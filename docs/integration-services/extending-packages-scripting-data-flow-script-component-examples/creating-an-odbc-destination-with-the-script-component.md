@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  次の TRANSACT-SQL コマンドを実行して、変換先テーブルを作成、 **AdventureWorks**データベース。  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

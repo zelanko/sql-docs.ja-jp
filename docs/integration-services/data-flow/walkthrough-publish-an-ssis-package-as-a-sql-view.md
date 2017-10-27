@@ -196,7 +196,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>OLE DB Provider for SSIS を使用してリンクサーバーを作成する  
  SQL Server Management Studio で次のクエリを実行して、OLE DB Provider for SSIS (SSISOLEDB) を使用するリンク サーバーを作成します。  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -217,7 +217,7 @@ GO
   
 1.  ビューを作成する前に、新しいクエリ ウィンドウで次のクエリを入力して実行します。 OPENQUERY は、SQL Server でサポートされている行セット関数です。 それは、指定されたパススルー クエリを、リンク サーバーに関連付けられた OLE DB Provider を使用するリンク サーバーで実行します。 OPENQUERY は、テーブル名と同じように、クエリの FROM 句で参照できます。 詳細については、 [MSDN ライブラリの OPENQUERY ドキュメント](http://msdn.microsoft.com/library/ms188427.aspx) を参照してください。  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -227,7 +227,7 @@ GO
   
 2.  次のクエリを実行して、このチュートリアル用のデータベース **TestDB** にビューを作成します。  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -240,14 +240,14 @@ GO
   
 3.  次のクエリを実行して、ビューをテストします。  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### <a name="openquery-function"></a>OPENQUERY 関数  
  OPENQUERY 関数の構文は次のとおりです。  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   

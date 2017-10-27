@@ -132,7 +132,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  作成および構成が必要ですが、最初の出力の変換先コンポーネント、 **AddressID**と**市区町村**列など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、または変換先コンポーネントのサンプル示されている[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)、します。 変換の最初の出力を接続**MyAddressOutput**、変換先コンポーネントにします。 コピー先のテーブルを作成するには、次を実行して[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを**AdventureWorks**データベース。  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

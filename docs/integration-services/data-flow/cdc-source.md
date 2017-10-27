@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>このスクリプトを使用して問題を特定し、SQL Server Management Studio で再現する  
  CDC ソース操作は、CDC ソースを呼び出す前に実行される CDC 制御タスク操作によって管理されます。 CDC 制御タスクは、開始 LSN と終了 LSN が保存されている CDC 状態パッケージ変数の値を比較します。 CDC 制御タスクは、次のスクリプトに相当する関数を実行します。  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

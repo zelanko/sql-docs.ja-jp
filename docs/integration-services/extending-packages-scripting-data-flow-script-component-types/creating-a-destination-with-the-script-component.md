@@ -118,7 +118,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  以下を実行して、変換先テーブルを作成する[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを**AdventureWorks**データベース。  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

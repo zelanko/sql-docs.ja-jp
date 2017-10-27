@@ -30,7 +30,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40dbts-transact-sql"></a>& #x 40; & #x 40 です DBTS (TRANSACT-SQL)。
+# <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;です DBTS (TRANSACT-SQL)。
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 現在のデータベースの現在の **timestamp** 型の値を返します。 この timestamp はデータベース内で一意になることが保証されます。
@@ -61,10 +61,10 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>参照
-[構成関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[カーソルの同時実行 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[構成関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[カーソルの同時実行 &#40;ODBC"&"#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   
 

@@ -80,13 +80,12 @@ ms.lasthandoff: 08/03/2017
   
  次の例では、パッケージのコンポーネント間で送信された行の数が表示されます。  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  以下の例では、特定の実行で各コンポーネントによって送信された 1 ミリ秒あたりの行数が計算されます。 計算される値は次のとおりです。  
@@ -110,7 +109,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>データ フロー コンポーネントでエラー出力を構成する
@@ -230,13 +228,11 @@ order by source_component_name desc
   
  前のシナリオで説明されているステップを実行するサンプル SQL スクリプトを次に示します:  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  create_execution ストアド プロシージャのフォルダー名、プロジェクト名、およびパッケージ名パラメーターは、Integration Services カタログのフォルダー、プロジェクト、およびパッケージ名に対応しています。 次のイメージに示すように、create_execution 呼び出しで使用するフォルダー、プロジェクト、およびパッケージ名を SQL Server Management Studio から取得できます。 SSIS プロジェクトがここに表示されない場合は、プロジェクトを SSIS サーバーに配置していない可能性があります。 Visual Studio の SSIS プロジェクトを右クリックした後 [配置] をクリックし、適切な SSIS サーバーにプロジェクトを配置します。  
@@ -260,18 +256,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### <a name="removing-a-data-tap"></a>データ タップの削除  
  [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) ストアド プロシージャを使用して、実行開始前にデータ タップを削除できます。 このストアド プロシージャは、add_data_tap ストアド プロシージャの出力として取得できるデータ タップの ID を、パラメーターとして取得します。  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### <a name="listing-all-data-taps"></a>すべてのデータ タップを一覧表示する  
  catalog.execution_data_taps ビューを使用して、すべてのデータ タップを一覧することもできます。 次の例は、指定の実行インスタンス (ID: 54) のデータ タップを抽出します。  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   

@@ -346,14 +346,14 @@ ms.lasthandoff: 08/02/2017
 -   **再接続の最大試行回数:**確立された接続はタイムアウトになるか、ネットワーク障害の原因を中断、する場合、サーバーが再接続する必要です。 最大まで再接続の試行が許可されている**5**後の再試行、コンソールが自動的に再接続を実行します。 自動再接続の機能には、スクリプトを再実行で、作業が軽減されます。  
   
 ## <a name="server-connection-parameters"></a>サーバーの接続パラメーター  
-スクリプト ファイル、またはサーバーの接続ファイルには、サーバー接続パラメーターを定義することができます。 参照してください、[サーバー接続ファイル (&) #40";"OracleToSQL"&"#41; を作成する](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)詳細についてはします。  
+スクリプト ファイル、またはサーバーの接続ファイルには、サーバー接続パラメーターを定義することができます。 参照してください、[サーバー接続ファイル &#40;OracleToSQL"&"#41; を作成する](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)詳細についてはします。  
   
 ## <a name="script-commands"></a>スクリプト コマンド  
 スクリプト ファイルには、XML 形式で移行ワークフロー コマンドのシーケンスが含まれています。 SSMA コンソール アプリケーションでは、スクリプト ファイルに表示されるコマンドの順序で移行を処理します。  
   
 たとえば、DB2 データベース内の特定のテーブルの一般的なデータの移行は次の階層: スキーマ -&gt;テーブル。  
   
-スクリプト ファイル内のすべてのコマンドは正常に実行しても、SSMA コンソール アプリケーションは終了し、ユーザーに、コントロールを返します。 スクリプト ファイルの内容の詳細または小さい静的変数の情報には、いずれかが含まれている、[変数値のファイルの作成 (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)または変数の値をスクリプト ファイル内の別のセクションでします。  
+スクリプト ファイル内のすべてのコマンドは正常に実行しても、SSMA コンソール アプリケーションは終了し、ユーザーに、コントロールを返します。 スクリプト ファイルの内容の詳細または小さい静的変数の情報には、いずれかが含まれている、[変数値のファイルの作成 &#40;OracleToSQL"&"#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)または変数の値をスクリプト ファイル内の別のセクションでします。  
   
 **例:**  
   
@@ -394,15 +394,15 @@ ms.lasthandoff: 08/02/2017
   
 妥当性をそこに表示されるパラメーターを変更した後は、テンプレート (ファイル) を実行できます。  
   
-スクリプト コマンドの完全な一覧は含まれて[SSMA コンソール (&) #40";"DB2ToSQL"&"#41; の実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+スクリプト コマンドの完全な一覧は含まれて[SSMA コンソール &#40;DB2ToSQL"&"#41; の実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="script-file-validation"></a>スクリプト ファイルの検証  
 ユーザーが、スキーマ定義ファイルに対して自分のスクリプト ファイルを簡単に検証**'O2SSConsoleScriptSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[変数値のファイルを作成する (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)です。  
+コンソールの運用には、次の手順は[変数値のファイルを作成する &#40;DB2ToSQL"&"#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[変数値ファイル (&) #40";"DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[変数値ファイル &#40;DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
 

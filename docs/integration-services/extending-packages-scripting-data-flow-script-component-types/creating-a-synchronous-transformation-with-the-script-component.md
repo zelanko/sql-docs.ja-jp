@@ -161,7 +161,7 @@ else
   
 6.  作成および構成が必要ですの変換先コンポーネント、 **AddressID**と**市区町村**列など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されている変換先、または変換先コンポーネントのサンプル[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)です。 変換の出力を変換先コンポーネントに接続します。 コピー先のテーブルを作成するには、次を実行して[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを**AdventureWorks**データベース。  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -215,7 +215,7 @@ public class ScriptMain:
   
 7.  作成および構成する 2 つの変換先コンポーネントを**AddressID**と**市区町村**列など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、フラット ファイル変換先、または変換先コンポーネントのサンプル示されている[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)です。 変換の各出力をいずれかの変換先コンポーネントに接続します。 実行して、変換先テーブルを作成することができます、 [!INCLUDE[tsql](../../includes/tsql-md.md)] (の一意のテーブル名) では、次のようなコマンド、 **AdventureWorks**データベース。  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  

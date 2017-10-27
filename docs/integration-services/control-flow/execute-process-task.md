@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Microsoft Visual Basic を使用してアプリケーションを作成する場合は、 **My.Application.CommandLineArgs** プロパティを設定します。 次の例では、 **My.Application.CommandLineArgs** プロパティを使用して、2 つの引数を取得しています。  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

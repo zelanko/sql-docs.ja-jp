@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
      たとえば、Customer テーブルの UPDATE ステートメントの構文は次のようになります。  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/03/2017
   
      たとえば、Customer テーブルの DELETE ステートメントの構文は次のようになります。  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  

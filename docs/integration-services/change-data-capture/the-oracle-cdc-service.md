@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  Oracle CDC デザイナー コンソールを使用すると、変更が自動的に検出されます。 SQL を使用して直接 Oracle CDC の構成を更新する場合は、その構成変更が Oracle CDC Service によって検出されるように、次のプロシージャを呼び出す必要があります。  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  ログ マイニング パスワードは、次のコマンドによって自動的に作成される、 `xdbcdc_asym_key` という固定名を持つ非対称キーを使用して暗号化されて格納されます。  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  
