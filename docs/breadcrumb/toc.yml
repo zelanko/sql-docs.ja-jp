@@ -45,6 +45,9 @@
                 - name: ADO RDS API (非推奨)
                   href: /sql/ado/reference/rds-api/
                   homepage: /sql/ado/reference/rds-api/rds-api-reference
+        - name: 分析プラットフォーム システム
+          href: /sql/analytics-platform-system/
+          homepage: /sql/analytics-platform-system/index
         - name: SQL にクライアントを接続する
           href: /sql/connect/
           homepage: /sql/connect/sql-server-drivers
