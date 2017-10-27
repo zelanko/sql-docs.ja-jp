@@ -65,9 +65,9 @@ ms.lasthandoff: 09/27/2017
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
-Azure SQL データベースでは、次を参照してください。 [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-Azure SQL Data Warehouse では、次を参照してください。 [ALTER DATABASE & #40 です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
-並列データ ウェアハウスでは、次を参照してください。 [ALTER DATABASE & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
+Azure SQL データベースでは、次を参照してください。 [ALTER DATABASE &#40;です。Azure SQL データベース &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
+Azure SQL Data Warehouse では、次を参照してください。 [ALTER DATABASE &#40;です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
+並列データ ウェアハウスでは、次を参照してください。 [ALTER DATABASE &#40;です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
   
 ## <a name="syntax"></a>構文  
   
@@ -131,12 +131,12 @@ ALTER DATABASE { database_name  | CURRENT }
   
  既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して内部のカタログ情報を保持する、包含データベースを作成するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定の照合順序、 **Latin1_General_100_CI_AS_WS_KS_SC**です。  
   
- Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
+ Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
   
  **\<delayed_durability_option >:: =**  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 詳細については、次を参照してください。 [ALTER DATABASE SET Options & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)です。  
+ 詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)です。  
   
  **\<file_and_filegroup_options >:: =**  
  詳細については、次を参照してください[ALTER DATABASE の File および Filegroup オプション &#40;。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
@@ -253,19 +253,19 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
-- [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md)  
+- [ALTER DATABASE &#40;です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
 - [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [sp_spaceused & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sp_spaceused &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
 - [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
-- [sys.database_mirroring_witnesses & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+- [sys.database_mirroring_witnesses &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
 - [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
-- [sys.filegroups & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [システム データベース](../../relational-databases/databases/system-databases.md)  
   

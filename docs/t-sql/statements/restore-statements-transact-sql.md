@@ -68,7 +68,7 @@ ms.lasthandoff: 09/27/2017
   
 -   データベース スナップショットでキャプチャされた時点にデータベースを戻す。  
   
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]復元シナリオを参照してください[復元と復旧の概要 & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  引数の説明の詳細については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   別のインスタンスからデータベースを復元するときは、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」の情報を考慮してください。
+ 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]復元シナリオを参照してください[復元と復旧の概要 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  引数の説明の詳細については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   別のインスタンスからデータベースを復元するときは、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」の情報を考慮してください。
   
 > **注:** 、Windows Azure Blob ストレージ サービスからの復元に関する詳細については、次を参照してください。 [SQL Server のバックアップと Microsoft Azure Blob ストレージ サービスによる復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
   
@@ -231,7 +231,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ```  
   
 ## <a name="arguments"></a>引数  
- 引数の説明については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ 引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="about-restore-scenarios"></a>復元シナリオについて  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではさまざまな復元シナリオがサポートされています。  
@@ -242,7 +242,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   ファイル復元  
   
-     マルチ ファイル グループ データベースのファイルまたはファイル グループを復元します。 単純復旧モデルでは、ファイルは読み取り専用のファイル グループに属している必要があります。 完全なファイル復元を行った後で、差分ファイル バックアップを復元できます。 詳細については、次を参照してください。[ファイルの復元 & #40 です。完全復旧モデル &#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)と[ファイル復元 &#40;単純復旧モデル &#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md).  
+     マルチ ファイル グループ データベースのファイルまたはファイル グループを復元します。 単純復旧モデルでは、ファイルは読み取り専用のファイル グループに属している必要があります。 完全なファイル復元を行った後で、差分ファイル バックアップを復元できます。 詳細については、次を参照してください。[ファイルの復元 &#40;です。完全復旧モデル &#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)と[ファイル復元 &#40;単純復旧モデル &#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md).  
   
 -   ページ復元  
   
@@ -258,7 +258,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   トランザクション ログの復元  
   
-     完全復旧モデルまたは一括ログ復旧モデルで、目的の復旧ポイントに戻すには、ログ バックアップの復元が必要です。 ログ バックアップの復元の詳細については、次を参照してください。[トランザクション ログ バックアップの適用 & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+     完全復旧モデルまたは一括ログ復旧モデルで、目的の復旧ポイントに戻すには、ログ バックアップの復元が必要です。 ログ バックアップの復元の詳細については、次を参照してください。[トランザクション ログ バックアップの適用 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
 -   Always On 可用性グループの可用性データベースを準備します。  
   
@@ -276,7 +276,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
     > **注:**オンライン復元を実行できる[遅延トランザクション](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)です。  
   
-     詳細については、次を参照してください。[オンライン復元 & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     詳細については、次を参照してください。[オンライン復元 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
 ## <a name="additional-considerations-about-restore-options"></a>RESTORE のオプションに関するその他の注意点  
   
@@ -319,7 +319,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ## <a name="general-remarks"></a>全般的な解説  
  オフライン復元を実行しているときに、指定したデータベースが使用中の場合、RESTORE を実行してしばらくするとユーザーは強制的に切断されます。 プライマリ ファイル グループ以外のオンライン復元では、復元するファイル グループがオフラインにならなければ、データベースの使用を続けることができます。 指定したデータベース内のデータはすべて、復元されたデータに置き換えられます。  
   
- データベースの回復の詳細については、次を参照してください。[復元と復旧の概要 & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+ データベースの回復の詳細については、次を参照してください。[復元と復旧の概要 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
  1 つのプラットフォームから別のプラットフォームへの復元操作は、異なる種類のプロセッサ間でも、オペレーティング システムでデータベースの照合順序がサポートされていれば実行できます。  
   
@@ -354,7 +354,7 @@ Note: URL is the format used to specify the location and the file name for the W
 > **注:**からインポートされたフルテキスト カタログ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]はデータベース ファイルとして扱われます。 これらの場合、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は一時停止と再開、バックアップ操作中には必要なくする点を除いてにフルテキスト カタログをバックアップするための手順も、適用します。 詳細については、次を参照してください。[をバックアップおよび復元のフルテキスト カタログ](http://go.microsoft.com/fwlink/?LinkId=107381)です。  
   
 ## <a name="metadata"></a>メタデータ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップを追跡し、各サーバー インスタンスのアクティビティを復元するバックアップと復元の履歴テーブルが含まれます。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、次を参照してください。[バックアップ履歴とヘッダーの情報 & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップを追跡し、各サーバー インスタンスのアクティビティを復元するバックアップと復元の履歴テーブルが含まれます。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、次を参照してください。[バックアップ履歴とヘッダーの情報 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
   
 ##  <a name="REPLACEoption"></a>REPLACE オプションによる影響  
  REPLACE は頻繁に使用すべきではありません。使用するのは十分に検討した後のみに限定してください。 通常、復元により、誤ってデータベースを別のデータベースで上書きしてしまうのを防ぐことができます。 RESTORE ステートメントで指定したデータベースが現在のサーバーに既に存在し、指定したデータベースのファミリ GUID がバックアップ セットに記録されているデータベースのファミリ GUID と異なる場合、そのデータベースは復元されません。 これは重要な保護機能です。  
@@ -436,7 +436,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   K. [Microsoft Azure Blob ストレージ サービスからの復元](#Azure_Blob)  
   
-> **注:**例についてに記載されている復元方法に関するトピックを参照してください。[復元と復旧の概要 & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+> **注:**例についてに記載されている復元方法に関するトピックを参照してください。[復元と復旧の概要 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 ###  <a name="restoring_full_db"></a> A. データベース全体を復元する  
  次の例では、`AdventureWorksBackups` 論理バックアップ デバイスからデータベース バックアップ全体を復元します。 このデバイスの作成の例は、次を参照してください。[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)です。  
@@ -686,7 +686,7 @@ RESTORE DATABASE Sales
  - [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  - [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- - [RESTORE REWINDONLY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ - [RESTORE REWINDONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  - [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  - [RESTORE FILELISTONLY (TRANSACT-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
  - [RESTORE HEADERONLY (TRANSACT-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
