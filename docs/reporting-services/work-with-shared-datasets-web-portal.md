@@ -14,7 +14,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ja-jp
@@ -111,3 +112,4 @@ Web ポータル内の共有データセットのプロパティを表示およ�
 一覧に表示されている計画は、 **[編集]** または **[削除]** できます。 **[既存のものから新規作成]** オプションは、キャッシュ更新計画が 1 つだけ選択されている場合に有効になります。 このオプションでは、新しい更新計画が元の計画からコピーされて作成されます。 キャッシュ更新計画ページは、選択された計画の詳細があらかじめ設定された状態で開きます。 その後、更新計画オプションを変更して、新しい説明で計画を保存できます。  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

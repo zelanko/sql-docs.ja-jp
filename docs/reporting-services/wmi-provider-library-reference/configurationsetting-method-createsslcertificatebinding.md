@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1d9a797922bc8d7b39e7b7c43897d4ae5ee5bd28
 ms.contentlocale: ja-jp
@@ -85,9 +86,10 @@ public void CreateSSLCertificateBinding(string application,
 5.  ホスト名を指定する URL 予約は存在するが、ホスト名が証明書のホスト名と一致しない。  
   
 ## <a name="requirements"></a>必要条件  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

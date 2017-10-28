@@ -21,6 +21,7 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: ca37946fadb30837e21255ae67b862a61bd6f68e
@@ -67,3 +68,4 @@ ms.lasthandoff: 08/28/2017
 [インデックス](../../relational-databases/indexes/indexes.md)  
 [データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md)  
+

@@ -19,6 +19,7 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
@@ -137,3 +138,4 @@ SELECT
  スクリプトが実行されていないため `SELECT`が **に存在しない場合でも、**を入力すると、IntelliSense により、使用可能な要素として **PrimaryKeyCol**、 **FirstNameCol** 、および `MyTable` LastNameCol `MyTestDB`が選択リストに表示されます。  
   
   
+

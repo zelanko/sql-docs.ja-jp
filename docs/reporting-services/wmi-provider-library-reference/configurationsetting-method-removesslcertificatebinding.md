@@ -17,7 +17,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2a4c9fe3ff515e9c6dce2986d19b75a61ac0b548
 ms.contentlocale: ja-jp
@@ -71,9 +72,10 @@ public void RemoveSSLCertificateBindings(string Application,
  このメソッドは、rsreportserver.config ファイルおよび HTTP.SYS (オプション) から特定のバインドを削除します。  
   
 ## <a name="requirements"></a>必要条件  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

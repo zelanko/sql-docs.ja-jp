@@ -22,7 +22,8 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
 ms.contentlocale: ja-jp
@@ -41,12 +42,13 @@ ms.lasthandoff: 08/09/2017
 |[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|このオブジェクトは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用です。|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|レポート サーバーが SharePoint 統合モード用に構成されているかどうかを示します。|  
-|[[バージョン]](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|レポート サーバーのバージョンを返します。|  
+|[バージョン](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|レポート サーバーのバージョンを返します。|  
   
 ## <a name="public-methods"></a>パブリック メソッド  
   
 |||  
 |-|-|  
-|[GetReportServerUrls メソッド & #40 です。WMI MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
+|[GetReportServerUrls メソッド (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
@@ -90,3 +91,4 @@ ms.lasthandoff: 08/09/2017
  [サブスクリプションの設定とファイル共有アカウントと #40 です。構成マネージャー &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   
+

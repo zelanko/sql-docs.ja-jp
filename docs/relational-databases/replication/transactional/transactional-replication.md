@@ -17,6 +17,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c496335127a2f2d8acbacec53efa8ecdae697cfc
@@ -88,3 +89,4 @@ ms.lasthandoff: 06/22/2017
  ディストリビューション エージェントは、プッシュ サブスクリプションのディストリビューターと、プル サブスクリプションのサブスクライバーで動作します。 エージェントは、トランザクションをディストリビューション データベースからサブスクライバーに移動します。 サブスクリプションが検証対象としてマークされている場合、ディストリビューション エージェントは、パブリッシャーのデータとサブスクライバーのデータが一致しているかどうかも確認します。  
   
   
+

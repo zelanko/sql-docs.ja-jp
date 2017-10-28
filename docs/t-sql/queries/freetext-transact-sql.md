@@ -1,7 +1,7 @@
 ---
 title: "FREETEXT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   使用される述語である、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 句](../../t-sql/queries/where-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントを実行する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索をフルテキスト インデックス文字ベースのデータ型を含む列を作成します。 この述語は、検索条件の文字列の並びと正確に一致しなくても意味が合っている値を検索できます。 フルテキスト クエリ エンジンが、上、次の操作を内部で実行する FREETEXT を使用する場合、 *freetext_string*各語に重みを割り当てます、および一致を検索します。  
   

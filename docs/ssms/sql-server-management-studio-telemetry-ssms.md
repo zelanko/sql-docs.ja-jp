@@ -14,6 +14,7 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
@@ -41,3 +42,4 @@ SSMS の使用状況データの収集を有効または無効にするには、
 ## <a name="see-also"></a>参照
 
 [SQL Server Usage Feedback Collection の Local Audit](http://msdn.microsoft.com/library/mt743085.aspx)
+

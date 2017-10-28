@@ -19,7 +19,8 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
 ms.contentlocale: ja-jp
@@ -62,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  レポートのパブリッシュ時に、サーバー上のデータ ソースをプロジェクト内のデータ ソースで上書きする場合は、 **[True]** を選択します。 サーバー上の既存のデータ ソースを残す場合は、 **[False]** を選択します。  
   
  **[TargetServerVersion]**  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の適切なバージョンを選択するか、 **[バージョンの検出]** を選択して、 **TargetServer URL** プロパティによって識別される、サーバーにインストールされているバージョンを自動的に特定します。 既定値は **SQL Server 2016**をクリックします。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の適切なバージョンを選択するか、 **[バージョンの検出]** を選択して、 **TargetServer URL** プロパティによって識別される、サーバーにインストールされているバージョンを自動的に特定します。 既定値は**SQL Server 2016**です。  
   
  **[TargetDataSourceFolder]**  
  パブリッシュした共有データ ソースを保存するフォルダーの名前です。 フォルダーを指定しない場合、レポートと同じフォルダーにデータ ソースがパブリッシュされます。 フォルダーがレポート サーバー上に存在しない場合は、レポートのパブリッシュ時に、レポート デザイナーによってフォルダーが作成されます。  
@@ -86,13 +87,14 @@ ms.lasthandoff: 08/09/2017
  SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 例: 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`」を参照してください。  
++ `http:\\<servername>\<site>\<subsite>`をインストールしたユーザーを対象にしています。  
 
 ## <a name="next-steps"></a>次の手順
 
 [レポートのパブリッシュ](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [SharePoint ライブラリへのレポートのパブリッシュ](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[展開プロパティの設定 & #40 です。Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [レポート デザイナーの F1 ヘルプ](../../reporting-services/tools/report-designer-f1-help.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

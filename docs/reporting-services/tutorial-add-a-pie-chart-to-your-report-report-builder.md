@@ -16,7 +16,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
 ms.contentlocale: ja-jp
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 円グラフのデータ ポイントが多すぎると、データ ポイント ラベルが過密状態になって見づらくなる場合があります。 その場合は、複数の小さいスライスを組み合わせて 1 つの大きなスライスにすることを検討してください。 円グラフは、データを少数のデータ ポイントに集計すると見やすくなります。  
  
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 手順については、レポート サーバーを参照するデータ ソースを追加、データセットを追加、参照してくださいこのシリーズの最初のチュートリアル:[チュートリアル: 基本的なテーブル レポート &#40; を作成します。。レポート ビルダー"&"#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル ([「チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)」](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)) を参照してください。  
   
 このチュートリアルの推定所要時間: 10 分  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 08/09/2017
 5.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、 **[次へ]**をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
   
     > [!NOTE]  
-    > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
+    > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
 6.  **[クエリのデザイン]** ページで、 **[テキストとして編集]**をクリックします。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  **[ラベル データ]** ボックスで、 **[#PERCENT]**を選択します。  
     
-5.  (省略可) ラベルに表示する小数点以下桁数を指定するには、 **[ラベル データ]** ボックスで、 **[#PERCENT]**の後に「 **{Pn}** 」と入力します。ここで、 *n* は、表示する小数点以下桁数を表します。 たとえば、小数点以下を表示しない場合は「 **#PERCENT{P0}**」と入力します。  
+5.  (省略可能)小数点以下桁数、ラベルを指定するを示していますで、**データ ラベル**後ボックス**#PERCENT**、型**{pn}**場所 *n* を表示する小数点以下桁数の数です。 たとえば、小数点以下を表示しない場合は「 **#PERCENT{P0}**」と入力します。  
 
 6.  値をパーセンテージとして表示するには、UseValueAsLabel プロパティを false に設定する必要があります。 **[アクションの確認]** ダイアログでこの値の設定を求めるメッセージが表示されたら、 **[はい]**をクリックします。  
   
@@ -143,7 +144,7 @@ ms.lasthandoff: 08/09/2017
 
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  プロパティ ペインが表示されない場合に、**ビュー**タブ >**表示/非表示**グループ > 選択**プロパティ**です。  
+2.  [プロパティ] ペインが表示されない場合は、**[表示]** タブの **[表示/非表示]** グループで、**[プロパティ]** を選択します。  
   
 3.  デザイン画面で、円グラフの任意のスライスをクリックします。 系列のプロパティが [プロパティ] ペインに表示されます。  
   
@@ -197,7 +198,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  **Camera and Camcorder Sales** を選択し、**[ホーム]** タブの **[フォント]** セクションで **[太字]** をクリックします。  
   
-4.  選択**として a Percentage of Total Sales**、および、**ホーム**タブ >**フォント**セクション > フォント サイズを設定**10**です。  
+4.  **As a Percentage of Total Sales** を選択し、**[ホーム]** タブの **[フォント]** セクションで、フォント サイズを **[10]** に設定します。  
   
 5.  (省略可) 2 行のテキストに合わせて、[タイトル] テキスト ボックスの高さを高くする必要が生じる場合もあります。  
   
@@ -220,7 +221,7 @@ ms.lasthandoff: 08/09/2017
 レポートがレポート サーバーに保存されます。  
   
 ## <a name="next-steps"></a>次の手順  
-これで、「レポートへの円グラフの追加」チュートリアルを終了します。 グラフの詳細については、次を参照してください。[グラフ & #40 です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)と[スパーク ラインとデータ バー &#40;レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+これで、「レポートへの円グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  

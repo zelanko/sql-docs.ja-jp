@@ -22,7 +22,8 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8e002210d1041da8c510cde99bc0c09261eb66b7
 ms.contentlocale: ja-jp
@@ -43,9 +44,10 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_Instance メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
+

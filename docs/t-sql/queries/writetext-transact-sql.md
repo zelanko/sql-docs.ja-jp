@@ -1,7 +1,7 @@
 ---
 title: "WRITETEXT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   最小ログ記録、対話型が、既存の更新を許可**テキスト**、 **ntext**、または**イメージ**列です。 WRITETEXT は、影響のある列内の既存のすべてのデータを上書きします。 は、WRITETEXT を使用できません**テキスト**、 **ntext**、および**イメージ**ビュー内の列です。  
   

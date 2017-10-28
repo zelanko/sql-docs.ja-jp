@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: ee5bbf86cb33e358b108b9a0bd63fb52913d98d0
@@ -34,3 +35,4 @@ ms.lasthandoff: 07/31/2017
 1.  [登録済みサーバー] でサーバーを右クリックし、 **[接続]**をポイントし、 **[オブジェクト エクスプローラー]**をクリックします。  
   
   
+

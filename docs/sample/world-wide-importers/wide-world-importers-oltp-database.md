@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: d55a4e1ce7f1b6e611411eb9a98b0b907bace7e6
@@ -38,3 +39,4 @@ WideWorldImporters が主要な SQL Server 機能を活用する方法につい�
 **WideWorldImporters サンプル クエリ**
 
 WideWorldImporters データベースのサンプル クエリ。
+

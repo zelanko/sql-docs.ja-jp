@@ -19,7 +19,8 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
 ms.contentlocale: ja-jp
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  サブスクリプションを作成する際には、出力ファイル形式を選択できます。 形式によっては正しく機能しないレポートもあります。 サブスクリプションで形式を選択する前に、レポートを開き、別の形式にエクスポートして、期待どおりに表示されることを確認します。  
   
- ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「 [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
+ ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「 [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  ライブラリまたは共有フォルダーにレポートを配信するサブスクリプションでは、元のレポートに基づいて新しく静的ファイルが作成されますが、これはレポート ビューアー Web パーツで実行される実際のレポート定義ではありません。 元のレポートに対話機能 (ドリルスルー リンクなど) や動的コンテンツが含まれている場合、対象の場所に配信される静的ファイルでは、これらの機能を使用できません。 "Web ページ" を選択すると、ある程度の対話機能を維持することができます。しかし、このドキュメントはレポート ビューアーで実行される .rdl ファイルではないため、レポートをクリックすると新しいページがブラウザー セッションで作成され、サイトに戻るにはそれらをスクロールする必要があります。  
@@ -169,3 +170,4 @@ ms.lasthandoff: 08/09/2017
  [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
+

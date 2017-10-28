@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3f94b815f18075eb769d4537e8af354aa11a297
@@ -86,3 +87,4 @@ ms.lasthandoff: 06/22/2017
 -   テンプレートをダブルクリックして、データベース エンジン クエリ ウィンドウを開きます。このウィンドウには、テンプレートのテキストが表示されます。 たとえば、CREATE DATABASE テンプレートを開くには、 **[SQL Server テンプレート]** フォルダー、 **[Database]** フォルダーの順に開き、 **[create database]**をダブルクリックします。  
   
   
+

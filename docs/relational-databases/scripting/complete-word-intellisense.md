@@ -19,6 +19,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ae1001b60f61120999ef61b7385464ca7af0fc5
@@ -42,3 +43,4 @@ ms.lasthandoff: 06/22/2017
  入力した文字と一致する項目が複数ある場合は、入力候補の機能を呼び出して候補の一覧を表示し、その中から該当する項目を選択してコードに挿入できます。  
   
   
+

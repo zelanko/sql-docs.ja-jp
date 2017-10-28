@@ -17,7 +17,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: ja-jp
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  既存のデータ ソースを使ったレポートをプレビューするには、レポート作成クライアントから、そのデータ ソースにアクセスするための権限が必要です。 詳細については、「 [データ接続、データ ソース、および接続文字列](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
- レポートを追加した後、データ ソースやデータセットを定義したり、レポート レイアウトをデザインしたりできます。 最初に、次を参照してください[基本的なテーブル レポート &#40; を作成する。SSRS チュートリアル &#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)または[テーブル & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ レポートを追加した後、データ ソースやデータセットを定義したり、レポート レイアウトをデザインしたりできます。 開始するには、「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」または「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>レポート ウィザードを使って新しいレポートを追加するには  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/09/2017
      レポートがプロジェクトの **[レポート]** フォルダーに追加されます。 プロジェクトを閉じてから開き直すと、一連のレポートがアルファベット順に並べ替えられます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のチュートリアルと &#40; です。SSRS と &#41; です。](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
  他に質問しますか。 [Reporting Services のフォーラムを再試行してください。](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   

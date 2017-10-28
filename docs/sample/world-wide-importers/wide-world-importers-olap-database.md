@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: de0880b7c16e2e54a45d7d138a727c3d6b696d15
@@ -44,3 +45,4 @@ WideWorldImportersDW が分析処理に対して SQL Server の機能を活用�
 **WideWorldImportersDW OLAP のサンプル クエリ**
 
 サンプルの分析クエリが WideWorldImportersDW データベースを活用することです。
+

@@ -17,7 +17,8 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ece42006b7022bd3fa031cd95ef97767055ad53
 ms.contentlocale: ja-jp
@@ -58,3 +59,4 @@ ms.lasthandoff: 08/09/2017
  [役割とアクセス許可 & #40 です。Reporting Services &#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
   
+

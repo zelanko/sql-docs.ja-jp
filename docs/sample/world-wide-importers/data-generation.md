@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ WideWorldImportersDW 任意パフォーマンス テスト、たとえばクラ�
 約、必要な数の行が挿入され、 `Fact.Sale` 2012 年内のテーブルです。 プロシージャ 50000 1 日あたりの行の数に制限します。 これにより、変更する可能性がありますを誤って overinflations テーブルを回避するのにはあります。
 
 さらに、プロシージャは既に適用されていない場合のようにクラスター化列ストア インデックスの作成を適用します。
+

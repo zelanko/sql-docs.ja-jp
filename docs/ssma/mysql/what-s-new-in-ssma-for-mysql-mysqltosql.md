@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
@@ -182,3 +183,4 @@ MySQL SSMA の 2010 年 1 月のリリースでは、最初のリリースをで
 -   両方への移行のサポートが追加のオンプレミス SQL Server および Azure SQL します。  
   
 -   **機能のスナップショット:**スキーマとデータの移行の MySQL テーブル/インデックス/の制約。
+
