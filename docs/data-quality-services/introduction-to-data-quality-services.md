@@ -88,7 +88,7 @@ ms.lasthandoff: 09/09/2017
   
  **マスター データ サービスのデータ品質プロセス**  
   
- Data Quality Services の機能はマスター データ サービス (MDS) に統合されているので、Microsoft Excel 用 Microsoft SQL Server 2014 Master Data Services アドインでソース データおよびマスター データに対して重複除去を実行できます。 マッチングを実行するには、MDS によって管理されているデータを Excel ワークシートに読み込み、MDS によって管理されていないデータと結合してから、Excel 内でマッチングを実行します。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] コンポーネントを MDS と共にインストールする必要があります。 詳細については、「  [Data Quality Matching in the MDS Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)」をご覧ください。  
+ Data Quality Services の機能はマスター データ サービス (MDS) に統合されているので、Microsoft Excel 用 Microsoft SQL Server 2014 Master Data Services アドインでソース データおよびマスター データに対して重複除去を実行できます。 マッチングを実行するには、MDS によって管理されているデータを Excel ワークシートに読み込み、MDS によって管理されていないデータと結合してから、Excel 内でマッチングを実行します。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] コンポーネントを MDS と共にインストールする必要があります。 詳細については、「  [Excel 用 MDS アドインでのデータ品質照合](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)」をご覧ください。  
   
   
 
