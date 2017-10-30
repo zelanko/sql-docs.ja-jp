@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
   
  詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]復元シナリオを参照してください[復元と復旧の概要 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  引数の説明の詳細については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   別のインスタンスからデータベースを復元するときは、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」の情報を考慮してください。
   
-> **注:** 、Windows Azure Blob ストレージ サービスからの復元に関する詳細については、次を参照してください。 [SQL Server のバックアップと Microsoft Azure Blob ストレージ サービスによる復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
+> **注:** 、Windows Azure Blob ストレージ サービスからの復元に関する詳細については、次を参照してください。 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -402,7 +402,7 @@ Note: URL is the format used to specify the location and the file name for the W
 > [!IMPORTANT]  
 >  パスワードによる保護は強力なものではありません。 使用して、正しくない復元を防止するものでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールを承認またはユーザーです。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップを保護するためのベスト プラクティスでは、安全な場所に、または十分なアクセス制御リスト (Acl) によって保護されているディスク ファイルへのバックアップ、バックアップ テープを保存します。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
 >   
->  SQL Server のバックアップと復元、Windows Azure Blob ストレージに固有の情報を参照してください。 [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
+>  SQL Server のバックアップと復元、Windows Azure Blob ストレージに固有の情報を参照してください。 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
   
 ### <a name="permissions"></a>Permissions  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
@@ -643,7 +643,7 @@ GO
  [& #91。上部の例 &#93;](#examples)  
   
 ###  <a name="Azure_Blob"></a>K. Microsoft Azure Blob ストレージ サービスからの復元  
-次の 3 つの例には、Microsoft Azure ストレージ サービスの使用が含まれます。  ストレージ アカウント名は `mystorageaccount`です。  データ ファイル用のコンテナーが呼び出された`myfirstcontainer`です。  バックアップ ファイルのコンテナーが呼び出された`mysecondcontainer`です。  各コンテナーの読み取り、書き込み、削除、および一覧は、権限を持つは、保存されているアクセス ポリシーが用意されています。  SQL Server 資格情報は、格納されているアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されました。  SQL Server のバックアップと復元、Microsoft Azure Blob ストレージに固有の情報を参照してください。 [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
+次の 3 つの例には、Microsoft Azure ストレージ サービスの使用が含まれます。  ストレージ アカウント名は `mystorageaccount`です。  データ ファイル用のコンテナーが呼び出された`myfirstcontainer`です。  バックアップ ファイルのコンテナーが呼び出された`mysecondcontainer`です。  各コンテナーの読み取り、書き込み、削除、および一覧は、権限を持つは、保存されているアクセス ポリシーが用意されています。  SQL Server 資格情報は、格納されているアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されました。  SQL Server のバックアップと復元、Microsoft Azure Blob ストレージに固有の情報を参照してください。 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。  
 
 **K1 です。Microsoft Azure ストレージ サービスからのデータベースの完全バックアップを復元します。**  
 データベースの完全バックアップがある`mysecondcontainer`の`Sales`に復元されます`myfirstcontainer`です。  `Sales`サーバーに現在存在しません。 

@@ -94,7 +94,7 @@ AS <select_statement>
   
 ## <a name="arguments"></a>引数
 または変更  
- **適用されます**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。   
+ **適用されます**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。   
   
  条件付きでは既に存在する場合にのみ、ビューを変更します。 
  
@@ -135,7 +135,7 @@ AS <select_statement>
   
 -   一時テーブルまたはテーブル変数の参照。  
   
- *Select_statement* 、SELECT ステートメントを使用して使用することは\<join_hint > および\<table_hint > ヒントを FROM 句で指定されています。 詳細については、次を参照してください。 [FROM & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md)と[SELECT &#40;TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md). 
+ *Select_statement* 、SELECT ステートメントを使用して使用することは\<join_hint > および\<table_hint > ヒントを FROM 句で指定されています。 詳細については、次を参照してください。 [FROM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md)と[SELECT &#40;TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md). 
   
  関数と UNION または UNION ALL で区切って複数の SELECT ステートメントで指定できます*select_statement*です。  
   
@@ -290,7 +290,7 @@ FROM Tn;
   
 3.  メンバー テーブルまたは基になるテーブル `T1, ..., Tn`  
   
-    -   テーブルには、ローカル テーブルまたはを実行している他のコンピューターからテーブルを指定できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]による 4 部構成の名前、または、OPENDATASOURCE ベースまたは OPENROWSET ベースの名前で参照されています。 OPENDATASOURCE および OPENROWSET の構文では、テーブル名は指定できますが、パススルー クエリは指定できません。 詳細については、次を参照してください。 [OPENDATASOURCE (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/opendatasource-transact-sql.md)と[OPENROWSET & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openrowset-transact-sql.md).  
+    -   テーブルには、ローカル テーブルまたはを実行している他のコンピューターからテーブルを指定できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]による 4 部構成の名前、または、OPENDATASOURCE ベースまたは OPENROWSET ベースの名前で参照されています。 OPENDATASOURCE および OPENROWSET の構文では、テーブル名は指定できますが、パススルー クエリは指定できません。 詳細については、次を参照してください。 [OPENDATASOURCE (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/opendatasource-transact-sql.md)と[OPENROWSET &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openrowset-transact-sql.md).  
   
          1 つ以上のメンバー テーブルがリモートにある場合、そのビューは分散パーティション ビューと呼ばれ、さらに条件が適用されます。 これらの条件については後で説明します。  
   
@@ -502,9 +502,9 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_refreshview & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sys.views & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
+ [sys.views &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
