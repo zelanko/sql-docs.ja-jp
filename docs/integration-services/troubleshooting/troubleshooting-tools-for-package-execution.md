@@ -57,7 +57,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **関連情報をエラー出力に追加する**。 エラー出力から提供される 2 列の数値識別子だけでなく、エラー メッセージと列名を追加すると、エラー出力の分析が容易になります。 これら 2 つの列を追加する方法の例については、「 [スクリプト コンポーネントによるエラー出力の強化](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)」を参照してください。  
   
--   **または、DiagnosticEx イベントを記録して列名を取得します**。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。  詳細については、「 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
+-   **または、DiagnosticEx イベントを記録して列名を取得します**。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。  詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
      **DiagnosticEx** のメッセージ列の値は XML テキストです。 パッケージ実行のメッセージ テキストを表示するには、[catalog.operation_messages &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ビューのクエリを実行します。 **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。  
   
