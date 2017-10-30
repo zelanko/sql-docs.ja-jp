@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ Evaluation および Developer エディションでサポートされる機能�
 |用語抽出と用語参照変換|はい|||||  
 
 <sup>1</sup> by Attunity の Change Data Capture コンポーネントには Enterprise edition が必要とします。 Change Data Capture Service と Change Data Capture Designer、ただし、不要 Enterprise edition です。 使用できます、Designer および Service コンピューターに SSIS がインストールされていません。
+

@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  完全な検証では、すべての参照先の環境変数が、検証に含まれていたすべての参照先の環境内で見つかることを確認します。 完全な検証結果では、検証に含まれていた参照先の環境で見つからなかった、有効な参照先の環境変数ではない環境参照を一覧表示します。  
   
   
+

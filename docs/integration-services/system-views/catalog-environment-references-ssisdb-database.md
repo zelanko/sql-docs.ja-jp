@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ee6f15af7a5384fea850aa67c7b5a95483530740
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/26/2017
  プロジェクトでは、相対または絶対環境参照を使用できます。 相対参照では、環境を名前で参照され、プロジェクトと同じフォルダーに格納されている必要があります。 絶対参照の場合、名前とフォルダーによって環境を参照します。プロジェクトとは異なるフォルダーに格納されている環境を参照する場合があります。 プロジェクトでは複数の環境を参照できます。  
   
   
+

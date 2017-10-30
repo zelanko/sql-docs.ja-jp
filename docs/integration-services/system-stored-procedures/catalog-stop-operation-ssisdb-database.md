@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 76a41be8ac6066a4f163b5049a758302d43d5219
@@ -64,3 +65,4 @@ catalog.stop_operation [ @operation_id = ] operation_id
  一度に 1 つだけのユーザーの操作を停止する必要があります[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。 複数のユーザーは、操作を停止すると、ストアド プロシージャは成功を返します (値`0`) 最初の試行では、後続の試行でエラーが発生します。  
   
   
+

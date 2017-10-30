@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ Scale Out でパッケージを実行するには、次のアクセス許可の�
 
 ## <a name="run-package-in-sql-agent-job"></a>SQL エージェント ジョブでパッケージを実行します。
 Sql エージェント ジョブのジョブの 1 つの手順として、SSIS パッケージを実行するを選択できます。 でスケール アウトを、パッケージを実行するには、上記の既定の実行モードを利用できます。 「スケール アウト」には、既定の実行モードを設定、Sql エージェント ジョブ内のパッケージは、スケール アウトで実行されます。
+

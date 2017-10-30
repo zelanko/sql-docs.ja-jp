@@ -8,6 +8,7 @@ ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: cfdf9fd32226dd94c244c1523380de67c280a892
@@ -253,3 +254,4 @@ NFS サーバーで共有するフォルダーを構成するときに、これ�
 [2]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/10-mountnoswitches.png
 [3]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/20-createtestdatabase.png
 [4]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/15-createtestdatabase.png
+

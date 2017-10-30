@@ -9,6 +9,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
@@ -130,3 +131,4 @@ dtexec /F <package name> /DE <protection password>
 ## <a name="next-steps"></a>次の手順
 
 Linux 上の SSIS を使用して、抽出、変換、およびデータの読み込みする方法の詳細については、次を参照してください。[抽出、変換、および SQL Server on Linux と SSIS のデータを読み込む](sql-server-linux-migrate-ssis.md)します。
+

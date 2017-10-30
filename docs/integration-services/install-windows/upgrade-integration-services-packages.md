@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がインストールされていないコンピューターでは、ADODB.dll を明示的に参照するスクリプト タスクおよびスクリプト コンポーネントのスクリプトをアップグレードしたり、実行したりすることはできません。 このようなスクリプト タスクまたはスクリプト コンポーネントのスクリプトをアップグレードするには、ADODB.dll に対する依存関係を削除することをお勧めします。  また、VB や C# のスクリプトなどのマネージ コードの代わりに ADO.NET を使用することをお勧めします。  
   
   
+

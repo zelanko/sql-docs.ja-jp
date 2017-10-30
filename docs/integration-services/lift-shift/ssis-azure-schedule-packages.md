@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
@@ -227,3 +228,4 @@ GO
 SQL Server エージェントに関する詳細については、次を参照してください。[パッケージの SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)です。
 
 SQL データベースでエラスティック ジョブに関する詳細については、次を参照してください。[管理するスケール アウト クラウド データベース](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)です。
+

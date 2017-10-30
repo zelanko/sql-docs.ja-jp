@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 77cf90268938bada458aa159a5f18f885491b407
@@ -60,3 +61,4 @@ AgentId|Scale Out Worker の Worker Agent ID|自動生成
 各タスクのログの場所は、TasksRootFolder によって WorkerSettings.config ファイルで構成されます。 指定されていない場合に、ログは、\<ドライバー\>: \Users\\*[アカウント]*\AppData\Local\SSIS\ScaleOut\Tasks フォルダーのパス。 
 
 *[アカウント]*はスケール アウト ワーカー サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。
+

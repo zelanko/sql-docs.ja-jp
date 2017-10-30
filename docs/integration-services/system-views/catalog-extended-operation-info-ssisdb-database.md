@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4d89a9adbf89dcc89715832664dcca176cd7f2ff
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/26/2017
 >  サーバー上で操作を実行する権限がある場合は、操作に関する情報を表示する権限もあります。 行レベルのセキュリティが適用されるため、表示する権限がある行のみが表示されます。  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 114e51f111e4b3dfece42c9510a35bb9be5d5652
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/27/2017
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの **dtexec** ユーティリティまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、以前のバージョンの開発ツールで作成された Integration Services パッケージを実行できます。 この [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ツールは、以前のバージョンの開発ツールで開発されたパッケージを読み込むときに、メモリ内のパッケージを、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] が使用するパッケージに一時的に変換します。 パッケージに問題があり、適切に変換できない場合、その問題が解決されるまで、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ツールでパッケージを実行することはできません。 詳細については、「 [Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages.md)」を参照してください。  
   
   
+

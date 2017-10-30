@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
 ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
@@ -156,3 +157,4 @@ GO
 ```
 ## <a name="next-steps"></a>次の手順
 Scale Out 機能のセットアップが終わりました。 スケール アウトでパッケージを実行できます。詳しくは、「[Integration Services (SSIS) Scale Out でパッケージを実行する](run-packages-in-integration-services-ssis-scale-out.md)」をご覧ください。
+

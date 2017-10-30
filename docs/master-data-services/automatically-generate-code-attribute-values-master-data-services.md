@@ -15,6 +15,7 @@ caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 02d1b2ab9e23d4bc0ff7a5e3c11b16ef6d26859f
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/07/2017
  [Code 以外の属性の値の自動生成 (マスター データ サービス)](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   
+

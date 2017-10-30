@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 4639379a65fc28c363f6510c1a393df8840dc7f8
@@ -41,3 +42,4 @@ PowerShell では、Linux 上の SQL Server を管理する機能豊富なコマ
 ## <a name="next-steps"></a>次の手順
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux に SQL Server](sql-server-linux-overview.md)です。
+

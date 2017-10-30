@@ -22,6 +22,7 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e91abac8902868dc9edefc1466fb2d25a602462
@@ -96,3 +97,4 @@ ms.lasthandoff: 09/26/2017
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] パッケージの 32 ビット開発環境である [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 ビット オペレーティング システムではサポートされていないので、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] サーバーにはインストールされません。    
     
   
+

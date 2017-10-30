@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
@@ -75,3 +76,4 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 >  相対参照が指定されている場合、 *environment_folder_name*パラメーターの値を使用しないと、環境フォルダー名が自動的に設定**NULL**です。 環境フォルダー名を指定する必要があります絶対参照が指定されている場合、 *environment_folder_name*パラメーター。  
   
   
+

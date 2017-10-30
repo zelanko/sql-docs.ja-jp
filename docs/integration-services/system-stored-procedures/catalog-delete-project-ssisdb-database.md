@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
@@ -67,3 +68,4 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  対応するプロジェクトのすべてのオブジェクトおよび環境参照が、プロジェクトと共に削除されます。 ただし、プロジェクトのバージョンと関連する操作レコードは、操作のクリーンアップ ジョブが次回実行されるまで保持されます。  
   
   
+

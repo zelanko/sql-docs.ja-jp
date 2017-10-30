@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
@@ -90,3 +91,4 @@ End WorkThread1
   
  コンポーネントに指定されたバッファーが含まれる可能性があるため、コンポーネントより多くの列が入力または出力列コレクションには、コンポーネントの開発者が呼び出すことができます、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A>メソッドを指定して、バッファー内で列を検索するその**LineageID**です。  
   
+
