@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  共通データに関するナレッジを含む 2 つ以上の個別のドメインで構成される複合ドメインを作成することもできます。 詳しくは、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
   
 ## <a name="domain-properties"></a>ドメインのプロパティ  
- ドメインを作成する際には、ソース データからドメインを作成する方法とドメイン値を出力する方法に関する次のオプションがあります。 詳細については、「 [Set Domain Properties](../data-quality-services/set-domain-properties.md)」を参照してください。  
+ ドメインを作成する際には、ソース データからドメインを作成する方法とドメイン値を出力する方法に関する次のオプションがあります。 詳細については、「 [ドメインのプロパティを設定する](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
--   ドメインの作成に使用するデータの型を選択します。 各ドメイン データ型でサポートされているデータ型については、「 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
+-   ドメインの作成に使用するデータの型を選択します。 各ドメイン データ型でサポートされているデータ型については、「 [DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
   
 -   シノニムではなく先頭の値のみがドメインから出力されるように指定します。  
   
