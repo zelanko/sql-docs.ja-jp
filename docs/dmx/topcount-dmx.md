@@ -125,11 +125,11 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  結果には、サポート値に基づいて並べ替えられた上位 3 件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、次を参照してください。 **Predict (DMX)**です。  
   
 ## <a name="see-also"></a>参照  
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomCount (&) #40";"DMX"&"#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent & #40";"DMX"&"#41;](../dmx/toppercent-dmx.md)   
- [TopSum (&) #40";"DMX"&"#41;](../dmx/topsum-dmx.md)  
+ [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomCount &#40;DMX"&"#41;](../dmx/bottomcount-dmx.md)   
+ [TopPercent &#40;DMX"&"#41;](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;DMX"&"#41;](../dmx/topsum-dmx.md)  
   
   
 

@@ -108,7 +108,7 @@ ms.lasthandoff: 08/02/2017
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソール (&) #40";"OracleToSQL"&"#41; の実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+コンソールの運用には、次の手順は[SSMA コンソール &#40;OracleToSQL"&"#41; の実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
 [SSMA コンソールを実行します。](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  

@@ -114,12 +114,12 @@ NATURAL PREDICTION JOIN
  **注**この例は、TopPercent の使用を示すことだけを提供します。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
   
 > [!WARNING]  
->  TOPPERCENT および BOTTOMPERCENT の MDX 関数は、比率の計算に使用される値に負の数が含まれていた場合に、予期しない結果を生成する場合があります。 この動作は、DMX 関数には影響しません。 詳細については、次を参照してください。 [BottomPercent & #40 です。MDX と #41 です。](../mdx/bottompercent-mdx.md).  
+>  TOPPERCENT および BOTTOMPERCENT の MDX 関数は、比率の計算に使用される値に負の数が含まれていた場合に、予期しない結果を生成する場合があります。 この動作は、DMX 関数には影響しません。 詳細については、次を参照してください。 [BottomPercent &#40;です。MDX と #41 です。](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 

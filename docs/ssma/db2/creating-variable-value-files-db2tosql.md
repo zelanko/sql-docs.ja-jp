@@ -93,7 +93,7 @@ ms.lasthandoff: 08/02/2017
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[サーバー接続ファイル (&) #40";"DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+コンソールの運用には、次の手順は[サーバー接続ファイル &#40;DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
 ## <a name="see-also"></a>参照  
 [サーバー接続ファイルを作成します。](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  

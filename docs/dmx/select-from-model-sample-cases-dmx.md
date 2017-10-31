@@ -39,7 +39,7 @@ ms.lasthandoff: 08/02/2017
 
   データ マイニング モデルの学習に使用されるケースを表すサンプル ケースを返します。  
   
- このステートメントを使用するには、マイニング モデルの作成時にドリルスルーを使用可能にする必要があります。 ドリルスルーを有効にする方法の詳細については、次を参照してください。[マイニング モデルの作成 (&) #40";"DMX"&"#41;](../dmx/create-mining-model-dmx.md)、 [SELECT INTO & #40";"DMX"&"#41;](../dmx/select-into-dmx.md)、および[ALTER MINING STRUCTURE & #40";"DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)です。  
+ このステートメントを使用するには、マイニング モデルの作成時にドリルスルーを使用可能にする必要があります。 ドリルスルーを有効にする方法の詳細については、次を参照してください。[マイニング モデルの作成 &#40;DMX"&"#41;](../dmx/create-mining-model-dmx.md)、 [SELECT INTO &#40;DMX"&"#41;](../dmx/select-into-dmx.md)、および[ALTER MINING STRUCTURE &#40;DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -79,10 +79,10 @@ WHERE IsInNode('000000003')
 ```  
   
 ## <a name="see-also"></a>参照  
- [選択 (&) #40";"DMX"&"#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択 &#40;DMX"&"#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

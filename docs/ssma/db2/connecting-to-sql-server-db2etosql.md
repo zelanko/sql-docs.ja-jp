@@ -48,7 +48,7 @@ DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnov
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 DB2 データベース オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]DB2 データベースやデータベースを移行します。  
   
-接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 接続した後は、DB2 スキーマ レベルでは、このマッピングをカスタマイズすることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server スキーマ (&) #40";"DB2ToSQL"&"#41; への DB2 スキーマのマッピング](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
+接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 接続した後は、DB2 スキーマ レベルでは、このマッピングをカスタマイズすることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server スキーマ &#40;DB2ToSQL"&"#41; への DB2 スキーマのマッピング](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
   
 > [!IMPORTANT]  
 > 接続しようとする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、ことを確認して、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が実行されていると、接続を受け入れることができます。  
@@ -114,15 +114,15 @@ DB2 データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
 ## <a name="next-step"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
--   DB2 スキーマ間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマを参照してください。 [SQL Server スキーマ (&) #40";"DB2ToSQL"&"#41; への DB2 スキーマのマッピング](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
+-   DB2 スキーマ間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマを参照してください。 [SQL Server スキーマ &#40;DB2ToSQL"&"#41; への DB2 スキーマのマッピング](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)です。  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクトの設定 & #40 です。変換"&"#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)セクションを関連するとします。  
+-   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクトの設定 &#40;です。変換"&"#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)セクションを関連するとします。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング DB2 と SQL Server データ型 (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング DB2 と SQL Server データ型 &#40;DB2ToSQL"&"#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
   
--   DB2 データベース オブジェクトの定義を変換できる場合は、次のタスクを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [DB2 スキーマを変換する (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。  
+-   DB2 データベース オブジェクトの定義を変換できる場合は、次のタスクを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [DB2 スキーマを変換する &#40;DB2ToSQL"&"#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

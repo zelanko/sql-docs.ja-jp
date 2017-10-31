@@ -36,12 +36,12 @@ ms.lasthandoff: 08/02/2017
 # <a name="ltsource-data-querygt"></a>&lt;ソース データ クエリ&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データ マイニング モデルのトレーニングをマイニング モデルから予測の作成は、外部にあるデータにアクセスする必要がある、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。 使用する、\<ソース データ クエリ > 句でデータ マイニング拡張機能 (DMX) をこの外部データを定義します。 [INSERT INTO (&) #40";"DMX"&"#41;](../dmx/insert-into-dmx.md)、 [SELECT FROM &#60; モデル &#62;。予測結合 & #40";"DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)、および[SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)ステートメントはすべて**\<ソース データ クエリ >**です。  
+  データ マイニング モデルのトレーニングをマイニング モデルから予測の作成は、外部にあるデータにアクセスする必要がある、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。 使用する、\<ソース データ クエリ > 句でデータ マイニング拡張機能 (DMX) をこの外部データを定義します。 [INSERT INTO &#40;DMX"&"#41;](../dmx/insert-into-dmx.md)、 [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)、および[SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)ステートメントはすべて**\<ソース データ クエリ >**です。  
   
 ## <a name="query-types"></a>クエリの種類  
  ソース データの指定には、最も一般的な次の 3 つの方法があります。  
   
- [OPENQUERY (&) #40";"DMX"&"#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;DMX"&"#41;](../dmx/source-data-query-openquery.md)  
  このステートメントは、外部のインスタンスにデータを照会する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、既存のデータ ソースを使用しています。  
   
  中に**OPENQUERY**の関数に似ています**OPENROWSET**、 **OPENQUERY**次の利点があります。  
@@ -50,10 +50,10 @@ ms.lasthandoff: 08/02/2017
   
 -   管理者は、サーバー上のデータがアクセスされる方法を制御しやすくなります。 たとえば、管理者は、サーバーに読み込まれるプロバイダーや、アクセスできる外部データを管理できます。  
   
- [OPENROWSET (&) #40";"DMX"&"#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX"&"#41;](../dmx/source-data-query-openrowset.md)  
  このステートメントは、外部のインスタンスにデータを照会する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、既存のデータ ソースを使用しています。  
   
- [図形 (&) #40";"DMX"&"#41;](../dmx/source-data-query-shape.md)  
+ [図形 &#40;DMX"&"#41;](../dmx/source-data-query-shape.md)  
  このステートメントは複数のデータ ソースをクエリして、入れ子になったテーブルを作成します。 使用して**図形**、1 つの階層テーブルに複数のソースからデータを組み合わせることができます。 これは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能を利用して、テーブル内にテーブルを埋め込むことによってテーブルを入れ子にします。  
   
  ソース データの指定には、次のオプションを使用することもできます。  
@@ -69,8 +69,8 @@ ms.lasthandoff: 08/02/2017
 -   行セット パラメーター  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
  [入れ子になったテーブルと #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
   

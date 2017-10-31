@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  データ マイニング拡張機能 (DMX) では、ドリルスルーはモデルの作成時にのみ可能です。 使用して、既存のモデルにドリルスルーを追加することができます[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]が、表示したり、ケースをクエリする前に、モデルが再処理する必要があります。  
   
- ドリルスルーを有効にする方法の詳細については、次を参照してください。[マイニング モデルの作成 (&) #40";"DMX"&"#41;](../dmx/create-mining-model-dmx.md)、 [SELECT INTO & #40";"DMX"&"#41;](../dmx/select-into-dmx.md)、および[ALTER MINING STRUCTURE & #40";"DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)です。  
+ ドリルスルーを有効にする方法の詳細については、次を参照してください。[マイニング モデルの作成 &#40;DMX"&"#41;](../dmx/create-mining-model-dmx.md)、 [SELECT INTO &#40;DMX"&"#41;](../dmx/select-into-dmx.md)、および[ALTER MINING STRUCTURE &#40;DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -73,7 +73,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="remarks"></a>解説  
  マイニング モデルとマイニング構造の両方についてドリルスルーを有効にした場合、そのモデルと構造に対するドリルスルー権限を持つロールのメンバー ユーザーが、マイニング モデルに含まれていないマイニング構造の列にアクセスできるようになります。 したがって、機密データまたは個人情報を保護する必要がありますを構築、個人情報をマスクし、付与、するデータ ソース ビュー **AllowDrillthrough**必要がある場合にのみ、マイニング構造に対する権限。  
   
- [Lag (&) #40";"DMX"&"#41;](../dmx/lag-dmx.md)を返したりフィルター各ケースと初期時間の間のタイム ラグ タイム シリーズ モデルで関数を使用できます。  
+ [Lag &#40;DMX"&"#41;](../dmx/lag-dmx.md)を返したりフィルター各ケースと初期時間の間のタイム ラグ タイム シリーズ モデルで関数を使用できます。  
   
  使用して、 [IsInNode & # #40; DMX &#41;](../dmx/isinnode-dmx.md)で機能、**場所**句には、スキーマ行セットの NODE_UNIQUE_NAME 列によって指定されているノードに関連付けられているケースのみが返されます。  
   
@@ -101,13 +101,13 @@ AND IsInNode('002')
  構造列を返すには、マイニング モデルとマイニング構造の両方についてドリルスルー権限を有効にする必要があります。  
   
 > [!NOTE]  
->  すべての種類のマイニング モデルでドリルスルーがサポートされるわけではありません。 ドリルスルーをサポートするモデルについては、次を参照してください。[ドリルスルー クエリ (&) #40 です。 データ マイニング (&) #41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)です。  
+>  すべての種類のマイニング モデルでドリルスルーがサポートされるわけではありません。 ドリルスルーをサポートするモデルについては、次を参照してください。[ドリルスルー クエリ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)です。  
   
 ## <a name="see-also"></a>参照  
- [選択 (&) #40";"DMX"&"#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択 &#40;DMX"&"#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

@@ -31,9 +31,9 @@ ms.lasthandoff: 08/02/2017
 ボタンを使用は、正しい順序でオブジェクトを配置するオブジェクトの一覧で、グリッドの一番上に配置します。 使用する代わりに、ボタンが右のときに、行がオンになります。  
   
 ## <a name="next-step"></a>次の手順  
-[フィニッシュのテスト_ケース準備 (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[フィニッシュのテスト_ケース準備 &#40;OracleToSQL"&"#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト (&) #40";"OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

@@ -27,7 +27,7 @@ ms.lasthandoff: 10/24/2017
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
   
- ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文規則では、次を参照してください。[コマンド プロンプト ユーティリティ リファレンス (&) #40";"データベース エンジン"&"#41;](../tools/command-prompt-utility-reference-database-engine.md)です。  
+ ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文規則では、次を参照してください。[コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン"&"#41;](../tools/command-prompt-utility-reference-database-engine.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -93,11 +93,11 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_primary_databases & #40 です。TRANSACT-SQL と #41 です。](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
- [log_shipping_secondary & #40 です。TRANSACT-SQL と #41 です。](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
- [sp_cleanup_log_shipping_history & #40 です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_help_log_shipping_primary_database & #40 です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [sp_help_log_shipping_secondary_database & #40 です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
+ [log_shipping_primary_databases &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
+ [log_shipping_secondary &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_help_log_shipping_primary_database &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
+ [sp_help_log_shipping_secondary_database &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   
