@@ -65,7 +65,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |DELETE FROM MINING STRUCTURE*\<構造 >*です。場合|マイニング構造を ProcessClearStructureOnly を実行します。 関連するマイニング モデルは保存したまま、すべての内容がマイニング構造から削除されます。 マイニング構造が削除された後では、関連するマイニング モデルでのドリルスルーは失敗します。|  
 |マイニング モデルから削除*\<モデル >*<br /><br /> または<br /><br /> マイニング モデルから削除*\<モデル >*です。コンテンツ|ProcessClear をマイニング モデルを実行しますが、状態の値をそのまま残ります。 状態値は、その列で使用できる状態を表します。 たとえば、性別の列の状態値は、男性と女性です。|  
   
- 処理の種類の詳細については、次を参照してください。[型要素 & #40 です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
+ 処理の種類の詳細については、次を参照してください。[型要素 &#40;です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
   
 ## <a name="examples"></a>使用例  
  次の例では、すべての内容が NB_Sample モデルから削除されます。  
@@ -75,9 +75,9 @@ DELETE FROM NB_Sample.CONTENT
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

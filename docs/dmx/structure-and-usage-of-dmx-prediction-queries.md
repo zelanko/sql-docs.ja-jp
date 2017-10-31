@@ -83,18 +83,18 @@ ms.lasthandoff: 08/02/2017
   
  **ON**要素は、外部データセット内の列をマイニング モデルで定義されている列をマップします。 空の予測結合クエリまたは自然予測結合を作成する場合は、この要素を含める必要はありません。  
   
- 使用することができます、**場所**句を予測クエリの結果をフィルター処理します。 使用することができます、**上部**または**ORDER BY**句を最も可能性の高い予測を選択します。 詳細については、これらの句を使用して、次を参照してください。[選択 (&) #40";"DMX"&"#41;](../dmx/select-dmx.md)です。  
+ 使用することができます、**場所**句を予測クエリの結果をフィルター処理します。 使用することができます、**上部**または**ORDER BY**句を最も可能性の高い予測を選択します。 詳細については、これらの句を使用して、次を参照してください。[選択 &#40;DMX"&"#41;](../dmx/select-dmx.md)です。  
   
- 予測ステートメントの構文の詳細については、次を参照してください。 [SELECT FROM &#60; モデル &#62;。予測結合 & #40";"DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)と[SELECT FROM & 60 モデル &#62; (&) #40";"DMX"&"#41;](../dmx/select-from-model-dmx.md)です。  
+ 予測ステートメントの構文の詳細については、次を参照してください。 [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)と[SELECT FROM &60;モデル &#62; &#40;DMX"&"#41;](../dmx/select-from-model-dmx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
  [DMX の Select ステートメントを理解します](../dmx/understanding-the-dmx-select-statement.md)  
   
   

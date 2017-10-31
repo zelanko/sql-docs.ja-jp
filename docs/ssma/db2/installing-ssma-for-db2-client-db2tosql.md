@@ -53,7 +53,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   DB2 バージョン 5 や以降のバージョンを移行先の DB2 データベースへの接続用の Microsoft OLEDB プロバイダーです。  
   
--   アクセスおよびのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB の場所はで移行するデータベース オブジェクトとデータ。 詳細については、次を参照してください。 [SQL Server (&) #40";"DB2eToSQL"&"#41; への接続](../../ssma/db2/connecting-to-sql-server-db2etosql.md)です。  
+-   アクセスおよびのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB の場所はで移行するデータベース オブジェクトとデータ。 詳細については、次を参照してください。 [SQL Server &#40;DB2eToSQL"&"#41; への接続](../../ssma/db2/connecting-to-sql-server-db2etosql.md)です。  
   
 -   4 GB の RAM (推奨)。  
   
@@ -84,7 +84,7 @@ SSMA は Web からダウンロードします。 最新バージョンをダウ
 既定のインストール場所は C:\Program files \microsoft SQL Server Migration Assistant for DB2 です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

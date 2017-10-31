@@ -51,8 +51,8 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[DTAXML 要素 & #40";"DTA"&"#41;](../../tools/dta/dtaxml-element-dta.md)|  
-|**子要素**|[Server 要素 & #40";"DTA"&"#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload 要素 & #40";"DTA"&"#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [TuningOptions 要素 & #40";"DTA"&"#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Configuration 要素 & #40";"DTA"&"#41;](../../tools/dta/configuration-element-dta.md)|  
+|**親要素**|[DTAXML 要素 &#40;DTA"&"#41;](../../tools/dta/dtaxml-element-dta.md)|  
+|**子要素**|[Server 要素 &#40;DTA"&"#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload 要素 &#40;DTA"&"#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [TuningOptions 要素 &#40;DTA"&"#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Configuration 要素 &#40;DTA"&"#41;](../../tools/dta/configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザーの入力スキーマ階層のルートです。 データベース エンジン チューニング アドバイザーへの入力としては、チューニング対象のデータベースのサーバー、ワークロード、チューニング オプション、ユーザー指定の構成などを指定した引数を使用できます。  

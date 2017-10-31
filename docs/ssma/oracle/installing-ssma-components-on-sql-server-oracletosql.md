@@ -109,7 +109,7 @@ SSMA for Oracle サーバー コンポーネントをインストールする前
 データを移行するたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA を作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント ジョブ。 これらのジョブの名前は**ssma_oracle データ移行パッケージ {GUID}**に表示されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のエージェント ノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Jobs フォルダーでします。  
   
 ## <a name="see-also"></a>参照  
-[Oracle クライアント (&) #40";"OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[SQL Server (&) #40";"OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Oracle クライアント &#40;OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

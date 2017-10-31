@@ -69,7 +69,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

@@ -47,11 +47,11 @@ ms.lasthandoff: 08/02/2017
   
     -   ユーザーは、必要なソースとターゲット サーバーの定義に値を変更するだけで、必要なデータベースに接続できます。 例で提供されるすべての値が用意されてで使用可能な値を変数として、 **VariableValueFileSample.xml**です。  その他のすべての接続パラメーターは、ユーザーの作業サーバーの接続ファイルから削除できます。  
   
-    -   ソースとターゲット サーバーへの接続の詳細については、次を参照してください。[サーバー接続ファイル (&) #40";"DB2ToSQL"&"#41; を作成する](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)です。  
+    -   ソースとターゲット サーバーへの接続の詳細については、次を参照してください。[サーバー接続ファイル &#40;DB2ToSQL"&"#41; を作成する](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)です。  
   
 2.  **VariableValueFileSample.xml:**スクリプト ファイルのサンプルのコンソールで使用されているすべての変数と`ServersConnectionFileSample.xml`このファイルで照合されています。 ユーザーが単純に置き換えます。 サンプル変数にサンプルのコンソール スクリプトを実行するには、ユーザーに値は定義されているものと、このファイルをスクリプト ファイルと共に追加のコマンドライン引数として渡します。  
   
-    値のさまざまなファイルの詳細については、次を参照してください。[変数値のファイルを作成する (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)です。  
+    値のさまざまなファイルの詳細については、次を参照してください。[変数値のファイルを作成する &#40;DB2ToSQL"&"#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)です。  
   
 3.  **AssessmentReportGenerationSample.xml:**このサンプルには、ユーザーが使用できる、ユーザーが分析のために変換し、データの移行は開始する前に xml 評価レポートの生成ができるようにします。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
   
     ユーザーが複数のオブジェクトを評価する/彼のデータベースの場合は複数指定できます`metabase-object`ノードに示すように、`generate-assessment-report`サンプル コンソール スクリプト ファイルのコマンドの例 4 です。  
   
-    レポートを生成する方法の詳細については、次を参照してください。[レポートを生成する (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
+    レポートを生成する方法の詳細については、次を参照してください。[レポートを生成する &#40;DB2ToSQL"&"#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
   
     **Notes:**  
   
@@ -86,8 +86,8 @@ ms.lasthandoff: 08/02/2017
     |`migrate-data`|ターゲットに、ソース データを移行します。<br /><br />ユーザーが複数のオブジェクトを評価する/彼のデータベースの場合は倍数を指定できます`metabase-object`ノードに示すように、`migrate-data`サンプル コンソール スクリプト ファイルのコマンドの例 2 です。|`object-name:`テーブルを移行するために必要な名前/ソース データベースを指定します。 対応することを確認`object-type`で指定されているオブジェクトの種類に基づいて変更します`object-name`|  
   
 ## <a name="see-also"></a>参照  
-[変数値ファイル (&) #40";"DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
-[サーバーの接続ファイル (&) #40";"DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
-[生成するレポート (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/generating-reports-db2tosql.md)  
+[変数値ファイル &#40;DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[サーバーの接続ファイル &#40;DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+[生成するレポート &#40;DB2ToSQL"&"#41;](../../ssma/db2/generating-reports-db2tosql.md)  
   
 

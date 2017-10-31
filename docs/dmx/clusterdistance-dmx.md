@@ -63,7 +63,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>関連する予測関数  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クラスタ リング モデルを照会するためには、次の追加機能を提供します。  
   
--   使用して、[クラスター (&) #40";"DMX"&"#41;](../dmx/cluster-dmx.md)関数最も可能性の高いクラスターを返します。  
+-   使用して、[クラスター &#40;DMX"&"#41;](../dmx/cluster-dmx.md)関数最も可能性の高いクラスターを返します。  
   
 -   使用して、 [ClusterProbability & # #40; DMX &#41;](../dmx/clusterprobability-dmx.md)ケースが特定のクラスターに所属する確率を取得します。 この値は、クラスターとの距離とは逆の関係になります。  
   
@@ -139,9 +139,9 @@ NATURAL PREDICTION JOIN
 |0.97008209236394|  
   
 ## <a name="see-also"></a>参照  
- [クラスター (&) #40";"DMX"&"#41;](../dmx/cluster-dmx.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [クラスター &#40;DMX"&"#41;](../dmx/cluster-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
  [クラスタ リング モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

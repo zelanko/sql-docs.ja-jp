@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
  マイニング構造には、モデル名の後に「_structure」を追加した名前を付けます。これにより、構造名がモデル名から一意であることが保証されます。  
   
- 既存のマイニング構造のマイニング モデルを作成するには、使用、 [ALTER MINING STRUCTURE & #40";"DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)ステートメントです。  
+ 既存のマイニング構造のマイニング モデルを作成するには、使用、 [ALTER MINING STRUCTURE &#40;DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)ステートメントです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -114,11 +114,11 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  構造列の定義に使用できる、データ型、コンテンツの種類、列分布、モデリング フラグのリストについては、次のトピックを参照してください。  
   
--   [データ型 (&) #40";"データ マイニング"&"#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型 &#40;データ マイニング"&"#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類 (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列の分布 (&) #40";"データ マイニング"&"#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列の分布 &#40;データ マイニング"&"#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
 -   [モデリング フラグ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
@@ -207,9 +207,9 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

@@ -112,9 +112,9 @@ NATURAL PREDICTION JOIN
  **注**BottomSum の使用法を示すことだけを次の例を提供します。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
   
 ## <a name="see-also"></a>参照  
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent (&) #40";"DMX"&"#41;](../dmx/bottompercent-dmx.md)  
+ [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;DMX"&"#41;](../dmx/bottompercent-dmx.md)  
   
   
 

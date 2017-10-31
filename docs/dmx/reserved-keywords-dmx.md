@@ -46,13 +46,13 @@ ms.lasthandoff: 08/02/2017
   
  データベースのオブジェクトに名前を付ける場合、予約されたキーワードを使用しない名前付け規則の使用を推奨します。  
   
- データベースに予約されたキーワードと一致する名前が含まれている場合、これらのオブジェクトを参照するときに区切られた識別子を使用する必要があります。 詳細については、次を参照してください。[識別子 (&) #40";"DMX"&"#41;](../dmx/identifiers-dmx.md)です。  
+ データベースに予約されたキーワードと一致する名前が含まれている場合、これらのオブジェクトを参照するときに区切られた識別子を使用する必要があります。 詳細については、次を参照してください。[識別子 &#40;DMX"&"#41;](../dmx/identifiers-dmx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [DMX の Select ステートメントを理解します](../dmx/understanding-the-dmx-select-statement.md)  
   
   

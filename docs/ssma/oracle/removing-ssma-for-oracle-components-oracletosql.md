@@ -62,7 +62,7 @@ SSMA をアンインストールするを使用**プログラム追加と削除*
 アンインストール後にオブジェクトを確認できます、 **sysdb.ssma_oracle**スキーマ、および場合によっては、全体**sysdb**データベースを使用して、取り外されて[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]です。 ただし、他の SSMA 製品を使用する場合も使用、 **sysdb**データベース。 場合は、データベースが存在し、他のデータベースにはこのデータベース内のオブジェクトが参照されていないことを確認して、データベースをデタッチすることができます。  
   
 ## <a name="see-also"></a>参照  
-[Oracle クライアント (&) #40";"OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[SQL Server (&) #40";"OracleToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[Oracle クライアント &#40;OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   
 

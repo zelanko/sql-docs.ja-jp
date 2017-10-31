@@ -50,13 +50,13 @@ ms.lasthandoff: 08/02/2017
   
  コメントの長さには制限がありません。  
   
- DMX でさまざまな種類のコメントを使用する方法の詳細については、次を参照してください。[コメント (&) #40";"DMX"&"#41;](../dmx/comments-dmx.md)です。  
+ DMX でさまざまな種類のコメントを使用する方法の詳細については、次を参照してください。[コメント &#40;DMX"&"#41;](../dmx/comments-dmx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [スラッシュ スター & #40 です。コメント &#41;& # #40; DMX &#41;](../dmx/slash-star-comment-dmx.md)   
- [2 つのスラッシュ & #40 です。コメント &#41;& # #40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [演算子 (&) #40";"DMX"&"#41;](../dmx/operators-dmx.md)  
+ [スラッシュ スター &#40;です。コメント &#41;& # #40; DMX &#41;](../dmx/slash-star-comment-dmx.md)   
+ [2 つのスラッシュ &#40;です。コメント &#41;& # #40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)  
   
   
 

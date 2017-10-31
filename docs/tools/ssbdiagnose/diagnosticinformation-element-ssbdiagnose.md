@@ -57,13 +57,13 @@ ms.lasthandoff: 08/02/2017
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[なし] :|  
-|**子要素**|[Banner 要素 & #40";"ssbdiagnose"&"#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Issue 要素 & #40";"ssbdiagnose"&"#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
+|**子要素**|[Banner 要素 &#40;ssbdiagnose"&"#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Issue 要素 &#40;ssbdiagnose"&"#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
 ## <a name="remarks"></a>解説  
  XML 名前空間の詳細については、 [MSDN Library の「](http://go.microsoft.com/fwlink/?LinkId=7341) XML ドキュメントにおける名前空間 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ssbdiagnose ユーティリティ & #40 です。Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [ssbdiagnose ユーティリティ &#40;です。Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   
 

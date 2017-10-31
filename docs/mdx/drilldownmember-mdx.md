@@ -61,7 +61,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
 ## <a name="remarks"></a>解説  
  この関数は、階層によって順序付けられた子メンバーのセットを返します。また、2 番目のセットにも存在する 1 番目のセットで指定されたメンバーが含まれています。 最初のセットに親メンバーと 1 つ以上の子が含まれている場合、親メンバーはドリル ダウンされません。 1 番目のセットの次元は任意ですが、2 番目には 1 次元のセットを指定する必要があります。 1 番目のセット内の元のメンバーの間で順序を維持、それぞれの親メンバーの結果に含まれるすべての子メンバーが設定されること以外、関数がすぐに含まれています。 この関数は、最初のセットのメンバーのうち、2 番目のセット内にも存在する各メンバーの子メンバーを取得することによって結果セットを作成します。 場合**再帰**を指定すると、関数は、再帰的に比較し、結果セットに対して、結果内の各メンバーの子を取得する 2 番目のセットのメンバーを 2 番目のセットで、結果セットから他のメンバーが見つかるまで、2 番目のセット内にも存在します。  
   
- XMLA プロパティのクエリを実行する**MdpropMdxDrillFunctions**サーバーがドリル関数が提供するサポートのレベルを確認することができます。 参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  
+ XMLA プロパティのクエリを実行する**MdpropMdxDrillFunctions**サーバーがドリル関数が提供するサポートのレベルを確認することができます。 参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  
   
  1 番目のセットには、メンバーではなく組を含めることもできます。 組のドリル ダウンは OLE DB の拡張機能であり、メンバーではなく組のセットを返します。  
   
@@ -94,7 +94,7 @@ SELECT DrilldownMember
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
 

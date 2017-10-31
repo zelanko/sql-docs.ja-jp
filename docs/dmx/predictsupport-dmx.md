@@ -53,7 +53,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  省略した状態のサポートを返すには、設定、\<予測状態 > を NULL にします。  
   
 > [!NOTE]  
->  サポートされている値の計算方法は異なります。つまり、クエリの対象となるモデルに応じてこの値の解釈は異なる場合があります。 任意の特定のモデル型のサポートを計算する方法の詳細については、各アルゴリズムの種類を参照してください。[マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  サポートされている値の計算方法は異なります。つまり、クエリの対象となるモデルに応じてこの値の解釈は異なる場合があります。 任意の特定のモデル型のサポートを計算する方法の詳細については、各アルゴリズムの種類を参照してください。[マイニング モデル コンテンツ &#40;です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="examples"></a>使用例  
  次の例は、単一クエリを使用して、個人が自転車購入者となるかどうかを予測します。また、TM Decision Tree マイニング モデルに基づいて、予測に対するサポートも判断します。  

@@ -65,9 +65,9 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
 ```  
   
 ## <a name="see-also"></a>参照  
- [& #60 以外の場合はソース データ クエリ &#62;。](../dmx/source-data-query.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [&#60;以外の場合はソース データ クエリ &#62;。](../dmx/source-data-query.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

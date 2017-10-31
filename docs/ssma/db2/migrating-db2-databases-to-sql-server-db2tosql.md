@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  [新しい SSMA プロジェクト](http://msdn.microsoft.com/en-us/66437b45-4686-4fc7-a91b-ebde45e0f1b0)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクトの設定 & #40 です。変換"&"#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)セクションを関連するとします。 データ型マッピングをカスタマイズする方法については、次を参照してください。 [DB2 のマッピングと SQL Server データ型 (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクトの設定 &#40;です。変換"&"#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)セクションを関連するとします。 データ型マッピングをカスタマイズする方法については、次を参照してください。 [DB2 のマッピングと SQL Server データ型 &#40;DB2ToSQL"&"#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
   
 2.  [DB2 データベースに接続](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)です。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/02/2017
 9. 必要に応じて、データベース アプリケーションを更新します。  
   
 ## <a name="see-also"></a>参照  
-[DB2 (&) #40";"DB2ToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)  
-[入門 SSMA for DB2 (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
+[DB2 &#40;DB2ToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)  
+[入門 SSMA for DB2 &#40;DB2ToSQL"&"#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
   
 

@@ -25,9 +25,9 @@ ms.lasthandoff: 08/02/2017
 # <a name="shortcut-keysoracle-to-sql"></a>ショートカット キー (Oracle To SQL)
 SSMA アプリケーション間を移動するキーボード ショートカットを使用することができます。 詳細については、次の各トピックを参照してください。  
   
--   [メニュー コマンドと他のショートカット キー (&) #40";"Oracle から SQL"&"#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
+-   [メニュー コマンドと他のショートカット キー &#40;Oracle から SQL"&"#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   
 ## <a name="see-also"></a>参照  
-[入門 SSMA for Oracle (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[入門 SSMA for Oracle &#40;OracleToSQL"&"#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   
 

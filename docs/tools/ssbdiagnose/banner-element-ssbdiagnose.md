@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[DiagnosticInformation 要素 & #40";"ssbdiagnose"&"#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**親要素**|[DiagnosticInformation 要素 &#40;ssbdiagnose"&"#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/02/2017
 ```  
   
 ## <a name="see-also"></a>参照  
- [ssbdiagnose ユーティリティ & #40 です。Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [ssbdiagnose ユーティリティ &#40;です。Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   
 

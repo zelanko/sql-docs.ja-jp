@@ -61,8 +61,8 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[DTAInput 要素 & #40";"DTA"&"#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**子要素**|[構成 (&) #40";"DTA"&"#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)|  
+|**親要素**|[DTAInput 要素 &#40;DTA"&"#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**子要素**|[構成 &#40;DTA"&"#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  

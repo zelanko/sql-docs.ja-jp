@@ -70,8 +70,8 @@ WHERE [[Model] = 'Patch kit'
  このクエリによって返される同じデータを表示する別の方法は、アソシエーション ビューアーでモデルを開き、アイテム セットを右クリックする**Patch kit = Existing**を選択、**ドリル スルー**オプションをクリックし **モデルの場合のみ**です。  
   
 ## <a name="see-also"></a>参照  
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
- [モデル フィルターの構文と例 & #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
+ [モデル フィルターの構文と例 &#40;です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   
 

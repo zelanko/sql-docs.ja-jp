@@ -50,8 +50,8 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[構成 (&) #40";"DTA"&"#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)|  
-|**子要素**|[データベース (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [データベース (&) #40";"DTA"&"#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [Recommendation 要素 & #40";"DTA"&"#41;](../../tools/dta/recommendation-element-dta.md)|  
+|**親要素**|[構成 &#40;DTA"&"#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)|  
+|**子要素**|[データベース &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [データベース &#40;DTA"&"#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [Recommendation 要素 &#40;DTA"&"#41;](../../tools/dta/recommendation-element-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseTypecomplexType** の名前です。 この **Database** 要素を、ルートの親要素が **Server** 要素である (XML 入力ファイルの最上位に発生する) 他の要素と混同しないでください。 詳細については、「[Server の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)」を参照してください。  

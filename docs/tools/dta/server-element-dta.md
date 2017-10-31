@@ -51,8 +51,8 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[DTAInput 要素 & #40";"DTA"&"#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**子要素**|[サーバー (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [サーバー (&) #40";"DTA"&"#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)|  
+|**親要素**|[DTAInput 要素 &#40;DTA"&"#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**子要素**|[サーバー &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [サーバー &#40;DTA"&"#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  **Server** 要素は、 **DTAInput** 要素に 1 個だけ指定できます。 この要素は、DTA XML スキーマの **ServerDetailsTypecomplexType** の名前です。 この **Server** 要素を **Configuration** 要素の子要素と混同しないでください。 詳細については、「[Configuration のサーバー要素 &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)」を参照してください。  

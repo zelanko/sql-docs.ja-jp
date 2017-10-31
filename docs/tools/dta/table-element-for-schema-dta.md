@@ -56,8 +56,8 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[データベース (&) #40";"DTA"&"#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)|  
-|**子要素**|[テーブル (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-table-dta.md)|  
+|**親要素**|[データベース &#40;DTA"&"#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)|  
+|**子要素**|[テーブル &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  **Table** 要素を指定しない場合、データベース エンジン チューニング アドバイザーでは、指定されているデータベースのすべてのテーブルがチューニング対象と見なされます。  

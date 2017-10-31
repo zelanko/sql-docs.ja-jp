@@ -81,14 +81,14 @@ SSMA 変換を選択した DB2 データベース オブジェクトでこの評
   
     -   SSMA で DB2 構文を更新します。 プロシージャ、関数、トリガー、関数をパッケージおよびパッケージ化されたプロシージャの構文を更新することができます。 構文を更新するには、DB2 メタデータ エクスプ ローラー ペインでオブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを変更します。 項目から移動するときに、更新された構文の保存が求められます。 表示するには、報告されたエラー オブジェクトを**レポート**タブです。  
   
-    -   DB2 の場合では、削除するか、問題のあるコードを修正する DB2 オブジェクトを変更できます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [DB2 データベース (&) #40";"DB2ToSQL"&"#41; への接続](../../ssma/db2/connecting-to-db2-database-db2tosql.md)です。  
+    -   DB2 の場合では、削除するか、問題のあるコードを修正する DB2 オブジェクトを変更できます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [DB2 データベース &#40;DB2ToSQL"&"#41; への接続](../../ssma/db2/connecting-to-db2-database-db2tosql.md)です。  
   
     -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーと DB2 メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横のチェック ボックスをオフ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]DB2 からデータを移行します。  
   
 ## <a name="next-step"></a>次の手順  
-[DB2 スキーマ (&) #40";"DB2ToSQL"&"#41; への変換](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
+[DB2 スキーマ &#40;DB2ToSQL"&"#41; への変換](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

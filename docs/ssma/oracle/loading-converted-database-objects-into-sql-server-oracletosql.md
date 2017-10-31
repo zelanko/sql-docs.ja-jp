@@ -115,6 +115,6 @@ SQL Server オブジェクトの定義に、1 つ以上のスクリプトを保�
 移行プロセスの次の手順が、 [SQL Server にデータを移行](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

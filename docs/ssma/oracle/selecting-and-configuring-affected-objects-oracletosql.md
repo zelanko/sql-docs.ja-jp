@@ -112,11 +112,11 @@ SSMA テスターによって生成された SELECT ステートメントを表�
 カスタム検証を提供するような SELECT ステートメントを編集することができます。 Oracle および SQL Server ステートメントで変更を保存するには、**適用**これに対応して、ソースとターゲット SQL では、下にあるボタンをクリックします。  
   
 ## <a name="next-step"></a>次の手順  
-[呼び出し順序 (&) #40";"OracleToSQL"&"#41; のカスタマイズ](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[呼び出し順序 &#40;OracleToSQL"&"#41; のカスタマイズ](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[フィニッシュのテスト_ケース準備 (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[実行するテスト_ケース (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[データベース オブジェクト (&) #40";"OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[フィニッシュのテスト_ケース準備 &#40;OracleToSQL"&"#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[実行するテスト_ケース &#40;OracleToSQL"&"#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

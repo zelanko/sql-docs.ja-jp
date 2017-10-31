@@ -51,8 +51,8 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[Workload 要素 & #40";"DTA"&"#41;](../../tools/dta/workload-element-dta.md)|  
-|**子要素**|[データベース (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Database の Schema 要素 &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|**親要素**|[Workload 要素 &#40;DTA"&"#41;](../../tools/dta/workload-element-dta.md)|  
+|**子要素**|[データベース &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Database の Schema 要素 &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseDetailsTypecomplexType** の名前です。 この **Database** 要素を、ルートの親要素が **Configuration** 要素である他の要素と混同しないでください (「[Configuration の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)」を参照)。  

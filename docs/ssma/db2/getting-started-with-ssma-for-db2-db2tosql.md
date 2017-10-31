@@ -31,7 +31,7 @@ ms.lasthandoff: 08/02/2017
 このトピックでは、インストール プロセスを導入し、し SSMA ユーザー インターフェイスを理解するために役立ちます。  
   
 ## <a name="installing-ssma"></a>SSMA のインストール  
-SSMA を使用する必要がありますに初めてインストールする SSMA クライアント プログラム ソース DB2 データベースとのターゲット インスタンスの両方にアクセスできるコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 実行しているコンピューター上の DB2 OLEDB プロバイダー[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントは、データの移行と DB2 システム関数のエミュレーションをサポートします。 インストール手順については、次を参照してください。 [DB2 (&) #40";"DB2ToSQL"&"#41; のインストールの SSMA](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)です。  
+SSMA を使用する必要がありますに初めてインストールする SSMA クライアント プログラム ソース DB2 データベースとのターゲット インスタンスの両方にアクセスできるコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 実行しているコンピューター上の DB2 OLEDB プロバイダー[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントは、データの移行と DB2 システム関数のエミュレーションをサポートします。 インストール手順については、次を参照してください。 [DB2 &#40;DB2ToSQL"&"#41; のインストールの SSMA](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)です。  
   
 SSMA を起動する をクリックして**開始**、 をポイント**すべてのプログラム**、 をポイント **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for DB2**、クリックして **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for DB2**です。  
   
@@ -46,7 +46,7 @@ SSMA をインストールした後に、DB2 データベースを移行 SSMA �
   
 使用するスキーマの変換後の同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 メタデータ エクスプ ローラーに戻るし、への DB2 スキーマからデータを移行できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
   
-これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)です。  
+これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)です。  
   
 次のセクションでは、SSMA ユーザー インターフェイスの機能を説明します。  
   
@@ -58,9 +58,9 @@ DB2 メタデータ エクスプ ローラーでは、DB2 スキーマについ�
   
 -   各スキーマ内のオブジェクトを参照します。  
   
--   変換に、オブジェクトを選択し、オブジェクトに変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文です。 詳細については、次を参照してください。 [DB2 スキーマを変換する (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。  
+-   変換に、オブジェクトを選択し、オブジェクトに変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文です。 詳細については、次を参照してください。 [DB2 スキーマを変換する &#40;DB2ToSQL"&"#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。  
   
--   データ移行のためのテーブルを選択し、これらのテーブルからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)です。  
+-   データ移行のためのテーブルを選択し、これらのテーブルからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)です。  
   
 #### <a name="sql-server-metadata-explorer"></a>SQL Server メタデータ エクスプ ローラー  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーのインスタンスに関する情報が表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 インスタンスに接続する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA は、そのインスタンスに関するメタデータを取得し、プロジェクト ファイルに格納します。  
@@ -113,7 +113,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 -   エラー一覧 ウィンドウは、並べ替え可能な一覧で、エラー、警告、および情報メッセージを示します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-[ユーザー インターフェイス リファレンス (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[ユーザー インターフェイス リファレンス &#40;DB2ToSQL"&"#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
 

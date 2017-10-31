@@ -69,7 +69,7 @@ ms.lasthandoff: 08/03/2017
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
  [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services & #40 です。SSIS &#41;式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;です。SSIS &#41;式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
 

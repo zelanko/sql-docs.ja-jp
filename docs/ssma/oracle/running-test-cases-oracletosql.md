@@ -83,11 +83,11 @@ SSMA テスターは、テストの開始前にテストの実行のすべての
 SSMA テスターがで作成された補助オブジェクトをクリーンアップ、終了処理中に、**初期化**手順です。  
   
 ## <a name="next-step"></a>次の手順  
-[テスト_ケースのレポートの表示 (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[テスト_ケースのレポートの表示 &#40;OracleToSQL"&"#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
 [選択と構成オブジェクトをテスト (&) #40 です。 OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[選択と構成を受けるオブジェクト (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[データベース オブジェクト (&) #40";"OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[選択と構成を受けるオブジェクト &#40;OracleToSQL"&"#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

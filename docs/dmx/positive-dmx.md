@@ -48,9 +48,9 @@ ms.lasthandoff: 08/02/2017
  指定されたパラメーターのデータ型を持つ値です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [演算子 (&) #40";"DMX"&"#41;](../dmx/operators-dmx.md)   
- [単項演算子 (&) #40";"DMX"&"#41;](../dmx/operators-unary.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)   
+ [単項演算子 &#40;DMX"&"#41;](../dmx/operators-unary.md)  
   
   
 

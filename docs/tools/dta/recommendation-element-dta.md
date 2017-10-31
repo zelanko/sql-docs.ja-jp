@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[スキーマ (&) #40; DTA &#41; の table 要素](../../tools/dta/table-element-for-schema-dta.md)|  
+|**親要素**|[スキーマ &#40; DTA &#41; の table 要素](../../tools/dta/table-element-for-schema-dta.md)|  
 |**子要素**|[Create 要素 &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](http://go.microsoft.com/fwlink/?linkid=43100)を参照してください。|  
   
 ## <a name="remarks"></a>解説  

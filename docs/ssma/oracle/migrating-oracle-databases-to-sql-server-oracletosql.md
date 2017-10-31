@@ -30,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  [新しい SSMA プロジェクトを作成](http://msdn.microsoft.com/en-us/ee5d94c0-c7a6-4779-bd32-729bdaf61e1b)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクト オプションの設定 (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/setting-project-options-oracletosql.md)です。 データ型マッピングをカスタマイズする方法については、次を参照してください。[マッピング Oracle と SQL Server データ型 (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)です。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクト オプションの設定 &#40;OracleToSQL"&"#41;](../../ssma/oracle/setting-project-options-oracletosql.md)です。 データ型マッピングをカスタマイズする方法については、次を参照してください。[マッピング Oracle と SQL Server データ型 &#40;OracleToSQL"&"#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)です。  
   
 2.  [Oracle データベース サーバーに接続](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)です。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 9. 必要に応じて、データベース アプリケーションを更新します。  
   
 ## <a name="see-also"></a>参照  
-[Oracle (&) #40";"OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
-[入門 SSMA for Oracle (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[Oracle &#40;OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
+[入門 SSMA for Oracle &#40;OracleToSQL"&"#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   
 

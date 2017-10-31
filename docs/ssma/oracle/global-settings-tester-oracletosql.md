@@ -69,6 +69,6 @@ ms.lasthandoff: 08/02/2017
 2.  いいえ  
   
 ## <a name="see-also"></a>参照  
-[フィニッシュのテスト_ケース準備 (&) #40";"OracleToSQL"&"#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[フィニッシュのテスト_ケース準備 &#40;OracleToSQL"&"#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 

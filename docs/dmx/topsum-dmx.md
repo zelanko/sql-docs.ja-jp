@@ -113,9 +113,9 @@ NATURAL PREDICTION JOIN
  **注**の使用法を示すことだけを次の例が提供される**TopSum**です。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
   
 ## <a name="see-also"></a>参照  
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
- [TopPercent & #40";"DMX"&"#41;](../dmx/toppercent-dmx.md)  
+ [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
+ [TopPercent &#40;DMX"&"#41;](../dmx/toppercent-dmx.md)  
   
   
 

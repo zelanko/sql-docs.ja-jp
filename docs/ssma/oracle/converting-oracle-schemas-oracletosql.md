@@ -33,7 +33,7 @@ Oracle に接続すると後に、接続[!INCLUDE[ssNoVersion](../../includes/ss
 変換中には、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 Oracle データベースまたは必要な変換の結果を得るため、変換プロセスを変更するのにかどうかを確認するのにには、出力とエラー情報を使用します。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
-オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクトの設定 & #40 です。変換"&"#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換"&"#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>変換結果  
 次の表は、変換されますが、Oracle のオブジェクトし、結果として得られる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。  
@@ -114,7 +114,7 @@ Oracle データベースのオブジェクトに変換するには、最初に�
   
 -   プロシージャのソース コードを変更することができます、 **SQL**タブです。  
   
--   削除するか、問題のあるコードを変更するには、Oracle データベース内のオブジェクトを変更することができます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Oracle データベース (&) #40";"OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)です。  
+-   削除するか、問題のあるコードを変更するには、Oracle データベース内のオブジェクトを変更することができます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Oracle データベース &#40;OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)です。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーと Oracle メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]および Oracle からのデータの移行。  
   
@@ -122,6 +122,6 @@ Oracle データベースのオブジェクトに変換するには、最初に�
 移行プロセスの次の手順が、[変換後のオブジェクトを SQL Server に読み込む](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a)します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

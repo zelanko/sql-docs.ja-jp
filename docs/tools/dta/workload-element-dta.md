@@ -52,7 +52,7 @@ ms.lasthandoff: 08/02/2017
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**子要素**|[File 要素 & #40";"DTA"&"#41;](../../tools/dta/file-element-dta.md)<br /><br /> [ワークロード (&) #40; DTA &#41; の database 要素](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 要素 & #40";"DTA"&"#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**子要素**|[File 要素 &#40;DTA"&"#41;](../../tools/dta/file-element-dta.md)<br /><br /> [ワークロード &#40; DTA &#41; の database 要素](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 要素 &#40;DTA"&"#41;](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 データベース エンジン チューニング アドバイザーは、ワークロードとして [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、トレース ファイル、およびトレース テーブルを使用できます。  

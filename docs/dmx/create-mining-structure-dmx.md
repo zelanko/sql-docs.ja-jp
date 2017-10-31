@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベースに新しいマイニング構造を作成し、必要に応じてトレーニング パーティションとテスト パーティションを定義します。 使用することができます、マイニング構造を作成した後、 [ALTER MINING STRUCTURE & #40";"DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)ステートメントに、マイニング構造にモデルを追加します。  
+  データベースに新しいマイニング構造を作成し、必要に応じてトレーニング パーティションとテスト パーティションを定義します。 使用することができます、マイニング構造を作成した後、 [ALTER MINING STRUCTURE &#40;DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)ステートメントに、マイニング構造にモデルを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -112,11 +112,11 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  データ型、コンテンツの種類、列の分布、および構造列の定義に使用できるモデリング フラグの一覧は、次のトピックを参照してください。  
   
--   [データ型 (&) #40";"データ マイニング"&"#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型 &#40;データ マイニング"&"#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類 (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列の分布 (&) #40";"データ マイニング"&"#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列の分布 &#40;データ マイニング"&"#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
 -   [モデリング フラグ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
@@ -154,7 +154,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  次の例では、DMX を使用して、提示されたパラメーターによってマイニング構造を作成する方法について説明します。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>例 1 : トレーニング セットを含まない構造を追加する  
- 次の例と呼ばれる新しいマイニング構造を作成する`New Mailing`関連するマイニング モデルを作成するしたりせず、提示されたパラメーターを使用します。 構造にマイニング モデルを追加する方法については、次を参照してください。 [ALTER MINING STRUCTURE & #40";"DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)です。  
+ 次の例と呼ばれる新しいマイニング構造を作成する`New Mailing`関連するマイニング モデルを作成するしたりせず、提示されたパラメーターを使用します。 構造にマイニング モデルを追加する方法については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX"&"#41;](../dmx/alter-mining-structure-dmx.md)です。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -195,9 +195,9 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[インデックス (&) #40";"DTA"&"#41; の column 要素](../../tools/dta/column-element-for-index-dta.md)|  
+|**親要素**|[インデックス &#40;DTA"&"#41; の column 要素](../../tools/dta/column-element-for-index-dta.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  

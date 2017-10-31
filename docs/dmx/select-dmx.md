@@ -113,7 +113,7 @@ WHERE < condition expression >
 ## <a name="predictions"></a>予測  
  予測の作成に使用できる構文には 2 つの種類があります。  
   
--   [SELECT FROM &#60; モデル &#62;。予測結合 & #40";"DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
 -   [SELECT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-from-model-dmx.md)  
   
@@ -134,25 +134,25 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
   
  [SELECT DISTINCT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。コンテンツ (&) #40";"DMX"&"#41;](../dmx/select-from-model-content-dmx.md)  
+ [SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX"&"#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。場合 (&) #40";"DMX"&"#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX"&"#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。SAMPLE_CASES (&) #40";"DMX"&"#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM &#60; モデル &#62;。SAMPLE_CASES &#40;DMX"&"#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT (&) #40";"DMX"&"#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT &#40;DMX"&"#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。予測結合 & #40";"DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
  [SELECT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-from-model-dmx.md)  
   
  [SELECT FROM &#60; 構造 &#62;。場合](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)  
   
   
 

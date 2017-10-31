@@ -65,7 +65,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID パラメーターは、結果に $NODEID 列を返します。 NODE_ID は、特定のケースに対して予測が実行されるコンテンツ ノードです。 テーブルの列に対して予測を使用する場合、このパラメーターは省略できます。  
   
-  *n* パラメーター テーブルの列に適用されます。 これにより、予測の種類に基づいて、返される列の数が設定されます。 呼び出す、基になる列がシーケンスの場合、 **PredictSequence**関数。 基になる列が時系列の場合は、呼び出し、 **PredictTimeSeries**関数。 予測の種類が結合型を呼び出し、 **PredictAssociation**関数。  
+ *n* パラメーター テーブルの列に適用されます。 これにより、予測の種類に基づいて、返される列の数が設定されます。 呼び出す、基になる列がシーケンスの場合、 **PredictSequence**関数。 基になる列が時系列の場合は、呼び出し、 **PredictTimeSeries**関数。 予測の種類が結合型を呼び出し、 **PredictAssociation**関数。  
   
  **Predict**関数はポリモーフィズムをサポートします。  
   
@@ -101,9 +101,9 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 

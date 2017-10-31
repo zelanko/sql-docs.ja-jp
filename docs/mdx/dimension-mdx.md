@@ -84,11 +84,11 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [カウント & #40 です。階層レベルが"&"#41;& #40 です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)   
- [カウント & #40 です。セット &#41;& #40 です。MDX と #41 です。](../mdx/count-set-mdx.md)   
- [レベル & #40 です。MDX と #41 です。](../mdx/levels-mdx.md)   
- [メンバーと #40 です。セット &#41;& #40 です。MDX と #41 です。](../mdx/members-set-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [カウント &#40;です。階層レベルが"&"#41;&#40;です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)   
+ [カウント &#40;です。セット &#41;&#40;です。MDX と #41 です。](../mdx/count-set-mdx.md)   
+ [レベル &#40;です。MDX と #41 です。](../mdx/levels-mdx.md)   
+ [メンバーと #40 です。セット &#41;&#40;です。MDX と #41 です。](../mdx/members-set-mdx.md)   
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
 

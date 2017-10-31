@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[サーバー (&) #40";"DTA"&"#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)|  
+|**親要素**|[サーバー &#40;DTA"&"#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  

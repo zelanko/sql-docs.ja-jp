@@ -43,85 +43,85 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="dtaxml-root-element"></a>DTAXML ルート要素  
   
--   [DTAXML 要素 & #40";"DTA"&"#41;](../../tools/dta/dtaxml-element-dta.md)  
+-   [DTAXML 要素 &#40;DTA"&"#41;](../../tools/dta/dtaxml-element-dta.md)  
   
 ## <a name="dtainput-elements"></a>DTAInput 要素  
   
--   [DTAInput 要素 & #40";"DTA"&"#41;](../../tools/dta/dtainput-element-dta.md)  
+-   [DTAInput 要素 &#40;DTA"&"#41;](../../tools/dta/dtainput-element-dta.md)  
   
--   [Server 要素 & #40";"DTA"&"#41;](../../tools/dta/server-element-dta.md)  
+-   [Server 要素 &#40;DTA"&"#41;](../../tools/dta/server-element-dta.md)  
   
--   [Workload 要素 & #40";"DTA"&"#41;](../../tools/dta/workload-element-dta.md)  
+-   [Workload 要素 &#40;DTA"&"#41;](../../tools/dta/workload-element-dta.md)  
   
--   [TuningOptions 要素 & #40";"DTA"&"#41;](../../tools/dta/tuningoptions-element-dta.md)  
+-   [TuningOptions 要素 &#40;DTA"&"#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
--   [Configuration 要素 & #40";"DTA"&"#41;](../../tools/dta/configuration-element-dta.md)  
+-   [Configuration 要素 &#40;DTA"&"#41;](../../tools/dta/configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>サーバー要素  
   
--   [サーバー (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-server-dta.md)  
+-   [サーバー &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-server-dta.md)  
   
--   [サーバー (&) #40";"DTA"&"#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)  
+-   [サーバー &#40;DTA"&"#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Workload 要素  
   
--   [File 要素 & #40";"DTA"&"#41;](../../tools/dta/file-element-dta.md)  
+-   [File 要素 &#40;DTA"&"#41;](../../tools/dta/file-element-dta.md)  
   
--   [ワークロード (&) #40; DTA &#41; の database 要素](../../tools/dta/database-element-for-workload-dta.md)  
+-   [ワークロード &#40; DTA &#41; の database 要素](../../tools/dta/database-element-for-workload-dta.md)  
   
--   [EventString 要素 & #40";"DTA"&"#41;](../../tools/dta/eventstring-element-dta.md)  
+-   [EventString 要素 &#40;DTA"&"#41;](../../tools/dta/eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>チューニング オプションの要素  
   
--   [TuningTimeInMin 要素 & #40";"DTA"&"#41;](../../tools/dta/tuningtimeinmin-element-dta.md)  
+-   [TuningTimeInMin 要素 &#40;DTA"&"#41;](../../tools/dta/tuningtimeinmin-element-dta.md)  
   
--   [StorageBoundInMB 要素 & #40";"DTA"&"#41;](../../tools/dta/storageboundinmb-element-dta.md)  
+-   [StorageBoundInMB 要素 &#40;DTA"&"#41;](../../tools/dta/storageboundinmb-element-dta.md)  
   
--   [TestServer 要素 & #40";"DTA"&"#41;](../../tools/dta/testserver-element-dta.md)  
+-   [TestServer 要素 &#40;DTA"&"#41;](../../tools/dta/testserver-element-dta.md)  
   
--   [FeatureSet 要素 & #40";"DTA"&"#41;](../../tools/dta/featureset-element-dta.md)  
+-   [FeatureSet 要素 &#40;DTA"&"#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Partitioning 要素 & #40";"DTA"&"#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [Partitioning 要素 &#40;DTA"&"#41;](../../tools/dta/partitioning-element-dta.md)  
   
--   [DropOnlyMode 要素 (&) #40";"DTA"&"#41;](../../tools/dta/droponlymode-element-dta.md)  
+-   [DropOnlyMode 要素 &#40;DTA"&"#41;](../../tools/dta/droponlymode-element-dta.md)  
   
--   [KeepExisting 要素 & #40";"DTA"&"#41;](../../tools/dta/keepexisting-element-dta.md)  
+-   [KeepExisting 要素 &#40;DTA"&"#41;](../../tools/dta/keepexisting-element-dta.md)  
   
--   [OnlineIndexOperation 要素 (&) #40";"DTA"&"#41;](../../tools/dta/onlineindexoperation-element-dta.md)  
+-   [OnlineIndexOperation 要素 &#40;DTA"&"#41;](../../tools/dta/onlineindexoperation-element-dta.md)  
   
--   [DatabaseToConnect 要素 & #40";"DTA"&"#41;](../../tools/dta/databasetoconnect-element-dta.md)  
+-   [DatabaseToConnect 要素 &#40;DTA"&"#41;](../../tools/dta/databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>構成の要素  
   
--   [構成 (&) #40";"DTA"&"#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)  
+-   [構成 &#40;DTA"&"#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)  
   
--   [構成 (&) #40";"DTA"&"#41; の database 要素](../../tools/dta/database-element-for-configuration-dta.md)  
+-   [構成 &#40;DTA"&"#41; の database 要素](../../tools/dta/database-element-for-configuration-dta.md)  
   
--   [Recommendation 要素 & #40";"DTA"&"#41;](../../tools/dta/recommendation-element-dta.md)  
+-   [Recommendation 要素 &#40;DTA"&"#41;](../../tools/dta/recommendation-element-dta.md)  
   
--   [要素 & #40";"DTA"&"#41; を作成します。](../../tools/dta/create-element-dta.md)  
+-   [要素 &#40;DTA"&"#41; を作成します。](../../tools/dta/create-element-dta.md)  
   
--   [Index 要素 & #40";"DTA"&"#41;](../../tools/dta/index-element-dta.md)  
+-   [Index 要素 &#40;DTA"&"#41;](../../tools/dta/index-element-dta.md)  
   
--   [インデックス (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-index-dta.md)  
+-   [インデックス &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-index-dta.md)  
   
--   [インデックス (&) #40";"DTA"&"#41; の column 要素](../../tools/dta/column-element-for-index-dta.md)  
+-   [インデックス &#40;DTA"&"#41; の column 要素](../../tools/dta/column-element-for-index-dta.md)  
   
--   [列 (&) #40; DTA &#41; の name 要素](../../tools/dta/name-element-for-column-dta.md)  
+-   [列 &#40; DTA &#41; の name 要素](../../tools/dta/name-element-for-column-dta.md)  
   
--   [インデックス (&) #40";"DTA"&"#41; の Filegroup 要素](../../tools/dta/filegroup-element-for-index-dta.md)  
+-   [インデックス &#40;DTA"&"#41; の Filegroup 要素](../../tools/dta/filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>データベースの要素  
   
--   [データベース (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)  
+-   [データベース &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)  
   
--   [データベース (&) #40";"DTA"&"#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)  
+-   [データベース &#40;DTA"&"#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)  
   
--   [スキーマ (&) #40; DTA &#41; の name 要素](../../tools/dta/name-element-for-schema-dta.md)  
+-   [スキーマ &#40; DTA &#41; の name 要素](../../tools/dta/name-element-for-schema-dta.md)  
   
--   [スキーマ (&) #40; DTA &#41; の table 要素](../../tools/dta/table-element-for-schema-dta.md)  
+-   [スキーマ &#40; DTA &#41; の table 要素](../../tools/dta/table-element-for-schema-dta.md)  
   
--   [テーブル (&) #40";"DTA"&"#41; の name 要素](../../tools/dta/name-element-for-table-dta.md)  
+-   [テーブル &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)  

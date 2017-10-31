@@ -68,7 +68,7 @@ Oracle スキーマ間のマッピングをカスタマイズする場合は、[
 Oracle オブジェクトへの変換を分析するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト、することができます[変換レポートを作成する](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)です。 それ以外の場合を実行できます[Oracle データベースのオブジェクトの定義の変換](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[SQL Server (&) #40";"OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

@@ -54,19 +54,19 @@ SSMA は、変換してデータベースの読み込み、データの移行お
   
 3.  左側のウィンドウでをクリックして**変換**です。  
   
-4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、次を参照してください。[プロジェクトの設定 & #40 です。変換"&"#41;& #40 です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
+4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換"&"#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
   
 5.  移行、同期、SQL Azure、GUI、および種類のマッピングのページの手順 1. ~ 3. を繰り返します。  
   
--   移行設定については、次を参照してください。[プロジェクトの設定 & #40 です。移行"&"#41;& #40 です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
+-   移行設定については、次を参照してください。[プロジェクトの設定 &#40;です。移行"&"#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
   
--   SQL Server への同期の設定については、次を参照してください。[プロジェクトの設定 & #40 です。同期 &#41;& #40 です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
+-   SQL Server への同期の設定については、次を参照してください。[プロジェクトの設定 &#40;です。同期 &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
 -   GUI の設定については、次を参照してください。[プロジェクトの設定 (GUI) (SSMA 共通)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)です。  
   
--   データ型マッピングの設定については、次を参照してください。[プロジェクトの設定 & #40 です。型のマッピング &#41;& #40 です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+-   データ型マッピングの設定については、次を参照してください。[プロジェクトの設定 &#40;です。型のマッピング &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
--   SQL Azure の設定については、次を参照してください。[プロジェクトの設定 & #40 です。Azure SQL DB &#41;& #40 です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   SQL Azure の設定については、次を参照してください。[プロジェクトの設定 &#40;です。Azure SQL DB &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
   
 > [!NOTE]  
 > SQL Azure の設定が選択した場合にのみ表示されます**SQL Azure への移行**してプロジェクトを作成します。  
@@ -99,9 +99,9 @@ SQL Server または SQL Azure の MySQL データベースからデータを移
 SSMA では、プロジェクト ファイルを作成します。  
   
 ## <a name="customizing-project-settings"></a>プロジェクト設定のカスタマイズ  
-既定値を定義するだけでなく、すべての新しい SSMA プロジェクトに適用されるプロジェクトの設定は各プロジェクトの設定もカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定 & #40 です。MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).  
+既定値を定義するだけでなく、すべての新しい SSMA プロジェクトに適用されるプロジェクトの設定は各プロジェクトの設定もカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).  
   
-ソースとターゲットのデータベース間のデータ型マッピングをカスタマイズする場合は、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、次を参照してください。[マッピング MySQL および SQL Server データ型 & #40 です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
+ソースとターゲットのデータベース間のデータ型マッピングをカスタマイズする場合は、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、次を参照してください。[マッピング MySQL および SQL Server データ型 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
   
 ## <a name="saving-projects"></a>プロジェクトの保存  
 プロジェクトの保存機能は、本質的には、プロジェクトの設定と、必要に応じて、データベースのメタデータを SSMA プロジェクト ファイルに保存するユーザーを使用します。  

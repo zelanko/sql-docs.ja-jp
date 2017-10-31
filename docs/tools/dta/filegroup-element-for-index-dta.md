@@ -52,7 +52,7 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[Index 要素 & #40";"DTA"&"#41;](../../tools/dta/index-element-dta.md)|  
+|**親要素**|[Index 要素 &#40;DTA"&"#41;](../../tools/dta/index-element-dta.md)|  
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  

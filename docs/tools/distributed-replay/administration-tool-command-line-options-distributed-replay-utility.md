@@ -25,7 +25,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理ツール コマンド ライン オプション (Distributed Replay Utility)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するためのコマンド ライン ツールです。 管理ツールを使用して、コントローラー上の操作を開始、監視、取り消しできます。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")管理ツールの構文で使用される構文表記規則の詳細については、次を参照してください。 [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")管理ツールの構文で使用される構文表記規則の詳細については、次を参照してください。 [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,13 +64,13 @@ Usage:
   
  コマンドの引数や例などの構文情報の詳細については、次のトピックを参照してください。  
   
--   [前処理オプション (&) #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [前処理オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Replay オプション & #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [Replay オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [Status オプション (&) #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [Status オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [Cancel オプション (&) #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [Cancel オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPC は、言語イベントとしてではなく RPC として再生されます。  
   

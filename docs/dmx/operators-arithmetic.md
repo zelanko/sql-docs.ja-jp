@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |--------------|-----------------|  
 |[+ (& a) #40 です。追加 (& a) #41;& # #40; DMX &#41;](../dmx/add-dmx.md)|2 つの数値を加算します。|  
 |[-(& a) #40 です。減算 (& a) #41;& # #40; DMX &#41;](../dmx/subtract-dmx.md)|ある数値から別の数値を減算します。|  
-|[& #42 です。& #40 です。乗算 (& a) #41;& # #40; DMX &#41;](../dmx/multiply-dmx.md)|ある数値を別の数値によって乗算します。|  
+|[&#42;です。&#40;です。乗算 (& a) #41;& # #40; DMX &#41;](../dmx/multiply-dmx.md)|ある数値を別の数値によって乗算します。|  
 |[& # #40; 除算 &#41;& # #40; DMX &#41;](../dmx/divide-dmx.md)|ある数値を別の数値によって除算します。|  
   
  次のルールは、DMX 式内の算術演算子の優先順位の順序を判断します。  
@@ -50,15 +50,15 @@ ms.lasthandoff: 08/02/2017
 -   かっこの中の式は、他のどの演算子よりも優先されます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [式 (&) #40";"DMX"&"#41;](../dmx/expressions-dmx.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
- [演算子 (&) #40";"DMX"&"#41;](../dmx/operators-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [式 &#40;DMX"&"#41;](../dmx/expressions-dmx.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
+ [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)   
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX の Select ステートメントを理解します](../dmx/understanding-the-dmx-select-statement.md)  
   

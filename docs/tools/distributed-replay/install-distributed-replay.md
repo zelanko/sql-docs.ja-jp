@@ -223,7 +223,7 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
  [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理ツールのコマンド ライン オプション (&) #40";"Distributed Replay Utility"&"#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [管理ツールのコマンド ライン オプション &#40;Distributed Replay Utility"&"#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay を構成します。](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

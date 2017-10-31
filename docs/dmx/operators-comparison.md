@@ -36,25 +36,25 @@ ms.lasthandoff: 08/02/2017
   
 |演算子|Description|  
 |--------------|-----------------|  
-|[(& m); 60& #40 です。小さい (& a) #41;& # #40; DMX &#41;](../dmx/less-than-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値より小さい場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
-|[& #62 です。& #40 です。大きい (& a) #41;& # #40; DMX &#41;](../dmx/greater-than-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値より大きい場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
+|[(& m); 60&#40;です。小さい (& a) #41;& # #40; DMX &#41;](../dmx/less-than-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値より小さい場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
+|[&#62;です。&#40;です。大きい (& a) #41;& # #40; DMX &#41;](../dmx/greater-than-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値より大きい場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
 |[= (& a) #40 です。等しいと #41 です。& # #40; DMX &#41;](../dmx/equal-to-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値と等しい場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
-|[(& m); 60 &#62;。& #40 です。等しい &#41; されません。& # #40; DMX &#41;](../dmx/not-equal-to-dmx.md)|Null 以外の値に評価される引数の場合は TRUE を返しますの左側の引数の値が右の引数の値と等しくない場合それ以外の場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
+|[(& m); 60 &#62;。&#40;です。等しい &#41; されません。& # #40; DMX &#41;](../dmx/not-equal-to-dmx.md)|Null 以外の値に評価される引数の場合は TRUE を返しますの左側の引数の値が右の引数の値と等しくない場合それ以外の場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
 |[(& m); 60 = (& a) #40 です。以下に &#41;& # #40; DMX &#41;](../dmx/less-than-or-equal-to-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値以下の場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
 |[&#62; = (& a) #40 です。大きいまたは等しい &#41;& # #40; DMX &#41;](../dmx/greater-than-or-equal-to-dmx.md)|Null 以外の値に評価される引数を右側に、引数の値に等しいか、左の引数の値がより大きい場合は TRUE を返しますそれ以外の場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
   
  DMX ステートメントや関数で比較演算子を使用して、条件を検索することもできます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [式 (&) #40";"DMX"&"#41;](../dmx/expressions-dmx.md)   
- [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
- [演算子 (&) #40";"DMX"&"#41;](../dmx/operators-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [式 &#40;DMX"&"#41;](../dmx/expressions-dmx.md)   
+ [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
+ [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)   
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX の Select ステートメントを理解します](../dmx/understanding-the-dmx-select-statement.md)  
   

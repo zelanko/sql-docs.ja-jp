@@ -51,9 +51,9 @@ Numeric_Expression - Numeric_Expression
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式が NULL 値に評価される場合、この演算子は、もう一方の式の結果を返します。  
   
 ## <a name="see-also"></a>参照  
- [算術演算子 (&) #40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [演算子 (&) #40";"DMX"&"#41;](../dmx/operators-dmx.md)  
+ [算術演算子 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
+ [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)  
   
   
 

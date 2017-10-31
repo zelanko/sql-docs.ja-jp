@@ -34,7 +34,7 @@ MySQL を接続すると後に、接続[!INCLUDE[ssNoVersion](../../includes/ssn
 変換中には、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 MySQL データベースまたは必要な変換の結果を得るため、変換プロセスを変更するのにかどうかを確認するのにには、出力とエラー情報を使用します。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
-オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA がテーブルとインデックスに変換する方法を設定することができます。 詳細については、「[プロジェクトの設定 & #40 です。変換"&"#41;& #40 です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA がテーブルとインデックスに変換する方法を設定することができます。 詳細については、「[プロジェクトの設定 &#40;です。変換"&"#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>変換結果  
 次の表は、MySQL オブジェクトは変換し、結果として得られる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。  

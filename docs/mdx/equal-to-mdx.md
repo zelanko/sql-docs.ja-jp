@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   1 つの多次元式 (MDX) 式の値が、別の MDX 式の値と等しいかどうかを判別する比較演算を実行します。  
   
 > [!NOTE]  
->  オブジェクトを比較する場合、 [IS & #40 です。MDX と #41 です。](../mdx/is-mdx.md)演算子。 たとえば、クエリ軸上の現在のメンバーが特定のメンバーかどうかを確認する場合に IS 演算子を使用します。  
+>  オブジェクトを比較する場合、 [IS &#40;です。MDX と #41 です。](../mdx/is-mdx.md)演算子。 たとえば、クエリ軸上の現在のメンバーが特定のメンバーかどうかを確認する場合に IS 演算子を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -89,7 +89,7 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
   
   
 

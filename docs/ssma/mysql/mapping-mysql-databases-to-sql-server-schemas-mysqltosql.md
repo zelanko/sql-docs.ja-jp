@@ -78,7 +78,7 @@ MySQL スキーマと SQL Server スキーマ間のマッピングをカスタ�
 MySQL オブジェクトの SQL Server または SQL Azure のオブジェクトへの変換を分析する場合は、[変換レポートを作成する](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)できますそれ以外の場合[MySQL のデータベース オブジェクトの定義の変換](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)を SQL Server または SQL Azure のスキーマに  
   
 ## <a name="see-also"></a>参照  
-[プロジェクトの設定 & #40 です。変換"&"#41;& #40 です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+[プロジェクトの設定 &#40;です。変換"&"#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [Azure SQL DB &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [SQL Server &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
