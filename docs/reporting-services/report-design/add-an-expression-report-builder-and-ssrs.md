@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 57cdb0a373d713741216b1cebc8d3d44ff7fceb3
 ms.contentlocale: ja-jp
@@ -43,13 +42,12 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [書式設定テキストとプレース ホルダー (&) #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [テキスト ボックス & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [テキスト ボックス &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [レポート &#40; 内の式の使用レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [フィルター式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [グループ式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [式 ダイアログ ボックス & #40 です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [フィルター式の例 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [グループ式の例 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [式 ダイアログ ボックス &#40;です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [コードを追加、レポートと #40 です。SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)  
   
   
-

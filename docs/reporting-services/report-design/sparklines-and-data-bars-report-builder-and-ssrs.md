@@ -18,8 +18,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
 ms.contentlocale: ja-jp
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/09/2017
 -   [縦棒グラフと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): Basic、積み上げ横、または 100% 積み上げ縦棒グラフ。 縦棒グラフはスパークラインまたはデータ バーのどちらにも変換できます。  
   
 ##  <a name="AlignDatainTableMatrix"></a> テーブルまたはマトリックス内でのスパークライン データの整列  
- スパークラインをテーブルまたはマトリックスに挿入する場合、通常は、各スパークラインのデータ ポイントを対象の列にある他のスパークラインのデータ ポイントに揃えることが重要です。 そうしないと、異なる行内のデータを比較することが難しくなります。 たとえば、社内の複数の販売員の月ごとの売上データを比較する場合は、月を揃えます。 従業員が 4 月に欠勤した場合、その従業員の 4 月分のデータはありません。 その月は空白にし、後続の月のデータを他の従業員のデータと揃えて表示することができます。 これを行うには、横軸を揃えます。 詳細については、スパーク ラインに関するセクションを参照してください。[式のスコープの合計、集計、および組み込みコレクション & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)を参照してください、[テーブルまたはマトリックス &#40; 内のグラフでのデータの整列レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
+ スパークラインをテーブルまたはマトリックスに挿入する場合、通常は、各スパークラインのデータ ポイントを対象の列にある他のスパークラインのデータ ポイントに揃えることが重要です。 そうしないと、異なる行内のデータを比較することが難しくなります。 たとえば、社内の複数の販売員の月ごとの売上データを比較する場合は、月を揃えます。 従業員が 4 月に欠勤した場合、その従業員の 4 月分のデータはありません。 その月は空白にし、後続の月のデータを他の従業員のデータと揃えて表示することができます。 これを行うには、横軸を揃えます。 詳細については、スパーク ラインに関するセクションを参照してください。[式のスコープの合計、集計、および組み込みコレクション &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)を参照してください、[テーブルまたはマトリックス &#40; 内のグラフでのデータの整列レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  同様に、行全体を比較できるようにするには、データを縦に揃える必要があります。つまり、1 つのスパークラインまたはデータ バーにある棒または折れ線の高さが、他のすべてのスパークラインまたはデータ バーにある棒と折れ線の高さに相対的である必要があります。 そうしないと、行を他の行と比較することはできません。  
   
@@ -113,4 +112,3 @@ ms.lasthandoff: 08/09/2017
  [チュートリアル: レポート &#40; へのスパーク ラインを追加します。レポート ビルダー"&"#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   
-

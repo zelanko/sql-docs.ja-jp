@@ -23,8 +23,7 @@ caps.latest.revision: 64
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4cb050e8f838eaab2bc215005b167c0dea258fc
 ms.contentlocale: ja-jp
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="design-mode"></a>デザイン モード  
  DMX クエリ デザイナーは、デザイン モードで開きます。 デザイン モードには、単一のデータ マイニング モデルと入力テーブルを選択するためのグラフィカルなデザイン画面、および予測クエリを指定するためのグリッドが含まれています。 DMX クエリ デザイナーには、この他に、クエリ モードと結果モードの 2 つのモードがあります。 クエリ モードでは、デザインモードのグリッドがクエリ ペインに置き換えられ、これを使用して DMX クエリを入力することができます。 結果モードでは、クエリによって返された結果セットがデータ グリッドに表示されます。  
   
- DMX クエリ デザイナーのモードを変更するには、クエリのデザイン画面を右クリックし、 **[デザイン]**、 **[クエリ]**、または **[結果]**をクリックします。 詳細については、次を参照してください[Analysis Services DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)と[データ マイニング モデル (&) #40; DMX &#41; &#40; からのデータの取得。SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md).  
+ DMX クエリ デザイナーのモードを変更するには、クエリのデザイン画面を右クリックし、 **[デザイン]**、 **[クエリ]**、または **[結果]**をクリックします。 詳細については、次を参照してください[Analysis Services DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)と[データ マイニング モデル &#40; DMX &#41; &#40; からのデータの取得。SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md).  
   
 ## <a name="designing-a-prediction-query"></a>予測クエリのデザイン  
  デザイン モードのクエリ デザイン ペインには、 **[マイニング モデル]** と **[入力テーブルの選択]**の 2 つのウィンドウがあります。 **[マイニング モデル]** ウィンドウでは、クエリで使用するマイニング モデルを選択します。 **[入力テーブルの選択]** ウィンドウでは、予測の基盤とするテーブルを選択します。 入力テーブルではなく、単一クエリを使用する場合は、クエリ デザイン ペインで右クリックし、 **[単一クエリ]**をクリックします。 **[入力テーブルの選択]** ウィンドウは、 **[単一クエリ入力]** ウィンドウに置き換えられます。  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

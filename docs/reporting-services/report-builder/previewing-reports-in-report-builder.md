@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
 ms.contentlocale: ja-jp
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [書式設定のレポート アイテムと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [書式設定のレポート アイテムと #40 です。レポート ビルダーおよび SSRS &#41;です。](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

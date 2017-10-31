@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
 ms.contentlocale: ja-jp
@@ -94,9 +93,8 @@ ms.lasthandoff: 08/09/2017
  [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [ゲージと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [書式設定のレポート アイテムと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [書式設定のレポート アイテムと #40 です。レポート ビルダーおよび SSRS &#41;です。](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [チュートリアル: レポート &#40; への KPI の追加レポート ビルダー"&"#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [スケール、ゲージ &#40; の書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   
-

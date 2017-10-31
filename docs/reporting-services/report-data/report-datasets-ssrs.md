@@ -15,8 +15,7 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
 ms.contentlocale: ja-jp
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/09/2017
 -   埋め込みデータ ソースに基づいた埋め込みデータセットを追加する。  
   
 > [!NOTE]  
->  レポート サーバーでは、共有アイテムは、個別に、またはパブリッシュされるフォルダーから権限を継承することによって、セキュリティで保護されます。 保存した共有データセットに他のユーザーがアクセスできるようにするには、権限を付与する方法を理解する必要があります。 詳細については、次を参照してください。[セキュリティ & #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/security-report-builder.md)または[共有データセット アイテムのセキュリティで保護された](../../reporting-services/security/secure-shared-dataset-items.md)です。  
+>  レポート サーバーでは、共有アイテムは、個別に、またはパブリッシュされるフォルダーから権限を継承することによって、セキュリティで保護されます。 保存した共有データセットに他のユーザーがアクセスできるようにするには、権限を付与する方法を理解する必要があります。 詳細については、次を参照してください。[セキュリティ &#40;です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/security-report-builder.md)または[共有データセット アイテムのセキュリティで保護された](../../reporting-services/security/secure-shared-dataset-items.md)です。  
   
  レポートにデータを追加した後、データ領域に基づくレポート ページのデータの編成、レポート パーツの変更、および他のユーザーとの変更内容の共有を行うことができます。また、レポートに表示されるデータの制限または並べ替えをユーザーが行うことができるように設定できます。 詳細については、次の関連項目を参照してください。  
   
@@ -142,4 +141,3 @@ ms.lasthandoff: 08/09/2017
  [レポート作成の概念と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

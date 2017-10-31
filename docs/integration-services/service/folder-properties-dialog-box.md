@@ -42,8 +42,8 @@ ms.lasthandoff: 09/27/2017
 5.  **[OK]** をクリックして変更を受け入れ、 **[フォルダーのプロパティ]** ダイアログ ボックスを閉じます。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services & #40 です。SSIS &#41;サーバー](../integration-services-ssis-packages.md)   
- [catalog.grant_permission & #40 です。SSISDB データベース &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+ [Integration Services &#40;です。SSIS &#41;サーバー](../integration-services-ssis-packages.md)   
+ [catalog.grant_permission &#40;です。SSISDB データベース &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   
 

@@ -15,8 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: ja-jp
@@ -77,9 +76,8 @@ ms.lasthandoff: 08/09/2017
     >  テキスト ボックスの中をクリックして編集モードになった場合は、Esc キーを押すとテキスト ボックスを選択できます。  
   
 ## <a name="see-also"></a>参照  
- [テキスト ボックス & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [テキスト ボックス &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [キーボード ショートカットと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   
-

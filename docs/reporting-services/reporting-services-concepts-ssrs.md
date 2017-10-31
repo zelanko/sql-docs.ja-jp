@@ -15,8 +15,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 522c9f0c5cec7b6966d80c45a890a5be90e60b07
 ms.contentlocale: ja-jp
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
  SharePoint と統合されたレポート サーバーは、2 種類の構成が可能です。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]の場合、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は SharePoint Server と共に SharePoint 共有サービスとしてインストールされます。 以前のリリースのレポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint アドインをインストールすることで SharePoint Server と統合されます。 どちらの場合も、レポート サーバー、レポート、およびレポート関連アイテムは、SharePoint サイトでアプリケーション ページを使用して操作します。 レポートに関連するコンテンツの種類を保存するには、SharePoint ドキュメント ライブラリや独自に作成するその他のライブラリを使用します。 詳細については、「[Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)」を参照してください。  
   
 ### <a name="report-server-items"></a>レポート サーバー アイテム 
- レポート サーバー アイテムには、改ページ調整されたレポートおよびモバイル レポート、KPI、共有データ ソース、共有データセット、レポート サーバーにパブリッシュ、アップロード、または保存できるレポートなどがあります。 アイテムは、ネイティブのレポート サーバーではレポート サーバーの階層フォルダー構造に、SharePoint サイトでは SharePoint コンテンツ ライブラリに整理します。 詳細については、次を参照してください。[レポート サーバー コンテンツの管理 & #40 です。SSRS ネイティブ モード &#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
+ レポート サーバー アイテムには、改ページ調整されたレポートおよびモバイル レポート、KPI、共有データ ソース、共有データセット、レポート サーバーにパブリッシュ、アップロード、または保存できるレポートなどがあります。 アイテムは、ネイティブのレポート サーバーではレポート サーバーの階層フォルダー構造に、SharePoint サイトでは SharePoint コンテンツ ライブラリに整理します。 詳細については、次を参照してください。[レポート サーバー コンテンツの管理 &#40;です。SSRS ネイティブ モード &#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>フォルダー
  ネイティブのレポート サーバーでは、フォルダーによって、レポート サーバーに格納されたすべてのアクセス可能なアイテムの階層ナビゲーション構造とパスが提供されます。 レポート サーバー アイテムへのアクセスを制御するには、フォルダー階層、およびサイトとフォルダーの権限を使用します。これは、" *アイテムレベルのセキュリティ*" と呼ばれます。 既定では、特定のフォルダーに定義するロールの割り当ては、そのフォルダー階層内の子フォルダーに継承されます。 フォルダーに特定のロールを割り当てる場合は、この継承ルールは適用されません。 フォルダー構造は、 **"ホーム"**という名前のルート ノードと、省略可能な **個人用レポート** 機能をサポートする予約済みフォルダーで構成されます。 ブラウザーで、ルート ノードはレポート サーバーの仮想ディレクトリの名前など、`http://myreportserver/reports`です。 詳細については、「 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)」を参照してください。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート ソリューションのカスタマイズに使用できる拡張可能なアーキテクチャが用意されています。 レポート サーバーは、カスタム認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、配信拡張機能、およびユーザーが RSReportServer.config 構成ファイルで構成できる拡張機能をサポートします。 たとえば、レポート ビューアーで使用できるエクスポート形式を制限できます。 配信拡張機能とレポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。 詳細については、次を参照してください。 [Reporting Services 拡張機能と #40 です。SSRS &#41;](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="report-access"></a>レポートへのアクセス 
- 要求時アクセスでは、ユーザーがレポート表示ツールからレポートを選択できます。 レポート サーバーの構成によって異なりますが、 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web パーツ、SharePoint ライブラリ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が SharePoint 統合モードでインストールされている場合)、埋め込みの ReportViewer コントロール、URL アクセスを使用するブラウザーの使用が可能です。 レポートへのオンデマンド アクセスの詳細については、次を参照してください。[検索、表示、およびレポートの管理 & #40 です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ 要求時アクセスでは、ユーザーがレポート表示ツールからレポートを選択できます。 レポート サーバーの構成によって異なりますが、 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web パーツ、SharePoint ライブラリ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が SharePoint 統合モードでインストールされている場合)、埋め込みの ReportViewer コントロール、URL アクセスを使用するブラウザーの使用が可能です。 レポートへのオンデマンド アクセスの詳細については、次を参照してください。[検索、表示、およびレポートの管理 &#40;です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
@@ -160,7 +159,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
  ドリルダウン レポートは、最初は複雑さが隠されており、条件によって非表示になっているレポート アイテムをユーザーが切り替えることによって、表示する詳細データ量を制御できるレイアウト デザインです。 ドリルダウン レポートでは、レポートに表示される可能性があるすべてのデータを取得する必要があります。 大量のデータを使用するレポートの場合は、詳細レポートを使用することを検討してください。 詳細については、「[ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="subreports"></a>サブレポート
- サブレポートは、レポートをレイアウト要素として追加するレポート アイテムです。 サブレポートは別のレポートを指し、メイン レポートの本文内にサブレポート インスタンスとして表示されます。 サブレポートは、メイン レポートとは別のデータ ソースを使用できます。 パラメーターを使用してサブレポートの各インスタンスのデータをフィルター処理することにより、サブレポートをデータ領域内で繰り返し使用することができますが、サブレポートは通常、抄録ファイルまたは関連レポートのコレクションのコンテナーとしてメイン レポートと共に使用されます。 サブレポートの各インスタンスによって、メイン レポートとサブレポート間のレポート処理のコンテキストが切り替えられます。 多数のサブレポート インスタンスを使用するレポートの場合は、詳細レポートを使用することを検討してください。 詳細については、次を参照してください。[サブレポート & #40 です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+ サブレポートは、レポートをレイアウト要素として追加するレポート アイテムです。 サブレポートは別のレポートを指し、メイン レポートの本文内にサブレポート インスタンスとして表示されます。 サブレポートは、メイン レポートとは別のデータ ソースを使用できます。 パラメーターを使用してサブレポートの各インスタンスのデータをフィルター処理することにより、サブレポートをデータ領域内で繰り返し使用することができますが、サブレポートは通常、抄録ファイルまたは関連レポートのコレクションのコンテナーとしてメイン レポートと共に使用されます。 サブレポートの各インスタンスによって、メイン レポートとサブレポート間のレポート処理のコンテキストが切り替えられます。 多数のサブレポート インスタンスを使用するレポートの場合は、詳細レポートを使用することを検討してください。 詳細については、次を参照してください。[サブレポート &#40;です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
  ### <a name="maindetail-reports-and-drillthrough-reports"></a>メイン/詳細レポートと詳細レポート
  メイン/詳細レポート ソリューションには、詳細情報を表示する 1 つ以上のレポートへのハイパーリンクが記載された概要情報を表示するメイン レポートが含まれます。  詳細レポートは、レポートを表示しているユーザーがその詳細レポートへのリンクをクリックした場合のみ実行されます。 詳細レポートはメイン レポートから個別に表示されます。 ハイパーリンクは、Action プロパティがあるレポート アイテム (テキスト ボックス、プレースホルダー テキスト、グラフの系列など) で定義できます。 詳細については、「[詳細レポートレポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)」を参照してください。  
@@ -210,7 +209,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
  データとレイアウト情報の両方を含む、完全に処理されたレポートです。  
   
 ### <a name="rendered-report"></a>表示レポート
- 完全に処理されたレポートは、レポート レンダラーに送信され、対象の表示形式の各ページ上のデータとレイアウトを結合します。 表示拡張機能は、カスタマイズおよび拡張できます。 レポートの既定の表示形式は HTML 4.0 です。 詳細については、次を参照してください。[ページ レイアウトとレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)と[拡張機能と #40 です。SSRS &#41;](../reporting-services/extensions-ssrs.md).  
+ 完全に処理されたレポートは、レポート レンダラーに送信され、対象の表示形式の各ページ上のデータとレイアウトを結合します。 表示拡張機能は、カスタマイズおよび拡張できます。 レポートの既定の表示形式は HTML 4.0 です。 詳細については、次を参照してください。[ページ レイアウトとレンダリング &#40;です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)と[拡張機能と #40 です。SSRS &#41;](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="exported-report"></a>エクスポートされたレポート
  エクスポートされたレポートは、特定のファイル形式で保存された、完全にページ分割されたレポートです。 エクスポート形式は、インストールされている表示拡張機能によって異なり、カスタマイズできます。 既定のエクスポート形式には、Excel、Word、XML、PDF、TIFF、CSV などがあります。 詳しくは、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」をご覧ください。  
@@ -218,7 +217,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の機能とタスク &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [テクニカル リファレンス & #40 です。SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
+ [テクニカル リファレンス &#40;です。SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

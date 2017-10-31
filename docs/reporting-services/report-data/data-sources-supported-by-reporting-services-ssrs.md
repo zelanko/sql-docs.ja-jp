@@ -25,8 +25,7 @@ caps.latest.revision: 96
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d3fc9080d28a3b187478fc02f64bd7b38a99b178
 ms.contentlocale: ja-jp
@@ -276,7 +275,7 @@ Oracle クライアント ツールをインストールするには、次の操
   
  この拡張機能では、複数値パラメーターがサポートされます。 クエリ モード TEXT の EXECUTE コマンドを使用すると、クエリでマクロを指定できます。  
   
- 詳細については、次を参照してください。 [Teradata の接続の種類 & #40 です。SSRS &#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
+ 詳細については、次を参照してください。 [Teradata の接続の種類 &#40;です。SSRS &#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
  Teradata データベースに基づくモデルを作成することもできます。 詳細については、Teradata サイトにあるホワイト ペーパー「 [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation (Microsoft SQL Server 2012 Reporting Services と Teradata 社)](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)」を参照してください。  
   
@@ -300,7 +299,7 @@ Oracle クライアント ツールをインストールするには、次の操
  指定できる資格情報は、クライアント アプリケーションが使用している実装によって異なります。 詳細については、「[SharePoint リストの接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)」を参照してください。  
   
 ###  <a name="XML"></a> XML データ処理拡張機能  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート内で XML データを使用できるように、XML データ処理拡張機能が含まれています。 データは、XML ドキュメントや Web サービス、または URL を使用してアクセス可能な Web ベースのアプリケーションから取得できます。 詳細については、次を参照してください。 [XML 接続の種類 & #40 です。SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). 関連付けられているクエリ デザイナーの詳細については、「 [グラフィカル クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/graphical-query-designer-user-interface.md)」の「テキスト ベースのクエリ デザイナー」セクションを参照してください。 例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](http://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート内で XML データを使用できるように、XML データ処理拡張機能が含まれています。 データは、XML ドキュメントや Web サービス、または URL を使用してアクセス可能な Web ベースのアプリケーションから取得できます。 詳細については、次を参照してください。 [XML 接続の種類 &#40;です。SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). 関連付けられているクエリ デザイナーの詳細については、「 [グラフィカル クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/graphical-query-designer-user-interface.md)」の「テキスト ベースのクエリ デザイナー」セクションを参照してください。 例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](http://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
   
  [データ ソースの表に戻る](#DataSourcesTable)  
   

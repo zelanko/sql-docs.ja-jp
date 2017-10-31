@@ -15,8 +15,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cc52b4687f9a2c944ea3a93c15b637d894c7a96
 ms.contentlocale: ja-jp
@@ -50,7 +49,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [テキスト ボックス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [チュートリアル: テキストの書式設定 & #40 です。レポート ビルダー"&"#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [チュートリアル: テキストの書式設定 &#40;です。レポート ビルダー"&"#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   
-
