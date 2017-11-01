@@ -55,7 +55,7 @@ Python - Ubuntu と Red Hat pyodbc を使用して SQL データベースに接�
 > sh installodbc.sh  
 ```   
 
-  Red Hat 6、7 の 
+  Red Hat 6、7 用 
 ``` 
 > sudo su 
 > wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
