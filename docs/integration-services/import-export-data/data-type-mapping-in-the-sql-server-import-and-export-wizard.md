@@ -27,8 +27,8 @@ ms.lasthandoff: 09/26/2017
   
 ##  <a name="wizardMapping"></a> ウィザードが変換元と変換先の間でデータ型をマップする方法
 ウィザードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によってインストールされたマッピング ファイルを使用して、データベース システムまたはバージョン間でデータ型をマップします。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から Oracle データ型にマップできます。 既定では、XML 形式のマッピング ファイルは次のフォルダにインストールされます。
--   **C:\Program files \microsoft SQL Server\130\DTSMappingFiles\* * (64 ビット) 用
--   **C:\Program Files (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * (32 ビット) 用です。  
+-   **C:\Program files \microsoft SQL Server\130\DTSMappingFiles\**  (64 ビット) 用
+-   **C:\Program Files (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  (32 ビット) 用です。  
   
  既存のマッピング ファイルを編集した、または新しいマッピング ファイルをフォルダーに追加した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を終了してから再度開いて、新しいファイルまたは更新したファイルを読み込む必要があります。  
  
