@@ -39,7 +39,7 @@ Azure 上のバーチャル マシンは、機械学習ソリューションの�
 
 ## <a name="find-a-machine-learning-image"></a>Machine learning のイメージが見つかりません
 
-1. クリックして、Azure ポータル (portal.azure.com) から**仮想マシン**、をクリックして**新規**です。
+1. クリックして、Azure ポータル (portal.azure.com) から**仮想マシン**、 をクリックして**新規**です。
 
 2. 名前でリソースをフィルター処理に使用することができます ページの上部にある検索ボックスを見つけます。 
 
@@ -106,7 +106,7 @@ Linux の各エディションでは、Ubuntu、Centos、および Centos CSP �
 
 ### <a name="r-server-virtual-machines"></a>R Server の仮想マシン
 
-加え、 **R サーバーのみ SQL Server 2016 Enterprise**イメージを R サーバーを含むスタンドアロン バーチャル マシンを取得することができます。 イメージは、Linux CentOS バージョン 7.2、Linux RedHat バージョン 7.2、および Ubuntu バージョン 16.04 で利用できます。
+加え、 **R サーバーのみ SQL Server 2016 Enterprise**イメージを R サーバーを含むスタンドアロン バーチャル マシンを取得することができます。 イメージは、Linux CentOS バージョン 7.2、Linux Red Hat バージョン 7.2、および Ubuntu バージョン 16.04 で利用できます。
 
 詳細については、次を参照してください[クラウド内の Machine Learning サーバー。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
 
