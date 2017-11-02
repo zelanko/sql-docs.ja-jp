@@ -513,7 +513,7 @@ ms.lasthandoff: 08/09/2017
 * [一覧がある請求書とフォームを作成する](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-クエリ デザイナーの詳細については、次を参照してください。[クエリ デザイナーと #40 です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)と[テキスト ベースのクエリ デザイナーのユーザー インターフェイスと #40 です。レポート ビルダー"&"#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+クエリ デザイナーの詳細については、次を参照してください。[クエリ デザイナーと #40 です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)と[テキスト ベースのクエリ デザイナーのユーザー インターフェイスと #40 です。レポート ビルダー&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 

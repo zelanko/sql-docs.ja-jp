@@ -59,7 +59,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** が選択されていることを確認します。  
   
 ## <a name="DConnection"></a>1a. データ接続を指定する  
-データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用に関する詳細については、次を参照してください[データの接続 &#40; を取得する代替方法。レポート ビルダー"&"#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用に関する詳細については、次を参照してください[データの接続 &#40; を取得する代替方法。レポート ビルダー&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
   

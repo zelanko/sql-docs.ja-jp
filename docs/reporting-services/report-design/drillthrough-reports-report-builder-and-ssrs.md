@@ -32,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  レポート ビルダーで作業しているときに、メイン レポートのドリルスルー リンクをクリックしたときに開く詳細レポートを表示するには、レポート サーバーに接続している必要があります。  
   
- すぐに開始する詳細レポートで、次を参照してください。[チュートリアル: を作成するドリルスルーとメイン レポートと #40 です。レポート ビルダー"&"#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ すぐに開始する詳細レポートで、次を参照してください。[チュートリアル: を作成するドリルスルーとメイン レポートと #40 です。レポート ビルダー&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>詳細レポートのパラメーター  
  詳細レポートには、通常、要約レポートから渡されるパラメーターが含まれています。 売り上げ要約レポートの例では、要約レポートには、テーブル セルのテキスト ボックス内のフィールド [OrderNumber] が含まれます。 詳細レポートには注文番号 (Order Number) を値として受け取るパラメーターが含まれています。 [OrderNumber] のテキスト ボックスに詳細レポート リンクを設定するとき、対象のレポートのパラメーターも [OrderNumber] に設定します。 ユーザーが要約レポート内の注文番号をクリックすると、対象の詳細レポートが開き、その注文番号の情報が表示されます。 表示するにはパラメーター値に基づいて詳細レポートをカスタマイズする方法についてを参照してください。[レポート パラメーターと #40 です。レポート ビルダーおよびレポート デザイナー &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)と[InScope 関数 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

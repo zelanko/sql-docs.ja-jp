@@ -19,14 +19,14 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8eea917788cfd0811750a1ffb59888fa7e2a156a
 ms.contentlocale: ja-jp
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="dataset-properties-dialog-box-options-report-builder"></a>[オプション] \([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
+# <a name="dataset-properties-dialog-box-options-report-builder"></a>[オプション] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[オプション]** を選択すると、照合順序オプションや小計を詳細行として処理するオプションなど、クエリのデータ オプションを変更できます。 照合順序の詳細については、 [SQL Server オンライン ブック](../../relational-databases/collations/collation-and-unicode-support.md) の「 [照合順序と Unicode のサポート](http://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  
   
  レポート サーバー上の共有データセット定義の一部であるデータ オプションは、共有データセットを使用するすべてのレポートに影響を及ぼします。 共有データセットのオプションは、レポートに追加した後にオーバーライドできます。 これらの変更は、オプションが定義されているレポートのみに影響を及ぼします。  
@@ -56,9 +56,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [集計関数と &#40; です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
+ [集計関数と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
  [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [レポート埋め込みデータセットおよび共有データセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [データセットのプロパティ ダイアログ ボックス、クエリ &#40; です。レポート ビルダー&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
+ [データセットのプロパティ ダイアログ ボックス、クエリ &#40;です。レポート ビルダー&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
   
   

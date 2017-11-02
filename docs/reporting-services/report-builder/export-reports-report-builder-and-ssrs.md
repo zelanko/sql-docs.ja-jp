@@ -199,6 +199,6 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 [改ページ、見出し、列、および行 &#40; を制御します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
 [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
-[レポート &#40; を保存します。レポート ビルダー"&"#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+[レポート &#40; を保存します。レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 レポート ビルダー チュートリアルを実行するには、レポート サーバー上、またはレポート サーバーと統合されている SharePoint サイト上で、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] のページ分割されたレポートを表示および保存できる必要があります。 データの場合は、すべてのチュートリアルは、SQL Server のインスタンスによって処理される必要があるリテラル クエリを使用します。  
   
-レポート サーバーやサイト、またはデータ ソースにアクセスできない場合は、オフラインのレポートを作成することによってレポート ビルダーについて学習できます。 参照してください[チュートリアル: オフラインでのクイック グラフ レポート &#40; を作成します。レポート ビルダー"&"#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+レポート サーバーやサイト、またはデータ ソースにアクセスできない場合は、オフラインのレポートを作成することによってレポート ビルダーについて学習できます。 参照してください[チュートリアル: オフラインでのクイック グラフ レポート &#40; を作成します。レポート ビルダー&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>必要条件
 

@@ -33,8 +33,7 @@ caps.latest.revision: 61
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Active
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c1c30915d5b9e78b9e8c33b33a2c66b91f47512
 ms.contentlocale: ja-jp
@@ -66,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
      共有データ ソースの場合は、 **[パスワードを保存する]** オプションを使用して、資格情報をユーザー設定と共に、使用しているコンピューターにローカルに保存します。 レポート ビルダーは、対応する外部データ ソースに接続するたびに、保存されている資格情報を使用します。  
   
- 詳細については、次を参照してください。[データ ソースのプロパティダイアログ ボックスの [全般] の場合も (&) #40 です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)と[レポート ビルダーでレポートをプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)です。  
+ 詳細については、次を参照してください。[データ ソースのプロパティダイアログ ボックスの [全般] の場合も &#40; です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)と[レポート ビルダーでレポートをプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)です。  
   
 ## <a name="using-remote-data-sources"></a>リモート データ ソースの使用  
  リモートのデータベース サーバーのデータをレポートに取得する場合、次の点を確認します。  
@@ -176,4 +175,3 @@ ms.lasthandoff: 08/09/2017
  [レポート &#40; のデータ ソースのプロパティを構成します。レポート マネージャー &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

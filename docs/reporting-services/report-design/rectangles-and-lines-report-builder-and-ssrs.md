@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
  四角形内のレポート アイテムをレポート パーツとしてパブリッシュすることはできません。 レポートに四角形を追加すると、その四角形と内部のアイテムを取得できます。  [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
   
 ##  <a name="RectangleAsContainer"></a> コンテナーとしての四角形の使用  
- 四角形は、他のアイテムのコンテナーとして使用できます。 四角形を移動すると、四角形の中にあるアイテムも合わせて移動します。 四角形の中にあるアイテムの **Parent** プロパティには、四角形の名前が表示されます。 詳細については、コンテナーとして四角形を使用して、次を参照してください[四角形またはコンテナー &#40; を追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)と[マトリックスとグラフ &#40; で同じデータの表示レポート ビルダー"&"#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
+ 四角形は、他のアイテムのコンテナーとして使用できます。 四角形を移動すると、四角形の中にあるアイテムも合わせて移動します。 四角形の中にあるアイテムの **Parent** プロパティには、四角形の名前が表示されます。 詳細については、コンテナーとして四角形を使用して、次を参照してください[四角形またはコンテナー &#40; を追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)と[マトリックスとグラフ &#40; で同じデータの表示レポート ビルダー&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
   
 > [!NOTE]  
 >  四角形はアイテムの単なるコンテナーで、アイテムを四角形内で作成するか四角形にドラッグします。 デザイン画面に既に存在するアイテムの周囲に四角形を描画した場合、四角形はコンテナーとして機能しません。 この四角形はアイテムの Parent プロパティに表示されません。  
