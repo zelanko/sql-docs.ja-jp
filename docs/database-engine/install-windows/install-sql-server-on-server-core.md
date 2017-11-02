@@ -294,7 +294,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]**をクリックします。  
   
-3.  **新しいタスクの作成** ダイアログ ボックスで、 **開く**  フィールドに **sqlps.exe** と入力して、 **OK**をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
+3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[ 開く ]** フィールドに **sqlps.exe** と入力して、**[ OK]** をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
   
 4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
