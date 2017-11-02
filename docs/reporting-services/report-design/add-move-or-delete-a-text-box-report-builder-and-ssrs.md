@@ -79,7 +79,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [テキスト ボックス &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [キーボード ショートカットと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [キーボード ショートカットと #40 です。レポート ビルダー&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   
 

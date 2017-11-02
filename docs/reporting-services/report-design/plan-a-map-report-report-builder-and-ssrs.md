@@ -158,7 +158,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [データとマップまたはマップ レイヤー &#40; の表示をカスタマイズします。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [チュートリアル: マップ レポート &#40;です。レポート ビルダー"&"#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [チュートリアル: マップ レポート &#40;です。レポート ビルダー&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [マップ &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [レポートと #40 です。 マップ レポートのトラブルシューティング。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

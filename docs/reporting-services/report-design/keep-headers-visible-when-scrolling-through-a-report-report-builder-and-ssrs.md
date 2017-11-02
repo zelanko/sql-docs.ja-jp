@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [グループ &#40; でヘッダーとフッターを表示します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [複数のページ &#40; 行および列ヘッダーを表示します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [グループ化ペインと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [グループ化ペインと #40 です。レポート ビルダー&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   
 

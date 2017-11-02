@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
  [グラフの種類 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [横棒グラフと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [範囲グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポート &#40; への横棒グラフの追加します。レポート ビルダー"&"#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [チュートリアル: レポート &#40; への横棒グラフの追加します。レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

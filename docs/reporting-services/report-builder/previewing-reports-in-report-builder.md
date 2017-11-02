@@ -87,7 +87,7 @@ ms.lasthandoff: 08/09/2017
  [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [レポート &#40; を保存します。レポート ビルダー"&"#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [レポート &#40; を保存します。レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
 

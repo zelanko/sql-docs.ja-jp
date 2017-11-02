@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート アイテムのプロパティ。該当するレポート アイテムを右クリックし、 **[プロパティ]**をクリックします。  
   
- キーボードを使用して、デザイン画面上の項目を操作する方法の詳細については、次を参照してください。[のキーボード ショートカットと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ キーボードを使用して、デザイン画面上の項目を操作する方法の詳細については、次を参照してください。[のキーボード ショートカットと #40 です。レポート ビルダー&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>デザイン画面のサイズと印刷領域  
  デザイン画面のサイズは、レポートを印刷する際に指定するページ サイズの印刷領域とは異なる場合があります。 デザイン画面のサイズを変更しても、レポートの印刷領域は変わりません。 レポートの印刷領域に設定したサイズに関係なく、デザイン領域全体のサイズは変わりません。 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  

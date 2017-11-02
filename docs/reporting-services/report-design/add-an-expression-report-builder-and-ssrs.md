@@ -47,7 +47,7 @@ ms.lasthandoff: 08/09/2017
  [レポート &#40; 内の式の使用レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [フィルター式の例 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [グループ式の例 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [式 ダイアログ ボックス &#40;です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [式 ダイアログ ボックス &#40;です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [コードを追加、レポートと #40 です。SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)  
   

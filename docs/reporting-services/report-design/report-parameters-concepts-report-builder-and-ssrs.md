@@ -52,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [レポート作成の概念と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [レポート埋め込みデータセットおよび共有データセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [チュートリアル: レポート &#40; へのパラメーターを追加します。レポート ビルダー"&"#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [チュートリアル: レポート &#40; へのパラメーターを追加します。レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   
 

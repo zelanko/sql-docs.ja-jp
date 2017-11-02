@@ -52,7 +52,7 @@ Data Source="Oracle"; Unicode="True"
   
   
 ##  <a name="Query"></a> クエリ  
- データセットを作成するには、ボックスの一覧からストアド プロシージャを選択するか、SQL クエリを作成します。 クエリを作成するには、テキストベースのクエリ デザイナーを使用する必要があります。 詳細については、次を参照してください。[テキスト ベースのクエリ デザイナーのユーザー インターフェイスと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ データセットを作成するには、ボックスの一覧からストアド プロシージャを選択するか、SQL クエリを作成します。 クエリを作成するには、テキストベースのクエリ デザイナーを使用する必要があります。 詳細については、次を参照してください。[テキスト ベースのクエリ デザイナーのユーザー インターフェイスと #40 です。レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
  結果セットを 1 つだけ返すストアド プロシージャを指定できます。 カーソル ベースのクエリは使用できません。  
   

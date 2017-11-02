@@ -110,7 +110,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポート &#40; へのスパーク ラインを追加します。レポート ビルダー"&"#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [チュートリアル: レポート &#40; へのスパーク ラインを追加します。レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   
 

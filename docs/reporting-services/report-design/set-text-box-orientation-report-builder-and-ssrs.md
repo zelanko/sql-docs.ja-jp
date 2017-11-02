@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [テキスト ボックス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [チュートリアル: テキストの書式設定 &#40;です。レポート ビルダー"&"#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [チュートリアル: テキストの書式設定 &#40;です。レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   
 

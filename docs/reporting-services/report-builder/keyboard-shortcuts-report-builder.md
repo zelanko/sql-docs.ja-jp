@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [レポート デザイン ビュー &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [用語集 &#40;です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [用語集 &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   
 

@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
  また、レポート パーツ (レポート パーツが依存するデータセットが含まれています) を追加することによって、データセットをレポートに追加することもできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- データを表示するレポートを作成する方法については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[チュートリアル: 基本的なテーブル レポート &#40; を作成します。レポート ビルダー"&"#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). 独自のデータが含まれたレポートの作成方法については、「[チュートリアル: オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
+ データを表示するレポートを作成する方法については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[チュートリアル: 基本的なテーブル レポート &#40; を作成します。レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). 独自のデータが含まれたレポートの作成方法については、「[チュートリアル: オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
 -   埋め込みデータ ソースに基づいた埋め込みデータセットを追加する。  
   
 > [!NOTE]  
->  レポート サーバーでは、共有アイテムは、個別に、またはパブリッシュされるフォルダーから権限を継承することによって、セキュリティで保護されます。 保存した共有データセットに他のユーザーがアクセスできるようにするには、権限を付与する方法を理解する必要があります。 詳細については、次を参照してください。[セキュリティ &#40;です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/security-report-builder.md)または[共有データセット アイテムのセキュリティで保護された](../../reporting-services/security/secure-shared-dataset-items.md)です。  
+>  レポート サーバーでは、共有アイテムは、個別に、またはパブリッシュされるフォルダーから権限を継承することによって、セキュリティで保護されます。 保存した共有データセットに他のユーザーがアクセスできるようにするには、権限を付与する方法を理解する必要があります。 詳細については、次を参照してください。[セキュリティ &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/security-report-builder.md)または[共有データセット アイテムのセキュリティで保護された](../../reporting-services/security/secure-shared-dataset-items.md)です。  
   
  レポートにデータを追加した後、データ領域に基づくレポート ページのデータの編成、レポート パーツの変更、および他のユーザーとの変更内容の共有を行うことができます。また、レポートに表示されるデータの制限または並べ替えをユーザーが行うことができるように設定できます。 詳細については、次の関連項目を参照してください。  
   
