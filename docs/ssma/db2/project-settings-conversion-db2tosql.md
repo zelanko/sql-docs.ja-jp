@@ -488,6 +488,6 @@ SSMA では、SSMA シーケンス エミュレーターに DB2 シーケンス�
 -   選択した場合**いいえ**SSMA は、変換後のトリガーの外部には、エラーで CURRVAL をシーケンス処理を行うすべての参照としてマークされます。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;DB2ToSQL"&"#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[ユーザー インターフェイス リファレンス &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
 

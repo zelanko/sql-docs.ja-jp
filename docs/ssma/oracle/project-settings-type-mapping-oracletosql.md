@@ -271,6 +271,6 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |Xml 型|xml|  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;OracleToSQL"&"#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[ユーザー インターフェイス リファレンス &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
 

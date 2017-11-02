@@ -45,7 +45,7 @@ IsDescendant(<NodeID>)
  Boolean 型。  
   
 ## <a name="remarks"></a>解説  
- **IsDescendant**だけで使われる[SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX"&"#41;](../dmx/select-from-model-content-dmx.md)と[SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT &#40;DMX"&"#41;](../dmx/select-from-model-dimension-content-dmx.md)クエリ。  
+ **IsDescendant**だけで使われる[SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)と[SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)クエリ。  
   
 ## <a name="examples"></a>使用例  
  次の例は、IsDescendant 関数に指定されたノードの子孫であるケースをすべて返します。  
@@ -56,9 +56,9 @@ WHERE IsDescendant('00000000100')
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 

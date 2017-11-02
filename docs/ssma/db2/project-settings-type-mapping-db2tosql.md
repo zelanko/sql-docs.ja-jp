@@ -274,6 +274,6 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |Xml 型|xml|  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;DB2ToSQL"&"#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[ユーザー インターフェイス リファレンス &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
 

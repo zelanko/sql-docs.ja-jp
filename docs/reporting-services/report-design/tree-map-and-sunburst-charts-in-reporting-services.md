@@ -183,7 +183,7 @@ SQL Server[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ツリー
   
   
 ## <a name="see-also"></a>参照  
-* [共有データセット デザイン ビュー &#40;です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
+* [共有データセット デザイン ビュー &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [系列 &#40; にツールヒントを表示します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [Power BI のツリーマップをチュートリアル:](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 * [ツリー マップ: Microsoft Research Data Visualization Apps for Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  

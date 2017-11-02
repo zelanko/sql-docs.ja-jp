@@ -70,6 +70,6 @@ SSMA テスターの現在のバージョンによって、同じソースまた
   
 ## <a name="see-also"></a>参照  
 [SQL Server &#40; SSMA コンポーネントをインストールします。SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[プロジェクトの設定 &#40;です。変換"&"#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+[プロジェクトの設定 &#40;です。変換&#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
 

@@ -28,7 +28,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="project-settingssynchronization-db2tosql"></a>プロジェクト Settings(Synchronization) (DB2ToSQL)
 [同期] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を読み込みますおよびにデータベース テーブルおよびストアド プロシージャなどのオブジェクトの更新方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
-既定のアクションのオプションは、DB2 データベースからオブジェクトを更新する場合と、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、次を参照してください。[更新からのデータベース &#40;DB2ToSQL"&"#41;](../../ssma/db2/refresh-from-database-db2tosql.md)です。  
+既定のアクションのオプションは、DB2 データベースからオブジェクトを更新する場合と、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、次を参照してください。[更新からのデータベース &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)です。  
   
 同じ設定を含む 2 つの異なる同期ページにアクセスできます。  
   

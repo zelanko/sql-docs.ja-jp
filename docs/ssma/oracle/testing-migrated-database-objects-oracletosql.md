@@ -64,10 +64,10 @@ SSMA Tester を使用する場合は、SSMA Oracle 拡張機能パックをイ�
 SSMA テスターの現在のバージョンによって、同じソースまたはターゲット サーバーに複数のユーザーによって並列実行がサポートされていないことに注意します。  
   
 ## <a name="getting-started"></a>作業の開始  
-[作成するテスト_ケース &#40;OracleToSQL"&"#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
+[作成するテスト_ケース &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;OracleToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
-[プロジェクトの設定 &#40;です。変換"&"#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
+[SQL Server &#40;OracleToSQL&#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[プロジェクトの設定 &#40;です。変換&#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
 

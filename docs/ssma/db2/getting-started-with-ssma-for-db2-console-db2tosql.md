@@ -40,13 +40,13 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムで、コンソールを正常に起動した後、次の手順を使用して作業する可能性があります。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;DB2ToSQL"&"#41;](../../ssma/db2/creating-script-files-db2tosql.md)です。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)です。  
   
-2.  [変数値ファイル &#40;DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+2.  [変数値ファイル &#40;DB2ToSQL&#41; の作成](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
-3.  [サーバーの接続ファイル &#40;DB2ToSQL"&"#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+3.  [サーバーの接続ファイル &#40;DB2ToSQL&#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-4.  [SSMA コンソール &#40;DB2ToSQL"&"#41; の実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)プロジェクトのニーズに基づく  
+4.  [SSMA コンソール &#40;DB2ToSQL&#41; の実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)プロジェクトのニーズに基づく  
   
 追加機能:  
   

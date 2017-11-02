@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
   
  [多次元式 &#40;です。MDX と #41 です。参照](../mdx/multidimensional-expressions-mdx-reference.md)  
   
- [データ マイニング拡張機能 &#40;DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)  
   
  [MDX および DAX での VBA 関数](../mdx/vba-functions-in-mdx-and-dax.md)  
   

@@ -47,7 +47,7 @@ Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ss
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 Oracle データベース オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または複数の Oracle データベースを移行します。  
   
-接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 Oracle スキーマ レベルでは、このマッピングをカスタマイズするに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server スキーマ &#40;OracleToSQL"&"#41; への Oracle スキーマのマッピング](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)です。  
+接続のプロパティを定義するときは、オブジェクトとデータを移行するデータベースを指定します。 Oracle スキーマ レベルでは、このマッピングをカスタマイズするに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server スキーマ &#40;OracleToSQL&#41; への Oracle スキーマのマッピング](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)です。  
   
 > [!IMPORTANT]  
 > 接続しようとする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、ことを確認して、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が実行されていると、接続を受け入れることができます。  
@@ -115,15 +115,15 @@ Oracle データベース オブジェクトを変換する前に[!INCLUDE[ssNoV
 ## <a name="next-step"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
--   Oracle スキーマ間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマを参照してください。 [SQL Server スキーマ &#40;OracleToSQL"&"#41; への Oracle スキーマのマッピング](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)です。  
+-   Oracle スキーマ間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースおよびスキーマを参照してください。 [SQL Server スキーマ &#40;OracleToSQL&#41; への Oracle スキーマのマッピング](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)です。  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定 &#40;OracleToSQL"&"#41;](../../ssma/oracle/setting-project-options-oracletosql.md)です。  
+-   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)です。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング Oracle と SQL Server データ型 &#40;OracleToSQL"&"#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)です。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング Oracle と SQL Server データ型 &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)です。  
   
--   Oracle データベース オブジェクトの定義を変換できる場合は、次のタスクを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [Oracle スキーマを変換する &#40;OracleToSQL"&"#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)です。  
+-   Oracle データベース オブジェクトの定義を変換できる場合は、次のタスクを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [Oracle スキーマを変換する &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL&#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

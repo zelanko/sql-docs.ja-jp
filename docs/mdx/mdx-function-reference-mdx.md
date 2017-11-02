@@ -88,13 +88,13 @@ ms.lasthandoff: 08/02/2017
 |[DefaultMember &#40;です。MDX と #41 です。](../mdx/defaultmember-mdx.md)|ディメンションまたは階層の既定のメンバーを返します。|  
 |[FirstChild &#40;です。MDX と #41 です。](../mdx/firstchild-mdx.md)|メンバーの先頭の子メンバーを返します。|  
 |[FirstSibling &#40;です。MDX と #41 です。](../mdx/firstsibling-mdx.md)|メンバーの親の最初の子メンバーを返します。|  
-|[項目 &#40;です。メンバー"&"#41;&#40;です。MDX と #41 です。](../mdx/item-member-mdx.md)|指定された組からメンバーを返します。|  
+|[項目 &#40;です。メンバー&#41;&#40;です。MDX と #41 です。](../mdx/item-member-mdx.md)|指定された組からメンバーを返します。|  
 |[Lag &#40;です。MDX と #41 です。](../mdx/lag-mdx.md)|ディメンション内の指定されたメンバーから指定された数だけ前にあるメンバーを返します。|  
 |[LastChild &#40;です。MDX と #41 です。](../mdx/lastchild-mdx.md)|指定されたメンバーの最後の子メンバーを返します。|  
 |[LastSibling &#40;です。MDX と #41 です。](../mdx/lastsibling-mdx.md)|指定されたメンバーの親の最後の子を返します。|  
 |[潜在顧客と #40 です。MDX と #41 です。](../mdx/lead-mdx.md)|ディメンション内の指定されたメンバーから指定された数だけ後にあるメンバーを返します。|  
 |[LinkMember &#40;です。MDX と #41 です。](../mdx/linkmember-mdx.md)|指定された階層の指定されたメンバーと等価のメンバーを返します。|  
-|[メンバーと #40 です。文字列"&"#41;&#40;です。MDX と #41 です。](../mdx/members-string-mdx.md)|文字列式で指定されたメンバーを返します。|  
+|[メンバーと #40 です。文字列&#41;&#40;です。MDX と #41 です。](../mdx/members-string-mdx.md)|文字列式で指定されたメンバーを返します。|  
 |[NextMember &#40;です。MDX と #41 です。](../mdx/nextmember-mdx.md)|指定されたメンバーを含むレベル内にある次のメンバーを返します。|  
 |[OpeningPeriod &#40;です。MDX と #41 です。](../mdx/openingperiod-mdx.md)|指定したレベルの子孫で、最初の兄弟を返します。オプションでメンバーも指定できます。|  
 |[ParallelPeriod &#40;です。MDX と #41 です。](../mdx/parallelperiod-mdx.md)|前の期間から、指定されたメンバーと同じ相対位置にあるメンバーを返します。|  
@@ -114,8 +114,8 @@ ms.lasthandoff: 08/02/2017
 |[CalculationPassValue (MDX)](../mdx/calculationpassvalue-mdx.md)|キューブに対して指定された計算パスを評価し、MDX 式の値を返します。|  
 |[CoalesceEmpty &#40;です。MDX と #41 です。](../mdx/coalesceempty-mdx.md)|空のセル値を数値または文字列に連結し、連結後の値を返します。|  
 |[相関関係 &#40;です。MDX と #41 です。](../mdx/correlation-mdx.md)|セットに対して評価される 2 つの系列の相関係数を返します。|  
-|[カウント &#40;ディメンション"&"#41;&#40;です。MDX と #41 です。](../mdx/count-dimension-mdx.md)|キューブ内のディメンション数を返します。|  
-|[カウント &#40;です。階層レベルが"&"#41;&#40;です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)|ディメンション内または階層内のレベル数を返します。|  
+|[カウント &#40;ディメンション&#41;&#40;です。MDX と #41 です。](../mdx/count-dimension-mdx.md)|キューブ内のディメンション数を返します。|  
+|[カウント &#40;です。階層レベルが&#41;&#40;です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)|ディメンション内または階層内のレベル数を返します。|  
 |[カウント &#40;です。セット &#41;&#40;です。MDX と #41 です。](../mdx/count-set-mdx.md)|セット内のセル数を返します。|  
 |[カウント &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/count-tuple-mdx.md)|組内のディメンション数を返します。|  
 |[共変性と #40 です。MDX と #41 です。](../mdx/covariance-mdx.md)|バイアスをかけた母集団の公式を使用して、セットに対して評価される 2 つの系列の母共分散を返します。|  

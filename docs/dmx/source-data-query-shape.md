@@ -73,7 +73,7 @@ APPEND ({ <child table query> }
  親テーブルと子テーブルを関連付ける列ごとにクエリを発行する必要があります。  
   
 ## <a name="examples"></a>使用例  
- 内で次の例を使用することができます、 [INSERT INTO &#40;DMX"&"#41;](../dmx/insert-into-dmx.md)ステートメントを入れ子になったテーブルが含まれるモデルをトレーニングします。 2 つのテーブル内で、**図形**によってステートメントが関連付けられて、 **OrderNumber**列です。  
+ 内で次の例を使用することができます、 [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md)ステートメントを入れ子になったテーブルが含まれるモデルをトレーニングします。 2 つのテーブル内で、**図形**によってステートメントが関連付けられて、 **OrderNumber**列です。  
   
 ```  
 SHAPE {  
@@ -87,9 +87,9 @@ SHAPE {
   
 ## <a name="see-also"></a>参照  
  [&#60;以外の場合はソース データ クエリ &#62;。](../dmx/source-data-query.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

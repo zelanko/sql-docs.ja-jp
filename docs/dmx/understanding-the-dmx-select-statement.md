@@ -81,8 +81,8 @@ ms.lasthandoff: 08/02/2017
   
 |クエリの型|Description|  
 |----------------|-----------------|  
-|SELECT FROM [NATURAL] PREDICTION JOIN します。|マイニング モデル内の列を内部データ ソースの列に結合させることで作成される予測を返します。<br /><br /> このクエリの型のドメインは、モデルからの予測可能列および入力データ ソースからの列となります。<br /><br /> [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX"&"#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [予測クエリ &#40;データ マイニング"&"#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
-|SELECT FROM *\<モデル >*|マイニング モデルにのみ基づいた、予測可能な列の最も可能性の高い状態を返します。 このクエリの型は、空の予測結合で予測を作成するための近道となります。<br /><br /> このクエリの型のドメインは、モデルからの予測可能列です。<br /><br /> [SELECT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-from-model-dmx.md)<br /><br /> [予測クエリ &#40;データ マイニング"&"#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|SELECT FROM [NATURAL] PREDICTION JOIN します。|マイニング モデル内の列を内部データ ソースの列に結合させることで作成される予測を返します。<br /><br /> このクエリの型のドメインは、モデルからの予測可能列および入力データ ソースからの列となります。<br /><br /> [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [予測クエリ &#40;データ マイニング&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|SELECT FROM *\<モデル >*|マイニング モデルにのみ基づいた、予測可能な列の最も可能性の高い状態を返します。 このクエリの型は、空の予測結合で予測を作成するための近道となります。<br /><br /> このクエリの型のドメインは、モデルからの予測可能列です。<br /><br /> [SELECT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-from-model-dmx.md)<br /><br /> [予測クエリ &#40;データ マイニング&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
   
  [Select の型に戻る](#Select_Types)  
   
@@ -92,8 +92,8 @@ ms.lasthandoff: 08/02/2017
 |クエリの型|Description|  
 |----------------|-----------------|  
 |SELECT DISTINCT FROM *\<モデル >*|指定された列に対して、マイニング モデルからすべての状態値を返します。<br /><br /> このクエリの型のデータ ドメインはデータ マイニング モデルです。<br /><br /> [SELECT DISTINCT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [コンテンツ クエリ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
-|SELECT FROM *\<モデル >*です。コンテンツ|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの型のデータ ドメインはコンテンツ スキーマ行セットです。<br /><br /> [SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX"&"#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [コンテンツ クエリ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
-|SELECT FROM *\<モデル >*です。DIMENSION_CONTENT|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの型のデータ ドメインはコンテンツ スキーマ行セットです。<br /><br /> [SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT &#40;DMX"&"#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
+|SELECT FROM *\<モデル >*です。コンテンツ|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの型のデータ ドメインはコンテンツ スキーマ行セットです。<br /><br /> [SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [コンテンツ クエリ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
+|SELECT FROM *\<モデル >*です。DIMENSION_CONTENT|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの型のデータ ドメインはコンテンツ スキーマ行セットです。<br /><br /> [SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
 |SELECT FROM *\<モデル >*です。PMML|この機能をサポートするアルゴリズムに対して、マイニング モデルの Predictive Model Markup Language (PMML) 表記法を返します。<br /><br /> このクエリの型のドメインは PMML スキーマ行セットです。<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
   
  [Select の型に戻る](#Select_Types)  
@@ -103,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 |クエリの型|Description|  
 |----------------|-----------------|  
-|SELECT INTO *\<新しいモデル >*|マイニング モデルのコピーを作成します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT INTO &#40;DMX"&"#41;](../dmx/select-into-dmx.md)|  
+|SELECT INTO *\<新しいモデル >*|マイニング モデルのコピーを作成します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
   
  [Select の型に戻る](#Select_Types)  
   
@@ -112,16 +112,16 @@ ms.lasthandoff: 08/02/2017
   
 |クエリの型|Description|  
 |----------------|-----------------|  
-|SELECT FROM *\<モデル >*です。場合|マイニング モデルのトレーニングに使用されたケースを返します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX"&"#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX を使用したドリルスルー クエリを作成します。](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
-|SELECT FROM *\<モデル >*です。SAMPLE_CASES|マイニング モデルのトレーニングに使用されたケースを表すサンプル ケースを返します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT FROM &#60; モデル &#62;。SAMPLE_CASES &#40;DMX"&"#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM *\<構造 >*です。 場合|基になるマイニング構造から詳細なデータ行を返します。この詳細情報は、マイニング モデルのトレーニングで使用されなかった場合にも返されます。<br /><br /> [SELECT FROM &#60; 構造 &#62;。場合](../dmx/select-from-structure-cases.md)<br /><br /> [ドリルスルー クエリ &#40;データ マイニング"&"#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
+|SELECT FROM *\<モデル >*です。場合|マイニング モデルのトレーニングに使用されたケースを返します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX を使用したドリルスルー クエリを作成します。](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
+|SELECT FROM *\<モデル >*です。SAMPLE_CASES|マイニング モデルのトレーニングに使用されたケースを表すサンプル ケースを返します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT FROM &#60; モデル &#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
+|SELECT FROM *\<構造 >*です。 場合|基になるマイニング構造から詳細なデータ行を返します。この詳細情報は、マイニング モデルのトレーニングで使用されなかった場合にも返されます。<br /><br /> [SELECT FROM &#60; 構造 &#62;。場合](../dmx/select-from-structure-cases.md)<br /><br /> [ドリルスルー クエリ &#40;データ マイニング&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
  [Select の型に戻る](#Select_Types)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   
 

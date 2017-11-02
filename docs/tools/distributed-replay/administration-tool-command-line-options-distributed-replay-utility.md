@@ -64,13 +64,13 @@ Usage:
   
  コマンドの引数や例などの構文情報の詳細については、次のトピックを参照してください。  
   
--   [前処理オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [前処理オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Replay オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [Replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [Status オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [Status オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [Cancel オプション &#40;Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [Cancel オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPC は、言語イベントとしてではなく RPC として再生されます。  
   

@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
 -   選択した場合**いいえ**、すべてのテストの実行データの変更は保存されます。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>補助テーブルの保存モード  
-テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースを実行する &#40;OracleToSQL"&"#41;](../../ssma/oracle/running-test-cases-oracletosql.md)トピックです。  
+テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースを実行する &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)トピックです。  
   
 -   選択した場合**は常に保存**、補助テーブル データは、後で使用するため常に格納されます。  
   
@@ -62,8 +62,8 @@ ms.lasthandoff: 08/02/2017
 をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[を使用してテスト リポジトリ (OracleToSQL)](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)です。  
   
 ## <a name="see-also"></a>参照  
-[使用してテスト リポジトリ &#40;OracleToSQL"&"#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[実行するテスト_ケース &#40;OracleToSQL"&"#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[使用してテスト リポジトリ &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[実行するテスト_ケース &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

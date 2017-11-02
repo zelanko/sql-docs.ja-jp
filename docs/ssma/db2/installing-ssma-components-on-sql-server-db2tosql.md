@@ -32,7 +32,7 @@ SSMA のこのバージョンで必要はありません、個別のインスト
 指定されたインスタンスにデータベースはスキーマ追加 SSMA 拡張機能パック[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 **Sysdb**スキーマには、テーブルとデータを移行するために必要なストアド プロシージャと DB2 システム関数をエミュレートするユーザー定義関数が含まれています。  
   
 ## <a name="see-also"></a>参照  
-[SSMA の DB2 クライアント &#40;DB2ToSQL"&"#41; のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
-[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SSMA の DB2 クライアント &#40;DB2ToSQL&#41; のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

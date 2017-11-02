@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 変換中には、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 出力とエラー情報を使用して、DB2 データベースまたは必要な変換の結果を得るため、変換プロセスを変更するかどうかを確認します。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
-オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換"&"#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
+オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換&#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>変換結果  
 次の表は、変換されますが、DB2 のオブジェクトし、結果として得られる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。  
@@ -150,7 +150,7 @@ DB2 データベース オブジェクトに変換するには、最初に、変
   
 -   プロシージャのソース コードを変更することができます、 **SQL**タブです。  
   
--   削除または問題のあるコードを変更する DB2 データベース内のオブジェクトを変更することができます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [DB2 データベース &#40;DB2ToSQL"&"#41; への接続](../../ssma/db2/connecting-to-db2-database-db2tosql.md)です。  
+-   削除または問題のあるコードを変更する DB2 データベース内のオブジェクトを変更することができます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [DB2 データベース &#40;DB2ToSQL&#41; への接続](../../ssma/db2/connecting-to-db2-database-db2tosql.md)です。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーと DB2 メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]と DB2 からデータを移行します。  
   
@@ -158,6 +158,6 @@ DB2 データベース オブジェクトに変換するには、最初に、変
 移行プロセスの次の手順が、[変換後のオブジェクトを SQL Server に読み込む](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
 

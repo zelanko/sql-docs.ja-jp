@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [FeatureSet 要素 &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Partitioning 要素 &#40;DTA"&"#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [Partitioning 要素 &#40;DTA&#41;](../../tools/dta/partitioning-element-dta.md)  
   
 -   [KeepExisting 要素 &#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md) が **ALL** に設定されている  
   

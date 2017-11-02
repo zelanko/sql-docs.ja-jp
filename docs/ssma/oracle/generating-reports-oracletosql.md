@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
     > [!IMPORTANT]  
     > レポートの出力、評価レポートと異なります。 前者は、コマンドの実行中のパフォーマンスに関するレポート、後者は、プログラムによる使用量の XML レポートします。  
   
-    コマンド オプションの出力からのレポート (Sl です。 不可。 上記の 2 ~ 4) を参照してください、 [SSMA コンソール &#40;OracleToSQL"&"#41; を実行する](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)セクションです。  
+    コマンド オプションの出力からのレポート (Sl です。 不可。 上記の 2 ~ 4) を参照してください、 [SSMA コンソール &#40;OracleToSQL&#41; を実行する](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)セクションです。  
   
 2.  詳細レポートの詳細設定を使用して、出力レポートに目的の範囲を指定します。  
   

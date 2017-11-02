@@ -48,9 +48,9 @@ DMX_Expression < DMX_Expression
  両方のパラメーターが NULL 以外であり、1 番目のパラメーターの値が 2 番目のパラメーターの値よりも小さい場合、TRUE を含むブール値です。 両方のパラメーターが NULL 以外であり、1 番目のパラメーターの値が 2 番目のパラメーターの値以上の場合、FALSE を含むブール値です。 どちらかまたは両方のパラメーターの結果が NULL 値の場合、NULL 値を含むブール値です。  
   
 ## <a name="see-also"></a>参照  
- [比較演算子 &#40;DMX"&"#41;](../dmx/operators-comparison.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)  
+ [比較演算子 &#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   
 

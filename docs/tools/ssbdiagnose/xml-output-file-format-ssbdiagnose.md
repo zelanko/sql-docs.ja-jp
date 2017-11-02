@@ -36,15 +36,15 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="diagnosticinformation-root-element"></a>DiagnosticInformation ルート要素 (ssbdiagnose)  
   
--   [DiagnosticInformation 要素 &#40;ssbdiagnose"&"#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)  
+-   [DiagnosticInformation 要素 &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)  
   
 ## <a name="banner-element"></a>Banner 要素  
   
--   [Banner 要素 &#40;ssbdiagnose"&"#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)  
+-   [Banner 要素 &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)  
   
 ## <a name="issue-element"></a>Issue 要素  
   
--   [Issue 要素 &#40;ssbdiagnose"&"#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)  
+-   [Issue 要素 &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)  
   
 ## <a name="see-also"></a>参照  
  [ssbdiagnose ユーティリティ &#40;です。Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  

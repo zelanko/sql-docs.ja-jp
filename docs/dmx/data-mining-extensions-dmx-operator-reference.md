@@ -49,19 +49,19 @@ ms.lasthandoff: 08/02/2017
 |[および & # #40; DMX &#41;](../dmx/and-dmx.md)|2 つの数値式の積を実行する論理演算子です。|  
 |[いない & # #40; DMX &#41;](../dmx/not-dmx.md)|数値式の否定を実行する論理演算子です。|  
 |[または & # #40; DMX &#41;](../dmx/or-dmx.md)|2 つの数値式の和を実行する論理演算子です。|  
-|[+ (& a) #40 です。正の値"&"#41;& # #40; DMX &#41;](../dmx/positive-dmx.md)|数値式の正の値を返す単項演算子です。|  
-|[-(& a) #40 です。負の値"&"#41;& # #40; DMX &#41;](../dmx/negative-dmx.md)|数値式の負の値を返す単項演算子です。|  
+|[+ (& a) #40 です。正の値&#41;& # #40; DMX &#41;](../dmx/positive-dmx.md)|数値式の正の値を返す単項演算子です。|  
+|[-(& a) #40 です。負の値&#41;& # #40; DMX &#41;](../dmx/negative-dmx.md)|数値式の負の値を返す単項演算子です。|  
 |[2 つのスラッシュ &#40;です。コメント &#41;& # #40; DMX &#41;](../dmx/double-slash-comment-dmx.md)|テキストを示す文字列を[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]実行する必要があります。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の最後に含めたり、別の行に挿入したりすることができます。|  
 |[--&#40;です。コメント &#41;& # #40; DMX &#41;概要](../dmx/comment-dmx-summary.md)|テキストを示す文字列を[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]実行する必要があります。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の最後に含めたり、別の行に挿入したりすることができます。|  
 |[スラッシュ スター &#40;です。コメント &#41;& # #40; DMX &#41;](../dmx/slash-star-comment-dmx.md)|テキストを示す文字列を[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]実行する必要があります。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の最後に含めたり、別の行に挿入したりすることができます。|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   
 

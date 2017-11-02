@@ -35,10 +35,10 @@ SSMA for Oracle の以降のバージョンにアップグレードする場合�
 |トピック|Description|  
 |---------|---------------|  
 |[Oracle クライアント &#40;OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
-|[SQL Server &#40;OracleToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
+|[SQL Server &#40;OracleToSQL&#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
 |[Oracle コンポーネント &#40;OracleToSQL"&"#41 です。 SSMA を削除します。](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|プログラムと拡張機能パックのクライアントをアンインストールするための手順を説明します。|  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL&#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

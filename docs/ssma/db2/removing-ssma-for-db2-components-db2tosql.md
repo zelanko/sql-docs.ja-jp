@@ -43,7 +43,7 @@ SSMA をアンインストールするを使用**プログラム追加と削除*
 移行したデータベースが内のオブジェクトを使用しないことを確認する場合は、 **sysdb.ssma_DB2**スキーマ、スキーマから削除して、拡張機能パックを削除する – は Windows のアンインストールはありません  
   
 ## <a name="see-also"></a>参照  
-[SSMA の DB2 クライアント &#40;DB2ToSQL"&"#41; のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
-[SQL Server &#40;DB2ToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[SSMA の DB2 クライアント &#40;DB2ToSQL&#41; のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; SSMA コンポーネントをインストールします。](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   
 

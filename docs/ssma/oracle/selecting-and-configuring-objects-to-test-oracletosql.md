@@ -28,7 +28,7 @@ ms.lasthandoff: 08/02/2017
 この手順では、テスト、およびプロシージャの関数の出力パラメーターと関数の戻り値を比較するための設定を構成するオブジェクトを選択します。  
   
 ## <a name="selection-of-objects-to-test"></a>テストするオブジェクトの選択  
-Oracle オブジェクト ツリーで、ウィンドウの左側にある、テスト プロセス中に、呼び出し先のオブジェクトを確認してください。 内のテストが容易なオブジェクトの完全な一覧を参照してください、[移行対象のデータベース オブジェクトのテスト &#40;OracleToSQL"&"#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)トピックです。  
+Oracle オブジェクト ツリーで、ウィンドウの左側にある、テスト プロセス中に、呼び出し先のオブジェクトを確認してください。 内のテストが容易なオブジェクトの完全な一覧を参照してください、[移行対象のデータベース オブジェクトのテスト &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)トピックです。  
   
 SSMA テスターによってサポートされないテスト用に選択されたオブジェクトのいずれかの場合は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトをテストすることはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
@@ -85,9 +85,9 @@ SSMA テスターによってサポートされないテスト用に選択され
 入力パラメーター値を指定することができます、**呼び出す値**ページ。 **の呼び出しの追加**ボタンは、空のパラメーター値を持つ新しい呼び出しを追加します。 **削除呼び出し**ボタンは、現在の呼び出しを削除します。  
   
 ## <a name="next-step"></a>次の手順  
-[選択と構成を受けるオブジェクト &#40;OracleToSQL"&"#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[選択と構成を受けるオブジェクト &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

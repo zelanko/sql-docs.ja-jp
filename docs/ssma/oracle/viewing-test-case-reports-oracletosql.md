@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
 としての実行の状態を示しています。**成功**または**エラー**です。  
   
 ## <a name="see-also"></a>参照  
-[実行するテスト_ケース &#40;OracleToSQL"&"#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[実行するテスト_ケース &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

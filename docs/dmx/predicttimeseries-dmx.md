@@ -102,7 +102,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   3 番目の例では、EXTEND_MODEL_CASES パラメーターを使用して、マイニング モデルを新しいデータで更新する方法を示します。  
   
- タイム シリーズ モデルの操作に関する詳細については、データ マイニング チュートリアル」を参照してください。[レッスン 2: a Forecasting Scenario &#40;中級者向けデータ マイニング チュートリアル"&"#41; の構築](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)と[時系列予測の DMX のチュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)です。  
+ タイム シリーズ モデルの操作に関する詳細については、データ マイニング チュートリアル」を参照してください。[レッスン 2: a Forecasting Scenario &#40;中級者向けデータ マイニング チュートリアル&#41; の構築](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)と[時系列予測の DMX のチュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)です。  
   
 > [!NOTE]  
 >  モデルの結果は異なる場合があります。次の例の結果は、結果の形式を説明することのみを目的としています。  
@@ -136,7 +136,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>例 2: 新しいデータを追加して REPLACE_MODEL_CASES を使用する  
  特定の地域のデータが正しくないことが判明したので、モデル内のパターンを使用しながら新しいデータに合わせて予測を調整するとします。 または、別の地域の傾向の方が信頼性が高いことが判明したので、最も信頼性が高いモデルを異なる地域のデータに適用するとします。  
   
- このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用する新しいデータセットを指定できます。 これにより、予測は指定したモデル内のパターンに基づくが、新しいデータ ポイントの末尾からスムーズに継続するようになります。 このシナリオの完全なチュートリアルについては、次を参照してください。[高度な時系列予測 &#40;中級者向けデータ マイニング チュートリアル"&"#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)です。  
+ このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用する新しいデータセットを指定できます。 これにより、予測は指定したモデル内のパターンに基づくが、新しいデータ ポイントの末尾からスムーズに継続するようになります。 このシナリオの完全なチュートリアルについては、次を参照してください。[高度な時系列予測 &#40;中級者向けデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)です。  
   
  次の PREDICTION JOIN クエリでは、データを置き換えて新しい予測を作成する構文を示します。 この例では、置き換え後のデータとして、Amount 列と Quantity 列の値を取得してそれぞれの値に 2 を乗算します。  
   
@@ -270,7 +270,7 @@ OR [Model Region] = 'M200 North America'
 >  この例では、FLATTENED キーワードを使用して、結果を表形式でわかりやすくしました。ただし、プロバイダーで階層的な行セットがサポートされている場合は、FLATTENED キーワードを省略できます。 FLATTENED キーワードを省略した場合、クエリを返します 2 つの列を識別する値を含む最初の列、`[Model Region]`データ系列、および統計の入れ子になったテーブルを含む 2 番目の列です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [タイム シリーズ モデルのクエリ例](../analysis-services/data-mining/time-series-model-query-examples.md)   
  [予測 (& a) # #40; DMX &#41;](../dmx/predict-dmx.md)  
   

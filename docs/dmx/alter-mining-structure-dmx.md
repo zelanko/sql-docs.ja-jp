@@ -37,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  既存のマイニング構造に基づいて新しいマイニング モデルを作成します。  使用すると、 **ALTER MINING STRUCTURE**を次のように新しいマイニング モデル構造を作成するステートメントが既に存在する必要があります。 ステートメントを使用する場合にこれに対し、[マイニング モデルの作成 &#40;DMX"&"#41;](../dmx/create-mining-model-dmx.md)モデルを作成し、その基になるマイニング構造を同時に自動的に生成します。  
+  既存のマイニング構造に基づいて新しいマイニング モデルを作成します。  使用すると、 **ALTER MINING STRUCTURE**を次のように新しいマイニング モデル構造を作成するステートメントが既に存在する必要があります。 ステートメントを使用する場合にこれに対し、[マイニング モデルの作成 &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)モデルを作成し、その基になるマイニング構造を同時に自動的に生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -133,7 +133,7 @@ USING <algorithm> [(<parameter list>)]
 |**リグレッサー**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
- 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ &#40;DMX"&"#41;](../dmx/modeling-flags-dmx.md)です。  
+ 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)です。  
   
 ### <a name="prediction-clause"></a>予測句  
  予測句では、予測列の使用方法を説明します。 次の表は、使用可能な句を示しています。  
@@ -220,9 +220,9 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

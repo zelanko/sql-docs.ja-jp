@@ -57,8 +57,8 @@ Dividend / Divisor
   
 ## <a name="see-also"></a>参照  
  [算術演算子 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [演算子 &#40;DMX"&"#41;](../dmx/operators-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [除算 &#40;です。SSIS 式 &#41;](../integration-services/expressions/divide-ssis-expression.md)   
  [& # #40; 除算 &#41;&#40;です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/divide-transact-sql.md)  
   

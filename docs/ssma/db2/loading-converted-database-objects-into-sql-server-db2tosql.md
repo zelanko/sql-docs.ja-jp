@@ -115,6 +115,6 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
 移行プロセスの次の手順が、 [SQL Server 内の DB2 データの移行](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
 

@@ -96,7 +96,7 @@ Oracle データベースへの接続に使用されるアカウントが少な�
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    詳細については、次を参照してください。 [Oracle に接続 &#40;OracleToSQL"&"#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
+    詳細については、次を参照してください。 [Oracle に接続 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
   
 ## <a name="reconnecting-to-oracle"></a>Oracle への再接続  
 プロジェクトを終了するまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くと、データベースにアクティブに接続する場合を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要がなくなるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データを移行します。  
@@ -131,6 +131,6 @@ Oracle データベースについてのメタデータは、自動的に更新�
 -   移行プロセスの次の手順が、 [SQL Server のインスタンスへの接続](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL&#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

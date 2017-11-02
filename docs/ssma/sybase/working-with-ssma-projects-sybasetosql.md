@@ -41,11 +41,11 @@ SSMA には変換と、データの移行し ASE と SSMA を同期するデー�
   
 3.  左側のウィンドウでをクリックして**変換**です。  
   
-4.  右側のウィンドウで、必要に応じてオプションを変更する、オプションを確認します。 これらのオプションの詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換"&"#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
+4.  右側のウィンドウで、必要に応じてオプションを変更する、オプションを確認します。 これらのオプションの詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換&#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
 5.  移行、SQL Azure、オブジェクトの読み込み、GUI、および種類のマッピングのページの手順 1. ~ 3. を繰り返します。  
   
-    -   移行オプションについては、次を参照してください。[プロジェクトの設定 &#40;です。移行"&"#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md).  
+    -   移行オプションについては、次を参照してください。[プロジェクトの設定 &#40;です。移行&#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md).  
   
     -   オブジェクトを読み込むためのオプションについては[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[プロジェクトの設定 &#40;です。同期 &#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md).  
   

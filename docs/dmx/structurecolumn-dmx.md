@@ -57,7 +57,7 @@ StructureColumn('structure column name')
   
  使用してクエリから返された結果、 **StructureColumn**関数は、モデルに対するフィルターの存在を受けます。 つまり、モデル フィルターは、マイニング モデルに含まれるケースを制御します。 したがって、構造列上のクエリは、マイニング モデルに使用されたケースのみを返します。 ケース テーブルと入れ子になったテーブルの両方に対するマイニング モデル フィルターの影響を示すコード例については、このトピックの「例」のセクションを参照してください。  
   
- DMX SELECT ステートメントでこの関数を使用する方法の詳細については、次を参照してください。 [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX"&"#41;](../dmx/select-from-model-cases-dmx.md)または[SELECT FROM &#60; 構造 &#62;。ケース](../dmx/select-from-structure-cases.md)です。  
+ DMX SELECT ステートメントでこの関数を使用する方法の詳細については、次を参照してください。 [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)または[SELECT FROM &#60; 構造 &#62;。ケース](../dmx/select-from-structure-cases.md)です。  
   
 ## <a name="error-messages"></a>エラー メッセージ  
  次のセキュリティ エラーは、親のマイニング構造に対するドリルスルー権限がユーザーに与えられていない場合に発生します。  
@@ -150,9 +150,9 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 

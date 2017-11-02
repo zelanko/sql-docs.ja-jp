@@ -189,6 +189,6 @@ ms.lasthandoff: 08/02/2017
 |宣言へ移動します。|F12|  
   
 ## <a name="see-also"></a>参照  
-[ショートカット キー &#40;DB2ToSQL"&"#41;](../../ssma/db2/shortcut-keys-db2tosql.md)  
+[ショートカット キー &#40;DB2ToSQL&#41;](../../ssma/db2/shortcut-keys-db2tosql.md)  
   
 

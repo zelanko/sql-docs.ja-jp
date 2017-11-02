@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[TuningOptions 要素 &#40;DTA"&"#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**親要素**|[TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子要素**|なし|  
   
 ## 解説  

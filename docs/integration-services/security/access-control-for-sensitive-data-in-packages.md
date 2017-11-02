@@ -140,7 +140,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="protection_dialog"></a>パッケージ保護レベル ダイアログ ボックス
   **[パッケージの保護レベル]** ダイアログ ボックスを使用すると、パッケージの保護レベルを更新できます。 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。  
   
- 要件とパッケージのセキュリティ オプションを理解するのに有用なことを表示する[セキュリティの概要 &#40;Integration Services"&"#41;](../../integration-services/security/security-overview-integration-services.md)です。  
+ 要件とパッケージのセキュリティ オプションを理解するのに有用なことを表示する[セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)です。  
   
 ### <a name="options"></a>オプション  
  **Package protection level**  
@@ -161,7 +161,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; パッケージ](../../integration-services/integration-services-ssis-packages.md)   
- [セキュリティの概要 &#40;Integration Services"&"#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil ユーティリティ](../../integration-services/dtutil-utility.md)  
   
 

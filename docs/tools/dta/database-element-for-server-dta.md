@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseDetailsTypecomplexType** の名前です。 この **Database** 要素を、ルートの親要素が **Configuration** 要素である他の要素と混同しないでください。 詳細については、「[Configuration の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 使用例については、**データベース**要素を参照してください[Server 要素 &#40;DTA"&"#41;](../../tools/dta/server-element-dta.md)です。  
+ 使用例については、**データベース**要素を参照してください[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)です。  
   
 ## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  

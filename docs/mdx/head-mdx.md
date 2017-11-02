@@ -70,7 +70,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>参照  
  [末尾 &#40;です。MDX と #41 です。](../mdx/tail-mdx.md)   
  [項目 &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/item-tuple-mdx.md)   
- [項目 &#40;です。メンバー"&"#41;&#40;です。MDX と #41 です。](../mdx/item-member-mdx.md)   
+ [項目 &#40;です。メンバー&#41;&#40;です。MDX と #41 です。](../mdx/item-member-mdx.md)   
  [ランクと #40 です。MDX と #41 です。](../mdx/rank-mdx.md)   
  [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   

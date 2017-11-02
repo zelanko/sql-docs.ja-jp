@@ -71,7 +71,7 @@ DB2 スキーマ間のマッピングをカスタマイズする場合は、[!IN
 DB2 オブジェクトへの変換を分析するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト、することができます[データ移行レポート (SSMA 共通)](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2eToSQL"&"#41; への接続](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
-[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2eToSQL&#41; への接続](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

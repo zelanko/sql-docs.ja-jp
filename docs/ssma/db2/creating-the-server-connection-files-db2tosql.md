@@ -83,7 +83,7 @@ ms.lasthandoff: 08/02/2017
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソール &#40;DB2ToSQL"&"#41; の実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+コンソールの運用には、次の手順は[SSMA コンソール &#40;DB2ToSQL&#41; の実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>参照  
 [SSMA コンソールを実行します。](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

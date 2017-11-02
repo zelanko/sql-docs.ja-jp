@@ -76,12 +76,12 @@ SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテ�
   
 次のボタンは、テスト結果 ページで入手できます。  
   
--   クリックして、**ビュー**を開くボタン[テスト_ケース レポートを表示する &#40;OracleToSQL"&"#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)テスト_ケースの結果を現在の。  
+-   クリックして、**ビュー**を開くボタン[テスト_ケース レポートを表示する &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)テスト_ケースの結果を現在の。  
   
 -   クリックして、**削除**を選択したテスト結果を削除するボタン  
   
 ## <a name="see-also"></a>参照  
-[実行するテスト_ケース &#40;OracleToSQL"&"#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[実行するテスト_ケース &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

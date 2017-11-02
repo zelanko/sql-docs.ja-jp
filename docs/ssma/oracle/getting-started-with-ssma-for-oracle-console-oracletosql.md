@@ -40,13 +40,13 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムで、コンソールを正常に起動した後、次の手順を使用して作業する可能性があります。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL"&"#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
   
-2.  [変数値ファイル &#40;OracleToSQL"&"#41; の作成](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+2.  [変数値ファイル &#40;OracleToSQL&#41; の作成](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-3.  [サーバーの接続ファイル &#40;OracleToSQL"&"#41; の作成](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+3.  [サーバーの接続ファイル &#40;OracleToSQL&#41; の作成](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-4.  [SSMA コンソール &#40;OracleToSQL"&"#41; の実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)プロジェクトのニーズに基づく  
+4.  [SSMA コンソール &#40;OracleToSQL&#41; の実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)プロジェクトのニーズに基づく  
   
 追加機能:  
   

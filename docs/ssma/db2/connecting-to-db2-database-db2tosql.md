@@ -83,7 +83,7 @@ DB2 データベースについてのメタデータは自動的に更新され�
   
     `Data Source=MyDB2DB;Integrated Security=yes;`  
   
-    詳細については、次を参照してください。 [Oracle に接続 &#40;OracleToSQL"&"#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
+    詳細については、次を参照してください。 [Oracle に接続 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
   
 ## <a name="reconnecting-to-db2"></a>DB2 への再接続  
 プロジェクトを終了するまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くと、データベースにアクティブに接続する場合を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要がなくなるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データを移行します。  
@@ -118,6 +118,6 @@ DB2 データベースについてのメタデータは、自動的に更新さ�
 -   移行プロセスの次の手順が、 [SQL Server に接続する](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

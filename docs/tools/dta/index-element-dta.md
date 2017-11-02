@@ -71,7 +71,7 @@ ms.lasthandoff: 08/02/2017
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[Create 要素 &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
-|**子要素**|[インデックス &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Index の Column 要素 &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> **PartitionColumn** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> [Index の Filegroup 要素 &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> **PercentUsage** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
+|**子要素**|[インデックス &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Index の Column 要素 &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> **PartitionColumn** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> [Index の Filegroup 要素 &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。<br /><br /> **PercentUsage** 要素。 詳細については、データベース エンジン チューニング アドバイザーの XML スキーマを参照してください。|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  

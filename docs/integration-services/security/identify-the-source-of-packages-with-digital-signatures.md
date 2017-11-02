@@ -152,7 +152,7 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; パッケージ](../../integration-services/integration-services-ssis-packages.md)   
- [セキュリティの概要 &#40;Integration Services"&"#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   
   
 

@@ -106,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [+ (& a) #40 です。共用体"&"#41;&#40;です。MDX と #41 です。](../mdx/union-mdx-operator-reference.md)   
+ [+ (& a) #40 です。共用体&#41;&#40;です。MDX と #41 です。](../mdx/union-mdx-operator-reference.md)   
  [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

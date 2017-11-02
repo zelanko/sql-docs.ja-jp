@@ -186,7 +186,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [予測 &#40;DMX"&"#41;](../dmx/predict-dmx.md)関数はポリモーフィックでは、すべての種類のモデルで使用できます。 この関数の引数に値 3 を使用して、クエリから返される項目の数を制限します。 **選択**NATURAL PREDICTION JOIN 句を下記の一覧が予測の入力として使用する値を提供します。  
+ [予測 &#40;DMX&#41;](../dmx/predict-dmx.md)関数はポリモーフィックでは、すべての種類のモデルで使用できます。 この関数の引数に値 3 を使用して、クエリから返される項目の数を制限します。 **選択**NATURAL PREDICTION JOIN 句を下記の一覧が予測の入力として使用する値を提供します。  
   
 ```  
 SELECT FLATTENED  
@@ -210,10 +210,10 @@ NATURAL PREDICTION JOIN
  予測可能属性を含む列`[v Assoc Seq Line Items]`テーブルの列は、クエリは、入れ子になったテーブルを含む 1 つの列を返します。 既定では入れ子になったテーブル列の名前は`Expression`します。 使用することができます、プロバイダーが階層的な行セットをサポートしていない場合、 **FLATTENED**キーワードやすく、結果を表示するこの例で示すようにします。  
   
 ## <a name="see-also"></a>参照  
- [選択 &#40;DMX"&"#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択 &#40;DMX&#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 

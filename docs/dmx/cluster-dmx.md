@@ -69,10 +69,10 @@ FROM
 ```  
   
 ## <a name="see-also"></a>参照  
- [ClusterProbability &#40;DMX"&"#41;](../dmx/clusterprobability-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 

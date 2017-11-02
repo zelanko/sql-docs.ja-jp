@@ -28,9 +28,9 @@ ms.lasthandoff: 08/02/2017
 # <a name="shortcut-keys-db2tosql"></a>ショートカット キー (DB2ToSQL)
 SSMA アプリケーション間を移動するキーボード ショートカットを使用することができます。 詳細については、次の各トピックを参照してください。  
   
--   [メニュー コマンドと他のショートカット キー &#40;DB2ToSQL"&"#41;](../../ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md)  
+-   [メニュー コマンドと他のショートカット キー &#40;DB2ToSQL&#41;](../../ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md)  
   
 ## <a name="see-also"></a>参照  
-[入門 SSMA for DB2 &#40;DB2ToSQL"&"#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
+[入門 SSMA for DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
   
 

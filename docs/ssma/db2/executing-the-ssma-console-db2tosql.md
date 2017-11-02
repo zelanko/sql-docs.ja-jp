@@ -127,7 +127,7 @@ DB2 コンソール アプリケーションの SSMA では、旧バージョン
   
 -   **参照**コンソールで、UI の機能がサポートされていません。  
   
--   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL"&"#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
+-   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
   
 **Command**  
   
@@ -766,16 +766,16 @@ sql ステートメントの変換
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください。 [SSMA コンソール &#40;DB2ToSQL"&"#41; でのコマンド ライン オプション](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)です。  
+コマンド ライン オプションについては、次を参照してください。 [SSMA コンソール &#40;DB2ToSQL&#41; でのコマンド ライン オプション](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)です。  
   
-サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイル &#40;DB2ToSQL"&"#41; の操作。](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
+サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイル &#40;DB2ToSQL&#41; の操作。](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
   
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードを管理する &#40;DB2ToSQL"&"#41;](../../ssma/db2/managing-passwords-db2tosql.md)です。  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードを管理する &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)です。  
   
--   レポートの生成に、次を参照してください。[レポートを生成する &#40;DB2ToSQL"&"#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
+-   レポートの生成に、次を参照してください。[レポートを生成する &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;DB2ToSQL"&"#41;](../../ssma/db2/troubleshooting-db2tosql.md)です。  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)です。  
   
 

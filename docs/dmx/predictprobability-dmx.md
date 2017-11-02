@@ -77,9 +77,9 @@ NATURAL PREDICTION JOIN
 |1|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 

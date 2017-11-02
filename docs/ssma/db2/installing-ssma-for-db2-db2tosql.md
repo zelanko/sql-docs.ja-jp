@@ -37,11 +37,11 @@ DB2 for SSMA の以降のバージョンにアップグレードする場合は�
   
 |トピック|Description|  
 |---------|---------------|  
-|[SSMA の DB2 クライアント &#40;DB2ToSQL"&"#41; のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
-|[SQL Server &#40;DB2ToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
-|[SSMA を削除する DB2 コンポーネント &#40;DB2ToSQL"&"#41;](../../ssma/db2/removing-ssma-for-db2-components-db2tosql.md)|プログラムと拡張機能パックのクライアントをアンインストールするための手順を説明します。|  
+|[SSMA の DB2 クライアント &#40;DB2ToSQL&#41; のインストール](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
+|[SQL Server &#40;DB2ToSQL&#41; SSMA コンポーネントをインストールします。](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
+|[SSMA を削除する DB2 コンポーネント &#40;DB2ToSQL&#41;](../../ssma/db2/removing-ssma-for-db2-components-db2tosql.md)|プログラムと拡張機能パックのクライアントをアンインストールするための手順を説明します。|  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

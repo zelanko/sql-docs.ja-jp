@@ -63,7 +63,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **ページのトップへ**  
   
--   *****\<モデル >***PREDICTION JOIN**   
+-   **FROM**  *\<モデル >***PREDICTION JOIN**   
   
 -   **ON**  
   

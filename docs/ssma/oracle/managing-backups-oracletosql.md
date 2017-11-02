@@ -100,6 +100,6 @@ SQL Server バックアップ管理は、バックアップと復元のテーブ
 -   をクリックして、**閉じる**ダイアログを閉じるボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

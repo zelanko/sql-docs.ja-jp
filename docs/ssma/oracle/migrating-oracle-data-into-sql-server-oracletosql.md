@@ -97,7 +97,7 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     > SSMA for Oracle の拡張機能パックがのインスタンスにインストールされていないかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、場合**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行中に、次のエラーが発生しました: ' SSMA データ移行のコンポーネントが見つかりませんでした、SQL Server のサーバー側のデータ移行を実行できなくなります。 拡張機能パックが正しくインストールされているかどうかを確認してください ' です。 をクリックして**キャンセル**データ移行を終了します。  
   
-5.  **Connect to Oracle**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 Oracle への接続の詳細については、次を参照してください[Oracle に接続 &#40;OracleToSQL"&"#41;。](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
+5.  **Connect to Oracle**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 Oracle への接続の詳細については、次を参照してください[Oracle に接続 &#40;OracleToSQL&#41;。](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
     ターゲット データベースに接続するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]で接続資格情報を入力、 **SQL Server への接続** ダイアログ ボックスをクリック**接続**です。 接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server への接続](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
@@ -107,6 +107,6 @@ ms.lasthandoff: 08/02/2017
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータの移行はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL&#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

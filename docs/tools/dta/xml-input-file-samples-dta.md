@@ -31,7 +31,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [単純な XML 入力ファイルのサンプル &#40;DTA"&"#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
+-   [単純な XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
   
 -   [インライン ワークロード &#40; DTA &#41; XML 入力ファイルのサンプル](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)  
   

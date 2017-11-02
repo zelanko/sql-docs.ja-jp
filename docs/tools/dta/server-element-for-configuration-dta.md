@@ -51,8 +51,8 @@ ms.lasthandoff: 08/02/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[Configuration 要素 &#40;DTA"&"#41;](../../tools/dta/configuration-element-dta.md)|  
-|**子要素**|[サーバー &#40;DTA"&"#41; の name 要素](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [構成 &#40;DTA"&"#41; の database 要素](../../tools/dta/database-element-for-configuration-dta.md)|  
+|**親要素**|[Configuration 要素 &#40;DTA&#41;](../../tools/dta/configuration-element-dta.md)|  
+|**子要素**|[サーバー &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [構成 &#40;DTA&#41; の database 要素](../../tools/dta/database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  **Server** 要素は、 **Configuration** 要素に 1 個だけ指定できます。 この要素は、 **データベース エンジン チューニング アドバイザー XML スキーマ** の [ServerTypecomplexType](http://go.microsoft.com/fwlink/?linkid=43100)の名前です。 この **Server** 要素を **DTAInput** 要素の子要素と混同しないでください。 詳しくは、「[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)」を参照してください。  

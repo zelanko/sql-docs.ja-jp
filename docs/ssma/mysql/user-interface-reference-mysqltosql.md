@@ -48,10 +48,10 @@ ms.lasthandoff: 08/02/2017
 |[グローバル設定 (ログ)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|ログ記録 ページを使用して、**グローバル設定**ダイアログ ボックスをログ記録を構成します。|  
 |[グローバル設定 (&) #40 です。 出力ウィンドウ &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|使用して、**グローバル設定**SSMA for MySQL のユーザー インターフェイスを設定する ダイアログ ボックス。|  
 |[新しいプロジェクトと #40 です。SSMA &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|使用して、**新しいプロジェクト**MySQL プロジェクトの新しい SSMA を作成する ダイアログ ボックス。|  
-|[プロジェクトの設定 &#40;です。変換"&"#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|変換 ページを使用して、**プロジェクト設定**SSMA for MySQL で、関数およびグローバル変数がどのように変換されるかを指定する ダイアログ ボックス。|  
+|[プロジェクトの設定 &#40;です。変換&#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|変換 ページを使用して、**プロジェクト設定**SSMA for MySQL で、関数およびグローバル変数がどのように変換されるかを指定する ダイアログ ボックス。|  
 |[プロジェクトの設定 &#40;です。GUI &#41; &#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-gui-mysqltosql.md)|GUI ページを使用して、**プロジェクト設定** ダイアログ ボックスで表示されるデータの量を指定する、**データ**タブです。|  
 |[プロジェクトの設定 &#40;です。同期 &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)|移行 ページを使用して、**プロジェクト設定** ダイアログ ボックスをどのように SSMA for MySQL データが移行 MySQL から SQL Server をカスタマイズします。|  
-|[プロジェクトの設定 &#40;です。移行"&"#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)|同期 ページを使用して、**プロジェクト設定**SSMA MySQL を作成または変更の移行方法で SQL Server データベース オブジェクトをカスタマイズする ダイアログ ボックス。|  
+|[プロジェクトの設定 &#40;です。移行&#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)|同期 ページを使用して、**プロジェクト設定**SSMA MySQL を作成または変更の移行方法で SQL Server データベース オブジェクトをカスタマイズする ダイアログ ボックス。|  
 |[プロジェクトの設定 &#40;です。Azure SQL DB &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|SQL Azure のページを使用して、**プロジェクト設定**MySQL から SQL Azure にデータを移行する接続設定をカスタマイズする ダイアログ ボックス。|  
 |[プロジェクトの設定 &#40;です。型のマッピング &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)|型マッピングのページを使用して、**プロジェクト設定**ダイアログ ボックスを SSMA for MySQL プロジェクト内のすべてのデータベースとデータベース オブジェクトの既定の型マッピングを指定します。|  
 |[更新からのデータベース &#40;です。MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|使用して、**データベースから更新** ダイアログ ボックスの MySQL データベースから更新するオブジェクトを選択します。|  

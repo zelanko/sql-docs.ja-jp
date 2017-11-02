@@ -93,7 +93,7 @@ ms.lasthandoff: 08/02/2017
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[サーバー接続ファイル &#40;OracleToSQL"&"#41; の作成](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+コンソールの運用には、次の手順は[サーバー接続ファイル &#40;OracleToSQL&#41; の作成](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
 [サーバー ファイル (Oracle) を作成します。](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  

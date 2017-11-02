@@ -37,17 +37,17 @@ ms.lasthandoff: 08/02/2017
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>ウィザードを使用してテスト_ケースの作成の概要  
 テスト_ケースを作成するプロセスは、5 つの手順で構成されます。  
   
-1.  [テスト_ケース &#40;OracleToSQL"&"#41; の初期化](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [テスト_ケース &#40;OracleToSQL&#41; の初期化](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
 2.  [選択と構成オブジェクトをテスト (&) #40 です。 OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [選択と構成を受けるオブジェクト &#40;OracleToSQL"&"#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [選択と構成を受けるオブジェクト &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-4.  [呼び出し順序 &#40;OracleToSQL"&"#41; のカスタマイズ](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+4.  [呼び出し順序 &#40;OracleToSQL&#41; のカスタマイズ](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [フィニッシュのテスト_ケース準備 &#40;OracleToSQL"&"#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [フィニッシュのテスト_ケース準備 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト &#40;OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
 

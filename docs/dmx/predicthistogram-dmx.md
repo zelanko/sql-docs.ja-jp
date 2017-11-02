@@ -98,17 +98,17 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>参照  
- [クラスター &#40;DMX"&"#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40;DMX"&"#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40;DMX"&"#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40;DMX"&"#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40;DMX"&"#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40;DMX"&"#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40;DMX"&"#41;](../dmx/predictvariance-dmx.md)   
+ [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
+ [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
+ [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
+ [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [データ マイニング拡張機能 &#40;DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX"&"#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
 
