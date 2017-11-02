@@ -27,7 +27,7 @@ ms.lasthandoff: 10/24/2017
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
   
- ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文規則では、次を参照してください。[コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン"&"#41;](../tools/command-prompt-utility-reference-database-engine.md)です。  
+ ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文規則では、次を参照してください。[コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)です。  
   
 ## <a name="syntax"></a>構文  
   

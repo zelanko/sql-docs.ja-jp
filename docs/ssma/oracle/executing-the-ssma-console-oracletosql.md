@@ -127,7 +127,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 -   **参照**コンソールで、UI の機能がサポートされていません。  
   
--   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL"&"#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
+-   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
   
 **Command**  
   
@@ -749,16 +749,16 @@ sql ステートメントの変換
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください。 [SSMA コンソール &#40;OracleToSQL"&"#41; でのコマンド ライン オプション](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)です。  
+コマンド ライン オプションについては、次を参照してください。 [SSMA コンソール &#40;OracleToSQL&#41; でのコマンド ライン オプション](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)です。  
   
-サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイル &#40;OracleToSQL"&"#41; の操作。](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  
+サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイル &#40;OracleToSQL&#41; の操作。](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  
   
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードを管理する &#40;OracleToSQL"&"#41;](../../ssma/oracle/managing-passwords-oracletosql.md)です。  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードを管理する &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)です。  
   
--   レポートの生成に、次を参照してください。[レポートを生成する &#40;OracleToSQL"&"#41;](../../ssma/oracle/generating-reports-oracletosql.md)です。  
+-   レポートの生成に、次を参照してください。[レポートを生成する &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)です。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;OracleToSQL"&"#41;](../../ssma/oracle/troubleshooting-oracletosql.md)です。  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)です。  
   
 
