@@ -51,7 +51,7 @@ ms.lasthandoff: 10/05/2017
 |[& (ビット演算子 AND) (SSIS 式)](../../integration-services/expressions/bitwise-and-ssis-expression.md)|2 つの整数値の AND 演算をビット単位で実行します。|  
 |[~ (ビット演算子 Not) (SSIS 式)](../../integration-services/expressions/bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
 |[== (等しい) (SSIS 式)](../../integration-services/expressions/equal-ssis-expression.md)|2 つの式が等しいかどうかを判別するための比較を実行します。|  
-|[\!= (& a) #40 です。等しくない"&"#41;&#40;です。SSIS 式 &#41;](../../integration-services/expressions/unequal-ssis-expression.md)|2 つの式が等しくないかどうかを判別するための比較を実行します。|  
+|[\!= (& a) #40 です。等しくない&#41;&#40;です。SSIS 式 &#41;](../../integration-services/expressions/unequal-ssis-expression.md)|2 つの式が等しくないかどうかを判別するための比較を実行します。|  
 |[> (より大きい) (SSIS 式)](../../integration-services/expressions/greater-than-ssis-expression.md)|最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。|  
 |[&#60; (より小さい) (SSIS 式)](../../integration-services/expressions/less-than-ssis-expression.md)|最初の式が 2 番目の式未満かどうかを判別するための比較を実行します。|  
 |[&#62;= (以上) (SSIS 式)](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)|最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。|  
