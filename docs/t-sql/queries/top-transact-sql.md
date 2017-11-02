@@ -345,7 +345,7 @@ FROM DimEmployee ORDER BY LastName;
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [ORDER BY 句 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-order-by-clause-transact-sql.md)   
+ [ORDER BY 句 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-order-by-clause-transact-sql.md)   
  [SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  
   
