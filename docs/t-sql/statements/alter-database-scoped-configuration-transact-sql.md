@@ -184,7 +184,7 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
   
 ## <a name="metadata"></a>メタデータ  
 
-[Sys.database_scoped_configurations & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)システム ビューは、データベース内でのスコープの構成に関する情報を提供します。 データベース スコープ構成オプションに表示するだけ sys.database_scoped_configurations はサーバー全体の既定の設定を上書きします。 [Sys.configurations & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)システム ビューでは、サーバー全体の設定のみ示しています。  
+[Sys.database_scoped_configurations &#40;です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)システム ビューは、データベース内でのスコープの構成に関する情報を提供します。 データベース スコープ構成オプションに表示するだけ sys.database_scoped_configurations はサーバー全体の既定の設定を上書きします。 [Sys.configurations &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)システム ビューでは、サーバー全体の設定のみ示しています。  
   
 ## <a name="examples"></a>使用例  
 これらの例は、ALTER DATABASE SCOPED CONFIGURATION の使用法を示します  
@@ -294,10 +294,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [SQL Server クエリ オプティマイザーの修正プログラム トレース フラグ 4199 サービス モデル](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>詳細情報  
- [sys.database_scoped_configurations & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.database_scoped_configurations &#40;です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [サーバー構成オプション & #40 です。SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [サーバー構成オプション &#40;です。SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40;です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 
