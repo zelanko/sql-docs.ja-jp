@@ -45,12 +45,12 @@ ms.lasthandoff: 09/01/2017
 |---|---|
 |構文|**datetimeoffset** [(*秒の小数部の有効桁数*)]|  
 |使用方法|宣言@MyDatetimeoffset **datetimeoffset (7)**<br /><br /> Table1 のテーブルの作成 (Column1 **datetimeoffset (7)** )|  
-|既定の文字列リテラル形式 (下位クライアント用)|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [{+ (& m); #124-} hh:mm]<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
+|既定の文字列リテラル形式 (下位クライアント用)|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [{+&#124;-} hh:mm]<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
 |日付範囲|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 年 12 月 31 日まで CE ~ 9999 CE|  
 |時刻範囲|00時 00分: 00 23:59:59.9999999 から (Informatica では、秒の小数部はサポートされていません)|  
 |タイム ゾーン オフセット範囲|-14:00 ~ + 14:00 (Informatica でタイム ゾーン オフセットは無視されます)|  
 |要素範囲|YYYY は、0001 ～ 9999 の年を表す 4 桁の数字です。<br /><br /> MM は 2 桁の数字、01 から指定した年、月を表す 12 までの範囲です。<br /><br /> DD は 2 桁の数字、01 から指定した月の日を表す 31、月に応じてです。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、00 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、00 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica では、秒の小数部はサポートされていません。<br /><br /> hh は、-14 ～ +14 までの 2 桁の数字です。 Informatica でタイム ゾーン オフセットは無視されます。<br /><br /> mm は、00 ～ 59 の 2 桁の数字です。 Informatica でタイム ゾーン オフセットは無視されます。|  
-|文字長|26 文字 (- YYYY-MM-DD hh:mm:ss {+ (& a) #124;-} hh:mm) 34 文字 (- YYYY-MM-DD hh:mm:ss.nnnnnnn {+ (& a) #124;-} hh:mm)|  
+|文字長|26 文字 (- YYYY-MM-DD hh:mm:ss {+&#124;-} hh:mm) 34 文字 (- YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-} hh:mm)|  
 |有効桁数、小数点以下桁数|次の表を参照してください。|  
 |ストレージのサイズ|既定では 10 バイト固定 (秒部分の既定の有効桁数は 100ns) です。|  
 |精度|100 ナノ秒|  
@@ -73,11 +73,11 @@ ms.lasthandoff: 09/01/2017
 |**datetimeoffset (7)**|(34,7)|10|5-7|  
   
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Datetimeoffset の文字列リテラル形式をサポート
-次の表は、サポートされている ISO 8601 文字列リテラル形式を**datetimeoffset**です。 日付と時刻の部分のアルファベット、数字、区切りなし、時間の形式については**datetimeoffset**を参照してください[日付と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/date-transact-sql.md)と[&#40;TRANSACT-SQL と #41 です。](../../t-sql/data-types/time-transact-sql.md).
+次の表は、サポートされている ISO 8601 文字列リテラル形式を**datetimeoffset**です。 日付と時刻の部分のアルファベット、数字、区切りなし、時間の形式については**datetimeoffset**を参照してください[日付と &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/data-types/date-transact-sql.md)と[&#40;TRANSACT-SQL と&#41; です。](../../t-sql/data-types/time-transact-sql.md).
   
 |ISO 8601|Description|  
 |---|---|
-|YYYY、MM、DDThh:mm:ss [.nnnnnnn] [{+ (& a) #124;-} hh:mm]|この 2 つの形式は、セッションのロケール設定である SET LANGUAGE および SET DATEFORMAT の影響を受けません。 間のスペースは使用できません、 **datetimeoffset**と**datetime**部分。|  
+|YYYY、MM、DDThh:mm:ss [.nnnnnnn] [{+&#124;- hh:mm]|この 2 つの形式は、セッションのロケール設定である SET LANGUAGE および SET DATEFORMAT の影響を受けません。 間のスペースは使用できません、 **datetimeoffset**と**datetime**部分。|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|ISO 定義に基づくこの形式を示します、 **datetime**部分は、世界協定時刻 (UTC) で表す必要があります。 たとえば、1999-12-12 12:30:30.12345 -07:00 は 1999-12-12 19:30:30.12345Z と表す必要があります。|  
   
 ## <a name="time-zone-offset"></a>タイム ゾーン オフセット
@@ -96,7 +96,7 @@ ms.lasthandoff: 09/01/2017
   
 **Datetimeoffset** UTC とオフセットのローカル (、永続的なと変換後のタイム ゾーン) の両方を入力**datetime**値が挿入、更新、算術演算、変換、または割り当て操作中に検証されます。 無効な UTC または (永続的なと変換後のタイム ゾーン オフセット) にローカルの検出**datetime**値には、無効な値がエラーが発生します。 たとえば、9999-12-31 10:10:00 は UTC では有効ですが、タイム ゾーン オフセットを +13:50 に設定したローカル時間ではオーバーフローします。
   
-対応した日付に変換する**datetimeoffset**ターゲット タイム ゾーン内の値を参照してください[AT TIME ZONE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/at-time-zone-transact-sql.md).
+対応した日付に変換する**datetimeoffset**ターゲット タイム ゾーン内の値を参照してください[AT TIME ZONE &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/queries/at-time-zone-transact-sql.md).
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 準拠  
 ANSI および ISO 8601 準拠のセクションで、[日付](../../t-sql/data-types/date-transact-sql.md)と[時間](../../t-sql/data-types/time-transact-sql.md)トピックに適用**datetimeoffset**です。
@@ -109,10 +109,10 @@ ANSI および ISO 8601 準拠のセクションで、[日付](../../t-sql/data-
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**date**|-YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
-|**datetimeoffset**|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [+ &#124;-] hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [+&#124;-] hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータを変換します。
-日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)
+日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
 変換するときに**日付**年、月、および日がコピーされます。 次のコードは、変換した結果を示しています、`datetimeoffset(4)`値を`date`値。  
   
