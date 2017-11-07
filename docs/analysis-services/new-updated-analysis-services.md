@@ -4,7 +4,7 @@ description: "更新されたコンテンツで最近変更したドキュメン
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: 
 ms.service: na
 ms.topic: updart-autogen
