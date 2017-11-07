@@ -50,7 +50,7 @@ ms.lasthandoff: 10/06/2017
 
     ![Office のリボンから web パーツを挿入します。](media/sharepoint-insert-web-part.png)
 
-4. **カテゴリ*** * SQL Server Reporting Services (ネイティブ モード)。 **パーツ****レポート ビューアー**です。 選択し、**追加**です。
+4. **カテゴリ** ** SQL Server Reporting Services (ネイティブ モード)。 **パーツ** **レポート ビューアー**です。 選択し、**追加**です。
 
     ![レポート ビューアー web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 

@@ -32,7 +32,7 @@ SQL Server 2017 Analysis Services では、ここで説明する機能が含ま�
 
 このリリースでは、主要な新機能をいくつか見てをみましょう。
 
-## <a name="1400-compatibility-level-for-tabular-models"></a>テーブル モデルの&1400; 互換性レベル
+## <a name="1400-compatibility-level-for-tabular-models"></a>テーブル モデルの1400 互換性レベル
   新機能と記載されている機能の多くは、ここを活用するには、新規または既存のテーブル モデルを設定または 1400 互換性レベルにアップグレードしてする必要があります。 1400 互換性レベルのモデルを SQL Server 2016 SP1 以前に展開したり、低い互換性レベルにダウングレードしたりすることはできません。 詳細については、次を参照してください。 [Analysis Services 表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)です。
   
 SSDT では、新しいテーブル モデル プロジェクトを作成するときに新しい 1400 互換性レベルを選択できます。 
