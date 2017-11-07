@@ -20,10 +20,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
@@ -55,9 +55,9 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="URLreservation"></a> URL の予約と登録  
  URL 予約は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションへのアクセスに使用できる URL を定義します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の URL を HTTP.SYS で 1 つ以上予約して、サービスの起動時に登録します。 URL にパラメーターを追加することにより、Web サービスを通じてレポートを開くことができます。 予約と登録は、HTTP.SYS によって行われます。 詳細については、MSDN の「 [名前空間の予約、登録、およびルーティング](http://go.microsoft.com/fwlink/?LinkId=92653) 」を参照してください。  
   
- URL 予約** とは、Web アプリケーションへの URL エンドポイントを作成して HTTP.SYS に格納するプロセスです。 HTTP.SYS は、コンピューターで定義されているすべての URL 予約の共通リポジトリであり、URL 予約が一意であることを保証する一連の共通規則を定義します。  
+ *URL 予約* とは、Web アプリケーションへの URL エンドポイントを作成して HTTP.SYS に格納するプロセスです。 HTTP.SYS は、コンピューターで定義されているすべての URL 予約の共通リポジトリであり、URL 予約が一意であることを保証する一連の共通規則を定義します。  
   
- URL の登録** は、サービスの起動時に行われます。 サービスが起動すると、要求キューが作成され、HTTP.SYS がそのキューへの要求のルーティングを開始します。 URL エンドポイントは、そのエンドポイントに転送される要求がキューに追加される前に登録される必要があります。 レポート サーバー サービスの起動時には、有効化されているすべてのアプリケーションに対して予約されているすべての URL が登録されます。 したがって、登録が行われるためには Web サービスが有効化されている必要があります。 ポリシー ベースの管理の Reporting Services のセキュリティ構成ファセットで **WebServiceAndHTTPAccessEnabled** プロパティを **False** に設定すると、Web サービスの URL がサービスの起動時に登録されません。  
+ *URL の登録* は、サービスの起動時に行われます。 サービスが起動すると、要求キューが作成され、HTTP.SYS がそのキューへの要求のルーティングを開始します。 URL エンドポイントは、そのエンドポイントに転送される要求がキューに追加される前に登録される必要があります。 レポート サーバー サービスの起動時には、有効化されているすべてのアプリケーションに対して予約されているすべての URL が登録されます。 したがって、登録が行われるためには Web サービスが有効化されている必要があります。 ポリシー ベースの管理の Reporting Services のセキュリティ構成ファセットで **WebServiceAndHTTPAccessEnabled** プロパティを **False** に設定すると、Web サービスの URL がサービスの起動時に登録されません。  
   
  サービスを停止するか、Web サービスや [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] アプリケーション ドメインの再利用を行うと、URL の登録が解除されます。 サービスの実行中に URL 予約を変更すると、古い URL の登録を解除して新しい URL を使用できるようにするために、アプリケーション ドメインの再利用処理が直ちに行われます。  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |SQL Server Express|Web ポータル|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services の URL の認証とサービス ID  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL 予約では、レポート サーバー サービスのサービス アカウントを指定します。 サービスが実行されているアカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションに対して作成されるすべての URL に対して使用されます。 レポート サーバー インスタンスのサービス ID は、RSReportServer.config ファイルに格納されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約では、レポート サーバー サービスのサービス アカウントが指定されます。 サービスが実行されているアカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションに対して作成されるすべての URL に対して使用されます。 レポート サーバー インスタンスのサービス ID は、RSReportServer.config ファイルに格納されます。  
   
  サービス アカウントには既定値はありません。 ただし、セットアップ時には (ファイルのみのモードでサーバーをインストールする場合でも) サービス アカウントを指定する必要があります。サービス アカウントは、RSReportServer.config の **URLReservation** に指定されます。 サービス アカウントの有効な値は、ドメイン ユーザー アカウント、 **LocalSystem**、および **NetworkService**です。  
   
@@ -109,11 +109,11 @@ ms.lasthandoff: 08/09/2017
   
  `http://localhost` URL として解釈されます`http://127.0.0.1`です。 URL 予約をコンピューター名や 1 つの IP アドレスに設定した場合は、ローカル コンピューターの 127.0.0.1 に対して追加の予約を作成しないと localhost を使用できません。 同様に、localhost や 127.0.0.1 がコンピューターで無効になっている場合も、その URL を使用できません。  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 以降には、誤ってプログラムが高度な特権で実行されるリスクを最小限に抑える新しいセキュリティ機能が含まれています。 これらのオペレーティング システムでローカル管理を有効にするには、追加の手順が必要です。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」をご覧ください。  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 以降には、誤ってプログラムが高度な特権で実行されるリスクを最小限に抑える新しいセキュリティ機能が含まれています。 これらのオペレーティング システムでローカル管理を有効にするには、追加の手順が必要です。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [URL &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL 予約構文 & #40 です。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 予約構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 
