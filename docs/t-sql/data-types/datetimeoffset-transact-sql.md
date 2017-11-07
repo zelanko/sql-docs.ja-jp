@@ -247,7 +247,7 @@ SELECT
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[タイム ゾーンと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/at-time-zone-transact-sql.md)
+[タイム ゾーンと &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 
