@@ -17,10 +17,10 @@ ms.author: maggies
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 209938a6f1f5562fb3e5bfb70be713d2eb9b8285
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>データの表示 (レポート ビルダーおよび SSRS)
@@ -47,16 +47,16 @@ ms.lasthandoff: 08/09/2017
   
 -   DataElementStyle プロパティは、XML において、レポート アイテムが要素と属性のどちらとして表示されるかを制御します。  
   
- CSV エクスポート オプションでは、書式を持たないコンマ区切りのプレーン テキスト形式のファイルとしてレポート データが保存されます。 既定では、コンマ (,) を使用してフィールドおよび行を区切りますが、この設定は、デバイス情報設定で構成できます。 エクスポートされたファイルは、Office SharePoint Server などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 .csv ファイルは、メモ帳などのテキスト エディターで開きます。 URL としてアクセスした場合は、.csv ファイルから **text/csv**の MIME の種類が返されます。 ファイルは、MIME バージョン 1.0 形式のファイルになります。 CSV ファイル形式でレポートを表示する方法の詳細については、「[Exporting to a CSV File &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」(CSV ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。  
+ CSV エクスポート オプションでは、書式を持たないコンマ区切りのプレーン テキスト形式のファイルとしてレポート データが保存されます。 既定では、コンマ (,) を使用してフィールドおよび行を区切りますが、この設定は、デバイス情報設定で構成できます。 エクスポートされたファイルは、Office SharePoint Server などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 .csv ファイルは、メモ帳などのテキスト エディターで開きます。 URL としてアクセスした場合は、.csv ファイルから **text/csv**の MIME の種類が返されます。 ファイルは、MIME バージョン 1.0 形式のファイルになります。 CSV ファイル形式でレポートを表示の詳細については、次を参照してください[CSV ファイル &#40; へのエクスポート。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
- [レポート データが含まれている XML ファイル] エクスポート オプションを指定すると、レポートが XML ファイルとして保存されます。 レポートの XML スキーマは、各レポート固有のものです。 XML エクスポート オプションでは、レポート レイアウト情報は保存されません。 このオプションで生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。 XML ファイル形式でレポートを表示する方法の詳細については、「[Exporting to XML &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)」(XML へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。  
+ [レポート データが含まれている XML ファイル] エクスポート オプションを指定すると、レポートが XML ファイルとして保存されます。 レポートの XML スキーマは、各レポート固有のものです。 XML エクスポート オプションでは、レポート レイアウト情報は保存されません。 このオプションで生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。 XML ファイル形式でレポートを表示の詳細については、次を参照してください[XML &#40; へのエクスポート。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services &#40; の改ページレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [レンダリングの動作と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [対話機能のさまざまなレポート表示拡張機能と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services デバイス情報設定](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   

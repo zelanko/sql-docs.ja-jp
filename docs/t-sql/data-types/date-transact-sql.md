@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 |プロパティ|値|  
 |--------------|-----------|  
 |構文|**date**|  
-|使用方法|宣言@MyDate**日付**<br /><br /> テーブル Table1 の作成 (Column1**日付**)|  
+|使用方法|宣言 @MyDate **日付**<br /><br /> テーブル Table1 の作成 (Column1**日付**)|  
 |既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|-YYYY-MM-DD<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
 |範囲|0001-01-01 ~ 9999-12-31 (1582-10-15 ~ 9999-12-31 Informatica)<br /><br /> 1 月 1 日 1 年 12 月 31 日まで CE ~ 9999 CE (年 12 月 31 1582 年 10 月 15日 CE、Informatica の 9999 CE)|  
 |要素範囲|YYYY は、西暦 1 年から 9999 年を表す 4 桁の数字です。 Informatica、YYYY は 1582 ~ 9999 の範囲に制限されます。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。|  
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/01/2017
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [+ &#124;-] hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータを変換します。
-日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).
+日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ときに、変換を**time (n)**変換は失敗し、発生するエラー メッセージ 206:"オペランド型の不整合: 日付は時間と互換性がありません"です。
   

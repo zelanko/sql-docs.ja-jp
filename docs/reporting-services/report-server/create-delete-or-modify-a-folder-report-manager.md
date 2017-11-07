@@ -24,10 +24,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>フォルダーの作成、削除、または変更 (レポート マネージャー)
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
-2.  レポート マネージャーで、[ホーム] フォルダーを選択し、**[新しいフォルダー]** をクリックします。 既存のフォルダーの下にフォルダーを作成する場合は、 **[コンテンツ]** ページでそのフォルダーに移動し、クリックして開きます。 次に **[新しいフォルダー]**をクリックします。  
+2.  レポート マネージャーで、[ホーム] フォルダーを選択し、 **[新しいフォルダー]**をクリックします。 既存のフォルダーの下にフォルダーを作成する場合は、 **[コンテンツ]** ページでそのフォルダーに移動し、クリックして開きます。 次に **[新しいフォルダー]**をクリックします。  
   
      **[新しいフォルダー]** ページが開きます。  
   
-3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? など) は使用できません。 : @ & = + , $ / * < > |. フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
+3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? : @ & = + , $ / * < > | など) は使用できません。 : @ & = + , $ / * < > |. フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
   
 4.  必要に応じて、説明を入力します。  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 08/09/2017
 7.  **[適用]** をクリックして変更を保存します。  
   
 ## <a name="see-also"></a>参照  
- [新しいフォルダー&#93; ページと &#40;です。レポート マネージャーと&#41; です。](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
- [[コンテンツ] ページと &#40;です。レポート マネージャーと&#41; です。](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [検索、表示、およびレポートと &#40;を管理レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [[新しいフォルダー] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [[コンテンツ] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

@@ -17,10 +17,10 @@ ms.author: maggies
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 0495d013be21d73c0ea5ae67c4a810c75db4298e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>レポート パーツの参照と既定のフォルダーの設定 (レポート ビルダーおよび SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
   
  レポート サーバーや、レポート サーバーに統合されている SharePoint サイトにレポート パーツをパブリッシュするための既定のフォルダーを設定できます。  
   
- 詳細については、「[レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="to-browse-for-report-parts"></a>レポート パーツを参照するには  
   
@@ -70,10 +70,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
- [レポート パーツと &#40;です。レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [レポート パーツとレポート ビルダーでデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [およびレポート パーツ &#40; を再パブリッシュレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [レポート パーツのパブリッシュおよび再パブリッシュ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   
 
