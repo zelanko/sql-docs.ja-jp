@@ -137,7 +137,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- 詳細については、次を参照してください。 [Power BI のレポート サーバーの統合 &#40 です。構成マネージャー &#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と[Power BI ダッシュ ボードにピン留め Reporting Services のアイテム](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)です。  
+ 詳細については、次を参照してください。 [Power BI のレポート サーバーの統合 &#40;です。構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と[Power BI ダッシュ ボードにピン留め Reporting Services のアイテム](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)です。  
  
  **PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
   
