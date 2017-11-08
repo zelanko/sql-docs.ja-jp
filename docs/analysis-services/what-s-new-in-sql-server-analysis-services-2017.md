@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2017 Analysis Services の新機能 |Microsoft ドキュメント"
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services の新機能
@@ -47,9 +47,9 @@ SSDT では、ソリューション エクスプ ローラーで、既存のテ�
 留意することが重要 1400 に既存のモデルをアップグレードすると、ダウン グレードします。 必ず、1200 モデル データベースのバックアップを保管してください。
 
 ## <a name="modern-get-data-experience"></a>新しい Get Data エクスペリエンス
-SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースからデータを取り込みする際に、モダンが導入されています**データの取得**1400 互換性レベルのモデルで発生します。 この新機能は、Power BI Desktop と Microsoft Excel 2016 の同様の機能に基づいています。 最新のデータの取得操作は、データの取得のクエリ ビルダーと M の式を使用して、非常に多くのデータ変換とデータのマッシュ アップ機能を提供します。
+SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースからデータをインポートする際に、現代が導入されています**データの取得**1400 互換性レベルのモデルで発生します。 この新機能は、Power BI Desktop と Microsoft Excel 2016 の同様の機能に基づいています。 最新のデータの取得操作は、データの取得のクエリ ビルダーと M の式を使用して、非常に多くのデータ変換とデータのマッシュ アップ機能を提供します。
 
-最新データの取得には、さまざまな追加のデータ ソースの指定されたサポートが発生します。 今後の更新では、追加のデータ ソースをサポートします。
+最新のデータの取得操作は、さまざまなデータ ソースのサポートを提供します。 将来的に、更新プログラムではさらに多くのサポートが含まれます。
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

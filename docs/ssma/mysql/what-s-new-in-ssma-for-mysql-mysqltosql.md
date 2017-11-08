@@ -1,5 +1,5 @@
 ---
-title: "どのような &#39; SSMA for MySQL (MySQLToSql) の |Microsoft ドキュメント"
+title: "SSMA for MySQL (MySQLToSql) の新機能 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/30/2017
@@ -19,13 +19,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: f895aee684d353451c263b136547c2c6ed7d976d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>どのような &#39; SSMA for MySQL (MySQLToSql) の
+# <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSql) の新機能
 このトピックでは、MySQL での変更の各リリース SSMA が一覧表示します。 
 
 ## <a name="ssma-v76"></a>SSMA v7.6

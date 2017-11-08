@@ -24,10 +24,10 @@ ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 70508825dfb2bdf60bcd77bdaad9ba9dbb19e7eb
+ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
+ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
@@ -61,10 +61,10 @@ ms.lasthandoff: 08/17/2017
   
  プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="ado-net-destination-editor-connection-manager-page"></a>[ADO NET 変換先エディター]\ ([接続マネージャー] ページ)
+## <a name="ado-net-destination-editor-connection-manager-page"></a>[ADO NET 変換先エディター] ([接続マネージャー] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
- **接続マネージャー ページを開きます**  
+ **[接続マネージャー] ページを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換先を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/17/2017
  **Connection manager**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
   
- **新機能**  
+ **[新規作成]**  
  **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
   
  **[テーブルまたはビューを使用する]**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/17/2017
   
  .NET Data Provider for SQL Server (SqlClient) を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。  
   
- **[使用可能な場合は一括挿入を使用する]**を選択し、 **[エラー]** オプションを **[行をリダイレクトする]**に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 詳細については、**エラー**オプションを参照してください[ADO NET 変換先エディター & #40 です。エラー出力 ページ &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+ **[使用可能な場合は一括挿入を使用する]**を選択し、 **[エラー]** オプションを **[行をリダイレクトする]**に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 詳細については、**エラー**オプションを参照してください[ADO NET 変換先エディター &#40;です。エラー出力 ページ &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
 >  SQL Server または Sybase のソース テーブルには、id 列が含まれている場合、ADO NET 変換先の前に IDENTITY_INSERT を有効にして、後でもう一度無効にする SQL 実行タスクを使用する必要があります。 (Id 列のプロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、コピー先のテーブル内の id 列に挿入されるソース テーブルからの明示的な値です。)  
@@ -113,10 +113,10 @@ ms.lasthandoff: 08/17/2017
 ## <a name="external-resources"></a>外部リソース  
  sqlcat.com の技術記事「 [Windows Azure SQL データベースへのデータの高速な読み込み](http://go.microsoft.com/fwlink/?LinkId=244333)」  
   
-## <a name="ado-net-destination-editor-mappings-page"></a>[ADO NET 変換先エディター]\ ([マッピング] ページ)
+## <a name="ado-net-destination-editor-mappings-page"></a>[ADO NET 変換先エディター] ([マッピング] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
- **[マッピング] ページを開く**  
+ **[マッピング] ページを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換先を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -137,10 +137,10 @@ ms.lasthandoff: 08/17/2017
  **変換先列**  
  マップするかどうかにかかわらず、使用できる変換先列を表示します。  
   
-## <a name="ado-net-destination-editor-error-output-page"></a>[ADO NET 変換先エディター]\ ([エラー出力] ページ)
+## <a name="ado-net-destination-editor-error-output-page"></a>[ADO NET 変換先エディター] ([エラー出力] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
- **エラー出力 ページを開きます**  
+ **[エラー出力] ページを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換先を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 08/17/2017
  **列**  
  使用されていません。  
   
- **エラー**  
+ **[エラー]**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
  **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
@@ -166,10 +166,10 @@ ms.lasthandoff: 08/17/2017
  **Description**  
  操作の説明を表示します。  
   
- **この値を選択したセルに設定します。**  
+ **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **適用**  
+ **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
   
