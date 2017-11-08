@@ -257,7 +257,7 @@ T-SQL を新しい場合を参照してください[チュートリアル: TRANS
 
 VS Code を使用する方法については、次を参照してください。、 [Visual Studio のコード ドキュメント](https://code.visualstudio.com/docs)です。
 
-[* * mssql * * の VS Code 拡張機能]:https://aka.ms/mssql-marketplace
+[**mssql** VS Code 拡張機能]:https://aka.ms/mssql-marketplace
 [をダウンロードしてインストール VS Code]:https://code.visualstudio.com/Download
 [.Net 指示をコア]:https://www.microsoft.com/net/core
 [接続プロファイルの管理]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
