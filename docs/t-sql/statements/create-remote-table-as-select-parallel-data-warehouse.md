@@ -2,7 +2,7 @@
 title: "リモート テーブルとして選択 (並列データ ウェアハウス) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

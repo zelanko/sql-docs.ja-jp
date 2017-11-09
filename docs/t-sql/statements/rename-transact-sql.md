@@ -2,7 +2,7 @@
 title: "名前の変更 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/13/2016
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

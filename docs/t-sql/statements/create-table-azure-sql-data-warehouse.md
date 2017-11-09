@@ -2,7 +2,7 @@
 title: "テーブル (Azure SQL データ ウェアハウス) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

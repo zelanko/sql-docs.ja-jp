@@ -2,7 +2,7 @@
 title: "作成テーブルとして選択 (Azure SQL Data Warehouse) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/07/2016
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 
