@@ -1,8 +1,9 @@
 ---
 title: "Linux 上の SQL Server の災害復旧 |Microsoft ドキュメント"
 description: 
-author: mihaelab
+author: allanhirt
 ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
