@@ -1,7 +1,7 @@
 ---
 title: "ユーザー定義関数の作成 (データベース エンジン) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/24/2016
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -75,7 +75,7 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="Scalar"></a> スカラー関数  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに複数ステートメントのスカラー関数を作成します。 この関数は、1 つの入力値 `ProductID`を受け取り、単一のデータ値 (在庫品目中の指定された製品に関する集計量) を返します。  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -92,24 +92,21 @@ BEGIN
      IF (@ret IS NULL)   
         SET @ret = 0;  
     RETURN @ret;  
-END;  
-GO  
-  
+END; 
 ```  
   
  次に、 `ufnGetInventoryStock` 関数を使用して、 `ProductModelID` が 75 ～ 80 の製品の現在の在庫量を返す例を示します。  
   
-```  
+```t-sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
-  
 ```  
   
 ##  <a name="TVF"></a> テーブル値関数  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにインライン テーブル値関数を作成します。 この関数は、入力パラメーターとして 1 つの顧客 (商店) ID を受け取り、 `ProductID`列と `Name`列、および過去 1 年間の集計である `YTD Total` を商店に販売した製品ごとに返します。  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -126,19 +123,17 @@ RETURN
     WHERE C.StoreID = @storeid  
     GROUP BY P.ProductID, P.Name  
 );  
-  
 ```  
   
  次の例では、この関数を呼び出して顧客 ID 602 を指定します。  
   
-```  
+```t-sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
-  
 ```  
   
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにテーブル値関数を作成します。 この関数は、単一の入力パラメーター `EmployeeID` を受け取り、指定された従業員の直接または間接の部下であるすべての従業員の一覧を返します。 関数が呼び出され、従業員 ID 109 を指定します。  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  
@@ -180,13 +175,12 @@ GO
 -- Example invocation  
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
-  
 ```  
   
 ## <a name="more-examples"></a>他の例について  
  - [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
-  - [ALTER FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
+ - [ALTER FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
  - [DROP FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
  - [DROP PARTITION FUNCTION (Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - [コミュニティ](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)のその他の例
