@@ -41,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   
  ![Analysis Services の論理クライアント アーキテクチャ](../../../analysis-services/multidimensional-models/olap-physical/media/as-clientarch9.gif "Analysis Services の論理クライアント アーキテクチャ")  
   
- Win32 クライアント アプリケーションから [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーへの接続には、OLE DB for OLAP インターフェイスまたは Microsoft Visual Basic&amp;#xAE; などのコンポーネント オブジェクト モデル (COM) オートメーション言語用の Microsoft&amp;#xAE; ActiveX&amp;#xAE; データ オブジェクト (ADO) オブジェクト モデルを使用できます。 .NET 言語で記述されたアプリケーションでは、ADOMD.NET を使用して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続できます。  
+ Win32 クライアント アプリケーションから [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーへの接続には、OLE DB for OLAP インターフェイスまたは Microsoft Visual Basic® などのコンポーネント オブジェクト モデル (COM) オートメーション言語用の Microsoft® ActiveX® データ オブジェクト (ADO) オブジェクト モデルを使用できます。 .NET 言語で記述されたアプリケーションでは、ADOMD.NET を使用して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続できます。  
   
  既存のアプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] プロバイダーのいずれかを使用するだけで、変更しなくても [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と通信できます。  
   

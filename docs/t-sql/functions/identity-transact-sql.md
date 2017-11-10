@@ -31,7 +31,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40identity-transact-sql"></a>& #x 40; & #x 40 です識別情報 (TRANSACT-SQL)。
+# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40; です識別情報 (TRANSACT-SQL)。
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   最後に挿入された ID 値を返すシステム関数です。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 09/01/2017
   
  スコープ、@@IDENTITY関数は、現在のセッションを実行するローカル サーバーにします。 この関数は、リモート サーバーまたはリンク サーバーには適用できません。 別のサーバーで ID 値を取得するには、そのリモート サーバーまたはリンク サーバーでストアド プロシージャを実行し、(リモート サーバーまたはリンク サーバーのコンテキスト内で実行されている) そのストアド プロシージャが ID 値を収集し、ローカル サーバー上の呼び出し元の接続にこれを返すようにします。  
   
- レプリケーションが変わる可能性があります、@@IDENTITY値、レプリケーション トリガーやストアド プロシージャ内で使用されているためです。 @@IDENTITY列がレプリケーション アーティクルの一部である場合、最新のユーザーが作成した id の信頼性の高いインジケーターではありません。 構文を使用できます、SCOPE_IDENTITY() 関数の代わりに @@IDENTITYです。 詳細については、次を参照してください。 [SCOPE_IDENTITY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/scope-identity-transact-sql.md)  
+ レプリケーションが変わる可能性があります、@@IDENTITY値、レプリケーション トリガーやストアド プロシージャ内で使用されているためです。 @@IDENTITY列がレプリケーション アーティクルの一部である場合、最新のユーザーが作成した id の信頼性の高いインジケーターではありません。 構文を使用できます、SCOPE_IDENTITY() 関数の代わりに @@IDENTITYです。 詳細については、次を参照してください。 [SCOPE_IDENTITY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/scope-identity-transact-sql.md)  
   
 > [!NOTE]  
 >  呼び出し元のストアド プロシージャまたは[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用するステートメントを書き直す必要があります、`SCOPE_IDENTITY()`関数で、そのユーザーのステートメントのスコープ内で使用される最新の id とにより使用される入れ子になったトリガーのスコープ内の id ではなくを返しますレプリケーション。  
@@ -89,7 +89,7 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SCOPE_IDENTITY と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/scope-identity-transact-sql.md)   
+ [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
