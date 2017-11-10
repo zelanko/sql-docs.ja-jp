@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>」を参照してください。  
   
-## <a name="http-connection-manager-editor-server-page"></a>[HTTP 接続マネージャー エディター] ([サーバー] ページ)
+## <a name="http-connection-manager-editor-server-page"></a>[HTTP 接続マネージャー エディター]\ ([サーバー] ページ)
   **[HTTP 接続マネージャー エディター]** ダイアログ ボックスの **[サーバー]** タブを使用すると、URL やセキュリティ資格情報などのプロパティを指定して、HTTP 接続マネージャーを構成できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 HTTP 接続マネージャーを構成した後に接続をテストすることもできます。  
   
 > [!IMPORTANT]  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/09/2017
  **[接続テスト]**  
  HTTP 接続マネージャーを構成した後に、 **[接続テスト]**をクリックして、接続が利用可能であることを確認します。  
   
-## <a name="http-connection-manager-editor-proxy-page"></a>[HTTP 接続マネージャー エディター] ([プロキシ] ページ)
+## <a name="http-connection-manager-editor-proxy-page"></a>[HTTP 接続マネージャー エディター] \([プロキシ] ページ)
   **[HTTP 接続マネージャー エディター]** の **[プロキシ]** タブを使用すると、HTTP 接続マネージャーがプロキシ サーバーを使用するように設定できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。  
   
  HTTP 接続マネージャーの詳細については、「 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)」を参照してください。 HTTP 接続マネージャーの一般的な使用シナリオの詳細については、「 [Web Service Task](../../integration-services/control-flow/web-service-task.md)」を参照してください。  
@@ -135,7 +135,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [Web サービス タスク](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services & #40 です。SSIS &#41;接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;です。SSIS &#41;接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
 
