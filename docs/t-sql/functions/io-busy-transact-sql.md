@@ -34,7 +34,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40iobusy-transact-sql"></a>& #x 40; & #x 40 です IO_BUSY (TRANSACT-SQL)。
+# <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降の入力と出力の操作の実行に費やした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。 結果は CPU time increment (「ティック」) であり、他のすべての Cpu の累積的なため、実際の経過時間を超える可能性があります。 乗算@TIMETICKS(マイクロ秒) に変換します。  
@@ -74,10 +74,10 @@ IO microseconds as of
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_os_sys_info & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [システム統計関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
 

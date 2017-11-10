@@ -43,7 +43,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40datefirst-transact-sql"></a>& #x 40; & #x 40 です DATEFIRST (TRANSACT-SQL)。
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; です DATEFIRST (TRANSACT-SQL)。
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 セッションは、現在の値を返します[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)です。
@@ -101,7 +101,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="see-also"></a>参照
-[構成関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)
+[構成関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 
