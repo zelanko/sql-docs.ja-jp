@@ -1,7 +1,7 @@
 ---
 title: "外部データ ソース (TRANSACT-SQL) を ALTER |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 11/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="alter-external-data-source-transact-sql"></a>変更する外部データ ソース (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   外部テーブルを作成するために使用する外部データ ソースを変更します。 外部データ ソースは、Hadoop または Azure blob ストレージ (WASB) にすることができます。  
   
