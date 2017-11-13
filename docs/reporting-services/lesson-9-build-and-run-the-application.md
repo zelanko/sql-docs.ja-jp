@@ -16,15 +16,14 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3e9d3ca3b3b708105bf428508ff52c021bd5dd0
 ms.contentlocale: ja-jp
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>レッスン 9: アプリケーションをビルドして実行する
 データ テーブルのデータ フィルターを作成した後は、Web サイト アプリケーションをビルドして実行します。  
   
 ### <a name="to-build-and-run-the-application"></a>アプリケーションをビルドして実行するには  
@@ -35,8 +34,7 @@ ms.lasthandoff: 08/09/2017
   
     Web ページがブラウザーに表示されます。 ReportViewer コントロールにレポートが表示されます。 ツール バーを使用して、レポート内の移動、ズーム、およびレポートの Excel へのエクスポートを行うことができます。  
   
-2.  
-              **[名前]** 列の任意の行にマウス カーソルを合わせます。 手の形のマウス カーソルが表示されます。  
+2.  **[名前]** 列の任意の行にマウス カーソルを合わせます。 手の形のマウス カーソルが表示されます。  
   
 3.  **[名前]** 列の値を選択します。 対応するフィルター選択されたデータを含む子レポートが表示されます。  
   

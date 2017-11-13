@@ -171,7 +171,7 @@ ms.lasthandoff: 08/02/2017
   
 7.  **SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) サービスを実行する最初の SharePoint アプリケーション サーバーで、** 構成ツールを実行[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]して、SharePoint のソリューションと Web サービスをアップグレードします。 この手順にサーバーの全体管理を使用することはできません。  
   
-    1.  **[スタート]** メニューの **[すべてのプログラム]**をポイントし、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]をクリックします。次に、 **[構成ツール]**をクリックし、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール**をクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
+    1.  **[スタート]** メニューの **[すべてのプログラム]**をポイントし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]**をクリックし、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール**をクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
   
     2.  起動時、構成ツールにより、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ファーム ソリューションと [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web アプリケーション ソリューションのアップグレード状態がチェックされます。 これらのソリューションの古いバージョンが検出されると、メッセージ "新しいバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション ファイルが検出されました。 ファームをアップグレードするために、アップグレード オプションを選択してください。" と表示されます。 **[OK]** をクリックして、このメッセージを閉じます。  
   

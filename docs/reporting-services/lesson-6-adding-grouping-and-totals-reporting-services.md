@@ -16,8 +16,7 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
 ms.contentlocale: ja-jp
@@ -34,13 +33,13 @@ ms.lasthandoff: 08/09/2017
   
 2.  **行グループ** ペインが表示されていない場合は、デザイン画面を右クリックして **[表示]** をクリックし、 **[グループ化]**をクリックします。  
   
-3.  **レポート データ** ペインから **行グループ** ペインに [ **Date** ] フィールドをドラッグします。 **(詳細)**行の上に配置します。
+3.  **レポート データ** ペインから **行グループ** ペインに **[ Date ]** フィールドをドラッグします。 **(詳細)**行の上に配置します。
   
     グループを示す角かっこが行ハンドルに表示されます。 テーブルにも 2 つの日付列が表示されます (点線の両側に 1 つずつ)。  
   
     ![追加日グループ](../reporting-services/media/rs-basictablegroups1design.png "日付グループが追加されました")  
   
-4.  **レポート データ** ペインから **行グループ** ペインに [ **Order** ] フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
+4.  **レポート データ** ペインから **行グループ** ペインに **[ Order ]** フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
