@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server イベント クラスの参照
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you record events as they occur in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 記録されるイベントは、トレース定義におけるイベント クラスのインスタンスです。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、イベント クラスとそのイベント カテゴリが **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブに表示されます。  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで発生したイベントを記録できます。 記録されるイベントは、トレース定義におけるイベント クラスのインスタンスです。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、イベント クラスとそのイベント カテゴリが **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブに表示されます。  
   
  次の表は、イベント カテゴリとそのイベント クラスを示しています。  
   
