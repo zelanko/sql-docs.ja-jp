@@ -150,7 +150,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET を使用した、xml 型の列に含まれている XML の操作  
- ADO.NET および **** を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] you can use the standard behavior of the **SqlCommand** class. たとえば、 **xml** データ型の列とその値は、 **SqlDataReader**を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として **xml** データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを **XmlReader** 型に割り当てる必要があります。  
+ ADO.NET および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、**xml** データ型の列に含まれている XML を操作するには、**SqlCommand** クラスの標準の動作を使用します。 たとえば、 **xml** データ型の列とその値は、 **SqlDataReader**を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として **xml** データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを **XmlReader** 型に割り当てる必要があります。  
   
  詳細とコード例については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Column Values in a Data Reader」を参照してください。  
   
