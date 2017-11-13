@@ -15,7 +15,8 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: ja-jp
@@ -124,7 +125,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="file-names"></a>ファイル名  
  レポート アイテムに対して URL 内に指定するファイル名にはファイル名拡張子が必要です。 ファイル名拡張子によってファイルの種類が識別されます。 レポート アイテムをレポート作成ツールからパブリッシュする場合は、ファイル名拡張子が自動的に含まれます。 レポート アイテムを SharePoint ライブラリにアップロードする場合は、ファイル名拡張子を含める必要があります。  
   
- SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、 **rsInvalidDataSourceReference** エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 # % & * : < > ? / { | } は、使わないでください。 / { | } は、使わないでください。  
+ SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、 **rsInvalidDataSourceReference** エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 # % & * : < > ?  / { | } は、使わないでください。  
   
 ## <a name="differences-between-uploading-and-publishing"></a>アップロードとパブリッシュの相違点  
  レポート デザイナーまたはレポート ビルダーを使用してレポートと関連ファイルをライブラリにパブリッシュする場合、ファイルは検証されてから追加されます。 SharePoint ライブラリで **[アップロード]** アクションを使用してレポートと関連ファイルをアップロードする場合、検証チェックは行われません。 ファイルが有効かどうかは、管理、編集、または実行のためにレポートにアクセスするまで知ることができません。  
