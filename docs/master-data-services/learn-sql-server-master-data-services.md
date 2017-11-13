@@ -1,5 +1,5 @@
 ---
-title: "SQL Server マスター データ サービスの説明 |Microsoft ドキュメント"
+title: "SQL Server マスター データ サービスについて | Microsoft Docs"
 ms.custom: 
 ms.date: 02/14/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,15 @@ keywords:
 - "SQL について"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 caps.latest.revision: 19
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0a3198e7cc00f01d31b7951e0d1298bee9b8dec2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: On Demand
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 9139c9faeb4d38fe43300d6b97c019ae845567ec
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server マスター データ サービスについて
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="samples"></a>サンプル  
 * モデル、エンティティ、および階層を使用して [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 内のデータを構造化する方法について詳しく知るには、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のインストールに含まれているサンプル モデルを試してみてください。 サンプルを配置する手順については、「 [サンプル モデルとデータを配置する](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)」を参照してください。   
   
-    については、[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]サンプル モデルに更新プログラムを参照してください[SQL Server のサンプル: モデル配置パッケージ](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)です。  
+    サンプル モデルの [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新プログラムについては、「[SQL Server のサンプル: モデル配置パッケージ (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
   
 * 管理者およびユーザーによる [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]の対話型操作をカスタマイズする方法の例については、SQL Server のサンプルに含まれている MDS C# コンソール アプリケーション サンプルを参照してください。 SQL Server のサンプルは、こちらの [GitHub リポジトリ](https://github.com/Microsoft/sql-server-samples)から .zip ファイルとしてダウンロードできます。  
   
