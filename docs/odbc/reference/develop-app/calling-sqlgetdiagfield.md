@@ -29,5 +29,5 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="calling-sqlgetdiagfield"></a>SQLGetDiagField を呼び出し
-ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetDiagField** ODBC 2 で*.x*ドライバー、ドライバーは SQL_SUCCESS と内の適切な情報を返すは* \*DiagInfoPtr*場合、 *DiagIdentifier*引数は SQL_DIAG_CLASS_ORIGIN SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE SQL_DIAG_SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME、または SQL_DIAG_SQLSTATE 数。 その他のすべての診断フィールドには、SQL_ERROR が返されます。
+ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetDiagField** ODBC 2 で*.x*ドライバー、ドライバーは SQL_SUCCESS と内の適切な情報を返すは *\*DiagInfoPtr*場合、 *DiagIdentifier*引数は SQL_DIAG_CLASS_ORIGIN SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE SQL_DIAG_SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME、または SQL_DIAG_SQLSTATE 数。 その他のすべての診断フィールドには、SQL_ERROR が返されます。
 

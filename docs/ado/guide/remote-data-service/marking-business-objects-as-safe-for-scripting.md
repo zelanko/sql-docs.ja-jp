@@ -48,7 +48,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  最後の手順では、アプリケーションのセットアップ ウィザードは、.htm ファイル、.cab ファイルを作成します。 ターゲット コンピューターにこれら 2 つのファイルをコピーし、ページを読み込むし、サーバーを正しく登録するには、.htm ファイルをダブルクリックします。  
   
- ビジネス オブジェクトは、既定で Windows\System32\Occache ディレクトリにインストールされるが、windows \system32 ディレクトリに移動し、変更、 **hkey_classes_root \clsid\\ ** \< *MyActiveXGUID*>\\**InprocServer32**レジストリ キーに正しいパスと一致します。
+ ビジネス オブジェクトは、既定で Windows\System32\Occache ディレクトリにインストールされるが、windows \system32 ディレクトリに移動し、変更、 **hkey_classes_root \clsid\\**  \< *MyActiveXGUID*>\\**InprocServer32**レジストリ キーに正しいパスと一致します。
 
 
 

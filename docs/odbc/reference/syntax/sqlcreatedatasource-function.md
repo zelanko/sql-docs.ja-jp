@@ -58,7 +58,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource**データ ソースを作成する場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLCreateDataSource**は FALSE を返します、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLCreateDataSource**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

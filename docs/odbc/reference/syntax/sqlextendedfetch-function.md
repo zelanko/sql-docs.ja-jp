@@ -96,7 +96,7 @@ SQLRETURN SQLExtendedFetch(
 |22015|間隔のフィールドがオーバーフローしました|真数型または interval SQL 型から C の間隔の種類を割り当てると、先頭のフィールドに有効桁数の損失が発生します。<br /><br /> 間隔 C 型にデータをフェッチするときに、間隔 C 型の SQL の型の値の表現はありませんでした。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |22018|キャストは無効な文字値|C 型が、真数または概数の数値、datetime、または、interval データ型です。列の SQL 型が文字データ型です。列の値がバインドされた C 型の有効なリテラルではありませんでした。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |24000|カーソル状態が無効|*StatementHandle*が実行された状態でしたが、結果セットが関連付けられていない、 *StatementHandle*です。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLError**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLError**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*関数が呼び出されたし、再度、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLExtendedFetch**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM)、指定した*StatementHandle*実行された状態ではありませんでした。 最初の呼び出さずに、関数が呼び出された**SQLExecDirect**、 **SQLExecute**、またはカタログ関数。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) **SQLExtendedFetch**で呼び出され、 *StatementHandle*後**SQLFetch**または**SQLFetchScroll**が呼び出されたとの前に**SQLFreeStmt** SQL_CLOSE オプションで呼び出されました。<br /><br /> (DM) **SQLBulkOperations**に対して前に、ステートメントが呼び出されました**SQLFetch**、 **SQLFetchScroll**、または**SQLExtendedFetch**呼び出されましたが、**SQLExtendedFetch**する前に呼び出された**SQLFreeStmt** SQL_CLOSE オプションで呼び出されました。|  
@@ -113,7 +113,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>コメント  
  動作**SQLExtendedFetch**はのものと同じ**SQLFetchScroll**、次の例外。  
   
--   **SQLExtendedFetch**と**SQLFetchScroll**フェッチされた行の数を返します異なる方法を使用します。 **SQLExtendedFetch**にフェッチされた行の数を返します* \*RowCountPtr*です。**SQLFetchScroll** SQL_ATTR_ROWS_FETCHED_PTR が指すバッファーに直接フェッチされた行の数を返します。 詳細については、次を参照してください。、 *RowCountPtr*引数。  
+-   **SQLExtendedFetch**と**SQLFetchScroll**フェッチされた行の数を返します異なる方法を使用します。 **SQLExtendedFetch**にフェッチされた行の数を返します *\*RowCountPtr*です。**SQLFetchScroll** SQL_ATTR_ROWS_FETCHED_PTR が指すバッファーに直接フェッチされた行の数を返します。 詳細については、次を参照してください。、 *RowCountPtr*引数。  
   
 -   **SQLExtendedFetch**と**SQLFetchScroll**さまざまな配列の各の行の状態が返されます。 詳細については、次を参照してください。、 *RowStatusArray*引数。  
   

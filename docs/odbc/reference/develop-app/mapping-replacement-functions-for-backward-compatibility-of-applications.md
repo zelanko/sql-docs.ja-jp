@@ -408,9 +408,9 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>エラー処理  
  ODBC 3 です。*x*、呼び出し元**SQLFetch**または**SQLFetchScroll** SQL_DESC_ARRAY_STATUS_PTR、IRD と特定の診断レコードの SQL_DIAG_ROW_NUMBER フィールドの追加このレコードに関連する行セットの行の数が含まれています。 これを使用して、アプリケーションは特定の行の位置と、エラー メッセージを関連付けることができます。  
   
- ODBC 2 です。*x*ドライバーをこの機能を提供することはできません。 ただし、SQLSTATE 01S01 でエラー境界を提供する (行でエラー)。 ODBC 3 です。*x*を使用しているアプリケーション**SQLFetch**または**SQLFetchScroll** ODBC 2 を通過するときにします*。x*ドライバーは、この事実に注意する必要があります。 このようなアプリケーションが呼び出すことができるなることにも注意してください**SQLGetDiagField**を実際にはこのまま SQL_DIAG_ROW_NUMBER フィールドを取得します。 ODBC 3 です。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーが呼び出すできる**SQLGetDiagField**でのみ、 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_RETURNCODE、または SQL_DIAG_ の引数SQLSTATE。 ODBC 3*.x*ドライバー マネージャーは、ODBC 2 を使用する場合に、診断データの構造を保持します*。x*ドライバーが、ODBC 2* 。x*ドライバーが 4 つのフィールドのみを返します。  
+ ODBC 2 です。*x*ドライバーをこの機能を提供することはできません。 ただし、SQLSTATE 01S01 でエラー境界を提供する (行でエラー)。 ODBC 3 です。*x*を使用しているアプリケーション**SQLFetch**または**SQLFetchScroll** ODBC 2 を通過するときにします*。x*ドライバーは、この事実に注意する必要があります。 このようなアプリケーションが呼び出すことができるなることにも注意してください**SQLGetDiagField**を実際にはこのまま SQL_DIAG_ROW_NUMBER フィールドを取得します。 ODBC 3 です。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーが呼び出すできる**SQLGetDiagField**でのみ、 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_RETURNCODE、または SQL_DIAG_ の引数SQLSTATE。 ODBC 3*.x*ドライバー マネージャーは、ODBC 2 を使用する場合に、診断データの構造を保持します*。x*ドライバーが、ODBC 2 *。x*ドライバーが 4 つのフィールドのみを返します。  
   
- ODBC 2 時にします。*x* ODBC 2 を利用するアプリケーション*。x*ドライバー、ドライバー マネージャーによって返される複数のエラーが発生することができます、操作の場合さまざまなエラーで返される可能性 ODBC 3*.x*よりも ODBC 2 でのドライバー マネージャー* 。x*ドライバー マネージャー。  
+ ODBC 2 時にします。*x* ODBC 2 を利用するアプリケーション*。x*ドライバー、ドライバー マネージャーによって返される複数のエラーが発生することができます、操作の場合さまざまなエラーで返される可能性 ODBC 3*.x*よりも ODBC 2 でのドライバー マネージャー *。x*ドライバー マネージャー。  
   
 ## <a name="mappings-for-bookmark-operations"></a>ブックマークの操作のマッピング  
  ODBC 3*.x*ドライバー マネージャーは、ODBC 3 時に、次のマッピングを実行します*。x* ODBC 2 を使用するアプリケーション*。x*ドライバーは、ブックマークの操作を実行します。  
@@ -477,7 +477,7 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  ここで*hstmt*と*pvParam*内の値に設定されて*StatementHandle*と*TargetValuePtr*、それぞれします。 ブックマークが指すバッファーに返されます、 *pvParam* (*TargetValuePtr*) 引数。 バッファー内の値を指す、 *StrLen_or_IndPtr*への呼び出しで引数**SQLGetData**が 4 に設定します。  
   
- このマッピングは、ケースのアカウントに必要な**SQLFetch**を呼び出す前に呼び出された**SQLGetData**と ODBC 2* 。x*ドライバーがサポートされていませんでした**SQLExtendedFetch**です。 この場合、 **SQLFetch**を通じて、ODBC 2 に渡される*。x*ドライバー、ケースのブックマークの取得はサポートされていません。  
+ このマッピングは、ケースのアカウントに必要な**SQLFetch**を呼び出す前に呼び出された**SQLGetData**と ODBC 2 *。x*ドライバーがサポートされていませんでした**SQLExtendedFetch**です。 この場合、 **SQLFetch**を通じて、ODBC 2 に渡される*。x*ドライバー、ケースのブックマークの取得はサポートされていません。  
   
  **SQLGetData** ODBC 2 で複数回を呼び出すことができません*。x*呼び出すので、部分内のブックマークを取得するドライバー **SQLGetData**で、 *BufferLength*引数が 4 未満の値に設定され、 *ColumnNumber*引数を 0 に設定するには、SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長)。 **SQLGetData**ただし、同じブックマークを取得する複数回呼び出します。  
   

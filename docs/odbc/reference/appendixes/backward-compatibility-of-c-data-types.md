@@ -28,5 +28,5 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="backward-compatibility-of-c-data-types"></a>C データ型の旧バージョンとの互換性
-SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なしの型: SQL_C_SSHORT と SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG、and SQL_C_STINYINT SQL_C_UTINYINT です。 ODBC 3*.x* ODBC 2 で動作するドライバー* 。x*アプリケーションは、そのため、呼び出されるときに、ドライバー マネージャーを使ってドライバーに渡します SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT、サポートする必要があります。
+SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なしの型: SQL_C_SSHORT と SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG、and SQL_C_STINYINT SQL_C_UTINYINT です。 ODBC 3*.x* ODBC 2 で動作するドライバー *。x*アプリケーションは、そのため、呼び出されるときに、ドライバー マネージャーを使ってドライバーに渡します SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT、サポートする必要があります。
 

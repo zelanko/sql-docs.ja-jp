@@ -56,7 +56,7 @@ public byte[] getBytes(java.lang.String sCol)
  この getBytes メソッドは、java.sql.CallableStatement インターフェイスの getBytes メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [getBytes メソッド & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
+ [getBytes メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -66,7 +66,7 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|[エラー]|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)引数で* \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)引数で *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|関連付けられているステートメント ハンドルのいずれかの非同期的に実行しているステートメント関連の関数が呼び出されました、*処理*、および*HandleType* sql_handle_dbc としてに設定されました。 非同期関数が実行時にまだ**SQLCancelHandle**が呼び出されました。<br /><br /> (DM)、 *HandleType*引数 SQL_HANDLE_STMT 以外の場合は、関連付けられている接続ハンドルで非同期的に実行中の関数が呼び出されましたれ、この関数が呼び出されたとき、関数が実行されています。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかで呼び出され、*処理*および*HandleType*が sql_handle_dbc としてに設定され、SQL_PARAM_DATA_AVAILABLE が返されます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> **SQLBrowseConnect**に対して呼び出されました*ConnectionHandle*SQL_NEED_DATA が返されます。 この関数は、参照の処理を完了する前に呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  

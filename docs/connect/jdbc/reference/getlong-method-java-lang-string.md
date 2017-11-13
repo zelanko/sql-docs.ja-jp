@@ -56,7 +56,7 @@ public long getLong(java.lang.String sCol)
  このメソッドでのみサポートされて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]できますを安全に返す整数値などのデータ型**bigint**、 **int**、 **smallint**、 **tinyint**、および**ビット**です。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [getLong メソッド & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
+ [getLong メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

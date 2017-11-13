@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>スクロールとフェッチ (ODBC) の行
-スクロール可能なカーソルを使用するときにアプリケーションを呼び出す**SQLFetchScroll** cursor および fetch の行を配置します。 **SQLFetchScroll**相対スクロールをサポートしています (次へ、prior、relative * n *行)、スクロールの絶対 (first、last、および行の* n *)、およびブックマークを配置します。 *FetchOrientation*と*FetchOffset*引数**SQLFetchScroll**次の図に示すようをフェッチする行セットを指定します。  
+スクロール可能なカーソルを使用するときにアプリケーションを呼び出す**SQLFetchScroll** cursor および fetch の行を配置します。 **SQLFetchScroll**相対スクロールをサポートしています (次へ、prior、relative  *n* 行)、スクロールの絶対 (first、last、および行の *n* )、およびブックマークを配置します。 *FetchOrientation*と*FetchOffset*引数**SQLFetchScroll**次の図に示すようをフェッチする行セットを指定します。  
   
  ![次に、前に、最初と最後の行セットのフェッチ](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   

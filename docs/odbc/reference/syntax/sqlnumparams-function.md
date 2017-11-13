@@ -64,7 +64,7 @@ SQLRETURN SQLNumParams(
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 **SQLNumParams**関数が呼び出され、実行を完了する前に**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*; **SQLNumParams**で関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> また、 **SQLNumParams**関数が呼び出され、実行を完了する前に**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*マルチ スレッド アプリケーションで別のスレッドからです。|  
 |HY010|関数のシーケンス エラー|(DM)、関数が呼び出された呼び出しの前に**SQLPrepare**または**SQLExecDirect**の*StatementHandle*です。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLNumParams**関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。|  

@@ -74,7 +74,7 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString**読み取られた文字数を示す整数値を返します。  
   
 ## <a name="diagnostics"></a>診断  
- 呼び出し時に**SQLGetPrivateProfileString**失敗すると、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ 呼び出し時に**SQLGetPrivateProfileString**失敗すると、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

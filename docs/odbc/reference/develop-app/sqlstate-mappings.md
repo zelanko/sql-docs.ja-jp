@@ -27,13 +27,13 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE マッピング
-このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3* 。x*です。 ODBC 3 の詳細についてはします。*x* SQLSTATE 値を参照してください[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)です。  
+このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3 *。x*です。 ODBC 3 の詳細についてはします。*x* SQLSTATE 値を参照してください[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)です。  
   
  ODBC 3 です。*x*S1xxx ではなく HYxxx SQLSTATEs が返されます、および S00XX ではなく 42Sxx SQLSTATEs が返されます。 これは、Open Group および ISO 標準に合うように行われました。 多くの場合、標準がいくつかの SQLSTATEs の解釈を再定義があるため、マッピングは一対一ありません。  
   
- ODBC 2 時にします。*x*アプリケーションは、ODBC 3 にアップグレードします*。x* ODBC 3 の期待に変更するアプリケーションでは、アプリケーションが*。x* ODBC 2 ではなく SQLSTATEs* 。x* SQLSTATEs です。 次の表には、ODBC 3 が一覧表示します。*x* SQLSTATEs される各 ODBC 2* 。x* SQLSTATE にマップします。  
+ ODBC 2 時にします。*x*アプリケーションは、ODBC 3 にアップグレードします*。x* ODBC 3 の期待に変更するアプリケーションでは、アプリケーションが*。x* ODBC 2 ではなく SQLSTATEs *。x* SQLSTATEs です。 次の表には、ODBC 3 が一覧表示します。*x* SQLSTATEs される各 ODBC 2 *。x* SQLSTATE にマップします。  
   
- また環境属性が SQL_OV_ODBC2 に設定されている場合、ドライバーは ODBC 2 をポストします。*x* ODBC 3 ではなく SQLSTATEs* 。x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**と呼びます。 特定のマッピングは、ODBC 2 注目することで決定できます*.x* ODBC 3 に対応する次の表の 1 列目の SQLSTATE* 。x*列 2 の SQLSTATE。  
+ また環境属性が SQL_OV_ODBC2 に設定されている場合、ドライバーは ODBC 2 をポストします。*x* ODBC 3 ではなく SQLSTATEs *。x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**と呼びます。 特定のマッピングは、ODBC 2 注目することで決定できます*.x* ODBC 3 に対応する次の表の 1 列目の SQLSTATE *。x*列 2 の SQLSTATE。  
   
 |ODBC 2 です。*x* SQLSTATE|ODBC 3 です。*x* SQLSTATE|コメント|  
 |-------------------------|-------------------------|--------------|  

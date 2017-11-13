@@ -95,7 +95,7 @@ SQLRETURN SQLSetConnectAttr(
 |24000|カーソル状態が無効|*属性*引数 SQL_ATTR_CURRENT_CATALOG、れ、結果セットが保留されていました。|  
 |25000|ローカル トランザクションの実行中の無効な操作|接続は、接続の SQL_ATTR_ENLIST_IN_DTC 属性を設定して、分散トランザクションの接続 (DTC) に参加しようとしています。 ローカルのトランザクションでした。<br /><br /> 接続は既に、DTC に参加しています。<br /><br /> 接続は分散トランザクションの接続に参加しているし、SQL_ATTR_AUTOCOMMIT を SQL_AUTOCOMMIT_OFF に設定して、ローカル トランザクションが開始されました。|  
 |3D000|無効なカタログ名|*属性*引数が SQL_CURRENT_CATALOG、および指定したカタログ名が無効でした。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *ConnectionHandle*です。 **SQLSetConnectAttr**関数が呼び出され、実行を完了する前に、 [SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)で呼び出されましたが、 *ConnectionHandle*、し、**SQLSetConnectAttr**関数がもう一度、 *ConnectionHandle*です。<br /><br /> また、 **SQLSetConnectAttr**関数が呼び出され、実行を完了する前に**SQLCancelHandle**で呼び出されましたが、 *ConnectionHandle*の別のスレッドからマルチ スレッド アプリケーションです。|  
 |HY009|無効な null ポインターの使用|*属性*引数が文字列値を必要とする接続属性を識別し、 *ValuePtr*引数が null ポインターでした。|  

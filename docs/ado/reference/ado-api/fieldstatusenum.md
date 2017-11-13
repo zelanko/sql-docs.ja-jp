@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定します、[ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)の[フィールド オブジェクト](../../../ado/reference/ado-api/field-object.md)です。  
   
- **AdFieldPending\* **値は、操作を設定できる状態の原因となったはその他の状態の値と組み合わせることを示します。  
+ **AdFieldPending\*** 値は、操作を設定できる状態の原因となったはその他の状態の値と組み合わせることを示します。  
   
 |定数|値|Description|  
 |--------------|-----------|-----------------|  

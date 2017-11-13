@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|読み取り専用のアクセス許可を示します。|  
 |**adModeReadWrite**|3|読み取り/書き込みアクセス許可を示します。|  
-|**adModeRecursive**|0x400000|他のと組み合わせて使用* \*ShareDeny\* *値 (**adModeShareDenyNone**、 **adModeShareDenyWrite**、または**adModeShareDenyRead**) 共有の制限は、現在のすべてのサブ レコードに反映されるまで**レコード**です。 これは、影響を与えません場合、**レコード**子はありません。 使用されている場合、実行時エラーが生成された**adModeShareDenyNone**のみです。 ただしで使用する**adModeShareDenyNone**他の値と組み合わせた場合です。 たとえば、使用することができます"**adModeRead**または**adModeShareDenyNone**または**adModeRecursive**"です。|  
+|**adModeRecursive**|0x400000|他のと組み合わせて使用 *\*ShareDeny\** 値 (**adModeShareDenyNone**、 **adModeShareDenyWrite**、または**adModeShareDenyRead**) 共有の制限は、現在のすべてのサブ レコードに反映されるまで**レコード**です。 これは、影響を与えません場合、**レコード**子はありません。 使用されている場合、実行時エラーが生成された**adModeShareDenyNone**のみです。 ただしで使用する**adModeShareDenyNone**他の値と組み合わせた場合です。 たとえば、使用することができます"**adModeRead**または**adModeShareDenyNone**または**adModeRecursive**"です。|  
 |**adModeShareDenyNone**|16|他のユーザーが任意のアクセス許可を持つ接続を開くために使用できます。 他のユーザーに対して、読み取りアクセスも書き込みアクセスも拒否できません。|  
 |**adModeShareDenyRead**|4|読み取りアクセス許可で接続を開くには、他のユーザーを禁止します。|  
 |**adModeShareDenyWrite**|8|書き込みアクセス許可を持つ接続を開くには、他のユーザーを禁止します。|  

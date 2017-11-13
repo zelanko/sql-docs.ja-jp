@@ -62,7 +62,7 @@ SQLRETURN SQLDisconnect(
 |01002|エラーを切断します。|切断中にエラーが発生しました。 ただし、接続解除が成功しました。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |08003|接続は開いていません|(DM) 接続は、引数で指定された*ConnectionHandle*が開いていませんでした。|  
 |25000|トランザクション状態が無効|引数で指定された接続上のプロセス内のトランザクションにありました*ConnectionHandle*です。 トランザクションは、アクティブなままです。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *ConnectionHandle*です。 関数が呼び出された、およびを実行する前に[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)で呼び出されましたが、 *ConnectionHandle*です。 関数が再度呼び出されたし、 *ConnectionHandle*です。<br /><br /> 関数が呼び出され、実行前に完了**SQLCancelHandle**で呼び出されましたが、 *ConnectionHandle*マルチ スレッド アプリケーションで別のスレッドからです。|  
 |HY010|関数のシーケンス エラー|(DM) の非同期的に実行中の関数が呼び出された、 *StatementHandle*に関連付けられている、 *ConnectionHandle*ときに実行されていると**SQLDisconnect**されましたと呼ばれる。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *ConnectionHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle*に関連付けられている、 *ConnectionHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。|  

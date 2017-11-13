@@ -68,14 +68,14 @@ SQLRETURN SQLCopyDesc(
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY007|関連付けられたステートメントが準備されていません|*SourceDescHandle* IRD では、関連付けられていたし、関連付けられているステートメント ハンドルは、準備または実行された状態ではありませんでした。|  
 |HY010|関数のシーケンス エラー|(DM) では、記述子の処理*SourceDescHandle*または*TargetDescHandle*が関連付けられて、 *StatementHandle*を非同期的に実行中の関数 (notこの 1 つ) が呼び出され、この関数が呼び出されたときに実行されています。<br /><br /> (DM) では、記述子の処理*SourceDescHandle*または*TargetDescHandle*が関連付けられて、 *StatementHandle*を**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**が呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *SourceDescHandle*または*TargetDescHandle*です。 この非同期関数がまだ実行したときに、 **SQLCopyDesc**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかで呼び出され、 *SourceDescHandle*または*TargetDescHandle* SQL_PARAM_DATA_AVAILABLE を返されるとします。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY016|実装行記述子は変更できません。|*TargetDescHandle* IRD に関連付けました。|  
 |HY021|不整合な記述子情報|整合性チェック中にチェック記述子の情報が一致していません。 詳細についてを参照してください「整合性チェック」 **SQLSetDescField**です。|  
-|HY092|無効な属性またはオプション識別子|呼び出し**SQLCopyDesc**への呼び出しの入力を求め**SQLSetDescField**が* \*ValuePtr*が、無効、 *FieldIdentifier*の引数で*TargetDescHandle*です。|  
+|HY092|無効な属性またはオプション識別子|呼び出し**SQLCopyDesc**への呼び出しの入力を求め**SQLSetDescField**が *\*ValuePtr*が、無効、 *FieldIdentifier*の引数で*TargetDescHandle*です。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *SourceDescHandle*または*TargetDescHandle*関数をサポートしていません。|  

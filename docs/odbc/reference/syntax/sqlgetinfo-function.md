@@ -65,7 +65,7 @@ SQLRETURN SQLGetInfo(
  場合*InfoValuePtr* null、 *StringLengthPtr*はまだバイト (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*InfoValuePtr*です。  
   
  *BufferLength*  
- [入力]長さ、 \* *InfoValuePtr*バッファー。 場合の値* \*InfoValuePtr*文字の文字列ではない場合、または*InfoValuePtr* null ポインターでは、 *BufferLength*引数は無視されます。 ドライバーでのサイズ* \*InfoValuePtr* SQLUSMALLINT または SQLUINTEGER、に基づいて、*情報の種類*です。 場合* \*InfoValuePtr* Unicode 文字列です (呼び出し時に**SQLGetInfoW**) では、 *BufferLength* SQLSTATE HY090 (されていない場合、引数が偶数; をする必要があります無効な文字列長またはバッファー長) が返されます。  
+ [入力]長さ、 \* *InfoValuePtr*バッファー。 場合の値 *\*InfoValuePtr*文字の文字列ではない場合、または*InfoValuePtr* null ポインターでは、 *BufferLength*引数は無視されます。 ドライバーでのサイズ *\*InfoValuePtr* SQLUSMALLINT または SQLUINTEGER、に基づいて、*情報の種類*です。 場合 *\*InfoValuePtr* Unicode 文字列です (呼び出し時に**SQLGetInfoW**) では、 *BufferLength* SQLSTATE HY090 (されていない場合、引数が偶数; をする必要があります無効な文字列長またはバッファー長) が返されます。  
   
  *StringLengthPtr*  
  [出力]バイト (文字データの null 終端文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な **InfoValuePtr*です。  
@@ -86,12 +86,12 @@ SQLRETURN SQLGetInfo(
 |01004|文字列データで、右側が切り捨てられました|バッファー \* *InfoValuePtr*要求されたすべての情報を返すのに十分な大きさがありません。 そのため、情報が切り詰められました。 切り詰められていない形式で要求された情報の長さが返される **StringLengthPtr*です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |08003|接続は開いていません|(DM) で情報の種類が要求された*情報の種類*開いている接続が必要です。 ODBC によって予約されている情報の種類の接続を開くことがなく SQL_ODBC_VER のみが返されます。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|(DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY024|無効な属性値|(DM)、*情報の種類*引数 SQL_DRIVER_HSTMT、れ、値を指す*InfoValuePtr*が有効なステートメントのハンドル。<br /><br /> (DM)、*情報の種類*引数 SQL_DRIVER_HDESC、れ、値を指す*InfoValuePtr*が有効な記述子ハンドル。|  
-|HY090|文字列またはバッファーの長さが無効です。|引数の指定された値 (DM) *BufferLength*が 0 未満です。<br /><br /> (DM) の指定された値*BufferLength* 、奇数と* \*InfoValuePtr*されましたが、Unicode データ型。|  
+|HY090|文字列またはバッファーの長さが無効です。|引数の指定された値 (DM) *BufferLength*が 0 未満です。<br /><br /> (DM) の指定された値*BufferLength* 、奇数と *\*InfoValuePtr*されましたが、Unicode データ型。|  
 |HY096|範囲外の情報の種類|引数が指定された値*情報の種類*が ODBC ドライバーでサポートされているのバージョンは無効です。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYC00|省略可能なフィールドが実装されていません|引数が指定された値*情報の種類*ドライバーでサポートされていないドライバー固有の値がします。|  

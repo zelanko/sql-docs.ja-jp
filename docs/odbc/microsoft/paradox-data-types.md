@@ -51,7 +51,7 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
   
  Paradox バージョン 5 に対してのみ有効期間を [1] です。*x*です。  
   
- Paradox バージョン 4 に対してのみ有効期間を [2]。*x*と 5* 。x*です。  
+ Paradox バージョン 4 に対してのみ有効期間を [2]。*x*と 5 *。x*です。  
   
 > [!NOTE]  
 >  **SQLGetTypeInfo** ODBC SQL データ型を返します。 付録 d のすべての変換、 *ODBC プログラマ リファレンス*このトピックの前半に示した ODBC SQL データ型はサポートされます。  

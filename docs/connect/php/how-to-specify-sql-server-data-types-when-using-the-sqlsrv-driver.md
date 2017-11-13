@@ -43,7 +43,7 @@ SQL Server データ型を指定するには、データを挿入または更新
   
 3.  クエリを準備または実行するときに使用する *$params* 配列を構築します。 SQL Server データ型を指定するときに、 *$params* 配列の各要素も配列にする必要があります。  
   
-4.  適切なを使用して目的の SQL Server データ型を指定する**sqlsrv_sqltype _\* **の各サブ配列の 4 番目のパラメーターとして定数、 *$params*配列。 完全な一覧については、 **sqlsrv_sqltype _\* **定数、」の Sqltype セクションを参照してください[定数 & #40 です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
+4.  適切なを使用して目的の SQL Server データ型を指定する**sqlsrv_sqltype _\*** の各サブ配列の 4 番目のパラメーターとして定数、 *$params*配列。 完全な一覧については、 **sqlsrv_sqltype _\*** 定数、」の Sqltype セクションを参照してください[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
   
     ```  
     $employeeId = 5;  

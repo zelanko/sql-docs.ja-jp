@@ -89,7 +89,7 @@ SQLRETURN SQLConnect(
 |08004|サーバー接続を拒否しました|データ ソースには、実装定義上の理由から、接続の確立が拒否されました。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとするドライバーが接続しようとするデータ ソース間の通信リンクが失敗しました。|  
 |28000|無効な権限の指定|引数が指定された値*UserName*または引数が指定された値*認証*データ ソースで定義された制限に違反します。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバー マネージャーは、(DM) は、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *ConnectionHandle*です。 **SQLConnect**関数が呼び出され、実行を完了する前に[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)で呼び出されましたが、 *ConnectionHandle*、およびし**SQLConnect**関数がもう一度、 *ConnectionHandle*です。<br /><br /> また、 **SQLConnect**関数が呼び出され、実行を完了する前に**SQLCancelHandle**で呼び出されましたが、 *ConnectionHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *ConnectionHandle*この関数が呼び出されたときに実行されているとします。|  
@@ -105,7 +105,7 @@ SQLRETURN SQLConnect(
 |IM005|ドライバーの SQLAllocHandle sql_handle_dbc としてに失敗しました|(DM) 中に**SQLConnect**、ドライバー マネージャーがドライバーのと呼ばれる**SQLAllocHandle**で機能、 *HandleType* sql_handle_dbc としてとドライバーのエラーが返されました。|  
 |IM006|ドライバーの SQLSetConnectAttr できませんでした。|中に**SQLConnect**、ドライバー マネージャーがドライバーのと呼ばれる**SQLSetConnectAttr**関数と、ドライバーにエラーが返されます。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |IM009|トランスレーター DLL に接続できません。|ドライバーは、変換、データ ソースの指定された DLL に接続できませんでした。|  
-|IM010|データ ソース名が長すぎます|(DM) * \*ServerName* SQL_MAX_DSN_LENGTH 文字より長くなっています。|  
+|IM010|データ ソース名が長すぎます|(DM)  *\*ServerName* SQL_MAX_DSN_LENGTH 文字より長くなっています。|  
 |IM014|指定の DSN にはなアーキテクチャと一致しないドライバーとアプリケーションが含まれています|(DM) 32 ビット アプリケーションでは、64 ビット ドライバー; に接続する DSN を使用します。またはその逆です。|  
 |IM015|ドライバーの SQLConnect SQL_HANDLE_DBC_INFO_HANDLE に失敗しました|ドライバーでは、SQL_ERROR が返された場合、ドライバー マネージャーは、アプリケーションに SQL_ERROR を返し、接続は失敗します。<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)です。|  
 |IM017|非同期通知モードでのポーリングが無効になっています|通知のモデルを使用するとは、ポーリングは無効です。|  

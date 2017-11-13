@@ -88,7 +88,7 @@ BOOL SQLConfigDriver(
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLConfigDriver**は FALSE を返します、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLConfigDriver**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

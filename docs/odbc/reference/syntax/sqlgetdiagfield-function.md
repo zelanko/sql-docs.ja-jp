@@ -83,7 +83,7 @@ SQLRETURN SQLGetDiagField(
  場合*DiagInfoPtr* null、 *StringLengthPtr*バイト (文字データの null 終端文字を除く) の合計数を返すはまだが指すバッファーに返される使用可能な*DiagInfoPtr*です。  
   
  *BufferLength*  
- [入力]場合*DiagIdentifier*は、ODBC で定義された診断と*DiagInfoPtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *DiagInfoPtr*. 場合*DiagIdentifier* ODBC で定義されたフィールドと\* *DiagInfoPtr*整数*BufferLength*は無視されます。 場合の値* \*DiagInfoPtr* Unicode 文字列です (呼び出し時に**SQLGetDiagFieldW**) では、 *BufferLength*引数は偶数である必要があります。  
+ [入力]場合*DiagIdentifier*は、ODBC で定義された診断と*DiagInfoPtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *DiagInfoPtr*. 場合*DiagIdentifier* ODBC で定義されたフィールドと\* *DiagInfoPtr*整数*BufferLength*は無視されます。 場合の値 *\*DiagInfoPtr* Unicode 文字列です (呼び出し時に**SQLGetDiagFieldW**) では、 *BufferLength*引数は偶数である必要があります。  
   
  場合*DiagIdentifier*ドライバーの定義済みのフィールドでは、アプリケーション、ドライバー マネージャーに、フィールドの性質を示す設定、 *BufferLength*引数。 *BufferLength*次の値を持つことができます。  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   場合*DiagInfoPtr*文字の文字列またはバイナリ文字列以外の値を指すポインター *BufferLength* SQL_IS_POINTER 値でなければなりません。  
   
--   場合* \*DiagInfoPtr* 、固定長データ型を含む*BufferLength*が SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT、または SQL_IS_USMALLINT、必要に応じて。  
+-   場合 *\*DiagInfoPtr* 、固定長データ型を含む*BufferLength*が SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT、または SQL_IS_USMALLINT、必要に応じて。  
   
  *StringLengthPtr*  
  [出力]合計バイト数 (null 終端文字のために必要なバイト数を除く) を返すバッファーへのポインターで返される使用可能な\* *DiagInfoPtr*、文字データ用です。 場合は、使用できるバイト数を返すより大きいまたは等しい*BufferLength*、内のテキスト\* *DiagInfoPtr*に切り捨てられます*BufferLength*負符号null 終了文字の長さ。  

@@ -88,7 +88,7 @@ SQLRETURN SQLExecute(
 |40003|不明なステートメント入力候補|、この関数の実行中に、関連付けられた接続が失敗し、トランザクションの状態を判断することはできません。|  
 |42000|構文エラーまたはアクセス違反|ユーザーに関連付けられている、準備されたステートメントを実行する権限を持っていません、 *StatementHandle*です。|  
 |44000|WITH CHECK OPTION 違反|準備済みステートメントに関連付けられている*StatementHandle*に含まれる、**挿入**表示されたテーブルに対して実行されるステートメントまたはを指定することによって作成された、表示されたテーブルから派生したテーブル**WITH CHECK OPTION**、そのような 1 つまたは複数の行が影響を受けました、**挿入**ステートメントできなくなります表示されたテーブル内に存在します。<br /><br /> 準備済みステートメントに関連付けられている、 *StatementHandle*に含まれる、**更新**表示されたテーブルに対して実行されるステートメントまたはを指定することによって作成された、表示されたテーブルから派生したテーブル**WITH CHECK OPTION**、そのような 1 つまたは複数の行が影響を受けました、**更新**ステートメントできなくなります表示されたテーブル内に存在します。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*です。 関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLExecute**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、 *StatementHandle*準備されていませんでした。|  
@@ -119,7 +119,7 @@ SQLRETURN SQLExecute(
   
  場合**SQLExecute**検索更新、挿入、またはデータ ソースへの呼び出しですべての行は影響しない delete ステートメントを実行**SQLExecute** SQL_NO_DATA が返されます。  
   
- SQL_ATTR_PARAMSET_SIZE ステートメント属性の値が 1 より大きいと、SQL ステートメントには、少なくとも 1 つのパラメーター マーカーが含まれています**SQLExecute** 、配列内のパラメーター値のセットごとに、SQL ステートメントを実行。によって示される、 * \*ParameterValuePtr*への呼び出しで引数**SQLBindParameter**です。 詳細については、次を参照してください。[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)です。  
+ SQL_ATTR_PARAMSET_SIZE ステートメント属性の値が 1 より大きいと、SQL ステートメントには、少なくとも 1 つのパラメーター マーカーが含まれています**SQLExecute** 、配列内のパラメーター値のセットごとに、SQL ステートメントを実行。によって示される、  *\*ParameterValuePtr*への呼び出しで引数**SQLBindParameter**です。 詳細については、次を参照してください。[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)です。  
   
  ブックマークが有効になっており、クエリが実行される場合は、ブックマークをサポートすることはできません、属性値を変更し、SQLSTATE 01S02 を返すことでブックマークをサポートしている環境を強制するべきでは、ドライバー (オプションの値が変更されました)。 属性は変更できない場合、ドライバーは SQLSTATE HY024 を返す必要があります (無効な属性値)。  
   

@@ -55,7 +55,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_SUCCESS_WITH_INFO|関数が正常に完了して可能性のある重大なエラー (警告) をします。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。|  
 |SQL_ERROR|関数が失敗しました。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 関数に出力引数の内容は未定義です。|  
 |SQL_INVALID_HANDLE|関数は、無効な環境、接続、ステートメント、または記述子ハンドルのため失敗しました。 これは、プログラミング エラーを示します。 追加情報が利用できない**SQLGetDiagRec**または**SQLGetDiagField**です。 ハンドルが null ポインターかなど、接続ハンドルを必要とする引数のステートメント ハンドルが渡されたときに、間違った種類場合にのみ、このコードが返されます。|  
-|SQL_NO_DATA|以上のデータを使用でした。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 クラス 02xxx 内の 1 つまたは複数のドライバーの定義済みの状態レコードが返される可能性があります。 **注:** Odbc 2* 。x*、これは、コードが SQL_NO_DATA_FOUND という名前が返されます。|  
+|SQL_NO_DATA|以上のデータを使用でした。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 クラス 02xxx 内の 1 つまたは複数のドライバーの定義済みの状態レコードが返される可能性があります。 **注:** Odbc 2 *。x*、これは、コードが SQL_NO_DATA_FOUND という名前が返されます。|  
 |SQL_NEED_DATA|実行時にパラメーターのデータが送信されたときより多くのデータが必要なまたは、追加の接続情報が必要です。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合、追加の情報を取得します。|  
 |SQL_STILL_EXECUTING|非同期的に起動された関数が実行中です。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合、追加の情報を取得します。|
 

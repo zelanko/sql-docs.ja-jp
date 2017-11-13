@@ -66,7 +66,7 @@ ODBC ステートメントでは、次の状態があります。
   
  [4] この行は、移行を示しています。 ときに*HandleType* SQL_HANDLE_DESC をがします。  
   
- [5] 通話**SQLAllocHandle**で*OutputHandlePtr*を以前の内容を処理し、ODBC ドライバーの問題が発生する可能性がありますに関係なく、そのハンドルを上書き有効なハンドルを指すです。 呼び出す ODBC アプリケーション プログラミングを不適切なである**SQLAllocHandle**に対して定義されている同じアプリケーションの変数を 2 回* \*OutputHandlePtr*呼び出さず**SQLFreeHandle**にそれを再割り当てする前に、ハンドルを解放します。 ODBC を上書きするようにハンドルを動作の一貫性がや部分の ODBC ドライバー エラーにつながる可能性があります。  
+ [5] 通話**SQLAllocHandle**で*OutputHandlePtr*を以前の内容を処理し、ODBC ドライバーの問題が発生する可能性がありますに関係なく、そのハンドルを上書き有効なハンドルを指すです。 呼び出す ODBC アプリケーション プログラミングを不適切なである**SQLAllocHandle**に対して定義されている同じアプリケーションの変数を 2 回 *\*OutputHandlePtr*呼び出さず**SQLFreeHandle**にそれを再割り当てする前に、ハンドルを解放します。 ODBC を上書きするようにハンドルを動作の一貫性がや部分の ODBC ドライバー エラーにつながる可能性があります。  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   

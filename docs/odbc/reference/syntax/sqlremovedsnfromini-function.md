@@ -54,7 +54,7 @@ BOOL SQLRemoveDSNFromIni(
  関数は、データ ソースが削除または Odbc.ini ファイルで、データ ソースはなかった場合に TRUE を返します。 データ ソースを削除に失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLRemoveDSNFromIni**は FALSE を返します、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLRemoveDSNFromIni**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

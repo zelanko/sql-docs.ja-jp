@@ -68,7 +68,7 @@ SQLRETURN SQLParamData(
 |22026|文字列データの長さが合致しません|SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo** "Y"、指定された数より長いパラメーターの (データ型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型をいました) の低いデータが送信されました*StrLen_or_IndPtr*引数**SQLBindParameter**です。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo** "Y"で指定されたよりも長い列 (データ型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型をいました) の低いデータが送信された、追加または更新されたデータの行の列に対応する長バッファー **SQLBulkOperations**またはで更新された**SQLSetPos**です。|  
 |40001|シリアル化のエラー|トランザクションが別のトランザクションでリソース デッドロックが原因ロールバックされました。|  
 |40003|不明なステートメント入力候補|、この関数の実行中に、関連付けられた接続が失敗し、トランザクションの状態を判断することはできません。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*; で、関数が再度呼び出さし、*StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) 前の関数呼び出しがへの呼び出し**SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、または**SQLSetPos**ここで、コードは SQL_NEED_DATA、または前の関数呼び出しがへの呼び出しを返す**SQLPutData**です。<br /><br /> 前の関数呼び出しがへの呼び出し**SQLParamData**です。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLParamData**関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle*SQL_NEED_DATA が返される。 **SQLCancel**がすべての実行時データ パラメーターまたは列に対してデータが送信される前に呼び出されました。|  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
 ## <a name="comments"></a>コメント  
  **SQLParamData** 2 つの用途の実行時データのデータを指定するに呼び出せる: パラメーターのデータへの呼び出しで使用される**SQLExecute**または**SQLExecDirect**、または使用される列のデータ行が更新またはへの呼び出しによって追加されたときに**SQLBulkOperations**への呼び出しによって更新または**SQLSetPos**です。 実行時に、 **SQLParamData**のどのデータを示すインジケーターが必要になるアプリケーションに返します。  
   
- アプリケーションを呼び出すと**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**ドライバーは SQL_NEED_ を返します実行時データのデータが必要がある場合は、データ。 その後、アプリケーションを呼び出す**SQLParamData**を送信するデータを決定します。 ドライバーは、パラメーターのデータを必要とする場合、ドライバーを返します、 * \*ValuePtrPtr*出力バッファーの行セットのバッファーでアプリケーションを配置する値。 アプリケーションでは、この値を使用して、ドライバーが要求しているパラメーター データを決定します。 ドライバーは、列のデータを必要とする場合、ドライバーを返します、 * \*ValuePtrPtr*バッファーの列が最初にバインドされている、次のように、アドレス。  
+ アプリケーションを呼び出すと**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**ドライバーは SQL_NEED_ を返します実行時データのデータが必要がある場合は、データ。 その後、アプリケーションを呼び出す**SQLParamData**を送信するデータを決定します。 ドライバーは、パラメーターのデータを必要とする場合、ドライバーを返します、  *\*ValuePtrPtr*出力バッファーの行セットのバッファーでアプリケーションを配置する値。 アプリケーションでは、この値を使用して、ドライバーが要求しているパラメーター データを決定します。 ドライバーは、列のデータを必要とする場合、ドライバーを返します、  *\*ValuePtrPtr*バッファーの列が最初にバインドされている、次のように、アドレス。  
   
  *アドレスをバインド* + *オフセットをバインド*+ ((*行数*– 1) x*要素サイズ*)  
   
@@ -99,7 +99,7 @@ SQLRETURN SQLParamData(
   
  また、これを呼び出して、アプリケーションにインジケーターは SQL_NEED_DATA を返します**SQLPutData**データを送信します。  
   
- アプリケーションの呼び出し**SQLPutData**列またはパラメーターの実行時データのデータを送信するために必要な回数だけです。 列またはパラメーターのすべてのデータが送信された後、アプリケーションを呼び出す**SQLParamData**もう一度です。 場合**SQLParamData** SQL_NEED_DATA を返しますが別のパラメーターまたは列のデータを送信する必要があります。 そのため、アプリケーションを再度呼び出す**SQLPutData**です。 実行時データのすべてのデータがすべてのパラメーターまたは列の送信された場合**SQLParamData** SQL_SUCCESS または SQL_SUCCESS_WITH_INFO の値を返します* \*ValuePtrPtr*が定義されていませんSQL ステートメントを実行して、または**SQLBulkOperations**または**SQLSetPos**呼び出しを処理することができます。  
+ アプリケーションの呼び出し**SQLPutData**列またはパラメーターの実行時データのデータを送信するために必要な回数だけです。 列またはパラメーターのすべてのデータが送信された後、アプリケーションを呼び出す**SQLParamData**もう一度です。 場合**SQLParamData** SQL_NEED_DATA を返しますが別のパラメーターまたは列のデータを送信する必要があります。 そのため、アプリケーションを再度呼び出す**SQLPutData**です。 実行時データのすべてのデータがすべてのパラメーターまたは列の送信された場合**SQLParamData** SQL_SUCCESS または SQL_SUCCESS_WITH_INFO の値を返します *\*ValuePtrPtr*が定義されていませんSQL ステートメントを実行して、または**SQLBulkOperations**または**SQLSetPos**呼び出しを処理することができます。  
   
  場合**SQLParamData**な検索の提供パラメーターのデータを更新または delete ステートメント、データ ソースへの呼び出しですべての行は影響しない**SQLParamData** SQL_NO_DATA が返されます。  
   

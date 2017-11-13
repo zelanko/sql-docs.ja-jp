@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="using-block-cursors"></a>ブロック カーソルを使用します。
-ODBC 3 には、ブロック カーソルのサポートが組み込まれています。*x*です。 **SQLFetch** ODBC 3 で呼び出されると、複数行のフェッチにのみ使用できます*。x*以外の場合は、ODBC 2* 。x*アプリケーション呼び出し**SQLFetch**単一行、順方向専用カーソルだけが開きます。 ODBC 3 時にします。*x*アプリケーション呼び出し**SQLFetch** ODBC 2* 。x*ドライバー、1 つの行を返しますこれには、ドライバーがサポートしていない限り**SQLExtendedFetch**です。 詳細については、次を参照してください。[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+ODBC 3 には、ブロック カーソルのサポートが組み込まれています。*x*です。 **SQLFetch** ODBC 3 で呼び出されると、複数行のフェッチにのみ使用できます*。x*以外の場合は、ODBC 2 *。x*アプリケーション呼び出し**SQLFetch**単一行、順方向専用カーソルだけが開きます。 ODBC 3 時にします。*x*アプリケーション呼び出し**SQLFetch** ODBC 2 *。x*ドライバー、1 つの行を返しますこれには、ドライバーがサポートしていない限り**SQLExtendedFetch**です。 詳細については、次を参照してください。[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
   
  ブロック カーソルを使用するアプリケーションは行セットのサイズを設定、行セットのバッファー (前のセクションで説明されている) と、必要に応じてセット、SQL_ATTR_ROWS_FETCHED_PTR 属性と SQL_ATTR_ROW_STATUS_PTR ステートメント属性、およびバインド呼び出し**SQLFetch**または**SQLFetchScroll**を行のブロックをフェッチします。 アプリケーションは、行セットのサイズを変更し、新しい行セットのバッファーをバインド (を呼び出して**SQLBindCol**バインド オフセットを指定するか) の行がフェッチされた後もします。  
   

@@ -54,7 +54,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources**場合は FALSE を返します*hwnd*有効なウィンドウ ハンドルではありません。 それ以外の場合、TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLManageDataSources**は FALSE を返します、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLManageDataSources**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

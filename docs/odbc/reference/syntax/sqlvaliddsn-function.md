@@ -54,7 +54,7 @@ BOOL SQLValidDSN(
  関数は、データ ソース名が有効な場合に TRUE を返します。 データ ソース名が無効であるか、関数呼び出しが失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLValidDSN**は FALSE を返します、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 A * \*pfErrorCode*が返されるだけ関数呼び出しが失敗したかどうか、データ ソース名が無効なために、FALSE が返された場合にありません。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLValidDSN**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 A  *\*pfErrorCode*が返されるだけ関数呼び出しが失敗したかどうか、データ ソース名が無効なために、FALSE が返された場合にありません。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

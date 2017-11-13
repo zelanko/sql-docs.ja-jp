@@ -91,7 +91,7 @@ Col1=CustomerNumber Text Width 10
 Col2=CustomerName Text Width 30  
 ```  
   
- 構文**Col** * n *は。  
+ 構文**Col**  *n* は。  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>解説  
- 次の表の各部分の説明、 **Col** * n *エントリです。  
+ 次の表の各部分の説明、 **Col**  *n* エントリです。  
   
 |パラメーター|Description|  
 |---------------|-----------------|  

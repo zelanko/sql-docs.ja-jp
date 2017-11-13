@@ -81,7 +81,7 @@ CREATE SYMMETRIC KEY key_name
  対称キーを所有するデータベース ユーザーまたはアプリケーション ロールの名前を指定します。  
   
  プロバイダーから*provider_name*  
- 拡張キー管理 (EKM) プロバイダーと名前を指定します。 EKM デバイスからはキーがエクスポートされません。 最初に CREATE PROVIDER ステートメントを使用してプロバイダーを定義する必要があります。 外部キー プロバイダーの作成の詳細については、次を参照してください。[拡張キー管理 & #40 です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 拡張キー管理 (EKM) プロバイダーと名前を指定します。 EKM デバイスからはキーがエクスポートされません。 最初に CREATE PROVIDER ステートメントを使用してプロバイダーを定義する必要があります。 外部キー プロバイダーの作成の詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
@@ -98,10 +98,10 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- CREATION_DISPOSITION ** = ** CREATE_NEW  
+ CREATION_DISPOSITION  **=**  CREATE_NEW  
  拡張キー管理デバイス上で新しいキーを作成します。  デバイスにキーが既に存在する場合は、ステートメントがエラーで失敗します。  
   
- CREATION_DISPOSITION ** = ** OPEN_EXISTING  
+ CREATION_DISPOSITION  **=**  OPEN_EXISTING  
  マップ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対称キーを既存の拡張キー管理キー。 CREATION_DISPOSITION = OPEN_EXISTING が指定されない場合、この既定値は CREATE_NEW です。  
   
  *certificate_name*  
@@ -202,7 +202,7 @@ GO
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

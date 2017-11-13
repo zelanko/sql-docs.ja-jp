@@ -69,7 +69,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     * \*ValuePtr*の値に基づいて、次の表に、値のいずれかに設定、*キーセット*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*の値に基づいて、次の表に、値のいずれかに設定、*キーセット*引数**SQLSetScrollOptions**です。  
   
     |*キーセット*引数|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -85,7 +85,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     * \*ValuePtr*に設定、*同時実行*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*に設定、*同時実行*引数**SQLSetScrollOptions**です。  
   
 -   場合、*キーセット*への呼び出しで引数**SQLSetScrollOptions**が正の値への呼び出し  
   
@@ -93,7 +93,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     * \*ValuePtr*に設定、*キーセット*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*に設定、*キーセット*引数**SQLSetScrollOptions**です。  
   
 -   呼び出し  
   
@@ -101,7 +101,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     * \*ValuePtr*に設定、*複合カーソル*引数**SQLSetScrollOptions**です。  
+     *\*ValuePtr*に設定、*複合カーソル*引数**SQLSetScrollOptions**です。  
   
     > [!NOTE]  
     >  ドライバー マネージャーのマップと**SQLSetScrollOptions** ODBC 3 を使用するアプリケーションの*.x*ドライバーをサポートしない**SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**です。 その結果、 **SQLSetScrollOptions**への呼び出しによって複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**です。 フェッチの複数の行への呼び出しによって場合にのみ使用できます**SQLExtendedFetch**です。

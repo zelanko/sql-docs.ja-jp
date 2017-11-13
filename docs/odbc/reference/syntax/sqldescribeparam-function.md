@@ -61,9 +61,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  [出力]パラメーターの SQL データ型を返すバッファーへのポインター。 この値は、IPD の SQL_DESC_CONCISE_TYPE レコード フィールドから読み取られます。 内の値の 1 つ、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型、またはドライバー固有の SQL データ型のセクションです。  
   
- ODBC 3 です。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP で返されます* \*DataTypePtr*の日付、時刻、またはタイムスタンプ データ、ODBC 2 にそれぞれ;.*x*SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ドライバー マネージャーでは、ODBC 2 時に、必須のマッピングを実行します。*x* ODBC 3 を利用するアプリケーション*。x*ドライバーまたは ODBC 3* 。x* ODBC 2 を利用するアプリケーション*。x*ドライバー。  
+ ODBC 3 です。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP で返されます *\*DataTypePtr*の日付、時刻、またはタイムスタンプ データ、ODBC 2 にそれぞれ;.*x*SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ドライバー マネージャーでは、ODBC 2 時に、必須のマッピングを実行します。*x* ODBC 3 を利用するアプリケーション*。x*ドライバーまたは ODBC 3 *。x* ODBC 2 を利用するアプリケーション*。x*ドライバー。  
   
- ときに*ColumnNumber*と等しいで 0 (ブックマーク列)、sql_binary 型が返されます* \*DataTypePtr*の可変長のブックマークです。 (SQL_INTEGER は ODBC 3 でブックマークが使用されている場合に返されます。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーまたは ODBC 2* 。x* ODBC 3 を使用するアプリケーション*。x*ドライバーです)。  
+ ときに*ColumnNumber*と等しいで 0 (ブックマーク列)、sql_binary 型が返されます *\*DataTypePtr*の可変長のブックマークです。 (SQL_INTEGER は ODBC 3 でブックマークが使用されている場合に返されます。*x* ODBC 2 を使用するアプリケーション*。x*ドライバーまたは ODBC 2 *。x* ODBC 3 を使用するアプリケーション*。x*ドライバーです)。  
   
  詳細については、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型にします。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
   
@@ -94,7 +94,7 @@ SQLRETURN SQLDescribeParam(
 |07009|無効な記述子のインデックス|引数の指定された値 (DM) *ParameterNumber*が 1 より小さい。<br /><br /> 引数が指定された値*ParameterNumber*が関連付けられている SQL ステートメントのパラメーターの数を超えています。<br /><br /> パラメーター マーカーは、非 DML ステートメントの一部でした。<br /><br /> パラメーター マーカーの一部であった、**選択** ボックスの一覧です。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
 |21S01|挿入値のリストが列の一覧と一致しません|パラメーターの数、**挿入**ステートメントは、ステートメントで指定したテーブルの列数と一致しませんでした。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*です。 関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) 関数が呼び出す前に呼び出された**SQLPrepare**または**SQLExecDirect**の*StatementHandle*です。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLDescribeParam**関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。|  

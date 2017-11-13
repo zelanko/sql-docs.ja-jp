@@ -81,7 +81,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>環境ハンドルの割り当てエラー  
  環境の割り当てには、ドライバー マネージャー内でと各ドライバーの両方が行われます。 によって返されるエラー **SQLAllocHandle**で、 *HandleType* sql_handle_env としてのレベルによって異なりますエラーが発生しました。  
   
- 場合は、ドライバー マネージャーがメモリを割り当てることはできません* \*OutputHandlePtr*とき**SQLAllocHandle**で、 *HandleType* SQL_HANDLE_ENV が呼び出されると、またはアプリケーションの null ポインターを提供する*OutputHandlePtr*、 **SQLAllocHandle** SQL_ERROR を返します。 ドライバー マネージャーの設定 **OutputHandlePtr* SQL_NULL_HENV を (場合を除く、アプリケーションには、SQL_ERROR が返されます、null ポインターが提供されます)。 追加の診断情報を関連付けられるハンドルはありません。  
+ 場合は、ドライバー マネージャーがメモリを割り当てることはできません *\*OutputHandlePtr*とき**SQLAllocHandle**で、 *HandleType* SQL_HANDLE_ENV が呼び出されると、またはアプリケーションの null ポインターを提供する*OutputHandlePtr*、 **SQLAllocHandle** SQL_ERROR を返します。 ドライバー マネージャーの設定 **OutputHandlePtr* SQL_NULL_HENV を (場合を除く、アプリケーションには、SQL_ERROR が返されます、null ポインターが提供されます)。 追加の診断情報を関連付けられるハンドルはありません。  
   
  ドライバー マネージャーが、アプリケーションがドライバー レベルの環境ハンドルの割り当て関数を呼び出しません**SQLConnect**、 **SQLBrowseConnect**、または**SQLDriverConnect**. ドライバー レベルでエラーが発生した場合**SQLAllocHandle**関数、そのドライバー マネージャー – レベル**SQLConnect**、 **SQLBrowseConnect**、または**SQLDriverConnect** SQL_ERROR を返します。 診断データの構造を含む SQLSTATE IM004 (ドライバーの**SQLAllocHandle**に失敗しました)。 接続ハンドルでは、エラーが返されます。  
   
@@ -111,10 +111,10 @@ SQLRETURN SQLAllocHandle(
   
  複数の割り当てがドライバーによってサポートされている場合、一度にアプリケーションによって 1 つ以上の環境、接続、またはステートメントのハンドルを割り当てることができます。 ODBC では、環境、接続、ステートメント、または任意の時点で割り当て可能な記述子ハンドルの数に制限は定義されません。 ドライバーは、特定の種類は一度に割り当てることができるハンドルの数に制限をかける場合があります。詳細については、ドライバーのマニュアルを参照してください。  
   
- アプリケーションを呼び出す場合**SQLAllocHandle**で* \*OutputHandlePtr*環境、接続、ステートメント、または既に存在する記述子ハンドルに設定すると、ドライバーを上書きします関連付けられている情報、*処理*アプリケーションが接続プール (を参照してください「の割り当て、環境属性を接続プール」このセクションで後述) を使用している場合を除き、します。 ドライバー マネージャーを表示するチェックしないかどうか、*処理*に入力された* \*OutputHandlePtr* 、既に使用されても、そのハンドルの以前の内容を上書きする前に確認.  
+ アプリケーションを呼び出す場合**SQLAllocHandle**で *\*OutputHandlePtr*環境、接続、ステートメント、または既に存在する記述子ハンドルに設定すると、ドライバーを上書きします関連付けられている情報、*処理*アプリケーションが接続プール (を参照してください「の割り当て、環境属性を接続プール」このセクションで後述) を使用している場合を除き、します。 ドライバー マネージャーを表示するチェックしないかどうか、*処理*に入力された *\*OutputHandlePtr* 、既に使用されても、そのハンドルの以前の内容を上書きする前に確認.  
   
 > [!NOTE]  
->  呼び出す ODBC アプリケーション プログラミングを不適切なである**SQLAllocHandle**に対して定義されている同じアプリケーション変数で 2 回* \*OutputHandlePtr*呼び出さず**SQLFreeHandle**にそれを再割り当てする前に、ハンドルを解放します。 ODBC を上書きするようにハンドルを一貫性のない動作または ODBC ドライバーによるエラー可能性があります。  
+>  呼び出す ODBC アプリケーション プログラミングを不適切なである**SQLAllocHandle**に対して定義されている同じアプリケーション変数で 2 回 *\*OutputHandlePtr*呼び出さず**SQLFreeHandle**にそれを再割り当てする前に、ハンドルを解放します。 ODBC を上書きするようにハンドルを一貫性のない動作または ODBC ドライバーによるエラー可能性があります。  
   
  複数のスレッドをサポートするオペレーティング システムでアプリケーションは、異なるスレッドで同じ環境、接続、ステートメント、または記述子ハンドルを使用できます。 ドライバー必要があります。 この情報を安全なマルチ スレッドへのアクセスをサポートしてしたがってこれを実現する 1 つの方法は、クリティカル セクションまたはセマフォを使用しています。 スレッド処理の詳細については、次を参照してください。[マルチ スレッド](../../../odbc/reference/develop-app/multithreading.md)です。  
   
@@ -131,7 +131,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>環境ハンドルの割り当て  
  環境ハンドルは、有効な接続ハンドルとアクティブな接続ハンドルなどのグローバル情報へのアクセスを提供します。 環境ハンドルに関する概要については、次を参照してください。[環境ハンドル](../../../odbc/reference/develop-app/environment-handles.md)です。  
   
- 環境ハンドルを要求するアプリケーションを呼び出す**SQLAllocHandle**で、 *HandleType* sql_handle_env としての*InputHandle* SQL_NULL_HANDLE のです。 ドライバーは、環境情報と関連付けられたハンドルの値で渡すメモリを割り当て、 * \*OutputHandlePtr*引数。 アプリケーション パス、 * \*OutputHandle*環境ハンドル引数を必要とするすべての後続の呼び出しで値。 詳細については、次を参照してください。[環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)です。  
+ 環境ハンドルを要求するアプリケーションを呼び出す**SQLAllocHandle**で、 *HandleType* sql_handle_env としての*InputHandle* SQL_NULL_HANDLE のです。 ドライバーは、環境情報と関連付けられたハンドルの値で渡すメモリを割り当て、  *\*OutputHandlePtr*引数。 アプリケーション パス、  *\*OutputHandle*環境ハンドル引数を必要とするすべての後続の呼び出しで値。 詳細については、次を参照してください。[環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)です。  
   
  既に存在する場合、ドライバーの環境ハンドルし、ドライバー マネージャーの環境ハンドル  **SQLAllocHandle**で、 *HandleType* SQL_HANDLE_ENV は、ドライバーでは呼び出されませんがときに、接続が確立のみ**SQLAllocHandle**で、 *HandleType* sql_handle_dbc としてのです。 ドライバー マネージャーの環境ハンドル ドライバーの環境ハンドルが存在しない場合 HandleType の SQL_HANDLE_ENV に SQLAllocHandle と HandleType の sql_handle_dbc としてと SQLAllocHandle の両方が、ドライバーで呼び出されます場合、最初の接続環境のハンドルは、ドライバーに接続されます。  
   
@@ -151,7 +151,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>接続ハンドルの割り当て  
  接続ハンドルが有効なステートメントなどの情報へのアクセスを提供し、接続しているかどうか、トランザクションは、現在の記述子ハンドルを開きます。 接続ハンドルの詳細については、次を参照してください。[接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md)です。  
   
- アプリケーションを呼び出すために、接続ハンドルを要求する**SQLAllocHandle**で、 *HandleType* sql_handle_dbc としてのです。 *InputHandle*引数への呼び出しによって返された環境ハンドルに設定されて**SQLAllocHandle**そのハンドルを割り当てられています。 ドライバーは、接続情報と関連付けられたハンドルの値で渡す用メモリを割り当てます* \*OutputHandlePtr*です。 アプリケーション パス、 * \*OutputHandlePtr*接続ハンドルを必要とするすべての後続の呼び出しで値。 詳細については、次を参照してください。[接続ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)です。  
+ アプリケーションを呼び出すために、接続ハンドルを要求する**SQLAllocHandle**で、 *HandleType* sql_handle_dbc としてのです。 *InputHandle*引数への呼び出しによって返された環境ハンドルに設定されて**SQLAllocHandle**そのハンドルを割り当てられています。 ドライバーは、接続情報と関連付けられたハンドルの値で渡す用メモリを割り当てます *\*OutputHandlePtr*です。 アプリケーション パス、  *\*OutputHandlePtr*接続ハンドルを必要とするすべての後続の呼び出しで値。 詳細については、次を参照してください。[接続ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)です。  
   
  ドライバー マネージャーの処理、 **SQLAllocHandle**関数を呼び出してドライバーの**SQLAllocHandle**アプリケーションを呼び出すときに機能**SQLConnect**、 **SQLBrowseConnect**、または**SQLDriverConnect**です。 (詳細については、次を参照してください[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)。)。  
   
@@ -164,7 +164,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当てください。  
  ステートメント ハンドルでは、SQL ステートメントの処理のエラー メッセージ、カーソル名、およびステータス情報などのステートメントの情報へのアクセスを提供します。 ステートメント ハンドルの詳細については、次を参照してください。[ステートメント ハンドル](../../../odbc/reference/develop-app/statement-handles.md)です。  
   
- ステートメント ハンドルを要求するアプリケーションがデータ ソースに接続しを呼び出して**SQLAllocHandle** SQL ステートメントを送信する前にします。 この呼び出しで*HandleType* SQL_HANDLE_STMT を設定する必要がありますと*InputHandle*への呼び出しによって返された接続ハンドルに設定する必要があります**SQLAllocHandle**そのハンドルが割り当てられます。 ドライバーがステートメントについては、メモリを割り当て、指定された接続は、関連付けられたハンドルの値で渡すと、ステートメント ハンドルに関連付けます* \*OutputHandlePtr*です。 アプリケーション パス、 * \*OutputHandlePtr*ステートメント ハンドルを必要とするすべての後続の呼び出しで値。 詳細については、次を参照してください。[ステートメント ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)です。  
+ ステートメント ハンドルを要求するアプリケーションがデータ ソースに接続しを呼び出して**SQLAllocHandle** SQL ステートメントを送信する前にします。 この呼び出しで*HandleType* SQL_HANDLE_STMT を設定する必要がありますと*InputHandle*への呼び出しによって返された接続ハンドルに設定する必要があります**SQLAllocHandle**そのハンドルが割り当てられます。 ドライバーがステートメントについては、メモリを割り当て、指定された接続は、関連付けられたハンドルの値で渡すと、ステートメント ハンドルに関連付けます *\*OutputHandlePtr*です。 アプリケーション パス、  *\*OutputHandlePtr*ステートメント ハンドルを必要とするすべての後続の呼び出しで値。 詳細については、次を参照してください。[ステートメント ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)です。  
   
  ドライバーは、ステートメント ハンドルを割り当てるときに、自動的に 4 つの記述子の設定を割り当て、SQL_ATTR_APP_ROW_DESC、SQL_ATTR_APP_PARAM_DESC、SQL_ATTR_IMP_ROW_DESC、および SQL_ATTR_IMP_PARAM_DESC にこれらの記述子のハンドルを割り当てますステートメント属性。 呼ばれる、*暗黙的に*記述子が割り当てられます。 アプリケーションの記述子を明示的に割り当てるには、「記述子ハンドルを割り当ててください。」次のセクションを参照してください。  
   

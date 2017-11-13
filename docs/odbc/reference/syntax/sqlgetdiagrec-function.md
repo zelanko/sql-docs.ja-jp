@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
  [入力]長さ、**MessageText*文字バッファー。 診断メッセージのテキストの最大長はありません。  
   
  *TextLengthPtr*  
- [出力]文字 (null 終端文字のために必要な文字数を除く) の合計数を返すバッファーへのポインターで返される使用可能な* \*MessageText*です。 返される文字数がより大きい場合*BufferLength*、診断メッセージのテキストで* \*MessageText*に切り捨てられます*BufferLength* null 終端文字の長さマイナスです。  
+ [出力]文字 (null 終端文字のために必要な文字数を除く) の合計数を返すバッファーへのポインターで返される使用可能な *\*MessageText*です。 返される文字数がより大きい場合*BufferLength*、診断メッセージのテキストで *\*MessageText*に切り捨てられます*BufferLength* null 終端文字の長さマイナスです。  
   
 ## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  

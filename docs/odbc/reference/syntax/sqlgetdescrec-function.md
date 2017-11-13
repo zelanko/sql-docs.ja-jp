@@ -108,7 +108,7 @@ SQLRETURN SQLGetDescRec(
 |01004|文字列データで、右側が切り捨てられました|バッファー \**名前*を全体の記述子フィールドを返すのに十分な大きさがありません。 そのため、フィールドが切り捨てられました。 切り詰められていない記述子フィールドの長さが返される **StringLengthPtr*です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |07009|無効な記述子のインデックス|*FieldIdentifier*引数がレコードのフィールド、 *RecNumber*引数が 0 に設定して、 *DescriptorHandle*引数は、IPD ハンドル。<br /><br /> (DM)、 *RecNumber*引数が 0 に設定された、SQL_ATTR_USE_BOOKMARKS ステートメント属性が SQL_UB_OFF に設定され、 *DescriptorHandle*引数は、IRD のハンドル。<br /><br /> *RecNumber*引数が 0 未満です。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY007|関連付けられたステートメントが準備されていません|*DescriptorHandle* IRD では、関連付けられていたし、関連付けられているステートメント ハンドルは、準備または実行された状態ではありませんでした。|  
 |HY010|関数のシーケンス エラー|(DM) *DescriptorHandle*が関連付けられて、 *StatementHandle*非同期的に実行中の関数 (いないこの 1 つ) が呼び出されたおよびこの関数が呼び出されたときに実行されています。<br /><br /> (DM) *DescriptorHandle*が関連付けられて、 *StatementHandle*を**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**が呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *DescriptorHandle*です。 この非同期関数ではときに実行されている**SQLGetDescRec**が呼び出されました。|  

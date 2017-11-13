@@ -105,7 +105,7 @@ SQLRETURN SQLSetStmtAttr(
 |01S02|オプション値が変更されました|ドライバーがで指定された値をサポートしていません*ValuePtr*で指定された値または*ValuePtr*が正しくない実装の動作条件のため、ドライバーのような値を置換するようにします。 (**SQLGetStmtAttr**を一時的に置換された値の決定に呼び出すことができます)。代替値は有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は次のとおりです。<br /><br /> SQL _ ATTR_CONCURRENCY SQL _ ATTR_CURSOR_TYPE SQL _ ATTR_KEYSET_SIZE SQL _ ATTR_MAX_LENGTH SQL _ ATTR_MAX_ROWS SQL _ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL _ ATTR_SIMULATE_CURSOR<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
 |24000|カーソル状態が無効|*属性*が SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_SIMULATE_CURSOR、または SQL_ATTR_USE_BOOKMARKS、およびカーソルが開かれていた。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY009|無効な null ポインターの使用|*属性*引数が文字列属性を必要とするステートメント属性を識別し、 *ValuePtr*引数が null ポインターでした。|  
 |HY010|関数のシーケンス エラー|(DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLSetStmtAttr**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。|  
@@ -113,7 +113,7 @@ SQLRETURN SQLSetStmtAttr(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY017|自動的に割り当てられた記述子ハンドルの使い方が正しくありません。|(DM)、*属性*因数が SQL_ATTR_IMP_ROW_DESC または SQL_ATTR_IMP_PARAM_DESC でした。<br /><br /> (DM)、*属性*引数された SQL_ATTR_APP_ROW_DESC または SQL_ATTR_APP_PARAM_DESC、および、値で*ValuePtr*ハンドル以外に暗黙的に割り当てられた記述子ハンドルであったARD または APD の割り当てください。|  
 |HY024|無効な属性値|指定した*属性*値で、無効な値が指定されました*ValuePtr*です。 (ドライバー マネージャーは、この SQLSTATE 接続と SQL_ATTR_ACCESS_MODE または _ ATTR_ASYNC_ENABLE などの値の個別のセットをそのまま使用するステートメント属性に対してのみを返します。 他のすべての接続とステートメント属性のドライバーがで指定された値を確認する必要があります*ValuePtr*)。<br /><br /> *属性*引数が SQL_ATTR_APP_ROW_DESC または SQL_ATTR_APP_PARAM_DESC、および*ValuePtr*されたのと同じ接続上にないを明示的に割り当てられた記述子ハンドル、 *StatementHandle*引数。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) * \*ValuePtr*文字の文字列、および*StringLength*引数が 0 未満の値がでした SQL_NTS です。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*ValuePtr*文字の文字列、および*StringLength*引数が 0 未満の値がでした SQL_NTS です。|  
 |HY092|無効な属性またはオプション識別子|引数の指定された値 (DM)*属性*が ODBC ドライバーでサポートされているのバージョンは無効です。<br /><br /> 引数の指定された値 (DM)*属性*読み取り専用の属性であった。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYC00|省略可能な機能が実装されていません|引数が指定された値*属性*有効な ODBC ステートメント属性が ODBC のバージョンは、ドライバーでサポートされていますが、ドライバーによってサポートされていませんでした。<br /><br /> *属性*引数を呼び出すと、SQL_ATTR_ASYNC_ENABLE **SQLGetInfo**で、*情報の種類*SQL_ASYNC_MODE の SQL_AM_CONNECTION を返します。<br /><br /> *属性*引数 SQL_ATTR_ENABLE_AUTO_IPD、SQL_ATTR_AUTO_IPD 接続属性の値が SQL_FALSE をでした。|  

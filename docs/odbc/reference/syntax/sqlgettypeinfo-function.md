@@ -71,7 +71,7 @@ SQLRETURN SQLGetTypeInfo(
 |24000|カーソル状態が無効|カーソルが開いて、 *StatementHandle、*と**SQLFetch**または**SQLFetchScroll**が呼び出されました。 このエラーが返されます、ドライバー マネージャーによって**SQLFetch**または**SQLFetchScroll** 、SQL_NO_DATA が返されなかったと場合、ドライバーによって返される**SQLFetch**または**SQLFetchScroll** SQL_NO_DATA が返されました。<br /><br /> 結果セットがで開かれていた、 *StatementHandle*が**SQLFetch**または**SQLFetchScroll**が呼び出されていません。|  
 |40001|シリアル化のエラー|トランザクションが別のトランザクションでリソース デッドロックによりロールバックされました。|  
 |40003|不明なステートメント入力候補|この関数の実行中に、関連付けられた接続が失敗し、トランザクションの状態を判断することはできません。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY004|無効な SQL データ型|引数が指定された値*DataType*が ODBC SQL データ型の有効な識別子でも、ドライバーでサポートされているドライバー固有のデータ型の識別子。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*関数が呼び出されたし、実行を完了する前に**SQLCancel**または**SQLCancelHandle**されました呼び出される、 *StatementHandle*です。 関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> 関数が呼び出され、実行を完了する前に**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
@@ -101,7 +101,7 @@ SQLRETURN SQLGetTypeInfo(
 |MONEY|FIXED_PREC_SCALE|  
 |AUTO_INCREMENT|AUTO_UNIQUE_VALUE|  
   
- によって返される結果セットに次の列が追加されて**SQLGetTypeInfo** ODBC 3* 。x*:  
+ によって返される結果セットに次の列が追加されて**SQLGetTypeInfo** ODBC 3 *。x*:  
   
 -   SQL_DATA_TYPE  
   

@@ -56,7 +56,7 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  ODBC で定義された文字列の接続オプションでは、ドライバー マネージャーの設定、 *BufferLength*への呼び出しで引数**SQLGetConnectAttr**定義済みの最大長 (SQL_MAX_OPTION_STRING_LENGTH) です。文字列以外の接続オプション、 *BufferLength*は 0 に設定します。  
   
- ODBC 3 SQL_GET_BOOKMARK ステートメント オプションが廃止*.x*です。 ODBC 3*.x* ODBC 2 を使用するドライバー* 。x* SQL_GET_BOOKMARK を使用するアプリケーション SQL_GET_BOOKMARK をサポートする必要があります。 ODBC 3*.x* ODBC 2 を使用するドライバー* 。x*アプリケーションは、その必要がありますサポート SQL_UB_ON SQL_USE_BOOKMARKS に設定し、固定長のブックマークを公開する必要があります。 場合、ODBC 3*.x*ドライバーは、可変長ブックマークいない固定長のブックマークをサポートしている、SQLSTATE HYC00 を返す必要があります (省略可能な機能が実装されていません) 場合は、ODBC 2* 。x*アプリケーション SQL_UB_ON に SQL_USE_BOOKMARKS を設定しようとしました。  
+ ODBC 3 SQL_GET_BOOKMARK ステートメント オプションが廃止*.x*です。 ODBC 3*.x* ODBC 2 を使用するドライバー *。x* SQL_GET_BOOKMARK を使用するアプリケーション SQL_GET_BOOKMARK をサポートする必要があります。 ODBC 3*.x* ODBC 2 を使用するドライバー *。x*アプリケーションは、その必要がありますサポート SQL_UB_ON SQL_USE_BOOKMARKS に設定し、固定長のブックマークを公開する必要があります。 場合、ODBC 3*.x*ドライバーは、可変長ブックマークいない固定長のブックマークをサポートしている、SQLSTATE HYC00 を返す必要があります (省略可能な機能が実装されていません) 場合は、ODBC 2 *。x*アプリケーション SQL_UB_ON に SQL_USE_BOOKMARKS を設定しようとしました。  
   
  ODBC 3*.x*ドライバー、ドライバー マネージャーは、不要になったを確認するかどうか*オプション*SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。 ドライバーは、これをチェックする必要があります。
 

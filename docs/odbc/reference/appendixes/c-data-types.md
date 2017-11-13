@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [ODBC 2 の c]。*x*C の日付、時刻、および timestamp データ型は SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP です。  
   
- [d] ODBC 3*.x* SQL_C_VARBOOKMARK、SQL_C_BOOKMARK いないアプリケーションを使用します。 ときに ODBC 3*.x*アプリケーションが ODBC 2* 。x*ドライバー、ODBC 3*.x*ドライバー マネージャーが SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップされます。  
+ [d] ODBC 3*.x* SQL_C_VARBOOKMARK、SQL_C_BOOKMARK いないアプリケーションを使用します。 ときに ODBC 3*.x*アプリケーションが ODBC 2 *。x*ドライバー、ODBC 3*.x*ドライバー マネージャーが SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップされます。  
   
  [e] A 番号が格納されている、 *val*リトル エンディアン モード (、左端バイトが最下位バイト) でのスケーリングの整数として SQL_NUMERIC_STRUCT 構造体のフィールドです。 たとえば、4 の小数点以下桁数で数値 10.001 の底 10 は 100010 の整数にスケーリングされます。 これ 186AA 16 進形式であるため SQL_NUMERIC_STRUCT の値になります"AA 86 01 00 00.00"、SQL_MAX_NUMERIC_LEN によって定義されたバイト数で**#define**です。  
   
@@ -152,7 +152,7 @@ struct tagSQLGUID {
   
  [ODBC 3 i] _SQL_C_BOOKMARK は廃止されて*.x*です。  
   
- [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なしの型: SQL_C_SSHORT と SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG、and SQL_C_STINYINT SQL_C_UTINYINT です。 ODBC 3*.x* ODBC 2 で動作するドライバー* 。x*アプリケーションは、そのため、呼び出されるときに、ドライバー マネージャーを使ってドライバーに渡します SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT、サポートする必要があります。  
+ [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なしの型: SQL_C_SSHORT と SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG、and SQL_C_STINYINT SQL_C_UTINYINT です。 ODBC 3*.x* ODBC 2 で動作するドライバー *。x*アプリケーションは、そのため、呼び出されるときに、ドライバー マネージャーを使ってドライバーに渡します SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT、サポートする必要があります。  
   
  [k] SQL_C_GUID SQL_CHAR または SQL_WCHAR にのみ変換できます。  
   

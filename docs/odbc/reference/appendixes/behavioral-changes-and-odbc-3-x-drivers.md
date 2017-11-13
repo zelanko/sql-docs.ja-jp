@@ -32,7 +32,7 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]  
 >  動作の変更であり、アプリケーションの機能の詳細については、次を参照してください。[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)です。  
   
- ODBC 2 です。*x*アプリケーションや ODBC 2* 。x* ODBC 3 で再コンパイルされたアプリケーション*.x*ヘッダー ファイルは呼び出さないでください**SQLSetEnvAttr**です。 ただし、呼び出す**SQLAllocEnv**の代わりに**SQLAllocHandle**環境ハンドルを割り当てられません。 そのため、アプリケーションを呼び出すと**SQLAllocEnv**ドライバー マネージャーで、ドライバー マネージャーを呼び出す**SQLAllocHandle**と**SQLSetEnvAttr**ドライバーにします。 したがって、ODBC 3*.x*ドライバーに設定されているこの属性でカウントできる常にします。  
+ ODBC 2 です。*x*アプリケーションや ODBC 2 *。x* ODBC 3 で再コンパイルされたアプリケーション*.x*ヘッダー ファイルは呼び出さないでください**SQLSetEnvAttr**です。 ただし、呼び出す**SQLAllocEnv**の代わりに**SQLAllocHandle**環境ハンドルを割り当てられません。 そのため、アプリケーションを呼び出すと**SQLAllocEnv**ドライバー マネージャーで、ドライバー マネージャーを呼び出す**SQLAllocHandle**と**SQLSetEnvAttr**ドライバーにします。 したがって、ODBC 3*.x*ドライバーに設定されているこの属性でカウントできる常にします。  
   
  標準に準拠したアプリケーションでは、呼び出しを ODBC_STD コンパイル フラグにコンパイルする場合**SQLAllocEnv** (が発生する可能性があるため**SQLAllocEnv** ISO では推奨されていません)、呼び出しにマップされて**SQLAllocHandleStd**コンパイル時にします。 実行時に、アプリケーション呼び出し**SQLAllocHandleStd**です。 ドライバー マネージャーは、また環境属性を SQL_OV_ODBC3 に設定します。 呼び出し**SQLAllocHandleStd**への呼び出しに相当**SQLAllocHandle**で、 *HandleType* SQL_HANDLE_ENV とへの呼び出しの**SQLSetEnvAttr**またを SQL_OV_ODBC3 に設定します。  
   

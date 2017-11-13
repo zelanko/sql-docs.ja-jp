@@ -58,7 +58,7 @@ ODBC 接続では、次の状態があります。
   
  [4] この行は、移行を示しています。 ときに*HandleType* SQL_HANDLE_DESC をがします。  
   
- [5] 通話**SQLAllocHandle**で*OutputHandlePtr*有効なハンドルを指す、以前の内容 ofthat ハンドルに関係なく、そのハンドルを上書きし、ODBC ドライバーの問題が発生する可能性があります。 呼び出す ODBC アプリケーション プログラミングを不適切なである**SQLAllocHandle**に対して定義されている同じアプリケーションの変数を 2 回* \*OutputHandlePtr*呼び出さず**SQLFreeHandle**にそれを再割り当てする前に、ハンドルを解放します。 ODBC を上書きするようにハンドルを一貫性のない動作または ODBC ドライバーによるエラー可能性があります。  
+ [5] 通話**SQLAllocHandle**で*OutputHandlePtr*有効なハンドルを指す、以前の内容 ofthat ハンドルに関係なく、そのハンドルを上書きし、ODBC ドライバーの問題が発生する可能性があります。 呼び出す ODBC アプリケーション プログラミングを不適切なである**SQLAllocHandle**に対して定義されている同じアプリケーションの変数を 2 回 *\*OutputHandlePtr*呼び出さず**SQLFreeHandle**にそれを再割り当てする前に、ハンドルを解放します。 ODBC を上書きするようにハンドルを一貫性のない動作または ODBC ドライバーによるエラー可能性があります。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

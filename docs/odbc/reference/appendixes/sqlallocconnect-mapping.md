@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect マッピング
-アプリケーションを呼び出すと**SQLAllocConnect**から ODBC 3* 。x*ドライバーへの呼び出し**SQLAllocConnect**(*henv*、 *phdbc*) にマップされて**SQLAllocHandle**次のようにします。  
+アプリケーションを呼び出すと**SQLAllocConnect**から ODBC 3 *。x*ドライバーへの呼び出し**SQLAllocConnect**(*henv*、 *phdbc*) にマップされて**SQLAllocHandle**次のようにします。  
   
 1.  ドライバー マネージャーは、接続を割り当てるし、アプリケーションに返します。  
   

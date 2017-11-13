@@ -86,7 +86,7 @@ SQLRETURN SQLPutData(
 |22012|0 による除算です。|算術式の入力/出力の計算または 0 による除算では、出力パラメーターが発生しました。|  
 |22015|間隔のフィールドがオーバーフローしました|間隔 SQL データ型のパラメーターの有効桁数が失われる原因となったまたは正確な数値型または interval 列のデータが送信されます。<br /><br /> データは、期間列または複数のフィールドを持つパラメーターの送信された、数値データ型に変換されましたおよび数値データ型の表現がなかった。<br /><br /> 間隔 SQL 型に割り当てられた列に送信されるデータまたはパラメーターのデータと、SQL 型の間隔で、C 型の値の形式がありませんでした。<br /><br /> 正確な numeric または間隔 C 列またはパラメーター間隔 C 型を送信するデータには、有効桁数の損失が発生します。<br /><br /> 列に送信されるデータまたはパラメーターのデータは、間隔 C 構造に割り当てられたおよび間隔のデータ構造内のデータの表現がありませんでした。|  
 |22018|キャストは無効な文字値|C 型が、真数または概数の数値、datetime、または、interval データ型です。列の SQL 型が文字データ型です。列またはパラメーターの値がバインドされた C 型の有効なリテラルではありませんでした。<br /><br /> SQL 型が、真数または概数の数値、datetime、または、interval データ型です。C 型が SQL_C_CHAR です。列またはパラメーターの値がバインドされた SQL 型の有効なリテラルではありませんでした。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*です。 関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY009|無効な null ポインターの使用|(DM) 引数*DataPtr*が null ポインターの場合と、引数*StrLen_or_Ind*でした 0、SQL_DEFAULT_PARAM、または SQL_NULL_DATA です。|  
@@ -108,7 +108,7 @@ SQLRETURN SQLPutData(
   
  アプリケーションを呼び出すと**SQLParamData**データを決定するを送る、ドライバーは、アプリケーション パラメーター データを送信する決定を使用している、または列のデータがあるインジケーターを返します。 また、これを呼び出して、アプリケーションにインジケーターは SQL_NEED_DATA を返します**SQLPutData**データを送信します。 *DataPtr*引数**SQLPutData**アプリケーションが、パラメーターまたは列の実際のデータを格納するバッファーへのポインターを渡します。  
   
- ドライバーでの SQL_SUCCESS が返されるときに**SQLPutData**、アプリケーション呼び出し**SQLParamData**もう一度です。 **SQLParamData** SQL_NEED_DATA より多くのデータを送信する必要がある場合は、アプリケーションの呼び出しが返されます**SQLPutData**もう一度です。 実行時データのすべてのデータが送信された場合は関係なく SQL_SUCCESS を返します。 その後、アプリケーションを呼び出す**SQLParamData**もう一度です。 ドライバーが SQL_NEED_DATA とで別のインジケーターを返す場合* \*ValuePtrPtr*、別のパラメーターまたは列にデータが必要と**SQLPutData**が再度呼び出されます。 データが送信され、SQL ステートメントを実行することができる場合は、ドライバー SQL_SUCCESS を返します、し、すべての実行時データまたは**SQLBulkOperations**または**SQLSetPos**呼び出しを処理することができます。  
+ ドライバーでの SQL_SUCCESS が返されるときに**SQLPutData**、アプリケーション呼び出し**SQLParamData**もう一度です。 **SQLParamData** SQL_NEED_DATA より多くのデータを送信する必要がある場合は、アプリケーションの呼び出しが返されます**SQLPutData**もう一度です。 実行時データのすべてのデータが送信された場合は関係なく SQL_SUCCESS を返します。 その後、アプリケーションを呼び出す**SQLParamData**もう一度です。 ドライバーが SQL_NEED_DATA とで別のインジケーターを返す場合 *\*ValuePtrPtr*、別のパラメーターまたは列にデータが必要と**SQLPutData**が再度呼び出されます。 データが送信され、SQL ステートメントを実行することができる場合は、ドライバー SQL_SUCCESS を返します、し、すべての実行時データまたは**SQLBulkOperations**または**SQLSetPos**呼び出しを処理することができます。  
   
  方法の実行時データ パラメーターのデータの詳細については、ステートメントの実行時に渡されたを参照してください「パラメーターの値の引き渡し」 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)と[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)です。 方法の実行時データ列のデータの詳細については、更新または追加のセクションを参照して"を使用して SQLSetPos" [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)、「を実行する一括更新プログラムを使用してブックマーク」で[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、および[長い形式のデータおよび SQLSetPos SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)です。  
   

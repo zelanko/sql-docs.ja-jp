@@ -66,20 +66,20 @@ SQLRETURN SQLGetStmtAttr(
  場合*ValuePtr* null、 *StringLengthPtr*バイト (文字データの null 終端文字を除く) の合計数を返すはまだが指すバッファーに返される使用可能な*ValuePtr*です。  
   
  *BufferLength*  
- [入力]場合*属性*ODBC で定義された属性と*ValuePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *ValuePtr*. 場合*属性*ODBC で定義された属性と\* *ValuePtr*整数*BufferLength*は無視されます。 値が返される場合* \*ValuePtr* Unicode 文字列です (呼び出し時に**SQLGetStmtAttrW**) では、 *BufferLength*引数は偶数である必要があります。  
+ [入力]場合*属性*ODBC で定義された属性と*ValuePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *ValuePtr*. 場合*属性*ODBC で定義された属性と\* *ValuePtr*整数*BufferLength*は無視されます。 値が返される場合 *\*ValuePtr* Unicode 文字列です (呼び出し時に**SQLGetStmtAttrW**) では、 *BufferLength*引数は偶数である必要があります。  
   
  場合*属性*ドライバーの定義済みの属性は、アプリケーション、ドライバー マネージャーに属性の性質を示す設定、 *BufferLength*引数。 *BufferLength*次の値を持つことができます。  
   
--   場合* \*ValuePtr*文字の文字列へのポインターが*BufferLength* SQL_NTS または文字列の長さです。  
+-   場合 *\*ValuePtr*文字の文字列へのポインターが*BufferLength* SQL_NTS または文字列の長さです。  
   
--   場合* \*ValuePtr*アプリケーションが、SQL_LEN_BINARY_ATTR の結果を配置し、バイナリのバッファーへのポインターは、(*長さ*) マクロで*BufferLength*です。 これにより、配置に負の値*BufferLength*です。  
+-   場合 *\*ValuePtr*アプリケーションが、SQL_LEN_BINARY_ATTR の結果を配置し、バイナリのバッファーへのポインターは、(*長さ*) マクロで*BufferLength*です。 これにより、配置に負の値*BufferLength*です。  
   
--   場合* \*ValuePtr*文字の文字列またはバイナリ文字列以外の値へのポインターが*BufferLength* SQL_IS_POINTER 値でなければなりません。  
+-   場合 *\*ValuePtr*文字の文字列またはバイナリ文字列以外の値へのポインターが*BufferLength* SQL_IS_POINTER 値でなければなりません。  
   
--   場合* \*ValuePtr*はし、固定長のデータ型を含む*BufferLength*は SQL_IS_INTEGER か SQL_IS_UINTEGER、必要に応じて。  
+-   場合 *\*ValuePtr*はし、固定長のデータ型を含む*BufferLength*は SQL_IS_INTEGER か SQL_IS_UINTEGER、必要に応じて。  
   
  *StringLengthPtr*  
- [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な* \*ValuePtr*です。 場合*ValuePtr* null ポインターでは、長さは返されません。 属性値が文字の文字列と、使用できるバイト数を返すより大きいまたは等しい*BufferLength*、内のデータ* \*ValuePtr* に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な *\*ValuePtr*です。 場合*ValuePtr* null ポインターでは、長さは返されません。 属性値が文字の文字列と、使用できるバイト数を返すより大きいまたは等しい*BufferLength*、内のデータ *\*ValuePtr* に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
@@ -90,7 +90,7 @@ SQLRETURN SQLGetStmtAttr(
 |SQLSTATE|[エラー]|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01004|文字列データで、右側が切り捨てられました|返されるデータ* \*ValuePtr*に切り詰められました*BufferLength* null 終端文字の長さマイナスです。 切り詰められていない文字列値の長さが返される **StringLengthPtr*です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|01004|文字列データで、右側が切り捨てられました|返されるデータ *\*ValuePtr*に切り詰められました*BufferLength* null 終端文字の長さマイナスです。 切り詰められていない文字列値の長さが返される **StringLengthPtr*です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |24000|カーソル状態が無効|引数*属性*SQL_ATTR_ROW_NUMBER が、カーソルが開いて、いなかったやまたは結果セットの終了後に結果セットの開始前に、カーソルが置かれています。|  
 |HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**引数で*MessageText*エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
@@ -107,7 +107,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="comments"></a>コメント  
  ステートメント属性に関する概要については、次を参照してください。[ステートメント属性](../../../odbc/reference/develop-app/statement-attributes.md)です。  
   
- 呼び出し**SQLGetStmtAttr**で返します* \*ValuePtr*で指定されたステートメント属性の値*属性*です。 SQLULEN 値または null で終わる文字の文字列、その値を指定するか、できます。 SQLULEN 値の場合、一部のドライバーのみ書き込むことが、下位 32 ビットまたは 16 ビットのバッファーとのままにして、上位ビットがそのままです。 そのため、アプリケーションは SQLULEN のバッファーを使用し、この関数を呼び出す前に、値を 0 を初期化する必要があります。 また、 *BufferLength*と*StringLengthPtr*引数は使用されません。 アプリケーションがその文字列内で最大長を指定する値が null で終わる文字列の場合は、 *BufferLength*引数、およびドライバーでは、その文字列の長さを返します、 * \*StringLengthPtr*バッファー。  
+ 呼び出し**SQLGetStmtAttr**で返します *\*ValuePtr*で指定されたステートメント属性の値*属性*です。 SQLULEN 値または null で終わる文字の文字列、その値を指定するか、できます。 SQLULEN 値の場合、一部のドライバーのみ書き込むことが、下位 32 ビットまたは 16 ビットのバッファーとのままにして、上位ビットがそのままです。 そのため、アプリケーションは SQLULEN のバッファーを使用し、この関数を呼び出す前に、値を 0 を初期化する必要があります。 また、 *BufferLength*と*StringLengthPtr*引数は使用されません。 アプリケーションがその文字列内で最大長を指定する値が null で終わる文字列の場合は、 *BufferLength*引数、およびドライバーでは、その文字列の長さを返します、  *\*StringLengthPtr*バッファー。  
   
  呼び出すアプリケーションを許可する**SQLGetStmtAttr** ODBC 2 を使用する*。x*ドライバーへの呼び出し**SQLGetStmtAttr**をドライバー マネージャーではマップ**SQLGetStmtOption**です。  
   

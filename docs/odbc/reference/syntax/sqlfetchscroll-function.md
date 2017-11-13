@@ -108,7 +108,7 @@ SQLRETURN SQLFetchScroll(
 |24000|カーソル状態が無効|*StatementHandle*実行状態でしたが、結果セットが関連付けられていない、 *StatementHandle*です。|  
 |40001|シリアル化のエラー|フェッチが実行されたトランザクションは、デッドロックを防ぐために終了しました。|  
 |40003|不明なステートメント入力候補|、この関数の実行中に、関連付けられた接続が失敗し、トランザクションの状態を判断することはできません。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*です。 関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLFetchScroll**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM)、指定した*StatementHandle*実行された状態ではありませんでした。 最初の呼び出さずに、関数が呼び出された**SQLExecDirect**、 **SQLExecute**またはカタログ関数。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) **SQLFetch**の呼び出された、 *StatementHandle*後**SQLExtendedFetch**が呼び出されたとする前に**SQLFreeStmt** sql _ と終了 オプションが呼び出されました。|  
@@ -168,7 +168,7 @@ SQLRETURN SQLFetchScroll(
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
 |*開始する前に*|1|  
-|*CurrRowsetStart + 複合カーソル*[1] * \<LastResultRow を =*|*CurrRowsetStart + 複合カーソル*[1]|  
+|*CurrRowsetStart + 複合カーソル*[1]  *\<LastResultRow を =*|*CurrRowsetStart + 複合カーソル*[1]|  
 |*CurrRowsetStart + 複合カーソル*[1]*> LastResultRow*|*末尾の後に*|  
 |*末尾の後に*|*末尾の後に*|  
   
@@ -198,8 +198,8 @@ SQLRETURN SQLFetchScroll(
 |*(開始前に、および FetchOffset > 0)または (末尾および FetchOffset の後に < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart と FetchOffset < = 0*|*開始する前に*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*開始する前に*|  
-|*CurrRowsetStart AND CurrRowsetStart + FetchOffset > 1 < 1 AND & #124 です。FetchOffset & #124 です。> 複合カーソル* <sup>[3]</sup>|*開始する前に*|  
-|*CurrRowsetStart AND CurrRowsetStart + FetchOffset > 1 < 1 AND & #124 です。FetchOffset & #124 です。< = 複合カーソル* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart AND CurrRowsetStart + FetchOffset > 1 < 1 AND &#124;です。FetchOffset &#124;です。> 複合カーソル* <sup>[3]</sup>|*開始する前に*|  
+|*CurrRowsetStart AND CurrRowsetStart + FetchOffset > 1 < 1 AND &#124;です。FetchOffset &#124;です。< = 複合カーソル* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<LastResultRow を =*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*末尾の後に*|  
 |*終了と FetchOffset 後 > 0 を =*|*末尾の後に*|  
@@ -215,9 +215,9 @@ SQLRETURN SQLFetchScroll(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND & #124 です。FetchOffset & #124 です。< LastResultRow を =*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 AND & #124 です。FetchOffset & #124 です。> LastResultRow AND & #124 です。FetchOffset & #124 です。> 複合カーソル* <sup>[2]</sup>|*開始する前に*|  
-|*FetchOffset < 0 AND & #124 です。FetchOffset & #124 です。> LastResultRow AND & #124 です。FetchOffset & #124 です。< = 複合カーソル* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124;です。FetchOffset &#124;です。< LastResultRow を =*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124;です。FetchOffset &#124;です。> LastResultRow AND &#124;です。FetchOffset &#124;です。> 複合カーソル* <sup>[2]</sup>|*開始する前に*|  
+|*FetchOffset < 0 AND &#124;です。FetchOffset &#124;です。> LastResultRow AND &#124;です。FetchOffset &#124;です。< = 複合カーソル* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset 0 を =*|*開始する前に*|  
 |*1 < = FetchOffset \<LastResultRow を =*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*末尾の後に*|  

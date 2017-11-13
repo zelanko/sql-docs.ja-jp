@@ -87,19 +87,19 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|[エラー]|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01S02|オプション値が変更されました|ドライバーがで指定された値をサポートしていません* \*ValuePtr* (場合*ValuePtr*ポインター) の値または*ValuePtr* (場合*ValuePtr*された整数値)、または* \*ValuePtr*が正しくない実装の動作条件のため、ドライバーのような値を置換するようにします。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|07009|無効な記述子のインデックス|*FieldIdentifier*引数がレコードのフィールド、 *RecNumber*引数が 0 の場合、 *DescriptorHandle* IPD ハンドルへの引数と呼ばれます。<br /><br /> *RecNumber*引数は、0 より小さい、 *DescriptorHandle*引数が、ARD または、APD を参照します。<br /><br /> *RecNumber*引数が列またはデータ ソースをサポートできますが、パラメーターの最大数よりも大きかったと*DescriptorHandle* APD または ARD 引数と呼ばれます。<br /><br /> (DM)、 *FieldIdentifier*引数が SQL_DESC_COUNT、および* \*ValuePtr*引数が 0 未満です。<br /><br /> *RecNumber*引数が 0 に等しいと*DescriptorHandle*引数が暗黙的に割り当てられた APD と呼びます。 (これで、アプリケーションが明示的に割り当てられた記述子でエラーが発生しないアプリケーションが明示的に割り当てられた記述子が APD またはまで ARD かどうかが不明のために実行されます。)|  
+|01S02|オプション値が変更されました|ドライバーがで指定された値をサポートしていません *\*ValuePtr* (場合*ValuePtr*ポインター) の値または*ValuePtr* (場合*ValuePtr*された整数値)、または *\*ValuePtr*が正しくない実装の動作条件のため、ドライバーのような値を置換するようにします。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|07009|無効な記述子のインデックス|*FieldIdentifier*引数がレコードのフィールド、 *RecNumber*引数が 0 の場合、 *DescriptorHandle* IPD ハンドルへの引数と呼ばれます。<br /><br /> *RecNumber*引数は、0 より小さい、 *DescriptorHandle*引数が、ARD または、APD を参照します。<br /><br /> *RecNumber*引数が列またはデータ ソースをサポートできますが、パラメーターの最大数よりも大きかったと*DescriptorHandle* APD または ARD 引数と呼ばれます。<br /><br /> (DM)、 *FieldIdentifier*引数が SQL_DESC_COUNT、および *\*ValuePtr*引数が 0 未満です。<br /><br /> *RecNumber*引数が 0 に等しいと*DescriptorHandle*引数が暗黙的に割り当てられた APD と呼びます。 (これで、アプリケーションが明示的に割り当てられた記述子でエラーが発生しないアプリケーションが明示的に割り当てられた記述子が APD またはまで ARD かどうかが不明のために実行されます。)|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
 |22001|文字列データで、右側が切り捨てられました|*FieldIdentifier*引数が SQL_DESC_NAME、および*BufferLength*引数が SQL_MAX_IDENTIFIER_LEN より大きい値です。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|(DM)、 *DescriptorHandle*が関連付けられて、 *StatementHandle*非同期的に実行中の関数 (いないこの 1 つ) が呼び出されたおよびこの関数が呼び出されたときに実行されています。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle*いる、 *DescriptorHandle*が関連付けられているし、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *DescriptorHandle*です。 この非同期関数がまだ実行したときに、 **SQLSetDescField**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかで呼び出され、 *DescriptorHandle* SQL_PARAM_DATA_AVAILABLE を返されるとします。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY016|実装行記述子は変更できません。|*DescriptorHandle*引数は、IRD を関連付け、 *FieldIdentifier* SQL_DESC_ARRAY_STATUS_PTR または SQL_DESC_ROWS_PROCESSED_PTR 引数がありませんでした。|  
 |HY021|不整合な記述子情報|SQL_DESC_TYPE と SQL_DESC_DATETIME_INTERVAL_CODE フィールドが形成されていません、有効な ODBC SQL 型または (Ipd) の有効なドライバー固有の SQL 型または有効な ODBC C 型 (Apd の標準)。<br /><br /> 整合性チェック中にチェック記述子の情報が一致していません。 (「整合性チェック」を参照してください**SQLSetDescRec**)。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) * \*ValuePtr*文字の文字列、および*BufferLength*ゼロより小さいは SQL_NTS に等しいでした。<br /><br /> (DM) ドライバーは ODBC 2*.x*ドライバー、記述子が、ARD、 *ColumnNumber*引数が 0 であり、引数に指定された値に設定された*BufferLength*されました4 に等しくないです。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*ValuePtr*文字の文字列、および*BufferLength*ゼロより小さいは SQL_NTS に等しいでした。<br /><br /> (DM) ドライバーは ODBC 2*.x*ドライバー、記述子が、ARD、 *ColumnNumber*引数が 0 であり、引数に指定された値に設定された*BufferLength*されました4 に等しくないです。|  
 |HY091|無効な記述子フィールド識別子|指定された値、 *FieldIdentifier*引数を選択して、ODBC で定義されたフィールドでしたが、実装定義の値ではありません。<br /><br /> *FieldIdentifier*引数が、無効、 *DescriptorHandle*引数。<br /><br /> *FieldIdentifier*引数が ODBC で定義された、読み取り専用フィールドです。|  
-|HY092|無効な属性またはオプション識別子|値* \*ValuePtr*が、無効、 *FieldIdentifier*引数。<br /><br /> *FieldIdentifier*引数が SQL_DESC_UNNAMED、および*ValuePtr* SQL_NAMED がします。|  
+|HY092|無効な属性またはオプション識別子|値 *\*ValuePtr*が、無効、 *FieldIdentifier*引数。<br /><br /> *FieldIdentifier*引数が SQL_DESC_UNNAMED、および*ValuePtr* SQL_NAMED がします。|  
 |HY105|無効なパラメーターの型|(DM) SQL_DESC_PARAMETER_TYPE フィールドに指定された値が無効でした。 (詳細については、次を参照してください、"*InputOutputType*引数"」の「 **SQLBindParameter**。)。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)です。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  

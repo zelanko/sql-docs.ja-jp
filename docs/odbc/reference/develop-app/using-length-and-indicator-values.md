@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  長さまたはインジケーターの値として有効な次の長さです。  
   
--   *n*、、 * n * > 0 です。  
+-   *n*、、  *n*  > 0 です。  
   
 -   0.  
   

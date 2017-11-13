@@ -54,7 +54,7 @@ DataControl.Handler = String
   
  既定のハンドラーの名前は**MSDFMAP です。ハンドラー**、その既定のパラメーターは、という名前のカスタマイズ ファイルおよび**MSDFMAP です。INI**です。 このプロパティを使用して、サーバー管理者によって作成される代替のカスタマイズ ファイルを呼び出します。  
   
- 設定する代わりに、**ハンドラー**プロパティがハンドラーと内のパラメーターを指定するには、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティですつまり、"**ハンドラー =** * 。handlerName、parameter1、parameter2、います。*".  
+ 設定する代わりに、**ハンドラー**プロパティがハンドラーと内のパラメーターを指定するには、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティですつまり、"**ハンドラー =**  *。handlerName、parameter1、parameter2、います。*".  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

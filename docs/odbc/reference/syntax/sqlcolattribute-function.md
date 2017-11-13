@@ -73,7 +73,7 @@ SQLRETURN SQLColAttribute (
  場合*CharacterAttributePtr*が NULL の場合、 *StringLengthPtr*はバイト (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能なによって示される*CharacterAttributePtr*です。  
   
  *BufferLength*  
- [入力]場合*FieldIdentifier* ODBC で定義されたフィールドと*CharacterAttributePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *CharacterAttributePtr*です。 場合*FieldIdentifier* ODBC で定義されたフィールドと\* *CharacterAttribute*Ptr が整数では、このフィールドは無視されます。 場合、 * \*CharacterAttributePtr* Unicode 文字列です (呼び出し時に**SQLColAttributeW**) では、 *BufferLength*引数は偶数である必要があります。 場合*FieldIdentifier*ドライバーの定義済みのフィールドでは、アプリケーション、ドライバー マネージャーに、フィールドの性質を示す設定、 *BufferLength*引数。 *BufferLength*次の値を持つことができます。  
+ [入力]場合*FieldIdentifier* ODBC で定義されたフィールドと*CharacterAttributePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *CharacterAttributePtr*です。 場合*FieldIdentifier* ODBC で定義されたフィールドと\* *CharacterAttribute*Ptr が整数では、このフィールドは無視されます。 場合、  *\*CharacterAttributePtr* Unicode 文字列です (呼び出し時に**SQLColAttributeW**) では、 *BufferLength*引数は偶数である必要があります。 場合*FieldIdentifier*ドライバーの定義済みのフィールドでは、アプリケーション、ドライバー マネージャーに、フィールドの性質を示す設定、 *BufferLength*引数。 *BufferLength*次の値を持つことができます。  
   
 -   場合*CharacterAttributePtr* 、ポインターへのポインターは、 *BufferLength* SQL_IS_POINTER 値でなければなりません。  
   
@@ -110,7 +110,7 @@ SQLRETURN SQLColAttribute (
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*です。 関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 SQLColAttribute が呼び出されたときに、この非同期関数が実行されています。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM)、関数が呼び出された呼び出しの前に**SQLPrepare**、 **SQLExecDirect**、またはのカタログ関数、 *StatementHandle*です。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) * \*CharacterAttributePtr*文字の文字列、および*BufferLength* SQL_NTS に等しくないが、0 より小さいをでした。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*CharacterAttributePtr*文字の文字列、および*BufferLength* SQL_NTS に等しくないが、0 より小さいをでした。|  
 |HY091|無効な記述子フィールド識別子|引数が指定された値*FieldIdentifier*が定義されている値のいずれかと、実装定義の値ではありません。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYC00|対応していないドライバー|引数が指定された値*FieldIdentifier*ドライバーによってサポートされていませんでした。|  
@@ -135,7 +135,7 @@ SQLRETURN SQLColAttribute (
  ODBC 3 です。*x*ドライバーは、の各記述子フィールドの値を返す必要があります。 記述子フィールドは、ドライバーまたはデータ ソースには適用されませんし、ドライバーに 0 を返します、明記しない限り場合\* *StringLengthPtr*または空の文字列で **CharacterAttributePtr*です。  
   
 ## <a name="backward-compatibility"></a>旧バージョンとの互換性  
- ODBC 3 です。*x*関数**SQLColAttribute**非推奨の ODBC 2 が置き換えられます*。x*関数**SQLColAttributes**です。 マップするとき**SQLColAttributes**に**SQLColAttribute** (ときに ODBC 2* 。x* ODBC 3 を利用するアプリケーション*。x*ドライバー)、またはマッピング**SQLColAttribute**に**SQLColAttributes** (ときに ODBC 3* 。x* ODBC 2 を利用するアプリケーション*。x*ドライバー)、ドライバー マネージャーがいずれかの値を渡します*FieldIdentifier*を通じて、新しい値にマップまたは次のように、エラーが返されます。  
+ ODBC 3 です。*x*関数**SQLColAttribute**非推奨の ODBC 2 が置き換えられます*。x*関数**SQLColAttributes**です。 マップするとき**SQLColAttributes**に**SQLColAttribute** (ときに ODBC 2 *。x* ODBC 3 を利用するアプリケーション*。x*ドライバー)、またはマッピング**SQLColAttribute**に**SQLColAttributes** (ときに ODBC 3 *。x* ODBC 2 を利用するアプリケーション*。x*ドライバー)、ドライバー マネージャーがいずれかの値を渡します*FieldIdentifier*を通じて、新しい値にマップまたは次のように、エラーが返されます。  
   
 > [!NOTE]  
 >  使用されるプレフィックス*FieldIdentifier* ODBC 3 の値*。x*で使用される ODBC 2 から変更されました*。x*です。 新しいプレフィックスは"SQL_DESC"です。古いプレフィックスは、"SQL_COLUMN"でした。  
@@ -146,7 +146,7 @@ SQLRETURN SQLColAttribute (
   
 -   場合、 **#define** ODBC 2 の値*。x* *FieldIdentifier*とは異なる、 **#define** ODBC 3 の値*。x* *FieldIdentifier*、カウント、名前、としてが発生し、関数呼び出しで値、null 許容の値は、対応する値にマップします。 SQL_DESC_COUNT に SQL_COLUMN_COUNT をマップするなど、SQL_DESC_COUNT がマッピングの方向に応じて SQL_COLUMN_COUNT にマップされているとします。  
   
--   場合*FieldIdentifier* ODBC 3 内の新しい値です*。x*、これがありませんでした対応する値では、ODBC 2 のです*。x*、ODBC 3 時にマップできません*。x*アプリケーションでの呼び出しで使用**SQLColAttribute** ODBC 2* 。x*ドライバー、および呼び出しは SQLSTATE HY091 を返します (無効な記述子フィールド識別子)。  
+-   場合*FieldIdentifier* ODBC 3 内の新しい値です*。x*、これがありませんでした対応する値では、ODBC 2 のです*。x*、ODBC 3 時にマップできません*。x*アプリケーションでの呼び出しで使用**SQLColAttribute** ODBC 2 *。x*ドライバー、および呼び出しは SQLSTATE HY091 を返します (無効な記述子フィールド識別子)。  
   
  次の表に、によって返される記述子型**SQLColAttribute**です。 型は、 *NumericAttributePtr*値は**SQLLEN \***です。  
   

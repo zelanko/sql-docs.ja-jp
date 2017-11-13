@@ -63,10 +63,10 @@ SQLRETURN SQLGetEnvAttr(
  場合*ValuePtr* null、 *StringLengthPtr*バイト (文字データの null 終端文字を除く) の合計数を返すはまだが指すバッファーに返される使用可能な*ValuePtr*です。  
   
  *BufferLength*  
- [入力]場合*ValuePtr*文字の文字列へのポインター、この引数の長さにする必要があります\* *ValuePtr*です。 場合\* *ValuePtr*整数*BufferLength*は無視されます。 場合* \*ValuePtr* Unicode 文字列です (呼び出し時に**SQLGetEnvAttrW**) では、 *BufferLength*引数は偶数である必要があります。 属性値が文字の文字列ではない場合*BufferLength*は使用されません。  
+ [入力]場合*ValuePtr*文字の文字列へのポインター、この引数の長さにする必要があります\* *ValuePtr*です。 場合\* *ValuePtr*整数*BufferLength*は無視されます。 場合 *\*ValuePtr* Unicode 文字列です (呼び出し時に**SQLGetEnvAttrW**) では、 *BufferLength*引数は偶数である必要があります。 属性値が文字の文字列ではない場合*BufferLength*は使用されません。  
   
  *StringLengthPtr*  
- [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な* \*ValuePtr*です。 場合*ValuePtr* null ポインターでは、長さは返されません。 属性値、文字の文字列であり、使用できるバイト数を返すより大きいかに等しい場合*BufferLength*、内のデータ\* *ValuePtr*に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な *\*ValuePtr*です。 場合*ValuePtr* null ポインターでは、長さは返されません。 属性値、文字の文字列であり、使用できるバイト数を返すより大きいかに等しい場合*BufferLength*、内のデータ\* *ValuePtr*に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE です。  
@@ -78,7 +78,7 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データで、右側が切り捨てられました|返されるデータ\* *ValuePtr*に切り詰められました*BufferLength*マイナス、null 終端文字です。 切り詰められていない文字列値の長さが返される **StringLengthPtr*です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|(DM)**また**経由で設定されていない**SQLSetEnvAttr**です。 設定する必要はありません**また**を使用している場合は明示的に**SQLAllocHandleStd**です。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  

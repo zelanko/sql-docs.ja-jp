@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
  このシナリオでは、ActiveX コントロールで基本的な HTML タグのレイアウト、DHTML データ バインディングの使用方法は、およびプログラムを使用する方法がわかっている前提としています。  
   
- SDK をインストールする場合は、samples\dataaccess\rds\AddressBook\AddressBook.asp、SDK のディレクトリにアドレス帳サンプル アプリケーションの完全なソース コードを確認できます。 表示するアドレス帳のシナリオを Internet Explorer 4.0 以降では、入力* *http://*webserver*/RDS/AddressBook/AddressBook.asp** 場所*webserver*名前を指定しますインターネット インフォメーション サービス (IIS) および ASP を実行している Windows NT 4.0 または Windows 2000 Web サーバー コンピューターに与えられます。  
+ SDK をインストールする場合は、samples\dataaccess\rds\AddressBook\AddressBook.asp、SDK のディレクトリにアドレス帳サンプル アプリケーションの完全なソース コードを確認できます。 表示するアドレス帳のシナリオを Internet Explorer 4.0 以降では、入力 **http://*webserver*/RDS/AddressBook/AddressBook.asp** 場所*webserver*名前を指定しますインターネット インフォメーション サービス (IIS) および ASP を実行している Windows NT 4.0 または Windows 2000 Web サーバー コンピューターに与えられます。  
   
 ## <a name="introduction-to-address-book"></a>アドレス帳の概要  
  アドレス帳のサンプル アプリケーションは、イントラネット経由での検索可能なディレクトリの発行に使用できる単純なオンラインのアドレス帳を提供します。 アドレス帳では、ユーザーが従業員に関する情報を要求の 1 つまたは複数のフィールドに検索文字列を入力できるように設計されています。 表示するには、リモートのデータ サービスの基本的な機能をサンプル アプリケーションが使用して小規模なオブジェクトと検索のフィールドの最小数意図的には保持されます。  

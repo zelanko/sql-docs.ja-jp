@@ -86,7 +86,7 @@ BOOL ConfigDriver(
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**ConfigDriver**は FALSE を返します、関連付けられている* \*pfErrorCode*への呼び出しで値がインストーラー エラー バッファーにポストされた**SQLPostInstallerError**呼び出すことによって取得できます**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**ConfigDriver**は FALSE を返します、関連付けられている *\*pfErrorCode*への呼び出しで値がインストーラー エラー バッファーにポストされた**SQLPostInstallerError**呼び出すことによって取得できます**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値スカラー関数は数値列を引数としてし、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープ シーケンスは、します。  
   
- **{fn***スカラー関数* **}  **  
+ **{fn***スカラー関数* **}**   
   
  ここで*スカラー関数*はでは、関数の 1 つ[付録 e: のスカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)です。 スカラー関数エスケープ シーケンスの詳細については、次を参照してください。[スカラー関数エスケープ シーケンス](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)付録 c: SQL の文法でします。  
   
