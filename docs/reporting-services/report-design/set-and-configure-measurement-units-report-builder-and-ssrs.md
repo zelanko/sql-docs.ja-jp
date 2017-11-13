@@ -1,5 +1,5 @@
 ---
-title: "設定し、測定単位 (レポート ビルダーおよび SSRS) の構成 |Microsoft ドキュメント"
+title: "測定単位の設定および構成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
 ms.contentlocale: ja-jp
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  さらに、測定単位を数値に変更することができます。 その場合、データの最小値または最大値を指定せず、代わりにインジケーターで使用される各アイコンの開始値と終了値のみを指定します。  
   
- 測定単位などのオプションは、式を使用して設定できます。 詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
+ 測定単位などのオプションは、式を使用して設定できます。 詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="to-use-the-numeric-state-measurement-unit"></a>数値の状態測定単位を使用するには  
   
@@ -81,4 +80,3 @@ ms.lasthandoff: 08/09/2017
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

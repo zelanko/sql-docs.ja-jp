@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: レポート (レポート ビルダー) へのパラメーターの追加 |Microsoft ドキュメント"
+title: "チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: ja-jp
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。 
    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
 このチュートリアルの推定所要時間 : 25 分  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
   
-2.  左ペインで、**[新しいレポート]** が選択されていることを確認します。  
+2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]**をクリックします。  
   
@@ -165,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  レポート データ ペインで **[パラメーター]** フォルダーを展開します。  
   
-実際には今すぐという名前のレポート パラメーター  *@StoreID* 、およびパラメーター ペインがレポートのパラメーターをレイアウトすることができます。   
+*@StoreID* というレポート パラメーターと、レポート パラメーターをレイアウトできるパラメーター ペインが存在することがわかります。   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -388,7 +387,7 @@ For *@StoreID*の値として表示されます。この値が、店舗 ID **200
   
 5.  レポート データ ペインで、 **[データセット]** フォルダーを展開して **DataSet1**を右クリックし、 **[クエリ]**をクリックします。  
   
-6.  クエリの最後の行で、 **等号** (=) を **** WHERE [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause WHERE last line WHERE query:  
+6.  クエリの最後の行で、**等号** (=) を [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 句の **IN** に変更します。  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -506,7 +505,7 @@ For *@StoreID*の値として表示されます。この値が、店舗 ID **200
 レポートがレポート サーバーに保存されます。 接続しているレポート サーバーがウィンドウ下部のステータス バーに表示されます。  
   
 ## <a name="next-steps"></a>次の手順  
-これで、レポートにパラメーターを追加する方法のチュートリアルは終了です。 パラメーターの詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+これで、レポートにパラメーターを追加する方法のチュートリアルは終了です。 パラメーターの詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 * [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)

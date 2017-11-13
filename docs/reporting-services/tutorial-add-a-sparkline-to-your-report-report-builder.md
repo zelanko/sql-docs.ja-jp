@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: レポート (レポート ビルダー) へのスパーク ラインの追加 |Microsoft ドキュメント"
+title: "チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: ja-jp
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="CreateTable"></a>1.テーブルを使用したレポートを作成する  
   
-1.  コンピューター、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータル、SharePoint 統合モードのいずれかから[レポート ビルダーを起動します](../reporting-services/report-builder/start-report-builder.md)。  
+1.  コンピューター、[Web ポータル、SharePoint 統合モードのいずれかから](../reporting-services/report-builder/start-report-builder.md) レポート ビルダーを起動します [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 4.  **[データセットの選択]** ページで、 **[データセットを作成する]** > **[次へ]**の順に選択します。 **[データ ソースへの接続の選択]** ページが開きます。  
   
     > [!NOTE]  
-    > このチュートリアルは、特定のデータを必要がないです。SQL Server データベースへの接続だけが必要です。 **[データ ソース接続]**の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択して手順 10 に進みます。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
+    > このチュートリアルでは、特定のデータは必要ありません。SQL Server データベースへの接続だけが必要です。 **[データ ソース接続]**の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択して手順 10 に進みます。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
 5.  **[新規作成]**をクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
@@ -73,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
     **[データ ソースへの接続の選択]** ページに戻ります。  
   
-11. データ ソースに接続できることを確認するために、[ **接続テスト**] をクリックします。  
+11. データ ソースに接続できることを確認するために、 **[接続テスト]**をクリックします。  
   
     "接続が正常に作成されました" というメッセージが表示されます。  
   
@@ -128,7 +127,7 @@ ms.lasthandoff: 08/09/2017
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  クエリ デザイナーのツール バーで、[実行] (**!**) をクリックします。  
+4.  クエリ デザイナーのツール バーで、[実行]\(**!**) をクリックします。  
   
     **SalesDate**、 **Subcategory**、 **Product**、 **Sales**、および **Quantity**の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
@@ -183,18 +182,18 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    地域設定が英語 (米国) の場合、既定のサンプル テキストは [**$12,345.00**] です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。  
+    地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="FormatDates"></a>2b. (オプション) データに日付の書式を設定する  
 既定では、 **SalesDate** フィールドには日付と時刻の情報が表示されます。 このフィールドを書式設定して、日付のみを表示できます。  
   
-1.  `[SalesDate]` が格納されたセルをクリックします。  
+1.  `[SalesDate]`が格納されたセルをクリックします。  
   
 3.  **[ホーム]** タブで、**[数値]** グループ**[日付]** の順に選択します。  
   
-    セルに、日付の例として **[2000/1/31]** と表示されます。
+    セルに、日付の例として **[2000/1/31]**と表示されます。
      
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -279,7 +278,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="Title"></a>8.(オプション) レポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
-テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
+テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
   
@@ -287,7 +286,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  「 **Sales by Date**」と入力し、テキスト ボックスの外側をクリックします。  
   
-3.  **Product Sales** を含むテキスト ボックスを選択します。  
+3.  **Product Sales**を含むテキスト ボックスを選択します。  
   
 4.  [ホーム] タブで、**[フォント]** グループ、**[色]** の順に進み、**[青緑]** を選択します。  
   
@@ -326,10 +325,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="next-steps"></a>次の手順  
 
-これで、スパークライン グラフを使ったテーブル レポートを作成するチュートリアルを終了します。 スパーク ラインの詳細については、次を参照してください。[スパーク ラインとデータ バー](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)です。  
+これで、スパークライン グラフを使ったテーブル レポートを作成するチュートリアルを終了します。 スパークラインの詳細については、「[スパークラインとデータ バー](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
