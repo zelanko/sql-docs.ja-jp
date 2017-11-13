@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、[前提条件](#Prerequisites)  
   
--   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
+-   **SQL Server リソースに依存関係を追加するために使用するもの:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
