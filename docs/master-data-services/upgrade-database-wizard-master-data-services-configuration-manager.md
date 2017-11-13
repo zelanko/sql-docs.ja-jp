@@ -1,5 +1,5 @@
 ---
-title: "データベースのアップグレード ウィザード (Master Data Services 構成マネージャー) | Microsoft Docs"
+title: "データベースのアップグレード ウィザード (Master Data Services 構成マネージャー) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 6
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 1b43487f640dea05d9d29c195cd660db8bd24574
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7823eb8d6b5b4a591f38e0e6dae1a4f8fdbadb80
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
-  **データベースのアップグレード ウィザード** を使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
+  **データベースのアップグレード ウィザード**を使用すると、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
   
 ## <a name="action"></a>操作  
  これは、ウィザードの最初のページです。 **[次へ]** をクリックして、データベースのアップグレード処理を開始します。  
@@ -33,16 +32,15 @@ ms.lasthandoff: 09/07/2017
   
 |コントロール名|Description|  
 |------------------|-----------------|  
-|**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
+|**SQL Server インスタンス (SQL Server instance)**|現在選択されている名前[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンス。|  
 |**[Master Data Services データベース]**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
   
 ## <a name="progress-and-finish"></a>[続行して完了する]  
  アップグレード処理の進捗状況を表示します。 データベースのアップグレードが完了したら、ログ ファイルへのリンクをクリックしてアップグレードに関する詳細情報を表示するか、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 アップグレードされたデータベースが選択され、そのシステム設定を表示および変更できます。  
   
 ## <a name="see-also"></a>参照  
- [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)  
+ [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md)  
  [マスター データ サービスのアップグレード](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   
-

@@ -236,7 +236,7 @@ End Module
  構成ファイルにカスタム変数を含めると、実行時に変数を更新できます。 つまり、パッケージを実行すると、パッケージにあらかじめ含まれていた変数の値は、構成ファイルの新しい値で置き換えられます。 この置き換え方法を使用すると、異なる変数値が必要な複数のサーバーにパッケージを配置するときに便利です。 たとえば、変数が回数を指定できます、 **Foreach ループ**ワークフロー、またはリスト、イベント ハンドラーを送信する宛先のエラーが発生したときに電子メールで送信またはパッケージが失敗する前に発生するエラーの数を変更、コンテナーが繰り返されます。 これらの変数は、各環境の構成ファイルで動的に指定できます。 したがって、構成ファイルでは読み取り/書き込み用の変数のみを使用できます。 詳細については、「 [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services & #40 です。SSIS &#41;変数](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;です。SSIS &#41;変数](../../integration-services/integration-services-ssis-variables.md)   
  [パッケージの変数を使用します。](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

@@ -305,7 +305,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  **[プロパティ]** ウィンドウで、読み取り/書き込みの変数プロパティを更新します。 ユーザー定義変数の場合は読み取り/読み取りのみのプロパティもあります。  
   
-     プロパティの詳細については、次を参照してください。 [Integration Services & #40 です。SSIS &#41;変数](../integration-services/integration-services-ssis-variables.md)です。  
+     プロパティの詳細については、次を参照してください。 [Integration Services &#40;です。SSIS &#41;変数](../integration-services/integration-services-ssis-variables.md)です。  
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
 

@@ -70,14 +70,14 @@ ms.lasthandoff: 08/03/2017
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [Integration Services & #40 です。SSIS &#41;式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;です。SSIS &#41;式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [パッケージのプロパティ式を使用します。](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services & #40 です。SSIS &#41;パッケージ](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;です。SSIS &#41;パッケージ](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services & #40 です。SSIS &#41;イベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;です。SSIS &#41;イベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)   
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services & #40 です。SSIS &#41;ログ記録](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;です。SSIS &#41;ログ記録](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
 
