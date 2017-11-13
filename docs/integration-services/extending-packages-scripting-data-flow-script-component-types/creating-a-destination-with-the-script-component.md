@@ -66,7 +66,7 @@ ms.lasthandoff: 09/26/2017
   
  **入力列**のページ、**スクリプト変換エディター**、列リスト データ フローの上流コンポーネントの出力から使用可能な列を示しています。 保存する列を選択します。  
   
- 詳細については、**入力列**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター &#40;の入力列 ページ"&"#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)です。  
+ 詳細については、**入力列**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター &#40;の入力列 ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)です。  
   
  **入力と出力**のページ、**スクリプト変換エディター**名前を変更する 1 つの入力を示しています。 スクリプト内ではこの名前で入力を参照しますが、参照には自動生成されたコードによって作成されたアクセサー プロパティが使用されます。  
   
