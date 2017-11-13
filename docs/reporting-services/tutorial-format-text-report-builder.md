@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: 書式を設定 (レポート ビルダー) |Microsoft ドキュメント"
+title: "チュートリアル: 書式文字列 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: ja-jp
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 4.  接続の種類が Microsoft SQL Server であることを確認したら **[接続文字列]** ボックスに次のように入力します。 `Data Source = <servername>`  
   
     > [!NOTE]  
-    > 式 `<servername>`には、たとえば Report001 など、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 このチュートリアルでは、特定のデータは必要はありません。SQL Server データベースへの接続だけが必要です。 **[データ ソース接続]**の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択してから次の手順「データセットを作成するには」に進みます。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
+    > 式 `<servername>`には、たとえば Report001 など、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 このチュートリアルでは、特定のデータは必要ありません。 SQL Server データベースへの接続だけが必要です。 **[データ ソース接続]**の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択してから次の手順「データセットを作成するには」に進みます。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 08/09/2017
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'http://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  [実行] (**!**) をクリックしてクエリを実行します。  
+7.  [実行]\(**!**) をクリックしてクエリを実行します。  
   
     クエリの結果が、レポートに表示できるデータになります。  
   
@@ -156,7 +155,7 @@ ms.lasthandoff: 08/09/2017
   
     デザイン画面にフィールドを直接ドラッグすることによって、テキスト ボックスが作成されました。 テキスト ボックス自体はデータ領域ではないので、レポート データセットのデータを表示しません。 テーブル、マトリックス、一覧などのデータ領域のテキスト ボックスが、データを表示します。  
   
-6.  テキスト ボックスを選択して (式を選択している場合は、Esc キーを押してからテキスト ボックスを選択します)、Del キーを押します。  
+6.  テキスト ボックスを選択して (式を選択している場合は、&lt;localizedText&gt;Esc&lt;/localizedText&gt; キーを押してからテキスト ボックスを選択します)、&lt;localizedText&gt;Del&lt;/localizedText&gt; キーを押します。  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>レポートにフィールドを追加する (正しい結果を得る) には  
   
@@ -182,14 +181,14 @@ ms.lasthandoff: 08/09/2017
   
     テキスト ボックスを一覧データ領域にドラッグすることによって、データセット内のフィールドにデータが表示されます。  
   
-7.  リスト ボックスを選択し、Del キーを押します。  
+7.  リスト ボックスを選択し、<localizedText>Del</localizedText> キーを押します。  
   
 ## <a name="AddTable"></a>レポート デザイン画面にテーブルを追加する  
 このテーブルは、ハイパーリンクと回転したテキストを配置する場所を用意するために作成します。   
   
 1.  **[挿入]** タブの **[テーブル]** > **[テーブル ウィザード]** をクリックします。  
   
-2.  新しいテーブル/マトリックス ウィザードの **[データセットの選択]** ページで、**[このレポートの既存のデータセットまたは共有データセットを選択する]** > **[TextDataset (このレポートで)]** > **[次へ]** をクリックします。  
+2.  新しいテーブル/マトリックス ウィザードの **[データセットの選択]** ページで、 **[このレポートの既存のデータセットまたは共有データセットを選択する]** > **[TextDataset (このレポートで)]** > **[次へ]**をクリックします。  
   
 3.  **[フィールドの配置]** ページで、 **Territory**、 **LinkText**、および **Product** フィールドを **[行グループ]**にドラッグし、 **Sales** フィールドを **[値]**にドラッグしてから、 **[次へ]**をクリックします。  
 
@@ -262,9 +261,9 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]**** **をクリックして、テキストをセルの中央に配置します。  
+6.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]****** をクリックして、テキストをセルの中央に配置します。  
   
-8.  [実行] (**!**) をクリックします。  
+8.  [実行]\(**!**) をクリックします。  
   
 `[Territory]` セル内のテキストがセルの下から上に向かって縦に表示されます。  
 
@@ -274,17 +273,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  **[デザイン]** をクリックしてデザイン ビューに切り替えます。  
   
-2.  テーブルの一番上の `[Sum(Sales)]` が含まれているセルをクリックし、Shift キーを押しながらテーブルの一番下の `[Sum(Sales)]` が含まれているセルをクリックします。  
+2.  テーブルの一番上の `[Sum(Sales)]`が含まれているセルをクリックし、&lt;localizedText&gt;Shift&lt;/localizedText&gt; キーを押しながらテーブルの一番下の `[Sum(Sales)]`が含まれているセルをクリックします。  
   
 3.  **[ホーム]** タブの **[数値]** グループで、**[通貨]** をクリックします。  
   
-4.  (省略可能) 地域設定が英語 (米国) の場合、既定のサンプル テキストは [**$12,345.00**] です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。  
+4.  (省略可能) 地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (省略可) **[ホーム]** タブの **[数値]** グループで、 **[小数点表示桁下げ]** ボタンを 2 回クリックして、表示されるドルの値にセントの部分が含まれないようにします。  
   
-6.  [実行] (**!**) をクリックして、レポートをプレビューします。  
+6.  [実行]\(**!**) をクリックして、レポートをプレビューします。  
   
 レポートには書式が設定されたデータが表示され、読みやすくなりました。  
 
@@ -326,7 +325,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  **[OK]**をクリックします。  
   
-8.  [実行] (**!**) をクリックして、レポートをプレビューします。  
+8.  [実行]\(**!**) をクリックして、レポートをプレビューします。  
   
 テキスト ボックス内のテキストが、見出し、段落、箇条書きとして表示されます。  
   
@@ -365,11 +364,10 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>次の手順
 
-レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 [チュートリアル: 自由形式のレポートを作成する](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)他の例が含まれています。  
+レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 詳細な例については、「[チュートリアル: 自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
 
-[レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
+[レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [レポート アイテムの書式設定](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

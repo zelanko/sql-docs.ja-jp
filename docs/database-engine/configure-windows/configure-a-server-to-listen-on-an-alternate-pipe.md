@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  コンソール ペインで、 **[SQL Server のサービス]**をクリックします。  
   
-5.  詳細ペインで **[SQL Server (\<インスタンス名>)]******  を右クリックします。次に、**[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
+5.  詳細ペインで **[SQL Server (**\<<instance name>**)]** を右クリックします。次に、**[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が代替パイプをリッスンしている場合、クライアント アプリケーションを使用して特定の名前付きパイプに接続するには次の 3 つの方法があります。  
   
