@@ -148,7 +148,7 @@ ms.lasthandoff: 09/01/2017
 |VisualMode|このプロパティは OLE DB プロパティの MDPROP_VISUALMODE と等価です。<br /><br /> このプロパティの既定値は 0 で、DBPROPVAL_VISUAL_MODE_DEFAULT と等価です。<br /><br /> このプロパティで使用できる、 **Discover**と**Execute**メソッドです。|省略可能、書き込み専用**整数**プロパティ||  
   
 ## <a name="see-also"></a>参照  
- [PropertyList 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
+ [PropertyList 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   
 

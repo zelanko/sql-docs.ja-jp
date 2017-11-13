@@ -132,7 +132,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   
- [データ マイニング ウィザード & #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [データ マイニング ウィザード &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   
  [マイニング構造列および構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

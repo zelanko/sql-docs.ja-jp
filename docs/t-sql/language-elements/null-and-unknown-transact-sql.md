@@ -58,9 +58,9 @@ ms.lasthandoff: 09/01/2017
 |FALSE|NULL|UNKNOWN|  
   
 ## <a name="see-also"></a>参照  
- [および & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md)   
- [または & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/or-transact-sql.md)   
- [いない & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-transact-sql.md)   
+ [および &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md)   
+ [または &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/or-transact-sql.md)   
+ [いない &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-transact-sql.md)   
  [NULL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/is-null-transact-sql.md)  
   
   

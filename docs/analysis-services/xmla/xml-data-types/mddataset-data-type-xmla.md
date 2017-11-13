@@ -70,12 +70,12 @@ ms.lasthandoff: 09/01/2017
 |派生要素|なし|  
   
 ## <a name="remarks"></a>解説  
- **MDDataSet**データ型は、OLAP 指向行セット (またはデータセット) XML で OLAP データを表すために必要です。 この行セットの内容は、の値によって異なることができます、**コンテンツ**と**形式**で提供されるプロパティ、[プロパティ](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)のコレクション、 **実行**メソッドです。 詳細については、**コンテンツ**と**形式**プロパティを参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ **MDDataSet**データ型は、OLAP 指向行セット (またはデータセット) XML で OLAP データを表すために必要です。 この行セットの内容は、の値によって異なることができます、**コンテンツ**と**形式**で提供されるプロパティ、[プロパティ](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)のコレクション、 **実行**メソッドです。 詳細については、**コンテンツ**と**形式**プロパティを参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  OLE DB for OLAP データセットの構造に関する基本的な情報については、XML for Analysis 1.1 仕様の「OLE DB への MDDataSet データ型のマッピング」を参照してください。 完全 XML スキーマ定義言語 (XSD) サンプルについては、 **MDDataSet**データ型、XML for Analysis 1.1 仕様の「付録 d: MDDataSet Example」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [XML データ型 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+ [XML データ型 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
 

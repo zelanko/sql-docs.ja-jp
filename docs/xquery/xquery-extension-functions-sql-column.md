@@ -142,7 +142,7 @@ select @x
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)   
- [XML データ変更言語 & #40 です。XML DML"&"#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;です。XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
 

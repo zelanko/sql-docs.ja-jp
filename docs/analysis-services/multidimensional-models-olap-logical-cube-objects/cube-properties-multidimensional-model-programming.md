@@ -52,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  キューブの作成時に自動的に設定され、変更できないプロパティもあります。  
   
- キューブのプロパティを設定する方法の詳細については、次を参照してください。[キューブ デザイナー & #40 です。Analysis Services - 多次元データ &#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
+ キューブのプロパティを設定する方法の詳細については、次を参照してください。[キューブ デザイナー &#40;です。Analysis Services - 多次元データ &#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 09/01/2017
 >  Null 値やその他のデータ整合性の問題を操作するとき、ErrorConfiguration プロパティの値の設定の詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](http://go.microsoft.com/fwlink/?LinkId=81891)です。  
   
 ## <a name="see-also"></a>参照  
- [プロアクティブ キャッシュ (&) #40 です。パーティション"&"#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
+ [プロアクティブ キャッシュ (&) #40 です。パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   
 

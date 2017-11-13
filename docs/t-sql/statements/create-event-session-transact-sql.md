@@ -268,8 +268,8 @@ GO
 ## <a name="see-also"></a>参照  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [sys.server_event_sessions & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
- [sys.dm_xe_objects & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
+ [sys.server_event_sessions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
+ [sys.dm_xe_objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
   
   
