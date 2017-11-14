@@ -1,0 +1,5 @@
+# [AliasName プロパティ (SqlServerAlias クラス)](aliasname-property-sqlserveralias-class.md)
+# [ConnectionString プロパティ (SqlServerAlias クラス)](connectionstring-property-sqlserveralias-class.md)
+# [ProtocolName プロパティ (SqlServerAlias クラス)](protocolname-property-sqlserveralias-class.md)
+# [ServerName プロパティ (SqlServerAlias クラス)](servername-property-sqlserveralias-class.md)
+# [SqlServerAlias クラス](sqlserveralias-class.md)

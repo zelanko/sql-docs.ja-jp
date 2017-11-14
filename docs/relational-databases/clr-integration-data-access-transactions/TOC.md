@@ -1,0 +1,5 @@
+# [CLR 統合とトランザクション](clr-integration-and-transactions.md)
+# [現在のトランザクションへのアクセス](accessing-the-current-transaction.md)
+# [トランザクションの有効期間](transaction-lifetimes.md)
+# [トランザクションの昇格](transaction-promotion.md)
+# [System.Transactions の使用](using-system-transactions.md)

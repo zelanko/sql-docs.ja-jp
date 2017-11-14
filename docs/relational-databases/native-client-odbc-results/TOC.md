@@ -1,0 +1,7 @@
+# [処理結果 (ODBC)](processing-results-odbc.md)
+# [記憶域の割り当てください。](assigning-storage.md)
+# [文字データの自動変換](autotranslation-of-character-data.md)
+# [データ型の使用法](data-type-usage.md)
+# [セット (ODBC) を結果の特性を決定します。](determining-the-characteristics-of-a-result-set-odbc.md)
+# [結果データのフェッチ](fetching-result-data.md)
+# [データ型のマッピング (ODBC)](mapping-data-types-odbc.md)

@@ -1,0 +1,18 @@
+# [SQL Server Express LocalDB リファレンス - インスタンスの Api](sql-server-express-localdb-reference-instance-apis.md)
+# [コマンドライン管理ツール: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
+# [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)
+
+# LocalDB 関数
+## [LocalDBCreateInstance 関数](localdbcreateinstance-function.md)
+## [LocalDBDeleteInstance 関数](localdbdeleteinstance-function.md)
+## [LocalDBFormatMessage 関数](localdbformatmessage-function.md)
+## [LocalDBGetInstanceInfo 関数](localdbgetinstanceinfo-function.md)
+## [LocalDBGetInstances 関数](localdbgetinstances-function.md)
+## [LocalDBGetVersionInfo 関数](localdbgetversioninfo-function.md)
+## [LocalDBGetVersions 関数](localdbgetversions-function.md)
+## [LocalDBShareInstance 関数](localdbshareinstance-function.md)
+## [LocalDBStartInstance 関数](localdbstartinstance-function.md)
+## [LocalDBStartTracing 関数](localdbstarttracing-function.md)
+## [LocalDBStopInstance 関数](localdbstopinstance-function.md)
+## [LocalDBStopTracing 関数](localdbstoptracing-function.md)
+## [LocalDBUnshareInstance 関数](localdbunshareinstance-function.md)

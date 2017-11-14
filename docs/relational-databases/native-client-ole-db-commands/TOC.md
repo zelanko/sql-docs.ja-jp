@@ -1,0 +1,6 @@
+# [[コマンド]](commands.md)
+# [コマンドのパラメーター](command-parameters.md)
+# [コマンドの構文](command-syntax.md)
+# [複数の行セットの結果を生成するコマンド](commands-generating-multiple-rowset-results.md)
+# [コマンドの準備](preparing-commands.md)
+# [IMultipleResults を使用して、複数の結果セットを処理するには](using-imultipleresults-to-process-multiple-result-sets.md)

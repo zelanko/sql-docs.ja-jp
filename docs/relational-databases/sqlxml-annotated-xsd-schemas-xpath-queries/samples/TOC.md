@@ -1,0 +1,11 @@
+# [サンプル XPath クエリ (SQLXML 4.0)](sample-xpath-queries-sqlxml-4-0.md)
+
+# [XPath の例 (SQLXML 4.0) の注釈付き XSD スキーマのサンプル](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)
+# [XPath クエリ (SQLXML 4.0) での算術演算子の指定](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)
+# [軸を指定する XPath クエリ (SQLXML 4.0)](specifying-axes-in-xpath-queries-sqlxml-4-0.md)
+# [XPath クエリ (SQLXML 4.0) で指定するブール関数](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)
+# [XPath クエリ (SQLXML 4.0) でのブール演算子の指定](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)
+# [ブール値述語を指定する XPath クエリ (SQLXML 4.0)](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)
+# [XPath クエリ (SQLXML 4.0) に明示的な変換関数を指定します。](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)
+# [XPath クエリ (SQLXML 4.0) に関係演算子を指定します。](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)
+# [XPath クエリ (SQLXML 4.0) 内で XPath 変数を指定します。](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)

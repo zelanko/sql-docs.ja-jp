@@ -1,0 +1,11 @@
+# [日付と時刻の強化 (OLE DB)](date-and-time-improvements-ole-db.md)
+
+# [IRowsetFind での比較](comparability-for-irowsetfind.md)
+# [変換 (OLE DB)](conversions-ole-db.md)
+# [クライアントからサーバーに実行される変換](conversions-performed-from-client-to-server.md)
+# [クライアントにサーバーから実行される変換](conversions-performed-from-server-to-client.md)
+# [OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)
+# [メタデータ - 日付と時刻、およびスキーマ行セット](metadata-date-and-time-and-schema-rowsets.md)
+# [メタデータ - パラメーターと行セット](metadata-parameter-and-rowset.md)
+# [新しい日付と時刻の機能と以前の SQL Server バージョン (OLE DB)](new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)
+# [日付と時刻の機能強化の OLE DB API によるサポート](ole-db-api-support-for-date-and-time-enhancements.md)
