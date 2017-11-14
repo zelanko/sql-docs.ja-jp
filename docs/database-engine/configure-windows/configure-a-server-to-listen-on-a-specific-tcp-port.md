@@ -60,11 +60,11 @@ ms.lasthandoff: 08/02/2017
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  **[IP*n* のプロパティ]****** ボックスの **[TCP ポート]** ボックスに、この IP アドレスが受信待ちするポート番号を入力し、**[OK]** をクリックします。  
+4.  **[IP***n* **のプロパティ]**ボックスの **[TCP ポート]** ボックスに、この IP アドレスが受信待ちするポート番号を入力し、**[OK]** をクリックします。  
   
 5.  コンソール ペインで、 **[SQL Server のサービス]**をクリックします。  
   
-6.  詳細ペインで **[SQL Server (\<インスタンス名>)]******  を右クリックします。次に、**[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
+6.  詳細ペインで **[SQL Server (**\<<instance name>**)]** を右クリックします。次に、**[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
   
 ## <a name="connecting"></a>接続  
 特定のポートで受信待ちするように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成した後、次の 3 つの方法でクライアント アプリケーションを使用して特定のポートに接続できます。  
