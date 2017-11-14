@@ -1,12 +1,15 @@
 ---
 title: "手順 5: DataControl が行われた使用可能な (RDS チュートリアル) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:

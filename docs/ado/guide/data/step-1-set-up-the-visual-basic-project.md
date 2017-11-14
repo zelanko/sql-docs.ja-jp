@@ -1,12 +1,15 @@
 ---
 title: "手順 1: Visual Basic プロジェクトの設定 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
