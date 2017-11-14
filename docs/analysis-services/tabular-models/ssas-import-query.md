@@ -2,9 +2,12 @@
 title: "ネイティブなクエリ (Analysis Services) を使用してデータ インポート |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/26/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 

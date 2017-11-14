@@ -1,9 +1,13 @@
 ---
 title: "コマンドで表形式モデル スクリプト言語 (TMSL) |Microsoft ドキュメント"
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 - docset-sql-devref
