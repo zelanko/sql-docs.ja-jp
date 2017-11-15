@@ -5,8 +5,7 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 672a3204c3bba22efd0d129d384980352ab2ac8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 
 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールがオンになっているが、正しく構成されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の試行がブロックされる可能性があります。  
   
-ファイアウォールを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターでファイアウォールを構成する必要があります。 ファイアウォールは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコンポーネントです。 他社製のファイアウォール プログラムをインストールすることもできます。 このトピックでは、Windows ファイアウォールを構成する方法について説明しますが、基本的な原則は他のファイアウォール プログラムにも適用されます。  
+ファイアウォールを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」などのファイアウォールのマニュアルを参照してください。 ファイアウォールは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコンポーネントです。 他社製のファイアウォール プログラムをインストールすることもできます。 このトピックでは、Windows ファイアウォールを構成する方法について説明しますが、基本的な原則は他のファイアウォール プログラムにも適用されます。  
   
 > [!NOTE]  
 >  このトピックでは、ファイアウォール構成の概要について説明し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。 ファイアウォールの詳細および管理ファイアウォール情報については、「 [セキュリティが強化された Windows ファイアウォールの設計ガイド](http://go.microsoft.com/fwlink/?LinkID=116904)」などのファイアウォールのマニュアルを参照してください。  
@@ -139,7 +138,7 @@ ms.lasthandoff: 06/22/2017
 
 1. 左側のペインで、**[受信の規則]** をクリックします。
 
-1. 右側のペインの **[操作]** の **[新しい規則]** をクリックします。 **新規の受信の規則ウィザード**が開きます。
+1. 右側のペインの **[操作]** の **[新しい規則]** をクリックします。**新規の受信の規則ウィザード**が開きます。
 
 1. **[規則の種類]** で、**[プログラム]** をクリックします。 **[次へ]**をクリックします。
 
@@ -310,7 +309,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  コマンド プロンプトで、「 **netstat -n -a**」と入力します。  
   
-         **-n** スイッチは、**netstat** に対して、アクティブな TCP 接続のアドレスおよびポート番号を数字で表示するように指示します。 **-a** スイッチは、 **netstat** に対して、コンピューターがリッスンしている TCP ポートおよび UDP ポートを表示するように指示します。  
+         コントロール パネルの **-n** スイッチは、 **netstat** に対して、アクティブな TCP 接続のアドレスおよびポート番号を数字で表示するように指示します。 **-a** スイッチは、 **netstat** に対して、コンピューターがリッスンしている TCP ポートおよび UDP ポートを表示するように指示します。  
   
 -   **PortQry** ユーティリティを使用して、TCP/IP ポートのステータスを LISTENING、NOT LISTENING、FILTERED としてレポートできます。 (FILTERED ステータスは、ポートが、LISTENING、NOT LISTENING のどちらか不明で、ユーティリティがポートからの応答を受信していないことを示します)。**PortQry** ユーティリティは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=28590)からダウンロードできます。  
   
@@ -319,4 +318,3 @@ ms.lasthandoff: 06/22/2017
  [方法: ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

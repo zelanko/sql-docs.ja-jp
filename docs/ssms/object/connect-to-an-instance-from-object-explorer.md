@@ -5,22 +5,20 @@ ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 2fbf96ce171fbcbe2eeb54729fc9f543011bcf07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server または Azure SQL Database への接続
 
@@ -34,11 +32,11 @@ ms.lasthandoff: 08/28/2017
 
    ![connect](../media/connect-to-server/connect-db-engine.png)
 
-1. [**サーバーへの接続**] フォームに必要事項を入力し、[**接続**] をクリックします。
+1. **[サーバーへの接続]** フォームに必要事項を入力し、**[接続]** をクリックします。
 
    ![サーバーへの接続](../media/connect-to-server/connect.png)
 
-1. Azure SQL Server に接続する場合は、サインインしてファイアウォール規則を作成するように求めるメッセージが表示される場合があります。 [**サインイン**] をクリックします (メッセージが表示されない場合は、下記の手順 6 に進みます)。
+1. Azure SQL Server に接続する場合は、サインインしてファイアウォール規則を作成するように求めるメッセージが表示される場合があります。 **[サインイン]** をクリックします (メッセージが表示されない場合は、下記の手順 6 に進みます)。
 
    ![ファイアウォール](../media/connect-to-server/firewall-rule-sign-in.png)
 
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/28/2017
 
    ![ファイアウォール](../media/connect-to-server/new-firewall-rule.png)
 
-1. ファイアウォール規則を作成して、サーバーに接続するには、[**OK**] をクリックします。
+1. ファイアウォール規則を作成して、サーバーに接続するには、**[OK]** をクリックします。
 
 1. 接続が正常に行われると、**オブジェクト エクスプローラー**にサーバー表示されます。
 
@@ -65,4 +63,3 @@ ms.lasthandoff: 08/28/2017
 [Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
 [Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
 [Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
-

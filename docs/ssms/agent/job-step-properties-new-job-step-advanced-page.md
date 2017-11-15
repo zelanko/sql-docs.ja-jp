@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.stepadvanced.f1
+f1_keywords: sql13.ag.job.stepadvanced.f1
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ea8ecf39a23a0db715c95bb4041c802a382822fa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6ad17a4381de9bac0443cd0bc65ebfbfbd1f9a2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] \([詳細設定] ページ)
-このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示したり、変更したりできます。  
+このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示したり、変更したりできます。  
   
 ## <a name="options"></a>オプション  
 **[成功した場合のアクション]**  
@@ -44,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 **[出力ファイル]**  
 ジョブ ステップからの出力に使用するファイルを設定します。 このオプションは、 **sysadmin** 固定サーバー ロールのメンバーである場合にのみ使用できます。  
   
-**[[...]]**  
+**[...]**  
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
@@ -72,7 +69,7 @@ ms.lasthandoff: 06/22/2017
 **[出力ファイル]**  
 ジョブ ステップからの出力に使用するファイルを設定します。  
   
-**[[...]]**  
+**[...]**  
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
@@ -97,7 +94,7 @@ ms.lasthandoff: 06/22/2017
 **[出力ファイル]**  
 ジョブ ステップからの出力に使用するファイルを設定します。  
   
-**[[...]]**  
+**[...]**  
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
@@ -129,7 +126,7 @@ ms.lasthandoff: 06/22/2017
 **[出力ファイル]**  
 ジョブ ステップからの出力に使用するファイルを設定します。 このオプションは、 **sysadmin** 固定サーバー ロールのメンバーである場合にのみ使用できます。  
   
-**[[...]]**  
+**[...]**  
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
 **表示**  
@@ -153,4 +150,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
 [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)  
   
-

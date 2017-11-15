@@ -5,29 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.saveas
-helpviewer_keywords:
-- Save As dialog box
+f1_keywords: vs.saveas
+helpviewer_keywords: Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: acbf3b32cdcbe92838532d7711fb2edf0a6238b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9feab44925e6c973b712e0d85e07912c00f91cd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-as"></a>[名前を付けて保存]
-現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 **[ファイル]** *<file>* **別名** **で保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
+現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 **ファイル** *<file>* ****  **を保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
   
 ## <a name="central-panel"></a>中央のパネル  
 **[保存先]**  
@@ -37,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 このオプションを使用して、現在のファイル名の表示、ファイル名の変更、表示されるファイルとフォルダーのフィルター選択を行います。 表示されるファイルとフォルダーをフィルター選択するには、フィルターの対象となるファイル名またはファイル名の一部を入力します。 ワイルドカードとしてアスタリスク (`*`) を使用できます。  
   
 > [!TIP]  
-> Web およびネットワークの場所にあるファイルを表示するには、 **[ファイル名]** ボックスに URL またはネットワーク パスを入力します。 たとえば、「http://mywebsite」 と入力した場合は、"mywebsite" という Web の場所で利用可能なファイルが表示され、「\\\myserver\myshare」と入力した場合は、"myserver" の "myshare" という場所で利用可能なファイルが表示されます。  
+> Web およびネットワークの場所にあるファイルを表示するには、 **[ファイル名]** ボックスに URL またはネットワーク パスを入力します。 たとえば、「http://mywebsite」と入力した場合は、"mywebsite" という Web の場所で利用可能なファイルが表示され、「\\\myserver\myshare」と入力した場合は、"myserver" の "myshare" という場所で利用可能なファイルが表示されます。  
   
 **ファイルの種類**  
 このオプションを使用して、選択したアイテムに適用する新しいファイルの種類を選択します。 選択したアイテムに適用できるすべてのファイル タイプが表示されます。  
@@ -59,4 +55,3 @@ ms.lasthandoff: 06/22/2017
 [[保存オプションの詳細設定]](../../ssms/menu-help/advanced-save-options.md)  
 [エンコーディングによるファイルの管理](../../ssms/solution/manage-files-with-encoding.md)  
   
-

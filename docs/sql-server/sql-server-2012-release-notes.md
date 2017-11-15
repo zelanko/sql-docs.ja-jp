@@ -8,20 +8,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 このリリース ノートでは、SQL Server 2012 について、インストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています ([SQL Server 2012 をダウンロードするにはここをクリックしてください](http://go.microsoft.com/fwlink/?LinkId=238647))。 このリリース ノートは、オンラインのみで入手でき、インストール メディアには含まれていません。また、定期的に更新されます。  
@@ -131,7 +129,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         3.  **[.NET Framework 3.5.1 の機能]**を展開すると、2 つのチェック ボックスが表示されます。 1 つは .NET Framework 3.5.1 用で、もう 1 つは WCF アクティブ化用です。 **.NET Framework 3.5.1**のチェック ボックスをオンにし、 **[次へ]**をクリックします。 .NET Framework 3.5.1 の機能をインストールする前に、必要な役割サービスと機能もインストールする必要があります。  
   
-        4.  **インストール オプションの確認**で、選択内容を確認して、インストールをクリックします。  
+        4.  **[インストール オプションの確認]**で、選択内容を確認して、[インストール] をクリックします。  
   
         5.  インストール プロセスを完了して、 **[閉じる]**をクリックします。  
   
@@ -361,7 +359,7 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 **回避策:** DQS クレンジング コンポーネントを使用してデータ列を処理する前に、データ変換の変換を使用して、これらの列を **DT_STR** データ型または **DT_WSTR** データ型に変換する必要があります。  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 [スタート] メニューの DQSInstaller.exe を実行するアイテムが新しい SQL Server インスタンスのインストールで上書きされる  
-**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、 **[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは 1 つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
+**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、 **[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは&1; つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 [アクティビティ監視] 画面に、失敗した Integration Services クレンジング アクティビティについて正しくないステータスが表示される  
 [アクティビティ監視] 画面の **[現在の状態]** 列に、失敗した Integration Services クレンジング アクティビティに対しても **[成功]** と表示されます。  
@@ -405,7 +403,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 このエラーは、DQS では SQL Server データベースの文字列と C# の文字列を比較する方法が異なるため発生します。 SQL Server データベースの文字列比較では大文字と小文字が区別されませんが、C# では区別されます。  
   
-例を挙げてこの問題を説明します。 Domain\user1 というユーザーがいるとします。 このユーザーが "user1" アカウントを使用して Data Quality Client コンピューターにログオンし、ナレッジ ベースの作業を行います。 各ユーザーが最近使用したナレッジ ベースは、DQS_MAIN データベースの A_CONFIGURATION テーブルにレコードとして格納されています。 このユーザーの場合、レコードは RecentList:KB:Domain\user1 という名前で格納されます。 その後で、このユーザーが Data Quality Client コンピューターに "User1" という名前でログオンし (最初の U が大文字)、ドメイン管理アクティビティの **[最近使用したナレッジ ベース]** 一覧でナレッジ ベースを開くとします。 DQS の基になるコードで RecentList:KB:DOMAIN\user1 と DOMAIN\User1 という 2 つの文字列が比較されますが、このときに大文字と小文字が区別される C# の方法が使用されます。この 2 つの文字列は一致しないと見なされるため、DQS_MAIN データベースの A_CONFIGURATION テーブルにこのユーザー (User1) 用の新しいレコードを挿入しようとします。 しかし、SQL データベースでは文字列の比較で大文字と小文字が区別されないため、DQS_MAIN データベースの A_CONFIGURATION テーブルにその文字列が既に存在することになり、挿入操作が失敗します。  
+例を挙げてこの問題を説明します。 Domain\user1 というユーザーがいるとします。 このユーザーが "user1" アカウントを使用して Data Quality Client コンピューターにログオンし、ナレッジ ベースの作業を行います。 各ユーザーが最近使用したナレッジ ベースは、DQS_MAIN データベースの A_CONFIGURATION テーブルにレコードとして格納されています。 このユーザーの場合、レコードは RecentList:KB:Domain\user1 という名前で格納されます。 その後で、このユーザーが Data Quality Client コンピューターに "User1" という名前でログオンし (最初の U が大文字)、ドメイン管理アクティビティの **[最近使用したナレッジ ベース]** 一覧でナレッジ ベースを開くとします。 DQS の基になるコードで RecentList:KB:DOMAIN\user1 と DOMAIN\User1 という&2; つの文字列が比較されますが、このときに大文字と小文字が区別される C# の方法が使用されます。この&2; つの文字列は一致しないと見なされるため、DQS_MAIN データベースの A_CONFIGURATION テーブルにこのユーザー (User1) 用の新しいレコードを挿入しようとします。 しかし、SQL データベースでは文字列の比較で大文字と小文字が区別されないため、DQS_MAIN データベースの A_CONFIGURATION テーブルにその文字列が既に存在することになり、挿入操作が失敗します。  
   
 **回避策:** この問題を解決するには、次のいずれかの操作を行います。  
   
@@ -505,9 +503,9 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|はい|可|可|可|はい|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|可|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム**\&#42;**|可|可|可|可|可|  
-|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|可|可|可|可|はい|  
-|Microsoft JDBC Driver 4.0 for SQL Server|はい|可|可|可|可|  
+|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム**\&#42;**|[ユーザー アカウント制御]|可|可|可|[ユーザー アカウント制御]|  
+|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|[ユーザー アカウント制御]|可|可|可|はい|  
+|Microsoft JDBC Driver 4.0 for SQL Server|はい|可|可|可|[ユーザー アカウント制御]|  
   
 **\&#42;** ADO .NET with .NET Framework 4.0 用の接続性に関する修正プログラムをダウンロードしてください ( [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211))。  
   
@@ -515,7 +513,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 **MultiSubnetFailover のキーワードおよび関連機能**  
   
-MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で MultiSubnetFailover=True が設定されていると、次の 3 つのサブ機能が有効になります。  
+MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で MultiSubnetFailover=True が設定されていると、次の&3; つのサブ機能が有効になります。  
   
 -   AlwaysOn 可用性グループまたはフェールオーバー クラスター インスタンスに対する複数サブネット リスナーへのより高速なマルチサブネット フェールオーバー。  
   
@@ -624,7 +622,7 @@ SQL Server 2012 Reporting Services から Microsoft SQL Server PDW Appliance Upd
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsight 2.0 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight 2.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「 [Microsoft StreamInsight 2.0 RC0 Release Notes (Microsoft StreamInsight 2.0 のリリース ノート)](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.0 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.0 のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=241593) にアクセスしてください。  
+SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsight 2.0 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight&2;.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「 [Microsoft StreamInsight 2.0 RC0 Release Notes (Microsoft StreamInsight 2.0 のリリース ノート)](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.0 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.0 のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkId=241593) にアクセスしてください。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -637,4 +635,3 @@ SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsig
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
-

@@ -5,24 +5,23 @@ ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.connecttoce.connectionproperties.f1
 - sql13.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
-ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/15/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 92c974ad90689a01d4155610b71babc7df7765d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] \([接続プロパティ] ページ) (データベース エンジン)
 このタブを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde_md.md)] を **登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/15/2017
 **[データベースへの接続]**  
 接続するデータベースを一覧から選択します。 **[<default>]** を選択した場合、サーバーの既定のデータベースに接続されます。 **[<Browse server>]** を選択した場合は、サーバーを参照して接続先データベースを指定できます。  
   
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用し、**[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。 **[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用し、**[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。**[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は **master**に接続されます。 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] に接続する場合、ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master** に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948)」(Microsoft Azure SQL Database の概要) をご覧ください。  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/15/2017
 送信されるネットワーク パケットのサイズを入力します。 既定値は 4096 バイトです。  
   
 **[接続タイムアウト]**  
-接続の確立を待機するタイムアウトまでの秒数を入力します。 既定値は 15 秒です。  
+接続の確立を待機するタイムアウトまでの秒数を入力します。既定値は 15 秒です。  
   
 **[実行タイムアウト]**  
 タスクの実行がサーバーで完了するまで待機する秒数を入力します。 既定値は 0 秒です。つまり、タイムアウトはありません。  
@@ -79,4 +78,3 @@ ms.lasthandoff: 08/15/2017
 ## <a name="see-also"></a>参照  
 [[接続プロパティ] ダイアログ ボックス](../../ssms/f1-help/connection-properties-dialog-box.md)  
   
-

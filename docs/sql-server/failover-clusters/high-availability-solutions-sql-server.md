@@ -5,8 +5,7 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,22 +15,22 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd78349c495ceb9b653ae3b44915da327c489152
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: dd44d90bef2561db193698e02b41014c56f592f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性ソリューション (SQL Server)
   このトピックでは、サーバーやデータベースの可用性を向上する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の高可用性ソリューションをいくつか紹介します。 高可用性ソリューションは、ハードウェアやソフトウェアで問題が発生した場合でもその影響が現れないようにし、アプリケーションの可用性を維持しながら、ユーザーに影響するダウンタイムを最小限に抑えます。    
     
    
->  **メモ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのエディションで特定の高可用性ソリューションがサポートされているかについては、 「[SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」の「高可用性 (AlwaysOn)」セクションを参照してください。     
+>  **メモ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのエディションで特定の高可用性ソリューションがサポートされているかについては、 「 [[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)SQL Server 2016 の各エディションでサポートされる機能」の「高可用性 (Always On)」のセクションを参照してください。    
      
     
 ##  <a name="TermsAndDefinitions"></a> SQL Server の高可用性ソリューションの概要    
@@ -43,10 +42,11 @@ ms.lasthandoff: 06/22/2017
  詳細については、「 [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。    
     
 *  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]    
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] は、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性および障害復旧ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、「[Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。    
+ 
+            [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、「[Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。    
     
   
->  **注:** FCI は、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を活用して、データベース レベルでのリモートの災害復旧を実現します。 詳細については、「[フェールオーバー クラスタリングと Always On 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。    
+>  **注:** FCI は、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[フェールオーバー クラスタリングと Always On 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。    
     
 *  データベース ミラーリング **メモ** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用することをお勧めします。     
 データベース ミラーリングは、ほぼ瞬時のフェールオーバーをサポートすることによりデータベースの可用性を向上させるソリューションです。 データベース ミラーリングを使用して、運用データベース (別称 *プリンシパル データベース*) と、それに対応する 1 つのスタンバイ データベース (別称 *ミラー データベース*) を管理できます。 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。    
@@ -69,5 +69,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server 2016 データベース エンジンの非推奨機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
     
   
-
 

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.lookin
+f1_keywords: vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)
 固有の名前の付いた検索フォルダーのセットのアセンブリ、保存、および変更や、検索の順序の指定ができます。 このダイアログ ボックスを表示するには、[フォルダーを指定して検索]、[フォルダーを指定して置換]、または [検索と置換] のいずれかのウィンドウで、 **[検索対象]** ドロップダウン リストの横の **[...]** をクリックします。  
@@ -50,10 +47,10 @@ ms.lasthandoff: 06/22/2017
 **Parent**  
 **[フォルダー一覧]** で選択したフォルダーをフォルダー階層内で 1 レベル上にします。  
   
-**追加 (>)**  
+**[>] (追加)**  
 **[フォルダー一覧]** で選択したフォルダーを **[選択されたフォルダー]** の一覧に追加します。  
   
-**削除 (<)**  
+**[<] (削除)**  
 **[選択されたフォルダー]** の一覧から選択したフォルダーを削除します。  
   
 **[選択されたフォルダー]**  
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 **[適用]**  
 **[選択されたフォルダー]** の一覧に表示された検索フォルダーのセットを名前付きフォルダー セットとして保存します。 このフォルダー セットは、 **[検索と置換]** ウィンドウのすべてのタブで **[検索対象]** フィールドから選択できます。 [検索フォルダーの選択] ダイアログ ボックスを閉じます。  
   
-

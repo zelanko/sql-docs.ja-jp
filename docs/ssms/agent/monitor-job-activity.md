@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - performance [SQL Server], jobs
 - current activity
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 762fd21319860bfe98fcbeeec5b777b62f54c533
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-job-activity"></a>ジョブの利用状況の監視
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブの利用状況モニターを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブの利用状況モニターを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
   
 ## <a name="sql-server-agent-sessions"></a>SQL Server エージェント セッション  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントでは、サービスが開始されるたびに新しいセッションが作成されます。 新しいセッションが作成されると、すべての既存の定義済みジョブが、 **msdb** データベースの **sysjobactivity** テーブルに設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを再起動したときには、ジョブの前回の利用状況がこのテーブルに保持されています。 各セッションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの通常のジョブの利用状況が、開始から終了まで記録されます。 これらのセッションに関する情報は、 **msdb** データベースの **syssessions** テーブルに格納されます。  
@@ -71,4 +69,3 @@ ms.lasthandoff: 06/22/2017
 [syssessions (Transact-SQL)](http://msdn.microsoft.com/en-us/187819b6-c7f4-4a26-b74c-0a89e96695cf)  
 [sp_help_jobactivity (Transact-SQL)](http://msdn.microsoft.com/en-us/d344864f-b4d3-46b1-8933-b81dec71f511)  
   
-

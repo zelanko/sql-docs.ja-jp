@@ -15,12 +15,11 @@ ms.workload: sql-server
 ms.custom: partners
 ms.date: 17/09/2017
 ms.author: mikeray
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 57a35974fdf1182c626b1ac444a8f2086735ba21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理のパートナー
 SQL Server サービスを管理するためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server をサポートする管理ソリューションを提供する Microsoft パートナー会社を示します。

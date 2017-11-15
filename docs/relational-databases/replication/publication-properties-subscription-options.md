@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8de57644d66112352b48a88a5ce80bb15bc24dd6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0e46255c7b91546ff00dadd04c5bc7d214831b2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-subscription-options"></a>[パブリケーションのプロパティ]、[サブスクリプション オプション]
   **[パブリケーション プロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページを使用すると、サブスクリプションに関連付けられたパブリケーション レベルのプロパティを表示したり設定したりできます。 プロパティは次のように分類されます。  
@@ -81,7 +79,7 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンにのみ適用されます。 パブリケーションでピア ツー ピア レプリケーションをサポートするかどうかを決定します。 このオプションを **[True]** にすると、他のパブリケーション プロパティでピア ツー ピア レプリケーションをサポートするように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]** 、または **[SQL Server 以外のサブスクライバーを許可]**が **[True]** に設定されている場合、このオプションは **[True]**に設定できません。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
  **[ピア ツー ピア競合検出を許可]**  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンにのみ適用されます。 このパブリケーションで競合検出を有効にするかどうかを指定します。 競合検出を使用するには、すべてのノードが [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンを実行しており、すべてのノードで検出が有効になっている必要があります。 競合検出を使用するには、 **[ピア実行者 ID]**の値も指定する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンにのみ適用されます。 このパブリケーションで競合検出を有効にするかどうかを指定します。 競合検出を使用するには、すべてのノードが [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンを実行しており、すべてのノードで検出が有効になっている必要があります。 競合検出を使用するには、 **[ピア実行者 ID]**の値も指定する必要があります。詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
   
  **[ピア実行者 ID]**  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンにのみ適用されます。 ピア ツー ピア トポロジ内のノードの ID を指定します。 **[ピア ツー ピア競合検出を許可]** が **[True]**に設定されている場合、この ID は競合検出で使用されます。 トポロジで使用されていないゼロ以外の正の ID を指定してください。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。  

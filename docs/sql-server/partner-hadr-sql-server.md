@@ -15,12 +15,11 @@ ms.workload: sql-server
 ms.custom: partners
 ms.date: 09/17/2017
 ms.author: mikeray
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 67af6dfa3063bea37d0ee73678ae5c1b34c7faf7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server の高可用性とディザスター リカバリーのパートナー
 SQL Server サービスの高可用性とディザスター リカバリーを提供するためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server をサポートする高可用性とディザスター リカバリーのソリューションを提供する Microsoft パートナー会社を示します。

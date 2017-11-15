@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13745947a33fbe51bddb69f4bb35165fd26c1867
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 245c775659b064815e64f5f10a0d56314ecb49b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-and-configure-object-explorer"></a>オブジェクト エクスプローラーを開き、構成する
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
+**の** [表示] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
   
 ## <a name="viewing-object-explorer"></a>オブジェクト エクスプローラーの表示  
 オブジェクト エクスプローラーは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 内に既定で表示されます。 オブジェクト エクスプローラーが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックしてください。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 [[オブジェクト エクスプローラーの詳細] ペイン](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)  
   
-

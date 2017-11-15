@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: bb97a542834adce9221b55f54c4bf5657586f187
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: d0e126678e921a47135ada143b1dba53a467df7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 リリース ノート
 このリリース ノートでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。 このリリース ノートは、オンラインのみで入手でき、インストール メディアには含まれていません。また、定期的に更新されます。  
@@ -205,4 +204,3 @@ SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](http://msdn
 [SQL Server のバージョンとエディションを確認する方法](http://support.microsoft.com/kb/321185)  
 [SQL Server 2014 の各エディションがサポートする機能](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
   
-

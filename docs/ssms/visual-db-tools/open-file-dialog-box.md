@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aeb2660571f6eff735bf9936be3d4243fb797149
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
-ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
+ディスクから既存のファイルを開くには、 **[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
   
 このダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[開く]** をクリックし、 **[ファイル]**をクリックします。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスなどの他の要素のファイルを開く場合にも表示されます。 **[ファイル]** メニューの **[開く]**を選択し、 **[プロジェクト/ソリューション]** を選択して、同様の **[プロジェクトを開く]** ダイアログ ボックスを開きます。  
   
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
 **[ネットワーク ドライブの割り当て]**  
 **[ネットワーク ドライブの割り当て]** ダイアログ ボックスを開きます。  
   
-

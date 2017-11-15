@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a5de42512c1b7f5372e96f53b6332145fb99a3d8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9ba9300c5bfa55b5f9968453874b29e6d8c4b179
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On フェールオーバー クラスター インスタンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 製品の一部として、Always On フェールオーバー クラスター インスタンスでは、Windows Server フェールオーバー クラスタリング (WSFC) の機能を活用して、サーバー インスタンス レベル ( *フェールオーバー クラスター インスタンス* (FCI)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
   
- FCI は、[可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)を活用して、データベース レベルでのリモートの災害復旧を実現します。 詳細については、「[Failover Clustering and Always On Availability Groups (SQL Server) (フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」をご覧ください。  
+ FCI は、[可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[Failover Clustering and Always On Availability Groups (SQL Server) (フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」をご覧ください。  
  
  > [!NOTE]  
  > Windows Server 2016 Datacenter Edition には、記憶域スペース ダイレクト (S2D) のサポートが導入されています。 SQL Server フェールオーバー クラスター インスタンスは、クラスター ストレージ リソース向けの S2D をサポートしています。 詳細については、「[Windows Server 2016 の記憶域スペース ダイレクト](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)」を参照してください。
@@ -66,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 -   障害 (ハードウェア、オペレーティング システム、アプリケーション、サービスなどの障害) 発生時の自動フェールオーバー  
   
     > [!IMPORTANT]  
-    >  可用性グループでは、FCI から可用性グループ内の他のノードへの自動フェールオーバーはサポートされていません。 このため、自動フェールオーバーが高可用性ソリューションの重要なコンポーネントである場合は、FCI とスタンドアロン ノードを 1 つの可用性グループ内で組み合わせて使用することはできません。 ただし、 *災害復旧* ソリューションではこの組み合わせを使用できます。  
+    >  可用性グループでは、FCI から可用性グループ内の他のノードへの自動フェールオーバーはサポートされていません。 このため、自動フェールオーバーが高可用性ソリューションの重要なコンポーネントである場合は、FCI とスタンドアロン ノードを 1 つの可用性グループ内で組み合わせて使用することはできません。 ただし、*ディザスター リカバリー* ソリューションではこの組み合わせを使用できます。  
   
 -   WSFC クラスター ディスク (iSCSI、ファイバー チャネルなど) やサーバー メッセージ ブロック (SMB) ファイル共有などのさまざまなストレージ ソリューションのサポート。  
   
@@ -166,4 +164,3 @@ ms.lasthandoff: 06/22/2017
 |FCI 内のノードと可用性グループ内のレプリカの概念の違いと、FCI を使用して可用性グループのレプリカをホストする場合の考慮事項について説明します。|[フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   
-

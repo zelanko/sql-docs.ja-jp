@@ -5,8 +5,7 @@ ms.date: 10/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +13,19 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 439b7c66da985003952c897583d520674c26d2ec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 53ff3b74ec6e818f91b92f7b968362c1f9a8bb7e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC クォーラム モードと投票の構成 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、Always On 高可用性および災害復旧ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、Always On 高可用性およびディザスター リカバリー ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
   
  **このトピックの内容:**  
   
@@ -102,7 +101,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **可能性のある自動フェールオーバーの所有者を含めます。** 自動可用性グループ フェールオーバーまたは FCI フェールオーバーの結果として、プライマリ レプリカをホストする可能性がある各ノードは、投票を持つ必要があります。 WSFC クラスターに可用性グループが 1 つだけあり、可用性レプリカがスタンドアロン インスタンスだけによってホストされている場合、この規則には自動フェールオーバー ターゲットであるセカンダリ レプリカだけが含まれます。  
   
--   **セカンダリ サイト ノードを除外します。** 通常は、セカンダリ災害復旧サイトに存在する WSFC ノードには投票を提供しないでください。  プライマリ サイトに問題がない場合、セカンダリ サイト内のノードがクラスターをオフラインにするという判断に影響を与えることは避けるべきです。  
+-   **セカンダリ サイト ノードを除外します。** 通常は、セカンダリ ディザスター リカバリー サイトに存在する WSFC ノードには投票を提供しないでください。  プライマリ サイトに問題がない場合、セカンダリ サイト内のノードがクラスターをオフラインにするという判断に影響を与えることは避けるべきです。  
   
 -   **投票数を奇数にします。** 必要に応じて、監視ファイル共有、監視ノード、または監視ディスクをクラスターに追加し、クォーラム モードを調整してクォーラム投票内の結合を防止します。  
   
@@ -141,4 +140,3 @@ ms.lasthandoff: 06/22/2017
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

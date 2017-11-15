@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: ed00031d1f55fc6fda2ee1c37fe76f7637e8e891
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: 71bde30cb5cefaf1c60bcbd5a5de08b84b3975b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 のリリース ノートします。
 このリリース ノートでは、SQL Server 2012 Service Pack 2 のインストールやトラブルシューティングを行う前に知っておく必要がある問題について説明しています。 リリース ノートはオンラインのみで入手でき、インストール メディアには含まれていません。 問題の検出に応じて、定期的に更新されます。 詳細については、「 [SQL Server 2012 Service Pack 2 で修正される問題](http://support.microsoft.com/KB/2958429) 」を参照してください。  
@@ -44,4 +43,3 @@ ms.lasthandoff: 09/02/2017
 |SQL Server 2012 Management Studio Express の 64 ビット バージョン|SQL Server 2012 SP2 Management Studio Express の 64 ビット バージョンにアップグレード|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkID=401007)|  
 |[Microsoft SQL Server 2012 RTM Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065) または [Microsoft SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)の 1 つ以上のツールの 64 ビット バージョン|Microsoft SQL Server 2012 SP2 用 Feature Pack の 64 ビット バージョンにツールをアップグレード|Microsoft [SQL Server 2012 SP2 Feature Pack のダウンロード ページ](http://go.microsoft.com/fwlink/?LinkID=401008)の 1 つ以上のツール|  
   
-

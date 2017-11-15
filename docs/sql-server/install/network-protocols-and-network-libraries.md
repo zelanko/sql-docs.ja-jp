@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,28 +20,28 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aac8ea2ddd6582529952398f3896f548d8117078
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 657134dd5c6c7fe7c4ee81050c570dc14e9d23d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="network-protocols-and-network-libraries"></a>ネットワーク プロトコルとネットワーク ライブラリ
+# ネットワーク プロトコルとネットワーク ライブラリ
   サーバーは、一度に複数のネットワーク プロトコルでリッスンまたは監視することができます。 ただし、これには各プロトコルを構成する必要があります。 特定のプロトコルが構成されていない場合、サーバーはそのプロトコルでリッスンできません。 インストール後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、プロトコルの構成を変更できます。  
   
-## <a name="default-sql-server-network-configuration"></a>SQL Server の既定のネットワーク構成  
+## SQL Server の既定のネットワーク構成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは、TCP/IP ポート 1433 と名前付きパイプ \\\\.\pipe\sql\query です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスは TCP 動的ポートに構成され、ポート番号がオペレーティング システムによって割り当てられます。  
   
  動的ポート アドレスを使用できない場合 (たとえば、特定のポート アドレスを通過するように構成されたファイアウォール サーバーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続が通過する必要がある場合) は、 未割り当てのポート番号を選択してください。 ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)に一覧が掲載されています。  
   
  セキュリティを強化するため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にネットワーク接続は完全には有効になっていません。 セットアップの完了後にネットワーク プロトコルを有効化、無効化、または構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワークの構成領域を使用します。  
   
-## <a name="server-message-block-protocol"></a>サーバー メッセージ ブロック プロトコル  
+## サーバー メッセージ ブロック プロトコル  
  境界ネットワーク内のサーバーでは、サーバー メッセージ ブロック (SMB) を含め、不要なプロトコルをすべて無効にする必要があります。 Web サーバーとドメイン ネーム システム (DNS) サーバーは SMB を必要としません。 ユーザー列挙の脅威に対抗するためには、このプロトコルを無効にする必要があります。  
   
 > [!WARNING]  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 > -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に SMB ファイル共有をデータ ディレクトリとして指定する  
 > -   SMB ファイル共有でデータベース ファイルを作成する  
   
-#### <a name="to-disable-smb"></a>SMB を無効にするには  
+#### SMB を無効にするには  
   
 1.  **[スタート]** ボタンをクリックし、 **[設定]**をポイントして、 **[ネットワークとダイヤルアップ接続]**をクリックします。  
   
@@ -66,11 +65,11 @@ ms.lasthandoff: 06/22/2017
   
 5.  アンインストールの手順に従います。  
   
-#### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>インターネットからアクセス可能なサーバーで SMB を無効にするには  
+#### インターネットからアクセス可能なサーバーで SMB を無効にするには  
   
 -   [ローカル エリア接続のプロパティ] で、 **[インターネット プロトコル (TCP/IP) のプロパティ]** ダイアログ ボックスを使用して、 **[Microsoft ネットワーク用ファイルとプリンター共有]** と **[Microsoft ネットワーク用クライアント]**を削除します。  
   
-## <a name="endpoints"></a>エンドポイント  
+## エンドポイント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続に関して新しい概念が導入されました。接続は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]*エンドポイント*によりサーバー エンドで表されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントに対して、権限の許可、取り消し、および拒否が行われます。 既定では、sysadmin グループのメンバーまたはエンドポイント所有者によって拒否または取り消しが行われない限り、エンドポイントへアクセスする権限はすべてのユーザーにあります。 GRANT、REVOKE、および DENY ENDPOINT 構文では、管理者がエンドポイントのカタログ ビューから取得する必要があるエンドポイント ID を使用します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、専用管理者接続のエンドポイントに加えて、サポートされるすべてのネットワーク プロトコルの [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントが作成されます。  
@@ -89,7 +88,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [サーバー ネットワークの構成](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>参照  
+## 参照  
  [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)  

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.target.status.f1
+f1_keywords: sql13.ag.target.status.f1
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0cbc0657c6ded692cff078c483e3578906fd8107
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0d6535de68b2ca39126b0a1b2c4deec49e766986
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="target-servers-target-server-status-tab"></a>[対象サーバー]\([対象サーバーの状態] タブ)
 このページを使用すると、このマスター サーバーの対象サーバーの状態を表示できます。  
@@ -61,4 +58,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
 [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   
-

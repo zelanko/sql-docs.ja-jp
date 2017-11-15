@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.getdirectoryname
+f1_keywords: vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c55d02a0ccdfd22d1d0b817e362e1faf661c4265
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
 このダイアログ ボックスを使用すると、必要なファイルが含まれているフォルダーを見つけて、選択できます。 選択したフォルダーのパスが、このダイアログ ボックスから呼び出し元のダイアログに返されます。 次の方法でこのダイアログ ボックスにアクセスできます。  
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 **[新しいフォルダーの作成]**  
 **[新しいフォルダー]** ダイアログ ボックスを表示します。 このオプションを使用すると、 **[探す場所]** 一覧で選択したフォルダーの下に、新しい子フォルダーを作成できます。  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f63a3a6b06e0b76e603e1cce094e5fb17ae32db
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
 ツールボックスから、アイテム、テキスト、およびコントロールを選択してフォーム、ページ、およびデザイナーにドラッグできます。また、アイテムを後で再利用するために、ドラッグ先からツールボックスに戻すことができます。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] では、タスクをメンテナンス プラン上にドラッグできます。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 |ツールボックスを非表示にする|**[ウィンドウ]** メニューの **[非表示]**を選択します (ツールボックスを再び表示するには、 **[表示]** メニューの **[ツールボックス]** をクリックします)。|  
 |ツールボックスのタブを展開する|ツールボックス内の目的のタブをクリックします。|  
 |ツールボックスのタブを順番に展開する|Ctrl キーを押しながら下方向キーを押すと次のタブが展開され、Ctrl キーを押しながら上方向キーを押すと前のタブが展開されます。|  
-|ツールボックスに新しいタブを作成する|ツールボックス内のいずれかの場所を右クリックしてから、 **[タブの追加]**をクリックします。 新しいタブの名前を入力して、Enter キーを押します。|  
+|ツールボックスに新しいタブを作成する|ツールボックス内のいずれかの場所を右クリックしてから、 **[タブの追加]**をクリックします。新しいタブの名前を入力して、Enter キーを押します。|  
 |デザイナー上の選択した位置にツールボックス アイテムを挿入する|アイテムをツールボックスからデザイナーにドラッグするか、展開したツールボックス タブで目的のアイテムをダブルクリックします。|  
 |ツールボックス内のタブの位置を変更する|ツールボックスのタブを目的の場所までドラッグし、マウスのボタンを離します。|  
 |展開されたツールボックスのタブ上でアイテムの位置を変更する|アイテムを目的の場所までドラッグし、マウスのボタンを離します。|  
@@ -49,4 +48,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
 [一般的なユーザー インターフェイス要素](../ssms/general-user-interface-elements.md)  
   
-

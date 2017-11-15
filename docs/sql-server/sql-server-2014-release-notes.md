@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
+caps.latest.revision: "100"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d6d229c14056f9157bd219ba6cbb7590eb14a7b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 3c507363ad05be7410ae69fc6d5f6748ad1738cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 このリリース ノートでは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。  
@@ -212,7 +211,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**回避策:** 2 つの回避策が推奨されます。  
+**回避策:** &2; つの回避策が推奨されます。  
   
 1.  次の例のように、式にかっこを追加します。  
   
@@ -228,7 +227,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
     ```  
   
-2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する 2 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
+2.  SHOWPLAN を対象にして、わずかに簡略化した式を使用する&2; 番目のプロシージャを作成します。プランの全般的な形式は同じままにします。 たとえば、次の表記の代わりに、  
   
     ```  
     SELECT @v0 +@v1 +@v2 +...+@v199  
@@ -337,7 +336,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="51-the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>5.1 Windows Azure で可用性グループ リスナーを構成するときに Azure のレプリカ追加ウィザードでエラーが返される  
 **問題点:** 可用性グループ にリスナーが存在する場合は、Windows Azure でリスナーを構成しようとしたときに、Azure のレプリカ追加ウィザードでエラーが返されます。  
   
-Azure サブネットを含め、可用性グループのレプリカをホストしているすべてのサブネットで、可用性グループ リスナーに 1 つの IP アドレスを割り当てることが必要とされるのが原因です。  
+Azure サブネットを含め、可用性グループのレプリカをホストしているすべてのサブネットで、可用性グループ リスナーに&1; つの IP アドレスを割り当てることが必要とされるのが原因です。  
   
 **回避策:**  
   
@@ -430,4 +429,3 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
 ![[トップに戻る] リンクで使用される矢印アイコン](../sql-server/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[トップ](#top)  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

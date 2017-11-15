@@ -10,14 +10,12 @@ ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server を構成して Microsoft にフィードバックを送信する
 
 ## <a name="summary"></a>概要
@@ -166,4 +164,3 @@ SSMS では、それ自体のクラッシュ ダンプを収集しません。 S
 「サーバー上でのレジストリ サブキーの設定」セクションで説明したように、お使いのサービスで使用状況データを送信しないように構成できます。 ただし、これを実行しても、サービス アカウントは削除されません。 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
