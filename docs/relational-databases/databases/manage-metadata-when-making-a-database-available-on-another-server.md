@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +33,16 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4c895c6dc04db18f8360f72a714b6c91b9e502ef
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 40cf09270cb121e7d88b2828aeb6bbc680839bf5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
   このトピックは、次の状況に関連しています。  
@@ -99,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [トリガー (サーバー レベル)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> サーバー構成の設定  
+##  <a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、主要なサービスや機能のインストールと開始を選択的に行います。 これにより、外部からのアクセスを制限し、攻撃を防ぐことができます。 新規インストール時の既定の構成では、多くの機能が有効化されていません。 データベースが、既定で無効になっているサービスまたは機能に依存している場合、対象のサーバー インスタンスでそのサービスまたは機能を有効にする必要があります。  
   
  これらの設定、およびその有効化と無効化に関する詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
@@ -113,7 +112,7 @@ ms.lasthandoff: 06/22/2017
 > **注:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントでは資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) システム テーブルを使用してください。  
   
   
-##  <a name="cross_database_queries"></a> 複数データベースにまたがるクエリ  
+##  <a name="cross_database_queries"></a> Cross-Database Queries  
  DB_CHAINING データベース オプションと TRUSTWORTHY データベース オプションは、既定では OFF になっています。 これらのオプションのいずれかが元のデータベースで ON に設定されていると、対象のサーバー インスタンスのデータベースで、これらの設定を有効にする必要がある場合があります。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
  アタッチおよびデタッチ操作により、複数データベースにまたがる組み合わせ所有権が無効になります。 チェーンを有効にする方法については、「[cross db ownership chaining サーバー構成オプション](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)」を参照してください。  
@@ -146,11 +145,11 @@ ms.lasthandoff: 06/22/2017
 -   [2 台のサーバーでの同じ対称キーの作成](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> [ユーザー定義エラー メッセージ]  
+##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
  ユーザー定義エラー メッセージは、 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) カタログ ビューに存在します。 このカタログ ビューは、 **master**データベースに格納されています。 データベース アプリケーションがユーザー定義エラー メッセージに依存していて、データベースを別のサーバー インスタンスで使用できる場合は、 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) を使用してユーザー定義エラー メッセージを対象のサーバー インスタンスに追加できます。  
 
   
-##  <a name="event_notif_and_wmi_events"></a> イベント通知と Windows Management Instrumentation (WMI) イベント (サーバー レベル)  
+##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### <a name="server-level-event-notifications"></a>サーバーレベルのイベント通知  
  サーバーレベルのイベント通知は **msdb**に格納されます。 したがって、データベース アプリケーションがサーバーレベルのイベント通知に依存している場合、そのイベント通知を対象のサーバー インスタンスで再作成する必要があります。 サーバー インスタンスでイベント通知を表示するには、 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) カタログ ビューを使用します。 詳しくは、「 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)」をご覧ください。  
@@ -178,7 +177,7 @@ ms.lasthandoff: 06/22/2017
 -   発信側サービスがミラー化されたデータベースにある場合、発信先に、受信確認や応答の配信のために発信側サービスに戻るミラー化されたルートがあること。 ただし、発信側は通常のルートで発信先に戻れること。  
   
   
-##  <a name="extended_stored_procedures"></a> 拡張ストアド プロシージャ  
+##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > **重要:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) を使用してください。  
   
@@ -312,7 +311,7 @@ ms.lasthandoff: 06/22/2017
  証明書および非対称キーの詳細については、「 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)」を参照してください。  
   
   
-##  <a name="replication_settings"></a> レプリケーションの設定  
+##  <a name="replication_settings"></a> Replication Settings  
  レプリケートされたデータベースのバックアップを別のサーバーまたはデータベースに復元する場合は、レプリケーションの設定は保存できません。 この場合、バックアップの復元後にすべてのパブリケーションおよびサブスクリプションを再作成する必要があります。 この処理を簡単にするには、現在のレプリケーションの設定を行うスクリプトと、レプリケーションの有効化および無効化を行うスクリプトを作成します。 レプリケーションの設定の再作成を容易にするには、これらのスクリプトをコピーし、対象のサーバー インスタンスで動作するようにサーバー名の参照を変更します。  
   
  詳細については、「[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」、「[データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」、および「[ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」を参照してください。  
@@ -322,11 +321,11 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに関連する多くの要素は、データベースに伴って使用できます。 ただし、アプリケーションの一部の要素は、新しい場所で再作成または再構成する必要があります。  
   
   
-##  <a name="startup_procedures"></a> スタートアップ プロシージャ  
+##  <a name="startup_procedures"></a> Startup Procedures  
  スタートアップ プロシージャは、自動的に実行するように設定され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するたびに実行されるストアド プロシージャです。 データベースがスタートアップ プロシージャに依存している場合、それらのスタートアップ プロシージャを対象のサーバー インスタンスで定義し、スタートアップ時に自動的に実行されるように構成する必要があります。  
 
   
-##  <a name="triggers"></a> トリガー (サーバー レベル)  
+##  <a name="triggers"></a> Triggers (at Server Level)  
  DDL トリガーにより、さまざまなデータ定義言語 (DDL) イベントに応答してストアド プロシージャが起動されます。 これらのイベントは、主にキーワード CREATE、ALTER、および DROP で始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
   
  この機能の詳細については、「 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)」を参照してください。  
@@ -343,4 +342,3 @@ ms.lasthandoff: 06/22/2017
  [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   
-

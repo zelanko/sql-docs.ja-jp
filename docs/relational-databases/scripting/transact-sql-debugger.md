@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
+helpviewer_keywords: Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL デバッガー
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの実行時の動作を確認してエラーを検出できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウをデバッグ モードに設定した後、特定のコード行で実行を一時停止し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用されている (またはステートメントから返される) 情報やデータを調べることができます。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-debugger-information"></a>デバッガー情報の表示  
  デバッガーが特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止するたびに、次のデバッガー ウィンドウを使用して現在の実行状態を表示できます。  
   
--   **Locals** and **Watch.** これらのウィンドウには、現在割り当てられている [!INCLUDE[tsql](../../includes/tsql-md.md)] 式が表示されます。 式は、単一のスカラー式に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 句です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] 変数、パラメーター、または、組み込み関数を参照する、名前が @@ で始まる表示式がサポートされます。 また、これらのウィンドウには、式に現在割り当てられているデータ値も表示されます。  
+-   **[ローカル]** および **[ウォッチ]** これらのウィンドウには、現在割り当てられている [!INCLUDE[tsql](../../includes/tsql-md.md)] 式が表示されます。 式は、単一のスカラー式に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 句です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] 変数、パラメーター、または、組み込み関数を参照する、名前が @@ で始まる表示式がサポートされます。 また、これらのウィンドウには、式に現在割り当てられているデータ値も表示されます。  
   
 -   **[クイック ウォッチ]。** このウィンドウには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式の値が表示されます。式を **[ウォッチ]** ウィンドウに保存することができます。  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **[出力]。** このウィンドウには、各種のメッセージやプログラム データ (たとえばデバッガーからのシステム メッセージ) が表示されます。  
   
--   **Results** and **Messages.** クエリ エディター ウィンドウ上のこれらのタブには、前に実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果が表示されます。  
+-   **[結果]** および **[メッセージ]** クエリ エディター ウィンドウ上のこれらのタブには、前に実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果が表示されます。  
   
 ## <a name="transact-sql-debugger-tasks"></a>Transact-SQL デバッガーのタスク  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

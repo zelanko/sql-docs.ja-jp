@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -39,23 +38,23 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: e6ae8ba71d1e424c4e295655d76ddfc0084a1a18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
   このトピックでは、データベース メール構成ウィザードを使用してデータベース メールを有効化して構成する方法、およびテンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [セキュリティ](#Security)  
   
--   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
+-   **データベース メールの構成:**  [データベース メール構成ウィザードの使用](#DBWizard)、 [テンプレートの使用](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 詳細については、「 [Database Mail XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 」を参照してください。  
@@ -157,7 +156,7 @@ ms.lasthandoff: 06/22/2017
  このアカウントから送信された電子メール メッセージへの返信に使用される電子メール アドレスを入力します。 電子メールの返信はオプションです。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアカウントへの返信は、データベース管理者 danw@Adventure-Works.com をクリックします。  
   
  **サーバー名**  
- アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 通常、これは **smtp.***<your_company>***.com** のような形式になります。 詳細については、電子メールの管理者に問い合わせてください。  
+ アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 通常、これは **smtp.***<your_company>***.com** のような形式になります。詳細については、電子メールの管理者に問い合わせてください。  
   
  **[ポート番号]**  
  このアカウントで使用する SMTP サーバーのポート番号を入力します。 ほとんどの SMTP サーバーでは、ポート 25 が使用されます。  
@@ -207,7 +206,7 @@ ms.lasthandoff: 06/22/2017
  このアカウントから送信された電子メール メッセージへの返信に使用される電子メール アドレスを表示または更新します。 電子メールの返信はオプションです。 たとえば、SQL Server エージェントのアカウントへの返信は、データベース管理者 **danw@Adventure-Works.com**をクリックします。  
   
  **サーバー名**  
- アカウントが電子メールの送信に使用する SMTP サーバーの名前を表示または更新します。 通常、これは **smtp.<your_company>.com** のような形式になります。 詳細については、電子メールの管理者に問い合わせてください。  
+ アカウントが電子メールの送信に使用する SMTP サーバーの名前を表示または更新します。 通常、これは **smtp.<your_company>.com** のような形式になります。詳細については、電子メールの管理者に問い合わせてください。  
   
  **[ポート番号]**  
  このアカウントの SMTP サーバーのポート番号を表示または更新します。 ほとんどの SMTP サーバーでは、ポート 25 が使用されます。  

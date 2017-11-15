@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:Batch Resp Statistics
+helpviewer_keywords: SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc35f5f03d3b395fc09765fa8ac5ef8158ad8c51
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7e7dd5d90f7e7b59e6d685f1e2dd4e4c1cdb319e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server、Batch Resp Statistics オブジェクト
 **SQLServer:Batch Resp Statistics** パフォーマンス オブジェクトには、SQL Server バッチ応答時間を追跡するカウンターが用意されています。
@@ -48,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |**Batches >=010000ms & \<020000ms**|応答時間が 10,000 ミリ秒以上 20,000 ミリ秒未満の SQL バッチ数|
 |**Batches >=020000ms & \<050000ms**|応答時間が 20,000 ミリ秒以上 50,000 ミリ秒未満の SQL バッチ数|
 |**Batches >=050000ms & \<100000ms**|応答時間が 50,000 ミリ秒以上 100,000 ミリ秒未満の SQL バッチ数| 
-|**Batches &gt;=100000ms**|応答時間が 100,000 ミリ秒以上の SQL バッチ数| 
+|**Batches >=100000ms**|応答時間が 100,000 ミリ秒以上の SQL バッチ数| 
 
 オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照
 [SQL Server の Plan Cache オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [リソースの利用状況の監視 (システム モニター)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-

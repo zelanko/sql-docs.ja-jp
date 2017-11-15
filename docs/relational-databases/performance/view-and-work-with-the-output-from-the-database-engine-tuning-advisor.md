@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: fb34918a06fe49195766fbcdd22e8f762c9e4faf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  データベース エンジン チューニング アドバイザー GUI を起動します。 詳細については、「 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションのチューニング サマリーおよびレポートを表示するには、 **[セッション モニター]** ウィンドウでセッション名をダブルクリックしてセッションを開きます。  
   
-3.  新しいチューニング セッションの完了後またはツールによって既存のセッションが読み込まれた後に、 **[進行状況]** タブをクリックします。 **[チューニング ログ]** ペインにログの内容が表示されます。 ログには、データベース エンジン チューニング アドバイザーが分析できなかったワークロード イベントに関する情報が含まれています。  
+3.  新しいチューニング セッションの完了後またはツールによって既存のセッションが読み込まれた後に、 **[進行状況]** タブをクリックします。**[チューニング ログ]** ペインにログの内容が表示されます。 ログには、データベース エンジン チューニング アドバイザーが分析できなかったワークロード イベントに関する情報が含まれています。  
   
      チューニング セッションのすべてのイベントがデータベース エンジン チューニング アドバイザーによって分析された場合は、セッションのチューニング ログが空であるというメッセージが表示されます。 チューニング セッションを実行したときに、 **[全般]** タブの **[チューニング ログを保存する]** が最初からオフであった場合は、そのことを示すメッセージが表示されます。  
   
@@ -214,7 +213,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  **[進行状況]** タブをクリックしてチューニング ログを確認します。このログには、データベース エンジン チューニング アドバイザーがチューニングできなかったワークロード内のイベントに関するエラー情報が含まれています。 この情報は、ワークロードの効果を評価するのに役立ちます。  
   
-3.  このセッションのチューニング結果をさらに確認するには、 **[レポート]** タブをクリックします。 このタブでは、チューニング サマリーを表示をしたり、 **[レポートの選択]** ボックスの一覧でチューニング レポートを選択することができます。  
+3.  このセッションのチューニング結果をさらに確認するには、 **[レポート]** タブをクリックします。このタブでは、チューニング サマリーを表示をしたり、 **[レポートの選択]** ボックスの一覧でチューニング レポートを選択することができます。  
   
 4.  **[推奨設定]** タブをクリックすると、チューニングの推奨設定が表示されます。  
   

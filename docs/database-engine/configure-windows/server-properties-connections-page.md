@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.connections.f1
+f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 906e8e7e92d847e8e440303188197dfcf3942d31
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
   このページを使用すると、接続オプションを表示したり変更したりできます。  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行するリモート サーバーからのストアド プロシージャの実行を制御します。 このチェック ボックスをオンにすることは、 **sp_configureremote access** オプションを 1 に設定することと同じです。 このチェック ボックスをオフにすると、ストアド プロシージャはリモート サーバーから実行されません。  
   
  **[リモート クエリのタイムアウト (秒単位、0 = タイムアウトなし)]**  
- リモート操作の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タイムアウトまでの時間 (秒) を指定します。 既定は 600 秒 (10 分) 間の待機です。  
+ リモート操作の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タイムアウトまでの時間 (秒) を指定します。既定は 600 秒 (10 分) 間の待機です。  
   
  **[サーバー間通信で使用する分散トランザクションを要求する]**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 詳細については、「 [remote proc trans サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)」を参照してください。  

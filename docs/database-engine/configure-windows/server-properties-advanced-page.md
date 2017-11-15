@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.advanced.f1
+f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 75f872cc60f59224bf874e9821348efa4bd22729
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---advanced-page"></a>サーバーのプロパティ - [詳細設定] ページ
   このページを使用すると、サーバーの詳細設定を表示または変更できます。  
@@ -129,7 +127,7 @@ ms.lasthandoff: 08/02/2017
  並列プランの実行で使用されるプロセッサの数を制限します (最大 64 まで)。 既定値の 0 の場合は、使用できるプロセッサをすべて使用します。 値 1 の場合は、並列プランの生成を抑制します。 1 より大きい値の場合は、1 つのクエリ実行で使用されるプロセッサの最大数を制限します。 使用可能なプロセッサ数よりも多い値を指定すると、実際に使用可能なプロセッサ数が使用されます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
  **[クエリの待機]**  
- クエリがタイムアウトの前にリソースを待機する秒数 (0 ～ 2,147,483,647) を指定します。 既定値の -1 を使用した場合、タイムアウトは、予測されるクエリ コストの 25 倍として計算されます。 詳細については、「 [query wait サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)」を参照してください。  
+ クエリがタイムアウトの前にリソースを待機する秒数 (0 ～ 2,147,483,647) を指定します。既定値の -1 を使用した場合、タイムアウトは、予測されるクエリ コストの 25 倍として計算されます。 詳細については、「 [query wait サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  

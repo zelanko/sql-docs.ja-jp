@@ -5,8 +5,7 @@ ms.date: 01/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +15,18 @@ f1_keywords:
 - sql13.dta.tuningoptions.f1
 - sql13.dta.progress.f1
 - sql13.dta.options.f1
-helpviewer_keywords:
-- Database Engine Tuning Advisor [SQL Server], starting
+helpviewer_keywords: Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3bb44cd4e105c09fc84822cb75222a14ce39af5f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 24e2347ba4cc496fcbb985f4a47bed8022b2c8c4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)」を参照してください。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio からデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ツール]** メニューの **[データベース エンジン チューニング アドバイザー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **の** メニューの **[データベース エンジン チューニング アドバイザー]**でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio のクエリ エディターからデータベース エンジン チューニング アドバイザーを起動するには  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 06/22/2017
   
 -   データベース エンジン チューニング アドバイザーのワークロードとしてトレース テーブルを使用する前に、トレースが停止していることを確認してください。 データベース エンジン チューニング アドバイザーでは、トレース イベントをワークロードとして書き込み中のトレース テーブルには使用できません。  
   
--   チューニング セッションの実行が予想よりも長く続いている場合、Ctrl キーを押しながら C キーを押してチューニング セッションを停止し、その時点までに **dta** で完了した分析に基づいて推奨設定を作成できます。 推奨設定を生成するかどうかの確認が要求されます。 Ctrl + C キーをもう一度押すと、推奨設定を生成せずにチューニング セッションを停止します。  
+-   チューニング セッションの実行が予想よりも長く続いている場合、Ctrl キーを押しながら C キーを押してチューニング セッションを停止し、その時点までに **dta** で完了した分析に基づいて推奨設定を作成できます。 推奨設定を生成するかどうかの確認が要求されます。 Ctrl</localizedText> + <localizedText>C</localizedText> キーをもう一度押すと、推奨設定を生成せずにチューニング セッションを停止します。  
   
  **dta** ユーティリティの構文と例の詳細については、「 [dta Utility](../../tools/dta/dta-utility.md)」を参照してください。  
   
@@ -409,7 +407,7 @@ database_name.owner_name.table_name
  セッション中のログを作成し、エラーを記録します。  
   
 > [!NOTE]  
->  データベース エンジン チューニング アドバイザーの **[全般]** タブに表示されるテーブルの行情報は、自動的に更新されません。 この情報はデータベースのメタデータに依存しています。 行の情報が古くなっていると感じた場合は、対応するオブジェクトに対して DBCC UPDATEUSAGE コマンドを実行してください。  
+>  データベース エンジン チューニング アドバイザーの **[全般]** タブに表示されるテーブルの行情報は、自動的に更新されません。この情報はデータベースのメタデータに依存しています。 行の情報が古くなっていると感じた場合は、対応するオブジェクトに対して DBCC UPDATEUSAGE コマンドを実行してください。  
   
 ##### <a name="tuning-tab-options"></a>[チューニング オプション] タブのオプション  
  **[チューニング オプション]** タブを使用すると、全般的なチューニング オプションの既定の設定を変更できます。 **[チューニング オプション]** タブの設定は、チューニング セッションを開始する前に変更する必要はありません。  
@@ -524,4 +522,3 @@ database_name.owner_name.table_name
  [dta Utility](../../tools/dta/dta-utility.md)  
   
   
-

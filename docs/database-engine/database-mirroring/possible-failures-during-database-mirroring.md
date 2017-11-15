@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fbc7cc9abcbfb1e0608104000bab04e56b5ea86d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-failures-during-database-mirroring"></a>データベース ミラーリング中に発生する可能性のあるエラー
   物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、 *ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/02/2017
   
  接続が開いた状態を維持するためには、定義されたタイムアウト期間と、ping をもう 1 回送信するために必要な時間を足した時間内に、その接続でサーバー インスタンスが ping を受信する必要があります。 タイムアウト時間内に ping を受信した場合は、その接続がまだ開いており、サーバー インスタンスがその接続により通信していることを示します。 ping を受信すると、サーバー インスタンスはその接続に対するタイムアウト カウンターをリセットします。  
   
- タイムアウト時間内に接続で ping を受信しない場合、サーバー インスタンスは接続がタイムアウトしたものと見なします。 サーバー インスタンスは、タイムアウトした接続を閉じ、セッションの状態と動作モードに従ってタイムアウト イベントを処理します。  
+ タイムアウト時間内に接続で ping を受信しない場合、サーバー インスタンスは接続がタイムアウトしたものと見なします。サーバー インスタンスは、タイムアウトした接続を閉じ、セッションの状態と動作モードに従ってタイムアウト イベントを処理します。  
   
  他のサーバーが実際には正常に動作し続けていたとしても、タイムアウトは障害と見なされます。 いずれかのパートナーの通常の応答時間に対し、セッションのタイムアウト値が短すぎる場合は、誤認エラーが発生する可能性があります。 あるサーバー インスタンスが別のサーバー インスタンスに正常に接続しても、接続先の応答時間が遅すぎて、タイムアウト時間が経過する前に ping を受信できない場合、誤認エラーが発生します。  
   

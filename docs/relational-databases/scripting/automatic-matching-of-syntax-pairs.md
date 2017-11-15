@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a86f4ede8645a7346234ab1bbfd3a45e3d01393a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5931a737db8fcd88a907492b2a61232d34c398a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
   構文ペアの自動照合では、ペアでコーディングする必要がある構文要素が正しくペアになっているかどうかをすぐに検出します。 この機能は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは区切り記号の照合、Analysis Services の XMLA クエリ エディターでは中かっこの照合、MDX エディターと DMX エディターではかっこの照合として知られています。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   ペアの 2 番目の区切り記号の入力が終了すると、ペアになる両方の区切り記号が強調表示されます。  
   
--   ペアのいすれかの区切り記号にカーソルが置かれていれば、Ctrl キーを押しながら ] キーを押すと、対応する区切り記号に移動できます。  
+-   ペアのいすれかの区切り記号にカーソルが置かれていれば、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら &lt;localizedText&gt;]&lt;/localizedText&gt; キーを押すと、対応する区切り記号に移動できます。  
   
 ### <a name="delimiter-pairs"></a>区切り記号のペア  
  区切り記号の自動照合では、次の区切り記号のペアが認識されます。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  区切り記号のペアは、カーソルを移動するまで強調表示されたままです。 新しいカーソル位置が同じ区切り記号の中にあっても、カーソルを移動すると強調表示が解除されます。 ペアのいずれかの任意の文字を削除してから再入力すると、再度強調表示することができます。  
   
 ## <a name="analysis-services-xmla-query-editor-brace-matching"></a>Analysis Services の XMLA クエリ エディターでの中かっこの照合  
- XMLA クエリ エディターの中かっこの照合では、左中かっこと右中かっこが強調表示され、要素が閉じられたかどうかを示します。 また、Ctrl キーを押しながら ] キーを押して、中かっこから対応する中かっこに移動することもできます。  
+ XMLA クエリ エディターの中かっこの照合では、左中かっこと右中かっこが強調表示され、要素が閉じられたかどうかを示します。 また、<localizedText>Ctrl</localizedText> キーを押しながら <localizedText>]</localizedText> キーを押して、中かっこから対応する中かっこに移動することもできます。  
   
  XMLA クエリ エディターでは、次の用語に対して中かっこの照合が行われます。  
   
@@ -77,4 +75,3 @@ ms.lasthandoff: 06/22/2017
  多次元式 (MDX) エディターとデータ マイニング式 (DMX) のエディターでは、関数のかっこのペアが自動的に照合されます。  
   
   
-

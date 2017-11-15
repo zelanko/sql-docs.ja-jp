@@ -5,24 +5,23 @@ ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: db2d067b9daaf0ca015e8069c9e01cab783cfeb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +42,9 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > メモリ不足で負荷の高いシステムでは、クエリ プランにマージ結合、並べ替え、およびビットマップを使用したクエリが含まれていると、クエリがビットマップに必要な最低限のメモリ量を確保できなかった場合に、ビットマップが削除されることがあります。 この動作がクエリのパフォーマンスに影響を与える場合があります。そのために並べ替え処理がメモリに収まらなくなったときに、tempdb データベース内の作業テーブルの使用率が増加し、tempdb データベースのサイズが大きくなります。 この問題を解決するには、物理メモリを追加するか、より実行速度の速い別のクエリ プランを使用するようにクエリをチューニングします。
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対する最大メモリ容量の指定
+### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-AWE および Locked Pages in Memory 特権を使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンに次の容量のメモリを指定できます。 (次の表には、現在利用できない 32 ビット バージョンの列が含まれています)。
+AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンに次の容量のメモリを指定できます。 (次の表には、現在利用できない 32 ビット バージョンの列が含まれています)。
 
 | |32 ビット <sup>1</sup> |64 ビット
 |-------|-------|-------| 
@@ -56,7 +55,7 @@ AWE および Locked Pages in Memory 特権を使用して、[!INCLUDE[ssNoVersi
 <sup>1</sup> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]から続けて 32 ビット バージョンを利用することはできません。  
 <sup>2</sup> /3gb は、オペレーティング システムのブート パラメーターです。 詳細については、MSDN ライブラリを参照してください。  
 <sup>3</sup> WOW64 (Windows on Windows 64) は、32 ビットの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が 64 ビットのオペレーティング システムで実行される場合のモードです。  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition は、オペレーティング システムの最大容量の最大値をサポートします。  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition は、最大 128 GB をサポートします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition は、オペレーティング システムの最大容量の最大値をサポートします。  
 <sup>5</sup> sp_configure awe enabled オプションは、64 ビットの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に存在しますが、無視されます。    
 <sup>6</sup> Lock Pages in Memory (LPIM) 特権が許可されている (AWE サポートの場合は 32 ビット、AWE そのものでは 64 ビットで) 場合は、サーバーの最大メモリも設定することをお勧めします。
 
@@ -181,5 +180,4 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Non-Unifo
 ## <a name="see-also"></a>参照
 [ページの読み取り](../relational-databases/reading-pages.md)   
  [ページの書き込み](../relational-databases/writing-pages.md)
-
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f14625038501a21d4321f45471a4391d29efec9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.workload: Active
+ms.openlocfilehash: 851ca8cf8c899f5028c2de73e59186000ee93abf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続
   このトピックでは、システム管理者が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] へのアクセスを復旧する方法について説明します。 システム管理者は、次のいずれかの理由で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスできなくなることがあります。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 5.  **[起動時のパラメーター]** タブの **[起動時のパラメーターの指定]** ボックスに、「`-m`」と入力し、**[追加]** をクリックします  (入力文字はダッシュの後に小文字の m です)。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。 その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]**をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーター `;-m` を追加し、 **[OK]**をクリックします (入力文字はセミコロンの後に小文字の m です)。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]**をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーター `;-m` を追加し、 **[OK]**をクリックします (入力文字はセミコロンの後に小文字の m です)。  
   
 6.  **[OK]**をクリックし、再起動するためのメッセージが表示されたら、サーバー名を右クリックし、 **[再起動]**をクリックします。  
   
@@ -113,7 +112,7 @@ ms.lasthandoff: 08/02/2017
 11. **[起動時のパラメーター]** タブの **[既存のパラメーター]** ボックスで、[ `-m` ] を選択し、 **[削除]**をクリックします。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。 その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]**をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 前の手順で追加した `;-m` を削除し、 **[OK]**をクリックします。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]**をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 前の手順で追加した `;-m` を削除し、 **[OK]**をクリックします。  
   
 12. サーバー名を右クリックし、 **[再起動]**をクリックします。  
   

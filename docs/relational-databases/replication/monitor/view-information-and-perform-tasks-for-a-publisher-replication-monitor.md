@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - viewing Publisher information
 - Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4d592cc39ec10a3f56275e177edd0b3e12b8b5d9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d48572a51365d913beec4951787e4058877a9eed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>パブリッシャーの情報を表示し、タスクを実行する (レプリケーション モニター)
   レプリケーション モニターには、選択したパブリッシャーに関する情報を表示する次のタブがあります。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  すべてのパブリケーションに関する情報を表示するには、 **[パブリケーション]** タブをクリックします。  
   
-3.  サブスクリプションの情報を表示するには、 **[サブスクリプション ウォッチ リスト]** タブをクリックします。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。  
+3.  サブスクリプションの情報を表示するには、 **[サブスクリプション ウォッチ リスト]** タブをクリックします。このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。  
   
     -   サブスクリプションに関連するエージェントの詳細を表示するには、サブスクリプションを右クリックし、 **[詳細表示]**をクリックします。  
   
@@ -58,13 +57,13 @@ ms.lasthandoff: 06/22/2017
   
     -   サブスクリプションを再初期化するには、サブスクリプションを右クリックし、 **[サブスクリプションの再初期化]**をクリックします。  
   
-4.  エージェントの情報を表示するには、 **[エージェント]** タブをクリックします。 このタブで、さらに詳しい情報を表示したり、タスクを実行することができます。  
+4.  エージェントの情報を表示するには、 **[エージェント]** タブをクリックします。このタブで、さらに詳しい情報を表示したり、タスクを実行することができます。  
   
     -   エージェントの詳細情報 (情報メッセージやエラー メッセージなど) を表示するには、エージェントを右クリックし、 **[詳細表示]**をクリックします。  
   
     -   エージェントを実行するジョブの詳細情報 (スケジュールやジョブ ステップの詳細など) を表示するには、エージェントを右クリックし、 **[プロパティ]**をクリックします。  
   
-    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]**をクリックします。 詳細については、「[Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md) (レプリケーション エージェント プロファイルの操作)」をご覧ください。  
+    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]**をクリックします。 詳細については、「[Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)」(レプリケーション エージェント プロファイルの操作) をご覧ください。  
   
     -   実行されていないエージェントを開始するには、エージェントを右クリックし、 **[エージェントの開始]**をクリックします。  
   

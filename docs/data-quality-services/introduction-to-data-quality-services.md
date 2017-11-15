@@ -5,24 +5,21 @@ ms.date: 03/05/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domains
+helpviewer_keywords: Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 396ce09be4ec6cf853d79c4ab1798476d04f097c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services の概要
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で提供されているデータ品質ソリューションを使用すると、データ スチュワードまたは IT プロフェッショナルは、データの品質を維持し、データをビジネス使用に適したものにすることができます。 DQS は、データ ソースの整合性と品質を管理する、コンピューター支援型のインタラクティブなナレッジ ドリブン ソリューションです。 DQS を利用すると、データについてのナレッジを発見し、構築して、管理できます。 その後、そのナレッジを使用して、データのクレンジング、マッチング、プロファイリングを実行できます。 また、DQS データ品質プロジェクトに含まれる参照データ プロバイダーのクラウド ベースのサービスを利用することもできます。  
@@ -91,4 +88,3 @@ ms.lasthandoff: 09/09/2017
  Data Quality Services の機能はマスター データ サービス (MDS) に統合されているので、Microsoft Excel 用 Microsoft SQL Server 2014 Master Data Services アドインでソース データおよびマスター データに対して重複除去を実行できます。 マッチングを実行するには、MDS によって管理されているデータを Excel ワークシートに読み込み、MDS によって管理されていないデータと結合してから、Excel 内でマッチングを実行します。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] コンポーネントを MDS と共にインストールする必要があります。 詳細については、「  [Excel 用 MDS アドインでのデータ品質照合](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)」をご覧ください。  
   
   
-

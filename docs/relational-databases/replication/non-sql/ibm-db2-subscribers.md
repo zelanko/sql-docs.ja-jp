@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      文字列のほとんどのオプションは構成している DB2 サーバー固有の値になりますが、`Process Binary as Character` および `Derive Parameters` オプションは、常に `False` に設定する必要があります。 サブスクリプション データベースを識別するには、 `Initial Catalog` オプションに値を入力する必要があります。 接続文字列は、サブスクリプションを作成するときに、サブスクリプションの新規作成ウィザードに入力します。  
   
-3.  スナップショット パブリケーションまたはトランザクション パブリケーションを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して有効にしてから、サブスクライバーに対してプッシュ サブスクリプションを作成します。 詳細については、「 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
+3.  スナップショット パブリケーションまたはトランザクション パブリケーションを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して有効にしてから、サブスクライバーに対してプッシュ サブスクリプションを作成します。 詳細については、「 [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
   
 4.  必要に応じて、1 つ以上のアーティクルに対してカスタム作成スクリプトを指定します。 テーブルがパブリッシュされると、そのテーブルに対して `CREATE TABLE` スクリプトが作成されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、このスクリプトが [!INCLUDE[tsql](../../../includes/tsql-md.md)] 言語で作成されます。その後、このスクリプトは、サブスクライバーで適用される前に、ディストリビューション エージェントによって、より汎用的な SQL 言語に翻訳されます。 カスタム作成スクリプトを指定するには、既存の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを変更するか、DB2 SQL 言語を使用する完全なスクリプトを作成します。DB2 スクリプトを作成する場合は、 **bypass_translation** ディレクティブを使用して、ディストリビューション エージェントがサブスクライバーでスクリプトを翻訳しないで適用できるようにします。  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

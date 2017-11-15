@@ -1,30 +1,27 @@
 ---
 title: "JSON データへのインデックスの追加 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 2d618b486f61f2e25a221517eb0efdaed70f582d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: e252b53eac86495ebdf4050d3ab425e22fea962a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-json-data"></a>JSON データへのインデックスの追加
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -133,7 +130,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-上記のコマンドは計算列 `vName` に標準的なインデックスを作成します。これはJSON の `$.name` プロパティからの値を表します。 セルビア語 (キリル) のコードページでは、文字の順序は、'А'、'Б'、'В'、'Г'、'Д'、'Ђ'、'Е' などです。`JSON_VALUE` 関数の結果は、ソース列からの照合順序を継承するため、インデックスの項目の順序はセルビア語 (キリル) の規則に準拠しています。 次の例では、このコレクションにクエリを実行し、結果を名前で並べ替えます。  
+上記のコマンドは、JSON の `$.name` プロパティから値を表す、計算列 `vName` に標準的なインデックスを作成します。 セルビア語 (キリル) のコードページでは、文字の順序は、'А'、'Б'、'В'、'Г'、'Д'、'Ђ'、'Е' などです。`JSON_VALUE` 関数の結果は、ソース列からの照合順序を継承するため、インデックスの項目の順序はセルビア語 (キリル) の規則に準拠しています。 次の例では、このコレクションにクエリを実行し、結果を名前で並べ替えます。  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*
@@ -145,9 +142,9 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  ![実行計画](../../relational-databases/json/media/jsonindexblog2.png "実行計画")  
   
- クエリには `ORDER BY` 句がありますが、実行プランでは、Sort 演算子は使用しません。 JSON インデックスは既にセルビア語 (キリル) の規則に従って並んでいます。 したがって、結果が既に並べ替えられている場合、SQL Server は非クラスター化インデックスを使用できます。  
+ クエリには `ORDER BY` 句がありますが、実行計画では、Sort 演算子は使用しません。 JSON インデックスは既にセルビア語 (キリル) の規則に従って並んでいます。 したがって、結果が既に並べ替えられている場合、SQL Server は非クラスター化インデックスを使用できます。  
   
- ただし、`JSON_VALUE` 関数の後に `COLLATE French_100_CI_AS_SC` を配置するなど、`ORDER BY` 式の照合順序を変更した場合、得られるクエリ実行プランは異なります。  
+ ただし、`JSON_VALUE` 関数の後に `COLLATE French_100_CI_AS_SC` を配置するなど、`ORDER BY` 式の照合順序を変更した場合、得られるクエリ実行計画は異なります。  
   
  ![実行計画](../../relational-databases/json/media/jsonindexblog3.png "実行計画")  
   
@@ -155,4 +152,3 @@ ORDER BY JSON_VALUE(json,'$.name')
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
 多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。
-

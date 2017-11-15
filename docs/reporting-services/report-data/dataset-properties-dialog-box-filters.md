@@ -1,5 +1,5 @@
 ---
-title: "[フィルター]\\([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs"
+title: "[フィルター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,19 +15,18 @@ f1_keywords:
 - "10170"
 - "10025"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4c09dd9cc2339045400b6c8e57126f437366d4a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6388e815e67edcb764a02f9c15d7f7dfdc12a6c5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="dataset-properties-dialog-box-filters"></a>[フィルター]\([データセットのプロパティ] ダイアログ ボックス)
+# <a name="dataset-properties-dialog-box-filters"></a>[フィルター] ([データセットのプロパティ] ダイアログ ボックス)
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィルター]** を選択すると、データセットに対するフィルターを作成できます。  
   
 ## <a name="options"></a>オプション  
@@ -47,9 +46,9 @@ ms.lasthandoff: 08/09/2017
  フィルターを適用する式を入力または選択します。 式を編集するには、式 (**[fx]**) ボタンをクリックします。  
   
  **データ型**  
- **[値]**のデータ型を選択します。 可能であれば、**[式]** のデータ型と一致するデータ型を選択します。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+ **[値]**のデータ型を選択します。 可能であれば、 **[式]**のデータ型と一致するデータ型を選択します。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
- **演算子**  
+ **[演算子]**  
  式と値の比較に使用する演算子を選択します。  
   
  **[値]**  
@@ -60,4 +59,3 @@ ms.lasthandoff: 08/09/2017
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

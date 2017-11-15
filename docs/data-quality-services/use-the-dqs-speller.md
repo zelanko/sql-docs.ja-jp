@@ -5,22 +5,20 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: a01e31bf6965cb1d7ac6bbcf183e1ce0c98fc38e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のスペル チェックでは、ドメイン内の文字列値の構文、スペル、および文構造をチェックします。 スペル チェックは、サーバー側のエンジンと統合されないクライアント側のスタンドアロンの機能で、現在のフローや状態には影響しません。 スペル チェックで誤りの可能性がある文字列値が見つかると、対応する各ページでドメイン値に対するその他の手動の変更を行うときに、それらの文字列値が赤い下線で示されます。 対象となるページは次のとおりです。  
@@ -78,4 +76,3 @@ ms.lasthandoff: 09/09/2017
  値に対する修正案は、 **"値"** テーブルの **[値]** 列と **[次に修正]** 列の両方に表示されます。 **[値]** 列で修正案を選択すると、値の種類が " **エラー**" に設定され、修正案が手動で挿入した場合と同様に **[次に修正]** 列にコピーされます。 既存の修正があった場合は修正案になります。 **クレンジング** アクティビティの **[結果の管理と表示]** ページで、 **[次に修正]** 列から修正案を選択すると、現在選択されている値がその修正案に置き換えられ、現在選択されている値が修正案になります。 **クレンジング** アクティビティの **[結果の管理と表示]** ページでは、レコード レベルの提案は行われません (下のグリッドには表示されません)。  
   
   
-

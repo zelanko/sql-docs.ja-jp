@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +14,16 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8aa5b0fdf2771d83310e503f2fdd8770bf9cf324
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 14478170a919235e9f2ca6f39926ff2f51f31406
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS (内部) ナレッジを使用したデータのクレンジング
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ品質プロジェクトを使用してデータをクレンジングする方法について説明します。 データ クレンジングは、DQS で高品質なデータ セットに対して作成されたナレッジ ベースを使用して、ソース データに対して実行されます。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/building-a-knowledge-base.md)」をご参照ください。  
@@ -232,4 +230,3 @@ ms.lasthandoff: 09/09/2017
  プロファイリングの詳細については、「 [DQS でのデータ プロファイルと通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)」を参照してください。  
   
   
-

@@ -5,27 +5,24 @@ ms.date: 07/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - reindex
 - sql13.swb.maint.reindex.f1
-helpviewer_keywords:
-- Rebuild Index Task dialog box
+helpviewer_keywords: Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
-ms.openlocfilehash: bb666c02a3e0d165a3c32515503be265287e1cac
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bce95c76bdf7eb37469b33f800e9aa8bf574bed3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク]\(メンテナンス プラン)
   **[インデックスの再構築タスク]** ダイアログ ボックスを使用すると、データベースのテーブルに新しい FILL FACTOR でインデックスを再作成できます。 FILL FACTOR は、後で拡張できるように、インデックスの各ページの空き領域の量を決定します。 FILL FACTOR が適用されるのはインデックスの作成時だけであるため、テーブルにデータが追加されるにつれて、各ページの空き容量は徐々に減少します。 データ ページおよびインデックス ページを再編成すると、再び空き領域を確保できます。  
@@ -79,7 +76,7 @@ ms.lasthandoff: 09/01/2017
  **インデックスを埋め込む (Pad index)**  
  インデックスの埋め込みを指定します。  
   
- **[Keep index online] \(オンラインのインデックスを保持する)**  
+ **[Keep index online] (オンラインのインデックスを保持する)**  
  `ONLINE` オプションを使用すると、インデックス操作の実行中に、ユーザーは基になるテーブルまたはクラスター化インデックス データ、および任意の関連付けられた非クラスター化インデックスにアクセスできます。  
   
 > [!NOTE]  
@@ -91,10 +88,10 @@ ms.lasthandoff: 09/01/2017
  **MAXDOP**  
  並列プランの実行で使用されるプロセッサ数を制限する値を指定します。  
   
- **[Low Priority Used] \(低優先度の使用)**  
+ **[Low Priority Used] (低優先度の使用)**  
  優先度の低いロックを待機するには、このオプションを選択します。  
   
- **[Abort after Wait] \(待機後に中止)**  
+ **[Abort after Wait] (待機後に中止)**  
  **[最長期間]** で指定した時間が経過した後に行う処理を指定します。  
   
  **[最長期間]**  
@@ -145,4 +142,3 @@ ms.lasthandoff: 09/01/2017
  [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)  
   
   
-

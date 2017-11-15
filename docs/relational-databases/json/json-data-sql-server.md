@@ -1,29 +1,27 @@
 ---
 title: "JSON データ (SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.workload: Active
+ms.openlocfilehash: 3c6b9e4b98863b230c46304c7c8026230c0372ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="json-data-sql-server"></a>JSON データ (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -199,7 +197,7 @@ WHERE ProductID = 1
 FOR JSON AUTO  
 ```  
   
-このクエリの出力は、OData 仕様に完全に準拠した JSON テキストになります。 形式設定とエスケープは、SQL Server によって処理されます。 SQL Server はクエリ結果も OData JSON や GeoJSON など、任意の形式に設定できます。詳細については、「[空間データを GeoJSON 形式で返す](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)」をご覧ください。  
+このクエリの出力は、OData 仕様に完全に準拠した JSON テキストになります。形式設定とエスケープは、SQL Server によって処理されます。 SQL Server はクエリ結果も OData JSON や GeoJSON など、任意の形式に設定できます。詳細については、「[空間データを GeoJSON 形式で返す](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)」をご覧ください。  
   
 ## <a name="analyze-json-data-with-sql-queries"></a>SQL クエリで JSON データを分析する  
  レポート作成のために JSON データをフィルター処理または集計する必要がある場合は、**OPENJSON** を使用して JSON をリレーショナル形式に変換できます。 その後、標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] と組み込み関数を使用してレポートを用意します。  
@@ -340,4 +338,3 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
     -   [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)  
   
   
-

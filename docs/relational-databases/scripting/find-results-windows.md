@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findresults1
 - findresultswindow
 - vs.findresults2
-helpviewer_keywords:
-- Find Results Windows dialog box
+helpviewer_keywords: Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 52589dedfb673f299f63d12c2381be04019a78bb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 739ebc9657fa81650ab57a95d057dc3cc674ebf9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
   2 つの検索結果ウィンドウには、 **[検索と置換]** ダイアログの **[フォルダーを指定して検索]** タブまたは **[フォルダーを指定して置換]** タブを使用して検出された項目が表示されます。 **[フォルダーを指定して検索]** または **[フォルダーを指定して置換]** の **[検索結果]** コマンドを使用すると、検出された項目が表示される検索結果ウィンドウを選択できます。  
@@ -53,10 +50,10 @@ ms.lasthandoff: 06/22/2017
 ## <a name="shortcut-keys"></a>ショートカット キー  
  検出された項目間をすばやく移動するために、次のショートカット キーが用意されています。  
   
- Ctrl + Home  
+ Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home  
  検索結果ウィンドウの最上部までスクロールします。  
   
- Ctrl + End  
+ Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End  
  検索結果ウィンドウの最下部までスクロールします。  
   
  PageUp  
@@ -103,4 +100,3 @@ ms.lasthandoff: 06/22/2017
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
   
   
-

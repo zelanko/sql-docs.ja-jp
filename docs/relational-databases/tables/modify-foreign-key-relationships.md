@@ -5,8 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b7282a8bf1ddbcd61729da98fde9f181b57632bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -127,9 +125,9 @@ ms.lasthandoff: 06/22/2017
      **[DeleteRule の設定]**  
      外部キー リレーションシップに関連するデータを持つ行をユーザーが削除しようとした場合の処理を指定します。  
   
-    -   **[動作なし]** &nbsp;&nbsp;&nbsp;削除操作が許可されていないことをユーザーに通知するエラー メッセージが出力され、DELETE がロールバックされます。  
+    -   **[動作なし]** &#xA0;&#xA0;&#xA0;削除操作が許可されていないことをユーザーに通知するエラー メッセージが出力され、DELETE がロールバックされます。  
   
-    -   **[重ねて表示]** &nbsp;&nbsp;&nbsp;外部キー リレーションシップに関係するデータを含む行がすべて削除されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
+    -   **[重ねて表示]** &#xA0;&#xA0;&#xA0;外部キー リレーションシップに関係するデータを含む行がすべて削除されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
   
     -   **[Null に設定]** テーブルのすべての外部キー列が null 値を使用できる場合、null 値が設定されます。  
   
@@ -138,13 +136,13 @@ ms.lasthandoff: 06/22/2017
      **[UpdateRule の設定]**  
      外部キー リレーションシップに関連するデータを持つ行をユーザーが更新しようとした場合の処理を指定します。  
   
-    -   **[動作なし]** &nbsp;&nbsp;&nbsp;更新操作が許可されていないことをユーザーに通知するエラー メッセージを出力し、UPDATE がロールバックします。  
+    -   **[動作なし]** &#xA0;&#xA0;&#xA0;更新操作が許可されていないことをユーザーに通知するエラー メッセージを出力し、UPDATE がロールバックします。  
   
-    -   **[重ねて表示]** &nbsp;&nbsp;&nbsp;外部キー リレーションシップに関係するデータを含む行がすべて更新されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
+    -   **[重ねて表示]** &#xA0;&#xA0;&#xA0;外部キー リレーションシップに関係するデータを含む行がすべて更新されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
   
     -   **[Null に設定]** テーブルのすべての外部キー列が null 値を使用できる場合、null 値が設定されます。  
   
-    -   **[既定値の設定]** &nbsp;&nbsp;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
+    -   **[既定値の設定]** &#xA0;&#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
 4.  **ファイル** メニューの **table name***の保存*をクリックします。  
   
@@ -154,4 +152,3 @@ ms.lasthandoff: 06/22/2017
  Transact-SQL を使用して FOREIGN KEY 制約を変更するには、まず既存の FOREIGN KEY 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 」および「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  
-

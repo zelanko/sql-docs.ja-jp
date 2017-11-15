@@ -5,33 +5,31 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95adc8c5246284a8f82131f853e6a28b91b8dc5f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: a988fcab5de7d5d21246ce82684213afed0c7fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# SQL Server の既定のネットワーク プロトコル構成
+# <a name="default-sql-server-network-protocol-configuration"></a>SQL Server の既定のネットワーク プロトコル構成
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、セキュリティ強化のため、一部の新規インストールではネットワーク接続を無効にします。 Enterprise エディション、Standard エディション、Evaluation エディション、または Workgroup エディションを使っている場合、または以前からインストールされている [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が存在する場合は、TCP/IP を使うネットワーク接続は無効になりません。 すべてのインストールについて、サーバーへのローカル接続を許可する共有メモリ プロトコルは有効化されています。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスは、インストール状態とインストール オプションに応じて、停止される場合があります。
 
 インストール後にネットワーク プロトコルを構成するには、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 構成マネージャーの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ネットワークの構成ノードを使用します。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスを自動的に開始するように構成するには、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 構成マネージャーの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のサービス ノードを使用します。 詳細については、「 [サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。
 
 
-## 既定の構成
+## <a name="default-configuration"></a>既定の構成
 
 次の表は、インストール後の構成状態を示しています。
 
@@ -53,7 +51,7 @@ SQL Server Express  | 新規インストール  | 有効   | Disabled  | ネッ�
 >[!NOTE]
 > コマンド プロンプト引数を指定して [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をインストールする場合は、 `TCPENABLED` パラメーターおよび `NPENABLED` パラメーターを使用して、有効にするプロトコルを指定できます。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。
 
-## 接続文字列の作成
+## <a name="creating-a-connection-string"></a>接続文字列の作成
 
 接続文字列のサンプルについては、次のトピックを参照してください。
 * [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
@@ -61,7 +59,7 @@ SQL Server Express  | 新規インストール  | 有効   | Disabled  | ネッ�
 
 
 
-## [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ブラウザーの設定
+## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ブラウザーの設定
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスは、セットアップ時に自動的に起動するように構成できます。 既定では、以下の条件が満たされている場合、自動的に起動されます。
 
@@ -71,12 +69,11 @@ SQL Server Express  | 新規インストール  | 有効   | Disabled  | ネッ�
 * [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express のすべてのインスタンスを含む、データベース エンジンの名前付きインスタンスをインストールする場合
 * Analysis Services の名前付きインスタンスをインストールする場合
 
-## 参照
+## <a name="see-also"></a>参照
 
 [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)  
-
 
 
 

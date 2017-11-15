@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8d07eaf421703fb57b9682780027f4e909583dd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 347348a43528881c76615fd348ba94130210ce93
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-merge-agent"></a>レプリケーション マージ エージェント
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
@@ -264,7 +263,7 @@ replmerg [-?]
  既存の接続がサーバーからの応答を待機しているかどうかを、履歴スレッドがチェックするまでの秒数です。 長時間実行のときに、照合エージェントがマージ エージェントに SUSPECT のマークを付けないようにするには、この値を小さくします。 既定値は **300** 秒です。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- ログインがタイムアウトになるまでの秒数です。 既定値は **15** 秒です。  
+ ログインがタイムアウトになるまでの秒数です。既定値は **15** 秒です。  
   
  **-MakeGenerationInterval** *make_generation_interval_seconds*  
  クライアントにダウンロードする生成結果 (変更のバッチ) を作成する間隔 (秒) です。 既定値は **1** 秒です。  
@@ -314,7 +313,7 @@ replmerg [-?]
  パブリッシャーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
- クエリがタイムアウトになるまでの秒数です。 既定では 300 秒です。 マージ エージェントも **QueryTimeout** の値を使用して、この値が 1800 を超える場合にパーティション スナップショットの生成をどのくらいの期間待機するかを判断します。  
+ クエリがタイムアウトになるまでの秒数です。既定では 300 秒です。 マージ エージェントも **QueryTimeout** の値を使用して、この値が 1800 を超える場合にパーティション スナップショットの生成をどのくらいの期間待機するかを判断します。  
   
  **-SrcThreads** *number_of_source_threads*  
  マージ エージェントが変更元から変更を列挙するために使用するソース スレッドの数を指定します。 変更元は、アップロード実行時はサブスクライバーであり、ダウンロード実行時はパブリッシャーです。 既定値は **3**です。  
@@ -356,7 +355,7 @@ replmerg [-?]
  **-SubscriptionType**[ **0**| **1**| **2**]  
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** は、プッシュ サブスクリプション (既定値) を示します。値 **1** はプル サブスクリプションを示し、値 **2** は匿名サブスクリプションを示します。  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** **[ 0|1]**  
  マージ エージェントがサブスクリプションと代替パブリッシャー間での同期を実行しているかどうかを指定します。 値 **1** は、これが代替パブリッシャーであることを示します。 既定値は **0**です。  
   
  **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
@@ -400,4 +399,3 @@ replmerg [-?]
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

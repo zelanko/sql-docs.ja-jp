@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL デバッガーの実行
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた後に起動できます。 次に、デバッガーを停止するまで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをデバッグ モードで実行できます。 オプションを設定して、デバッガーの実行方法をカスタマイズできます。  
@@ -84,8 +83,8 @@ ms.lasthandoff: 06/22/2017
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**[ウィンドウ]/[ブレークポイント]**|使用不可|**[ブレークポイント]**|Ctrl + Alt + B|**[ブレークポイント]** ウィンドウを表示します。このウィンドウでは、ブレークポイントの表示と管理を行うことができます。|  
 |**[ウィンドウ]/[ウォッチ]/[ウォッチ 1]**|使用不可|**[ブレークポイント]/[ウォッチ]/[ウォッチ 1]**|Ctrl + Alt + W、1|**[ウォッチ 1]** ウィンドウを表示します。|  
-|**[ウィンドウ]/[ウォッチ]/[ウォッチ 2]**|使用不可|**[ブレークポイント]/[ウォッチ]/[ウォッチ 2]**|Ctrl + Alt + W、2|**[ウォッチ 2]** ウィンドウを表示します。|  
-|**[ウィンドウ]/[ウォッチ]/[ウォッチ 3]**|使用不可|**[ブレークポイント]/[ウォッチ]/[ウォッチ 3]**|Ctrl + Alt + W、3|**[ウォッチ 3]** ウィンドウを表示します。|  
+|**[ウィンドウ]/[ウォッチ]/[ウォッチ 2]**|使用不可|**[ブレークポイント]/[ウォッチ]/[ウォッチ 2]**|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>2|**[ウォッチ 2]** ウィンドウを表示します。|  
+|**[ウィンドウ]/[ウォッチ]/[ウォッチ 3]**|使用不可|**[ブレークポイント]/[ウォッチ]/[ウォッチ 3]**|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>3|**[ウォッチ 3]** ウィンドウを表示します。|  
 |**[ウィンドウ]/[ウォッチ]/[ウォッチ 4]**|使用不可|**[ブレークポイント]/[ウォッチ]/[ウォッチ 4]**|Ctrl + Alt + W、4|**[ウォッチ 4]** ウィンドウを表示します。|  
 |**[ウィンドウ]/[ローカル]**|使用不可|**[ブレークポイント]/[ローカル]**|Ctrl + Alt + V、L|**[ローカル]** ウィンドウを表示します。|  
 |**[ウィンドウ]/[呼び出し履歴]**|使用不可|**[ブレークポイント]/[呼び出し履歴]**|Ctrl + Alt + C|**[呼び出し履歴]** ウィンドウを表示します。|  

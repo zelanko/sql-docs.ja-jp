@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 339787b7252b5604a08770d417fe39d5b63aca70
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2fbac24caac2af64ba28178a1cfebd9bd860581d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  WMI コントロール スナップインを開きます。 これを行うには、次のいずれかの操作を実行します (オペレーティング システムによって異なります)。  
   
-    -   **[スタート]**ボタンをクリックし、[ **検索の開始** ] ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
+    -   **[スタート]**ボタンをクリックし、**[ 検索の開始 ]** ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
   
     -   **[スタート]**ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックします。「 **wmimgmt.msc**」と入力して Enter キーを押します。  
   
@@ -127,4 +125,3 @@ ms.lasthandoff: 06/22/2017
  [ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)  
   
   
-

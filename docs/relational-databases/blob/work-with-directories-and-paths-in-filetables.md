@@ -5,23 +5,21 @@ ms.date: 08/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], directories
+helpviewer_keywords: FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eb6e4560f35f1b251ee34f703be9824182bd2909
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
@@ -97,7 +95,7 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**動作**|  
+|*is_directory* **の値**|*file_stream* **の値**|**動作**|  
 |FALSE|NULL|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
 |FALSE|\<値>|アイテムはファイルを表します。|  
 |TRUE|NULL|アイテムはディレクトリを表します。|  
@@ -117,4 +115,3 @@ GO
  [ファイル I/O API を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
-

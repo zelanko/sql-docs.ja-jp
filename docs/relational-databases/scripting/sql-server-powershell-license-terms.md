@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0916924eeb783ae65dd254b4d105a01067a08bd5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b97a7e33924f1ee7b6d6e19c08b020ec0b5c779
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-license-terms"></a>SQL Server PowerShell ライセンス条項
 **マイクロソフト ソフトウェア ライセンス条項**
@@ -108,4 +106,3 @@ ms.lasthandoff: 06/22/2017
     - 契約違反、保証違反、無過失責任、過失または不法行為 (適用法で許可されている範囲において)
 
     マイクロソフトがこのような損害の可能性について知っていた場合または知り得た場合も、この制限は適用されます。 上記の制限または除外は、一部の国では付随的、派生的、およびその他の損害の免責、または責任の制限を認めないため、適用されない場合があります。
-

@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ', policies'
+helpviewer_keywords: ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3118b56aa9c7b88c3fe22e6a410a39c11986d073
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 0efe859a8578bdc6c29dd5b5421e5ab9af8ac40d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>可用性レプリカのプロパティの表示 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して、AlwaysOn 可用性グループの可用性レプリカのプロパティを表示する方法について説明します。  
@@ -38,13 +35,13 @@ ms.lasthandoff: 08/02/2017
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  [ **AlwaysOn 高可用性** ] ノードと [ **可用性グループ** ] ノードを展開します。  
+2.  **[ AlwaysOn 高可用性 ]** ノードと **[ 可用性グループ ]** ノードを展開します。  
   
-3.  可用性レプリカが属する可用性グループを展開し、[ **可用性レプリカ** ] ノードを展開します。  
+3.  可用性レプリカが属する可用性グループを展開し、**[ 可用性レプリカ ]** ノードを展開します。  
   
-4.  プロパティを表示する可用性レプリカを右クリックし、[ **プロパティ** ] をクリックします。  
+4.  プロパティを表示する可用性レプリカを右クリックし、**[ プロパティ ]** をクリックします。  
   
-5.  [ **可用性レプリカ プロパティ** ] ダイアログ ボックスで、[ **全般** ] ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、「[可用性レプリカのプロパティ &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)」を参照してください。  
+5.  **[ 可用性レプリカ プロパティ ]** ダイアログ ボックスで、**[ 全般 ]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、「[可用性レプリカのプロパティ &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)」を参照してください。  
 
    [!NOTE]
    >クラスターの種類がなしの場合は、フェールオーバー モードを変更できません。
@@ -138,4 +135,3 @@ ms.lasthandoff: 08/02/2017
  [可用性グループの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)  
   
   
-

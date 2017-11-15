@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.publisherinfo.publications.f1
+f1_keywords: sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58631a593562e6fc04ddf411128111bed5f847c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0d5a47e752f77625cbebc9fbb5ca5df42c8fb419
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publisher-information-publications"></a>パブリッシャー情報、[パブリケーション]
   **[パブリケーション]** タブを使用すると、左ペインで選択したパブリッシャーにおけるすべてのパブリケーションに関する要約情報を取得できます。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 06/22/2017
 -   スナップショット レプリケーションが "同期" している場合、ディストリビューション エージェントは実行されており、データは現在レプリケートされています。  
   
  **[現在の平均パフォーマンス]** と **[現在の最低パフォーマンス]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. それぞれ、パブリケーションに対するすべてのサブスクリプションの、平均パフォーマンスと最低パフォーマンスの評価を表します。 評価は、レプリケーション モニターにより取得された最新の計測結果に基づいています。サブスクリプションの経過的なパフォーマンスは反映されません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ。 それぞれ、パブリケーションに対するすべてのサブスクリプションの、平均パフォーマンスと最低パフォーマンスの評価を表します。 評価は、レプリケーション モニターにより取得された最新の計測結果に基づいています。サブスクリプションの経過的なパフォーマンスは反映されません。  
   
  トランザクション レプリケーションの場合、レプリケーション モニターには、パフォーマンスしきい値が定義されているパブリケーションに対してのみ値が表示されます。 パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]**と表示されます。 マージ レプリケーションの場合、レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続 (ダイヤルアップまたは LAN) により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  
   

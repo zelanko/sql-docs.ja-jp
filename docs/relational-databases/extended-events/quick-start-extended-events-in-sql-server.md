@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>クイック スタート: SQL Server の拡張イベント
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -94,25 +94,25 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
 2. オブジェクト エクスプローラーで、 **[管理]** > **[拡張イベント]** > **[新しいセッション]**をクリックします。 **[新しいセッション]** ダイアログと **新規セッション ウィザード**は互いに似ていますが、[新しいセッション] をお勧めします。
 
-3. 左上で、 **[全般]** ページをクリックします。 *[セッション名]*テキスト ボックスに ” **YourSession** ” または任意の名前を入力します。 **[OK]** ボタンはデモの終了時にのみ押すため、まだ*押さないで*ください。
+3. 左上で、 **[全般]** ページをクリックします。 *[セッション名]*テキスト ボックスに ” **YourSession** ” または任意の名前を入力します。 *[OK]* ボタンはデモの終了時にのみ押すため、まだ **押さないで** ください。
 
     ![[新しいセッション] > [全般] > [セッション名]](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
-4. 左上で **[イベント]** ページをクリックして、**[選択]** ボタンをクリックします。
+4. 左上で **[イベント]** ページをクリックして、 **[選択]** ボタンをクリックします。
 
     ![[新しいセッション] > [イベント] > [選択] > [イベント ライブラリ]、選択されたイベント](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. **[イベント ライブラリ]** の領域で、ドロップダウン リストから **[イベント名のみ]** を選択します。
+5. **[イベント ライブラリ]** の領域で、ドロップダウン リストから **[イベント名のみ]**を選択します。
     - テキスト ボックスに ” **sql**" を入力します。これは、 *contains* 演算子を使用して、使用可能なイベントの長いリストをフィルター処理して短くします。
     - スクロールして、 **sql_statement_completed**という名前のイベントをクリックします。
     - 右矢印ボタン **>** をクリックして、イベントを **[選択したイベント]** ボックスに移動します。
 
 6. **[イベント]** ページで、右端にある **[構成]** ボタンをクリックします。
-    - 見やすくするために左側を切り取った次のスクリーンショットで、**[イベントの構成オプション]** 領域を確認できます。
+    - 見やすくするために左側を切り取った次のスクリーンショットで、 **[イベントの構成オプション]** 領域を確認できます。
 
     ![[新しいセッション] > [イベント] > [構成] > [フィルター (述語)] > [フィールド]](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. **[フィルター (述語)]** タブをクリックします。 次に、HAVING 句を含むすべての SQL SELECT ステートメントをキャプチャするため、 **[句を追加するにはここをクリックします]**をクリックします。
+7. **[フィルター (述語)]** タブをクリックします。次に、HAVING 句を含むすべての SQL SELECT ステートメントをキャプチャするため、 **[句を追加するにはここをクリックします]**をクリックします。
 
 8. **[フィールド]** ドロップ ダウン リストから、 **[sqlserver.sql_text]**を選択します。
    - **[演算子]** に LIKE 演算子を選択します。
@@ -129,17 +129,17 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
     ![[新しいセッション] > [データ ストレージ] > [ターゲット] > [種類] > [event_file]](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
-11. **[プロパティ]** 領域で、**[サーバー上のファイル名]** テキスト ボックスに完全パスとファイル名を入力します。
+11. **[プロパティ]** 領域で、 **[サーバー上のファイル名]** テキスト ボックスに完全パスとファイル名を入力します。
     - ファイル名の拡張子は *.xel*にする必要があります。
     - この簡単なテストでは、1 MB 未満のファイル サイズが必要になります。
 
     ![[新しいセッション] > [詳細] > [ディスパッチの最大待機時間] > [OK]](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. 左上で、**[詳細]** ページをクリックします。
+12. 左上で、 **[詳細]** ページをクリックします。
     - **[ディスパッチの最大待機時間]** を 3 秒に減らします。
     - 最後に、下部にある **[OK]** ボタンをクリックします。
 
-13. **オブジェクト エクスプローラー**に戻り、**[管理]** > **[セッション]** の順に展開して、**YourSession** の新しいノードを表示します。
+13. **オブジェクト エクスプローラー**に戻り、 **[管理]** > **[セッション]**の順に展開して、 **YourSession**の新しいノードを表示します。
 
     ![オブジェクト エクスプローラーで [管理] > [拡張イベント] > [セッション] の下に表示される YourSession という名前の新しい *イベント セッション* のノード](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -392,13 +392,13 @@ SELECT
 
 SSMS **オブジェクト エクスプローラー**で、イベント セッション ノードの下にあるターゲット ノードを右クリックします。 コンテキスト メニューで **[ターゲット データの表示]**をクリックします。 SSMS でデータが表示されます。
 
-新しいデータはイベントで報告されているため、表示は更新されません。 しかし、**[ターゲット データの表示]** をもう一度クリックできます。
+新しいデータはイベントで報告されているため、表示は更新されません。 しかし、 **[ターゲット データの表示]** をもう一度クリックできます。
 
 
 ![[ターゲット データの表示]、SSMS で、[管理] > [拡張イベント] > [セッション] > [YourSession] > [package0.event_file]、右クリック](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
 
 
-### <a name="watch-live-data"></a>ライブ データの監視
+### <a name="watch-live-data"></a>[ライブ データの監視]
 
 
 SSMS **オブジェクト エクスプローラー**で、イベント セッション ノードを右クリックします。 コンテキスト メニューで **[ライブ データの監視]**をクリックします。 SSMS では、受信データがリアルタイムで引き続き到着するため、受信データが表示されます。
@@ -661,6 +661,5 @@ SELECT HAS_PERMS_BY_NAME(
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

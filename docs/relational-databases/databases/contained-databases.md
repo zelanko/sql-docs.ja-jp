@@ -1,13 +1,11 @@
 ---
 title: "包含データベース | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40dc720b7c0e74efbd1602d29af26da6320f66c1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 603c85443f4f80e102919ad855dc7ead2ea5b6e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-databases"></a>包含データベース
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -120,7 +118,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="benefit-of-contained-database-users-with-always-on"></a>AlwaysOn の包含データベース ユーザーの利点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの結び付きを低減することで、部分的包含データベースは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を使用する場合のフェールオーバー時に役立つことがあります。  
   
- 包含ユーザーを作成すると、そのユーザーは包含データベースに直接接続できます。 これは、AlwaysOn ソリューションなどの高可用性および災害復旧のシナリオにおいて非常に重要な機能です。 ユーザーが包含ユーザーである場合は、フェールオーバーが発生したときに、セカンダリ データベースをホストするインスタンスのログインを作成せずに、セカンダリ データベースに接続できます。 これは直接的な利益をもたらします。 詳細については、「 [Always On 可用性グループの概要 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 」およおび「 [Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」をご覧ください。  
+ 包含ユーザーを作成すると、そのユーザーは包含データベースに直接接続できます。 これは、AlwaysOn ソリューションなどの高可用性およびディザスター リカバリーのシナリオにおいて非常に重要な機能です。 ユーザーが包含ユーザーである場合は、フェールオーバーが発生したときに、セカンダリ データベースをホストするインスタンスのログインを作成せずに、セカンダリ データベースに接続できます。 これは直接的な利益をもたらします。 詳細については、「 [Always On 可用性グループの概要 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 」およおび「 [Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」をご覧ください。  
   
 ### <a name="initial-database-development"></a>初期のデータベース開発  
  開発者は新しいデータベースが配置される場所を把握していない場合があるため、配置先の環境がデータベースに及ぼす影響を少なくすることで、開発者の作業や懸案事項が軽減されます。 非包含モデルでは、開発者は新しいデータベースが環境から受ける影響の可能性を考慮して、それに応じたプログラミングをする必要があります。 しかし、部分的包含データベースを使用することによって、開発者はデータベースに対するインスタンス レベルの影響と、開発者のインスタンス レベルの懸案事項を検出できます。  
@@ -161,4 +159,3 @@ ms.lasthandoff: 06/22/2017
  [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーの分類プロセスにより、着信セッションがセッションの特性に基づいてワークロード グループに割り当てられます。 分類ロジックは、分類子関数と呼ばれるユーザー定義関数を記述することで調整できます。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  関数を作成して構成の変更を適用すると、この関数から返されたワークロード グループ名がリソース ガバナーの分類で使用されて、適切なワークロード グループに新しい要求が送信されます。  
   
 > [!IMPORTANT]  
->  分類関数が指定のログイン タイムアウトまでに完了せずに、クライアント セッションがタイムアウトになることがあります。 ログイン タイムアウトはクライアントのプロパティであるため、サーバーはタイムアウトを認識しません。 分類関数の実行時間が長いと、孤立した接続がサーバーに長時間残される可能性があります。 接続がタイムアウトになる前に実行が完了する分類関数を作成することが重要です。  
+>  分類関数が指定のログイン タイムアウトまでに完了せずに、クライアント セッションがタイムアウトになることがあります。 ログイン タイムアウトはクライアントのプロパティであるため、サーバーはタイムアウトを認識しません。分類関数の実行時間が長いと、孤立した接続がサーバーに長時間残される可能性があります。 接続がタイムアウトになる前に実行が完了する分類関数を作成することが重要です。  
   
  ユーザー定義関数の特性と動作は次のとおりです。  
   

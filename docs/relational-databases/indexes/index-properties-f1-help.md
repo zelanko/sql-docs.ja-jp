@@ -5,8 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,16 +17,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1b84819194aa25b50259293aaf56ccca9c68b1f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  [[インデックスのプロパティ] の [全般] ページ](#General)  
   
- [[&lt;table name&gt; から (インデックス) 列を選択] ダイアログ ボックス](#Columns)  
+ [[<table name> から (インデックス) 列を選択] ダイアログ ボックス](#Columns)  
   
  [[インデックスのプロパティ] の [ストレージ] ページ](#Storage)  
   
@@ -116,8 +115,8 @@ ms.lasthandoff: 06/22/2017
  **[付加列]**  
  非キー列を非クラスター化インデックスに含めます。 このオプションを選択すると、列を非キー列として非クラスター化インデックスのリーフ レベルに追加することにより、インデックス キーの合計サイズに対する現在のインデックス制限、およびインデックス キーを構成する列の最大数の制限を無視できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
-##  <a name="Columns"></a> [&lt;table name&gt; から (インデックス) 列を選択] ダイアログ ボックス  
- このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ]\([全般] ページ)** に列を追加できます。  
+##  <a name="Columns"></a> [<table name> から (インデックス) 列を選択] ダイアログ ボックス  
+ このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ] ([全般] ページ)** に列を追加できます。  
   
  **チェック ボックス**  
  列を選択する場合にオンにします。  
@@ -175,7 +174,7 @@ ms.lasthandoff: 06/22/2017
 >  XML インデックスの場合、またはインデックスが無効なクラスター化インデックスの場合、このオプションは使用できません。  
   
  **[並列処理の最大限度の設定]**  
- 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [最適なパフォーマンスを実現するための max degree of parallelism オプションの設定](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
+ 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
   
 > [!NOTE]  
 >  使用可能な CPU 数よりも多い値を指定すると、実際に使用可能な CPU 数が使用されます。  
@@ -216,7 +215,7 @@ ms.lasthandoff: 06/22/2017
  **[地理自動グリッド]**  
  このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、データベース互換性レベルが 110 以上に設定されている場合に利用できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテセレーションを実装するしくみについては、「 [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md) 」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテセレーションを実装するしくみについては、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
   
  **[オブジェクトごとのセル数]**  
  インデックスの単一の空間オブジェクトに使用できるオブジェクトごとのテセレーション セル数を示します。 1 ～ 8192 の整数を指定できます。 既定値は 16 ですが、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース互換性レベルが 110 以上に設定されている場合、既定値は 8 です。  
@@ -250,4 +249,3 @@ ms.lasthandoff: 06/22/2017
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
-

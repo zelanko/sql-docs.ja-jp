@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c5b04e64e1cea0c24a6695a46eac0a2f94d04cf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
   このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
@@ -66,7 +65,7 @@ ms.lasthandoff: 06/22/2017
  キャプチャ ジョブでは、追加のロジックを適用することにより、固定したポーリング間隔に依存せずに、新しいスキャンをすぐに開始するか、スリープ状態を経てから新しいスキャンを開始するかを決定できます。 この決定は単に時刻に基づきます。たとえば、アクティビティのピーク時に非常に長いスリープを強制したり、その日の処理を完了し、夜間の運用に備えることが重要な 1 日の終わりにポーリング間隔を 0 にしたりします。 また、キャプチャ プロセスの進捗状態を監視して、午前零時までにコミットされたすべてのトランザクションのスキャンが完了して変更テーブルに格納された時刻を判断することもできます。 これにより、キャプチャ ジョブを終了して、毎日 1 回のスケジュールで再起動することが可能になります。 **sp_cdc_scan** を呼び出すジョブ ステップを、ユーザーが作成した **sp_cdc_scan**のラッパーの呼び出しに置き換えることにより、付加的な労力はほとんどなしで、高度にカスタマイズされた動作を簡単に実現できます。  
   
 ##  <a name="Cleanup"></a> クリーンアップ ジョブ  
- ここでは、変更データ キャプチャのクリーンアップ ジョブのしくみについて説明します。  
+ ここでは、変更データ キャプチャのクリーンアップ ジョブの仕組みについて説明します。  
   
 ### <a name="structure-of-the-cleanup-job"></a>クリーンアップ ジョブの構造  
  変更データ キャプチャでは、保有期間に基づくクリーンアップ戦略を使用して変更テーブルのサイズを管理します。 クリーンアップ メカニズムは、最初のデータベース テーブルが有効になったときに作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブで構成されます。 単一のクリーンアップ ジョブがすべてのデータベース変更テーブルのクリーンアップを処理し、定義されたすべてのキャプチャ インスタンスに同じ保有期間値を適用します。  

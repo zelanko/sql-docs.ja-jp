@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7fd50c53405ab0866e5eca50275531687c7b171
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7f8734ed310e261351a30e6ce3f629ee6ef0467e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
   ここでは、レプリケートされたデータベースの管理者が行うさまざまな作業についての指針となるような質問と回答を掲載します。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/03/2017
 -   ディストリビューション エージェントまたはマージ エージェントが、スケジュールまたは要求時に実行されるように構成されており、エージェント起動時には利用可能なスナップショットがなかった場合には、エージェントはスナップショットが利用できないことを示すメッセージを表示して終了します。 スナップショットを適用するためには、スナップショット エージェントが完了した後でエージェントを再度実行する必要があります。 エージェントの実行については、「[Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md)」 (プッシュ サブスクリプションの同期)、「[Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」 (プル サブスクリプションの同期)、「[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」 (レプリケーション エージェント実行可能ファイルの概念) を参照してください。  
   
 ### <a name="should-i-script-my-replication-configuration"></a>レプリケーションの構成をスクリプト化する必要がありますか。  
- 可能。 レプリケーション構成をスクリプト化するのは、レプリケーション トポロジの障害復旧計画の重要な部分です。 スクリプト作成の詳細については、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
+ 可能。 レプリケーション構成をスクリプト化するのは、レプリケーション トポロジのディザスター リカバリー計画の重要な部分です。 スクリプト作成の詳細については、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
 ### <a name="what-recovery-model-is-required-on-a-replicated-database"></a>レプリケートされたデータベースでは、どの復旧モデルが必要ですか。  
  単純復旧モデル、一括ログ復旧モデル、完全復旧モデルのいずれの復旧モデルでも、レプリケーションは正常に機能します。 マージ レプリケーションでは、メタデータ テーブルに情報を格納することで変更が追跡されます。 トランザクション レプリケーションでは、トランザクション ログにマークを付けることにより変更が追跡されますが、復旧モデルによってこのマーク設定処理が影響を受けることはありません。  
@@ -238,4 +236,3 @@ ms.lasthandoff: 08/03/2017
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   
-

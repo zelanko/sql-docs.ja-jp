@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 -   テーブルに LOB データ型が含まれていても、そのデータ型の列がキー列または非キー (付加) 列としてインデックス定義で使用されていない場合は、一意ではない非クラスター化インデックスをオンラインで作成できます。  
   
 -   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。
-- インデックスは、予期しないエラー、データベースのフェールオーバー、または **PAUSE** コマンドの後で、停止したところから再開できます。 「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」をご覧ください。 この機能は、SQL Server 2017 および Azure SQL Database でパブリック プレビュー段階にあります。
+- インデックスは、予期しないエラー、データベースのフェールオーバー、または **PAUSE** コマンドの後で、停止したところから再開できます。 「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」をご覧ください。 
 
 > [!NOTE]  
 >  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するページを参照してください。  
@@ -95,7 +94,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="resumable-index-rebuild-considerations"></a>再開可能なインデックスの再構築に関する考慮事項
 
 > [!NOTE]
-> 「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」をご覧ください。 この機能は、SQL Server 2017 および Azure SQL Database でパブリック プレビュー段階にあります。
+> 「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」をご覧ください。 
 >
 
 再開可能なオンライン インデックスの再構築を実行するときは、次のガイドラインが適用されます。
@@ -126,4 +125,3 @@ ms.lasthandoff: 07/31/2017
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.addeditjoin.f1
+f1_keywords: sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70780bc8284ad454014f2b1e0188d9a22db6ba03
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7ef3cc313a76a26f075ab295a5559792dd872e32
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
   **[結合の追加]** ダイアログ ボックスおよび **[結合の編集]** ダイアログ ボックスでは、マージ パブリケーションに使用する結合フィルターの追加と編集を行えます。  
@@ -62,14 +60,14 @@ ms.lasthandoff: 06/22/2017
         > [!CAUTION]  
         >  このオプションを選択すると、結合フィルターにおける子テーブルと親テーブルのリレーションシップが一対一または一対多となるように指定されます。 親テーブル内の結合する列に一意性を保証する制約がある場合にのみ、このオプションを選択してください。 このオプションを適切に設定しなかった場合、データを収束できない可能性があります。  
   
-    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. 既定で、マージ レプリケーションでは同期中に行ごとに変化が処理されます。 関連する変更をまとめて処理するには、 **[論理レコード : フィルター選択されたテーブルと結合テーブルの関連する変更を同期時にトランザクションとして扱う]**を選択します。 このオプションは、論理レコードを使用するために必要なアーティクルとパブリケーションの要件が満たされている場合にのみ使用できます。 詳細については、「[論理レコードによる関連行への変更のグループ化](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」の「Considerations for Using Logical Records」 (論理レコードの使用についての注意点) を参照してください。  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ。 既定で、マージ レプリケーションでは同期中に行ごとに変化が処理されます。 関連する変更をまとめて処理するには、 **[論理レコード : フィルター選択されたテーブルと結合テーブルの関連する変更を同期時にトランザクションとして扱う]**を選択します。 このオプションは、論理レコードを使用するために必要なアーティクルとパブリケーションの要件が満たされている場合にのみ使用できます。 詳細については、「[論理レコードによる関連行への変更のグループ化](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」の「Considerations for Using Logical Records」 (論理レコードの使用についての注意点) を参照してください。  
   
  フィルターを追加または編集した後に、 **[OK]** をクリックして変更を保存し、ダイアログ ボックスを閉じます。 指定したフィルターは、SELECT 句のテーブルに対して解析され、実行されます。 フィルター ステートメントに構文エラーなどの問題がある場合には通知され、フィルター ステートメントを編集することができます。  
   
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
  [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

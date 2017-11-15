@@ -5,8 +5,7 @@ ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -135,17 +134,16 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
   操作は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリやデータ操作言語 (DML) ステートメントを実行する方法を示します。 クエリ オプティマイザーでは、操作を使用して、クエリで指定された結果を作成するクエリ プラン、または DML ステートメントで指定された操作を実行するクエリ プランが構築されます。 クエリ プランは、物理操作をツリー構成で表現したものです。 クエリ プランを表示するには、SET SHOWPLAN ステートメント、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のグラフィカル実行プラン オプション、または SQL Server Profiler Showplan イベント クラスを使用します。  
@@ -234,7 +232,7 @@ ms.lasthandoff: 10/13/2017
 |![Inserted Scan 操作アイコン](../relational-databases/media/inserted-scan-32x.gif "Inserted Scan 操作アイコン")|**Inserted Scan**|**Inserted Scan** 操作は、 **inserted** テーブルをスキャンします。 **Inserted Scan** 操作は論理操作でもあり、物理操作でもあります。|  
 |![Intrinsic 言語要素アイコン](../relational-databases/media/intrinsic-32x.gif "Intrinsic 言語要素アイコン")|**Intrinsic**|**Intrinsic** 操作では、内部 [!INCLUDE[tsql](../includes/tsql-md.md)] 関数が呼び出されます。 **Intrinsic** は言語要素です。|  
 ![Iterator 汎用操作アイコン](../relational-databases/media/iterator-catch-all.gif "Iterator 汎用操作アイコン")|**Iterator**|**Iterator** 汎用アイコンは、グラフィカルなプラン表示を生成するロジックで、反復子に適したアイコンが見つからない場合に表示されます。 汎用アイコンは、必ずしもエラー状態を示しているわけではありません。 汎用アイコンには、青 (反復子)、オレンジ (カーソル)、緑 ( [!INCLUDE[tsql](../includes/tsql-md.md)] 言語コンストラクト) の 3 種類があります。|  
-|![Bookmark Lookup 操作アイコン](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 操作アイコン")|**Key Lookup**|**Key Lookup** 操作は、クラスター化インデックス付きテーブルでのブックマーク参照です。 **Argument** 列には、クラスター化インデックスの名前、およびクラスター化インデックスで行の参照に使用されるクラスター化キーが格納されます。 **Key Lookup** は、常に **Nested Loops** 操作を伴います。 **Argument** 列に WITH PREFETCH 句がある場合、クエリ プロセッサでは、クラスター化インデックスのブックマークを参照する最適な方法として、非同期プリフェッチ (先読み取り) が使用されます。<br /><br /> クエリ プランで **Key Lookup** 操作を使用することは、パフォーマンスのチューニングによってクエリ パフォーマンスが向上する可能性があることを示します。 たとえば、カバリング インデックスを追加することにより、クエリ パフォーマンスが向上する場合があります。|  
+|![Bookmark Lookup 操作アイコン](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 操作アイコン")|**Key Lookup**|**Key Lookup** 操作は、クラスター化インデックス付きテーブルでのブックマーク参照です。 **Argument** 列には、クラスター化インデックスの名前、およびクラスター化インデックスで行の参照に使用されるクラスター化キーが格納されます。 **Key Lookup** は、常に **Nested Loops** 操作を伴います。 **Argument** 列に WITH PREFETCH 句がある場合、クエリ プロセッサでは、クラスター化インデックスのブックマークを参照する最適な方法として、非同期プリフェッチ (先読みり) が使用されます。<br /><br /> クエリ プランで **Key Lookup** 操作を使用することは、パフォーマンスのチューニングによってクエリ パフォーマンスが向上する可能性があることを示します。 たとえば、カバリング インデックスを追加することにより、クエリ パフォーマンスが向上する場合があります。|  
 |![Keyset カーソル操作アイコン](../relational-databases/media/keyset-32x.gif "Keyset カーソル操作アイコン")|**Keyset**|**Keyset** 操作では、カーソルを使用して更新内容を参照できます。ただし、他のユーザーが挿入した内容は参照できません。|  
 |![Language Element 汎用アイコン](../relational-databases/media/language-construct-catch-all.gif "Language Element 汎用アイコン")|**Language 要素**|**Language Element** 汎用アイコンは、グラフィカルなプラン表示を生成するロジックで、反復子に適したアイコンが見つからない場合に表示されます。 汎用アイコンは、必ずしもエラー状態を示しているわけではありません。 汎用アイコンには、青 (反復子)、オレンジ (カーソル)、緑 ( [!INCLUDE[tsql](../includes/tsql-md.md)] 言語コンストラクト) の 3 種類があります。|  
 |![Spool 操作アイコン](../relational-databases/media/spool-32x.gif "Spool 操作アイコン")|**Lazy Spool**|**Lazy Spool** 論理操作では、 **tempdb** データベースに格納された非表示の一時オブジェクトに入力からの各行を格納します。 この操作が再度使用され ( **Nested Loops** 操作で使用される場合など)、再バインドが不要な場合は、入力を再スキャンする代わりにスプールされたデータが使用されます。 再バインドが必要な場合は、スプールされたデータが破棄され、(再バインドされる) 入力の再スキャンによりスプール オブジェクトが再構築されます。 **Lazy Spool** 操作のスプール ファイルは "レイジー" 手法で構築されます。つまり、1 回にすべての行を処理するのではなく、スプールの親操作から行が要求されるたびに入力操作から行を取得し、その行をスプールに格納します。 Lazy Spool は論理操作です。|  
@@ -288,7 +286,7 @@ ms.lasthandoff: 10/13/2017
 |![Table Spool 操作アイコン](../relational-databases/media/table-spool-32x.gif "Table Spool 操作アイコン")|**Table Spool**|**Table Spool** 操作は入力をスキャンし、隠しスプール テーブルに各行のコピーを格納します。この隠しスプール テーブルは [tempdb](../relational-databases/databases/tempdb-database.md) データベースに格納され、クエリの有効期間だけ存在します。 この操作が再度使用され ( **Nested Loops** 操作で使用される場合など)、再バインドが不要な場合は、入力を再スキャンする代わりにスプールされたデータが使用されます。 **Table Spool** は物理操作です。|  
 |![Table Update 操作アイコン](../relational-databases/media/table-update-32x.gif "Table Update 操作アイコン")|**Table Update**|**Table Update** 物理操作は、クエリ実行プランの **Argument** 列 (引数) で指定されているテーブルの入力行を更新します。 SET:() 述語によって、更新された各列の値が決定されます。 これらの値は、SET 句、またはこの操作内かこのクエリ内で参照されることがあります。|  
 |![Table-valued Function 操作アイコン](../relational-databases/media/table-valued-function-32x.gif "Table-valued Function 操作アイコン")|**Table-valued Function**|**Table-valued Function** 操作は、テーブル値関数 ( [!INCLUDE[tsql](../includes/tsql-md.md)] または CLR のいずれか) を評価し、結果行を [tempdb](../relational-databases/databases/tempdb-database.md) データベースに格納します。 親反復子により行が要求されると、 **Table-valued Function** は **tempdb**から行を返します。<br /><br /> テーブル値関数への呼び出しを伴うクエリにより、 **Table-valued Function** 反復子を備えたクエリ プランが生成されます。 さまざまなパラメーター値を使用して**Table-valued Function** を評価できます。<br /><br /> -<br />                    **Table-valued Function XML Reader** では、パラメーターとして XML BLOB が入力され、XML ノードを表す行セットが XML ドキュメントの順序で生成されます。 他の入力パラメーターにより、XML ドキュメントのサブセットに返される XML ノードが制限されることがあります。<br /><br /> -**Table Valued Function XML Reader with XPath filter** は、出力を XPath 式が満たされる XML ノードに限定する、特殊な種類の **XML Reader Table-valued Function** です。<br /><br /> **Table-valued Function** は論理操作でもあり、物理操作でもあります。|  
-|![Top 操作アイコン](../relational-databases/media/top-32x.gif "Top 操作アイコン")|**Top**|**Top** 操作は、入力をスキャンし、並べ替え順に基づいて、指定した最初の数または最初の比率の行だけを返します。 **Argument** 列 (引数) には、タイ (同順位) をチェックする列のリストが入ることもあります。 **Top** 操作は、更新プランで行数制限を行うときに使用します。 **Top** は論理操作でもあり、物理操作でもあります。 **Top** は論理操作でもあり、物理操作でもあります。|  
+|![Top 操作アイコン](../relational-databases/media/top-32x.gif "Top 操作アイコン")|**Top**|**Top** 操作は、入力をスキャンし、並べ替え順に基づいて、指定した最初の数または最初の比率の行だけを返します。 **Argument** 列 (引数) には、タイ (同順位) をチェックする列のリストが入ることもあります。 **Top** 操作は、更新プランで行数制限を行うときに使用します。 **Top** は論理操作でもあり、物理操作でもあります。|  
 |なし|**Top N Sort**|**Top N Sort** は、結果セット全体ではなく最初の **N** 行のみを必要とする点を除いては、 *Sort* 反復子と類似しています。 *N*の値が小さい場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ実行エンジンは、メモリ内全体の並べ替え操作を実行しようとします。 *N*の値が大きい場合、クエリ実行エンジンは、 *N* をパラメーターとしない、より汎用的な並べ替え方法を使用します。|  
 |![拡張操作 (UDX) アイコン](../relational-databases/media/udx-32x.gif "拡張操作 (UDX) アイコン")|**UDX**|拡張操作 (UDX) には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の数ある操作のうちの XQuery 操作と XPath 操作が実装されています。 すべての UDX 操作には、論理操作と物理操作の両方があります。<br /><br /> 拡張操作 (UDX) **FOR XML** は、単一出力行の単一 BLOB 列に XML 表記で入力するリレーショナル行セットをシリアル化するのに使用します。 この操作は、順序を区別する XML 集計操作です。<br /><br /> 拡張操作 (UDX) **XML SERIALIZER** は、順序を区別する XML 集計操作です。 この操作は、XML ドキュメントの順序で XML ノードまたは XQuery スカラーを表す行を入力し、単一出力行の単一 XML 列にシリアル化した XML BLOB を生成します。<br /><br /> 拡張操作 (UDX) **XML FRAGMENT SERIALIZER** は、XQuery の挿入データの変更拡張に挿入される XML フラグメントを表す入力行の処理に使用する **XML SERIALIZER** の特殊な形式の操作です。<br /><br /> 拡張操作 (UDX) **XQUERY STRING** は、XML ノードを表す入力行の XQuery 文字列値を評価します。 これは順序を区別する文字列集計操作です。 この操作では、入力の文字列値を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 (UDX) **XQUERY LIST DECOMPOSER** は、XQuery のリスト分解操作です。 入力が XSD リストで想定されている型の場合、この操作では、XML ノードを表す入力行ごとに、リスト要素の値を含む XQuery スカラーを表す 1 行以上の行が生成されます。<br /><br /> 拡張操作 (UDX) **XQUERY DATA** は、XML ノードを表す入力の XQuery の fn:data() 関数を評価します。 これは順序を区別する文字列集計操作です。 この操作では、 **fn:data()**関数の結果を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 (UDX) **XQUERY CONTAINS** は、XML ノードを表す入力の XQuery の fn:data() 関数を評価します。 これは順序を区別する文字列集計操作です。 この操作では、 **fn:contains()**関数の結果を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 **UPDATE XML NODE** は、XML 型の **modify()** メソッドで XQuery の置換データの変更拡張の XML ノードを更新します。|  
 |なし|**Union**|**Union** 操作は、複数の入力をスキャンし、重複行を削除して、スキャンした各行を出力します。 **Union** は論理操作です。|  
@@ -297,4 +295,3 @@ ms.lasthandoff: 10/13/2017
 |![Table Spool 操作アイコン](../relational-databases/media/table-spool-32x.gif "Table Spool 操作アイコン")|**Window Spool**|**Window Spool** 操作は、各行をその行に関連付けられたウィンドウを表す行セットに拡張します。 クエリでは、OVER 句でクエリの結果セット内のウィンドウを定義してから、ウィンドウ関数がウィンドウ内の各行の値を計算します。 **Window Spool** は論理操作でもあり、物理操作でもあります。|  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +13,16 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 18521a8d3f0deb2c7ada0a3633c3d9e606eff9b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: daabab1d4122ce132579f399a4ea6c923477da35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード)
   このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
@@ -102,7 +101,7 @@ ms.lasthandoff: 08/02/2017
   
 -   すべてのサーバー インスタンスがドメイン サービス アカウントで実行されている場合、つまり、すべてのサーバー インスタンスの **[SQL Server サービス アカウント]** 列にドメイン サービス アカウントが表示されている場合は、 **[次へ]**をクリックします。  
   
--   ドメイン サービス アカウントで実行されていないサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 この場合、 **[次へ]** をクリックすると、警告ダイアログ ボックスが表示されるので、 **[いいえ]**をクリックして、**[エンドポイント]** タブに戻ってください。 **[レプリカの指定]** ページでウィザードを中断している間、 **[SQL Server サービス アカウント]** 列にドメイン サービス アカウント以外のアカウントが表示されている各サーバー インスタンスに対し、次のいずれかの変更を行います。  
+-   ドメイン サービス アカウントで実行されていないサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 この場合、 **[次へ]** をクリックすると、警告ダイアログ ボックスが表示されるので、 **[いいえ]**をクリックして、**[エンドポイント]** タブに戻ってください。**[レプリカの指定]** ページでウィザードを中断している間、 **[SQL Server サービス アカウント]** 列にドメイン サービス アカウント以外のアカウントが表示されている各サーバー インスタンスに対し、次のいずれかの変更を行います。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントをドメイン アカウントに変更する。 詳細については、「[SQL Server のサービス開始アカウントの変更 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)」を参照してください。  
   
@@ -218,4 +217,3 @@ ms.lasthandoff: 08/02/2017
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
-

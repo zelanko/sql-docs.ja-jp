@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 5dd771760822004cf75dfb602882bb739b2e396d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  のページ分割されたレポートでテキスト ボックス、画像、グラフ、ゲージにハイパーリンク アクションを追加する方法について説明します。 リンクで他のレポート、レポート内のブックマーク、静的または動的な URL に移動できます。 
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  レポート デザイン ビューで、リンクを追加するテキスト ボックス、画像、またはグラフを右クリックし、 **[プロパティ]**をクリックします。  
   
-2.  [プロパティ] ダイアログ ボックスで、 **[アクション]** タブをクリックします。 オプションの詳細については、読み進めてください。  
+2.  [プロパティ] ダイアログ ボックスで、 **[アクション]** タブをクリックします。オプションの詳細については、読み進めてください。  
 
 ## <a name="-add-drillthrough-to-another-report"></a>別のレポートにドリルスルーを追加するには
 
@@ -97,4 +97,3 @@ ms.lasthandoff: 08/09/2017
  [ドキュメント マップの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
-

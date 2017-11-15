@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1ce50a767b5d704a889de0aaf96a74c0196f1587
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>コレクション セットのスケジュールの表示または変更 (SQL Server Management Studio)
   コレクション セットのスケジュールは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して表示または変更できます。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
     1.  詳細ペインで、 **[コレクション アイテム]** テーブルの **[収集頻度 (秒)]** 列に表示されている数値をダブルクリックします。  
   
-    2.  より小さな数値を入力して収集頻度を増加させるか、またはより大きな数値を入力して収集頻度を減少させ、Enter キーを押して新しい値を格納します。  
+    2.  より小さな数値を入力して収集頻度を増加させるか、またはより大きな数値を入力して収集頻度を減少させ、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押して新しい値を格納します。  
   
 4.  コレクション セットの既存のアップロード スケジュールを変更するには、次の手順を実行します。  
   

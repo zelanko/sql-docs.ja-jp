@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- EventLog event class
+helpviewer_keywords: EventLog event class
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bab426a6bb349f0f868f4a08bf02e43cd9dd9500
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 4e304c76fb4b81177dac90e852edff82d806d87d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="eventlog-event-class"></a>EventLog イベント クラス
   EventLog イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログにイベントが記録されたことを示します。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 |SPID|**int**|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|**ntext**|(取得できた場合) エラー メッセージのテキスト。|1|はい|  
-|TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
+|TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|可|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)   

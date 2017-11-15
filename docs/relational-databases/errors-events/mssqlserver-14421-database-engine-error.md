@@ -5,23 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 14421 (Database Engine error)
+helpviewer_keywords: 14421 (Database Engine error)
 ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cc4a06f7b9b27884ac0a5998d43ef056368dcc73
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "23"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 5c1997078811628f8a7088f59f0d7d0fe7a414cc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver14421"></a>MSSQLSERVER_14421
   
@@ -34,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|SQLErrorNum14421|  
-|メッセージ テキスト|ログ配布のセカンダリ データベース %s.%s は復元のしきい値が %d 分間ですが、同期されていません。 復元は %d 分間実行されていません。 復元される待機時間は %d 分間です。 エージェント ログおよびログ配布モニターの情報を調べてください。|  
+|メッセージ テキスト|ログ配布のセカンダリ データベース %s.%s は復元のしきい値が %d 分間ですが、同期されていません。復元は %d 分間実行されていません。 復元される待機時間は %d 分間です。 エージェント ログおよびログ配布モニターの情報を調べてください。|  
   
 ## <a name="explanation"></a>説明  
 このメッセージは、復元のしきい値を超えてもログ配布が同期されていないことを示しています。 復元のしきい値は、復元操作が完了するまでの許容時間 (分数) です。この時間が経過すると警告メッセージが生成されます。  
@@ -77,4 +75,3 @@ ms.lasthandoff: 06/22/2017
 [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)  
 [ログ配布について &#40;SQL Server&#41;](~/database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
-

@@ -5,23 +5,21 @@ ms.date: 11/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.querystore.f1
+f1_keywords: sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89d782e0fa62c2b4b4332e9818b93f87f797710f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1049e37ab25fc7b76856a94c9c3ac091ab4403d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-properties-query-store-page"></a>データベースのプロパティ (クエリのストアのページ)
   このページにはプリンシパル データベースからアクセスし、これを使用してデータベースのクエリのストアのプロパティを構成および変更します。 これらのオプションは、 [ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)を使用して構成することもできます。 クエリのストアの詳細については、「 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)」をご覧ください。  
@@ -50,11 +48,11 @@ ms.lasthandoff: 06/22/2017
  クエリのストアに割り当てられた合計領域を取得、および設定します。  
   
  Query Store Capture Mode (クエリ ストアのキャプチャ モード)  
- -   [None]\(なし) に設定すると、新しいクエリがキャプチャされません。  
+ -   [None] (なし) に設定すると、新しいクエリがキャプチャされません。  
   
--   [All]\(すべて) に設定すると、すべてのクエリがキャプチャされます。  
+-   [All] (すべて) に設定すると、すべてのクエリがキャプチャされます。  
   
--   [Auto]\(自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
+-   [Auto] (自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
   
  古いクエリのしきい値 (日)  
  古いクエリのしきい値を取得、および設定します。 STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 06/22/2017
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
-

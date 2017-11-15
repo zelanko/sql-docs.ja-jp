@@ -1,5 +1,5 @@
 ---
-title: "[レポート サーバー ジョブのキャンセル]\\(Management Studio) | Microsoft Docs"
+title: "[レポート サーバー ジョブのキャンセル] (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.cancelreportserverjobs.f1
+f1_keywords: sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 86acc5b5fd6099f2c10699689281b62d04689aa1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル]\(Management Studio)
+# <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル] (Management Studio)
   実行中のレポートの表示や実行のキャンセルを行うには、 **[レポート サーバー ジョブのキャンセル]** ダイアログ ボックスを使用します。 このダイアログ ボックスには、レポート サーバーで現在実行中のすべてのジョブが表示されます。 現在処理中のジョブを一時停止または再開することはできませんが、すべてのジョブ、または時間がかかりすぎて完了できない場合は個々のジョブをキャンセルできます。  
   
  ユーザー ジョブとシステム ジョブをキャンセルできます。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
  このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバーに接続し、 **[ジョブ]**を右クリックして **[すべてのジョブのキャンセル]**をクリックします。 または、 **[ジョブ]**を開き、レポート サーバーで実行中のジョブを右クリックして、 **[ジョブのキャンセル]**をクリックします。  
   
- ジョブを取り消す前に、そのプロパティを表示し、ジョブがいつ開始されたかを確認します。 詳細については、「[ジョブのプロパティ (Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)」を参照してください。  
+ ジョブを取り消す前に、そのプロパティを表示し、ジョブがいつ開始されたかを確認します。 詳細については、「[ジョブのプロパティ &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)」を参照してください。  
   
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services ではサポートされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を実行している場合、このページは表示されません。  
@@ -61,9 +59,8 @@ ms.lasthandoff: 08/09/2017
  1 つのジョブまたは複数のジョブを取り消します。 ジョブはすぐに取り消され、再開することはできません。 誤ってジョブを取り消した場合は、レポートまたはサブスクリプションを再度要求して新しいジョブを開始する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [実行中のプロセスを管理します。](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

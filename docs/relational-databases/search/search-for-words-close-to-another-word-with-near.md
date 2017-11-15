@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - word searches [full-text search]
 - NEAR option [full-text search]
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aaff4768722fa830cccf9e2ee397945f0866ae07
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 81230587be4efd864fb2ec3958a1473db8de2e53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
   [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数で*近接語句* (**NEAR**) を使用すると、互いに似た単語や語句を検索できます。 
@@ -151,7 +149,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   CONTAINSTABLE 関数による順位付けへの近接語句の影響  
   
-    NEAR を CONTAINSTABLE 関数で使用する場合は、ドキュメント内のその長さに関連する一致数と、各一致における最初の検索語句と最後の検索語句の間の距離が、各ドキュメントの順位付けに影響します。 汎用近接語句では、たとえば、一致する検索語間の距離が 50 論理語より大きい場合、そのドキュメントについて返される順位は 0 になります。 最大距離として整数を指定しないカスタム近接語句では、間隔が 100 論理語より大きい一致のみを含むドキュメントは、順位 0 を取得します。 カスタム近接語句の順位付けの詳細については、「[RANK を使用して検索結果を制限する方法](../../relational-databases/search/limit-search-results-with-rank.md)」を参照してください。  
+    NEAR を CONTAINSTABLE 関数で使用する場合は、ドキュメント内のその長さに関連する一致数と、各一致における最初の検索語句と最後の検索語句の間の距離が、各ドキュメントの順位付けに影響します。 汎用近接語句では、たとえば、一致する検索語間の距離が 50 論理語より大きい場合、そのドキュメントについて返される順位は 0 になります。 最大距離として整数を指定しないカスタム近接語句では、間隔が 100 論理語より大きい一致のみを含むドキュメントは、順位 0 を取得します。 カスタム近接語句の順位付けの詳細については、「 [RANK を使用して検索結果を制限する方法](../../relational-databases/search/limit-search-results-with-rank.md)」を参照してください。  
   
 -   **transform noise words** サーバー オプション  
   
@@ -161,4 +159,3 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
-

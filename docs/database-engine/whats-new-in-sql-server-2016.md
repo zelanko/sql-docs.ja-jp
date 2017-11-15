@@ -7,25 +7,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 431
+caps.latest.revision: "431"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 211d0d1d59ac9875fd3c66efb0fc88a453a8deb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +173,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
   - ADD インデックスと DROP インデックス。 ハッシュ インデックスの bucket_count を変更します。
   - スキーマ変更: 列の追加/削除/変更、制約の追加/削除。
 
-- 組み合わせた長さが 8,060 バイト ページの長さを超える複数の列をメモリ最適化テーブルに含めることができるようになりました。 例として、 `nvarchar(4000)`型の列が 3 列が含まれているテーブルがあります。 そうした例では、行外に格納される列もあります。 列が行内と行外のどちらにあるかをクエリは意識しないで済みます。
+- 組み合わせた長さが 8,060 バイト ページの長さを超える複数の列をメモリ最適化テーブルに含めることができるようになりました。 例として、 `nvarchar(4000)`型の列が&3; 列が含まれているテーブルがあります。 そうした例では、行外に格納される列もあります。 列が行内と行外のどちらにあるかをクエリは意識しないで済みます。
 
 - [LOB (ラージ オブジェクト) タイプ](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`、`nvarchar(max)`、`varchar(max)` がメモリ最適化テーブルでサポートされるようになりました。
 
@@ -206,7 +204,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
   - ネイティブ プロシージャにおいて文字列関数 (LTrim または Substring など) に渡されるパラメーター。
 
 
-- インライン (つまり 1 ステートメントの) テーブル値関数 (TVF) をネイティブ コンパイルできるようになりました。
+- インライン (つまり&1; ステートメントの) テーブル値関数 (TVF) をネイティブ コンパイルできるようになりました。
 
 - スカラーのユーザー定義関数 (UDF) をネイティブ コンパイルできるようになりました。
 
@@ -279,7 +277,7 @@ Insert select ステートメントで挿入では、マルチ スレッドは�
 
 
 ####  <a name="TT"></a> テンポラル テーブル
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には 2 つのテーブルで構成されており、1 つは現在のデータ用で、もう 1 つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には&2; つのテーブルで構成されており、1 つは現在のデータ用で、もう&1; つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
 
 ####  <a name="StripedBackupToAzure"></a> Microsoft Azure BLOB Storage へのストライプ バックアップ
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、Microsoft Azure Blob ストレージ サービスを使用した SQL Server Backup to URL がブロック BLOB によるストライプ バックアップ セットをサポートするようになり、最大バックアップ サイズ 12.8 TB をサポートするようになりました。 例については、「 [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples)」を参照してください。
@@ -417,7 +415,7 @@ SQL Server 2016 Standard Edition で、Always On の基本的な可用性グル�
 
 読み取りを目的とした接続要求を一連の読み取り専用レプリカで負荷分散することがサポートされるようになりました。 以前の動作では常に、ルーティング リストで最初に使用可能な読み取り専用レプリカに直接接続されていました。 詳細については、「[読み取り専用レプリカ間の負荷分散の構成](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。
 
- 自動フェールオーバーをサポートするレプリカの数が 2 から 3 に増えました。
+ 自動フェールオーバーをサポートするレプリカの数が&2; から&3; に増えました。
 
  Always On フェールオーバー クラスターでグループ管理サービス アカウントがサポートされるようになりました。 詳細については、「 [グループの管理されたサービス アカウントの概要](https://technet.microsoft.com/library/hh831782.aspx)」を参照してください。 Windows Server 2012 R2 の場合は、パスワードの変更後の一時的なダウンタイムを回避するために更新プログラムが必要になります。 更新プログラムを取得する場合は、「 [gMSA ベースのサービスは、Windows Server 2012 R2 のドメインでパスワードを変更した後ログインできません](https://support.microsoft.com/kb/2998082/)」を参照してください。
 
@@ -459,7 +457,6 @@ SQL Server 2016 Upgrade Advisor プレビューはスタンドアロン ツー�
 [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md) 
  
 [SSMS を使用した SQL Server 管理ツールのインストール](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
-
 
 
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 11ac36bd42257b0be9a0b03166132f658d62431e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
   正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
@@ -68,8 +66,8 @@ ms.lasthandoff: 07/31/2017
   
 |式|構文|説明|  
 |----------------|------------|-----------------|  
-|最短 &amp;#x2014; ゼロ個以上|@|直前の正規表現のゼロ個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
-|最短 &amp;#x2014; 1 個以上|#|直前の正規表現の 1 個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
+|最短 &#x2014; ゼロ個以上|@|直前の正規表現のゼロ個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
+|最短 &#x2014; 1 個以上|#|直前の正規表現の 1 個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
 |n 回の繰り返し|^n|直前の正規表現の n 回の繰り返しを検索します。 たとえば、「[0-9]^4」は、任意の 4 桁の数字と一致します。|  
 |グループ化|()|サブ式をグループ化します。|  
 |n 番目のタグ付きテキスト|\n|**[検索または置換]** の正規表現では、n 番目のタグ付き正規表現と一致するテキストを示します。n は 1 ～ 9 の数字です。<br /><br /> **[置換]** の正規表現の場合、「\0」を指定すると、一致したテキスト全体が挿入されます。|  
@@ -142,4 +140,3 @@ ms.lasthandoff: 07/31/2017
  [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)  
   
   
-

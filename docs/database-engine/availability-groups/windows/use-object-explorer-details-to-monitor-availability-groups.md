@@ -5,28 +5,25 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.OEdetails.f1
+f1_keywords: sql13.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cbaab2811f5362d7fb2ad57285ee0bcfd4afb242
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: fdfc53f0a3e497e95a4c987531ebdff9d3fcb236
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視
   このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
@@ -58,7 +55,7 @@ ms.lasthandoff: 08/02/2017
   
 2.  オブジェクト エクスプローラーで、可用性グループを監視する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-3.  [ **AlwaysOn 高可用性** ] ノードと [ **可用性グループ** ] ノードを展開します。  
+3.  **[ AlwaysOn 高可用性 ]** ノードと **[ 可用性グループ ]** ノードを展開します。  
   
 4.  **[オブジェクト エクスプローラーの詳細]** ペインに、接続したサーバー インスタンスがそのレプリカをホストしている可用性グループが表示されます。 それぞれの可用性グループについて、 **[サーバー インスタンス (プライマリ)]** 列に、プライマリ レプリカを現在ホストしているサーバー インスタンス名が表示されます。  特定の可用性グループの詳細を表示するには、オブジェクト エクスプ ローラーでそのグループを選択します。  
   
@@ -155,4 +152,3 @@ ms.lasthandoff: 08/02/2017
  [可用性レプリカのプロパティの表示 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b22b667a679c2dee3a87b0348170c793af0c9e1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、マージ テーブル アーティクル間に論理レコード リレーションシップを定義する方法について説明します。  
@@ -162,19 +161,19 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定して、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1 で作成した接続を設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定して、手順 1. で作成した接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> プロパティが <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False> に設定されている場合は、これを <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True> に設定します。  
+4.  <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> プロパティが <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>に設定されている場合、これを <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>に設定します。  
   
-5.  論理レコードを構成するアーティクルが存在しない場合は、<xref:Microsoft.SqlServer.Replication.MergeArticle> クラスのインスタンスを作成し、次のプロパティを設定します。  
+5.  論理レコードを構成するアーティクルが存在しない場合は、 <xref:Microsoft.SqlServer.Replication.MergeArticle> クラスのインスタンスを作成し、次のプロパティを設定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Article.Name%2A> のアーティクル名。  
+    -   <xref:Microsoft.SqlServer.Replication.Article.Name%2A>にアーティクル名を指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> のパブリケーション名。  
+    -   <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>にパブリケーション名を指定します。  
   
-    -   (省略可) アーティクルが行方向にフィルター選択される場合は、<xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティに行フィルター句を指定します。 このプロパティを使用して、静的行フィルターまたはパラメーター化された行フィルターを指定します。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+    -   (省略可) アーティクルが行方向にフィルター選択される場合、 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティに行フィルター句を指定します。 このプロパティを使用して、静的行フィルターまたはパラメーター化された行フィルターを指定します。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
      詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
@@ -192,9 +191,9 @@ ms.lasthandoff: 06/22/2017
   
     -   リレーションシップを定義する式を <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> プロパティに指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> の値を <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> プロパティに指定します。 論理レコード リレーションシップが結合フィルターでもある場合は、このプロパティに <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> の値を指定します。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」(論理レコードによる関連行への変更のグループ化) をご覧ください。  
+    -   <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> の値を <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> プロパティに指定します。 論理レコード リレーションシップが結合フィルターでもある場合は、このプロパティに <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> の値を指定します。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   
-9. リレーションシップの子アーティクルを表すオブジェクト上の <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> メソッドを呼び出します。 手順 8 の <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを渡して、リレーションシップを定義します。  
+9. リレーションシップ内の子アーティクルを表すオブジェクトに対して <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> メソッドを呼び出します。 手順 8. の <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを渡して、リレーションシップを定義します。  
   
 10. パブリケーションの他の論理レコード リレーションシップについても、手順 8. と 9. をそれぞれ実行します。  
   

@@ -5,22 +5,20 @@ ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: caa1851ca33c49b0199cfa76589d278ec8974a95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 07/31/2017
   
     -   テーブルで使用されるメモリの量は、正確に計算することはできません。 使用されるメモリの量には、多くの要因が影響します。 たとえば、ページ単位のメモリ割り当て、局所性、キャッシュ、余白などの要因です。 また、アクティブなトランザクションが関連付けられている行や、ガベージ コレクションを待機している行には複数のバージョンが存在します。  
   
-    -   テーブル内のデータとインデックスに必要な最小サイズは、後で説明する [テーブル サイズ]\(table size) の計算によって得られます。  
+    -   テーブル内のデータとインデックスに必要な最小サイズは、後で説明する [テーブル サイズ] (table size) の計算によって得られます。  
   
     -   メモリ使用量の計算で得られる値は、最善でも近似値です。配置プランにキャパシティ プランニングを含めることをお勧めします。  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 07/31/2017
 [table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
 ```  
   
- ハッシュ インデックスのサイズはテーブルの作成時に固定され、実際のバケット数によって決まります。 インデックスの仕様で指定された bucket_count は、[実際のバケット数]\(actual bucket count) を取得するために、最も近い 2 のべき乗の値に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの [実際のバケット数]\(actual bucket count) は 131,072 になります。  
+ ハッシュ インデックスのサイズはテーブルの作成時に固定され、実際のバケット数によって決まります。 インデックスの仕様で指定された bucket_count は、[実際のバケット数] (actual bucket count) を取得するために、最も近い 2 のべき乗の値に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの [実際のバケット数] (actual bucket count) は 131,072 になります。  
   
 ```  
 [hash index size] = 8 * [actual bucket count]  
@@ -124,11 +122,11 @@ ms.lasthandoff: 07/31/2017
   
  行本文サイズには、計算されたサイズと実際のサイズという 2 種類の計算があります。  
   
--   [計算された行本文サイズ]\(computed row body size) で示される計算されたサイズは、8,060 バイトという行サイズの上限値を超えるかどうかを判断するために使用されます。  
+-   [計算された行本文サイズ] (computed row body size) で示される計算されたサイズは、8,060 バイトという行サイズの上限値を超えるかどうかを判断するために使用されます。  
   
--   [実際の行本文サイズ]\(actual row body size) で示される実際のサイズは、メモリ内およびチェックポイント ファイル内の行本文の実際の格納サイズです。  
+-   [実際の行本文サイズ] (actual row body size) で示される実際のサイズは、メモリ内およびチェックポイント ファイル内の行本文の実際の格納サイズです。  
   
- [計算された行本文サイズ]\(computed row body size) と [実際の行本文サイズ]\(actual row body size) はほぼ同じ方法で計算されます。 次の表の最後に説明されているとおり、唯一の違いは、(n)varchar(i) 列と varbinary(i) 列のサイズの計算です。 計算された行本体サイズでは、宣言されたサイズ *i* を列のサイズとして使用しますが、実際の行本体サイズではデータの実際のサイズを使用します。  
+ [計算された行本文サイズ] (computed row body size) と [実際の行本文サイズ] (actual row body size) はほぼ同じ方法で計算されます。 次の表の最後に説明されているとおり、唯一の違いは、(n)varchar(i) 列と varbinary(i) 列のサイズの計算です。 計算された行本体サイズでは、宣言されたサイズ *i* を列のサイズとして使用しますが、実際の行本体サイズではデータの実際のサイズを使用します。  
   
  [実際の行本文サイズ] = SUM([シャロー型のサイズ]) + 2 + 2 * [ディープ型の列の数] として指定した場合、行本文サイズの計算について、次の表で説明します。  
   
@@ -136,13 +134,13 @@ ms.lasthandoff: 07/31/2017
 |-------------|----------|--------------|  
 |シャロー型の列|SUM([シャロー型のサイズ])。 個々の型のサイズは次のとおりです (バイト単位)。<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (精度 <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(精度>18): 16<br /><br /> **Uniqueidentifier**: 16||  
 |シャロー列の余白|有効な値は次のとおりです。<br /><br /> ディープ型の列が存在し、シャロー列の合計データ サイズが奇数になる場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
-|ディープ型の列のオフセット配列|有効な値は次のとおりです。<br /><br /> ディープ型の列がない場合は 0<br /><br /> それ以外の場合は 2 + 2 * [ディープ型の列の数]\(number of deep type columns)|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
+|ディープ型の列のオフセット配列|有効な値は次のとおりです。<br /><br /> ディープ型の列がない場合は 0<br /><br /> それ以外の場合は 2 + 2 * [ディープ型の列の数] (number of deep type columns)|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |NULL 配列|[NULL 値を許容する列の数] / 8 (完全なバイト数になるように切り上げ)。|配列は、NULL 値を許容する列ごとに 1 ビットを保持します。 これは、完全なバイト数になるように切り上げられます。|  
 |NULL 配列の余白|有効な値は次のとおりです。<br /><br /> ディープ型の列が存在し、NULL 配列のサイズのバイト数が奇数である場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |余白|ディープ型の列がない場合は 0<br /><br /> ディープ型の列がある場合、シャロー列に必要な最大の配置に基づいて、余白の 0 ～ 7 バイトが追加されます。 前に説明したように、各シャロー列の配置は、列のサイズと等しい値にする必要があります。ただし、例外として、GUID 列の配置は 1 バイト (16 ではない) とし、数値列の配置は常に 8 バイト (16 ではない) とする必要があります。 すべてのシャロー列間で必要となる配置の値の中で、最も大きな値が使用されます。それまでの合計サイズ (ディープ型の列を含まない) が必要な配置の倍数になるように、余白として 0 ～ 7 バイトが追加されます。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |固定長のディープ型の列|SUM([固定長のディープ型の列のサイズ])<br /><br /> 個々の列のサイズは次のとおりです。<br /><br /> char(i) および binary(i) の場合は i。<br /><br /> nchar(i) の場合は 2 * i。|固定長のディープ型の列では、列の型が char(i)、nchar(i)、または binary(i) です。|  
-|可変長のディープ型の列の [計算されたサイズ]|SUM([可変長のディープ型の列の計算されたサイズ])<br /><br /> 個々の列の計算されたサイズは次のとおりです。<br /><br /> varchar(i) および varbinary(i) の場合は i。<br /><br /> nvarchar(i) の場合は 2 * i。|この行は、[計算された行本文サイズ]\(computed row body size) にのみ適用されます。<br /><br /> 可変長のディープ型の列では、列の型が varchar(i)、nvarchar(i)、または varbinary(i) です。 計算されたサイズは、列の最大長 (i) で決まります。|  
-|可変長のディープ型の列の [実際のサイズ]|SUM([可変長のディープ型の列の実際のサイズ])<br /><br /> 個々の列の実際のサイズは次のとおりです。<br /><br /> varchar(i) の場合は n (ここで n は列に格納されている文字数)。<br /><br /> nvarchar(i) の場合は 2 * n (ここで n は列に格納されている文字数)。<br /><br /> varbinary(i) の場合は n (ここで n は列に格納されているバイト数)。|この行は、[実際の行本文サイズ]\(actual row body size) にのみ適用されます。<br /><br /> 実際のサイズは、行の列内に格納されているデータで決まります。|   
+|可変長のディープ型の列の [計算されたサイズ]|SUM([可変長のディープ型の列の計算されたサイズ])<br /><br /> 個々の列の計算されたサイズは次のとおりです。<br /><br /> varchar(i) および varbinary(i) の場合は i。<br /><br /> nvarchar(i) の場合は 2 * i。|この行は、[計算された行本文サイズ] (computed row body size) にのみ適用されます。<br /><br /> 可変長のディープ型の列では、列の型が varchar(i)、nvarchar(i)、または varbinary(i) です。 計算されたサイズは、列の最大長 (i) で決まります。|  
+|可変長のディープ型の列の [実際のサイズ]|SUM([可変長のディープ型の列の実際のサイズ])<br /><br /> 個々の列の実際のサイズは次のとおりです。<br /><br /> varchar(i) の場合は n (ここで n は列に格納されている文字数)。<br /><br /> nvarchar(i) の場合は 2 * n (ここで n は列に格納されている文字数)。<br /><br /> varbinary(i) の場合は n (ここで n は列に格納されているバイト数)。|この行は、[実際の行本文サイズ] (actual row body size) にのみ適用されます。<br /><br /> 実際のサイズは、行の列内に格納されているデータで決まります。|   
   
 ##  <a name="bkmk_ExampleComputation"></a> 例: テーブルと行のサイズの計算  
  ハッシュ インデックスの場合、実際のバケット数は最も近い 2 のべき乗に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの実際のバケット数は 131,072 です。  
@@ -182,7 +180,7 @@ GO
 [row header size] = 24 + 8 * [number of indices] = 24 + 8 * 1 = 32 bytes  
 ```  
   
- ここで、[実際の行本文サイズ]\(actual row body size) を計算します。  
+ ここで、[実際の行本文サイズ] (actual row body size) を計算します。  
   
 -   シャロー型の列:  
   
@@ -251,4 +249,3 @@ where object_id = object_id('dbo.Orders')
  [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

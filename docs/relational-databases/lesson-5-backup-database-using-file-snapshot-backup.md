@@ -1,29 +1,25 @@
 ---
 title: "レッスン 5: ファイル スナップショット バックアップを使用してデータベースをバックアップする | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd3226cf6bf52151c94853d87b4de28e54b5d2df
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3b5e0888f00f34fc3d85f6727cc98903c66c2239
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>レッスン 5: ファイル スナップショット バックアップを使用してデータベースをバックアップする
 このレッスンでは、AdventureWorks2014 データベースを Azure のスナップショットを使用して、ほぼ瞬時に Azure 仮想マシンにファイル スナップショット バックアップでバックアップを行います。 ファイル スナップショット バックアップの詳細については、「 [Azure でのデータベース ファイルのスナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
@@ -85,4 +81,3 @@ AdventureWorks2014 をファイル スナップショット バックアップ�
   
   
   
-

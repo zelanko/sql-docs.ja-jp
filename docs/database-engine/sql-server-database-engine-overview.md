@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Engine [SQL Server]
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 633dcb55603999404697a10dfa7b3b4001a9c131
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/16/2017
-
+ms.openlocfilehash: 39a96a83d4801fa5cf5342e3383d2e57085b4450
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
   [!INCLUDE[ssDE](../includes/ssde-md.md)]は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 [!INCLUDE[ssDE](../includes/ssde-md.md)]は、アクセス制御と高速トランザクション処理を提供しており、これらを活用すれば、企業内で最も大規模なデータ処理アプリケーションの要件にも対応できます。  
@@ -35,4 +33,3 @@ ms.lasthandoff: 08/16/2017
  [SQL Server リソース センター](http://go.microsoft.com/fwlink/?LinkId=219676)  
   
   
-
