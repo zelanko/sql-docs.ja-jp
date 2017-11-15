@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0c9be76ca64a4df24cca399308244c5bc4c28e0d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: cebf731c4a429ea738b1031da3d4f9445af3096b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、 *の* ジョブ [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
@@ -182,4 +180,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>参照  
 [セキュリティ構成](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
   
-

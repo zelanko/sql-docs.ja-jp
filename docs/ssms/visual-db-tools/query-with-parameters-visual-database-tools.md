@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - parameters [SQL Server], queries
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc12e48c23b2e362b972f6d6e6d04f953a8f09c3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 3deb83bf9fdaafd3598080e5889999b2630aaf22
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>パラメーターを使用したクエリ (Visual Database Tools)
 多くの場合、アプリケーションで何度も使用でき、実行のたびに入力値を変えることができるクエリを作成すると便利です。 このセクションでは、汎用的なパラメーター クエリを作成する方法について説明します。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 08/18/2017
 [検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 リンクが掲載されており、リンク先にはさまざまな検索方法、および必要なものを検索する方法についてのトピックが掲載されています。  
   
-

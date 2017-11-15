@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.stepgeneral.f1
+f1_keywords: sql13.ag.job.stepgeneral.f1
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fbe2a44b573d05bbf4b9b1eed79595e3a771bcf4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b6821abbd0c69929350a95c004033e730e6ff769
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] \([全般] ページ)
-このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
+このページでは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
 このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを展開します。次に **[ジョブ]**を右クリックし、 **[新しいジョブ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]**をクリックします。  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 > ActiveX スクリプティング サブシステムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の将来のバージョンで [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
   
-**[[VBScript]]**  
+**[VBScript]**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition をジョブ ステップの言語として指定します。  
   
 **JScript**  
@@ -302,7 +299,7 @@ JScript をジョブ ステップの言語として指定します。
 **[チェックポイント ファイル]**  
 パッケージ チェックポイント ファイルの名前を入力します。  
   
-**[[...]]**  
+**[...]**  
 パッケージ チェックポイント ファイルを参照して指定します。  
   
 **[再開オプションを上書きする]**  
@@ -376,4 +373,3 @@ JScript をジョブ ステップの言語として指定します。
 [パッケージに対する SQL Server エージェント ジョブ](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
 [レプリケーション エージェントの管理](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
   
-

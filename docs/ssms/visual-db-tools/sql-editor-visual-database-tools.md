@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5b5c0c123950f5314a0f6fce46c92d64b20821df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL エディター (Visual Database Tools)
 SQL エディターを使用すると、既存のストアド プロシージャ、関数、トリガー、および SQL スクリプトを編集できます。 これらのオブジェクトのいずれかを開くと、このウィンドウが開きます。 データ ソースに対して実行する SQL ステートメントを新しく作成する場合は、クエリ デザイナーの [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) を使用します。  
@@ -56,4 +54,3 @@ SQL ステートメントを編集するときは、細い線の枠で囲まれ�
 ## <a name="see-also"></a>参照  
 [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

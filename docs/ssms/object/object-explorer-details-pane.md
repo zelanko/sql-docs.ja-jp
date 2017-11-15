@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a6a6ac677e6c084015b0d562f9382b53c2d9b0c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c88f8188f607e5508bf087e230b1e8e70e92aab7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] では、[オブジェクト エクスプローラーの詳細] ペインが既定で表示されます。 オブジェクト エクスプローラーが表示されていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックするか、 **F7**キーを押します。  
   
@@ -76,9 +74,9 @@ ms.lasthandoff: 06/22/2017
   
 プロパティ値をクリップボードにコピーするには、次のキーボード キーの組み合わせを使用します。  
   
--   Ctrl+C を押すと、プロパティ値がコピーされます。  
+-   Ctrl</localizedText> + <localizedText>C</localizedText> を押すと、プロパティ値がコピーされます。  
   
--   Ctrl+Shift+C を押すと、プロパティ名とプロパティ値がタブで区切られてコピーされます。  
+-   Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>C</localizedText> を押すと、プロパティ名とプロパティ値がタブで区切られてコピーされます。  
   
 すべてのプロパティ、またはすべてのプロパティと名前をクリップボードにコピーするには、[オブジェクト エクスプローラーの詳細] プロパティ ペインの右クリック メニューを使用します。  
   
@@ -105,4 +103,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)  
   
-

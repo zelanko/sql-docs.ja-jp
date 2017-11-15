@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] の [ヘルプ] メニューでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
     後からアクセスしやすくするために、ユーザー トピックのブックマークを格納します。  
   
-[ヘルプに関するヘルプ] \([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] を選択してください。  
+[ヘルプに関するヘルプ] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] を選択してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  
@@ -60,9 +58,9 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>[操作方法] ページから SQL Server コミュニティにアクセスするには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] の **[ヘルプ]** メニューの **[カテゴリから検索]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]の **[ヘルプ]** メニューの **[カテゴリから検索]**をクリックします。  
   
-2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] の **[操作方法]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
+2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] **[カテゴリから検索]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] を実行しているコンピューターは、Web に直接接続している必要があります。  
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
   
 2.  **[次を使用してヘルプを表示する]** ボックスで **[統合ヘルプ ビューアー]**をクリックします。  
   
-

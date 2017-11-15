@@ -5,22 +5,20 @@ ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 9b477c4c755e98d5aaae6ba92f4a67ff4d02d190
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 6a1531fb335269f3b02b512a75750ebb188c82c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
@@ -192,7 +190,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 
 - MFA を使用したユニバーサル認証を使用する Azure AD 認証では、次の SSMS 機能はサポートされていません。
   - **新しいテーブル/ビュー** デザイナーが古いスタイルのログイン プロンプトを表示して、Azure AD の認証で機能しません。
-  - [**上位 200 行を編集**] 機能は、Azure AD 認証をサポートしません。
+  - **[上位 200 行を編集]** 機能は、Azure AD 認証をサポートしません。
   - **登録済みサーバー** コンポーネントは、Azure AD 認証をサポートしません。
   - **データベース エンジン チューニング アドバイザー**は、Azure AD 認証でサポートされていません。 ユーザーに表示されるエラー メッセージが有益ではないという既知の問題があります。*Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database.(DTAClient)* (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
 
@@ -719,4 +717,3 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 すべての SQL Server Management Studio ダウンロードの一覧については、「[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)」を検索してください。  
   
 SQL Server Management Studio の最新リリースについては、「[SQL Server Management Studio &#40;SSMS&#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」をご覧ください。  
-

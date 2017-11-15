@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +13,16 @@ f1_keywords:
 - vdt.dlgbox.saveincomplete
 - vdtsql.chm:98831
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4cba4325958e8f96f524889acaee6f1cbb89bdfb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 25036c1b2e6ffef3108fe409128d38f4552528a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>[保存前の通知] ダイアログ ボックス (Visual Database Tools)
 このダイアログ ボックスは、テーブルへ変更を保存するときにエラーが発生した場合に表示されます。 このダイアログ ボックスには、データベースに正常に保存されたオブジェクト、保存されなかったオブジェクト、および発生したエラーが一覧表示されます。  
@@ -33,4 +31,3 @@ ms.lasthandoff: 06/22/2017
 **[テキスト ファイルを保存]**  
 **[上書き保存]** ダイアログ ボックスが表示され、エラー情報の一覧を含むテキスト ファイルの保存場所を指定するように要求されます。 このファイルは、正常に保存されたデータベースへの変更、およびエラーのために保存できなかった変更を記録しています。  
   
-

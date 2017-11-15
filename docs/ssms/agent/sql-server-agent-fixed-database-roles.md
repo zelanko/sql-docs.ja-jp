@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ccb75de64c08f26932a26af3c1c4b9d5a17d11a5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a8b2d1ccf779150f478702870689c359af4b0182
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] には、次の **msdb** データベースの固定データベース ロールが用意されています。これらのロールを使用することで、管理者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントへのアクセスをより細かく制御できます。 特権レベルの低いロールから順に、次に示します。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 06/22/2017
 |操作|演算子|ローカル ジョブ<br /><br />(所有しているジョブのみ)|ジョブ スケジュール<br /><br />(所有しているスケジュールのみ)|プロキシ|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
 |作成/変更/削除|いいえ|可<br /><br />ジョブの所有権は変更できません。|可|いいえ|  
-|リストの表示 (列挙)|可<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|可|はい|可<br /><br />プロキシのリストは、Management Studio の **[ジョブ ステップのプロパティ]** ダイアログ ボックスにのみ表示できます。|  
+|リストの表示 (列挙)|可<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|可|可|可<br /><br />プロキシのリストは、Management Studio の **[ジョブ ステップのプロパティ]** ダイアログ ボックスにのみ表示できます。|  
 |有効化/無効化|いいえ|はい|可|適用なし|  
 |プロパティの表示|いいえ|はい|可|いいえ|  
 |実行/停止/開始|適用なし|可|適用なし|適用なし|  
@@ -75,9 +73,9 @@ ms.lasthandoff: 06/22/2017
 |操作|演算子|ローカル ジョブ|マルチサーバー ジョブ|ジョブ スケジュール|プロキシ|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
 |作成/変更/削除|いいえ|可 (所有しているジョブのみ)<br /><br />ジョブの所有権は変更できません。|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
-|リストの表示 (列挙)|可<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|可|はい|はい|可<br /><br />プロキシのリストは、Management Studio の **[ジョブ ステップのプロパティ]** ダイアログ ボックスにのみ表示できます。|  
+|リストの表示 (列挙)|可<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|可|可|可|可<br /><br />プロキシのリストは、Management Studio の **[ジョブ ステップのプロパティ]** ダイアログ ボックスにのみ表示できます。|  
 |有効化/無効化|いいえ|可 (所有しているジョブのみ)|いいえ|可 (所有しているスケジュールのみ)|適用なし|  
-|プロパティの表示|いいえ|はい|はい|可|いいえ|  
+|プロパティの表示|いいえ|はい|可|可|いいえ|  
 |プロパティの編集|いいえ|可 (所有しているジョブのみ)|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |実行/停止/開始|適用なし|可 (所有しているジョブのみ)|いいえ|適用なし|適用なし|  
 |ジョブ履歴の表示|適用なし|可|可|適用なし|適用なし|  
@@ -99,9 +97,9 @@ ms.lasthandoff: 06/22/2017
 |操作|オブジェクト エクスプローラーには|演算子|ローカル ジョブ|マルチサーバー ジョブ|ジョブ スケジュール|プロキシ|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |作成/変更/削除|いいえ|いいえ|可 (所有しているジョブのみ)<br /><br />ジョブの所有権は変更できません。|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
-|リストの表示 (列挙)|可|可<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|可|はい|はい|可|  
+|リストの表示 (列挙)|可|可<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|可|可|可|可|  
 |有効化/無効化|いいえ|いいえ|可<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_job** を使用し、 **@enabled** および **@job_id** (または **@job_name**) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|いいえ|可<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_schedule** を使用し、 **@enabled** および **@schedule_id** (または **@name**) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|適用なし|  
-|プロパティの表示|可|はい|はい|はい|はい|可|  
+|プロパティの表示|可|可|可|可|可|可|  
 |プロパティの編集|いいえ|いいえ|可 (所有しているジョブのみ)|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |実行/停止/開始|適用なし|適用なし|可|いいえ|適用なし|適用なし|  
 |ジョブ履歴の表示|適用なし|適用なし|可|可|適用なし|適用なし|  
@@ -118,4 +116,3 @@ ms.lasthandoff: 06/22/2017
 [sp_notify_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/c440f5c9-9884-4196-b07c-55d87afb17c3)  
 [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/en-us/237f9bad-636d-4262-9bfb-66c034a43e88)  
   
-
