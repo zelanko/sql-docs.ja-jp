@@ -5,26 +5,24 @@ ms.date: 07/14/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+f1_keywords: SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "13"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 569eea78d5270e680caa81557585bfb817d3bd13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="join-a-role"></a>ロールの追加
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインおよびデータベース ユーザーにロールを割り当てる方法について説明します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で権限を効率的に管理するには、ロールを使用します。 ロールに権限を割り当て、そのロールに対してユーザーとログインの追加および削除を行います。 ロールを使用すると、権限をユーザーごとに個別に管理する必要がありません。  
@@ -80,9 +78,9 @@ ms.lasthandoff: 06/22/2017
   
 4.  編集するロールを右クリックし、 **[プロパティ]**をクリックします。  
   
-5.  **サーバーロールのプロパティ –***server_role_name* ダイアログ ボックスの **[メンバー]** ページで、 **[追加]**をクリックします。  
+5.  **server_role_name**** ダイアログ ボックスの **メンバー** ページで、 **追加**をクリックします。  
   
-6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]**に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **サーバーロールのプロパティ –***server_role_name* ダイアログ ボックスに戻ります。  
+6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]**に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **OK** をクリックして **server_role_name**** ダイアログ ボックスに戻ります。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -102,9 +100,9 @@ ms.lasthandoff: 06/22/2017
   
 7.  編集するロールを右クリックし、 **[プロパティ]**をクリックします。  
   
-8.  **データベースロールのプロパティ –***database_role_name* ダイアログ ボックスの **[全般]** ページで、 **[追加]**をクリックします。  
+8.  **database_role_name**** ダイアログ ボックスの **全般** ページで、 **追加**をクリックします。  
   
-9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]**に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **データベースロールのプロパティ –***database_role_name* ダイアログ ボックスに戻ります。  
+9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]**に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **OK** をクリックして **database_role_name**** ダイアログ ボックスに戻ります。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -146,4 +144,3 @@ ms.lasthandoff: 06/22/2017
  [アプリケーション ロール](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
-

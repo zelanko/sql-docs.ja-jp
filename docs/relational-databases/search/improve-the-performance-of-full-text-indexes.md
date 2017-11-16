@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b90d942aa6c056a6a656b1bc2c835e51f468f676
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 このトピックでは、フルテキスト インデントとクエリのパフォーマンス低下の一般的な原因をいくつか説明します。 また、このような問題を軽減し、パフォーマンスを改善する提案もいくつか紹介します。
@@ -150,7 +148,7 @@ ms.lasthandoff: 08/18/2017
   
  `F = 8*10*8=640`  
   
- 次の計算では、最適な **max server memory**値 (*M*) を算出します。 *こ*のシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192`です。  
+ 次の計算では、最適な **max server memory**値 (*M*) を算出します。 **このシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192`です。  
   
  `M = 8192-640-500=7052`  
   
@@ -222,4 +220,3 @@ Full-Text Engine では、フルテキスト インデックスを作成する�
  [フルテキスト インデックスの作成のトラブルシューティング](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
   
   
-

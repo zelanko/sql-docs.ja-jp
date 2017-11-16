@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
   **データ層アプリケーションの登録ウィザード** または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース (**では** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]データベース) に登録します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **DAC のアップグレード:**  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、 [PowerShell の使用](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
  登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのマネージ インスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **の** details page.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>オブジェクトの検証  
- **Checking**  *SchemaName* **.** *ObjectName* **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName***.***ObjectName* は、現在検証されているオブジェクトを示します。  
+ ****  *SchemaName* **を実行できません。** *ObjectName* **を実行できません。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName***.***ObjectName* は、現在検証されているオブジェクトを示します。  
   
  **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   
@@ -185,4 +183,3 @@ $registerunit.Register()
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

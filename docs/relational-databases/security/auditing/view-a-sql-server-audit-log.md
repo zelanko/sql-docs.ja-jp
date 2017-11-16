@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - viewing audit logs
 - logs [SQL Server], audit
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: caff5bab9e303b299a31005b1add0f0c807f6ef5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "12"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 17285d9493a8ad4507d973f2df218915f67e63e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 監査ログの表示
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で SQL Server 監査ログを表示する方法について説明します。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  **[監査]** フォルダーを展開します。  
   
-3.  表示する監査ログを右クリックし、 **[監査ログの表示]**をクリックします。 [**ジョブ カテゴリの管理***server_name*] ダイアログ ボックスが開きます。 詳細については、「 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
+3.  表示する監査ログを右クリックし、 **[監査ログの表示]**をクリックします。 **server_name**** ダイアログ ボックスが開きます。 詳細については、「 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
   
 4.  完了したら、 **[閉じる]**をクリックします。  
   
