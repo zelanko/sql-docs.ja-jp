@@ -3,28 +3,33 @@ title: "ページとエクステントのアーキテクチャ ガイド | Micro
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc9b8e32bc6848547b8833841876b74ca25cc27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/20/2017
+
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ページは、SQL Server のデータ ストレージの基本単位です。 エクステントは物理的に連続する 8 ページをまとめたものです。 エクステントを使用すると、ページを効率的に管理できます。 このガイドでは、すべてのバージョンの SQL Server でページとエクステントの管理に使用されるデータ構造について説明します。 ページとエクステントのアーキテクチャを理解することは、効率的に実行されるデータベースを設計、開発するうえで重要です。
 
@@ -164,3 +169,4 @@ DCM ページと BCM ページ間の間隔は、GAM ページと SGAM ページ�
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

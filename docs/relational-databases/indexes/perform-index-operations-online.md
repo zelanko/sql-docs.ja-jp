@@ -12,22 +12,24 @@ helpviewer_keywords:
 - online index operations
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.suite: SQL
-ms.prod_service: database-engine, sql-database, sql-data-warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: b4be319efe2dd1b6ecdeca915f3fe1e437782b17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2a7e07e2af46446f9271eb82d1dae13f6da2145
+ms.contentlocale: ja-jp
+ms.lasthandoff: 10/06/2017
+
 ---
 # <a name="perform-index-operations-online"></a>オンラインでのインデックス操作の実行
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスをオンラインで作成、再構築、または削除する方法について説明します。 ONLINE オプションにより、このようなインデックス操作中に、基になるテーブルやクラスター化インデックス データ、および関連付けられた任意の非クラスター化インデックスへの同時ユーザー アクセスが可能になります。 たとえば、あるユーザーがクラスター化インデックスを再構築している最中に、そのユーザーと他のユーザーが基になるデータの更新やクエリを続行できます。 クラスター化インデックスの構築や再構築などのデータ定義言語 (DDL) 操作をオフラインで実行するときは、これらの操作により、基になるデータや関連付けられたインデックスに排他ロックがかけられます。 このため、インデックス操作が完了するまで、基になるデータの変更やクエリを実行できません。  
   
@@ -120,3 +122,4 @@ ms.lasthandoff: 11/09/2017
  詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
   
+

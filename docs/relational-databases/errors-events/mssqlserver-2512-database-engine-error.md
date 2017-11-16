@@ -2,26 +2,33 @@
 title: MSSQLSERVER_2512 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 2512 (Database Engine error)
+helpviewer_keywords:
+- 2512 (Database Engine error)
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: e6086dd0464cc7937a4e48a383fcba26bbc5831a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1010301cae338b1f6d1544f48541ea5237297381
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
   
@@ -60,3 +67,4 @@ ms.lasthandoff: 11/09/2017
 ### <a name="results-of-running-repair-options"></a>REPAIR オプションの実行結果  
 レコードが非実体レコードである場合またはインデックスが一意でない場合は、DBCC によるインデックスの再構築でこの問題を修復できます。 これ以外の場合、REPAIR により、必要に応じてページ *P_ID2* のスロット *SLOT2* を削除するか、非実体スロットとして設定するか、いずれかの処理が行われます。  
   
+

@@ -2,10 +2,14 @@
 title: "一括インポート中の NULL の保持または既定値の使用 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 23e50a8144b21194aca61100c49bf35fff9b776e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 74e0dabe8b6691e467e82d7267c40ef578d84490
+ms.contentlocale: ja-jp
+ms.lasthandoff: 10/04/2017
+
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL の保持または既定値の使用 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 既定では、データをテーブルにインポートするとき、 [bcp](../../tools/bcp-utility.md) コマンドと [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントによって、テーブルの列に対して定義されているすべての既定値が監視されます。  たとえば、データ ファイルに NULL フィールドがある場合は、NULL 値の代わりにその列の既定値が読み込まれます。  [bcp](../../tools/bcp-utility.md) コマンドと [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの両方で、NULL 値を保持することを指定することもできます。
 
@@ -358,3 +363,4 @@ SELECT * FROM TestDatabase.dbo.myNulls;
  [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   
   
+

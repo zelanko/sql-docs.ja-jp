@@ -2,10 +2,14 @@
 title: "非クラスター化インデックスの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f0133b0a3975c46f4672d87be0b6b92f3c002d5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-nonclustered-indexes"></a>非クラスター化インデックスの作成
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して非クラスター化インデックスを作成できます。 非クラスター化インデックスは、テーブルに格納されているデータとは別個の、選択された 1 つまたは複数の列を並べ替えるインデックス構造です。 非クラスター化インデックスを使用すると、基になるテーブルを検索するよりも迅速にデータを検索できるようになります。クエリの結果が非クラスター化インデックスのデータのみによって得られたり、非クラスター化インデックスによって基になるテーブル内の行を [!INCLUDE[ssDE](../../includes/ssde-md.md)] に対して指定できたりする場合があります。 一般に、非クラスター化インデックスは、クラスター化インデックスで対応できない、頻繁に使用されるクエリのパフォーマンスを向上させたり、クラスター化インデックスのないテーブル (ヒープと呼ばれます) 内の行を探すために作成します。 1 つのテーブルまたはインデックス付きビューに複数の非クラスター化インデックスを作成できます。  
   
@@ -137,3 +142,4 @@ ms.lasthandoff: 11/09/2017
  詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
   
+

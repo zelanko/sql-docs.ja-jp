@@ -1,28 +1,34 @@
 ---
 title: "クエリ ストアがデータを収集するしくみ | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/13/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Query Store, data collection
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7374c44e653391e043dc85ae87808d3998b3527
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   クエリ ストアは継続的に **フライト データ レコーダー** の役割を果たし、クエリおよびプランに関連するコンパイルおよびランタイムの情報を収集します。 クエリ関連のデータは内部テーブルに保存され、一連のビューでユーザーに表示されます。  
   
@@ -59,7 +65,7 @@ ms.lasthandoff: 11/09/2017
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `DATA_FLUSH_INTERVAL_SECONDS` ステートメントの `SET QUERY_STORE` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 SSMS Query Store (SSMS クエリ ストア) ダイアログ ボックスで  **データのフラッシュ間隔 (分)** を入力できます。これは秒に変換されます。  
+ I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `DATA_FLUSH_INTERVAL_SECONDS` ステートメントの `SET QUERY_STORE` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 [SSMS Query Store (SSMS クエリ ストア)] ダイアログ ボックスで [ **データのフラッシュ間隔 (分)**] を入力できます。これは秒に変換されます。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
@@ -77,3 +83,4 @@ ms.lasthandoff: 11/09/2017
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

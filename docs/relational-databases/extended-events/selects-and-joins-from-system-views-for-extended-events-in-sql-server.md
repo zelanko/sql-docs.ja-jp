@@ -2,28 +2,32 @@
 title: "SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f74637bd0e696ae4fd17d54f3826181e5d2ecf29
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 この記事では、Microsoft SQL Server および Azure SQL Database クラウド サービスの拡張イベントに関連するシステム ビューの 2 つのセットについて説明します。 以下のことについて説明します。
@@ -118,12 +122,12 @@ ms.lasthandoff: 11/09/2017
 
 SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]** > **[セッション]**を右クリックして **[新しいセッション]** > **[管理]**」をご覧ください。
 
-大きい **[新しいセッション]** ダイアログの最初の **[全般]**セクションで、 **[サーバーの起動時にイベント セッションを開始する]**がオンになっています。
+大きい **[新しいセッション]** ダイアログの最初の **[全般]** セクションで、**[サーバーの起動時にイベント セッションを開始する]** がオンになっています。
 
 ![[新しいセッション] > [全般]、[サーバーの起動時にイベント セッションを開始する]](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-次に、 **[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
+次に、**[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
 
 ![[新しいセッション] > [イベント]、[グローバル フィールド (アクション)]](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
@@ -137,12 +141,12 @@ SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 
 ![[新しいセッション] > [イベント]、[フィルター (述語)] フィールド (アクション)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-次に、 **[データ ストレージ]** セクションでは、 **[event_file]** がターゲットとして選択されています。 さらに、 **[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
+次に、**[データ ストレージ]** セクションでは、**[event_file]** がターゲットとして選択されています。 さらに、**[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
 
 ![[新しいセッション] > [データ ストレージ]、eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-最後に、 **[詳細]** セクションでは、 **[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
+最後に、**[詳細]** セクションでは、**[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
 
 ![[新しいセッション] > [詳細]、[ディスパッチの最大待機時間]](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -920,5 +924,6 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
+
 
 

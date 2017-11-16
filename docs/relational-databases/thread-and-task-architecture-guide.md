@@ -3,28 +3,33 @@ title: "スレッドおよびタスクのアーキテクチャ ガイド | Micro
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f2ded3d40a1f17980507fdf92d05e3517f0bc54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 スレッドは、同時に実行される複数の実行パスにアプリケーション ロジックを分割できるオペレーティング システムの機能です。 この機能は、複雑なアプリケーションに同時に実行できるタスクが多数ある場合に役立ちます。 
 
@@ -128,5 +133,6 @@ CPU を追加しても、SQL Server で自動的にその CPU の使用が開始
 |SQL Server エージェント   |Sqlagent.exe   |いいえ |  
 |[SQL Server Management Studio]   |Ssms.exe   |いいえ |  
 |SQL Server セットアップ   |Setup.exe  |いいえ |  
+
 
 

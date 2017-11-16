@@ -1,28 +1,34 @@
 ---
 title: "FOR JSON が SQL Server データ型を JSON データ型に変換する方法 (SQL Server) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-json
+ms.suite: sql
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FOR JSON, data type conversion
+helpviewer_keywords:
+- FOR JSON, data type conversion
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1744d9300d7a27087ebac6d7ef3f5dc00805750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: d866cc385b2c44d4594f4d4f8249df6f84ac48f2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON が SQL Server データ型を JSON データ型に変換する方法 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   **FOR JSON** 句は、次の規則に従って、JSON 出力で SQL Server データ型を JSON 型に変換します。  
   
@@ -43,3 +49,4 @@ ms.lasthandoff: 11/09/2017
  [FOR JSON を使用してクエリ結果を JSON として書式設定する &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
   
   
+

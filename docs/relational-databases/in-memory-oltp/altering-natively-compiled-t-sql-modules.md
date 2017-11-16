@@ -1,27 +1,32 @@
 ---
 title: "ネイティブ コンパイル T-SQL モジュールの変更 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf925251acede3f7d1139c9d152c392c59ae7b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4696039c56ebf5f1fd6ea440cd27da84721f35b9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールの変更
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (およびそれ以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、ALTER ステートメントを使用して、ネイティブ コンパイル ストアド プロシージャおよびスカラー UDF やトリガーなどの他のネイティブ コンパイル T-SQL モジュールに対して、ALTER 操作を実行できます。  
   
@@ -83,3 +88,4 @@ GO
 ```  
   
   
+

@@ -2,26 +2,31 @@
 title: "インメモリ OLTP を使用した JSON の処理の最適化 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-json
+ms.suite: sql
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baceef80e5e24975b3144d6e239c6fb70fbf1c16
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>インメモリ OLTP を使用した JSON の処理の最適化
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 SQL Server と Azure SQL Database では、JSON 形式のテキストを使用できます。 JSON データを処理するクエリのパフォーマンスを上げるには、標準の文字列型の列 (NVARCHAR 型) を使用してメモリ最適化テーブルに JSON ドキュメントを格納します。 JSON データをメモリ最適化テーブルに格納すると、ロックはされることがなく、データはインメモリでアクセスされるので、クエリのパフォーマンスが向上します。
 
@@ -166,3 +171,4 @@ END
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
 多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。
+

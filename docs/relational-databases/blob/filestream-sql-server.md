@@ -2,10 +2,14 @@
 title: FILESTREAM (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 10/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6bdd184af34ba6738fe58b29b648dbe9ff9f6797
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 404dcc9a6be22c8a56c2a2311fb28062c280af64
+ms.contentlocale: ja-jp
+ms.lasthandoff: 10/18/2017
+
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
 
 FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベースのアプリケーションで非構造化データ (ドキュメントやイメージなど) をファイル システムに格納できます。 これにより、ファイル システムの豊富なストリーミング API と高いパフォーマンスをアプリケーションで活用できるほか、非構造化データとそれに対応する構造化データの間でトランザクションの一貫性も維持されます。  
@@ -167,3 +172,4 @@ FILESTREAM ハンドルを使用してメモリ マップ表示 (メモリ マ�
 ## <a name="related-content"></a>関連コンテンツ
 
 [FILESTREAM と SQL Server のその他の機能との互換性](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
+

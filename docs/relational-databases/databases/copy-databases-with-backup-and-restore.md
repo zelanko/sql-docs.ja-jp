@@ -2,10 +2,14 @@
 title: "バックアップと復元によるデータベースのコピー | Microsoft Docs"
 ms.custom: 
 ms.date: 07/15/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], copying databases
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 57e704bc1ed89cd5b877fab217cd75f6a665421b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa3c7efcaa066953595525819686c612b5a9aee5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンを使用して作成したユーザー データベースのバックアップを復元して、新しいデータベースを作成できます。 ただし、以前のバージョンの **を使用して作成された**master **、** model **、および** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で復元することはできません。 また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のバックアップを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で復元することもできません。  
   
@@ -143,3 +148,4 @@ ms.lasthandoff: 11/09/2017
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   
+

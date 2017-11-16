@@ -1,27 +1,32 @@
 ---
 title: "メモリ最適化テーブルの変更 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb499975e6429ac0a54f60cbfca6e72b0290f946
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
+ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   メモリ最適化テーブルのスキーマとインデックスの変更は、ALTER TABLE ステートメントを使用して実行できます。 SQL Server 2016 と Azure SQL Database では、メモリ最適化テーブルに対する ALTER TABLE 操作は OFFLINE です。つまり、操作が行われている間、テーブルのクエリを行うことはできません。 データベース アプリケーションは実行を継続できます。また、テーブルにアクセスする操作は、変更プロセスが完了するまでブロックされます。 1 つの ALTER TABLE ステートメントに、複数の ADD、DROP、または ALTER 操作を組み合わせることができます。
   
@@ -172,4 +177,5 @@ GO
 
 [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
 

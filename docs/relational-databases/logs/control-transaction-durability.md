@@ -2,29 +2,34 @@
 title: "トランザクションの持続性の制御 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-transaction-log
+ms.suite: sql
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 70f830b3e94781733cf18ea638912e5813ffeb90
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="control-transaction-durability"></a>トランザクションの持続性の制御
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] におけるトランザクションのコミットには、完全持続性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値、または遅延持続性 (低速コミットとも呼ばれます) が適用されます。    
     
@@ -92,7 +97,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="how-to-control-transaction-durability"></a>トランザクションの持続性を制御する方法    
     
-###  <a name="bkmk_DbControl"></a> データベース レベルの制御    
+###  <a name="bkmk_DbControl"></a> Database level control    
  DBA は次のステートメントを使用して、トランザクションの遅延持続性をデータベースに対してユーザーが使用できるかどうかを制御できます。 遅延持続性の設定は ALTER DATABASE で設定する必要があります。    
     
 ```tsql    
@@ -108,7 +113,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  この設定では、データベースにコミットされるすべてのトランザクションに遅延持続性が適用されます。 トランザクションで完全持続性 (DELAYED_DURABILITY = OFF) が指定された場合も、指定がまったく行われていない場合も、遅延持続性トランザクションになります。 データベースに対してトランザクションの遅延持続性が役立ち、アプリケーション コードの変更を行わない場合に、この設定を使用できます。    
     
-###  <a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ    
+###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
  次のコードは、ATOMIC ブロック内で使用します。    
     
 ```tsql    
@@ -143,7 +148,7 @@ END
 |**DELAYED_DURABILITY = OFF**|ATOMIC ブロックで、新しい完全持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
 |**DELAYED_DURABILITY = ON**|ATOMIC ブロックで、新しい遅延持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 構文は、トランザクションの遅延持続性を適用できるように拡張されています。 DELAYED_DURABILITY がデータベース レベルで DISABLED または FORCED に設定されている場合 (上記を参照)、この COMMIT オプションは無視されます。    
     
 ```tsql    
@@ -199,7 +204,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **ログ バックアップ**    
  バックアップに含まれるのは、持続可能な状態になったトランザクションのみです。    
     
-##  <a name="bkmk_DataLoss"></a> データが失われるケース    
+##  <a name="bkmk_DataLoss"></a> When can I lose data?    
  遅延持続性をテーブルに実装する場合、状況によってはデータが失われる可能性があることを理解する必要があります。 一切のデータ損失を許容できない場合は、テーブルに対して遅延持続性は使用しないでください。    
     
 ### <a name="catastrophic-events"></a>重大なイベント    
@@ -212,3 +217,4 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  [メモリ最適化テーブルでのトランザクション](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
+

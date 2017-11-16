@@ -2,9 +2,12 @@
 title: "メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、限られた量のアクティブなデータがメモリ最適化テーブルに保持される一方、アクセス頻度の低いデータはディスクで処理される、というパターンをサポートします。 通常、これはデータが **datetime** キーに基づいて格納されるシナリオです。  
   

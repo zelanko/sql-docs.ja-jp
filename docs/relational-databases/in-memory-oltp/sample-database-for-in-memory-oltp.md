@@ -2,9 +2,12 @@
 title: "インメモリ OLTP のサンプル データベース | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -23,6 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
 ## <a name="overview"></a>概要  
  このサンプルでは、インメモリ OLTP 機能を紹介します。 このサンプルで取り上げるのは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、インメモリ OLTP のパフォーマンス上の利点も示します。  

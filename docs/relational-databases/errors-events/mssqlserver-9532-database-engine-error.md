@@ -2,26 +2,33 @@
 title: MSSQLSERVER_9532 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 9532 (Database Engine error)
+helpviewer_keywords:
+- 9532 (Database Engine error)
 ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: d746a185e3bb99828f65bda13be12280a23415c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8c88ac3f700fa2f91a868f7a7fb1590d4119d0cc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver9532"></a>MSSQLSERVER_9532
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
   
@@ -40,3 +47,4 @@ ms.lasthandoff: 11/09/2017
 ## <a name="user-action"></a>ユーザーの操作  
 指定された値は暗黙的に変換することができなかったため、無効なエントリとなる可能性があります。 エラーを修正して再試行してください。 値が正しい場合は、列セットではなく個々の列を使用するようにステートメントを変更します。 これにより、値を適切なデータ型に明示的にキャストすることができます。  
   
+

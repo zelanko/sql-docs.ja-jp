@@ -2,26 +2,31 @@
 title: "JSON ドキュメントの SQL Server へのインポート | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-json
+ms.suite: sql
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dfd93090f4cec421d57ab993fc4e0d6f587ab426
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 このトピックでは、SQL Server に JSON ファイルをインポートする方法について説明します。 現在、多数の JSON ドキュメントがファイルに保存されています。 たとえば、アプリケーションは JSON ファイルに情報を記録し、センサーは JSON ファイルに保存される情報を生成します。 ファイルに保存されている JSON データ読み取り、そのデータを SQL Server に読み込んで分析できることが重要です。
 
@@ -126,7 +131,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 OPENROWSET の使用の詳細と例については、「[Loading files from Azure Blob Storage into Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)」(Azure Blob Storage のファイルを Azure SQL Database に読み込む) をご覧ください。
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>JSON ドキュメントを行と列に解析する
-JSON ファイルを 1 つの値として読み取るのではなく、分析して、ファイル内の書籍とそのプロパティを行と列で返すこともできます。 次の例では、書籍の一覧を格納している[こちらのサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)の JSON ファイルを使います。
+JSON ファイルを 1 つの値として読み取るのではなく、解析して、ファイル内の書籍とそのプロパティを行と列で返すこともできます。 次の例では、書籍の一覧を格納している[こちらのサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)の JSON ファイルを使います。
 
 ### <a name="example-1"></a>例 1
 最も簡単な例では、単にファイルから一覧全体を読み込むことができます。 
@@ -175,4 +180,5 @@ SELECT book.*
   
 ## <a name="see-also"></a>参照
 [OPENJSON を使用して JSON データを行と列に変換する](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
+
 

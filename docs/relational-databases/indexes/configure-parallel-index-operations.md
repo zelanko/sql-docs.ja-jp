@@ -2,10 +2,14 @@
 title: "並列インデックス操作の構成 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - MAXDOP index option, parallel index operations
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24aaca5d7f8a459c353fe40d552cd6afe3e5f8fd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3e68d3b1d6d08153e24ec3afdb5102e5c1ae6c46
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="configure-parallel-index-operations"></a>並列インデックス操作の構成
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、並列処理の最大限度に関する定義と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してこの設定を変更する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 以上を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作、並べ替え操作、インデックス操作などの実行に、複数のプロセッサを使用する場合があります。 1 つのインデックス ステートメントの実行に使用されるプロセッサの数は、 [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 構成オプション、現在のワークロード、およびインデックス統計によって決まります。 max degree of parallelism オプションによって、並列プランの実行で使用するプロセッサの最大数が決まります。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によりシステムがビジー状態であることが検出されると、ステートメントの実行が開始される前に、インデックス操作の並列処理の次数が自動的に削減されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、パーティション分割されていないインデックスの先頭のキー列で個々の値の数が制限されている場合や、個々の値の頻度が大きく異なる場合に、並列処理の次数を減らすこともできます。  
   
@@ -145,3 +150,4 @@ ms.lasthandoff: 11/09/2017
  詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
   
+

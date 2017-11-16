@@ -1,7 +1,7 @@
 ---
 title: "DBCC OPENTRAN (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN はアクティブなトランザクションを識別するのに役立ち、ログの切り捨てを防ぐ目的でも使用できます。 DBCC OPENTRAN によって、指定したデータベースのトランザクション ログ内に存在する最も古いアクティブ トランザクション、および (存在する場合は) 最も古い分散型と非分散型のレプリケートされたトランザクションに関する情報が表示されます。 ログ内にアクティブ トランザクションが存在する場合、またはデータベースにレプリケーション情報が存在する場合にのみ、結果が表示されます。 ログ内にアクティブ トランザクションがない場合は、情報メッセージが表示されます。
   

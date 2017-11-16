@@ -2,10 +2,14 @@
 title: "インデックスの SORT_IN_TEMPDB オプション | Microsoft Docs"
 ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 866d681c01ce1ce72f9b63ee6a6003d2d40e5260
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fa7ac1cb00252f855ba71b39fbccbe901365b00
+ms.contentlocale: ja-jp
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="sortintempdb-option-for-indexes"></a>インデックスの SORT_IN_TEMPDB オプション
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   インデックスを作成または再構築する際には、SORT_IN_TEMPDB オプションを ON に設定することにより、インデックスの構築に使用する中間の並べ替え結果の格納場所として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が **tempdb** を使用するように指定できます。 このオプションを使用すると、インデックスの作成に使用する一時ディスク領域は増えますが、 **tempdb** がユーザー データベースとは異なるディスク セットにある場合、インデックスの作成または再構築に必要な時間を短縮できることがあります。 **tempdb**の詳細については、「 [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)」を参照してください。  
   
@@ -89,3 +94,4 @@ ms.lasthandoff: 11/09/2017
  [インデックス DDL 操作に必要なディスク領域](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
   
+
