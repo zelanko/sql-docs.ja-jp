@@ -2,26 +2,31 @@
 title: "PowerShell を使用した Always Encrypted キーの交換 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c3ac81162f54adbbbc5256f622b465cfc08425b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 9bec2f6ad7f48cd881a2de13b14191e9deb2f851
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell を使用した Always Encrypted キーの交換
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 この記事では、SqlServer PowerShell モジュールを使用し、Always Encrypted キーを交換する手順について説明します。 Always Encrypted に SqlServer PowerShell を使用する方法については、「 [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)」を参照してください。
 
@@ -373,4 +378,5 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
 - [Always Encrypted (データベース エンジン)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 関連のブログ](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
 

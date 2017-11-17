@@ -2,27 +2,33 @@
 title: "トランザクション パブリケーションの更新可能なサブスクリプションの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: updateable transactional subscriptions, T-SQL
+helpviewer_keywords:
+- updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fdd09301555c3515603af73854fb8cd5a3ebbe79
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7e21ddca2057879f3f9cde2bf5decf3c97944269
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-updatable-subscription-to-transactional-publication"></a>トランザクション パブリケーションの更新可能なサブスクリプションの作成
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 2012 から 2016 のバージョンでサポートされています。  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
@@ -278,4 +284,5 @@ GO
 [sqlcmd でのスクリプト変数の使用](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
 
 [トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+
 

@@ -3,28 +3,33 @@ title: "データベース エンジンの有効なアクセス許可の決定 |
 ms.custom: 
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 70359d3c8b34fabec496ad9fbc165bcc7d1707c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d21efb4495f786b6000fe0b8675fa042b4d2ca6e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 SQL Server データベース エンジンでは、さまざまなオブジェクトのアクセス許可が与えられます。このトピックでは、アクセス許可が与えられているユーザーを判断する方法について説明します。 SQL Server では、データベース エンジンのために 2 つのアクセス許可システムが実装されます。 固定ロールの古いほうのシステムでは、アクセス許可が事前構成されました。 SQL Server 2005 より、より柔軟で正確なシステムが利用できます。 (このトピックの情報は 2005 以降の SQL Server に適用されます。 SQL Server のバージョンによっては、利用できない種類のアクセス許可があります。)
 
@@ -160,4 +165,5 @@ REVERT;
 
 [データベース エンジンの権限の概要](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [チュートリアル : データベース エンジンの概要](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+
 

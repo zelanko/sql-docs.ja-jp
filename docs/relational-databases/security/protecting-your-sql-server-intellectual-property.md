@@ -3,28 +3,33 @@ title: "SQL Server の知的所有権の保護 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protecting intellectual property
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 363fa4744ca429f19e2c8dd2375146e616e85f85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
+
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server の知的所有権の保護
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ソフトウェア開発者から、どのようにすれば、顧客が [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] データ アプリケーションを分析したり、分解できないように、アプリケーションを配布できるかよく質問されます。 ここでの基本原則は、知的財産の保護は法的な問題であり、保護に関する記載は使用許諾契約にあるということです。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が他のユーザーが管理するコンピューターにインストールされている場合、ユーザーは元からそれを完全に管理することはできません。 
 
@@ -44,4 +49,5 @@ ms.lasthandoff: 11/09/2017
 
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)  
+
 
