@@ -1,11 +1,13 @@
 ---
 title: "列のマスター _ キー (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   データベース内の列マスター キー メタデータ オブジェクトを作成します。 保護に使用される外部キー ストアに格納されている、キーを表す列マスター _ キーのメタデータ エントリ (暗号化) 列の暗号化キーを使用する場合、 [Always Encrypted & #40";"データベース エンジン"&"#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)機能します。 キーのローテーションに関して複数の列マスター _ キーを許可します。セキュリティを強化するためにキーを定期的に変更します。 オブジェクト エクスプ ローラーを使用してキー ストアと、データベース内の対応するメタデータ オブジェクトの列マスター _ キーを作成することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または PowerShell。 詳細については、「 [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)です。  
   

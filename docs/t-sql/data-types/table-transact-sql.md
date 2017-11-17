@@ -3,8 +3,11 @@ title: "テーブル (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 後で処理できるように結果セットを格納するために使用できる特別なデータ型です。 **テーブル**は主に、テーブル値関数の結果セットとして返される行のセットの一時的なストレージを使用します。 型である関数および変数を宣言できます**テーブル**です。 **テーブル**変数は、関数、ストアド プロシージャ、およびバッチで使用できます。 型の変数を宣言する**テーブル**を使用して[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)です。
   

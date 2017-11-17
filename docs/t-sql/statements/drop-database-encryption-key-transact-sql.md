@@ -3,8 +3,11 @@ title: "データベース暗号化キーの削除 (TRANSACT-SQL) |Microsoft ド
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   透過的なデータベースの暗号化で使用されるデータベース暗号化キーを削除します。 透過的なデータベースの暗号化の詳細については、次を参照してください。 [Transparent Data Encryption & #40 です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   

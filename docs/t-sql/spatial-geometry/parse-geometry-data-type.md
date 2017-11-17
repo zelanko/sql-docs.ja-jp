@@ -3,8 +3,11 @@ title: "解析 (geometry データ型) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-geometry-data-type"></a>Parse (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 返します、 **geometry** Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現からのインスタンス。 `Parse()`等価[STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md)、spatial を想定している例外に ID (SRID) を参照 0 をパラメーターとして。 入力には、オプションとして Z (標高) 値と M (メジャー) 値が含まれる場合があります。
   

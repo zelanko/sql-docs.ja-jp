@@ -6,13 +6,17 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: BYHAM
-ms.service: na
+ms.service: 
+ms.component: t-sql
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.author: genemi
 ms.workload: t-sql
 ms.translationtype: MT
@@ -23,7 +27,7 @@ ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>新規または最近の更新: TRANSACT-SQL のドキュメント
-
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 
 ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。

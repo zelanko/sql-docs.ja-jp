@@ -3,8 +3,11 @@ title: "NULL および不明 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL および不明 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   NULL では、値が不明であることを示します。 Null 値では、空または 0 の値と異なるです。 2 つの NULL 値は等しいとは限りません。 各 NULL の値が不明であるために、2 つの null 値または null 値とその他の値の間の比較は不明な返します。  
   

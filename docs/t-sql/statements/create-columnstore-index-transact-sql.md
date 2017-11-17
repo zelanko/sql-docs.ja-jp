@@ -1,11 +1,13 @@
 ---
 title: "列ストア インデックス (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,9 +43,8 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/27/2017
 
 ---
-
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 行ストア テーブルをクラスター化列ストア インデックスに変換するか、非クラスター化列ストア インデックスを作成します。 OLTP ワークロードに効率的にリアルタイムの経営分析を実行する、またはデータ ウェアハウスのワークロードのデータの圧縮とクエリのパフォーマンスを向上させるためには、列ストア インデックスを使用します。  
   

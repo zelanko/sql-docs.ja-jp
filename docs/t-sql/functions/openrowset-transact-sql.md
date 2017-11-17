@@ -3,8 +3,11 @@ title: "OPENROWSET (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OLE DB データ ソースからリモート データへのアクセスに必要な、すべての接続情報をインクルードします。 これは、リンク サーバー内のテーブルにアクセスする代わりに、OLE DB を使用してリモート データに接続しアクセスする特別な方法です。 OLE DB データ ソースをより頻繁に参照する場合は、代わりにリンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。 `OPENROWSET`関数は、テーブル名の場合と同様、クエリの FROM 句で参照できます。 `OPENROWSET`関数は、の対象のテーブルとしても参照できます、 `INSERT`、 `UPDATE`、または`DELETE`ステートメントでは、OLE DB プロバイダーの機能により制限されます。 クエリは、複数の結果セットを返す可能性があります`OPENROWSET`最初の 1 つだけ返されます。  
   

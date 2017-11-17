@@ -3,8 +3,11 @@ title: "SYSUTCDATETIME (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 12/01/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返します、 **datetime2**いるコンピューターの日時を表す値のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 日付と時刻が UTC 時刻 (世界協定時刻) として返されます。 秒の小数部の有効桁数は 1 ～ 7 桁の範囲で指定できます。 既定の有効桁数は 7 桁です。  
   

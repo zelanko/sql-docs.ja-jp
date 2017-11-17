@@ -3,8 +3,11 @@ title: "ALTER DATABASE SET HADR (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (TRANSACT-SQL) の SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このトピックには、設定の ALTER DATABASE の構文が含まれています。[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]セカンダリ データベースでのオプションです。 1 つだけの SET HADR オプションは ALTER DATABASE ステートメントごとに許可します。 これらのオプションは、セカンダリ レプリカ上でのみサポートされます。  
   

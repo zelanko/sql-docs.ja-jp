@@ -3,8 +3,11 @@ title: "NEWSEQUENTIALID (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Windows が起動されてから、指定されたコンピューターで、この関数によりこれまでに生成されたどの GUID よりも大きい GUID を生成します。 Windows の再起動後、GUID は、より小さい値の範囲から始まることもありますが、グローバルに一意のままです。 GUID 列を行識別子 (ROWID) として使用する場合は、NEWSEQUENTIALID を使用すると、NEWID 関数を使用するよりも処理が高速になることがあります。 これは、NEWID 関数では、ランダムなアクティビティが発生し、使用されるキャッシュ データ ページが少なくなるためです。 また、NEWSEQUENTIALID を使用すると、データ ページとインデックス ページを完全に埋めることができます。  
   

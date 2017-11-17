@@ -2,9 +2,12 @@
 title: "外部リソース プール (TRANSACT-SQL) を削除 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>外部リソース プール (TRANSACT-SQL) を削除します。
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   外部プロセス用のリソースを定義するために使用、リソース ガバナーの外部リソース プールを削除します。 R Services 外部プールは`rterm.exe`、 `BxlServer.exe`、およびそれらにより生成された他のプロセスです。 外部リソース プールを使用して作成される[CREATE EXTERNAL RESOURCE POOL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-resource-pool-transact-sql.md)を使用して変更および[ALTER EXTERNAL RESOURCE POOL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-external-resource-pool-transact-sql.md).  
   

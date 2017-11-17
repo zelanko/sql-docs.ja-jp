@@ -3,8 +3,11 @@ title: "! = (等しくない) (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>いない Equal To (Transact SQL の場合)、感嘆符
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   一方の式がもう一方の式と等しくないかどうかをテストします (比較演算子)。 どちらか一方、または両方のオペランドが NULL の場合、NULL が返されます。 同様に機能、[等しいにではなく) <>](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)比較演算子です。  
   

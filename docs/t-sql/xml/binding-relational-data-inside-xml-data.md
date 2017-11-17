@@ -3,8 +3,11 @@ title: "XML データ内部のリレーショナル データをバインド |Mi
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指定できます[xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)に対して、 **xml**データ型の変数または列。 たとえば、[クエリ &#40; #41メソッド (&) #40";"xml データ型"&"#41;](../../t-sql/xml/query-method-xml-data-type.md) XML インスタンスに対して指定した XQuery を実行します。 この方法で XML を構築するときに、XML 以外の型の列の値や Transact-SQL 変数を使用することもできます。 この処理を、XML 内部のリレーショナル データのバインドと呼びます。  
   

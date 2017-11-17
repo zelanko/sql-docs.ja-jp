@@ -3,8 +3,11 @@ title: "DROP SERVER AUDIT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   SQL Server Audit 機能を使用して、SQL Server 監査オブジェクトを削除します。 SQL Server Audit の詳細については、次を参照してください。 [SQL Server Audit (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)です。  
   

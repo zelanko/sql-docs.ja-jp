@@ -2,9 +2,12 @@
 title: "テーブル (チュートリアル) を作成する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="lesson-1-2---creating-a-table"></a>レッスン 1 ~ 2-テーブルを作成します。
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 テーブルを作成するには、テーブルの名前と、テーブル内の各列の名前とデータ型を入力する必要があります。 また、各列でヌル値を許可するかどうかを指定することも推奨されます。 テーブルを作成するには、テーブルを追加するスキーマに対して `CREATE TABLE` アクセス許可と `ALTER SCHEMA` アクセス許可を持っている必要があります。 `db_ddladmin` 固定データベース ロールには、これらのアクセス許可があります。  
   

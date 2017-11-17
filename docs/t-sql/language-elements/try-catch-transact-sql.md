@@ -3,8 +3,11 @@ title: "TRY しています.CATCH (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   実装のエラー処理[!INCLUDE[tsql](../../includes/tsql-md.md)]での例外処理に似た、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# と[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C の言語です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのグループを TRY ブロックで囲むことができます。 TRY ブロック内でエラーが発生すると、CATCH ブロックで囲まれた別のステートメントのグループに制御が渡されます。  
   

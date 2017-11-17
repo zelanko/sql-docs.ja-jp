@@ -3,8 +3,11 @@ title: "データベースの復元 (並列データ ウェアハウス) |Micros
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>データベース (並列データ ウェアハウス) を復元します。
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   復元、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]にデータベースのバックアップからユーザー データベース、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスです。 によって作成されたバックアップからデータベースを復元、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][データベースのバックアップ & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)コマンド。 バックアップを使用して操作と復元操作を災害復旧計画を作成したり、データベースを別の 1 つのアプライアンスに移動します。  
   

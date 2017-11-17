@@ -3,8 +3,11 @@ title: "PIVOT および UNPIVOT を使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="from---using-pivot-and-unpivot"></a>PIVOT および UNPIVOT を使用して - から
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   使用することができます、`PIVOT`と`UNPIVOT`関係演算子を別のテーブルにテーブル値式を変更します。 `PIVOT`出力では、複数の列に式で 1 つの列から一意の値にすることによって、テーブル値式を回転し、最終的な出力で必要な残りの列値に必要で集計を実行します。 `UNPIVOT`列の値にテーブル値式の列を回転して PIVOT 演算子の逆を実行します。  
   

@@ -3,8 +3,11 @@ title: "Parse (データベース エンジン) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 正規文字列形式に変換する**hierarchyid**を**hierarchyid**値。 解析は、文字列型を変換するとき暗黙的に呼び出されます。 **hierarchyid**に発生します。 逆の役割を果たします[ToString](../../t-sql/data-types/tostring-database-engine.md)です。 Parse() は、静的メソッドです。
   

@@ -3,8 +3,11 @@ title: "データ型の変換 (データベース エンジン) |Microsoft ド�
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 データ型は、以下のシナリオで変換される場合があります。
 -   あるオブジェクトのデータを他のオブジェクトのデータに移動、比較、または結合する場合は、あるオブジェクトのデータ型から他のオブジェクトのデータ型への変換が必要な場合があります。  

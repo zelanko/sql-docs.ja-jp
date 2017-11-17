@@ -3,8 +3,11 @@ title: "+ = (文字列連結) (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-concatenation---equal-transact-sql"></a>文字列の連結 - 等しい (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   2 つの文字列を連結し、その結果の文字列を演算の結果に設定します。 たとえば、変数@x'Adventure' を等しい@x+ = 'Works' の元の値を受け取る@xを文字列に 'Works' を追加し、設定@xにその新しい値 'AdventureWorks'。  
   

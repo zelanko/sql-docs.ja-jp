@@ -3,8 +3,11 @@ title: "ブローカーの優先順位 (TRANSACT-SQL) を作成 |Microsoft ド�
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   優先度レベルと判断するための条件のセットを定義[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ交換の優先度レベルを割り当てます。 優先度レベルは、メッセージ交換の優先度で指定されているコントラクトおよびサービスの同じ組み合わせを使用するすべてのメッセージ交換エンドポイントに割り当てられます。 優先度は、1 (低) ～ 10 (高) までの範囲の値です。 既定は 5 です。  
   

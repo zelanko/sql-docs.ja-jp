@@ -3,8 +3,11 @@ title: "CREATE SPATIAL INDEX (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したテーブルと列に空間インデックスを作成します。 インデックスはテーブル内にデータがなくても作成できます。 データベース名を修飾して指定することにより、他のデータベース内のテーブルまたはビューにインデックスを作成することもできます。 空間インデックスでは、テーブルにクラスター化主キーが含まれる必要があります。 空間インデックスについては、次を参照してください。[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
   

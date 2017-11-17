@@ -3,8 +3,11 @@ title: "CUME_DIST (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 値のグループ内の値の累積的な分布を計算[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 つまり、CUME_DIST は、値のグループにおける指定された値の相対位置を計算します。 行の*r*cume_dist の昇順と仮定して、 *r*よりも低いかの値に等しい値を持つ行の数は、 *r*行の数で割った値パーティションまたはクエリの結果セットで評価されます。 CUME_DIST は、PERCENT_RANK 関数に似ています。
   

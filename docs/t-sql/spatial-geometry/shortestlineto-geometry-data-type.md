@@ -3,8 +3,11 @@ title: "ShortestLineTo (geometry データ型) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 返します、 **LineString**を 2 つの間の最短距離を表す 2 つの点を持つインスタンス**geometry**インスタンス。 長さ、 **LineString**返されるインスタンスは、2 つの間の距離**geometry**インスタンス。
   

@@ -3,8 +3,11 @@ title: "コントラクト (TRANSACT-SQL) を作成 |Microsoft ドキュメン�
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   新しいコントラクトを作成します。 コントラクトは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ交換で使用されるメッセージ型を定義し、またメッセージ交換のどちら側がその型のメッセージを送信できるかを決定するものです。 各メッセージ交換は、コントラクトに従います。 発信側サービスでは、メッセージ交換の開始時に、そのメッセージ交換用のコントラクトを指定します。 発信先サービスでは、メッセージ交換を受け入れるコントラクトを指定します。  
   

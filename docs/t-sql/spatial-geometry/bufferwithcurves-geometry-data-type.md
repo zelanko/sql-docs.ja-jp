@@ -3,8 +3,11 @@ title: "BufferWithCurves (geometry データ型) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   返します、 **geometry** 、呼び出し元からの距離の地点をすべてのセットを表すインスタンス**geometry**インスタンスは、以下に、*距離*パラメーター。  
   

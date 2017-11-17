@@ -3,9 +3,11 @@ title: "DBCC PDW_SHOWEXECUTIONPLAN (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 表示、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定で実行されているクエリの実行プラン[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ノードまたはノードのコントロールを計算します。 クエリの計算ノードと管理 ノードで実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うには、これを使用します。
   

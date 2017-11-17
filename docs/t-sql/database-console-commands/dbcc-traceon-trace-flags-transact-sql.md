@@ -3,8 +3,11 @@ title: "トレース フラグ (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 トレース フラグは、サーバー固有の特性を設定したり、特定の動作を切り替えるときに使用します。 たとえば、トレース フラグ 3205 が設定されている場合のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始の場合は、テープ ドライバーは無効になってハードウェア圧縮します。 トレース フラグは、パフォーマンスの問題を診断したり、ストアド プロシージャや複雑なシステムをデバッグするときによく使用されます。
   

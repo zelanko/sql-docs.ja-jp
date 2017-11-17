@@ -3,8 +3,11 @@ title: "ALTER PARTITION FUNCTION (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   境界値の分割または結合によって、パーティション関数を変更します。 ALTER PARTITION FUNCTION を実行すると、任意のテーブルまたはインデックスで、そのパーティション関数を使用する 1 つのパーティションを 2 つに分割したり、2 つのパーティションを 1 つにマージしたりできます。  
   

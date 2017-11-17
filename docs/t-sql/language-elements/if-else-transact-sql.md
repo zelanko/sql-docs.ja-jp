@@ -3,8 +3,11 @@ title: "もし。。。ELSE (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   実行を条件を設定、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 [!INCLUDE[tsql](../../includes/tsql-md.md)] IF キーワードおよびその条件に続くステートメントが実行されるは、条件が満たされる場合。 ブール式が TRUE を返します。 オプションの ELSE キーワードは、IF 条件が満たされない (ブール式から FALSE が返される) 場合に実行される別の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   

@@ -3,8 +3,11 @@ title: "テーブル ヒント (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (TRANSACT-SQL) のテーブル
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   テーブル ヒントは、ロック手法、1 つまたは複数のインデックス、テーブル スキャンやインデックス シーク、またはその他のオプションなどのクエリ処理操作を指定することによって、データ操作言語 (DML) ステートメントの実行中、クエリ オプティマイザーの既定の動作をオーバーライドします。 テーブル ヒントは、DML ステートメントの FROM 句で指定され、その句で参照されるテーブルまたはビューのみに影響します。  
   

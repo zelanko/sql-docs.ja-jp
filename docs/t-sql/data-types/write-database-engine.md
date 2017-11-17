@@ -3,8 +3,11 @@ title: "Write (データベース エンジン) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="write-database-engine"></a>Write (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 書き込みのバイナリ表現を書き込みます**SqlHierarchyId**に渡された**BinaryWriter**です。 使用して書き込みを呼び出すことができません[!INCLUDE[tsql](../../includes/tsql-md.md)]です。 代わりに、CAST または CONVERT を使用してください。
   

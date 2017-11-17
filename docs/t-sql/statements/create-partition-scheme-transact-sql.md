@@ -3,8 +3,11 @@ title: "パーティション構成 (TRANSACT-SQL) を作成 |Microsoft ドキ�
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   パーティション テーブルまたはパーティション インデックスのパーティションをファイル グループにマップする構成を、現在のデータベース内に作成します。 パーティション テーブルまたはパーティション インデックスのパーティションの数とドメインは、パーティション関数で決まります。 パーティション関数で最初に作成する必要があります、 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)パーティション構成を作成する前にステートメントです。  
   

@@ -3,8 +3,11 @@ title: "グループ化 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   GROUP BY リストの指定された列式が集計されるかどうかを示します。 GROUPING は、集計される場合に 1、集計されない場合に 0 を結果セットで返します。 グループ化は、選択でのみ使用できます\<選択 > リスト、HAVING、および GROUP BY が指定されている場合は、ORDER BY 句。  
   

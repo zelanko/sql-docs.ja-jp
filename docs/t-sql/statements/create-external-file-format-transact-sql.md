@@ -3,8 +3,11 @@ title: "外部ファイル形式 (TRANSACT-SQL) を作成します |Microsoft �
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-external-file-format-transact-sql"></a>外部のファイルの形式 (TRANSACT-SQL) を作成します。
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Hadoop や Azure blob ストレージ、Azure Data Lake Store に格納されている外部データ用 PolyBase 外部ファイル形式の定義を作成します。 PolyBase 外部テーブルを作成するための前提条件は、外部のファイル形式を作成します。 を、外部のファイル形式を作成するには、外部テーブルによって参照されるデータの実際のレイアウトを指定します。  
   

@@ -3,8 +3,11 @@ title: "rowversion (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 データベース内で自動的に生成され、一意の 2 進数を公開するデータ型です。 **rowversion**は通常、テーブルの行のバージョン指定のメカニズムとして使用します。 記憶領域のサイズは 8 バイトです。 **Rowversion**データ型は、増分する番号だけであり、日付または時刻では保持されません。 録音するには、日付または時刻を使用して、 **datetime2**データ型。
   

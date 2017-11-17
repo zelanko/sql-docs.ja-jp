@@ -3,8 +3,11 @@ title: "GET CONVERSATION GROUP (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   次に受信するメッセージのメッセージ交換グループの識別子を返すと共に、そのメッセージが含まれるメッセージ交換のメッセージ交換グループをロックします。 メッセージ交換グループの識別子は、メッセージ自体を取得する前にメッセージ交換の状態情報を取得する場合に使用できます。  
   

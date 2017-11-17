@@ -3,8 +3,11 @@ title: "DENSE_RANK (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   結果セットのパーティションにおける行の順位を返します。この順位付けではギャップが発生しません。 行の順位は、対象となる行より 1 つ前の順位の番号に 1 を加算したものになります。  
   

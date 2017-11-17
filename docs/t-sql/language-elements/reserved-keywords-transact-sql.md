@@ -3,8 +3,11 @@ title: "予約済みキーワード (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワードの TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードの文法の一部である、[!INCLUDE[tsql](../../includes/tsql-md.md)]によって使用される言語[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を解析し、理解[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントとバッチです。 構文的に使用することはできますが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子とオブジェクト名の予約済みキーワード[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト、これを行うを区切られた識別子を使用します。  
   

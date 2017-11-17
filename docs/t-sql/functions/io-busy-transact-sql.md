@@ -3,8 +3,11 @@ title: "@@IO_BUSY (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降の入力と出力の操作の実行に費やした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。 結果は CPU time increment (「ティック」) であり、他のすべての Cpu の累積的なため、実際の経過時間を超える可能性があります。 乗算@TIMETICKS(マイクロ秒) に変換します。  
   

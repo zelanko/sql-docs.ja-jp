@@ -3,8 +3,11 @@ title: "_ (ワイルドカード - 一致する 1 文字) (TRANSACT-SQL) |Micros
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (ワイルドカード - 1 文字に一致) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 など、パターン マッチを伴う文字列比較操作で単一の文字をアンダー スコア文字 _ を使用して`LIKE`と`PATINDEX`です。  
   

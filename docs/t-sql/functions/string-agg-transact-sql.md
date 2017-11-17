@@ -3,8 +3,11 @@ title: "STRING_AGG (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 文字列式の値を連結し、それらの間の区切り記号の値を格納します。 区切り記号は、文字列の末尾には追加されません。
  

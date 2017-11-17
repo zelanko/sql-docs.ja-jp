@@ -3,8 +3,11 @@ title: "選択的 XML インデックス (TRANSACT-SQL) を作成 |Microsoft ド
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   指定したテーブルと XML 列に新しい選択的 XML インデックスを作成します。 選択的 XML インデックスは、クエリを通常行うノードのサブセットにのみインデックスを作成します。そのため、XML インデックス作成とクエリのパフォーマンスが向上します。 選択的セカンダリ XML インデックスを作成することもできます。 詳細については、次を参照してください。 [Create、Alter、およびセカンダリ選択的 XML インデックスのドロップ](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)です。  
   

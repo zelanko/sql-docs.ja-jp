@@ -3,8 +3,11 @@ title: "アセンブリ (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 8/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   クラス メタデータとマネージ コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のオブジェクトとして含む、マネージ アプリケーション モジュールを作成します。 データベース内では、このモジュールを参照することにより、共通言語ランタイム (CLR) 関数、ストアド プロシージャ、トリガー、ユーザー定義集計関数、ユーザー定義型を作成できます。  
   

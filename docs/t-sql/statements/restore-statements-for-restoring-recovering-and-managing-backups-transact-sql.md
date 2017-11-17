@@ -3,8 +3,11 @@ title: "復元、復旧、バックアップ (T-SQL) の管理用の RESTORE ス
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>バックアップの復元、復旧、管理用の RESTORE ステートメント (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   ここでは、バックアップ用の RESTORE ステートメントについて説明します。 バックアップを復元および復旧するためのメインの RESTORE {DATABASE | LOG} ステートメントの他に、いくつか補助的な RESTORE ステートメントを使用すると、バックアップの管理や復元シーケンスの計画で役立ちます。 補助的な RESTORE のコマンドには、RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY があります。  
   

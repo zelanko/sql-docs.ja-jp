@@ -3,8 +3,11 @@ title: "ALTER DATABASE (並列データ ウェアハウス) |Microsoft ドキュ
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (並列データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   レプリケートされたテーブル、分散テーブル、および内のトランザクション ログの最大データベース サイズのオプションを変更[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 このステートメントを使用すると、それを拡大または縮小のサイズとデータベースのディスク領域の割り当てを管理できます。  
   

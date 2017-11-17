@@ -3,8 +3,11 @@ title: "OVER 句 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="select---over-clause-transact-sql"></a>OVER 句 (TRANSACT-SQL) の選択します。
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   パーティション分割し、関連するウィンドウ関数が適用される前に、行セットの順序を決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 OVER 句と関数を使用して、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
   

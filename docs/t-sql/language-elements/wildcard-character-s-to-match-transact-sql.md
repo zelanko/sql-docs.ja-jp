@@ -3,8 +3,11 @@ title: "(ワイルドカード - 一致する文字列)(TRANSACT-SQL) |Microsoft
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="wildcard---characters-to-match-transact-sql"></a>(ワイルドカード - 一致する文字列)(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定した範囲または角かっこの間で指定されているセット内の任意の 1 文字と一致する`[ ]`です。 これらのワイルドカード文字をパターンに一致するなどを含む文字列比較で使用できます`LIKE`と`PATINDEX`です。  
   

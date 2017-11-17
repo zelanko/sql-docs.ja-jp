@@ -3,8 +3,11 @@ title: "宣言@local_variable(TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="declare-localvariable-transact-sql"></a>宣言@local_variable(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   変数は、バッチやプロシージャの中で DECLARE ステートメントを使用して宣言し、SET ステートメントまたは SELECT ステートメントを使用して値を割り当てます。 このステートメントでは、他のカーソル関連のステートメントで使用できるカーソル変数を宣言できます。 宣言の一部として値を指定しない場合、宣言の後、すべての変数は NULL として初期化されます。  
   

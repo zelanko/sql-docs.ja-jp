@@ -3,8 +3,11 @@ title: "SCOPE_IDENTITY (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   同じスコープ内の ID 列に挿入された最後の ID 値を返します。 スコープは、ストアド プロシージャ、トリガー、関数、バッチのいずれかのモジュールです。 したがって、2 つのステートメントが同じストアド プロシージャ、関数、またはバッチである場合は、同じスコープ内ではです。  
   

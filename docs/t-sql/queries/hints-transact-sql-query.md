@@ -3,8 +3,11 @@ title: "クエリ ヒント (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -67,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (TRANSACT-SQL) のクエリ
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   クエリ ヒントは、指定されたヒントをクエリ全体で使用する必要があることを指定します。 クエリ ヒントは、ステートメント内のすべての演算子に影響を与えます。 メイン クエリで UNION を使用する場合、UNION 操作を含む最後のクエリだけに OPTION 句を指定できます。 クエリ ヒントがの一部として指定されて、 [OPTION 句](../../t-sql/queries/option-clause-transact-sql.md)です。 複数のクエリ ヒントが原因でクエリ オプティマイザーが有効なプランを生成できない場合は、エラー 8622 が発生します。  
   

@@ -3,8 +3,11 @@ title: "+ (文字列連結)(TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (文字列連結) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   文字列式の中の演算子であり、2 つ以上の文字列やバイナリ文字列、列、文字列と列名の組み合わせを 1 つの式に連結します (文字列演算子)。  たとえば`SELECT 'book'+'case';`返します`bookcase`です。
   

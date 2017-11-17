@@ -3,8 +3,11 @@ title: "COMMIT TRANSACTION (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   正常終了した暗黙的または明示的なトランザクションの終点をマークします。 @ If@TRANCOUNT 1、COMMIT TRANSACTION では、データベースの一部として、トランザクションの開始、トランザクション、および @ デクリメントによって保持されているリソースを解放するためにすべてのデータ変更が実行されるは@TRANCOUNTを 0 にします。 @ If@TRANCOUNT @ 1 の場合、COMMIT TRANSACTION デクリメントより大きい@TRANCOUNT1 と、トランザクションでのみアクティブに保ちます。  
   

@@ -3,8 +3,11 @@ title: "パーティション構成を削除 (TRANSACT-SQL) |Microsoft ドキュ
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースからパーティション構成を削除します。 パーティション構成を使用して作成される[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)を使用して変更および[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)です。  
   

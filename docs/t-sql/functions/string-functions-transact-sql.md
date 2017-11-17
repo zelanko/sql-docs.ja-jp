@@ -3,8 +3,11 @@ title: "文字列関数 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-functions-transact-sql"></a>文字列関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   以下のスカラー関数は、文字列型の入力値に対して操作を行い、文字列値または数値を返します。  
   

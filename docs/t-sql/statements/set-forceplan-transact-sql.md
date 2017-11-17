@@ -3,8 +3,11 @@ title: "SET FORCEPLAN (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   FORCEPLAN を ON に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーは、クエリの FROM 句のテーブルと同じ順序で結合を処理します。 また、FORCEPLAN を ON に設定すると、クエリのプランの構築に他の種類の結合が必要とされる場合や、結合ヒントまたはクエリ ヒントで他の種類の結合が要求された場合を除き、入れ子になったループ結合が強制的に使用されます。  
   

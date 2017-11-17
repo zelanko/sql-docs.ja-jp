@@ -3,8 +3,11 @@ title: "集計 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のアセンブリのクラスで実装が定義される、ユーザー定義集計関数を作成します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]その実装に集計関数をバインドする、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のインスタンスに、実装が含まれているアセンブリをアップロードする必要があります最初[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE ASSEMBLY ステートメントを使用しています。  
   

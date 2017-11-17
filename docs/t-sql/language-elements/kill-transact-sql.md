@@ -3,8 +3,11 @@ title: "KILL (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -46,7 +49,7 @@ ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   セッション ID または作業単位 (UOW) に基づき、ユーザーのプロセスを終了します。 指定したセッション ID または UOW の多くの作業量を元に戻す場合は、KILL ステートメントには、特にときに関係する長いトランザクションのロールバックを完了する時間がかかる場合があります。  
   

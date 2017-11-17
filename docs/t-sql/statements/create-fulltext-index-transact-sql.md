@@ -3,8 +3,11 @@ title: "CREATE FULLTEXT INDEX (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース内のテーブルまたはインデックス付きビューで、フルテキスト インデックスを作成します。 テーブルまたはインデックス付きビューごとに 1 つのフルテキスト インデックスのみ使用でき、各フルテキスト インデックスは 1 つのテーブルまたはインデックス付きビューに適用されます。 フルテキスト インデックスには、1,024 列まで格納できます。  
   

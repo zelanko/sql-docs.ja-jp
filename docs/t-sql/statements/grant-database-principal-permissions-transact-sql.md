@@ -3,8 +3,11 @@ title: "データベース プリンシパル アクセス許可の付与 (TRANS
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 

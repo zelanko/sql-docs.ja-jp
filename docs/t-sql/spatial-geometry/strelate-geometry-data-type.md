@@ -3,8 +3,11 @@ title: "STRelate (geometry データ型) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   場合 1 を返します、 **geometry**インスタンスが相互に関連**geometry**リレーションシップが、Dimensionally Extended 9 Intersection Model (DE 9IM) パターンのマトリックス値で定義されている場合、インスタンス、0 を返します。  
   

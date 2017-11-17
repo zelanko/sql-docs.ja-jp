@@ -3,8 +3,11 @@ title: "CREATE FUNCTION (SQL データ ウェアハウス) |Microsoft ドキュ�
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>関数 (SQL データ ウェアハウス) を作成します。
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義関数は、[!INCLUDE[tsql](../../includes/tsql-md.md)]ルーチン パラメーターを受け取るが、複雑な計算などの操作を実行し、値として、そのアクションの結果を返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   

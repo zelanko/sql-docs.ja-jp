@@ -3,8 +3,11 @@ title: "パーティション関数 (TRANSACT-SQL) を作成 |Microsoft ドキ�
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   テーブルまたはインデックスの行を指定された列の値に基づいてパーティションにマップする関数を、現在のデータベース内に作成します。 CREATE PARTITION FUNCTION の使用は、パーティション テーブルまたはパーティション インデックスを作成する最初の手順です。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、テーブルまたはインデックスは、最大 15,000 のパーティションを持つことができます。  
   

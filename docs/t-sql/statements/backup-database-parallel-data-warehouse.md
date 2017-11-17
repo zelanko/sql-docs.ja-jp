@@ -3,8 +3,11 @@ title: "データベースのバックアップ (並列データ ウェアハウ
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>データベースのバックアップ (並列データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   バックアップを作成、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースおよびユーザー指定のネットワークの場所にアプライアンス オフ バックアップを保存します。 このステートメントで使用する[データベースの復元 & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)災害復旧、または 1 つのアプライアンスからデータベースをコピーします。  
   

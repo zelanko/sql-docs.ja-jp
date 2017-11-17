@@ -3,8 +3,11 @@ title: "続行 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   WHILE ループを再開します。 CONTINUE キーワードの後ろにあるステートメントはすべて無視されます。 CONTINUE は、常にではありませんが、IF ステートメントの分岐で実行される場合があります。 詳細については、次を参照してください。[中 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/while-transact-sql.md)と[フロー制御言語 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md).  
   

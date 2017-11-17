@@ -3,8 +3,11 @@ title: "PERCENTILE_CONT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   計算列の値の連続型分散に基づく百分位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 結果には値が挿入され、列内の特定の値と一致しない可能性があります。  
   

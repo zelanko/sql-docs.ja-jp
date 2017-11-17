@@ -3,8 +3,11 @@ title: "テーブル値コンス トラクター (TRANSACT-SQL) |Microsoft ド�
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>テーブル値コンストラクター (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   テーブルに設定される行の値式のセットを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用すると、単一の DML ステートメントで複数行のデータを指定できます。 テーブル値コンス トラクターは、使用中の INSERT ステートメントの VALUES 句で指定できます\<ソース テーブル > 句と MERGE ステートメントの FROM 句の派生テーブルの定義でします。  
   

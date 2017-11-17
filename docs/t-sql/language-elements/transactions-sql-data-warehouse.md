@@ -3,8 +3,11 @@ title: "トランザクション (SQL データ ウェアハウス) |Microsoft �
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transactions-sql-data-warehouse"></a>トランザクション (SQL データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   トランザクションが完全にコミットまたは完全にロールバックを 1 つまたは複数のデータベースのステートメントのグループとは。 各トランザクションは、分割不可能な一貫性のある、分離性、および持続性 (ACID)。 トランザクションが成功すると、その中のすべてのステートメントがコミットされます。 トランザクションが失敗するがある場合、グループ内のステートメントの少なくとも 1 つが失敗した場合は、グループ全体がロールバックします。  
   

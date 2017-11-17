@@ -1,11 +1,13 @@
 ---
 title: "圧縮する (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="compress-transact-sql"></a>圧縮する (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 GZIP アルゴリズムを使用して、入力式が圧縮されます。 圧縮の結果は型のバイト配列**varbinary (max)**です。
   

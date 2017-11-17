@@ -3,8 +3,11 @@ title: "述語の |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="predicates"></a>述語
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   TRUE、FALSE または、UNKNOWN を評価する式です。 述語がの検索条件で使用される[場所](../../t-sql/queries/where-transact-sql.md)句と[HAVING](../../t-sql/queries/select-having-transact-sql.md)句での結合条件[FROM](../../t-sql/queries/from-transact-sql.md)句、およびブール値が他の構造体必須。  
   

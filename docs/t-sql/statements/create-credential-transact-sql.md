@@ -3,8 +3,11 @@ title: "資格情報 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー レベルの資格情報を作成します。 資格情報は、SQL Server の外部リソースへの接続に必要な認証情報を含むレコードです。 通常、資格情報には Windows ユーザーとパスワードが含まれます。 たとえば、いくつかの場所へのデータベースのバックアップの保存には、その場所にアクセスする特別な資格情報を提供する SQL Server が必要です。 詳細については、次を参照してください。[資格情報 (データベース エンジン)](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。
   

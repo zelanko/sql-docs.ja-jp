@@ -1,12 +1,14 @@
 ---
 title: "ALTER DATABASE の SET オプション (TRANSACT-SQL) |Microsoft ドキュメント"
 description: "自動調整、暗号化、SQL Server と Azure SQL データベース内のクエリ ストアなどのデータベース オプションを設定する方法の詳細についてください。"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース オプションの設定に関連した ALTER DATABASE 構文について説明します。 その他の ALTER DATABASE 構文は、次のトピックを参照してください。  
   

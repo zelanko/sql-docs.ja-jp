@@ -2,8 +2,12 @@
 title: "タイム ゾーン (TRANSACT-SQL) で |Microsoft ドキュメント"
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="at-time-zone-transact-sql"></a>タイム ゾーン (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   変換、 *inputdate* 、対応する*datetimeoffset*対象のタイム ゾーンの値。 場合*inputdate*関数があると仮定して、タイム ゾーンのオフセットを適用するオフセット情報がない場合は*inputdate*対象のタイム ゾーンで値を指定します。 場合*inputdate*として提供される、 *datetimeoffset*値よりも**AT TIME ZONE**句にタイム ゾーンの変換規則を使用して対象のタイム ゾーンに変換します。  
   

@@ -3,8 +3,11 @@ title: "CREATE XML INDEX (選択的 XML インデックス) |Microsoft ドキュ
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選択的 XML インデックス)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   既存の選択的 XML インデックスによってインデックスが既に作成されている単一のパスに、新しい選択的セカンダリ XML インデックスを作成します。 選択的プライマリ XML インデックスを作成することもできます。 詳細については、次を参照してください。 [Create、Alter、および選択的 XML インデックスのドロップ](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)です。  
   

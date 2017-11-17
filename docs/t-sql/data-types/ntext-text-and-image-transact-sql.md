@@ -3,8 +3,11 @@ title: "ntext、text、または image (TRANSACT-SQL) |Microsoft ドキュメン
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext 型、text 型、image 型 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 サイズの大きい非 Unicode 文字、Unicode 文字、およびバイナリ データを格納する固定長データ型と可変長データ型を指定します。 Unicode データは UNICODE UCS-2 文字セットを使用します。
   

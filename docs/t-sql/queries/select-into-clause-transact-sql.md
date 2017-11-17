@@ -3,8 +3,11 @@ title: "INTO 句 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT の INTO 句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を表示するには、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
   

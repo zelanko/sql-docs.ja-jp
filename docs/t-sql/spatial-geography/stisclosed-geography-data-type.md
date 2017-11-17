@@ -3,8 +3,11 @@ title: "STIsClosed (geography データ型) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   場合 1 を返します、始点と終点の指定された**geography**が同じをインスタンス化します。 1 を返します**geography**コレクション型の場合、含まれている各**geography**インスタンスが閉じています。 インスタンスが閉じていない場合は 0 を返します。  
   

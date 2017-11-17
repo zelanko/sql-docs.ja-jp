@@ -2,10 +2,14 @@
 title: "CHECK 制約の変更 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +18,17 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bd3d8fd6a6d714b81d5e68e2f7a4c99c299d9f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,3 +87,4 @@ ms.lasthandoff: 11/09/2017
  `CHECK` を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]制約を変更するには、最初に既存の `CHECK` 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [CHECK 制約の削除](../../relational-databases/tables/delete-check-constraints.md) 」および「 [CHECK 制約の作成](../../relational-databases/tables/create-check-constraints.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  
+

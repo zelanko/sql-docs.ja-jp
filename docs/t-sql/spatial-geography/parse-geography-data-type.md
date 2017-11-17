@@ -3,8 +3,11 @@ title: "解析 (geography データ型) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 返します、 **geography** Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現からのインスタンス。 Parse() は等価[STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)spatial reference ID (SRID) 4326 をパラメーターとして想定する点を除いて、します。 入力には、オプションとして Z (標高) 値と M (メジャー) 値が含まれる場合があります。
   

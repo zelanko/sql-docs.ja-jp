@@ -3,8 +3,11 @@ title: "ALTER DATABASE の File および Filegroup オプション (TRANSACT-SQ
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -54,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (TRANSACT-SQL) の File および Filegroup オプション 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ファイルおよびファイル グループ内のデータベースに関連付けられている変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 データベースに対するファイルやファイル グループの追加と削除、およびデータベースおよびデータベースのファイルやファイル グループの属性の変更を行います。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
   

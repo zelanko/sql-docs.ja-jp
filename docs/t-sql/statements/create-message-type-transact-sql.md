@@ -3,8 +3,11 @@ title: "メッセージ型 (TRANSACT-SQL) を作成 |Microsoft ドキュメン�
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   新しいメッセージ型を作成します。 メッセージの種類は、メッセージと検証の名前を定義する[!INCLUDE[ssSB](../../includes/sssb-md.md)]をその名前を持つメッセージを実行します。 メッセージ交換の両側で、同じメッセージ型を定義する必要があります。  
   

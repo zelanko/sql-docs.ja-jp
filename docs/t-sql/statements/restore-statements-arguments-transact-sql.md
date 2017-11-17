@@ -3,8 +3,11 @@ title: "RESTORE の引数 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、RESTORE {DATABASE|LOG} ステートメントと、関連する補助ステートメント RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、および RESTORE VERIFYONLY の「構文」に記載されている引数について説明します。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 それぞれの引数の説明では、その引数を使用できるステートメントについても示します。  
   

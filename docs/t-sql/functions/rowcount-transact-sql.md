@@ -3,8 +3,11 @@ title: "@@ROWCOUNT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="x40x40rowcount-transact-sql"></a>& #x 40; & #x 40 です。ROWCOUNT (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   最後のステートメントの影響を受けた行数を返します。 行の数が 20億をより多くの場合を使用して[ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)です。  
   

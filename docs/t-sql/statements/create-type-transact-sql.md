@@ -3,8 +3,11 @@ title: "型 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在のデータベースで別名データ型またはユーザー定義型を作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。 別名データ型の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ システム型に基づきます。 内のアセンブリのクラスを使用して、ユーザー定義型が実装されている、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR)。 ユーザー定義型をその実装をバインドする型の実装を含む CLR アセンブリ必要があります最初に登録する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)です。  
   

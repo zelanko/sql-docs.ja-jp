@@ -1,12 +1,13 @@
 ---
 title: "DBCC FLUSHAUTHCACHE (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 ログインと現在のユーザー データベースでのファイアウォール規則に関する情報を含む、データベース認証キャッシュを空に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。 Master データベースにログインし、ファイアウォール規則に関する情報の物理記憶域が含まれているために、このステートメントは、論理マスター データベースには適用されません。 ステートメントを実行するユーザー、現在接続している他のユーザーは、接続されたままです。 (DBCC FLUSHAUTHCACHE は現在サポートされていません[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)])。
  

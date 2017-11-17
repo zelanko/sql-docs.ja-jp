@@ -3,8 +3,11 @@ title: "文字列演算子 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-operators-transact-sql"></a>文字列演算子 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次の文字列演算子を提供します。 文字列連結演算子を使用すると、2 つ以上の文字列やバイナリ文字列、列、文字列と列名の組み合わせを 1 つの式に連結できます。 ワイルドカード文字列演算子は、LIKE や PATINDEX などの文字列比較操作で、1 つまたは複数の文字に一致します。  
   

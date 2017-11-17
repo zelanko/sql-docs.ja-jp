@@ -3,8 +3,11 @@ title: "式 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="expressions-transact-sql"></a>式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって 1 つのデータ値を取得するために評価される、記号と演算子の組み合わせです。 単純式には、1 つの定数、変数、列、またはスカラー関数を指定できます。 演算子を使用すると、2 つ以上の単純式を結合して、複合式を作成できます。  
   

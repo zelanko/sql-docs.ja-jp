@@ -3,8 +3,11 @@ title: "DECRYPTBYKEYAUTOCERT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,14 +32,14 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/01/2017
 
 ---
-# DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   証明書で自動的に暗号化解除された対称キーを使用し、暗号化を解除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -46,7 +49,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *cert_ID*  
  対称キーの保護に使用されている証明書の ID です。 *cert_ID*は**int**です。  
   
@@ -71,16 +74,16 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
  @authenticator  
  認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
   
-## 戻り値の型  
+## <a name="return-types"></a>戻り値の型  
  **varbinary** 8,000 バイトの最大サイズ。  
   
-## 解説  
+## <a name="remarks"></a>解説  
  DecryptByKeyAutoCert は、OPEN SYMMETRIC KEY および DecryptByKey の機能を組み合わせたもので、 対称キーの暗号化解除と、そのキーを使用した暗号化テキストの暗号化解除を 1 回の操作で行います。  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  対称キーに対する VIEW DEFINITION 権限と、証明書に対する CONTROL 権限が必要です。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  例を次にどのように`DecryptByKeyAutoCert`を復号化を実行するコードを簡略化するために使用できます。 このコードを実行する必要があります、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース マスター _ キーを既には持たないデータベース。  
   
 ```  
@@ -130,7 +133,7 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
     FROM HumanResources.Employee;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [ENCRYPTBYKEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbykey-transact-sql.md)   

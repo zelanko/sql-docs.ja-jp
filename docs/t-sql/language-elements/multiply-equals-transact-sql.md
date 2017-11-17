@@ -3,8 +3,11 @@ title: "* = (乗算代入) (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="-multiply-equals-transact-sql"></a>*= (乗算代入) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   2 つの数値を乗算し、値に演算の結果を設定します。 たとえば、変数@x35 にし、等しい@x* = 2 は元の値の@x2 で乗算し、設定@xにその新しい値 (70)。  
   

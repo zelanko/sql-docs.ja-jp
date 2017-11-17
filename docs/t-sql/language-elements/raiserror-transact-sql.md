@@ -3,8 +3,11 @@ title: "RAISERROR (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR Transact SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   エラー メッセージを生成し、セッションのエラー処理を開始します。 RAISERROR では、sys.messages カタログ ビューに格納されているユーザー定義のメッセージを参照することまたは、メッセージを動的に作成できます。 メッセージは、サーバー エラー メッセージとして、呼び出し元のアプリケーションまたは関連する TRY...CATCH 構造の CATCH ブロックに返されます。 新しいアプリケーションを使用する必要があります[スロー](../../t-sql/language-elements/throw-transact-sql.md)代わりにします。  
   

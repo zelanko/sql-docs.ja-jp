@@ -3,8 +3,11 @@ title: "SET QUOTED_IDENTIFIER (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して、識別子とリテラル文字列を区切る引用符に関して、ISO 規格に従うことを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の予約済みキーワードを指定する場合や、[!INCLUDE[tsql](../../includes/tsql-md.md)] の構文規則で通常は識別子として許可されない文字がある場合は、二重引用符で識別子を区切ることができます。  
   

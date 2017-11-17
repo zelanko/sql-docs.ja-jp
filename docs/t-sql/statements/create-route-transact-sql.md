@@ -3,8 +3,11 @@ title: "ルート (TRANSACT-SQL) を作成する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   新しいルートを現在のデータベース用のルーティング テーブルに追加します。 送信メッセージで[!INCLUDE[ssSB](../../includes/sssb-md.md)]をローカルのデータベース内のルーティング テーブルを調べてルーティングを決定します。 別のインスタンスで発生するメッセージ交換でメッセージを含むメッセージを転送する[!INCLUDE[ssSB](../../includes/sssb-md.md)]ルートを調べます**msdb**です。  
   

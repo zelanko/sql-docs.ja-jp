@@ -3,8 +3,11 @@ title: "!&gt;(より大きくない)(TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;(より大きくない)(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも大きくない場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 = (等価) 比較演算子と異なり、2 つの NULL 値の !> 比較の結果は ANSI_NULLS の設定に依存しません。  
   

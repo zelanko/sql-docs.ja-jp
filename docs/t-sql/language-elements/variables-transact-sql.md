@@ -3,8 +3,11 @@ title: "変数 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 TRANSACT-SQL のローカル変数は、特定の種類の 1 つのデータ値を保持できるオブジェクトです。 バッチ内の変数とスクリプトは、通常、次の場合に使用されます。 
 

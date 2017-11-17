@@ -3,8 +3,11 @@ title: "ALTER ASSEMBLY (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   変更することにより、アセンブリを変更、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログ アセンブリのプロパティです。 ALTER ASSEMBLY がの最新のコピーを更新、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]実装を保持し、追加または関連付けられているファイルを削除するモジュールです。 アセンブリを使用して作成される[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)です。  
 

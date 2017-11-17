@@ -3,8 +3,11 @@ title: "ヒント (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql"></a>ヒント (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   ヒントは、オプションまたは方法によって強制用に指定された、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ プロセッサでは、SELECT、INSERT、UPDATE、または DELETE ステートメント。 ヒントは、クエリ オプティマイザーがクエリのために選択するどの実行プランよりも優先されます。  
   

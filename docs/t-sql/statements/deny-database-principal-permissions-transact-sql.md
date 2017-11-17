@@ -3,8 +3,11 @@ title: "DENY データベース プリンシパルの権限 (TRANSACT-SQL) |Micr
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (データベース プリンシパルの権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   データベース ユーザー、データベース ロール、またはアプリケーション ロールに対して許可された権限を拒否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
 

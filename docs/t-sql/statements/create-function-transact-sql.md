@@ -3,8 +3,11 @@ title: "関数 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でユーザー定義関数を作成します。 ユーザー定義関数は、パラメーターを受け取り、複雑な計算などのアクションを実行し、そのアクションの結果を値として返す [!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のルーチンです。 戻り値は、スカラー (単一) 値またはテーブルにすることができます。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   

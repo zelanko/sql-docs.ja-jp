@@ -2,9 +2,12 @@
 title: "一致する (SQL グラフ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,9 +33,8 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="match-transact-sql"></a>一致する (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   グラフの検索条件を指定します。 一致は、WHERE 句の一部として、SELECT ステートメントで、グラフ ノードとエッジのテーブルでのみ使用できます。 
   

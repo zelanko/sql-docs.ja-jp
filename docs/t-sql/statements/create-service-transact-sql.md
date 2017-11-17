@@ -3,8 +3,11 @@ title: "サービス (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   新しいサービスを作成します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスとは、特定のタスクまたはタスク セットの名前です。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ではサービスの名前を使用して、メッセージのルーティング、データベース内の正しいキューへのメッセージの配信、メッセージ交換のコントラクトの適用を行います。  
   

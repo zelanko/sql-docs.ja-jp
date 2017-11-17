@@ -3,8 +3,11 @@ title: "エイリアス (Azure SQL Data Warehouse、並列データ ウェアハ
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>エイリアス (Azure SQL Data Warehouse、並列データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   エイリアスがあることでテーブルまたは列名の代わりに、短期的および覚えやすい文字列の一時的な置換[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]クエリ。 テーブルの別名は、結合の構文は、列を参照するときに、完全修飾オブジェクト名を必要とするために多くの場合、結合クエリで使用されます。  
   

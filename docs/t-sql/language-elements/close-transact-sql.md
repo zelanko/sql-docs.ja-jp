@@ -3,8 +3,11 @@ title: "閉じる (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の結果セットを解放し、カーソルが置かれている行に設定されているカーソル ロックを解除して、開いているカーソルを閉じます。 CLOSE では、再度開けるようにデータ構造がアクセス可能なままになりますが、フェッチや位置指定更新は、カーソルを再度開くまで実行できません。 CLOSE は開いているカーソル上で実行する必要があります。宣言されただけのカーソルや、既に閉じているカーソルでは実行できません。  
   

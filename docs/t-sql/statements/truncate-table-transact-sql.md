@@ -3,8 +3,11 @@ title: "TRUNCATE TABLE (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   個々 の行の削除ログに記録せず、テーブルまたはテーブルの指定したパーティションからすべての行を削除します。 TRUNCATE TABLE は、WHERE 句を伴わない DELETE ステートメントに似ています。ただし、TRUNCATE TABLE の方が高速で、使用するシステム リソースとトランザクション ログ リソースも少なくなります。  
   

@@ -3,8 +3,11 @@ title: "RECONFIGURE (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在構成されている値を更新 (、 **config_value**内の列、 **sp_configure**結果セット) では、構成オプションの変更、 **sp_configure**システムストアド プロシージャです。 RECONFIGURE が現在実行中の値を常に更新していない一部の構成オプションは、サーバーの停止と再起動を現在実行中の値を更新する必要があるため (、 **run_value**内の列、 **sp_configure**結果セット) の変更された構成値。    
     

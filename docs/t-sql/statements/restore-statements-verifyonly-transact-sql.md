@@ -3,8 +3,11 @@ title: "RESTORE VERIFYONLY (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE ステートメントで VERIFYONLY (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   復元せずにバックアップを確認して、バックアップ セットが完全なものであること、およびバックアップのすべてが読み取り可能であることを確認します。 ただし、RESTORE VERIFYONLY ステートメントが、バックアップ ボリュームに含まれているデータの構造を確認することはありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの検出率を向上させるデータに対して追加のチェックを行う RESTORE VERIFYONLY が強化されました。 この機能の目的は、実際の復元操作にできるだけ近い状況を実現することです。 詳細については、「解説」を参照してください。  
   

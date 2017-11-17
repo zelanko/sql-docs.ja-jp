@@ -1,11 +1,13 @@
 ---
 title: "OPENJSON (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -31,7 +33,7 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** JSON テキストを解析して行および列として JSON 入力からのオブジェクトおよびプロパティを返すテーブル値関数です。 つまり、 **OPENJSON** JSON ドキュメントに対する行セット ビューを提供します。 行セットと列の作成に使用する JSON プロパティのパスで列を明示的に指定することができます。 **OPENJSON**使用できる行のセットを返します、 **OPENJSON**で、`FROM`の句、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントと同じように、その他のテーブル、ビュー、またはテーブル値関数を使用することができます。  
   

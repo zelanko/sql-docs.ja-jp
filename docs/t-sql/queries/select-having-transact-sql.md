@@ -3,8 +3,11 @@ title: "(TRANSACT-SQL) を持つ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="select---having-transact-sql"></a>選択 - こと (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   グループまたは集計の検索条件を指定します。 HAVING は、SELECT ステートメントと共にのみ使用できます。 通常、HAVING は GROUP BY 句で使用されます。 GROUP BY 句を使用しない場合、HAVING は WHERE 句と同様に動作します。  
   
