@@ -3,8 +3,11 @@ title: "getLogWriter メソッド (SQLServerDataSource) |Microsoft ドキュメ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -19,6 +22,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e5242f48dd9fe099b63db0569d09a23055d42368
@@ -49,3 +53,4 @@ public java.io.PrintWriter getLogWriter()
  [SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
+

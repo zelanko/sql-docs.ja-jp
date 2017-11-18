@@ -3,9 +3,12 @@ title: "Azure Active Directory 認証を使用して接続する |Microsoft ド�
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.technology:
 - drivers
 ms.topic: article

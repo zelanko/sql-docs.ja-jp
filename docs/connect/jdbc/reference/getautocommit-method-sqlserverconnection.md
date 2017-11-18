@@ -3,8 +3,11 @@ title: "getAutoCommit メソッド (SQLServerConnection) |Microsoft ドキュメ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,28 +30,28 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/09/2017
 
 ---
-# getAutoCommit メソッド (SQLServerConnection)
+# <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   この現在の自動コミット モードを取得[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 public boolean getAutoCommit()  
 ```  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
  **true**自動コミット モードが有効になっている場合**false**されていない場合。  
   
-## 例外  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## 解説  
+## <a name="remarks"></a>解説  
  この getAutoCommit メソッドは、java.sql.Connection インターフェイスの getAutoCommit メソッドによって指定されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

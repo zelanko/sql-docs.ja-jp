@@ -3,9 +3,12 @@ title: "Microsoft SQL データベースに対する接続ライブラリ |Micro
 description: "さまざまなプログラミング言語のクライアントから Microsoft SQL Server と Azure SQL データベースへの接続を有効にするモジュールのダウンロードのリンクを提供します。"
 author: MightyPen
 ms.service: 
-ms.prod: sql-server
+ms.component: connect
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: develop apps
+ms.custom: 
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017

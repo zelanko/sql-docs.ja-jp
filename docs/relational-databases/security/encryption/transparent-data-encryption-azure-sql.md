@@ -16,15 +16,15 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: ac3ea91dc2db3d1cfb22dca2fdc341650c74b95b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 35c94a39989fda76ea023588b2d7a3aa4e463262
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/05/2017
+
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database と Data Warehouse 用の Transparent Data Encryption
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Transparent Data Encryption (TDE) を使用すると、データベース、関連するバックアップ、静止したトランザクション ログ ファイルのリアルタイム暗号化および暗号化解除を実行して、悪意のあるアクティビティの脅威から Azure SQL Database と Data Warehouse を保護できます。アプリケーションに変更を加える必要はありません。
 
@@ -135,3 +135,4 @@ REST API で TDE を構成するには、Azure の所有者、共同作成者、
 - BYOK がサポートされた TDE を初めて使用する場合は、方法ガイド「[Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md)」(PowerShell で Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする) を参照してください。
 
 - Key Vault の詳細については、「[キー コンテナーのセキュリティ保護](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)」を参照してください。
+

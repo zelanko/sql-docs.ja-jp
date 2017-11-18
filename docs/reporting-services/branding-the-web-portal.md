@@ -1,7 +1,7 @@
 ---
 title: "Web ポータルをブランド化 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/02/2017
+ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,11 +9,9 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
@@ -31,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>ブランド パッケージを作成する  
+## <a name="creating-the-brand-package"></a>ブランド パッケージを作成する
   
 Reporting Services のブランド パッケージは 3 つのアイテムから構成されており、zip ファイルとしてパッケージされています。   
   
@@ -41,7 +39,7 @@ Reporting Services のブランド パッケージは 3 つのアイテムから
   
 ファイルには上記の名前を与える必要があります。 ただし、zip ファイルの名前は自由に設定できます。  
   
-### <a name="metadataxml"></a>metadata.xml  
+### <a name="metadataxml"></a>metadata.xml
   
 metadata.xml ファイルにより、ブランド パッケージの名前を設定できます。また、このファイルには、colors.json ファイルと logo.png ファイルの両方の参照エントリが含まれています。  
   
@@ -64,7 +62,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### <a name="colorsjson"></a>Colors.json
   
 ブランド パッケージがアップロードされると、サーバーは colors.json ファイルから名前/値のペアを抽出し、それをマスター LESS スタイルシートである、brand.less と結合します。 この LESS ファイルが処理され、結果的に生成された CSS ファイルがクライアントに提供されます。 スタイルシートのすべての色を 6 文字の 16 進数で表現します。  
   
@@ -115,13 +113,13 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
 その後、作成したあらゆるモバイル レポートにこのテーマを利用できます。テーマを配置した同じサーバーでなくても構いません。   
   
-### <a name="using-a-logo"></a>ロゴを使用する  
+### <a name="using-a-logo"></a>ロゴを使用する
   
 ブランド パッケージでロゴを追加する場合、Web ポータルの [サイト設定] メニューに設定した名前の代わりに Web ポータルに表示されます。  
   
 ロゴのために追加するファイルには PNG ファイル形式を使用する必要があります。 ファイルの寸法はサーバーにアップロードした後に拡大されます。 約 290px x 60px になるはずです。  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Web ポータルにブランド パッケージを適用する  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Web ポータルにブランド パッケージを適用する
   
 次の手順でブランド パッケージを追加、ダウンロード、削除します。  
   
@@ -141,9 +139,9 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
 パッケージを **[ダウンロード]** したり、 **[削除]** したりすることもできます。 パッケージを削除すると、直後に Web ポータルが既定のブランドにリセットされます。  
   
-## <a name="metadataxml-example"></a>metadata.xml 例  
+## <a name="metadataxml-example"></a>metadata.xml 例
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -155,7 +153,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>colors.json 例  
+## <a name="colorsjson-example"></a>colors.json 例
   
     {  
         "name":"Multicolored example brand",  

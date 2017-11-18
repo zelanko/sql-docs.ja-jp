@@ -3,8 +3,11 @@ title: "手順 3: 概念実証の ADO.NET を使用して SQL への接続 |Micr
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ado-net
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

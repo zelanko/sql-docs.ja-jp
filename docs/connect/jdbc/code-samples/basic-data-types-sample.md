@@ -3,8 +3,11 @@ title: "基本的なデータ型サンプル |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -172,3 +175,4 @@ public class basicDT {
  [データ型 &#40; の操作JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   
+

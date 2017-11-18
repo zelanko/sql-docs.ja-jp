@@ -3,8 +3,11 @@ title: "setAutoCommit メソッド (SQLServerConnection) |Microsoft ドキュメ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/09/2017
 
 ---
-# setAutoCommit メソッド (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   自動コミット モードを設定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)オブジェクトを特定の状態にします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  *value*  
   
  **true** 、接続の自動コミット モードを有効にする**false**を無効にします。  
   
-## 例外  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## 解説  
+## <a name="remarks"></a>解説  
  この setAutoCommit メソッドは、java.sql.Connection インターフェイスの setAutoCommit メソッドによって指定されます。  
   
  自動コミット モードの接続では、SQL ステートメントはすべて個別のトランザクションとして実行され、コミットされます。 それ以外の場合、SQL ステートメントはいずれかへの呼び出しで終了するトランザクションにグループ化、[コミット](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)メソッドまたは[ロールバック](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)メソッドです。 既定では、新しい接続は自動コミット モードとなります。  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  トランザクションの実行中にこのメソッドが呼び出された場合、トランザクションはコミットされます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

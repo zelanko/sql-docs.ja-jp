@@ -3,8 +3,11 @@ title: "SQLXML データ型のサンプル |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -63,3 +66,4 @@ ms.lasthandoff: 09/09/2017
  [データ型 &#40; の操作JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   
+
