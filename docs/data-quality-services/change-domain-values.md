@@ -2,24 +2,30 @@
 title: "ドメイン値の変更 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.dm.values.f1
+f1_keywords:
+- sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1f8a61f77ac470917f41bf6ba6704f5ca5df48d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="change-domain-values"></a>ドメイン値の変更
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのメタデータを変更および拡張する方法について説明します。 ナレッジ検出でナレッジを生成したり、ナレッジ ベースまたはドメインにナレッジをインポートしたり、別のナレッジ ベースに基づいてナレッジ ベースを作成した後に、データ値を対話形式で変更することができます。 ナレッジ ベースを生成するときは、コンピューター支援型のプロセスを利用するほかに、独自のナレッジを使用してデータ値を確認したり、次のように変更したりできます。  
@@ -64,7 +70,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、値を変更するドメインを選択するか、新しいドメインを作成します。 新しいドメインを作成する必要がある場合は、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。 **[ドメイン値]** タブをクリックします。  
   
-4.  **"値"** テーブルで、変更する必要がある値を表示します。 詳細については、次の「 [How to Display the Appropriate Values](#Display) 」を参照してください。  
+4.  **"値"** テーブルで、変更する必要がある値を表示します。 詳細については、次の「 [適切な値を表示する方法](#Display) 」を参照してください。  
   
 5.  値の状態を変更するには、次の手順に従います。  
   
@@ -87,20 +93,20 @@ ms.lasthandoff: 11/09/2017
   
     -   **[選択したドメイン値をグループの先頭の値として設定]**: グループの先頭の値を変更するには、先頭の値として指定されていないグループ内の値を選択し、 **[選択したドメイン値をグループの先頭の値として設定]** をクリックします。 先頭の値が他の値の置換値として設定されます。 この操作は、2 つ以上の値がグループ化されていて、DQS によって指定された値から先頭の値を変更する場合にのみ実行できます。 先頭の値は青色の行で太字で示されます。  
   
-7.  **スペル チェック**: 値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 」および「 [Set Domain Properties](../data-quality-services/set-domain-properties.md)」を参照してください。  
+7.  **スペル チェック**: 値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 その値を右クリックし、必要に応じて修正を選択します。 修正を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、その修正が **[次に修正]** 列に追加されます。 下矢印をクリックすると、その他の修正案が表示されます。 手動で修正を入力してスペル チェックの辞書に追加すると、修正として選択できるようになります。 詳細については、「 [DQS のスペル チェックの使用](../data-quality-services/use-the-dqs-speller.md) 」および「 [ドメインのプロパティを設定する](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
     > [!NOTE]  
     >  スペル チェックを使用するには、 **[ドメインのプロパティ]** ページで有効にする必要があります。 **[ドメインのプロパティ]** ページで無効になっている場合は、 **[ドメイン値]** ページで **[スペル チェックを有効/無効にします]** アイコンをクリックして有効にすることもできます。  
   
 8.  **[新しいドメインの値を追加します]**: クリックすると、テーブルの末尾に行が追加されます。 その行に値を入力すると、行がアルファベット順に並べ替えられます。入力した値には、新しいエントリであることを示す星のマークが値の前に表示されます。  
   
-9. **[ドメインの値を Excel からインポートします]**: Excel スプレッドシートから新しい値を追加するには、 **[値をインポートします]** アイコンの下矢印をクリックし、 **[ドメインの値を Excel からインポートします]**を選択します。 ファイル名を入力し、必要に応じて **[先頭の行を見出しとして使用]** を選択し、 **[OK]**をクリックします。 詳細については、「 [Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」をご参照ください。  
+9. **[ドメインの値を Excel からインポートします]**: Excel スプレッドシートから新しい値を追加するには、 **[値をインポートします]** アイコンの下矢印をクリックし、 **[ドメインの値を Excel からインポートします]**を選択します。 ファイル名を入力し、必要に応じて **[先頭の行を見出しとして使用]** を選択し、 **[OK]**をクリックします。 詳細については、「 [値を Excel ファイルからドメインへインポートする](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」をご参照ください。  
   
 10. **[プロジェクトの値のインポート]**: データ品質プロジェクトから新しい値を追加するには、 **[値をインポートします]** アイコンの下矢印をクリックし、 **[プロジェクトの値のインポート]**を選択します。 ファイル名を入力し、必要に応じて **[先頭の行を見出しとして使用]** を選択し、 **[OK]**をクリックします。 値をインポートするプロジェクトを選択し、 **[OK]**をクリックします。 インポートされた値が表示されます。 **[完了]**をクリックします。 詳細については、「プロジェクトの値をドメインにインポートする」を参照してください。  
   
 11. **[選択したドメインの値を削除します]**: ドメインの既存の値を削除するには、削除する値を "値" テーブルで選択し、 **[選択したドメインの値を削除します]** をクリックします。 DQS_NULL というエントリは削除できません。したがって、削除する値を複数選択した場合に、選択した値の中に DQS_NULL が含まれていると、操作が失敗します。  
   
-12. **[完了]** をクリックし、「 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+12. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: ドメイン ルールの変更後  
  ドメイン値を変更した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
@@ -118,7 +124,7 @@ ms.lasthandoff: 11/09/2017
   
  **[クレンジング]** アクティビティの **[結果の管理と表示]** ページでインタラクティブなデータ クレンジングを実行する際には、 **[結果の管理と表示]** ページの **[無効]** タブに "無効" と "エラー" の両方の値が含まれます。  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> 適切な値を表示する方法  
  次のようにして表示を変更することができます。  
   
 -   **[フィルター]** ボックスの一覧で状態を選択して、テーブルに表示する結果を状態に基づいて**絞り込み**ます。  
@@ -137,3 +143,4 @@ ms.lasthandoff: 11/09/2017
  **[ドメイン値]** タブの各値テーブルに DQS_NULL という値が 1 つ含まれています。 データ ソース内の null は、値テーブルでは SQL_NULL として表示されます。 null に相当する値は、DQS_NULL のシノニムとして設定することができます。 これにより、null と null に相当する値がすべて DQS_NULL として処理されます。  
   
   
+

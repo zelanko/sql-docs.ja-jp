@@ -2,9 +2,12 @@
 title: "予約済みキーワード (DMX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-dmx"></a>予約されているキーワード (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]排他的に使用するための特定のキーワードを予約します。 これらのキーワードを任意の場所を除く、位置でのデータ マイニング拡張機能 (DMX) ステートメントで使用できませんを[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]DMX 言語リファレンスで定義します。 これらの制限された DMX キーワードには次のメンバーがあります。  
   

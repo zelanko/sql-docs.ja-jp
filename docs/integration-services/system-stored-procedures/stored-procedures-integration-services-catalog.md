@@ -3,8 +3,11 @@ title: "ストアド プロシージャ (Integration Services カタログ) |Mic
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>ストアド プロシージャ (Integration Services カタログ)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このセクションの内容について説明します、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを管理するために使用できる[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスに配置されているプロジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   

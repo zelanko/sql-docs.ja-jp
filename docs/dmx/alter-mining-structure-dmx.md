@@ -2,9 +2,12 @@
 title: "マイニング構造 (DMX) を ALTER |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   既存のマイニング構造に基づいて新しいマイニング モデルを作成します。  使用すると、 **ALTER MINING STRUCTURE**を次のように新しいマイニング モデル構造を作成するステートメントが既に存在する必要があります。 ステートメントを使用する場合にこれに対し、[マイニング モデルの作成 &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)モデルを作成し、その基になるマイニング構造を同時に自動的に生成します。  
   

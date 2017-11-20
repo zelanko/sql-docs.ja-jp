@@ -2,9 +2,12 @@
 title: "データ マイニング拡張機能 (DMX) 関数リファレンス |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>データ マイニング拡張機能 (DMX) 関数リファレンス
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、データ マイニング拡張機能 (DMX) 言語のいくつかの関数をサポートしています。 関数によって、予測クエリの結果が拡張され、予測の詳細を説明する情報が含まれるようになります。 また、関数により、予測結果が返される方法をよりコントロールできるようにもなります。 次の表に、DMX の関数の使用方法を理解するのに役立つリソースへのリンクを示します。  
   

@@ -3,8 +3,11 @@ title: "標準のデータ ストリーム プロトコル |Microsoft ドキュ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -29,6 +32,6 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/09/2017
 
 ---
-# 標準のデータ ストリーム プロトコル
+# <a name="standard-data-stream-protocol"></a>標準のデータ ストリーム プロトコル
 標準のデータ ストリーム プロトコルとは、異種の Dbms のデータにアクセスする方法の 1 つです。 標準的なデータ ストリーム プロトコルが既に存在する実際には、: ANSI/ISO リモート データベース アクセス (RDA) 標準 ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) と、IBM 分散型リレーショナル データベース アーキテクチャ (DRDA) ([http://www.netstoreusa.com/cbbooks/007/0070351384.shtml](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml))。 両方のシステムでは、promise を表示、どちらも、広範に実装されて現在します。
 

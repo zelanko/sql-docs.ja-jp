@@ -3,8 +3,11 @@ title: "データ ソース |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -38,3 +41,4 @@ A*データソース*データのソースだけです。 ファイル、DBMS、
 -   [データ ソースを使用します。](../../odbc/reference/using-data-sources.md)  
   
 -   [データ ソースの例](../../odbc/reference/data-source-example.md)
+

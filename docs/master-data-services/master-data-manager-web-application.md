@@ -1,24 +1,29 @@
 ---
 title: "マスター データ マネージャー Web アプリケーション | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 12/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5352e1eeabd5050d0a7d1e28fe324b96be6ebb9d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 269fbc636345b0313c07812cb8475afb6d1ab238
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーション
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションは、主に、管理者が管理タスクを実行するために使用します。 たとえば、管理者のみが、モデル、ビジネス ルール、またはデータのバージョンを作成できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
@@ -43,3 +48,4 @@ ms.lasthandoff: 11/09/2017
  [[ユーザー/グループの権限] 機能領域 (マスター データ マネージャー)](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   
+

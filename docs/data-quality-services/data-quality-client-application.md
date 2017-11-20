@@ -2,23 +2,28 @@
 title: "Data Quality Client アプリケーション | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 940d2cb164c6f1d1af3574ae204d379d8293ce8f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f40568ff94ac2e2a026f2538fa2cb9e6fb9f7c3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用すると、スタンドアロンのツールを使用してデータ品質に関する操作を実行できます。 このアプリケーションでは、ナレッジ ベースを作成し、データ品質プロジェクトを作成して実行し、管理タスクを実行できます。  
@@ -47,3 +52,4 @@ ms.lasthandoff: 11/09/2017
  [Data Quality Client のホーム画面](../data-quality-services/data-quality-client-home-screen.md)  
   
   
+

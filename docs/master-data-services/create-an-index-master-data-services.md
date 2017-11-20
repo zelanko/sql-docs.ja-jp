@@ -1,24 +1,29 @@
 ---
 title: "インデックスを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c5367e5ecea514baae909869d5495b8d0f3087
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee405ebea31b8ca2a178b2d287a1ba1b8d4e97f8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-an-index-master-data-services"></a>インデックスを作成する (マスター データ サービス)
   頻繁にクエリを実行する属性の一覧にカスタム インデックスを作成して、クエリのパフォーマンスを高めます。  
@@ -55,7 +60,7 @@ ms.lasthandoff: 11/09/2017
 |[状態]|インデックスの状態。<br /><br /> **[保存]** をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") 画像が表示されます。|  
 |名前|インデックス名。|  
 |[Is Unique]|インデックスが一意かどうかを示します。|  
-|[On Attributes] (属性)|インデックスが定義されている属性の表示名を示します。|  
+|[On Attributes]\(属性)|インデックスが定義されている属性の表示名を示します。|  
   
  インデックスをクリックすると、次の情報が表示されます。  
   
@@ -74,3 +79,4 @@ ms.lasthandoff: 11/09/2017
  [カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)  
   
   
+

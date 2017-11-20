@@ -2,27 +2,30 @@
 title: "基本的な可用性グループ (Always On 可用性グループ) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/27/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
 ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/28/2017
+
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本的な可用性グループ (AlwaysOn 可用性グループ)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   基本的な AlwaysOn 可用性グループでは、SQL Server 2016 Standard Edition および SQL Server 2017 Standard Edition 用の高可用性ソリューションが提供されます。 基本的な可用性グループでは、単一のデータベースのフェールオーバー環境がサポートされます。 Enterprise Edition での従来の (拡張) [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) の場合と同じように作成され、管理されます。 このドキュメントでは、基本的な可用性グループの違いと制限の概要を示します。  
   
@@ -64,3 +67,4 @@ ms.lasthandoff: 11/09/2017
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

@@ -2,9 +2,12 @@
 title: "データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx)」をご覧ください。
 
 

@@ -2,23 +2,28 @@
 title: "ドメイン ベースの属性の作成 (Excel 用 MDS アドイン) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6fc80ed27dc94c4652f4db70a261277163f98f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0183ba6f178fbc9f392b4e711ccaba49220ffa3e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、列内の値を特定の一連の値に制約する場合に、ドメイン ベースの属性を作成できます。  
@@ -49,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  **[属性に次の値を設定]** ボックスの一覧で、次の操作を実行します。  
   
-    -   ワークシートの値を使用するには、**[ 選択した列]** をクリックします。 選択した列の値を使用して、新しいエンティティと新しいステージング テーブルが作成されます。  
+    -   ワークシートの値を使用するには、[ **選択した列**] をクリックします。 選択した列の値を使用して、新しいエンティティと新しいステージング テーブルが作成されます。  
   
     -   既存のエンティティの値を使用するには、エンティティの名前を選択します。
     
@@ -69,3 +74,4 @@ ms.lasthandoff: 11/09/2017
  [モデルの構築 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   
+

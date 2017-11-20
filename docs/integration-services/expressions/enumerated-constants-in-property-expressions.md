@@ -2,9 +2,12 @@
 title: "列挙プロパティ式で定数 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,6 +24,7 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
@@ -613,3 +617,4 @@ ms.lasthandoff: 08/03/2017
  [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)  
   
   
+

@@ -1,28 +1,34 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Stretch Database
+helpviewer_keywords:
+- Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f4b92e22ff418924950871820b2c43640821bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch Database は、コールド データを透過的かつ安全に Microsoft Azure クラウドに移行します。  
   
@@ -82,3 +88,4 @@ ms.lasthandoff: 11/09/2017
  **Stretch Database の候補となるデータベースとテーブルを特定する。** SQL Server 2016 Upgrade Advisor をダウンロードし、Stretch Database Advisor を実行して、Stretch Database の候補となるデータベースとテーブルを特定します。 Stretch Database Advisor はブロックの問題も特定します。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」を参照してください。  
   
   
+

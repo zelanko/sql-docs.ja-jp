@@ -2,23 +2,28 @@
 title: "データ クレンジング | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-cleansing"></a>データ クレンジング
   データ クレンジングは、データ ソース内のデータの品質を分析し、システムによる推奨事項を手動で承認または拒否し、それによってデータを変更するプロセスです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのデータ クレンジングには、ナレッジ ベースのナレッジにデータがどの程度準拠しているのかを分析するコンピューター支援型のプロセスと、データ スチュワードがコンピューター支援型プロセスの結果を検討および変更してデータ クレンジングが意図したとおりに行われるようにするための対話型プロセスが含まれます。  
@@ -57,9 +62,9 @@ ms.lasthandoff: 11/09/2017
   
  コンピューター支援型のプロセスでは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] に、対話型クレンジング プロセスで使用するデータ品質情報が表示されます。 構文エラー規則への準拠を除き、DQS では、参照データと高度なアルゴリズムを使用して、 *信頼レベル*に基づいてデータが分類されます。 信頼レベルは、DQS の修正または候補に対する確実性の度合いを示します。 信頼レベルは、次のしきい値に基づきます。  
   
--   *自動修正のしきい値* : この値を上回る場合 DQS によって変更内容が提示され、データ スチュワードが拒否しない限り修正されます。 自動修正しきい値は、 **[構成]** 画面の **[全般設定]** タブで指定できます。 詳細については、「 [クレンジングと照合のしきい値の構成](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)」をご参照ください。  
+-   *自動修正のしきい値* : この値を上回る場合 DQS によって変更内容が提示され、データ スチュワードが拒否しない限り修正されます。 自動修正しきい値は、 **[構成]** 画面の **[全般設定]** タブで指定できます。 詳細については、「 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)」をご参照ください。  
   
--   *自動提案のしきい値* : この値を上回り、自動修正のしきい値以下である場合、DQS によって変更内容が提示され、データ スチュワードが承認した場合に修正されます。 自動提案しきい値は、 **[構成]** 画面の **[全般設定]** タブで指定できます。 詳細については、「 [クレンジングと照合のしきい値の構成](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)」をご参照ください。  
+-   *自動提案のしきい値* : この値を上回り、自動修正のしきい値以下である場合、DQS によって変更内容が提示され、データ スチュワードが承認した場合に修正されます。 自動提案しきい値は、 **[構成]** 画面の **[全般設定]** タブで指定できます。 詳細については、「 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)」をご参照ください。  
   
  自動提案のしきい値より信頼レベルが低いすべての値は、データ スチュワードが変更を指定しない限り、そのまま維持されます。  
   
@@ -111,3 +116,4 @@ ms.lasthandoff: 11/09/2017
  [データ照合](../data-quality-services/data-matching.md)  
   
   
+

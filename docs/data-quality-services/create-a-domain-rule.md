@@ -2,26 +2,31 @@
 title: "ドメイン ルールの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: edc83accaccc4eeee09c73ca8535a758fd9cd98e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメイン ルールを作成する方法について説明します。 ドメイン ルールとは、ドメイン値の検証、修正、および標準化のために使用される条件です。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、ドメイン ルールがドメイン全体に当てはまる必要があります。 ドメイン ルールには検証規則を含めることができます。検証規則は、データ品質プロジェクトでドメイン値の検証に使用され、データの修正には使用されません。 また、標準化規則を含めることもできます。標準化規則は、有効なデータに対して適用され、データ修正で使用されます。  
@@ -40,12 +45,12 @@ ms.lasthandoff: 11/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 」または「 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
     > [!NOTE]  
     >  Data Quality Service クライアントのドメイン管理用のページには、それぞれ異なるドメイン管理操作に対応する 5 つのタブが含まれています。 ウィザード ベースのプロセスではないため、任意の管理操作を個別に実行することができます。  
   
-3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、ドメイン ルールを作成するドメインを選択するか、新しいドメインを作成します。 新しいドメインを作成する必要がある場合は、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
+3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、ドメイン ルールを作成するドメインを選択するか、新しいドメインを作成します。 新しいドメインを作成する必要がある場合は、「 [Create a Domain](../data-quality-services/create-a-domain.md)」を参照してください。  
   
 4.  **[ドメイン ルール]** タブをクリックします。  
   
@@ -135,3 +140,4 @@ ms.lasthandoff: 11/09/2017
 |値が正規表現と一致しない|オペランド内の正規表現と一致しない値のみが有効と見なされます。|オペランドの例: [1-5]+ (1 ～ 5 の数字のみで構成されていない文字列)<br /><br /> 有効な値: 456、ABC<br /><br /> 無効な値: 123、123456、14352|  
   
   
+

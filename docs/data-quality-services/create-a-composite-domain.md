@@ -2,26 +2,31 @@
 title: "複合ドメインの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/22/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c69c58ed516b9977e8b8ea43a6a5f69a1e57f2e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインを作成する方法について説明します。 複合ドメインは、1 つのデータ フィールドに適用される 1 つ以上の単一ドメインで構成されます。 複合ドメインについて詳しくは、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
@@ -52,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 ソース列に、既存の 2 つの単一ドメインで構成される複合ドメインが含まれていることを確認します。 対応する単一ドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックします。  
   
-6.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 ソース列に、各部分が既存の 2 つの単一ドメインで構成される複合ドメインが含まれていることを確認します。 対応する単一ドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックして作成します。 詳細については、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
+6.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 ソース列に、各部分が既存の 2 つの単一ドメインで構成される複合ドメインが含まれていることを確認します。 対応する単一ドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックして作成します。 詳細については、「 [Create a Domain](../data-quality-services/create-a-domain.md)」をご参照ください。  
   
 7.  **[複合ドメインの作成]** アイコンをクリックします。  
   
@@ -62,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  アクティビティとして **[ドメイン管理]** を選択した後に、 **[作成]** をクリックして新しいナレッジ ベースを作成するか、 **[開く]** をクリックして既存のナレッジ ベースを開きます。  
   
-3.  複合ドメインに必要な 2 つ以上の単一ドメインが存在することを確認します。 存在しない場合は、 **[ドメインの作成]** アイコンをクリックして作成します。 詳細については、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
+3.  複合ドメインに必要な 2 つ以上の単一ドメインが存在することを確認します。 存在しない場合は、 **[ドメインの作成]** アイコンをクリックして作成します。 詳細については、「 [Create a Domain](../data-quality-services/create-a-domain.md)」をご参照ください。  
   
 4.  **[ドメイン管理]** ページで、ドメイン リストの上にある **[複合ドメインの作成]** アイコンをクリックします。  
   
@@ -105,3 +110,4 @@ ms.lasthandoff: 11/09/2017
  ナレッジ ベースの解析を使用する場合、複合ドメイン内のドメインよりもソース データ内の値の方が少ないときは、不足しているドメインに null が格納されます。 複合ドメイン内のドメインよりもソース データ内の値の方が多いときは、余分なデータがいずれかの列に追加されます。 複数のドメインに同じ値が含まれる場合、データ ソースは最初に一致したドメインに解析されます。  
   
   
+
