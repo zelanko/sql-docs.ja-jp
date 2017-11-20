@@ -1,5 +1,5 @@
 
-# [SQL Server Native Client OLE DB プロバイダーでエラー](errors.md)
+# [SQL Server Native Client OLE DB プロバイダーのエラー](errors.md)
 
 # [エラー インターフェイス内の情報](information-in-error-interfaces.md)
 # [エラー情報の取得](retrieving-error-information.md)

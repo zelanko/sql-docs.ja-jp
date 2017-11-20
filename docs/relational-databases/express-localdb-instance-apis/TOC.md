@@ -1,5 +1,5 @@
-# [SQL Server Express LocalDB リファレンス - インスタンスの Api](sql-server-express-localdb-reference-instance-apis.md)
-# [コマンドライン管理ツール: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
+# [SQL Server Express LocalDB リファレンス - インスタンス API](sql-server-express-localdb-reference-instance-apis.md)
+# [コマンド ライン管理ツール: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
 # [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)
 
 # LocalDB 関数

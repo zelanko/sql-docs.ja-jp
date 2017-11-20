@@ -1,4 +1,4 @@
-# [WMI Provider for Configuration Management クラス](wmi-provider-for-configuration-management-classes.md)
+# [WMI Provider for Configuration Management のクラス](wmi-provider-for-configuration-management-classes.md)
 
 # 特定の領域
 ## [ClientNetLibInfo クラス +](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)
@@ -16,10 +16,10 @@
 ## [SqlService クラス +](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md)
 ## [SqlServiceAdvancedProperty クラス +](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md)
 
-# [CInstance クラスの InstanceName プロパティ](cinstance-class-instancename-property.md)
+# [CInstance クラス - InstanceName プロパティ](cinstance-class-instancename-property.md)
 # [CInstance クラス - SetDefaults メソッド](cinstance-class-setdefaults-method.md)
 # [CInstance クラス](cinstance-class.md)
-# [ClientSettings クラスの InstanceName プロパティ](clientsettings-class-instancename-property.md)
+# [ClientSettings クラス - InstanceName プロパティ](clientsettings-class-instancename-property.md)
 # [ClientSettings クラス - SetDefaults メソッド](clientsettings-class-setdefaults-method.md)
 # [ClientSettings クラス](clientsettings-class.md)
 # [SqlErrorLogEvent クラス](sqlerrorlogevent-class.md)

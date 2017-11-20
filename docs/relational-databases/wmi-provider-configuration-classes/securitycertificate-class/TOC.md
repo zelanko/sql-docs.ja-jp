@@ -1,4 +1,4 @@
-# [コンテキスト プロパティ (SecurityCertificate クラス)](context-property-securitycertificate-class.md)
+# [Context プロパティ (SecurityCertificate クラス)](context-property-securitycertificate-class.md)
 # [ExpirationDate プロパティ (SecurityCertificate クラス)](expirationdate-property-securitycertificate-class.md)
 # [FriendlyName プロパティ (SecurityCertificate クラス)](friendlyname-property-securitycertificate-class.md)
 # [GetCurrentCertificate メソッド (SecurityCertificate クラス)](getcurrentcertificate-method-securitycertificate-class.md)

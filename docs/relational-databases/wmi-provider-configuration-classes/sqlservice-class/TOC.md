@@ -3,7 +3,7 @@
 # [AdvancedProperties プロパティ (SqlService クラス)](advancedproperties-property-sqlservice-class.md)
 # [BinaryPath プロパティ (SqlService クラス)](binarypath-property-sqlservice-class.md)
 # [Clustered プロパティ (SqlService クラス)](clustered-property-sqlservice-class.md)
-# [依存関係プロパティ (SqlService クラス)](dependencies-property-sqlservice-class.md)
+# [Dependencies プロパティ (SqlService クラス)](dependencies-property-sqlservice-class.md)
 # [Description プロパティ (SqlService クラス)](description-property-sqlservice-class.md)
 # [DisplayName プロパティ (SqlService クラス)](displayname-property-sqlservice-class.md)
 # [ErrorControl プロパティ (SqlService クラス)](errorcontrol-property-sqlservice-class.md)

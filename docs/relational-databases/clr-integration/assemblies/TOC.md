@@ -1,4 +1,4 @@
 # [CLR 統合アセンブリの管理](managing-clr-integration-assemblies.md)
-# [アセンブリを変更します。](altering-an-assembly.md)
-# [アセンブリを作成します。](creating-an-assembly.md)
-# [アセンブリを削除します。](dropping-an-assembly.md)
+# [アセンブリの変更](altering-an-assembly.md)
+# [アセンブリの作成](creating-an-assembly.md)
+# [アセンブリの削除](dropping-an-assembly.md)

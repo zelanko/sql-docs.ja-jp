@@ -1,6 +1,6 @@
 # [ホスト保護属性と CLR 統合プログラミング](host-protection-attributes-and-clr-integration-programming.md)
 # [Microsoft.VisualBasic.dll の許可されない型およびメンバー](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)
-# [Mscorlib.dll の許可されない型およびメンバー](disallowed-types-and-members-in-mscorlib-dll.md)
+# [mscorlib.dll の許可されない型およびメンバー](disallowed-types-and-members-in-mscorlib-dll.md)
 # [System.Core.dll の許可されない型およびメンバー](disallowed-types-and-members-in-system-core-dll.md)
 # [System.Data.dll の許可されない型およびメンバー](disallowed-types-and-members-in-system-data-dll.md)
 # [System.dll の許可されない型およびメンバー](disallowed-types-and-members-in-system-dll.md)

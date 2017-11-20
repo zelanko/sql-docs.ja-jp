@@ -12,6 +12,7 @@
 ## [インストールと接続 - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [実行と接続 - Docker](quickstart-install-connect-docker.md)
 ## [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [実行と接続 - クラウド](quickstart-install-connect-clouds.md)
 
 # チュートリアル
 ## [1_Windows からの移行](sql-server-linux-migrate-restore-database.md)
@@ -77,7 +78,7 @@
 ##### [SUSE での構成](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Ubuntu での構成](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
-#### [スケール アウトのみを読み取るために作成]()
+#### [読み取りスケールのみ用に作成する]()
 ##### [AG の構成](sql-server-linux-availability-group-configure-rs.md)
 
 ## [セキュリティ](sql-server-linux-security-overview.md)

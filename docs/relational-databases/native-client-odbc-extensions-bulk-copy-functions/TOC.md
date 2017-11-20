@@ -1,4 +1,4 @@
-# [SQL Server のドライバー拡張機能 - 一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)
+# [SQL Server ドライバーの拡張機能 - 一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)
 
 # [bcp_batch](bcp-batch.md)
 # [bcp_bind](bcp-bind.md)
@@ -10,7 +10,7 @@
 # [bcp_done](bcp-done.md)
 # [bcp_exec](bcp-exec.md)
 # [bcp_getcolfmt](bcp-getcolfmt.md)
-# [bcp_gettypename による](bcp-gettypename.md)
+# [bcp_gettypename](bcp-gettypename.md)
 # [bcp_init](bcp-init.md)
 # [bcp_moretext](bcp-moretext.md)
 # [bcp_readfmt](bcp-readfmt.md)

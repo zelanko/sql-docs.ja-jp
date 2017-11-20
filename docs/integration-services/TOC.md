@@ -28,6 +28,8 @@
 ## [Azure で SSIS カタログに接続する](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
 ## [Windows 認証でデータ ソースに接続する](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [ファイルとファイル共有への接続](lift-shift/ssis-azure-files-file-shares.md)
+
 # [インストールまたはアップグレード](../integration-services/install-windows/install-integration-services.md)
 
 # [開発ツールと管理ツール](integration-services-ssis-development-and-management-tools.md)
@@ -169,3 +171,13 @@
 #### [レッスン 3-1 - 配置バンドルのコピー](lesson-3-1-copying-the-deployment-bundle.md)
 #### [レッスン 3-2 - パッケージ インストール ウィザードの実行](lesson-3-2-running-the-package-installation-wizard.md)
 #### [レッスン 3-3 - 配置したパッケージのテスト](lesson-3-3-testing-the-deployed-packages.md)
+
+# リソース
+## ブログをフォロー
+### [SSIS チーム ブログ](https://blogs.msdn.microsoft.com/ssis/)
+## ヘルプの参照
+### [MSDN の SSIS フォーラム](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Stack Overflow の SSIS](http://stackoverflow.com/questions/tagged/ssis)  
+## フィードバックの送信
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [PC のドキュメントを入手](../sql-server/sql-server-help-installation.md)

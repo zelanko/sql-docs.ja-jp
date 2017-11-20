@@ -1,4 +1,4 @@
-# [SQL Server インプロセス固有の拡張 ado.net](sql-server-in-process-specific-extensions-to-ado-net.md)
+# [ADO.NET に対する SQL Server インプロセス固有の拡張機能](sql-server-in-process-specific-extensions-to-ado-net.md)
 # [SqlContext オブジェクト](sqlcontext-object.md)
 # [SqlDataRecord オブジェクト](sqldatarecord-object.md)
 # [SqlPipe オブジェクト](sqlpipe-object.md)

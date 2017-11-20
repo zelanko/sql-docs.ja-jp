@@ -1,6 +1,6 @@
 # [ODBC API 実装の詳細](odbc-api-implementation-details.md)
 
-# ネイティブ クライアント用の SQL * ODBC Api
+# ネイティブ クライアント用の SQL * ODBC API
 ## [SQLBindCol](sqlbindcol.md)
 ## [SQLBindParameter](sqlbindparameter.md)
 ## [SQLBrowseConnect](sqlbrowseconnect.md)
@@ -27,7 +27,7 @@
 ## [SQLGetCursorName](sqlgetcursorname.md)
 ## [SQLGetData](sqlgetdata.md)
 ## [SQLGetDescField](sqlgetdescfield.md)
-## [Sqlgetdescrec による](sqlgetdescrec.md)
+## [SQLGetDescRec](sqlgetdescrec.md)
 ## [SQLGetDiagField](sqlgetdiagfield.md)
 ## [SQLGetFunctions](sqlgetfunctions.md)
 ## [SQLGetInfo](sqlgetinfo.md)
@@ -44,8 +44,8 @@
 ## [SQLPutData](sqlputdata.md)
 ## [SQLRowCount](sqlrowcount.md)
 ## [SQLSetConnectAttr](sqlsetconnectattr.md)
-## [Sqlsetdescfield による](sqlsetdescfield.md)
-## [Sqlsetdescrec による](sqlsetdescrec.md)
+## [SQLSetDescField](sqlsetdescfield.md)
+## [SQLSetDescRec](sqlsetdescrec.md)
 ## [SQLSetEnvAttr](sqlsetenvattr.md)
 ## [SQLSetStmtAttr](sqlsetstmtattr.md)
 ## [SQLSpecialColumns](sqlspecialcolumns.md)

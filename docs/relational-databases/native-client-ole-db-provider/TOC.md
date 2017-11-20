@@ -1,6 +1,6 @@
 # [SQL Server Native Client OLE DB プロバイダー アプリケーションの作成](creating-a-sql-server-native-client-ole-db-provider-application.md)
 # [OLE DB プロパティについて](about-ole-db-properties.md)
-# [データ ソースへの接続を確立します。](establishing-a-connection-to-a-data-source.md)
+# [データ ソースへの接続の確立](establishing-a-connection-to-a-data-source.md)
 # [コマンドの実行](executing-a-command.md)
 # [結果の処理](processing-results.md)
-# [OLE db SQL Server Native Client で OUTPUT 句の使用](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)
+# [SQL Server Native Client の OLE DB での OUTPUT 句の使用](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)

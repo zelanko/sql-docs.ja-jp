@@ -3,6 +3,7 @@
 # 概要
 ## [Reporting Services の新機能](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [新規および最近の更新記事](new-updated-reporting-services.md)
+## [ログの変更](change-log-sql-server-reporting-services.md)
 ## [Reporting Services の概念 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services の機能とタスク](reporting-services-features-and-tasks-ssrs.md)   
 ## [旧バージョンとの互換性](reporting-services-backward-compatibility.md)  
@@ -87,7 +88,8 @@
 ### [CSV デバイス情報設定](csv-device-information-settings.md)  
 ### [Excel デバイス情報設定](excel-device-information-settings.md)  
 ### [HTML デバイス情報設定](html-device-information-settings.md)  
-### [デバイス情報設定をイメージ](image-device-information-settings.md)  ### [MHTML デバイス情報設定](mhtml-device-information-settings.md)  
+### [画像デバイス情報設定](image-device-information-settings.md)  
+### [MHTML デバイス情報設定](mhtml-device-information-settings.md)  
 ### [PDF デバイス情報の設定](pdf-device-information-settings.md)  
 ### [PPTX デバイス情報設定](pptx-device-information-settings.md)  
 ### [XML デバイス情報設定](xml-device-information-settings.md)  

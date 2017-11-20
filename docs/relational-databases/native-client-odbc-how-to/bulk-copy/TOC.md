@@ -1,7 +1,7 @@
-# [一括コピーするいますと SQL Server ODBC ドライバーの操作方法に関するトピック (ODBC)](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)
+# [SQL Server ODBC ドライバーで一括コピーを行う方法に関するトピック (ODBC)](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)
 
-# [一括コピー SELECT 結果セット (ODBC)](bulk-copy-a-select-result-set-odbc.md)
-# [フォーマット ファイル (ODBC) を使用して一括コピー](bulk-copy-by-using-a-format-file-odbc.md)
-# [プログラム変数 (ODBC) からデータの一括コピー](bulk-copy-data-from-program-variables-odbc.md)
-# [一括コピー フォーマット ファイル (ODBC) なし](bulk-copy-without-a-format-file-odbc.md)
-# [一括コピー フォーマット ファイル (ODBC) を作成します。](create-a-bulk-copy-format-file-odbc.md)
+# [SELECT 結果セットの一括コピー (ODBC)](bulk-copy-a-select-result-set-odbc.md)
+# [フォーマット ファイルを使用した一括コピー (ODBC)](bulk-copy-by-using-a-format-file-odbc.md)
+# [プログラム変数からのデータの一括コピー (ODBC)](bulk-copy-data-from-program-variables-odbc.md)
+# [フォーマット ファイルを使用しない一括コピー (ODBC)](bulk-copy-without-a-format-file-odbc.md)
+# [一括コピー フォーマット ファイルの作成 (ODBC)](create-a-bulk-copy-format-file-odbc.md)

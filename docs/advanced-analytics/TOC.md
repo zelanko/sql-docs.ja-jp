@@ -153,12 +153,11 @@
 ### [Machine Learning Services の高度な構成オプション](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [SQL Server での R ランタイムのセキュリティに関する考慮事項](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [SQL Server Machine Learning Services のユーザー アカウント プールを変更する](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Machine Learning の拡張機能の構成と管理](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [Web サービスを使用したモデルのデプロイと使用](operationalization-with-mrsdeploy.md)
 ### [Machine Learning ソリューションの管理と監視](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services のリソース管理](r/resource-governance-for-r-services.md)
-### [R 用のリソース プールを作成する](r/how-to-create-a-resource-pool-for-r.md)
+### [Machine Learning 用のリソース プールの作成](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning Services の拡張イベント](r/extended-events-for-sql-server-r-services.md)
 
 ### [Machine Learning Services の DMV](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [既存の Azure 仮想マシンに R を追加する](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [SqlBindR.exe を使ってインスタンスをアップグレードする](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [コマンドラインから R Server をインストールする](r/install-microsoft-r-server-from-the-command-line.md)
-### [データ サイエンス仮想マシンのプロビジョニング](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [エンタープライズ データ サイエンス仮想マシンのプロビジョニング](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [データ サイエンス ツールをセットアップする](r/setup-or-configure-r-tools.md)
 ### [データ サイエンス クライアントをセットアップする](r/set-up-a-data-science-client.md)
 

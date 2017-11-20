@@ -1,8 +1,8 @@
 # [概要](catalog-views-transact-sql.md)
 
-# [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](querying-the-sql-server-system-catalog-faq.md)  
-# [スキーマの sys.schemas](schemas-catalog-views-sys-schemas.md)  
-# [メッセージ (エラー) 用の sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
+# [SQL Server システム カタログに対するクエリに関してよくあるご質問](querying-the-sql-server-system-catalog-faq.md)  
+# [スキーマ - sys.schemas](schemas-catalog-views-sys-schemas.md)  
+# [メッセージ (エラー) - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
 # [拡張プロパティ - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
 # 変更の追跡
@@ -13,7 +13,7 @@
 ## [データベース ミラーリング監視サーバー - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
 # データ層アプリケーション
-## [データ層アプリケーションのビュー - dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
+## [データ層アプリケーション ビュー - dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
 
 # [可用性グループ](always-on-availability-groups-catalog-views-transact-sql.md)  
 ## [可用性データベースの監視](sys-availability-databases-cluster-transact-sql.md)  
@@ -68,7 +68,7 @@
 ## [sysmail_sentitems](sysmail-sentitems-transact-sql.md)  
 ## [sysmail_unsentitems](sysmail-unsentitems-transact-sql.md)  
 
-# [データベースおよびファイル](databases-and-files-catalog-views-transact-sql.md)  
+# [データベースとファイル](databases-and-files-catalog-views-transact-sql.md)  
 ## [sys.backup_devices](sys-backup-devices-transact-sql.md)  
 ## [sys.databases](sys-databases-transact-sql.md)  
 ## [sys.database_files](sys-database-files-transact-sql.md)  
@@ -87,11 +87,11 @@
 ## [sys.tcp_endpoints](sys-tcp-endpoints-transact-sql.md)  
 
 # [拡張イベント](extended-events-catalog-views-transact-sql.md)  
-## [sys.database_event_session_targets (Azure SQL データベース)](sys-database-event-session-targets-azure-sql-database.md)  
-## [sys.database_event_session_fields (Azure SQL データベース)](sys-database-event-session-fields-azure-sql-database.md)  
-## [sys.database_event_session_events (Azure SQL データベース)](sys-database-event-session-events-azure-sql-database.md)  
-## [sys.database_event_session_actions (Azure SQL データベース)](sys-database-event-session-actions-azure-sql-database.md)  
-## [sys.database_event_sessions (Azure SQL データベース)](sys-database-event-sessions-azure-sql-database.md)  
+## [sys.database_event_session_targets (Azure SQL Database)](sys-database-event-session-targets-azure-sql-database.md)  
+## [sys.database_event_session_fields (Azure SQL Database)](sys-database-event-session-fields-azure-sql-database.md)  
+## [sys.database_event_session_events (Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)  
+## [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)  
+## [sys.database_event_sessions (Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)  
 ## [sys.server_event_sessions](sys-server-event-sessions-transact-sql.md)  
 ## [sys.server_event_session_actions](sys-server-event-session-actions-transact-sql.md)  
 ## [sys.server_event_session_events](sys-server-event-session-events-transact-sql.md)  
@@ -108,7 +108,7 @@
 ## [sys.filetable_system_defined_objects](sys-filetable-system-defined-objects-transact-sql.md)  
 ## [sys.filetables](sys-filetables-transact-sql.md)  
 
-# [フルテキスト検索およびセマンティック検索](full-text-search-and-semantic-search-catalog-views-transact-sql.md)  
+# [フルテキスト検索とセマンティック検索](full-text-search-and-semantic-search-catalog-views-transact-sql.md)  
 ## [sys.fulltext_catalogs](sys-fulltext-catalogs-transact-sql.md)  
 ## [sys.fulltext_document_types](sys-fulltext-document-types-transact-sql.md)  
 ## [sys.fulltext_index_catalog_usages](sys-fulltext-index-catalog-usages-transact-sql.md)  
@@ -237,7 +237,7 @@
 # [セキュリティ](security-catalog-views-transact-sql.md)  
 ## [sys.asymmetric_keys](sys-asymmetric-keys-transact-sql.md)  
 ## [sys.certificates](sys-certificates-transact-sql.md)  
-## [sys.column_encryption_keys](sys-column-encryption-keys-transact-sql.md)  
+## [sys.column_encryption_keys ](sys-column-encryption-keys-transact-sql.md)  
 ## [sys.column_encryption_key_values](sys-column-encryption-key-values-transact-sql.md)  
 ## [sys.column_master_keys](sys-column-master-keys-transact-sql.md)  
 ## [sys.credentials](sys-credentials-transact-sql.md)  
@@ -278,7 +278,7 @@
 ## [sys.routes](sys-routes-transact-sql.md)  
 ## [sys.service_contract_message_usages](sys-service-contract-message-usages-transact-sql.md)  
 ## [sys.service_contract_usages](sys-service-contract-usages-transact-sql.md)  
-## [結合します。](sys-service-contracts-transact-sql.md)  
+## [sys.service_contracts](sys-service-contracts-transact-sql.md)  
 ## [sys.service_message_types](sys-service-message-types-transact-sql.md)  
 ## [sys.service_queue_usages](sys-service-queue-usages-transact-sql.md)  
 ## [sys.service_queues](sys-service-queues-transact-sql.md)  
@@ -300,7 +300,7 @@
 ## [sys.spatial_indexes](sys-spatial-indexes-transact-sql.md)  
 ## [sys.spatial_reference_systems](sys-spatial-reference-systems-transact-sql.md)  
 
-# [SQL データ ウェアハウス](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+# [SQL Data Warehouse](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 ## [sys.pdw_column_distribution_properties](sys-pdw-column-distribution-properties-transact-sql.md)  
 ## [sys.pdw_database_mappings](sys-pdw-database-mappings-transact-sql.md)  
 ## [sys.pdw_diag_event_properties](sys-pdw-diag-event-properties-transact-sql.md)  
@@ -345,7 +345,7 @@
 ## [sys.xml_indexes](sys-xml-indexes-transact-sql.md)  
 ## [sys.xml_schema_model_groups](sys-xml-schema-model-groups-transact-sql.md)  
 ## [sys.xml_schema_collections](sys-xml-schema-collections-transact-sql.md)  
-## [あります](sys-xml-schema-namespaces-transact-sql.md)  
+## [sys.xml_schema_namespaces](sys-xml-schema-namespaces-transact-sql.md)  
 ## [sys.xml_schema_types](sys-xml-schema-types-transact-sql.md)  
 ## [sys.xml_schema_wildcard_namespaces](sys-xml-schema-wildcard-namespaces-transact-sql.md)  
 ## [sys.xml_schema_wildcards](sys-xml-schema-wildcards-transact-sql.md)  
