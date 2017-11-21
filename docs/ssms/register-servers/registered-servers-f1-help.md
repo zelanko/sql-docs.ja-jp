@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e6862293a076e345534c77995352e5f63daee20b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: df1eb91bc84f39d0e2277731d5329d79b8c43e78
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="registered-servers-f1-help"></a>[登録済みサーバー] の F1 ヘルプ
   ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [登録済みサーバー] コンポーネントの F1 ヘルプについて説明します。 さまざまなオプションについて説明します。
@@ -121,7 +119,7 @@ ms.lasthandoff: 09/01/2017
   
 ### <a name="options"></a>オプション  
  **サーバーの種類**  
- [登録済みサーバー] でサーバーを登録する場合は、 **[サーバーの種類]** ボックスは読み取り専用になっており、そのサーバーは [登録済みサーバー] に表示されるサーバーの種類に一致します。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]**, **[データベース エンジン]**, **[分析サーバー]**, **[Reporting Services]** 、 **[SQL Server Compact]** **[Edition]** 、または **[Integration Services]** をクリックします。  
+ [登録済みサーバー] でサーバーを登録する場合は、 **[サーバーの種類]** ボックスは読み取り専用になっており、そのサーバーは [登録済みサーバー] に表示されるサーバーの種類に一致します。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]**, **[データベース エンジン]**, **[分析サーバー]**, **[Reporting Services]** 、**[SQL Server Compact]** **[Edition]** 、または **[Integration Services]** をクリックします。  
   
  **サーバー名**  
  接続先のサーバーを選択します。 既定では、最後に接続していたサーバーが表示されます。  
@@ -151,4 +149,3 @@ ms.lasthandoff: 09/01/2017
  
  
   
-
