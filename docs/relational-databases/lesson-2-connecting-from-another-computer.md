@@ -5,23 +5,21 @@ ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 3e860fc71d2f9e5efcf68324040d267d9de6fce9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
 セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  **SQL Server 構成マネージャー**で **[SQL Server ネットワークの構成]**を展開し、 をクリックします **プロトコル** *<InstanceName>*。  
+2.  **SQL Server 構成マネージャー**で **SQL Server ネットワークの構成**を展開し、 **** *<InstanceName>*をクリックします。  
   
     既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -73,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 セキュリティ強化のために、Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]、および Windows 7 では Windows ファイアウォールが有効になっています。 別のコンピューターからこのインスタンスに接続する場合は、ファイアウォールで通信ポートを開放する必要があります。 [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスはポート 1433 でリッスンするので、固定ポートを構成する必要はありません。 ただし、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の名前付きインスタンスは、動的ポートでリッスンします。 ファイアウォールでポートを開く前に、まず [!INCLUDE[ssDE](../includes/ssde-md.md)] が固定ポートまたは静的ポートと呼ばれる特定のポートでリッスンするように構成する必要があります。このように構成しないと、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は起動のたびに異なるポートでリッスンする可能性があります。 ファイアウォール、Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
 > [!NOTE]  
-> ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)に一覧が掲載されています。 ポート番号には 49152 ～ 65535 の数値を割り当てる必要があります。  
+> ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)に一覧が掲載されています。ポート番号には 49152 ～ 65535 の数値を割り当てる必要があります。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server が特定のポートでリッスンするよう構成するには  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access-windows-7"></a>TCP アクセス用に Windows ファイアウォールのポートを開くには (Windows 7)  
   
-1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして「 **WF.msc**」と入力し、 **[OK]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]**をクリックします。  
   
 2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
@@ -145,5 +143,4 @@ ms.lasthandoff: 06/22/2017
 ## <a name="return-to-tutorials-portal"></a>チュートリアル ポータルに戻る  
 [チュートリアル : データベース エンジンの概要](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
-
 

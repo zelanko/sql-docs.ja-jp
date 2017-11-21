@@ -5,24 +5,21 @@ ms.date: 02/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- log shipping [SQL Server], upgrading
+helpviewer_keywords: log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4a13d848603205d4f43180d1a6f6cfb0e28d734b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成を新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス パック、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の累積的な更新プログラムにアップグレードする場合、適切な順序でログ配布サーバーをアップグレードすることで、ログ配布の障害復旧ソリューションが保持されます。  
@@ -86,7 +83,7 @@ ms.lasthandoff: 08/02/2017
 >  アップグレードが必要なデータベースに対しては RESTORE WITH STANDBY オプションはサポートされません。 アップグレードされたセカンダリ データベースが RESTORE WITH STANDBY を使用して構成されている場合、アップグレード後にトランザクション ログを復元できなくなります。 そのセカンダリ データベースでのログ配布を再開するには、そのスタンバイ サーバーでもう一度ログ配布を設定する必要があります。 STANDBY オプションの詳細については、「[トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)」を参照してください。  
   
 ##  <a name="UpgradePrimary"></a> プライマリ サーバー インスタンスのアップグレード  
- ログ配布は主に障害復旧ソリューションであるため、最も単純で一般的なシナリオは、プライマリ インスタンスを適切にアップグレードすることです。データベースはこのアップグレード中は使用できなくなります。 サーバーのアップグレードが完了すると、データベースが自動的にオンラインに戻り、データベースのアップグレードが行われます。 データベースのアップグレードが完了すると、ログ配布ジョブが再開されます。  
+ ログ配布は主にディザスター リカバリー ソリューションであるため、最も単純で一般的なシナリオは、プライマリ インスタンスを適切にアップグレードすることです。データベースはこのアップグレード中は使用できなくなります。 サーバーのアップグレードが完了すると、データベースが自動的にオンラインに戻り、データベースのアップグレードが行われます。 データベースのアップグレードが完了すると、ログ配布ジョブが再開されます。  
   
 > [!NOTE]  
 >  ログ配布では、[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)のオプションもサポートしています。また、[プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)もできます。  ただし、ログ配布が高可用性ソリューションとして構成されることは今後ほとんどないため (新しいオプションの方が堅牢性がかなり高い)、フェールオーバーでは通常ダウンタイムが最小化されません。フェールオーバーではシステム データベース オブジェクトが同期されず、昇格したセカンダリを見つけて接続しやすくするためのクライアントを有効にする方が難しいためです。  
@@ -99,4 +96,3 @@ ms.lasthandoff: 08/02/2017
  [ログ配布テーブルとストアド プロシージャ](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-
