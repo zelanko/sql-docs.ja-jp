@@ -5,24 +5,21 @@ ms.date: 04/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- XMLTEXT directive
+helpviewer_keywords: XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54ada9bad44e2cd8410fe3a70fd022769febc960
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 13f296721a3648c1b75b7b5329d8b9d4a927cd20
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>例: XMLTEXT ディレクティブの指定
   この例では、EXPLICIT モードを使用した **ステートメントで、** XMLTEXT `SELECT` ディレクティブによりオーバーフロー列のデータを指定する方法を示します。  
@@ -40,7 +37,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- このクエリでは、 `Person` テーブルから列を取得します。 `Overflow` 列には *AttributeName* が指定されていませんが、ユニバーサル テーブルの列名の一部として、 *ディレクティブ* `XMLTEXT` が設定されています。  
+ このクエリでは、 `Person` テーブルから列を取得します。 `Overflow` 列には *AttributeName* が指定されていませんが、ユニバーサル テーブルの列名の一部として、 **  ディレクティブ `XMLTEXT` が設定されています。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -103,7 +100,7 @@ FOR XML EXPLICIT;
   
  *AttributeName* と `xmltext` ディレクティブの両方を指定した場合、<`overflow`> 要素の属性は、囲み要素である <`Parent`> のサブ要素の属性として追加されます。 *AttributeName* に指定された名前がサブ要素の名前になります。  
   
- このクエリでは、*AttributeName* (<`overflow`>) と `xmltext` ディレクティブ *の両方が指定されています。*  
+ このクエリでは、*AttributeName* (<`overflow`>) と `xmltext` ディレクティブの両方が指定されています*。*  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -182,4 +179,3 @@ FOR XML EXPLICIT, xmldata;
  [FOR XML での EXPLICIT モードの使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-
