@@ -5,8 +5,7 @@ ms.date: 08/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -50,16 +49,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
+caps.latest.revision: "207"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: b93f57717cea30367f212020d73684a3fe55b796
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 2fa9ca92039b8e26aecd78ca0f6c1bdc03f36d71
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 
@@ -276,7 +275,7 @@ ms.lasthandoff: 08/29/2017
  サービス構成に応じて、インストール時またはアップグレード時にサービスまたはサービス SID のサービス アカウントが、サービス グループのメンバーとして追加されます。  
   
 ###  <a name="Windows"></a> Windows の特権および権限  
- サービスを開始するために割り当てられているアカウントには、サービスを開始、停止、および一時停止するための権限が必要です **** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)」を参照してください。  
+ サービスを開始するために割り当てられているアカウントには、サービスを**開始、停止、および一時停止するための権限が必要です**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)」を参照してください。  
   
  次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが使用するサービスごとの SID またはローカル Windows グループに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが要求する権限を示します。  
   
@@ -644,4 +643,3 @@ ms.lasthandoff: 08/29/2017
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

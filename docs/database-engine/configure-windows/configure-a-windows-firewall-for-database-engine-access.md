@@ -2,14 +2,10 @@
 title: "データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine
+ms.suite: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +13,19 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 93ffea433f68d8b380f6d0d24865e8a6c00429ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7d79f9d00344dceb2559d66f7f6f4450597c79f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx)」をご覧ください。
 
 
@@ -74,7 +69,7 @@ ms.lasthandoff: 08/02/2017
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access"></a>TCP アクセス用に Windows ファイアウォールのポートを開くには  
   
-1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして **「 WF.msc」** と入力し、 **[OK]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]**をクリックします。  
   
 2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
@@ -90,7 +85,7 @@ ms.lasthandoff: 08/02/2017
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>動的ポートの使用時に SQL Server にアクセスするには  
   
-1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして **「 WF.msc」** と入力し、 **[OK]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]**をクリックします。  
   
 2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
@@ -108,4 +103,3 @@ ms.lasthandoff: 08/02/2017
  [方法: ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

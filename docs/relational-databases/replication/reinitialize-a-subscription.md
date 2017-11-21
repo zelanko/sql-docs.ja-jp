@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1f7fb4d386936f39a471bae4746fecb42057ee2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6be5e63eebd7c9a403ac3bb1330552d474d919b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reinitialize-a-subscription"></a>サブスクリプションの再初期化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、サブスクリプションを再初期化する方法について説明します。 次回の同期で新しいスナップショットが適用されるように、個別のサブスクリプションに再初期化のマークを付けることができます。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションの再初期化には、2 段階の処理があります。  
   
-1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが再初期化対象として *マーク* されます。 **サブスクリプションの再初期化** のマークを設定するには、 の **[ローカル パブリケーション]** フォルダーおよび **[ローカル サブスクリプション]** フォルダーから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. また、 **[すべてのサブスクリプション]** タブやレプリケーション モニターのパブリケーション ノードからマークを設定することもできます。 レプリケーション モニターの起動の詳細については、「[レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。 サブスクリプションの再初期化の設定には、以下のオプションがあります。  
+1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが再初期化対象として *マーク* されます。 サブスクリプションの再初期化のマークを設定するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーおよび **[ローカル サブスクリプション]** フォルダーから **[サブスクリプションの再初期化]** ダイアログ ボックスを使用します。 また、 **[すべてのサブスクリプション]** タブやレプリケーション モニターのパブリケーション ノードからマークを設定することもできます。 レプリケーション モニターの起動の詳細については、「[レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。 サブスクリプションの再初期化の設定には、以下のオプションがあります。  
   
      **[現在のスナップショットを使用する]**  
      このオプションを選択すると、次にディストリビューション エージェントまたはマージ エージェントが実行されたときに、現在のスナップショットがサブスクライバーに適用されます。 有効なスナップショットが使用できない場合、このオプションは選択できません。  
@@ -172,7 +171,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成し、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> を設定して、手順 1 の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> に設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成し、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>を設定して、手順 1. の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。  
   
@@ -187,7 +186,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成し、<xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> を設定して、手順 1 の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> に設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成し、 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>を設定して、手順 1. の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。  
   
@@ -202,7 +201,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成し、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> を設定して、手順 1 の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> に設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成し、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>を設定して、手順 1. の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。  
   
@@ -220,7 +219,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成し、<xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> を設定して、手順 1 の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> に設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成し、 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>を設定して、手順 1. の接続を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。  
   
