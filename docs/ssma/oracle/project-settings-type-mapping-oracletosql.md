@@ -5,27 +5,25 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f387bee9f8e83568bb463ae0e07c4f614a725b15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4cefe036943dd986cbc6b1cd9cab2b44c9e0f9fd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>プロジェクトの設定 (型のマッピング) (OracleToSQL)
-[型マッピング] ページ、[**プロジェクト設定**] ダイアログ ボックスには、SSMA に Oracle データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
+[型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Oracle データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
   
-[型マッピング] ページがで使用できる、**プロジェクト設定**と[**プロジェクト設定の既定の**] ダイアログ ボックス。  
+型マッピング ページがで使用できる、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
   
 -   今後のすべての SSMA プロジェクトの設定を指定する、**ツール**ボタンをクリックし**プロジェクト設定の既定の**、設定は表示または変更に必要な移行プロジェクトの種類を選択**移行のターゲット バージョン**ドロップダウンをクリックし、**の種類のマッピング**左側のウィンドウの下部にあります。  
   
@@ -45,16 +43,16 @@ ms.lasthandoff: 08/02/2017
 SSMA Oracle 型のマッピングの既定の値については、次のセクション内のテーブルを参照してください。  
   
 **[追加]**  
-マッピングのリストに、[データ型を追加する] をクリックします。  
+マッピングのリストに、データ型を追加する をクリックします。  
   
 **[編集]**  
-マッピングの一覧で選択したデータ型を編集するをクリックします。  
+マッピングの一覧で選択したデータ型を編集する をクリックします。  
   
 **[削除]**  
-マッピングのリストから選択したデータ型のマッピングを削除するをクリックします。  
+マッピングのリストから選択したデータ型のマッピングを削除する をクリックします。  
   
 **既定値にリセット**  
-SSMA の既定値に型マッピングのリストをリセットするをクリックします。  
+SSMA の既定値に型マッピングのリストをリセットする をクリックします。  
   
 ## <a name="default-type-mappings"></a>既定の型マッピング  
 SSMA for Oracle には、引数、列、ローカル変数、および戻り値のカスタム型マッピングを設定できます。 引数と戻り値の型の既定のマッピングはほぼ同じです。  
@@ -64,7 +62,7 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
   
 |Oracle データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型|  
 |--------------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
@@ -92,24 +90,24 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |各国語文字 varying<sup>**</sup>|nvarchar(max)|  
 |各国語文字 varying<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
-|urowid|uniqueidentifier|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xml 型|xml|  
+|Xml 型|xml|  
   
 <sup>*</sup>値型のマッピングのみを返すに適用されます。  
   
@@ -120,7 +118,7 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
   
 |Oracle データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型|  
 |--------------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob (blob)|varbinary(max)|  
@@ -141,16 +139,16 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |倍精度|float [53]|  
 |float|float [53]|  
 |float [*..53]|float [*]|  
-|float [54..*]|float [53]|  
+|float [54.. *]|float [53]|  
 |int|int|  
 |整数 (integer)|int|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [*..8000]|varbinary [*]|  
-|long raw [8001..*]|varbinary(max)|  
+|long raw [8001.. *]|varbinary(max)|  
 |long varchar|varchar(max)|  
 |長い [*..8000]|varchar [*]|  
-|長い [8001..*]|varchar(max)|  
+|長い [8001.. *]|varchar(max)|  
 |national char|nchar|  
 |varying、national char [*..\*]|nvarchar [*]|  
 |national char [*..\*]|nchar [*]|  
@@ -159,7 +157,7 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |各国語文字 [*..\*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |数値 [*..\*]|数値 [*]|  
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
@@ -169,7 +167,7 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |nvarchar2 [*..\*]|nvarchar [*]|  
 |生 [*..\*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
@@ -196,14 +194,14 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |ブール値|bit|  
 |Char|char|  
 |char のさまざまな [*..8000]|varchar [*]|  
-|char のさまざまな [8001..*]|varchar(max)|  
+|char のさまざまな [8001.. *]|varchar(max)|  
 |char [*..8000]|char [*]|  
-|char [8001..*]|varchar(max)|  
+|char [8001.. *]|varchar(max)|  
 |文字|char|  
 |文字がさまざまな [*..8000]|varchar [*]|  
-|文字がさまざまな [8001..*]|varchar(max)|  
+|文字がさまざまな [8001.. *]|varchar(max)|  
 |文字 [*..8000]|char [*]|  
-|文字 [8001..*]|varchar(max)|  
+|文字 [8001.. *]|varchar(max)|  
 |Clob|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec [38] [0]|  
@@ -215,29 +213,29 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |倍精度|float [53]|  
 |Float|float [53]|  
 |float [*..53]|float [*]|  
-|float [54..*]|float [53]|  
-|Int|int|  
+|float [54.. *]|float [53]|  
+|int|int|  
 |Integer|int|  
 |整数 [*..\*]|数値 [*] [0]|  
 |Long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [*..8000]|varbinary [*]|  
-|long raw [8001..*]|varbinary(max)|  
+|long raw [8001.. *]|varbinary(max)|  
 |national char|nchar|  
 |varying、national char [*..4000]|nvarchar [*]|  
-|varying、national char [4001..*]|nvarchar(max)|  
+|varying、national char [4001.. *]|nvarchar(max)|  
 |national char [*..4000]|nchar [*]|  
-|national char [4001..*]|nvarchar(max)|  
+|national char [4001.. *]|nvarchar(max)|  
 |各国語文字|nchar|  
 |各国語文字 [*..4000]|nvarchar [*]|  
-|各国語文字 [4001..*]|nvarchar(max)|  
+|各国語文字 [4001.. *]|nvarchar(max)|  
 |各国語文字 varying [*..4000]|nvarchar [*]|  
-|各国語文字 varying [4001..*]|nvarchar(max)|  
+|各国語文字 varying [4001.. *]|nvarchar(max)|  
 |Nchar|nchar|  
 |nchar [*..4000]|nchar [*]|  
-|nchar [4001..*]|nvarchar(max)|  
+|nchar [4001.. *]|nvarchar(max)|  
 |nchar varying [*..4000]|nvarchar [*]|  
-|nchar varying [4001..*]|nvarchar(max)|  
+|nchar varying [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |数値|float [53]|  
 |数値 [*..\*]|数値 [*]|  
@@ -246,16 +244,16 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |数値 [*..\*]|数値 [*]|  
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |nvarchar2 [*..4000]|nvarchar [*]|  
-|nvarchar2 [4001..*]|nvarchar(max)|  
+|nvarchar2 [4001.. *]|nvarchar(max)|  
 |pls_integer|int|  
 |生 [*..8000]|varbinary [*]|  
-|生 [8001..*]|varbinary(max)|  
+|生 [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
 |文字列 [*..8000]|varchar [*]|  
-|文字列 [8001..*]|varchar(max)|  
+|文字列 [8001.. *]|varchar(max)|  
 |timestamp|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
@@ -265,12 +263,11 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |Urowid|uniqueidentifier|  
 |urowid [*..\*]|uniqueidentifier|  
 |varchar [*..8000]|varchar [*]|  
-|varchar [8001..*]|varchar(max)|  
+|varchar [8001.. *]|varchar(max)|  
 |varchar2 [*..8000]|varchar [*]|  
-|varchar2 [8001..*]|varcha(max)|  
+|varchar2 [8001.. *]|varcha(max)|  
 |Xml 型|xml|  
   
 ## <a name="see-also"></a>参照  
 [ユーザー インターフェイス リファレンス &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-

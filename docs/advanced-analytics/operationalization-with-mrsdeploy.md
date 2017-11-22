@@ -5,22 +5,19 @@ ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0bd3095fbb41beeb5d31d8c64dc5969acfdb3c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a8b090a9d5a9ed0a9f63b8f666fa9985089305ed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>展開および mrsdeploy を使用して分析を使用します。
 
 Microsoft R Server には、操作運用の機能が含まれています**mrsdeploy**、これらのタスクをサポートします。
@@ -95,4 +92,3 @@ SQL Server 2017 CTP 2.0 以降には、以前 R Server でのみ利用可能だ�
 5. 構成を続行、 **mrsdeploy** 」の説明に従ってサービス:[管理者用の構成](https://docs.microsoft.com/r-server/operationalize/configure-start-for-administrators)
 
 6. 詳細については、次を参照してください。 [mrsdeploy 関数](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)です。
-

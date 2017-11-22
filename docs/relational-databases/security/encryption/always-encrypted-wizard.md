@@ -8,28 +8,25 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
 - sql.swb.alwaysencryptedwizard.masterkey.f1
-helpviewer_keywords:
-- Wizard, Always Encrypted
+helpviewer_keywords: Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8d07fe91f365bd274d835d77b22efb8830d09b70
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8322346347568b8bb3bc56b56f363ceb7d6f5cfa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted ウイザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,12 +46,12 @@ ms.lasthandoff: 09/27/2017
  -2.  データベースを右クリックして **[タスク]**をポイントし、 **[列の暗号化]**をクリックします。  
  -  
  -## 列の選択ページ  
- - テーブルと列を見つけ、選択した列の暗号化の種類 (決定性またはランダム) と暗号化キーを選択します。 現在暗号化されている列の暗号化を解除するには、 **[プレーン テキスト]**を選択します。 列の暗号化キーを回転させるには、別の暗号化キーを選択します。ウィザードが列の暗号化を解除し、新しいキーで列を再び暗号化します。 (テンポラル テーブルとインメモリ テーブルの暗号化は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされていますが、このウィザードでは構成できません。)  
+ - テーブルと列を見つけ、選択した列の暗号化の種類 (決定性またはランダム) と暗号化鍵を選択します。 現在暗号化されている列の暗号化を解除するには、 **[プレーン テキスト]**を選択します。 列の暗号化鍵を回転させるには、別の暗号化鍵を選択します。ウィザードが列の暗号化を解除し、新しい鍵で列を再び暗号化します。 (テンポラル テーブルとインメモリ テーブルの暗号化は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされていますが、このウィザードでは構成できません。)  
  -  
  -## マスター キーの構成ページ  
  - Windows 証明書ストアまたは Azure Key Vault で列の新しいマスター キーを作成します。 詳細については、「キー ストレージ」以下のリンクを参照してください。  
  -  
- - [列の選択] ページで列の暗号化キーの自動生成を選択した場合、列に生成された暗号化キーを暗号化する列のマスター キーを設定する必要があります。 列のマスター キーが既にデータベースに定義されている場合、それを選択できます。 (既存のマスター キーを使用するには、そのキーにアクセスするための権限が必要になります。)あるいは、選択したキー ストア (Windows 証明書ストアまたは Azure Key Vault) で列のマスター キーを生成し、そのキーをデータベースで定義できます。  
+ - [列の選択] ページで列の暗号化鍵の自動生成を選択した場合、列に生成された暗号化鍵を暗号化する列のマスター キーを設定する必要があります。 列のマスター キーが既にデータベースに定義されている場合、それを選択できます。 (既存のマスター キーを使用するには、その鍵にアクセスするための権限が必要になります。)あるいは、選択したキー ストア (Windows 証明書ストアまたは Azure Key Vault) で列のマスター キーを生成し、そのキーをデータベースで定義できます。  
  -  
  - **キー ストレージ**  
  -  
@@ -74,11 +71,10 @@ ms.lasthandoff: 09/27/2017
  -  
  --   **ランダム化された暗号化**は、低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 暗号のランダム化は安全性が上がりますが、暗号化する列で同等性による検索、グループ化、インデックス作成、結合ができなくなります。  
  -  
- --   **列のマスター キー**は、列の暗号化キーの暗号化に使用される保護キーです。 列のマスター キーは信頼できるキーの保管場所に保管する必要があります。 場所など、列のマスター キーに関する情報はシステム カタログ ビューのデータベースに保管されます。  
+ --   **列のマスター キー**は、列の暗号化キーの暗号化に使用される保護キーです。 列のマスター キーは信頼できる鍵の保管場所に保管する必要があります。 場所など、列のマスター キーに関する情報はシステム カタログ ビューのデータベースに保管されます。  
  -  
- --   **列の暗号化キー**は、データベース列に保存されている機密データの暗号化に使用されます。 列のすべての値を 1 つの列暗号化キーで暗号化できます。 列の暗号化キーの暗号化された値は、システム カタログ ビューのデータベースに保存されます。 列の暗号化キーは、バックアップとして安全で信頼できる場所に格納する必要があります。  
+ --   **列の暗号化キー**は、データベース列に保存されている機密データの暗号化に使用されます。 列のすべての値を 1 つの列暗号化鍵で暗号化できます。 列の暗号化キーの暗号化された値は、システム カタログ ビューのデータベースに保存されます。 列の暗号化キーは、バックアップとして安全で信頼できる場所に格納する必要があります。  
  -  
  -## 参照  
  - [Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
-

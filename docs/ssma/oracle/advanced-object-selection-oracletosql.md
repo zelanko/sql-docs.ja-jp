@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: bbf9dc74633ba55b4f73fe9146d8a26374440240
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 350b223034355afa675d0a18300028841edeee71
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高度なオブジェクトの選択 (OracleToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名に文字列および部分文字列を使用してデータベース オブジェクトをフィルター処理し、選択するか、それらのオブジェクトの選択を解除することができます。 SSMA では、選択したオブジェクトでの変換と移行操作を実行します。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/02/2017
 **読み込まれただけの項目が表示されます。**  
 カテゴリまたは項目の表示を切り替えます。 このボタンを選択すると、SSMA は、フィルター条件や以前に読み込まれたものと一致するすべての項目を示します。 このボタンを選択しない場合は、SSMA はカテゴリ フォルダーを示しています。  
   
-**フィルター**  
+**Assert**  
 項目をフィルター処理に使用する文字列を入力します。 たとえば、項目名に、"ID"、文字列が含まれる使用可能なすべての項目を検索を入力文字列"ID"、**フィルター**ボックス。  
   
 項目がフィルター条件に一致する場合は、文字列を入力すると、カテゴリまたは項目は表示されます。 一致する項目を表示するには、ことをお勧めをクリックすること、**読み込まれた項目のみを表示**ボタンをクリックします。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 08/02/2017
 **[フィルターのクリア]**  
 消去、**フィルター**ボックス。  
   
-

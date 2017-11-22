@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b630c95516370e4c0352e18d1259f05649c106d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 669901a865788be20096ddedb05d15f4448a2a4b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>ユーザー インターフェイス リファレンス (MySQLToSQL)
 ここでは、MySQL のヘルプ トピックの SQL Server Migration Assistant (SSMA) を説明します。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/02/2017
 |[Azure SQL DB &#40; への接続します。MySQLToSQL &#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|使用して、 **SQL Azure への接続**SQL Azure に移行する先のインスタンスに接続する ダイアログ ボックス。|  
 |[変換の設定 (MySQL)](http://msdn.microsoft.com/en-us/f551cf6e-1575-4206-9cca-975b5b43a6b8)|使用して、**設定**ノード レベルの設定 タブ。|  
 |[データ移行のレポートと #40 です。MySQLToSQL &#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|結果を表示 MySQL から SQL Server または SQL Azure へのデータを移行します。|  
-|[データ移行の設定](http://msdn.microsoft.com/en-us/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
+|[データの移行設定](http://msdn.microsoft.com/en-us/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
 |[型のマッピング &#40; を編集します。MySQLToSQL &#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|使用して、**型マッピングの編集** ダイアログ ボックスを作成またはソースとターゲット データベースとデータベース オブジェクトの間のデータ型のマッピングを変更します。|  
 |[グローバルの設定 &#40;です。エディター &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|エディター ページを使用して、**グローバル設定**コード エディターのオプションを構成するダイアログ ボックス。|  
 |[グローバル設定 (&) #40 です。 ダイアログ ボックス &#41;&#40;です。MySQLToSQL &#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|ダイアログ ページを使用して、**グローバル設定**ダイアログ ボックスを既定値 ダイアログ ボックスと警告の設定を構成します。|  
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/02/2017
 [MySQL &#40; for SSMA の概要MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

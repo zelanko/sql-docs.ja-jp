@@ -1,35 +1,29 @@
 ---
 title: "グラフおよび SQL と R (チュートリアル) を使用してプロットを作成 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>グラフや SQL と R (チュートリアル) を使用してプロットを作成します。
 
-このチュートリアルのこの部分では、プロットと SQL Server データを R を使用して、マップを生成する方法を学習します。 単純なヒストグラムを作成し、演習してから、より複雑なマップ プロットを作成します。
+このチュートリアルでは、プロットと SQL Server データを R を使用して、マップを生成する方法を説明します。 いくつかの方法を取得する、単純なヒストグラムを作成しより複雑なマップ プロットを作成します。
 
 ### <a name="create-a-histogram"></a>ヒストグラムを作成します。
 
@@ -56,8 +50,6 @@ ms.lasthandoff: 09/01/2017
 ### <a name="create-a-map-plot"></a>マップ プロットを作成します。
 
 通常、データベース サーバーは、インターネット アクセスをブロックします。 これは不都合マップまたはプロットを生成するには、その他のイメージをダウンロードする必要がある R パッケージを使用する場合。 ただし、これには役に立つ、独自のアプリケーションを開発するときにする回避策があります。 基本的には、クライアントでは、マップの表現を生成し、SQL Server テーブルの属性として保存されている点で、マップをオーバーレイします。
-
-を通じて説明、このレッスンでします。
 
 1. R プロット オブジェクトを作成する関数を定義します。 ユーザー定義関数*mapPlot*タクシーのピックアップ場所を使用し、各場所から開始乗っての数をプロットする散布図を作成します。 これは **ggplot2** パッケージと  **ggmap** パッケージを利用します。この 2 つのパッケージは既にインストールされ、読み込まれているはずです。
 
@@ -117,4 +109,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>前のレッスン
 
 [R を使用するデータを概要します。](/walkthrough-view-and-summarize-data-using-r.md)
-

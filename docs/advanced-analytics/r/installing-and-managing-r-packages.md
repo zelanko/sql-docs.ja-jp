@@ -5,24 +5,21 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 41fb66e7b2155b75d05ce9eab8dc0df3782e4030
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0e96334850554ab642e3372c3631f3ab672109d6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="r-packages-installed-with-sql-server"></a>SQL Server と共にインストールされている R パッケージ
 
@@ -97,4 +94,3 @@ SQL Server 2016 では、管理者は、インスタンス全体を対象に新�
 ## <a name="managing-or-viewing-installed-packages"></a>インストールされているパッケージの管理または表示します。
 
 現在インストールされているパッケージの完全な一覧を取得できる複数の方法はあります。 詳細については、次を参照してください。 [SQL Server にインストールされているパッケージを決定](determine-which-packages-are-installed-on-sql-server.md)です。
-

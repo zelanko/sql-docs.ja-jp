@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2071dfc0ea042138a9f6b5f00261b81847f7f909
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-knowledge-discovery"></a>ナレッジ検出の実行
   このトピックでは、ナレッジ検出を使用してナレッジ ベースを構築する方法について説明します。 検出プロセスでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) によって、コンピューター支援型のプロセスを使用してサンプル データ ソースのデータが分析され、取得されたナレッジがナレッジ ベースに追加されます。 そのナレッジは、ナレッジ検出アクティビティの **[ドメイン値の管理]** 手順か、ドメイン管理アクティビティで変更および強化できます。  
@@ -74,12 +72,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  **"マッピング"** テーブルで、次の手順に従って、ナレッジ検出を実行する各ソース列をナレッジ ベースのドメインにマップします。  
   
-    1.  マッピングを作成するには、空の行の **[ソース列]** ボックスの一覧からソース列を選択し、同じ行の **[ドメイン]** ボックスの一覧からドメインを選択します。 ドメインが存在しない場合は、 **[ドメインの作成]** または **[複合ドメインの作成]** をクリックしてドメインを作成します。 詳細については、「 [ドメイン ルールを作成](../data-quality-services/create-a-domain-rule.md) 」または「 [複合ドメインの作成](../data-quality-services/create-a-composite-domain.md)」を参照してください。  
+    1.  マッピングを作成するには、空の行の **[ソース列]** ボックスの一覧からソース列を選択し、同じ行の **[ドメイン]** ボックスの一覧からドメインを選択します。 ドメインが存在しない場合は、 **[ドメインの作成]** または **[複合ドメインの作成]** をクリックしてドメインを作成します。 詳細については、「 [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) 」または「 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)」を参照してください。  
   
     2.  作成するマッピングごとに前の手順を繰り返します。 テーブルの行の数を変更するには、 **[列マッピングの追加]**をクリックするか、行を選択して **[選択した列マッピングを削除します]**をクリックします。 値が設定された行を選択した状態で **[選択した列マッピングを削除します]** をクリックすると、値が設定されていない行がある場合でも、選択した行が削除されます。  
   
         > [!NOTE]  
-        >  ソース データを DQS ドメインにマッピングし、ナレッジ検出を実行できるのは、ソースのデータ型が DQS でサポートされていて、なおかつ DQS ドメインのデータ型と一致する場合だけです。 サポートされているデータ型の詳細については、「 [DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
+        >  ソース データを DQS ドメインにマッピングし、ナレッジ検出を実行できるのは、ソースのデータ型が DQS でサポートされていて、なおかつ DQS ドメインのデータ型と一致する場合だけです。 サポートされているデータ型の詳細については、「 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
   
     3.  **[複合ドメインの表示と選択]** をクリックすると、定義されている複合ドメインが表示されます。 複合ドメインが定義されていない場合、このコントロールは使用できません。  
   
@@ -229,7 +227,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **[フィルター]** ボックスの一覧で状態を選択して、テーブルに表示する結果を状態に基づいて**絞り込み**ます。  
   
--   **** 検索する 1 つ以上の文字を **[検索]** ボックスに入力して、確認または変更するデータを検索します。 それらの文字が、含まれている場所に関係なく、表示されている値で強調表示されます。  
+-   **[検索]** する 1 つ以上の文字を **[検索]** ボックスに入力して、確認または変更するデータを検索します。 それらの文字が、含まれている場所に関係なく、表示されている値で強調表示されます。  
   
 -   **[新規のみ表示]** をクリックします。テーブルに表示される値が、以前のセッションではなく現在のセッションで検出された値のみに制限されます。  
   
@@ -294,7 +292,6 @@ ms.lasthandoff: 09/09/2017
   
 -   フィールド内の有効な値が少ない場合。マッピングと、ドメイン ルールとフィールドの内容の関連を確認する必要があります。  
   
- プロファイリングの詳細については、「 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)」を参照してください。  
+ プロファイリングの詳細については、「 [DQS でのデータ プロファイルと通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)」を参照してください。  
   
   
-

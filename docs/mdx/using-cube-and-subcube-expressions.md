@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - cubes [Analysis Services], MDX
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - expressions [MDX], subcubes
 - expressions [MDX], cubes
 ms.assetid: 95ae034d-8f88-4820-91c6-205ec424e119
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6194e0cc053c66fc194d7f8ab0724ed75a8f61f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 71ba6c7d7d5040481ea13d80a160fc19c0704c10
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-cube-and-subcube-expressions"></a>キューブ式とサブキューブ式の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,11 +81,10 @@ ms.lasthandoff: 08/02/2017
  サブキューブ識別子は*Subcube_Name*です。 形式で表されます。  
   
 ## <a name="see-also"></a>参照  
- [MDX の基本的なクエリ & #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [MDX の基本的なクエリ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [MDX &#40; でのサブキューブの作成MDX と #41 です。](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [SUBCUBE ステートメント &#40; を作成します。MDX と #41 です。](../mdx/mdx-data-definition-create-subcube.md)   
- [式 & #40 です。MDX と #41 です。](../mdx/expressions-mdx.md)   
- [SCOPE ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-scripting-scope.md)  
+ [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)   
+ [SCOPE ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-scripting-scope.md)  
   
   
-

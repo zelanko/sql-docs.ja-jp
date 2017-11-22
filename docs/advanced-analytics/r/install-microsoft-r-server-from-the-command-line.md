@@ -1,100 +1,123 @@
 ---
-title: "コマンドラインから Microsoft R Server をインストールする | Microsoft Docs"
+title: "Machine Learning Server (スタンドアロン) または Microsoft R Server (スタンドアロン) をコマンドラインからインストール |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b9f6ceba4d3609a7e7ff816d31446a77c4fea64c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="install-microsoft-r-server-from-the-command-line"></a>コマンドラインから Microsoft R Server をインストールする
-    
-このトピックでは、SQL Server コマンドライン引数を使用して、SQL Server 2016 での Microsoft R Server のインストールまたは SQL Server 2017 で Machine Learning Server (スタンドアロン) をインストールする方法について説明します。 
+# <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>コマンドラインから Machine Learning Server (スタンドアロン) または Microsoft R Server (スタンドアロン) をインストールします。
 
-> [!NOTE]
-個別の Windows インストーラーを使用して、Microsoft R Server をインストールすることもできます。 詳細については、次を参照してください。[インストール R Server 9.0.1 for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)です。 
+この記事では、SQL Server コマンドライン引数を使用して、コマンドラインを使用して、次の SQL Server 機能をインストールする方法について説明します。
+
++ [SQL server 2017 機械学習のサーバー (スタンドアロン)](#bkmk_mls2017) 
++ [SQL Server 2016 では、Microsoft R Server (スタンドアロン)](#bkmk_mrs2016)
+
+**無人**インストールは、セットアップ ユーティリティの場所を指定してをインストールする機能を示す引数を使用することが必要です。
+
+**Quiet** インストールの場合、同じ引数を渡し、 **/q** スイッチを追加します。 プロンプトが指定されていないと、操作は必要ありません。 ただし、必要な引数が省略されている場合に、セットアップが失敗します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このインストール方法では、SQL Server のコマンド ライン インストールを実行する方法を理解し、そのスクリプトの引数に慣れている必要があります。
+SQL Server のコマンド ライン インストールを実行し、スクリプトの引数に理解して方法を理解する必要があります。
 
-- **無人** インストールでは、セットアップ ユーティリティの場所を指定し、インストールする機能を示す引数を使用する必要があります。 
-- **Quiet** インストールの場合、同じ引数を渡し、 **/q** スイッチを追加します。 プロンプトは表示されず、操作の必要もありません。 ただし、必要な引数が省略されている場合、セットアップは失敗します。
+詳細については、次を参照してください。[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)です。
 
-詳細については、「 [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。
+インターネットへのアクセスを持たないコンピューターで Machine Learning のサーバーまたは Microsoft R Server (スタンドアロン) をインストールする場合は、R (または Python) の必須コンポーネントを事前にダウンロードし、ローカル フォルダーにコピーする必要があります。 ダウンロードの場所を参照してください。[インターネットにアクセスできないマシン ラーニング コンポーネントをインストールする](installing-ml-components-without-internet-access.md)です。
 
-## <a name="sql-server-2017-microsoft-machine-learning-server-standalone"></a>SQL Server 2017: Microsoft した機械学習 Server (スタンドアロン)
 
-Microsoft Machine Learning サーバーのみ (スタンドアロン) とその前提条件をインストールする管理者特権でコマンド プロンプトから次のコマンドを実行します。  例では、R. をインストールするための引数を示しています。
+## <a name="bkmk_mls2017"></a>マイクロソフトの機械学習のサーバー (スタンドアロン) のインストールします。
+
+**適用されます SQL Server 2017。**
+
+Machine Learning Server (スタンドアロン) のみとその前提条件をインストールする管理者特権でコマンド プロンプトから次のコマンドを実行します。
+
++ 機能の引数は、SQL Server のライセンス条項は、必要です。
++ 1 つの言語、または両方 R と、Python をインストールすることができますが、個別のライセンスはごとに必要です。
+
+この例は、R. をインストールするための引数を示しています。
 
 ```
-Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MR  /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS 
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MR  /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
-進行状況とプロンプトを表示するには、_/q_ 引数を削除します。
+この例では、Python をインストールするための引数を使用します。
 
-- **機能 = SQL_SHARED_MR** Machine Learning のサーバー コンポーネントのみを取得します。 これには、すべての前提条件には、既定で自動的にインストールされますが含まれます。
-- **SQL_INST_MR**は R 言語の installl サポートするために必要です。
-- **SQL_INST_MPY** Python のサポートをインストールするが必要です。
-- **IACCEPTROPENLICENSETERMS** は、オープン ソースの R コンポーネントを使用するライセンス条項を承諾したことを意味します。
-- **IACCEPTPYTHONLICENSETERMS** Python コンポーネントを使用するライセンス条項に同意を受け入れたことを示します。
-- **IACCEPTSQLSERVERLICENSETERMS** はセットアップ ウィザードの実行に必要です。
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MPY  /IACCEPTPYTHONOPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
+```
 
-**注**
++ 進行状況とプロンプトを表示するには、_/q_ 引数を削除します。
++ 引数を使用する場合**機能 = SQL_SHARED_MR**R でも Python での Machine Learning のサーバー コンポーネントのみをインストールします。 このインストールには、既定で自動的にインストールされているすべての前提条件が含まれています。 ただし、最初にインストールするときに、少なくとも 1 つの言語を追加することをお勧めします。
++ 追加**SQL_INST_MR** R. のサポートをインストールするには
++ 追加**SQL_INST_MPY** Python のサポートをインストールします。
++ **IACCEPTROPENLICENSETERMS** は、オープン ソースの R コンポーネントを使用するライセンス条項を承諾したことを意味します。
++ **IACCEPTPYTHONLICENSETERMS** Python コンポーネントを使用するライセンス条項に同意を受け入れたことを示します。
++ **IACCEPTSQLSERVERLICENSETERMS** はセットアップ ウィザードの実行に必要です。
 
-1. 機能の引数は、SQL Server のライセンス条項は、必要です。
-2. ライセンス契約フラグと共に、1 つ以上の言語を指定します。
-3. 1 つの言語、または両方 R と、Python をインストールすることができますが、個別のライセンスはごとに必要です。
 
-## <a name="sql-server-2016-microsoft-r-server-standalone"></a>SQL Server 2016: Microsoft R Server (スタンドアロン)
+## <a name="bkmk_mrs2016"></a>Microsoft R Server (スタンドアロン) のインストール
 
-管理者特権で次のコマンドをコマンド プロンプトより実行し、Microsoft R Server (スタンドアロン) とその前提条件のみをインストールします。  この例は、SQL Server 2016 セットアップで使用される引数を示します。
+**適用されます SQL Server 2016。**
+
+インストールする管理者特権でコマンド プロンプトから次のコマンドを実行**のみ**Microsoft R Server (スタンドアロン) とその前提条件です。 
 
 ```
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
-## <a name="offline-installation"></a>オフライン インストール
+> [!TIP]
+> インストールすることはできませんこの SQL Server R Services のインスタンスをホストしている同じコンピューターをお勧めします。
 
-インターネットへのアクセスを持たないコンピューターで Machine Learning のサーバーまたは Microsoft R Server (スタンドアロン) をインストールする場合は、必要な R コンポーネントを事前にダウンロードし、ローカル フォルダーにコピーする必要があります。 ダウンロード場所については、「 [インターネットへのアクセスなしで R コンポーネントをインストールする](../r/installing-ml-components-without-internet-access.md)」を参照してください。
+## <a name="post-installation-tasks"></a>インストール後のタスク
 
-## <a name="what-is-installed"></a>インストールされている内容
+Microsoft R Server の別のインスタンスと同じパラメーターを設定するにはインストール中に作成する構成ファイルを再利用できます。 詳細については、次を参照してください。 [SQL サーバーのインストール、構成ファイルを使用して](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)です。
+
+### <a name="review-installed-components"></a>インストールされているレビュー コンポーネント
 
 セットアップが完了したら、SQL Server のセットアップで作成された構成ファイルを、セットアップ処理の概要と共に確認できます。
 
 既定では、すべてのセットアップ ログと概要 for SQL Server との関連する機能は、次のフォルダーに作成されます。
 
-- SQL Server 2016 の場合:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
-- SQL Server 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016 の場合:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
-インストールされる機能ごとに個別にサブフォルダーが作成されます。
+インストールされている各機能の個別のサブフォルダーが作成されます。
 
-Microsoft R Server の別のインスタンスと同じパラメーターを設定するにはインストール中に作成する構成ファイルを再利用できます。 詳細については、次を参照してください[SQL Server を使用したインストール、構成ファイル。](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)
+### <a name="customize-the-r-or-python-environment"></a>R、または Python 環境をカスタマイズします。
 
+インストール後、追加の R または Python パッケージをインストールできます。 プロセスでは、SQL Server 2016 または SQL Server 2017 のどちらを使用しているかどうかによってやや異なります。
 
-## <a name="customize-your-r-environment"></a>R 環境内をカスタマイズします。
+SQl Server の 2017年では、インストールし、T-SQL を使用して、R パッケージを管理します。 詳細については、次を参照してください。[のインストールと R パッケージを管理する](../r/install-additional-r-packages-on-sql-server.md)です。
 
-インストール後、さらに R パッケージをインストールできます。 詳細については、「 [Installing and Managing R Packages](../r/install-additional-r-packages-on-sql-server.md)」 (R パッケージのインストールおよび管理) を参照してください。
+Python、および SQL Server 2016 では、管理者が必要になる可能性がある追加のライブラリをインストールする必要があります。
 
 > [!IMPORTANT]
 > SQL Server で R コードを実行する場合は、開発、ソリューション、および SQL Server インスタンスを実行またはソリューションの配置を使用するコンピューターに同じパッケージをインストールすることを確認します。
 
-R (In-database) の Machine Learning のサービスをインストールした後は、指定した SQL Server インスタンスに関連付けられている R のバージョンをアップグレードするのに個別の Windows インストーラーを使用することができます。 詳細については、次を参照してください。[アップグレード R を使用して SqlBindR](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+### <a name="upgrading-r-server-or-sql-server-machine-learning"></a>R Server または SQL Server の機械学習のアップグレード
 
+SQL Server を使用しない場合は、個別の Windows インストーラーを使用して、Microsoft R Server または Machine Learning のサーバーをインストールできます。 ダウンロード場所および手順については、これらのリンクを参照してください。
 
++ [機械学習の windows Server をインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
++ [R Server 9.0.1 を Windows をインストールします。](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) 
 
+Machine Learning サーバー用の個別の windows インストーラーは、機械学習のインスタンスに関連付けられているコンポーネントのアップグレードにも使用できます。  詳細については、次のリンクを参照してください。
+
++ [SqlBindR を使用して R のアップグレード](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)

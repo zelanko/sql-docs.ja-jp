@@ -8,8 +8,7 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - vdtsql.chm:69657
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8eefd641ac7c9672b6e5f52412bd7cafe623ea09
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 66ebe137da10784f3999e9039538895afa701abe
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>テーブル列のプロパティ (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 06/22/2017
  **[既定値またはバインド]**  
  この列に値が指定されていないときの既定値を表示します。 このフィールドの値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の制約の値か、列がバインドされているグローバル制約の名前になります。 ドロップダウン リストには、データベースに定義されているすべてのグローバル既定値が含まれています。 列にグローバル既定値をバインドする場合は、ドロップダウン リストから選択します。 列に既定の制約を作成する場合は、既定値をテキストとして直接入力します。  
   
- **[長さ]**  
+ **長さ**  
  文字ベースのデータ型で許容される文字数が表示されます。 このプロパティは、文字に基づくデータ型にのみ使用できます。  
   
  **[小数点以下桁数]**  
@@ -145,4 +143,3 @@ ms.lasthandoff: 06/22/2017
 >  **(max)** のデータ型の長さは行ごとに異なります。 **sp_help** を実行すると、 **(max)** 列の長さとして (-1) が返されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、列のサイズとして -1 が表示されます。  
   
   
-

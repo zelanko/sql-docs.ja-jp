@@ -8,22 +8,20 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6ffd1d33262cbee8ffa08f2cbeb7879e1b04fa55
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 24a0db5ef21d00cf46617a011c5953c7cde74f39
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>変更セットと承認 (Excel 用 MDS アドイン)
   Excel 用 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アドインでは、エンティティに対する保留中の変更を変更セットに保存できます。 既存の変更セットを適用して保留中の変更を表示、変更してから、既存の変更セットをコミットすることができます。  
@@ -34,4 +32,3 @@ ms.lasthandoff: 09/07/2017
  [変更セット (マスター データ サービス)](../../master-data-services/changesets-master-data-services.md)  
   
   
-

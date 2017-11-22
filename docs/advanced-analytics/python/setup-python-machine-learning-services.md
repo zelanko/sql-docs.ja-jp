@@ -2,23 +2,21 @@
 title: "Python の Machine Learning のサービスのセットアップと構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e3142bcf06fa2ed88ead730d0cc127cf41cfde56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python Machine Learning Services (In-database) を設定します。
 
@@ -50,13 +48,15 @@ ms.lasthandoff: 09/08/2017
 
 ### <a name="unattended-installation"></a>無人インストール
 
-無人インストールを実行するには、Python に固有の引数および SQL Server セットアップのコマンド ライン オプションを使用します。 詳細については、次を参照してください。 [Python Machine Learning のサービスと SQL server の無人インストール](./unattended-installs-of-sql-server-python-services.md)です。
+無人インストールを実行するには、Python に固有の引数および SQL Server セットアップのコマンド ライン オプションを使用します。 詳細については、次を参照してください。 [Python Machine Learning のサービスと SQL server の無人インストール](unattended-installs-of-sql-server-python-services.md)です。
 
 ##  <a name="bkmk_installPythonInDatabase"></a>手順 1: 機械学習の SQL Server 上のサービス (In-database) をインストールします。
 
 1. SQL Server 2017 のセットアップ ウィザードを実行します。
   
 2. **インストール**] タブで [ **SQL Server の新規スタンドアロン インストールまたは既存のインストールに機能の追加**です。
+
+    ![データベース内に Python をインストールします。](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. **[機能の選択]** ページで、次のオプションを選択します。
   
@@ -69,11 +69,12 @@ ms.lasthandoff: 09/08/2017
          このオプションは、Python スクリプトの実行をサポートするデータベースのサービスをインストールします。
 
     -   **Python** Python 3.5 実行可能ファイルを取得し、Anaconda ディストリビューションからライブラリを選択するには、このオプションをオンにします。 インスタンスごとに 1 つの言語をインストールします。
+        
+        ![Python のためのオプションの機能](media/ml-svcs-features-python-highlight.png "Python のセットアップ オプション")
 
         > [!NOTE]
-        > オプションを選択しない**共有機能**の**Microsoft R Server (スタンドアロン)**です。 機械学習の R 開発に使用する別のコンピューターにコンポーネントを追加する必要がある場合は、個別のインストールでは、このオプションを使用します。 たとえば、データ科学者のラップトップに役立つこの可能性があります。
-        
-        ![Python のセットアップ オプション](media/ml-svcs-features-python-highlight.png "Python のセットアップ オプション")
+        > 
+        > オプションを選択しない**Machine Learning Server (スタンドアロン)**です。 Machine Learning のサーバーをインストールするオプション**共有機能**は別のコンピューターに使用するものです。 たとえば、同じバージョンの機械学習データ科学者のラップトップなどのプロジェクトの開発に使用する別のコンピューター上のコンポーネントをインストールすることができます。
 
 4. **Python のインストールに同意する**] ページで、[ **Accept**です。
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 09/08/2017
      + Machine Learning Services (データベース内)
      + Python
   
-    これらの選択は、SQL Server で Python を使用するために必要な最小構成を表します。
+    これらの選択での Python を使用するために必要な最小構成を表します。[!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]です。
     
     ![Python をインストールする準備が](media/ready-to-install-python.png "Python のインストールに必要なコンポーネント")
 
@@ -118,7 +119,8 @@ ms.lasthandoff: 09/08/2017
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
-    これは、プロセスはまったく同じ基になる拡張機能は、両方の言語をサポートしているため、R を有効にするのに使用されます。
+    
+    実行する必要はありません、R 言語の機能が既に有効な場合、もう一度 Python を再構成します。 基になるの機能拡張のプラットフォームでは、両方の言語をサポートします。
 
 4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの SQL Server サービスを再起動します。 SQL Server のサービスも自動的に再起動すると、関連する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]サービス。
 
@@ -140,13 +142,13 @@ ms.lasthandoff: 09/08/2017
   
     SQL Server の複数のインスタンスをインストールした場合、R または有効になっている Python を含む任意のインスタンスは、独自のスタート パッド サービスがします。
 
-    ただし、1 つのインスタンスに R、Python をインストールすると、1 つだけのスタート パッドがインストールされます。 言語ごとに、個別の言語固有のランチャー DLL が追加されます。 詳細については、次を参照してください。 [Python の統合をサポートするにはコンポーネント](new-components-in-sql-server-to-support-python-integration.md)です。 
+    R、Python の両方を 1 つのインスタンスをインストールする場合は、1 つだけのスタート パッドはインストールされます。 言語ごとに、個別の言語固有のランチャー DLL が追加されます。 詳細については、次を参照してください。 [Python の統合をサポートするにはコンポーネント](new-components-in-sql-server-to-support-python-integration.md)です。 
    
 3. スタート パッドを実行している場合では、次のような単純な Python スクリプトを実行する必要がありますできる[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',
-    @script=N'OutputDataSet=InputDataSet',
+    @script=N'OutputDataSet = InputDataSet',
     @input_data_1 = N'SELECT 1 AS col'
     ```
     
@@ -156,6 +158,7 @@ ms.lasthandoff: 09/08/2017
 
 > [!NOTE]
 > 列または Python スクリプトで使用される見出しでは返されませんをデザインします。 出力の列名を追加するには、戻り値のデータ セットのスキーマを指定する必要があります。 そのため、列の名前付けと SQL データ型を指定することは、ストアド プロシージャの結果にパラメーターを使用します。
+> 
 > たとえば、任意の列名を生成するのには、次の行を追加できます。`WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>手順 4: 追加の構成
@@ -177,26 +180,26 @@ ms.lasthandoff: 09/08/2017
 これらのアカウントは、Windows ユーザー グループ **SQLRUserGroup**で見ることができます。 既定では、20 のワーカー アカウントが作成された、外部スクリプトを実行するために十分な数より多くのジョブは通常です。
 
 > [!IMPORTANT]
-> Worker グループを実行しているスクリプトの種類に関係なく SQLRUserGroup と呼びます。 インスタンスごとに 1 つのグループがあります。
+> Worker グループの名前は**SQLRUserGroup** R または Python をインストールするかどうかに関係なく。 インスタンスごとに 1 つのグループがあります。
 
-リモート データ サイエンス クライアントでは、R スクリプトを実行する必要があります、Windows 認証を使用している場合は、追加の考慮事項があります。 これらのワーカー アカウントにサインインするアクセス許可を与える必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたの代理としてのインスタンス。
+リモート データ サイエンス クライアントからスクリプトを実行する必要があるあり、Windows 認証を使用して、追加の考慮事項があります。 これらのワーカー アカウントにサインインするアクセス許可を与える必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたの代理としてのインスタンス。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプ ローラーを展開して**セキュリティ**です。 右クリックし、**ログイン**を選択して**新しいログイン**です。
 2. **ログイン - 新規**ダイアログ ボックスで、**検索**です。
 3. 選択**オブジェクトの種類**を選択して**グループ**です。 他のすべてをクリアします。
 4. **を選択するオブジェクト名を入力**、型*SQLRUserGroup*を選択して**名前の確認**です。
-5. インスタンスのスタート パッド サービスに関連付けられているローカル グループの名前が、" *インスタンス名\SQLRUserGroup*" などに解決されます。 [ **OK**] を選択します。
-6. 既定では、サインインに割り当てられた、**パブリック**ロール、データベース エンジンに接続するアクセス許可を持つとします。
-7. [ **OK**] を選択します。
+5. インスタンスのスタート パッド サービスに関連付けられているローカル グループの名前が、" *インスタンス名\SQLRUserGroup*" などに解決されます。 **[ OK]** を選択します。
+6. 既定では、グループが割り当てられている、**パブリック**ロール、データベース エンジンに接続するアクセス許可を持つとします。
+7. **[ OK]** を選択します。
 
 > [!NOTE]
-> SQL Server のコンピューティング コンテキストでスクリプトを実行するため、SQL サインインを使用する場合はこの余分な手順は必要ありません。
+> 使用する場合、 **SQL ログイン**スクリプトを実行して、SQL Server のコンピューティング コンテキストで、この余分な手順は必要ありません。
 
 ### <a name="give-users-permission-to-run-external-scripts"></a>ユーザーを外部スクリプトを実行する権限を付与します。
 
 インストールした場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、自分で実行している Python スクリプト独自のインスタンスで、通常、管理者としてスクリプトを実行します。 したがって、さまざまな操作と、データベース内のすべてのデータを暗黙のアクセス許可があります。
 
-ただし、ほとんどのユーザーにはこのような高度な権限はありません。 たとえば、組織内の SQL のサインインを使用して、一般に、データベースにアクセスするユーザーには、高度な権限はありません。 したがって、Python を使用しているユーザーごとにする必要があります権限を付与 Machine Learning のサービスのユーザー Python が使用されている各データベースで外部のスクリプトを実行します。 ここでは、どのようにします。
+ただし、ほとんどのユーザーにはこのような高度な権限はありません。 たとえば、組織内の SQL ログインを使用して、一般に、データベースにアクセスするユーザーには、高度な権限はありません。 したがって、Python を使用しているユーザーごとにする必要があります権限を付与 Machine Learning のサービスのユーザー Python が使用されている各データベースで外部のスクリプトを実行します。 ここでは、どのようにします。
 
 ```SQL
 USE <database_name>
@@ -209,12 +212,12 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 ### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>ユーザー、読み取り、書き込み、またはデータ定義のデータベースへの言語 (DDL) のアクセス許可を付与します。
 
-ユーザーがスクリプトを実行中にユーザー アカウントまたは SQL のサインインが他のデータベースからデータを読み取る必要があります。 ユーザー アカウントまたは SQL のサインインは、結果を格納およびデータ テーブルに書き込むために新しいテーブルを作成する必要もあります。
+ユーザーがスクリプトを実行中に、ユーザーは、他のデータベースからデータを読み取る必要があります。 ユーザーは、結果を格納およびデータ テーブルに書き込むために新しいテーブルを作成する必要もあります。
 
-各ユーザー アカウントまたは SQL サインイン R または Python スクリプトを実行している場合があることを確認します`db_datareader`、 `db_datawriter`、または`db_ddladmin`特定のデータベースに対する権限。
+Windows ユーザー アカウントまたは R または Python スクリプトを実行している SQL ログインごとに、特定のデータベースに適切なアクセス許可があることを確認してください: `db_datareader`、 `db_datawriter`、または`db_ddladmin`です。
 
-たとえば、次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントは、SQL サイン イン*MySQLLogin*で T-SQL クエリを実行する権限、 *ML_Samples*データベース。 このステートメントを実行するには、SQL サインインが既に存在して、サーバーのセキュリティ コンテキスト。
-  
+たとえば、次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントは、SQL ログイン*MySQLLogin*で T-SQL クエリを実行する権限、 *ML_Samples*データベース。 このステートメントを実行するには、SQL ログインがサーバーのセキュリティ コンテキストに既に存在している必要があります。
+
 ```SQL
 USE ML_Samples
 GO
@@ -229,12 +232,11 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>データ サイエンス クライアント上のインスタンス用の ODBC データ ソースを作成する
 
-機械学習データ サイエンス クライアント コンピューターでソリューションを作成する場合があります。 コンピューティング コンテキストとして、SQL Server コンピューターを使用してコードを実行する必要がある場合は、2 つのオプションがあります。 SQL のサイン インまたは統合 Windows 認証を使用することができます。
+機械学習データ サイエンス クライアント コンピューターでソリューションを作成する場合があります。 2 つのオプションがある場合は、計算コンテキストとして、SQL Server コンピューターを使用してコードを実行する必要があります。 SQL ログインを使用して、インスタンスへのアクセスや、Windows を使用してアカウント。
 
-+ SQL サインインの: サインインがデータを読み取り、データベース上の適切なアクセス許可ができるようにします。 追加することでこれを行う*への接続*と*選択*権限、またはサインインに追加することによって、`db_datareader`ロール。 サインインがオブジェクトを作成する必要がある`DDL_admin`権限です。 追加するサインインのテーブルにデータを保存する必要があります`db_datawriter`ロール。
++ SQL ログインの: ログインがデータを読み取り、データベースで適切なアクセス許可を持っていることを確認します。 追加することでこれを行う*への接続*と*選択*権限、またはへのログインを追加することによって、`db_datareader`ロール。 オブジェクトを作成するには、割り当てる`DDL_admin`権限です。 テーブルにデータを保存する必要がある場合に追加、`db_datawriter`ロール。
 
 + Windows 認証: インスタンス名とその他の接続情報を指定するデータ サイエンス クライアントで ODBC データ ソースを作成する必要があります。 詳細については、次を参照してください。 [ODBC データ ソース アドミニストレーター](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)です。
-
 
 ## <a name="additional-optimizations"></a>さらに最適化
 
@@ -242,7 +244,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>複数のワーカー アカウントを追加します。
 
-スクリプトを同時に実行される多くのユーザーの場合、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server R Services のユーザー アカウント プールを変更する](../r/modify-the-user-account-pool-for-sql-server-r-services.md)です。
+スクリプトを同時に実行される多くのユーザーの場合、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server の Machine Learning のサービスのユーザー アカウント プールを変更する](../r/modify-the-user-account-pool-for-sql-server-r-services.md)です。
 
 ### <a name="optimize-the-server-for-script-execution"></a>スクリプトの実行用のサーバーを最適化します。
 
@@ -280,10 +282,6 @@ SQL Server 2017 を使用して、マシン学習サービスをインストー�
 
 インスタンスをアップグレードする方法については、次を参照してください。[バインディングからのアップグレードの R コンポーネント](..\r\use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 
-> [!NOTE]
-> 
-> 現在のリリース バージョンには、machine learning のすべてのコンポーネントの最新バージョンが含まれています。 そのため、Microsoft Machine Learning サーバー経由でのアップグレードは、SQL Server 2017 のサポートされていますが、現在利用可能なアップグレードは SQL Server 2016 インスタンスにのみ適用されます。
-
 ### <a name="tutorials"></a>チュートリアル
 
 ビルドし、マシン学習ソリューションの配置を SQL Server で Python を使用する方法の例については、以下のチュートリアルを参照してください。
@@ -291,4 +289,3 @@ SQL Server 2017 を使用して、マシン学習サービスをインストー�
 [T-SQL で Python を使用します。](../tutorials/run-python-using-t-sql.md)
 
 [Python を revoscalepy を使用してモデルを作成します。](../tutorials/use-python-revoscalepy-to-create-model.md)
-

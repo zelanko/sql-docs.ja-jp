@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc2498f80dfc5a057eff9350ed1949ee02ee5f4f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16bba12bdcf95e8e71cab6dcb8404b7b3b1916e7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-property"></a>並べ替えのプロパティ
 1 つまたは複数のフィールド名を示す、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)が並べ替えられて、各フィールドが昇順または降順で並べ替えられたかどうかとします。  
@@ -58,7 +56,7 @@ ms.lasthandoff: 09/09/2017
  フィールドをするという名前の"ASC"または"DESC"キーワードとそれらの名前が競合するため**ASC**と**DESC**です。 使用して、競合する名前を持つフィールドの別名を作成することができます、 **AS**を返すクエリ内のキーワード、 **Recordset**です。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [並べ替えプロパティの例 (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  [動的プロパティ (ADO) を最適化します。](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [SortColumn プロパティ (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection プロパティ (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-

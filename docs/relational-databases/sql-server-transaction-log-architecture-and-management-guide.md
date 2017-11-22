@@ -8,25 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transaction log architecture guide
 - guide, transaction log architecture
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9d778d6a5fe6340e1a5125b60f16a2dbe7dfa781
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -198,7 +196,7 @@ SQL Server データベース エンジンでは自動チェックポイント�
 > [!TIP]  
 >  一部の種類のチェックポイントでは、データベース管理者が -k SQL Server の詳細設定オプションを使用して、I/O サブシステムのスループットに基づいてチェックポイントの I/O 動作を調整できます。 -k 設定オプションは、自動チェックポイントと、-k を使用しなければ調整されないチェックポイントに適用されます。 
  
-データベースで単純復旧モデルを使用している場合、自動チェックポイントにより、トランザクション ログの未使用のセクションが切り捨てられます。 ただし、データベースで完全復旧モデルまたは一括ログ復旧モデルを使用している場合は、自動チェックポイントにより、ログが切り捨てられることはありません。 詳細については、「 [トランザクション ログ](../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。 
+データベースで単純復旧モデルを使用している場合、自動チェックポイントにより、トランザクション ログの未使用のセクションが切り捨てられます。 ただし、データベースで完全復旧モデルまたは一括ログ復旧モデルを使用している場合は、自動チェックポイントにより、ログが切り捨てられることはありません。 詳細については、「 [トランザクション ログ](../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください. 
 
 CHECKPOINT ステートメントでは、チェックポイントが終了するまでの時間を秒単位で指定する checkpoint_duration 引数が使用できるようになりました。この引数は省略可能です。 詳細については、「 [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md)」を参照してください。
 
@@ -236,4 +234,3 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
  [SQL Server Transaction Log Management (SQL Server のトランザクション ログ管理) (著者: Tony Davis、Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
-

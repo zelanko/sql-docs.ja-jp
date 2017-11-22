@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- XML persistence [ADO], persistence scenario
+helpviewer_keywords: XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bfbc480a7b13a7008d2cc7679a5033e2f3270797
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd47944f218c6cb4d3bea571b27be990c5f7f530
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML レコード セットを保存するシナリオ
 このシナリオでは、ASP 応答オブジェクトに直接、レコード セット オブジェクトの内容を保存する Active Server Pages (ASP) アプリケーションを作成します。  
@@ -122,5 +119,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>参照  
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)   
- [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

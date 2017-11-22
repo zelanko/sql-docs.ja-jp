@@ -1,35 +1,34 @@
 ---
 title: "SQL Server インスタンスの machine learning コンポーネントのアップグレード |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
+applies_to: SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>SQL Server インスタンスの machine learning コンポーネントをアップグレードします。
 
-この記事のプロセス説明_バインディング_コンピューターをアップグレードする SQL Server で使用されるコンポーネントの学習に使用できます。 バインドするプロセスは、SQL Server ではなく、マシン学習 Server のリリースに基づいて更新リズムにサーバーをロックします。
+この記事のプロセス説明_バインディング_コンピューターをアップグレードする SQL Server で使用されるコンポーネントの学習に使用できます。 バインドするプロセスのリリースの Machine Learning Server に基づいて更新リズムにサーバーをロックする、SQL Server を使用するのではなくリリースおよびスケジュールを更新します。
 
 > [!IMPORTANT]
-> SQL Server 更新プログラムの一環としてアップグレードを取得する場合は、このアップグレード プロセスを使用する必要はありません。 新しいサービス パックまたはサービス リリースをインストールするときに、マシン学習コンポーネントは最新バージョンに常に自動的にアップグレードされます。 SQL Server サービスのリリースによって提供されるよりも速いペースでコンポーネントをアップグレードする場合は、このプロセスを使用します。
+> SQL Server 更新プログラムの一環としてアップグレードを取得する場合は、このアップグレード プロセスを使用する必要はありません。 新しいサービス パックまたはサービス リリースをインストールするときに、マシン学習コンポーネントは最新バージョンに常に自動的にアップグレードされます。 のみを使用して、_バインディング_SQL Server サービスのリリースによって提供されるよりも速いペースでコンポーネントをアップグレードする場合を処理します。
 
 場合は、いつで Machine Learning のサーバーのスケジュールでアップグレードを停止する必要があります_バインド解除_」の説明に従ってインスタンス[このセクションで](#bkmk_Unbind)と Machine Learning のサーバーをアンインストールします。
 
@@ -39,22 +38,22 @@ ms.lasthandoff: 10/13/2017
 
 機械学習のコンポーネントをアップグレードするプロセスと呼びます**バインディング**新しい最新ソフトウェア ライフ サイクル ポリシーを使用する SQL Server マシン ラーニング コンポーネントのサポートのモデルを変更するため、します。 
 
-一般に、新しいライセンス モデルへの切り替えにより、データ サイエンティストは、R または Python の最新バージョンに常に使用できます。 最新のライフ サイクル ポリシーの条件の詳細については、次を参照してください。 [Microsoft R Server のサポート タイムライン](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support)です。
+一般に、新しいライセンス モデルへの切り替えにより、データ サイエンティストは、R または Python の最新バージョンに常に使用できます。 最新のライフ サイクル ポリシーの条件の詳細については、次を参照してください。 [Microsoft R Server のサポート タイムライン](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)です。
 
 > [!NOTE]
 > アップグレードでは、SQL Server データベースのサポートのモデルが変更され、SQL Server のバージョンは変更されません。
 
-インスタンスをバインドするときにいくつかの処理が行われます、機械学習のコンポーネントへのアップグレードを含めることができます。
+インスタンスをバインドするときは、複数の処理が行われます。
 
 + サポート モデルが変更されます。 SQL Server サービスのリリースに依存するのではなく、サポートは、新しいモダン ライフ サイクル ポリシーに基づいています。
 + インスタンスに関連付けられているマシン ラーニング コンポーネントは、各リリースでは、新しいモダン ライフ サイクル ポリシーに従った現在のバージョンのロックの手順で自動的にアップグレードされます。 
-+ 新しい R または Python パッケージを追加する場合があります。 たとえば、新しい R パッケージの追加から Microsoft R Server の以前の更新など[MicrosoftML](../using-the-microsoftml-package.md)、 [olapR](../r/how-to-create-mdx-queries-using-olapr.md)、および[sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)です。
++ 新しい R または Python パッケージを追加する場合があります。 たとえば、新しい R パッケージの追加 Microsoft R Server 9.1 に基づいて以前の更新など[MicrosoftML](../using-the-microsoftml-package.md)、 [olapR](../r/how-to-create-mdx-queries-using-olapr.md)、および[sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)です。
 + 新しいパッケージを追加する場合以外は、インスタンスを手動で更新できなくなります。
-+ Microsoft によって提供される事前トレーニング済みモデルを追加するオプションが得られます。
++ Microsoft によって提供される事前トレーニング済みモデルをインストールするオプションが表示されます。
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-アップグレードの候補となるインスタンスの特定から始めます。 場合は、インストーラーを実行し、バインド オプションを選択して、アップグレードと互換性があるインスタンスの一覧を返します。 
+アップグレードの候補となるインスタンスの特定から始めます。 場合は、インストーラーを実行し、バインド オプションを選択して、アップグレードと互換性があるインスタンスの一覧を返します。
 
 サポートされるアップグレードと要件の一覧については、次の表を参照してください。
 
@@ -65,7 +64,7 @@ ms.lasthandoff: 10/13/2017
 
 ## <a name="bind-or-upgrade-an-instance"></a>バインドまたはのインスタンスをアップグレード
 
-Microsoft Machine Learning Server for Windows には、コンピューターをアップグレードする言語および SQL Server のインスタンスに関連付けられているツールについて学習に使用できるツールが含まれています。 ツールの 2 つのバージョン: ウィザード、およびコマンド ライン ユーティリティです。
+学習のサーバーの Windows コンピューターには、コンピューターをアップグレードする言語および SQL Server のインスタンスに関連付けられているツールについて学習に使用できるツールが含まれています。 ツールの 2 つのバージョン: ウィザード、およびコマンド ライン ユーティリティです。
 
 ウィザードまたはコマンド ライン ツールを実行することができます、前に、機械学習のコンポーネントのスタンドアロン インストーラーの最新バージョンをダウンロードする必要があります。
 
@@ -89,13 +88,13 @@ Microsoft Machine Learning Server for Windows には、コンピューターを�
 
 4. 連続するページで、Microsoft R Open または Python Anaconda ディストリビューションなど、選択したすべてのオープン ソース コンポーネントの追加のライセンス条件に同意を提供します。
 
-5. **少し** ページで、インストール フォルダーのメモしておきます。 既定のフォルダーは`~\Program Files\Microsoft\ML Server`します。 
+5. **少し** ページで、インストール フォルダーのメモしておきます。 既定のフォルダーは`~\Program Files\Microsoft\ML Server`します。
 
-    インストール フォルダーを変更する場合は、クリックして**詳細**ウィザードの最初のページに戻ります。 ただし、前のすべての選択を行う必要があります。 
+    インストール フォルダーを変更する場合は、クリックして**詳細**ウィザードの最初のページに戻ります。 ただし、前のすべての選択を行う必要があります。
 
 6. オフライン コンポーネントをインストールする場合は、Microsoft R Open、Python サーバー、および Python のオープンなどの必要なマシン ラーニング コンポーネントの場所の促さ可能性があります。
-    
-インストール中に、SQL Server で使用される R または Python のライブラリは置き換えられ、新しいコンポーネントを使用するスタート パッドが更新されました。 つまり、インスタンスは、以前 R_SERVICES の既定のフォルダーでライブラリを使用、アップグレード後にこれらのライブラリとが削除ライブラリを使用する、指定した場所で、スタート パッド サービスのプロパティが変更されます。
+
+インストール プロセス中に SQL Server で使用される R または Python のライブラリが置き換えられ、スタート パッドを更新して、新しいコンポーネントを使用します。 その結果、インスタンスは、以前 R_SERVICES の既定のフォルダーでライブラリを使用、アップグレード後にこれらのライブラリとが削除ライブラリを使用する、新しい場所に、スタート パッド サービスのプロパティが変更されます。
 
 ### <a name="bkmk_BindCmd"></a>コマンドラインを使用したアップグレードします。
 
@@ -219,4 +218,3 @@ Microsoft R Server 9.0.1 に含まれているアップグレードのユーテ�
 + [R Server の以前のリリースから機能の発表内容](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [非推奨、廃止された、または変更された機能](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
-
