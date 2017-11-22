@@ -8,24 +8,21 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- PolyBase, installation
+helpviewer_keywords: PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 05ac029c0e4ef807a5d6586882f7655753d1bfbd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="polybase-installation"></a>PolyBase のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +139,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   **[詳細設定]**をクリックして、 **[受信の規則]**をクリックします。  
   
--   無効になっている規則を右クリックして、[ **規則の有効化**] をクリックします。  
+-   無効になっている規則を右クリックして、**[ 規則の有効化]** をクリックします。  
   
 ### <a name="polybase-service-accounts"></a>PolyBase サービス アカウント
 PolyBase エンジンと PolyBase データ移動サービスのサービス アカウントを変更するには、PolyBase 機能をアンインストールし、再インストールします。
@@ -151,4 +148,3 @@ PolyBase エンジンと PolyBase データ移動サービスのサービス ア
  「 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。  
   
   
-
