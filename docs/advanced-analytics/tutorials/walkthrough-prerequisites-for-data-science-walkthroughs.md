@@ -1,31 +1,25 @@
 ---
 title: "SQL Server と R のデータ サイエンスのチュートリアルの前提条件 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/23/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 127957f5a2838efb9d2dfa2829cb33909c490571
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9d3a579f023a7e6d9805b934edc3f0e9e5ad5e8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server と R のデータ サイエンスのチュートリアルの前提条件
 
@@ -35,7 +29,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="install-machine-learning-for-sql-server"></a>SQL Server の機械学習をインストールします。
 
-次のいずれかを使用して、インストールされている R のサポートを持つ SQL Server のインスタンスへのアクセスが必要です。
+インストールされている R のサポートを持つ SQL Server のインスタンスへのアクセスが必要です。 このチュートリアルが当初 SQL erver 2016 用に開発され、次の SQL Server のバージョンのいずれかを使用することができますので、2017年でテストします。 (がいくつかの相違は小さい RevoScaleR 関数でリリース。)
 
 + SQL Server 2017 の機械学習の Services (In-database)
 + SQL Server 2016 R サービス
@@ -43,21 +37,21 @@ ms.lasthandoff: 09/01/2017
 詳細については、次を参照してください。 [SQL Server R Services の設定 (データベース内](../r/set-up-sql-server-r-services-in-database.md)です。
 
 > [!IMPORTANT]
-> 必ず、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以降を使用してください。 それより前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では R との統合がサポートされていません。ただし、ODBC データ ソースとして以前の SQL データベースを使用することはできます。
+> SQL Server のバージョン以前 2016年より統合をサポートしない R とただし、ODBC データ ソースとして、以前の SQL データベースを使用できます。
 
 ## <a name="install-an-r-development-environment"></a>R 開発環境をインストールします。
 
 このチュートリアルでは、R 開発環境を使用することをお勧めします。 次にいくつかの提案を示します。
 
-- **R Tools for Visual Studio** (RTVS) は、無料でプラグインを Intellisense、デバッグを提供し、Microsoft r です。 を使用できます R Server と SQL Server の Machine Learning のサービスの両方をサポートします。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx)」を参照してください。
+- **R Tools for Visual Studio** (RTVS) は、無料でプラグインを Intellisense、デバッグを提供し、Microsoft r です。 を使用できます R Server と SQL Server の Machine Learning のサービスの両方をサポートします。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
 
-- **Microsoft R Client** は、ScaleR パッケージを使用する R での開発をサポートする軽量の開発ツールです。 これを取得する方法については、「 [Get Started with Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started)」 (Microsoft R Client の概要) を参照してください。
+- **Microsoft R クライアント**RevoScaleR パッケージを使用して R での開発をサポートする軽量の開発ツールです。 これを取得する方法については、「 [Get Started with Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)」 (Microsoft R Client の概要) を参照してください。
 
 - **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳しくは、 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)参照してください。
 
     RStudio またはその他の環境の一般的なインストールを使用してこのチュートリアルを完了することはできません。また、Microsoft R Open の R パッケージと接続ライブラリをインストールする必要があります。 詳しくは、「 [データ サイエンス クライアントのセットアップ](../r/set-up-a-data-science-client.md)」を参照してください。
 
-- 既定では、インストールするときに基本的な R ツール (R.exe、RTerm.exe、RScripts.exe) はインストールも[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]します。 IDE をインストールしない場合は、これらのツールを使用できます。
+- 基本的な R ツール (R.exe、RTerm.exe、RScripts.exe) は、SQL Server または R クライアントで R をインストールするときにも既定でインストールされます。 IDE をインストールしない場合は、これらのツールを使用できます。
 
 ## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>SQL Server インスタンスとデータベースのアクセス許可を取得します。
 
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>次のレッスン
 
 [PowerShell を使用してデータを準備します。](/walkthrough-prepare-the-data.md)
-

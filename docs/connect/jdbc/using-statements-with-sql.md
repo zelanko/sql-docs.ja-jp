@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e672add8738558615d01d6d402bec5cbe34dc295
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5cba782d32a60b2bbdcf61276db6a1989f82c50b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-sql"></a>SQL でのステートメントの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,13 +39,12 @@ ms.lasthandoff: 09/09/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[パラメーターなしの SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|パラメーターを含まない SQL ステートメントの使用方法について説明します。|  
-|[パラメーターを使用して SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|パラメーターを含む SQL ステートメントの使用方法について説明します。|  
-|[SQL ステートメントを使用してデータベース オブジェクトを変更するには](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|SQL ステートメントを使用してデータベース オブジェクトを変更する方法について説明します。|  
-|[SQL ステートメントを使用してデータを変更するには](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|SQL ステートメントを使用してデータベースのデータを変更する方法について説明します。|  
+|[パラメーターのない SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|パラメーターを含まない SQL ステートメントの使用方法について説明します。|  
+|[パラメーターがある SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|パラメーターを含む SQL ステートメントの使用方法について説明します。|  
+|[SQL ステートメントを使用したデータベース オブジェクトの変更](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|SQL ステートメントを使用してデータベース オブジェクトを変更する方法について説明します。|  
+|[SQL ステートメントを使用したデータの変更](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|SQL ステートメントを使用してデータベースのデータを変更する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーでステートメントを使用します。](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [JDBC ドライバーでのステートメントの使用](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

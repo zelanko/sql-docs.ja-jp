@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
+helpviewer_keywords: ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 18afa7157bf3afc9d9ed1a1988b8c1fd0881ddc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a54f500c0f6fe15360fdcdb72ce01460bb66ef4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle ユーザー &#39; s ガイド
 > [!IMPORTANT]  
@@ -41,15 +38,14 @@ ms.lasthandoff: 09/09/2017
   
 -   [Oracle ソフトウェアの修正プログラム](../../odbc/microsoft/oracle-software-patches.md)  
   
--   [追加して、セットアップを使用してデータ ソースを変更します。](../../odbc/microsoft/adding-and-modifying-data-sources-using-setup.md)  
+-   [セットアップを使用してデータ ソースを追加および変更する](../../odbc/microsoft/adding-and-modifying-data-sources-using-setup.md)  
   
 -   [ODBC の接続のテスト](../../odbc/microsoft/testing-the-odbc-connection.md)  
   
--   [Oracle ODBC ドライバーを構成します。](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
+-   [ODBC Driver for Oracle の構成](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
 -   [データ ソースへの接続](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
--   [インストールされる Oracle コンポーネントを決定します。](../../odbc/microsoft/determining-installed-oracle-components.md)  
+-   [インストールされる Oracle コンポーネントの決定](../../odbc/microsoft/determining-installed-oracle-components.md)  
   
--   [接続で、日付の書式を設定します。](../../odbc/microsoft/setting-the-date-format-on-connection.md)
-
+-   [接続時の日付形式の設定](../../odbc/microsoft/setting-the-date-format-on-connection.md)

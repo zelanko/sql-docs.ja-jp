@@ -8,36 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - subtract
 - '-'
 - -_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 - minus operator (-)
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 519f3455fd264cbbed7b826a8c90b03039250589
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6f3013e03ddc1d7481c36be6ed8cce4cf4572c04
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="--subtract-transact-sql"></a>- (減算) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="--subtraction-transact-sql"></a>-(減算) (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   2 つの値で減算を行います (算術減算演算子)。 日付から日数を減算することもできます。  
   
@@ -110,16 +107,15 @@ FROM DimEmployee;
 ```  
   
 ## <a name="see-also"></a>参照  
+ [-= (& a) #40 です。減算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [算術演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
- [-(& a) #40 です。負の値"&"#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/unary-operators-negative.md)   
+ [-(& a) #40 です。負の値&#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/unary-operators-negative.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [-= (& a) #40 です。減算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

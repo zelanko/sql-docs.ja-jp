@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Test Repositories
+helpviewer_keywords: Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2348c527027603895cee2ebda45ea55b21626044
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8c790666f48f142e65a0293bef2170dc12eb5f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-test-repositories-sybasetosql"></a>テスト リポジトリ (SybaseToSQL) を使用します。
 SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテスト結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_sybase_utilities**の**ssmatesterdb_syb**データベース。  
@@ -57,7 +54,7 @@ SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテ�
   
 -   をクリックして、**編集**テスト_ケース ウィザードを実行し、選択したテストを変更するボタンをクリックします。  
   
--   をクリックして、**実行**を開くボタン、[テスト_ケースの実行 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)ダイアログと、選択したテストを実行します。  
+-   をクリックして、**実行**を開くボタン、[テスト_ケースの実行 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)ダイアログと、選択したテストを実行します。  
   
 ## <a name="test-results-repository"></a>テストの結果リポジトリ  
 テストの結果リポジトリを表示することができます、**テスト結果**のページ、**テスト_ケース リポジトリ**ウィンドウです。 クリックして開く**テスト結果しています.** **Tester**メニュー。  
@@ -78,7 +75,7 @@ SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテ�
   
 次のボタンは、テスト結果 ページで入手できます。  
   
--   をクリックして、**ビュー**を開くボタン[テスト_ケース レポートを表示する & #40 です。SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)の現在のテスト_ケースの結果。  
+-   をクリックして、**ビュー**を開くボタン[テスト_ケース レポートを表示する &#40;です。SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)の現在のテスト_ケースの結果。  
   
 -   クリックして、**削除**を選択したテスト結果を削除するボタン  
   
@@ -86,4 +83,3 @@ SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテ�
 [実行中のテスト_ケースと #40 です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

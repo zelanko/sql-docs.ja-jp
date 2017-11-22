@@ -1,8 +1,7 @@
 ---
 title: "Reset メソッド (RDS) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Reset method [ADO]
+helpviewer_keywords: Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4762d331c76b1e97d13ffd1dbf926a35468bcaa9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 753a34ee7600ace3c5236df2c206a60255cc1a6f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reset-method-rds"></a>Reset メソッド (RDS)
 並べ替えまたはフィルターをクライアント側で実行**Recordset**指定の並べ替えとフィルター処理のプロパティを基にします。  
@@ -81,7 +78,6 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ## <a name="see-also"></a>参照  
  [FilterColumn、FilterCriterion、FilterValue、SortColumn、および SortDirection プロパティおよびメソッドの例をリセット (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 
 

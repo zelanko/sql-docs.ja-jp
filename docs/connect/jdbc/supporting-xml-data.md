@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77ec535a43cf79b10e25d3c0fd7108d3c9a40dd0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5f561c72cda30a9f62e202cbd612725d02b7f408
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="supporting-xml-data"></a>XML データのサポート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +43,6 @@ ms.lasthandoff: 09/09/2017
 |[SQLXML でのプログラミング](../../connect/jdbc/programming-with-sqlxml.md)|使用する方法について説明します、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API のメソッドを格納およびリレーショナル データベースから XML データの取得、 **SQLXML** Java データ型。 SQLXML オブジェクトの型についての情報や、SQLXML オブジェクトを使用するうえでの重要なガイドラインおよび制限事項の一覧も掲載されています。|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーのデータ型をについてください。](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

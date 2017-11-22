@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e46fb86489ca7e2a1fed33e85f638f99e47770eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>プロジェクトの設定 (移行) (MySQLToSQL)
 移行 ページ、**プロジェクト設定** ダイアログ ボックスには、どのように SSMA データが移行 MySQL から SQL Server をカスタマイズする設定が含まれています。  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/02/2017
 |**エラーの処理**|空間データ型の値の移行でエラーを処理する方法を指定します。 'Replace では NULL' が指定されている場合は、NULL とすべての空間値が原因で、エラーに交換してください。 置換は行われませんそれ以外の場合。<br /><br />**既定のモード**: エラーが発生<br /><br />**オプティミスティック モード**: エラーが発生<br /><br />**Full モード**: エラーが発生|  
 |**値の検証**|無効な空間の値を処理する方法を指定します。 'を再試行してください、有効な' が指定されている場合、しようとしましたが中に有効にするために無効な値を変更します。<br /><br />**既定のモード**: 有効にします。<br /><br />**オプティミスティック モード**: 変更しないでください<br /><br />**Full モード**: 有効にします。|  
   
-

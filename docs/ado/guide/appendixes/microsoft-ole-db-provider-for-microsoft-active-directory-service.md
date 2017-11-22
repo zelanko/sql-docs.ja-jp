@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc6946f6944cf37f85759847f2c8db852d120461
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory サービスの Microsoft OLE DB プロバイダー
 Active Directory サービス インターフェイス (ADSI) プロバイダーでは、adsi エディターを使用した異種のディレクトリ サービスに接続する ADO が許可されます。 これにより、ADO アプリケーションは、Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory サービスに、すべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなく読み取り専用アクセスできるようにします。 ADSI 自体は、プロバイダー モデルに基づいて、できるように、別のディレクトリに新しいプロバイダーの提供アクセスがある場合、ADO アプリケーションはシームレスにアクセスします。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
@@ -128,20 +126,20 @@ objectClass='user' AND objectCategory='Person'"
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|不可|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|不可|  
 |[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|不可|  
-|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|はい|  
-|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|  
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|可|  
+|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|可|  
 |[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|不可|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|  
-|[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|はい|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|はい|  
-|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|  
-|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|はい|  
-|[再同期](../../../ado/reference/ado-api/resync-method.md)|はい|  
-|[サポートしています](../../../ado/reference/ado-api/supports-method.md)|はい|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|可|  
+|[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|可|  
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|  
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|  
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|  
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|可|  
+|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|可|  
+|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|可|  
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|可|  
+|[サポートしています](../../../ado/reference/ado-api/supports-method.md)|可|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|不可|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|不可|  
   
@@ -153,5 +151,4 @@ objectClass='user' AND objectCategory='Person'"
  [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [プロバイダーのプロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [メソッドをサポートしています](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

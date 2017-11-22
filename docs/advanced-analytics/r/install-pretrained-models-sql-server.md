@@ -1,47 +1,41 @@
 ---
 title: "事前トレーニング済みの機械学習モデルを SQL Server のインストール |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/18/2017
+ms.date: 11/16/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ed5616b66ffdad10f0e2794eb5ab0109a0979d2e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。
 
 この記事では、事前トレーニング済みモデルを SQL Server のインスタンスに追加済みの R Services または Machine Learning のサービスのインストール方法について説明します。
 
-事前トレーニング済みモデルは、Microsoft R Server をインストールするとき、またはスタンドアロンのインストーラーを使用して、マシン学習サーバー オプションとして提供されます。 このインストーラーを使用すると、事前トレーニング済みモデルだけを取得することができますか、コンピューターをアップグレードする SQL Server 2016 または SQl Server 2017 のインスタンス内のコンポーネントの学習を行うこともできます。
+事前トレーニング済みモデルをインストールするオプションは、Microsoft R Server や Machine Learning のサーバーに個別の Windows インストーラーを使用する場合に使用できます。 このインストーラーを使用するを事前トレーニング済みモデルだけを取得またはクエリを使用することができます[コンピューターをアップグレードするコンポーネントを学習](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)SQL Server 2016 または SQL Server 2017 のインスタンスにします。
 
 インストーラーを実行して、事前トレーニング済みモデルをダウンロードしたら、SQL Server を使用するためのモデルを構成する追加の手順があります。 この記事では、プロセスについて説明します。
 
-詳細については、次の記事を参照してください。
+SQL Server のデータを事前トレーニング済みモデルを使用する方法の例は、SQL Server の Machine Learning チームによってこのブログを参照してください。 
 
-+ [事前トレーニング済みの機械学習のセンチメント分析とイメージ検出モデル](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
-
-+ [R Services のインスタンスで R コンポーネントをアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
++ [SQL Server の Machine Learning のサービスでの Python のセンチメント分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
 ## <a name="benefits-of-using-pretrained-models"></a>事前トレーニング済みモデルを使用する利点
 
-これらの事前トレーニング済みモデルは、顧客の特性付け、画像のまたはセンチメント分析などのタスクを実行する必要がありますが、大規模なデータセットを取得するか、複雑なモデルをトレーニングするリソースがないのために作成されています。 事前トレーニング済みモデルを使用するには、テキストおよびイメージ最も効率的に処理を開始することができます。
+これらの事前トレーニング済みモデルは、センチメント分析またはイメージの特性付けなどのタスクを実行する必要があり、大規模なデータセットを取得するか、複雑なモデルをトレーニングするためのリソースは持っていないユーザーを支援する作成されました。 事前トレーニング済みモデルを使用するには、テキストおよびイメージ効率的に処理を開始することができます。
 
-現在使用できるモデルは深層ニューラル ネットワーク (DNN) センチメント分析とイメージ分類モデルです。 Microsoft を使用してすべての事前トレーニング済みモデル トレーニングを受けた[計算ネットワーク Toolkit](https://cntk.ai/Features/Index.html)、または**CNTK**です。 
+現在使用できるモデルは深層ニューラル ネットワーク (DNN) センチメント分析とイメージ分類モデルです。 Microsoft を使用してすべての事前トレーニング済みモデル トレーニングを受けた[計算ネットワーク Toolkit](https://cntk.ai/Features/Index.html)、または**CNTK**です。
 
 各ネットワークの構成が次の参照の実装に基づいています。
 
@@ -49,6 +43,8 @@ ms.lasthandoff: 10/24/2017
 + ResNet 50
 + ResNet 101
 + AlexNet
+
+これらのモデルの詳細については、次を参照してください[事前トレーニング済みの機械学習のセンチメント分析とイメージ検出モデル。](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
 
 ネットワークの詳細な学習および CNTK を使用してその実装の詳細については、次の記事を参照してください。
 
@@ -69,17 +65,17 @@ ms.lasthandoff: 10/24/2017
 
     + 同時に、R または Python コンポーネントをアップグレードするに更新するには使用する言語 (R、Python、またはその両方) を選択し、事前トレーニング済みモデル オプションを選択します。 これらの変更を適用する 1 つまたは複数のインスタンスを選択します。
 
-    + 前のすべての選択のままにして以前に Machine Learning のサーバーをインストールおよび更新されたバインド オプションを使用して R または Python のコンポーネントが場合、**は**、事前トレーニング済みモデルのオプションを選択します。 以前に選択したオプションの選択を解除できませんまたは削除される予定です。
+    + 前のすべての選択のままにして以前に Machine Learning のサーバーをインストールおよび更新されたバインド オプションを使用して R または Python のコンポーネントが場合、**は**、事前トレーニング済みモデルのオプションを選択します。 以前に選択したオプションです。 選択を解除できません。これを行う場合、インストーラーは、コンポーネントを削除します。
 
 3. インストールが完了したら、Windows コマンド プロンプトを開き**管理者として**、し、Microsoft R インストーラーが含まれる SQL Server のセットアップ ブートス トラップ フォルダーに移動します。 SQL Server 2017 の既定のインスタンスで、フォルダーになります。
     
     `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-4. インストールするコンポーネント、バージョン、およびこれらの例で示すように、RSetup.exe に引数を使用して、モデルのソース ファイルを含むフォルダーを指定します。
+4. RSetup.exe を実行し、インストールするコンポーネント、バージョン、およびこれらの例に示すようにコマンドライン引数を使用して、モデルのソース ファイルを含むフォルダーを指定します。
 
-  + 使用したモデルを使用する**R_SERVICES**、次の構文とパスを使用します。
+    + 使用したモデルを使用する**R_SERVICES**:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     たとえば、SQL Server の 2017 の既定のインスタンスでの R の事前トレーニング済みモデルの最新バージョンの使用を有効にするには、このステートメントを実行します。
 
@@ -89,19 +85,35 @@ ms.lasthandoff: 10/24/2017
 
     `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + 使用したモデルを使用する**PYTHON_SERVICES**、次の構文とパスを使用します。
+    + 事前トレーニング済みモデルを使用して、R Server (スタンドアロン) または Machine Learning Server (スタンドアロン).
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
+
+    たとえばを SQL Server 2016 での R Server の既定のインストールでの R の事前トレーニング済みモデルの最新バージョンの使用を有効にするには、このステートメントを実行します。
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir ‘C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
+    
+    + 事前トレーニング済みモデルを使用する**PYTHON_SERVICES**:
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     たとえば、事前トレーニング済みモデルの最新バージョンの SQL Server の 2017 の既定のインスタンスでの Python のために使用するには、このステートメントを実行します。
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     名前付きインスタンスのコマンドは、ようになります次のような
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-5. バージョン パラメーターには、次の値がサポートされています。
+    + Python を使用するには、Machine Learning Server (スタンドアロン) を持つモデルに事前トレーニング済み。
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<sql_folder>\PYTHON_SERVER\site-packages\microsoftml\mxLibs"`
+
+    たとえば、2017 年 1 SQL Server セットアップを使用してマシン ラーニング Server (スタンドアロン) の既定のインストールと仮定した場合、このステートメントを実行します。
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER\Lib\site-packages\microsoftml\mxLibs"`
+
+5. バージョン パラメーターは、次の値がサポートされています。
 
     + リリース候補 0:**されていた 9.1.0.0**
     + リリース候補 1: **9.2.0.22**
@@ -116,6 +128,11 @@ ms.lasthandoff: 10/24/2017
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model
+
+
+> [!NOTE]
+> 
+> モデル ファイルへのパスが長い場合は、Python コードから、モデル ファイルを呼び出すときにエラーが表示する可能性があります。 これは、現在の Python 実装の制限によるものです。 この問題は、次のサービス リリースで修正されます。
 
 ## <a name="examples"></a>使用例
 
@@ -149,10 +166,8 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 > パフォーマンスを向上させるために、ネイティブ形式を使用して圧縮されているために、読み取り、または事前トレーニング済みのモデルを変更することはありません。
 
-
 ### <a name="text-analysis-example"></a>テキスト分析の例
 
 事前トレーニング済みのテキストの特性付けのモデルを使用してテキスト分類する方法の例については、次の例を参照してください。
 
 [テキスト フィーチャライザーを使用してセンチメント分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7a5bcfea240af2477b3522f2baa849a6a5a6876
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>動作の変更と ODBC 3.x ドライバー
 環境属性 ODBC 2 が発生する必要があるかどうかがドライバーにまたを示します。*x*動作または ODBC 3*.x*動作します。 また環境属性を設定する方法は、アプリケーションによって異なります。 ODBC 3*.x*アプリケーションを呼び出す必要があります**SQLSetEnvAttr**を呼び出すことが後に、この属性を設定する**SQLAllocHandle**環境ハンドルの割り当てに呼び出しの前に、**SQLAllocHandle**接続ハンドルを割り当てられません。 ドライバー マネージャーを含む SQLSTATE HY010 を返しますこれに失敗した場合 (関数のシーケンス エラー) 後者の呼び出しに**SQLAllocHandle**です。  
@@ -45,15 +43,14 @@ ms.lasthandoff: 09/09/2017
   
 -   [Datetime データ型](../../../odbc/reference/appendixes/datetime-data-types.md)  
   
--   [C データ型の旧バージョンとの互換性](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
+-   [C データ型の下位互換性](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
   
 -   [固定長のブックマーク](../../../odbc/reference/appendixes/fixed-length-bookmarks.md)  
   
--   [SQLGetInfo サポート](../../../odbc/reference/appendixes/sqlgetinfo-support.md)  
+-   [SQLGetInfo のサポート](../../../odbc/reference/appendixes/sqlgetinfo-support.md)  
   
 -   [SQL_NO_DATA を返す](../../../odbc/reference/appendixes/returning-sql-no-data.md)  
   
--   [データを挿入する SQLSetPos を呼び出す](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
+-   [データを挿入するための SQLSetPos の呼び出し](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
--   [序数で読み込む](../../../odbc/reference/appendixes/loading-by-ordinal.md)
-
+-   [序数での読み込み](../../../odbc/reference/appendixes/loading-by-ordinal.md)

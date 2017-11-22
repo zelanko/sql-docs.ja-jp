@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - CREATE ASSEMBLY
 - CREATE_ASSEMBLY_TSQL
 - ASSEMBLY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - assemblies [CLR integration], validating
 - validating assemblies
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 94
+caps.latest.revision: "94"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 845175405b8acc810044c0acc1f54060b81280d4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +118,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、名前、カルチャ、および公開キーが同じでありバージョンが異なるアセンブリの登録を許可していません。  
   
-指定されたアセンブリにアクセスしようとしています。 \<client_assembly_specifier >、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在の Windows ログインのセキュリティ コンテキストの権限を借用します。 場合\<client_assembly_specifier > ネットワークの場所 (UNC パス) を指定します。 現在のログインの権限の借用が引き継がれませんネットワークの場所に委任制限があり。 この場合、アクセスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストを使って行われます。 詳細については、次を参照してください。[資格情報 (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。
+指定されたアセンブリにアクセスしようとしています。 \<client_assembly_specifier >、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在の Windows ログインのセキュリティ コンテキストの権限を借用します。 場合\<client_assembly_specifier > ネットワークの場所 (UNC パス) を指定します。 現在のログインの権限の借用が引き継がれませんネットワークの場所に委任制限があり。 この場合、アクセスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストを使って行われます。 詳細については、次を参照してください。[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。
   
  によって指定されたルート アセンブリだけでなく*assembly_name*、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップロードされるルート アセンブリによって参照されているすべてのアセンブリをアップロードしようとしています。 参照先のアセンブリが、先に実行された CREATE ASSEMBLY ステートメントにより既にアップロードされている場合、そのアセンブリはアップロードされませんが、ルート アセンブリからは引き続き使用できます。 依存アセンブリがまだアップロードされておらず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではソース ディレクトリ内にそのアセンブリのマニフェスト ファイルが検出できない場合、CREATE ASSEMBLY ではエラーが返されます。  
   
@@ -196,7 +193,7 @@ WITH PERMISSION_SET = SAFE;
 ```  
   
 ## <a name="see-also"></a>参照  
- [アセンブリの変更 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [アセンブリの変更 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [アセンブリ &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
@@ -204,7 +201,6 @@ WITH PERMISSION_SET = SAFE;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [集計 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [使用シナリオと例については、共通言語ランタイム & #40 です。CLR &#41;統合](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [使用シナリオと例については、共通言語ランタイム &#40;です。CLR &#41;統合](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   
   
-

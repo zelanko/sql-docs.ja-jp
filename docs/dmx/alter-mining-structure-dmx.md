@@ -16,8 +16,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1e835c27541ab59fc6913b31600cd5804ea99f6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -133,7 +131,7 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |項目|定義|  
-|**リグレッサー**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
+|**REGRESSOR**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
  列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)です。  
@@ -143,7 +141,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**予測**|この列は、モデルによって予測が可能で、その値は他の予測可能列の値を予測するための入力として使用できます。|  
+|**PREDICT**|この列は、モデルによって予測が可能で、その値は他の予測可能列の値を予測するための入力として使用できます。|  
 |**PREDICT_ONLY**|この列は、モデルによって予測が可能ですが、その他の予測可能列の値を予測するためにこの列の値を入力ケースで使用することはできません。|  
   
 ## <a name="filter-criteria-expressions"></a>フィルター条件式  
@@ -228,4 +226,3 @@ USING Microsoft_Decision Trees
  [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

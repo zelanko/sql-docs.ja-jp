@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators
 - compound operators, described
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb178876814b5b83f839dda1d2a266948c43d8d2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e5fde8cd4265359722f33400d834b0a301718ef
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="compound-operators-transact-sql"></a>複合演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +39,14 @@ ms.lasthandoff: 09/01/2017
   
 |演算子|詳細情報へのリンク|操作|  
 |--------------|------------------------------|------------|  
-|+=|[+ = (& a) #40 です。追加等しい &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/add-equals-transact-sql.md)|いくつかの数値を元の値に加算し、元の値に結果を設定します。|  
-|-=|[-= (& a) #40 です。減算代入 &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/subtract-equals-transact-sql.md)|いくつかの数値を元の値から減算し、元の値に結果を設定します。|  
-|*=|[&#42; = (& a) #40 です。乗算代入 &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/multiply-equals-transact-sql.md)|1 つの数値で乗算し、元の値に結果を設定します。|  
-|/=|[&#40; 分割等号"&"#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/divide-equals-transact-sql.md)|1 つの数値で除算し、元の値に結果を設定します。|  
-|%=|[剰余代入 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/modulo-equals-transact-sql.md)|1 つの数値で除算し、元の値に剰余を設定します。|  
-|&=|[& = (& a) #40 です。ビットごとの AND 代入 &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|ビットごとの AND 演算を実行し、元の値に結果を設定します。|  
-|^=|[^ = (& a) #40 です。ビットごとの排他的 OR EQUALS &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|ビットごとの排他的 OR 演算を実行し、元の値に結果を設定します。|  
-|&#124;=|[&#124; = (& a) #40 です。ビットごとの OR EQUALS &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|ビットごとの OR 演算を実行し、元の値に結果を設定します。|  
+|+=|[+ = (& a) #40 です。追加の割り当て &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/add-equals-transact-sql.md)|いくつかの数値を元の値に加算し、元の値に結果を設定します。|  
+|-=|[-= (& a) #40 です。減算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/subtract-equals-transact-sql.md)|いくつかの数値を元の値から減算し、元の値に結果を設定します。|  
+|*=|[&#42; = (& a) #40 です。乗算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/multiply-equals-transact-sql.md)|1 つの数値で乗算し、元の値に結果を設定します。|  
+|/=|[& # #40; 除算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/divide-equals-transact-sql.md)|1 つの数値で除算し、元の値に結果を設定します。|  
+|%=|[剰余代入 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/modulo-equals-transact-sql.md)|1 つの数値で除算し、元の値に剰余を設定します。|  
+|&=|[& = (& a) #40 です。ビットごとの AND 代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|ビットごとの AND 演算を実行し、元の値に結果を設定します。|  
+|^=|[^ = (& a) #40 です。ビットごとの排他的 OR 代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|ビットごとの排他的 OR 演算を実行し、元の値に結果を設定します。|  
+|&#124;=|[&#124; = (& a) #40 です。ビットごとの OR 代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|ビットごとの OR 演算を実行し、元の値に結果を設定します。|  
   
 ## <a name="syntax"></a>構文  
   
@@ -107,8 +104,7 @@ SELECT @x8 AS Bitwise_OR;
 ```  
   
 ## <a name="see-also"></a>参照  
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [ビット処理演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ビット処理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

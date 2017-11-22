@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b399910612848033ea927aa8c4d3adc86d048ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>アクセスのインベントリ スキーマ (AccessToSQL)
 次のセクションへのアクセスのスキーマをエクスポートするときに、SSMA によって作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |**DatabaseId**|**uniqueidentifier**|各データベースを一意に識別する GUID です。 この列は、テーブルの主キーもです。|  
 |**DatabaseName**|**nvarchar (4000)**|Access データベースの名前。|  
 |**ExportTime**|**datetime**|このメタデータが SSMA によって作成された日付と時刻。|  
-|**ファイル パス**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
+|**FilePath**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
 |**ファイル サイズ**|**bigint**|Access データベース (KB 単位) のサイズ。|  
 |**FileOwner**|**nvarchar (4000)**|Access データベースの所有者として指定されている Windows アカウント。|  
 |**作成日時**|**datetime**|日付と Access データベースが作成された時刻。|  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/02/2017
 |**ReportsCount**|**int**|Access データベース内のレポートの数。|  
 |**MacrosCount**|**int**|Access データベース内のマクロの数。|  
 |**AccessVersion**|**nvarchar (4000)**|データベースのアクセス バージョンです。|  
-|**[照合順序]**|**nvarchar (4000)**|Access データベースの照合順序です。 照合順序は、データベースの並べ替えし、文字列を比較する方法を決定します。|  
+|**照合順序**|**nvarchar (4000)**|Access データベースの照合順序です。 照合順序は、データベースの並べ替えし、文字列を比較する方法を決定します。|  
 |**JetVersion**|**nvarchar (4000)**|Jet データベース エンジンのバージョン。 Access データベースは、基になる Jet データベース エンジンを使用します。|  
 |**IsUpdatable**|**bit**|データベースを更新できるかどうかを示します。 値が 1 の場合は、データベースは更新可能です。 値が 0 の場合、データベースは読み取り専用です。|  
 |**QueryTimeout**|**int**|構成されている ODBC クエリのタイムアウト値 (秒) のデータベースです。 既定値は 60 秒です。|  
@@ -105,7 +103,7 @@ ms.lasthandoff: 08/02/2017
 |**IsNullable**|**bit**|列が null 値を含めることができるかどうかを指定します。 値が 1 の場合は、列は null 値を含めることができます。 値が 0 の場合、列は null 値を含めることはできません。 検証規則は null 値を防ぐためにも使用できますに注意してください。|  
 |**DataType**|**nvarchar (4000)**|など、列のデータ アクセス種類**テキスト**または**長い**です。|  
 |**IsAutoIncrement**|**bit**|列が整数値を自動的にインクリメントするかどうかを指定します。 値が 1 の場合は、整数が自動インクリメントします。|  
-|**序数**|**smallint**|0 から始まる、テーブル内の列の順序。|  
+|**Ordinal**|**smallint**|0 から始まる、テーブル内の列の順序。|  
 |**DefaultValue**|**nvarchar (4000)**|列の既定値。|  
 |**ValidationRule**|**nvarchar (4000)**|データを追加または列の更新の検証に使用される規則です。|  
   
@@ -189,6 +187,5 @@ ms.lasthandoff: 08/02/2017
 |**ModuleName**|**nvarchar (4000)**|モジュールの名前。|  
   
 ## <a name="see-also"></a>参照  
-[アクセスのインベントリをエクスポートします。](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Access インベントリのエクスポート](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-

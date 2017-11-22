@@ -1,27 +1,25 @@
 ---
 title: "SQL Server に追加の R パッケージをインストール |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/02/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
+ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: a7afdf4230bd27505afff271a6b4782214eedfb3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server に追加の R パッケージをインストールします。
 
@@ -30,7 +28,8 @@ ms.lasthandoff: 10/10/2017
 > [!IMPORTANT]
 > 新しいパッケージを追加するプロセスは、SQL Server を実行していると、ツールを使用しているのバージョンによって異なります。 
 
-**適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
+**適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]と  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="overview-of-package-installation-process"></a>パッケージのインストール処理の概要
 
@@ -40,7 +39,9 @@ ms.lasthandoff: 10/10/2017
 
     パッケージの依存関係を確認し、インストール中に必要となるすべての関連するパッケージを取得することを確認します。 パッケージとその依存関係のコレクションを準備することをお勧め、 [miniCRAN パッケージ](#bkmk_packageDependencies)です。
 
-3.  パッケージのインストール方法によって異なります、サーバーがあるインターネットにアクセスするかどうかと SQL Server のバージョン。 推奨されるプロセスは次のとおりです。
+    ダウンロードまたはインストールのエラーが発生する場合は、さまざまなミラー サイトを再試行してください。
+
+3.  パッケージをインストールする方法によって異なります、サーバーがあるインターネットにアクセスするかどうかと SQL Server のバージョン。 推奨されるプロセスは次のとおりです。
 
     **SQL Server 2016 用のパッケージのインストール**
     
@@ -62,11 +63,11 @@ ms.lasthandoff: 10/10/2017
 
 ## <a name="install-new-packages"></a>新しいパッケージをインストールします。
 
-このセクションでは、次のキー パッケージのインストール シナリオの詳細な手順を提供します。 使用するための最適な方法は、これら factores によって異なります。
+このセクションでは、キー パッケージのインストール シナリオの詳細な手順を提供します。 に基づいて、最適な方法を選択します。
 
 - 使用している SQL Server のバージョン
 
-- インスタンスの唯一の所有者かは、データベース ロールを使用して複数のユーザーの mamaneg パッケージにしようとしています。
+- 場合、インスタンスの唯一の所有者とデータベース ロールを使用して複数のユーザーのパッケージを管理しようとしています。
 
 - 依存関係を持つ 1 つのパッケージ、または複数のパッケージをインストールするかどうか
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/10/2017
 
     [MiniCRAN リポジトリからの複数のパッケージをインストールします。](#bkmk_minicran)
 
-**従来の R rools を使用します。**
+**従来の R ツールを使用します。**
 
 SQL Server R services の以前のバージョンを使用している場合は従来の R ツールを使用してパッケージをインストールする手順に従います。 必要に応じて、miniCRAN を使用して、インストールのパッケージのコレクションを準備します。
 
@@ -112,7 +113,7 @@ SQL Server R services の以前のバージョンを使用している場合は�
 
 4.  パッケージを使用する、データベースから実行、[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメントです。
 
-    この例では、アカウントがサーバーに新しいパッケージをアップロードして、データベース内の共有のスコープにインストールする権限を持っているものとします。
+    この例では、ものと、アカウントにサーバーに新しいパッケージをアップロードし、それらをインストールするアクセス許可が**共有**データベースにスコープします。
 
     次のステートメントは、のリリース版を追加、 [zoo](https://cran.r-project.org/web/packages/zoo/index.html)ローカルのファイル共有から、現在のデータベース コンテキストにパッケージします。
 
@@ -136,7 +137,7 @@ SQL Server R services の以前のバージョンを使用している場合は�
     library(zoo)'
     ```
 
-    成功した場合、**メッセージ**「パッケージ 'zoo' が正常に展開および MD5 合計チェック」など、ウィンドウは、メッセージを報告する必要があります。 必要なパッケージが既にインストールされている場合、インストール プロセスがアタッチし、必要なパッケージを読み込めません。
+    成功した場合、**メッセージ**「パッケージ 'zoo' が正常に開梱し、MD5 合計チェックします」など、ウィンドウは、メッセージを報告する必要があります。 必要なパッケージが既にインストールされている場合、インストール プロセスをアタッチし、必要なパッケージを読み込みます。
 
     > [!NOTE]
     > 必要なパッケージが利用できない場合、エラーが返されます。"と呼ばれるパッケージはありません\<required_package\>"です。 
@@ -149,7 +150,7 @@ SQL Server R services の以前のバージョンを使用している場合は�
 
 1. 開始する前に、これらの条件を満たしていることを確認します。
 
-    + R クライアントでは、RevoScale の最新バージョンがあります。 プレリリース版では、一部のパッケージ管理機能は含まれませんでした。
+    + Microsoft R を含むクライアント RevoScale に更新プログラムの最新バージョンを使用します。
     + インスタンスであり、データベースに、パッケージの管理を有効になっています。
     + データベースの管理ロールのいずれかのアクセス許可があります。
 
@@ -219,7 +220,7 @@ R ツールを使用すると、SQL Server 2016 および SQL Server 2017 の両
 
     ミラー サイトを求められたら、現在の場所は便利では任意のサイトを選択します。
 
-    目的のパッケージがその他のパッケージに依存している場合、R インストーラーは依存関係にあるパッケージを自動的にダウンロードしてインストールします。
+    ターゲットのパッケージは、その他のパッケージに依存している場合、R インストーラーは自動的に依存関係をダウンロードして、インストールします。
 
     **インターネットにアクセスできないと、パッケージを手動でまたは、コンピューターにインストールします。**
 
@@ -235,7 +236,7 @@ R ツールを使用すると、SQL Server 2016 および SQL Server 2017 の両
 
 ### <a name="bkmk_minicran"></a>MiniCRAN リポジトリからの複数のパッケージをインストールします。
 
-MiniCRAN リポジトリからパッケージをインストールする場合、全体的なプロセスは、1 つの zip ファイルからパッケージをインストールするとよく似ています。 ただし、zip 形式で個々 のパッケージをアップロードするのではなく miniCRAN リポジトリが含まれています、関連の必要なパッケージと同様に、対象パッケージです。
+MiniCRAN リポジトリからパッケージのインストールの全体的なプロセスは、1 つの zip ファイルからパッケージをインストールすると似ています。 ただし、zip 形式で個々 のパッケージをアップロードするのではなく miniCRAN リポジトリが含まれています、関連の必要なパッケージと同様に、対象パッケージです。
 
 1.  MiniCRAN リポジトリを準備し、サーバー上のローカル フォルダーに zip 形式のファイルをコピーします。
 
@@ -259,7 +260,7 @@ MiniCRAN リポジトリからパッケージをインストールする場合�
     library(randomForest)'
     ```
 
-    成功した場合、**メッセージ**「'randomForest' が正常に開梱済みのパッケージおよび MD5 の合計値をチェック」とも「完了チェーンの実行」などのウィンドウでメッセージを報告する必要があります。
+    成功した場合、**メッセージ**「'randomForest' が正常に開梱済みのパッケージおよび MD5 の合計値をチェック」と「完了には、実行がチェーンされた」などのウィンドウでメッセージを報告する必要があります。
 
 ## <a name="package-installation-tips"></a>パッケージのインストールに関するヒント
 
@@ -267,11 +268,11 @@ MiniCRAN リポジトリからパッケージをインストールする場合�
 
 ###  <a name="packageVersion"></a>適切なパッケージのバージョンと形式を取得します。
 
-R パッケージの供給元は複数あります。その中でもよく知られているのは CRAN と Bioconductor です。 R 言語の公式サイト (<https://www.r-project.org/>) には、これらのリソースが多数掲載されています。 または、GitHub に多くのパッケージが公開されており、ここではソース コードを取得できます。 ただし、社内の誰かによって開発された R パッケージが提供されている場合もあります。
+R パッケージの供給元は複数あります。その中でもよく知られているのは CRAN と Bioconductor です。 R 言語の公式サイト (<https://www.r-project.org/>) には、これらのリソースが多数掲載されています。 多くのパッケージは、GitHub のソース コードを取得する場所に発行されます。 ただしが提供された社内の誰かによって開発された R パッケージです。
 
 元に関係なくをインストールするパッケージが、Windows プラットフォームのバイナリ形式を持つことを確認する必要があります。 それ以外の場合、ダウンロードしたパッケージは、SQL Server 環境で実行できません。
 
-また、パッケージが SQL Server で実行されている R のバージョンと互換性があるかどうかを確認する必要があります。
+をダウンロードする前に、また、パッケージが SQL Server で実行されている R のバージョンと互換性があるかどうかを確認する必要があります。
 
 ### <a name="bkmk_zipPreparation"></a>Zip 形式のファイルとしてパッケージをダウンロードします。
 
@@ -287,7 +288,7 @@ R パッケージの供給元は複数あります。その中でもよく知ら
 
 このプロセスにより、パッケージのローカル コピーが作成されます。 パッケージをインストールしたり、zip 形式のパッケージをインターネット アクセスが許可されていないサーバーにコピーできます。
 
-ZIP ファイル形式のコンテンツと、R パッケージの作成方法の詳細については、R プロジェクトのサイトから PDF 形式でダウンロードできる、次のチュートリアルを参照することをお勧めします: [Freidrich Leisch: Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf) (R パッケージの作成)。
+Zip ファイル形式と、R パッケージを作成する方法の詳細については、内容、ことをお勧めこのチュートリアルでは、R プロジェクト サイトから PDF 形式でダウンロードできます: [R パッケージを作成する](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)です。
 
 ### <a name="bkmk_packageDependencies"></a>パッケージの依存関係を取得します。
 
@@ -365,4 +366,3 @@ SQL Server マシン ラーニング サービスに加えて Microsoft マシ�
 > R_SERVER ライブラリにインストールされているパッケージは、Microsoft R Server によってのみ使用され、SQL Server がアクセスできないされます。
 > 
 > 使用してください、`R_SERVICES`ライブラリ SQL Server で使用するパッケージをインストールするときにします。
-

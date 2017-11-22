@@ -1,39 +1,36 @@
 ---
 title: "発行および Python コードを使用する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b060d27376b17709bd0f3fc8f39b8e01a6702e6b
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="publish-and-consume-python-web-services"></a>発行および Python web サービスの利用
 
 Web サービスに、作業用 Python ソリューションを展開するには、Microsoft Machine Learning のサーバーの操作運用の機能を使用します。 このトピックでは、正常に発行し、ソリューションを実行する手順について説明します。
 
-> [!IMPORTANT]
->
-> このサンプルは、Machine Learning サーバー バージョン 9.1.0 に機能を使用してマシン ラーニング Server (スタンドアロン) に含まれている Python のバージョン用に開発されました。
- > 
- > Microsoft Machine Learning のサーバーのバージョン 9.2.0 の最新のリリースで機能を利用して同様の例を表示する Machine Learning サーバー サイトでこの記事を参照してください:[展開および Python で web サービスを管理](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)です。
-
 この記事の対象読者は、データ サイエンティストは、Microsoft Machine Learning のサーバーでホストされる web サービスとしての Python コードまたはモデルを発行する方法を学習します。 アプリケーションで使用する方法も説明、コードまたはモデル。 この記事では、Python に習熟していることを前提としています。
 
-**適用されます SQL server 2017 機械学習のサーバー (スタンドアロン)。**
+> [!IMPORTANT]
+>
+> このサンプルは、Machine Learning Server (スタンドアロン) に含まれて、Machine Learning のサーバーのバージョンで機能を使用して Python のバージョンの開発された**9.1.0**です。
+ > 
+ > 次のリンクを クリックすると、再発行 Machine Learning のサーバーで、新しいライブラリを使用して、同じサンプルを参照してください。 参照してください[展開および Python で web サービスを管理](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)です。
+
+**適用されます Microsoft R Server (スタンドアロン)。**
 
 ## <a name="overview-of-workflow"></a>ワークフローの概要
 
@@ -54,7 +51,7 @@ Web サービスに、作業用 Python ソリューションを展開するに�
 
 このサンプル コードが想定が満たされて、[の前提条件](#prereq)その Swagger から Python クライアント ライブラリを生成するファイルとを使った Autorest です。
 
-コード ブロックの後に、プロセスの各 steo の詳細な説明と詳細なチュートリアルがあります。
+コード ブロックの後に、すべてのプロセスに関する詳細な説明と詳細なチュートリアルがあります。
 
 > [!IMPORTANT]
 > この例は、ローカルを使用して`admin`アカウントを認証します。 ただし、資格情報を置き換える必要がありますと[認証メソッド](#python-auth)管理者によって構成します。
@@ -65,7 +62,12 @@ Web サービスに、作業用 Python ソリューションを展開するに�
 ##################################################
 
 # Import the generated client library. 
+
 import deployrclient
+
+# This example is intended for use with Microsoft R Server 9.0.1. 
+# If you are using a newer version of Machine Learning Server, 
+# use the mrs_server library instead.
 
 ##################################################
 ##              AUTHENTICATION                  ##
@@ -75,6 +77,7 @@ import deployrclient
 #Create client instance and point it at an R Server. 
 #In this case, R Server is local.
 client = deployrclient.DeployRClient("http://localhost:12800")
+# To use ML Server, replace with mrs_server.MRSServer()
 
 #Define the login request and provide credentials 
 #Update values with the connection parameters from your admin
@@ -88,7 +91,7 @@ token_response = client.login(login_request)
 headers = {"Authorization": "Bearer {0}".format(token_response.access_token)}
 
 #Verify that the server is running.
-#Remember to include `headers` in every request!
+#Remember to include `headers` in all requests!
 status_response = client.status(headers) 
 print(status_response.status_code)
 
@@ -103,7 +106,7 @@ print(status_response.status_code)
 create_session_request = deployrclient.models.CreateSessionRequest("Session 1", runtime_type="Python")
 
 #Make the call to start the session. 
-#Remember to include headers in every method call to the server.
+#Remember to include headers in all method calls to the server.
 #Returns a session ID.
 response = client.create_session(create_session_request, headers) 
    
@@ -151,7 +154,7 @@ else:
 response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
 #Return the snapshot ID for reference when you publish later.
 response.snapshot_id
-#If you forget the ID, list every snapshot to get the ID again.
+#If you forget the ID, list snapshots to get the ID again.
 for snapshot in client.list_snapshots(headers):
     print(snapshot)
 
@@ -300,30 +303,28 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 3. 渡すことによって、静的に生成されたクライアント ライブラリを生成、 `rserver-swagger-<version>.json` Swagger コード ジェネレーターへのファイルし、言語を示すを指定します。 この場合、Python を指定する必要があります。  
 
-   たとえば、Python クライアント ライブラリを生成する AutoRest を使用する場合、ようになりますこれには、3 桁の数字が R サーバーのバージョン番号を表します。
-   
-   `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
-   
+    たとえば、Python クライアント ライブラリを生成する AutoRest を使用する場合、ようになりますこれには、3 桁の数字が R サーバーのバージョン番号を表します。
+    
+    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
 
-   いくつかのカスタム ヘッダーを指定し、ライブラリのスタブ生成されたクライアントを使用する前にその他の変更を行うようになりましたできます。 参照してください、[コマンド ライン インターフェイス](https://github.com/Azure/autorest/blob/master/docs/user/cli.md)GitHub で別の構成オプションと、名前空間の名前変更などの設定の詳細についてのドキュメントです。
+4. 一部のカスタム ヘッダーを示し、ライブラリのスタブを生成されたクライアントを使用する前に他の変更を加えることができますもします。 参照してください、[コマンド ライン インターフェイス](https://github.com/Azure/autorest/blob/master/docs/user/cli.md)GitHub で別の構成オプションと、名前空間の名前変更などの設定の詳細についてのドキュメントです。
    
-4. さまざまな API の呼び出しを表示することができます、コア クライアント ライブラリについて説明します。 
+5. さまざまな API の呼び出しを表示することができます、コア クライアント ライブラリについて説明します。 
 
-   この例では、いくつかのディレクトリと、ローカル システム上の Python クライアント ライブラリのファイル Autorest が生成されます。 名前空間 (とディレクトリ) は、既定では、`deployrclient`し、次のようになります。
+    この例では、いくつかのディレクトリと、ローカル システム上の Python クライアント ライブラリのファイル Autorest が生成されます。 名前空間 (とディレクトリ) は、既定では、`deployrclient`し、次のようになります。
    
    ![Autorest 出力パス](./media/data-scientist-python-autorest.png)
 
-   この既定の名前空間のクライアント ライブラリ自体と呼ばれる`deploy_rclient.py`です。 このファイルを開くには、Visual Studio などの IDE で、次のように表示されます。
+    この既定の名前空間のクライアント ライブラリ自体と呼ばれる`deploy_rclient.py`です。 このファイルを開くには、Visual Studio などの IDE で、次のように表示されます。
    
    ![Python クライアント ライブラリ](./media/data-scientist-python-client-library.png)
-
 
 
 ### <a name="step-2-add-authentication-and-header-logic"></a>手順 2. 認証とヘッダーのロジックを追加します。
 
 すべての Api に認証が必要なことに注意してください。API を使用して呼び出しを行うときにそのため、すべてのユーザーを認証する必要があります、 `POST /login` API または Azure Active Directory (AAD) を通じてします。 
 
-このプロセスを簡略化は、ユーザーが、すべて 1 回の呼び出しの自分の資格情報提供する必要がないように、ベアラー アクセス トークンが発行されます。  このベアラー トークンは、保護されたリソースに対する"bearer"アクセスを許可する簡易的なセキュリティ トークン。 この場合は、Machine Learning サーバーの Api です。 ユーザーが認証されると、アプリケーションは認証では、意図した相手の成功したことを確認するユーザーのベアラー トークンを検証する必要があります。 これらのトークンの管理に関する詳細についてを参照してください。[セキュリティのアクセス トークン](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)です。
+このプロセスを簡略化は、ユーザーが、呼び出しごとに自分の資格情報提供する必要がないように、ベアラー アクセス トークンが発行されます。  このベアラー トークンは、保護されたリソースに対する"bearer"アクセスを許可する簡易的なセキュリティ トークン。 この場合は、Machine Learning サーバーの Api です。 ユーザーが認証されると、アプリケーションは認証では、意図した相手の成功したことを確認するユーザーのベアラー トークンを検証する必要があります。 これらのトークンの管理に関する詳細についてを参照してください。[セキュリティのアクセス トークン](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)です。
 
 コア Api とやり取りする前に最初に認証、ベアラー アクセス トークンを使用して、[認証方法](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication)管理者によって構成され、後続の要求では、各ヘッダーに含めること。
 
@@ -336,11 +337,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
    import deployrclient
    ```
 
-2. 認証ロジックをローカル コンピューターから Machine Learning のサーバーへの接続の定義、資格情報を提供、アクセス トークンをキャプチャ、ヘッダーにそのトークンを追加およびすべての後続の要求のヘッダーを使用して、アプリケーションに追加します。  管理者によって定義されている認証方法を使用します。 基本的な管理アカウント、Active Directory または LDAP (AD または LDAP)、または Azure Active Directory (AAD)。
+2. アプリケーションをローカル コンピューターから Machine Learning のサーバーへの接続を定義する、資格情報を提供、アクセス トークンをキャプチャ、ヘッダーにそのトークンを追加するには、認証ロジックを追加します。 すべての後続の要求のヘッダーを使用しています。  管理者によって定義されている認証方法を使用します。 基本的な管理アカウント、Active Directory または LDAP (AD または LDAP)、または Azure Active Directory (AAD)。
 
    **AD または LDAP または`admin`アカウントの認証**
 
-   呼び出す必要があります、 `POST /login` API を認証するためにします。 渡す必要があります、`username`と`password`ローカルの管理者では、Active Directory が有効になっている場合は、LDAP アカウント情報を渡すこともできます。 さらに、Machine Learning のサーバーはトークンを発行するベアラ/アクセスします。 認証されると、ユーザーは、トークンがまだ有効で、ヘッダーはすべての要求と共に送信される限り、もう一度資格情報を指定する必要はありません。 接続の設定がわからない場合は、管理者に問い合わせてください。
+   呼び出す、 `POST /login` API を認証するためにします。 渡す、`username`と`password`ローカルの管理者では、Active Directory が有効になっている場合は、LDAP アカウント情報を渡すこともできます。 さらに、マシン学習サーバーは、ベアラー/アクセス トークンを発行します。 認証されると、ユーザーが、トークンがまだ有効では、ヘッダーが各要求と一緒に送信される限り、資格情報を指定する必要がありません。 接続の設定がわからない場合は、管理者に問い合わせてください。
 
    ```python
    #Using client library generated from Autorest
@@ -358,7 +359,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
    **Azure Active Directory (AAD) の認証**
 
-   AAD を渡す必要がありますの資格情報、権限、およびクライアントの id。 AAD を発行するさらに、[ベアラー アクセス トークン](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)です。 認証されると、ユーザーは、トークンがまだ有効で、ヘッダーはすべての要求と共に送信される限り、もう一度資格情報を指定する必要はありません。 接続の設定がわからない場合は、管理者に問い合わせてください。
+   AAD 資格情報、権限、およびクライアント ID を渡す AAD をさらに、発行、[ベアラー アクセス トークン](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)です。 認証されると、ユーザーが、トークンがまだ有効では、ヘッダーが各要求と一緒に送信される限り、資格情報を指定する必要がありません。 接続の設定がわからない場合は、管理者に問い合わせてください。
 
    ```python
    #Import the AAD authentication library
@@ -397,12 +398,12 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ### <a name="step-3-prepare-session-and-code"></a>手順 3. セッションとコードを準備します。
 
-認証の後に、Python セッションを開始し、後で発行するがモデルを作成できます。 Web サービスでは、任意の Python コードまたはモデルを含めることができます。 セッション環境をセットアップした後できるでもとして保存するスナップショットようにする必要があったため、前に、セッションを再読み込みすることができます。 
+認証の後に、Python セッションを開始し、後で発行するためのモデルを作成できます。 Web サービスでは、任意の Python コードまたはモデルを含めることができます。 セッション環境をセットアップした後できるでもとして保存するスナップショットようにする必要があったため、前に、セッションを再読み込みすることができます。 
 
 > [!IMPORTANT]
 > 必ず含めて`headers`すべての要求にします。
 
-1. R Server での Python セッションを作成します。 名前および Python 言語を指定する必要があります (`runtime_type="Python"`)。  Python ランタイムの型を設定しなかった場合は、既定値は r です。
+1. R Server での Python セッションを作成します。 名前および Python 言語を指定してください (`runtime_type="Python"`)。  Python ランタイムの型を設定しなかった場合は、既定値は r です。
 
    これは、Autorest によって生成されたクライアント ライブラリを使用する例の続きです。
 
@@ -464,10 +465,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
        print (execute_response.error_message)
    ```
 
-3. スナップショットを作成するこの Python のため、この環境は、web サービスに保存してでは、再現セッションが時間を消費します。 スナップショットは、準備された環境を特定のライブラリ、オブジェクト、モデル、ファイルや成果物を含む必要がある場合に非常に便利です。 スナップショットは、作業ディレクトリとワークスペース全体を保存します。 ただし、発行するときに作成したスナップショットのみを使用できます。
-
-   > [!NOTE] 
-   > スナップショットは、環境の依存関係の web サービスを発行するときにも使用できますが、消費時間のパフォーマンスに影響があります。  最適なパフォーマンスをワークスペース オブジェクトのみと必要とする残りの部分を削除しておくことを確認して、スナップショットのサイズを慎重に検討してください。 セッションでは、Python を使用することができます`del`関数または[、 `deleteWorkspaceObject` API 要求](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object)不要なオブジェクトを削除します。 
+3. スナップショットを作成するこの Python のため、この環境は、web サービスに保存してでは、再現セッションが時間を消費します。 スナップショットは、準備された環境を特定のライブラリ、オブジェクト、モデル、ファイル、および成果物を含む必要がある場合に便利です。 スナップショットは、作業ディレクトリとワークスペース全体を保存します。 ただし、発行するときに作成したスナップショットのみを使用できます。
 
    ```python
    #Create a snapshot of the current session.
@@ -476,27 +474,27 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Return the snapshot ID for reference when you publish later.
    response.snapshot_id
    
-   #If you forget the ID, list every snapshot to get the ID again.
+   #If you forget the ID, list snapshots to get the ID again.
    for snapshot in client.list_snapshots(headers):
        print(snapshot)
    ```
+
+  > [!NOTE] 
+   > スナップショットは、環境の依存関係の web サービスを発行するときにも使用できますが、消費時間のパフォーマンスに影響があります。  最適なパフォーマンスをワークスペース オブジェクトのみと必要とする残りの部分を削除しておくことを確認して、スナップショットのサイズを慎重に検討してください。 セッションでは、Python を使用することができます`del`関数または[、 `deleteWorkspaceObject` API 要求](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object)不要なオブジェクトを削除します。 
 
 ### <a name="step-4-publish-the-model"></a>手順 4. モデルをパブリッシュします。 
 
 クライアント ライブラリが生成され、アプリケーションに認証ロジックを作成したら、Python セッションを作成、モデルを作成し、そのモデルを使用して web サービスを公開する Api のコアと対話できます。
 
-> [!NOTE]
-> API の呼び出しを実行する前に、認証される必要がありますに注意してください。 このため、含める`headers`すべての要求にします。
+いくつかの点に注意してください。
 
-+ Machine Learning のサーバーでの Python web サービスとしてこの SVM モデルを発行します。 この web サービスは、取得、渡されるベクターをスコア付けされます。
++ API の呼び出しを実行する前に認証する必要があります。 このため、含める`headers`すべての要求数。
++ Web サービスが、Python サービスとして登録されていることを確認するには必ず指定して`runtime_type="Python"`です。 Python ランタイムの型を設定しなかった場合は、既定値は r です。
++ Sepal sepal 幅、花びら長さ、および花びら幅を持つベクトル スコア付けが必要です。
 
-> [!IMPORTANT]
-> Web サービスが、Python サービスとして登録されていることを確認するには必ず指定して`runtime_type="Python"`です。 Python ランタイムの型を設定しなかった場合は、既定値は r です。
+次のコードは、Python web サービスとして、SVM モデルを公開します。 この web サービスには、渡された値に基づいて予測カテゴリが生成されます。
 
 ```python
-   #Define a web service that determines the iris species by scoring 
-   #a vector of sepal length and width, petal length and width
-   
    #Set `flower_data` for the sepal and petal length and width
    flower_data = deployrclient.models.ParameterDefinition(name = "flower_data", type = "vector")
    #Set `iris_species` for the species of iris
@@ -545,22 +543,22 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Record the R Server endpoint URL hosting the web services you created
    url = "http://localhost:12800"
 
-   #Give the request.Session object the authentication headers 
-   #so you don't have to repeat it with each request.
+   #Include the request.Session object in the authentication headers.
+   #By doing so, you don't need to repeat it with each request.
    s.headers = headers
 
-   # Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific Swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either download service-specific swagger file using the json library.
+   #You can download a service-specific Swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or print just what you need from the Swagger file, 
-   #such as the routing paths for the endpoints to be consumed.
+   #Or, you can print just what you need from the Swagger file. 
+   #This example gets the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
-   #Or, print input and output parameters as defined in the Swagger.io format
+   #You can also print input and output parameters as defined in the Swagger.io format
    print("Input")
    print(json.dumps(swagger_resp.json()["definitions"]["InputParameters"], indent = 1, sort_keys = True))
    print("Output")
@@ -585,11 +583,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ## <a name="managing-the-services"></a>サービスを管理します。
 
-Web サービスを作成したら、これでは、更新に削除、またはそのサービスを再発行します。 また、Microsoft Machine Learning のサーバーでホストされているすべての web サービスを一覧表示することができます。
+Web サービスを作成したら、これでは、更新に削除、またはそのサービスを再発行します。 R Server (または Machine Learning サーバー) を使用してホストされているすべての web サービスの一覧を表示することもできます。
 
 ### <a name="update-a-web-service"></a>Web サービスを更新します。
 
-コード、モデル、説明、入力、出力および詳細を変更する web サービスを更新することができます。 この例では、このサービスを使用することがあります人に便利な説明を追加するサービスを更新します。
+ この例では、このサービスを使用することがあります人に便利な説明を追加するサービスを更新します。
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -600,9 +598,11 @@ update_request = deployrclient.models.PublishWebServiceRequest(
 client.patch_web_service_version("Iris", "V1.0", update_request, headers)
 ```
 
+コード、モデル、説明、入力、出力、および詳細を変更する web サービスを更新することができます。
+
 ### <a name="publish-another-version"></a>別のバージョンを発行します。
 
-別のバージョンの web サービスを公開することもできます。 この例では、サービスを返します Iris 種の代わりに、文字列のリストとしての文字列として。
+この例では、サービスを返します Iris 種の代わりに、文字列のリストとしての文字列として。
 
 ```python
 #Publish another version of the web service, but this time 
@@ -629,9 +629,11 @@ resp = s.post(url+"/api/Iris/V2.0",json={"flower_data":[5.1,3.5,1.4,.2]})
 print(json.dumps(resp.json(), indent = 1, sort_keys = True))
 ```
 
+このパターンを使用して、同じ web サービスの複数のバージョンを発行できます。 
+
 ### <a name="list-services"></a>サービスの一覧表示
 
-さまざまな言語または他のユーザーによって作成されたものを含め、すべての web サービスの一覧を取得します。
+このサンプルでは、他のユーザーによってまたは別の言語で作成されたものを含む、すべての web サービスの一覧を取得します。
 
 ```python
 #Return the list of all existing web services.
@@ -645,8 +647,6 @@ for service in client.get_all_web_services(headers):
 
 ### <a name="delete-services"></a>サービスを削除します。
 
-作成したサービスを削除することができます。 適切なアクセス許可を持つロールに割り当てられた場合は、他のサービスを削除することもできます。
-
 この例では、発行した 2 つ目の web サービスのバージョンを削除します。
 
 ```python
@@ -654,3 +654,4 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+作成した任意のサービスを削除することができます。 適切なアクセス許可を持つロールに割り当てられた場合にのみ、他のサービスを削除することができます。

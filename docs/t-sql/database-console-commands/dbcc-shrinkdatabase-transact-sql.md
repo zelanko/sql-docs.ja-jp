@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC SHRINKDATABASE
 - SHRINKDATABASE_TSQL
 - SHRINKDATABASE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - data shrinking [SQL Server]
 - shrinking files
@@ -30,17 +28,16 @@ helpviewer_keywords:
 - logs [SQL Server], shrinking
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7f6e9fa3feea20bfeb82037cb9358370c67aaa0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +140,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-これは、圧縮操作が、109 より古いタイムスタンプが存在する、圧縮操作の完了された最後のトランザクションがスナップショット トランザクションによってブロックされていることを意味します。 示して、 **transaction_sequence_num**、または**first_snapshot_sequence_num**内の列、 [sys.dm_tran_active_snapshot_database_transactions & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)動的管理ビューには、値 15 が含まれています。 どちらの場合、 **transaction_sequence_num**、または**first_snapshot_sequence_num** (109) の圧縮操作が完了した最後のトランザクションより小さいビュー内の列が含まれています、圧縮操作はそれらのトランザクションを完了するまで待機します。
+これは、圧縮操作が、109 より古いタイムスタンプが存在する、圧縮操作の完了された最後のトランザクションがスナップショット トランザクションによってブロックされていることを意味します。 示して、 **transaction_sequence_num**、または**first_snapshot_sequence_num**内の列、 [sys.dm_tran_active_snapshot_database_transactions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)動的管理ビューには、値 15 が含まれています。 どちらの場合、 **transaction_sequence_num**、または**first_snapshot_sequence_num** (109) の圧縮操作が完了した最後のトランザクションより小さいビュー内の列が含まれています、圧縮操作はそれらのトランザクションを完了するまで待機します。
   
 問題を解決するのには、次のタスクのいずれかの操作を行います。
 -   圧縮操作をブロックしているトランザクションを終了します。  
@@ -177,4 +174,3 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 [データベースの圧縮](../../relational-databases/databases/shrink-a-database.md)
   
   
-

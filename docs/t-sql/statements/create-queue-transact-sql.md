@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CREATE QUEUE
 - QUEUE
 - CREATE_QUEUE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE QUEUE statement
 - internal activation [Service Broker]
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 59e7140970b80d2be64c15aefebca90bf45977e7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +134,7 @@ CREATE QUEUE <object>
   
  有害なメッセージの処理が OFF に設定されているキューは、トランザクションのロールバックが連続して 5 回実行されても無効になりません。 これにより、カスタムの有害なメッセージの処理システムをアプリケーションで定義できます。  
   
- ON *filegroup |*[**既定**]  
+ ON *filegroup |***[既定]**  
  指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイル グループをこのキューを作成します。 使用することができます、 *filegroup*ファイル グループを識別または service broker データベースの既定のファイル グループを使用する既定の識別子を使用するパラメーターです。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 ファイル グループを指定しない場合、キューの作成ではデータベースの既定のファイル グループが使用されます。  
   
 ## <a name="remarks"></a>解説  
@@ -240,4 +237,3 @@ CREATE QUEUE ExpenseQueue
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a9ebce7d1345b5d9c5a821347ee53ce89f34d07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21178ca7326678504244658192d7395bab79a9ac
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>グローバル設定 (テスト担当者) (SybaseToSQL)
 テスト担当者のページを使用して、**グローバル設定**SSMA テスターの設定を指定 ダイアログ ボックス。  
@@ -36,9 +34,9 @@ ms.lasthandoff: 08/02/2017
   
 次のオプションは、この設定に使用されます。  
   
-1.  はい  
+1.  可  
   
-2.  いいえ  
+2.  不可  
   
 **補助テーブルの保存モード**  
 この設定は、テスト_ケースの実行中に作成された内部の補助テーブルを保存する方法を指定します。 この特定の設定には、次のオプションを設定できます。  
@@ -58,20 +56,19 @@ ms.lasthandoff: 08/02/2017
   
 次のオプションは、この設定に使用されます。  
   
-1.  はい  
+1.  可  
   
-2.  いいえ  
+2.  不可  
   
 **最初のエラーの後にテストの実行を停止します。**  
 実行中にエラーが発生した場合、この設定は現在実行中のテスト ケースを停止するかどうかを指定します。 既定のオプション セットが**はい**です。  
   
 次のオプションは、この設定に使用されます。  
   
-1.  はい  
+1.  可  
   
-2.  いいえ  
+2.  不可  
   
 ## <a name="see-also"></a>参照  
-[フィニッシュのテスト_ケースの準備 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+[フィニッシュのテスト_ケースの準備 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getCharacterStream (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getCharacterStream (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f0f35316b59822369b6470e18b1841da36df0fd
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a882e903e689f67db7adf9b8d71d34851affd5b4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>getCharacterStream (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,9 +55,8 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  このメソッドは読み取り専用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]nchar、nvarchar、nvarchar (max)、および ntext などの Unicode 文字データ型。 ASCII 文字型などのその他のデータ型では、例外がスローされます。 ASCII データ型を読み取り、使用、 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)メソッドです。  
   
 ## <a name="see-also"></a>参照  
- [getCharacterStream メソッド & #40 です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
+ [getCharacterStream メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

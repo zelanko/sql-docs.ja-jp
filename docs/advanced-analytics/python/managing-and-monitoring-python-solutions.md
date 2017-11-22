@@ -5,20 +5,18 @@ ms.date: 04/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a56a4d2618d374bc4b39e8f798ca60ed805fe843
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5905db6a151dcb10f893f795ed74f8fbd847d234
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring"></a>監視
 
@@ -35,4 +33,3 @@ Python のサポートは、SQL server、SQL Server 2017 CTP 2.0 で使用でき
 + [R の監視ソリューションと管理](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 
 + [R のリソース管理](../../advanced-analytics/r/resource-governance-for-r-services.md)
-

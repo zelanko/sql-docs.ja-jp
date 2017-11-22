@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21a90941ad2c6f16ad969698b08f2455aaaea58b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46c10cf6c8e2d0fe7f6f91e4eedbe864d62609fb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行された ODBC 関数
 > [!IMPORTANT]  
@@ -45,12 +43,11 @@ ms.lasthandoff: 09/09/2017
 |**SQLEndTran**|**SQLRowCount**|  
 |**SQLExtendedFetch**|**SQLSetConnectAttr**|  
 |**SQLFetchScroll**|**SQLSetConnectOption**|  
-|**SQLFreeHandle**|**Sqlsetdescfield による**|  
-|**SQLFreeStmt**|**Sqlsetdescrec による**|  
+|**SQLFreeHandle**|**SQLSetDescField**|  
+|**SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
 |**SQLGetDescField**|**SQLSetScrollOptions**|  
-|**Sqlgetdescrec による**|**SQLSetStmtAttr**|  
+|**SQLGetDescRec**|**SQLSetStmtAttr**|  
 |**SQLGetFunctions**|**SQLSetStmtOption**|  
 |**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||
-

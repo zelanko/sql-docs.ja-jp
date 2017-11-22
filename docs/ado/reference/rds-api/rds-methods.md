@@ -1,8 +1,7 @@
 ---
 title: "RDS メソッド |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e2a034ccdd85f3c05d3438cd8a589ac47d1aabd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623b1f814d23ab8a23e87634ba1fe16b647907d0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-methods"></a>RDS メソッド
 > [!IMPORTANT]
@@ -44,8 +42,7 @@ ms.lasthandoff: 09/09/2017
 |[更新 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|指定されたデータ ソースを再クエリ、**接続**プロパティと、クエリの結果を更新します。|  
 |[リセット (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|並べ替えまたはフィルターをクライアント側で実行**Recordset**指定された並べ替えとフィルター プロパティに基づいて、します。|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|保留中のローカル キャッシュと更新の変更を送信する**Recordset**で指定されたデータ ソースに、**接続**プロパティです。|  
-|[同期メソッド (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|(ADO 2.5 以降で使用する) の接続文字列で指定されたデータベースと特定のレコード セットを同期します。|  
+|[Synchronize メソッド (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|(ADO 2.5 以降で使用する) の接続文字列で指定されたデータベースと特定のレコード セットを同期します。|  
 |[Synchronize21 メソッド (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|(ADO 2.1 を使用する) ため、接続文字列によって指定されたデータベースと特定のレコード セットを同期します。|
-
 
 

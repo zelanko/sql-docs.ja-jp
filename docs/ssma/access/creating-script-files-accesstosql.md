@@ -5,30 +5,28 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: 2945b7fac5aeb464511d38b6130c747c8ce95abc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプト ファイル (AccessToSQL) を作成します。
 最初の手順とスクリプト ファイルの作成には、SSMA コンソール アプリケーションを起動する前に、変数の値のファイルと、サーバー接続ファイルを作成するために必要な場合は。  
   
-スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
+スクリプト ファイルを viz 3 つのセクションに分割できます。。、します。  
   
 1.  **config:**コンソール アプリケーションの構成パラメーターを設定することができます。  
   
@@ -399,9 +397,8 @@ ms.lasthandoff: 08/17/2017
 ユーザーが、スキーマ定義ファイルに対して自分のスクリプト ファイルを簡単に検証**'A2SSConsoleScriptSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順
-コンソールの運用には、次の手順は[変数値ファイルの作成 & #40 です。AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
+コンソールの運用には、次の手順は[変数値ファイルの作成 &#40;です。AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>参照  
 [変数値ファイル &#40; を作成します。AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-

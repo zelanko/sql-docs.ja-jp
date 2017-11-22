@@ -1,24 +1,22 @@
 ---
 title: "機械学習で SQL Server の概要 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: b61de3dcbe239ec1bffdabc734e8e5d624519df6
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09d6e887a8c64c98a1c3f68c78b07c26da6ffb76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>機械学習で SQL Server の概要
 
@@ -33,9 +31,9 @@ ms.lasthandoff: 09/01/2017
 
 + SQL Server 2017
 
-  以降で SQL Server 2017 CTP 2.0 のサポート、Python が追加されて、広範なマシン ラーニング ソリューションの Machine Learning サービス (In-database) のサポートを反映するために名前が変更されました。 これで、R、または Python コードを実行する SQL ツールを使用して、機械学習タスクを自動化できます。 または、として、SQL Server コンピューターを使用して、_計算コンテキスト_リモート開発環境から起動されたジョブにします。
+  SQL Server 2017 年 1 から始まり、SQL Server での Python コードをここで使用できます。 ソリューション (で以上になる!)、複数の言語と名前の広範なサポートを反映するように変更された[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]です。 これで、R、または Python コードを実行する SQL ツールを使用して、機械学習タスクを自動化できます。 または、として、SQL Server コンピューターを使用して、_計算コンテキスト_リモート開発環境から起動されたジョブにします。
 
-    + [SQL Server での Python のアーキテクチャの概要](python/architecture-overview-sql-server-python.md)
+    + [SQL Server での Python のアーキテクチャの概要](/python/architecture-overview-sql-server-python.md)
     + [SQL Server R Services または Machine Learning のサービスのセットアップします。](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -49,20 +47,20 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>マイクロソフトの機械学習のサーバー (Microsoft R Server)
 
-Microsoft Machine Learning のサーバーをインストールするオプションは、スケーラブルな分散した機械学習、ジョブを実行するときに、SQL Server データベース エンジンの使用などを統合しない必要がある企業のお客様をサポートするために SQL Server 2017 で提供されます。SQL のコンテキストを計算します。
+インストールするオプション[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]、スケーラブルな分散した機械学習、ジョブを実行するときに、SQL コンピューティングの使用など、SQL Server データベース エンジンと統合する必要はありませんが、企業のお客様をサポートするために SQL Server 2017 で提供されます。コンテキストです。
 
-SQL Server 2016 では、Microsoft R Server をインストールするのにオプションを使用します。
+SQL Server 2016 をインストールするオプションを使う[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]です。
   
-  + [Introducing Microsoft R Server (Microsoft R Server の概要)](https://msdn.microsoft.com/microsoft-r/rserver)
+  + [機械学習のサーバーへようこそ](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
   
-MSDN から使用可能なプラットフォームに応じたインストーラーを R サーバーをインストールすることもできます。
+インストールすることも[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]または[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]を通じてプラットフォーム固有のインストーラー。
 
-  + [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-  + [R Server for Linux](https://msdn.microsoft.com/microsoft-r/rserver-install-linux-server)
-  + [R Server for Hadoop](https://msdn.microsoft.com/microsoft-r/rserver-install-hadoop)
+  + [Windows をインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+  + [Linux にインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-linux-install)
+  + [Hadoop をインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-hadoop-install)
 
 > [!IMPORTANT]
-> R Server を使用して Python を実行する場合は、必ず最新のバージョンをインストールする**Machine Learning サーバー**、これは SQL Server 2017 セットアップを通してのみ入手できます。
+> R Server を使用して Python を実行する場合は、必ず最新のバージョンをインストールする[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]、を介してのみ使用される[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]セットアップします。
 > 
 >    + [Microsoft R Server または Machine Learning のサーバーのセットアップします。](../advanced-analytics/r/create-a-standalone-r-server.md)
 
@@ -82,7 +80,7 @@ MSDN から使用可能なプラットフォームに応じたインストーラ
 
 + [Machine learning のチュートリアル](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  SQL Server 2017 と SQL Server 2017 を使用して、マシン学習ソリューションについて学習するためのすべてのリソースの一覧を検索するには、ここから開始します。
+  使用して、マシン学習ソリューションについて学習するためのすべてのリソースの一覧を検索するここから始めて[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]または[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]です。
 
 ### <a name="r-tutorials"></a>R のチュートリアル
 
@@ -100,7 +98,7 @@ MSDN から使用可能なプラットフォームに応じたインストーラ
 
 + [SQL Server の Python のチュートリアル](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
-  SQL Server で Python を実行する方法を説明します。 Python を使用して、モデルをビルドし、SQL Server のデータをスコア付けに使用します。
+  Python を実行する方法について[!INCLUDE[ssnoversion](../includes/ssnoversion.md)]です。 Python を使用して、モデルをビルドし、SQL Server のデータをスコア付けに使用します。
 
    SQL 開発者のため、エンド ツー エンドのソリューションでは、SQL Server Management Studio から Python を実行する必要があります。 すべてのコードを提供します。
 
@@ -127,4 +125,3 @@ Microsoft データ サイエンス チームからのソリューション テ�
 [SQL Server の Machine Learning のサービスを概要します。](../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 
 [マイクロソフトの機械学習のサーバーを概要します。](../advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md)
-

@@ -8,29 +8,26 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- sqlsrv_get_field
+apiname: sqlsrv_get_field
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_get_field
 - API Reference, sqlsrv_get_field
 - retrieving data, as a single field
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 814a7c0052afe9bbf7b98e8e15efed0dc6dd9faf
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5251bb4c0c2118ccff1985cc512094fb3a8340b4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +46,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: 取得するフィールドのインデックス。 インデックスは 0 から始まります。  
   
-*$getAsType* [省略可能]: A **SQLSRV**定数 (**sqlsrv_phptype _\***) 返されたデータの PHP データ型を決定します。 サポートされているデータ型については、次を参照してください。[定数 & #40 です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 戻り値の型が指定されていない場合、既定の PHP 型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+*$getAsType* [省略可能]: A **SQLSRV**定数 (**sqlsrv_phptype _\***) 返されたデータの PHP データ型を決定します。 サポートされているデータ型については、次を参照してください。[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 戻り値の型が指定されていない場合、既定の PHP 型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
 フィールドのデータ。 *$getAsType* パラメーターを指定して、返されるデータの PHP データ型を指定できます。 戻り値のデータ型が指定されていない場合、既定の PHP データ型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
@@ -123,4 +120,3 @@ sqlsrv_close( $conn);
 [データの取得](../../connect/php/retrieving-data.md)  
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
   
-

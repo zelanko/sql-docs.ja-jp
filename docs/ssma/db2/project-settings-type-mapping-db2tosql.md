@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 267d3e30f61539da24ed22d54c4355945da21999
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b9bc26477c4b43e47588280e2cce74096b810c5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>プロジェクトの設定 (型のマッピング) (DB2ToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に DB2 データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
@@ -67,7 +65,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
   
 |DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
@@ -95,24 +93,24 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |各国語文字 varying<sup>**</sup>|nvarchar(max)|  
 |各国語文字 varying<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
-|urowid|uniqueidentifier|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xml 型|xml|  
+|Xml 型|xml|  
   
 <sup>*</sup>値型のマッピングのみを返すに適用されます。  
   
@@ -123,7 +121,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
   
 |DB2 データ型|既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob (blob)|varbinary(max)|  
@@ -162,7 +160,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |各国語文字 [*..\*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |数値 [*..\*]|数値 [*]|  
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
@@ -172,7 +170,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |nvarchar2 [*..\*]|nvarchar [*]|  
 |生 [*..\*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
@@ -219,7 +217,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |Float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|Int|int|  
+|int|int|  
 |Integer|int|  
 |整数 [*..\*]|数値 [*] [0]|  
 |Long|varchar(max)|  
@@ -276,4 +274,3 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 ## <a name="see-also"></a>参照  
 [ユーザー インターフェイス リファレンス &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

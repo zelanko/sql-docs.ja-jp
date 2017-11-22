@@ -1,26 +1,24 @@
 ---
 title: "R Services の結果とリソースのパフォーマンス |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
 
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/01/2017
 + 最初のケース スタディ、R Services の開発チームが探索される特定の最適化の手法の影響を測定するには
 + 2 番目のケース スタディ、データ科学者のチームでいろいろ試して、特定の大量のスコア付けシナリオに最適な最適化を判断する方法を複数です。
 
-このトピックでは、最初のケース スタディの詳細な結果を示します。 2 番目のケース スタディの概要には、全体的な結果がについて説明します。 このトピックの最後に、すべてのスクリプトとサンプル データ、および元の作成者によって使用されているリソースへのリンクが表示されます。
+このトピックでは、最初のケース スタディの詳細な結果を示します。 2 番目のケース スタディの概要には、全体的な結果がについて説明します。 このトピックの最後に、すべてのスクリプトとサンプル データ、および元の作成者によって使用されているリソースへのリンクです。
 
 ## <a name="performance-case-study-airline-dataset"></a>パフォーマンスのケース スタディ: 航空券 dataset
 
@@ -280,13 +278,13 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 テーブルからトレーニング済みモデルの読み込みは、明確に、予測を行う高速な方法です。 モデルを作成して、同じスクリプトですべてのスコアを実行しないことをお勧めします。
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>ケース スタディ: 再開タスクに一致するための最適化
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>ケース スタディ: 再開-一致するタスクの最適化
 
-Resume-一致するモデルは、データ科学者の Microsoft SQL Server の R コードのパフォーマンスをテストして、エンタープライズ レベルのスケーラブルなソリューションをサポートするデータ サイエンティストを有効にする Ke Huang によって開発されました。
+Resume-一致するモデルは科学者がスケーラブルな作成するためのヘルプ データを行うとデータ科学者の Microsoft SQL Server での R コードのパフォーマンスをテストする Ke Huang によって開発されたエンタープライズ レベルのソリューションです。
 
 ### <a name="methods"></a>メソッド
 
-RevoScaleR と MicrosoftML の両方のパッケージは、大規模なデータセットを含む複雑な R ソリューションで予測モデルのトレーニングに使用されました。 SQL クエリと R コードは、同じでした。 インストールされる SQL server の 1 つの Azure VM ですべてのテストを実行しました。 作成者では、スコア付けの回および SQL Server によって提供されるこれらの最適化を使用せずに、比較。
+RevoScaleR と MicrosoftML の両方のパッケージは、大規模なデータセットを含む複雑な R ソリューションで予測モデルのトレーニングに使用されました。 SQL クエリと R コードは、すべてのテストで同じでした。 インストールされる SQL server の 1 つの Azure VM でのテストを実行しました。 作成者では、スコア付けの回および SQL Server によって提供される次の最適化を使用せずに、比較。
 
 - インメモリ テーブル
 - ssNoVersion
@@ -328,12 +326,9 @@ CPU の結合は、シナリオでは、再開の一致、R ジョブへの影�
 
 -   R セッションで使用するための最大メモリ 70% を =
 
-、Resume-一致するモデルの外部スクリプトの使用が高いとなかったその他のデータベース エンジン サービスが実行されています。 したがって、スクリプトのパフォーマンスを最適な構成であった、70% に外部スクリプトに割り当てられたリソースが増加します。
+、Resume-一致するモデルの外部スクリプトの使用が高いとなかったその他のデータベース エンジン サービスが実行されています。 そのため、外部スクリプトに割り当てられたリソースは、スクリプトのパフォーマンスを最適な構成であること、70% に増加しました。
 
-この構成は、試してみることで別の値に到着しました。 別のハードウェアまたは別のソリューションを使用する場合は、最適な構成が異なる可能性があります。
-
-> [!IMPORTANT]
-> 場合は、最適な構成を検索する実験!
+この構成は、試してみることで別の値に到着しました。 別のハードウェアまたは別のソリューションを使用する場合は、最適な構成が異なる可能性があります。 常に、このケースの最適な構成を検索する実験!
 
 ソリューションでは、最適化された、(100 機能) を使用してデータの 1.1 100万行 20 core コンピューターに 8.5 秒以内にスコアによってます。 最適化では、スコア付けの時間の観点からパフォーマンスが大幅に向上します。
 
@@ -342,6 +337,16 @@ CPU の結合は、シナリオでは、再開の一致、R ジョブへの影�
 このブログ記事および詳細については、付随するチュートリアルを読むことをお勧めします。
 
 -   [SQL Server での機械学習の最適化ヒントとテクニック](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+多くのユーザーがある小規模の一時停止が最初に、R (または Python) ランタイムが読み込まれるとメモします。 このため、これらのテスト」の説明に従って初回実行時は多くの場合、測定しますが、後で破棄されます。 後続のキャッシングと、最初の重要なパフォーマンスの違いになる可能性があり、次に実行します。 オーバーヘッドが発生 SQL Server と外部のランタイムの間でデータを移動したときに SQL Server から直接読み込まれるのではなく、ネットワーク経由でデータが渡された場合に特にです。
+
+これらのすべての理由から、ソリューションはありません単一この初期読み込み時間を緩和するためのタスクによってはパフォーマンスに与える影響が大幅に変化します。 たとえば、キャッシュが実行される単一行のバッチのスコアリングそのため、連続したスコア付けの操作がはるかに高速とモデルでも、R ランタイムを再読み込みします。 使用することも[ネイティブ スコアリング](../sql-native-scoring.md)R ランタイムを完全に読み込まれないようにします。
+
+大規模なモデルのトレーニングまたは大きなバッチでスコアリング、オーバーヘッドは、データ移動を回避またはストリーミングと並列処理の向上と比較すると最小限に抑えられます可能性があります。 これらの最近のブログと追加のパフォーマンス ガイダンス用のサンプルを参照してください。
+
++ [SQL Server 2016 の R Services を使用してローン分類](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [初期のユーザーが R Services を操作します。](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [R を使用して、100万秒あたりのトランザクションで不正行為の検出](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>リソース
 
@@ -407,4 +412,3 @@ CPU の結合は、シナリオでは、再開の一致、R ジョブへの影�
 [R の R のパフォーマンスの調整コードとデータの最適化](r-and-data-optimization-r-services.md)
 
 [パフォーマンスのチューニングのケース スタディ結果](performance-case-study-r-services.md)
-

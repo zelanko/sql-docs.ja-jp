@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2ca2c1c7b566b70b82a70b939c5495e76ce4612a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7923995b392dff8c80f1ee6ae3946e421dc46331
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-ssl-encryption"></a>SSL 暗号化の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,12 +43,11 @@ ms.lasthandoff: 09/09/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[SSL のサポートをについてください。](../../connect/jdbc/understanding-ssl-support.md)|について説明しますが、どのように[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]SSL 暗号化をサポートします。|  
+|[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)|について説明しますが、どのように[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]SSL 暗号化をサポートします。|  
 |[SSL 暗号化を使用した接続](../../connect/jdbc/connecting-with-ssl-encryption.md)|接続する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]新しい SSL 固有の接続プロパティを使用してデータベース。|  
-|[SSL 暗号化用のクライアントを構成します。](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|クライアント側で既定のトラスト ストアを構成する方法と、クライアント コンピューターのトラスト ストアにプライベート証明書をインポートする方法について説明します。|  
+|[SSL 暗号化のためのクライアントの構成](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|クライアント側で既定のトラスト ストアを構成する方法と、クライアント コンピューターのトラスト ストアにプライベート証明書をインポートする方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバー アプリケーションをセキュリティで保護します。](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

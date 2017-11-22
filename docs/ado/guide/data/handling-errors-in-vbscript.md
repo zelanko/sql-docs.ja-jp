@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0f80fa93733c9e9fc4541617d45bd1f266434ba1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 909721266982cdfbaf6a3a58b00b120c47cf736e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-errors-in-vbscript"></a>VBScript でのエラーを処理
 Visual Basic で使用されるメソッドと VBScript で使用されるものの間のほとんどの違いがありません。 主な違いは、VBScript がラベルで実行を継続により、エラー処理の概念をサポートしていません。 つまり、使用することはできません`On Error GoTo`VBScript でします。 代わりに、`On Error Resume Next`両方を確認および**Err.Number**と**カウント**のプロパティ、**エラー**次の例のように、コレクション。  
@@ -86,4 +83,3 @@ Visual Basic で使用されるメソッドと VBScript で使用されるもの
 </HTML>  
 <!-- EndErrorExampleVBS -->  
 ```
-

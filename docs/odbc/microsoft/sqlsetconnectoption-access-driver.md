@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f545dc9e40b45c20dec14405cf78d182acf3c71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Access ドライバー)
 > [!NOTE]  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION は SQL_TXN_READ_COMMITTED では常にします。|  
   
  [Microsoft Access ドライバーでは、1] は、アトミック トランザクションはサポートされていません。 値が書き込まれる時間と、トランザクションはコミット時間の間、有限の遅延が存在する Microsoft Access ドライバーを使用してトランザクションをコミットするときにディスクにします。 この遅延は、Microsoft Jet エンジンに特有の遅延によって決定されます。 ページのタイムアウトはできません、最小値よりも小さい PageTimeout オプションを設定したその値を下回る場合でもです。 その結果、あるデータをコミットするという保証はありません、安定した遅延の間に変更を行うためです。
-

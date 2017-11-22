@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET DELETED command [ODBC]
+helpviewer_keywords: SET DELETED command [ODBC]
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34bcce12665dd3e0bcaa49e4c6e1ff93a807f514
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3bf1ec522bee6fda19349a71c894ebd98bd75b9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-deleted-command"></a>SET DELETED コマンド
 削除対象としてマークするレコードが処理されるかどうかおよびその他のコマンドで使用されるかどうかを指定します。  
@@ -51,5 +48,4 @@ SET DELETED ON | OFF
 >  削除設定には、コマンドの既定のスコープが現在のレコードの場合、または 1 つのレコードのスコープを含める場合は無視されます。 インデックスは常に削除設定を無視し、テーブル内のすべてのレコードのインデックスを作成します。  
   
 ## <a name="see-also"></a>参照  
- [SQL コマンドを削除します。](../../odbc/microsoft/delete-sql-command.md)
-
+ [DELETE - SQL コマンド](../../odbc/microsoft/delete-sql-command.md)

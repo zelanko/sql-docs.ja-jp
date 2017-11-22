@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dbcf08606316614f18bbc69beef54eea0a7569ee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f5b71db23d56150fbc6a2f7990ba9960d83d2d1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>プロジェクト オプションの設定 (DB2ToSQL)
 SSMA プロジェクトごとにプロジェクト レベルのオプションを設定することができます。 これらのオプションは、オブジェクトへの変換、オブジェクトの読み込み、ユーザー インターフェイスとデータの移行設定を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、構成オプションが、プロジェクトの適切なであることを確認します。  
@@ -35,7 +33,7 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 -   プロジェクト情報  
   
--   [全般]\ (変換、オブジェクトの読み込みの移行)  
+-   [全般] (変換、オブジェクトの読み込みの移行)  
   
 -   Synchronization  
   
@@ -57,15 +55,15 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 設定と各モードの設定を適用する方法の詳細については、次のトピックを参照してください。  
   
--   [プロジェクトの設定 &#40;です。変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
+-   [プロジェクトの設定 &#40;です。変換&#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
   
--   [プロジェクトの設定 &#40;です。移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
+-   [プロジェクトの設定 &#40;です。移行&#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
   
--   [プロジェクトの設定 &#40;です。同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
+-   [プロジェクトの設定 &#40;です。同期 &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
   
--   [プロジェクトの設定 &#40;です。GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
+-   [プロジェクトの設定 &#40;です。GUI &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
   
--   [プロジェクトの設定 &#40;です。型のマッピング&#41; &#40; DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
+-   [プロジェクトの設定 &#40;です。型のマッピング &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
   
 ## <a name="setting-project-options"></a>プロジェクト オプションの設定  
 SSMA では、すべてのプロジェクトの既定の設定を構成できます。 これらの設定は SSMA 構成ファイルに保存して、作成した新しいプロジェクトに適用します。  
@@ -82,7 +80,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム設定を指定するを選択するか、新しい設定または値を入力します。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクト ファイルに保存されます。  
   
@@ -96,7 +94,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタムのモードを指定する、**モード**ボックスで、**カスタム**、適切なプロジェクト設定を選択します。  
   
-3.  クリックして **OK** 、設定を保存します。  
+3.  をクリックして**OK**設定を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
@@ -108,4 +106,3 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
 ## <a name="see-also"></a>参照  
 [マッピング DB2 と SQL Server データ型 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   
-

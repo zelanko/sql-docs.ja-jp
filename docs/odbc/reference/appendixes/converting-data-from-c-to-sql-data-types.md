@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>データを C から SQL データ型に変換します。
 アプリケーションを呼び出すと**SQLExecute**または**SQLExecDirect**のすべてのパラメーターがバインドされたデータを取り出します**SQLBindParameter**記憶域の場所からアプリケーションです。 アプリケーションを呼び出すと**SQLSetPos**、ドライバーの更新プログラムのデータを取得または追加操作を使用してバインドされた列から**SQLBindCol**です。 実行時データ パラメーターの場合、アプリケーション データを送信、パラメーターと**SQLPutData**です。 かどうか、必要に応じて、ドライバーのデータを変換で指定されたデータ型、 *ValueType*引数**SQLBindParameter**で指定されたデータ型を*ParameterType*引数**SQLBindParameter**、し、データ ソースにデータを送信します。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [SQL を C: の文字](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C から SQL へ: 文字](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
 -   [C から SQL へ: 数値](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
@@ -81,9 +79,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [C から SQL へ: タイムスタンプ](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C から SQL へ: 年-月間隔](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C から SQL へ: 年月の間隔](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C から SQL へ: 1 日間隔で](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C から SQL へ: 日付と時刻の間隔](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
--   [SQL データの変換例 C](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
-
+-   [C から SQL へのデータ変換の例](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

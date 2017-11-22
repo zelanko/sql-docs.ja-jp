@@ -1,19 +1,20 @@
 ---
 title: "選択 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベースから行が取得され、1 つ以上のテーブルからの行または列の 1 つまたは複数を選択できるように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SELECT ステートメントの完全な構文は複雑ですが、主な句は次のとおりです。  
   
@@ -138,7 +138,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. 先頭に戻る  
-  
+
+> [!WARNING]
+> 上記の順序は、通常は true です。 ただしは一般的でない場合は、シーケンスが異なる場合があります。
+>
+> たとえば、ビューがいくつかのテーブル行を除外およびビューの SELECT 列リストから、データ型を変更する変換を使用して、ビューにクラスター化インデックスがある*varchar*に*整数*です。 このような状況では、変換は、WHERE 句を実行する前に実行できます。 珍しいことで実際にします。 多くの場合、方法がある場合で問題になる場合は、別のシーケンスを避けるためにビューを変更します。 
+
 ## <a name="permissions"></a>Permissions  
  データの選択にはテーブルまたはビューに対する **SELECT** 権限が必要です。この権限は、スキーマに対する **SELECT** 権限やテーブルに対する **CONTROL** 権限など上位スコープから継承されます。 メンバーシップが必要か、 **db_datareader**または**db_owner**固定データベース ロール、または**sysadmin**固定サーバー ロール。 使用して新しいテーブルを作成する**SELECTINTO**両方も必要、 **CREATETABLE**権限、および**ALTERSCHEMA**新しいテーブルを所有するスキーマに対する権限。  
   
@@ -264,7 +269,6 @@ ORDER BY OrderDateKey;
   
 ## <a name="see-also"></a>参照  
  [例 &#40; を選択します。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-examples-transact-sql.md)  
- [ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)
+ [ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)
   
-
 

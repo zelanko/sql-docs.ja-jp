@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 351650e6445c0d8f85751349d243bc8870fd8c2f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1107c5c4aafb0a2e661bbc1307f9aea71b278270
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>階層のレコード セット (例) 内の行にアクセスします。
 次の例では手順アクセス許可の行に必要な階層[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -77,4 +75,3 @@ End Sub
 
 ## <a name="see-also"></a>参照
  [データの概要をシェイプ](../../../ado/guide/data/data-shaping-overview.md)[オブジェクトのフィールド](../../../ado/reference/ado-api/field-object.md)[フィールドのコレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft データ シェイプのサービスOLE DB (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md) [図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md) [図形が一般にコマンド](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic アプリケーション関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

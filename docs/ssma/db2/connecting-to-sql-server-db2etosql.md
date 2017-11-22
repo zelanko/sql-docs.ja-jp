@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: de9a7af8f191f3c979075de204e4a887128b9c1d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4fbfc112af0d0fb2b9bc62cdf0c3af4803fe731f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server (DB2eToSQL) に接続します。
 DB2 データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 または Azure の SQL DB がこれらのターゲット インスタンスのいずれかに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 SSMA がのインスタンス内のすべてのデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でデータベースのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続しているが、パスワードは保存されません。  
@@ -90,10 +88,10 @@ DB2 データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
 ||||||  
 |-|-|-|-|-|  
 |**プロジェクトの種類と対象サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|はい|[ユーザー アカウント制御]|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||はい||  
-|Azure SQL DB||||はい|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|可|可|可||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||可|可||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||可||  
+|Azure SQL DB||||可|  
   
 > [!IMPORTANT]  
 > バージョンに従っていませんが、プロジェクトの種類に従って、データベース オブジェクトの変換は実行が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続しています。 場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 または Azure SQL DB します。  
@@ -125,4 +123,3 @@ DB2 データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
 ## <a name="see-also"></a>参照  
 [SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

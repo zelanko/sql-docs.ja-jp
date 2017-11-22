@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Test Case Settings
+helpviewer_keywords: Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0eec311acd9250b8bc5224e7bba46a4035f3f98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7568e7a78e0129204a23797cbc589139816ac13e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>テスト_ケース準備 (SybaseToSQL) の終了
 ウィザードの最終ページには、テスト_ケースの説明と、テストに関連するオブジェクトに関する情報が表示されます。 さらに、このページで設定できます、テストの実行オプション。  
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 -   選択した場合**いいえ**、すべてのテストの実行データの変更は保存されます。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>補助テーブルの保存モード  
-テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースの実行 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)トピックです。  
+テストの実行中に作成された補助テーブルの保存モードを定義します。 内の補助テーブルの説明を参照して、[テスト_ケースの実行 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)トピックです。  
   
 -   選択した場合**は常に保存**、補助テーブル データは、後で使用するため常に格納されます。  
   
@@ -71,4 +68,3 @@ ms.lasthandoff: 08/02/2017
 [実行中のテスト_ケースと #40 です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

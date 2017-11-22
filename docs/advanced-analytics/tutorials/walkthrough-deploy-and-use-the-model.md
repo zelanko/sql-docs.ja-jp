@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>SQL で使用して、R モデルの配置
 
@@ -72,7 +68,7 @@ ms.lasthandoff: 10/07/2017
 
     + SELECT ステートメントを使用して、SQL テーブルから保存されたモデルを呼び出します。 モデルとしてテーブルから取得された**varbinary (max)** SQL 変数に格納されているデータ _@lmodel2_ 、およびパラメーターとして渡された*mod*格納されているシステムにプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
 
-    + スコアリングは SQL クエリとして定義され、SQL 変数内の文字列として格納されているために、入力として使用されるデータ _@input_です。 データは、データベースから取得したと呼ばれるデータ フレームで保存され*InputDataSet*への入力データの既定の名前だけである、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャを定義できます別の変数名、パラメーターを使用して必要な場合は _@input\_データ\_1\_名前_です。
+    + スコアリングは SQL クエリとして定義され、SQL 変数内の文字列として格納されているために、入力として使用されるデータ _@input_です。 データは、データベースから取得したと呼ばれるデータ フレームで保存され*InputDataSet*への入力データの既定の名前だけである、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャを定義できます別の変数名、パラメーターを使用して必要な場合は *_@input_data_1_name_* です。
 
     + スコアを生成するために、ストアド プロシージャは `rxPredict` RevoScaleR **ライブラリの** 関数を呼び出します。
 
@@ -229,4 +225,3 @@ ms.lasthandoff: 10/07/2017
 [SQL Server R チュートリアル](sql-server-r-tutorials.md)
 
 [Sqlrutils を使用して、ストアド プロシージャを作成する方法](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

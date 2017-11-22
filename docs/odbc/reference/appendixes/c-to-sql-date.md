@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], date
 - data conversions from C to SQL types [ODBC], date
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a1efdeb745856ea7460a6719b386143d1a03819
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5806fe1dcdbabbc27e25c0387f2d06ea25f64ee
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-date"></a>C から SQL へ: 日付
 日付の ODBC C データ型の識別子です。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
  C の日付データが文字 SQL データに変換されると、結果の文字データは、"*yyyy*-*mm*-*dd*"の形式です。  
   
  ドライバーは、日付 C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズが、日付 C データ型のサイズであると見なされます。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
-

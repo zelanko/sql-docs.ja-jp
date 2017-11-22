@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rowset-size"></a>行セット サイズ
 使用するには、どの行セット サイズは、アプリケーションによって異なります。 通常、画面ベースのアプリケーションでは、2 つの方法に従います。 1 つは、行セット サイズを画面に表示される行の数に設定するのにはアプリケーションをユーザーが画面を変更する場合、行セットのサイズがそれに応じて変わります。 2 番目をより大きな数値に 100 など、データ ソースへの呼び出しの数が減少行セットのサイズを設定することです。 アプリケーションでは、可能な場合は、行セット内でローカルにまでスクロールし、行セットの外部スクロール場合にのみ新しい行がフェッチされます。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos**前の呼び出しの時点で有効になっている行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**ので、 **SQLSetPos**を演算し、既に設定されている行セット。 **SQLSetPos**も場合を選択し、新しい行セット サイズを**SQLBulkOperations**が行セットのサイズが変更された後に呼び出されています。  
   
 -   **SQLBulkOperations**すべてフェッチされる行セットの独立したテーブルに対する操作が実行されるため、呼び出し時に有効で、行セット サイズを使用します。
-

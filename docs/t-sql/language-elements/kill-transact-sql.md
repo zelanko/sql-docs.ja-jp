@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - KILL_TSQL
 - KILL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - WITH STATUSONLY option
 - terminating distributed transactions
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c05f03abc5bb03da332ba2ec28294ea7af3f9d1e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 5a67eb7c7f3686dcb0735f6e1c4a1255ab8b59bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -164,15 +161,14 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
   
 ## <a name="see-also"></a>参照  
  [KILL STATS JOB と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [シャット ダウン & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/shutdown-transact-sql.md)   
+ [シャット ダウン &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/shutdown-transact-sql.md)   
  [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)   
- [sys.dm_exec_requests & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_sessions & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_tran_locks & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [sp_lock & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.dm_exec_requests &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
-

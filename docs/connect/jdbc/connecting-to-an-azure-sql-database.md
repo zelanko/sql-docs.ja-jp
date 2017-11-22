@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a6115941051862c9979db90b1aa8a58ac3c9b220
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [Java での SQL Azure を使用します。](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
 
--   [Azure Active Directory 認証を使用して接続します。](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+-   [Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>詳細  
  接続するとき、 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]、呼び出しに、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**です。  
@@ -94,7 +92,6 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;passwor
 ```  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーで SQL Server に接続します。](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

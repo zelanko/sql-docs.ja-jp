@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5d4c6fb051f37d02875070eeef6709cba84ae452
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55f91e6b5e83b3a317f74b71e591de7e08009413
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>アクセス インベントリ (AccessToSQL) をエクスポートします。
 アクセスの複数のデータベースがあり、どれに移行するかわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロジェクト内のすべてのアクセス データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行にこれらのデータベース内のオブジェクトを決定するインベントリのメタデータをクエリします。 このインベントリではすぐに、次のように、質問への回答を検索します。  
@@ -238,4 +236,3 @@ WHERE ColumnName LIKE '%salary%';
 ## <a name="see-also"></a>参照  
 [Access データベースの移行の準備](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
-

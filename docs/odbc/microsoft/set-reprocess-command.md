@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET REPROCESS command [ODBC]
+helpviewer_keywords: SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8e907d01b79c314603ba87c8195e56c8710bd10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-reprocess-command"></a>再処理コマンドのセット
 ロック失敗後のファイルまたはレコードのロックに長時間かかる場合または方法の数を指定します。  
@@ -62,4 +59,3 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>解説  
  レコードまたはファイルをロックする最初の試行は成功は限りません。 多くの場合、レコードまたはファイルは、ネットワーク上の別のユーザーによってロックされています。 設定を再処理すると、Visual FoxPro は、追加の試行を最初の試行が成功すると、レコードまたはファイルをロックするかどうかを判断します。 指定するに何回か追加の試行が行われるまたは時間の試行が行われます。 ON エラー ルーチンでは、試行の処理方法に失敗した場合のロックに影響します。
-

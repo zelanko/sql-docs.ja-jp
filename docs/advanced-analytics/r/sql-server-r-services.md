@@ -1,27 +1,23 @@
 ---
 title: "SQL Server コンピューターのサービスの学習 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: fb770b52f2cacfc527f6bb89955acfbda243c18a
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c384b7fba553175767aaf7c439207771b31e6b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning サービス
 
@@ -39,7 +35,7 @@ SQL Server セットアップにより、サーバー コンポーネントと�
   
     この機能を選択すると、拡張機能は R または Python で記述されたコードの実行をサポートするために、データベース エンジンにインストールされます。 新しいサービスを作成、 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]、外部のランタイムとの間の通信を管理して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。
   
-+ インストール**Microsoft Machine Learning Server (スタンドアロン)**別のコンピューターを使用している場合は、計算コンテキストとして SQL Server を使用する必要はありません。 Machine Learning のサーバーには、コンポーネント、および web サービスとしての machine learning のジョブのスケーラビリティを備えた分散実行 mrsdeploy パッケージを学習、同じマシンが含まれています。
++ インストール**Microsoft Machine Learning Server (スタンドアロン)**別のコンピューターを使用している場合は、計算コンテキストとして SQL Server を使用する必要はありません。 Machine Learning のサーバーには、machine learning コンポーネント、および web サービスとスケーラビリティを備えた分散 machine learning ジョブを実行する機能が含まれています。
   
 +    インストール[Microsoft R クライアント](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)SQL Server または Windows、Linux、または Hadoop 上の Machine Learning サーバーに配置できるソリューションを開発するリモート コンピューターにします。
 
@@ -49,7 +45,7 @@ SQL Server セットアップにより、サーバー コンポーネントと�
   
     この機能を選択すると、計算コンテキストとして SQL Server を使用して R スクリプトを実行する機能や、ストアド プロシージャで R スクリプトを実行する機能を取得します。
   
-+   インストール**Microsoft R Server (スタンドアロン)** developin R ソリューションを使用する別のコンピューターに R コンポーネントをセットアップする SQL Server 2016 セットアップからです。
++   インストール**Microsoft R Server (スタンドアロン)** SQL Server 2016 セットアップから、開発または R ソリューションを配置するために使用できる別のコンピューターに R コンポーネントをインストールします。
 
 
 ## <a name="which-type-of-machine-learning-service-do-i-need"></a>Machine learning のサービスの種類が必要ですか。
@@ -75,4 +71,3 @@ SQL Server セットアップにより、サーバー コンポーネントと�
 + [SQL Server R チュートリアル](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     R コードで SQL Server データ ソースを作成する方法とリモート コンピューティング コンテキストを使用する方法について説明します。 SQL 開発者を対象としているその他のチュートリアルでは、SQL Server で R モデルをトレーニングし、展開する方法について説明します。
-

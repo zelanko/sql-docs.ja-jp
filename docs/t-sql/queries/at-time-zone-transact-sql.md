@@ -8,27 +8,24 @@ ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AT TIME ZONE
 - AT_TIME_ZONE_TSQL
-helpviewer_keywords:
-- AT TIME ZONE function
+helpviewer_keywords: AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2265efe9fab240d25d03e3e1ef16009d294166af
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0983cbd76b1ec3a71985537f098f8faf002b93e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="at-time-zone-transact-sql"></a>タイム ゾーン (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ inputdate AT TIME ZONE timezone
  式に解決されることができるは、 **smalldatetime**、 **datetime**、 **datetime2**、または**datetimeoffset**値。  
   
  *タイム ゾーン*  
- 変換先タイム ゾーンの名前です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows レジストリに格納されているタイム ゾーンに依存します。 次のレジストリ ハイブに、コンピューターにインストールされているすべてのタイム ゾーンが格納されている: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time ゾーン**です。 を通じてインストールされているタイム ゾーンの一覧が公開されても、 [sys.time_zone_info & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)ビュー。  
+ 変換先タイム ゾーンの名前です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows レジストリに格納されているタイム ゾーンに依存します。 次のレジストリ ハイブに、コンピューターにインストールされているすべてのタイム ゾーンが格納されている: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time ゾーン**です。 を通じてインストールされているタイム ゾーンの一覧が公開されても、 [sys.time_zone_info &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)ビュー。  
   
 ## <a name="return-types"></a>戻り値の型  
  データ型を返す**datetimeoffset**  
@@ -178,4 +175,3 @@ FOR SYSTEM_TIME AS OF @ASOF;
  [日付および時刻データ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
-

@@ -1,0 +1,93 @@
+---
+title: "sys.fn_trace_geteventinfo (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-functions
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- fn_trace_geteventinfo
+- fn_trace_geteventinfo_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- events [SQL Server], status information
+- fn_trace_geteventinfo function
+- sys.fn_trace_geteventinfo function
+- status information [SQL Server], events
+ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
+caps.latest.revision: "35"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 39cd184b4c47876318217cc9380f264d1b386359
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  トレースされるイベントに関する情報を返します。  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
+  
+||  
+|-|  
+|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+fn_trace_geteventinfo ( trace_id )  
+```  
+  
+## <a name="arguments"></a>引数  
+ *trace_id*  
+ トレースの ID を指定します。 *trace_id*は**int**、既定値はありません。  
+  
+## <a name="tables-returned"></a>返されたテーブル  
+  
+|列名|データ型|Description|  
+|-----------------|---------------|-----------------|  
+|**イベント id**|**int**|トレースされるイベントの ID です。|  
+|**columnid**|**int**|各イベントに対して収集されるすべての列の ID 番号です。|  
+  
+## <a name="remarks"></a>解説  
+ 特定のトレースの ID が渡されたときに**fn_trace_geteventinfo**そのトレースに関する情報を返します。 無効な ID が渡された場合、空の行セットが返されます。  
+  
+## <a name="permissions"></a>Permissions  
+ サーバーの ALTER TRACE 権限が必要です。  
+  
+## <a name="examples"></a>使用例  
+ 次の例では、トレース番号 2 に関する情報を返します。  
+  
+```  
+SELECT * FROM fn_trace_geteventinfo(2) ;  
+GO  
+  
+```  
+  
+## <a name="see-also"></a>参照  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
+ [sp_trace_generateevent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_gettable &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)   
+ [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  
+  
+  

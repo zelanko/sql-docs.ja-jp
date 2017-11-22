@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9061ad8221537eaa00eb40fab56fa10d3357198d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>処理には、Update および Delete ステートメントが配置されています。
 > [!IMPORTANT]  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   ドライバーは、1 つだけのアクティブなステートメントをサポートする場合、結果の残りの部分を設定および位置指定を実行する前に、キャッシュから現在の行セットを変わりませんカーソル ライブラリのフェッチを更新または delete ステートメント。 その後、アプリケーションが結果セットのメタデータを返す関数を呼び出す場合 (たとえば、 **SQLNumResultCols**または**SQLDescribeCol**)、カーソル ライブラリには、エラーが返されます。  
   
 -   場合、更新プログラムを実行するたびに自動的に更新されるタイムスタンプ列を含むテーブルの列の位置指定更新または削除ステートメントが実行される後続のすべての位置指定更新または削除ステートメントは失敗タイムスタンプ列がある場合バインドされています。 これは、カーソル ライブラリを作成するステートメントが正確には更新する行を識別しません、検索結果を更新または削除するために発生します。 Timestamp 列の検索結果のステートメントで値には、timestamp 列の自動的に更新された値はありません。
-

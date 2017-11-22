@@ -1,12 +1,14 @@
 ---
 title: "可用性グループ (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +18,26 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
+caps.latest.revision: "196"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cebeb43402be1762021738096b9a0e959082d986
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能に対して有効である場合、新しい可用性グループを作成します。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>構文  
   
-```  
+```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -73,8 +73,8 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
   
@@ -145,7 +145,7 @@ CREATE AVAILABILITY GROUP group_name
 >  AUTOMATED_BACKUP_PREFERENCE 設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、次を参照してください[可用性レプリカ &#40; バックアップの構成。SQL Server &#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
->  既存の可用性グループの自動バックアップ設定を表示するには、選択、 **automated_backup_preference**または**automated_backup_preference_desc**の列、 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)カタログ ビューです。 さらに、 [sys.fn_hadr_backup_is_preferred_replica & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)優先されるバックアップ レプリカを決定するために使用できます。  この関数は、少なくとも 1 つで、レプリカの 1 を返す場合でも、`AUTOMATED_BACKUP_PREFERENCE = NONE`です。  
+>  既存の可用性グループの自動バックアップ設定を表示するには、選択、 **automated_backup_preference**または**automated_backup_preference_desc**の列、 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)カタログ ビューです。 さらに、 [sys.fn_hadr_backup_is_preferred_replica &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)優先されるバックアップ レプリカを決定するために使用できます。  この関数は、少なくとも 1 つで、レプリカの 1 を返す場合でも、`AUTOMATED_BACKUP_PREFERENCE = NONE`です。  
   
  FAILURE_CONDITION_LEVEL  **=**  {1 | 2 |**3** | 4 | 5}  
  この可用性グループの自動フェールオーバーを実行するエラー条件を指定します。 FAILURE_CONDITION_LEVEL はグループ レベルで設定されていますが、同期コミット可用性モードが構成されている可用性レプリカにのみ (AVAILIBILITY_MODE  **=**  SYNCHRONOUS_COMMIT)。 さらに、エラー状態が自動フェールオーバーをトリガー プライマリとセカンダリの両方のレプリカが自動フェールオーバー モードで構成されている場合にのみ (FAILOVER_MODE  **=** 自動) セカンダリ レプリカが、現在プライマリ レプリカと同期されています。  
@@ -182,16 +182,16 @@ CREATE AVAILABILITY GROUP group_name
  データベースにまたがるトランザクションは分散トランザクション コーディネーター (DTC) ではサポートするかどうかを指定します。 データベースにまたがるトランザクションは、以降でのみサポートされます[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 PER_DB では、これらのトランザクションのサポートを可用性グループを作成します。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
  BASIC  
- 基本的な可用性グループを作成するために使用します。 基本的な可用性グループは 1 つのデータベースと 2 つのレプリカに制限されます。 プライマリ レプリカとセカンダリ レプリカが 1 つです。 このオプションは、非推奨のデータベース ミラーリング SQL Server Standard Edition の機能に代わるものです。 詳細については、次を参照してください。[基本的な可用性グループ & #40 です。Always On 可用性グループ &#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). 基本的な可用性グループには、以降ではサポートされて[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。  
+ 基本的な可用性グループを作成するために使用します。 基本的な可用性グループは 1 つのデータベースと 2 つのレプリカに制限されます。 プライマリ レプリカとセカンダリ レプリカが 1 つです。 このオプションは、非推奨のデータベース ミラーリング SQL Server Standard Edition の機能に代わるものです。 詳細については、次を参照してください。[基本的な可用性グループ &#40;です。Always On 可用性グループ &#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). 基本的な可用性グループには、以降ではサポートされて[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。  
 
  DISTRIBUTED  
  分散型可用性グループを作成するために使用します。 このオプションは個別の Windows Server フェールオーバー クラスター内の 2 つの可用性グループを接続する可用性グループのパラメーターと共に使用します。  詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)」を参照してください。 分散型可用性グループには、以降ではサポートされて[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- SQL Server 2017 CTP 2.2 で導入されました。 プライマリ トランザクションをコミットする前にコミットするために必要なの同期セカンダリ レプリカの最小数を設定するために使用します。 SQL Server トランザクションがセカンダリ レプリカの最小数のトランザクション ログが更新されるまで待機することを保証します。 既定では 0 で、SQL Server 2016 と同じ動作を示します。 最小値は 0 です。 最大値は、レプリカから 1 を引いた数です。 このオプションは、同期コミット モードのレプリカに関連しています。 レプリカは、同期コミット モードでは、ときに、プライマリ レプリカでの書き込みは同期セカンダリ レプリカ上の書き込みはレプリカ データベースのトランザクション ログにコミットされるまでを待ちます。 同期セカンダリ レプリカをホストする SQL Server が応答しなくなった場合、プライマリ レプリカをホストする SQL Server は、同期されていないと続行としてそのセカンダリ レプリカをマークします。 応答しない状態のデータベースがオンラインに戻ったときに「同期されていません"状態にあるプライマリとなる同期再度まで、レプリカが異常とマークされてです。 この設定は、プライマリ レプリカはレプリカの最小数は、各トランザクションをコミット済みになるまで待機することを保証します。 レプリカの最小数が使用できない場合は、プライマリでコミットが失敗します。 この設定は、クラスターの種類の可用性グループに適用されます。`WSFC`と`EXTERNAL`です。 クラスターの種類の`EXTERNAL`をクラスター リソースに追加されると、可用性グループの設定を変更します。 参照してください[可用性グループの構成の高可用性とデータ保護](../../linux/sql-server-linux-availability-group-ha.md)です。
+ SQL Server 2017 年 1 で導入されました。 プライマリ トランザクションをコミットする前にコミットするために必要なの同期セカンダリ レプリカの最小数を設定するために使用します。 SQL Server トランザクションがセカンダリ レプリカの最小数のトランザクション ログが更新されるまで待機することを保証します。 既定では 0 で、SQL Server 2016 と同じ動作を示します。 最小値は 0 です。 最大値は、レプリカから 1 を引いた数です。 このオプションは、同期コミット モードのレプリカに関連しています。 レプリカは、同期コミット モードでは、ときに、プライマリ レプリカでの書き込みは同期セカンダリ レプリカ上の書き込みはレプリカ データベースのトランザクション ログにコミットされるまでを待ちます。 同期セカンダリ レプリカをホストする SQL Server が応答しなくなった場合、プライマリ レプリカをホストする SQL Server は、同期されていないと続行としてそのセカンダリ レプリカをマークします。 応答しない状態のデータベースがオンラインに戻ったときに「同期されていません"状態にあるプライマリとなる同期再度まで、レプリカが異常とマークされてです。 この設定は、プライマリ レプリカはレプリカの最小数は、各トランザクションをコミット済みになるまで待機することを保証します。 レプリカの最小数が使用できない場合は、プライマリでコミットが失敗します。 クラスターの種類の`EXTERNAL`をクラスター リソースに追加されると、可用性グループの設定を変更します。 参照してください[可用性グループの構成の高可用性とデータ保護](../../linux/sql-server-linux-availability-group-ha.md)です。
 
  CLUSTER_TYPE  
- SQL Server 2017 CTP 2.2 で導入されました。 場合は、可用性グループで、Windows Server フェールオーバー クラスター (WSFC) を識別するために使用します。  Windows Server フェールオーバー クラスターでフェールオーバー クラスター インスタンス上の可用性グループがある場合は、WSFC に設定されます。 クラスターは、Linux ペースのように、Windows Server フェールオーバー クラスターではないクラスター マネージャーで管理されている場合は、外部に設定します。 可用性グループの WSFC をクラスターの調整を使用していない場合は、NONE に設定します。 たとえば、可用性グループが含まれてとき Linux サーバーには。 
+ SQL Server 2017 年 1 で導入されました。 場合は、可用性グループで、Windows Server フェールオーバー クラスター (WSFC) を識別するために使用します。  Windows Server フェールオーバー クラスターでフェールオーバー クラスター インスタンス上の可用性グループがある場合は、WSFC に設定されます。 クラスターは、Linux ペースのように、Windows Server フェールオーバー クラスターではないクラスター マネージャーで管理されている場合は、外部に設定します。 可用性グループの WSFC をクラスターの調整を使用していない場合は、NONE に設定します。 たとえば、ときに、可用性グループを含む Linux サーバー クラスター マネージャーがありません。 
 
  データベース*database_name*  
  ローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス (つまり可用性グループを作成するサーバー インスタンス) 上の 1 つ以上のユーザー データベースのリストを指定します。 1 つの可用性グループに対して複数のデータベースを指定できますが、各データベースが所属できる可用性グループは 1 つだけです。 可用性グループでサポートされるデータベースの種類については、次を参照してください[前提条件、制限事項、および Always On 可用性グループ &#40; ための推奨事項。SQL Server &#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). ローカル データベースが可用性グループに属しているを参照してください、 **replica_id**内の列、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。  
@@ -245,14 +245,23 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  ポート番号 (ENDPOINT_URL オプションの場合) のパートナー サーバー インスタンスのミラーリング エンドポイントに関連付けられているかによって使用されるポート番号、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のサーバー インスタンスの (READ_ONLY_ROUTING_URL オプションの場合)。  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT}  
- SYNCHRONOUS_COMMIT または ASYNCHRONOUS_COMMIT は、プライマリ レプリカがセカンダリ レプリカをプライマリ レプリカは、特定のプライマリでトランザクションをコミットできる前にディスクにログ レコードの固定 (書き込み) を確認するを待っているかどうかを指定しますデータベースです。 同じプライマリ レプリカに対する異なるデータベースでのトランザクションは個別にコミットできます。
+ AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
+ SYNCHRONOUS_COMMIT または ASYNCHRONOUS_COMMIT は、プライマリ レプリカがセカンダリ レプリカをプライマリ レプリカは、特定のプライマリでトランザクションをコミットできる前にディスクにログ レコードの固定 (書き込み) を確認するを待っているかどうかを指定しますデータベースです。 同じプライマリ レプリカに対する異なるデータベースでのトランザクションは個別にコミットできます。 SQL Server 2017 CU 1 には、CONFIGURATION_ONLY が導入されています。 CONFIGURATION_ONLY レプリカは CLUSTER_TYPE を含む可用性グループにのみ適用されます = 外部または CLUSTER_TYPE = NONE です。 
   
  SYNCHRONOUS_COMMIT  
  プライマリ レプリカがトランザクションをコミットがこのセカンダリ レプリカ (同期コミット モード) に書き込まれるまで待機するを指定します。 SYNCHRONOUS_COMMIT は、プライマリ レプリカを含む最大 3 つのレプリカに対して指定できます。  
   
  ASYNCHRONOUS_COMMIT  
  このセカンダリ レプリカでログが書き込まれるのを待たずに、プライマリ レプリカがトランザクションをコミットすることを指定します (同期コミット可用性モード)。 ASYNCHRONOUS_COMMIT は、プライマリ レプリカを含む最大 5 つの可用性レプリカに対して指定できます。  
+
+ CONFIGURATION_ONLY では、プライマリ レプリカは、このレプリカ上の master データベースを可用性グループ構成メタデータを同期的にコミットを指定します。 レプリカでは、ユーザー データは含まれません。 このオプションでは:
+
+- Express Edition をなど、SQL Server の任意のエディションでホストできます。
+- データの型である CONFIGURATION_ONLY レプリカのミラーリング エンドポイントを要求`WITNESS`です。
+- 変更できません。
+- 正しくない場合に`CLUSTER_TYPE = WSFC`です。 
+
+   詳細については、次を参照してください。[構成のみのレプリカ](../../linux/sql-server-linux-availability-group-ha.md)です。
   
  AVAILABILITY_MODE 句は必須です。 詳細については、「 [可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
@@ -380,7 +389,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  可用性グループのデータベース ミラーリング エンドポイントに関連付けられているポート番号です。 リスナーのポートではないことに注意してください。  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
  プライマリ レプリカがセカンダリ可用性グループ プライマリ レプリカは、特定のプライマリ データベースでトランザクションをコミットできる前にディスクにログ レコードの固定 (書き込み) を確認するを待っているかどうかを指定します。  
   
  SYNCHRONOUS_COMMIT  
@@ -498,7 +507,7 @@ CREATE AVAILABILITY GROUP group_name
   
  最後に、新しい可用性グループの可用性グループ リスナーを作成するためのオプションの LISTENER 句を指定します。 このリスナーには、一意の DNS 名 `MyAgListenerIvP6`を指定します。 2 つのレプリカが異なるサブネット上に存在するため、リスナーは静的 IP アドレスを使用する必要があります。 WITH IP 句が、静的 IP アドレスを指定する 2 つの可用性レプリカのそれぞれについて、`2001:4898:f0:f00f::cf3c`と`2001:4898:e0:f213::4ce2`、IPv6 形式を使用します。 また、この例では、オプションの PORT 引数を使用して、 `60173` をリスナー ポートとして指定しています。  
   
-```  
+```SQL
 CREATE AVAILABILITY GROUP MyAg   
    WITH (  
       AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
@@ -566,11 +575,10 @@ GO
 ## <a name="see-also"></a>参照  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
- [DROP AVAILABILITY GROUP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-availability-group-transact-sql.md)   
+ [DROP AVAILABILITY GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Always On 可用性グループの構成 &#40; のトラブルシューティングします。SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-
 

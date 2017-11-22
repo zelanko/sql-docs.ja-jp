@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,24 +17,22 @@ f1_keywords:
 - NOT
 - ~
 - Bitwise NOT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - NOT keyword
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6525306bfae5112e1d49a191c52cc0125dfe2e96
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cfe0944a896548bfd0e0e0612b832ac91417016
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (ビット演算子 NOT) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/01/2017
  **ビット**場合は、入力値**ビット**です。  
   
 ## <a name="remarks"></a>解説  
-  **~** ビットごとの演算子が論理否定演算を実行用、*式*、さらに、各ビットです。 場合*式*値が 0 の場合の結果セット内のビットが 1 に設定されます。 それ以外の場合、結果のビットがオフになって値の 0 にします。 つまり、1 は 0 に、0 は 1 に変更されます。  
+ **~** ビットごとの演算子が論理否定演算を実行用、*式*、さらに、各ビットです。 場合*式*値が 0 の場合の結果セット内のビットが 1 に設定されます。 それ以外の場合、結果のビットがオフになって値の 0 にします。 つまり、1 は 0 に、0 は 1 に変更されます。  
   
 > [!IMPORTANT]  
 >  どのような種類のビットごとの演算を実行する場合でも、演算の中で使用される式の記憶域の長さが重要になります。 値を格納するときは、式のデータ型と同じバイト数を使用するようにしてください。 たとえば、同様の 5 つの 10 進値を格納する、 **tinyint**、 **smallint**、または**int**バイト数が異なると共に格納されている値を生成: **tinyint** 1 バイトを使用してデータの格納**smallint** 2 (バイト単位) を使用してデータを格納および**int** 4 バイトを使用してデータを格納します。 したがってでビットごとの演算を実行する、 **int** 10 進値は、直接バイナリまたは 16 進数の変換を使用して異なる結果を生成できる場合は特に、  **~**  (ビットごとの NOT) 演算子を使用します。 また、長さが短い方の変数に対してビットごとの NOT 演算が実行される場合があります。 この場合は、短い長さが長いデータ型の変数に変換するときに、上位 8 ビットのビット可能性がありますしない設定適切な値にします。 短いデータ型を長いデータ型に変換し、その結果に対して NOT 演算を実行するようにしてください。  
@@ -117,11 +114,10 @@ FROM bitwise;
   
  
 ## <a name="see-also"></a>参照  
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [ビット処理演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ビット処理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-
 
 

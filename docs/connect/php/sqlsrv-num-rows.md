@@ -8,25 +8,23 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0be1f022460ed99445de32e6dcac439cc5365ca
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1739cdd1632ec9d7bbc191e30d09252ab014e536
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +45,7 @@ sqlsrv_num_rows( resource $stmt )
 行数の計算中にエラーが発生した場合は**false** 。 それ以外の場合は、結果セットの行数をレポートします。  
   
 ## <a name="remarks"></a>解説  
-sqlsrv_num_rows がクライアント側、スタティック、またはキーセット カーソルが必要であり、戻ります**false**順方向カーソルまたは動的カーソルを使用する場合。 (順方向カーソルが既定値です。)カーソルの詳細については、次を参照してください。 [sqlsrv_query](../../connect/php/sqlsrv-query.md)と[カーソルの種類 & #40 です。SQLSRV ドライバー &#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
+sqlsrv_num_rows がクライアント側、スタティック、またはキーセット カーソルが必要であり、戻ります**false**順方向カーソルまたは動的カーソルを使用する場合。 (順方向カーソルが既定値です。)カーソルの詳細については、次を参照してください。 [sqlsrv_query](../../connect/php/sqlsrv-query.md)と[カーソルの種類 &#40;です。SQLSRV ドライバー &#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>例  
   
@@ -103,4 +101,3 @@ echo "\nRow count for second result set = $row_count\n";
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
   
-

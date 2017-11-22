@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ODBC function calls
 - keywords [SQL Server], reserved
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="reserved-keywords-transact-sql"></a>予約済みキーワードの TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードの文法の一部である、[!INCLUDE[tsql](../../includes/tsql-md.md)]によって使用される言語[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を解析し、理解[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントとバッチです。 構文的に使用することはできますが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子とオブジェクト名の予約済みキーワード[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト、これを行うを区切られた識別子を使用します。  
   
@@ -120,38 +117,38 @@ ms.lasthandoff: 09/01/2017
 |-|-|-|  
 |**絶対**|**EXEC**|**重複しています**|  
 |**アクション**|**EXECUTE**|**パッド**|  
-|**ADA**|**存在します。**|**部分的です**|  
+|**ADA**|**EXISTS**|**部分的です**|  
 |**追加**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**抽出**|**位置**|  
 |**割り当てる**|**FALSE**|**有効桁数**|  
-|**ALTER**|**フェッチ**|**準備します。**|  
+|**ALTER**|**FETCH**|**準備します。**|  
 |**AND**|**まずは**|**保持します。**|  
-|**任意**|**浮動小数点数**|**PRIMARY**|  
+|**ANY**|**浮動小数点数**|**PRIMARY**|  
 |**します。**|**の**|**前に**|  
 |**AS**|**外部**|**特権**|  
-|**ASC**|**FORTRAN**|**プロシージャ**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
 |**アサーション**|**見つかりません**|**パブリック**|  
 |**AT**|**FROM**|**読み取り**|  
-|**承認**|**FULL**|**本当の**|  
+|**AUTHORIZATION**|**FULL**|**本当の**|  
 |**AVG**|**取得**|**参照**|  
 |**BEGIN**|**グローバル**|**相対**|  
-|**BETWEEN**|**移動します。**|**制限します。**|  
+|**BETWEEN**|**GO**|**制限します。**|  
 |**ビット**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**両方とも**|**グループ**|**ロールバック**|  
 |**によって**|**持つ**|**行**|  
-|**CASCADE**|**1 時間**|**スキーマ**|  
+|**CASCADE**|**1 時間**|**SCHEMA**|  
 |**カスケード**|**ID**|**スクロール**|  
-|**場合**|**イミディ エイト**|**1 秒**|  
+|**CASE**|**イミディ エイト**|**1 秒**|  
 |**キャスト**|**IN**|**セクション**|  
 |**カタログ**|**含まれます**|**SELECT**|  
-|**CHAR 型**|**インデックス**|**セッション**|  
+|**CHAR**|**INDEX**|**セッション**|  
 |**CHAR_LENGTH**|**インジケーター**|**SESSION_USER**|  
 |**文字**|**最初に**|**設定**|  
 |**CHARACTER_LENGTH**|**内部**|**サイズ**|  
 |**チェック**|**入力**|**SMALLINT**|  
-|**閉じる**|**小文字を区別しません。**|**いくつか**|  
-|**結合**|**INSERT**|**領域**|  
+|**CLOSE**|**小文字を区別しません。**|**いくつか**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**部単位印刷します。**|**INT**|**SQL**|  
 |**照合順序**|**整数**|**SQLCA**|  
 |**列**|**INTERSECT**|**SQLCODE**|  
@@ -159,42 +156,42 @@ ms.lasthandoff: 09/01/2017
 |**接続**|**に**|**SQLSTATE**|  
 |**接続**|**IS**|**行いません**|  
 |**制約**|**分離**|**SUBSTRING**|  
-|**制約**|**結合**|**合計**|  
-|**続行**|**キー**|**SYSTEM_USER**|  
-|**変換**|**LANGUAGE**|**テーブル**|  
+|**制約**|**結合**|**SUM**|  
+|**CONTINUE**|**キー**|**SYSTEM_USER**|  
+|**変換**|**LANGUAGE**|**TABLE**|  
 |**対応します。**|**前の**|**一時**|  
-|**カウント**|**先行します。**|**そうしたら**|  
+|**COUNT**|**先行します。**|**そうしたら**|  
 |**作成します。**|**LEFT**|**時間**|  
 |**クロス**|**レベル**|**タイムスタンプ**|  
 |**現在の**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**地元の**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**低い**|**宛先**|  
+|**CURRENT_TIME**|**LOWER**|**宛先**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**末尾**|  
-|**CURRENT_USER**|**最大値**|**トランザクション**|  
-|**カーソル**|**最小値**|**翻訳**|  
+|**CURRENT_USER**|**MAX**|**トランザクション**|  
+|**カーソル**|**MIN**|**TRANSLATE**|  
 |**日付**|**1 分**|**翻訳**|  
-|**1 日**|**モジュール**|**TRIM**|  
-|**割り当てを解除します。**|**月**|**場合は TRUE。**|  
+|**DAY**|**モジュール**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**場合は TRUE。**|  
 |**年 12 月**|**名**|**共用体**|  
 |**10 進数**|**各国語**|**一意**|  
 |**宣言**|**自然です**|**不明**|  
-|**既定値**|**NCHAR**|**UPDATE**|  
-|**遅延**|**次に**|**上限**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**遅延**|**次に**|**UPPER**|  
 |**遅延**|**違います**|**使用状況**|  
-|**DELETE**|**NONE**|**ユーザー**|  
+|**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**使用します。**|  
 |**説明**|**NULL**|**VALUE**|  
 |**記述子**|**NULLIF**|**値**|  
 |**診断**|**数値**|**VARCHAR**|  
 |**切断**|**OCTET_LENGTH**|**さまざまな**|  
-|**DISTINCT**|**の**|**ビュー**|  
+|**DISTINCT**|**の**|**VIEW**|  
 |**ドメイン**|**ON**|**いつ**|  
 |**DOUBLE**|**のみ**|**ときに**|  
-|**ドロップ**|**開いています。**|**WHERE**|  
+|**ドロップ**|**OPEN**|**WHERE**|  
 |**その他**|**オプション**|**と**|  
 |**END**|**OR**|**作業**|  
 |**終了 EXEC**|**順序**|**書き込み**|  
-|**エスケープ**|**外部**|**1 年**|  
+|**エスケープ**|**外部**|**YEAR**|  
 |**点を除いて**|**出力**|**ゾーン**|  
 |**例外**|||  
   
@@ -300,4 +297,3 @@ ms.lasthandoff: 09/01/2017
  [ALTER DATABASE 互換性レベル &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

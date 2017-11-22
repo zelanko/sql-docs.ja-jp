@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>デスクトップ データベース ドライバーを実装します。
 指示とを実装し、Microsoft ODBC のデスクトップ データベース ドライバーをセットアップする方法についてのテクニカル ノートは、ODBC データ ソース アドミニストレーターのオンライン ヘルプで確認できます。 ドライバーのセットアップ ルーチンから中にこのファイルにアクセスできる、 [Microsoft ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)です。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [文字列パラメーターを受け入れる関数](../../odbc/microsoft/functions-accepting-string-parameters.md)  
   
--   [Sql-92 準拠](../../odbc/microsoft/sql-92-compliance.md)  
+-   [SQL-92 準拠](../../odbc/microsoft/sql-92-compliance.md)  
   
 -   [ドライバーのベース アドレス](../../odbc/microsoft/base-address-of-drivers.md)  
   
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 -   [デスクトップ データベース ドライバーの互換性](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [デスクトップ データベース ドライバー パフォーマンスの問題](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
-

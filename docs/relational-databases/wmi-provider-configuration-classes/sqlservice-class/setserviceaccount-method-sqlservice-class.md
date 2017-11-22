@@ -1,0 +1,65 @@
+---
+title: "SetServiceAccount メソッド (SqlService クラス) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: wmi
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: reference
+apiname: SetServiceAccount Method (SqlService Class)
+apilocation: sqlmgmproviderxpsp2up.mof
+apitype: MOFDef
+helpviewer_keywords: SetServiceAccount method
+ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
+caps.latest.revision: "36"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: c0cec37d97f91da803a7d071aabfdd664878862f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount メソッド (SqlService クラス)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]ユーザー名とサービス インスタンスを実行しているパスワードを変更しようとしています。  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+object.SetServiceAccount(ServiceStartName , ServiceStartPassword)  
+```  
+  
+## <a name="parts"></a>要素  
+ *オブジェクト*  
+ サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
+  
+#### <a name="parameters"></a>パラメーター  
+ *ServiceStartName*  
+ サービスの実行環境に対応するアカウント名を指定する文字列値。 サービスの種類によっては、アカウント名が "ドメイン名\ユーザー名" の形式になる場合もあります。 サービス プロセスの実行時には、ログオンは次のいずれかの形式になります。  
+  
+-   アカウントがビルトイン ドメインに属している場合、\Username を指定することができます。  
+  
+-   NULL が指定されている場合、サービスとしてログオンする、 **LocalSystem**アカウント。  
+  
+ カーネルまたはシステム レベルのドライバーの*StartName*ドライバー オブジェクト名を含む \FileSystem\Rdr または \Driver\Xns、I/O システムが、デバイス ドライバーの読み込みに使用します。 NULL が指定された場合、ドライバーは、I/O システムがサービス名に基づいて作成した既定のオブジェクト名 (たとえば、DWDOM\Admin) で実行されます。  
+  
+ *ServiceStartPassword*  
+ アカウント名のパスワードを指定する文字列値、 *StartName*パラメーター。 パスワードを変更しない場合は NULL を指定します。 サービスがパスワードを持っていない場合は、空の文字列を指定します。  
+  
+## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
+ A **uint32**値は、サービスが正常に変更された場合は 0 または 1 の場合は、要求はサポートされていません。 それ以外の数値はエラーを示します。  
+  
+## <a name="remarks"></a>解説  
+  
+## <a name="see-also"></a>参照  
+ [開始して、サービスの停止](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+  
+  

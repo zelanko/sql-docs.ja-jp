@@ -8,29 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], precedence
 - operator precedence [Transact-SQL]
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c534653bb383fbbfcd069cb98bb72519d3d02987
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0c7bd10a7d53f4de8fb5aedbe6f1cf3c9be42b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="operator-precedence-transact-sql"></a>演算子の優先順位 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +39,8 @@ ms.lasthandoff: 09/01/2017
 |レベル|演算子|  
 |-----------|---------------|  
 |1|~ (ビットごとの NOT)|  
-|2|* (乗算)、/ (除算)、% (剰余)|  
-|3|+ (正号)、- (負号) + (加算)、(+ 連結)、- (減算)、& (ビットごとの AND)、^ (ビットごとの排他的 OR)、(& a) #124;(ビットごとの OR)|  
+|2|* (乗算)/(除算)、% (剰余)|  
+|3|+ (正号)、- (負号) + (加算)、(+ 連結)、-(減算)、& (ビットごとの AND)、^ (ビットごとの排他的 OR)、(& a) #124;(ビットごとの OR)|  
 |4|=、>、 \<、> =、< =、<>、! =、! >、! < (比較演算子)|  
 |5|[NOT]|  
 |6|[AND]|  
@@ -90,9 +87,8 @@ SELECT @MyNumber;
 ```  
   
 ## <a name="see-also"></a>参照  
- [論理演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [論理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-

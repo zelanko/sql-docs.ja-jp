@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data section [ADO]
+helpviewer_keywords: data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62eb026fac4588cc159afec1714a6aa51903aa8a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-section"></a>データ セクション
 データ セクションでは、更新、挿入、または削除保留中のいずれかと共に、行セットのデータを定義します。 データ セクションには、0 個以上の行を含めることができます。 行が、スキーマで定義されている 1 つの行セットからのデータだけを含めることができます。 また、前述したとおり、データを含まない列は省略できます。 データ セクションの属性またはサブ要素が使用され、スキーマ」セクションでその構造体が定義されていない場合は、サイレント モードで無視されます。  
@@ -93,5 +90,4 @@ ms.lasthandoff: 09/09/2017
  更新プログラムには、常に変更された行のデータが続きます全体の元の行データが含まれています。 変更された行は、すべての列または実際に変更された列のみに含まれている可能性があります。 前の例で出荷業者の 2 行は変更されず、Phone 列だけ Shipper 3 の値が変更された、変更された行に含まれる唯一の列であるためです。 Shippers 12、13、および 14 の挿入された行は、バッチ化 rs: 挿入の 1 つのタグです。 これは、前の例では表示されませんが、削除された行もバッチ処理できる同時に、注意してください。  
   
 ## <a name="see-also"></a>参照  
- [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC escape sequences [ODBC], about escape sequences
 - ODBC escape sequences [ODBC]
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e94eb22965a841d514e257fc63045dfaa5ddb757
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0476415619db3591fd9c26d22bc615b6d90f6c2e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日付、時刻、およびタイムスタンプ エスケープ シーケンス
 ODBC では、日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスを定義します。 これらのエスケープ シーケンスの構文は次のとおりです。  
@@ -62,4 +60,3 @@ timestamp-separator ::=
   
 ## <a name="remarks"></a>解説  
  日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスは、日付、時刻、および timestamp データ型が、データ ソースによってサポートされている場合にサポートされます。 アプリケーションを呼び出す必要があります**SQLGetTypeInfo**をこれらのデータ型がサポートされているかどうかを判断します。
-

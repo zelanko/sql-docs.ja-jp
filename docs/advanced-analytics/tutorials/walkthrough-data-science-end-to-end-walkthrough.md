@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル
 
@@ -45,8 +41,8 @@ ms.lasthandoff: 09/01/2017
 |トピックの一覧|所要時間|
 |-|------------------------------|
 |[R のチュートリアルのデータを準備します。](../tutorials/walkthrough-prepare-the-data.md) <br /><br />モデルの構築に使用するデータを取得します。 公開されているデータセットをダウンロードして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに読み込みます。|30 分|
-|[SQL を使用してデータを探索します。](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />SQL ツールと集計を使用して、データを理解します。|10 分|
-|[R を使用するデータを概要します。](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />R を使用して、データを調べ、サマリーを生成します。|10 分|
+|[SQL を使用してデータを探索する](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />SQL ツールと集計を使用して、データを理解します。|10 分|
+|[R を使用したデータの要約](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />R を使用して、データを調べ、サマリーを生成します。|10 分|
 |[SQL Server で R を使用してプロットを作成します。](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />R と SQL を混在させることで、ローカルおよびリモート計算コンテキストでプロットを作成します。|10 分|
 |[R と T-SQL を使用してデータの機能を作成する)](../tutorials/walkthrough-create-data-features.md) <br /><br />R と [!INCLUDE[tsql](../../includes/tsql-md.md)] のカスタム関数を使用して、機能エンジニアリングを実行します。 特性付けタスクにおける R と T-SQL のパフォーマンスを比較します。 |10 分|
 |[R モデルを構築し、SQL Server に保存](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />予測モデルをトレーニングして調整します。 モデルのパフォーマンスを評価します。 このチュートリアルでは、分類モデルを作成します。 また、R を使用してモデルの精度のプロットも作成します。|15 分|
@@ -71,4 +67,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>次のレッスン
 
 [R のチュートリアルのデータを準備します。](../tutorials/walkthrough-prepare-the-data.md)
-

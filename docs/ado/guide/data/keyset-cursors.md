@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0366f161e6c2e6639a18ca06c4e82ffbf686d3e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8def959d69c353449c2f862638d6edd54f786624
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keyset-cursors"></a>Keyset カーソル
 キーセット カーソルは、変更を検出する機能で、静的および動的カーソルの間での機能を提供します。 静的カーソルと同様に常に検出されない、メンバーシップと、結果セットの順序を変更します。 動的カーソルの場合と同様には、行の値への変更を検出、結果セットに。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [順方向専用カーソル](../../../ado/guide/data/forward-only-cursors.md)   
  [静的カーソル](../../../ado/guide/data/static-cursors.md)   
  [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)
-

@@ -1,0 +1,144 @@
+---
+title: "sys.sp_cdc_add_job (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_cdc_add_job_TSQL
+- sys.sp_cdc_add_job
+- sys.sp_cdc_add_job_TSQL
+- sp_cdc_add_job
+dev_langs: TSQL
+helpviewer_keywords: sp_cdc_add_job
+ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
+caps.latest.revision: "29"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d906a1253499dcfb076ddd707d46d254102d4138
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  現在のデータベースに、変更データ キャプチャ機能のクリーンアップ ジョブまたはキャプチャ ジョブを作成します。  
+  
+||  
+|-|  
+|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+sys.sp_cdc_add_job [ @job_type = ] 'job_type'  
+    [ , [ @start_job = ] start_job ]   
+    [ , [ @maxtrans = ] max_trans ]   
+    [ , [ @maxscans = ] max_scans ]   
+    [ , [ @continuous = ] continuous ]   
+    [ , [ @pollinginterval = ] polling_interval ]   
+    [ , [ @retention ] = retention ]   
+    [ , [ @threshold ] = 'delete_threshold' ]  
+```  
+  
+## <a name="arguments"></a>引数  
+ [  **@job_type=** ] **'***job_type***'**  
+ 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は**'capture'**と**'cleanup'**です。  
+  
+ [  **@start_job=** ] *start_job*  
+ ジョブの追加後、そのジョブを直ちに開始するかどうかを指定するフラグです。 *start_job*は**ビット**既定値は 1 です。  
+  
+ [  **@maxtrans**  ] = *max_trans*  
+ 各スキャン サイクルで処理する最大トランザクション数を指定します。 *max_trans*は**int**既定値は 500 です。 指定する場合、値は正の整数にする必要があります。  
+  
+ *max_trans*はキャプチャ ジョブでのみ有効です。  
+  
+ [  **@maxscans**  ]  **=**  *max_scans*  
+ ログからすべての行を抽出するために実行する最大スキャン サイクル数を指定します。 *max_scans*は**int**既定値は 10 です。  
+  
+ *max_scan*はキャプチャ ジョブでのみ有効です。  
+  
+ [  **@continuous**  ]  **=** *連続*  
+ キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を指定します。 *継続的な*は**ビット**既定値は 1 です。  
+  
+ ときに*連続*= 1,、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブはログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
+  
+ ときに*連続*= 0 の場合、 **sp_cdc_scan**ジョブが実行されるまで*max_scans*まで処理、ログのスキャン*max_trans*トランザクション中に各スキャン、およびし終了します。  
+  
+ *継続的な*はキャプチャ ジョブでのみ有効です。  
+  
+ [  **@pollinginterval**  ]  **=**  *polling_interval*  
+ ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は 5 です。  
+  
+ *polling_interval*キャプチャに対してのみ有効ではジョブの場合に*連続*が 1 に設定します。 指定する場合、値には負の数を指定できず、24 時間が上限になります。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
+  
+ [  **@retention**  ]  **=** *保有期間*  
+ 変更データ行が変更テーブルに保持される分数を指定します。 *保有期間*は**bigint**既定値は 4320 (72 時間)。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数にする必要があります。  
+  
+ *保有期間*はクリーンアップ ジョブでのみ有効です。  
+  
+ [  **@threshold =** ] **'***delete_threshold***'**  
+ クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数を指定します *delete_threshold*は**bigint**既定値は 5000 です。  
+  
+## <a name="return-code-values"></a>リターン コードの値  
+ **0** (成功) または**1** (失敗)  
+  
+## <a name="result-sets"></a>結果セット  
+ なし  
+  
+## <a name="remarks"></a>解説  
+ クリーンアップ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたときに既定値を使って作成されます。 キャプチャ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたとき、そのデータベースにトランザクション パブリケーションが存在しなかった場合に、既定値を使って作成されます。 トランザクション パブリケーションが存在する場合、トランザクション ログ リーダーを使ってキャプチャ メカニズムが実現されます。別個のキャプチャ ジョブは必要ありません (使用することもできません)。  
+  
+ クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
+  
+ ジョブの名前は**cdc** 。*< database_name >***_cleanup**または**cdc** 。*< database_name >***_capture**ここで、 *< database_name >*現在のデータベースの名前を指定します。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) 一意の識別子をたとえば続く: **cdc です。AdventureWorks_capture です。A1ACBDED-13FC-428C-8302-10100EF74F52**です。  
+  
+ 表示するには、クリーンアップ ジョブまたはキャプチャ ジョブの現在の構成を使用して[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)です。 ジョブの構成を変更するには、使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)です。  
+  
+## <a name="permissions"></a>Permissions  
+ メンバーシップが必要、 **db_owner**固定データベース ロール。  
+  
+## <a name="examples"></a>使用例  
+  
+### <a name="a-creating-a-capture-job"></a>A. キャプチャ ジョブを作成する  
+ 次の例では、キャプチャ ジョブを作成します。 明示的に削除された既存のクリーンアップ ジョブを改めて作成するという状況を想定しています。 ジョブは既定値を使って作成されます。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+EXEC sys.sp_cdc_add_job @job_type = N'capture';  
+GO  
+```  
+  
+### <a name="b-creating-a-cleanup-job"></a>B. クリーンアップ ジョブを作成する  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにクリーンアップ ジョブを作成します。 パラメーター `@start_job` は 0 に、`@retention` は 5760 分 (96 時間) に設定します。 明示的に削除された既存のクリーンアップ ジョブを改めて作成するという状況を想定しています。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+EXEC sys.sp_cdc_add_job  
+     @job_type = N'cleanup'  
+    ,@start_job = 0  
+    ,@retention = 5760;  
+```  
+  
+## <a name="see-also"></a>参照  
+ [dbo.cdc_jobs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+  
+  

@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ae77c759c4856ecb3b74cbaeb36f0123398c2e16
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9683542427256511b961ad8f6ffd74af43eb23d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessing-sybase-ase-database-objects-for-conversion-sybasetosql"></a>変換 (SybaseToSQL) Sybase ASE データベース オブジェクトを評価します。
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure 移行が複雑な方法で、どれ時間だけを決定する必要があります、移行になります。 SSMA は、オブジェクトおよびを正常に変換されたプロシージャの割合が表示される評価レポートを作成できます[!INCLUDE[tsql](../../includes/tsql_md.md)]です。 SSMA では、変換エラーの原因となる特定の問題を表示することもできます。  
@@ -91,4 +89,3 @@ SSMA が選択されている Sybase Adaptive Server Enterprise (ASE) データ�
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

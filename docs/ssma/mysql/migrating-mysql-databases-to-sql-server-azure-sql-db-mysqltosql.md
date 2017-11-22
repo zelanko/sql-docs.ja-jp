@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c58cd08cddd34bccaabdfe35004a768c4ad85a2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d86a7d779212a781a4bab29a85a963cf163b9ade
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>SQL Server - Azure SQL DB (MySQLToSql) への MySQL データベースの移行
 SQL Server Migration Assistant (SSMA) for MySQL は、SQL Server または SQL Azure に迅速に MySQL データベースを移行するのに役立つ包括的な環境です。 SSMA for MySQL を使用してデータベース オブジェクトとデータを確認、移行対象のデータベースの評価、SQL Server または SQL Azure にデータベース オブジェクトを移行でき、SQL Server または SQL Azure にデータを移行できます。  
@@ -33,7 +31,7 @@ SQL Server Migration Assistant (SSMA) for MySQL は、SQL Server または SQL A
   
 1.  [SSMA プロジェクト &#40; の操作MySQLToSQL &#41;](../../ssma/mysql/working-with-ssma-projects-mysqltosql.md).  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定の詳細については、次を参照してください。[プロジェクト オプションの設定 & #40 です。MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md). データ型マッピングをカスタマイズする方法については、次を参照してください。[マッピング MySQL および SQL Server データ型 & #40 です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定の詳細については、次を参照してください。[プロジェクト オプションの設定 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md). データ型マッピングをカスタマイズする方法については、次を参照してください。[マッピング MySQL および SQL Server データ型 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
 2.  [MySQL &#40; に接続します。MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -66,4 +64,3 @@ SQL Server Migration Assistant (SSMA) for MySQL は、SQL Server または SQL A
 [SSMA の MySQL &#40; のインストールMySqlToSql &#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
 [MySQL &#40; for SSMA の概要MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   
-

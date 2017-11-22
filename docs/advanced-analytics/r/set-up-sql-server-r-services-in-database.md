@@ -1,115 +1,173 @@
 ---
 title: "SQL Server マシン ラーニング Services (In-database) を設定 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - "SQL Server R Services のインストール"
+- "SQL Server の Machine Learning のサービスをインストールします。"
+- "R Services セットアップします。"
+- "SQL の機械学習をインストールします。"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: 3a32560422e8fc5f1a2e4284702d2cb28562f01f
+ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server マシン ラーニング Services (In-database) セットアップします。
 
-このトピックを使用して SQL Server の Machine Learning のサービスを設定する方法について説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザードです。
+このトピックでは、インストールして、次の機械学習で SQL Server データベース内の分析をサポートする機能を構成する方法について説明します。
 
-**適用されます:** SQL Server 2016 R サービス (R のみ)、SQL Server 2017 マシン ラーニング (R および Python)
++ **SQL Server 2016 R Services (In-database)**です。 SQL Server 2016 がある場合は、SQL Server で R コードの実行を有効にするには、この機能をインストールします。 データベース エンジンが必要です。
 
-## <a name="machine-learning-options-in-sql-server-setup"></a>機械学習の SQL Server セットアップのオプション
+    [機械学習で SQL Server 2016 セットアップします。](#bkmk_2016top)
 
-SQL Server セットアップでは、機械学習をインストールするため、次のオプションを提供します。
++ **SQL Server 2017 Machine Learning Services (In-database)**です。 SQL Server 2017 がある場合は、このコードを実行する R (または Python) SQL Server をインストールします。 データベース エンジンが必要です。 
 
-* SQL Server データベースとの機械学習をインストールします。
+    [機械学習で SQL Server 2017 設定します。](#bkmk_2017top)
 
-  このオプションを使用して、ストアド プロシージャを使用して R または Python スクリプトを実行できます。 外部接続で実行される R または Python スクリプトの SQL Server コンピューターをリモート計算コンテキストとして使用することもできます。
++ Machine learning サーバー**ありません**SQL Server
 
-  このオプションをインストールします。
-  
-  * SQL Server 2016 では、次のように選択します。 **R Services (In-database)**です。
-  * SQL Server の 2017 で選択**Machine Learning Services (In-database)**です。
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップには、マシンの学習のコンポーネントは、データベース エンジンと SQL Server では実行されません「スタンドアロン」バージョンをインストールするオプションも含まれています。  一般に、SQL Server をホストするコンピューターとは異なるコンピューターでこのオプションをインストールすることをお勧めします。
+    
+    [機械学習のスタンドアロン サーバーのセットアップ](create-a-standalone-r-server.md)です。
 
+この記事には、使用するセットアップのプロセスがについて説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザードです。 コマンド ライン インストールの場合、またはオフラインのサーバーで使用するインストーラーをダウンロードするには、次の記事を参照してください。
 
-* スタンドアロン machine learning サーバーをインストールします。
++ [コマンドラインから SQL Server の R をインストールします。](unattended-installs-of-sql-server-r-services.md)
++ [コマンドラインから SQL Server 用 Python をインストールします。](../python/unattended-installs-of-sql-server-python-services.md)
++ [コマンドラインからスタンドアロン machine learning サーバーをインストールします。](install-microsoft-r-server-from-the-command-line.md)
++ [いないインターネット ace を備えたサーバーで machine learning のコンポーネントをインストールします。](installing-ml-components-without-internet-access.md)
 
-  このオプションでは、機械学習を必要とや SQL Server を使用しないソリューションの開発環境を作成します。 そのため、1 つのホスティングの SQL Server が別のコンピューターでこのオプションをインストールすることを一般にお勧めします。 詳細については、このオプションは、次を参照してください。[スタンドアロン R Server の作成](../r/create-a-standalone-r-server.md)です。
+**適用されます:** SQL Server 2016、SQL Server 2017
 
-インストール プロセスでは、これらの一部は省略可能な複数の手順が必要です。 省略可能な側面は、両方に依存して機械学習とセキュリティ環境の状態を使用する方法です。 
+## <a name="bkmk_prereqs"></a>インストール前のチェックリスト
 
-## <a name="bkmk_prereqs"></a>前提条件
++ Machine learning データベース内には、SQL Server 2016 以降が必要です。 
 
-*  R Server と R Services の両方を同時にインストールしないでください。 通常インストール R Server (スタンドアロン) データ科学者や開発者は、接続に使用する環境を作成する SQL Server にして R ソリューションを展開します。 そのため、両方を同一のコンピューターにインストールする必要はありません。
++ サポートされている言語: 
 
-* 以前のバージョンの Revolution Analytics 開発環境または RevoScaleR パッケージを使用した場合、または SQL Server 2016 のプレリリース版をインストールした場合は、それらをアンインストールする必要があります。 サイド バイ サイド インストールはサポートされていません。 以前のバージョンの削除については、次を参照してください。[アップグレードおよび SQL Server R Services のインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)です。
+    + SQL Server 2016 では、R がのみがサポートされます。 
 
-* Machine Learning のサービスは、フェールオーバー クラスターをインストールできません。 外部スクリプト プロセスを分離するために使用されるセキュリティ メカニズムが Windows Server フェールオーバー クラスター環境と互換性がないことです。 この問題を回避するには、次のいずれかの操作を行います。
-    * レプリケーションを使用すると、R Services のスタンドアロン SQL Server インスタンスに必要なテーブルをコピーできます。
-    * インストール[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]AlwaysOn を使用し、可用性グループの一部は、スタンドアロン コンピューターにします。
+    + R もいくつかの制限と Azure SQL Database のプレビュー機能として利用できます。 詳細については、次を参照してください[Azure SQL データベースでの R の使用。](using-r-in-azure-sql-database.md)
 
-> [!IMPORTANT]
-> セットアップが完了したら、追加の手順は、機械学習機能を有効にする必要があります。 可能性がありますも必要があります、特定のデータベースにユーザーのアクセス許可を与える変更アカウントの構成またはリモート データ サイエンス クライアントのセットアップします。
+    + Python を使用するには、SQL Server 2017 以降が必要です。
 
-##  <a name="bkmk_installExt"></a>手順 1: 拡張機能をインストールし、機械学習の言語の選択
++ 以前のバージョンの Revolution Analytics 開発環境または RevoScaleR パッケージを使用した場合、または SQL Server 2016 のプレリリース版をインストールした場合は、それらをアンインストールする必要があります。 サイド バイ サイド インストールはサポートされていません。 以前のバージョンの削除については、次を参照してください。[アップグレードおよび SQL Server の Machine Learning のサービスのインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)です。
 
-機械学習を使用するのには、SQL Server 2016 以降をインストールする必要があります。 使用する[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]、データベース エンジンの少なくとも 1 つのインスタンスが必要です。 既定のインスタンスまたは名前付きインスタンスを使用できます。
++ ドメイン コント ローラーで SQL Server 2016 の R Services または SQL Server 2017 Machine Learning Services をインストールすることはできません。 セットアップの R Services または Machine Learning のサービスの一部が失敗します。
 
-1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行します。
-  
-    無人インストールを行う方法については、次を参照してください。[無人を SQL Server R Services のインストール](../r/unattended-installs-of-sql-server-r-services.md)です。
-  
++ 機械学習をフェールオーバー クラスターに機能をインストールすることはできません。 外部スクリプト プロセスを分離するために使用されるセキュリティ メカニズムは、Windows Server フェールオーバー クラスター環境と互換性がありません。 この問題を回避するには、次のいずれかの操作を行います。
+    * レプリケーションを使用すると、有効になっている機械学習で SQL Server インスタンスに必要なテーブルをコピーできます。
+    * AlwaysOn を使用し、可用性グループの一部は、スタンドアロン コンピューターでは、機械学習をインストールします。
+
++ 機械学習フレームワークでは、セットアップが完了したら、追加の構成が必要です。 正確な手順は、組織とセキュリティ ポリシー、サーバーの構成、および想定されるユーザーによって異なります。 すべての手順を確認し、環境内で必要な追加の構成を確認することをお勧めします。
+
+## <a name="bkmk2016top"></a>SQL Server 2016 R Services (In-database) のインストールします。
+
+> [!div class="checklist"]
+> * データベース エンジンと機械学習の機能をインストールします。
+> * インストール後の手順が必要: 機械学習を有効にして再起動
+> * 省略可能なインストール後の手順: ファイアウォール規則を追加、ユーザーを追加、変更、またはサービス アカウントの構成、リモート データ サイエンス クライアントの設定
+
+**SQL Server 2016 セットアップ ウィザードを使用します。**
+
+1. SQL Server セットアップ ウィザードを実行します。
+
 2. **インストール**] タブで [ **SQL Server の新規スタンドアロン インストールまたは既存のインストールに機能の追加**です。
-   
-3. **機能の選択** ページで、R で使用されるデータベース サービスをインストールするジョブや外部のスクリプトと処理をサポートで、次のオプションを選択する拡張機能をインストールします。
-   
-   **SQL Server 2016**
-   - 選択**データベース エンジン サービス**です。
-   - 選択**R Services (In-database)**です。
 
-   **SQL Server 2017**
-   - 選択**データベース エンジン サービス**です。
-   - 選択**機械学習の Services (In-database)**です。
-   - 学習の言語を有効にするには、少なくとも 1 つのマシンを選択します。 、R のみを選択することができますか、R と Python の両方を追加することができます。
+    
+     ![R Services (In-database) をインストール](media/2016-setup-installation-rsvcs.png "R Services のデータベース エンジンのインストールを開始")
    
-   > [!NOTE]
-   > Python または R 言語のオプションを選択しない場合は、セットアップ ウィザードにのみ、extensibility framework、SQL Server の信頼されたスタート パッドが含まれておりがインストールされますが、任意の言語に固有のコンポーネントはインストールされません。 このオプションは、Microsoft の最新のライフ サイクル ポリシーの一部として、SQL Server インスタンスを R または Python にバインドするためです。 詳細については、次を参照してください。 [R Services のインスタンスをアップグレードする使用 SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+3. **機能の選択** ページで、次のオプションを選択します。
 
-4.  **Microsoft R Open のインストールに同意する**] ページで、[ **Accept**です。
+   - 選択**データベース エンジン サービス**です。 機械学習を使用する各インスタンス、データベース エンジンが必要です。
+   - 選択**R Services (In-database)**です。 R です。 データベースで使用するためのサポートをインストール
+    
+     ![R Services 機能の選択](media/2016setup-rsvcs-features.png "の R サービス データベース内のこれらの機能を選択")
+
+    > [!IMPORTANT]
+    > 同時に R サーバーと R Services をインストールすることはできません。 通常インストール R Server (スタンドアロン) データ科学者や開発者は、接続に使用する環境を作成する SQL Server にして R ソリューションを展開します。 そのため、両方を同一のコンピューターにインストールする必要はありません。
+
+4.  **Microsoft R Open のインストールに同意する**] ページで [ **Accept**です。
   
-     オープン ソース R 基本パッケージとツール、拡張 R パッケージおよび接続プロバイダー、Microsoft R 開発チームからのディストリビューションが含まれる Microsoft R Open をダウンロードするには、この使用許諾契約書が必要です。
+    オープン ソース R 基本パッケージとツール、拡張 R パッケージおよび接続プロバイダー、Microsoft R 開発チームからのディストリビューションが含まれる Microsoft R Open をダウンロードするには、この使用許諾契約書が必要です。
   
-    > [!NOTE]
-    >  使用しているコンピューターがインターネットにアクセスを持たない場合」の説明に従って、個別にインストーラーをダウンロードするには、この時点でセットアップを一時停止することができます[インターネットにアクセスできないインストールの R コンポーネント](installing-ml-components-without-internet-access.md)です。
+    使用しているコンピューターがインターネットにアクセスを持たない場合」の説明に従って、個別にインストーラーをダウンロードするには、この時点でセットアップを一時停止することができます[インターネットにアクセスできないインストールの R コンポーネント](installing-ml-components-without-internet-access.md)です。
   
-5. **[次へ]** を選択します。
+5. 使用許諾契約を承諾すると、インストーラーを準備している間ありますは一時停止です。 をクリックして**次**ボタンが使用可能なになります。
 
 6. **インストールの準備完了** ページで、次の項目が含まれています、ことを確認を選択し、**インストール**です。
 
-   **SQL Server 2017**
+   + データベース エンジン サービス
+   + R Services (In-Database)
+
+7. インストールが完了したら、コンピューターを再起動します。
+
+
+## <a name="bkmk2017top"></a>SQL Server 2017 Machine Learning Services (In-database) のインストールします。
+
+> [!div class="checklist"]
+> * データベース エンジンと機械学習の機能をインストールします。
+> * インストール後の手順が必要: 機械学習を有効にして再起動
+> * 省略可能なインストール後の手順: ファイアウォール規則を追加、ユーザーを追加、変更、またはサービス アカウントの構成、リモート データ サイエンス クライアントを設定します。
+
+**開始するには**
+
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行します。
+  
+2. **インストール**] タブで [ **SQL Server の新規スタンドアロン インストールまたは既存のインストールに機能の追加**です。
+
+     ![Machine Learning Services (In-database) をインストール](media/2017setup-installation-page-mlsvcs.png "Machine Learning のサービスとデータベース エンジンのインストールを開始")
+
+3. **機能の選択** ページで、次のオプションを選択します。
+   
+    + 選択**データベース エンジン サービス**です。 機械学習を使用する各インスタンス、データベース エンジンが必要です。
+
+    + 選択**機械学習の Services (In-database)**です。 このオプションは r です。 データベースで使用するためのサポートをインストールします。このオプションを選択した後に、機械学習の言語を選択できます。 、R のみを選択することができますか、R と Python の両方を追加することができます。
+   
+    ![Machine Learning サービス機能の選択](media/2017setup-features-page-mls-rpy.png "の R サービス データベース内のこれらの機能を選択")
+
+    Python または R 言語のオプションを選択しない場合、セットアップ ウィザードは、言語固有のコンポーネントをインストールしないと SQL Server 信頼スタート パッドが含まれます extensibility framework のみをインストールします。  一般に、少なくとも 1 つの言語を最初にインストールすることをお勧めします。 ただし、すぐに、バインディング プロセスを使用して、機械学習のコンポーネントをアップグレードする場合は、このオプションを使用する場合があります。 詳細については、次を参照してください。 [R Services のインスタンスをアップグレードする使用 SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+
+    お勧めする**しない**同じコンピューターにスタンドアロンと、データベース内の機能をインストールし、同時にインストールしないことです。 通常、ソリューションを展開するときに、Machine Learning サーバー データ科学者や開発者は、接続に使用する環境を作成するには、(スタンドアロン) を SQL サーバーにインストールはします。 そのため、両方を同一のコンピューターにインストールする必要はありません。
+
+4.  機械学習の契約のライセンスを取得します。 によっては、どの言語をインストールしている、R、Python、またはその両方のライセンス契約に同意する必要があります。
+
+    + R: この使用許諾契約のライセンス条項は、オープン ソース R 基本パッケージとツール、拡張 R パッケージおよび接続プロバイダー、Microsoft 開発チームからのディストリビューションが含まれる Microsoft R Open、について説明します。
+  
+    + Python のライセンス条項。 Python のオープン ソース ライセンス契約は、Anaconda と関連するツール、および Microsoft 開発チームの一部の新しい Python ライブラリにも説明します。
+
+    をクリックして**Accept**をアグリーメントを示します。 コンポーネントは、準備している間は一時停止、**次**ボタンができるようになります。
+
+    使用しているコンピューターがインターネットにアクセスを持たない場合」の説明に従って、個別にインストーラーをダウンロードするには、この時点でセットアップを一時停止することができます:[インターネットにアクセスできないマシン ラーニング コンポーネントをインストール](installing-ml-components-without-internet-access.md)です。
+
+6. **インストールの準備完了** ページで、次の項目が含まれています、ことを確認を選択し、**インストール**です。
+
    - データベース エンジン サービス
    - Machine Learning Services (データベース内)
    - R、Python、またはその両方
 
-   **SQL Server 2016**
-   - データベース エンジン サービス
-   - R Services (In-Database)
+7. インストールが完了したら、セットアップ ログの場所をメモを行い、コンピューターを再起動します。
 
-7. インストールが完了したら、コンピューターを再起動します。
+###  <a name="bkmk_enableFeature"></a>必要なインストール後の手順
 
-##  <a name="bkmk_enableFeature"></a>手順 2: 外部スクリプト サービスを有効にします。
+セキュリティ上の理由から、マシン学習機能は無効既定では、機能がインストールされている場合でもです。 サーバー管理者は、機能を有効にする必要があり、インスタンスを再起動します。 
+
+このセクションでは、機械学習のインスタンスを再構成する方法について説明します。 構成では、外部のサービス アカウントを設定し、スタート パッド サービスを開始します。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 まだインストールされていない場合は、SQL Server セットアップ ウィザードを再実行してダウンロード リンクを開き、インストールすることができます。
   
@@ -119,7 +177,7 @@ SQL Server セットアップでは、機械学習をインストールするた
    sp_configure
    ```
 
-    値、**外部のスクリプトを有効になっている**プロパティされます**0**します。 既定では、画面の領域を削減する機能が無効になっており、管理者で明示的に許可する必要があるためにです。
+    値を探して、**外部のスクリプトを有効になっている**対象となるプロパティ**0**します。 機能は、無効になって既定では、画面の領域を削減するためです。
      
 3. 外部のスクリプト機能を有効にするには、次のステートメントを実行します。
   
@@ -132,21 +190,21 @@ SQL Server セットアップでは、機械学習をインストールするた
 
     使用してサービスを再起動することができます、 **Services**パネルまたは SQL Server 構成マネージャーを使用して、コントロール パネルの します。
 
-## <a name="bkmk_TestScript"></a>手順 3: は、スクリプトの実行がローカルで動作することを確認してください。
-
-外部スクリプト実行サービスが有効になっていることを確認します。
-
-1. SQL Server Management Studio で開く新しい**クエリ**ウィンドウ、および、次のコマンドを実行します。
+5. SQL Server Management Studio で、外部スクリプト実行サービスを有効することを確認するには、新しい開きます**クエリ**ウィンドウ、および、次のコマンドを実行します。
   
     ```SQL
     EXEC sp_configure  'external scripts enabled'
     ```
     この時点で、**run_value** が 1 に設定されている必要があります。
     
-2. 開く、 **Services**パネル、およびスタート パッド サービスのインスタンスが実行されていることを確認してください。 複数のインスタンスをインストールした場合は、各インスタンスに独自のスタート パッド サービスがあります。
-   
-3. 新しく開きます**クエリ**ウィンドウ[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、次のように単純な R スクリプトを実行します。
-  
+6. 開く、 **Services**パネル、およびスタート パッド サービスのインスタンスが実行されていることを確認してください。 複数のインスタンスをインストールした場合は、各インスタンスに独自のスタート パッド サービスがあります。
+
+7. 外部スクリプトのランタイムは、SQL Server と通信できることを確認する単純なスクリプトを実行することをお勧めします。 
+
+    新しく開きます**クエリ**ウィンドウに[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、次のようスクリプトを実行します。
+    
+    + R の
+    
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
@@ -156,29 +214,49 @@ SQL Server セットアップでは、機械学習をインストールするた
     WITH RESULT SETS (([hello] int not null));
     GO
     ```
-  
-    **[結果]**
-  
-    *こんにちは* *1*
-  
-   コマンドの実行、エラーが発生せず、次の手順に進んでください。 一般的な問題の一覧については、エラーが発生した場合は、次を参照してください。[アップグレードとインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)です。
 
-## <a name="bkmk_FollowUp"></a>手順 4: 追加の構成
+    + Python の
+    
+    ```SQL
+    EXEC sp_execute_external_script  @language =N'Python',
+    @script=N'
+    OutputDataSet = InputDataSet;
+    ',
+    @input_data_1 =N'SELECT 1 AS hello'
+    WITH RESULT SETS (([hello] int not null));
+    GO
+    ```
 
-R、Python、ユース ケースによっては、サーバー、ファイアウォールが、サービス、またはデータベースのアクセス許可が使用するアカウントに追加の変更を加える必要があります。 変更する必要がありますはケースによって異なります。
+    スクリプトは、外部スクリプトの実行時の読み込みを初めて実行するときは少しことができます。 結果は、次のようにする必要があります。
+
+    | hello |
+    |----|
+    | 1|
+
+
+8. エラーが発生した場合は、インストールが完了したら、またはトラブルシューティング ガイドを参照する必要があります (省略可能) の変更を説明するセクションに進みます。
+
+    + [省略可能なインストール後の手順: サービスと権限の構成](#bkmk_FollowUp) 
+    + [機械学習で SQL Server のトラブルシューティング](upgrade-and-installation-faq-sql-server-r-services.md)
+
+## <a name="bkmk_FollowUp"></a>省略可能なインストール後の手順
+
+機械学習、ユース ケースによっては、サーバー、ファイアウォールが、サービス、またはデータベースのアクセス許可が使用するアカウントに追加の変更を加える必要があります。 変更する必要がありますはケースによって異なります。
 
 追加の変更を必要とする一般的なシナリオは次のとおりです。
 
 * SQL Server への着信接続を許可するファイアウォール ルールを変更します。
 * 追加のネットワーク プロトコルを有効にします。
 * サーバーがリモート接続をサポートしていることを確認します。
-* 有効にする*黙示的な認証*ユーザーがリモート R 開発ターミナルから SQL Server のデータにアクセスし、し、RODBC パッケージまたは他の Microsoft ODBC Open Database Connectivity () プロバイダーを使用して R コードを実行します。
-* R スクリプトを実行するか、データベースを使用するユーザーのアクセス許可を付与します。
+* 有効にする*黙示的な認証*ユーザーがリモート データ サイエンス クライアントから SQL Server データにアクセスし、RODBC パッケージまたは他の ODBC プロバイダーを使用してコードを実行します。
+* 個々 のデータベースへのアクセスをユーザーに付与します。
 * スタート パッド サービスとの通信を妨げるセキュリティの問題を修正します。
-* ユーザーが R コードを実行またはパッケージをインストールする権限を持っていることを確認できます。
+* ユーザーがコードを実行したり、パッケージをインストールする権限を持っていることを確認できます。
 
 > [!NOTE]
 > 表示されているすべての変更は、必要があります。 ただし、すべての項目を自分のシナリオに該当するかどうかを確認することをお勧めします。
+
+追加のトラブルシューティングのヒントをご覧ください:[アップグレードとインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ### <a name="bkmk_configureAccounts"></a>スタート パッドのアカウント グループの暗黙の認証を有効にします。
 
@@ -205,7 +283,7 @@ R、Python、ユース ケースによっては、サーバー、ファイアウ
 > [!NOTE]
 > SQL Server のコンピューティング コンテキストで R スクリプトを実行するための SQL ログインを使用する場合はこの手順は必要ありません。
 
-インストールした場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独自のインスタンスで R スクリプトを実行していると、通常、管理者は、スクリプトを実行しているデータベース所有者は、少なくとも、さまざまな操作、データベース、および機能のすべてのデータの暗黙的なアクセス許可を持たない新しい R パッケージのインストールに必要です。
+インストールした場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独自のインスタンスで通常スクリプトを実行する管理者は、またはデータベース所有者は、少なくとも、さまざまな操作、データベース、および新しいパッケージをインストールする機能のすべてのデータの暗黙的なアクセス許可を持たない必要に応じて。
 
 ただし、エンタープライズのシナリオで、SQL ログインを使用して、データベースにアクセスするユーザーを含むほとんどのユーザーはありませんこのような高度な権限。 そのため、R または Python スクリプトを実行するユーザーごとに、外部スクリプトを使用する各データベースでスクリプトを実行するユーザーのアクセス許可を付与する必要があります。
 
@@ -216,7 +294,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 ```
 
 > [!TIP]
-> セットアップのヘルプが必要ですか。 すべての手順を実行したかわかりませんか。 カスタム レポートを使って、R Services のインストール状態を確認できます。 詳しくは、「 [Management Studio でカスタム レポートを使用して R Services を監視する](monitor-r-services-using-custom-reports-in-management-studio.md)」をご覧ください。
+> セットアップのヘルプが必要ですか。 すべての手順を実行したかわかりませんか。 これらのカスタム レポートを使用して、インストール状態をチェックして、追加の手順を実行します。 
+> 
+> [カスタム レポートを使用して、マシン学習サービスを監視](monitor-r-services-using-custom-reports-in-management-studio.md)です。
 
 ### <a name="ensure-that-the-sql-server-computer-supports-remote-connections"></a>SQL Server コンピューターがリモート接続をサポートしていることを確認してください。
 
@@ -226,9 +306,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 ### <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>ユーザーの読み取り、書き込み、またはデータベースに DDL のアクセス許可を付与します。
 
-R スクリプトを実行中、ユーザー アカウントまたは SQL ログイン可能性があります必要があります、他のデータベースからデータを読み取る、結果を格納する新しいテーブルを作成およびテーブルにデータを書き込みます。
-
-ユーザー アカウントまたは R スクリプトを実行する SQL ログインごとに、アカウントまたはログインがデータベースで適切な権限を持っていることを確認する: *db_datareader*、 *db_datawriter*、または*db_ddladmin*です。
+R または Python の実行に使用するユーザー アカウント可能性があります必要がある他のデータベースからデータを読み取る、結果を格納する新しいテーブルを作成およびテーブルにデータを書き込みます。 そのため、ユーザーごとに実行されるように R または Python スクリプト、ユーザーがデータベースで適切な権限を持っていることを確認します*db_datareader*、 *db_datawriter*、または*作業。ddladmin*です。
 
 たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、SQL ログイン *MySQLLogin* に、 *RSamples* データベースで T-SQL クエリを実行する権限を与えています。 このステートメントを実行するには、SQL ログインがサーバーのセキュリティ コンテキストに既に存在している必要があります。
 
@@ -254,15 +332,13 @@ Azure の仮想マシンに Machine Learning サービス (または R サービ
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server で、スクリプトの実行機能が動作することを確認した後は、SQL Server Management Studio、Visual Studio コード、またはサーバーに T-SQL ステートメントを送信できるその他のクライアントから R、Python のコマンドを実行できます。
+SQL Server で、スクリプトの実行機能が動作することを確認した後は、SQL Server Management Studio、Visual Studio コード、またはサーバーに T-SQL ステートメントを送信できるその他のクライアントから R、Python のコマンドを実行できます。 これを行うには、前は機械学習の頻繁に使用をサポートするか、新しい R パッケージを追加するには、システム構成にいくつかの変更を加えることができます。
 
-ただし、いくつかは機械学習の頻繁に使用をサポートするか、新しい R パッケージを追加するには、システム構成を変更することができます。
-
-このセクションでは、機械学習をサポートするために行えるいくつかの一般的な変更を一覧表示します。
+このセクションでは、いくつかの一般的な最適化と機械学習の学習活動を一覧表示します。
 
 ### <a name="add-more-worker-accounts"></a>複数のワーカー アカウントを追加します。
 
-頻度の高い、R を使用すると思われる場合、または同時に実行中のスクリプトに多数のユーザーの予定の場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server R Services のユーザー アカウント プールを変更する](modify-the-user-account-pool-for-sql-server-r-services.md)です。
+頻度の高い、R を使用すると思われる場合、または同時に実行中のスクリプトに多数のユーザーの予定の場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server の Machine Learning のサービスのユーザー アカウント プールを変更する](modify-the-user-account-pool-for-sql-server-r-services.md)です。
 
 ### <a name="bkmk_optimize"></a>外部スクリプトの実行用のサーバーを最適化します。
 
@@ -282,32 +358,28 @@ Standard Edition を使用しており、リソース ガバナーを持って�
 
 使用する、追加の R パッケージをインストールする分ほどをかかります。
 
-SQL Server で使用するパッケージは、インスタンスによって使用される既定のライブラリにインストールする必要があります。 コンピューターで、R の別のインストールをした場合、あるいはユーザー ライブラリへのパッケージをインストールした場合は、T-SQL からこれらのパッケージを使用することはできません。 詳細については、次を参照してください。 [SQL Server に追加の R パッケージをインストール](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md)です。
+SQL Server で使用するパッケージは、インスタンスによって使用される既定のライブラリにインストールする必要があります。 コンピューターで、R の別のインストールをした場合、あるいはユーザー ライブラリへのパッケージをインストールした場合は、T-SQL からこれらのパッケージを使用することはできません。
 
-データベース レベルでは、上のパッケージを共有するユーザー グループを設定したり、独自のパッケージをインストールするユーザーを有効にするデータベース ロールを構成できます。 詳細については、次を参照してください。[パッケージの管理](r-package-management-for-sql-server-r-services.md)です。
+インストールして、R パッケージを管理するためのプロセスは、SQL Server 2016 および SQL Server 2017 で異なります。 たとえば、SQL Server の 2017 でするレベルでは、データベース、パッケージを共有するユーザー グループを設定またはユーザー独自のパッケージをインストールするデータベース ロールを構成します。 詳細については、次を参照してください。[パッケージの管理](r-package-management-for-sql-server-r-services.md)です。
+
+SQL Server 2016 では、データベース管理者は、ユーザーが必要な R パッケージをインストールする必要があります。
+
+管理アクセス権もインスタンス ライブラリに追加の Python パッケージのインストールに必要です。
 
 ### <a name="upgrade-the-machine-learning-components"></a>コンピューターをアップグレードするコンポーネントの学習
 
-SQL Server 2016 を使用して R Services をインストールするときに、リリースまたはサービス パックが発行されたときに最新だった R コンポーネントのバージョンを取得します。 修正プログラムを適用したり、サーバーをアップグレードするたびに、マシン学習コンポーネントは、アップグレードもします。
+SQL Server の machine learning の機能をインストールするときに、リリースまたはサービス パックが発行されたときに、最新だった R または Python のコンポーネントのバージョンを取得します。 修正プログラムを適用したり、サーバーをアップグレードするたびに、マシン学習コンポーネントは、アップグレードもします。
 
-ただし、機械学習はサポートされているよりも高速なスケジュールでコンポーネントをアップグレードする Microsoft R Server をインストールして、インスタンスをバインドして、SQL Server のリリースでします。 アップグレードすると、取得することも、次の新機能、Microsoft R Server の最近のリリースでサポートされます。
+ただし、機械学習はサポートされているよりも高速なスケジュールでコンポーネントをアップグレードすると呼ばれるプロセスを使用して、SQL Server のリリースによって_バインディング_です。 SQL Server インスタンスをバインドするときに両方 R または Python のバージョンをアップグレードしてより頻繁なアップグレードをサポートする別のサポート ポリシーを変更します。 
 
-* 新しい R パッケージを含むパッケージ[sqlrutils](https://docs.microsoft.com/r-server/r-reference/sqlrutils/sqlrutils)、 [olapR](https://docs.microsoft.com/r-server/r-reference/olapr/olapr)、および[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)です。
+このようなアップグレードが含まれます。
+
+* 新しい R パッケージ
++ などの Api を使用する Microsoft パッケージ[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)です。
 * [モデルを事前トレーニング済み](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models)イメージの分類とテキストの分析のためです。
 
-SQL Server 2016 インスタンスをアップグレードする方法については、次を参照してください。[バインディングからのアップグレードの R コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+SQL Server インスタンスをアップグレードする方法については、次を参照してください。[バインディングから machine learning のコンポーネントをアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 
-インスタンスに関連付けされている R のバージョンがわからない場合は、次などのコマンドを実行できます。
-
-```SQL
-EXEC sp_execute_external_script  @language =N'R',
-@script=N'
-myvar <- version$version.string
-OutputDataSet <- as.data.frame(myvar);'
-```
-
-> [!NOTE]
-> バインディング プロセスを使用してアップグレードは、SQL Server 2017 のもサポートされます。 ただし、現在のアップグレードは SQL Server 2016 インスタンスに対してのみサポートされます。
 
 ### <a name="tutorials"></a>チュートリアル
 
@@ -323,5 +395,4 @@ OutputDataSet <- as.data.frame(myvar);'
 
 インスタンスのインストール状態をチェックして、一般的な問題を修正、これらのカスタム レポートを実行してください。
 
-* [SQL Server R Services のカスタム レポート](monitor-r-services-using-custom-reports-in-management-studio.md)
-
+* [SQL Server R Services のカスタム レポート](\r\monitor-r-services-using-custom-reports-in-management-studio.md)

@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithCurves
 - BufferWithCurves_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- BufferWithCurves method (geography)
+dev_langs: TSQL
+helpviewer_keywords: BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12b9abd82133c7f2c42f43dd436e223b1b0173f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80f16777999a029e1063305a0d1b8501af7e05d7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -149,7 +145,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [Geography インスタンスの拡張メソッド](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves &#40;geometry データ型"&"#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+ [BufferWithCurves &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   
-

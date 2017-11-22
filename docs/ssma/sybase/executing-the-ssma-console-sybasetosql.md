@@ -5,8 +5,7 @@ ms.date: 09/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 998f882c0cd351f1df95cb8177ce93d6b06ed09a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 998a42b80fa415537051693467b337f07c9ba381
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソール (SybaseToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 次のセクションでは、同じを詳しく説明します。  
@@ -119,7 +117,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 > [!NOTE]  
 > - **参照**コンソールで、UI の機能がサポートされていません。  
-> - 'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+> - 'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
 ### <a name="connect-source-database"></a>接続ソース データベース  
 このコマンドは、ソース データベースへの接続を実行し、ソース データベースが、すべてのメタデータの高レベルのメタデータを読み込みます。
@@ -676,10 +674,9 @@ fail-script>" (optional)
   
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
   
--   レポートの生成に、次を参照してください。[レポートの生成 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   レポートの生成に、次を参照してください。[レポートの生成 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング & #40 です。SybaseToSQL &#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;です。SybaseToSQL &#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   
-
