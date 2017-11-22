@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Services, extensibility
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Analysis Services, extensibility
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ec3cf33f788c6e208919d9d86a2ac74de9938bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a676978e37f257293b863786c3bcfae103ed4c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="extending-olap-through-personalizations"></a>パーソナル化による OLAP の拡張
   Analysis Services は、多次元式 (MDX) およびデータ マイニング拡張機能 (DMX) 言語で使用する多くの組み込み関数を提供します。 これらの関数は、標準的な統計計算から階層に含まれるメンバーのスキャンまで、さまざまな処理に対応できるように設計されています。 ただしと同様に、他の複雑で強力な製品は常にこのような製品のさらに機能を拡張する必要があります。  
@@ -46,4 +43,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services のパーソナル化拡張機能](../../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
   
   
-

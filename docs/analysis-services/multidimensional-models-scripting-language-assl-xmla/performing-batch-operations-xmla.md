@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - multiple projects
 - XML for Analysis, batches
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 509554d21fc56088d5be341cd828b8b8ed8e3d60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e2673091cfba456834da77049036591e4591891
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performing-batch-operations-xmla"></a>バッチ操作の実行 (XMLA)
   使用することができます、[バッチ](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) を単一の XMLA を使用して複数の XMLA コマンドを実行するコマンド[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。 含まれる複数のコマンドを実行することができます、**バッチ**コマンドを単一のトランザクションとしてまたはコマンドごとに個別のトランザクションで、直列または並列でします。 アウトオブ ライン バインドおよびその他のプロパティを指定することも、**バッチ**の複数の処理コマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  
@@ -131,10 +129,9 @@ ms.lasthandoff: 09/01/2017
     >  A**プロセス**コマンドを含めることはできません、**バインド**、**データソース**、 **DataSourceView**、または**ErrorConfiguration**プロパティ場合、**プロセス**にコマンドが含まれている、**バッチ**コマンド。 これらのプロパティを指定する必要があります場合、**プロセス**コマンドでの対応するプロパティに必要な情報、**バッチ**コマンドを含む、**プロセス**コマンド。  
   
 ## <a name="see-also"></a>参照  
- [バッチ要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Process 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
+ [バッチ要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Process 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

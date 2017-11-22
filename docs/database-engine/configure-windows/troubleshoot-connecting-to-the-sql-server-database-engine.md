@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,10 +85,10 @@ SQL Server の一部のインストールでは、管理者が構成マネージ
 TCP/IP を使用して SQL Server に接続するには、Windows が接続を確立できることが必須となります。 `ping` ツールを使用し、TCP をテストします。
 1.  [スタート] メニューの **[ファイル名を指定して実行]**をクリックします。 **[ファイル名を指定して実行]** ウィンドウで、「 **cmd**」と入力し、 **[OK]**をクリックします。 
 2.  コマンド プロンプト ウィンドウで、「 `ping` 」と入力し、SQL Server を実行しているコンピューターの IP アドレスを入力します。 たとえば、IPv4 アドレスの場合、「 `ping 192.168.1.101` 」と、IPv6 アドレスの場合、「 `ping fe80::d51d:5ab5:6f09:8f48%11` 」と入力します。 (ping の後の数値は、先に集めたコンピューターの IP アドレスに変えます。) 
-3.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 "**宛先ホストに到達できません**"  または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、TCP/IP が正しく構成されていません。 (IP アドレスが正しく、タイプミスもないことを確認してください。)この段階でのエラーは、クライアント コンピューター、サーバー コンピューター、ネットワーク (ルーターなど) に関する問題を示唆します。 インターネットには、TCP/IP のトラブルシューティングに関するさまざまなリソースがあります。 2006 年に公開された記事、「 [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) から始めると効率的です。
+3.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 **宛先ホストに到達できません。** または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、TCP/IP が正しく構成されていません。 (IP アドレスが正しく、タイプミスもないことを確認してください。)この段階でのエラーは、クライアント コンピューター、サーバー コンピューター、ネットワーク (ルーターなど) に関する問題を示唆します。 インターネットには、TCP/IP のトラブルシューティングに関するさまざまなリソースがあります。 2006 年に公開された記事、「 [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) から始めると効率的です。
 4.  次に、IP アドレスによる ping テストに成功した場合、コンピューター名を TCP/IP アドレスに解決できることをテストします。 クライアント コンピューターのコマンド プロンプト ウィンドウで、「 `ping` 」と入力し、SQL Server を実行しているコンピューターのコンピューター名を入力します。 たとえば、IPv4 アドレスの場合、「 `ping newofficepc` 
-5.  たとえば、IP ドレスに ping できても、"**宛先ホストに到達できません**"  または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、古い名前解決情報がクライアント コンピューターにキャッシュされている可能性があります。 「 `ipconfig /flushdns` 」と入力し、DNS (動的な名前解決) キャッシュを消去します。 次に、もう一度、名前でコンピューターに ping を実行します。 DNS キャッシュが空の場合、クライアント コンピューターはサーバー コンピューターの IP アドレスに関する最新情報がないか確認します。 
-6.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 IP アドレスでサーバー コンピューターに ping を成功させることができるが、コンピューター名で ping を実行すると、"**宛先ホストに到達できません**"  または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、名前解決が正しく構成されていません。 (詳細については、前述の 2006 年の記事、「[How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) を参照してください。)名前解決が成功しなくても、SQL Server に接続できますが、コンピューター名を IP アドレスに解決できない場合、IP アドレスを指定して接続を行う必要があります。 そのような状態は理想的ではありません。名前解決は後で修正できます。
+5.  たとえば、IP ドレスに ping できても、" **宛先ホストに到達できません**" または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、古い名前解決情報がクライアント コンピューターにキャッシュされている可能性があります。 「 `ipconfig /flushdns` 」と入力し、DNS (動的な名前解決) キャッシュを消去します。 次に、もう一度、名前でコンピューターに ping を実行します。 DNS キャッシュが空の場合、クライアント コンピューターはサーバー コンピューターの IP アドレスに関する最新情報がないか確認します。 
+6.  ネットワークが適切に構成されていれば、**Reply from \<IP アドレス>** (この後にいくつかの情報が続きます) のような応答を受け取ります。 IP アドレスでサーバー コンピューターに ping を成功させることができるが、コンピューター名で ping を実行すると、 **宛先ホストに到達できません。** または "**要求がタイムアウトしました**" などのエラーを受け取る場合は、名前解決が正しく構成されていません。 (詳細については、前述の 2006 年の記事、「[How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) を参照してください。)名前解決が成功しなくても、SQL Server に接続できますが、コンピューター名を IP アドレスに解決できない場合、IP アドレスを指定して接続を行う必要があります。 そのような状態は理想的ではありません。名前解決は後で修正できます。
   
   
 ## <a name="testing-a-local-connection"></a>ローカル接続をテストする
@@ -160,5 +158,4 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
     1. クライアント コンピューターで、SQL Server 構成マネージャーを使用し、左ペインで **[SQL Native Client** *<バージョン>* **の構成]** を展開し、**[クライアント プロトコル]** を選択します。
     2. 右ペインで、TCP/IP が有効になっていることを確認します。 TCP/IP が無効になっている場合、 **[TCP/IP]** を右クリックし、 **[有効化]**をクリックします。
     3. TCP/IP のプロトコル順序が名前付きパイプ (または、古いバージョンでは VIA) プロトコルより小さい数値になっていることを確認します。 一般的に、共有メモリを 1 に、TCP/IP を 2 のままにしておきます。 共有メモリは、クライアントと SQL Server が同じコンピューターで実行されている場合にのみ使用されます。 有効なプロトコルはすべて、その中の 1 つが成功するまで試されます。ただし、同じコンピューターに接続するのでなければ、共有メモリはスキップされます。 
-
 

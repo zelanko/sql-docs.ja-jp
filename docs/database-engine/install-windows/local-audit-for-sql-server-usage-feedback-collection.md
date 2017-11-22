@@ -2,9 +2,12 @@
 title: "SQL Server Usage Feedback Collection の Local Audit | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - dbe-security
@@ -17,13 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server Usage Feedback Collection の Local Audit
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ## <a name="introduction"></a>概要
 
 Microsoft SQL Server は、お客様のコンピューターまたはデバイスに関する情報 (以下「標準的なコンピューター情報」といいます) を収集してマイクロソフトに送信するインターネット対応の機能を備えています。 [SQL Server Usage Feedback Collection](http://support.microsoft.com/kb/3153756) の Local Audit コンポーネントは、サービスで収集されたデータを保存先フォルダーに出力します。このデータは、Microsoft に送信されるデータ (ログ) です。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。  

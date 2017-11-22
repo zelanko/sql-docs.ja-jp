@@ -14,23 +14,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 02d8617161c4d2a023ea5b91e5e4fc2074c6c07d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 875dd29a77a341e3d40502002488fc0189947c9d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>表形式モデルのスクリプト言語 (TMSL) のリファレンス
 
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-  Tabular Model Scripting Language (TMSL) は、Analysis Services 表形式モデルのデータベース互換性レベル 1200 以上のコマンドとオブジェクト モデルの定義構文です。 TMSL は、XMLA プロトコルを介して Analysis Services と通信する場所、 [XMLA です。実行](../analysis-services/xmla/xml-elements-methods-execute.md)メソッドは、両方を受け取ります JSON ベース**ステートメント**TMSL だけでなく、従来 XML ベースのスクリプトでスクリプト[Analysis Services スクリプト言語 & #40 です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+  Tabular Model Scripting Language (TMSL) は、Analysis Services 表形式モデルのデータベース互換性レベル 1200 以上のコマンドとオブジェクト モデルの定義構文です。 TMSL は、XMLA プロトコルを介して Analysis Services と通信する場所、 [XMLA です。実行](../analysis-services/xmla/xml-elements-methods-execute.md)メソッドは、両方を受け取ります JSON ベース**ステートメント**TMSL だけでなく、従来 XML ベースのスクリプトでスクリプト[Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  TMSL の主要な要素は次のとおりです。  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="scripting-languages-in-analysis-services"></a>Analysis services スクリプト言語  
  Analysis Services には、ASSL、TMSL スクリプト言語がサポートしています。 以上の互換性レベル 1200 で作成された表形式モデルだけは、JSON 形式に TMS に記載されています。  
   
- [Analysis Services スクリプト言語 & #40 です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)が最初のスクリプト言語および多次元モデルと下位の互換性レベル (1100 または 1103) でのテーブル モデルに対してのみのスクリプト言語でがあります。 Assl で表形式モデル 110x、条項に記載された多次元など**キューブ**(モデル) 用と**measuregroup** (テーブル) 用です。  
+ [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)が最初のスクリプト言語および多次元モデルと下位の互換性レベル (1100 または 1103) でのテーブル モデルに対してのみのスクリプト言語でがあります。 Assl で表形式モデル 110x、条項に記載された多次元など**キューブ**(モデル) 用と**measuregroup** (テーブル) 用です。  
   
 > [!NOTE]  
 >  [SQL Server Data Tools (SSDT) を切り替えることで、TMSL を使用する以前のバージョン表形式モデルをアップグレードすることができます、 **CompatibilityLevel** 1200 またはそれ以降。 アップグレードは元に元に戻すことに注意してください。 をアップグレードする前に、元のバージョンを後で必要な場合、モデルをバックアップします。  
@@ -84,8 +83,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [Analysis services 表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Analysis Services スクリプト言語 & #40 です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

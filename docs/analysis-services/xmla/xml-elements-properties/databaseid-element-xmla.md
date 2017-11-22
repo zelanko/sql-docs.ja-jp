@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DatabaseID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DatabaseID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.databaseid
 - urn:schemas-microsoft-com:xml-analysis#DatabaseID
 - http://schemas.microsoft.com/analysisservices/2003/engine#DatabaseID
-helpviewer_keywords:
-- DatabaseID element
+helpviewer_keywords: DatabaseID element
 ms.assetid: 2df720dd-9b42-449a-9df6-0d12930603f0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ca63dc92b7824be058bf391949845a800a02e914
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 53f64d6a5f1842a3fde67a4eb5877503e66b1785
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databaseid-element-xmla"></a>DatabaseID 要素 (XMLA)
   オブジェクト参照を含む親要素内で、データベースを識別します。  
@@ -76,7 +71,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

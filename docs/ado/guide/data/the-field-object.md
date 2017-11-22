@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Field object [ADO]
+helpviewer_keywords: Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ecd2382d15536a5c2ebd2b2098c89c41c78ba1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-field-object"></a>Field オブジェクト
 各**フィールド**オブジェクトは通常、データベース テーブル内の列に対応しています。 ただし、**フィールド**を別のポインターを表すことができますも**レコード セット**チャプターと呼ばれます。 チャプター列などの例外は、このガイドの後半で取り上げます。  
@@ -126,4 +123,3 @@ ms.lasthandoff: 09/09/2017
  使用すると、現在のレコードがない場合、 **GetChunk**または**AppendChunk**メソッドを**フィールド**オブジェクト、3021 (現在のレコードがありません) エラーが発生します。  
   
  これらのメソッドを使用してバイナリ データを操作するの例は、次を参照してください。、 [AppendChunk メソッド](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk メソッド](../../../ado/reference/ado-api/getchunk-method-ado.md)の例では、 *ADO プログラマーズ リファレンス*です。
-

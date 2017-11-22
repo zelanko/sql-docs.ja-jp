@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- StorageMode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: StorageMode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- StorageMode
-helpviewer_keywords:
-- StorageMode element
+applies_to: SQL Server 2016 Preview
+f1_keywords: StorageMode
+helpviewer_keywords: StorageMode element
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1cb05e28a6deb1158ecd41f50041b2d63738af53
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dd6ed7838025255015c3a4103689b772dd035771
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="storagemode-element-assl"></a>StorageMode 要素 (ASSL)
   親要素のストレージ モードを指定します。  
@@ -63,7 +57,7 @@ ms.lasthandoff: 09/01/2017
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[Cube 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)、[ディメンション要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)、 [MeasureGroup 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)、[要素 &#40; をパーティション分割ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
+|親要素|[Cube 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)、[ディメンション要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)、 [MeasureGroup 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)、[要素 &#40; をパーティション分割ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
@@ -81,7 +75,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**StorageMode**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.Cube>、 <xref:Microsoft.AnalysisServices.Dimension>、 <xref:Microsoft.AnalysisServices.MeasureGroup>、および<xref:Microsoft.AnalysisServices.Partition>です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

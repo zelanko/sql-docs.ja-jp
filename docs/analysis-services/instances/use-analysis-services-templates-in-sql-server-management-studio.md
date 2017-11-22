@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9775571e489c2f950bf50fb3c62386fba13e90dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff4058fd2827698cee28b1a9d6b759719688a212
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、XMLA スクリプト、DMX クエリ、または MDX クエリの迅速な作成、キューブまたはテーブル モデルの KPI の作成、バックアップ操作および復元操作のスクリプト作成、および他の多数のタスクを実行するためのテンプレートのセットを提供します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。  
@@ -153,7 +152,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]**テンプレートを空のクエリ ウィンドウにドラッグします。  
   
-3.  テンプレートで、置換、 [RequestType 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)要素を次のテキスト。`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  テンプレートで、置換、 [RequestType 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)要素を次のテキスト。`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  **[実行]**をクリックします。  
   
@@ -238,7 +237,6 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
  [多次元式 (MDX) リファレンス](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services スクリプト言語 & #40 です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

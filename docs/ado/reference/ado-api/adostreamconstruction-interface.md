@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ADOStreamConstruction
-helpviewer_keywords:
-- ADOStreamConstruction interface [ADO]
+f1_keywords: ADOStreamConstruction
+helpviewer_keywords: ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e22c76c1e484e544e53d9ee313e6e303b7f0b8f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9090cd99a7a43645165b9b1095f9cd9e789788f3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction インターフェイス
 **ADOStreamConstruction**インターフェイスは、ADO を構築するために使用**ストリーム**オブジェクトを OLE DB から**IStream** C/C++ アプリケーション内のオブジェクト。  
@@ -37,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[ストリームのプロパティ](../../../ado/reference/ado-api/stream-property.md)|読み取り/書き込みです。 OLE DB を取得/設定**ストリーム**オブジェクト。|  
+|[Stream プロパティ](../../../ado/reference/ado-api/stream-property.md)|読み取り/書き込みです。 OLE DB を取得/設定**ストリーム**オブジェクト。|  
   
 ## <a name="methods"></a>メソッド  
  [なし] :  
@@ -82,4 +78,3 @@ adoStrConstruct->put_Stream(pUnk);
   
 ## <a name="see-also"></a>参照  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)
-

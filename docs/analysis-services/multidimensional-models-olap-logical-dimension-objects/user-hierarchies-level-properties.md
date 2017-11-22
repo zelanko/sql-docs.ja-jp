@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - user hierarchies [Analysis Services]
 - hierarchies [Analysis Services], user
 ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dea548f76a6197f557a520bfa0153133643bed3a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7fa44b453e1c91d8a43dde01ec582b59f22d3824
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-hierarchies---level-properties"></a>ユーザー階層のレベルのプロパティ
   次の表では、ユーザー定義階層におけるレベルのプロパティの一覧および説明を示します。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [ユーザー階層プロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   
-

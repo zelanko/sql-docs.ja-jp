@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Locations Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Locations Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Locations
 - urn:schemas-microsoft-com:xml-analysis#Locations
 - microsoft.xml.analysis.locations
-helpviewer_keywords:
-- Locations element
+helpviewer_keywords: Locations element
 ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 66efa92996f345246daf0e49d9c2dc1c63147008
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a6a04008b57e82679ba396815b73b3b7cf2ce5c3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locations-element-xmla"></a>Locations 要素 (XMLA)
   コレクションを格納[場所](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)親によって使用される要素[バックアップ](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)、[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)、または[同期](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)コマンド。  
@@ -73,7 +68,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data shaping [ADO], overview
+helpviewer_keywords: data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2bcfa746be8db71aa85c7e83f7f52b40997fd433
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f885a8585d3665efcc39bfe979b501d779c35c00
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-shaping-overview"></a>データ シェイプの概要
 *データ シェイプ*クエリ内の 2 つ以上の論理エンティティ間の階層関係を構築することを意味します。 階層が 1 つのレコード間の親子関係でわかるように[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および別の 1 つまたは複数のレコード (章とも呼ばれます)**レコード セット**です。 親子関係で、親**Recordset**子を含む**レコード セット**です。 このような階層リレーションシップの例は、顧客と注文です。 データベース内のすべての顧客の 0 個以上の注文があります。 階層リレーションシップには、再帰的孫レコードが子レコード内に入れ子にすることがあります。 原則として、階層レコードを任意の深さに入れ子にできます。 実際には、ADO は 512 の最大再帰を制限**Recordset**s。  
@@ -39,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  さらに、データの整形を ado を使用すると、新規作成**Recordset**オブジェクトを使用して、基になるデータ ソースを使用せず、**新規**親と子のフィールドについて説明するキーワード**レコード セット**です。 新しい**Recordset**オブジェクトでデータを設定し、永続的に保存します。 開発者には、さまざまな計算や集計もを実行できます (たとえば、**合計**、 **AVG**、および**MAX**) 子フィールドにします。 データ シェイプ作成することも、親**Recordset**子から**レコード セット**子のレコードをグループ化して、親、子グループごとに 1 つの行を配置することです。  
   
  正規 SQL を使用してデータを取得することができます**参加**構文が、このでき、非効率的な扱いにくく、指定された親子リレーションシップの返された各レコードの冗長な親データで繰り返されるためです。 親内の 1 つの親レコードを関連付けることができるデータの整形**レコード セット**子の複数の子レコードを**レコード セット**の冗長性を回避する、**参加**です。 ほとんどのユーザーにとっては、親-子複数**Recordset**プログラミング モデルより自然で 1 つ以上の操作が容易に**レコード セットに参加**モデル。
-

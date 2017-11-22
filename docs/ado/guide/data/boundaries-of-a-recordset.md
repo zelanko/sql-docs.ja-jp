@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67a300e30522a5f02bb6c33409a062a3c2434643
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="boundaries-of-a-recordset"></a>レコード セットの境界
 **レコード セット**をサポートしている、 **BOF**と**EOF**に含めること示す先頭と末尾、それぞれ、データセットのプロパティです。 考えることができます**BOF**と**EOF**の先頭と末尾の位置「ファントム」のレコードとして、 **Recordset**です。 カウント**BOF**と**EOF**、サンプル**Recordset**は、次のようになります。  
@@ -78,4 +76,3 @@ else
  このスキームでは、すべての種類のカーソル動作し、は、基になるプロバイダーに依存しません。 空かを決定しようとする場合、 **Recordset**オブジェクトを確認する場合、 **RecordCount**プロパティの値がゼロ (0) か、適切なカーソルとプロバイダーを使用する予防措置を行う必要がありますを結果内のレコードの数を返すをサポートします。  
   
  最後の残りのレコードを削除する場合、 **Recordset**オブジェクト、カーソルは、不定状態のままにします。 **BOF**と**EOF**プロパティが残る可能性がある**False**まで、現在のレコードの位置を変更しようとすると、プロバイダーによって異なります。 詳細については、次を参照してください。 [Delete メソッドを使用してレコードを削除すると、](../../../ado/guide/data/deleting-records-using-the-delete-method.md)です。
-

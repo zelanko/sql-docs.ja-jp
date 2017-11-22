@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語と ADO の併用
 ADO では、スクリプト環境では、サーバー側のスクリプトを使用してデータを公開できます。 この場合は、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されるコンポーネントです。 この HTML コンテンツは、クライアントの Web ブラウザーに HTTP 経由で渡すことができます。 スクリプトを使用して Web ページは、サーバー側のスクリプトは、更新、移動、および特定のデータを表示することができますに戻す操作を送信できます。  
@@ -35,26 +33,26 @@ ADO では、スクリプト環境では、サーバー側のスクリプトを�
   
 |オブジェクト|スクリプト作成のため安全ですか。|  
 |------------|-------------------------|  
-|ADO 接続|はい|  
+|ADO 接続|可|  
 |ADO コマンド|不可|  
 |ADO パラメーター|不可|  
-|ADO レコード セット|はい|  
-|ADO レコード|はい|  
-|ADO ストリーム|はい|  
+|ADO レコード セット|可|  
+|ADO レコード|可|  
+|ADO ストリーム|可|  
 |ADO エラーです。|不可|  
 |ADOX カタログ|不可|  
 |ADOX セルセット|不可|  
-|RDS DataControl|はい|  
-|RDS DataSpace|はい|  
+|RDS DataControl|可|  
+|RDS DataSpace|可|  
 |RDS DataFactory|不可|  
   
  次の表は、Windows DAC/MDAC では、含まれているプロバイダーの一覧し、スクリプト作成のため安全であるかどうかを示します。  
   
 |プロバイダー|スクリプト作成のため安全ですか。|  
 |--------------|-------------------------|  
-|図形|はい|  
-|永続化します。|はい|  
-|Remote|はい|  
+|図形|可|  
+|永続化します。|可|  
+|Remote|可|  
 |OLE DB Provider for SQL Server (SQLOLEDB)|不可|  
 |OLE DB Provider for ODBC (MSDASQL)|不可|  
   
@@ -69,12 +67,11 @@ ADO では、スクリプト環境では、サーバー側のスクリプトを�
   
  次のトピックでは、スクリプト言語と ADO の併用の詳細についてを紹介します。  
   
--   [VBScript ADO プログラミング](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
+-   [VBScript での ADO プログラミング](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
--   [JScript ADO プログラミング](../../../ado/guide/appendixes/jscript-ado-programming.md)  
+-   [JScript での ADO プログラミング](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
 ## <a name="see-also"></a>参照  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Microsoft Visual Basic と ADO を使用します。](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Microsoft Visual C で ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-
+ [Microsoft Visual C++ での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

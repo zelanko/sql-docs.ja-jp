@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Member Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Member Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Member
 - microsoft.xml.analysis.member
 - http://schemas.microsoft.com/analysisservices/2003/engine#Member
-helpviewer_keywords:
-- Member element
+helpviewer_keywords: Member element
 ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: be758dd6797bd399604ca20faf57904b5725d52b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 233938a1018a48dfaa8f7513fc88c65361b5f55a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="member-element-xmla"></a>Member 要素 (XMLA)
   1 つの親メンバーを表す[メンバー](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)または[組](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)要素。  
@@ -96,7 +91,6 @@ ms.lasthandoff: 09/01/2017
  **メンバー**要素には識別し、特定の階層内のメンバーを表示するための情報が含まれています。 親の**メンバー**要素、階層が既に指定、**階層**親要素の属性です。 親の**組**要素を使用して、階層を指定、**階層**の属性、**メンバー**要素。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

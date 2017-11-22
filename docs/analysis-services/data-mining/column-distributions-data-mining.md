@@ -21,17 +21,16 @@ helpviewer_keywords:
 - continuous columns
 - distributions [data mining]
 ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5f49952d075e0886bfc89ea6fb8effef72a14ceb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 96b2502e351f371163d5b748b432d381d237a8a9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="column-distributions-data-mining"></a>列の分布 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造内の列の分布を定義して、マイニング モデルの作成時にこれらの列のデータがアルゴリズムによってどのように処理されるかを指定できます。 いくつかのアルゴリズムは、列が値の一般的な分布を含むことが認識された場合、モデルを処理する前にすべての連続列の分布を定義するために使用されます。 分布が定義されない場合、アルゴリズムが持つデータを解釈するための情報が少ないため、分布が定義されたときよりも、マイニング モデルの結果が実際の予測より小さくなる場合があります。  
@@ -58,9 +57,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>参照  
  [コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
  [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [分離メソッド (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
- [ディストリビューション & #40";"DMX"&"#41;](../../dmx/distributions-dmx.md)   
+ [分離メソッド &#40;データ マイニング&#41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
+ [ディストリビューション &#40;DMX&#41;](../../dmx/distributions-dmx.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Users::raw_Append
 - Users::Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1720503f6ff8de32b247fa4878bccb69c88d5c71
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 616000cfb53d9c3178aa6fa9adbd0ac7f8437efc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-users"></a>Append メソッド (ADOX ユーザー)
 新しく追加[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトを[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)コレクション。  
@@ -57,7 +54,7 @@ Users.Append User[,Password]
 >  追加の前に、**ユーザー**オブジェクトを**ユーザー**のコレクション、**グループ**オブジェクト、**ユーザー**が同じオブジェクト[名](../../../ado/reference/adox-api/name-property-adox.md)追加する 1 つに既に存在すると、**ユーザー**のコレクション、**カタログ**です。  
   
 ## <a name="applies-to"></a>適用対象  
- [ユーザー コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
 ## <a name="see-also"></a>参照  
  [グループとユーザーの追加、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
@@ -67,5 +64,4 @@ Users.Append User[,Password]
  [Append メソッド (ADOX キー)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append メソッド (ADOX プロシージャ)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append メソッド (ADOX テーブル)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append メソッド (ADOX ビュー)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)

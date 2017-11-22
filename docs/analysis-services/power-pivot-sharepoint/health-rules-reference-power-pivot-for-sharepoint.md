@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>正常性ルールのリファレンス (Power Pivot for SharePoint)
   ここでは、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint のインストールによって追加される SharePoint の正常性ルールについて説明します。 正常性ルールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サービス アプリケーションまたはそれに関連する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー状態、可用性、または構成に関する問題をレポートするために使用されます。  
@@ -65,4 +64,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: サーバーの全体管理用に構成されているスタンドアロン WFE に ADOMD.NET がインストールされていません。|いいえ|いいえ|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET は、Analysis Services データベースへの接続をサポートする Analysis Services クライアント ライブラリです。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint の配置では、ADOMD.NET を使用して、サーバーの全体管理で [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードの組み込みレポートにアクセスできます。 組み込みレポートは、実際には、埋め込み Analysis Services のデータが含まれた [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックです。 管理ダッシュボードでは、ADOMD.NET を使用して、ブックに含まれているデータを読み込むサーバーに接続要求を送信します。<br /><br /> スタンドアロン Web フロントエンド サーバーで実行されているサーバーの全体管理を含むトポロジで、管理ダッシュボードにこれらのレポートを表示する場合は、ADOMD.NET を手動でインストールする必要があります。 詳細については、「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)」を参照してください。|  
   
   
-

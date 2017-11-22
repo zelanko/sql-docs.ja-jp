@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AllMemberTranslation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AllMemberTranslation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AllMemberTranslation
-helpviewer_keywords:
-- AllMemberTranslation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AllMemberTranslation
+helpviewer_keywords: AllMemberTranslation element
 ms.assetid: 31ec0c44-8f1d-457c-9e8b-61dd5bc468f7
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 51bc23aaadefbcaea4a492203a46c52424536468
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 34ac096f28bdeac7cb97b963b4cf073a57b5da99
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="allmembertranslation-element-assl"></a>AllMemberTranslation 要素 (ASSL)
   すべてのメンバーのキャプションの翻訳が含まれています、[階層](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)要素。  
@@ -69,9 +63,8 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素、 **AllMemberTranslations**分析管理オブジェクト (AMO) オブジェクト モデルのコレクションが<xref:Microsoft.AnalysisServices.Hierarchy>です。  
   
 ## <a name="see-also"></a>参照  
- [Translation 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/translation-element-assl.md)   
- [Hierarchy 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)   
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Translation 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/translation-element-assl.md)   
+ [Hierarchy 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)   
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: 85
+caps.latest.revision: "85"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f566af7bab5a69c99a07c0f275cb44ddb79cc841
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 32a43f651f20ca257837de0440505b9ac4179708
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -94,7 +92,7 @@ ms.lasthandoff: 09/07/2017
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を最初にインストールしたユーザーにサーバー管理権限がある。|ユーザーにスーパー ユーザー機能権限がある|  
 |ユーザーにモデル レベルの更新権限があり、モデル サブツリーの権限はないため、暗黙的にモデル管理者になる。|ユーザーにモデル レベルの明示的な管理権限がある。|  
 |ユーザーに読み取り専用権限がある。|ユーザーに読み取りアクセス権限がある。|  
-|ユーザーに更新権限がある。|ユーザーに 4 つの権限 (作成、更新、削除、読み取り) がすべてある。|  
+|ユーザーに更新権限がある。|ユーザーに&4; つの権限 (作成、更新、削除、読み取り) がすべてある。|  
 |ユーザーに拒否権限がある。|ユーザーに拒否権限がある。|  
   
  権限の詳細については、「[Security (Master Data Services) (セキュリティ (マスター データ サービス))](../master-data-services/security-master-data-services.md)」を参照してください。  
@@ -164,7 +162,7 @@ ms.lasthandoff: 09/07/2017
 
  **派生階層の多対多リレーションシップ**  
   
- 派生階層を作成して、多対多リレーションシップを表示できます。 2 つのエンティティ間の多対多リレーションシップは、両者間のマッピングを提供する第 3 のエンティティを使用してモデリングできます。 マッピング エンティティは、他のエンティティを参照するドメイン ベースの属性が 2 つ以上含まれているエンティティです。  
+ 派生階層を作成して、多対多リレーションシップを表示できます。 2 つのエンティティ間の多対多リレーションシップは、両者間のマッピングを提供する第&3; のエンティティを使用してモデリングできます。 マッピング エンティティは、他のエンティティを参照するドメイン ベースの属性が&2; つ以上含まれているエンティティです。  
   
  たとえば、エンティティ M のドメイン ベースの属性が A と B をそれぞれ参照しています。A から B への階層は、マッピング エンティティを使用して作成できます。  
   
@@ -241,5 +239,4 @@ ms.lasthandoff: 09/07/2017
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

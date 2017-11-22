@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - DateCreated property [ADOX], Visual Basic example
 - DateModified property [ADOX], Visual Basic example
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b235322465b5f0c2dd36db70ff1c5b5549341c91
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0761c9f334d9e347185e8c87dbf88c6d32767615
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>作成日時と最終更新日時プロパティの例 (VB)
 この例で、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)と[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを追加して[列](../../../ado/reference/adox-api/column-object-adox.md)既存[テーブル](../../../ado/reference/adox-api/table-object-adox.md)および新たに作成する**テーブル**です。 DateOutput プロシージャは、この例を実行する必要があります。  
@@ -108,5 +105,4 @@ End Sub
  [プロシージャのオブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [プロシージャのコレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [ビュー オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [ビューのコレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

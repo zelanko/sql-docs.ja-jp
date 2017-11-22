@@ -1,10 +1,13 @@
 ---
 title: "テンポラル テーブルのシステム一貫性のチェック | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 23f95c019266b97bee574e864adaa7cd70cbd763
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 06a8476e912888e799969af1e8f867bcfcc3fdc1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="temporal-table-system-consistency-checks"></a>テンポラル テーブルのシステム一貫性のチェック
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルを使用する際、システムでは、スキーマがテンポラルの要件に準拠しているか、またそのデータに一貫性がありそれが維持されるかを確認する、さまざまな一貫性チェックが実行されます。 また、 **DBCC CHECKCONSTRAINTS** ステートメントにもテンポラル チェックが追加されています。  
   

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c7fe8e5ad97a1955160bf2f8f953c85971f66b09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculated-columns"></a>計算列
   テーブル モデルでの計算列を使用すると、新しいデータをモデルに追加できます。 列に値を貼り付けまたはインポートする代わりに、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 10/04/2017
  この数式では、StartDate 列から月を抽出します。 そして、テーブルの各行について月の最終日を計算します。 2 番目のパラメーターは、StartDate の月より前または後の月数を指定します。この場合、0 は同じ月であることを表します。 たとえば、StartDate 列の値が 6/1/2001 の場合、計算列の値は 6/30/2001 になります。  
   
 ##  <a name="bkmk_naming"></a> Naming a calculated column  
- 既定では、新しい計算列はテーブル内のその他の列の右側に追加され、 **CalculatedColumn1**、 **CalculatedColumn2**などの既定の名前が自動的に割り当てられます。 列を右クリックしてから 列の挿入をクリックして、2 つの既存列の間に新しい列を作成することもできます。 クリックしてドラッグすることで、同じテーブル内の列を並べ替えることができます。また、列の作成後に名前を変更することもできます。ただし、計算列の変更に対する次の制限事項に注意してください。  
+ 既定では、新しい計算列はテーブル内のその他の列の右側に追加され、 **CalculatedColumn1**、 **CalculatedColumn2**などの既定の名前が自動的に割り当てられます。 列を右クリックしてから [列の挿入] をクリックして、2 つの既存列の間に新しい列を作成することもできます。 クリックしてドラッグすることで、同じテーブル内の列を並べ替えることができます。また、列の作成後に名前を変更することもできます。ただし、計算列の変更に対する次の制限事項に注意してください。  
   
 -   それぞれの列名は、1 つのテーブル内で一意である必要があります。  
   
@@ -88,4 +87,3 @@ ms.lasthandoff: 10/04/2017
  [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
-

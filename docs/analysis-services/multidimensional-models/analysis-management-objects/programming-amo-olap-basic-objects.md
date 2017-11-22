@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bebff2d4f64f26f0f1824042512534c5459f2872
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eaca145753958228bdecae9b7bdcb2ebcdb8b6cb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本オブジェクトのプログラミング
   複雑な [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトの作成は簡単でわかりやすいものですが、詳細については注意が必要です。 このトピックでは、OLAP 基本オブジェクトのプログラミングについて詳しく説明します。 このトピックには、次のセクションが含まれます。  
@@ -258,7 +256,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>キューブの処理  
  キューブの処理は、<xref:Microsoft.AnalysisServices.Cube> オブジェクトの Process メソッドを使用して簡単に実行できます。 キューブを処理すると、キューブ内のすべてのメジャー グループ、およびメジャー グループ内のすべてのパーティションも処理されます。 キューブ内で処理可能なオブジェクトはパーティションだけです。処理に関しては、メジャー グループはパーティションのコンテナーにすぎません。 キューブに対して指定した処理の種類はパーティションに反映されます。 キューブおよびメジャー グループの処理は、ディメンションとパーティションの処理に内部的に解決されます。  
   
- 処理オプションの詳細については、次を参照してください。[オブジェクトの処理 & #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)、および[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 処理オプションの詳細については、次を参照してください。[オブジェクトの処理 &#40;です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)、および[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  次のコードでは、指定したデータベース内のすべてのキューブを完全に処理します。  
   
@@ -425,7 +423,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>メジャー グループの処理  
  メジャー グループの処理は、<xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトの Process メソッドを使用して簡単に実行できます。 メジャー グループを処理すると、メジャー グループに属するすべてのパーティションが処理されます。 メジャー グループの処理は、ディメンションとパーティションの処理に内部的に解決されます。 参照してください[パーティションの処理](#ProcPart)このドキュメントでします。  
   
- 処理オプションの詳細については、次を参照してください。[オブジェクトの処理 & #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)、および[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 処理オプションの詳細については、次を参照してください。[オブジェクトの処理 &#40;です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)、および[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  次のコードは、指定されたキューブのすべてのメジャー グループを完全に処理します。  
   
@@ -491,7 +489,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a>パーティションの処理  
  パーティションの処理は、<xref:Microsoft.AnalysisServices.Partition> オブジェクトの Process メソッドを使用して簡単に実行できます。  
   
- 処理オプションの詳細については、次を参照してください。[オブジェクトの処理 & #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)と[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 処理オプションの詳細については、次を参照してください。[オブジェクトの処理 &#40;です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)と[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  次のサンプル コードは、指定されたメジャー グループのすべてのパーティションを完全に処理します。  
   
@@ -577,9 +575,8 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
  [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト & #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Analysis Services 多次元モデリング チュートリアル用サンプル データとプロジェクトをインストールします。](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

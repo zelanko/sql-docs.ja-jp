@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
   サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
@@ -359,7 +358,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) 関数式を使用します。  
   
--   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** 内のプロパティ[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
+-   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** 内のプロパティ[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
   
   
-

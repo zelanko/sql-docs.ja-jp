@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72ef02bfcf8e5392d23cd90f0ad0d49fe4d87122
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-cachesize"></a>CacheSize を使用します。
 使用して、 **CacheSize**プロパティは、プロバイダーからローカル メモリに一度に取得するレコードの数を制御します。 たとえば場合、 **CacheSize**は 10 ですが最初に開く後、**レコード セット**オブジェクト、プロバイダーがローカル メモリに最初の 10 個のレコードを取得します。 間を移動すると、 **Recordset**オブジェクト、プロバイダーがローカル メモリ バッファーからデータを返します。 過去のキャッシュの最後のレコードを移動するとすぐに、プロバイダーは、キャッシュにデータ ソースから、次の 10 個のレコードを取得します。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  キャッシュから取得したレコードでは、他のユーザーが、ソース データに対する同時変更は反映されません。 すべてのキャッシュされたデータの更新を強制するを使用して、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドです。  
   
  場合**CacheSize**ナビゲーション方法 1 より大きい値に設定されます ([移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md))、削除されたへの移動されない可能性がありますレコードを取得した後、削除が発生した場合に記録します。 最初のフェッチ後以降の削除は反映されませんデータ キャッシュ内の削除された行のデータ値にアクセスしようとするまで。 ただし、設定**CacheSize**を 1 に削除された行はフェッチできないためにこの問題を排除します。
-

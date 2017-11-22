@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 42993cc9fdaa5deaad46fae2f7c61f8beb776489
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75bef2df222023fe54ec5c890b3321677f2a7a40
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>プロバイダーと DefaultDatabase プロパティの使用例 (vc++)
 この例で、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)を開き、3 つのプロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを別のプロバイダーを使用します。 また、使用、 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC プロバイダーの既定のデータベースを設定するプロパティです。  
@@ -144,5 +141,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>参照  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase プロパティ](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [プロバイダーのプロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
-
+ [Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

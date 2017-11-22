@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>多次元モデルの計算
   キューブ デザイナーの **[計算]** タブを使用して、計算されるメンバー、名前付きセット、およびその他の多次元式 (MDX) 計算を作成します。  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  既存の計算を削除するには、 **[スクリプト オーガナイザー]** ペインの **[計算]** タブで、削除する計算を選択し、 **[編集]** メニューの **[削除]** をクリックするか、ツール バーの **[削除]** アイコンをクリックします。 また、 **[スクリプト オーガナイザー]** ペインで計算を右クリックし、ショートカット メニューから **[削除]** を選択することもできます。  
   
   
-

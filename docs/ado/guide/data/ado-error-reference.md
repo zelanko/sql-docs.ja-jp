@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-errors"></a>ADO エラー
 **ErrorValueEnum**定数は、ADO のエラー値を表します。 これらの列挙定数、値を含む完全な一覧については、次を参照してください。[付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)です。 このセクションではさらに興味深いもののエラーのいくつかを確認し、いくつか特定の状況させることができる、または問題の解決策について説明します。 両方の**ErrorValueEnum**定数および短いの正の 10 進数が表示されます。
@@ -88,4 +86,3 @@ ms.lasthandoff: 09/09/2017
 |**3749**|**adErrFieldsUpdateFailed**|フィールドを更新できませんでした。 詳細については、確認、**ステータス**個々 のフィールド オブジェクトのプロパティです。 このエラーは、2 つの状況で発生することができます: を変更する場合、**フィールド**オブジェクトの値を変更するかのプロパティを変更する場合とデータベースにレコードを追加処理を行って、**フィールド**オブジェクト自体です。<br /><br /> **レコード**または**Recordset**現在のレコードのフィールドのいずれかの問題により更新に失敗しました。 列挙、**フィールド**コレクションとチェック、**ステータス**問題の原因を特定するには、各フィールドのプロパティです。|
 |**3750**|**adErrDenyNotSupported**|プロバイダーは、共有の制限をサポートしていません。 ファイル共有を制限が試行され、プロバイダーは、概念をサポートしていません。|
 |**3751**|**adErrDenyTypeNotSupported**|プロバイダーは、要求された種類の制限を共有をサポートしていません。 特定の種類のファイル共有を確立しようとしましたが、プロバイダーでサポートされていない制限します。 どのようなファイル共有の制限がサポートするプロバイダーのマニュアルを参照してください。|
-

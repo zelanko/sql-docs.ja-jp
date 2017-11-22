@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Lock Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Lock Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Lock
 - microsoft.xml.analysis.lock
 - http://schemas.microsoft.com/analysisservices/2003/engine#Lock
-helpviewer_keywords:
-- Lock command
+helpviewer_keywords: Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8e3a174682bd6e2c84f48dbf75462fadecf2a573
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df377150443acf63e4f67cd4f8f4952f36277a32
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lock-element-xmla"></a>Lock 要素 (XMLA)
   上の指定したオブジェクトをロック、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 09/01/2017
 |子要素|[ID](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)、[モード](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)、[オブジェクト](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>解説  
- **ロック**コマンドが現在アクティブなトランザクションのコンテキスト内で、共有、または排他的に使用のいずれかのオブジェクトをロックします。 データベース管理者またはサーバー管理者のみに明示的に発行できる、**ロック**コマンド。 オブジェクトをロックすると、そのロックが解除されるまでトランザクションはコミットできません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、共有ロックと排他ロックの 2 種類がサポートされています。 サポートされているロックの種類の詳細については[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を参照してください[Mode 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
+ **ロック**コマンドが現在アクティブなトランザクションのコンテキスト内で、共有、または排他的に使用のいずれかのオブジェクトをロックします。 データベース管理者またはサーバー管理者のみに明示的に発行できる、**ロック**コマンド。 オブジェクトをロックすると、そのロックが解除されるまでトランザクションはコミットできません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、共有ロックと排他ロックの 2 種類がサポートされています。 サポートされているロックの種類の詳細については[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を参照してください[Mode 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、データベースに対するロックだけが可能です。 **オブジェクト**要素へのオブジェクト参照を含める必要があります、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データベース。 場合、**オブジェクト**要素が指定されていない場合は、**オブジェクト**要素を参照し、データベース以外のオブジェクト、エラーが発生します。  
   
@@ -84,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [コマンドと #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

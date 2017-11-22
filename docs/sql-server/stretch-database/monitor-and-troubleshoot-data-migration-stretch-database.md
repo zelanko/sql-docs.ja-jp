@@ -8,33 +8,31 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, monitoring
 - monitoring Stretch Database
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91c10b51a3fec9ccc96c3aa23100abdf2a60ba81
-ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: df04b69d16e0dde05fe2f731972836c1deb5d210
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>データ移行の監視とトラブルシューティング (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch Database モニターでデータ移行を監視するには、SQL Server Management Studio でデータベースについて **[タスク]、[Stretch]\(ストレッチ)、[Monitor]\(監視)** の順に選択します。  
+  Stretch Database モニターでデータ移行を監視するには、SQL Server Management Studio でデータベースについて **[タスク]、[Stretch] (ストレッチ)、[Monitor] (監視)** の順に選択します。  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Stretch Database モニターでのデータ移行の状態の確認  
- SQL Server Management Studio でデータベースについて **[タスク]、[Stretch]\(ストレッチ)、[Monitor]\(監視)** の順に選択して Stretch Database モニターを開き、データ移行を監視します。  
+ SQL Server Management Studio でデータベースについて **[タスク]、[Stretch] (ストレッチ)、[Monitor] (監視)** の順に選択して Stretch Database モニターを開き、データ移行を監視します。  
   
 -   モニターの上部には、Stretch 対応 SQL Server データベースとリモート Azure データベースの両方についての一般情報が表示されます。  
   
@@ -66,4 +64,3 @@ ms.lasthandoff: 04/11/2017
  [Stretch Database の管理とトラブルシューティング](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   
-

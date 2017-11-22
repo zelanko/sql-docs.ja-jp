@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- IgnoreUnrelatedDimensions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: IgnoreUnrelatedDimensions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- IgnoreUnrelatedDimensions
-helpviewer_keywords:
-- IgnoreUnrelatedDimensions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: IgnoreUnrelatedDimensions
+helpviewer_keywords: IgnoreUnrelatedDimensions element
 ms.assetid: c7d7a1cd-a8e0-4ae7-9464-a1d2a55a86ab
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 920bc28033619bc546f84351d53ab76720fda6db
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6985abe0a62c0430ca494418659b0bd168ceb20d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ignoreunrelateddimensions-element-assl"></a>IgnoreUnrelatedDimensions 要素 (ASSL)
   メジャー グループに関連付けられていないディメンションのメンバーがクエリに含まれているときに、関連付けられていないディメンションをトップ レベルに強制するかどうかを指定します。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**IgnoreUnrelatedDimensions**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MeasureGroup>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

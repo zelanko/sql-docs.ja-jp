@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 648fca1de8f4c98bce4e778a2d4d26fb44246267
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>サーバー グループへの Analysis Services インスタンスの登録
   多数の Analysis Services サーバー インスタンスがある場合、サーバー管理をより容易にするために Management Studio 内にサーバー グループを作成できます。 サーバー グループの目的は、管理ワークスペース内の関連するサーバーのグループで近接性を提供することです。 たとえば、10 個の独立した Analysis Services インスタンスを管理する必要があるとします。 サーバー モード、連続稼動条件、または部門や地域によってそれらをグループ化することで、同じ特徴を持つインスタンスをより簡単に表示および接続することができます。 サーバーがどのように使用されるかを思い出すために役立つ情報を追加することもできます。  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  サーバー グループを右クリックし、[新規サーバーの登録] をクリックします。 サーバーが名前付きインスタンスとしてインストールされた場合は、インスタンス名を含めて、ローカルまたはリモート サーバーのネットワーク名を入力します。 必要に応じて、[登録済みサーバー] に表示される、登録済みサーバーの名前を指定できます。 この名前は、[登録済みサーバー] でのみ使用されます。 サーバーの名前変更に使用することも、接続文字列に使用することもできません。 登録済みサーバー名は、実際のサーバー名よりもわかりやすくしたり、このサーバーを他のサーバーと区別するために他の識別特性を含めたりできます。  
   
   
-

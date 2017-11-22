@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AxisInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AxisInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#AxisInfo
 - microsoft.xml.analysis.axisinfo
 - http://schemas.microsoft.com/analysisservices/2003/engine#AxisInfo
-helpviewer_keywords:
-- AxisInfo element
+helpviewer_keywords: AxisInfo element
 ms.assetid: 060741db-b2ec-4174-9277-58d996440a88
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63c34fdea2c6f00d109cd155cfaff82fa592c4e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa8b5554573ebb3f34212fd7ba48b6583fb926af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo 要素 (XMLA)
   親に含まれる 1 つの軸のメタデータを表す[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)要素。  
@@ -80,7 +75,6 @@ ms.lasthandoff: 09/01/2017
  **ルート**を使用する要素、 **MDDataSet**オブジェクト、 **AxisInfo**要素のコレクションを含みます**HierarchyInfo**要素を、の値と組み合わせると、**名前**属性では、多次元データセットで返される 1 つの軸の定義を表します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

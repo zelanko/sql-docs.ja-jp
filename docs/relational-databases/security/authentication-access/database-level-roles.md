@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
-ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +72,7 @@ ms.lasthandoff: 07/31/2017
 
 ## <a name="fixed-database-roles"></a>固定データベース ロール
   
- 次の表に、固定データベース ロールとその機能を示します。 これらのロールは、すべてのデータベースに存在します。 **public** データベース ロールを除き、固定データベース ロールに割り当てられているアクセス許可を変更することはできません。   
+ 次の表に、固定データベース ロールとその機能を示します。 これらのロールは、すべてのデータベースに存在します。 **public** データベース ロールを除き、固定データベース ロールに割り当てられている権限を変更することはできません。   
   
 |固定データベース ロールの名前|Description|  
 |-------------------------------|-----------------|  
@@ -168,4 +166,3 @@ R Services がインストールされている場合は、パッケージの管
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
   
   
-

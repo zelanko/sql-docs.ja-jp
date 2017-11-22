@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PartitionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PartitionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- PartitionID element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ced5e03a10c37e4b28c467efd03a72c42dadea4d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e93957d649fef92eb05608e1b7a084a13294521
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitionid-element-assl"></a>PartitionID 要素 (ASSL)
   関連付けます、[パーティション](../../../analysis-services/scripting/objects/partition-element-assl.md)親要素、バインド、または不一致のバインドを持つ要素。  
@@ -65,10 +60,9 @@ ms.lasthandoff: 09/01/2017
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
- バインドおよび不一致のバインドの詳細については、次を参照してください。[データ ソースとのバインド & #40 です。SSAS 多次元 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ バインドおよび不一致のバインドの詳細については、次を参照してください。[データ ソースとのバインド &#40;です。SSAS 多次元 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

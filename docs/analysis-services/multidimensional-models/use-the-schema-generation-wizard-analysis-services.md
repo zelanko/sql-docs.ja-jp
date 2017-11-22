@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザードの使用 (Analysis Services)
   スキーマ生成ウィザードが生成フェーズで必要とする情報の量は限られています。 スキーマ生成ウィザードでリレーショナル スキーマを生成するために必要な情報のほとんどは、プロジェクトで既に作成した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションから抽出されます。 また、サブジェクト領域データベース スキーマの生成方法とスキーマ内のオブジェクトの名前付け方法をカスタマイズすることもできます。  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  スキーマ生成ウィザードの **[名前付け規則の指定]** ページで、サブジェクト領域データベースに特定のオブジェクトを生成するときにウィザードが使用する名前付け規則を定義できます。 **[名前付け規則の指定]** ページで使用できるオプションの詳細については、「[[名前付け規則の指定] &#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b)」を参照してください。  
   
   
-

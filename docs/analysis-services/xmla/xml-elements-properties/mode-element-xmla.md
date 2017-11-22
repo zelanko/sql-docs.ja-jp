@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Mode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Mode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Mode
 - microsoft.xml.analysis.mode
 - http://schemas.microsoft.com/analysisservices/2003/engine#Mode
-helpviewer_keywords:
-- Mode element
+helpviewer_keywords: Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e2047c923e6c205990c58602e1694f645ef97c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57c3450e8928b24dc03e2d5915983f39330d0b0c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mode-element-xmla"></a>Mode 要素 (XMLA)
   親によって使用されるモードを示す[ロック](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)要素を指定したオブジェクトのロックを作成するとき。  
@@ -77,9 +72,8 @@ ms.lasthandoff: 09/01/2017
 |*CommitExclusive*|指定されたオブジェクトに対して排他ロックが設定されます。 同じオブジェクトに対して、他の共有ロックまたは排他ロックを作成することはできません。<br /><br /> 排他ロックを使用すると、指定されたオブジェクトに対する読み取り操作または書き込み操作を伴うトランザクションは、排他ロックが解除されるまでコミットできません。|  
   
 ## <a name="see-also"></a>参照  
- [ID 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)   
- [Object 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [ID 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)   
+ [Object 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

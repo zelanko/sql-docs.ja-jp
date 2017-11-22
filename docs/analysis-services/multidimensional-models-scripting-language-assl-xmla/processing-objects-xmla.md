@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - errors [XML for Analysis]
 - objects [XML for Analysis]
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8d255485b2aca60d4ea2500abef45939729af962
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6dfc2fafb76d19ea986b697ec065abec738f4c05
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-objects-xmla"></a>オブジェクトの処理 (XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]処理は、手順つまたは一連のオンであるデータをビジネス分析のための情報にします。 処理内容はオブジェクトの種類によって異なりますが、データを情報に変換する処理の一部として必ず実行されます。  
@@ -85,7 +83,7 @@ ms.lasthandoff: 09/01/2017
   
  設定した場合、 **ProcessAffectedObjects**の属性、**プロセス**関連する、指定したオブジェクトを処理することで影響を受けるオブジェクトの処理も true の場合、コマンドします。 たとえばを使用して、ディメンションの増分更新、 *ProcessUpdate*処理オプション、**プロセス**コマンド、任意のパーティションの集計がメンバーによって無効になる中追加または削除しても、処理されます[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]場合**ProcessAffectedObjects**が設定を true にします。 この場合は、1 つの**プロセス**コマンドで複数のオブジェクトを処理できる、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、インスタンスが、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で指定された 1 つのオブジェクトだけでなくオブジェクトが決定、**プロセス**コマンドを処理もする必要があります。  
   
- ただし、複数を使用して、同時にディメンションなど、複数のオブジェクトを処理することができます**プロセス**コマンドの中で、**バッチ**コマンド。 バッチ操作では、オブジェクトの直列または並列処理のため、細かいレベルの制御を提供に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを使用するより、 **ProcessAffectedObjects**属性がありの処理方法をチューニングできる大きな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 バッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行 & #40 です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ ただし、複数を使用して、同時にディメンションなど、複数のオブジェクトを処理することができます**プロセス**コマンドの中で、**バッチ**コマンド。 バッチ操作では、オブジェクトの直列または並列処理のため、細かいレベルの制御を提供に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを使用するより、 **ProcessAffectedObjects**属性がありの処理方法をチューニングできる大きな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 バッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行 &#40;です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
   
 ## <a name="specifying-out-of-line-bindings"></a>不一致バインドの指定  
  場合、**プロセス**でコマンドが含まれていない、**バッチ**コマンド内の行外のバインディング オプションで指定できます、[バインド](../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md)、[データソース](../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md)、および[DataSourceView](../../analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla.md)のプロパティ、**プロセス**コマンドを処理するオブジェクト。 アウトオブ ライン バインドは、データ ソース、データ ソース ビュー、およびその他のオブジェクトの実行時にのみ存在するバインドへの参照、**プロセス**コマンド、およびに関連付けられている既存のバインドを上書きします処理中のオブジェクト。 不一致バインドが指定されていない場合、処理対象のオブジェクトに現在関連付けられているバインドが使用されます。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 09/01/2017
   
 -   データ フロー タスクを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ディメンション、マイニング モデル、またはパーティションの処理中にデータを提供します。  
   
- 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL での不一致バインドの詳細については、次を参照してください。[データ ソースとのバインド & #40 です。SSAS 多次元 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL での不一致バインドの詳細については、次を参照してください。[データ ソースとのバインド &#40;です。SSAS 多次元 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ### <a name="incrementally-updating-partitions"></a>パーティションの増分更新  
  通常、既に処理されているパーティションを増分更新する場合は、不一致バインドが必要です。これは、パーティションに対して指定されているバインドが、既にパーティション内で集計されているファクト テーブル データを参照するためです。 使用して既に処理されているパーティションを増分更新する場合、**プロセス**コマンド、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、次の操作を実行します。  
@@ -196,4 +194,3 @@ ms.lasthandoff: 09/01/2017
 ```  
   
   
-

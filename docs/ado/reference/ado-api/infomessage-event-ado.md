@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Connection::InfoMessage
 - InfoMessage
-helpviewer_keywords:
-- InfoMessage event [ADO]
+helpviewer_keywords: InfoMessage event [ADO]
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2dbc9c38c01036c6f04f706a8599753e69304bc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7f1e479b4dfb5b9cb557030e03afeac3f6278720
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage イベント (ADO)
 **InfoMessage**中に警告が発生するたびにイベントが呼び出された、 **ConnectionEvent**操作します。  
@@ -56,5 +53,4 @@ InfoMessage pError, adStatus, pConnection
 ## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

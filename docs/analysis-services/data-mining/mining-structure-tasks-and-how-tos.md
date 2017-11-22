@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], how-to topics
+helpviewer_keywords: mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7bf40cbc33a3f20110e135f2f67c8a6a06d0489e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 37193320cddce5b0ecccaf9d0040992118bc0e44
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>マイニング構造のタスクと操作方法
   **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブには、マイニング構造の作成、編集、および処理に使用できるツールが含まれています。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [設計と実装の方法に関するトピック (Analysis Services - データ マイニング)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   
-

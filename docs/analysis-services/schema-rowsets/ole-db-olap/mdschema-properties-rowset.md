@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_PROPERTIES
+apiname: MDSCHEMA_PROPERTIES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_PROPERTIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_PROPERTIES rowset
 ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13c187e2620c825f70a20637ab1fffb8560dbd1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6f77505e9daa9efc330bfcd358a37982eace8935
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemaproperties-rowset"></a>MDSCHEMA_PROPERTIES 行セット
   データベース内のメンバーのプロパティについて記述します。  
@@ -88,7 +84,6 @@ ms.lasthandoff: 09/01/2017
 |**PROPERTY_VISIBILITY**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 有効な値は次のいずれかのビットマップ。<br /><br /> 1 表示<br /><br /> 2 not 表示|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

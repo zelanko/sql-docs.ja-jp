@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.mds.configmanager.createsite.f1
+f1_keywords: sql13.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4e828a16a51b3a5744703fc08cf79abaeb489d2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 72b03df097b9951384674abbb984636b8999abf7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>[Web サイトの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)
   **[Web サイトの作成]** ダイアログ ボックスを使用すると、ローカル コンピューター上に新しい Web サイトを作成できます。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]で Web サイトを作成すると、作成したサイトは、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとして構成されるルート アプリケーションを伴って、ローカル コンピューター上のインターネット インフォメーション サービス (IIS) に追加されます。 また、新しいアプリケーション プールが作成され、Web アプリケーションがそのアプリケーション プールに追加されます。  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/07/2017
  [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   
-

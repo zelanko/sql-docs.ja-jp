@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e176da2e8f67a61a4f38fa6867919d4c5bfbde7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7473f3a8772c53834c964071c2385736ff45cbf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Java の Microsoft SDK を使用します。
 
@@ -58,5 +56,4 @@ Microsoft SDK for Java は、Microsoft Internet Explorer の環境の開発キ�
 3.  これらのファイルを使用するには、プロジェクトを開く、Visual j です。 **プロジェクト**] メニューの [選択**プロジェクトに追加**です。 選択**ファイル**、すべての追加とします。JAVA ファイルがプロジェクトに trustlib\msado15 ディレクトリに生成します。  
   
 ## <a name="see-also"></a>参照  
- [ADO Java クラスのラッパー](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
-
+ [ADO Java クラス ラッパー](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

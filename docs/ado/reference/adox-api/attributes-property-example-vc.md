@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Attributes property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 69ec8dcfecac32da4d963198298cf94f58edba1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 555f4545d7d54ce5b7ee37b19aa049461f00c969
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-property-example-vc"></a>属性プロパティの例 (vc++)
 この例で、[属性](../../../ado/reference/adox-api/attributes-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)です。 設定すると**adColNullable**の値を設定することができます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [フィールド](../../../ado/reference/ado-api/field-object.md)に空の文字列。 このような状況では、ユーザーはデータが不明なレコードと、データが当てはまりませんレコード間区別できます。  
@@ -213,4 +209,3 @@ int main() {
 ## <a name="see-also"></a>参照  
  [属性プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-

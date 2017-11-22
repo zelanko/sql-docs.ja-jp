@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - quantitative dimensions [Analysis Services]
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fa77532b4c674c4b5035cf6b591b973008ae6e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimension-properties---types"></a>データベース ディメンションのプロパティ - 種類
   **型**プロパティの設定は、サーバーおよびクライアント アプリケーションにディメンションの内容に関する情報を提供します。 場合によっては、**型**設定は、のみクライアント アプリケーションのガイダンスを提供し、省略可能です。 それ以外の場合になど**アカウント**または**時間**ディメンション、**型**ディメンションとその属性のプロパティ設定を特定のサーバーに基づく動作を決定します。キューブ内の特定の動作を実装する必要があります。 たとえば、**型**にディメンションのプロパティを設定できます**アカウント**標準ディメンションに勘定科目属性が含まれているクライアント アプリケーションを指定します。 時間、アカウント、および通貨ディメンションの詳細については、次を参照してください[日付型ディメンションの作成](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)、[親子型ディメンションの財務アカウントを作成する](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)、および[、通貨の作成。ディメンションの入力](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)です。  
@@ -76,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

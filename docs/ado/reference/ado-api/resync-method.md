@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,20 +17,18 @@ f1_keywords:
 - Fields::Resync
 - Recordset20::Resync
 - Fields::raw_Resync
-helpviewer_keywords:
-- Resync method [ADO]
+helpviewer_keywords: Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8fe3a2a123061cd0fc4de31d2b08ab82d41f7542
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 392dd82f2b6412c537a86cc68331cffc852069b8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resync-method"></a>メソッドを再同期します。
 現在のデータを更新[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)基になるデータベースからのオブジェクト。  
@@ -76,11 +73,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 |||  
 |-|-|  
-|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>参照  
  [メソッドの例 (VB) を再同期します。](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [メソッドの例 (vc++) を再同期します。](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)
-

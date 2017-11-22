@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataMiningMeasureGroupDimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataMiningMeasureGroupDimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DataMiningMeasureGroupDimension
-helpviewer_keywords:
-- DataMiningMeasureGroupDimension data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: DataMiningMeasureGroupDimension
+helpviewer_keywords: DataMiningMeasureGroupDimension data type
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0bd192b829e1481022fe895ed2ad92cb203397c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7aefd2be1889e334cd82d41c5e12aa9d7f2bbc7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dataminingmeasuregroupdimension-data-type-assl"></a>DataMiningMeasureGroupDimension データ型 (ASSL)
   メジャー グループとデータ マイニング ディメンションの間のリレーションシップを表す派生データ型を定義します。  
@@ -69,7 +63,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AMO, classes
 - Analysis Management Objects, classes
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO の概念とオブジェクト モデル
   このトピックは、分析管理オブジェクト (AMO) の定義を提供 AMO が他のツールとのアーキテクチャで提供されるライブラリに関連するどの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]AMO 内のすべての主要なオブジェクトの概念について説明します。  
@@ -87,7 +85,7 @@ ms.lasthandoff: 09/01/2017
 |[AMO OLAP クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] で OLAP オブジェクトを管理するためのクラス。|  
 |[AMO データ マイニング クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でデータ マイニング オブジェクトの管理を可能にするためのクラス。|  
 |[AMO セキュリティ クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|他のオブジェクトへのアクセスを制御し、セキュリティのメンテナンスを可能にするためのクラス。|  
-|[AMO の他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP またはデータ マイニングの管理者の日常的業務の遂行に役立つ、クラスおよびメソッド。|  
+|[AMO のその他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP またはデータ マイニングの管理者の日常的業務の遂行に役立つ、クラスおよびメソッド。|  
   
 ##  <a name="bkmk_UsingAMO"></a>AMO を使用してください。  
  AMO は、繰り返しタスクの自動化に非常に役立ちます。たとえば、ファクト テーブルの新しいデータに基づいてメジャー グループに新しいパーティションを作成する場合や、新しいデータに基づいてマイニング モデルを再調整する場合などです。 新しいオブジェクトを作成するこれらのタスクは、通常、毎月、毎週、または四半期ごとに実行され、アプリケーションで新しいオブジェクトに新しいデータに基づく名前を付けることも簡単です。  
@@ -127,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  データのクエリには、AMO を使用できません。 キューブやマイニング モデルなどの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データにクエリを実行するには、ユーザー アプリケーションから ADOMD.NET を使用してください。 詳細については、次を参照してください。 [ADOMD.NET での開発](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)です。  
   
   
-

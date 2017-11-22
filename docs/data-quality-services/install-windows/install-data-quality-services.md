@@ -8,21 +8,19 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.openlocfilehash: a9b01209583c35c9ee6be01193f78c9577c20bac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) には、 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** および **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**の 2 つのコンポーネントが含まれています。  
@@ -106,9 +104,9 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     既定では、ユーザー アカウントが sysadmin 固定サーバー ロールのメンバーである場合、DQS ロールがユーザー アカウントに付与されていない場合でも [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を使用して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] にログオンできます。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../../data-quality-services/dqs-security.md)」を参照してください。  
+     既定では、ユーザー アカウントが sysadmin 固定サーバー ロールのメンバーである場合、DQS ロールがユーザー アカウントに付与されていない場合でも [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を使用して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] にログオンできます。 3 つの DQS ロールの詳細については、「 [DQS Security](../../data-quality-services/dqs-security.md)」を参照してください。  
   
-     詳細については、「 [ユーザーに DQS ロールを付与する](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)」を参照してください。  
+     詳細については、「 [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)」を参照してください。  
   
     > [!NOTE]  
     >  DQS_PROJECTS および DQS_STAGING_DATA データベースについては、3 つの DQS ロールは使用できません。  
@@ -130,4 +128,3 @@ ms.lasthandoff: 09/12/2017
  [DQS のインストールおよび構成に関する問題のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
-

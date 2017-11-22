@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Connection15::ConnectionString
-helpviewer_keywords:
-- ConnectionString property [ADO]
+f1_keywords: Connection15::ConnectionString
+helpviewer_keywords: ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 590125743d78e4c583cd22011dcf40f58eed1999
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34db69d25ff835de4f8c81d252c99017ae4acbb5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データ ソースへの接続を確立するために使用される情報を示します。  
@@ -70,10 +66,9 @@ ms.lasthandoff: 09/09/2017
 |既定値はありません。<br /><br /> ADO アプリケーションでは、次のオペレーティング システムで実行され、プロバイダーが明示的に指定しない、ときに、次のエラーが返されます。"ADODB です。接続: プロバイダーが指定されていないと、指定された既定のプロバイダーがありません"|Windows 2000 (64 ビット)<br /><br /> Windows XP (64 ビット)<br /><br /> Windows Server 2003 (64 ビット)<br /><br /> Windows Vista (64 ビット)|  
   
 ## <a name="applies-to"></a>適用対象  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [ConnectionString、ConnectionTimeout、および (VB) の状態プロパティの例](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString、ConnectionTimeout、および (vc++) の状態プロパティの例](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

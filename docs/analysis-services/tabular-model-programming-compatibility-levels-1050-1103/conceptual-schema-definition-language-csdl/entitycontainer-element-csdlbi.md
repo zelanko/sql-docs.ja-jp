@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abb371783474c7a0580d5694e7ad2afeabce3a4c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 要素 (CSDLBI)
   EntityContainer 要素は、CSDL の種類に基づく複合型で、1 つのデータ モデル内のエンティティのコレクションを定義します。 ビジネス インテリジェンス アプリケーションでは、EntityContainer で表されるデータ モデルは、リレーションシップによってリンクされた列のある複数のテーブルと、計算、メジャー、および KPI を含む可能性があります。 概念的には、データベースやデータ ソースに似ています。  
@@ -45,8 +43,8 @@ ms.lasthandoff: 09/01/2017
 |カルチャ|可|要求の LCID を含む文字列。|  
 |CompareOptions|可|モデルの言語固有の並べ替えおよび文字列比較のオプション|  
 |DirectQueryMode|いいえ|モデルが DirectQuery モードを使用するときのクエリ モードを示す列挙体。|  
-|EntitySet 要素|はい|[EntitySet 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|AssociationSet 要素|不可|[AssociationSet 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|EntitySet 要素|可|[EntitySet 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
+|AssociationSet 要素|不可|[AssociationSet 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions 要素  
  CompareOptions 属性では、データ モデルに適用される照合順序のプロパティが定義されます。 CompareOptions で定義されているプロパティは、モデルのデザイン時に Analysis Services データベースで設定される並べ替え順序、かなの区別、大文字小文字の区別に対する設定から派生されます。 次の表では、CompareOptions 属性の一部として含まれる値について説明します。  
@@ -121,7 +119,6 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="see-also"></a>参照  
- [EntitySet 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
+ [EntitySet 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Schema section [ADO]
+helpviewer_keywords: Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbe340ed1778b125d6281ef62f53b721923939cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f691a4ba9632f40ceb4eb08c33a35135d9a0e7d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schema-section"></a>スキーマ セクション
 スキーマのセクションが必要です。 前の例に示すように、ADO は更新可能な限り、データ値のセマンティクスを保持するために各列に関する詳細なメタデータを書き込みます。 ただし、XML に読み込むには、ADO のみが必要ですが所属する行セットおよび列の名前。 最小限のスキーマの例を次に示します。  
@@ -183,5 +180,4 @@ ms.lasthandoff: 09/09/2017
  詳細については、OLE DB 構造は OLE DB の XML ドキュメントのスキーマ内で使用できるの定義を参照してください"urn: スキーマ-microsoft-com:rowset"と OLE DB プログラマ ガイドです。  
   
 ## <a name="see-also"></a>参照  
- [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

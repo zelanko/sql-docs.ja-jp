@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 548c2c51dc0df576e5334dba2f7b17a838b19cb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4254b34f570f37761001542d67e94c02e70a84
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>モデル ビューアーからのドリルスルーの使用
   モデルの種類に応じて、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにある参照ビューアーのドリルスルーを使用して、マイニング モデルで使用されているケースを調べたり、マイニング構造の追加列を参照したりできます。 モデルのパターンは特定のケースに直接リンクできないため、多くのモデルの種類ではドリルスルーがサポートされませんが、次のモデルの種類ではドリルスルーがサポートされます。  
@@ -85,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [マイニング構造でのドリルスルー](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   
-

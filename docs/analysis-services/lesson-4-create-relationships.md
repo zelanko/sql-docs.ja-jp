@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 1ebfc0ec46e750196a23a2b24a93ccc7ebd16114
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 096f19dc25973b2d515c6ccfb9961e7b0fe07c21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-create-relationships"></a>レッスン 4: リレーションシップを作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
 2.  間の実線をクリックして、 **DimCustomer**テーブルおよび**DimGeography**テーブル。 これら 2 つのテーブル間の実線は、そのリレーションシップがアクティブであることを示します。つまり、そのリレーションシップは DAX 数式の計算時に既定で使用されます。  
   
-    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**これで、ボックス内にそれぞれ表示両方のテーブルです。 これは、これらがリレーションシップに使用される列であるということを示しています。 リレーションシップのプロパティが、[ **プロパティ** ] ウィンドウに表示されます。  
+    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**これで、ボックス内にそれぞれ表示両方のテーブルです。 これは、これらがリレーションシップに使用される列であるということを示しています。 リレーションシップのプロパティが、**[ プロパティ ]** ウィンドウに表示されます。  
   
     > [!TIP]  
     > だけでなく、モデル デザイナーを使用して、ダイアグラム ビューで、表形式ですべてのテーブル間のリレーションシップを表示するのにリレーションシップの管理 ダイアログ ボックスを使用することができます。 右クリック**リレーションシップ**をクリックして、表形式モデル エクスプ ローラー**リレーションシップの管理**です。 リレーションシップの管理 ダイアログ ボックスでは、データのインポート時に自動的に作成されたリレーションシップを示します。  
@@ -61,11 +58,11 @@ ms.lasthandoff: 09/01/2017
   
     |Active|テーブル|関連する参照テーブル|  
     |----------|---------|------------------------|  
-    |はい|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |はい|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |はい|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |はい|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |はい|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |可|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |可|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |可|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |可|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |可|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     上の表に、リレーションシップのいずれかが存在しない場合は、次のテーブルがモデルに含まれることを確認してください: DimCustomer、DimDate、DimGeography、DimProduct、DimProductCategory、DimProductSubcategory、および FactInternetSales です。 同じデータ ソース接続からのテーブルが複数回インポートされた場合、それらのテーブル間のリレーションシップは作成されず、手動で作成する必要があります。  
 
@@ -106,4 +103,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

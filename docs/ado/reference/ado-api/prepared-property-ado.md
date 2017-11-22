@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Command15::Prepared
-helpviewer_keywords:
-- Prepared property [ADO]
+f1_keywords: Command15::Prepared
+helpviewer_keywords: Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62f01b807c56065c61e5cf8650c15f7210df6b7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f47836c824401e5ca49edd5eac33c2f6f6393993
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prepared-property-ado"></a>準備済みのプロパティ (ADO)
 コンパイル済みのバージョンを保存するかどうかを示す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)実行前にします。  
@@ -44,9 +40,8 @@ ms.lasthandoff: 09/09/2017
  このプロパティ設定されている場合に、エラーを返す可能性がありますが、プロバイダーがコマンドの準備をサポートしていない場合**True**です。 コマンドとセットを準備する要求を無視プロバイダーでエラーが返されない場合、 **Prepared**プロパティを**False**です。  
   
 ## <a name="applies-to"></a>適用対象  
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [準備済みのプロパティの例 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
- [準備済みのプロパティの例 (vc++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   
-
+ [Prepared プロパティの例 (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

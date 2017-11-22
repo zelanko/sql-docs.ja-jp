@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Members Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Members Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Members
-helpviewer_keywords:
-- Members element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Members
+helpviewer_keywords: Members element
 ms.assetid: 4bf585a3-b681-486d-852b-1244c5658a04
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b7a4a67e738d500661a430a1fb55a93284c50e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 223618d552b1bd0277697c53505ac32c089f3ded
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="members-element-assl"></a>Members 要素 (ASSL)
   コレクションを格納[メンバー](../../../analysis-services/scripting/objects/member-element-assl.md)親要素の要素。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**メンバー**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.Group>と<xref:Microsoft.AnalysisServices.Role>です。  
   
 ## <a name="see-also"></a>参照  
- [コレクション & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [コレクション &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

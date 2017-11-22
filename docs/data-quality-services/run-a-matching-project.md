@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でデータ照合を実行する方法について説明します。 照合プロセスでは、照合ポリシーの照合ルールに基づいて一致レコードのクラスターを特定し、サバイバーシップ ルールに基づいて各クラスターで保持するレコードを 1 つ特定し、結果をエクスポートします。 照合プロセス (重複除去とも呼ばれます) はコンピューター支援型のプロセスで実行されますが、照合ルールを対話形式で作成し、いくつかの選択肢の中からサバイバーシップ ルールを選択することで、照合プロセスを制御します。  
@@ -245,4 +243,3 @@ ms.lasthandoff: 09/09/2017
 -   クラスター内の重複の最大数  
   
   
-

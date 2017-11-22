@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADOX]
+helpviewer_keywords: enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a43048c4ea1dff730c6be4d1f755bfa96bec34dd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列挙定数
 デバッグを支援するには、ADOX 列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADOX の 1 つのリリース別に変更があります。 コードは必要があります列挙定数の実際の値ではなく、名前にのみ依存します。  
@@ -37,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|ときに実行されるアクションの種類を指定**SetPermissions**と呼びます。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 値を持つレコードのインデックスが作成するかどうかを指定します。|  
 |[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|特性を指定します、**列**です。|  
-|[格納](../../../ado/reference/ado-api/datatypeenum.md)|データ型を指定します、**フィールド**、**パラメーター**、または**プロパティ**です。|  
+|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|データ型を指定します、**フィールド**、**パラメーター**、または**プロパティ**です。|  
 |[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|オブジェクトがアクセス許可の設定を継承する方法を示す**SetPermissions**です。|  
 |[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|型を指定**キー**: プライマリ、外部キー、または一意です。|  
 |[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|Ownership のいずれかのアクセス許可を設定する対象のデータベース オブジェクトの種類を指定します。|  
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>参照  
  [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Persistence Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Persistence Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Persistence
-helpviewer_keywords:
-- Persistence element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Persistence
+helpviewer_keywords: Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f49d7a5eabaeaec3ba9d75bcfec92adda6c0e196
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fd24f62070693d74949bd9ff328c87f66567929f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persistence-element-assl"></a>Persistence 要素 (ASSL)
   調べ、バインドされているソース データのどの部分は動的で指定された頻度を使用して更新プログラムの確認は、 [RefreshPolicy](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md)要素。  
@@ -78,7 +72,6 @@ ms.lasthandoff: 09/01/2017
  許可される値に対応する列挙**永続化**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.PersistenceType>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

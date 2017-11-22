@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DiscretizationMethod Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DiscretizationMethod Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DiscretizationMethod
-helpviewer_keywords:
-- DiscretizationMethod element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DiscretizationMethod
+helpviewer_keywords: DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0b084caccf3b44cc6b43021551f227f61c0de0e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2bbf548ba16ccc81d1536c5c64a22e9c69d96d1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 要素 (ASSL)
   分離に使用するメソッドを定義します。  
@@ -67,7 +61,7 @@ ms.lasthandoff: 09/01/2017
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
- 値、 **DiscretizationMethod**要素を決定する方法の値を**DimensionAttribute**または**ScalarMiningStructureColumn**分離されるか、構成されています特定のグループ セットにします。 分離メソッドの詳細については、次を参照してください。[分離メソッド (&) #40 です。 データ マイニング (&) #41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)です。  
+ 値、 **DiscretizationMethod**要素を決定する方法の値を**DimensionAttribute**または**ScalarMiningStructureColumn**分離されるか、構成されています特定のグループ セットにします。 分離メソッドの詳細については、次を参照してください。[分離メソッド (&) #40 です。 データ マイニング &#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)です。  
   
  この要素の値は、次の表のいずれかの文字列に制限されます。  
   
@@ -82,7 +76,6 @@ ms.lasthandoff: 09/01/2017
  許可される値に対応する列挙**DiscretizationMethod**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DiscretizationMethod>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

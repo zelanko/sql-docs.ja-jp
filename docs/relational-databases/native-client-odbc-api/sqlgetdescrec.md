@@ -1,0 +1,73 @@
+---
+title: "SQLGetDescRec |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: native-client-odbc-api
+ms.reviewer: 
+ms.suite: sql
+ms.technology: docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: SQLGetDescRec function
+ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
+caps.latest.revision: "18"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 29ce8156afcbb9d31a35e0ae727c711f82c04dfc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sqlgetdescrec"></a>SQLGetDescRec
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+
+  このトピックに固有である sqlgetdescrec による機能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client です。  
+  
+## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec とテーブル値パラメーター  
+ Sqlgetdescrec によるはテーブル値パラメーターおよびテーブル値パラメーター列の属性の値を取得するためにことができます。 *RecNumber* SQLGetDescRec のパラメーターに対応、 *ParameterNumber* SQLBindParameter のパラメーターです。  
+  
+ テーブル値パラメーター列は、記述子のヘッダー フィールド SQL_SOPT_SS_PARAM_FOCUS に、SQL_DESC_TYPE が SQL_SS_TABLE に設定されているレコードの序数が設定される場合のみ使用できます。 SQL_SOPT_SS_PARAM_FOCUS についての詳細については、次を参照してください。 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)です。  
+  
+ Sqlgetdescrec によるには、次のデータが返されます。  
+  
+|パラメーター|テーブル値パラメーター|テーブル値パラメーター列とその他のパラメーター|  
+|---------------|-----------------------------|----------------------------------------------------------|  
+|*名前*|ストアド プロシージャ呼び出しの場合は仮パラメーター名。それ以外の場合は長さが 0 の文字列。|テーブル値パラメーター列の名前。|  
+|*TypePtr*|SQL_DESC_TYPE。 テーブル値パラメーターの場合、これは SQL_SS_TABLE です。|SQL_DESC_TYPE|  
+|*SubTypePtr*|未定義。|SQL_DESC_DATETIME_INTERVAL_CODE (SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合)。|  
+|*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
+|*PrecisionPtr*|0|SQL_DESC_PRECISION|  
+|*ScalePtr*|0|SQL_DESC_SCALE|  
+|*NullablePtr*|1|SQL_DESC_NULLABLE|  
+  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)です。  
+  
+## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>SQLGetDescRec による機能強化された日付と時刻のサポート  
+ 日付型または時刻型に対して返される値を次に示します。  
+  
+||*TypePtr*|*SubTypePtr*|*LengthPtr*|*PrecisionPtr*|*ScalePtr*|  
+|-|---------------|------------------|-----------------|--------------------|----------------|  
+|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|time|SQL_SS_TIME2|0|10|0..7|0..7|  
+|datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
+|datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
+  
+ 詳細については、次を参照してください。[日付と時刻の強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
+  
+## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>SQLGetDescRec による大きな CLR UDT のサポート  
+ **SQLGetDescRec**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)です。  
+  
+## <a name="see-also"></a>参照  
+ [Sqlgetdescrec による](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+  
+  

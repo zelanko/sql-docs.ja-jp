@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - ChildCount
 - Member::ChildCount
-helpviewer_keywords:
-- ChildCount property [ADO MD]
+helpviewer_keywords: ChildCount property [ADO MD]
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5976605c9bfb96a7dc53895eaa4cbc511fb321a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ca8ee6c01299c3db45977a8e64c4f2afd46c7d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount プロパティ (ADO MD)
 対象のメンバーの数を示す現在[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクト階層の親であります。  
@@ -45,10 +42,9 @@ ms.lasthandoff: 09/09/2017
  **メンバー**オブジェクトから、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト、ADO のコレクションを使用して[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティを**子**を確認する、子の正確な数。 子の正確な数を決定するには、コレクション内の子の数が多い場合は低速可能性があります。  
   
 ## <a name="applies-to"></a>適用対象  
- [メンバー オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
  [子プロパティ (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
- [メンバーのコレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
-
+ [Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX code examples
+helpviewer_keywords: ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8a30aa48521f1fd634bb2bd8e2f462ad60e648b9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-code-examples"></a>ADOX のコード例
 ADOX オブジェクト、メソッド、プロパティ、およびイベントを使用するのに方法については、次のコード例を使用します。  
@@ -33,9 +30,9 @@ ADOX オブジェクト、メソッド、プロパティ、およびイベント
 > [!NOTE]
 >  コード例全体をコード エディターに貼り付けます。 部分的な例を使用する場合、または段落の書式設定が失われた場合、例が正しく動作しない可能性があります。  
   
--   [ADOX のコード例では、Microsoft Visual Basic](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-basic.md)  
+-   [Microsoft Visual Basic での ADOX コードの例](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-basic.md)  
   
--   [Microsoft Visual C のコード例を ADOX](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
+-   [Microsoft Visual C++ での ADOX のコード例](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
 ## <a name="see-also"></a>参照  
  [カタログ ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -55,5 +52,4 @@ ADOX オブジェクト、メソッド、プロパティ、およびイベント
  [ビューの追加メソッドの例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [ビューのコレクション、CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [ビューの削除の方法の例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [ビューの更新メソッドの例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
-
+ [Views Refresh メソッドの例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)

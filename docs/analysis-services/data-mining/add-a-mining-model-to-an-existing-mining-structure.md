@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 07a1f5deb7fc82fbe6021691417addf00414b3a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b3d91f5684a43202ea83ed6f7a4728bad53c98
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>既存のマイニング構造へのマイニング モデルの追加
   初期モデルを追加した後、マイニング構造にマイニング モデルを追加できます。 各モデルには構造内に存在する列が含まれている必要がありますが、列の使用法はマイニング モデルごとにそれぞれ定義できます。 マイニング モデルの列を定義する方法の詳細については、「 [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)」を参照してください。  
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

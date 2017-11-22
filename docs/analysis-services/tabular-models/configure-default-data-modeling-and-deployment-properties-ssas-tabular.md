@@ -20,17 +20,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 704a719e3f2d509b5a949f7e44dd86cdcea7b183
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50c41697a0197261be8ef1b60b469a28bd331248
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>既定のデータ モデルと配置プロパティの構成 (SSAS テーブル)
   このトピックでは、既定の互換性レベル、配置、およびワークスペース データベース プロパティの設定について説明します。これらは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成する新しい各テーブル モデル プロジェクトに対して事前に定義できます。 新しいプロジェクトの作成後も、これらのプロパティを特定の要件に応じて変更できます。  
@@ -82,8 +81,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [プロジェクトのプロパティ (SSAS テーブル)](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [モデルのプロパティ & #40 です。SSAS テーブル &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [モデルのプロパティ &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service: ssdt
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0ac5aa53-cdc3-4ced-9ab9-690be02aa951
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8f84afd80acae08e3fdd0bd3c0ae27dc25df32de
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2d07b9aa90c3f695d04e1ac668c46db57d8040d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools - ライセンス条項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 &nbsp;&nbsp;**b.**  本ソフトウェアは、SQL Server Integration Services (SSIS) のユーザーが (a) オンプレミスのデータ ストアと Microsoft Online Services 間でデータを移動し、(b) Microsoft Online Services の特定のアクションをトリガーできるように設計されています。 このため、本ソフトウェアはインターネット プロトコルを使用して、(i) お客様が指定した独自のデータと本ソフトウェアの構成に関するデータを含むデータをこれらのサービスに送信し、(ii) お客様が指定した独自のデータとお客様の使用する Microsoft Online Services の性質および構成に関するデータを含むデータをこれらのサービスから要求します。 これらのサービスと通信するように本ソフトウェアを構成した場合は、本ソフトウェアがこれらのサービスに接続したときに別途通知が送信されることはありません。  
   
-**4.  フィードバック｡** 本ソフトウェアに関するフィードバックをお客様がマイクロソフトに提供した場合は、方法および目的を問わずそのフィードバックを無償で使用、公開、および商用利用する権利をお客様がマイクロソフトに付与したものと見なされます。 また、そのフィードバックが含まれているマイクロソフトのソフトウェアまたはサービスの特定部分が、第三者の製品、テクノロジ、およびサービスによって使用される場合またはその部分との連携が行われる場合に必要となる特許権についても、お客様が無償で付与したものと見なされます。 お客様のフィードバックをソフトウェアまたはドキュメントに含めるために、マイクロソフトから第三者に対して、そのソフトウェアまたはドキュメントの使用許諾が必要となるようなライセンスが適用されるフィードバックは、お客様から提供されないものとします。 これらの権利は、本契約の終了後も継続するものとします。  
+**4.  フィードバック。** 本ソフトウェアに関するフィードバックをお客様がマイクロソフトに提供した場合は、方法および目的を問わずそのフィードバックを無償で使用、公開、および商用利用する権利をお客様がマイクロソフトに付与したものと見なされます。 また、そのフィードバックが含まれているマイクロソフトのソフトウェアまたはサービスの特定部分が、第三者の製品、テクノロジ、およびサービスによって使用される場合またはその部分との連携が行われる場合に必要となる特許権についても、お客様が無償で付与したものと見なされます。 お客様のフィードバックをソフトウェアまたはドキュメントに含めるために、マイクロソフトから第三者に対して、そのソフトウェアまたはドキュメントの使用許諾が必要となるようなライセンスが適用されるフィードバックは、お客様から提供されないものとします。 これらの権利は、本契約の終了後も継続するものとします。  
   
 **5.第三者の通知。** 本ソフトウェアには、本ソフトウェアに付属している ThirdPartyNotices ファイルに規定されている場合があるように、別途の法律上の通知が付属するか、別途のライセンス条項が適用される、第三者のコンポーネントが含まれている場合があります。  かかるコンポーネントに別途のライセンス条項が適用される場合でも、下記の免責事項ならびに損害に関する制限および除外は併せて適用されるものとします。  
   
@@ -148,4 +146,3 @@ les réclamations au titre de violation de contrat ou de garantie, ou au titre d
 Elle s’applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
 EFFET JURIDIQUE.  Le présent contrat décrit certains droits juridiques.  Vous pourriez avoir d’autres droits prévus par les lois de votre pays.  Le présent contrat ne modifie pas les droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.
-

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tools"></a>データ マイニング クエリ ツール
   すべてのデータ マイニング クエリで、データ マイニング拡張機能 (DMX) の言語が使用されます。 DMX を使って、分類、リスク分析、推奨設定の生成、線形回帰など、あらゆる種類の Machine Learning タスクのモデルを作成できます。 またモデル処理時に生成されたパターンおよび統計に関する情報を取得するための DMX クエリを作成することもできます。  
@@ -93,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [SQL Server Management Studio で DMX クエリを作成する](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- intrinsic member properties [MDX]
+helpviewer_keywords: intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1b3dfd57447e95c22a468e3635030f8973fcc2bc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX メンバーのプロパティ - 固有メンバー プロパティ
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、カスタム アプリケーションで使用する追加のデータまたはメタデータを返したり、モデルの調査や構築を支援したりするために、クエリに含めることができるディメンション メンバーの固有プロパティを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
@@ -221,12 +219,11 @@ FROM [Adventure Works]
  [Hierarchize (& a) #40 です。MDX と #41 です。](../../../mdx/hierarchize-mdx.md)   
  [Count (セット) (MDX)](../../../mdx/count-set-mdx.md)   
  [フィルターと #40 です。MDX と #41 です。](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40 です。MDX と #41 です。](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40 です。MDX と #41 です。](../../../mdx/drilldownlevel-mdx.md)   
- [プロパティ & #40 です。MDX と #41 です。](../../../mdx/properties-mdx.md)   
- [PrevMember & #40 です。MDX と #41 です。](../../../mdx/prevmember-mdx.md)   
+ [AddCalculatedMembers &#40;です。MDX と #41 です。](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;です。MDX と #41 です。](../../../mdx/drilldownlevel-mdx.md)   
+ [プロパティ &#40;です。MDX と #41 です。](../../../mdx/properties-mdx.md)   
+ [PrevMember &#40;です。MDX と #41 です。](../../../mdx/prevmember-mdx.md)   
  [メンバー プロパティの使用 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

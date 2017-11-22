@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cancel Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cancel Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cancel
 - http://schemas.microsoft.com/analysisservices/2003/engine#Cancel
 - urn:schemas-microsoft-com:xml-analysis#Cancel
-helpviewer_keywords:
-- Cancel command
+helpviewer_keywords: Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0acdbc4358ff88f49e6b87f8c4cf3924ddedb661
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a12372d43b20395e878e305b036fe5a63f399d2b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancel-element-xmla"></a>Cancel 要素 (XMLA)
   現在実行中のコマンドを取り消します、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
@@ -78,11 +73,10 @@ ms.lasthandoff: 09/01/2017
   
  通常、**キャンセル**コマンドを使用して、現在アクティブなセッションで実行中のコマンドをキャンセルします。 その場合は、none の子要素の**キャンセル**コマンドを指定する必要があります。 **キャンセル**コマンドこともできます管理者によって接続または現在アクティブなセッションを除いて、セッションの実行中のコマンドをキャンセルします。 特定のデータベースの管理者権限を持つロールのメンバーは、そのデータベースに該当する接続やセッションでのコマンドをキャンセルできます。サーバー管理者は、特定の Analysis Services インスタンスに関連した接続やセッションでのコマンドをキャンセルできます。  
   
- 現在の接続やセッションに関する情報を取得する、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、インスタンス、 **Discover** 、それぞれ DISCOVER_CONNECTIONS および DISCOVER_SESSIONS スキーマ行セットを要求するメソッドを実行できます。 特定のデータベースの管理者権限を持つロールのメンバーは、DISCOVER_SESSIONS スキーマ行セットの SESSION_CURRENT_DATABASE 制限列の中でそのデータベースを指定することにより、特定のデータベースに関連したセッションだけを返すことができます。 詳細については、 **Discover**メソッドを参照してください[検出メソッド & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
+ 現在の接続やセッションに関する情報を取得する、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、インスタンス、 **Discover** 、それぞれ DISCOVER_CONNECTIONS および DISCOVER_SESSIONS スキーマ行セットを要求するメソッドを実行できます。 特定のデータベースの管理者権限を持つロールのメンバーは、DISCOVER_SESSIONS スキーマ行セットの SESSION_CURRENT_DATABASE 制限列の中でそのデータベースを指定することにより、特定のデータベースに関連したセッションだけを返すことができます。 詳細については、 **Discover**メソッドを参照してください[検出メソッド &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
   
 ## <a name="see-also"></a>参照  
- [バッチ要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [バッチ要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [コマンドと #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

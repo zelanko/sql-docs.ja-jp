@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="kpis"></a>KPI
   *KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
@@ -83,11 +82,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[作成および管理の Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
+|[KPI の作成および管理](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

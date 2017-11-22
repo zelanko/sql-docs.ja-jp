@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Record
-helpviewer_keywords:
-- Record object [ADO]
+f1_keywords: Record
+helpviewer_keywords: Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0efb504844ac58e7889cdb768821efe95f52e0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26840ff89f61bc3c37cee2fd88c1f53e393528bf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 行を表し、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータ プロバイダーまたはファイルやディレクトリなどの半構造化データ プロバイダーによって返されるオブジェクト。  
@@ -87,11 +83,10 @@ ms.lasthandoff: 09/09/2017
   
  このセクションには、次のトピックが含まれています。  
   
--   [オブジェクトのプロパティ、メソッド、およびイベントを記録します。](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
+-   [Record オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
  [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [レコードとストリーム](../../../ado/guide/data/records-and-streams.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

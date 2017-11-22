@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ModelingFlags Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ModelingFlags Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ModelingFlags
-helpviewer_keywords:
-- ModelingFlags element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ModelingFlags
+helpviewer_keywords: ModelingFlags element
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2ae419864b73406d854e05f03cf11add9d1cdaa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ce81cd03f3af885b99d19de1d4174fce3998fe9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modelingflags-element-assl"></a>ModelingFlags 要素 (ASSL)
   コレクションを格納[ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md)要素内の列に、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)または[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)です。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MiningModelingFlags>します。  
   
 ## <a name="see-also"></a>参照  
- [コレクション & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [コレクション &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

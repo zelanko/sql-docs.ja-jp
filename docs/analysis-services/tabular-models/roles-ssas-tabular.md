@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5a80e46a15037dbc3c96b107dd06e567ae3eeb9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="roles"></a>ロール
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。 
@@ -130,7 +129,7 @@ ms.lasthandoff: 09/01/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[作成し、ロールの管理](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
+|[ロールの作成および管理](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
   
 ## <a name="see-also"></a>参照  
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
@@ -140,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  [CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab01c719611309117308c818930b1553741495e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52c9495e221ba7a4b71ba91d276eefd576f6715d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-append-clause"></a>図形の APPEND 句
 列または列を図形コマンドの APPEND 句が追加され、 **Recordset**です。 多くの場合、これらの列は、チャプター列は、子を参照してください**Recordset**です。  
@@ -126,10 +124,9 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [ハイブリッド コマンド](../../../ado/guide/data/hybrid-commands.md)  
   
--   [介在する図形の COMPUTE 句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
+-   [介在する Shape COMPUTE 句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
 ## <a name="see-also"></a>参照  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)
