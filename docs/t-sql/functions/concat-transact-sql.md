@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONCAT
 - CONCAT_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- CONCAT function
+dev_langs: TSQL
+helpviewer_keywords: CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a924bb7f9eb521e3c9637e69aeb5055c69bfeb11
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 046278bb3016b39df8039a1450a58b177d2bc180
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -53,7 +49,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 入力に依存する文字列、長さ、および型です。
   
 ## <a name="remarks"></a>解説  
-**CONCAT**可変個の文字列引数を受け取り、1 つの文字列に連結します。 最小で 2 つの入力値が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 Null 値は暗黙的に空の文字列に変換されます。 すべての引数が null、空の文字列型の場合**varchar**(1) が返されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換の詳細については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).
+**CONCAT**可変個の文字列引数を受け取り、1 つの文字列に連結します。 最小で 2 つの入力値が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 Null 値は暗黙的に空の文字列に変換されます。 すべての引数が null、空の文字列型の場合**varchar**(1) が返されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換の詳細については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 戻り値の型は、引数の種類によって異なります。 次の表に、マッピングを示します。
   
@@ -115,6 +111,5 @@ NameLastname
 [文字列関数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 [CONCAT_WS (TRANSACT-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   
   
-
 
 

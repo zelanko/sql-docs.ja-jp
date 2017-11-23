@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - identifiers [MDX]
 - expressions [MDX]
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], expressions
 - Multidimensional Expressions [Analysis Services], expressions
 ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 8474c90f0cfbcd8ae0aabce14623c427106298a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 608cba1c2819136f5bafa71be8ac5a347c5939cd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-mdx"></a>式 (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.lasthandoff: 08/02/2017
  MDX のスカラー関数は、評価のコンテキスト内で単一の値を返します。 MDX がスカラー関数を解決する方法を理解するうえで、この違いは重要です。ほとんどの MDX 式、ステートメント、およびスクリプトは単一のデータ要素に対して評価されるのではなく、(複数のセル、メンバーなど) データ要素のグループに対して反復的に評価されます。 しかし、スカラー関数の評価時には、通常、関数は単一のデータ要素を検査します。  
   
  オブジェクト識別子  
- 多次元データの性質上、MDX はオブジェクト指向です。 MDX では、オブジェクト識別子は単純式と見なされます。 識別子の詳細については、次を参照してください。[識別子 & #40 です。MDX と #41 です。](../mdx/identifiers-mdx.md).  
+ 多次元データの性質上、MDX はオブジェクト指向です。 MDX では、オブジェクト識別子は単純式と見なされます。 識別子の詳細については、次を参照してください。[識別子 &#40;です。MDX と #41 です。](../mdx/identifiers-mdx.md).  
   
  これらのエンティティを演算子で結合して、複合式を作成することができます。  
   
@@ -90,17 +87,16 @@ WHERE [Product].[Category].[Bikes]
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[キューブ式とサブキューブ式を使用します。](../mdx/using-cube-and-subcube-expressions.md)|キューブ式とサブキューブ式を定義します。|  
+|[キューブ式とサブキューブ式の使用](../mdx/using-cube-and-subcube-expressions.md)|キューブ式とサブキューブ式を定義します。|  
 |[ディメンション式の使用](../mdx/using-dimension-expressions.md)|ディメンション式 (次元式) を定義します。|  
 |[メンバー式の使用](../mdx/using-member-expressions.md)|メンバー式を定義します。|  
 |[組式の使用](../mdx/using-tuple-expressions.md)|組式を定義します。|  
 |[セット式の使用](../mdx/using-set-expressions.md)|セット式を定義します。|  
 |[スカラー関数の使用](../mdx/using-scalar-expressions.md)|スカラー式を定義します。|  
-|[空の値の扱い](../mdx/working-with-empty-values.md)|空の値とは何か、そのような値がどのように処理されるかを説明します。|  
+|[空の値の操作](../mdx/working-with-empty-values.md)|空の値とは何か、そのような値がどのように処理されるかを説明します。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 言語リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)   
  [MDX クエリの基礎と #40 です。Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

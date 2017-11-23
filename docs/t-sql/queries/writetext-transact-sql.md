@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WRITETEXT_TSQL
 - WRITETEXT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - replacing data
 - WRITETEXT statement
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5bf092ec05c2ae07864c12f092cf8b98f97234fa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +89,7 @@ WRITETEXT [BULK]
   
  ODBC SQLPutData 関数は高速であり、WRITETEXT よりも小さい動的メモリを使用します。 この関数の 2 ギガバイトを挿入できる**テキスト**、 **ntext**、または**イメージ**データ。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の行内テキスト ポインター**テキスト**、 **ntext**、または**イメージ**データが存在しても、有効なことができない可能性があります。 Text in row オプションの詳細については、次を参照してください。 [sp_tableoption & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効になります。 詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の行内テキスト ポインター**テキスト**、 **ntext**、または**イメージ**データが存在しても、有効なことができない可能性があります。 Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効になります。 詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  指定したテーブルの UPDATE 権限が必要です。 UPDATE 権限が転送されるときに、この権限は譲渡できます。  
@@ -125,7 +122,6 @@ GO
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [UPDATETEXT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/updatetext-transact-sql.md)  
+ [UPDATETEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/updatetext-transact-sql.md)  
   
   
-

@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
 - ALTER LOGIN
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER LOGIN statement
 - change password
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 0bc7681bdb3404f3b6114d0725cbed7ef8f388e9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9dd47cb63c56dbbfb5f31ea3f7b2c8d4f45e9d73
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -139,7 +136,7 @@ ALTER LOGIN login_name
  パスワード**='***パスワード***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 変更するログインのパスワードを指定します。 パスワードでは大文字と小文字が区別されます。  
   
- SQL データベースに対するアクティブな接続が (データベース エンジンによって実行されます) を再認証を必要と継続的に、少なくとも 10 時間。 データベース エンジンは、最初に送信されたパスワードを使用して再認証を試行して、ユーザー入力は必要ありません。 パフォーマンス上の理由から、SQL データベースで、パスワードがリセットされたとき、接続はできません、再認証場合でも、接続プールのために、接続がリセットします。 これは、内部設置型 SQL Server の動作と異なります。 接続が最初に承認されているために、パスワードは変更されている場合、は、接続を終了する必要があり、新しいパスワードを使用して新しい接続が作成します。 KILL DATABASE CONNECTION 権限を持つユーザーは、KILL コマンドを使用して SQL データベースへの接続を明示的に終了できます。 詳細については、次を参照してください。 [KILL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-transact-sql.md).  
+ SQL データベースに対するアクティブな接続が (データベース エンジンによって実行されます) を再認証を必要と継続的に、少なくとも 10 時間。 データベース エンジンは、最初に送信されたパスワードを使用して再認証を試行して、ユーザー入力は必要ありません。 パフォーマンス上の理由から、SQL データベースで、パスワードがリセットされたとき、接続はできません、再認証場合でも、接続プールのために、接続がリセットします。 これは、内部設置型 SQL Server の動作と異なります。 接続が最初に承認されているために、パスワードは変更されている場合、は、接続を終了する必要があり、新しいパスワードを使用して新しい接続が作成します。 KILL DATABASE CONNECTION 権限を持つユーザーは、KILL コマンドを使用して SQL データベースへの接続を明示的に終了できます。 詳細については、次を参照してください。 [KILL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-transact-sql.md).  
   
  パスワード **=**  *hashed_password*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -190,12 +187,12 @@ ALTER LOGIN login_name
  資格情報 = *credential_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップする資格情報の名前を指定します。 この資格情報はサーバー内に存在する必要があります。 詳細については、次を参照してください。[資格情報 (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。 資格情報は、sa ログインにマップすることはできません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップする資格情報の名前を指定します。 この資格情報はサーバー内に存在する必要があります。 詳細については、次を参照してください。[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。 資格情報は、sa ログインにマップすることはできません。  
   
  NO CREDENTIAL  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- ログインからサーバー資格情報へのマッピングがある場合は削除します。 詳細については、次を参照してください。[資格情報 (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。  
+ ログインからサーバー資格情報へのマッピングがある場合は削除します。 詳細については、次を参照してください。[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。  
   
  UNLOCK  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -205,12 +202,12 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 拡張キー管理 (EKM: Extensible Key Management) プロバイダー資格情報をログインに追加します。 詳細については、次を参照してください。[拡張キー管理 & #40 です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 拡張キー管理 (EKM: Extensible Key Management) プロバイダー資格情報をログインに追加します。 詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-ログインから拡張キー管理 (EKM) プロバイダー資格情報を削除します。 詳細については、次を参照してください。[拡張キー管理 & #40 です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ログインから拡張キー管理 (EKM) プロバイダー資格情報を削除します。 詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>解説  
  CHECK_POLICY が ON に設定されている場合、HASHED 引数は使用できません。  
@@ -239,7 +236,7 @@ ALTER_LOGIN を DISABLE 引数と共に使用して Windows グループへの�
   
  これは仕様です。  
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続の認証に必要なログイン データ、およびサーバー レベルのファイアウォール ルールは、各データベースでは一時的にキャッシュします。 このキャッシュは定期的に更新されます。 認証キャッシュの更新を強制し、データベースのログインの表に、最新バージョンがあることを確認、実行[DBCC FLUSHAUTHCACHE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続の認証に必要なログイン データ、およびサーバー レベルのファイアウォール ルールは、各データベースでは一時的にキャッシュします。 このキャッシュは定期的に更新されます。 認証キャッシュの更新を強制し、データベースのログインの表に、最新バージョンがあることを確認、実行[DBCC FLUSHAUTHCACHE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  ALTER ANY LOGIN 権限が必要です。  
@@ -334,7 +331,7 @@ GO
  
   
 ## <a name="see-also"></a>参照  
- [資格情報 (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [DROP LOGIN &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
@@ -342,6 +339,5 @@ GO
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
-
 
 

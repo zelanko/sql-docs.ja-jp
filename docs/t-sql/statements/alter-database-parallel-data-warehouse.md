@@ -8,29 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 522f8c8404e80943e093ebeb0a56698fa790b6c9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 74b47bec1033728d47e5fe577af29c6d43e9af65
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   レプリケートされたテーブル、分散テーブル、および内のトランザクション ログの最大データベース サイズのオプションを変更[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 このステートメントを使用すると、それを拡大または縮小のサイズとデータベースのディスク領域の割り当てを管理できます。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,7 +52,7 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- 変更するデータベースの名前。 アプライアンス上のデータベースの一覧を表示する使用[sys.databases & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ 変更するデータベースの名前。 アプライアンス上のデータベースの一覧を表示する使用[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  自動拡張 = {ON |オフ}  
  自動拡張オプションを更新します。 自動拡張が ON の場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]記憶域の要件の増大に対応するために必要とレプリケートされたテーブル、分散テーブル、およびトランザクション ログに割り当てられた領域を自動的に増加します。 自動拡張が OFF の場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]エラーを返します、テーブルをレプリケートされた場合に分散テーブル、またはトランザクション ログが最大サイズの設定を超えています。  
@@ -69,7 +67,7 @@ ALTER DATABASE database_name
  変更されているデータベース内のすべてのトランザクション ログを格納するためのデータベースあたり最大ギガバイト単位の新しいを指定します。 サイズは、すべてのアプライアンスにコンピューティング ノードに分散されます。  
   
  暗号化 {ON |オフ}  
- データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 暗号化のみに対して設定できる[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]とき[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)に設定されている**1**です。 透過的なデータ暗号化を構成する前に、データベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption & #40 です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 暗号化のみに対して設定できる[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]とき[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)に設定されている**1**です。 透過的なデータ暗号化を構成する前に、データベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="permissions"></a>Permissions  
  データベースに対する ALTER 権限が必要です。  
@@ -133,7 +131,7 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- TDE を実装するすべての手順を示す包括的な例を参照してください。 [Transparent Data Encryption & #40 です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ TDE を実装するすべての手順を示す包括的な例を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -170,8 +168,7 @@ ALTER DATABASE CustomerSales
 ```  
   
 ## <a name="see-also"></a>参照  
- [DATABASE &#40; を作成します。並列データ ウェアハウス"&"#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
+ [DATABASE &#40; を作成します。並列データ ウェアハウス&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   
-

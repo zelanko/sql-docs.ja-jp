@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AS
 - AS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - permission sets [SQL Server]
 - queues [SQL Server]
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: baf3fdc592265f1c2117ef3358820ae94ce8536c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b96757281a5b36755422346ef444136ad8702726
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -190,7 +187,7 @@ GO
 ## <a name="using-execute-as-to-define-custom-permission-sets"></a>EXECUTE AS を使用したカスタム権限セットの定義  
  モジュールの実行コンテキストを指定すると、カスタム権限セットを定義する場合に非常に便利です。 たとえば、TRUNCATE TABLE などの操作には、許可できる権限がありません。 モジュール内に TRUNCATE TABLE ステートメントを組み込み、テーブルの変更権限を持つユーザーがモジュールを実行するように指定すると、モジュールの EXECUTE 権限を許可するユーザーに、テーブルを切り捨てる権限を拡張して与えることができます。  
   
- 表示するには、指定された実行コンテキストを持つモジュールの定義を使用して、 [sys.sql_modules & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。  
+ 表示するには、指定された実行コンテキストを持つモジュールの定義を使用して、 [sys.sql_modules &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。  
   
 ## <a name="best-practice"></a>推奨事項  
  モジュール内で定義された操作を実行する場合に必要となる最低限の権限を持つログインまたはユーザーを指定します。 たとえば、データベース レベルの権限が必要とされない場合は、データベース所有者アカウントは指定しないでください。  
@@ -232,9 +229,8 @@ GO
 ## <a name="see-also"></a>参照  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.service_queues & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
+ [sys.service_queues &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
  [元に戻す (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revert-transact-sql.md)   
  [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)  
   
   
-

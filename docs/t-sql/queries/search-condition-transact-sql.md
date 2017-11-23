@@ -8,16 +8,14 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - search
 - Search Condition
 - condition
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - OR operator [Transact-SQL]
 - CONTAINS predicate (Transact-SQL)
@@ -39,17 +37,16 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: eaacb26fe7c402b17206ecf3a0e05af709170f97
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -105,13 +102,13 @@ ms.lasthandoff: 10/24/2017
  SELECT ステートメント、クエリ式、またはサブクエリの場合、結果セットに返す行の条件を指定します。 UPDATE ステートメントの場合、更新する行を指定します。 DELETE ステートメントの場合、削除する行を指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの検索条件に含まれる述語の数に制限はありません。  
   
  [NOT]  
- 述語によって指定されたブール式を否定します。 詳細については、次を参照してください。[いない & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-transact-sql.md).  
+ 述語によって指定されたブール式を否定します。 詳細については、次を参照してください。[いない &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-transact-sql.md).  
   
  [AND]  
- 2 つの条件を結合し、両方の条件が真の場合に TRUE と評価します。 詳細については、次を参照してください。 [AND & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md).  
+ 2 つの条件を結合し、両方の条件が真の場合に TRUE と評価します。 詳細については、次を参照してください。 [AND &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md).  
   
  または  
- 2 つの条件を結合し、少なくとも片方の条件が真の場合に TRUE と評価します。 詳細については、次を参照してください。[または & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/or-transact-sql.md).  
+ 2 つの条件を結合し、少なくとも片方の条件が真の場合に TRUE と評価します。 詳細については、次を参照してください。[または &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/or-transact-sql.md).  
   
  \<述語 >  
  TRUE、FALSE、または UNKNOWN を返す式です。  
@@ -153,25 +150,25 @@ ms.lasthandoff: 10/24/2017
  文字列とワイルドカード文字から成る文字列です。  
   
  [ NOT ] LIKE  
- 後続の文字列が、パターン照合で使用されます。 詳細については、次を参照してください。[のような & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md).  
+ 後続の文字列が、パターン照合で使用されます。 詳細については、次を参照してください。[のような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md).  
   
  エスケープ**'***escape _ 文字***'**  
  ワイルドカードとして機能するのではなく、ワイルドカード文字そのものを文字列内で検索できます。 *escape_character*この特別な用途を示すために、ワイルドカード文字の前に配置されている文字です。  
   
  [ NOT ] BETWEEN  
- 両端を含む値の範囲を指定します。 最初と最後の値を除外するには、AND を使用します。 詳細については、次を参照してください。 [BETWEEN & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/between-transact-sql.md).  
+ 両端を含む値の範囲を指定します。 最初と最後の値を除外するには、AND を使用します。 詳細については、次を参照してください。 [BETWEEN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/between-transact-sql.md).  
   
  IS [NOT] NULL  
  指定のキーワードに応じて、NULL 値または NULL 値以外の値の検索を指定します。 ビットごとの演算子や算術演算子を使う式は、オペランドの少なくとも 1 つが NULL であれば、NULL と評価されます。  
   
  CONTAINS  
- 検索またはあいまいの文字ベースのデータを含む列 (*あいまい*) 1 つの単語または語句、特定の範囲内で 1 つの別、および重み付き検索語の近接度に一致します。 このオプションは、SELECT ステートメントでのみ使用できます。 詳細については、次を参照してください。 [CONTAINS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/contains-transact-sql.md).  
+ 検索またはあいまいの文字ベースのデータを含む列 (*あいまい*) 1 つの単語または語句、特定の範囲内で 1 つの別、および重み付き検索語の近接度に一致します。 このオプションは、SELECT ステートメントでのみ使用できます。 詳細については、次を参照してください。 [CONTAINS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/contains-transact-sql.md).  
   
  FREETEXT  
- 文字ベースのデータを含む列で、述語内の文字の並びと正確に一致しなくても意味が合っている値を検索するための、単純形式の自然言語クエリを指定します。 このオプションは、SELECT ステートメントでのみ使用できます。 詳細については、次を参照してください。 [FREETEXT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/freetext-transact-sql.md).  
+ 文字ベースのデータを含む列で、述語内の文字の並びと正確に一致しなくても意味が合っている値を検索するための、単純形式の自然言語クエリを指定します。 このオプションは、SELECT ステートメントでのみ使用できます。 詳細については、次を参照してください。 [FREETEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/freetext-transact-sql.md).  
   
  [ NOT ] IN  
- 式がリストに含まれているかどうかに基づいて、式の検索を指定します。 検索式には定数または列名を指定できます。またリストには、一般的にはサブクエリが指定されますが、一連の定数も指定できます。 値のリストはかっこで囲んでください。 詳細については、次を参照してください。 [IN & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/in-transact-sql.md).  
+ 式がリストに含まれているかどうかに基づいて、式の検索を指定します。 検索式には定数または列名を指定できます。またリストには、一般的にはサブクエリが指定されますが、一連の定数も指定できます。 値のリストはかっこで囲んでください。 詳細については、次を参照してください。 [IN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/in-transact-sql.md).  
   
  *サブクエリ*  
  制限された SELECT ステートメントと見なされます。 と似ています\<query_expresssion > SELECT ステートメントでします。 ORDER BY 句および INTO キーワードは使用できません。 詳細については、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
@@ -180,13 +177,13 @@ ms.lasthandoff: 10/24/2017
  比較演算子およびサブクエリと共に使用します。 に対して TRUE を返します\<述語 > ときに、サブクエリから取得したすべての値を満たす、比較操作またはすべての値の場合は FALSE 比較要件を満たしてとき、サブクエリ行を返しません外側のステートメントにします。 詳細については、次を参照してください。 [ALL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/all-transact-sql.md).  
   
  { SOME | ANY }  
- 比較演算子およびサブクエリと共に使用します。 に対して TRUE を返します\<述語 > サブクエリを満たす、比較操作またはサブクエリで値を持たない場合は FALSE 比較要件を満たしてとき、サブクエリ行を返しません外側のステートメントに対してに任意の値を取得するときにします。 それ以外の場合には、式は UNKNOWN と評価されます。 詳細については、次を参照してください。[一部 & #124 です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md).  
+ 比較演算子およびサブクエリと共に使用します。 に対して TRUE を返します\<述語 > サブクエリを満たす、比較操作またはサブクエリで値を持たない場合は FALSE 比較要件を満たしてとき、サブクエリ行を返しません外側のステートメントに対してに任意の値を取得するときにします。 それ以外の場合には、式は UNKNOWN と評価されます。 詳細については、次を参照してください。[一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md).  
   
  EXISTS  
  サブクエリと共に使用され、サブクエリによって返される行が存在するかどうかを調べます。 詳細については、次を参照してください。 [EXISTS と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/exists-transact-sql.md).  
   
 ## <a name="remarks"></a>解説  
- 論理演算子の優先順位は、高い方から NOT、AND、OR です。 かっこを使用することによって、検索条件におけるこれらの優先順位を変更することができます。 論理演算子の評価順序は、クエリ オプティマイザーが行う選択によって異なる場合があります。 論理値の論理演算子の動作方法の詳細については、次を参照してください。 [AND & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md)、[または & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/or-transact-sql.md)、および[いない & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-transact-sql.md).  
+ 論理演算子の優先順位は、高い方から NOT、AND、OR です。 かっこを使用することによって、検索条件におけるこれらの優先順位を変更することができます。 論理演算子の評価順序は、クエリ オプティマイザーが行う選択によって異なる場合があります。 論理値の論理演算子の動作方法の詳細については、次を参照してください。 [AND &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md)、[または &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/or-transact-sql.md)、および[いない &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
   
@@ -240,16 +237,15 @@ WHERE LastName LIKE N'%and%';
   
 ## <a name="see-also"></a>参照  
  [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [場合 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
+ [場合 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [カーソル &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-
 

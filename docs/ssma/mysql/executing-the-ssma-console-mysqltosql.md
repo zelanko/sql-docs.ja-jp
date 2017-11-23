@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5536ace7511bbbb778b9ca5c3732ff78c986afd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d3524ac9d8aac255fdf87bedbe6cf3badad963bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA コンソール (MySQLToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。  
@@ -148,7 +146,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 2.  **Windows 認証**と**ポート**パラメーターは、SQL Azure に接続する場合は適用されません。  
   
-3.  'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 & #40 です。MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
+3.  'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
   
 **Command**  
   
@@ -679,7 +677,7 @@ sql ステートメントの変換
   
 8.  `write-summary-report-to`概要レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
-    レポートの作成が viz サブカテゴリの一覧をさらに 2します..,:  
+    レポートの作成が viz サブカテゴリの一覧をさらに 2。。、します。  
   
     -   -エラーの報告 (="true または false"、"false"(省略可能な属性) として既定値)。  
   
@@ -764,10 +762,9 @@ sql ステートメントの変換
   
 次の手順は、プロジェクトの要件によって異なります。  
   
-1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 & #40 です。MySQLToSQL &#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
   
-2.  レポートの生成に、次を参照してください。[レポートの生成 & #40 です。MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
+2.  レポートの生成に、次を参照してください。[レポートの生成 &#40;です。MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング & #40 です。MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;です。MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   
-

@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CASE_TSQL
 - CASE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CASE expression [Transact-SQL]
 - simple CASE expression
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b366f7b6d57adbed5f028171617abb7516f3260b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +118,7 @@ END
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Case 式に入れ子にできるのは 10 レベルまでです。  
   
- CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御のメソッドの一覧は、次を参照してください。[フロー制御言語 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md).  
+ CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御のメソッドの一覧は、次を参照してください。[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md).  
   
  CASE ステートメントは条件を順に評価していき、最初に条件が満たされた時点で評価を止めます。 CASE ステートメントには、評価された式の結果が入力として渡されることがあります。 こうした式の評価中にエラーが発生する可能性もあります。 CASE ステートメントの WHEN 引数に指定された集計式は、あらかじめ評価されて CASE ステートメントに渡されます。 たとえば、次のクエリでは、MAX 集計値を生成する際に 0 除算エラーが発生します。 このエラーが発生するのは、CASE 式が評価される前です。  
   
@@ -358,14 +355,13 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [合体 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [合体 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [Iif 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [選択 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
-
 
 
 

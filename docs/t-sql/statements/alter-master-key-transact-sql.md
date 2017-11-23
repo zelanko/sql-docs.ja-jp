@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER MASTER KEY
 - ALTER_MASTER_KEY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - REGENERATE phrase
 - ALTER MASTER KEY statement
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - service master key [SQL Server], modifying
 - DROP ENCRYPTION BY SERVICE MASTER KEY phrase
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0e664b594017b7131553869d1696708eae3b52b0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 638449f85daf7b13abc37c5750eb32ec5603d7ef
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -105,7 +102,7 @@ ALTER MASTER KEY <alter_option>
 ## <a name="remarks"></a>解説  
  REGENERATE オプションを指定すると、データベース マスター キーと、それによって保護されるすべてのキーが再作成されます。 これらのキーは、最初に元のマスター キーで暗号化解除され、次に新しいマスター キーで暗号化されます。 この操作はリソースを大量に消費するため、マスター キーのセキュリティに問題がある場合を除き、リソース要求が少ないときに実行するように考慮してください。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK の再作成の詳細については、次を参照してください。 [ALTER SERVICE MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-master-key-transact-sql.md).  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK の再作成の詳細については、次を参照してください。 [ALTER SERVICE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-service-master-key-transact-sql.md).  
   
  FORCE オプションを指定すると、マスター キーを使用できなかった場合や、暗号化されているすべての秘密キーをサーバーで暗号化解除できなかった場合でも、キーの再生成が続行されます。 マスター _ キーを開けない場合を使用して、 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md)をバックアップから、マスター _ キーを復元するステートメント。 FORCE オプションは、マスター キーを取得できないか、暗号化解除が失敗する場合にのみ使用してください。 取得できないキーによってのみ暗号化されている情報は失われます。  
   
@@ -137,14 +134,13 @@ GO
 ## <a name="see-also"></a>参照  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [MASTER KEY &#40; を開くTRANSACT-SQL と #41 です。](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-master-key-transact-sql.md)   
- [BACKUP MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [RESTORE MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-master-key-transact-sql.md)   
- [DROP MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   
-
 

@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - table data type [SQL Server]
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 90f8db8df144113d47543ff50c321baed61fba37
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b22ecfa04f949af77df974abc3359b7bc5144a82
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ table_type_definition ::=
 ## <a name="arguments"></a>引数  
 *table_type_definition*  
 CREATE TABLE でテーブルを定義するために使用する情報のサブセットと同じです。 テーブルの定義には、列の定義、名前、データ型、および制約が含まれます。 許可される制約の種類は、PRIMARY KEY、UNIQUE KEY、および NULL だけです。  
-構文の詳細については、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md)、[関数 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-function-transact-sql.md)、および[DECLARE @local_variable & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
+構文の詳細については、次を参照してください。 [CREATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md)、[関数 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-function-transact-sql.md)、および[DECLARE @local_variable &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 *collation_definition*  
 構成されている列の照合順序、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ロケールと比較形式、Windows ロケールとバイナリ表記法または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]照合順序。 場合*collation_definition*が指定されていない、現在のデータベースの照合順序が列に継承します。 または、列が共通言語ランタイム (CLR) ユーザー定義型として定義されている場合は、ユーザー定義型の照合順序が列に継承されます。
@@ -109,7 +106,7 @@ SELECT select_list INTO table_variable;
   
 変更するクエリ**テーブル**変数は、並列クエリ実行プランを生成しません。 パフォーマンスに影響が非常に大きいとき**テーブル**変数、または**テーブル**、複雑なクエリで変数を変更します。 このような場合は、代わりに一時テーブルを使用することを検討してください。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。 読み取るクエリは**テーブル**変数を変更せずの並列処理を実行できます。
   
-インデックスが明示的に作成することはできません**テーブル**変数、および統計情報はありませんが上に保持されます**テーブル**変数。 場合によっては、インデックスと統計をサポートする一時テーブルを使用した方がパフォーマンスが向上する場合があります。 一時テーブルの詳細については、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).
+インデックスが明示的に作成することはできません**テーブル**変数、および統計情報はありませんが上に保持されます**テーブル**変数。 場合によっては、インデックスと統計をサポートする一時テーブルを使用した方がパフォーマンスが向上する場合があります。 一時テーブルの詳細については、次を参照してください。 [CREATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).
   
 CHECK 制約、既定値、および計算列、**テーブル**型の宣言は、ユーザー定義関数を呼び出すことはできません。
   
@@ -183,13 +180,12 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>参照
-[COLLATE & #40 です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[使用してテーブル値パラメーター (&) #40; データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
+[使用してテーブル値パラメーター &#40; データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
   
   
-

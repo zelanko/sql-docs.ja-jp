@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OBJECTPROPERTYEX
 - OBJECTPROPERTYEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - displaying schema-scoped object information
 - viewing schema-scoped object information
@@ -24,22 +22,21 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 63854d22cf1285fee6758ee0e78da0c13bb21dc6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73e4cbb26ea46753a79b9089acaaab7fe5d50e65
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  現在のデータベース内のスキーマ スコープ オブジェクトに関する情報を返します。 これらのオブジェクトの一覧は、次を参照してください。 [sys.objects & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). OBJECTPROPERTYEX は、データ定義言語 (DDL) トリガーやイベント通知などの非スキーマ スコープ オブジェクトには使用できません。  
+  現在のデータベース内のスキーマ スコープ オブジェクトに関する情報を返します。 これらのオブジェクトの一覧は、次を参照してください。 [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). OBJECTPROPERTYEX は、データ定義言語 (DDL) トリガーやイベント通知などの非スキーマ スコープ オブジェクトには使用できません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -263,14 +260,13 @@ U
   
 ## <a name="see-also"></a>参照  
  [シノニム &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-synonym-transact-sql.md)   
- [メタデータ関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-id-transact-sql.md)   
- [OBJECT_NAME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-name-transact-sql.md)   
- [sys.objects & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [ALTER AUTHORIZATION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [TYPEPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md)  
+ [OBJECT_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-name-transact-sql.md)   
+ [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [TYPEPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md)  
   
   
-
 

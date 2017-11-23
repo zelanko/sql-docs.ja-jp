@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SWITCHTZ
 - SWITCHTZ_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - functions [SQL Server], time
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 56708a638f47aa926228d2d98e4fce5c3de7754b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 3c81153c233e68d12347dc47ae9c232f4a5ee030
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +65,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  SWITCHOFFSET を使用して更新すること、 **datetimeoffset**列です。  
   
- SWITCHOFFSET を GETDATE() 関数と共に使用すると、クエリの実行速度が遅くなる場合があります。 これは、クエリ オプティマイザーが datetime 値の基数を正確に推定できないためです。 この問題を解決するには、OPTION (RECOMPILE) クエリ ヒントを使用し、次に同じクエリが実行されるときにクエリ オプティマイザーによってクエリ プランが強制的に再コンパイルされるようにします。 その後、オプティマイザーでは、基数の推定が正確になり、より効率的なクエリ プランが生成されます。 RECOMPILE クエリ ヒントの詳細については、次を参照してください。[クエリ ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
+ SWITCHOFFSET を GETDATE() 関数と共に使用すると、クエリの実行速度が遅くなる場合があります。 これは、クエリ オプティマイザーが datetime 値の基数を正確に推定できないためです。 この問題を解決するには、OPTION (RECOMPILE) クエリ ヒントを使用し、次に同じクエリが実行されるときにクエリ オプティマイザーによってクエリ プランが強制的に再コンパイルされるようにします。 その後、オプティマイザーでは、基数の推定が正確になり、より効率的なクエリ プランが生成されます。 RECOMPILE クエリ ヒントの詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -99,10 +96,9 @@ FROM dbo.test;
 ```  
   
 ## <a name="see-also"></a>参照  
- [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [タイム ゾーンと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [タイム ゾーンと &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
-
 
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - ROWCOUNT_TSQL
 - SET ROWCOUNT
 - ROWCOUNT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - row return limitations [SQL Server]
 - SET ROWCOUNT statement
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - limiting rows returned
 - queries [SQL Server], stopping
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 1e27fcb521763eb38d7aec4a89d8a9e13d7e520f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eda7f9faf2bb45b06cf1112dbe48cbdb281fdab3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +58,7 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  SQL Server の将来のリリースでは、SET ROWCOUNT を使用しても、DELETE、INSERT、および UPDATE ステートメントが影響を受けることはありません。 新しい開発作業で、DELETE、INSERT、および UPDATE ステートメントで SET ROWCOUNT の使用を避けるため、現在それを使用するアプリケーションの変更を検討してください。 同様の処理を行う場合は、TOP 構文を使用します。 詳細については、次を参照してください。 [TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+>  SQL Server の将来のリリースでは、SET ROWCOUNT を使用しても、DELETE、INSERT、および UPDATE ステートメントが影響を受けることはありません。 新しい開発作業で、DELETE、INSERT、および UPDATE ステートメントで SET ROWCOUNT の使用を避けるため、現在それを使用するアプリケーションの変更を検討してください。 同様の処理を行う場合は、TOP 構文を使用します。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
  このオプションを off に設定して、すべての行が返されるように、するには、SET ROWCOUNT 0 を指定します。  
   
@@ -133,5 +130,4 @@ WHERE AccountType = 'Assets';
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-
 

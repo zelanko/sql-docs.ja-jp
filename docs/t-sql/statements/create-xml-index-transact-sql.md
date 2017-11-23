@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,25 +21,23 @@ f1_keywords:
 - CREATE XML INDEX
 - XML_INDEX_TSQL
 - FOR_XML_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - CREATE INDEX statement
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 28de81b28ee31c172d1a31644f6847579af4e961
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f9e235df8fe59bc86522ece554a75e22954fef1b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   指定したテーブルに XML インデックスを作成します。 インデックスはテーブル内にデータがなくても作成できます。 データベース名を修飾して指定することにより、他のデータベース内のテーブルに XML インデックスを作成することもできます。  
   
 > [!NOTE]  
->  リレーショナル インデックスを作成するを参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md). 空間インデックスを作成する方法については、次を参照してください。 [CREATE SPATIAL INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  リレーショナル インデックスを作成するを参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md). 空間インデックスを作成する方法については、次を参照してください。 [CREATE SPATIAL INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -249,10 +246,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  表示するには XML インデックスに関する情報を使用して、 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)カタログ ビューです。  
   
- XML インデックスの詳細については、次を参照してください。 [XML インデックス & #40 です。SQL Server &#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ XML インデックスの詳細については、次を参照してください。 [XML インデックス &#40;です。SQL Server &#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="additional-remarks-on-index-creation"></a>インデックス作成に関する詳細説明  
- インデックスの作成の詳細については、「解説」セクションを参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ インデックスの作成の詳細については、「解説」セクションを参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
   
@@ -299,14 +296,13 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.xml_indexes & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
-
 

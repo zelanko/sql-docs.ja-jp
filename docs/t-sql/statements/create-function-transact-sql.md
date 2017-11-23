@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - invoking functions
 - extended stored procedures [SQL Server], functions
@@ -38,17 +36,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
+caps.latest.revision: "162"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -449,7 +446,7 @@ RETURNS return_data_type
  挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 *constant_expression*は、定数、NULL の場合、またはシステム関数値です。 DEFAULT 定義は、IDENTITY プロパティを持つ列を除くすべての列に適用できます。 CLR テーブル値関数には DEFAULT を指定できません。  
   
  COLLATE *collation_name*  
- 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と照合順序の詳細については、次を参照してください。 [Windows 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と照合順序の詳細については、次を参照してください。 [Windows 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  のみの列の照合順序を変更するのには、COLLATE 句を使用できます、 **char**、 **varchar**、 **nchar**、および**nvarchar**データ型。  
   
@@ -499,7 +496,7 @@ RETURNS return_data_type
   
  **\<computed_column_definition >:: =**  
   
- 計算列を指定します。 計算列の詳細については、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
+ 計算列を指定します。 計算列の詳細については、次を参照してください。 [CREATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
   
  *column_name*  
  計算列の名前です。  
@@ -509,7 +506,7 @@ RETURNS return_data_type
   
  **\<index_option >:: =**  
   
- PRIMARY KEY インデックスまたは UNIQUE インデックスのインデックス オプションを指定します。 インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ PRIMARY KEY インデックスまたは UNIQUE インデックスのインデックス オプションを指定します。 インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
   
  PAD_INDEX = {ON |**OFF** }  
  インデックスの埋め込みを指定します。 既定値は OFF です。  
@@ -552,7 +549,7 @@ RETURNS return_data_type
  CLR 関数のプログラミング方法の詳細については、次を参照してください。 [clr ユーザー定義関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)です。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- スカラー値関数は、スカラー式が使用されている場所で呼び出すことができます。 これには、計算列および CHECK 制約定義が含まれます。 使用してスカラー値関数を実行することも、 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)ステートメントです。 スカラー値関数は、2 つ以上の要素から構成される名前を使用して呼び出す必要があります。 マルチパート名の詳細については、次を参照してください。 [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). SELECT、INSERT、UPDATE、DELETE の各ステートメントの FROM 句でテーブル式を使用できる場合は、テーブル値関数を呼び出すことができます。 詳細については、次を参照してください。[実行のユーザー定義関数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)です。  
+ スカラー値関数は、スカラー式が使用されている場所で呼び出すことができます。 これには、計算列および CHECK 制約定義が含まれます。 使用してスカラー値関数を実行することも、 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)ステートメントです。 スカラー値関数は、2 つ以上の要素から構成される名前を使用して呼び出す必要があります。 マルチパート名の詳細については、次を参照してください。 [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). SELECT、INSERT、UPDATE、DELETE の各ステートメントの FROM 句でテーブル式を使用できる場合は、テーブル値関数を呼び出すことができます。 詳細については、次を参照してください。[実行のユーザー定義関数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)です。  
   
 ## <a name="interoperability"></a>相互運用性  
  関数で有効なステートメントは以下のとおりです。  
@@ -571,7 +568,7 @@ RETURNS return_data_type
   
 -   拡張ストアド プロシージャを呼び出す EXECUTE ステートメント。  
   
--   詳細については、次を参照してください。[作成するユーザー定義関数 &#40; データベース エンジン"&"#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)です。  
+-   詳細については、次を参照してください。[作成するユーザー定義関数 &#40; データベース エンジン&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)です。  
   
 ### <a name="computed-column-interoperability"></a>計算列の相互運用性  
  関数には次のプロパティがあります。 これらのプロパティの値によって、保存される計算列またはインデックス付き計算列で関数を使用できるかどうかが決まります。  
@@ -647,7 +644,7 @@ RETURNS return_data_type
   
     -   非重複列と ORDER 句が互換である DISTINCT 集計  
   
- SELECT クエリを実行するときは、そのクエリで ORDER BY を一緒に指定しないと、ORDER 句で順序どおりの結果が得られるかどうかは保証されません。 参照してください[sys.function_order_columns & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)テーブル値関数の並べ替え順序で含まれている列を照会する方法についてはします。  
+ SELECT クエリを実行するときは、そのクエリで ORDER BY を一緒に指定しないと、ORDER 句で順序どおりの結果が得られるかどうかは保証されません。 参照してください[sys.function_order_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)テーブル値関数の並べ替え順序で含まれている列を照会する方法についてはします。  
   
 ## <a name="metadata"></a>メタデータ  
  次の表に、ユーザー定義関数に関するメタデータを返すために使用できるシステム カタログ ビューを示します。  
@@ -819,7 +816,7 @@ GO
 ## <a name="see-also"></a>参照  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [DROP FUNCTION &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-function-transact-sql.md)   
- [OBJECTPROPERTYEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/objectpropertyex-transact-sql.md)   
+ [OBJECTPROPERTYEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
@@ -828,5 +825,4 @@ GO
  [セキュリティ ポリシー &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-security-policy-transact-sql.md)  
   
  
-
 

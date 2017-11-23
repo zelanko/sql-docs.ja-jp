@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - ANSI_NULL_DFLT_OFF
 - SET ANSI_NULL_DFLT_OFF
 - SET_ANSI_NULL_DFLT_OFF_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - default nullability
 - ANSI_NULL_DFLT_OFF option
@@ -26,22 +24,21 @@ helpviewer_keywords:
 - overriding default nullability
 - SET ANSI_NULL_DFLT_OFF statement
 ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 415f93dc71d8a3f69f3dfb93053e789080bc607a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1eeb95a4fdeb8e0db5ed08f3f5728a38f512bc2f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-ansinulldfltoff-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベースの ANSI null default オプションが、新しい列の既定の null 値をオーバーライドするセッションの動作を変更**true**です。 ANSI null default の値の設定の詳細については、次を参照してください。 [ALTER DATABASE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+  データベースの ANSI null default オプションが、新しい列の既定の null 値をオーバーライドするセッションの動作を変更**true**です。 ANSI null default の値の設定の詳細については、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -156,7 +153,6 @@ DROP TABLE t1, t2, t3, t4, t5, t6;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [セット ANSI_NULL_DFLT_ON & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)  
+ [セット ANSI_NULL_DFLT_ON &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)  
   
   
-

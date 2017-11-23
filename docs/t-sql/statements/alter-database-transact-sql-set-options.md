@@ -9,12 +9,10 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - online database state [SQL Server]
 - database options [SQL Server]
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - automatic tuning
 - SQL plan regression correction
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
+caps.latest.revision: "159"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b460ca1e3f662ea59c0b7bcd4b1fc0e0e059e236
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5dbb93a69c6f8194c2d17eb982fae1ba15d4a522
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/27/2017
 
 -   [ALTER DATABASE &#40;です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
--   [ALTER DATABASE &#40;です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
+-   [ALTER DATABASE &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
 データベース ミラーリングは、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルを`SET`オプションが、別のトピックに記載されている、長くなるためです。 詳細については、次を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、 [ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)、および[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -1121,25 +1118,25 @@ FEDERATED_SERVICE_ACCOUNT = ON |オフ
   
 |オプションのカテゴリ|他のオプションとの組み合わせの可否|With\<終了 > 句|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option >|はい|はい|  
-|\<db_user_access_option >|はい|はい|  
-|\<db_update_option >|はい|はい|  
-|\<delayed_durability_option >|はい|はい|  
-|\<external_access_option >|はい|不可|  
-|\<cursor_option >|はい|不可|  
-|\<auto_option >|はい|不可|  
-|\<sql_option >|はい|不可|  
-|\<recovery_option >|はい|不可|  
-|\<target_recovery_time_option >|不可|はい|  
+|\<db_state_option >|可|可|  
+|\<db_user_access_option >|可|可|  
+|\<db_update_option >|可|可|  
+|\<delayed_durability_option >|可|可|  
+|\<external_access_option >|可|不可|  
+|\<cursor_option >|可|不可|  
+|\<auto_option >|可|不可|  
+|\<sql_option >|可|不可|  
+|\<recovery_option >|可|不可|  
+|\<target_recovery_time_option >|不可|可|  
 |\<database_mirroring_option >|不可|不可|  
 |ALLOW_SNAPSHOT_ISOLATION|不可|不可|  
-|READ_COMMITTED_SNAPSHOT|不可|はい|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|はい|はい|  
-|\<service_broker_option >|はい|不可|  
-|DATE_CORRELATION_OPTIMIZATION|はい|はい|  
-|\<parameterization_option >|はい|はい|  
-|\<change_tracking_option >|はい|はい|  
-|\<db_encryption >|はい|不可|  
+|READ_COMMITTED_SNAPSHOT|不可|可|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|可|可|  
+|\<service_broker_option >|可|不可|  
+|DATE_CORRELATION_OPTIMIZATION|可|可|  
+|\<parameterization_option >|可|可|  
+|\<change_tracking_option >|可|可|  
+|\<db_encryption >|可|不可|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュは、次のいずれかのオプションを設定することにより消去されます。  
   
@@ -1284,4 +1281,3 @@ SET QUERY_STORE = ON
  [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   
-

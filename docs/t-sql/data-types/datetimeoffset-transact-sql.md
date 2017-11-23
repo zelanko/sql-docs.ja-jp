@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - datetimeoffset_TSQL
 - datetimeoffset
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - date and time [SQL Server], datetimeoffset
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time zones [SQL Server]
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a6c143380711d1af39a6c11f311e9ce3caf87c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,8 +56,8 @@ ms.lasthandoff: 09/01/2017
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00 00:00|  
 |カレンダー|グレゴリオ暦|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
-|タイム ゾーン オフセットへの対応と保持|はい|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|可|  
+|タイム ゾーン オフセットへの対応と保持|可|  
 |夏時間への対応|不可|  
   
 |指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト単位)|秒の小数部の有効桁数|  
@@ -112,7 +109,7 @@ ANSI および ISO 8601 準拠のセクションで、[日付](../../t-sql/data-
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**date**|-YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
-|**datetimeoffset**|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [+&#124;-] hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [+ &#124;-] hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータを変換します。
 日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/cast-and-convert-transact-sql.md)
@@ -253,4 +250,3 @@ SELECT
 [タイム ゾーンと &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
-

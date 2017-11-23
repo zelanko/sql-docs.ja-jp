@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
+caps.latest.revision: "154"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 387e808d57395db8978611b311f54df441eabc91
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 8a5997cc7692e7cce1459dc64401397cc3b07eaf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/06/2017
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
+-   [RESTORE REWINDONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
@@ -119,7 +116,7 @@ PAGE
 > [!NOTE]  
 >  ページ復元は復旧されません。  
   
- ページ復元の詳細については、次を参照してください。[ページ復元 & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
+ ページ復元の詳細については、次を参照してください。[ページ復元 &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
   
  [ **,**...*n* ]  
  複数のファイル、ファイル グループ、およびページをコンマ区切りリストに指定できることを示すプレースホルダーです。 数値の制限はありません。  
@@ -130,7 +127,7 @@ PAGE
   
  \<backup_device > [ **、**. *n*  ]、復元操作に使用する論理または物理バックアップ デバイスを指定します。  
   
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、 [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、 [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  \<backup_device >:: = 次のように、バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
@@ -140,7 +137,7 @@ PAGE
  {ディスク |テープ}  **=**  { **'***physical_backup_device_name***'**  |   **@** *physical_backup_device_name_var* }  
  指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります:`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'`または`TAPE ='\\\\.\TAPE0'`です。 変数として指定されている場合 (**@***physical_backup_device_name_var*)、デバイス名を指定できます文字列定数として指定 ( **@**  *physical_backup_device_name_var* = '*physcial_backup_device_name*') または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
- ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名を使用する方法の詳細については、次を参照してください。[バックアップ デバイス & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名を使用する方法の詳細については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  RESTORE 操作を実行するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するアカウントに、リモート コンピューターまたはネットワーク サーバーへの読み取りアクセス権が与えられている必要があります。  
   
@@ -226,7 +223,7 @@ LOADHISTORY
   
  復元操作に情報を読み込むことを指定、 **msdb**履歴テーブルです。 LOADHISTORY オプションは、1 つのバックアップ セットの検証中には、約にについてを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メディアに保存されたバックアップがバックアップに設定され、復元履歴テーブルに、 **msdb**データベース。 履歴テーブルの詳細については、次を参照してください。[システム テーブルと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options > [、...n]  
+#### <a name="generalwithoptions--n-"></a>\<general_WITH_options > [、.. .n]  
  RESTORE DATABASE および RESTORE LOG ステートメントでは、一般的な WITH オプションをすべて使用できます。 次に示すように、1 つまたは複数の補助ステートメントによって一部のオプションもサポートされます。  
   
 ##### <a name="restore-operation-options"></a>復元操作オプション  
@@ -253,7 +250,7 @@ LOADHISTORY
  詳細については、「 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
   
 CREDENTIAL  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
 **適用されます**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -275,7 +272,7 @@ CREDENTIAL
   
  REPLACE を使用すると、データベースを復元する前のログ末尾のバックアップも必須ではなくなります。  
   
- 影響については、REPLACE オプションを使用して、次を参照してください。[復元 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-transact-sql.md).  
+ 影響については、REPLACE オプションを使用して、次を参照してください。[復元 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 RESTART  
  **サポートされる:**[復元  ](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -283,7 +280,7 @@ RESTART
  指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中断されていた復元操作を再開する必要があります。 RESTART では、中断された時点から復元操作が再開されます。  
   
 RESTRICTED_USER  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)です。  
   
  メンバーに新しく復元されたデータベースへのアクセスを制限、 **db_owner**、 **dbcreator**、または**sysadmin**ロール。  RESTRICTED_USER は、DBO_ONLY に置き換わるオプションです。 DBO_ONLY は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で廃止されました。  
   
@@ -293,7 +290,7 @@ RESTRICTED_USER
  以下のオプションは、復元されるバックアップを含んでいるバックアップ セットに適用されます。  
   
 ファイル **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  復元するバックアップ セットを特定します。 たとえば、 *1* の **backup_set_file_number** は、バックアップ 目での最初のバックアップ セットを示し、2 の *backup_set_file_number* は **2** 番目のバックアップ セットを示します。 バックアップ セットの *backup_set_file_number* を取得するには、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) ステートメントを使用します。  
   
@@ -303,7 +300,7 @@ RESTRICTED_USER
 >  この FILE オプションは、データベース ファイル、ファイルを指定するためのファイル オプションに関連する **=**  { *logical_file_name_in_backup*  |   **@** *logical_file_name_in_backup_var* }。  
   
  パスワード **=**  {*パスワード* | **@***password_variable* }  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  バックアップ セットのパスワードを指定します。 バックアップ セットのパスワードは文字列です。  
   
@@ -319,7 +316,7 @@ RESTRICTED_USER
  以下のオプションはメディア セット全般に適用されます。  
   
  MEDIANAME  **=**  { *media_name* | **@***media_name_variable*}  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  メディアの名前を指定します。 メディア名を指定する場合、その名前がバックアップ ボリューム上のメディア名と一致している必要があります。一致していない場合、復元操作は終了します。 RESTORE ステートメントにメディア名を指定しない場合は、バックアップ ボリューム上のメディア名と一致するかどうかの確認は行われません。  
   
@@ -327,7 +324,7 @@ RESTRICTED_USER
 >  バックアップ操作と復元操作で同じメディア名を一貫して使用することで、復元操作で選択されたメディアに対する安全性チェックが強化されます。  
   
  MEDIAPASSWORD  **=**  { *mediapassword* | **@***mediapassword_variable* }  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  メディア セットのパスワードを指定します。 メディア セットのパスワードは文字列です。  
   
@@ -370,7 +367,7 @@ RESTRICTED_USER
  これらのオプションを使用すると、復元操作にバックアップ チェックサムが有効にするかどうかと、エラー発生時に、操作を停止するかどうかを決定できます。    
   
  { CHECKSUM | NO_CHECKSUM }  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  既定の動作では、チェックサムがある場合はチェックサムの確認が行われ、チェックサムがない場合は確認せずに動作が続行されます。  
   
@@ -388,7 +385,7 @@ RESTRICTED_USER
  復元操作によるチェックサムの検証を、明示的に無効にします。  
   
  {**場合は STOP_ON_ERROR** |CONTINUE_AFTER_ERROR}  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  STOP_ON_ERROR  
  最初にエラーが発生した時点で、復元操作を停止することを指定します。 これは RESTORE の既定の動作ですが、VERIFYONLY では既定の動作ではありません。VERIFYONLY の既定の動作は、CONTINUE_AFTER_ERROR になります。  
@@ -423,7 +420,7 @@ RESTRICTED_USER
  このオプションはテープ デバイスにのみ適用されます。 テープ以外のデバイスが使用される場合、このオプションは無視されます。  
   
  REWIND  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解放し、テープを巻き戻します。 既定値は REWIND です。  
   
@@ -437,10 +434,10 @@ RESTRICTED_USER
  NOREWIND は暗黙的に NOUNLOAD も意味しています。この 2 つのオプションを同一の RESTORE ステートメント内で同時に使用することはできません。  
   
 > [!NOTE]  
->  インスタンスである NOREWIND を使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]巻き戻しやアンロードのいずれかのオプションを使用する同じプロセスで実行されているバックアップまたは復元ステートメントまたはサーバー インスタンスがシャット ダウンされるまで、テープ ドライブの所有権を保持します。 テープを開いたままにすると、他のプロセスはそのテープにアクセスできません。 開いているテープの一覧を表示して、開いているテープを閉じる方法については、次を参照してください。[バックアップ デバイス & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+>  インスタンスである NOREWIND を使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]巻き戻しやアンロードのいずれかのオプションを使用する同じプロセスで実行されているバックアップまたは復元ステートメントまたはサーバー インスタンスがシャット ダウンされるまで、テープ ドライブの所有権を保持します。 テープを開いたままにすると、他のプロセスはそのテープにアクセスできません。 開いているテープの一覧を表示して、開いているテープを閉じる方法については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  {**アンロード**|NOUNLOAD}  
- **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、 [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。    
+ **サポートされる:**[復元](../../t-sql/statements/restore-statements-transact-sql.md)、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、 [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)、および[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)です。  
   
  このオプションはテープ デバイスにのみ適用されます。 テープ以外のデバイスが使用される場合、このオプションは無視されます。  
   
@@ -473,7 +470,7 @@ RESTRICTED_USER
   
  KEEP_CDC は、データベースまたはログのバックアップを別のサーバーで復元してデータベースを復旧するときに、変更データ キャプチャの設定が削除されないようにするために使用する必要があります。 NORECOVERY オプションを使用してバックアップを復元するときにこのオプションを指定することはできません。  
   
- KEEP_CDC を持つデータベースを復元する場合は、変更データ キャプチャ ジョブは作成されません。 データベースを復元した後にログから変更を抽出するには、復元されたデータベースに対してキャプチャ プロセス ジョブとクリーンアップ ジョブを再作成します。 詳細については、次を参照してください。 [sys.sp_cdc_add_job & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+ KEEP_CDC を持つデータベースを復元する場合は、変更データ キャプチャ ジョブは作成されません。 データベースを復元した後にログから変更を抽出するには、復元されたデータベースに対してキャプチャ プロセス ジョブとクリーンアップ ジョブを再作成します。 詳細については、次を参照してください。 [sys.sp_cdc_add_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
  データベース ミラーリングでの変更データ キャプチャの使用については、次を参照してください。[変更データ キャプチャとその他の SQL Server 機能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)します。  
   
@@ -493,7 +490,7 @@ RESTRICTED_USER
  データベースに新しい Service Broker 識別子を割り当てることを指定します。 データベースは新しい Service Broker と見なされるため、データベースにおける既存のメッセージ交換は、終了ダイアログ メッセージを生成せずに、直ちに削除されます。 古い Service Broker 識別子を参照するルートは、新しい識別子を使用して作成し直す必要があります。  
   
 #### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options >  
- **サポートされる:**[RESTORE {DATABASE |ログ}](../../t-sql/statements/restore-statements-transact-sql.md)および完全または一括ログ復旧モデルに対してのみです。    
+ **サポートされる:**[RESTORE {DATABASE |ログ}](../../t-sql/statements/restore-statements-transact-sql.md)および完全または一括ログ復旧モデルに対してのみです。  
   
  STOPAT、STOPATMARK、または STOPBEFOREMARK 句で目的の復旧ポイントを指定することで、特定の時点またはトランザクションにデータベースを復元できます。 指定された時間またはトランザクションへの復元は、常にログ バックアップから行われます。 復元シーケンスのすべての RESTORE ステートメントで、同一の STOPAT、STOPATMARK、STOPBEFOREMARK のいずれかの句で目的の時間またはトランザクションを指定する必要があります。  
   
@@ -558,7 +555,7 @@ RESTRICTED_USER
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
+-   [RESTORE REWINDONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
@@ -593,8 +590,8 @@ RESTRICTED_USER
   
 |オプションを使用|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> & #124 です。NO_CHECKSUM}|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> & #124 です。場合は STOP_ON_ERROR}|√|√|√|√|—|√|  
+|{ CHECKSUM<br /><br /> &#124;です。NO_CHECKSUM}|√|√|√|√|—|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124;です。場合は STOP_ON_ERROR}|√|√|√|√|—|√|  
 |ファイル<sup>1</sup>|√|√|√|—|—|√|  
 |LOADHISTORY|—|—|—|—|—|√|  
 |MEDIANAME|√|√|√|√|—|√|  
@@ -618,7 +615,7 @@ RESTRICTED_USER
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
+-   [RESTORE REWINDONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
@@ -643,5 +640,4 @@ RESTRICTED_USER
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
   
-
 

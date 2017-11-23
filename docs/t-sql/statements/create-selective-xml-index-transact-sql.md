@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 411d0242510752d82e85425634f057cc3ac2cbb3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 29a2a6eaec3ebbbafef0fcead331835921c7da44
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -119,11 +116,11 @@ identifier
  *xml_column_name*  
  インデックスへのパスを含む XML 列の名前です。  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list >**)**] インデックスを作成するパスで使用される名前空間の一覧を示します。 WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(**\<xmlnamespace_list >**)**] インデックスを作成するパスで使用される名前空間の一覧を示します。 WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
   
  **(**\<Promoted_node_path_list >**)**省略可能な最適化ヒントを使用してインデックスへのパスの一覧を示します。 パスと、CREATE または ALTER ステートメントで指定できる最適化のヒントについては、次を参照してください。[パスを指定し、選択的 XML インデックスの最適化ヒント](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)です。  
   
-  *\<Index_options >*インデックス オプションについては、次を参照してください。 [CREATE XML INDEX & #40 です。選択的 XML インデックス &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ *\<Index_options >*インデックス オプションについては、次を参照してください。 [CREATE XML INDEX &#40;です。選択的 XML インデックス &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  ほとんどの場合、通常の XML インデックスではなく選択的 XML インデックスを作成すると、パフォーマンスが向上し、効率的な保管が可能になります。 ただし、選択的 XML インデックスは、次の条件のいずれかに該当する場合はお勧めしません。  
@@ -133,7 +130,7 @@ identifier
 -   不明な要素または不明な位置にある要素のクエリをサポートする必要がある場合。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- 制限事項と制約については、次を参照してください。[選択的 XML インデックス & #40 です。SXI &#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
+ 制限事項と制約については、次を参照してください。[選択的 XML インデックス &#40;です。SXI &#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ## <a name="security"></a>セキュリティ  
   
@@ -170,5 +167,4 @@ FOR ( path1 = '/myns:book/myns:author/text()' );
  [選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   
-
 

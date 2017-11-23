@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET_SHOWPLAN_TEXT_TSQL
 - SET SHOWPLAN_TEXT
 - SHOWPLAN_TEXT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - statements [SQL Server], estimates
 - execution information and estimates [SQL Server]
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e0fd12594c0b2a4c5df3a616aeaa48746f781977
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7abd42acdcbfa4274686d3d8162e727cf36e5ee7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |列名|Description|  
 |-----------------|-----------------|  
-|**StmtText**|この列は、種類 PLAN_ROW の場合は行のテキストを含む、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理演算子の詳細については、次を参照してください。、**引数**内の列[SET SHOWPLAN_ALL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
+|**StmtText**|この列は、種類 PLAN_ROW の場合は行のテキストを含む、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理演算子の詳細については、次を参照してください。、**引数**内の列[SET SHOWPLAN_ALL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
   
  プラン表示出力でわかるように、物理および論理演算子の詳細については、次を参照してください[プラン表示の論理および物理演算子リファレンス。](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
@@ -145,9 +142,8 @@ StmtText
 ```  
   
 ## <a name="see-also"></a>参照  
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-showplan-all-transact-sql.md)  
   
   
-

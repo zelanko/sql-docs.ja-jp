@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - timestamp_TSQL
 - timestamp
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - rowversion data type
 - size [SQL Server], rowversion
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - timestamp columns
 - size [SQL Server], timestamp
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4a8a9c6a9ea076ec1727bfa5422a3dfbda58386c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 47bcf3007657c1cf8f77c364aa21839cdd27d1ba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -144,9 +141,8 @@ IF (SELECT COUNT(*) FROM @t) = 0
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
+[MIN_ACTIVE_ROWVERSION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
   
   
-

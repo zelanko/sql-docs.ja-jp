@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_TSQL
 - DATEDIFF
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - DATEDIFF function [SQL Server]
@@ -33,24 +31,23 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: cbbe6e93122cb69253b960afe067635ee0a852d8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: dba834b51bab48c2bd30d1bbbb4abe11694ab321
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定された数 (符号付き整数) を返します*datepart* 、指定された間の差*startdate*と*enddate*です。
   
-大きな違いは、次を参照してください。 [DATEDIFF_BIG & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datediff-big-transact-sql.md). すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+大きな違いは、次を参照してください。 [DATEDIFF_BIG &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datediff-big-transact-sql.md). すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -298,10 +295,9 @@ FROM dbo.DimEmployee
 ```  
   
 ## <a name="see-also"></a>参照
-[DATEDIFF_BIG & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datediff-big-transact-sql.md)  
+[DATEDIFF_BIG &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-
 
 

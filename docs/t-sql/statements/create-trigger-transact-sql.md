@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - TRIGGER
 - CREATE_TRIGGER_TSQL
 - TRIGGER_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
 - CREATE TRIGGER statement
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 140
+caps.latest.revision: "140"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 56011e892d5fbc5862f3d7c279bc297c3d0ac04c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -198,7 +195,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
  このオプションは、メモリ最適化テーブルのトリガーに必要です。  
   
- 詳細については、次を参照してください。[EXECUTE AS 句 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+ 詳細については、次を参照してください。[EXECUTE AS 句 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
  トリガーをネイティブでコンパイルすることを示します。  
@@ -262,7 +259,7 @@ SELECT * FROM deleted;
   
  詳細については、次を参照してください。 [inserted および deleted テーブルを使用して](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)です。  
   
- DDL およびログオン トリガーを使用して、トリガー起動イベントに関する情報をキャプチャする、 [EVENTDATA & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/eventdata-transact-sql.md)関数。 詳細については、次を参照してください。 [、EVENTDATA 関数を使用して](../../relational-databases/triggers/use-the-eventdata-function.md)です。  
+ DDL およびログオン トリガーを使用して、トリガー起動イベントに関する情報をキャプチャする、 [EVENTDATA &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/eventdata-transact-sql.md)関数。 詳細については、次を参照してください。 [、EVENTDATA 関数を使用して](../../relational-databases/triggers/use-the-eventdata-function.md)です。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更新では、**テキスト**、 **ntext**、または**イメージ**テーブルまたはビューに INSTEAD OF によって列をトリガーします。  
   
@@ -563,7 +560,7 @@ GO
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
- [TRIGGER_NESTLEVEL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
+ [TRIGGER_NESTLEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
@@ -572,8 +569,8 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_settriggerorder & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
- [UPDATE &#40; #41& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
+ [sp_settriggerorder &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
+ [UPDATE &#40; #41&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
  [DML トリガーに関する情報の取得](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [DDL トリガーに関する情報を取得します。](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
@@ -586,6 +583,5 @@ GO
  [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
   
-
 
 

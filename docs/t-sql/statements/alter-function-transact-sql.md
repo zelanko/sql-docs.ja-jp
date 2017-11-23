@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
 - ALTER FUNCTION
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER FUNCTION statement
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4b1008715d9cfd3e48945d0651f454253bc4e4bc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3da4c3a8e76a48db0eee940e969ddf24dc147149
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -320,7 +317,7 @@ RETURNS return_data_type
   
 -   関数を、SCHEMABINDING オプションを指定せずに ALTER ステートメントを使用して変更した場合。  
   
-関数がスキーマ バインドをする前に満たす必要がある条件の一覧は、次を参照してください。 [CREATE FUNCTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-function-transact-sql.md).  
+関数がスキーマ バインドをする前に満たす必要がある条件の一覧は、次を参照してください。 [CREATE FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-function-transact-sql.md).  
   
  RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT  
  指定します、 **OnNULLCall**スカラー値関数の属性です。 指定しない場合は、既定で CALLED ON NULL INPUT が暗黙的に使用されます。 つまり、NULL が引数として渡された場合でも、関数本体が実行されます。  
@@ -349,7 +346,7 @@ RETURNS return_data_type
  挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 *constant_expression*は、定数、NULL の場合、またはシステム関数値です。 DEFAULT 定義は、IDENTITY プロパティを持つ列を除くすべての列に適用できます。 CLR テーブル値関数には DEFAULT を指定できません。  
   
  COLLATE *collation_name*  
- 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と詳細については、「 [Windows 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と詳細については、「 [Windows 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  のみの列の照合順序を変更するのには、COLLATE 句を使用できます、 **char**、 **varchar**、 **nchar**、および**nvarchar**データ型。  
   
@@ -399,7 +396,7 @@ RETURNS return_data_type
   
  **\<computed_column_definition >:: =**  
   
- 計算列を指定します。 計算列の詳細については、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
+ 計算列を指定します。 計算列の詳細については、次を参照してください。 [CREATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
   
  *column_name*  
  計算列の名前です。  
@@ -409,7 +406,7 @@ RETURNS return_data_type
   
  **\<index_option >:: =**  
   
- PRIMARY KEY インデックスまたは UNIQUE インデックスのインデックス オプションを指定します。 インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ PRIMARY KEY インデックスまたは UNIQUE インデックスのインデックス オプションを指定します。 インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
   
  PAD_INDEX = { ON | OFF }  
  インデックスの埋め込みを指定します。 既定値は OFF です。  
@@ -451,4 +448,3 @@ RETURNS return_data_type
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - SET CONCAT_NULL_YIELDS_NULL
 - CONCAT_NULL_YIELDS_NULL
 - SET_CONCAT_NULL_YIELDS_NULL_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CONCAT_NULL_YIELDS_NULL option
 - null values [SQL Server], concatenation results
 - concatenation [SQL Server]
 - SET CONCAT_NULL_YIELDS_NULL statement
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9660aa9492b25c106f1ee0bbe7c8fb9d2ed061ee
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 60281ff903bf7eb04165a65e8f2b75a80f589780
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -71,7 +68,7 @@ SET CONCAT_NULL_YIELDS_NULL ON
   
  SET CONCAT_NULL_YIELDS_NULL は、解析時ではなく実行時に設定されます。  
   
- 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET CONCAT_NULL_YIELDS_NULL を ON に設定する必要があります。 SET CONCAT_NULL_YIELDS_NULL が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET CONCAT_NULL_YIELDS_NULL を ON に設定する必要があります。 SET CONCAT_NULL_YIELDS_NULL が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
   
  CONCAT_NULL_YIELDS_NULL を OFF に設定した場合、複数のサーバーにまたがって文字列を連結することはできません。  
   
@@ -105,7 +102,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SESSIONPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   
-

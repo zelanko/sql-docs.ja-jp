@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - READTEXT_TSQL
 - READTEXT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - column reading [SQL Server]
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c501fe8ea8146b4b2ec6e138f72fc2604b4b374
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,11 +65,11 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
  トランザクションが終了するまでテキスト値の読み取りをロックします。 他のユーザーは読み取りはできますが、変更はできません。  
   
 ## <a name="remarks"></a>解説  
- 使用して、 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)有効なを取得する関数*text_ptr*値。 TEXTPTR をへのポインターを返します、**テキスト**、 **ntext**、または**イメージ**、指定された行または列、**テキスト**、 **ntext**、または**イメージ**1 つ以上の行が返される場合に、クエリによって返される最後の行の列です。 TEXTPTR は 16 バイトのバイナリ文字列を返すため、テキスト ポインターを保持するローカル変数を宣言し、READTEXT でその変数を使用することをお勧めします。 ローカル変数の宣言の詳細については、次を参照してください。 [DECLARE @local_variable & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+ 使用して、 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)有効なを取得する関数*text_ptr*値。 TEXTPTR をへのポインターを返します、**テキスト**、 **ntext**、または**イメージ**、指定された行または列、**テキスト**、 **ntext**、または**イメージ**1 つ以上の行が返される場合に、クエリによって返される最後の行の列です。 TEXTPTR は 16 バイトのバイナリ文字列を返すため、テキスト ポインターを保持するローカル変数を宣言し、READTEXT でその変数を使用することをお勧めします。 ローカル変数の宣言の詳細については、次を参照してください。 [DECLARE @local_variable &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、行内テキスト ポインターが存在しても、有効なことができない可能性があります。 詳細については、**行内テキスト**オプションを参照してください[sp_tableoption & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効化の詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、行内テキスト ポインターが存在しても、有効なことができない可能性があります。 詳細については、**行内テキスト**オプションを参照してください[sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). テキスト ポインターを無効化の詳細については、次を参照してください。 [sp_invalidate_textptr (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- 値、@@TEXTSIZE関数 READTEXT READTEXT の指定したサイズよりも小さい場合に指定されたサイズよりも優先されます。 @@TEXTSIZE関数は、SET TEXTSIZE ステートメントによってセットが返されるデータのバイト数の制限を指定します。 TEXTSIZE のセッションの設定を設定する方法の詳細については、次を参照してください。 [SET TEXTSIZE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md).  
+ 値、@@TEXTSIZE関数 READTEXT READTEXT の指定したサイズよりも小さい場合に指定されたサイズよりも優先されます。 @@TEXTSIZE関数は、SET TEXTSIZE ステートメントによってセットが返されるデータのバイト数の制限を指定します。 TEXTSIZE のセッションの設定を設定する方法の詳細については、次を参照してください。 [SET TEXTSIZE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  READTEXT 権限は、特に指定のない限り指定されたテーブルで SELECT 権限を持つユーザーに与えられます。 SELECT 権限を譲渡した場合は、READTEXT 権限を譲渡できます。  
@@ -101,4 +98,3 @@ GO
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   
-

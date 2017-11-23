@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET IMPLICIT_TRANSACTIONS
 - IMPLICIT_TRANSACTIONS_TSQL
 - SET_IMPLICIT_TRANSACTIONS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - implicit transactions
 - transactions [SQL Server], implicit
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - SET IMPLICIT_TRANSACTIONS statement
 - IMPLICIT_TRANSACTIONS option
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89211c9b25ea2c488df71456cfbe6a5bc6c48eda
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +69,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
 -   テーブルからの選択操作を伴わない SELECT ステートメントでは、暗黙のトランザクションは開始されません。 たとえば、`SELECT GETDATE();` や `SELECT 1, 'ABC';` にトランザクションは不要です。  
   
--   暗黙のトランザクションが予期せずがあります ON ANSI の既定値です。 詳細をご覧ください[SET ANSI_DEFAULTS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
+-   暗黙のトランザクションが予期せずがあります ON ANSI の既定値です。 詳細をご覧ください[SET ANSI_DEFAULTS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
   
      IMPLICIT_TRANSACTIONS ON は、人気のあるではないです。 IMPLICIT_TRANSACTIONS が ON ほとんどの場合、これは SET ANSI_DEFAULTS の選択が行われたためです。  
   
@@ -208,18 +205,17 @@ go
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
- [フェッチ & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [フェッチ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [開く & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)   
+ [開く &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET ansi_defaults] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [[SET ansi_defaults] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
- [TRUNCATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-

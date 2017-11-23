@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TYPE_NAME_TSQL
 - TYPE_NAME
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - names [SQL Server], data types
 - unqualified type names
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: efd210bc036ed301f426e81feb6c783984f9fb4d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d3d60bec3a21bb5b1127b0f18977d3485979f20b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +63,7 @@ TYPE_NAME ( type_id )
   
  TYPE_NAME は、システム データ型と、ユーザー定義データ型にも使用できます。 型が含まれるスキーマはあらゆるスキーマが対象になりますが、常に修飾なしの名前が返されます。 つまり、名前が必要ない、*スキーマ***です。** プレフィックス。  
   
- システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳細については、次を参照してください。[式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)と[場所 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md).  
+ システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳細については、次を参照してください。[式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)と[場所 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `Vendor` テーブルにある各列の、オブジェクト名、列名、型名を返します。  
@@ -114,11 +111,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [TYPE_ID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPEPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [TYPE_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPEPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [メタデータ関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
-
 

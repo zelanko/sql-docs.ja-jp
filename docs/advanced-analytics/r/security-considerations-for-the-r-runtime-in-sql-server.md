@@ -1,27 +1,23 @@
 ---
 title: "機械学習で SQL Server のセキュリティに関する考慮事項 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 8c1cc4c65d35f6c2806a9890464cccfb6c621494
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9b5fba856cc40c11f218faf0a61f66ee5451aa4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>機械学習で SQL Server のセキュリティに関する考慮事項
 
@@ -29,44 +25,52 @@ ms.lasthandoff: 09/01/2017
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
 
-## <a name="use-a-firewall-to-restrict-network-access-by-r"></a>ファイアウォールを使用して、R によるネットワーク アクセスを制限します。
+## <a name="use-a-firewall-to-restrict-network-access"></a>ネットワーク アクセスを制限するのにファイアウォールを使用します。
 
-既定インストールでは、Windows ファイアウォールの規則は、R ランタイム プロセスからのすべての発信ネットワーク アクセスをブロックするために使用します。 R ランタイム プロセスによって、パッケージのダウンロード、および悪意のある可能性があるその他のネットワーク呼び出しが実行されないように、ファイアウォール ルールを作成する必要があります。
+既定のインストールで Windows ファイアウォール ルールが使用する外部のランタイム プロセスからのすべての発信ネットワーク アクセスをブロックします。 パッケージをダウンロードすると、悪意のある可能性があるその他のネットワーク呼び出しからは、外部のランタイム プロセスを防ぐためにファイアウォール ルールを作成する必要があります。
 
-別のファイアウォール プログラムを使用している場合にも、ローカル ユーザー アカウント用、またはユーザー アカウント プールによって表されるグループ用のルールを設定することで、R ランタイムの送信ネットワーク接続をブロックするためのルールを作成できます。
+別のファイアウォール プログラムを使用している場合は、ローカル ユーザー アカウントまたはユーザー アカウント プールによって表されるグループ用のルールを設定して、外部のランタイムの送信ネットワーク接続をブロックする規則を作成することもできます。
 
-R、または Python ランタイムによって設けるネットワーク アクセスを防ぐために Windows ファイアウォール (または別のファイアウォール) を有効にすることを強くお勧めします。
+R、または Python ランタイムで無制限のネットワーク アクセスを防ぐために Windows ファイアウォール (または別のファイアウォール) を有効にすることを強くお勧めします。
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>リモート計算コンテキストでサポートされる認証メソッド
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]間の接続を作成するときに、Windows 統合認証と SQL の両方のログインをサポートしている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とリモート データ サイエンス クライアント。
 
-たとえば、ノート PC で R ソリューションを開発し、SQL Server コンピューターで計算を実行する場合は、**rx** 関数を使用し、Windows 資格情報に基づいて接続文字列を定義することによって、SQL Server データ ソースを R で作成します。
+たとえば、ラップトップ コンピューターで R ソリューションを開発しており、SQL Server コンピューターに対して計算を実行するとします。 使用して、R で SQL Server データ ソースを作成すると、 **rx**関数との接続文字列を定義する、Windows 資格情報に基づいています。
 
-変更すると、_計算コンテキスト_、SQL Server コンピューターにラップトップから使用する Windows アカウントに必要なアクセス許可がある場合すべて R コードが実行される SQL Server コンピューターにします。 さらに、R コードの一部として実行された SQL クエリは、管理者の資格情報も実行されます。
+変更すると、_計算コンテキスト_Windows アカウントに必要なアクセス許可がある場合は、すべての R コードを SQL Server コンピューターで実行するよう、SQL Server コンピューターにラップトップからです。 さらに、R コードの一部として実行された SQL クエリは、管理者の資格情報も実行されます。
 
-このシナリオでは、混合モード認証を許可する SQL Server インスタンスを構成することが必要では、SQL ログインの使用はサポートされても。
+このシナリオでは、SQL ログインの使用はサポートされてもします。 ただし、これは混合モード認証を許可する SQL Server インスタンスを構成することが必要です。
 
 ### <a name="implied-authentication"></a>暗黙の認証
 
  一般に、[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]外部スクリプトの実行時を起動し、独自のアカウント下でスクリプトを実行します。 ただし、外部のランタイムは、ODBC 呼び出しを行う場合、 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] ODBC 呼び出しが異常終了しないようにするコマンドを送信したユーザーの資格情報の権限を借用します。 これは*暗黙の認証*と呼ばれます。
  
  > [!IMPORTANT]
- >
  > 暗黙の認証が正常に行われるには、ワーカー アカウント (既定では **SQLRUser**) を含む Windows ユーザー グループがインスタンスのマスター データベースにアカウントを持ち、このアカウントにインスタンスへの接続許可が付与されている必要があります。
  > 
  > グループ**SQLRUser** Python スクリプトを実行しているときにも使用します。 
 
+一般に、なくすることより大規模なデータセットを事前に SQL Server に移動 RODBC または別のライブラリを使用してデータを読み取るしようとしています。 お勧めします。 また、SQL Server クエリまたはビュー、プライマリ データ ソースとして使用、パフォーマンス向上のためです。 
+
+たとえば、SQL サーバーから、トレーニング データ (通常、最大のデータ) を取得し、外部ソースからの要因の一覧を取得する可能性があります。 ほとんどの ODBC データ ソースからデータを取得するリンク サーバーを定義することができます。 詳細については、次を参照してください。[リンク サーバーを作成](https://docs.microsoft.com/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine)です。
+
+外部データ ソースへの ODBC 呼び出しへの依存関係を最小限に抑えるに可能性がありますも個別のプロセスとしてデータ エンジニア リングを実行およびテーブルの結果を保存または T-SQL を使用します。 SQL の vs でのデータ エンジニア リングの良い例は、このチュートリアルを参照してください。R: [T-SQL を使用してデータの機能を作成する](../tutorials/sqldev-create-data-features-using-t-sql.md)です。
+
 ## <a name="no-support-for-encryption-at-rest"></a>保存時の暗号化はサポートされていません
 
-データを送信または受信外部スクリプトの実行時からに、透過的なデータ暗号化はサポートされていません。 その結果、保存時の暗号化**は**R または Python スクリプト、ディスク、または任意の保存された中間結果を保存されるデータで使用する任意のデータに適用されます。
+[Transparent Data Encryption (TDE)](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption)に送信するか、外部スクリプトの実行時から受信したデータはサポートされていません。 その理由は、SQL Server のプロセスの外部 R (または Python) を実行します。したがって、外部のランタイムによって使用されるデータは、暗号化、データベース エンジンの機能では保護されません。  この動作は、データベースからデータを読み取り、コピーを作成する SQL Server コンピューターで実行されているその他のクライアントと違いはありません。
+
+その結果、TDE**は**R または Python のスクリプトで使用するすべてのデータまたは永続化された中間結果をディスクに保存されるデータに適用します。 ただし、他の種類の暗号化など、ファイルまたはフォルダー レベルで、Windows BitLocker 暗号化またはサード パーティ製の暗号化の適用を引き続き適用されます。
+
+場合、 [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)、外部のランタイムには、暗号化キーへのアクセスはありません。 スクリプトにそのため、データを送信できません。
 
 ## <a name="resources"></a>リソース
 
-詳細については、サービスの管理、および R スクリプトを実行するために使用するユーザー アカウントをプロビジョニングする方法について、次を参照してください。[構成 Advanced Analytics Extensions を管理および](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)です。
+Machine learning のスクリプトを実行するためのユーザー アカウントをプロビジョニングする方法と、サービスの管理についての詳細については、次を参照してください。[構成 Advanced Analytics Extensions を管理および](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)です。
 
-セキュリティ アーキテクチャの説明を参照してください。
+一般的なセキュリティ アーキテクチャの詳細についてを参照してください。
 
 + [R のセキュリティの概要](security-overview-sql-server-r.md)
 + [Python のセキュリティの概要](../python/security-overview-sql-server-python-services.md)
-

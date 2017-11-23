@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29e0343f6f4e254a8171cb1d44084201af34d7d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b83e86ce201343d624974244a9d551fb1016d3e7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="conversion-settings-mysqltosql"></a>変換の設定 (MySQLToSQL)
 **'設定'**  タブでは、ユーザーをノード レベルの設定を設定します。 タブは、次のメタベース ノードで使用可能なになります。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 -   テーブルのノード  
   
 ## <a name="specifications"></a>仕様:  
-**設定**タブには、次の 2 つのユーザー設定 viz。  
+**設定**タブには、次の 2 つのユーザー設定 viz。。  
   
 1.  関数の変換  
   
@@ -73,9 +71,9 @@ ms.lasthandoff: 08/02/2017
   
         -   [継承] プロジェクト設定に従って変換します。  
   
-        -   はい  
+        -   可  
   
-        -   いいえ  
+        -   不可  
   
         -   プロジェクトの設定に応じて変換します。  
   
@@ -86,4 +84,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>参照  
 [プロジェクトの設定 (変換) (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   
-

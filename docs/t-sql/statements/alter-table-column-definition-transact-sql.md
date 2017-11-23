@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - column_definition
 - column_definition_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - column_definition
 - ALTER TABLE statement
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d50bda05bd0487a60e9a909500be2ea3d65fed92
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5c63dcea3473198ded46ebf84053fa9d8b36330f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -139,14 +136,14 @@ FILESTREAM
   
  列に対して FILESTREAM ストレージ属性を指定した場合、この列のすべての値がファイル システム上の FILESTREAM データ コンテナーに格納されます。  
   
- 列の定義を使用する方法を示す例を次を参照してください。 [FILESTREAM & #40 です。SQL Server &#41;](../../relational-databases/blob/filestream-sql-server.md).  
+ 列の定義を使用する方法を示す例を次を参照してください。 [FILESTREAM &#40;です。SQL Server &#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 COLLATE *collation_name*  
- 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 一覧および詳細については、次を参照してください。 [Windows 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 一覧および詳細については、次を参照してください。 [Windows 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  COLLATE 句は、のみの列の照合順序を指定するために使用できます、 **char**、 **varchar**、 **nchar**、および**nvarchar**データ型.  
   
- COLLATE 句の詳細については、次を参照してください。 [COLLATE & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
+ COLLATE 句の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
   
  NULL | NOT NULL  
  列で NULL 値を許すかどうかを示します。 NULL は厳密には制約ではありませんが、NOT NULL と同じように指定することができます。  
@@ -191,19 +188,19 @@ ROWGUIDCOL
   
  列が、行グローバル一意識別子列であることを指定します。 ROWGUIDCOL にのみ割り当てることができます、 **uniqueidentifier**列、および 1 つだけ**uniqueidentifier** ROWGUIDCOL 列として 1 つのテーブルの列を指定することができます。 ROWGUIDCOL は、ユーザー定義データ型の列には割り当てできません。  
   
- ROWGUIDCOL では、列に格納される値の一意性は設定されません。 また、テーブルに新しい行を挿入しても値は自動的に生成されません。 各列に一意な値を生成するには、INSERT ステートメントで NEWID 関数を使用するか、列の既定値として NEWID 関数を指定します。 詳細については、次を参照してください。 [NEWID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newid-transact-sql.md)と[INSERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md).  
+ ROWGUIDCOL では、列に格納される値の一意性は設定されません。 また、テーブルに新しい行を挿入しても値は自動的に生成されません。 各列に一意な値を生成するには、INSERT ステートメントで NEWID 関数を使用するか、列の既定値として NEWID 関数を指定します。 詳細については、次を参照してください。 [NEWID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newid-transact-sql.md)と[INSERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md).  
   
 SPARSE  
  列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として指定することはできません。 追加の制限とスパース列の詳細については、次を参照してください。[スパース列を使用する](../../relational-databases/tables/use-sparse-columns.md)です。  
   
 \<column_constraint >  
- 列の制約の引数の定義を参照してください。 [column_constraint & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-column-constraint-transact-sql.md).  
+ 列の制約の引数の定義を参照してください。 [column_constraint &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-column-constraint-transact-sql.md).  
   
  使用して暗号化  
  使用して暗号化列を指定します、 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)機能します。  
   
  COLUMN_ENCRYPTION_KEY = *key_name*  
- 列の暗号化キーを指定します。 詳細については、次を参照してください。 [CREATE COLUMN ENCRYPTION KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
+ 列の暗号化キーを指定します。 詳細については、次を参照してください。 [CREATE COLUMN ENCRYPTION KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = {決定的 |ランダム化}  
  **確定的な暗号化** は常に任意のプレーン テキストを指定した値の場合は、同じ暗号化された値を生成するメソッドを使用します。 確定的な暗号化を使用すると、グループ化、および暗号化された値に基づいて、等しいかどうかの結合を使用して、テーブルへの参加の等値比較を使用して検索をできますも確認するには、暗号化された列のパターンについては、暗号化された値を推測する承認されていないユーザーを許可することができます。 確定的に暗号化された列に 2 つのテーブルを結合すると、両方の列が同じ列の暗号化キーを使用して暗号化されている場合にのみ可能なです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。  
@@ -218,7 +215,7 @@ ENCRYPTION_TYPE = {決定的 |ランダム化}
 **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
 必要があります**'AEAD_AES_256_CBC_HMAC_SHA_256'**です。  
   
- 機能の制約を含むの詳細については、次を参照してください。 [Always Encrypted & #40";"データベース エンジン"&"#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)です。  
+ 機能の制約を含むの詳細については、次を参照してください。 [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)です。  
   
    
 追加マスクで (関数 = ' *mask_function* ')  
@@ -244,9 +241,8 @@ ENCRYPTION_TYPE = {決定的 |ランダム化}
  列の追加によりデータ行のサイズが 8,060 バイトを超える場合、ALTER TABLE ステートメントは失敗します。  
   
 ## <a name="examples"></a>使用例  
- 例については、次を参照してください。 [ALTER TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md).  
+ 例については、次を参照してください。 [ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-

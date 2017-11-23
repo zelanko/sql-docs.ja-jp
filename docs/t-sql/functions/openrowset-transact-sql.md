@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - data sources [SQL Server]
 - OPENROWSET function
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
+caps.latest.revision: "130"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c23ec85299af595305a5f6d5141dbbf3ffab96d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +104,7 @@ OPENROWSET
  操作するオブジェクトを一意に識別するオブジェクト名を指定します。  
   
  '*クエリ*'  
- プロバイダーに送られ、プロバイダーによって実行される文字列定数を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーは、OLE DB コマンド オブジェクトとその必須インターフェイスをサポートしている限り、リモート サーバーでサポートされます。 詳細については、次を参照してください[SQL Server Native Client &#40;OLE DB"&"#41;。参照](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)です。  
+ プロバイダーに送られ、プロバイダーによって実行される文字列定数を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーは、OLE DB コマンド オブジェクトとその必須インターフェイスをサポートしている限り、リモート サーバーでサポートされます。 詳細については、次を参照してください[SQL Server Native Client &#40;OLE DB&#41;。参照](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)です。  
   
  BULK  
  ファイルからのデータ読み取りに OPENROWSET の BULK 行セット プロバイダーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OPENROWSET を使用すると、データを対象テーブルに読み込むことなくデータ ファイルからの読み取りができます。 このため、OPENROWSET は簡単な SELECT ステートメントで使用できます。  
@@ -252,14 +249,14 @@ CSV ファイルの引用符の文字として使用される文字を指定し�
   
 -   A`SELECT...FROM OPENROWSET(BULK...)`ステートメントなしでクエリ ファイル内のデータを直接テーブルにデータをインポートします。 `SELECT…FROM OPENROWSET(BULK...)`ステートメントは、列名ともデータ型を指定するフォーマット ファイルを使用して、一括列の別名を一覧もできます。  
   
--   使用して`OPENROWSET(BULK...)`内でソース テーブルとして、`INSERT`または`MERGE`ステートメントの一括データ ファイルからのデータのインポート、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 詳細については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK..."&"#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) .  
+-   使用して`OPENROWSET(BULK...)`内でソース テーブルとして、`INSERT`または`MERGE`ステートメントの一括データ ファイルからのデータのインポート、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 詳細については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK...&#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) .  
   
 -   ときに、`OPENROWSET BULK`オプションを使用する`INSERT`ステートメントでは、BULK 句のテーブル ヒントをサポートしています。 テーブル ヒントなど、通常に加えて`TABLOCK`、`BULK`句は、次の特殊なテーブル ヒントを受け取ることができます: `IGNORE_CONSTRAINTS` (だけを無視、`CHECK`と`FOREIGN KEY`制約)、 `IGNORE_TRIGGERS`、 `KEEPDEFAULTS`、および`KEEPIDENTITY`です。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  使用する方法については`INSERT...SELECT * FROM OPENROWSET(BULK...)`ステートメントを参照してください[一括インポートし、データ ファイルのエクスポート &#40;です。SQL Server &#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). 一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
   
 > [!NOTE]  
->  使用すると`OPENROWSET`、理解することが重要か[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]権限借用を処理します。 セキュリティに関する考慮事項については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK..."&"#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+>  使用すると`OPENROWSET`、理解することが重要か[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]権限借用を処理します。 セキュリティに関する考慮事項については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK...&#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>SQLCHAR、SQLNCHAR、および SQLBINARY データの一括インポート  
  OPENROWSET(BULK...) では、指定がない場合、SQLCHAR、SQLNCHAR、および SQLBINARY データの最大の長さが 8000 バイトを超えないものと想定されます。 インポートされているデータを含む LOB データ フィールドに場合**varchar (max)**、 **nvarchar (max)**、または**varbinary (max)** 、8000 バイトを超えるオブジェクトが使用する必要があります、データ フィールドの最大長を定義する XML フォーマット ファイル。 最大の長さを指定するには、フォーマット ファイルを編集して MAX_LENGTH 属性を宣言します。  
@@ -438,4 +435,3 @@ SELECT * FROM OPENROWSET(
  [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,24 +16,22 @@ f1_keywords:
 - RESTORE_FILELISTONLY_TSQL
 - FILELISTONLY
 - FILELISTONLY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - backups [SQL Server], file lists
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdae49bd22b5398d120530db150bc9628e34d92a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE ステートメントで FILELISTONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ セットに保存されているデータベースとログ ファイルのリストを含んだ結果セットを返します。  
   
 > [!NOTE]  
->  引数の説明については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +81,7 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>引数  
- RESTORE FILELISTONLY の引数の説明については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ RESTORE FILELISTONLY の引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>結果セット  
  クライアントでは、RESTORE FILELISTONLY を使用して、バックアップ セットに含まれるファイルの一覧を取得できます。 この情報は、ファイル 1 件あたり 1 行のデータで構成される結果セットとして返されます。  
@@ -111,7 +108,7 @@ FROM <backup_device>
 |DifferentialBaseGUID|**uniqueidentifier**|差分ベースの一意識別子 (差分バックアップの場合)。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
 |IsReadOnly|**bit**|**1** = ファイルは読み取り専用です。|  
 |IsPresent|**bit**|**1** = バックアップに、ファイルが存在します。|  
-|TDEThumbprint|**varbinary (32)**|データベース暗号化キーの拇印を表示します。 暗号化の拇印とは、キーの暗号化で使用された証明書の SHA-1 ハッシュです。 データベースの暗号化については、次を参照してください。 [Transparent Data Encryption & #40 です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|TDEThumbprint|**varbinary (32)**|データベース暗号化キーの拇印を表示します。 暗号化の拇印とは、キーの暗号化で使用された証明書の SHA-1 ハッシュです。 データベースの暗号化については、次を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT バックアップに含まれているデータベース ファイルの Azure のスナップショットの URL。 FILE_SNAPSHOT バックアップがない場合は、NULL を返します。|  
   
 ## <a name="security"></a>セキュリティ  
@@ -141,4 +138,3 @@ GO
  [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

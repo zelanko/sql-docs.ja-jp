@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
 - ALTER VIEW
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexed views [SQL Server], modifying
 - views [SQL Server], modifying
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 006b9fce1e13833c977d26d4bc0f13a602f2c96c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +86,7 @@ AS select_statement
   
  VIEW_METADATA で作成したビューの場合、ブラウズ モード メタデータでは結果セット内のビューの列の説明で、ベース テーブル名ではなくビュー名が返されます。  
   
- WITH VIEW_METADATA をすべての列を使用して、ビューを作成する場合を除く、**タイムスタンプ**列にいる場合、ビューに INSERT または UPDATE INSTEAD OF トリガーします。 詳細については、「解説」セクションを参照してください。 [CREATE VIEW & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
+ WITH VIEW_METADATA をすべての列を使用して、ビューを作成する場合を除く、**タイムスタンプ**列にいる場合、ビューに INSERT または UPDATE INSTEAD OF トリガーします。 詳細については、「解説」セクションを参照してください。 [CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
  AS  
  ビューが実行するアクションがあります。  
@@ -101,7 +98,7 @@ AS select_statement
  強制的にすべてのデータ変更ステートメント内で設定された条件に従うビューに対して実行される*select_statement*です。  
   
 ## <a name="remarks"></a>解説  
- ALTER VIEW の詳細についてで「解説」を参照してください。 [CREATE VIEW & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
+ ALTER VIEW の詳細についてで「解説」を参照してください。 [CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  
 >  以前のビュー定義が WITH ENCRYPTION または CHECK OPTION を使用して作成されている場合、これらのオプションは、ALTER VIEW で指定される場合にのみ有効となります。  
@@ -151,4 +148,3 @@ GO
  [パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
   
   
-

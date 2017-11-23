@@ -3,10 +3,12 @@ title: "統計情報 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - STATISTICS_TSQL
 - CREATE STATISTICS
 - CREATE_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], creating
 - indexed views [SQL Server], statistics
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 105
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "105"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e09604deac2b823243515c10398dc27c75941bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   テーブル、インデックス付きビュー、または、外部テーブルの 1 つまたは複数の列には、クエリの最適化に関する統計を作成します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、クエリのパフォーマンスを向上させるために CREATE STATISTICS で追加の統計を作成したりクエリのデザインを変更したりする必要がある場合もあります。  
   
@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON |オフ}  
  ときに**ON**、統計サンプリング比率が明示的に指定されていない後続の更新プログラムの作成のサンプリングの割合が保持されます。 ときに**OFF**、統計サンプリング率はサンプリング比率が明示的に指定されていない後続の更新で既定のサンプリングをリセットします。 既定値は**OFF**です。 
  
- **適用されます**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 です。  
+ **適用されます**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -176,7 +176,7 @@ CREATE STATISTICS statistics_name
 > [!WARNING]  
 >  このオプションを使用すると、最適ではないクエリ プランが作成されることがあります。 このオプションは慎重に使用してください。特に、資格のあるシステム管理者だけが使用することをお勧めします。  
   
- AUTO_STATISTICS_UPDATE オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md). 無効にして、統計の更新プログラムを再有効化の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。  
+ AUTO_STATISTICS_UPDATE オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md). 無効にして、統計の更新プログラムを再有効化の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。  
   
  INCREMENTAL = { ON | OFF }  
  ときに**ON**、作成される統計は、パーティションごとの統計はします。 ときに**OFF**、すべてのパーティションの統計が結合されます。 既定値は**OFF**です。  
@@ -314,8 +314,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
-
 

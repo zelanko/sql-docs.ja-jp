@@ -3,32 +3,32 @@ title: "nchar および nvarchar (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar および nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 文字データ型は固定長、 **nchar**、または可変長の**nvarchar**、Unicode データで使用する UNICODE ucs-2 文字セット。
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 固定長の Unicode 文字列データです。 *n*文字列の長さを定義して、1 ~ 4,000 値を指定する必要があります。 ストレージのサイズは 2 回 *n* バイトです。 ストレージのサイズがまだは照合順序コード ページは、2 バイト文字を使用するときに *n* バイトです。 文字列のストレージのサイズによっては *n* バイトには、指定された値より小さくなること *n*です。 ISO シノニム**nchar**は**national char**と**各国語文字**.
   
 **nvarchar** [(n |**max** )]  
-可変長の Unicode 文字列データです。 *n*文字列の長さを定義し、1 ~ 4,000 の値を指定できます。 **max**ストレージの最大サイズが 2 であることを示します。 ^ 31-1 バイト (2 GB)。 記憶領域のサイズ (バイト単位) は、入力したデータの実際の長さの 2 倍のバイト数に 2 バイトを足した数です。 ISO シノニム**nvarchar**は**varying、national char**と**各国語文字 varying**です。
+可変長の Unicode 文字列データです。 *n*文字列の長さを定義し、1 ~ 4,000 の値を指定できます。 **max**ストレージの最大サイズが 2 であることを示します。 ^ 31-1 文字 (2 GB)。 記憶領域のサイズ (バイト単位) は、入力したデータの実際の長さの 2 倍のバイト数に 2 バイトを足した数です。 ISO シノニム**nvarchar**は**varying、national char**と**各国語文字 varying**です。
   
 ## <a name="remarks"></a>解説  
 ときに *n* が指定されていないデータ定義または変数宣言ステートメントで、既定の長さは 1 です。 ときに *n* が指定されていない、CAST 関数で、既定の長さは 30 です。
@@ -61,7 +61,7 @@ SET ANSI_PADDING は ON に、常に**nchar**と**nvarchar**です。 SET ANSI_P
 >  各 null **varchar (max)**または**nvarchar (max)**列が並べ替え操作中に 8,060 バイトの行の制限に対してカウントする追加の固定割り当ての 24 バイトが必要です。 これは、暗黙的な null 以外の数に制限を作成できます**varchar (max)**または**nvarchar (max)**列、テーブルに作成できます。 テーブルの作成時やデータ挿入時に、最大行サイズが許容最大値の 8060 バイトを超えるという通常の警告以外の、特別なエラーは提供されません。 この大きな行サイズが原因で、クラスター化インデックス キーの更新や列セット全体の並べ替えなどの通常操作の一部でエラー (エラー 512 など) が発生する可能性があります。これは操作を実行するまでユーザーは予測することができません。  
   
 ## <a name="converting-character-data"></a>文字データの変換  
-文字データを変換する方法については、次を参照してください。 [char および varchar & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+文字データを変換する方法については、次を参照してください。 [char および varchar &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/char-and-varchar-transact-sql.md).
   
 ## <a name="examples"></a>使用例  
   
@@ -93,14 +93,13 @@ Test data       More test data
 ## <a name="see-also"></a>参照
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE & #40 です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[ような & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)  
-[SET ANSI_PADDING & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
+[ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)  
+[SET ANSI_PADDING &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

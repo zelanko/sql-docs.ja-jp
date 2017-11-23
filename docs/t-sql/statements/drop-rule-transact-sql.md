@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_RULE_TSQL
 - DROP RULE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - rules [SQL Server], removing
 - deleting roles
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - removing roles
 - dropping roles
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d6ce4daed9a438747765fa4efa90f249425e7c60
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba898b1c9f94f4e38102da929709b4a05f889b7e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
   
  ルールを削除すると、以前はそのルールに制御されていた列に新しいデータを入力しても、ルールの制約を受けなくなります。 既存のデータはまったく影響を受けません。  
   
- DROP RULE ステートメントは、CHECK 制約には適用されません。 CHECK 制約の削除の詳細については、次を参照してください。 [ALTER TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md).  
+ DROP RULE ステートメントは、CHECK 制約には適用されません。 CHECK 制約の削除の詳細については、次を参照してください。 [ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  DROP RULE を実行するには、少なくとも、ルールが属するスキーマに対する ALTER 権限が必要です。  
@@ -85,10 +82,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindrule & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_bindrule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_unbindrule & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindrule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
-
 

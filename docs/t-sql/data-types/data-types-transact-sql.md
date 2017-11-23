@@ -11,35 +11,33 @@ ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - system data types [SQL Server]
 - data types [SQL Server]
 - data types [SQL Server], about data types
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 397d96212851ed52020a0ac0e951e282edf6c087
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 75efc7b5a58b3739a196e36b2c80d4ee37a92003
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-types-transact-sql"></a>データ型 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、列、ローカル変数、式、パラメーターのそれぞれに、関連するデータ型があります。 データ型は、整数データ、文字データ、通貨データ、日時データ、バイナリ文字列など、オブジェクトが保持できるデータの種類を示す属性です。
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システム データ型のセットが用意されており、ここに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用可能なデータ型がすべて定義されています。 独自のデータ型を定義することもできます。[!INCLUDE[tsql](../../includes/tsql-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]です。 別名データ型は、システムが提供するデータ型に基づいています。 別名データ型の詳細については、次を参照してください。[の種類の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). ユーザー定義型の特性は、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でサポートされるプログラミング言語の 1 つを使用して作成するクラスのメソッドと演算子によって決まります。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システム データ型のセットが用意されており、ここに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用可能なデータ型がすべて定義されています。 独自のデータ型を定義することもできます。[!INCLUDE[tsql](../../includes/tsql-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]です。 別名データ型は、システムが提供するデータ型に基づいています。 別名データ型の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). ユーザー定義型の特性は、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でサポートされるプログラミング言語の 1 つを使用して作成するクラスのメソッドと演算子によって決まります。
   
 データ型、照合順序、有効桁数、小数点以下桁数、または長さが異なる 2 つの式を演算子で結合する場合、結果の特性は次のように決まります。
 -   結果のデータ型は、入力式のデータ型のうち優先順位が高いほうになります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
--   結果の照合順序は、結果のデータ型が、照合順序の優先順位の規則によって決まります**char**、 **varchar**、**テキスト**、 **nchar**、 **nvarchar**、または**ntext**です。 詳細については、次を参照してください。[照合の優先順位 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/collation-precedence-transact-sql.md).  
+-   結果の照合順序は、結果のデータ型が、照合順序の優先順位の規則によって決まります**char**、 **varchar**、**テキスト**、 **nchar**、 **nvarchar**、または**ntext**です。 詳細については、次を参照してください。[照合の優先順位 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/collation-precedence-transact-sql.md).  
 -   結果の有効桁数、小数点以下桁数、長さは、入力式の精度、桁数、長さによって決まります。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ISO の互換性のためには、データ型のシノニムを提供します。 詳細については、次を参照してください。[データ型のシノニムと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
@@ -119,14 +117,13 @@ ms.lasthandoff: 09/27/2017
 ## <a name="see-also"></a>参照
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[宣言@local_variable& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
- [EXECUTE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/execute-transact-sql.md)  
+[宣言@local_variable&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
+ [EXECUTE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/execute-transact-sql.md)  
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/functions.md)  
-[ような & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)  
-[sp_droptype & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)  
-[sp_help & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)  
-[sp_rename & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)  
+[sp_droptype &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)  
+[sp_help &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)  
+[sp_rename &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
   
   
-

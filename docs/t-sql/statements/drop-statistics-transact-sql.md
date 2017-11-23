@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP STATISTICS
 - DROP_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - removing statistics
 - column statistics [SQL Server]
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - table statistics [SQL Server]
 - statistical information [SQL Server], removing
 ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 34cc65eaccfdfcbffd38e93f613f2b2d34de23d0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 39d639b9d2ea2fc43cfd8389113ae7dad5611cc1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +69,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
  インデックスの統計を DROP STATISTICS で削除することはできません。 インデックスが存在する限り、統計は維持されます。  
   
- 統計情報の表示の詳細については、次を参照してください。 [DBCC SHOW_STATISTICS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ 統計情報の表示の詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。  
@@ -113,15 +110,14 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
+ [sys.stats_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sp_autostats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   
   
-
 
 

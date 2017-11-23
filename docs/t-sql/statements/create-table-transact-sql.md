@@ -1,13 +1,14 @@
 ---
 title: "テーブル (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +20,7 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,20 +47,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: "256"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   新しいテーブルを作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
@@ -582,7 +581,7 @@ TEXTIMAGE_ON のみ「LOB ストレージ領域」の場所を変更、データ
  アルゴリズム  
  必要があります**'AEAD_AES_256_CBC_HMAC_SHA_256'**です。  
   
- 機能の制約を含むの詳細については、次を参照してください。 [Always Encrypted &#40;データベース エンジン"&"#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)です。  
+ 機能の制約を含むの詳細については、次を参照してください。 [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)です。  
   
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -1020,7 +1019,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1029,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1068,7 @@ Azure SQL データベースでは、グローバルの一時テーブルも tem
 Azure SQL DB のグローバルの一時テーブルは、同じの構文とセマンティクスを一時テーブルは、SQL Server に従います。  同様に、グローバル一時ストアド プロシージャも、Azure SQL DB 内のデータベース レベルにスコープされます。 ローカル一時テーブルの (# テーブル名を使用して開始) では、Azure SQL データベースでもサポートされ、同じの構文とセマンティクスを SQL Server を使用してに従います。  前のセクションを参照してください[一時テーブル](#temporary-tables)です。  
 
 > [!IMPORTANT]
-> この機能は、パブリック プレビューでは、Azure SQL データベースの使用します。
+> この機能は、Azure SQL データベースで使用できるのみです。
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Azure SQL DB のグローバル一時テーブルのトラブルシューティング 
@@ -1660,6 +1659,5 @@ GO
  [sp_spaceused &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

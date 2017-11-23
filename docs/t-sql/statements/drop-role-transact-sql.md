@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP ROLE
 - DROP_ROLE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting roles
 - database roles [SQL Server], removing
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - roles [SQL Server], removing
 - dropping roles
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d3ab74cca51d7fc52edb134d29887bb30abb4499
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 86266835ec5d54ce08bdf7fe18d93dd9d4de1737
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,7 +67,7 @@ DROP ROLE role_name
 ## <a name="remarks"></a>解説  
  セキュリティ保護可能なリソースを所有するロールは、データベースから削除できません。 セキュリティ保護可能なリソースを所有するデータベース ロールを削除するには、最初に、セキュリティ保護可能なリソースの所有権を転送するか、リソースをデータベースから削除する必要があります。 メンバーを含むロールは、データベースから削除できません。 メンバーを含むロールを削除するには、最初にロールのメンバーを削除する必要があります。  
   
- データベース ロールからメンバーを削除するには使用[ALTER ROLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md).  
+ データベース ロールからメンバーを削除するには使用[ALTER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-role-transact-sql.md).  
   
  DROP ROLE を使用して、固定データベース ロールを削除することはできません。  
   
@@ -79,7 +76,7 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- サーバーの役割を削除する使用[DROP SERVER ROLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ サーバーの役割を削除する使用[DROP SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  必要があります**ALTER ANY ROLE** 、データベースに対する権限または**コントロール**メンバーシップまたはロールに対する権限、 **db_securityadmin**です。  
@@ -104,6 +101,5 @@ GO
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   
-
 
 

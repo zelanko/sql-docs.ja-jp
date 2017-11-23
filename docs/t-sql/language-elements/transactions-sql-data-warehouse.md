@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 66e897341fa06f2666969677f7a3a2305b52cf46
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8202a0de588bce3a36fc048e68c283b52db7e89d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transactions-sql-data-warehouse"></a>トランザクション (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
 -   *自動コミット トランザクション*セッション内で自動的に開始して、BEGIN TRANSACTION ステートメントでは開始されません。 自動コミット設定が ON の場合は、各ステートメントは、トランザクションで実行され、明示的にコミットまたはロールバックする必要はありません。 自動コミット設定が OFF の場合、COMMIT または ROLLBACK ステートメントが、トランザクションの結果を決定するために必要です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、COMMIT または ROLLBACK ステートメントでは、直後に、または自動コミットの SET OFF ステートメントの後に自動コミット トランザクションが開始します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +71,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  自動コミットが ON の場合は、別のセットの自動コミット ON ステートメントを実行しても効果はありません。 同様に、自動コミットが OFF の場合は、もう 1 つ設定自動コミットを実行している効果はありません。  
   
  SET IMPLICIT_TRANSACTIONS {ON |**OFF** }  
- これは、設定の自動コミットとして同じモードを切り替えます。 SET IMPLICIT_TRANSACTIONS が ON の場合は、接続は暗黙のトランザクション モードに設定されます。 オフ、それを返す場合、接続自動コミット モードにします。  詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+ これは、設定の自動コミットとして同じモードを切り替えます。 SET IMPLICIT_TRANSACTIONS が ON の場合は、接続は暗黙のトランザクション モードに設定されます。 オフ、それを返す場合、接続自動コミット モードにします。  詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  トランザクション関連のステートメントを実行するのには、特定のアクセス許可は必要ありません。 トランザクション内でステートメントを実行するには、権限が必要です。  
@@ -100,7 +97,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  COMMIT ステートメントが発行されると、データが変更されて、データベースの永続的な一部であるために、トランザクションはロールバックできません。  
   
- [データベースの作成 & #40 です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)と[DATABASE &#40; を削除TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-database-transact-sql.md)明示的なトランザクション コマンドを使用することはできません。  
+ [データベースの作成 &#40;です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)と[DATABASE &#40; を削除TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-database-transact-sql.md)明示的なトランザクション コマンドを使用することはできません。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]共有メカニズムのトランザクションはありません。 これは、ことで、特定の時点におけるセッションの 1 つだけことができますに行う任意のトランザクションに対する作業システムのことを意味します。  
   
@@ -153,9 +150,8 @@ COMMIT;
 ```  
   
 ## <a name="see-also"></a>参照  
- [[SET implicit_transactions] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
- [SET TRANSACTION ISOLATION LEVEL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [[SET implicit_transactions] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
-

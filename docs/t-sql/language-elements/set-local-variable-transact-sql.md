@@ -8,29 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - SET @local_variable
 - variables [SQL Server], assigning
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a92fa424de70d1ba9cccf437a2de49ab8432ba1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="set-localvariable-transact-sql"></a>設定@local_variable(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -188,7 +185,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  カーソル変数は、グローバル カーソルを参照する場合でも、常にローカルです。 カーソル変数でグローバル カーソルを参照する場合、カーソルに対してグローバル カーソル参照とローカル カーソル参照の両方が行われます。 詳細については、例 C を参照してください。  
   
- 詳細については、次を参照してください。 [DECLARE CURSOR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ 詳細については、次を参照してください。 [DECLARE CURSOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  複合代入演算子は、変数や、UPDATE、SELECT、および RECEIVE ステートメントの SET など、演算子の右側にある式で代入を行う任意の場所で使用できます。  
   
@@ -370,11 +367,11 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>参照  
+ [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-
 

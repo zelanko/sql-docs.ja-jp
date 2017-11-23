@@ -5,14 +5,11 @@ ms.date: 08/10/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - sequence [XQuery]
 - type system [XQuery]
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b8c3bc023375876e4581e28f1cbeec39c1fa8995
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e84467e5f4ec58e1601868f1406c8c7cfd972a94
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="type-system-xquery"></a>型システム (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
 -   型指定された値とノードの文字列値。  
   
--   [Data 関数 & #40 です。XQuery と #41 です。](../xquery/data-accessor-functions-data-xquery.md)と[文字列関数 & #40 です。XQuery と #41 です。](../xquery/data-accessor-functions-string-xquery.md).  
+-   [Data 関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-data-xquery.md)と[文字列関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   式から返されるシーケンス型の照合。  
   
@@ -108,9 +104,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  使用することができます、 **data()**または**string()**ノードの値を取得します。  
   
--   [Data 関数 & #40 です。XQuery と #41 です。](../xquery/data-accessor-functions-data-xquery.md)ノードの型指定された値を返します。  
+-   [Data 関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-data-xquery.md)ノードの型指定された値を返します。  
   
--   [文字列関数 & #40 です。XQuery と #41 です。](../xquery/data-accessor-functions-string-xquery.md)ノードの文字列値を返します。  
+-   [文字列関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-string-xquery.md)ノードの文字列値を返します。  
   
  次の XML スキーマ コレクションで、<`root`>、整数型の要素が定義されています。  
   
@@ -160,4 +156,3 @@ WHERE ProductModelID=7
  [XQuery の基礎](../xquery/xquery-basics.md)  
   
   
-

@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PRINT_TSQL
 - PRINT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - PRINT statement
 - user-defined messages [SQL Server]
@@ -25,20 +23,19 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: bc40ee58fe6037d7ad29ced76232f84fe91c2c15
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: a1044fb78ebf3852a963d11607433fdb93d48007
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="print-transact-sql"></a>印刷 Transact SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="print-transact-sql"></a>PRINT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   ユーザー定義メッセージをクライアントに返します。  
   
@@ -52,7 +49,7 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="arguments"></a>引数  
  *msg_str*  
- 文字列または Unicode 文字列の定数です。 詳細については、次を参照してください。[定数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/constants-transact-sql.md).  
+ 文字列または Unicode 文字列の定数です。 詳細については、次を参照してください。[定数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@***local_variable*  
  任意の有効な文字型の変数を指定します。 **@***local_variable*する必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**、またはあることができる必要がありますこれらのデータ型に暗黙的に変換します。  
@@ -124,5 +121,4 @@ GO
  [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-
 

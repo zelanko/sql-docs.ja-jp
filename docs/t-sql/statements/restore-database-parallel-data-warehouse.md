@@ -8,34 +8,32 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4cd72d13f4c953f9b15963655d437709bfc71fa7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 001813cf0e7d00e089046d8580108eb10ef4cba0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>データベース (並列データ ウェアハウス) を復元します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  復元、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]にデータベースのバックアップからユーザー データベース、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスです。 によって作成されたバックアップからデータベースを復元、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][データベースのバックアップ & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)コマンド。 バックアップを使用して操作と復元操作を災害復旧計画を作成したり、データベースを別の 1 つのアプライアンスに移動します。  
+  復元、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]にデータベースのバックアップからユーザー データベース、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスです。 によって作成されたバックアップからデータベースを復元、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][データベースのバックアップ &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)コマンド。 バックアップを使用して操作と復元操作を災害復旧計画を作成したり、データベースを別の 1 つのアプライアンスに移動します。  
   
 > [!NOTE]  
 >  Master の復元には、アプライアンスのログイン情報の復元が含まれます。 Master データベースを復元するを使用して、 [master データベース &#40; を復元TRANSACT-SQL と #41 です。](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)  ページで、 **Configuration Manager**ツールです。 コントロールのノードへのアクセスを持つ管理者は、この操作を実行できます。  
   
  詳細については[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースのバックアップ「のバックアップと復元」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -90,14 +88,14 @@ RESTORE HEADERONLY
  RESTORE HEADERONLY  
  1 人のユーザー データベースのバックアップ ヘッダー情報のみを返すように指定します。 他のフィールドの間では、ヘッダーには、バックアップ、およびバックアップの名前のテキストの説明が含まれます。 バックアップ名は、バックアップ ファイルを格納するディレクトリの名前と同じである必要はありません。  
   
- RESTORE HEADERONLY の結果は、後でパターン化、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果します。 結果は、50 以上の列で使用されるすべて[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 内の列の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果を参照してください[RESTORE HEADERONLY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
+ RESTORE HEADERONLY の結果は、後でパターン化、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果します。 結果は、50 以上の列で使用されるすべて[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 内の列の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果を参照してください[RESTORE HEADERONLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  必要があります、 **CREATE ANY DATABASE**権限です。  
   
  アクセスして、バックアップ ディレクトリから読み取る権限を持つ Windows アカウントが必要です。 Windows アカウント名とパスワードを格納する必要がありますも[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。  
   
-1.  確認する資格情報は既にを使用して[sys.dm_pdw_network_credentials & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+1.  確認する資格情報は既にを使用して[sys.dm_pdw_network_credentials &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
 2.  を追加または資格情報を更新するには使用[sp_pdw_add_network_credentials (& a) #40 です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
@@ -134,7 +132,7 @@ RESTORE HEADERONLY
   
 たとえば、60 GB を復元するデータベースは、2 つのノードのアプライアンス (ノードあたり 30 GB) から 6 ノード アプライアンスに[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]6 ノード アプライアンス上 180 GB のデータベース (6 ノード 30 GB を持つ 1 つのノード) を作成します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ソースの構成と一致する 2 つのノードには、最初に、データベースを復元し、6 つのすべてのノードにデータを再分配します。  
   
- 再配布後にすべての計算ノードは、実際の低いデータと小さいソース アプライアンス上のすべての計算ノードよりも多くの空き領域に含まれます。 追加の領域を使用して、データベースにデータを追加します。 使用することができます、復元されたデータベースのサイズが大きい場合、必要以上、 [ALTER DATABASE & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)データベース ファイルのサイズを縮小します。  
+ 再配布後にすべての計算ノードは、実際の低いデータと小さいソース アプライアンス上のすべての計算ノードよりも多くの空き領域に含まれます。 追加の領域を使用して、データベースにデータを追加します。 使用することができます、復元されたデータベースのサイズが大きい場合、必要以上、 [ALTER DATABASE &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)データベース ファイルのサイズを縮小します。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  これらの制限事項と制約を使用して、ソース アプライアンスは、アプライアンス元となるデータベースのバックアップが作成され、ターゲット アプライアンスは、データベースを復元するアプライアンスです。  
@@ -185,7 +183,6 @@ RESTORE HEADERONLY
  ターゲット復元アプライアンスは、バックアップを復元する前に、ソース バックアップ アプライアンスと互換性のあるかどうかを確認したり、バックアップの内容を確認するヘッダー情報を使用できます。  
   
 ## <a name="see-also"></a>参照  
- [データベースのバックアップ & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+ [データベースのバックアップ &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   
-

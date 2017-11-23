@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DECLARE
 - DECLARE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - table-valued parameters
 - variables [SQL Server], declaring
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70decceb0fb5bc34f5ac7a32c64ca80cb0977de2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="declare-localvariable-transact-sql"></a>宣言@local_variable(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -278,7 +275,7 @@ GO
 ```  
   
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. ユーザー定義テーブル型の変数を宣言する  
- 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
   
 ```  
 DECLARE @LocationTVP   
@@ -328,7 +325,6 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   
-
 
 
 

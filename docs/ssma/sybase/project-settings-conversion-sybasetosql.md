@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ba161d9f053e35c80f9c22627a55a4f1cab003
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e49acca5ae556f6f892c364a7bd81d0db4c68ec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を Sybase Adaptive Server Enterprise (ASE) 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の構文。  
@@ -384,7 +382,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
 **NEXT_IDENTITY 関数**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の NEXT_IDENTITY システム関数ではありません。  
   
--   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます  
+-   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます。。  
   
 -   エラー メッセージを印刷するは、その NEXT_IDENTITY が発生するたびに、**エラーでマーク**です。 SSMA は、関数への参照は変換されませんし、エラー コメントを指定してステートメントをマークします。  
   
@@ -454,6 +452,5 @@ ASE、関数で`SUBSTRING(expression, start, length)`式の文字数より大き
 > SQL Azure に接続しているときは、既定では True です。  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス & #40 です。SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[ユーザー インターフェイス リファレンス &#40;です。SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   
-

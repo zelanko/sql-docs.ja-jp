@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bcf939f68dd338e9672dfc4bc716b3d92ebda272
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e152abc34c459d82f451c5ded02d30f5fb76b23
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exist-method-xml-data-type"></a>exist() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +80,7 @@ select @f;
   
 -   値、  **@Somedate** 属性に型指定されていません。 この値を比較する場合は暗黙的にキャスト、比較の右側にある型に、 **xs:date**型です。  
   
--   代わりに**as xs:date() キャスト**、使用することができます、 **xs:date()**コンス トラクター関数。 詳細については、次を参照してください。[コンス トラクター関数 & #40 です。XQuery と #41 です。](../../xquery/constructor-functions-xquery.md).  
+-   代わりに**as xs:date() キャスト**、使用することができます、 **xs:date()**コンス トラクター関数。 詳細については、次を参照してください。[コンス トラクター関数 &#40;です。XQuery と #41 です。](../../xquery/constructor-functions-xquery.md).  
   
  次の例は似ていますが、1 つ前に、<`Somedate`> 要素。  
   
@@ -166,7 +163,6 @@ WHERE CatalogDescription.exist('
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
- [XML データ変更言語 & #40 です。XML DML"&"#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;です。XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

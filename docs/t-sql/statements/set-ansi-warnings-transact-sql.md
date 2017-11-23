@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - ANSI_WARNINGS_TSQL
 - ANSI_WARNINGS
 - SET_ANSI_WARNINGS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - errors [SQL Server], ISO standard behavior
 - warnings [SQL Server]
 - SET ANSI_WARNINGS statement
 - ANSI_WARNINGS option
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b0c584a6573e9b5ddc5b306a31fe7dada2100f72
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: feee804808cb9ba8d6e3dd97fb512a3a73301e17
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +70,7 @@ SET ANSI_WARNINGS ON;
   
  sp_configure の user options オプションを使用すると、ANSI_WARNINGS の既定の設定をサーバーに対するすべての接続に適用できます。 詳細については、このトピックの「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
   
- 計算列やインデックス付きビューのインデックスを作成または操作するときには、SET ANSI_WARNINGS を ON に設定する必要があります。 SET ANSI_WARNINGS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、または DELETE ステートメントを実行すると失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列やインデックス付きビューのインデックスを作成または操作するときには、SET ANSI_WARNINGS を ON に設定する必要があります。 SET ANSI_WARNINGS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、または DELETE ステートメントを実行すると失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ANSI_WARNINGS データベース オプションが用意されています。 これは、SET ANSI_WARNINGS と同じです。 SET ANSI_WARNINGS が ON の場合、0 除算やデータベースの列のサイズを超える文字列、または同様のエラーが発生すると、エラーまたは警告が発生します。 SET ANSI_WARNINGS が OFF の場合、これらのエラーや警告は発生しません。 model データベースでは、SET ANSI_WARNINGS の既定の設定は OFF です。 指定しない場合は、ANSI_WARNINGS の設定が適用されます。 SET ANSI_WARNINGS を OFF 場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is_ansi_warnings_on 列の値を使用して、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。  
   
@@ -184,8 +181,7 @@ DROP TABLE T1
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET ansi_defaults] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SESSIONPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [[SET ansi_defaults] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SESSIONPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   
-

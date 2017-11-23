@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET_NUMERIC_ROUNDABORT_TSQL
 - SET NUMERIC_ROUNDABORT
 - NUMERIC_ROUNDABORT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - rounding expressions
 - precision [SQL Server], rounded expressions
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - NUMERIC_ROUNDABORT
 - SET NUMERIC_ROUNDABORT statement
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2a78c81a9990b2a9c895776c5f51fe9046b2eb5d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2885429909ebc48294d84d5f3b3a27bccca8abff
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +70,7 @@ SET NUMERIC_ROUNDABORT ON;
   
  SET NUMERIC_ROUNDABORT は、解析時ではなく実行時に設定されます。  
   
- 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET NUMERIC_ROUNDABORT を OFF に設定する必要があります。 SET NUMERIC_ROUNDABORT が ON の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE の各ステートメントは失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET NUMERIC_ROUNDABORT を OFF に設定する必要があります。 SET NUMERIC_ROUNDABORT が ON の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE の各ステートメントは失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
   
  この設定の現在の設定を表示するには、次のクエリを実行します。  
   
@@ -157,7 +154,6 @@ GO
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
-

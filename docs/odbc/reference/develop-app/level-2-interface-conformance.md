@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 216cfaa83c7b48e94778b98fde9766a47221091b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-interface-conformance"></a>レベル 2 インターフェイスへの準拠
 インターフェイスへの準拠レベル 2 にはでは、レベル 1 インターフェイスへの準拠レベルの機能と、次の機能が含まれます。  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |209|また、ステートメント属性 SQL_ATTR_CONCURRENCY を SQL_CONCUR_READ_ONLY 以外には、少なくとも 1 つの値に設定します。|  
 |210|ログイン要求のタイムアウトが発生し、SQL クエリ (SQL_ATTR_LOGIN_TIMEOUT および SQL_ATTR_QUERY_TIMEOUT) する権限です。|  
 |211|既定の分離レベルを変更する機能「シリアル化可能な」分離レベルでのトランザクションを実行する権限です。|
-

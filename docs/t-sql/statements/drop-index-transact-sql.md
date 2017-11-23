@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
 - DROP INDEX
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nonclustered indexes [SQL Server], removing
 - MAXDOP index option, DROP INDEX statement
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
+caps.latest.revision: "99"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 821782102f7c9c6014c3ec46c5e9f9223eca98a0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 59f78a8c62e8257eb09327d4b629ad678d9c0e69
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -248,7 +245,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  MOVE TO は、単一のトランザクションでクラスター化インデックスを削除し、結果のテーブルを別のファイル グループまたはパーティション構成に移動するために使用します。  
   
- ONLINE = ON を指定すると、基となるデータや関連する非クラスター化インデックスに対するクエリと変更は、DROP INDEX トランザクションによってブロックされません。 オンラインでは、一度に 1 つのクラスター化インデックスしか削除できません。 ONLINE オプションの詳細については、次を参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ ONLINE = ON を指定すると、基となるデータや関連する非クラスター化インデックスに対するクエリと変更は、DROP INDEX トランザクションによってブロックされません。 オンラインでは、一度に 1 つのクラスター化インデックスしか削除できません。 ONLINE オプションの詳細については、次を参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
   
  オンライン インデックスをビューには無効かがある場合、クラスター化インデックスを削除することはできません**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、**nvarchar (max)**、 **varbinary (max)**、または**xml**列がリーフ レベルのデータ行にします。  
   
@@ -400,7 +397,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [ALTER PARTITION SCHEME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
@@ -409,10 +406,9 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.filegroups & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sp_spaceused & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sp_spaceused &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

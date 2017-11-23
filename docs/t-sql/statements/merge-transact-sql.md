@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - updating data [SQL Server]
 - modifying data [SQL Server], MERGE statement
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: dd8ecb3609dd70516023afe84125252c708ad1ad
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d071a0137d39abb638131df391c72eae75292c08
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -171,7 +168,7 @@ SET
  MERGE ステートメントのスコープ内で定義された、一時的な名前付き結果セットまたはビュー (共通テーブル式とも呼ばれる) を指定します。 結果セットは単純なクエリから派生し、MERGE ステートメントで参照されます。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  上部 (*式*) [PERCENT]  
- 影響を受ける行の数またはパーセンテージを指定します。 *式*行数または行の割合を指定できます。 TOP 式で参照される行は順序付けされません。 詳細については、次を参照してください。 [TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ 影響を受ける行の数またはパーセンテージを指定します。 *式*行数または行の割合を指定できます。 TOP 式で参照される行は順序付けされません。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
  TOP 句は、ソース テーブル全体と対象テーブル全体が結合され、挿入、更新、または削除操作の対象とならない結合された行が削除された後に適用されます。 TOP 句を使用すると、結合された行の数が指定の値まで減少し、挿入、更新、または削除操作が残りの結合された行に順序付けなしで適用されます。 つまり、WHEN 句で定義された各操作に行を割り当てる順序に決まりはありません。 たとえば、TOP (10) と指定すると 10 行に影響しますが、そのうち 7 行が更新されて 3 行が挿入される場合も、1 行が削除、5 行が更新され、4 行が挿入される場合もあります。  
   
@@ -198,7 +195,7 @@ SET
   
  \<table_source > を使用する派生テーブルを指定することができます、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [テーブル値コンス トラクター](../../t-sql/queries/table-value-constructor-transact-sql.md)に複数の行を指定することによって、テーブルを作成します。  
   
- この句の引数と構文に関する詳細については、次を参照してください。 [FROM & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md).  
+ この句の引数と構文に関する詳細については、次を参照してください。 [FROM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md).  
   
  ON \<merge_search_condition >  
  対象の条件を指定\<table_source > に参加している*対象テーブル*を一致箇所を判断します。 
@@ -222,12 +219,12 @@ SET
  ときに行が返されないによって\<table_source >、ソース テーブルの列にアクセスすることはできません。 Update または delete 操作で指定される場合、 \<merge_matched > 句がソース テーブルの列を参照、エラー 207 (無効な列名) が返されます。 たとえば、ソース テーブルの `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` にアクセスできないために、`Col1` 句によってステートメントが失敗することがあります。  
   
  および\<clause_search_condition >  
- 任意の有効な検索条件を指定します。 詳細については、次を参照してください。[検索条件 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
+ 任意の有効な検索条件を指定します。 詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
   
  \<table_hint_limited >  
  MERGE ステートメントによって実行される挿入、更新、削除の各操作に対し、対象テーブルに適用される 1 つ以上のテーブル ヒントを指定します。 キーワード WITH とかっこが必要です。  
   
- NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
+ NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
   
  INSERT ステートメントの対象であるテーブルに対して TABLOCK ヒントを指定すると、TABLOCKX ヒントを指定した場合と同じ効果を得られます。 テーブルに対して、排他ロックが取得されます。 FORCESEEK を指定すると、対象テーブルとソース テーブルが結合された暗黙のインスタンスに対して適用されます。  
   
@@ -240,7 +237,7 @@ SET
  \<output_clause >  
  行のすべての行を返します*対象テーブル*が更新、挿入、または任意の順序で、削除します。 **$action** output 句で指定することができます。 **$action**型の列は、 **nvarchar (10)**行ごとに 3 つの値のいずれかを返します: 'INSERT'、'UPDATE'、または 'DELETE'、その行に対して実行されたアクションに従ってします。 この句の引数の詳細については、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/output-clause-transact-sql.md).  
   
- オプション ( \<query_hint > [、...n])  
+ オプション ( \<query_hint > [、.. .n])  
  オプティマイザー ヒントを使用して、データベース エンジンがステートメントを処理する方法をカスタマイズすることを指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
  \<merge_matched >  
@@ -249,7 +246,7 @@ SET
  UPDATE SET \<set_clause >  
  対象テーブル内で更新する列名または変数名の一覧と、それらの更新に使用する値を指定します。  
   
- この句の引数の詳細については、次を参照してください。[更新 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/update-transact-sql.md). 列と同じ値を変数に設定することはできません。  
+ この句の引数の詳細については、次を参照してください。[更新 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/update-transact-sql.md). 列と同じ値を変数に設定することはできません。  
   
  DELETE  
  内の行に一致する行を指定します*対象テーブル*は削除されます。  
@@ -266,10 +263,10 @@ SET
  DEFAULT VALUES  
  挿入される行が、各列に対して定義されている既定値で構成されることを指定します。  
   
- この句の詳細については、次を参照してください。 [INSERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md).  
+ この句の詳細については、次を参照してください。 [INSERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md).  
   
  \<検索条件 >  
- 指定するために使用する検索条件を指定\<merge_search_condition > または\<clause_search_condition >。 この句の引数の詳細については、次を参照してください。[検索条件 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
+ 指定するために使用する検索条件を指定\<merge_search_condition > または\<clause_search_condition >。 この句の引数の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="remarks"></a>解説  
  3 つの MATCHED 句のうち、少なくとも 1 つは指定する必要があります。これらの句は、任意の順序で指定できます。 1 つの MATCHED 句で 1 つの変数を複数回更新することはできません。  
@@ -278,7 +275,7 @@ SET
   
  MERGE ステートメントでは、ステートメントのターミネータとしてセミコロン (;) が必要です。 MERGE ステートメントにターミネータを付けずに実行すると、エラー 10713 が生成されます。  
   
- MERGE の後に使用すると[@@ROWCOUNT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md)挿入、更新、およびクライアントに削除された行の合計数を返します。  
+ MERGE の後に使用すると[@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md)挿入、更新、およびクライアントに削除された行の合計数を返します。  
   
  データベースの互換性レベルが 100 以上に設定されている場合、MERGE は完全に予約されたキーワードです。 MERGE ステートメントはデータベースの互換性レベルが 90 と 100 の両方で使用できますが、データベースの互換性レベルが 90 に設定されている場合、MERGE キーワードは完全には予約されていません。  
   
@@ -462,5 +459,4 @@ GO
  [テーブル値コンス トラクターと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/table-value-constructor-transact-sql.md)  
   
   
-
 

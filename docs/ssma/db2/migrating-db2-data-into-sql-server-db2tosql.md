@@ -5,31 +5,29 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45039e39cc04c75f0d2f92de8cf3ad95b55d8e0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 392deeac6aeb1791322723367def8f2e3e6464e8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) に DB2 データの移行
 使用して変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 からからデータを移行することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
 > [!IMPORTANT]  
-> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にインストールしてください、SSMA DB2 拡張機能パックおよび SSMA を実行しているコンピューター上の DB2 プロバイダー。 SQL Server エージェント サービスを実行する必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします。](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にインストールしてください、SSMA DB2 拡張機能パックおよび SSMA を実行しているコンピューター上の DB2 プロバイダー。 SQL Server エージェント サービスを実行する必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします。。](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
 移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/02/2017
   
 **サーバー側のデータの移行:**  
   
--   サーバー側のデータ移行中に、エンジンは、対象のデータベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+-   サーバー側のデータ移行中に、エンジンは、対象のデータベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします。。](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 -   サーバー側での移行を開始するには、選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     > SSMA for DB2 の拡張機能パックがのインスタンスにインストールされていないかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、場合**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行中に、次のエラーが発生しました: ' SSMA データ移行のコンポーネントが見つかりませんでした、SQL Server のサーバー側のデータ移行を実行できなくなります。 拡張機能パックが正しくインストールされているかどうかを確認してください ' です。 をクリックして**キャンセル**データ移行を終了します。  
   
-5.  **DB2 への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 DB2 への接続の詳細については、次を参照してください[DB2 データベース  &#40;DB2ToSQL&#41; への接続。](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  **DB2 への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 DB2 への接続の詳細については、次を参照してください[DB2 データベース &#40;DB2ToSQL&#41; への接続。](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
     ターゲット データベースに接続するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]で接続資格情報を入力、 **SQL Server への接続** ダイアログ ボックスをクリック**接続**です。 接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server に接続します。](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
@@ -109,4 +107,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>参照  
 [SQL Server &#40;DB2ToSQL&#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - RESTORE HEADERONLY
 - RESTORE_HEADERONLY_TSQL
 - HEADERONLY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - backup sets [SQL Server], header information
 - headers [SQL Server]
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-caps.latest.revision: 95
+caps.latest.revision: "95"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5ea17d9f848a47639b748e6f243f604e0e3e2bb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 694c77c3d59b5565e6c5b25eaf946e9ebaa0e22f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE ステートメントで HEADERONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   特定のバックアップ デバイスのすべてのバックアップ セットのすべてのバックアップ ヘッダー情報を含む結果セットを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
 > [!NOTE]  
->  引数の説明については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -85,7 +82,7 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>引数  
- RESTORE HEADERONLY の引数の説明については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ RESTORE HEADERONLY の引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>結果セット  
  指定されたデバイス上にあるバックアップごとに、サーバーからヘッダー情報の行が送信されます。下に説明する列が含まれています。  
@@ -104,7 +101,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|バックアップ セットの失効日。|  
 |**圧縮**|**BYTE(1)**|ソフトウェア ベースの圧縮によりバックアップ セットが圧縮されているかどうか。<br /><br /> **0** = なし<br /><br /> **1** = [はい]|  
 |**[位置]**|**smallint**|ボリューム内でのバックアップ セットの位置 (FILE = のオプションで使用)。|  
-|**DeviceType**|**tinyint**|バックアップ操作で使用するデバイスに対応する値。<br /><br /> ディスク:<br /><br /> **2** = 論理<br /><br /> **102** = 物理<br /><br /> テープ:<br /><br /> **5** = 論理<br /><br /> **105** = 物理<br /><br /> 仮想デバイス:<br /><br /> **7** = 論理<br /><br /> **107** = 物理<br /><br /> 論理デバイス名とデバイス番号は**sys.backup_devices**。 詳細については、を参照してください[sys.backup_devices & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|バックアップ操作で使用するデバイスに対応する値。<br /><br /> ディスク:<br /><br /> **2** = 論理<br /><br /> **102** = 物理<br /><br /> テープ:<br /><br /> **5** = 論理<br /><br /> **105** = 物理<br /><br /> 仮想デバイス:<br /><br /> **7** = 論理<br /><br /> **107** = 物理<br /><br /> 論理デバイス名とデバイス番号は**sys.backup_devices**。 詳細については、を参照してください[sys.backup_devices &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar (128)**|バックアップ操作を実行するユーザー名。|  
 |**ServerName**|**nvarchar (128)**|バックアップ セットを作成したサーバーの名前。|  
 |**DatabaseName**|**nvarchar (128)**|バックアップの作成元であるデータベースの名前。|  
@@ -139,7 +136,7 @@ FROM <backup_device>
 |**HasBackupChecksums**|**bit**|**1** = バックアップにバックアップ チェックサムが含まれています。|  
 |**IsDamaged**|**bit**|**1** = バックアップ時に、データベースが破損したが、バックアップ操作のエラーに関係なく続行が要求されました。|  
 |**BeginsLogChain**|**bit**|**1** = これは、最初のログ バックアップの連鎖的なです。 データベースを作成した後、または単純から完全または一括ログ復旧モデルに切り替えるときに、最初のログ バックアップ ログ チェーンを開始します。|  
-|**HasIncompleteMetaData**|**bit**|**1** = ログ末尾のバックアップが不完全なメタデータを使用します。<br /><br /> 不完全なバックアップ メタデータでのログ末尾のバックアップについては、次を参照してください。[ログ末尾のバックアップ & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
+|**HasIncompleteMetaData**|**bit**|**1** = ログ末尾のバックアップが不完全なメタデータを使用します。<br /><br /> 不完全なバックアップ メタデータでのログ末尾のバックアップについては、次を参照してください。[ログ末尾のバックアップ &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
 |**IsForceOffline**|**bit**|**1** = with norecovery を指定します。 作成したバックアップ、データベースによってオフラインにバックアップします。|  
 |**IsCopyOnly**|**bit**|**1**コピーのみのバックアップを = です。<br /><br /> コピーのみのバックアップを行っても、データベースの全体的なバックアップと復元の手順に影響はありません。 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。|  
 |**FirstRecoveryForkID**|**uniqueidentifier**|開始の復旧分岐の ID。 この列に対応して**first_recovery_fork_guid**で、 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)テーブル。<br /><br /> データのバックアップ、 **FirstRecoveryForkID** equals **RecoveryForkID**です。|  
@@ -192,4 +189,3 @@ GO
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

@@ -1,39 +1,39 @@
 ---
 title: "UPDATE STATISTICS (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE STATISTICS
 - UPDATE_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - updating statistics
 - query optimization statistics [SQL Server], updating
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "74"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a1b053ddc09876717f0fbf34b2d7c294988162f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   テーブルまたはインデックス付きビューで、クエリ最適化に関する統計を更新します。 既定では、クエリ オプティマイザー既に統計を更新、クエリ プランを向上させるために必要に応じて場合によっては、UPDATE STATISTICS またはストアド プロシージャを使用してクエリのパフォーマンスを向上できます[sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)を既定の更新より頻繁に統計を更新します。  
   
@@ -96,7 +96,7 @@ UPDATE STATISTICS schema_name . ] table_name
  *index_or_statistics_name*  
  統計の更新対象のインデックスの名前、または更新する統計の名前を指定します。 場合*index_or_statistics_name*が指定されていない、クエリ オプティマイザーがテーブルまたはインデックス付きビューのすべての統計を更新します。 これには、CREATE STATISTICS ステートメントを使用して作成した統計、AUTO_CREATE_STATISTICS がオンの場合に作成される 1 列ずつの統計、およびインデックスに対して作成された統計が含まれます。  
   
- AUTO_CREATE_STATISTICS の詳細については、次を参照してください。 [ALTER DATABASE SET Options & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md). 使用してテーブルまたはビューのすべてのインデックスを表示するには、 [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)です。  
+ AUTO_CREATE_STATISTICS の詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md). 使用してテーブルまたはビューのすべてのインデックスを表示するには、 [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)です。  
   
  FULLSCAN  
  テーブルまたはインデックス付きビュー内のすべての行をスキャンして統計を計算します。 FULLSCAN と SAMPLE 100 PERCENT は同じ結果になります。 FULLSCAN では SAMPLE オプションは使用できません。  
@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = {ON |オフ}
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)と[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)選択された統計情報の永続化されたサンプルの割合の値を公開します。
  
- **適用されます**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 です。  
+ **適用されます**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
  
  パーティションで ({ \<partition_number > |\<範囲 >}[、... n])を再計算、および全体の統計を作成するマージし、ON PARTITIONS 句で指定されたパーティションをカバーするリーフ レベルの統計を強制します。 異なるサンプル レートで構築されたパーティションの統計はマージできないため、WITH RESAMPLE が必要になります。  
   
@@ -148,7 +148,7 @@ PERSIST_SAMPLE_PERCENT = {ON |オフ}
 > [!WARNING]  
 >  このオプションを使用すると、最適ではないクエリ プランが作成されることがあります。 このオプションは慎重に使用してください。特に、資格のあるシステム管理者だけが使用することをお勧めします。  
   
- AUTO_STATISTICS_UPDATE オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ AUTO_STATISTICS_UPDATE オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  INCREMENTAL = { ON | OFF }  
  ときに**ON**パーティションの統計情報に従って、統計を再作成します。 ときに**OFF**、統計ツリーが削除されると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計が再計算します。 既定値は**OFF**です。  
@@ -290,13 +290,11 @@ UPDATE STATISTICS Customer;
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_autostats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_autostats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
- [STATS_DATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
+ [STATS_DATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stats-date-transact-sql.md)  
+ [sys.dm_db_stats_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
-  
-
 
 
 

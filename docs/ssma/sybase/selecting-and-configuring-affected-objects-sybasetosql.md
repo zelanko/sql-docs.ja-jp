@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Affected Objects
+helpviewer_keywords: Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97bb6a73aa744a6471a48ba16fc3ee9b52dea67e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e5f4fcb5af81da2b78520542e2b57bd66bc4fd1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けたオブジェクト (SybaseToSQL) の選択と構成
 このページでは、テーブルを選択して、SSMA、前の手順で選択されたオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズすることができます。  
@@ -35,7 +32,7 @@ Sybase オブジェクト ツリーで、ウィンドウの左側にある、テ
   
 SSMA テスターは、これらのオブジェクトのいずれかを確認できない場合、は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトを比較することはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>テーブル  
 あるテーブル タブには、選択されたテーブルのグリッド ビューが含まれています。 グリッドには、選択したテーブルについては、次の情報が含まれています。  
   
 -   列名  
@@ -57,10 +54,10 @@ SSMA テスターは、これらのオブジェクトのいずれかを確認で
 ## <a name="sql"></a>Sql  
 [SQL] タブには、"Create table"が含まれています。 選択されたテーブルの SQL です。  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>data  
 [データ] タブでは、選択されたテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更されました。  
@@ -130,4 +127,3 @@ SSMA テスターによって生成された SELECT ステートメントを表�
 [実行中のテスト_ケースと #40 です。SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - datetime2
 - datetime2_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - dates [SQL Server], data types
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - datetime2 data type [SQL Server]
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 70a3f27fc59fcc904679040029e47f312017dbe3
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 13766b3d0cb86780c2eca55c7f36e8fd16e973c5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,11 +55,11 @@ ms.lasthandoff: 09/01/2017
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00|  
 |カレンダー|グレゴリオ暦|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|可|  
 |タイム ゾーン オフセットへの対応と保持|不可|  
 |夏時間への対応|不可|  
   
-データ型のメタデータを参照してください。 [sys.systypes & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)または[TYPEPROPERTY (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md). 一部の日付時刻データ型では、有効桁数および小数点以下桁数が可変です。 有効桁数と列の小数点以下桁数を取得する、次を参照してください。 [COLUMNPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columnproperty-transact-sql.md)、 [COL_LENGTH (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/col-length-transact-sql.md)、または[sys.columns & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
+データ型のメタデータを参照してください。 [sys.systypes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)または[TYPEPROPERTY (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md). 一部の日付時刻データ型では、有効桁数および小数点以下桁数が可変です。 有効桁数と列の小数点以下桁数を取得する、次を参照してください。 [COLUMNPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columnproperty-transact-sql.md)、 [COL_LENGTH (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/col-length-transact-sql.md)、または[sys.columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>Datetime2 の文字列リテラル形式をサポート
 次の表は、サポートされている ISO 8601 および ODBC 文字列リテラル形式を**datetime2**です。 日付と時刻の部分のアルファベット、数値、区切りなし、および時刻の形式については**datetime2**を参照してください[日付と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/date-transact-sql.md)と[&#40;TRANSACT-SQL と #41 です。](../../t-sql/data-types/time-transact-sql.md).
@@ -89,7 +86,7 @@ ANSI および ISO 8601 準拠[日付](../../t-sql/data-types/date-transact-sql.
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [+ &#124;-] hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータを変換します。
-日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)
+日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime2-data-type"></a>その他の日付と時刻型、datetime2 データ型に変換
 このセクションでは、他の日付と時刻データ型が変換するときの動作について説明します、 **datetime2**データ型。  
@@ -211,4 +208,3 @@ SELECT
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-

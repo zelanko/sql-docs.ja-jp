@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP EVENT NOTIFICATION
 - DROP_EVENT_NOTIFICATION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - event notifications [SQL Server], removing
 - deleting event notifications
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - DROP EVENT NOTIFICATION statement
 - removing event notifications
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 94ef4e523b213f3b959546964227325b350f23b2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ab32a9ffadce83635e8ef987607af913fe0f2472
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>引数  
  *notification_name*  
- 削除するイベント通知の名前を指定します。 複数のイベント通知を指定できます。 現在作成されているイベント通知の一覧を表示する[sys.event_notifications & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ 削除するイベント通知の名前を指定します。 複数のイベント通知を指定できます。 現在作成されているイベント通知の一覧を表示する[sys.event_notifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  イベント通知のスコープが現在のサーバーに適用されることを示します。 イベント通知の作成時に SERVER を指定した場合は、SERVER を指定する必要があります。  
@@ -94,8 +91,7 @@ ON DATABASE;
 ## <a name="see-also"></a>参照  
  [イベント通知 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [sys.events & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   
-

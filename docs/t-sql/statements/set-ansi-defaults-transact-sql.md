@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,23 +16,21 @@ f1_keywords:
 - ANSI_DEFAULTS
 - SET_ANSI_DEFAULTS_TSQL
 - ANSI_DEFAULTS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ANSI_DEFAULTS option
 - SET ANSI_DEFAULTS statement
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2a06170bd4a52708c5a3a88cfc12fe56204a6ddc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 170fb1f5a95b9f6fe4fbe596906595475175b1a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,7 +67,7 @@ SET ANSI_DEFAULTS ON;
   
  また、ユーザーの作業セッション時や、トリガーまたはストアド プロシージャの実行時は、これらの ISO 標準 SET オプションは、クエリ処理環境を定義します。 ただし、これらの SET オプションには ISO 標準に準拠するために必要なオプションがすべて含まれているわけではありません。  
   
- 計算列およびインデックス付きビューにおいてインデックスを操作する場合は、4 つの既定オプション (ANSI_NULLS、ANSI_PADDING、ANSI_WARNINGS、および QUOTED_IDENTIFIER) を ON に設定する必要があります。 これは、計算列とインデックス付きビューにおいてインデックスを作成および変更するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 4 つのオプションです。 その他の SET オプションは、ARITHABORT (ON)、CONCAT_NULL_YIELDS_NULL (ON)、および NUMERIC_ROUNDABORT (OFF) です。 計算列でインデックス付きビューとインデックスで必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列およびインデックス付きビューにおいてインデックスを操作する場合は、4 つの既定オプション (ANSI_NULLS、ANSI_PADDING、ANSI_WARNINGS、および QUOTED_IDENTIFIER) を ON に設定する必要があります。 これは、計算列とインデックス付きビューにおいてインデックスを作成および変更するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 4 つのオプションです。 その他の SET オプションは、ARITHABORT (ON)、CONCAT_NULL_YIELDS_NULL (ON)、および NUMERIC_ROUNDABORT (OFF) です。 計算列でインデックス付きビューとインデックスで必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するときに、ON に ANSI_DEFAULTS を自動的に設定します。 次に、このドライバーとプロバイダーは、CURSOR_CLOSE_ON_COMMIT と IMPLICIT_TRANSACTIONS を OFF に設定します。 ODBC データ ソース、ODBC 接続属性、またはに接続する前に、アプリケーションで設定されている OLE DB 接続プロパティでは、SET CURSOR_CLOSE_ON_COMMIT と SET IMPLICIT_TRANSACTIONS OFF 設定を構成することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 DB-Library アプリケーションからの接続に対しては、SET ANSI_DEFAULTS は既定で OFF に設定されています。  
   
@@ -101,15 +98,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DBCC USEROPTIONS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [セット ANSI_NULL_DFLT_ON & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)   
+ [セット ANSI_NULL_DFLT_ON &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [[SET cursor_close_on_commit] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)   
- [[SET implicit_transactions] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [[SET cursor_close_on_commit] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)   
+ [[SET implicit_transactions] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
-

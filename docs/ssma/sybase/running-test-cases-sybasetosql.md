@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Execution Steps
+helpviewer_keywords: Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20b74e4908f57c0fab89cbfbea295f2442cedde1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80c335253aef5dd676ece990cb34feb5d67da829
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト_ケース (SybaseToSQL) を実行します。
 SSMA テスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストが成功しました。 Sybase 間のオブジェクトの対応付けと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -39,7 +36,7 @@ SSMA テスト担当者がテスト_ケースを実行すると、テスト用�
   
 2.  **Sybase への接続**ダイアログ ボックスでは、接続情報を入力し、をクリックして**接続**です。  
   
-テストが完了したら、テスト_ケースのレポートが作成されます。 をクリックして、**レポート**を表示するボタン、[テスト_ケース レポートを表示する & #40 です。SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). テスト (テスト ケース レポート) の結果がで自動的に格納されている、[テスト リポジトリの使用 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)を後で使用します。  
+テストが完了したら、テスト_ケースのレポートが作成されます。 をクリックして、**レポート**を表示するボタン、[テスト_ケース レポートを表示する &#40;です。SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). テスト (テスト ケース レポート) の結果がで自動的に格納されている、[テスト リポジトリの使用 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)を後で使用します。  
   
 ## <a name="test-case-execution-steps"></a>テスト_ケースの実行手順  
   
@@ -56,8 +53,8 @@ SSMATESTER2005db または SSMATESTER2008db データベース中および、Syb
 |名前|型|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
-|USER_TABLE$ Aud|Table|テーブルな行が削除され、上書きを保存します。|  
-|USER_TABLE$ AudID|Table|追加または変更された行が保存されているテーブルです。|  
+|USER_TABLE$ Aud|テーブル|テーブルな行が削除され、上書きを保存します。|  
+|USER_TABLE$ AudID|テーブル|追加または変更された行が保存されているテーブルです。|  
 |USER_TABLE|表示|テーブルの変更の簡略化された表現。|  
 |新しい USER_TABLE $|表示|挿入、および上書きされた行の簡略化された表現。|  
 |USER_TABLE$ new_id|表示|挿入および変更された行の id です。|  
@@ -76,11 +73,10 @@ Sybase で検証済みのテーブルのデータベースで次のオブジェ�
 SSMA テスターがで作成された補助オブジェクトをクリーンアップ、終了処理中に、**初期化**手順です。  
   
 ## <a name="next-step"></a>次の手順  
-[テスト_ケースのレポートの表示 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
+[テスト_ケースのレポートの表示 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
 [選択とテスト &#40; オブジェクトの構成SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [選択して、影響を受けるオブジェクト &#40; を構成します。SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [データベース オブジェクト &#40; 移行テストSybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

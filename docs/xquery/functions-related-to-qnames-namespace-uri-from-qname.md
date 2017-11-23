@@ -5,29 +5,25 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - fn:namespace-uri-from-QName function
 - namespace-uri-from-QName function
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34a8b738a8c4b38951ff73f4437e3327a3d6a852
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: be3af81f884ff54ff6bea5f07f97d31cf0ad2342
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Qname の名前空間 uri から QName に関連する関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. QName からの名前空間 URI の取得  
- 作業用サンプルについては、次を参照してください。 [QName のローカル名 & #40 です。XQuery と #41 です。](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
+ 作業用サンプルについては、次を参照してください。 [QName のローカル名 &#40;です。XQuery と #41 です。](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
@@ -59,4 +55,3 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  [Qname &#40; に関連する関数XQuery と #41 です。](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   
-

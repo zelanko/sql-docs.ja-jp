@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nodes() method
 - nodes method
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: e083c0b7376b1cac9433e19eee8fc25c93ea09b4
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fbbbd268398ab46b150f647a8d19689d198e6e8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -119,7 +116,7 @@ ProductModelID  Instructions
   
  また、行セットのコンテキスト ノードは具体化できません。 つまり、このコンテキスト ノードは SELECT ステートメントでは使用できません。 ただし、IS NULL と COUNT(*) では使用できます。  
   
- 使用するシナリオ、 **nodes()**メソッドは、使用する場合と同じ[OPENXML & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openxml-transact-sql.md). したがって、XML の行セット ビューが提供されます。 ただしを使用するときにカーソルを使用する必要はありません、 **nodes()**を XML ドキュメントの複数の行を含むテーブルでのメソッドです。  
+ 使用するシナリオ、 **nodes()**メソッドは、使用する場合と同じ[OPENXML &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openxml-transact-sql.md). したがって、XML の行セット ビューが提供されます。 ただしを使用するときにカーソルを使用する必要はありません、 **nodes()**を XML ドキュメントの複数の行を含むテーブルでのメソッドです。  
   
  によって返される行セットを**nodes()**メソッドは、名前のない行セット。 したがって、別名を使用してこれらの行セットに明示的に名前を付ける必要があります。  
   
@@ -310,4 +307,3 @@ GO
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

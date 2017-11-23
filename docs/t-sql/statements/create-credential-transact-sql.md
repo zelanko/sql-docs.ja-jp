@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,25 +17,23 @@ f1_keywords:
 - CREATE CREDENTIAL
 - CREATE_CREDENTIAL_TSQL
 - CREDENTIAL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - SECRET clause
 - authentication [SQL Server], credentials
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 556fa0262696075d63ee549730f2d9824c482dd4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   サーバー レベルの資格情報を作成します。 資格情報は、SQL Server の外部リソースへの接続に必要な認証情報を含むレコードです。 通常、資格情報には Windows ユーザーとパスワードが含まれます。 たとえば、いくつかの場所へのデータベースのバックアップの保存には、その場所にアクセスする特別な資格情報を提供する SQL Server が必要です。 詳細については、次を参照してください。[資格情報 (データベース エンジン)](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。
   
 > [!NOTE]  
->  資格情報をデータベース レベルの使用時に[CREATE DATABASE SCOPED CREDENTIAL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). 複数のデータベース サーバーで、同じ資格情報を使用する必要がある場合は、サーバー レベルの資格情報を使用します。 データベースの移植性を高めるようにするのにには、データベース スコープの資格情報を使用します。 新しいサーバーにデータベースを移動すると、データベース スコープ資格情報がそれに移動します。 使用するデータベース スコープの資格情報[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+>  資格情報をデータベース レベルの使用時に[CREATE DATABASE SCOPED CREDENTIAL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). 複数のデータベース サーバーで、同じ資格情報を使用する必要がある場合は、サーバー レベルの資格情報を使用します。 データベースの移植性を高めるようにするのにには、データベース スコープの資格情報を使用します。 新しいサーバーにデータベースを移動すると、データベース スコープ資格情報がそれに移動します。 使用するデータベース スコープの資格情報[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,13 +68,13 @@ WITH IDENTITY = 'identity_name'
  Azure Key Vault にアクセスする資格情報を使用する場合、**シークレット**の引数**CREATE CREDENTIAL**が必要です、 *\<クライアント ID >* (ハイフンなし)および*\<シークレット >*の**サービス プリンシパル**スペースを含めずに間でまとめて渡される Azure Active Directory でします。 後半の例 C を参照してください。 共有アクセス署名を使用しているとき、資格情報、**シークレット**共有アクセス署名トークンです。 D は次の例を参照してください。  Azure のコンテナーに保存されているアクセス ポリシーと shared access signature を作成する方法の詳細については、次を参照してください。[レッスン 1: Azure のコンテナーに保存されているアクセス ポリシーと shared access signature を作成する](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)です。  
   
  暗号化サービス プロバイダーの*cryptographic_provider_name*  
- 名前を指定、*企業キー管理プロバイダー (EKM)*です。 キー管理の詳細については、次を参照してください。[拡張キー管理 & #40 です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 名前を指定、*企業キー管理プロバイダー (EKM)*です。 キー管理の詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>解説  
 
  IDENTITY が Windows ユーザーの場合、このシークレットにはパスワードを指定できます。 シークレットはサービス マスター キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使用して再度暗号化されます。  
   
- 資格情報を作成した後にマップできます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用してログイン[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)または[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)です。 A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインは 1 つだけの資格情報にマップすることができますが、1 つの資格情報を複数にマップできる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 詳細については、次を参照してください。[資格情報 (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。 サーバー レベルの資格情報は、データベース ユーザーが、ログインにのみマップできます。 
+ 資格情報を作成した後にマップできます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用してログイン[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)または[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)です。 A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインは 1 つだけの資格情報にマップすることができますが、1 つの資格情報を複数にマップできる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 詳細については、次を参照してください。[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)です。 サーバー レベルの資格情報は、データベース ユーザーが、ログインにのみマップできます。 
   
  資格情報に関する情報は、 [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)カタログ ビューです。  
   
@@ -163,7 +160,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [資格情報 (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [ALTER CREDENTIAL &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-credential-transact-sql.md)   
  [資格情報 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-credential-transact-sql.md)   
  [データベース スコープの資格情報 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
@@ -174,4 +171,3 @@ GO
  [共有アクセス署名](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   
-

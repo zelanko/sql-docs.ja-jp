@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OBJECT_ID
 - OBJECT_ID_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - objects [SQL Server], IDs
 - identification numbers [SQL Server], database objects
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e9abb4a4556ca8ab83e638768ac95b9d7d637935
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a612928c3a30b48d3dc8e1dedd4375ca564555d8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +59,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  使用するオブジェクトを指定します。 *object_name*か**varchar**または**nvarchar**です。 場合*object_name*は**varchar**、暗黙的に変換されます**nvarchar**です。 データベース名とスキーマ名の指定は省略可能です。  
   
  **'** *object_type* **'**  
- スキーマ スコープのオブジェクトの種類を指定します。 *object_type*か**varchar**または**nvarchar**です。 場合*object_type*は**varchar**、暗黙的に変換されます**nvarchar**です。 オブジェクトの種類の一覧は、次を参照してください。、**型**内の列[sys.objects & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+ スキーマ スコープのオブジェクトの種類を指定します。 *object_type*か**varchar**または**nvarchar**です。 場合*object_type*は**varchar**、暗黙的に変換されます**nvarchar**です。 オブジェクトの種類の一覧は、次を参照してください。、**型**内の列[sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -79,7 +76,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  一時テーブル名を指定すると、データベース名でなければなりません一時テーブル名の前に、現在のデータベースがない限り、 **tempdb**です。 たとえば、 `SELECT OBJECT_ID('tempdb..#mytemptable')`のようにします。  
   
- システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳細については、次を参照してください。[式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)と[場所 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md).  
+ システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳細については、次を参照してください。[式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)と[場所 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
   
@@ -140,12 +137,11 @@ SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
 ```  
   
 ## <a name="see-also"></a>参照  
- [メタデータ関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.objects & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.dm_db_index_operational_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [メタデータ関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [OBJECT_NAME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-name-transact-sql.md)  
+ [OBJECT_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-name-transact-sql.md)  
   
   
-
 

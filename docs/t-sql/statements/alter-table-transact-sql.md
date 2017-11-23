@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - ALTER TABLE
 - WAIT_AT_LOW_PRIORITY_TSQL
 - ALTER_COLUMN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - columns [SQL Server], resizing
 - changing column size
@@ -61,17 +59,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
+caps.latest.revision: "281"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cee79406283aa3b75d41b968370f490cb454ea5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -380,7 +377,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
  のみ適用され、 **xml**型と XML スキーマを関連付けるためのデータ型。 入力する前に、 **xml**列をスキーマ コレクション、スキーマ コレクション必要があります最初に作成するデータベースを使用して[CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)です。  
   
-COLLATE \< *collation_name* > 変更する列の新しい照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧および詳細については、次を参照してください。 [Windows 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+COLLATE \< *collation_name* > 変更する列の新しい照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧および詳細については、次を参照してください。 [Windows 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL Server 照合順序名 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  のみの列の照合順序を変更するのには、COLLATE 句を使用できます、 **char**、 **varchar**、 **nchar**、および**nvarchar**データ型。 ユーザー定義の別名データ型の列の照合順序を変更するには、列を変更する別の ALTER TABLE ステートメントを実行する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データを入力して、その照合順序を変更し、列を別名データ型に変更します。  
   
@@ -497,7 +494,7 @@ WITH CHECK | WITH NOCHECK
  期間の FOR SYSTEM_TIME (system_start_time_column_name、system_end_time_column_name)  
  **適用されます**:[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
- レコードの有効期間を記録する、システムを使用する列の名前を指定します。 既存の列を指定したり、追加期間 FOR SYSTEM_TIME 引数の一部として、新しい列を作成することができます。 列は、datetime2 データ型があります。 と NOT として定義する必要が NULL です。 期間の列が NULL として定義される場合は、エラーがスローされます。 定義することができます、 [column_constraint & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)や[列の既定値の指定](../../relational-databases/tables/specify-default-values-for-columns.md)system_start_time と system_end_time の列です。 例 A を参照して、[システムのバージョン管理](#system_versioning)system_end_time 列の既定値の使用方法を示す以下の例です。  
+ レコードの有効期間を記録する、システムを使用する列の名前を指定します。 既存の列を指定したり、追加期間 FOR SYSTEM_TIME 引数の一部として、新しい列を作成することができます。 列は、datetime2 データ型があります。 と NOT として定義する必要が NULL です。 期間の列が NULL として定義される場合は、エラーがスローされます。 定義することができます、 [column_constraint &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)や[列の既定値の指定](../../relational-databases/tables/specify-default-values-for-columns.md)system_start_time と system_end_time の列です。 例 A を参照して、[システムのバージョン管理](#system_versioning)system_end_time 列の既定値の使用方法を示す以下の例です。  
   
  SYSTEM_VERSIONING の設定の引数と組み合わせてこの引数を使用して、既存のテーブルにシステムのバージョン管理を有効にします。 詳細については、次を参照してください。[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)と[Azure SQL Database のテンポラル テーブルの使用を開始する](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)です。  
   
@@ -699,7 +696,7 @@ TABLE
   
  REBUILD 操作で特定の圧縮設定を指定しないと、パーティションの現在の圧縮設定が使用されます。 現在の設定を返すクエリ、 **data_compression**内の列、 **sys.partitions**カタログ ビューです。  
   
- 再構築オプションの詳細な説明については、次を参照してください。 [index_option & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-index-option-transact-sql.md).  
+ 再構築オプションの詳細な説明については、次を参照してください。 [index_option &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-index-option-transact-sql.md).  
   
  DATA_COMPRESSION  
  **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
@@ -725,7 +722,7 @@ TABLE
   
  クラスター化列ストア インデックスを使用して格納されているテーブルである、列ストア テーブルにのみ適用されます。 COLUMNSTORE_ARCHIVE は、指定したパーティションをより小さなサイズにさらに圧縮します。 これは、保存用や、ストレージの使用量を減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
   
- 同時に複数のパーティションを再構築を参照してください。 [index_option & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-index-option-transact-sql.md). テーブルにクラスター化インデックスが含まれていない場合、データ圧縮を変更するとヒープと非クラスター化インデックスが再構築されます。 圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。  
+ 同時に複数のパーティションを再構築を参照してください。 [index_option &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-index-option-transact-sql.md). テーブルにクラスター化インデックスが含まれていない場合、データ圧縮を変更するとヒープと非クラスター化インデックスが再構築されます。 圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。  
   
  オンライン **=**  {ON |**OFF** } \<single_partition_rebuild_option に適用 >  
  インデックス操作中に、基となるテーブルの 1 つのパーティションとそれに関連する各インデックスに対してクエリやデータ変更を行うことができるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。  
@@ -821,14 +818,14 @@ ALTER TABLE \<table_name>
   
      この操作によりデータ転送コストが発生し、取り消すことはできません。  
   
--   指定`PAUSED`を一時停止またはデータの移行を延期します。 詳細については、次を参照してください。[一時停止と再開データの移行 & #40 です。Stretch Database &#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+-   指定`PAUSED`を一時停止またはデータの移行を延期します。 詳細については、次を参照してください。[一時停止と再開データの移行 &#40;です。Stretch Database &#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
 WAIT_AT_LOW_PRIORITY  
  **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
  オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY**オンライン インデックス再構築操作が他の操作を続行しながら、オンライン インデックス構築操作が待機している、優先度の低いロックを待つことを示します。 省略すると、 **WAIT AT LOW PRIORITY**オプションと同等に`IT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。  
   
- MAX_DURATION =*時間*[**分**]  
+ MAX_DURATION =*時間***[分]**  
  **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
  待機時間 (分単位で指定された整数値) を**スイッチ**またはオンライン インデックス再構築のロックが、DDL コマンドを実行するときに優先度の低い待機です。 操作がブロックされている場合、 **MAX_DURATION**のいずれかの時間、 **ABORT_AFTER_WAIT**動作が実行されます。 **MAX_DURATION**時間は分、および、word では常に**分**を省略できます。  
@@ -877,7 +874,7 @@ WAIT_AT_LOW_PRIORITY
  ALTER TABLE は、パーティション テーブルを対象にした SWITCH 操作の実行に使用できるほか、非パーティション テーブルと同様に、パーティション テーブルの列、制約、トリガーの状態を変更する場合にも使用できます。 ただし、このステートメントを使用して、テーブル自体のパーティション分割方法を変更することはできません。 パーティション テーブルのパーティションを再作成するには使用[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)と[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)です。 また、パーティション テーブルの列のデータ型を変更することもできません。  
   
 ## <a name="restrictions-on-tables-with-schema-bound-views"></a>スキーマ バインド ビューによるテーブルへの制限  
- スキーマ バインド ビューのあるテーブルに ALTER TABLE ステートメントを実行するときに適用される制約は、単純なインデックスのあるテーブルを変更する場合に現在適用されている制約と同じです。 列の追加は許可されますが、 任意のスキーマ バインド ビューに含まれる列を削除または変更することはできません。 ALTER TABLE が失敗した、スキーマ バインド ビューで使用される列を変更するかどうか、ALTER TABLE ステートメントに必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]エラー メッセージを生成します。 スキーマ バインド ビューとインデックス付きビューの詳細については、次を参照してください。 [CREATE VIEW & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
+ スキーマ バインド ビューのあるテーブルに ALTER TABLE ステートメントを実行するときに適用される制約は、単純なインデックスのあるテーブルを変更する場合に現在適用されている制約と同じです。 列の追加は許可されますが、 任意のスキーマ バインド ビューに含まれる列を削除または変更することはできません。 ALTER TABLE が失敗した、スキーマ バインド ビューで使用される列を変更するかどうか、ALTER TABLE ステートメントに必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]エラー メッセージを生成します。 スキーマ バインド ビューとインデックス付きビューの詳細については、次を参照してください。 [CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
  ベース テーブルを参照するスキーマ バインド ビューを作成しても、そのテーブルに対するトリガーの追加や削除には影響はありません。  
   
@@ -1767,11 +1764,11 @@ WITH
   
 |パーティション|データを持つか。|境界の範囲|  
 |---------------|---------------|--------------------|  
-|1|はい|OrderDate < ' 2004-01-01'|  
-|2|はい|'2004-01-01' < OrderDate を = <' 2005-01-01'|  
-|3|はい|'2005-01-01' < OrderDate を = <' 2006-01-01'|  
-|4|はい|'2006-01-01'< OrderDate を = <' 2007-01-01'|  
-|5|はい|' 2007-01-01' < OrderDate を =|  
+|1|可|OrderDate < ' 2004-01-01'|  
+|2|可|'2004-01-01' < OrderDate を = <' 2005-01-01'|  
+|3|可|'2005-01-01' < OrderDate を = <' 2006-01-01'|  
+|4|可|'2006-01-01'< OrderDate を = <' 2007-01-01'|  
+|5|可|' 2007-01-01' < OrderDate を =|  
   
 -   パーティション 1 (データを含む): OrderDate < ' 2004-01-01'  
 -   パーティション 2 (データがあります) '2004-01-01' < OrderDate を = <' 2005-01-01'。  
@@ -1852,12 +1849,11 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [DROP TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [ALTER PARTITION SCHEME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [ALTER PARTITION FUNCTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-function-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

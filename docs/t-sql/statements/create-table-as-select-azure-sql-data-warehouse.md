@@ -8,24 +8,21 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2f95f9bc6975593f2536848e2bb3a2b346eca538
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>テーブルとして選択 (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -137,7 +134,7 @@ CTAS 必要`SELECT`で参照されているすべてのオブジェクトに対�
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
 Azure SQL Data Warehouse では、サポートの自動作成] または [統計の更新を自動まだされていません。  クエリから最高のパフォーマンスを取得するためには、CTAS を実行した後、およびデータに大幅な変更が加えられた後は、統計をすべてのテーブルのすべての列を作成する必要があります。 詳細については、「 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
 
-[SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md) CTAS で影響を与えません。 同様の動作を実現するために使用[TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+[SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md) CTAS で影響を与えません。 同様の動作を実現するために使用[TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
  
 詳細については、「[制限事項と制約](https://msdn.microsoft.com/library/mt203953/#LimitationsRestrictions)CREATE TABLE でします。
 
@@ -281,7 +278,7 @@ CREATE TABLE [dbo].[test] (
 WITH (DISTRIBUTION = ROUND_ROBIN);
 ```
  
-最後の手順として行うこともできます[名前の変更 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/rename-transact-sql.md)テーブル名を切り替えるには。 これにより、新しいテーブルを指定する DimCustomer2 です。
+最後の手順として行うこともできます[名前の変更 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/rename-transact-sql.md)テーブル名を切り替えるには。 これにより、新しいテーブルを指定する DimCustomer2 です。
 
 ```
 RENAME OBJECT DimCustomer2 TO DimCustomer2_old;
@@ -838,9 +835,8 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
  [TABLE &#40; を作成します。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [TABLE &#40; を削除TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
  [外部テーブル &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE & #40 です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
-
 
 

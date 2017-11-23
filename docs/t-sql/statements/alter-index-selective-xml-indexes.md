@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8b8ee79d871f207b59ccaf5cc0562d7e125e596a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e7854dd1d9365f97628341c4160c368f97308302
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選択的 XML インデックス)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -133,7 +130,7 @@ identifier
 -   `table_name`  
   
  [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
+ インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文の詳細については、次を参照してください。 [WITH XMLNAMESPACES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/xml/with-xmlnamespaces.md).  
   
  **(** \<Promoted_node_path_action_list > **)**  
  追加または削除するインデックス付きパスの一覧です。  
@@ -143,7 +140,7 @@ identifier
 -   **パスを削除します。** パスを削除 (REMOVE) するときは、作成時にパスに付けた名前を指定します。  
   
  [で**(** \<index_options > **)**]  
- 指定できますのみ\<index_options > FOR 句なし ALTER INDEX を使用するとします。 ALTER INDEX を使用してインデックスのパスを追加または削除する場合、インデックス オプションは引数として無効です。 インデックス オプションについては、次を参照してください。 [CREATE XML INDEX & #40 です。選択的 XML インデックス &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ 指定できますのみ\<index_options > FOR 句なし ALTER INDEX を使用するとします。 ALTER INDEX を使用してインデックスのパスを追加または削除する場合、インデックス オプションは引数として無効です。 インデックス オプションについては、次を参照してください。 [CREATE XML INDEX &#40;です。選択的 XML インデックス &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>解説  
   
@@ -182,4 +179,3 @@ PAD_INDEX = ON;
  [選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   
-

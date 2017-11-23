@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 4370076afa9255cc7e83acaa6fe4dffeb73bc958
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b2cd81e4b96ce5c38a816c50728d794390bb383
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="value-method-xml-data-type"></a>value() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ value (XQuery, SQLType)
  *SQLType*  
  正常な結果として返される SQL 型 (文字列リテラル) です。 このメソッドの戻り値の型と一致する、 *SQLType*パラメーター。 *SQLType*することはできません、 **xml**データ型、共通言語ランタイム (CLR) ユーザー定義型、**イメージ**、**テキスト**、 **ntext**、または**sql_variant**データ型。 *SQLType*ユーザー定義データ型、SQL を指定できます。  
   
- **Value()**メソッドを使用、[!INCLUDE[tsql](../../includes/tsql-md.md)]演算子を暗黙的に変換し、対応する SQL 型で指定されたXSD型からシリアル化された文字列表現がXQuery式の結果を変換しようとしています。[!INCLUDE[tsql](../../includes/tsql-md.md)]変換します。 変換の型キャストの規則の詳細については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ **Value()**メソッドを使用、[!INCLUDE[tsql](../../includes/tsql-md.md)]演算子を暗黙的に変換し、対応する SQL 型で指定されたXSD型からシリアル化された文字列表現がXQuery式の結果を変換しようとしています。[!INCLUDE[tsql](../../includes/tsql-md.md)]変換します。 変換の型キャストの規則の詳細については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
 >  パフォーマンス上の理由から、使用する代わりに、 **value()**メソッドを使用して、リレーショナル値と比較する述語で**exist()**で**sql:column()**です。 これは、下の例 D で示しています。  
@@ -170,7 +167,6 @@ GO
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
- [XML データ変更言語 & #40 です。XML DML"&"#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;です。XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

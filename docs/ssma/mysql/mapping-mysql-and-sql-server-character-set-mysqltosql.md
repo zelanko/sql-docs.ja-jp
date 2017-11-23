@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) を設定する MySQL および SQL Server の文字のマッピング
 MySQL の文字データ型、式およびリテラルの文字セット (文字セット) を指定できます。  
@@ -125,7 +123,7 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
     |cp932|Windows 日本語の SJIS|NCHAR と NVARCHAR (既定値)|  
     |eucjpms|Windows 日本語の UJIS|NCHAR と NVARCHAR (既定値)|  
   
-2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:**データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。:  
+2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:**データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。。  
   
     1.  タイトル、グリッドの最初の列**文字セット名**文字セットの名前が含まれています。  
   
@@ -143,4 +141,3 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
 > -   MySQL データベースとデータベース、カテゴリ、およびオブジェクト ノード レベルでターゲット データベースの間の文字セット マッピングで、既定値列のルート以外のレベルごとに特定の文字セット**対象のデータ型**'を継承するか' です。  
 > -   グリッドで、値**継承**いずれかのサフィックスが '(CHAR/VARCHAR)' または '(NCHAR/NVARCHAR)' によって、この特定の文字セットでは、どの値が親から継承がします。  
   
-

@@ -1,13 +1,14 @@
 ---
 title: "DBCC CHECKFILEGROUP (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/16/2017
+ms.custom: 
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKFILEGROUP_TSQL
 - DBCC CHECKFILEGROUP
 - CHECKFILEGROUP
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DBCC CHECKFILEGROUP statement
 - database objects [SQL Server], checking
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3ee32ac764afd0e350fe094eb8e18a24589026e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6e5335bd6685e1c547361d931938134becaac84
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]割り当てとすべてのテーブルと、現在のデータベースの指定したファイル グループのインデックス付きビューの構造的整合性をチェックします。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]割り当てとすべてのテーブルと、現在のデータベースの指定したファイル グループのインデックス付きビューの構造的整合性をチェックします。
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
@@ -113,7 +112,7 @@ DBCC CHECKFILEGROUP は、次のコマンドを実行します。
 DBCC CHECKALLOC または DBCC CHECKTABLE を DBCC CHECKFILEGROUP と分けて実行する必要はありません。
   
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット  
-DBCC CHECKFILEGROUP は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を実現します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKFILEGROUP は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を実現します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 スナップショットを作成できない場合や TABLOCK オプションが指定されている場合、DBCC CHECKFILEGROUP はロックを取得して必要な一貫性を実現します。 この場合、割り当てのチェックを行うための排他データベース ロックと、テーブルのチェックを行うための共有テーブル ロックが必要です。 TABLOCK の作用によって負荷の高いデータベースでも DBCC CHECKFILEGROUP の実行速度が速くなりますが、DBCC CHECKFILEGROUP の実行中、データベースでの同時実行性は低下します。
   
 > [!NOTE]  
@@ -232,13 +231,12 @@ WITH ESTIMATEONLY;
   
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[FILEGROUP_ID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-id-transact-sql.md)  
-[sp_helpfile を実行 & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
-[sp_helpfilegroup & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
-[sys.sysfilegroups & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
+[FILEGROUP_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-id-transact-sql.md)  
+[sp_helpfile を実行 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
+[sp_helpfilegroup &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
+[sys.sysfilegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
   
   
-

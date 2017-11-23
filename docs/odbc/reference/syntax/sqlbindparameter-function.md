@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBindParameter
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBindParameter
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBindParameter
-helpviewer_keywords:
-- SQLBindParameter function [ODBC]
+f1_keywords: SQLBindParameter
+helpviewer_keywords: SQLBindParameter function [ODBC]
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 083be2fe5cda6f28cb250a3e0bc4aaef9bf30ef2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e1984e301d72e8f2f80cce8e5a5c9864dad0e956
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 **準拠**  
@@ -213,7 +207,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
  場合*ParameterType* SQL_TYPE_TIME、SQL_TYPE_TIMESTAMP、SQL_INTERVAL_SECOND、SQL_INTERVAL_DAY_TO_SECOND、SQL_INTERVAL_HOUR_TO_SECOND、または、SQL_INTERVAL_MINUTE_TO_SECOND、IPD の SQL_DESC_PRECISION フィールドが設定されています。*DecimalDigits*です。 場合*ParameterType* SQL_NUMERIC または SQL_DECIMAL には、IPD の SQL_DESC_SCALE フィールドに設定されて*DecimalDigits*です。 他のすべてのデータ型、 *DecimalDigits*引数は無視されます。  
   
 ## <a name="parametervalueptr-argument"></a>ParameterValuePtr 引数  
- *ParameterValuePtr*引数が指すバッファーされるときに、 **SQLExecute**または**SQLExecDirect**を呼び出すと、パラメーターの実際のデータが含まれています。 データがで指定された形式である必要があります、 *ValueType*引数。 この引数は、APD の SQL_DESC_DATA_PTR フィールドを設定します。 アプリケーション設定、 *ParameterValuePtr* null ポインターの場合と同じくらいに渡す引数* \*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC です。 (これは適用のみを入力パラメーターまたは入出力パラメーターです)。  
+ *ParameterValuePtr*引数が指すバッファーされるときに、 **SQLExecute**または**SQLExecDirect**を呼び出すと、パラメーターの実際のデータが含まれています。 データがで指定された形式である必要があります、 *ValueType*引数。 この引数は、APD の SQL_DESC_DATA_PTR フィールドを設定します。 アプリケーション設定、 *ParameterValuePtr* null ポインターの場合と同じくらいに渡す引数 *\*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC です。 (これは適用のみを入力パラメーターまたは入出力パラメーターです)。  
   
  場合\* *StrLen_or_IndPtr* 、SQL_LEN_DATA_AT_EXEC の結果である (*長さ*) マクロまたは SQL_DATA_AT_EXEC し*ParameterValuePtr*は、パラメーターに関連付けられているアプリケーション定義のポインターの値。 経由でアプリケーションに返される**SQLParamData**です。 たとえば、 *ParameterValuePtr*パラメーター番号、データへのポインター、またはアプリケーションの入力パラメーターをバインドするために使用する構造体へのポインターなどの 0 以外のトークンがあります。 ただし、その場合、パラメーターは入力/出力パラメーター、 *ParameterValuePtr*出力値を格納するバッファーへのポインターにする必要があります。 SQL_ATTR_PARAMSET_SIZE ステートメント属性の値が 1 より大きい場合は、アプリケーションがと共に、SQL_ATTR_PARAMS_PROCESSED_PTR ステートメント属性によって示される値を使用して、 *ParameterValuePtr*引数。 たとえば、 *ParameterValuePtr*値の配列を指すこともあり、アプリケーションは、配列から、適切な値を取得する SQL_ATTR_PARAMS_PROCESSED_PTR によって示される値を使用する場合があります。 詳細については、「パラメーターの値の引き渡し」このセクションの後半を参照してください。  
   
@@ -233,7 +227,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
  ストリーミングされる出力のストリームの入力/出力パラメーター、 *BufferLength*でバッファーの長さが指定されているために、引数は無視されます**SQLGetData**です。  
   
 > [!NOTE]  
->  ODBC 1.0 アプリケーションを呼び出すと**SQLSetParam** ODBC 3* 。x*ドライバー、ドライバー マネージャーに変換しますこのへの呼び出しに**SQLBindParameter**を*BufferLength*引数が SQL_SETPARAM_VALUE_MAX では常にします。 ドライバー マネージャーは、ODBC 3 の場合、エラーを返します。*x*アプリケーション セット*BufferLength* SQL_SETPARAM_VALUE_MAX、ODBC 3 にします*。x*ドライバーを使用してこの ODBC 1.0 アプリケーションによって呼び出されたときを判断します。  
+>  ODBC 1.0 アプリケーションを呼び出すと**SQLSetParam** ODBC 3 *。x*ドライバー、ドライバー マネージャーに変換しますこのへの呼び出しに**SQLBindParameter**を*BufferLength*引数が SQL_SETPARAM_VALUE_MAX では常にします。 ドライバー マネージャーは、ODBC 3 の場合、エラーを返します。*x*アプリケーション セット*BufferLength* SQL_SETPARAM_VALUE_MAX、ODBC 3 にします*。x*ドライバーを使用してこの ODBC 1.0 アプリケーションによって呼び出されたときを判断します。  
   
 > [!NOTE]  
 >  **SQLSetParam**、アプリケーションがの長さを指定する方法、**ParameterValuePtr*バッファーに格納できるように、ドライバーは、文字またはバイナリ データ、およびアプリケーションを送信する方法を返すことができます、配列の文字またはドライバーにバイナリ パラメーター値では、ドライバーで定義されています。  
@@ -475,7 +469,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
  場合に呼び出し**SQLBindParameter**失敗は、APD の設定が記述子フィールドの内容が定義し、APD の SQL_DESC_COUNT フィールドは変更されません。 さらに、IPD で適切なレコードの SQL_DESC_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_TYPE フィールドが定義されていると、IPD の SQL_DESC_COUNT フィールドは変更されません。  
   
 ## <a name="conversion-of-calls-to-and-from-sqlsetparam"></a>呼び出し SQLSetParam との間の変換  
- ODBC 1.0 アプリケーションを呼び出すと**SQLSetParam** ODBC 3* 。x*ドライバー、ODBC 3* 。x*ドライバー マネージャーは、次の表に示すように呼び出しをマップします。  
+ ODBC 1.0 アプリケーションを呼び出すと**SQLSetParam** ODBC 3 *。x*ドライバー、ODBC 3 *。x*ドライバー マネージャーは、次の表に示すように呼び出しをマップします。  
   
 |ODBC 1.0 アプリケーションを呼び出す|ODBC 3 の呼び出しです。*x*ドライバー|  
 |----------------------------------|-------------------------------|  
@@ -595,5 +589,4 @@ int main() {
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)   
- [SQLGetData を使用して出力パラメーターを取得します。](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
-
+ [SQLGetData を使用した出力パラメーターの取得](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

@@ -5,29 +5,25 @@ ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6bd44dc569515f6673bb5791cd7d53a0500d09d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 707a939ce112e612874fefb956b8ebbc3142c0c5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="type-system---sequence-type-matching"></a>システム - 入力シーケンス型の照合
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.lasthandoff: 09/01/2017
   
 -   式から特定の名前や型の XML 要素または属性ノードが返されるかどうかを確認できます。  
   
- 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式 & #40 です。XQuery と #41 です。](../xquery/sequencetype-expressions-xquery.md).  
+ 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式 &#40;です。XQuery と #41 です。](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>式から返されるアトミック値の型の比較  
  式からアトミック値のシーケンスが返される場合、シーケンス内の値の型を確認することが必要な場合があります。 次の例は、シーケンス型の構文を使用して式から返されるアトミック値の型を評価する方法を示しています。  
@@ -443,4 +439,3 @@ RETURN
  [型システムと #40 です。XQuery と #41 です。](../xquery/type-system-xquery.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - CROSS_APPLY_TSQL
 - APPLY_TSQL
 - CROSS_JOIN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - OUTER APPLY operator
 - hints [SQL Server], FROM clause
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 97
+caps.latest.revision: "97"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +189,7 @@ FROM { <table_source> [ ,...n ] }
 **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
 
   
- OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、次を参照してください。[行セット関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、次を参照してください。[行セット関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
  OPENROWSET 関数および OPENQUERY 関数を使用したリモート オブジェクトの指定は、そのオブジェクトにアクセスする OLE DB プロバイダーの機能に依存します。  
   
@@ -214,7 +211,7 @@ FROM { <table_source> [ ,...n ] }
 **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
 
   
- XML ドキュメントに対して行セット ビューを提供します。 詳細については、次を参照してください。 [OPENXML & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openxml-transact-sql.md).  
+ XML ドキュメントに対して行セット ビューを提供します。 詳細については、次を参照してください。 [OPENXML &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  
  データベースから行を取得するサブクエリです。 *derived_table*外側のクエリに入力として使用されます。  
@@ -274,7 +271,7 @@ FROM { <table_source> [ ,...n ] }
  内部結合によって返されるすべての行に加えて、結合条件に合わない右側のテーブルのすべての行も結果セットに含まれます。左側のテーブルからの出力列は NULL に設定されることを指定します。  
   
 \<join_hint >  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、ことを指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリの FROM 句で指定される結合ごと、1 つの結合ヒントまたは実行アルゴリズムを使用します。 詳細については、次を参照してください。[結合ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-join.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、ことを指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリの FROM 句で指定される結合ごと、1 つの結合ヒントまたは実行アルゴリズムを使用します。 詳細については、次を参照してください。[結合ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-join.md).  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、2 つのディストリビューションの互換性のない列上の内部結合にこれらの結合ヒントを適用します。 クエリの処理中に発生するデータの移動量を制限することでクエリのパフォーマンスを向上することができます。 許容される結合のヒント:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]とおりです。  
   
@@ -305,7 +302,7 @@ ON (p.ProductID = v.ProductID);
   
  ON 句に、結合されるテーブルのいずれかだけを指定している述語がある場合があります。 このような述語は、クエリの WHERE 句にもある場合があります。 このように述語を指定した場合、INNER 結合に対しては同じ結果になりますが、OUTER 結合が関係するときは結果が異なることがあります。 ON 句内の述語は結合の前にテーブルに適用されるのに対し、WHERE 句は意味的に結合結果に適用されるためです。  
   
- 検索条件および述語の詳細については、次を参照してください。[検索条件 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
+ 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CROSS JOIN  
  2 つのテーブルの結合を指定します。 SQL-92 形式でない旧形式の結合で WHERE 句が指定されていない場合と同じ行が返されます。  
@@ -861,9 +858,8 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openquery-transact-sql.md)   
+ [OPENQUERY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [ここで & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
-
+ [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  

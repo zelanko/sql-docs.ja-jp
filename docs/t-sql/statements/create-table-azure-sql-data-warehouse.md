@@ -8,24 +8,21 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11df71495b55ca72074c6ab928caaf6474bb2576
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -307,7 +304,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  ### <a name="columnstore-table-columnstore-index"></a>列ストア テーブル (列ストア インデックス)
 列ストア テーブルは、列、列の順序で格納されているテーブルです。 列ストア インデックスは、列ストア テーブルに格納されているデータを管理するテクノロジです。  クラスター化列ストア インデックスには影響しません。 データの配布方法これは、各配布内でのデータの格納方法に影響します。
 
-列ストア テーブルに行ストア テーブルを変更するに既存のすべてのインデックス、テーブルを削除し、クラスター化列ストア インデックスを作成します。 例については、次を参照してください。 [CREATE COLUMNSTORE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-columnstore-index-transact-sql.md).
+列ストア テーブルに行ストア テーブルを変更するに既存のすべてのインデックス、テーブルを削除し、クラスター化列ストア インデックスを作成します。 例については、次を参照してください。 [CREATE COLUMNSTORE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
 詳細については、次の記事を参照してください。
 - [列ストア インデックスのバージョン管理機能の概要](https://msdn.microsoft.com/library/dn934994/)
@@ -563,8 +560,7 @@ WITH
 ## <a name="see-also"></a>参照 
  
  [テーブルとして選択 &#40; を作成します。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

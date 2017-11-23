@@ -1,41 +1,41 @@
 ---
 title: "LAG (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/20/2015
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LAG_TSQL
 - LAG
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77598feb87f6766f6c24c454dace2c138315e69b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の自己結合を使用せずに同じ結果セットの前の行からデータにアクセスします。 LAG によって、現在の行の前にある指定された物理的なオフセットの行にアクセスできます。 SELECT ステートメントでこの分析関数を使用して、現在の行の値と前の行の値を比較します。  
+  同じ結果セットで始まる自己結合を使用せずに前の行からデータにアクセスする[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。 LAG によって、現在の行の前にある指定された物理的なオフセットの行にアクセスできます。 SELECT ステートメントでこの分析関数を使用して、現在の行の値と前の行の値を比較します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,7 +68,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. 年間の値を比較します。  
  次の例では、LAG 関数を使用して過去数年間にわたる特定の従業員の販売ノルマの差を返します。 最初の行に使用できるラグ値がないため、既定のゼロ (0) が返されることに注意してください。  
   
-```  
+```t-sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -79,8 +79,7 @@ WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 BusinessEntityID SalesYear   CurrentQuota          PreviousQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             0.00  
@@ -95,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>B. パーティション内の値を比較します。  
  次の例では、LAG 関数を使用して従業員間の今年に入ってからの売上高を比較します。 PARTITION BY 句を指定して、販売区域ごとに結果セットの行を分割します。 LAG 関数は各パーティションに対して個別に適用され、各パーティションで計算が再開されます。 OVER 句で指定した ORDER BY 句によって、各パーティション内の行の順序が決められます。 SELECT ステートメントの ORDER BY 句によって、結果セット全体で行の並べ替えが行われます。 各パーティションの最初の行に使用できるラグ値がないため、既定のゼロ (0) が返されることに注意してください。  
   
-```  
+```t-sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -107,8 +106,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 TerritoryName            BusinessEntityID SalesYTD              PrevRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          0.00  
@@ -122,7 +120,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>C. 任意の式を指定する  
  次の例では、LAG 関数の構文にさまざまな任意の式を指定する方法を示します。  
   
-```  
+```t-sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -150,7 +148,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: 四半期間で値を比較します。  
  次の例では、LAG 関数を示します。 クエリでは、LAG 関数を使用して、前のカレンダー四半期経由で特定の従業員の販売ノルマの差を返します。 最初の行に使用できるラグ値がないため、既定のゼロ (0) が返されることに注意してください。  
   
-```  
+```t-sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  
@@ -178,6 +176,5 @@ Year Quarter  SalesQuota  PrevQuota  Diff
  [潜在顧客と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/lead-transact-sql.md)  
   
   
-
 
 

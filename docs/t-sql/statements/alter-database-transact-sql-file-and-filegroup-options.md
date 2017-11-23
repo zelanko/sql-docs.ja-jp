@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
 - ADD_FILE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting files
 - removing files
@@ -44,22 +42,21 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 0672b00cbb7064bdb889908585b4333865ac75c9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fdd1f2aaab4e4aeeced6eb069255adba5b333abf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (TRANSACT-SQL) の File および Filegroup オプション 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ファイルおよびファイル グループ内のデータベースに関連付けられている変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 データベースに対するファイルやファイル グループの追加と削除、およびデータベースおよびデータベースのファイルやファイル グループの属性の変更を行います。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+  ファイルおよびファイル グループ内のデータベースに関連付けられている変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 データベースに対するファイルやファイル グループの追加と削除、およびデータベースおよびデータベースのファイルやファイル グループの属性の変更を行います。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -369,9 +366,9 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  データ ファイルを瞬時に初期化できます。 そのため、このようなファイル操作を高速に実行できます。  
   
 ## <a name="removing-a-filestream-container"></a>FILESTREAM コンテナーの削除  
- DBCC SHRINKFILE 操作によって FILESTREAM コンテナーが空にされた場合でも、データベースは、さまざまなシステム保守上の理由から、削除されたファイルへの参照を維持する必要があります。 [sp_filestream_force_garbage_collection & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)これを行うには安全ではときに、これらのファイルを削除する FILESTREAM ガベージ コレクターを実行します。 FILESTREAM ガベージ コレクターによって FILESTREAM コンテナーからすべてのファイルが削除されない限り、ALTER DATABASE REMOVE FILE 操作で FILESTREAM コンテナーを削除する試みは失敗し、エラーが返されます。 FILESTREAM コンテナーを削除する場合は、次の手順をお勧めします。  
+ DBCC SHRINKFILE 操作によって FILESTREAM コンテナーが空にされた場合でも、データベースは、さまざまなシステム保守上の理由から、削除されたファイルへの参照を維持する必要があります。 [sp_filestream_force_garbage_collection &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)これを行うには安全ではときに、これらのファイルを削除する FILESTREAM ガベージ コレクターを実行します。 FILESTREAM ガベージ コレクターによって FILESTREAM コンテナーからすべてのファイルが削除されない限り、ALTER DATABASE REMOVE FILE 操作で FILESTREAM コンテナーを削除する試みは失敗し、エラーが返されます。 FILESTREAM コンテナーを削除する場合は、次の手順をお勧めします。  
   
-1.  実行[DBCC SHRINKFILE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)このコンテナーのアクティブなコンテンツを他のコンテナーに移動する EMPTYFILE オプションを使用します。  
+1.  実行[DBCC SHRINKFILE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)このコンテナーのアクティブなコンテンツを他のコンテナーに移動する EMPTYFILE オプションを使用します。  
   
 2.  ログ バックアップが完全または一括ログ復旧モデルで作成されたことを確認します。  
   
@@ -659,11 +656,10 @@ GO
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.filegroups & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.master_files と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
  [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
   
-

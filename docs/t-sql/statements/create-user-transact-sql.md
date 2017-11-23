@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - CREATE USER
 - ALLOW_ENCRYPTED_VALUE_MODIFICATIONS
 - ALLOW_ENCRYPTED_VALUE_MODIFICATIONS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - adding users
 - WITHOUT LOGIN [SQL Server]
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
+caps.latest.revision: "111"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: cc1b66f561ce413016e154bc329384566a8384b8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 47004dfe9ec810fec68a63849755021690f98fdb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -321,7 +318,7 @@ GO
   
  包含データベースでユーザーする必要はありませんログインを持つ、**マスター**データベース。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理者は、包含データベースに対するアクセス許可を [!INCLUDE[ssDE](../../includes/ssde-md.md)] レベルではなくデータベース レベルで付与できることを理解する必要があります。 詳しくは、「 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)」をご覧ください。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で包含データベース ユーザーを使用する場合、サーバー レベルのファイアウォール ルールではなく、データベース レベルのファイアウォール ルールを使用してアクセスを構成します。 詳細については、次を参照してください。 [sp_set_database_firewall_rule & #40 です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で包含データベース ユーザーを使用する場合、サーバー レベルのファイアウォール ルールではなく、データベース レベルのファイアウォール ルールを使用してアクセスを構成します。 詳細については、次を参照してください。 [sp_set_database_firewall_rule &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]包含データベース ユーザー、SSMS は、多要素認証をサポートできます。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。  
   
@@ -464,6 +461,5 @@ WITH
  [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
-
 
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC_SHRINKFILE_TSQL
 - DBCC SHRINKFILE
 - SHRINKFILE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - data shrinking [SQL Server]
 - TRUNCATEONLY option
@@ -32,17 +30,16 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 87
+caps.latest.revision: "87"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f1b96b92738d3f44c21f4e6056798da74e26872a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14746a5bfac3674299e03b6eba0da1a823f1bba9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -113,7 +110,7 @@ WITH NO_INFOMSGS
 |**EstimatedPages**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]で推定されるファイル圧縮後の 8 KB ページの数。|  
   
 ## <a name="remarks"></a>解説  
-DBCC SHRINKFILE は現在のデータベース内のファイルに適用されます。 現在のデータベースを変更する方法の詳細については、次を参照してください。[の使用 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/use-transact-sql.md).
+DBCC SHRINKFILE は現在のデータベース内のファイルに適用されます。 現在のデータベースを変更する方法の詳細については、次を参照してください。[の使用 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/use-transact-sql.md).
   
 DBCC SHRINKFILE 操作は、プロセスのどの時点でも中断でき、中断時に完了していた作業は保持されます。
   
@@ -239,9 +236,8 @@ GO
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [ファイルの圧縮](../../relational-databases/databases/shrink-a-file.md)
   
   
-

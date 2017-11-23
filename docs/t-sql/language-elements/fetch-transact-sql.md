@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FETCH
 - FETCH_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - FETCH statement
 - cursors [SQL Server], fetching
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ccf0fc44e9be488c7c07cdb159270056bba0adc6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1333af6ceba4a4410fefadd1a99d8611fae88a6a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +99,7 @@ FETCH
   
 -   DYNAMIC SCROLL カーソルは、ABSOLUTE 以外のすべての FETCH オプションをサポートします。  
   
- @@FETCH_STATUS関数が最後にフェッチ ステートメントの状態を報告します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、次を参照してください。 [@@FETCH_STATUS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fetch-status-transact-sql.md).  
+ @@FETCH_STATUS関数が最後にフェッチ ステートメントの状態を報告します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 FETCH ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fetch-status-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  FETCH 権限は、特に指定のない限り有効なすべてのユーザーに与えられます。  
@@ -216,10 +213,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [閉じる & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/close-transact-sql.md)   
- [DEALLOCATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [閉じる &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [開く & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)  
+ [開く &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)  
   
   
-

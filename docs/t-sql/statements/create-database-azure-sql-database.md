@@ -8,8 +8,7 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,25 +20,23 @@ f1_keywords:
 - EDITION_TSQL
 - MAXSIZE
 - MAXSIZE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - SERVICE_OBJECTIVE
 - ELASTIC_POOL
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e9781bd657f094c7be57ae513cc2c4a026ad4746
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -174,17 +171,17 @@ CREATE DATABASE database_name
   
 -   データベース スナップショット  
   
- 引数の詳細については、`CREATE DATABASE`ステートメントを参照してください[CREATE DATABASE & #40 です。SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ 引数の詳細については、`CREATE DATABASE`ステートメントを参照してください[CREATE DATABASE &#40;です。SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="remarks"></a>解説  
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内のデータベースについては、データベースの作成時に設定される既定の設定がいくつかあります。 これらの既定の設定の詳細については、の値の一覧を参照して[DATABASEPROPERTYEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/databasepropertyex-transact-sql.md).  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内のデータベースについては、データベースの作成時に設定される既定の設定がいくつかあります。 これらの既定の設定の詳細については、の値の一覧を参照して[DATABASEPROPERTYEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
  MAXSIZE を使用して、データベースのサイズを制限できます。 データベースのサイズが MAXSIZE に達するとエラー コード 40544 が表示されます。 このエラーが発生すると、データを挿入または更新したり、新しいオブジェクト (テーブル、ストアド プロシージャ、ビュー、関数など) を作成したりできなくなります。 データの読み取りと削除、テーブルの切り捨て、テーブルとインデックスの削除、およびインデックスの再構築は引き続き可能です。 これを解決するには、MAXSIZE を現在のデータベースのサイズより大きい値にするか、一部のデータを削除してストレージ領域を解放します。 新しいデータを挿入できるようになるまでに、最大で 15 分の遅延が生じる可能性があります。  
   
 > [!IMPORTANT]  
 >  `CREATE DATABASE`ステートメントは唯一のステートメントである必要があります、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 
   
- 後で、サイズ、エディション、またはサービス目標の値を変更する場合は、次のように使用します。 [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
+ 後で、サイズ、エディション、またはサービス目標の値を変更する場合は、次のように使用します。 [ALTER DATABASE &#40;です。Azure SQL データベース &#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
 
 CATALOG_COLLATION 引数ではデータベースの作成中にのみ使用できます。 
   
@@ -289,10 +286,9 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
   
 ## <a name="see-also"></a>参照  
 
--  [sys.dm_database_copies & #40 です。Azure SQL データベース &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
+-  [sys.dm_database_copies &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md)   
+-   [ALTER DATABASE &#40;です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md)   
     
   
-
 

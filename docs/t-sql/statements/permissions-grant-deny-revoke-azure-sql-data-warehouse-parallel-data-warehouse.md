@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c4beb3881b983c0af3add7671dc4c7155649497
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>アクセス許可: GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **取り消す**既存削除**GRANT**または**DENY**アクセス許可。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -92,7 +89,7 @@ REVOKE
  \<class_type > のセキュリティ保護可能なクラス型。 これは、**ログイン**、**データベース**、**オブジェクト**、**スキーマ**、**ロール**、または**ユーザー**. またに権限を付与できる、**サーバー***class_type*が**サーバー**これらのアクセス許可が指定されていません。 **データベース**、アクセス許可がという単語を含む場合が指定されていない**データベース**(たとえば**ALTER ANY DATABASE**)。 ない場合*class_type*が指定されているアクセス許可の種類は、サーバーまたはデータベース クラスに制限は、クラスを想定して**オブジェクト**です。  
   
  *セキュリティ保護可能です*  
- ログイン、データベース、テーブル、ビュー、スキーマ、プロシージャ、ロール、またはを与えるには、ユーザーの名前は、拒否、または、アクセス許可を取り消します。 説明されている 3 部構成の名前付け規則では、オブジェクト名を指定できます[TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ログイン、データベース、テーブル、ビュー、スキーマ、プロシージャ、ロール、またはを与えるには、ユーザーの名前は、拒否、または、アクセス許可を取り消します。 説明されている 3 部構成の名前付け規則では、オブジェクト名を指定できます[TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  *プリンシパル*[ **、**.*n* ]  
  許可するには、1 つまたは複数のプリンシパルでは、拒否、または、アクセス許可を取り消します。 プリンシパルは、ログイン、データベース ユーザー、またはデータベース ロールの名前です。  
@@ -327,5 +324,4 @@ GRANT UPDATE ON dbo.StatusTable TO [Ted];
 ```  
   
   
-
 

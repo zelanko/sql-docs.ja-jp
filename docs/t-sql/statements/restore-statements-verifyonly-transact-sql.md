@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - RESTORE VERIFYONLY
 - VERIFYONLY_TSQL
 - RESTORE_VERIFYONLY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RESTORE VERIFYONLY statement
 - backups [SQL Server], verifying
 - verifying backups
 - checking backups
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 342b9efcbdaabfd06fa1aee62eebfefedebdcf58
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6996997ff66c291285fef4081dc7c21477ea8584
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE ステートメントで VERIFYONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 09/01/2017
  バックアップが、有効な場合は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]成功メッセージが返されます。  
   
 > [!NOTE]  
->  引数の説明については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -96,7 +93,7 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>引数  
- RESTORE VERIFYONLY の引数の説明については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ RESTORE VERIFYONLY の引数の説明については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="general-remarks"></a>全般的な解説  
  メディア セットまたはバックアップ セットには、Microsoft Tape Format として解釈できるように最小限の正しい情報が含まれている必要があります。 含まれていない場合は、RESTORE VERIFYONLY が停止し、バックアップの形式が無効であることが示されます。  
@@ -134,4 +131,3 @@ FROM <backup_device> [ ,...n ]
  [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

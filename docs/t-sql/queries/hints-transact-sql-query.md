@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -57,17 +55,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b866e3ab0ee44c8b65a7b5064f0feb1e4f52aff9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (TRANSACT-SQL) のクエリ
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [マージ](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -154,14 +151,14 @@ ms.lasthandoff: 09/01/2017
  { LOOP | MERGE | HASH } JOIN  
  LOOP JOIN、MERGE JOIN、または HASH JOIN によって、すべての結合操作がクエリ全体で実行されることを指定します。 結合ヒントを複数指定した場合は、可能なヒントの中から最も負荷の軽い方法がオプティマイザーによって選択されます。  
   
- 同じクエリの中で、特定のテーブルのペアに対して FROM 句に結合ヒントが指定されている場合も、2 つのテーブルの結合ではこの結合ヒントが優先されますが、クエリ ヒントは引き続き有効です。 このため、テーブルのペアの結合ヒントは、クエリ ヒント内で許可される結合方法の選択を制限できるだけです。 詳細については、次を参照してください。[結合ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-join.md).  
+ 同じクエリの中で、特定のテーブルのペアに対して FROM 句に結合ヒントが指定されている場合も、2 つのテーブルの結合ではこの結合ヒントが優先されますが、クエリ ヒントは引き続き有効です。 このため、テーブルのペアの結合ヒントは、クエリ ヒント内で許可される結合方法の選択を制限できるだけです。 詳細については、次を参照してください。[結合ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-join.md).  
   
  EXPAND VIEWS  
  インデックス付きビューが展開されていることを指定します。これによって、クエリ オプティマイザーがインデックス付きビューをクエリの一部の代わりであると見なすことがなくなります。 ビューが展開されるのは、ビュー名がクエリ テキスト内のビュー定義に置換される場合です。  
   
  このクエリ ヒントは、インデックス付きビューを直接使用することを実質的に禁止し、クエリ プラン内のインデックス付きビューにインデックスを指定します。  
   
- ビューがクエリおよび WITH (NOEXPAND) または WITH の SELECT 部分で直接参照されている場合にのみ、インデックス付きビューが展開されていない (NOEXPAND, INDEX ( *index_value* [ **、***...n*])) を指定します。 クエリ ヒント WITH (NOEXPAND) の詳細については、次を参照してください。 [FROM](../../t-sql/queries/from-transact-sql.md)です。  
+ ビューがクエリおよび WITH (NOEXPAND) または WITH の SELECT 部分で直接参照されている場合にのみ、インデックス付きビューが展開されていない (NOEXPAND, INDEX ( *index_value* [ **、***.. .n*])) を指定します。 クエリ ヒント WITH (NOEXPAND) の詳細については、次を参照してください。 [FROM](../../t-sql/queries/from-transact-sql.md)です。  
   
  INSERT、UPDATE、MERGE、DELETE ステートメントなど、ステートメントの SELECT 要素内のビューのみが、ヒントの影響を受けます。  
   
@@ -201,7 +198,7 @@ ms.lasthandoff: 09/01/2017
  MAXDOP*数*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 上書き、**並列処理の次数の最大**構成オプションの**sp_configure**とは、このオプションを指定して、クエリのリソース ガバナーです。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP 値を超える場合、リソース ガバナーで構成されている、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で説明されている、リソース ガバナーの MAXDOP 値を使用して[ALTER WORKLOAD GROUP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-workload-group-transact-sql.md). 使用されるすべての意味ルール、**並列処理の次数の最大**MAXDOP クエリ ヒントを使用する場合に、構成オプションが適用されます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ 上書き、**並列処理の次数の最大**構成オプションの**sp_configure**とは、このオプションを指定して、クエリのリソース ガバナーです。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP 値を超える場合、リソース ガバナーで構成されている、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で説明されている、リソース ガバナーの MAXDOP 値を使用して[ALTER WORKLOAD GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-workload-group-transact-sql.md). 使用されるすべての意味ルール、**並列処理の次数の最大**MAXDOP クエリ ヒントを使用する場合に、構成オプションが適用されます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 > [!WARNING]  
 >  MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
@@ -294,7 +291,7 @@ ms.lasthandoff: 09/01/2017
  USE PLAN N**'***xml_plan***'**  
  指定されているクエリの既存のクエリ プランを使用する、クエリ オプティマイザー **'***xml_plan***'**です。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
-テーブル ヒント**(***exposed_object_name* [ **、** \<table_hint > [**、** ]. *n*  ] **)**をテーブルまたはビューに対応する、指定したテーブル ヒントを適用*exposed_object_name*です。 コンテキストのみでのクエリ ヒントとしてのテーブル ヒントを使用することをお勧め、[プラン ガイド](../../relational-databases/performance/plan-guides.md)です。  
+テーブル ヒント**(***exposed_object_name* [ **、** \<table_hint > **[、 ]**. *n*  ] **)**をテーブルまたはビューに対応する、指定したテーブル ヒントを適用*exposed_object_name*です。 コンテキストのみでのクエリ ヒントとしてのテーブル ヒントを使用することをお勧め、[プラン ガイド](../../relational-databases/performance/plan-guides.md)です。  
   
  *exposed_object_name*次の参照のいずれかになります。  
   
@@ -304,7 +301,7 @@ ms.lasthandoff: 09/01/2017
   
  ときに*exposed_object_name*がオブジェクトのテーブル ヒントの一部は無視され、インデックスの使用状況は、クエリ オプティマイザーによって決定されます、クエリで指定されたインデックスのテーブル ヒントを指定せずに指定されています。 この手法を使用すると、元のクエリに変更を加えることができない場合に INDEX テーブル ヒントの効果を除去できます。 例 J を参照してください。  
   
-**\<table_hint >:: =** {[NOEXPAND] {インデックス ( *index_value* [,...*n* ] ) |インデックス = ( *index_value* ) |FORCESEEK [**(***index_value***(***index_column_name* [**、**...]**))** ]|FORCESCAN |HOLDLOCK |NOLOCK |NOWAIT |PAGLOCK |READCOMMITTED |READCOMMITTEDLOCK |READPAST |READUNCOMMITTED |REPEATABLEREAD |ROWLOCK |シリアル化可能な |スナップショット |SPATIAL_WINDOW_MAX_CELLS |TABLOCK |TABLOCKX |UPDLOCK |XLOCK} は、適用するテーブル ヒントをテーブルまたはビューに対応する*exposed_object_name*クエリ ヒントとして。 これらのヒントについては、次を参照してください。[テーブル ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint >:: =** {[NOEXPAND] {インデックス ( *index_value* [,...*n* ] ) |インデックス = ( *index_value* ) |FORCESEEK [**(***index_value***(***index_column_name* [**、**...]**))** ]|FORCESCAN |HOLDLOCK |NOLOCK |NOWAIT |PAGLOCK |READCOMMITTED |READCOMMITTEDLOCK |READPAST |READUNCOMMITTED |REPEATABLEREAD |ROWLOCK |シリアル化可能な |スナップショット |SPATIAL_WINDOW_MAX_CELLS |TABLOCK |TABLOCKX |UPDLOCK |XLOCK} は、適用するテーブル ヒントをテーブルまたはビューに対応する*exposed_object_name*クエリ ヒントとして。 これらのヒントについては、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
   
  INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 詳細については、「解説」を参照してください。  
   
@@ -557,10 +554,9 @@ GO
 ```  
     
 ## <a name="see-also"></a>参照  
- [ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)   
+ [ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_control_plan_guide & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

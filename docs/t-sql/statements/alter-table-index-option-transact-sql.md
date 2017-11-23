@@ -8,26 +8,22 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- index_option
+dev_langs: TSQL
+helpviewer_keywords: index_option
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 646b46501abd345a35c0e90547391e5181105a00
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e7563f9fe992dcf4f9308cccbf11f6310b7925a7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -257,7 +253,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
   
  A**スイッチ**またはオンライン インデックス再構築は、このテーブルに対するブロック操作がないとすぐに完了するとします。 *WAIT_AT_LOW_PRIORITY*ことを示す、**スイッチ**またはオンライン インデックス再構築操作が直ちに完了できない、待機しています。 操作では、他の操作を続行するための DDL ステートメントと競合するロックを保持する、優先度の低いロックを保持します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。  
   
-MAX_DURATION =*時間*[**分**]  
+MAX_DURATION =*時間***[分]**  
  待機時間 (分単位で指定された整数値) を**スイッチ**DDL コマンドを実行するときに取得する必要があります、オンライン インデックス再構築のロックが待機するか。 スイッチまたはオンライン インデックス再構築の操作は、直ちに完了しようとします。 操作がブロックされている場合、 **MAX_DURATION**のいずれかの時間、 **ABORT_AFTER_WAIT**アクションを実行します。 **MAX_DURATION**時間は分、および、word では常に**分**を省略できます。  
   
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **ブロッカー** }]  
@@ -272,13 +268,12 @@ BLOCKERS
  ブロックが必要です、 **ALTER ANY CONNECTION**権限です。  
   
 ## <a name="remarks"></a>解説  
- インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [column_constraint & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)   
- [computed_column_definition & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-computed-column-definition-transact-sql.md)   
- [table_constraint & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+ [column_constraint &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)   
+ [computed_column_definition &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-computed-column-definition-transact-sql.md)   
+ [table_constraint &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
   
  
-

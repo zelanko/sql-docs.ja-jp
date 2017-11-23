@@ -5,8 +5,7 @@ ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b08d2a27a911c625c8d2b8ad5aa4e27fa8841bd6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: d6c9588690a1848e022fd12bf8fa338f258338ec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/06/2017
 
   **b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) は、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは **の知識は必要ありません。ただし、** queryout [!INCLUDE[tsql](../includes/tsql-md.md)]オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
   
- ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")に使用される構文表記規則について、 **bcp**構文を参照してください[TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")に使用される構文表記規則について、 **bcp**構文を参照してください[TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 > [!NOTE]
 > **bcp** を使ってデータをバックアップする場合、フォーマット ファイルを作成してデータ形式を記録します。 **bcp** データ ファイルには、スキーマ情報やフォーマット情報が **含まれない** ので、テーブルまたはビューが削除され、フォーマット ファイルがない場合は、データをインポートできないことがあります。  
@@ -150,7 +148,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> バージョン 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) より前のバージョンでは、コード ページ 65001 (UTF-8 エンコード) はサポートされません。 バージョン 13 以降では、UTF-8 エンコードを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンにインポートできます。|  
   
  **-d** ***database_name***<a name="d"></a>   
- 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*、bcp.exe の最初のパラメーターとして渡される) を指定した場合、データベース名は 2 回指定できないため、エラーが発生します。*database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、**-d** とデータベース名の間に空白を入れないでください。  
+ 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice. *database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、 **-d** とデータベース名の間に空白を入れないでください。  
   
  **-e** ***err_file***<a name="e"></a>  
  **bcp** ユーティリティがファイルからデータベースに転送できなかったすべての行を格納するエラー ファイルの完全パスを指定します。 **bcp** コマンドからのエラー メッセージは、ユーザーのワークステーションに送られます。 このオプションを指定しないと、エラー ファイルは作成されません。  
@@ -617,8 +615,7 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER と #40 です。TRANSACT-SQL と #41 です。](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption & #40 です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
-

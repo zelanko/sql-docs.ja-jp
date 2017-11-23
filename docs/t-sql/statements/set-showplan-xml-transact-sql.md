@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET SHOWPLAN_XML
 - SET_SHOWPLAN_XML_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - statements [SQL Server], estimates
 - SET SHOWPLAN_XML statement
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - SHOWPLAN_XML option
 - estimated execution information [SQL Server]
 ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b51e19f70b0ff2119cfe3f89404fe61accf4656
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3414096227310460a0a1b58a34cb0fbc4e528649
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ SET SHOWPLAN_XML { ON | OFF }
  SET SHOWPLAN_XML のためのものとして出力を返す**nvarchar (max)**などのアプリケーション、 **sqlcmd**ユーティリティ、XML 出力が、後で使用されている他のツールで表示し、クエリの処理情報を計画します。  
   
 > [!NOTE]  
->  動的管理ビュー **sys.dm_exec_query_plan**、SET SHOWPLAN_XML とで同じ情報を返す、 **xml**データ型。 この情報から返される、 **query_plan**の列**sys.dm_exec_query_plan**です。 詳細については、次を参照してください。 [sys.dm_exec_query_plan & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>  動的管理ビュー **sys.dm_exec_query_plan**、SET SHOWPLAN_XML とで同じ情報を返す、 **xml**データ型。 この情報から返される、 **query_plan**の列**sys.dm_exec_query_plan**です。 詳細については、次を参照してください。 [sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
  SET SHOWPLAN_XML はストアド プロシージャ内では指定できません。 このステートメントは、バッチ内にのみ指定できます。  
   
@@ -113,4 +110,3 @@ SET SHOWPLAN_XML OFF;
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-

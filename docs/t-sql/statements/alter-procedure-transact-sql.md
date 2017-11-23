@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - ALTER_PROC_TSQL
 - ALTER PROC
 - ALTER PROCEDURE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER PROCEDURE statement
 - stored procedure modifications [SQL Server]
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d5970f5dc6a0bf614de4540e7354e23a16f91546
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3dc195d3f6ca908253ff5726c3f336435e7f2bd1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +101,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  [ *type_schema_name***です。** *data_type*  
  パラメーターのデータ型とそれが属するスキーマを指定します。  
   
- データ型の制限については、次を参照してください。 [CREATE PROCEDURE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ データ型の制限については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  VARYING  
  出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターは、ストアド プロシージャによって動的に構築され、その内容を変更ことができます。 カーソル パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
@@ -147,7 +144,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 >  このオプションは、包含データベースでは使用できません。  
   
  {[BEGIN] *sql_statement* [;][ ... *n*  ] [終了]}  
- プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳細については、セクションを参照して、ベスト プラクティス、全般的な解説と制限事項と制約で[CREATE PROCEDURE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳細については、セクションを参照して、ベスト プラクティス、全般的な解説と制限事項と制約で[CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  外部名*assembly_name***.***class_name***.***メソッド名が*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -166,7 +163,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  以前のプロシージャ定義が WITH ENCRYPTION または WITH RECOMPILE を使用して作成されている場合、これらのオプションは、ALTER PROCEDURE に指定されるときだけ有効になります。  
   
- ストアド プロシージャの詳細については、次を参照してください。 [CREATE PROCEDURE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ ストアド プロシージャの詳細については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
   
 ## <a name="security"></a>セキュリティ  
   
@@ -248,7 +245,6 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
  [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sys.procedures & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
+ [sys.procedures &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
   
   
-

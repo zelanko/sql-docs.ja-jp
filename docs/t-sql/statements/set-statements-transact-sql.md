@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET
 - SET_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ISO SET statements
 - queries [SQL Server], executing
@@ -27,24 +25,23 @@ helpviewer_keywords:
 - statistical information [SQL Server], SET statements
 - locking [SQL Server], SET statements
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3832a2be6952354122c999d3c88c7ad1610b623d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-statements-transact-sql"></a>SET ステートメント (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング言語には、現在のセッションにおける特定の情報の処理方法を変更する SET ステートメントがいくつか用意されています。 これらの SET ステートメントは、次の表に示すカテゴリに分類されます。  
   
- SET ステートメントでローカル変数の設定については、次を参照してください。[設定@local_variable& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+ SET ステートメントでローカル変数の設定については、次を参照してください。[設定@local_variable&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 |カテゴリ|ステートメント|  
 |--------------|----------------|  
@@ -94,4 +91,3 @@ ms.lasthandoff: 09/01/2017
      これらのオプションのうち 1 つでも正しく設定しなかった場合は、インデックス付きビューに対して、または計算列にインデックスが含まれているテーブルに対して INSERT、UPDATE、DELETE、DBCC CHECKDB、および DBCC CHECKTABLE を実行すると操作は失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが発生し、正しく設定されなかったすべてのオプションが一覧表示されます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このようなテーブルやインデックス付きビューに対して SELECT ステートメントを実行すると、計算列またはビューにインデックスが存在しないものとして処理されます。  
   
   
-

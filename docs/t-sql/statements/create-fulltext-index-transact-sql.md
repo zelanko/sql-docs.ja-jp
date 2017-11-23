@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,24 +16,22 @@ f1_keywords:
 - CREATE_FULLTEXT_INDEX_TSQL
 - CREATE FULLTEXT INDEX
 - FULLTEXT INDEX
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text indexes [SQL Server], creating
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: 110
+caps.latest.revision: "110"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 47808b1214157b393cae5cfcc193f5b482b53601
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 92749ed0518de83be07c6a80f9e3306741507166
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -225,7 +222,7 @@ GO
 ### <a name="c-creating-a-full-text-index-with-a-search-property-list-without-populating-it"></a>C. インデックスの値を設定せずに、検索プロパティ リストのフルテキスト インデックスを作成する  
  次の例では、`Title` テーブルの `DocumentSummary`、`Document`、および `Production.Document` の各列にフルテキスト インデックスを作成します。 この例では英語の LCID、指定`1033`、これは、列内のデータの言語です。 このフルテキスト インデックスは、既定のフルテキスト カタログおよび既存の一意なキー インデックス、`PK_Document_DocumentID` を使用します。 このインデックス キーは整数列、推奨される`DocumentID`です。  
   
- この例では、ストップリストとして SYSTEM を指定します。 また、検索プロパティ リストを指定`DocumentPropertyList`以外の場合は、このプロパティ リストを作成する例についてを参照してください[CREATE SEARCH PROPERTY LIST & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-search-property-list-transact-sql.md).  
+ この例では、ストップリストとして SYSTEM を指定します。 また、検索プロパティ リストを指定`DocumentPropertyList`以外の場合は、このプロパティ リストを作成する例についてを参照してください[CREATE SEARCH PROPERTY LIST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
  この例では、変更の追跡が OFF で、NO POPULATION を指定しています。 代わりに、ALTER FULLTEXT INDEX ステートメントを指定して、後のピーク タイム以外の時間に新しいインデックスの完全作成を開始し、自動変更追跡を有効にしています。  
   
@@ -258,8 +255,7 @@ GO
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [sys.fulltext_indexes & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [sys.fulltext_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

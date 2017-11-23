@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FORMATMESSAGE
 - FORMATMESSAGE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sysmessages system table
 - sys.messages catalog view
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f90213e9e70d07f3f9d2bb661a64ef10f96c5068
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 071f6def07baf0b74919fd5ce93e65494877dda0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  *msg_string*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
- プレース ホルダーの単一引用符とパラメーターの値を含むで囲まれた文字列です。 エラー メッセージの長さは最大 2,047 文字です。 メッセージの文字数が 2,048 文字を超えると、2,044 文字までだけ表示され、メッセージが途中で切れていることを示す省略記号が追加されます。 内部的な記憶動作が原因で、書式引数は出力として表示されるより多くの文字を使用することに注意してください。  メッセージ文字列の構造と、文字列内のパラメーターの使用についての説明を参照して、 *msg_str*引数[RAISERROR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md).  
+ プレース ホルダーの単一引用符とパラメーターの値を含むで囲まれた文字列です。 エラー メッセージの長さは最大 2,047 文字です。 メッセージの文字数が 2,048 文字を超えると、2,044 文字までだけ表示され、メッセージが途中で切れていることを示す省略記号が追加されます。 内部的な記憶動作が原因で、書式引数は出力として表示されるより多くの文字を使用することに注意してください。  メッセージ文字列の構造と、文字列内のパラメーターの使用についての説明を参照して、 *msg_str*引数[RAISERROR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  *param_value*  
  メッセージで使用するパラメーター値です。 複数のパラメーター値を指定することもできます。 メッセージに指定されているプレースホルダー変数の順序で、値を指定する必要があります。 値の最大個数は 20 です。  
@@ -65,7 +62,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  **nvarchar**  
   
 ## <a name="remarks"></a>解説  
- RAISERROR ステートメントと同様、FORMATMESSAGE は、指定されたパラメーター値を、メッセージ内のプレースホルダー変数に置き換えることによって、メッセージを編集します。 エラー メッセージや編集のプロセスで使用できるプレース ホルダーの詳細については、次を参照してください。 [RAISERROR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md).  
+ RAISERROR ステートメントと同様、FORMATMESSAGE は、指定されたパラメーター値を、メッセージ内のプレースホルダー変数に置き換えることによって、メッセージを編集します。 エラー メッセージや編集のプロセスで使用できるプレース ホルダーの詳細については、次を参照してください。 [RAISERROR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  FORMATMESSAGE は、ユーザーが現在使用している言語のメッセージを検索します。 日本語版のメッセージがない場合は、英語版のメッセージが使用されます。  
   
@@ -114,11 +111,10 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
 ```  
   
 ## <a name="see-also"></a>参照  
- [THROW & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/throw-transact-sql.md)   
- [sp_addmessage & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [THROW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/throw-transact-sql.md)   
+ [sp_addmessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-

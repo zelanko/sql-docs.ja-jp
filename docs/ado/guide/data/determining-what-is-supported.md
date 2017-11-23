@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - editing data [ADO], Supports method
 - Supports method [ADO]
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b16206a305ea9751b180fddccec5e36ba0945b5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2e15f52d48f5870cfe4df8cd6149d56012b42abf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="determining-what-is-supported"></a>サポートされている機能を決定します。
 **をサポートしている**メソッドを使用して、指定したかどうかを判断**Recordset**オブジェクトは、特定の種類の機能をサポートしています。 次の構文があります。  
@@ -42,4 +40,3 @@ boolean = recordset.Supports(CursorOptions )
  使用して、**サポート**メソッドの機能を確認することができます、 **Recordset**新しいレコードを追加、ブックマークを使用して、使用するオブジェクト、**検索**方法、スクロールを使用して、を使用します。**インデックス**プロパティ、およびバッチ更新を実行します。 定数とその意味の一覧については、次を参照してください。 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)です。  
   
  **サポート**メソッドが返す可能性があります**True**の特定の機能とは限りませんプロバイダーは、実行できること、機能のすべての状況で使用可能な。 **サポート**メソッドは単に特定の条件が満たされたと仮定した場合で、指定された機能をプロバイダーがサポートできるかどうかを返します。 たとえば、**をサポートしている**メソッド可能性があります、**レコード セット**オブジェクトは、カーソルは、複数のテーブル結合に基づいている場合でも、更新をサポートしている — 一部の列は更新不可能なです。
-

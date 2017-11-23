@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
 - COMPATIBILITY_LEVEL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - 80 compatibility level
 - ALTER DATABASE statement, compatibility levels
@@ -24,23 +22,22 @@ helpviewer_keywords:
 - compatibility levels [SQL Server]
 - 100 compatibility level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
+caps.latest.revision: "89"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 49a1adc8e90cbec335030ce630c831822f963903
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b65511b09f2a94d30c39c1f97ed88cfbfab855b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (TRANSACT-SQL) の互換性レベル
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   
-データベースの特定の動作の指定されたバージョンに合うように設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+データベースの特定の動作の指定されたバージョンに合うように設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > 以降で**2016 年 6 月中旬**、Azure SQL データベースにおける既定の互換性レベルが 120 ではなく 130**新しく作成された**データベース。 2016 年 6 月中旬の前に作成された既存のデータベースは影響がなく、および、その現在の互換性レベル 100、110 (120) を維持します。 
 > 
-> 場合レベルが 130、データベースの一般的に、レベル 110 を使用する理由がある**基数の推定**アルゴリズムを参照してください[ALTER DATABASE SCOPED CONFIGURATION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)、具体的には、そのキーワード LEGACY_CARDINALITY_ESTIMATION = ON です。  
+> 場合レベルが 130、データベースの一般的に、レベル 110 を使用する理由がある**基数の推定**アルゴリズムを参照してください[ALTER DATABASE SCOPED CONFIGURATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)、具体的には、そのキーワード LEGACY_CARDINALITY_ESTIMATION = ON です。  
 >  
 >  Azure SQL データベースで次の 2 つの互換性レベルの間で、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細についてを参照してください[Azure SQL データベースの互換性レベル 130 でのクエリ パフォーマンスの向上](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)です。
 
@@ -89,7 +86,7 @@ SELECT SERVERPROPERTY('ProductVersion');
 > [!NOTE]  
 >  サポートされる互換性レベルによって異なる機能をすべて[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
 
- 現在の互換性レベルを特定するのには、クエリ、 **compatibility_level**の列[sys.databases & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ 現在の互換性レベルを特定するのには、クエリ、 **compatibility_level**の列[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ```tsql  
 SELECT name, compatibility_level FROM sys.databases;  
@@ -113,7 +110,7 @@ SELECT name, compatibility_level FROM sys.databases;
   
 3.  ALTER DATABASE SET MULTI_USER を使用してデータベースをマルチユーザー アクセス モードにします。  
   
-4.  データベースのアクセス モードの設定の詳細については、次を参照してください。 [ALTER DATABASE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+4.  データベースのアクセス モードの設定の詳細については、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>互換性レベルとストアド プロシージャ  
  ストアド プロシージャを実行すると、そのストアド プロシージャが定義されているデータベースの現在の互換性レベルが使用されます。 データベースの互換性設定が変更された場合、そのデータベースのすべてのストアド プロシージャは、設定に合わせて自動的に再コンパイルされます。  
@@ -175,7 +172,7 @@ SQL Server 2017 する前に SQL Server の以前のバージョンでは、ト�
 |XQuery 関数**文字列長**と**substring**各サロゲートを 2 つの文字としてカウントします。|XQuery 関数**文字列長**と**substring**各サロゲート文字 1 文字としてカウントします。|  
 |PIVOT は再帰共通テーブル式 (CTE) のクエリで許可されます。 ただし、グループごとに複数の行がある場合、クエリは誤った結果を返します。|PIVOT は再帰共通テーブル式 (CTE) のクエリで許可されません。 エラーが返されます。|  
 |RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材の暗号化を解除できます。|新素材は、RC4 または RC4_128 を使用して暗号化することはできません。 AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材の暗号化を解除できます。|  
-|に対する CAST および CONVERT 操作の既定のスタイル**時間**と**datetime2**データ型は、計算列の式内のいずれかの型を使用する場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。<br /><br /> 例では、後述の「例 D では、スタイル 0 と 121 の違いを示します。 上記の動作については示しません。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).|互換性レベル 110 で CAST および CONVERT 操作の既定のスタイルで**時間**と**datetime2**データ型は常に 121 です。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。<br /><br /> データベースを互換性レベル 110 にアップグレードしても、ディスクに格納されているユーザー データは変更されません。 このようなデータは手動で適切に修正する必要があります。 たとえば、SELECT INTO を使用して、前に説明した計算列の式を含むソースからテーブルを作成した場合は、計算列の定義自体ではなく、(スタイル 0 を使用する) データが格納されます。 このようなデータは、手動で更新してスタイル 121 に一致させる必要があります。|  
+|に対する CAST および CONVERT 操作の既定のスタイル**時間**と**datetime2**データ型は、計算列の式内のいずれかの型を使用する場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。<br /><br /> 例では、後述の「例 D では、スタイル 0 と 121 の違いを示します。 上記の動作については示しません。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).|互換性レベル 110 で CAST および CONVERT 操作の既定のスタイルで**時間**と**datetime2**データ型は常に 121 です。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。<br /><br /> データベースを互換性レベル 110 にアップグレードしても、ディスクに格納されているユーザー データは変更されません。 このようなデータは手動で適切に修正する必要があります。 たとえば、SELECT INTO を使用して、前に説明した計算列の式を含むソースからテーブルを作成した場合は、計算列の定義自体ではなく、(スタイル 0 を使用する) データが格納されます。 このようなデータは、手動で更新してスタイル 121 に一致させる必要があります。|  
 |型のリモート テーブル内の列**smalldatetime**はパーティション ビューで参照されるとしてマップ**datetime**です。 型でなければなりません (選択リスト内の同じ序数位置) でのローカル テーブルの対応する列**datetime**です。|型のリモート テーブル内の列**smalldatetime**はパーティション ビューで参照されるとしてマップ**smalldatetime**です。 型でなければなりません (選択リスト内の同じ序数位置) でのローカル テーブルの対応する列**smalldatetime**です。<br /><br /> 110 にアップグレードした後は、データ型の不一致により、分散パーティション ビューは失敗します。 これを解決するには、リモート テーブルでのデータ型を変更することによって**datetime**またはレベル以下を 100 にローカルのデータベースの互換性を設定します。|  
 |SOUNDEX 関数では、次の規則を実装します。<br /><br /> 2 つの子音数を持つ同じ SOUNDEX コードの場合、1) 大文字の H または大文字の W は無視されます。<br /><br /> 2) 場合、最初の 2 文字*character_expression* SOUNDEX コードの同じ番号、両方の文字が含まれます。 最初の 2 文字の場合を除き、並んでいる一連の子音に SOUNDEX コードの同じ数値が割り当てられている場合、最初の文字以外はすべて除外されます。|SOUNDEX 関数では、次の規則を実装します。<br /><br /> 1) 場合、大文字の H または大文字の W の 2 つの分割数を持つ同じ SOUNDEX コード、右側の子音の子音は無視されます<br /><br /> 2) 一連の子音のサイド バイ サイドでは、SOUNDEX コードの同じ番号がある、すべての除外された場合、先頭を除く。<br /><br /> <br /><br /> その他のルールにより、SOUNDEX 関数で計算された値が、110 未満の互換性レベルで計算された値と異なる結果になる場合があります。 互換性レベル 110 へのアップグレード後に、SOUNDEX 関数を使用するインデックス、ヒープ、または CHECK 制約の再構築が必要になる場合があります。 詳細については、次を参照してください。 [SOUNDEX (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/soundex-transact-sql.md)|  
   
@@ -279,7 +276,7 @@ FROM r;
 ```  
   
 ### <a name="d"></a>D.  
- この例では、スタイル 0 と 121 の違いを示します。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ この例では、スタイル 0 と 121 の違いを示します。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ```tsql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
@@ -338,4 +335,3 @@ SELECT @v;
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   
-

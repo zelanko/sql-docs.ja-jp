@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CREATE ENDPOINT
 - ENDPOINT_TSQL
 - CREATE_ENDPOINT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - database mirroring [SQL Server], endpoint
 - HTTP SOAP support [SQL Server]
@@ -34,22 +32,21 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 135
+caps.latest.revision: "135"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a8ce3df8a9b6e7ead8e775b6bd0b2d31720b38a9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 072e142531102533d278ec57573079f5bd90c99e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  エンドポイントを作成し、クライアント アプリケーションで使用可能なメソッドを含む、プロパティを定義します。 関連する権限については、次を参照してください。 [GRANT Endpoint Permissions & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  エンドポイントを作成し、クライアント アプリケーションで使用可能なメソッドを含む、プロパティを定義します。 関連する権限については、次を参照してください。 [GRANT Endpoint Permissions &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
  CREATE ENDPOINT の構文は、論理的に次の 2 つの部分に分かれます。  
   
@@ -124,7 +121,7 @@ FOR DATABASE_MIRRORING (
   
  AUTHORIZATION を指定して所有権を割り当てる、呼び出し元は、指定した IMPERSONATE 権限が必要*ログイン*です。  
   
- 所有権の再割り当て、次を参照してください。 [ALTER ENDPOINT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 所有権の再割り当て、次を参照してください。 [ALTER ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
  状態 **=**  {開始 |**STOPPED** |無効になっている}  
  エンドポイントの作成時点での状態です。 エンドポイントの作成時点での状態を指定しない場合、既定値は STOPPED です。  
@@ -138,7 +135,7 @@ FOR DATABASE_MIRRORING (
  **停止しました**  
  エンドポイントは停止しています。 この状態の場合、サーバーはエンドポイントのポートをリッスンしておらず、エンドポイントの使用要求にも応答しません。  
   
- 状態を変更するには、使用[ALTER ENDPOINT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 状態を変更するには、使用[ALTER ENDPOINT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
  AS { TCP }  
  使用するトランスポート プロトコルを指定します。  
@@ -259,7 +256,7 @@ FOR DATABASE_MIRRORING (
  ALL  
  エンドポイントが、ミラーリング プロセスにおいてミラーリング監視およびパートナーの両方のロールを実行できるようにします。  
   
- これらのロールの詳細については、次を参照してください。[データベース ミラーリング & #40 です。SQL Server &#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ これらのロールの詳細については、次を参照してください。[データベース ミラーリング &#40;です。SQL Server &#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!NOTE]  
 >  DATABASE_MIRRORING には既定のポートはありません。  
@@ -301,5 +298,4 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

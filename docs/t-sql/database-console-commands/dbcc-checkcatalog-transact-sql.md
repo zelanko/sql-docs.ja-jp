@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC CHECKCATALOG
 - CHECKCATALOG_TSQL
 - CHECKCATALOG
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - catalogs [SQL Server], consistency checks
 - checking catalog consistency
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f63850a2cf39d783daee65431da349d04cba3b03
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +74,7 @@ DBCC CHECKCATALOG
 |4|アサートまたはアクセス違反が検出されました。|  
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|  
   
-DBCC CHECKCATALOG は、システム メタデータ テーブル間でさまざまな一貫性チェックを実行します。 DBCC CHECKCATALOG は、内部データベース スナップショットを使用してこれらのチェックを実行するために必要なトランザクション一貫性を確保します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKCATALOG は、システム メタデータ テーブル間でさまざまな一貫性チェックを実行します。 DBCC CHECKCATALOG は、内部データベース スナップショットを使用してこれらのチェックを実行するために必要なトランザクション一貫性を確保します。 詳細については、次を参照してください[データベース スナップショット &#40; のスパース ファイルのサイズを表示。TRANSACT-SQL と #41 です。](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 「DBCC 内部データベース スナップショットの使用」」、および[DBCC &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 スナップショットが作成できない場合、DBCC CHECKCATALOG は排他データベース ロックを獲得して必要な一貫性を取得します。 不一致が検出された場合、これらは修復できず、データベースをバックアップから復元する必要があります。
   
 > [!NOTE]  
@@ -120,4 +117,3 @@ GO
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [システム テーブルと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/system-tables-transact-sql.md)
   
-

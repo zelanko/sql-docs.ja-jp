@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - CREATE_XML_SCHEMA_TSQL
 - COLLECTION
 - COLLECTION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE XML SCHEMA COLLECTION statement
 - importing schema components
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - multiple schema namespaces
 - XML schema collections [SQL Server], creating
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 92db67af64232bf7fea46ece0e56eb16b22ea5a3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa0611afff415744e66f29e056b52fa1c9b57970
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ## <a name="remarks"></a>解説  
  コレクションに新しい名前空間を追加またはを使用して、コレクション内の既存の名前空間に新しいコンポーネントを追加することができますも[ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)です。  
   
- コレクションを削除する使用[DROP XML SCHEMA COLLECTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ コレクションを削除する使用[DROP XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  XML SCHEMA COLLECTION を作成するには、少なくとも次のいずれかの権限セットが必要です。  
@@ -271,12 +268,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER XML SCHEMA COLLECTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [DROP XML SCHEMA COLLECTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [サーバー上の XML スキーマ コレクションの要件と制限](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CREATE LOGIN
 - LOGIN_TSQL
 - LOGIN
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - passwords [SQL Server], logins
 - mapping logins [SQL Server]
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: e0b84743a9c3c578954560613c69f2863af8aa01
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -211,7 +208,7 @@ WINDOWS
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成することがルール、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]形式の認証ログイン\<loginname > @\<サーバー名 >。 場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバーが**myazureserver** 、ログインが **myemail@live.com** 、としてログインを指定する必要があります **myemail@live.com @myazureserver** .  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続の認証に必要なログイン データ、およびサーバー レベルのファイアウォール ルールは、各データベースでは一時的にキャッシュします。 このキャッシュは定期的に更新されます。 認証キャッシュの更新を強制し、データベースのログインの表に、最新バージョンがあることを確認、実行[DBCC FLUSHAUTHCACHE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]接続の認証に必要なログイン データ、およびサーバー レベルのファイアウォール ルールは、各データベースでは一時的にキャッシュします。 このキャッシュは定期的に更新されます。 認証キャッシュの更新を強制し、データベースのログインの表に、最新バージョンがあることを確認、実行[DBCC FLUSHAUTHCACHE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
  詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]ログインを参照してください[Windows Azure SQL データベースにおけるデータベースの管理とログイン](http://msdn.microsoft.com/library/ee336235.aspx)です。  
   
@@ -227,7 +224,7 @@ WINDOWS
   
 -   データベースに接続するには、ログイン用のデータベース ユーザーを作成する必要があります。 詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。  
   
--   使用して、ユーザー定義サーバー ロールを作成[CREATE SERVER ROLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-role-transact-sql.md). 使用して**サーバーの役割が ALTER**しています. **メンバーの追加**ユーザー定義サーバー ロールに、新しいログインを追加します。 詳細については、次を参照してください。 [CREATE SERVER ROLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-role-transact-sql.md)と[ALTER SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md).  
+-   使用して、ユーザー定義サーバー ロールを作成[CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-role-transact-sql.md). 使用して**サーバーの役割が ALTER**しています. **メンバーの追加**ユーザー定義サーバー ロールに、新しいログインを追加します。 詳細については、次を参照してください。 [CREATE SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-server-role-transact-sql.md)と[ALTER SERVER ROLE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 -   使用して**sp_addsrvrolemember**固定サーバー ロールにログインを追加します。 詳細については、次を参照してください。[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)と[sp_addsrvrolemember (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
@@ -348,4 +345,3 @@ GO
  [ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   
-

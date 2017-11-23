@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
 - DATEPART
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], DATEPART
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 05547f2dd50d7f130438d6a07b6952b8c29ec816
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,12 +133,12 @@ ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されていま
   
 |週の最初の日|年の最初の週の構成|2 回割り当てられる週の有無|利用されている地域|  
 |---|---|---|---|
-|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 ～ 7 日|はい|United States|  
-|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 ～ 7 日|はい|欧州および英国|  
+|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 ～ 7 日|可|United States|  
+|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 ～ 7 日|可|欧州および英国|  
 |月曜日|4 月は 1 月<br /><br /> 最初の木曜日<br /><br /> 年の 4 ～ 7 日間|不可|ISO 8601、ノルウェー、およびスウェーデン|  
 |月曜日|7 月は 1 月<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|不可||  
-|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 ～ 7 日|はい||  
-|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 ～ 7 日|はい||  
+|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 ～ 7 日|可||  
+|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 ～ 7 日|可||  
   
 ## <a name="tzoffset"></a>TZoffset  
 **TZoffset** (**tz**) (署名) 分数として返されます。 次のステートメントは、310 分のタイム ゾーン オフセットを返します。
@@ -234,4 +231,3 @@ SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-

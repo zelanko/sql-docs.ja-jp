@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - INSERT_TSQL
 - INSERT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - inserting multiple rows
 - user-defined types [SQL Server], inserting values
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], INSERT statement
 - inserting data
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef8387c2bbbc109ad7ec325e4faf632a983d96c9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +141,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  INSERT ステートメントのスコープ内で定義された、一時的な名前付き結果セット (共通テーブル式とも呼ばれる) を指定します。 結果セットは SELECT ステートメントから派生します。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  上部 (*式*) [PERCENT]  
- 挿入するランダムな行の数または比率 (%) を指定します。 *expression* は行数または行の比率 (%) にすることができます。 詳細については、次を参照してください。 [TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ 挿入するランダムな行の数または比率 (%) を指定します。 *expression* は行数または行の比率 (%) にすることができます。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
  INTO  
  INSERT キーワードと対象のテーブルとの間で使用できるキーワードで、省略可能です。  
@@ -169,7 +166,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  A[テーブル](../../t-sql/data-types/table-transact-sql.md)、そのスコープ内の変数は、INSERT ステートメントでテーブル ソースとして使用できます。  
   
- によって参照されるビュー *table_or_view_name*可能にし、ビューの FROM 句内のただ 1 つのベース テーブルを参照する必要があります。 たとえば、複数のテーブル ビューに INSERT を使用する必要があります、 *column_list* 1 つのベース テーブルから列のみを参照します。 更新可能なビューの詳細については、次を参照してください。 [CREATE VIEW & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
+ によって参照されるビュー *table_or_view_name*可能にし、ビューの FROM 句内のただ 1 つのベース テーブルを参照する必要があります。 たとえば、複数のテーブル ビューに INSERT を使用する必要があります、 *column_list* 1 つのベース テーブルから列のみを参照します。 更新可能なビューの詳細については、次を参照してください。 [CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -179,7 +176,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  使用 ( \<table_hint_limited > [.*n* ] )  
  対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。  
   
- READPAST、NOLOCK、および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
+ READPAST、NOLOCK、および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
   
 > [!IMPORTANT]  
 >  INSERT ステートメントの対象になっているテーブルで HOLDLOCK、SERIALIZABLE、READCOMMITTED、REPEATABLEREAD、または UPDLOCK のヒントを指定する機能は、将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 これらのヒントは、INSERT ステートメントのパフォーマンスに影響を与えません。 新しい開発作業では、これらのオプションの使用は避け、現在これらを使用しているアプリケーションは修正するようにしてください。  
@@ -264,7 +261,7 @@ OUTPUT 句
  影響を受ける行を OUTPUT 句で返す有効な INSERT、UPDATE、DELETE、または MERGE ステートメントです。 このステートメントには WITH 句を指定できず、リモート テーブルまたはパーティション ビューを対象にすることもできません。 UPDATE または DELETE を指定する場合、カーソルベースの UPDATE または DELETE は指定できません。 ソース行を、入れ子になった DML ステートメントとして参照することはできません。  
   
  ここで\<search_condition >  
- いずれかの WHERE 句を含む有効な\<search_condition > によって返される行のフィルター処理する\<dml_statement_with_output_clause >。 詳細については、次を参照してください。[検索条件 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md). このコンテキストで使用すると\<search_condition > サブクエリ、スカラー ユーザー定義関数は、データ アクセス、集計関数、TEXTPTR、または、フルテキスト検索の述語を含めることはできません。 
+ いずれかの WHERE 句を含む有効な\<search_condition > によって返される行のフィルター処理する\<dml_statement_with_output_clause >。 詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md). このコンテキストで使用すると\<search_condition > サブクエリ、スカラー ユーザー定義関数は、データ アクセス、集計関数、TEXTPTR、または、フルテキスト検索の述語を含めることはできません。 
   
  DEFAULT VALUES  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -306,7 +303,7 @@ OUTPUT 句
 グラフの SQL テーブルにデータを挿入する固有の情報を参照してください。 [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)です。 
 
 ## <a name="best-practices"></a>ベスト プラクティス  
- 使用して、@@ROWCOUNT関数の数を返しますが、クライアント アプリケーションに行を挿入します。 詳細については、次を参照してください。 [@@ROWCOUNT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md).  
+ 使用して、@@ROWCOUNT関数の数を返しますが、クライアント アプリケーションに行を挿入します。 詳細については、次を参照してください。 [@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>データの一括インポートに関するベスト プラクティス  
   
@@ -392,7 +389,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
  INSERT ステートメントの中で、式の評価中に算術エラー (オーバーフロー、0 による除算、またはドメイン エラー) が発生すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、SET ARITHABORT が ON に設定されている場合と同様に、これらのエラーが処理されます。 バッチは停止し、エラー メッセージが返されます。 式の評価中に SET ARITHABORT と SET ANSI_WARNINGS を OFF に、INSERT、DELETE または UPDATE ステートメントが発生し、算術エラー、オーバーフロー、0 による除算、またはドメイン エラー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を挿入します。 または、NULL 値を更新します。 出力先の列で NULL 値が許容されない場合は、挿入または更新処理は失敗し、エラーが返されます。  
   
 ## <a name="interoperability"></a>相互運用性  
- テーブルやビューを対象とする INSERT 操作で INSTEAD OF トリガーが定義されている場合は、INSERT ステートメントの代わりにトリガーが実行されます。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
+ テーブルやビューを対象とする INSERT 操作で INSTEAD OF トリガーが定義されている場合は、INSERT ステートメントの代わりにトリガーが実行されます。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  リモート テーブルに値を挿入するとき、すべての列のすべての値が指定されている場合を除いて、指定された値をどの列に挿入するかをユーザーが指定する必要があります。  
@@ -407,7 +404,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
 ## <a name="security"></a>セキュリティ  
  リンク サーバーに接続する場合、送信側サーバーは受信側サーバーに接続するためにログイン名とパスワードをリンク サーバーに代わって提供します。 この接続を機能させるを使用してリンク サーバー間でログイン マッピングを作成する必要があります[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)です。  
   
- OPENROWSET(BULK…) を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 詳細については、「セキュリティの考慮事項」を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポートBULK..."&"#41;& #40 です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ OPENROWSET(BULK…) を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 詳細については、「セキュリティの考慮事項」を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポートBULK...&#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
  対象のテーブルに対する INSERT 権限が必要です。  
@@ -856,7 +853,7 @@ GO
 ```  
   
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R.  OPENROWSET 関数を BULK を指定して使用し、テーブルにデータを一括読み込みする  
- 次の例は、OPENROWSET 関数を指定することによって、テーブルにデータ ファイルからの行を挿入します。 パフォーマンスを最適化するために、IGNORE_TRIGGERS テーブル ヒントを指定しています。 例については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK..."&"#41;& #40 です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ 次の例は、OPENROWSET 関数を指定することによって、テーブルにデータ ファイルからの行を挿入します。 パフォーマンスを最適化するために、IGNORE_TRIGGERS テーブル ヒントを指定しています。 例については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK...&#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -1022,15 +1019,14 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [NEWID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newid-transact-sql.md)   
+ [NEWID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/newid-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [マージ & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/merge-transact-sql.md)   
+ [マージ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/merge-transact-sql.md)   
  [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/output-clause-transact-sql.md)   
  [inserted テーブルと deleted テーブルの使用](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
   
-
 
 
 

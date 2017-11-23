@@ -8,22 +8,20 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a0318d108d6dfaaa374af9a1ab8a148ff960dfcd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>リモート テーブルとして選択 (並列データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 09/01/2017
   
  リモート サーバーを構成するのには「リモート テーブルのコピー」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -123,13 +121,13 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
 -   アクティブなトランザクション内部、または自動コミット オフ設定では、セッションがアクティブなときに、CREATE REMOTE TABLE を実行できません。  
   
- [SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md)このステートメントでも何も起こりません。 同様の動作を実現するために使用[TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ [SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md)このステートメントでも何も起こりません。 同様の動作を実現するために使用[TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="locking-behavior"></a>ロック動作  
  リモート テーブルを作成した後、コピーを開始するまで、変換先テーブルをロックしません。 したがって、別のプロセスを作成した後、およびコピーを開始する前に、リモート テーブルを削除することができます。 この場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]でエラーが発生し、コピーは失敗します。  
   
 ## <a name="metadata"></a>メタデータ  
- 使用して[sys.dm_pdw_dms_workers & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)リモート SMP サーバーへの選択したデータのコピーの進行状況を表示します。 PARALLEL_COPY_READER の種類を持つ行には、この情報が含まれています。  
+ 使用して[sys.dm_pdw_dms_workers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)リモート SMP サーバーへの選択したデータのコピーの進行状況を表示します。 PARALLEL_COPY_READER の種類を持つ行には、この情報が含まれています。  
   
 ## <a name="security"></a>セキュリティ  
  CREATE REMOTE TABLE を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモートへの接続に認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスです。 Windows 認証は使用されません。  
@@ -172,5 +170,4 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 ```  
   
   
-
 

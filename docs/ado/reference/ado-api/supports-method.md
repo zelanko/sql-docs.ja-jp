@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Supports
 - Recordset15::Supports
-helpviewer_keywords:
-- Supports method [ADO]
+helpviewer_keywords: Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 13186c130b85de50bc6cff9487d8fec11359d008
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 60e3039e48ea203b0585dba1ecbeaf7ad3e57907
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supports-method"></a>メソッドをサポートしています
 指定したかどうかを決定[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、特定の種類の機能をサポートしています。  
@@ -55,10 +52,9 @@ boolean = recordset.Supports(CursorOptions )
 >  **サポート**メソッドが返す可能性があります**True**の特定の機能とは限りませんプロバイダーは、実行できること、機能のすべての状況で使用可能な。 **サポート**メソッドは単に特定の条件が満たされたと仮定した場合で、指定された機能をプロバイダーがサポートできるかどうかを返します。 たとえば、**をサポートしている**メソッド可能性があります、**レコード セット**カーソルは一部の列は更新できない複数のテーブル結合に基づいている場合でも、オブジェクトが更新をサポートします。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [メソッドの例 (VB) をサポートしています](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [メソッドの例 (vc++) をサポートしています](../../../ado/reference/ado-api/supports-method-example-vc.md)   
- [カーソル。 プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
-
+ [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

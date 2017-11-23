@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP TRIGGER
 - DROP_TRIGGER_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - renaming triggers
 - triggers [SQL Server], removing
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - removing triggers
 - DML triggers, removing
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 98f871f47674aeb4c5c3d2b0f55a3e7f8aebb4d7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e3ca35b2b33a60d0af5dd31467f1381402f8f99b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,9 +97,9 @@ ON ALL SERVER
   
  特定のトリガーの依存関係の確認の詳細については、次を参照してください。 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)、 [sys.dm_sql_referenced_entities と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)、および[sys.dm_sql_referencing_entities および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- トリガーのテキストを表示する方法の詳細については、次を参照してください。 [sp_helptext & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)と[sys.sql_modules & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+ トリガーのテキストを表示する方法の詳細については、次を参照してください。 [sp_helptext &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)と[sys.sql_modules &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- 既存のトリガーの一覧を表示する方法の詳細については、次を参照してください。 [sys.triggers & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)と[sys.server_triggers & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ 既存のトリガーの一覧を表示する方法の詳細については、次を参照してください。 [sys.triggers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)と[sys.server_triggers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  削除 DML トリガーでは、テーブルまたはトリガーが定義されているビューに対する ALTER 権限が必要です。  
@@ -149,4 +146,3 @@ ON DATABASE;
  [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
   
-

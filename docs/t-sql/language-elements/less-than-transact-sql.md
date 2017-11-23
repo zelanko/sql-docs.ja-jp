@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,28 +18,26 @@ f1_keywords:
 - Less
 - <
 - Less Than
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b21f58bf3ebb448262c04ee67fcc8670b249cda9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4b7123b55623f6b8aa5e61fb7c200de1ea39c706
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt;(より小さい)(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも小さい場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 いずれかまたは両方のオペランドが NULL の場合は、トピックを参照してください。 [SET ANSI_NULLS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも小さい場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 いずれかまたは両方のオペランドが NULL の場合は、トピックを参照してください。 [SET ANSI_NULLS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,7 +103,6 @@ FALSE
 ## <a name="see-also"></a>参照  
  [Iif 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

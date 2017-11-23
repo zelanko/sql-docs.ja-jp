@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYKEY_TSQL
 - ENCRYPTBYKEY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - authenticators [SQL Server]
 - encryption [SQL Server], symmetric keys
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: fe0267020c4100794593731c0f0651b35ea30395
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17b9b4aea4916cfb74efbead6d06c830698a4167
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,7 +95,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  対称キーの暗号化と暗号化解除は比較的高速なので、データが大きい場合に適しています。  
   
 > [!IMPORTANT]  
->  使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_PADDING OFF 設定と共に暗号化関数には暗黙的な変換によってデータが失われる可能性があります。 ANSI_PADDING の詳細については、次を参照してください。 [SET ANSI_PADDING & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_PADDING OFF 設定と共に暗号化関数には暗黙的な変換によってデータが失われる可能性があります。 ANSI_PADDING の詳細については、次を参照してください。 [SET ANSI_PADDING &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  キーに基づいて、次の例に示すように機能し、証明書を作成[操作方法: 列のデータを暗号化](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)です。  
@@ -151,12 +148,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DECRYPTBYKEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   
-

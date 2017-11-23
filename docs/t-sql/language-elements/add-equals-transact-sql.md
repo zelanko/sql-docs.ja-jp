@@ -8,33 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +=
 - +=_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - += (add equals)
 - compound operators, +=
+- assignment operators, +=
+- augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7437b65f197650eb06d736519122770a005fb6d8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0d07ab123822db8f381af6fcc4f1707529bed359
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-add-equals-transact-sql"></a>+= (加算代入) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-addition-assignment-transact-sql"></a>+ = (加算代入) (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   2 つの数値を加算し、値に演算の結果を設定します。 場合、変数など、 @x 35 にし、等しい@x+ = 2 の元の値を受け取る@x、2 とセットを追加@xにその新しい値 (37) です。  
   
@@ -54,13 +53,12 @@ expression += expression
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- 詳細については、次を参照してください。 [+ & #40 です。追加 (& a) #41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/add-transact-sql.md).  
+ 詳細については、次を参照してください。 [+ &#40;です。加算 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/add-transact-sql.md).  
   
 ## <a name="see-also"></a>参照  
- [複合の演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = (& a) #40 です。文字列の連結 &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [+ = (& a) #40 です。文字列連結代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
   
-

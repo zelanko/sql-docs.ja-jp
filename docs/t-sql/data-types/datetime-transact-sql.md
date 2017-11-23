@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - datetime_TSQL
 - datetime
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - date and time [SQL Server], datetime
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - datetime data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4493e165efbc0410d444f34fc41e30cc08e90307
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ae40eaacd6fd441ce0bdbadd3af02b7b189704a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +98,7 @@ ms.lasthandoff: 09/01/2017
 **datetime**は ANSI または ISO 8601 準拠していません。
   
 ##  <a name="_datetime"></a>日付と時刻のデータを変換します。  
-日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).
+日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>その他の日付と時刻型を datetime データ型に変換します。 
 このセクションでは、他の日付と時刻データ型が変換するときの動作について説明します、 **datetime**データ型。  
@@ -207,4 +204,3 @@ SELECT
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-

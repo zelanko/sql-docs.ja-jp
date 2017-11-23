@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 870d6391732d87c08f64d016ea6325107c791c88
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 02b6c4b19007ecce500046ce6f3824abf9956309
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選択的 XML インデックス)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -107,7 +104,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、パス `pathabc`に選択的セカンダリ XML インデックスを作成します。 インデックスへのパスは、割り当てられた名前、 [CREATE SELECTIVE XML INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ 次の例では、パス `pathabc`に選択的セカンダリ XML インデックスを作成します。 インデックスへのパスは、割り当てられた名前、 [CREATE SELECTIVE XML INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
 ```  
 CREATE XML INDEX filt_sxi_index_c  
@@ -121,5 +118,4 @@ FOR ( pathabc );
  [選択的セカンダリ XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)  
   
   
-
 

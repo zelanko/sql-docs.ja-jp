@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SEQUENCE_TSQL
 - ALTER SEQUENCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sequence number object, altering
 - ALTER SEQUENCE statement
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 66960ed0ae27cb7ecbe2d39d0e30d1ec12dcc3cb
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de7fd182be8fd79574c098a499a40a34d38aaf21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER シーケンス (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -83,10 +80,10 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  [キャッシュ [\<定数 >] |キャッシュなし]  
  生成された値をシステム テーブルに保存するのに必要な IO の数を最小限に抑えることで、シーケンス オブジェクトを使用するアプリケーションのパフォーマンスが向上します。  
   
- キャッシュの動作に関する詳細については、次を参照してください。[シーケンスの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-sequence-transact-sql.md).  
+ キャッシュの動作に関する詳細については、次を参照してください。[シーケンスの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-sequence-transact-sql.md).  
   
 ## <a name="remarks"></a>解説  
- シーケンスの作成方法と、シーケンスのキャッシュを管理する方法については、次を参照してください。[シーケンスの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-sequence-transact-sql.md).  
+ シーケンスの作成方法と、シーケンスのキャッシュを管理する方法については、次を参照してください。[シーケンスの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-sequence-transact-sql.md).  
   
  昇順のシーケンスの MINVALUE と降順のシーケンスの MAXVALUE は、シーケンスの START WITH 値を許可しない値に変更することはできません。 昇順のシーケンスの MINVALUE を START WITH 値より大きい数に変更する、または降順のシーケンスの MAXVALUE を START WITH 値より小さい数に変更するには、RESTART WITH 引数を含めて、最小値と最大値の範囲内にある目的の位置からシーケンスを再開します。  
   
@@ -188,9 +185,8 @@ ALTER SEQUENCE Test.CountBy1
 ## <a name="see-also"></a>参照  
  [SEQUENCE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [次の値を & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [次の値を &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/next-value-for-transact-sql.md)   
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [sp_sequence_get_range & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
+ [sp_sequence_get_range &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   
-

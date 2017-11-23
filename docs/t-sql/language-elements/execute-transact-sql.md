@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - EXECUTE_TSQL
 - EXECUTE
 - EXEC_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - remote stored procedures [SQL Server]
 - command strings [SQL Server]
@@ -33,20 +31,19 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 104
+caps.latest.revision: "104"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="execute-transact-sql"></a>実行の TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 コマンド文字列または文字の文字列内で実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、または、次のモジュールのいずれかの: システム ストアド プロシージャ、ユーザー定義のストアド プロシージャ、CLR ストアド プロシージャ、スカラー値ユーザー定義関数、または拡張ストアド プロシージャです。 EXECUTE ステートメントを使用して、パススルー コマンドをリンク サーバーに送信できます。 さらに、文字列またはコマンドを実行するコンテキストを、明示的に設定できるようになりました。 WITH RESULT SETS オプションを使用すると、結果セットのメタデータを定義できます。
   
@@ -222,7 +219,7 @@ Execute a character string
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- プロシージャ グループの詳細については、次を参照してください。 [CREATE PROCEDURE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
+ プロシージャ グループの詳細については、次を参照してください。 [CREATE PROCEDURE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  @*module_name_var*  
  モジュール名を表すローカル変数の名前を指定します。  
@@ -305,7 +302,7 @@ Execute a character string
   
 |項目|定義|  
 |----------|----------------|  
-|RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:**は使用できません WITH RECOMPILE OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出すときにします。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブ コンパイル、スカラー ユーザー定義関数ではサポートされません。 再コンパイルする必要がある場合を使用して[sp_recompile & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
+|RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:**は使用できません WITH RECOMPILE OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出すときにします。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブ コンパイル、スカラー ユーザー定義関数ではサポートされません。 再コンパイルする必要がある場合を使用して[sp_recompile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**結果セットが定義されていません**|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> このオプションを使用した場合、返される結果の種類は保証されず、定義は指定されません。 ステートメントは、何かの結果が返される場合でも、結果が返されない場合でも、問題なく実行されます。 result_sets_option を指定しない場合は、RESULT SETS UNDEFINED が既定の動作となります。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
 |RESULT SETS NONE|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> 実行ステートメントによって結果が一切返されなくなります。 結果が返された場合、バッチは中断されます。<br /><br /> スカラー ユーザー定義の関数では、およびネイティブ コンパイルのスカラー ユーザー定義関数を解釈された、このオプションが機能していないため、関数は、結果セットを返すことはありません。|  
 |*\<result_sets_definition >*|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントが複数指定して*result_sets_definition*セクションです。 各*result_sets_definition*でかっこ、コンマで区切られます。 詳細については、次を参照してください。 \<result_sets_definition > このトピックで後述します。<br /><br /> このオプションは常には、ネイティブ コンパイル済みのスカラー ユーザー定義関数のエラーが発生するため、関数は、結果セットを返すことはありません。|
@@ -316,10 +313,10 @@ Execute a character string
   
 |項目|定義|  
 |----------|----------------|  
-|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL & #124 です。NULL 以外]<br /><br /> }|次の表を参照してください。|  
+|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124;です。NULL 以外]<br /><br /> }|次の表を参照してください。|  
 |db_name|テーブル、ビュー、またはテーブル値関数を含むデータベースの名前です。|  
 |schema_name|テーブル、ビュー、またはテーブル値関数を所有するスキーマの名前です。|  
-|table_name & #124 です。view_name & #124 です。table_valued_function_name|名前付きのテーブル、ビュー、またはテーブル値関数で指定された列を返すように指定します。 テーブル変数、一時テーブル、およびシノニムは、AS オブジェクト構文ではサポートされていません。|  
+|table_name &#124;です。view_name &#124;です。table_valued_function_name|名前付きのテーブル、ビュー、またはテーブル値関数で指定された列を返すように指定します。 テーブル変数、一時テーブル、およびシノニムは、AS オブジェクト構文ではサポートされていません。|  
 |AS TYPE [schema_name.]table_type_name|テーブル型で指定された列を返すように指定します。|  
 |AS FOR XML|これらは、SELECT によって生成されたものとしてにステートメントまたは EXECUTE ステートメントで呼び出されるストアド プロシージャから結果の XML 形式に変換することを指定しています. XML をしています. ステートメントの使用などがあります。 元のステートメントの TYPE ディレクティブからのすべての書式設定が削除され、TYPE ディレクティブが指定されなかったものとして、結果が返されます。 AS FOR XML では、実行されたステートメントまたはストアド プロシージャからの XML 以外の表形式の結果は XML に変換されません。|  
   
@@ -328,7 +325,7 @@ Execute a character string
 |column_name|各列の名前です。 列の数が結果セットと異なる場合は、エラーが発生し、バッチが中断されます。 列の名前が結果セットと異なる場合は、返される列の名前は定義済みの名前に設定されます。|  
 |data_type|各列のデータ型です。 データ型が異なる場合は、定義済みのデータ型への暗黙的な変換が行われます。 変換に失敗すると、バッチが中断されます。|  
 |COLLATE collation_name|各列の照合順序です。 照合順序の不一致がある場合、暗黙的な照合順序が使用されます。 これに失敗した場合は、バッチが中断されます。|  
-|NULL & #124 です。NOT NULL します。|各列の NULL 値の許容属性です。 定義済みの NULL 値の許容属性が NOT NULL である場合に、返されるデータに NULL が含まれていると、エラーが発生し、バッチは中断されます。 指定しない場合、既定値は ANSI_NULL_DFLT_ON および ANSI_NULL_DFLT_OFF オプションの設定に従った値になります。|  
+|NULL &#124;です。NOT NULL します。|各列の NULL 値の許容属性です。 定義済みの NULL 値の許容属性が NOT NULL である場合に、返されるデータに NULL が含まれていると、エラーが発生し、バッチは中断されます。 指定しない場合、既定値は ANSI_NULL_DFLT_ON および ANSI_NULL_DFLT_OFF オプションの設定に従った値になります。|  
   
  実行中に返される実際の結果セットは、結果セットの数、列の数、列の名前、NULL 値の許容属性、およびデータ型のいずれかが WITH RESULT SETS 句を使用して定義された結果とは異なる場合があります。 結果セットの数が異なる場合は、エラーが発生し、バッチが中断されます。  
   
@@ -385,7 +382,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
  モジュールで他のデータベース オブジェクトにアクセスする場合は、モジュールに対する EXECUTE 権限があり、次のいずれかに該当する場合にのみ、実行は成功します。  
   
--   モジュールが EXECUTE AS USER または SELF としてマークされており、モジュール所有者が、参照されるオブジェクトに対して必要な権限を保持している。 モジュール内で権限借用の詳細については、次を参照してください。 [EXECUTE AS 句 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+-   モジュールが EXECUTE AS USER または SELF としてマークされており、モジュール所有者が、参照されるオブジェクトに対して必要な権限を保持している。 モジュール内で権限借用の詳細については、次を参照してください。 [EXECUTE AS 句 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 -   モジュールが EXECUTE AS CALLER としてマークされており、オブジェクトに対して必要な権限を保持している。  
   
@@ -738,12 +735,11 @@ GO
  [元に戻す (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/suser-name-transact-sql.md)   
+ [SUSER_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [USER_NAME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-name-transact-sql.md)   
+ [USER_NAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/user-name-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   
-

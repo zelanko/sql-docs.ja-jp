@@ -1,5 +1,5 @@
 ---
-title: "| = (ビットごとの OR 代入) (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "| = (ビット演算子または代入) (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '|='
 - '|=_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, |=
-- '|= (bitwize OR equals)'
+- assignment operators, |=
+- augmented operators, |=
+- '|= (bitwise OR equals)'
 ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c5f991e93e9fd11e74e9284a6f85e1f010187bed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 224f1c3e0dff0ad9e6a1816a6a12eea0392791ab
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-bitwise-or-equals-transact-sql"></a>|= (ビットごとの OR 代入) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-bitwise-or-assignment-transact-sql"></a>| = (ビット演算子または代入) (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で、バイナリ式に変換された 2 つの指定される整数値に対して、ビットごとの論理和演算を実行し、値に演算の結果を設定します。  
   
@@ -54,13 +53,12 @@ expression |= expression
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- 詳細については、次を参照してください。 [&#124; & #40 です。ビットごとの OR &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-or-transact-sql.md).  
+ 詳細については、次を参照してください。 [&#124; &#40;です。ビットごとの OR &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-or-transact-sql.md).  
   
 ## <a name="see-also"></a>参照  
- [複合の演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [ビット処理演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+ [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ビット処理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

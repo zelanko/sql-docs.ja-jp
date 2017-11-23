@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6d969ae607f15876c21271d2721ed3f33c6949f3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB のリモート処理のプロバイダーの概要
 Microsoft OLE DB リモート プロバイダーをクライアント コンピューターでリモート コンピューター上のデータ プロバイダーを呼び出すためのローカル ユーザーを有効にします。 リモート コンピューター上のローカル ユーザーをした場合と同様、リモート コンピューターのデータ プロバイダーのパラメーターを指定します。 次に、リモート コンピューターにアクセスするリモート プロバイダーによって使用されるパラメーターを指定します。 ローカル ユーザーをした場合とするリモート コンピューターにアクセスできます。
@@ -100,4 +98,3 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 
 ## <a name="see-also"></a>参照
  [OLE DB のリモート処理のプロバイダーの概要](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
-

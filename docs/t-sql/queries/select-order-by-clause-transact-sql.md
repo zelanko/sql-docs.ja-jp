@@ -3,10 +3,12 @@ title: "ORDER BY 句 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,8 +18,7 @@ f1_keywords:
 - BY_TSQL
 - ORDER
 - ORDER BY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ad-hoc query paging
 - OFFSET clause
@@ -38,20 +39,19 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fa84841e573d9bd1a285d24548c2f57ab5b9235
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---order-by-clause-transact-sql"></a>選択 - ORDER BY 句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   クエリによって返されるデータを並べ替えます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この句は次の場合に使用します。  
   
@@ -133,7 +133,7 @@ ORDER BY order_by_expression
 ## <a name="best-practices"></a>ベスト プラクティス  
  選択リスト内の列の位置を表すために、ORDER BY 句で整数を指定しないでください。 たとえば、`SELECT ProductID, Name FROM Production.Production ORDER BY 2` などのステートメントは有効ですが、実際の列名を指定した場合と比べて理解が難しくなります。 さらに、列の順序を変更したり、新しい列を追加するなどして、選択リストに変更を加えた場合は、予期しない結果が生じないように ORDER BY 句を変更する必要が生じます。  
   
- SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ SELECT top (*N*) ステートメントでは、常に ORDER BY 句を使用します。 これは、TOP の処理対象の行を指定するための唯一の方法です。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="interoperability"></a>相互運用性  
  別のソースから行を挿入するときに、ORDER BY 句を SELECT…INTO ステートメントと共に使用する場合、行が指定した順序で挿入されるかどうかは保証されません。  
@@ -182,13 +182,13 @@ ORDER BY order_by_expression
   
  ページング ソリューションとして OFFSET と FETCH を使用する場合は、クライアント アプリケーションに返されるデータの "ページ" ごとにクエリを 1 回実行する必要があります。 たとえば、10 行単位でクエリの結果を取得するには、クエリを 1 回実行して行 1 から行 10 を取得した後、クエリをもう一度実行して行 11 から行 20 を取得する必要があります。これ以降も、同様の処理が必要です。 各クエリは独立しており、相互に関連付けられることはありません。 つまり、クエリを 1 回実行してサーバーで状態を維持するカーソルを使用する場合とは異なり、状態の追跡はクライアント アプリケーションで行われます。 OFFSET と FETCH を使用してクエリ要求の結果に一貫性を持たせるためには、次の条件を満たす必要があります。  
   
-1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+1.  クエリで使用される基になるデータが変更されていない。 つまり、クエリで処理される行が更新されていないか、クエリからのすべてのページ要求が、スナップショットまたはシリアル化可能なトランザクション分離を使用して単一のトランザクションで実行される必要があります。 これらのトランザクション分離レベルの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 2.  ORDER BY 句に、一意であることが保証されている列または列の組み合わせが含まれている。  
   
  例については、このトピックの「例」セクションの「単一のトランザクションで複数のクエリを実行する」を参照してください。  
   
- ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 Optimze FOR のに関する詳細については、次を参照してください。[クエリ ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
+ ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 Optimze FOR のに関する詳細については、次を参照してください。[クエリ ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="examples"></a>使用例  
   
@@ -484,7 +484,25 @@ GO
   
 ```  
   
-### <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+###  <a name="Union"></a>Order BY 句を使用して、和集合を EXCEPT、および INTERSECT  
+ クエリで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、ORDER BY 句をステートメントの末尾に指定する必要があります。この場合、結合されたクエリの結果が並べ替えられます。 赤または黄色と組み合わせてこの種類は、すべての製品を返す例を次の列によって一覧`ListPrice`です。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Red'  
+-- ORDER BY cannot be specified here.  
+UNION ALL  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Yellow'  
+ORDER BY ListPrice ASC;  
+  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例で、数値によって結果セットの順序付け`EmployeeKey`列で昇順に並べ替えます。  
   
 ```  
@@ -525,35 +543,16 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-###  <a name="Union"></a>Order BY 句を使用して、和集合を EXCEPT、および INTERSECT  
- クエリで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、ORDER BY 句をステートメントの末尾に指定する必要があります。この場合、結合されたクエリの結果が並べ替えられます。 赤または黄色と組み合わせてこの種類は、すべての製品を返す例を次の列によって一覧`ListPrice`です。  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Red'  
--- ORDER BY cannot be specified here.  
-UNION ALL  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Yellow'  
-ORDER BY ListPrice ASC;  
-  
-```  
-  
 ## <a name="see-also"></a>参照  
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [順位付け関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md)   
+ [順位付け関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md)   
  [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [除くおよび INTERSECT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [共用体 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [共用体 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-
 

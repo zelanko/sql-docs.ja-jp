@@ -3,10 +3,12 @@ title: "COMMON_TABLE_EXPRESSION (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a065ef1f5c21d0fb5a458d55108acd8a9fd0678e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 共通テーブル式は単純なクエリから派生し、単一の SELECT、INSERT、UPDATE、または DELETE ステートメントの実行スコープ内で定義されます。 CTE は、CREATE VIEW ステートメントの中で、ビューの SELECT ステートメントの定義の一部として指定することもできます。 共通テーブル式には、自己参照を含めることができます。 これは再帰共通テーブル式と呼ばれます。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/01/2017
  共通テーブル式の列名を指定します。 1 つの CTE 定義の中で、列名の重複は許可されません。 指定した列名の数がの結果セット内の列の数に一致する必要があります、 *CTE_query_definition*です。 クエリ定義内で、結果セットのすべての列に対して異なる列名が指定されている場合にのみ、列名リストをオプションで使用できます。  
   
  *CTE_query_definition*  
- 共通テーブル式を設定した結果セットを持つ SELECT ステートメントを指定します。 SELECT ステートメントの*CTE_query_definition* CTE が別の CTE を定義することはできません以外に、ビューを作成する場合と同じ要件を満たす必要があります。 詳細については、「解説」セクションを参照してください。 および[CREATE VIEW & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
+ 共通テーブル式を設定した結果セットを持つ SELECT ステートメントを指定します。 SELECT ステートメントの*CTE_query_definition* CTE が別の CTE を定義することはできません以外に、ビューを作成する場合と同じ要件を満たす必要があります。 詳細については、「解説」セクションを参照してください。 および[CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
  複数ある場合*CTE_query_definition*が定義されている、クエリの定義が参加しているこれらのいずれかで set 演算子: UNION ALL、UNION、EXCEPT、または INTERSECT です。  
   
@@ -601,48 +601,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-creating-a-simple-common-table-expression"></a>L. 単純な共通テーブル式を作成する  
- 次の例では、年度ごとの販売注文の合計数を示しますにおける各販売員の[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]します。  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### <a name="m-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>M. 共通テーブル式を使用して、回数を制限し、平均数をレポートする  
- 次の例は、販売員のすべての年度の販売注文数の平均を示しています。  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### <a name="n-using-a-common-table-expression-within-a-ctas-statement"></a>N. CTAS ステートメント内で共通テーブル式を使用します。  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. CTAS ステートメント内で共通テーブル式を使用します。  
  次の例にある各営業担当者の年度ごとの販売注文の合計数を含む新しいテーブルを作成する[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]です。  
   
 ```  
@@ -671,7 +630,7 @@ AS
 GO  
 ```  
   
-### <a name="o-using-a-common-table-expression-within-a-cetas-statement"></a>O.  CETAS ステートメント内で共通テーブル式を使用します。  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. CETAS ステートメント内で共通テーブル式を使用します。  
  次の例で各販売担当者の年度ごとの販売注文の合計数を格納する新しい外部テーブルを作成する[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]です。  
   
 ```  
@@ -701,7 +660,7 @@ AS
 GO  
 ```  
   
-### <a name="p-using-multiple-comma-separated-ctes-in-a-statement"></a>P. ステートメントで Cte を区切られた複数のコンマを使用します。  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. ステートメントで Cte を区切られた複数のコンマを使用します。  
  次の例では、単一のステートメントで 2 つの Cte を含むを示します。 Cte をすることはできません (再帰なし) を入れ子にします。  
   
 ```  
@@ -728,4 +687,3 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-

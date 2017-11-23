@@ -8,8 +8,7 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>外部テーブルとして選択 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -51,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
  詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -89,10 +87,10 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  外部ファイルに書き込まれます*hdfs_folder*と名前付き*QueryID_date_time_ID.format*ここで、 *ID*増分識別子と*形式*エクスポートされたデータ形式です。 たとえば、QID776_20160130_182739_0.orc です。  
   
  DATA_SOURCE = *external_data_source_name*  
- 外部のデータが格納されているまたはを格納する場所を含む外部データ ソース オブジェクトの名前を指定します。 場所は、Hadoop クラスターまたは Azure Storage の Blob のいずれか。 外部データ ソースを作成するには、使用[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ 外部のデータが格納されているまたはを格納する場所を含む外部データ ソース オブジェクトの名前を指定します。 場所は、Hadoop クラスターまたは Azure Storage の Blob のいずれか。 外部データ ソースを作成するには、使用[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
- 外部データ ファイルの形式を含む外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには使用[CREATE EXTERNAL FILE FORMAT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ 外部データ ファイルの形式を含む外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには使用[CREATE EXTERNAL FILE FORMAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  オプションを拒否します。  
  拒否するオプションは、この CREATE EXTERNAL TABLE AS SELECT ステートメントの実行時に適用されません。 代わりに、それらは、ここで指定したデータベースが、外部テーブルからデータをインポートする場合、後で使用できるようにします。 後で、CREATE TABLE AS SELECT ステートメントを外部テーブルからデータを選択すると、データベース オプションを使用して、拒否数またはインポートを停止する前にインポートに失敗した行の割合を決定します。  
@@ -186,7 +184,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部のパーティションの移動  
   
- **適用対象:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンス管理者を外部テーブルを作成するための前提条件、としては、hadoop の接続を構成する必要があります。   詳細については、マニュアルを参照して外部データ (Analytics Platform System) への接続を構成する APS からダウンロードできます[ここ](http://www.microsoft.com/download/details.aspx?id=48241)です。  
+ **適用対象:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンス管理者を外部テーブルを作成するための前提条件、としては、hadoop の接続を構成する必要があります。 詳細については、マニュアルを参照して外部データ (Analytics Platform System) への接続を構成する APS からダウンロードできます[ここ](http://www.microsoft.com/download/details.aspx?id=48241)です。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  以降、データベース、バックアップの外部で外部テーブルのデータが存在して、復元操作は、データベースに格納されたデータにのみ作用します。 つまり、メタデータのみのバックアップおよび復元されます。  
@@ -201,7 +199,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  PolyBase は 32 の同時実行 PolyBase クエリを実行している場合、最大で 1 つのフォルダーの 33 k ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 同時実行の程度が 32 未満である場合は、ユーザーは、複数の 33 k ファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Hadoop と PolyBase のことをお勧めユーザーは、短いファイル パスを維持し、1 つの HDFS フォルダー 30 個を超える k ファイルを使用します。 ファイルが多すぎますが参照されている場合は、JVM のメモリ不足の例外が発生します。  
   
- [SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md)この CREATE EXTERNAL TABLE AS SELECT に影響を与えません。 同様の動作を実現するために使用[TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ [SET ROWCOUNT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-rowcount-transact-sql.md)この CREATE EXTERNAL TABLE AS SELECT に影響を与えません。 同様の動作を実現するために使用[TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
  CREATE EXTERNAL TABLE AS SELECT、RCFile から選択をしたときに、RCFile で列の値を含めないでくださいパイプ ' |' 文字です。  
   
@@ -262,10 +260,9 @@ OPTION ( HASH JOIN );
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [TABLE &#40; を作成します。Azure SQL Data Warehouse、並列データ ウェアハウス &#41;](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)   
  [テーブルとして選択 &#40; を作成します。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - CREATE PROC
 - PROC_TSQL
 - CREATE_PROCEDURE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
 - table-valued parameters
@@ -48,17 +46,16 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 180
+caps.latest.revision: "180"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 23460288040b37ec6a09293bc02a46e4f9af94fa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -191,13 +188,13 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 -   すべて[!INCLUDE[tsql](../../includes/tsql-md.md)]データ型をパラメーターとして使用することができます。  
   
--   ユーザー定義テーブル型を使用して、テーブル値パラメーターを作成できます。 テーブル値パラメーターは、入力パラメーターとしてのみ指定でき、READONLY キーワードと共に使用する必要があります。 詳細については、次を参照してください[テーブル値パラメーター (&) #40";"データベース エンジン"&"#41;。](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
+-   ユーザー定義テーブル型を使用して、テーブル値パラメーターを作成できます。 テーブル値パラメーターは、入力パラメーターとしてのみ指定でき、READONLY キーワードと共に使用する必要があります。 詳細については、次を参照してください[テーブル値パラメーター &#40;データベース エンジン&#41;。](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
   
 -   **カーソル**データ型の出力パラメーターであることができますのみと VARYING キーワードと共に使用する必要があります。  
   
 **CLR プロシージャに関するガイドライン**:  
   
--   マネージ コード内に同等の型を持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型であれば、どの型でもパラメーターとして使用できます。 CLR 型間の通信の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型を参照してください[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)です。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型とその構文を参照してください。[データ型 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md).  
+-   マネージ コード内に同等の型を持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型であれば、どの型でもパラメーターとして使用できます。 CLR 型間の通信の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型を参照してください[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)です。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム データ型とその構文を参照してください。[データ型 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md).  
   
 -   テーブル値または**カーソル**データ型をパラメーターとして使用することはできません。  
   
@@ -291,7 +288,7 @@ NATIVE_COMPILATION
 SCHEMABINDING  
  **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
- プロシージャによって参照されるテーブルを削除または変更できないようにします。 ネイティブ コンパイル ストアド プロシージャでは、SCHEMABINDING が必要です。 (詳細については、次を参照してください[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)。SCHEMABINDING の制限は、ユーザー定義関数に対する場合と同じです。 詳細については、SCHEMABINDING のセクションを参照してください。 [CREATE FUNCTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-function-transact-sql.md).  
+ プロシージャによって参照されるテーブルを削除または変更できないようにします。 ネイティブ コンパイル ストアド プロシージャでは、SCHEMABINDING が必要です。 (詳細については、次を参照してください[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)。SCHEMABINDING の制限は、ユーザー定義関数に対する場合と同じです。 詳細については、SCHEMABINDING のセクションを参照してください。 [CREATE FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-function-transact-sql.md).  
   
 LANGUAGE = [N] 'language'  
  **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
@@ -303,7 +300,7 @@ TRANSACTION ISOLATION LEVEL
   
  ネイティブ コンパイル ストアド プロシージャでは必要です。 ストアド プロシージャのトランザクション分離レベルを指定します。 次のオプションがあります。  
   
- これらのオプションの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ これらのオプションの詳細については、次を参照してください。 [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 REPEATABLE READ  
  他のトランザクションによって変更されていてもまだコミットされていないデータは、ステートメントで読み取ることができないことを指定します。 別のトランザクションが、現在のトランザクションが読み取ったデータを変更する場合、現在のトランザクションは失敗します。  
@@ -322,7 +319,7 @@ DATEFIRST =*数*
   
  週の最初の曜日を 1 ～ 7 の数値で指定します。 DATEFIRST は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
   
- 詳細については、次を参照してください。 [SET DATEFIRST & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-datefirst-transact-sql.md).  
+ 詳細については、次を参照してください。 [SET DATEFIRST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-datefirst-transact-sql.md).  
   
 DATEFORMAT =*形式*  
  **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
@@ -363,7 +360,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>ベスト プラクティス  
  ここではベスト プラクティスをすべて網羅しているわけではありませんが、次の推奨事項に従うと、プロシージャのパフォーマンスが向上する場合があります。  
   
--   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、SET NOCOUNT ON ステートメントを AS キーワードの直後に配置します。 この有効にするメッセージ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SELECT、INSERT、UPDATE、MERGE、後に、クライアントに返送され、DELETE ステートメントが実行されます。 この不要なネットワーク オーバーヘッドを軽減することにより、データベースとアプリケーションの全体的なパフォーマンスが向上します。 詳細については、次を参照してください。 [SET NOCOUNT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、SET NOCOUNT ON ステートメントを AS キーワードの直後に配置します。 この有効にするメッセージ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SELECT、INSERT、UPDATE、MERGE、後に、クライアントに返送され、DELETE ステートメントが実行されます。 この不要なネットワーク オーバーヘッドを軽減することにより、データベースとアプリケーションの全体的なパフォーマンスが向上します。 詳細については、次を参照してください。 [SET NOCOUNT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   プロシージャ内のデータベース オブジェクトを作成または参照するときにスキーマ名を使用する。 処理時間がかかりません、[!INCLUDE[ssDE](../../includes/ssde-md.md)]複数のスキーマを検索するがあるない場合は、オブジェクト名を解決するのには。 また、権限とアクセスの問題が原因で、スキーマを指定せずに作成されたオブジェクトに割り当てられているユーザーの既定のスキーマも回避されます。  
   
@@ -997,7 +994,7 @@ EXEC Get10TopResellers;
   
 ## <a name="see-also"></a>参照  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
- [フロー制御言語 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
  [カーソル](../../relational-databases/cursors.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
@@ -1005,23 +1002,22 @@ EXEC Get10TopResellers;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sp_procoption & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
- [sp_recompile & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
+ [sp_procoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
+ [sp_recompile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
- [sys.numbered_procedures & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
- [sys.numbered_procedure_parameters & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
+ [sys.numbered_procedures &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
+ [sys.numbered_procedure_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [使用してテーブル値パラメーター (&) #40; データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
+ [使用してテーブル値パラメーター &#40; データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   
-
 
 
 

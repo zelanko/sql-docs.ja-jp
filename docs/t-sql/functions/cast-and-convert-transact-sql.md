@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CAST function
 - automatic data type conversion
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -216,7 +213,7 @@ CONVERT 関数は、変換する方法を指定する整数式です*式*です�
 データの自動型変換はサポートされていません、**テキスト**と**イメージ**データ型。 明示的に変換することができます**テキスト**データを文字データ、および**イメージ**データ**バイナリ**または**varbinary**が、最大の長さが 8000バイト数です。 文字を含む文字式を変換するなど、不適切な変換しようとすると、 **int**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー メッセージが返されます。
   
 ## <a name="output-collation"></a>出力の照合順序  
-CAST または CONVERT の入出力が文字列である場合、出力では入力と同じ照合順序および照合順序ラベルが使用されます。 入力が文字列ではない場合、出力ではデータベースの既定の照合順序、および強制可能な既定照合順序の照合順序ラベルが使用されます。 詳細については、次を参照してください。[照合の優先順位 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/collation-precedence-transact-sql.md).
+CAST または CONVERT の入出力が文字列である場合、出力では入力と同じ照合順序および照合順序ラベルが使用されます。 入力が文字列ではない場合、出力ではデータベースの既定の照合順序、および強制可能な既定照合順序の照合順序ラベルが使用されます。 詳細については、次を参照してください。[照合の優先順位 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/collation-precedence-transact-sql.md).
   
 出力に別の照合順序を割り当てるには、CAST 関数または CONVERT 関数の結果式に COLLATE 句を適用します。 例:
   
@@ -460,7 +457,7 @@ Rachel           Valdez              2241204.0424      289
 ```
   
 ### <a name="f-using-convert-or-cast-with-typed-xml"></a>F. CONVERT または CAST を、型指定された XML と共に使用する  
-使用して表示する例をいくつかの変換を使用して型指定された XML に変換するは、次のとおり、 [XML データ型と列 & #40 です。SQL Server &#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).
+使用して表示する例をいくつかの変換を使用して型指定された XML に変換するは、次のとおり、 [XML データ型と列 &#40;です。SQL Server &#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).
   
 次の例では、空白、テキスト、およびマークアップのある文字列を、型指定された XML に変換し、すべての余分な空白 (ノード間の境界の空白) を削除します。
   
@@ -714,9 +711,8 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>参照
-[データ型の変換 (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[システム関数 & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0227da93168d1a0b7de95cd289e1beaec17145d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e30171c86c56f232d17ed159eb53d0eaddae79c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>SQL Server - Azure SQL DB (SybaseToSQL) に Sybase ASE データの移行
 Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを正常に読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB に ASE からデータを移行することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。  
@@ -41,7 +39,7 @@ Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを
   
     詳細については**データ移行の設定の拡張**を参照してください[データ移行の設定](http://msdn.microsoft.com/en-us/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
   
--   **移行エンジン**で、**プロジェクト設定** ダイアログ ボックスの 2 種類のデータ移行のエンジンを viz を使用して、移行プロセスを実行することができます。  
+-   **移行エンジン**で、**プロジェクト設定** ダイアログ ボックスの 2 種類のデータ移行のエンジンを viz を使用して、移行プロセスを実行することができます。。  
   
     1.  クライアント側のデータ移行のエンジン  
   
@@ -119,4 +117,3 @@ Sybase Adaptive Server Enterprise (ASE) データベース オブジェクトを
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

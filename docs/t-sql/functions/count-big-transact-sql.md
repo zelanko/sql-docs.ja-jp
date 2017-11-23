@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COUNT_BIG_TSQL
 - COUNT_BIG
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - totals [SQL Server], COUNT_BIG function
 - counting items in group
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b0165fefcc715becfb9c59644ed0ddd96cca9c07
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8ce3046c36b7d224f6294948029cef6cf5afd43c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,13 +97,12 @@ COUNT_BIG (DISTINCT*式*) 評価*式*グループ内の行ごとに一意、非 
 COUNT_BIG は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
-例については、次を参照してください。[カウント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-transact-sql.md).
+例については、次を参照してください。[カウント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-transact-sql.md).
   
 ## <a name="see-also"></a>参照
 [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[カウント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-transact-sql.md)  
+[カウント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-transact-sql.md)  
 [int、bigint、smallint 型、および tinyint (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
 [句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
-

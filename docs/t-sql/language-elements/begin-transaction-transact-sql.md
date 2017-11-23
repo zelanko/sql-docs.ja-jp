@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - BEGIN TRANSACTION
 - BEGIN TRAN
 - BEGIN_TRAN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - transaction logs [SQL Server], BEGIN TRANSACTION statement
 - marked transactions [SQL Server], BEGIN TRANSACTION statement
@@ -32,17 +30,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: d1e327dc8e5ce590ee3d2123b6049bbfc470d7b6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f52f237795de00f4ad78403bed986ac571005c31
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -108,12 +105,12 @@ BEGIN TRANSACTION では、ステートメントを実行する接続のロー�
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーはトランザクションのコントローラーになり、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) を使用して分散トランザクションを管理します。  
   
- BEGIN DISTRIBUTED TRANSACTION を使用して、トランザクションを分散トランザクションとして明示的に実行できます。 詳細については、次を参照してください。 [BEGIN DISTRIBUTED TRANSACTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ BEGIN DISTRIBUTED TRANSACTION を使用して、トランザクションを分散トランザクションとして明示的に実行できます。 詳細については、次を参照してください。 [BEGIN DISTRIBUTED TRANSACTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
- SET IMPLICIT_TRANSACTIONS が ON に設定されている場合、BEGIN TRANSACTION ステートメントは 2 つの入れ子構造のトランザクションを作成します。 詳細については、「 [SET IMPLICIT_TRANSACTIONS & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
+ SET IMPLICIT_TRANSACTIONS が ON に設定されている場合、BEGIN TRANSACTION ステートメントは 2 つの入れ子構造のトランザクションを作成します。 詳細については、「 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
 ## <a name="marked-transactions"></a>マーク付きのトランザクション  
- WITH MARK オプションを使用すると、トランザクション名がトランザクション ログに挿入されます。 データベースを以前の状態に復元する場合は、日付や時刻の代わりにマークが付いたトランザクションを使用できます。 詳細については、次を参照してください[関連のデータベースを一貫して復旧 &#40; を使用してマークされたトランザクション。完全復旧モデル &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)と[復元 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-transact-sql.md).  
+ WITH MARK オプションを使用すると、トランザクション名がトランザクション ログに挿入されます。 データベースを以前の状態に復元する場合は、日付や時刻の代わりにマークが付いたトランザクションを使用できます。 詳細については、次を参照してください[関連のデータベースを一貫して復旧 &#40; を使用してマークされたトランザクション。完全復旧モデル &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)と[復元 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  さらに、関連するデータベースのセットを論理的に一貫した状態に復元する必要がある場合は、トランザクション ログ マークが必要です。 分散トランザクションによって、関連するデータベースのトランザクション ログにマークを設定できます。 関連するデータベースのセットをこれらのマークに復元すると、トランザクションとして一貫性のあるデータベースのセットが作成されます。 関連するデータベースにマークを設定するには、特別な手順が必要です。  
   
@@ -217,10 +214,9 @@ GO
 ## <a name="see-also"></a>参照  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [コミット動作 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [コミット動作 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   
-

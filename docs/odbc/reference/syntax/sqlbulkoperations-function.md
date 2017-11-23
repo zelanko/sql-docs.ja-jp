@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBulkOperations
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBulkOperations
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBulkOperations
-helpviewer_keywords:
-- SQLBulkOperations function [ODBC]
+f1_keywords: SQLBulkOperations
+helpviewer_keywords: SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 74934fb9edbcea316b4acb09f4b8e63c08236b1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea439a41a6a3d42c9266bbccfe53aace1c0f37f4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 関数
 **準拠**  
@@ -90,7 +84,7 @@ SQLRETURN SQLBulkOperations(
 |40003|不明なステートメント入力候補|、この関数の実行中に、関連付けられた接続が失敗し、トランザクションの状態を判断することはできません。|  
 |42000|構文エラーまたはアクセス違反|ドライバーで要求された操作の実行に必要に応じて、行をロックできなかった、*操作*引数。|  
 |44000|WITH CHECK OPTION 違反|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK での挿入または更新が表示されたテーブルで実行された (またはテーブルが表示されていたテーブルから派生) を指定することによって作成された**WITH CHECK OPTION**、このような形で、挿入によって 1 つまたは複数の行が影響を受けるか、更新プログラムが表示されたテーブル内に存在しなくをすることです。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*です。 関数が再度呼び出されたし、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLBulkOperations**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM)、指定した*StatementHandle*実行された状態ではありませんでした。 最初の呼び出さずに、関数が呼び出された**SQLExecDirect**、 **SQLExecute**、またはカタログ関数。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) ドライバーは ODBC 2、でした。*x*ドライバー、および**SQLBulkOperations**で呼び出され、 *StatementHandle*する前に**SQLFetchScroll**または**SQLFetch**が呼び出されました。<br /><br /> (DM) **SQLBulkOperations**後に呼び出された**SQLExtendedFetch**で呼び出されましたが、 *StatementHandle*です。|  
@@ -237,20 +231,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>一括挿入と更新プログラムの長い形式のデータを提供します。  
  一括挿入と更新プログラムへの呼び出しによって実行される長い形式のデータを指定することができます**SQLBulkOperations**です。 挿入するか長いデータを更新するのには、アプリケーションは、「一括挿入を実行する」および「を実行する一括更新を使用してブックマーク」セクションでは、このトピックの前半で説明する手順に加えて、次の手順を実行します。  
   
-1.  使用してデータをバインドに**SQLBindCol**、アプリケーション内の列番号などのアプリケーション定義の値の配置、 * \*TargetValuePtr*実行時データのバッファー列です。 値は、後で列を識別に使用できます。  
+1.  使用してデータをバインドに**SQLBindCol**、アプリケーション内の列番号などのアプリケーション定義の値の配置、  *\*TargetValuePtr*実行時データのバッファー列です。 値は、後で列を識別に使用できます。  
   
-     アプリケーションが、SQL_LEN_DATA_AT_EXEC の結果を配置 (*長さ*) でマクロ、 * \*StrLen_or_IndPtr*バッファー。 列の SQL データ型は SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長い形式のデータ ソース固有のデータ型と、ドライバーで SQL_NEED_LONG_DATA_LEN 情報の種類に"Y"が返されます場合**SQLGetInfo**、*長さ* ; パラメーターに送信されるデータのバイト数は、それ以外の場合は負でない値を指定しは無視されます。  
+     アプリケーションが、SQL_LEN_DATA_AT_EXEC の結果を配置 (*長さ*) でマクロ、  *\*StrLen_or_IndPtr*バッファー。 列の SQL データ型は SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長い形式のデータ ソース固有のデータ型と、ドライバーで SQL_NEED_LONG_DATA_LEN 情報の種類に"Y"が返されます場合**SQLGetInfo**、*長さ* ; パラメーターに送信されるデータのバイト数は、それ以外の場合は負でない値を指定しは無視されます。  
   
 2.  ときに**SQLBulkOperations**実行時データ列、関数の戻り値 SQL_NEED_DATA およびに依存して手順 3 に進みますがある場合は、呼び出されます。 (実行時データ列が存在しない場合、プロセスが完了しました。)  
   
-3.  アプリケーションの呼び出し**SQLParamData**のアドレスを取得する、 * \*TargetValuePtr*処理する最初の実行時データ列のバッファー。 **SQLParamData** SQL_NEED_DATA を返します。 アプリケーションからのアプリケーション定義の値を取得する、 * \*TargetValuePtr*バッファー。  
+3.  アプリケーションの呼び出し**SQLParamData**のアドレスを取得する、  *\*TargetValuePtr*処理する最初の実行時データ列のバッファー。 **SQLParamData** SQL_NEED_DATA を返します。 アプリケーションからのアプリケーション定義の値を取得する、  *\*TargetValuePtr*バッファー。  
   
     > [!NOTE]  
     >  値がによって返される実行時データ パラメーターには、実行時データ列が似ています、 **SQLParamData**はごとに異なります。  
   
      実行時データ列は列のデータを送信する行セットで**SQLPutData**行が更新または挿入**SQLBulkOperations**です。 バインドされている**SQLBindCol**です。 によって返される値**SQLParamData**内の行のアドレスは、**TargetValuePtr*が処理されているバッファー。  
   
-4.  アプリケーションの呼び出し**SQLPutData** 1 回以上の列のデータを送信します。 すべてのデータ値を返すことはできない場合、複数の呼び出しが必要、 * \*TargetValuePtr*で指定されたバッファー **SQLPutData**; を複数回呼び出す**SQLPutData**文字、バイナリ、またはデータ ソース固有のデータ型の列に文字データを送信するときにのみ、または列を文字、バイナリ、C のバイナリ データを送信するときに、同じ列が許可されるか、データ ソース固有のデータ型します。  
+4.  アプリケーションの呼び出し**SQLPutData** 1 回以上の列のデータを送信します。 すべてのデータ値を返すことはできない場合、複数の呼び出しが必要、  *\*TargetValuePtr*で指定されたバッファー **SQLPutData**; を複数回呼び出す**SQLPutData**文字、バイナリ、またはデータ ソース固有のデータ型の列に文字データを送信するときにのみ、または列を文字、バイナリ、C のバイナリ データを送信するときに、同じ列が許可されるか、データ ソース固有のデータ型します。  
   
 5.  アプリケーションの呼び出し**SQLParamData**列のすべてのデータが送信されたことを通知するには、もう一度です。  
   
@@ -471,4 +465,3 @@ int main() {
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)
-

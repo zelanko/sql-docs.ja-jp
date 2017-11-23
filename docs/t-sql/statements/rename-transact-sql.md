@@ -1,29 +1,27 @@
 ---
 title: "名前の変更 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 11/20/2017
 ms.prod: 
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d58470957ab58085ddd6a733cf30dbc77ce7439a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rename-transact-sql"></a>名前の変更 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/01/2017
   内のユーザーが作成したテーブルの名前を変更[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 ユーザーが作成したテーブルまたはデータベースの名前を変更[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。  
   
 > [!NOTE]  
->  データベースの名前を変更する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または[!INCLUDE[ssSDS](../../includes/sssds-md.md)]ストアド プロシージャを使用して[sp_renamedb & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  データベースの名前を変更する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ストアド プロシージャを使用して[sp_renamedb &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Azure SQL データベースにおけるデータベースの名前を変更するには、 [ALTER DATABASE (Azure SQL データベース)](/statements/alter-database-azure-sql-database.md)ステートメントです。 
   
 ## <a name="syntax"></a>構文  
   
@@ -112,7 +110,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-rename-a-database"></a>A. データベースの名前変更します。  
- **適用対象:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]のみ    
+ **適用対象:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]のみ  
   
  この例では、AdWorks2 を AdWorks ユーザー定義のデータベースを変更します。  
   
@@ -142,7 +140,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. 別のスキーマにテーブルを移動します。  
  **適用対象:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- ユーザーの意図が別のスキーマにオブジェクトを移動する場合を使用して[ALTER SCHEMA & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-schema-transact-sql.md). たとえば、テーブルの項目は、製品スキーマから、dbo スキーマにこの移動します。  
+ ユーザーの意図が別のスキーマにオブジェクトを移動する場合を使用して[ALTER SCHEMA &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-schema-transact-sql.md). たとえば、テーブルの項目は、製品スキーマから、dbo スキーマにこの移動します。  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
@@ -164,4 +162,3 @@ KILL 'SID1234';
 ```  
   
   
-

@@ -3,37 +3,37 @@ title: "外部テーブル (TRANSACT-SQL) を作成 |Microsoft ドキュメン�
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
 - CREATE EXTERNAL TABLE
 - PolyBase, T-SQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abb5affb76f0caac24e973928561939280ba40
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Hadoop クラスターまたは Azure blob ストレージに格納されたデータを参照する PolyBase 外部テーブルを作成します。 外部テーブルを作成するためにも使用する[柔軟なデータベース クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)です。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
      
 - インポートし、Azure SQL Data Warehouse に Azure Data Lake Store からのデータを保存
   
- 関連項目[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[EXTERNAL TABLE &#40; を削除TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-external-table-transact-sql.md).  
+ 関連項目[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[EXTERNAL TABLE &#40; を削除TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-external-table-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -138,7 +138,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name*です。 [schema_name] です。 |schema_name です。 *table_name*  
  1 つを 3 つの一部の名前を作成するテーブル。 外部テーブルのテーブルのメタデータのみのファイルまたはフォルダーの Hadoop または Azure blob ストレージ内で参照に関する基本的な統計情報と値は SQL に格納されます。 実際のデータが移動またはにに格納されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
- \<column_definition > [,... *n*  ] CREATE EXTERNAL TABLE で 1 つまたは複数の列の定義。 CREATE EXTERNAL TABLE と CREATE TABLE の両方の列を定義する同じ構文を使用します。 例外が次のようには、外部テーブルで、既定の制約を使用することはできません。 列の定義とそのデータ型の詳細について、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md)と[Azure SQL データベースでテーブルを作成する](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)です。  
+ \<column_definition > [,... *n*  ] CREATE EXTERNAL TABLE で 1 つまたは複数の列の定義。 CREATE EXTERNAL TABLE と CREATE TABLE の両方の列を定義する同じ構文を使用します。 例外が次のようには、外部テーブルで、既定の制約を使用することはできません。 列の定義とそのデータ型の詳細について、次を参照してください。 [CREATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md)と[Azure SQL データベースでテーブルを作成する](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)です。  
   
  列の定義には、外部ファイル内のデータを一致データ型と列の数を含む必要があります。 不一致がある場合、実際のデータを照会するときに、ファイルの行が拒否されます。  
   
@@ -180,10 +180,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  ルート フォルダーからのみ読み取り、既定値を変更するには、属性を設定\<polybase.recursive.traversal > を 'false' core-site.xml 構成ファイルにします。 このファイルが下にある`<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`です。 たとえば、 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`のようにします。  
   
  DATA_SOURCE = *external_data_source_name*  
- 外部のデータの場所を含む外部データ ソースの名前を指定します。 この場所は、Hadoop または Azure blob ストレージです。 外部データ ソースを作成するには、使用[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ 外部のデータの場所を含む外部データ ソースの名前を指定します。 この場所は、Hadoop または Azure blob ストレージです。 外部データ ソースを作成するには、使用[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
- 外部データに対するファイルの種類と比較のメソッドを格納する外部のファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには使用[CREATE EXTERNAL FILE FORMAT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ 外部データに対するファイルの種類と比較のメソッドを格納する外部のファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには使用[CREATE EXTERNAL FILE FORMAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  オプションを拒否します。  
  PolyBase を処理する方法を決定する拒否するパラメーターを指定できます*ダーティ*レコードの場合、外部データ ソースからデータを取得します。 データ レコードは、'ダーティ' 場合と見なされますが実際のデータ型または列の数も、外部テーブルの列の定義が一致しません。  
@@ -275,7 +275,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  これに対し、シナリオでは、インポート、つまりにから外部テーブルの選択、PolyBase では、SQL テーブル内の永続的なデータとして、外部データ ソースから取得された行に格納します。 Polybase が外部のデータを取得するときに、クエリの実行中に、新しいテーブルが作成されます。  
   
- PolyBase は、クエリのパフォーマンスを向上させるために Hadoop をクエリの計算の一部をプッシュできます。 これには、述語のプッシュ ダウンは呼び出されます。 これを有効にするには、するには、Hadoop リソース マネージャーの場所で、オプションを指定[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ PolyBase は、クエリのパフォーマンスを向上させるために Hadoop をクエリの計算の一部をプッシュできます。 これには、述語のプッシュ ダウンは呼び出されます。 これを有効にするには、するには、Hadoop リソース マネージャーの場所で、オプションを指定[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  同じまたは別の外部データ ソースを参照している多数の外部テーブルを作成できます。  
   
@@ -284,7 +284,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  アプライアンス オフ、外部テーブルのデータが存在するため、PolyBase の管理されていないと変更またはの外部プロセスによっていつでも削除です。 このため、外部のテーブルに対して uery 結果は決定的である保証はありません。 同じクエリでは、外部のテーブルに対して実行するたびに異なる結果を返すことができます。 同様に、外部のデータが削除されるか、再配置する場合に、クエリが失敗することができます。  
   
- さまざまな外部データ ソースを参照して各いる複数の外部テーブルを作成することができます。 ただし、さまざまな Hadoop のデータ ソースに対してクエリを同時に実行すると、各 Hadoop ソース必要があります同じ 'hadoop 接続' サーバーの構成設定を使用します。 たとえば、ことはできません同時にクエリを実行する Cloudera Hadoop クラスターと Hortonworks の Hadoop クラスターに対してこれらさまざまな構成設定を使用するためです。 構成設定とサポートされる組み合わせでは、次を参照してください。 [PolyBase 接続構成 & #40 です。TRANSACT-SQL と #41 です。](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+ さまざまな外部データ ソースを参照して各いる複数の外部テーブルを作成することができます。 ただし、さまざまな Hadoop のデータ ソースに対してクエリを同時に実行すると、各 Hadoop ソース必要があります同じ 'hadoop 接続' サーバーの構成設定を使用します。 たとえば、ことはできません同時にクエリを実行する Cloudera Hadoop クラスターと Hortonworks の Hadoop クラスターに対してこれらさまざまな構成設定を使用するためです。 構成設定とサポートされる組み合わせでは、次を参照してください。 [PolyBase 接続構成 &#40;です。TRANSACT-SQL と #41 です。](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
  テーブルの外部では、これらのデータ定義言語 (DDL) ステートメントのみが使用できます。  
   
@@ -318,7 +318,7 @@ SQL データ ウェアハウスでは 1 MB にこのような制限が発生し
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. データをテキストで区切られた形式で外部テーブルを作成します。  
- この例では、テキスト区切りのファイルで書式設定されたデータのある外部テーブルを作成するために必要なすべての手順を示します。 外部データ ソースを定義*mydatasource* 、外部ファイル形式*myfileformat*です。 これらのデータベース レベルのオブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照します。 詳細については、次を参照してください。[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ この例では、テキスト区切りのファイルで書式設定されたデータのある外部テーブルを作成するために必要なすべての手順を示します。 外部データ ソースを定義*mydatasource* 、外部ファイル形式*myfileformat*です。 これらのデータベース レベルのオブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照します。 詳細については、次を参照してください。[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  
   
@@ -349,7 +349,7 @@ WITH (
 ```  
   
 ### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. RCFile 形式でのデータには、外部テーブルを作成します。  
- この例では、外部テーブルを持つ RCFiles として書式設定されたデータの作成に必要なすべての手順を示します。 外部データ ソースを定義*mydatasource_rc* 、外部ファイル形式*myfileformat_rc*です。 これらのデータベース レベルのオブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照します。 詳細については、次を参照してください。[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ この例では、外部テーブルを持つ RCFiles として書式設定されたデータの作成に必要なすべての手順を示します。 外部データ ソースを定義*mydatasource_rc* 、外部ファイル形式*myfileformat_rc*です。 これらのデータベース レベルのオブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照します。 詳細については、次を参照してください。[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  
   
@@ -381,7 +381,7 @@ WITH (
 ```  
   
 ### <a name="c-create-an-external-table-with-data-in-orc-format"></a>C. ORC 形式でのデータには、外部テーブルを作成します。  
- この例を ORC ファイルとして書式設定されたデータを持つ外部テーブルを作成するのに必要なすべての手順を示します。 これは、外部データのソース mydatasource_orc と外部ファイルの形式 myfileformat_orc を定義します。 これらのデータベース レベルのオブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照します。 詳細については、次を参照してください。[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ この例を ORC ファイルとして書式設定されたデータを持つ外部テーブルを作成するのに必要なすべての手順を示します。 これは、外部データのソース mydatasource_orc と外部ファイルの形式 myfileformat_orc を定義します。 これらのデータベース レベルのオブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照します。 詳細については、次を参照してください。[外部データ ソースの作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  
   
@@ -469,102 +469,7 @@ WITH
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-create-an-external-table-with-data-in-text-delimited-format"></a>H. データをテキストで区切られた形式で外部テーブルを作成します。  
- この例では、テキスト区切りのファイルで書式設定されたデータのある外部テーブルを作成するために必要なすべての手順を示します。 これは、外部データ ソースの mydatasource と外部のファイルの書式指定 myfileformat を定義します。 これらのサーバー レベル オブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照し、されます。 詳細については、次を参照してください。[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat  
-WITH (  
-    FORMAT_TYPE = DELIMITEDTEXT,   
-    FORMAT_OPTIONS (FIELD_TERMINATOR ='|')  
-);  
-  
-CREATE EXTERNAL TABLE ClickStream (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee.tbl',  
-        DATA_SOURCE = mydatasource,  
-        FILE_FORMAT = myfileformat  
-    )  
-;  
-  
-```  
-  
-### <a name="i-create-an-external-table-with-data-in-rcfile-format"></a>I. RCFile 形式でのデータには、外部テーブルを作成します。  
- この例では、外部テーブルを持つ RCFiles として書式設定されたデータの作成に必要なすべての手順を示します。 これは、外部データ ソース mydatasource_rc および外部ファイル形式 myfileformat_rc を定義します。 これらのサーバー レベル オブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照し、されます。 詳細については、次を参照してください。[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_rc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_rc  
-WITH (  
-    FORMAT = RCFILE,  
-    SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_rc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee_rc.tbl',  
-        DATA_SOURCE = mydatasource_rc,  
-        FILE_FORMAT = myfileformat_rc  
-    )  
-;  
-  
-```  
-  
-### <a name="j-create-an-external-table-with-data-in-orc-format"></a>J. ORC 形式でのデータには、外部テーブルを作成します。  
- この例を ORC ファイルとして書式設定されたデータを持つ外部テーブルを作成するのに必要なすべての手順を示します。 これは、外部データのソース mydatasource_orc と外部ファイルの形式 myfileformat_orc を定義します。 これらのサーバー レベル オブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照し、されます。 詳細については、次を参照してください。[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-data-source-transact-sql.md)と[外部ファイル形式の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_orc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_orc  
-WITH (  
-    FORMAT = ORC,  
-    COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_orc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/',  
-        DATA_SOURCE = mydatasource_orc,  
-        FILE_FORMAT = myfileformat_orc  
-    )  
-;  
-  
-```  
-  
-### <a name="k-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>K. ADLS から Azure にデータをインポートします。[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. ADLS から Azure にデータをインポートします。[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```  
@@ -610,7 +515,7 @@ AS SELECT * FROM
      
 ```  
   
-### <a name="l-join-external-tables"></a>L. 外部テーブルを結合します。  
+### <a name="i-join-external-tables"></a>I. 外部テーブルを結合します。  
   
 ```  
 SELECT url.description  
@@ -620,7 +525,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="m-join-hdfs-data-with-pdw-data"></a>M. PDW データでのデータを HDFS 結合します。  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>J. PDW データでのデータを HDFS 結合します。  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  
@@ -630,7 +535,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="n-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>N. HDFS から分散 PDW テーブルに行のデータをインポートします。  
+### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>K. HDFS から分散 PDW テーブルに行のデータをインポートします。  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -639,7 +544,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="o-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>O.  HDFS から PDW のレプリケートされたテーブルに行のデータをインポートします。  
+### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>L. HDFS から PDW のレプリケートされたテーブルに行のデータをインポートします。  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -657,7 +562,6 @@ FROM ClickStream
  [テーブルとして選択 &#40; を作成します。Azure SQL Data Warehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
-
 
 
 

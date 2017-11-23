@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DELETE
 - DELETE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - row removal [SQL Server]
 - DELETE statement [SQL Server], about DELETE statement
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 339b84a5362bd2011a557bb2f45e2bee8c3eb101
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +99,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  共通テーブル式は、SELECT、INSERT、UPDATE、CREATE VIEW の各ステートメントでも使用できます。 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  上部**(***式***)** [PERCENT]  
- 削除するランダムな行数または比率 (%) を指定します。 *expression* は行数または行の比率 (%) にすることができます。 INSERT、UPDATE、または DELETE を使用する TOP 式で参照される行は、順序付けされません。 詳細については、次を参照してください。 [TOP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
+ 削除するランダムな行数または比率 (%) を指定します。 *expression* は行数または行の比率 (%) にすることができます。 INSERT、UPDATE、または DELETE を使用する TOP 式で参照される行は、順序付けされません。 詳細については、次を参照してください。 [TOP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
  DELETE キーワードとターゲットの間で使用できるオプションのキーワード*table_or_view_name*、または*rowset_function_limited*です。  
@@ -126,7 +123,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  テーブル変数は、そのスコープ内では、DELETE ステートメントでテーブル ソースとしても使用できます。  
   
- によって参照されるビュー *table_or_view_name*可能にし、ビュー定義の FROM 句内のただ 1 つのベース テーブルを参照する必要があります。 更新可能なビューの詳細については、次を参照してください。 [CREATE VIEW & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
+ によって参照されるビュー *table_or_view_name*可能にし、ビュー定義の FROM 句内のただ 1 つのベース テーブルを参照する必要があります。 更新可能なビューの詳細については、次を参照してください。 [CREATE VIEW &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -134,7 +131,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  いずれか、 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)関数、プロバイダーの機能です。  
   
  **(** \<Table_hint_limited > [.*n*] **)**  
- 対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
+ 対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause >  
  DELETE 操作の一部として、削除された行または行に基づく式を返します。 OUTPUT 句は、ビューまたはリモート テーブルを対象とする DML ステートメントではサポートされません。 詳細については、次を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -156,7 +153,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   位置指定削除。CURRENT OF 句を使用してカーソルを指定します。 削除操作は、カーソルの現在の位置で発生します。 これは、WHERE を使用する検索結果の DELETE ステートメントよりも正確*search_condition*句を削除する行を修飾します。 検索結果削除の DELETE ステートメントでは、検索条件で 1 つの行が一意に識別されない場合、複数の行が削除されます。  
   
 \<search_condition >  
- 削除する行を制限する条件を指定します。 検索条件に含まれる述語の数に制限はありません。 詳細については、次を参照してください。[検索条件 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
+ 削除する行を制限する条件を指定します。 検索条件に含まれる述語の数に制限はありません。 詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CURRENT OF  
  指定したカーソルの現在位置で DELETE を実行します。  
@@ -174,9 +171,9 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のステートメント処理をカスタマイズするためのオプティマイザー ヒントを示すキーワードです。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- テーブル内のすべての行を削除するには、TRUNCATE TABLE を使用します。 DELETE と比べると TRUNCATE TABLE の方が高速で、システムとトランザクション ログのリソース使用量も少なくて済みます。 TRUNCATE TABLE には制限があり、たとえば、テーブルがレプリケーションに参加することはできません。 詳細については、次を参照してください。 [TRUNCATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/truncate-table-transact-sql.md)  
+ テーブル内のすべての行を削除するには、TRUNCATE TABLE を使用します。 DELETE と比べると TRUNCATE TABLE の方が高速で、システムとトランザクション ログのリソース使用量も少なくて済みます。 TRUNCATE TABLE には制限があり、たとえば、テーブルがレプリケーションに参加することはできません。 詳細については、次を参照してください。 [TRUNCATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/truncate-table-transact-sql.md)  
   
- 使用して、@@ROWCOUNT関数の数を返しますが、クライアント アプリケーションに行を削除します。 詳細については、次を参照してください。 [@@ROWCOUNT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md).  
+ 使用して、@@ROWCOUNT関数の数を返しますが、クライアント アプリケーションに行を削除します。 詳細については、次を参照してください。 [@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>エラー処理  
  TRY...CATCH 構造でステートメントを指定することで、DELETE ステートメントのエラー処理を実装できます。  
@@ -190,7 +187,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  FILESTREAM 列を含む行を削除すると、その基となるファイル システム ファイルも削除されます。 基になるファイルは、FILESTREAM ガベージ コレクターによって削除されます。 詳細については、次を参照してください。 [TRANSACT-SQL による FILESTREAM データをアクセス](../../relational-databases/blob/access-filestream-data-with-transact-sql.md)です。  
   
- INSTEAD OF トリガーが定義されているビューを直接または間接的に参照している DELETE ステートメントでは、FROM 句は指定できません。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
+ INSTEAD OF トリガーが定義されているビューを直接または間接的に参照している DELETE ステートメントでは、FROM 句は指定できません。 INSTEAD of トリガーの詳細については、次を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  TOP を DELETE と共に使用する場合、参照される行は任意の順序に並べられません。また、このステートメントで、ORDER BY 句を直接指定することはできません。 TOP を使用して、意味のある順序で行を削除する必要がある場合は、サブセレクト ステートメントで ORDER BY 句を指定して TOP を使用する必要があります。 例については、後の「例」のセクションを参照してください。  
@@ -204,7 +201,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  ヒープ内の行を削除し、ページの割り当てを解除するには、次のいずれかの方法を使用します。  
   
--   DELETE ステートメントで TABLOCK ヒントを指定します。 TABLOCK ヒントを使用すると、削除操作では、行またはページ ロックではなく、テーブルの排他的ロックが取得されます。 これにより、ページの割り当てを解除できるようになります。 TABLOCK ヒントの詳細については、次を参照してください。[テーブル ヒント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
+-   DELETE ステートメントで TABLOCK ヒントを指定します。 TABLOCK ヒントを使用すると、削除操作では、行またはページ ロックではなく、テーブルの排他的ロックが取得されます。 これにより、ページの割り当てを解除できるようになります。 TABLOCK ヒントの詳細については、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
   
 -   テーブルからすべての行を削除する場合は、TRUNCATE TABLE を使用します。  
   
@@ -482,11 +479,10 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [TRUNCATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
   
-
 

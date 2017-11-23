@@ -3,17 +3,18 @@ title: "FREETEXT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FREETEXT
 - FREETEXT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], meaning matches
 - meaning matches [full-text search]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - words in predicate [full-text search]
 - column searches [full-text search]
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9c7475e73cbd5022bf5c243fbd4e7a35dc115cf0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48c7ce4788a0c5da0b22e80ab1dc366091c25f97
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用される述語である、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 句](../../t-sql/queries/where-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントを実行する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索をフルテキスト インデックス文字ベースのデータ型を含む列を作成します。 この述語は、検索条件の文字列の並びと正確に一致しなくても意味が合っている値を検索できます。 フルテキスト クエリ エンジンが、上、次の操作を内部で実行する FREETEXT を使用する場合、 *freetext_string*各語に重みを割り当てます、および一致を検索します。  
   
@@ -76,7 +76,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  WEIGHT、FORMSOF、ワイルドカード、NEAR、およびその他の構文は使用できません。 *freetext_string*は単語、語幹に分割され、類義語辞典を通過します。  
   
- *freetext_string*は**nvarchar**です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 次の例で、`@SearchWord`として定義されている変数`varchar(30)`で暗黙的な変換により、`FREETEXT`述語。  
+ *freetext_string*は**nvarchar**です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例で、`@SearchWord`として定義されている変数`varchar(30)`で暗黙的な変換により、`FREETEXT`述語。  
   
 ```  
   
@@ -111,7 +111,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 このような列のクエリを実行する場合を指定して*言語**language_term*とよく一致の確率を高めることができます。  
   
- 文字列として指定されている場合*language_term*に対応する、**エイリアス**彼は列の値[sys.syslanguages & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列は、ように、単一引用符で囲む必要があります '*language_term*' です。 整数として指定すると*language_term*言語を識別する実際の LCID です。 16 進数の値として指定する*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ 文字列として指定されている場合*language_term*に対応する、**エイリアス**彼は列の値[sys.syslanguages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。  文字列は、ように、単一引用符で囲む必要があります '*language_term*' です。 整数として指定すると*language_term*言語を識別する実際の LCID です。 16 進数の値として指定する*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
  値が 2 バイト文字セット (DBCS) の形式である場合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unicode に変換されます。  
   
@@ -125,7 +125,7 @@ FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用す�
  フルテキスト述語は使用できません、 [OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)データベースの互換性レベルを 100 に設定するとします。  
   
 > [!NOTE]  
->  FREETEXTTABLE 関数は、FREETEXT 述語と同様の検索に役立ちます。 通常のテーブル名のようにこの関数を参照することができます、[句から](../../t-sql/queries/from-transact-sql.md)SELECT ステートメントのです。 詳細については、次を参照してください。 [FREETEXTTABLE & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+>  FREETEXTTABLE 関数は、FREETEXT 述語と同様の検索に役立ちます。 通常のテーブル名のようにこの関数を参照することができます、[句から](../../t-sql/queries/from-transact-sql.md)SELECT ステートメントのです。 詳細については、次を参照してください。 [FREETEXTTABLE &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="querying-remote-servers"></a>リモート サーバーのクエリ  
  4 部構成の名前を使用することができます、 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)または FREETEXT 述語をフルテキスト クエリには、リンク サーバー上の対象テーブルの列がインデックス付きです。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。  
@@ -173,7 +173,6 @@ GO
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [ここで & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+ [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
   
   
-

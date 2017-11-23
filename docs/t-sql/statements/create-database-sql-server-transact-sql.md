@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - CONTAINS_FILESTREAM_TSQL
 - CONTAINS FILESTREAM
 - CONTAINMENT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], creating
 - databases [SQL Server], creating
@@ -38,17 +36,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: 212
+caps.latest.revision: "212"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +177,7 @@ CREATE DATABASE database_snapshot_name
   
  照合順序名は、FOR ATTACH 句または FOR ATTACH_REBUILD_LOG 句と共に指定することはできません。 アタッチされたデータベースの照合順序を変更する方法についてを参照してくださいこの[Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)です。  
   
- Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
+ Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
   
 > [!NOTE]  
 >  包含データベースは、非包含データベースとは異なる方法で照合されます。 参照してください[Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)詳細についてはします。  
@@ -327,7 +324,7 @@ CREATE DATABASE database_snapshot_name
   
  FOR ATTACH_REBUILD_LOG はデータベース スナップショットでは指定できません。  
   
- アタッチして、データベースのデタッチに関する詳細については、次を参照してください。[データベースのデタッチとアタッチ & #40 です。SQL Server &#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ アタッチして、データベースのデタッチに関する詳細については、次を参照してください。[データベースのデタッチとアタッチ &#40;です。SQL Server &#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
  \<filespec >  
  ファイル プロパティを制御します。  
@@ -473,14 +470,14 @@ CREATE DATABASE database_snapshot_name
 > [!NOTE]  
 >  データベース スナップショットを作成する際、CREATE DATABASE ステートメントは、ログ ファイル、オフライン ファイル、復元ファイル、および現存しないファイルを参照することはできません。  
   
- データベース スナップショットの作成に失敗した場合、スナップショットは問題ありになります、削除する必要があります。 詳細については、次を参照してください。 [DROP DATABASE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-database-transact-sql.md).  
+ データベース スナップショットの作成に失敗した場合、スナップショットは問題ありになります、削除する必要があります。 詳細については、次を参照してください。 [DROP DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-database-transact-sql.md).  
   
  各スナップショットは、削除されるまで、DROP DATABASE を使用して保持されます。  
   
  詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
 ## <a name="database-options"></a>データベース オプション  
- データベースを作成するたびに、いくつかのデータベース オプションが自動的に設定されます。 これらのオプションの一覧は、次を参照してください。 [ALTER DATABASE SET Options & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ データベースを作成するたびに、いくつかのデータベース オプションが自動的に設定されます。 これらのオプションの一覧は、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ## <a name="the-model-database-and-creating-new-databases"></a>model データベースと新しいデータベースの作成  
  内のすべてのユーザー定義オブジェクト、 [model データベース](../../relational-databases/databases/model-database.md)新しく作成されたすべてのデータベースにコピーされます。 テーブル、ビュー、ストアド プロシージャ、データ型など、あらゆるオブジェクトを model データベースに追加し、新しく作成されたすべてのデータベースに含めることができます。  
@@ -542,7 +539,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. データ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する  
- 次の例は、データベースを作成`Sales`です。 PRIMARY キーワードがない使用されるため、最初のファイル (`Sales_dat`) がプライマリ ファイルとなります。 `Sales_dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales_log` ファイルは、`SIZE` パラメーターに `MB` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
+ 次の例は、データベースを作成`Sales`です。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales_dat`) がプライマリ ファイルになります。 `Sales_dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales_log` ファイルは、`SIZE` パラメーターに `MB` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
   
 ```tsql  
 USE master;  
@@ -843,12 +840,11 @@ GO
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_changedbowner & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_detach_db & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_removedbreplication & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [sp_changedbowner &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_detach_db &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_removedbreplication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)   
  [データベース](../../relational-databases/databases/databases.md)   
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-
 

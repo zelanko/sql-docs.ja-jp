@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER TRIGGER
 - ALTER_TRIGGER_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DDL triggers, modifying
 - triggers [SQL Server], modifying
@@ -24,22 +22,21 @@ helpviewer_keywords:
 - ALTER TRIGGER statement
 - DML triggers, modifying
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 29808a6c96bfcdef3bc892463604a474b567878f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ae43399e1154e326ccee3d8760d59c71b73de5b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  以前に CREATE TRIGGER ステートメントで作成された DML トリガー、DDL トリガー、またはログオン トリガーの定義を変更します。 トリガーは、CREATE TRIGGER を使用して作成します。 直接作成する必要が[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント内に作成されるアセンブリのメソッドから、または、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) のインスタンスにアップロードし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ALTER TRIGGER ステートメントで使用されるパラメーターの詳細については、次を参照してください。 [CREATE TRIGGER & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
+  以前に CREATE TRIGGER ステートメントで作成された DML トリガー、DDL トリガー、またはログオン トリガーの定義を変更します。 トリガーは、CREATE TRIGGER を使用して作成します。 直接作成する必要が[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント内に作成されるアセンブリのメソッドから、または、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) のインスタンスにアップロードし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ALTER TRIGGER ステートメントで使用されるパラメーターの詳細については、次を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -225,7 +222,7 @@ AS { sql_statement
  トリガーにバインドするアセンブリのメソッドを指定します。 このメソッドは引数を受け取らず、void を返す必要があります。 *class_name*は有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子アセンブリの可視性を持つアセンブリ内のクラスとして存在する必要があります。 入れ子にされたクラスは使用できません。  
   
 ## <a name="remarks"></a>解説  
- ALTER TRIGGER の詳細についてで「解説」を参照してください。 [CREATE TRIGGER & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
+ ALTER TRIGGER の詳細についてで「解説」を参照してください。 [CREATE TRIGGER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  
 >  EXTERNAL_NAME オプションおよび ON_ALL_SERVER オプションは、包含データベースでは使用できません。  
@@ -278,7 +275,7 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sp_addmessage & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [トランザクション](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [DML トリガーに関する情報の取得](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [DDL トリガーに関する情報を取得します。](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
@@ -293,4 +290,3 @@ GO
  [パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
   
   
-

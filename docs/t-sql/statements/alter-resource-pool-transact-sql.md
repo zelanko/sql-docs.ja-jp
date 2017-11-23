@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_RESOURCE_POOL_TSQL
 - ALTER RESOURCE POOL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER RESOURCE POOL
+dev_langs: TSQL
+helpviewer_keywords: ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 662686f08e370f3d3ee4dee3211f28df58e3b171
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +90,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
   
  リソース プールを特定のスケジューラにアタッチします。 既定値は AUTO です。  
   
- AFFINITY SCHEDULER (Scheduler_range_spec) マップをリソース プールを =、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定した Id によって識別されます。 これらの Id の値にマップがの scheduler_id column 内[sys.dm_os_schedulers & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
+ AFFINITY SCHEDULER (Scheduler_range_spec) マップをリソース プールを =、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定した Id によって識別されます。 これらの Id の値にマップがの scheduler_id column 内[sys.dm_os_schedulers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
   
  AFFINITY NAMANODE = (NUMA_node_range_spec) を使用すると、リソース プールは、指定した NUMA ノードまたはノードの範囲に対応する物理 CPU にマップされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスケジューラに関連付けられます。 次の TRANSACT-SQL クエリを使用するを物理 NUMA 構成の間のマッピングを検出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スケジューラ Id。  
   
@@ -188,4 +184,3 @@ GO
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-

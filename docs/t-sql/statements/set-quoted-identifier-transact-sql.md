@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET_QUOTED_IDENTIFIER_TSQL
 - SET QUOTED_IDENTIFIER
 - QUOTED_IDENTIFIER
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - delimited identifiers [SQL Server]
 - identifiers [SQL Server], delimited
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - ISO delimited identifiers rules
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 207cf23523a315a0a4a4bc923ae9e52d7b82f8b0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c6ba7962a9721dad3c3f043f960c72f718f6062
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +64,7 @@ SET QUOTED_IDENTIFIER ON
   
  SET QUOTED_IDENTIFIER が OFF (既定値) の場合、式の内部のリテラル文字列は、単一引用符と二重引用符のどちらで区切ることもできます。 リテラル文字列を二重引用符で区切る場合は、文字列の内部でアポストロフィなどの埋め込み単一引用符を使用できます。  
   
- 計算列やインデックス付きビューのインデックスを作成または操作するときには、SET QUOTED_IDENTIFIER を ON に設定する必要があります。 SET QUOTED_IDENTIFIER が OFF の場合、計算列上にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、および DELETE ステートメントを実行しようとすると失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列やインデックス付きビューのインデックスを作成または操作するときには、SET QUOTED_IDENTIFIER を ON に設定する必要があります。 SET QUOTED_IDENTIFIER が OFF の場合、計算列上にインデックスが設定されているテーブルやインデックス付きビューに対して CREATE、UPDATE、INSERT、および DELETE ステートメントを実行しようとすると失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
   
  フィルター選択されたインデックスを作成する場合は、SET QUOTED_IDENTIFIER を ON に設定する必要があります。  
   
@@ -83,7 +80,7 @@ SET QUOTED_IDENTIFIER ON
   
  SET ANSI_DEFAULTS が ON の場合、SET QUOTED_IDENTIFIER は有効になります。  
   
- SET QUOTED_IDENTIFIER は、ALTER DATABASE の QUOTED_IDENTIFIER 設定にも対応します。 データベースの設定の詳細については、次を参照してください。 [ALTER DATABASE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+ SET QUOTED_IDENTIFIER は、ALTER DATABASE の QUOTED_IDENTIFIER 設定にも対応します。 データベースの設定の詳細については、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
   
  SET QUOTED_IDENTIFIER は解析時では、有効で、のみに影響を与える解析では、クエリを実行できません。  
   
@@ -209,8 +206,7 @@ GO
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET ansi_defaults] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [sp_rename & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
+ [[SET ansi_defaults] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [sp_rename &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
   
   
-

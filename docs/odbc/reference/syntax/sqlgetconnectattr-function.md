@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetConnectOption
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetConnectOption
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetConnectAttr
-helpviewer_keywords:
-- SQLGetConnectAttr function [ODBC]
+f1_keywords: SQLGetConnectAttr
+helpviewer_keywords: SQLGetConnectAttr function [ODBC]
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1162bf771e9a3d757986c0b6a94d1a36dd4892f4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc8f754301b5b0c0d5259cd7613bacdf302a06e7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 関数
 **準拠**  
@@ -69,20 +63,20 @@ SQLRETURN SQLGetConnectAttr(
  場合*ValuePtr* null、 *StringLengthPtr*バイト (文字データの null 終端文字を除く) の合計数を返すはまだが指すバッファーに返される使用可能な*ValuePtr*です。  
   
  *BufferLength*  
- [入力]場合*属性*ODBC で定義された属性と*ValuePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *ValuePtr*. 場合*属性*ODBC で定義された属性と\* *ValuePtr*整数*BufferLength*は無視されます。 場合の値* \*ValuePtr* Unicode 文字列です (呼び出し時に**SQLGetConnectAttrW**) では、 *BufferLength*引数は偶数である必要があります。  
+ [入力]場合*属性*ODBC で定義された属性と*ValuePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *ValuePtr*. 場合*属性*ODBC で定義された属性と\* *ValuePtr*整数*BufferLength*は無視されます。 場合の値 *\*ValuePtr* Unicode 文字列です (呼び出し時に**SQLGetConnectAttrW**) では、 *BufferLength*引数は偶数である必要があります。  
   
  場合*属性*ドライバーの定義済みの属性は、アプリケーション、ドライバー マネージャーに属性の性質を示す設定、 *BufferLength*引数。 *BufferLength*次の値を持つことができます。  
   
--   場合* \*ValuePtr*文字の文字列を指すポインター *BufferLength*文字列の長さです。  
+-   場合 *\*ValuePtr*文字の文字列を指すポインター *BufferLength*文字列の長さです。  
   
--   場合* \*ValuePtr*バイナリのバッファー、アプリケーションの場所へのポインター、SQL_LEN_BINARY_ATTR の結果である (*長さ*) マクロで*BufferLength*です。 これにより、配置に負の値*BufferLength*です。  
+-   場合 *\*ValuePtr*バイナリのバッファー、アプリケーションの場所へのポインター、SQL_LEN_BINARY_ATTR の結果である (*長さ*) マクロで*BufferLength*です。 これにより、配置に負の値*BufferLength*です。  
   
--   場合* \*ValuePtr*文字の文字列またはバイナリ文字列以外の値を指すポインター *BufferLength* SQL_IS_POINTER 値でなければなりません。  
+-   場合 *\*ValuePtr*文字の文字列またはバイナリ文字列以外の値を指すポインター *BufferLength* SQL_IS_POINTER 値でなければなりません。  
   
--   場合* \*ValuePtr* 、固定長データ型を含む*BufferLength*は SQL_IS_INTEGER か SQL_IS_UINTEGER、必要に応じて。  
+-   場合 *\*ValuePtr* 、固定長データ型を含む*BufferLength*は SQL_IS_INTEGER か SQL_IS_UINTEGER、必要に応じて。  
   
  *StringLengthPtr*  
- [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*です。 場合\* *ValuePtr* null ポインターでは、長さは返されません。 属性値、文字の文字列であり、使用できるバイト数を返すよりも大きい場合*BufferLength* null 終端文字、内のデータの長さマイナス* \*ValuePtr*に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*です。 場合\* *ValuePtr* null ポインターでは、長さは返されません。 属性値、文字の文字列であり、使用できるバイト数を返すよりも大きい場合*BufferLength* null 終端文字、内のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE です。  
@@ -100,7 +94,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|(DM) **SQLBrowseConnect**で呼び出され、 *ConnectionHandle* SQL_NEED_DATA が返されます。 この関数が呼び出されました**SQLBrowseConnect** SQL_SUCCESS_WITH_INFO または SQL_SUCCESS が返されます。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *ConnectionHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) * \*ValuePtr*文字の文字列、および BufferLength は SQL_NTS に等しくないが、0 より小さい。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*ValuePtr*文字の文字列、および BufferLength は SQL_NTS に等しくないが、0 より小さい。|  
 |HY092|無効な属性またはオプション識別子|引数が指定された値*属性*が ODBC ドライバーでサポートされているのバージョンは無効です。|  
 |HY114|ドライバーは接続レベルの非同期関数の実行をサポートしていません|(DM) アプリケーションは、非同期の接続操作をサポートしていないドライバーの SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE で非同期関数の実行を有効にしようとしました。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
@@ -136,4 +130,3 @@ SQLRETURN SQLGetConnectAttr(
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)
-

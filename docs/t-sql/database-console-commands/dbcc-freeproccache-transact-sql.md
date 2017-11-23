@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - FREEPROCCACHE
 - DBCC_FREEPROCCACHE_TSQL
 - DBCC FREEPROCCACHE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - freeing procedure cache
 - removing procedure cache elements
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ae416ab23f27a7f71951ac05a6c69d0abb00a90d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/16/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 10/16/2017
 プラン キャッシュからすべての要素を削除するか、プラン ハンドルまたは SQL ハンドルを指定して特定のプランを削除するか、指定したリソース プールに関連付けられたすべてのキャッシュ エントリを削除します。
 
 >[!NOTE]
->DBCC FREEPROCCACHE では、ネイティブ コンパイル ストアド プロシージャの実行統計は消去されません。 プロシージャ キャッシュには、ネイティブ コンパイル ストアド プロシージャに関する情報は含まれていません。 プロシージャの実行から収集された実行統計は、実行統計の Dmv に表示されます: [sys.dm_exec_procedure_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)と[sys.dm_exec_query_plan & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>DBCC FREEPROCCACHE では、ネイティブ コンパイル ストアド プロシージャの実行統計は消去されません。 プロシージャ キャッシュには、ネイティブ コンパイル ストアド プロシージャに関する情報は含まれていません。 プロシージャの実行から収集された実行統計は、実行統計の Dmv に表示されます: [sys.dm_exec_procedure_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)と[sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -224,7 +221,6 @@ GO
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)  
-[ALTER データベース スコープ ベースの構成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[ALTER データベース スコープ ベースの構成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
-

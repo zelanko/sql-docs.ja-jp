@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -18,23 +17,21 @@ applies_to:
 f1_keywords:
 - ALL_TSQL
 - ALL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b6ea6be0d745ca5ce61a540e9a1e299671d8c7fd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fd1b250a30b83a3b014384aafee6c40ff4f1a5a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +68,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="remarks"></a>解説  
  すべてが必要、 *scalar_expression*サブクエリによって返されるすべての値に対し肯定的な比較します。 インスタンスのサブクエリは 2 および 3 の値を返す場合は、 *scalar_expression* < = ALL (subquery) は TRUE と評価、 *scalar_expression* 2 のです。 サブクエリは 2 および 3 の値を返す場合*scalar_expression* = ALL (subquery) はサブクエリ (値 3) の値の一部は、式の条件を満たさないために、FALSE と評価します。  
   
- ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返される 1 つだけの値に対し肯定的な比較を参照してください。[一部 & #124 です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md).  
+ ステートメントを必要とする、 *scalar_expression* 、サブクエリによって返される 1 つだけの値に対し肯定的な比較を参照してください。[一部 &#124;です。いずれかと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/some-any-transact-sql.md).  
   
  このトピックでは、ALL をサブクエリと共に使用する場合を想定しています。 すべてでも使用できます[共用体](../../t-sql/language-elements/set-operators-union-transact-sql.md)と[選択](../../t-sql/queries/select-transact-sql.md)です。  
   
@@ -117,14 +114,13 @@ EXECUTE DaysToBuild 49080, 1 ;
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>参照  
- [場合 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [場合 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [ような & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
- [IN & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/in-transact-sql.md)  
+ [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/in-transact-sql.md)  
   
   
-

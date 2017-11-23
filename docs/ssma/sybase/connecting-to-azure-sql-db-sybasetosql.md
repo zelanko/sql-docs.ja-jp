@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31c5fe416166627ac63f0f65e3b8c1102fc48f8e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 217492904d3d21818fed28222dcc6acaf193c92b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Azure SQL DB (SybaseToSQL) に接続します。
 Sybase データベースを Azure SQL DB を移行するには、Azure SQL DB のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は Azure SQL DB のインスタンス内のすべてのデータベースに関するメタデータを取得し、Azure SQL DB メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA は、Azure SQL DB に、接続しているが、パスワードを保存しないのインスタンスの情報を格納します。  
@@ -86,13 +84,12 @@ Azure SQL DB データベースについてのメタデータは自動的に更�
   
 -   Sybase スキーマ、Azure SQL DB データベース、およびスキーマ間のマッピングをカスタマイズするを参照してください[に SQL Server スキーマ &#40; Sybase ASE スキーマのマッピング。SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
+-   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング Sybase ASE と SQL Server データ型 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング Sybase ASE と SQL Server データ型 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
   
--   場合は、次のタスクを実行する必要はありません、Sybase データベース オブジェクトの定義を Azure SQL DB オブジェクトの定義に変換できます。 詳細については、次を参照してください。 [Sybase ASE データベース オブジェクトの変換 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+-   場合は、次のタスクを実行する必要はありません、Sybase データベース オブジェクトの定義を Azure SQL DB オブジェクトの定義に変換できます。 詳細については、次を参照してください。 [Sybase ASE データベース オブジェクトの変換 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-
