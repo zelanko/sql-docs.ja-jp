@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 955b214ef035bf957ecf68a2481d85fdf3ec7956
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c29dcd40090a380c124a0c72b07d5993d4295829
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前の表に、SQL ステートメントで使用されます。  
@@ -112,4 +110,3 @@ ms.lasthandoff: 09/09/2017
  *upper case 文字*:: = *A &#124;です。B &#124; です。C &#124;です。D &#124; です。E &#124; です。F &#124; です。G &#124; です。H &#124; です。I &#124; です。J &#124; です。K &#124; です。L &#124; です。M &#124; です。N &#124; です。O &#124; です。P &#124; です。Q &#124; です。R &#124; です。S &#124;です。T &#124; です。U &#124; です。V &#124; です。W &#124; です。X &#124; です。Y&#124; です。Z*  
   
  *ユーザー定義名*:: =*文字*[*桁*&#124;です。*文字*&#124;です。*_*]...
-

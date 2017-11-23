@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67cb0f520c9e75606c7e1ffcae42d20d87a3d9fb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf44de6479d50e188b84679b5c09ce382e541391
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>OLE DB Provider for SQL Server のドライバー対応接続プール
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 09/09/2017
   
     |Keyword|ODBC Driver 13|ODBC Driver 11|
     |-|-|-|
-    |`Address`|はい|可|
+    |`Address`|可|可|
     |`AnsiNPW`|可|可|
     |`App`|可|可|
     |`ApplicationIntent`|可|可|  
@@ -71,13 +69,13 @@ ms.lasthandoff: 09/09/2017
     |`Trusted_Connection`|可|可|
     |`TrustServerCertificate`|可|可|
     |`UID`|可|可|
-    |`WSID`|可|はい|
+    |`WSID`|可|可|
     
 - 接続文字列とプールされた接続文字列の次のいずれかの接続属性の間に違いがある場合、プールされた接続は使用されません。  
   
     |属性|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |`SQL_ATTR_CURRENT_CATALOG`|はい|可|
+    |`SQL_ATTR_CURRENT_CATALOG`|可|可|
     |`SQL_ATTR_PACKET_SIZE`|可|可|
     |`SQL_COPT_SS_ANSI_NPW`|可|可|
     |`SQL_COPT_SS_ACCESS_TOKEN`|可|いいえ|
@@ -103,7 +101,7 @@ ms.lasthandoff: 09/09/2017
   
     |Keyword|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |`AutoTranslate`|はい|可|
+    |`AutoTranslate`|可|可|
     |`Description`|可|可|
     |`MultisubnetFailover`|可|可|  
     |`QueryLog_On`|可|可|
@@ -111,13 +109,13 @@ ms.lasthandoff: 09/09/2017
     |`QueryLogTime`|可|可|
     |`Regional`|可|可|
     |`StatsLog_On`|可|可|
-    |`StatsLogFile`|  可|はい|
+    |`StatsLogFile`|  可|可|
   
      次のいずれかの接続属性を変更した場合、既存の接続を再利用できます。  必要に応じて、ドライバーによって値がリセットされます。 ドライバーは追加のネットワーク呼び出しを行うことなく、クライアントでこれらの属性をリセットできます。  
   
     |属性|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |すべてのステートメント属性|はい|可|
+    |すべてのステートメント属性|可|可|
     |`SQL_ATTR_AUTOCOMMIT`|可|可|
     |`SQL_ATTR_CONNECTION_TIMEOUT`|  可|可|
     |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|可|可|
@@ -132,10 +130,9 @@ ms.lasthandoff: 09/09/2017
     |`SQL_COPT_SS_PRESERVE_CURSORS`|可|可|
     |`SQL_COPT_SS_TRANSLATE`|可|可|
     |`SQL_COPT_SS_USER_DATA`|  可|可|
-    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|可|はい|  
+    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|可|可|  
   
 ## <a name="see-also"></a>参照  
  [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   
-

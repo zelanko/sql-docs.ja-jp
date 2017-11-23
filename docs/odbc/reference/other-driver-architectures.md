@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3fc19dd4b6553362705b7cc57c9431a29aa91ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="other-driver-architectures"></a>他のドライバーのアーキテクチャ
 一部の ODBC ドライバーは、厳密には前に説明したアーキテクチャに準拠しません。 ドライバーが、従来の ODBC ドライバーのもの以外の職務を遂行または通常の意味でのドライバーではない可能性があります。  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  このアーキテクチャの利点の 1 つは、効率的なソフトウェア メンテナンスおよび構成します。 ドライバーは、1 か所でのみ更新が必要: サーバーでします。 システム データ ソースを使用して、データ ソースは、すべてのクライアントで使用するサーバーで定義できます。 データ ソースは、クライアントで定義されていない必要があります。 接続プールは、クライアントがデータ ソースに接続するプロセスを効率化に使用できます。  
   
  クライアントのドライバーは、通常、サーバーへのドライバー マネージャーの呼び出しを転送する非常に小さなドライバーです。 そのフット プリントは、サーバーで完全に機能の ODBC ドライバーよりも大幅に小さくできます。 このアーキテクチャでは、サーバーは、コンピューティング能力を持っている場合、クライアントのリソースを解放できます。 さらに、システム全体のセキュリティと効率性は、バックアップ サーバーをインストールして、サーバーの使用を最適化するために負荷が分散を実行することによって拡張できます。
-

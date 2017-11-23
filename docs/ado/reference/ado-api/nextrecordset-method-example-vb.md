@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- NextRecordset method [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4ad28e324126f0dc7374b6882e727f1052e41d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8876682f825febe1deaf1a00867d543120e83af7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset メソッドの例 (VB)
 この例では、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドの 3 つの異なるから成る複合コマンド ステートメントを使用しているレコード セットからデータを表示する**選択**ステートメントです。  
@@ -104,5 +100,4 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [NextRecordset メソッド (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

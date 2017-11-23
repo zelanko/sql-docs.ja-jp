@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40af606931eb56b518d6435f59885c6260c58264
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 616cc7cb69f6d5e275688dfdf76baa5a8d061508
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-editor-db2tosql"></a>グローバル設定 (エディター) (DB2ToSQL)
 エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  
@@ -36,4 +34,3 @@ ms.lasthandoff: 08/02/2017
   
 この設定を変更すると、コード エディター ウィンドウが選択されている場合は、表示を更新する現在のオブジェクトを選択し直す必要があります。  
   
-

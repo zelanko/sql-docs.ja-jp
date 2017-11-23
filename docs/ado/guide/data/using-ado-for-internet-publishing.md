@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1cf73843e742254e9fcbc71299fa1494a669164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9b26261c83932005ba0852b67e4f246cea47b8e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-for-internet-publishing"></a>インターネットへの発行の ADO を使用します。
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO と異種データへのアクセスの具体的な例を示しています。 このセクションの例では、インターネット パブリッシング用プロバイダーを使用して特定できますは、メール ストア プロバイダーなどの異種データを他のプロバイダーと ADO を使用するときに示されている原則が生成されます。  
@@ -52,16 +50,15 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [インターネットへの発行用の OLE DB プロバイダー](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
+-   [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
--   [インターネット発行シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)  
+-   [インターネットへの発行のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)  
   
--   [絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)  
+-   [絶対 URL と相対 URL](../../../ado/guide/data/absolute-and-relative-urls.md)  
   
 -   [レコードとプロバイダーが指定したフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>参照  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [ストリーム オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [ADO の履歴](../../../ado/guide/ado-history.md)
-
+ [ADO 履歴](../../../ado/guide/ado-history.md)

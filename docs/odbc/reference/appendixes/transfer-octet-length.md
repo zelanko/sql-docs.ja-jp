@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - data types [ODBC], transfer octet length
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9a6655bde245348b3b70c3d29631be1b9caa60b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-octet-length"></a>転送のオクテットの長さ
 転送オクテット長の列は、既定の C データ型にデータが転送されるときに、アプリケーションに返されるバイトの最大数です。 文字データの転送オクテット長に null 終端文字のための領域は含まれません。 列の転送のオクテットの長さは、データ ソースのデータの格納に必要なバイト数よりも異なる可能性があります。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|16 (GUID 構造体のサイズ)。|  
   
  [a] の変数の型の列またはパラメーターの長さを判断できないのは、ドライバー場合、SQL_NO_TOTAL が返されます。
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="considering-database-features-to-use"></a>使用するデータベース機能の検討
 基本レベルの相互運用性がわかったら、アプリケーションで使用されるデータベースの機能を考慮する必要があります。 たとえば、どのような SQL ステートメントは、アプリケーションを実行しますか。 アプリケーションは、スクロール可能なカーソルを使用しますか。 トランザクションしますか。 プロシージャしますか。 長い形式のデータですか。 どのような機能に関する考慮事項は、Dbms のすべてでサポートされていない可能性がありますを参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明、および[付録 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)です。 アプリケーションに必要な機能は、ターゲットの Dbms の一覧から一部の Dbms を除外できます。 アプリケーションの場合、多くの dbms で簡単に対象も示します可能性があります。  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 -   **ドライバーは場合にのみ、複数のクエリをサポートします。** ドライバーに接続すると、アプリケーションはアクティブなステートメントの数を確認します。 アプリケーションは、いずれかが、ドライバーは、複数のアクティブ ステートメントをサポートしている場合にのみ有効では既に、新しいステートメントを開始できます。 アプリケーション機能との相互運用性の高いが、実装することが困難になります。  
   
 -   **常に複数のクエリをサポートし、必要な場合にそれらをエミュレートします。** ドライバーに接続すると、アプリケーションはアクティブなステートメントの数を確認します。 アプリケーションは常には、いずれかが既にアクティブなときに、新しいステートメントを開始するユーザーを許可します。 ドライバーは、1 つだけのアクティブなステートメントをサポートする場合、アプリケーションはドライバーを追加の接続を開きますして、その接続で新しいステートメントを実行します。 アプリケーションすべての機能と相互運用性の高いが、実装することが困難になります。
-

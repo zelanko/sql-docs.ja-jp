@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5250ca91c0a4a90d22742c078cc027d48fea3195
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dcd500c4e71853f5c2a0e88e75d091c8b7df714e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatement-class"></a>PDOStatement クラス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -83,9 +81,8 @@ PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ## <a name="see-also"></a>参照  
 [PDO_SQLSRV ドライバー リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [PHP SQL ドライバーの概要](../../connect/php/overview-of-the-php-sql-driver.md)
-[定数 & #40 です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 [作業の開始](../../connect/php/getting-started-with-the-php-sql-driver.md)
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。
 
@@ -108,7 +113,10 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>共有記憶域を構成して、データベース ファイルの移動 
 
-さまざまな共有記憶域を提供するためのソリューションがあります。 このチュートリアルでは、NFS で共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して NFS を保護することをお勧め (次に例を見つけることができます: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)。 そうしないと場合、ネットワークへのアクセスおよび SQL ノードの IP アドレスを偽装できるすべてのユーザーができるデータ ファイルにアクセスします。 いつものように、脅威モデルの実稼働環境で使用する前に、システムを確認します。 別の記憶域オプションでは、SMB ファイル共有を使用します。
+さまざまな共有記憶域を提供するためのソリューションがあります。 このチュートリアルでは、NFS で共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して NFS を保護することをお勧め (次に例を見つけることができます: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)。 
+
+>[!Warning]
+>NFS を保護していない場合、ネットワークへのアクセスおよび SQL ノードの IP アドレスを偽装できるすべてのユーザーができるデータ ファイルにアクセスします。 いつものように、脅威モデルの実稼働環境で使用する前に、システムを確認します。 別の記憶域オプションでは、SMB ファイル共有を使用します。
 
 ### <a name="configure-shared-storage-with-nfs"></a>Nfs の共有記憶域を構成します。
 
@@ -391,4 +399,3 @@ NFS サーバー上には、次の操作を行います。
 ## <a name="next-steps"></a>次の手順
 
 [Red Hat Enterprise Linux 共有ディスク クラスターで SQL Server の運用します。](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

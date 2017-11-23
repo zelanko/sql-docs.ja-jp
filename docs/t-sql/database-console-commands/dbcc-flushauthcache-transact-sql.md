@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,20 +16,18 @@ f1_keywords:
 - FLUSHAUTHCACHE
 - DBCC_FLUSHAUTHCACHE_TSQL
 - FLUSHAUTHCACHE_TSQL
-helpviewer_keywords:
-- DBCC FLUSHAUTHCACHE
+helpviewer_keywords: DBCC FLUSHAUTHCACHE
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 18fe9c70a774bce85bfdb8a59b54b57064e6c1ad
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ba6a519ebcdbbc70bf19ec491539a3b07fb6c85
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ DBCC FLUSHAUTHCACHE [ ; ]
   
 ## <a name="remarks"></a>解説  
 認証キャッシュは、ログインとは master に格納され、ユーザー データベースでメモリに配置するサーバーのファイアウォール ルールのコピーを作成します。  包含データベース ユーザーに関する情報が既に格納されるため、ユーザー データベースで、包含データベース ユーザーが、認証キャッシュの一部。
-継続的にアクティブな接続[!INCLUDE[ssSDS](../../includes/sssds-md.md)]再認証が必要 (によって実行される、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 少なくとも 10 時間ごとです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]試行の再認証が最初に送信されたパスワードとユーザーがいないを使用して入力が必要です。 パフォーマンス上の理由で、パスワードがリセットされると[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、接続プールのため、接続がリセットされた場合でも、接続の再認証されません。 これは、内部設置型の動作と異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 接続が最初に承認されているために、パスワードは変更されている場合、は、接続を終了する必要があり、新しいパスワードを使用して新しい接続が作成します。 KILL DATABASE CONNECTION 権限を持つユーザーがへの接続を明示的に終了[!INCLUDE[ssSDS](../../includes/sssds-md.md)]を使用して、 [KILL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-transact-sql.md)コマンド。
+継続的にアクティブな接続[!INCLUDE[ssSDS](../../includes/sssds-md.md)]再認証が必要 (によって実行される、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 少なくとも 10 時間ごとです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]試行の再認証が最初に送信されたパスワードとユーザーがいないを使用して入力が必要です。 パフォーマンス上の理由で、パスワードがリセットされると[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、接続プールのため、接続がリセットされた場合でも、接続の再認証されません。 これは、内部設置型の動作と異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 接続が最初に承認されているために、パスワードは変更されている場合、は、接続を終了する必要があり、新しいパスワードを使用して新しい接続が作成します。 KILL DATABASE CONNECTION 権限を持つユーザーがへの接続を明示的に終了[!INCLUDE[ssSDS](../../includes/sssds-md.md)]を使用して、 [KILL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/kill-transact-sql.md)コマンド。
   
 ## <a name="permissions"></a>Permissions  
 必要があります、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。
@@ -66,4 +63,3 @@ DBCC FLUSHAUTHCACHE;
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
-

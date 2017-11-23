@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ConvexHullAggregate_TSQL
 - ConvexHullAggregate
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ConvexHullAggregate method (geography)
+dev_langs: TSQL
+helpviewer_keywords: ConvexHullAggregate method (geography)
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 726bcc637e827c37000112cf66b81dad4e0f691b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a2f112e58838c754b946bdf3870fea31125a813
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ ConvexHullAggregate ( geography_operand )
  入力値が無効である場合は、`FormatException` をスローします。 参照してください[STIsValid (& a) #40; geography データ型 &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 ## <a name="remarks"></a>解説  
- メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 & #40 です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  メソッドは無視**null**入力します。  
   
@@ -77,4 +73,3 @@ ConvexHullAggregate ( geography_operand )
  [拡張された静的な地理メソッド](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

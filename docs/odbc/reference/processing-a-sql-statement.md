@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-a-sql-statement"></a>SQL ステートメントの処理
 プログラムによる SQL を使用する方法を説明する前に、SQL ステートメントを処理する方法について説明する必要があります。 必要な手順は、各方法に異なるタイミングで実行が次の 3 つの方法がすべてに必要な場合に共通です。 次の図では、このセクションの残りの部分で説明する SQL ステートメントの処理に関連した手順を示します。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  DBMS では、アクセスの計画を実行して、ステートメントを実行します。  
   
  データベースへのアクセスが必要として、必要な時間の量の量、SQL ステートメントを処理するための手順が異なります。 SQL ステートメントを解析し、データベースへのアクセスをしないため、非常に迅速に行うことができます。 その一方は、CPU を大量に消費、最適化を処理し、システム カタログへのアクセスが必要です。 だけで複雑なクエリでは、オプティマイザーは何千もの同じクエリを実行するさまざまな方法を調べることがあります。 ただし、効率的でないクエリを実行するコストは非常に高いため、最適化に要した時間が増加したクエリの実行速度の回復は、複数のでは通常です。 これは、反復的なクエリを実行する同じのアクセスを最適化プランを繰り返し使用できる場合、さらに大きなです。
-

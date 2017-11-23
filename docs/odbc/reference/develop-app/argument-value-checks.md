@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5269d810e91187b8c57ce6b2fbd1043d1df3a89d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="argument-value-checks"></a>引数値のチェック
 ドライバー マネージャーでは、次の種類の引数を確認します。 特に記載のない限り、ドライバー マネージャーは、引数の値にエラー SQL_ERROR を返します。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   列とパラメーターの番号より大きいまたは 0 で、関数によって 0 より大きい値にする必要があります。 ドライバーは、現在の結果セットまたは SQL ステートメントに基づくこれらの引数値の数の上限をチェックする必要があります。  
   
 -   長さ/インジケーター引数とデータのバッファー長の引数は、適切な値を含める必要があります。 内のテーブル名の長さを指定する引数など、 **SQLColumns** (*NameLength3*) SQL_NTS または値より大きくなければなりません 0;*BufferLength*で**SQLDescribeCol** 0 以上にする必要があります。 ドライバーは、これらの引数を確認する必要もあります。 たとえば、その可能性があることを確認*NameLength3*がデータ ソースのテーブル名の最大長未満です。
-

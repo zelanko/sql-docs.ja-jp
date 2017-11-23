@@ -1,39 +1,38 @@
 ---
-title: "セキュリティの概要 (SQL Server R サービス) | Microsoft Docs"
+title: "SQL Server の機械学習と R のセキュリティ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f694cca3286b5f1a9f738a08919f4fe8214fa770
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8388d7c9d22a49a49a1a45a6fa6b479107f9ccae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="security-overview-sql-server-r-services"></a>セキュリティの概要 (SQL Server R サービス)
+# <a name="security-for-sql-server-machine-learning-and-r"></a>SQL Server の機械学習と R のセキュリティ
 
-ここでは、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] データベース エンジンおよび関連するコンポーネントを R ランタイムに接続するために使用される全体的なセキュリティ アーキテクチャについて説明します。 セキュリティ プロセスの例は、エンタープライズ環境で R を使用する一般的な次の 2 つのシナリオのために提供されます。
+この記事は、接続に使用される全体的なセキュリティ アーキテクチャをについて説明します、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]データベース エンジンと R ランタイムに関連するコンポーネントです。 R を使用するエンタープライズ環境でこれらの一般的なシナリオについては、セキュリティ処理の例が用意されています。
 
 + データ サイエンス クライアントから [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] で RevoScaleR 関数 を実行
 + ストアド プロシージャを使用して R を [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] から直接実行
 
 ## <a name="security-overview"></a>セキュリティの概要
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] SQL Server のデータを使用するか、計算コンテキストとして SQL Server を実行する R スクリプトを実行するログインまたは Windows ユーザー アカウントが必要です。 この要件は、両方に適用されます。[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]および SQL Server 2017 Machine Learning Services です。 
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] SQL Server のデータを使用するか、計算コンテキストとして SQL Server を実行する R スクリプトを実行するログインまたは Windows ユーザー アカウントが必要です。 この要件は、両方に適用されます。[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]と SQL Server 2017[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]です。
 
 ログインまたはユーザー アカウントを識別、*セキュリティ プリンシパル*、複数レベルのアクセス、R スクリプトの要件に応じて必要がある可能性があります。
+
 + R が有効になっているデータベースにアクセスする権限
 + テーブルなどのセキュリティで保護されたオブジェクトからデータを読み取るアクセス許可
 + モデル、または結果をスコア付けなど、テーブルに新しいデータを書き込む機能
@@ -56,7 +55,7 @@ R コードを実行するにはログインまたは Windows ユーザー ア�
 
 そのため、リモート クライアントから開始されるすべての R ジョブでは、接続文字列の一部としてログインまたはユーザー情報を指定する必要があります。
 
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] セキュリティとスタート パッド セキュリティの相互作用
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>相互作用[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]セキュリティとスタート パッドのセキュリティ
 
 R スクリプトが [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] コンピューターのコンテキストで実行されるとき、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスは、外部プロセス用に確立されたワーカー アカウントのプールから使用可能なワーカー アカウント (ローカル ユーザー アカウント) を取得し、そのワーカー アカウントを使用して関連するタスクを実行します。 
 
@@ -66,23 +65,27 @@ R スクリプトが [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のすべての処理が完了すると、ユーザー ワーカー アカウントは空きとしてマークされ、プールに返されます。
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] について詳しくは、「[New Components in SQL Server to Support R Integration](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)」(R 統合をサポートする SQL Server の新コンポーネント) をご覧ください。
+詳細については[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]を参照してください[R 統合をサポートするために SQL Server のコンポーネント](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)です。
 
-> [!NOTE]
-スタート パッドでワーカー アカウントを管理して R ジョブを実行するには、ワーカー アカウントを含むグループ SQLRUserGroup が [ローカル ログオンを許可する] アクセス許可を持つ必要があります。このアクセス許可がない場合、R Services は機能しないことがあります。 既定ではこのアクセス許可はすべての新規ローカル ユーザーに付与されますが、組織によっては、ワーカー アカウントが SQL Server に接続して R ジョブを実行できないように厳しいグループ ポリシーが実施される可能性があります。  
+### <a name="implied-authentication"></a>暗黙の認証
+
+**黙示的な認証**は、SQL Server がユーザーを取得する処理に使用される用語の資格情報し、ユーザーがデータベースに適切なアクセス許可を持つと仮定した場合、ユーザーの代理のすべての外部のスクリプト タスクを実行します。 黙示的な認証は、R スクリプトは、SQL Server データベースの外部の ODBC 呼び出しを行う必要がある場合に特に重要です。 たとえば、コードでは、スプレッドシートまたはその他のソースから要因の短い一覧を取得する可能性があります。
+
+このようなループバック呼び出しが成功するには、ワーカー アカウント、SQLRUserGroup を含むグループは「ローカル ログオンを許可」権限が必要です。 既定では、この権限はすべての新しいローカル ユーザーに与えられますが、一部の組織より厳密なグループ ポリシーを適用する場合があります。
+
+![R の暗黙の認証](media/implied-auth-rsql.png)
 
 ## <a name="security-of-worker-accounts"></a>ワーカー アカウントのセキュリティ
 
-外部の Windows ユーザーまたはワーカー アカウントに有効な SQL ログインのマッピングは、R スクリプトを実行する SQL クエリの有効期間の有効期間にのみ有効です。 
+外部の Windows ユーザーまたはワーカー アカウントに有効な SQL ログインのマッピングは、R スクリプトを実行する SQL クエリの有効期間の有効期間にのみ有効です。
 
 同じログインからの並列クエリは、同じユーザー ワーカー アカウントにマップされます。
 
 プロセスで使用されるディレクトリは、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] が RLauncher を使用して管理します。ディレクトリへのアクセスは制限されます。 ワーカー アカウントは、自分のフォルダーよりも上にあるフォルダー内のファイルにはアクセスできません。ただし、R スクリプトを含む SQL クエリのために作成されたセッション作業フォルダー内の子ファイルの読み取り、書き込み、削除は行うことができます。
 
-ワーカー アカウントの数、アカウント名、またはアカウント パスワードを変更する方法について詳しくは、「[Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md)」(SQL Server R Services のユーザー アカウント プールの変更) を参照してください。
+ワーカー アカウント、アカウント名、またはアカウントのパスワードの数を変更する方法の詳細については、次を参照してください。[機械学習の SQL Server のユーザー アカウント プールを変更する](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)です。
 
-
-## <a name="security-isolation-for-multiple-external-scripts"></a>複数外部スクリプトでのセキュリティ分離
+## <a name="security-isolation-for-multiple-external-scripts"></a>複数の外部スクリプトのセキュリティの分離
 
 分離メカニズムは物理ユーザー アカウントに基づいています。 サテライト プロセスは特定の言語ラインタイムに対して開始されるため、各サテライト タスクは [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] によって指定されたワーカー アカウントを使用します。 タスクが複数のサテライトを必要とする場合 (たとえば並列クエリなど)、関連するすべてのタスクで 1 つのワーカー アカウントが使用されます。
 
@@ -91,5 +94,5 @@ R スクリプトが [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)
 コンピューターの管理者であれば、各プロセスによって作成されたディレクトリを表示できます。 各ディレクトリはセッション GUID によって識別されます。
 
 ## <a name="see-also"></a>参照
-[アーキテクチャの概要](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 
+[SQL Server の機械学習のアーキテクチャの概要](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

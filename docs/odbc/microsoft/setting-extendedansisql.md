@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- extendedANSISQL [ODBC], setting
+helpviewer_keywords: extendedANSISQL [ODBC], setting
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 59955db9520b409e46d179dd50fc33cedd8e15db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba6688643c16eef8b6f20ef8f7bb469941b6edb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-extendedansisql"></a>ExtendedAnsiSQL の設定
 属性は、ExtendedAnsiSQL 属性を追加することで、接続文字列に制御できます。  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  属性を設定する 0 に、新しい機能です。新機能を 1 に設定できます。  
   
  SQLSetConnectAttr() を使用して、属性を設定することもできます。 属性の値は、65501 でに設定されている SQLINTEGER 値 1 または 0 の場合のように、前の表に記載されています。 前に、または接続した後、呼び出すことができますが、ドライバーのプロセスがキャッシュされている接続属性および接続文字列の順序のための接続後に呼び出すことをお勧めします。
-

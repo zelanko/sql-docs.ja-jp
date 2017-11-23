@@ -1,30 +1,31 @@
 ---
 title: "SQL Server の機能と機能の使用 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: f2feaaa999a6010ab493e9f4f73f6ffdef576e82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server の機能と機能の使用
-SQL Server の機能と、OLTP データベースの機能の WideWorldImporters を使用します。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SQL Server の機能と、OLTP データベースの機能の WideWorldImporters を使用します。
 
 SQL Server 2016 で導入された最新の機能をなど、SQL Server の主な機能の多くに対応させることは、WideWorldImporters は設計されています。 SQL Server の機能や機能、WideWorldImporters での使用方法の説明の一覧を次に示します。
 
@@ -51,4 +52,3 @@ SQL Server 2016 で導入された最新の機能をなど、SQL Server の主�
 |クエリ ストア|クエリ ストアは、データベースで有効にします。 いくつかのクエリを実行すると、Management Studio でデータベースを開く、ノードの下にある、データベース、クエリ ストアを開くおよび上位リソース消費のクエリのクエリの実行、および実行したクエリのプランを表示するレポートを開きます。|
 |STRING_SPLIT|列`DeliveryInstructions`表内の`Sales.Invoices`STRING_SPLIT を示すために使用できるカンマ区切りの値を持ちます。|
 |監査|SQL Server Audit は、データベースで、次のステートメントを実行してこのサンプル データベースに対して有効にすることができます。<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>を介して、Azure SQL データベースの監査が有効になっている、 [Azure ポータル](https://portal.azure.com/)です。<br/><br/>ログインに関連するセキュリティ操作、役割とアクセス許可は、(standard edition のシステム) を含む監査が有効になっているすべてのシステムで記録されます。 これは、すべてのシステムで使用可能な追加の権限は必要ないために、アプリケーション ログに監査が送られます。 警告より高いセキュリティにリダイレクトされる、セキュリティ ログに、またはセキュリティで保護されたフォルダー内のファイルにいるです。 リンクは、必要な追加の構成を記述するものです。<br/><br/>評価/developer または enterprise edition のシステムでは、すべての財務トランザクション データへのアクセスを監査します。|
-

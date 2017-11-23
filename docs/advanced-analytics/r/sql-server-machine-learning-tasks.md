@@ -1,72 +1,72 @@
 ---
-title: "SQL Server コンピューターのタスクを学習 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 04/16/2017
-ms.prod: sql-server-2016
+title: "機械学習のライフ サイクル、および、チーム プロセス |Microsoft ドキュメント"
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52ad3f10-6d24-477a-aeb6-110456b2ed1c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: bfe2fb19481c78e982d69303af1dec8041283324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: c0e7a0929d5caa84df1a1fb02894db08313a36bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-machine-learning-tasks"></a>SQL Server の機械学習タスク
+# <a name="machine-learning-lifecycle-and-personas"></a>Machine learning のライフ サイクルとペルソナ
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] は、オープン ソース R 言語の機能と柔軟性を、データ ストレージと管理、ワークフロー開発、およびレポートと視覚エフェクトのためのエンタープライズ レベルのツールと組み合わせます。 このトピックは、機械学習のライフ サイクル、および SQL Server が enagged machine learning では、次の 4 つの異なるデータ担当者のニーズをサポートする方法について説明します。
+Machine learning プロジェクト スキルとプロフェッショナル向けのさまざまな一連の共同作業に必要なため、複雑なことはできます。 この記事では、マシン学習のライフ サイクルであり、機械学習、および SQL Server がニーズをサポートする方法を行っているデータ担当者の種類の主なタスクについて説明します。
 
-## <a name="machine-learning-life-cycle"></a>機械学習のライフ サイクル
+> [!TIP]
+> 
+> ツールとによって提供されるベスト プラクティスを確認することをお勧め、機械学習のプロジェクトで開始する前に、 [Microsoft チーム データ サイエンス プロセス](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/)、または TDSP です。 このプロセスは、機械学習の計画と機械学習のプロジェクトの反復処理のベスト プラクティスを統合する Microsoft コンサルタントによって作成されました。 TDSP にそのルートに CRISP-DM などの業界標準が DevOps と視覚エフェクトなどの最新のプラクティスが組み込まれています。
 
-機械学習はなく、短期的なタスクを企業内のデータのすべての側面を接して長期的なプロセスではなくなります。 機械学習を開始ビジネス目標とルールの id とセンサーやビジネス アプリケーションからのデータのコレクションを使用します。 機械学習では、抽出、処理、およびデータを格納するためのプロセスに大きく依存および格納する、抽出、およびデータの監査のポリシーを検討する場合は、ますます重要です。 最後に、機械学習は、レポートし分析、だけでなく顧客の契約とフィードバックのための戦略の重要なコンポーネントではようになりました。
+## <a name="machine-learning-life-cycle"></a>Machine learning のライフ サイクル
 
+機械学習は、企業内のデータのすべての側面がある複雑なプロセスと多くの machine learning プロジェクト最終的に長い時間かかっていて、予想よりも複雑です。 次に、企業内のデータ プロフェッショナルのサポートが必要である機械学習の方法のいくつかを示します。
 
++ 機械学習では、目標とビジネス ルールの id で始まります。
++ Machine learning のプロフェッショナルを格納する、抽出、およびデータの監査のポリシーの対応にする必要があります。
++ 該当する可能性のあるデータのコレクションは、[次へ] です。  データ ソースを識別する必要があります、され、センサー、ビジネス アプリケーションから、適切なデータが抽出されます。 
++ Machine learning の作業の品質は、使用可能なデータが抽出、処理、およびデータの格納に使用される非常に処理の種類だけでなくに大きく依存します。 
++ Machine learning プロジェクトすることが完成報告し分析、および可能性のある顧客の契約とフィードバックの戦略がなければです。
 
-SQL Server は機械学習プロセスの矛盾点の多くをブリッジするため、機械学習に最適です。
+SQL Server では、多くの企業のデータ プロフェッショナルと machine learning エキスパートの間のギャップを埋めるのに役立ちます。
 
-+ 内部設置型の動作またはクラウド
-+ ビジネス インテリジェンスを含む、エンタープライズ データ処理の各段階での統合
-+ 強化されたデータのセキュリティのサポート
-+ リソース管理と監査
++ 社内に保存できるデータはクラウド内、または
++ エンタープライズ データ処理、レポートなど、ETL の各段階で SQL Server を統合します。
++ SQL Server には、データのセキュリティ、データの冗長性、および監査がサポートしています
++ リソース管理を提供します。
 
-## <a name="data-professionals-and-how-they-use-machine-learning"></a>データ プロフェッショナルと方法が使用する機械学習
+## <a name="data-scientists"></a>データ サイエンティスト
 
-### <a name="data-scientists"></a>データ サイエンティスト
+データ サイエンティストは、データ分析と機械学習、Excel または無料のオープン ソース プラットフォームから深い技術的知識を必要とする高価な統計スイートまでのさまざまなツールを使用します。 ただし、SQL Server で R または Python を使用すると、これらの従来のツールと比較するといくつか一意の利点があります。
 
-データ サイエンティストは、データ分析と機械学習、Excel または無料のオープン ソース プラットフォームから深い技術的知識を必要とする高価な統計スイートまでのさまざまなツールへのアクセスがあります。 ただし、SQL Server との統合には、独自のメリットが提供されます。
-
-+ 選択した R 開発環境を使用して、ソリューションを開発し、テストします。
-+ データベース、企業のセキュリティ ポリシーに準拠しているときにデータの移動を回避するのには、計算をプッシュします。
++ 開発して、任意の開発環境を使用して、ソリューションをテストし、T-SQL コードの一部として R または Python コードをデプロイすることができます。
++ データ サイエンティストのラップトップ コンピューター オフと企業のセキュリティ ポリシーに準拠するデータの移動を回避する、サーバー上に複雑な計算を移動します。
 + 特殊な R パッケージと Api を介して、パフォーマンスと拡張性が向上します。 不要になった、R のシングル スレッド、メモリ バインド アーキテクチャによって制限されているし、大規模なデータセットとマルチ スレッド、マルチコア、マルチ プロセス計算を処理できます。
-+ R コードを簡単に実稼働環境に展開されているし、企業のツール、アプリケーション、その他のデータベース、およびダッシュ ボードによって呼び出されます。
-+ データ サイエンティストを配置してエンタープライズ データ管理、セキュリティとアクセスの監査などの標準の要件を満たしながら、分析ソリューションを更新できます。
-+ コードの移植性: 簡単に、Hadoop などの他のデータ ソースに対して R コードを再利用
++ コードの移植性: ソリューションは、SQL Server、Hadoop または Linux を実行できますを使用して[Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)です。 1 回コードは、任意の場所を展開します。
 
-### <a name="application-and-database-developers"></a>アプリケーションおよびデータベース開発者
+## <a name="application-and-database-developers"></a>アプリケーションとデータベース開発者
 
-データベース開発者は、企業全体で共有できるように、多数のテクノロジを統合し、結果をまとめる任務を負っています。 データベース開発者は、アプリケーション開発者、SQL 開発者、およびデータ サイエンティストと協力して、ソリューションを設計し、データの管理方法を推奨して、ソリューションを構築して展開します。 
+データベース開発者は、企業全体で共有できるように、多数のテクノロジを統合し、結果をまとめる任務を負っています。 データベース開発者は、ソリューションを設計、データの管理方法を推奨し、設計またはソリューションの配置するには、アプリケーション開発者、SQL 開発者、およびデータ サイエンティストで動作します。
 
-SQL Server との統合では、機械学習を使用するデータの開発者にこれらの利点があります。
+SQL Server との統合では、データの開発者に多くの利点があります。
 
-+ R スクリプトと対話するには、使い慣れたツールを使用します。 RStudio での作業データ開発者は、SQL Server Management Studio を使用して、ソリューションを配置、データ サイエンティストを使用できます。 これ以上の R または Python のソリューションの再コーディングします。
-+ ミキシングおよびと一致する SQL と R、または SQL Python によって最適化します。 多くの場合、大規模なデータセットに対して複雑な操作を実行できます: T-SQL でよりはるかに効率的にインメモリ columnstoreindexes または非常に高速集計などの SQL Server の機能を使用しています。 機械学習の言語を使用して、合理的であること、および SQL を使用して移動し、データを処理します。
-+ 簡単に実稼働データの予測スコアを生成するなど、データの大量に繰り返し実行する必要がありますタスクを自動化します。
-+ 使用するアプリケーションから R または Python スクリプトを実行[!INCLUDE[tsql](../../includes/tsql-md.md)]です。 パラメーター化されたモデルを作成、複雑な図を生成または予測を出力するストアド プロシージャを呼び出すだけです。
-+ **RevoScaleR**と**revoscalepy** Api は大規模なデータセットを処理して、マルチ スレッド、マルチコア、マルチ プロセスのデータベース内計算を活用します。
++ データ サイエンティストは、データの開発者は、SQL Server Management Studio を使用して、ソリューションを配置中に、RStudio で作業できます。 これ以上の R または Python のソリューションの再コーディングします。
++ T-SQL、R、Python の最高レベルを使用して、ソリューションを最適化します。 はるかに効率的に R. 活用して、データベース担当者の情報でよりも SQL Server を使用して、メモリ内列ストア インデックスを使用して、マシン学習ソリューションのパフォーマンスを向上させるために大規模なデータセットに対して複雑な操作を実行することができ、SQL セットベースの操作を使用して集計します。 
++ 簡単に実稼働データの予測スコアを生成するなど、データの大量に繰り返し実行する必要がありますタスクを自動化します。 
++ パラメーター化を使用するアプリケーションから R または Python スクリプトのアクセス[!INCLUDE[tsql](../../includes/tsql-md.md)]です。 モデルのトレーニング、プロットを生成または予測を出力するストアド プロシージャを呼び出すだけです。
++ Api では、大規模なデータセットをストリーム配信でき、マルチ スレッド、マルチコア、マルチ プロセスのデータベース内計算メリットを享受することができます。
 
 関連タスクについてを参照してください。
-+ [Operationalizing Your R Code](../../advanced-analytics/r-services/operationalizing-your-r-code.md)
++ [R コードの運用](../../advanced-analytics/r/operationalizing-your-r-code.md)
 
 ### <a name="database-administrators"></a>データベース管理者
 
@@ -74,27 +74,26 @@ SQL Server との統合では、機械学習を使用するデータの開発者
 
 SQL Server では、データ サイエンスの役割をサポートする必要があります、データベース管理者のための独自の機能を提供します。
 
-+ SQL Server でのセキュリティ: のアーキテクチャ[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]データベースをセキュリティで保護された状態をデータベース インスタンスの操作からのセッションを外部スクリプトの実行を分離します。 Machine learning のスクリプトを実行するアクセス許可を持っているユーザーと新しい R パッケージをインストールできる権限、データベース ロールの使用を指定することができます。
++ SQL Server でのセキュリティ: のアーキテクチャ[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]データベースをセキュリティで保護された状態をデータベース インスタンスの操作からのセッションを外部スクリプトの実行を分離します。 Machine learning のスクリプトを実行し、データベース ロールを使用してパッケージを管理するアクセス許可を持っているユーザーを指定することができます。
 
 + R、Python のセッションは、サーバーが引き続き、外部スクリプトに問題が発生した場合でも、通常どおり実行できるように別のプロセスで実行されます。
 
 + SQL Server を使用してリソース管理を使用して、メモリとサーバーの全体的なパフォーマンスが損なわれない大規模な計算を防ぐために、外部のランタイムに割り当てられているプロセスを制御できます。
 
 関連タスクについてを参照してください。
-+ [Managing and Monitoring R Solutions](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)
++ [Machine Learning ソリューションの管理と監視](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 
-### <a name="architects-and-etl-designers"></a>アーキテクトや ETL 設計
+## <a name="architects-and-data-engineers"></a>設計者およびデータ エンジニア
 
-アーキテクトは、machine learning のライフ サイクルのすべての側面にまたがる統合ワークフローを設計します。 データ エンジニアの設計および ETL ソリューションを構築および特徴エンジニア リングを最適化する方法を特定のタスクと機械学習プロセスの一部であります。 多くの場合、全体的なデータ プラットフォームの場合は、競合する補完的ビジネス ニーズのバランスをとるように設計する必要があります。
+アーキテクトは、machine learning のライフ サイクルのすべての側面にまたがる統合ワークフローを設計します。 データ エンジニアは、設計、ETL ソリューションを構築およびと機械学習機能エンジニア リング タスクを最適化する方法を決定します。 全体的なデータ プラットフォームは、競合するビジネス ニーズのバランスを設計する必要があります。
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] は、ビジネス インテリジェンスおよびデータ ウェアハウス スタック、エンタープライズ クラウドおよびモビリティ ツール、Hadoop などの他の Microsoft ツールと緊密に統合し、高度な分析を推進する必要があるデータ エンジニアやシステム アーキテクトに多大なメリットをもたらします。
 
-+ R、Python のソリューションを開発するための使い慣れた開発ツールです。 データセットを作成、グラフィックスを生成、予測を取得したりをシステム ストアド プロシージャを使用して、Python または R スクリプトを呼び出すことができます。 ない以上設計並列のワークフロー データ サイエンスおよび ETL ツールです。 Azure Data Factory および Azure SQL Database のサポートを簡単に変換して、データの管理、機械学習のワークフローでのクラウド データ ソースを使用します。
++ データセットを作成、グラフィックスを生成または予測を取得のシステム ストアド プロシージャを使用して、Python または R スクリプトを呼び出します。 ない以上設計並列のワークフロー データ サイエンスおよび ETL ツールです。 Azure Data Factory および Azure SQL Database のサポートでは、機械学習のワークフローでのクラウド データ ソースを使用してやすくなります。
 
-+ スケジュール設定と操作運用の機能を使用して Microsoft R Server で管理します。
++ スケジュールを設定して、機械学習タスクの管理、SQL Server Integration Services、SQL エージェント、または Azure Data Factory に基づくで標準の自動化のワークフローを使用します。 または、使用して、[操作運用機能](https://docs.microsoft.com/machine-learning-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)Machine Learning のサーバーにします。
 
 関連タスクについてを参照してください。
 
-+ [SQL Server で R を使用するワークフローの作成](../../advanced-analytics/r-services/creating-workflows-that-use-r-in-sql-server.md)
-
++ [SQL Server で machine learning ワークフローの作成](../../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md)
 

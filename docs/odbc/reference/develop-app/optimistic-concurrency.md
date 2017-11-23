@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック同時実行制御
 *オプティミスティック同時実行制御*というオプティミスティックな仮定からその名前を取得するトランザクション間で競合が発生することはほとんどありません以外の場合は、競合が発生している別のトランザクションを更新または読み取られるまでの間のデータの行を削除すると言われますによって、現在のトランザクションと、時刻が更新または削除します。 は、その逆の*ペシミスティック同時実行性、*をロックするかをアプリケーションの開発者と見なすこのような競合がある一般的にします。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  アプリケーション自体では、オプティミスティック同時実行制御を実装する場合は、行を読み取る SQL_CONCUR_READ_ONLY を SQL_ATTR_CONCURRENCY ステートメント属性を設定します。 行のバージョンを比較し、行バージョン列が認識していない場合は呼び出し**SQLSpecialColumns**この列の名前を決定する SQL_ROWVER オプションを使用します。  
   
  アプリケーションを更新または SQL_CONCUR_LOCK (書き込みアクセスするために、行) を実行して同時実行を増やすことで、行を削除、**更新**または**削除**ステートメントを**場所**バージョンを指定または行の値を句は、アプリケーションで読み取られるときに必要があります。 その後、行が変更された場合、ステートメントは失敗します。 場合、**場所**句が行を一意に識別されない、ステートメント可能性がありますも更新、またはその他の行を削除以外の場合は行のバージョンでは、行、常に一意に識別する、行の値は行を一意に識別、主キーが含まれる場合にのみです。
-

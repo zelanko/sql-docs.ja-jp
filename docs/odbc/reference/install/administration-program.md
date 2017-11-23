@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53024c6d7ba7933ae6bcc425455b262b176fed80
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="administration-program"></a>管理プログラム
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 -   **追加、変更、またはサイレント モードでのデータ ソースを削除します。** 管理プログラム呼び出し**SQLConfigDataSource**インストーラー DLL とパスで、null のウィンドウを処理、追加、変更、または削除するデータ ソースの名前と、レジストリの値の一覧です。 インストーラー DLL 呼び出し**ConfigDSN**ドライバー セットアップ DLL に実際に追加するには、変更、またはデータ ソースを削除します。  
   
 -   **追加、変更、または既定のデータ ソースを削除します。** 既定のデータ ソースは、その名前が既定する点を除いて、他のデータ ソースとして同じです。 追加、変更されると、またはその他のデータ ソースと同じ方法で削除します。
-

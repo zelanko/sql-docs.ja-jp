@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cafac55eeca169ff83521e945f0f5e76b31f19c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-result-set-columns"></a>バインドの結果セットの列
 アプリケーションがない列をバインドしないを含む結果セットを選択する際の多くまたは少数の列としてバインドできます。 データの行がフェッチしたときに、ドライバーは、アプリケーションにバインドされた列のデータを返します。 かどうか、結果セット内のアプリケーション バインドのすべての列は、アプリケーションによって異なります。 たとえば、通常のレポートを生成するアプリケーションにある固定形式です。このようなアプリケーションは、すべてのレポートで使用する列を含む結果セットを作成し、バインドし、これらの列のすべてのデータを取得します。 表示する列を決定することもありますデータでいっぱい画面を表示するアプリケーション アクセス許可します。このようなアプリケーションでは、ユーザー可能性がありますが、バインドし、ユーザーが選択した列のみをデータの取得のすべての列を含む結果セットを作成します。  
@@ -50,4 +48,3 @@ SELECT * FROM Lines
 ```  
   
  同じステートメント ハンドルでは、最初の結果セットの列バインドはまだ有効なため、これらのステートメントの構造体に格納されているバインディング。 ほとんどの場合、これが低いプログラミング手法、避ける必要があります。 代わりに、アプリケーションを呼び出す必要があります**SQLFreeStmt**古いすべての列のバインドを解除し、新しいものをバインドする SQL_UNBIND オプションを使用します。
-

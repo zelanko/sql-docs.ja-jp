@@ -5,26 +5,22 @@ ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e350c6e4ab289f3b967dec9482fe096a4bb37881
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51f4a782ad941d8b9a66ba00cbf2b3540478361c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages"></a>データ サイエンスの詳細: RevoScaleR パッケージの使用
 
@@ -114,5 +110,4 @@ ScaleR パッケージの柔軟性と処理能力を示すため、このチュ�
 ## <a name="next-step"></a>次の手順
 
 [R を使用する SQL Server データを操作します。](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
-
 

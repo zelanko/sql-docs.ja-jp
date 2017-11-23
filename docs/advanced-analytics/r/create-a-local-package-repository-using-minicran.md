@@ -5,22 +5,20 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cc7c216cb95d10c4158a3ac0998d458cec3d7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 1dd7e8f1a0054818849b3b9672a5df6286bdabce
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>MiniCRAN を使用して、ローカルのパッケージ リポジトリを作成します。
 
@@ -91,8 +89,8 @@ MiniCRAN を使用してリポジトリを作成する多くの利点があり�
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
-
-2. Optionally, plot the dependency graph, which can be informative and looks cool.
+    ```
+2. 必要に応じて、わかりやすく、残りません依存関係グラフを描画します。
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -199,4 +197,3 @@ MiniCRAN を使用しないようにする場合、必要なパッケージと�
 > R ツールを使用してパッケージをインストールするときに、全体として、インスタンスにインストールされます。 
 > 
 > データベースにパッケージをインストールし、パッケージをデータベース ロールを使用しているユーザーと共有する場合は、外部ライブラリの作成ステートメントを使用して、ライブラリをアップロードする必要があります。 参照してください[SQL サーバーに追加の R パッケージをインストールします。](install-additional-r-packages-on-sql-server.md)
-

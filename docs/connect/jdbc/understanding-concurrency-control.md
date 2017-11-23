@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52c954cb3acc87753f9ede5a0fc786bd9ed9b755
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-concurrency-control"></a>同時実行制御をについてください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/09/2017
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|[読み取り専用]|不可|カーソルを使用して更新することはできません。また、結果セットを構成する行にはロックが設定されません。|  
 |CONCUR_UPDATABLE|オプティミスティック読み取り、書き込み|不可|データベースで、行の競合が発生する可能性が低いと想定されます。 行の整合性は、タイムスタンプの比較によって検証されます。|  
-|CONCUR_SS_SCROLL_LOCKS|ペシミスティック読み取り、書き込み|はい|データベースで、行の競合が発生する可能性が高いと想定されます。 行の整合性は、行のロックによって保証されます。|  
+|CONCUR_SS_SCROLL_LOCKS|ペシミスティック読み取り、書き込み|可|データベースで、行の競合が発生する可能性が高いと想定されます。 行の整合性は、行のロックによって保証されます。|  
 |CONCUR_SS_OPTIMISTIC_CC|オプティミスティック読み取り、書き込み|不可|データベースで、行の競合が発生する可能性が低いと想定されます。 行の整合性は、タイムスタンプの比較によって検証されます。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]し、後で、サーバーはこの変更 CONCUR_SS_OPTIMISTIC_CCVAL をテーブルに timestamp 列が含まれていない場合。<br /><br /> [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]、OPTIMISTIC WITH VALUES が指定した場合でも、OPTIMISTIC WITH ROW VERSIONING が使用される基になるテーブルに timestamp 列がある場合。 OPTIMISTIC WITH ROW VERSIONING が指定されていて、テーブルにタイムスタンプがない場合は、OPTIMISTIC WITH VALUES が使用されます。|  
 |CONCUR_SS_OPTIMISTIC_CCVAL|オプティミスティック読み取り、書き込み|不可|データベースで、行の競合が発生する可能性が低いと想定されます。 行の整合性は、行データの比較によって検証されます。|  
   
@@ -54,7 +52,6 @@ ms.lasthandoff: 09/09/2017
 |テーブル デザインにより KEYSET カーソルまたは DYNAMIC カーソルが使用できなくなっている|基になるテーブルが有効にする一意のキーを持っていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]する行を一意に識別します。|一意キーをテーブルに追加し、各行を一意に識別できるようにします。|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーでセットの結果の管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+ [JDBC ドライバーによる結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
-

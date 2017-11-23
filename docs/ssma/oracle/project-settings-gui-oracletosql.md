@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: be37883101e95c60a792689d8ec5cf35896b8ac6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f787114033217f4821fa209e7bcaf72d7b28c67
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-gui-oracletosql"></a>プロジェクトの設定 (GUI) (OracleToSQL)
 GUI のプロジェクト設定では、上のデータの表示方法を構成できます。、**データ**タブとか、変換後に評価レポートを表示するかどうか。  
@@ -47,4 +45,3 @@ GUI のウィンドウで使用できる、**プロジェクト設定**と**プ�
   
 **既定の**: False  
   
-

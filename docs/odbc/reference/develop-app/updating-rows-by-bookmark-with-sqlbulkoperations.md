@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations とブックマークによる行の更新
 ブックマークで行を更新するときに**SQLBulkOperations**ようにデータ ソース テーブルの 1 つまたは複数の行を更新します。 行は、バインドされたブックマーク列内のブックマークで識別されます。 アプリケーションのバッファーで列の長さ/インジケーター バッファー内の値がの場合を除き SQL_COLUMN_IGNORE) バインドされた各列のデータを使用して、行が更新されます。 バインドされていない列は更新されません。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 6.  呼び出し**SQLBulkOperations**で、*操作*引数 SQL_UPDATE_BY_BOOKMARK に設定します。  
   
  更新プログラムとしてデータ ソースに送信されるすべての行でアプリケーション バッファーは有効な行データである必要があります。 アプリケーション バッファーがいっぱいになった場合、フェッチによって行の状態配列が維持されている場合、および行の状態値が SQL_ROW_DELETED、SQL_ROW_ERROR、または SQL_ROW_NOROW である場合は、無効なデータは、データ ソースに誤って送信でした。
-

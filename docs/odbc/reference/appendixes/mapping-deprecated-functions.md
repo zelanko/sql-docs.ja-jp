@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bf9d6ecc7971d8047dff4a808e1fe84a6261b71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61d05017039673989e1477501feb17b3da6d7220
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mapping-deprecated-functions"></a>使用されなくなった関数のマッピング
 このセクションの内容がどのように使用されなくなった関数について説明します、ODBC 3 でマッピングされます*.x* ODBC 3 の下位互換性を保証するためにドライバー マネージャー*.x* ODBC 2 で使用されるドライバー *。x*アプリケーションです。 ドライバー マネージャーでは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ODBC 2 の各します。*x*次の一覧内の関数は、対応する ODBC 3 にマップされて*.x*関数、ODBC 3 で呼び出されると*.x*ドライバー、ODBC 3*.x*ドライバーは、ODBC 2 を実装する必要はありません。*x*関数。  
@@ -65,39 +63,38 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [SQLAllocConnect マッピング](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
+-   [SQLAllocConnect のマッピング](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   
--   [SQLAllocEnv マッピング](../../../odbc/reference/appendixes/sqlallocenv-mapping.md)  
+-   [SQLAllocEnv のマッピング](../../../odbc/reference/appendixes/sqlallocenv-mapping.md)  
   
--   [SQLAllocStmt マッピング](../../../odbc/reference/appendixes/sqlallocstmt-mapping.md)  
+-   [SQLAllocStmt のマッピング](../../../odbc/reference/appendixes/sqlallocstmt-mapping.md)  
   
--   [SQLBindParam マッピング](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)  
+-   [SQLBindParam のマッピング](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)  
   
--   [SQLColAttributes マッピング](../../../odbc/reference/appendixes/sqlcolattributes-mapping.md)  
+-   [SQLColAttributes のマッピング](../../../odbc/reference/appendixes/sqlcolattributes-mapping.md)  
   
--   [SQLError マッピング](../../../odbc/reference/appendixes/sqlerror-mapping.md)  
+-   [SQLError のマッピング](../../../odbc/reference/appendixes/sqlerror-mapping.md)  
   
--   [SQLFreeConnect マッピング](../../../odbc/reference/appendixes/sqlfreeconnect-mapping.md)  
+-   [SQLFreeConnect のマッピング](../../../odbc/reference/appendixes/sqlfreeconnect-mapping.md)  
   
--   [SQLFreeEnv マッピング](../../../odbc/reference/appendixes/sqlfreeenv-mapping.md)  
+-   [SQLFreeEnv のマッピング](../../../odbc/reference/appendixes/sqlfreeenv-mapping.md)  
   
--   [SQLFreeStmt マッピング](../../../odbc/reference/appendixes/sqlfreestmt-mapping.md)  
+-   [SQLFreeStmt のマッピング](../../../odbc/reference/appendixes/sqlfreestmt-mapping.md)  
   
--   [SQLGetConnectOption マッピング](../../../odbc/reference/appendixes/sqlgetconnectoption-mapping.md)  
+-   [SQLGetConnectOption のマッピング](../../../odbc/reference/appendixes/sqlgetconnectoption-mapping.md)  
   
--   [SQLGetStmtOption マッピング](../../../odbc/reference/appendixes/sqlgetstmtoption-mapping.md)  
+-   [SQLGetStmtOption のマッピング](../../../odbc/reference/appendixes/sqlgetstmtoption-mapping.md)  
   
--   [SQLInstallTranslator マッピング](../../../odbc/reference/appendixes/sqlinstalltranslator-mapping.md)  
+-   [SQLInstallTranslator のマッピング](../../../odbc/reference/appendixes/sqlinstalltranslator-mapping.md)  
   
--   [SQLParamOptions マッピング](../../../odbc/reference/appendixes/sqlparamoptions-mapping.md)  
+-   [SQLParamOptions のマッピング](../../../odbc/reference/appendixes/sqlparamoptions-mapping.md)  
   
--   [SQLSetConnectOption マッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)  
+-   [SQLSetConnectOption のマッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)  
   
--   [SQLSetParam マッピング](../../../odbc/reference/appendixes/sqlsetparam-mapping.md)  
+-   [SQLSetParam のマッピング](../../../odbc/reference/appendixes/sqlsetparam-mapping.md)  
   
--   [SQLSetScrollOptions マッピング](../../../odbc/reference/appendixes/sqlsetscrolloptions-mapping.md)  
+-   [SQLSetScrollOptions のマッピング](../../../odbc/reference/appendixes/sqlsetscrolloptions-mapping.md)  
   
--   [SQLSetStmtOption マッピング](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
+-   [SQLSetStmtOption のマッピング](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
   
--   [SQLTransact マッピング](../../../odbc/reference/appendixes/sqltransact-mapping.md)
-
+-   [SQLTransact のマッピング](../../../odbc/reference/appendixes/sqltransact-mapping.md)

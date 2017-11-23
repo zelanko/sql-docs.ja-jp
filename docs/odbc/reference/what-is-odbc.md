@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 544f4aa32119b0fde5971f76e46a382b92dbd3ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-is-odbc"></a>ODBC とは何ですか。
 コンピューティングの世界で ODBC に関する多くの誤解が存在します。 エンド ユーザーには、Microsoft® Windows® のコントロール パネルのアイコンです。 アプリケーション プログラマは、データ アクセスのルーチンを含むライブラリを勧めします。 他の多くには、想像れたすべてのデータベース アクセスの問題に対する回答を勧めします。  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  ODBC がデータベースの機能を公開するありませんこれらを補足するものに設計されているかを理解しておく必要があります。 したがって、アプリケーションの作成者では、ODBC を使用してが突然変換する単純なデータベースを完全に機能を備えたのリレーショナル データベース エンジンには限りません。 また、ドライバーの作成者は、基になるデータベースに含まれない機能を実装するが必要です。 この例外は、ファイル データ (ファイルのデータを Xbase) などに直接アクセスするドライバーを記述する開発者が最低限の SQL 機能をサポートするデータベース エンジンを書き込みに必要なことです。 別の例外は、以前に、Microsoft Data Access Components (MDAC) SDK 含まれている、Windows SDK の ODBC コンポーネントは、特定のレベルの機能を実装するドライバーのスクロール可能なカーソルをシミュレートするカーソル ライブラリを提供です。  
   
  ODBC を使用するアプリケーションでは、データベース間の機能をすべてを担当します。 たとえば、ODBC が異種結合エンジンもありません分散トランザクション プロセッサ。 ただし、これは、DBMS に依存しないであるために、このようなデータベースにまたがるツールを構築する使用できます。
-

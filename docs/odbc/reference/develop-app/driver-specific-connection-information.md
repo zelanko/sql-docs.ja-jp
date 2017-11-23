@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e027eb6b5c5afdf361854892a22ad5dd69a9d646
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specific-connection-information"></a>ドライバー固有の接続情報
 **SQLConnect**データ ソース名、ユーザー ID とパスワードがデータ ソースに接続するための十分なことと、システム上の他のすべての接続情報を格納できることを前提としています。 これは頻繁に当てはまりません。 たとえば、ドライバーは、1 人のユーザー ID とパスワード、サーバー、および別のユーザー ID とパスワードにログオンする DBMS にログオンする必要があります。 **SQLConnect** 1 人のユーザー ID とパスワードを受け入れるつまり他のユーザー ID とパスワードが場合、システム上のデータ ソース情報を格納する必要があります**SQLConnect**を使用します。 これは潜在的なセキュリティ侵害であり、パスワードが暗号化されていない限り避ける必要があります。  
@@ -50,4 +48,3 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  キーワードと値のペアで**SQLDriverConnect**特定構文規則に従う必要があります。 キーワードとその値を含めないで、 **{} ()、;?\*=! @**文字です。 値、 **DSN**キーワードは、空白のみ含めることはできませんし、先頭の空白を含めることはできません。 レジストリの文法のためのキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。 スペースはキーワード/値ペア内の等号 (=) を使用できません。  
   
  **FILEDSN**キーワードへの呼び出しで使用することができます**SQLDriverConnect**をデータ ソースの情報を含むファイルの名前を指定する (を参照してください[接続を使用してファイル データ ソース](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、このセクションで後述)。 **SAVEFILE**への呼び出しによって正常な接続のキーワードと値のペアが行われた .dsn ファイルの名前を指定するキーワードを使用できる**SQLDriverConnect**は保存されます。 ファイルのデータ ソースの詳細については、次を参照してください。、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明。
-

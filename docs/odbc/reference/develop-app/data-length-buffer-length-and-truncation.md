@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 978418b3341bf82e0d7560052e68fecbbeb3c59b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>データの長さ、バッファー長、および切り捨て
 *データ長*はデータのバイト長アプリケーションのデータ バッファーに格納されますが、データ ソースに格納されていることがではありません。 データは多くの場合よりも、データ ソース内のデータ バッファー内のさまざまな種類に格納されているために、この区別は重要です。 したがって、データ ソースに送信されるデータ、これは、データ ソースの型への変換前に、のデータのバイト長です。 データ ソースから取得されるデータ、これは、データのバイト長切り捨てが行われる前に、データ バッファーの型に変換した後です。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  たとえば、アプリケーションは 50 バイトをバイナリ データ バッファーを割り当てます。 ドライバーの 10 バイトのバイナリ データを返す場合は、バッファーにそれらの 10 バイトを返します。 データのバイト長が 10 で、バッファーのバイトの長さは 50 です。 ドライバーが 60 のバイトのバイナリのデータを返す場合は、バッファー内のそれらのバイトを返します、および、sql_success_with_info が返されます、50 バイトにデータが切り捨てられます。 データのバイト長は 60 (切り捨て前に長さ) であり、バッファーのバイトの長さは 50 のままです。  
   
  各列が切り捨てられている診断レコードが作成されます。 ドライバーがこれらのレコードを作成するため、それらを処理するためにアプリケーション時間がかかるために、切り捨てによってパフォーマンスが低下します。 通常、アプリケーションを回避できますこの問題、十分な大きさのバッファーを割り当てることによってできませんが、これが可能な長い形式のデータを操作するとき。 データの切り捨てが発生すると、アプリケーションことができる場合もありますより大きなバッファーを割り当てるし、データの再フェッチこれは常に該当しません。 呼び出しによるデータの取得中に切り捨てが発生した場合**SQLGetData**、アプリケーションを呼び出す必要がありますいない**SQLGetData**返されたデータの詳細についてを参照してください[Getting長い形式のデータ](../../../odbc/reference/develop-app/getting-long-data.md)です。
-

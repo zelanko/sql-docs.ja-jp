@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
 - ALTER QUEUE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - number of queue readers
 - modifying queues
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9320e2f2af4bccd07ee8b255166b513c0b204a76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +126,7 @@ WITH
 ユーザー テーブルに再編成とは異なり、キューに再編成は常に実行オフライン操作としてページ レベルのロックがキューで明示的に無効になっています。  
   
 > [!TIP]  
->  インデックスの断片化に関する一般的なガイダンス断片化が 5% ~ 30% には、インデックスが再編成します。 断片化が 30% を超える場合、インデックスを再構築します。 ただし、これらの番号、専用環境の開始点として一般的なガイダンスです。 インデックスの断片化の量を調べるには使用[sys.dm_db_index_physical_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -例については、該当するアーティクル内の例 G を参照してください。  
+>  インデックスの断片化に関する一般的なガイダンス断片化が 5% ~ 30% には、インデックスが再編成します。 断片化が 30% を超える場合、インデックスを再構築します。 ただし、これらの番号、専用環境の開始点として一般的なガイダンスです。 インデックスの断片化の量を調べるには使用[sys.dm_db_index_physical_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -例については、該当するアーティクル内の例 G を参照してください。  
   
  MOVE TO { *file_group* |"default"}  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -270,4 +267,3 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   
   
-

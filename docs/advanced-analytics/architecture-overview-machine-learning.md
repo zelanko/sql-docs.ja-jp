@@ -1,27 +1,24 @@
 ---
-title: "アーキテクチャと概要 |Microsoft ドキュメント"
+title: "SQL Server の Machine Learning のサービスのアーキテクチャの概要 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c81f114f97dee97a37832201637ac5e17fe08794
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7549b59d4edc00dd620deeb515f6cd7143a62db7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="architecture-and-overview-of-machine-learning-services"></a>アーキテクチャと Machine Learning のサービスの概要
+# <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server の Machine Learning のサービスのアーキテクチャの概要 
 
 このトピックでは、SQL Server での Python と R スクリプトの実行をサポートする機能拡張フレームワークの目標について説明します。
 
@@ -70,7 +67,6 @@ SQL Server によって管理されているセキュリティで保護された
 
   パフォーマンスの最適化は、プラットフォームの 2 つの均等に強力な側面に依存していますリソース ガバナンスおよび並列実行する SQL Server を使用して処理および分散コンピューティング アルゴリズムによって提供される**RevoScaleR**と**。revoscalepy**です。
 
-
 ## <a name="solution-development-and-deployment"></a>ソリューションの開発と展開
 
 これらの機能拡張プラットフォームのコア目標、に加えて SQL Server の machine learning サービスは、データベース エンジンとこれらの利点と、BI スタックの強力な統合を実現するよう設計されています。
@@ -93,7 +89,7 @@ SQL Server によって管理されているセキュリティで保護された
 
 わからない場合は、どの機械学習ソリューションはニーズを満たすか。 埋め込みの分析機能を SQL Server 2016 および SQL Server 2017、に加えては、マイクロソフトは、次の機械学習のプラットフォームとサービスを提供します。
 
-+ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
++ [Microsoft R Server と Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   開発、配布、および machine learning のジョブを管理するための複数のプラットフォーム環境
 + [データ サイエンス仮想マシン](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -101,6 +97,7 @@ SQL Server によって管理されているセキュリティで保護された
   すべてのツールの machine learning、プレインストールされている必要があります。 使用 Jupyter ノートブック、Python や r です。
   
   新しいを再試行してください[Windows 2016 preview エディション](http://aka.ms/dsvm/win2016)、CNTK mxNet と Windows コンテナーのサポートなどの一般的な深層学習フレームワークの GPU のバージョンが含まれます。
+
 + [Azure の認知サービス](https://azure.microsoft.com/services/cognitive-services/)
 
   さまざまな自然言語が、ビデオ、顔認識のインデックスを含む、アプリケーションに AI および ML を追加するためのクラウド サービスの感情の検出、テキスト分析では、コンピューターの平行移動、およびそれほど多くより
@@ -110,5 +107,4 @@ SQL Server によって管理されているセキュリティで保護された
 
 ## <a name="see-also"></a>参照
 
-[R Server のスタンドアロン](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)
-
+[Machine Learning サーバーおよび Microsoft R 製品を比較します。](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

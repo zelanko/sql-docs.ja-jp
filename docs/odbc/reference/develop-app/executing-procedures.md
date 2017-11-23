@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f952e8d2fbc1eb41d65cd4d30fa2f13c991d264
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-procedures"></a>プロシージャの実行
 ODBC では、プロシージャを実行するための標準のエスケープ シーケンスを定義します。 このシーケンスおよびそれを使用するコード例の構文を参照してください。[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)です。  
@@ -44,4 +42,3 @@ ODBC では、プロシージャを実行するための標準のエスケープ
     -   データ ソースのプロシージャを呼び出し、変換後のパラメーターの値を送信します。 ドライバーが、プロシージャを呼び出す方法と、ドライバー固有です。 データ ソースの SQL 文法を使用して、実行のためには、このステートメントを送信する SQL ステートメントが変更されることなど、DBMS のデータ ストリーム プロトコルで定義されているリモート プロシージャ コール (RPC) メカニズムを使用して直接、プロシージャを呼び出す可能性があります。  
   
     -   任意の入力/出力や出力パラメーターの値またはプロシージャが成功したと仮定した場合、プロシージャの戻り値を返します。 これらの値は、すべてその他の (行数と結果セット) で生成された結果、プロシージャが処理された後まで使用できない可能性があります。 プロシージャが失敗した場合、ドライバーはエラーを返します。
-

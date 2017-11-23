@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Connection15::Attributes
 - Field20::Attributes
 - _Parameter::Attributes
-helpviewer_keywords:
-- Attributes property [ADO]
+helpviewer_keywords: Attributes property [ADO]
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a245de28b8224a9265544d2850f6fdb12dbb1c2f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bffe5215cbb93e24f6914d6d56a349c9d35f6b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-property-ado"></a>属性プロパティ (ADO)
 オブジェクトの 1 つまたは複数の特性を示します。  
@@ -58,8 +55,8 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|  
-|[パラメーター オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[プロパティのオブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|  
+|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>参照  
  [属性と名前のプロパティの例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
@@ -67,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  [AppendChunk メソッド (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [GetChunk メソッド (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
-

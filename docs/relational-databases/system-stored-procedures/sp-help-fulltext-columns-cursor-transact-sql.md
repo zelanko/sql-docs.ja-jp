@@ -1,0 +1,107 @@
+---
+title: "sp_help_fulltext_columns_cursor (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_help_fulltext_columns_cursor
+- sp_help_fulltext_columns_cursor_TSQL
+dev_langs: TSQL
+helpviewer_keywords: sp_help_fulltext_columns_cursor
+ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
+caps.latest.revision: "28"
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: cd12180fc4c5c4a923c8a89b5a204468072d94bd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  カーソルを使用して、フルテキスト インデックスの作成用に指定された列を返します。  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して、 [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)カタログ ビューを代わりにします。  
+  
+||  
+|-|  
+|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT   
+     [ , [ @table_name = ] 'table_name' ]   
+     [ , [ @column_name = ] 'column_name' ]  
+```  
+  
+## <a name="arguments"></a>引数  
+ [  **@cursor_return =**]  *@cursor_variable* 出力  
+ 型の output 変数は、**カーソル**です。 結果のカーソルでは、読み取り専用で、スクロール可能な動的カーソルがあります。  
+  
+ [  **@table_name =**] **'***table_name***'**  
+ フルテキスト インデックス情報を要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)**既定値は NULL です。 場合*table_name*を省略すると、すべてのフルテキスト インデックス付きテーブルのフルテキスト インデックス列情報を取得します。  
+  
+ [  **@column_name =**] **'***column_name***'**  
+ フルテキスト インデックス メタデータが要求された列の名前を指定します。 *column_name*は**sysname**で、既定値は NULL です。 場合*column_name*を省略するか、NULL の場合は、すべてのフルテキスト インデックス付き列のフルテキスト列情報が返されます*table_name*です。 場合*table_name*はも省略するか、NULL の場合、データベース内のすべてのテーブルのすべてのフルテキスト インデックス付き列のフルテキスト インデックス列情報が返されます。  
+  
+## <a name="return-code-values"></a>リターン コードの値  
+ 0 (成功) または (1) の失敗  
+  
+## <a name="result-sets"></a>結果セット  
+  
+|列名|データ型|Description|  
+|-----------------|---------------|-----------------|  
+|**TABLE_OWNER**|**sysname**|テーブル所有者 テーブルを作成したデータベース ユーザーの名前です。|  
+|**TABLE_ID**|**int**|テーブルの ID を指定します。|  
+|**TABLE_NAME**|**sysname**|テーブル名です。|  
+|**FULLTEXT_COLUMN_NAME**|**sysname**|フルテキスト インデックスが作成されたテーブル内にある、インデックス作成用に指定された列。|  
+|**FULLTEXT_COLID**|**int**|フルテキスト インデックスが作成された列の列 ID。|  
+|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|フルテキスト インデックスが作成されたテーブル内の列で、フルテキスト インデックス列のドキュメントの種類を指定する列。 この値は、フルテキスト インデックス列がときにのみ適用、 **varbinary (max)**または**イメージ**列です。|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|ドキュメント型列の列 ID。 この値は、フルテキスト インデックス列がときにのみ適用、 **varbinary (max)**または**イメージ**列です。|  
+|**FULLTEXT_LANGUAGE**|**sysname**|列のフルテキスト検索に使用される言語。|  
+  
+## <a name="permissions"></a>Permissions  
+ メンバーに権限は、既定の実行、**パブリック**ロール。  
+  
+## <a name="examples"></a>使用例  
+ 次の例では、データベース内のすべてのテーブルを対象に、フルテキスト インデックスの作成用に指定された列に関する情報を返します。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+DECLARE @mycursor CURSOR;  
+EXEC sp_help_fulltext_columns_cursor @mycursor OUTPUT  
+FETCH NEXT FROM @mycursor;  
+WHILE (@@FETCH_STATUS <> -1)  
+   BEGIN  
+      FETCH NEXT FROM @mycursor;  
+   END;  
+CLOSE @mycursor;  
+DEALLOCATE @mycursor;  
+GO   
+```  
+  
+## <a name="see-also"></a>参照  
+ [COLUMNPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [sp_fulltext_column &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
+ [照会する &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

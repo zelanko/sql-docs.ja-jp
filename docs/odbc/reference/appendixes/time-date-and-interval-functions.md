@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数
 次の表には、ODBC スカラー関数のセットに含まれている日付と時刻の関数が一覧表示します。 アプリケーションでは、どの日付と時刻の関数が呼び出すことによって、ドライバーでサポートされるを判断できます**SQLGetInfo**で、*情報の種類*SQL_TIMEDATE_FUNCTIONS のです。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 10/05/2017
 |**TIMESTAMPDIFF (** *間隔*、 *timestamp_exp1*、 *timestamp_exp2* **)** (ODBC 2.0)|整数型の間隔の数を返します*間隔*する*timestamp_exp2*がより大きい*timestamp_exp1*です。 有効な値の*間隔*は次のキーワード。<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> ここで秒の小数部は、10億分の 1 秒で表現されます。 たとえば、次の SQL ステートメントは、各従業員とそのユーザーが使用されている年の数の名前を返します。<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> タイムスタンプのいずれかの式が時間の値の場合と*間隔*日、週、月、四半期、または年、そのタイムスタンプの日付部分は、タイムスタンプの差を計算する前に現在の日付に設定を指定します。<br /><br /> タイムスタンプのいずれかの式が日付値の場合と*間隔*小数部を指定します、タイムスタンプの差を計算する前に、そのタイムスタンプの時刻部分が 0 に設定されて秒、秒、分、または時間、します。<br /><br /> アプリケーションを呼び出すことによって、データ ソースをサポートする間隔を決定**SQLGetInfo** SQL_TIMEDATE_DIFF_INTERVALS オプションを使用します。|  
 |**週 (** *date_exp* **)** (ODBC 1.0)|週のフィールドに基づき、年の週を返します*date_exp* 1 ~ 53 の範囲の整数値として。|  
 |**年 (** *date_exp* **)** (ODBC 1.0)|[Year] フィールドに基づき、年を返します*date_exp*整数値として。 範囲は、データ ソースに依存します。|
-

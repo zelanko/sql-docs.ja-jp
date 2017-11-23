@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Error
-helpviewer_keywords:
-- error object [ADO]
+f1_keywords: Error
+helpviewer_keywords: error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c866f3df4ca51d935fee22327a6196f88635a4ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a283d7d40140e46668dc704196316a4a52c1fdbf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-object"></a>Error オブジェクト
 プロバイダーを含む 1 つの操作に関連するデータ アクセス エラーの詳細が含まれています。  
@@ -62,12 +58,11 @@ ms.lasthandoff: 09/09/2017
   
  このセクションには、次のトピックが含まれています。  
   
--   [エラー オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
+-   [Error オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
  [説明、HelpContext、HelpFile、以下、数、ソース、および SQLState のプロパティの例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [説明、HelpContext、HelpFile、以下、数、ソース、および SQLState のプロパティの例 (vc++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

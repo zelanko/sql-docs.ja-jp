@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 19e0a4e308d0ac4414bdab9c03389947d9dde28b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20c2dcbf26307c99830909447eb23679ffd3ac96
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>グローバル設定 (テスト担当者) (OracleToSQL)
 テスト担当者のページを使用して、**グローバル設定**SSMA テスターの設定を指定 ダイアログ ボックス。  
@@ -33,9 +31,9 @@ ms.lasthandoff: 08/02/2017
   
 次のオプションは、この設定に使用されます。  
   
-1.  はい  
+1.  可  
   
-2.  いいえ  
+2.  不可  
   
 **補助テーブルの保存モード**  
 この設定は、テスト_ケースの実行中に作成された内部の補助テーブルを保存する方法を指定します。 この特定の設定には、次のオプションを設定できます。  
@@ -55,20 +53,19 @@ ms.lasthandoff: 08/02/2017
   
 次のオプションは、この設定に使用されます。  
   
-1.  はい  
+1.  可  
   
-2.  いいえ  
+2.  不可  
   
 **最初のエラーの後にテストの実行を停止します。**  
 実行中にエラーが発生した場合、この設定は現在実行中のテスト ケースを停止するかどうかを指定します。 既定のオプション セットが**はい**です。  
   
 次のオプションは、この設定に使用されます。  
   
-1.  はい  
+1.  可  
   
-2.  いいえ  
+2.  不可  
   
 ## <a name="see-also"></a>参照  
 [フィニッシュのテスト_ケース準備 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-

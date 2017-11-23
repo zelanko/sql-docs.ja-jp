@@ -8,27 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4fb36fd89c02ff9ddd5bc33825a387b53ab6e174
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>データベースのバックアップ (並列データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  バックアップを作成、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースおよびユーザー指定のネットワークの場所にアプライアンス オフ バックアップを保存します。 このステートメントで使用する[データベースの復元 & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)災害復旧、または 1 つのアプライアンスからデータベースをコピーします。  
+  バックアップを作成、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースおよびユーザー指定のネットワークの場所にアプライアンス オフ バックアップを保存します。 このステートメントで使用する[データベースの復元 &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)災害復旧、または 1 つのアプライアンスからデータベースをコピーします。  
   
  **開始する前に**を取得し、バックアップ サーバーの構成」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/01/2017
   
  詳細については[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベースのバックアップ「のバックアップと復元」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -143,7 +141,7 @@ BACKUP DATABASE database_name
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  Master データベースの差分バックアップを実行することはできません。 Master データベースの完全バックアップのみがサポートされています。  
   
- バックアップを復元するためだけに適切な形式でバックアップ ファイルが格納されている、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスを使用して、[データベースの復元 & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)ステートメントです。  
+ バックアップを復元するためだけに適切な形式でバックアップ ファイルが格納されている、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスを使用して、[データベースの復元 &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)ステートメントです。  
   
  SMP にデータまたはユーザーの情報を転送する BACKUP DATABASE ステートメントでのバックアップを使用することはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 この機能については、リモート テーブルのコピー機能を使用できます。 詳細については、「リモート テーブルのコピー」を参照してください、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]です。  
   
@@ -162,11 +160,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>メタデータ  
  これらの動的管理ビューは、すべてのバックアップの復元に関する情報が含まれてし、操作を読み込みます。 情報は、システムの再起動の間で永続化します。  
   
--   [sys.pdw_loader_backup_runs & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>パフォーマンス  
  バックアップを実行する[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]メタデータ、その後の最初のバックアップを作成は、コンピューティング ノードに格納されているデータベースのデータの並列バックアップを実行します。 データは、各コンピューティング ノードから直接、バックアップ ディレクトリにコピーされます。 コンピューティング ノードから、バックアップ ディレクトリにデータを移動するための最適なパフォーマンスを実現するために[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]同時にデータをコピーであるコンピューティング ノードの数を制御します。  
@@ -188,7 +186,7 @@ BACKUP DATABASE database_name
   
  ネットワーク資格情報を削除する[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を参照してください[sp_pdw_remove_network_credentials (& a) #40 です。SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
   
- 格納されているすべてのネットワーク資格情報を一覧表示する[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して、 [sys.dm_pdw_network_credentials & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)動的管理ビュー。  
+ 格納されているすべてのネットワーク資格情報を一覧表示する[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]を使用して、 [sys.dm_pdw_network_credentials &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)動的管理ビュー。  
   
 ## <a name="examples"></a>使用例  
   
@@ -249,7 +247,6 @@ WITH (
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベースの復元 & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+ [データベースの復元 &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
-

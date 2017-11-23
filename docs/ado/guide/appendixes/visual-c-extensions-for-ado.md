@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a51272e2fba20b4c336cf4a21cce0cf4a83f4726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbc17b15d552f9b7afeeb4841febdd7d08e54808
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 Visual C で ADO のプログラミングの推奨される方法を使用して、 **#import**で説明したように、ディレクティブ[C++ ADO プログラミングのビジュアル Microsoft](../../../ado/guide/appendixes/visual-c-ado-programming.md)です。 ただし、以前のバージョンの ADO 付属の Visual C を使用したプログラミングの別の方法: Visual C 拡張します。 このセクションでは、この機能を説明の Visual C の拡張機能のコードを保守する必要がありますが、# を使用して新しい ADO コードを記述する必要があります**インポート**です。
@@ -43,10 +40,9 @@ Visual C で ADO のプログラミングの推奨される方法を使用して
 
 -   [ADO の Visual C の拡張機能の使用](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
--   [Visual C 拡張機能ヘッダー](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+-   [Visual C++ Extensions のヘッダー](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
 -   [拡張機能の使用例を Visual C で ADO](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>参照
  [COM 用の Visual C 構文のインデックスの ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C 拡張機能の使用例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C の拡張機能を使用して](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual C 拡張機能ヘッダー](../../../ado/guide/appendixes/visual-c-extensions-header.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df2f3bfdb37ab506de3fe99d8c7d1e5e9764ef43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 101879f45583fc46d5bc4aecc3ff11a92aed5112
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>サポートされていない Visual FoxPro コマンドと関数 (Visual FoxPro ODBC ドライバー)
 次の表には、FoxPro コマンドとは、Visual FoxPro ODBC ドライバーではサポートされていませんが、Microsoft® Visual FoxPro® でサポートされている関数が一覧表示します。  
@@ -40,9 +38,9 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|# #UNDEF を DEFINE.|#IF... #ENDIF プリプロセッサ ディレクティブ|#IFDEF & #124 です。#IFNDEF|  
+|# #UNDEF を DEFINE.|#IF... #ENDIF プリプロセッサ ディレクティブ|#IFDEF &#124;です。#IFNDEF|  
 |#INCLUDE プリプロセッサ ディレクティブ|: スコープ解決演算子|! コマンド (実行 &#124; を参照してください。 コマンドを使用)|  
-|? &#124; ?? Command|??? Command|\ & #124 です。\\\ コマンド|  
+|? &#124; ?? Command|??? Command|\ &#124;です。\\\ コマンド|  
 |@ ...ボックス コマンド|@ ...クラスのコマンド|@ ...クリア コマンド|  
 |@ ...編集 - [編集] ボックスのコマンド|@ ...コマンドを入力します。|@ ...GET|  
 |@ ...メニュー コマンド|@ ...コマンド プロンプト|@ ...コマンドを言う|  
@@ -328,4 +326,3 @@ ms.lasthandoff: 09/09/2017
 ||||  
 |-|-|-|  
 |ズーム ウィンドウのコマンド|||
-

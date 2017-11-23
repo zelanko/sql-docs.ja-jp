@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Find Databases Wizard
+helpviewer_keywords: Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f23fb0084b9fc0570b5dbc9d551833be171251c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c254ca94d75abd78acabc6c008c5d8350ba30cd2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>データベースのウィザード (場所) を検索 (AccessToSQL)
 検索データベース ウィザードの [場所の選択] ページでは、Access データベースを検索するための検索パラメーターを入力します。  
@@ -63,11 +60,10 @@ SSMA はスキャンを実行する場所の一覧を示します。 クリッ�
 **サイズ**  
 サイズの条件に一致するデータベースを検索するには、最初のボックスで、比較の文字を選択、サイズの番号を入力し、バイト、または選択してキロバイト、メガバイト単位 3 番目のボックスからです。  
   
-**所有者**  
+**[所有者]**  
 所有者のすべての Windows ユーザー名を入力します。 これにフォーマットされたとして*ドメイン*\\*ユーザー*です。  
   
 ## <a name="see-also"></a>参照  
 [追加して、Access データベース ファイルを削除します。](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [ユーザー インターフェイス Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

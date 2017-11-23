@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスへの準拠
 レベル 1 のインターフェイスへの準拠レベルには、コア インターフェイスへの準拠の機能レベルと、OLTP リレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 – インターフェイスに準拠するドライバーは、コア インターフェイスへの準拠レベルの機能に加えて、次の操作をアプリケーションを使用できます。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |107|データベースの特定の操作を実行する SQL ステートメントではなく ODBC 関数を使用: **SQLSetPos** SQL_POSITION と SQL_REFRESH を使用します。|  
 |108|呼び出して、バッチおよびストアド プロシージャは、によって生成された複数の結果セットの内容にアクセスできるように**SQLMoreResults**です。|  
 |109|True 原子性と SQL_ROLLBACK を指定することで複数の ODBC 関数にまたがるトランザクションを区切るため**SQLEndTran**です。|
-

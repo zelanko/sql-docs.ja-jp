@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c77be1b431a7f7e2cf8c040df7ceb9a9feaf321a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="uses-of-catalog-data"></a>カタログ データの使用
 アプリケーションでは、さまざまな方法でカタログ データを使用します。 一般的な使用方法を次に示します。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
      このような環境が使用も**SQLTables**と**SQLColumns**元となるプログラマ行うことができる選択リストを作成します。 これらの環境を使うことも**SQLPrimaryKeys**と**SQLForeignKeys**自動的に決定して、選択したテーブル間の関係を表示、使用**SQLStatistics**を特定し、プログラマは、効率的なクエリを作成できるように、インデックス付きフィールドを強調表示にします。  
   
 -   **カーソルを作成しています。** アプリケーション、ドライバー、または、スクロール可能なカーソル エンジンを提供するミドルウェアを使用でした**SQLSpecialColumns**行を一意に識別する列または列を決定します。 プログラムをビルドでした、*キーセット*フェッチした行ごとにこれらの列の値を格納します。 アプリケーションは、行にスクロールするときに、行の最新のデータをフェッチするのにこれらの値、使用します。 スクロール可能なカーソルおよびキーセットの詳細については、次を参照してください。[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)です。
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56610f09ea40942988e88202ac09ec6a3a5e48e0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-sql-escape-sequences"></a>SQL エスケープ シーケンスの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -170,7 +168,6 @@ LIMIT <rows> [OFFSET <row offset>]
  エスケープ構文は、2 つの部分を持つ: \<*行*> は必須で、返す行の数を指定します。 オフセットおよび\<*行オフセット*> オプションで、行を返すを開始する前にスキップする行の数を指定します。 JDBC ドライバーでは、このうち必須の部分のみがサポートされ、LIMIT の代わりに TOP を使用するようにクエリを変換して処理されます。 SQL Server は、LIMIT 句をサポートしていません。 **JDBC ドライバーは、省略可能なできません\<行オフセット > を使用する場合に、ドライバーが例外をスローおよび**です。  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーでステートメントを使用します。](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [JDBC ドライバーでのステートメントの使用](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

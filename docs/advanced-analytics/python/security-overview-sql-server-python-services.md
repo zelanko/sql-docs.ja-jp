@@ -1,36 +1,34 @@
 ---
-title: "セキュリティの概要 (SQL Server R サービス) | Microsoft Docs"
+title: "SQL Server での Python のセキュリティの概要 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 8e0f7b35f91fa9f62b1ac4ab2e32c56ff0265bdf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ddfc3ccb67d017dc618cfbb7e7680c0164f3a21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="security-overview"></a>セキュリティの概要
+# <a name="security-overview-for-python-in-sql-server"></a>SQL Server での Python のセキュリティの概要
 
 このトピックの接続に使用されるセキュリティ アーキテクチャについて説明、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]データベース エンジンおよび Python コンポーネントです。 2 つの一般的なシナリオについて、セキュリティ処理の例が記載されて: ストアド プロシージャを使用して、リモート計算コンテキストとして SQL Server で Python を実行している SQL Server で Python を実行します。
 
 ## <a name="security-overview"></a>セキュリティの概要
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] SQL Server での Python スクリプトを実行するログインまたは Windows ユーザー アカウントが必要です。 ログインまたはユーザー アカウントを識別、*セキュリティ プリンシパル*、データベースからデータを取得する場所にアクセスする権限を持つ必要があります。 Python スクリプトが新しいオブジェクトを作成か、新しいデータを書き込むか、によって、ユーザーは、テーブルを作成、データを書き込む、またはカスタム関数またはストアド プロシージャを作成するアクセス許可を必要があります。
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] SQL Server での Python スクリプトを実行するログインまたは Windows ユーザー アカウントが必要です。 これら*セキュリティ プリンシパル*インスタンスおよびデータベース レベルでは、管理し、データベースへの接続、読み書き可能なデータへのアクセス許可を持つユーザーを識別またはテーブルやストアド プロシージャなどのデータベース オブジェクトを作成します。 また、Python スクリプトを実行しているユーザーには、データベース レベルでの外部のスクリプトを実行する権限が必要です。
 
-そのため、厳密な要件がする Python コードを実行する各ユーザーに[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ログインまたはデータベース内のアカウントにマップする必要があります。 この制限は、スクリプトは、リモート データ サイエンス クライアントから送信するかどうかに関係なく適用されます。 または T-SQL ストアド プロシージャの使用を開始します。
+外部ツールで Python を使用しているユーザーであってもは、ユーザーは、Python コード内のデータベース、またはデータベース オブジェクトとデータを実行する必要がある場合、ログインまたはデータベース内のアカウントにマップする必要があります。 Python スクリプトのリモート データ サイエンス クライアントから送信されるまたは T-SQL ストアド プロシージャを使用して開始されたかどうか、同じアクセス許可が必要です。
 
 たとえば、ラップトップ コンピューターで実行されている Python スクリプトを作成してでそのコードを実行すること[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]です。 次の条件が満たされていることを確認する必要があります。
 
@@ -48,12 +46,11 @@ Python スクリプトを起動するたびに[!INCLUDE[ssNoVersion_md](../../in
 
 したがって、リモート クライアントから開始されるすべての Python スクリプトでは、接続文字列の一部としてログインまたはユーザーの情報を指定する必要があります。
 
-
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] セキュリティとスタート パッド セキュリティの相互作用
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>相互作用[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]セキュリティとスタート パッドのセキュリティ
 
 コンテキストでの Python スクリプトを実行すると、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 、コンピューター、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]サービスの外部プロセス用に確立されたワーカー アカウントのプールから使用可能なワーカー アカウント (ローカル ユーザー アカウント) を取得およびはそのワーカー アカウントを使用関連するタスクを実行します。
 
-たとえば、Windows ドメインの資格情報 Python スクリプトを起動するとします。 SQL Server は、資格情報を取得し、など、使用可能なスタート パッドのワーカー アカウントにマップする*SQLRUser01*です。
+たとえば、Windows ドメインの資格情報 Python スクリプトを起動するとします。 SQL Server は、資格情報を取得およびなど、使用可能なスタート パッド ワーカー アカウントをタスクをマップ*SQLRUser01*です。
 
 > [!NOTE]
 > ワーカー アカウントのグループの名前は、R または Python のどちらを使用しているかどうかに関係なく同じです。 ただし、別のグループは、外部の言語を有効にするインスタンスごとに作成されます。
@@ -62,10 +59,15 @@ Python スクリプトを起動するたびに[!INCLUDE[ssNoVersion_md](../../in
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のすべての処理が完了すると、ユーザー ワーカー アカウントは空きとしてマークされ、プールに返されます。
 
-詳細については[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]を参照してください[Python の統合をサポートする SQL Server の新しいコンポーネント](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md)です。
+詳細については[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]を参照してください[Python 統合をサポートするために SQL Server のコンポーネント](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md)です。
 
-> [!NOTE]
-> ワーカー アカウントを管理し、Python ジョブ、ワーカー アカウントが含まれるグループを実行するスタート パッドの*SQLRUserGroup*、権限が必要「ログオンを許可するローカル」です。 それ以外の場合、Python、ランタイムが開始されていません。 既定では、この権限はすべての新しいローカル ユーザーに与えられますが一部の組織でグループ ポリシーをより厳密な可能性があります強制する、Python ジョブに SQL Server への接続からワーカー アカウントを回避します。
+### <a name="implied-authentication"></a>暗黙の認証
+
+**黙示的な認証**は、SQL Server がユーザーを取得する処理に使用される用語の資格情報し、ユーザーがデータベースに適切なアクセス許可を持つと仮定した場合、ユーザーの代理のすべての外部のスクリプト タスクを実行します。 黙示的な認証は、Python スクリプトは、SQL Server データベースの外部の ODBC 呼び出しを行う必要がある場合に特に重要です。 たとえば、コードでは、スプレッドシートまたはその他のソースから要因の短い一覧を取得する可能性があります。
+
+このようなループバック呼び出しが成功するには、ワーカー アカウント、SQLRUserGroup を含むグループは「ローカル ログオンを許可」権限が必要です。 既定では、この権限はすべての新しいローカル ユーザーに与えられますが、一部の組織より厳密なグループ ポリシーを適用する場合があります。
+
+![R の暗黙の認証](media/implied-auth-python2.png)
 
 ## <a name="security-of-worker-accounts"></a>ワーカー アカウントのセキュリティ
 
@@ -75,12 +77,12 @@ Python スクリプトを起動するたびに[!INCLUDE[ssNoVersion_md](../../in
 
 管理されるプロセス用に使用されるディレクトリ、 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]、およびディレクトリはアクセスを制限します。 Python の PythonLauncher はこのタスクを実行します。 それぞれ個別のワーカー アカウントは、独自のフォルダーには制限され、独自レベルより上のフォルダー内のファイルにアクセスできません。 ただし、ワーカー アカウントを読み取り、書き込み、または作成されたセッションの作業フォルダーの下の子を削除します。
 
-ワーカー アカウントの数、アカウント名、またはアカウント パスワードを変更する方法について詳しくは、「[Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)」(SQL Server R Services のユーザー アカウント プールの変更) を参照してください。
+ワーカー アカウント、アカウント名、またはアカウントのパスワードの数を変更する方法の詳細については、次を参照してください。[機械学習の SQL Server のユーザー アカウント プールを変更する](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)です。
 
 
-## <a name="security-isolation-for-multiple-external-scripts"></a>複数外部スクリプトでのセキュリティ分離
+## <a name="security-isolation-for-multiple-external-scripts"></a>複数の外部スクリプトのセキュリティの分離
 
-分離メカニズムは物理ユーザー アカウントに基づいています。 サテライト プロセスは特定の言語ラインタイムに対して開始されるため、各サテライト タスクは [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] によって指定されたワーカー アカウントを使用します。 タスクが複数のサテライトを必要とする場合 (たとえば並列クエリなど)、関連するすべてのタスクで 1 つのワーカー アカウントが使用されます。
+分離メカニズムは、物理的なユーザー アカウントに基づいています。 サテライト プロセスは特定の言語ラインタイムに対して開始されるため、各サテライト タスクは [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] によって指定されたワーカー アカウントを使用します。 タスクが複数のサテライトを必要とする場合 (たとえば並列クエリなど)、関連するすべてのタスクで 1 つのワーカー アカウントが使用されます。
 
 ワーカー アカウントは、他のワーカー アカウントによって使用されるファイルを、読み取ったり操作したりすることはできません。
 
@@ -89,4 +91,3 @@ Python スクリプトを起動するたびに[!INCLUDE[ssNoVersion_md](../../in
 ## <a name="see-also"></a>参照
 
 [アーキテクチャの概要](../../advanced-analytics/python/architecture-overview-sql-server-python.md)
-

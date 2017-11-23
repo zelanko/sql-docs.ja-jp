@@ -15,14 +15,12 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 36c5b7ccd0cc8c3a56dca700469fb4fd05fa2871
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの SQL Server on Linux
 
 この記事では、SQL Server フェールオーバー クラスター インスタンス (FCI) を Linux に関連する概念について説明します。 
@@ -92,4 +90,3 @@ SQL Server on Linux での 1 つの主な違いは、既定のユーザー デ�
 - [フェールオーバー クラスター インスタンス - iSCSI: Linux 上の SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [フェールオーバー クラスター インスタンス: NFS - Linux に SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [フェールオーバー クラスター インスタンス: SMB - Linux に SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-smb.md)
-

@@ -5,21 +5,18 @@ ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="native-scoring"></a>ネイティブのスコアリング
 
 このトピックでは、SQL Server 2017 でほぼリアルタイムで機械学習モデルのスコアを提供する機能について説明します。
@@ -119,4 +116,3 @@ MicrosoftML からモデルを使用する必要がある場合は、リアル�
 + PMML モデル
 + CRAN または他のリポジトリから他の R ライブラリを使用して作成されたモデル
 + その他のすべての R 変換を含むモデル
-

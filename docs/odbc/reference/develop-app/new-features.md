@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e2b48097b6c398772e14d2594a583d89e6825e0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-features"></a>新機能
 ODBC 3 以下の新機能が導入されました。*x*です。 ODBC 3 です。*x* ODBC 2 作業アプリケーション*.x*ドライバーでは、この機能を使用できません。 ODBC 3 です。*x* ODBC 2 を使用する場合に、ドライバー マネージャーでこれらの機能がマップされていない*.x*ドライバー。  
@@ -116,5 +114,4 @@ ODBC 3 以下の新機能が導入されました。*x*です。 ODBC 3 です�
   
  このセクションには、次のトピックが含まれています。  
   
--   [ブロック カーソル、スクロール可能なカーソル、および ODBC 3.x アプリケーションの旧バージョンとの互換性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
-
+-   [ODBC 3.x アプリケーション用のブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)

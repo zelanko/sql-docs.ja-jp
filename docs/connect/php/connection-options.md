@@ -8,29 +8,27 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4fcec3597676efa5feebc3fdb562a6dd19878278
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aadb44954096cbbcb520850a54d4cc2c41911f08
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックには、連想配列で許可されているオプションが一覧表示 (を使用する場合[sqlsrv_connect](../../connect/php/sqlsrv-connect.md) SQLSRV ドライバーで) またはデータ ソース名 (dsn) で許可されているキーワード (を使用する場合[:: _ _construct](../../connect/php/pdo-construct.md) PDO_SQLSRV ドライバーで)。  
 
-|[キー]|値|説明|既定値|  
+|Key|値|説明|既定値|  
 |-------|---------|---------------|-----------|  
 |APP|文字列|トレースで使用されるアプリケーション名を指定します。|値は設定されません。|  
 |ApplicationIntent|文字列|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、ReadOnly と ReadWrite です。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]によるサポートの詳細については、「 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」(高可用性、障害復旧の PHP Driver for SQL Server のサポート) を参照してください。|ReadWrite|  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 
 ## <a name="see-also"></a>参照  
 [サーバーへの接続](../../connect/php/connecting-to-the-server.md)  
-

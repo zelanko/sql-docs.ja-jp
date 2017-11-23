@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions-odbc"></a>ODBC トランザクション
 A*トランザクション*作業の単位ですが、1 つのアトミック操作として完了する以外の場合は、操作として成功または失敗全体です。 たとえば、間の 1 つの銀行口座の money を転送します。 これは、2 つの手順: 参加お金を最初のアカウントと 2 番目にデポジットです。 重要です。 両方の手順が成功します。1 つのステップが成功して失敗する余裕がないです。 トランザクションをサポートするデータベースは、これを保証できません。  
@@ -43,7 +41,6 @@ A*トランザクション*作業の単位ですが、1 つのアトミック操
   
 -   [ODBC でのトランザクション](../../../odbc/reference/develop-app/transactions-in-odbc-odbc.md)  
   
--   [トランザクションの分離](../../../odbc/reference/develop-app/transaction-isolation.md)  
+-   [トランザクション分離](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [同時実行制御](../../../odbc/reference/develop-app/concurrency-control.md)
-

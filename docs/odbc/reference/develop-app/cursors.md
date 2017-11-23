@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursors"></a>カーソル
 アプリケーションでのデータのフェッチ、*カーソル*です。 カーソルが結果セットを異なる: 結果セットは、特定の検索条件に一致する行のセットをアプリケーションにこれらの行を返すのに対し、カーソルは、ソフトウェア。 名前*カーソル、*データベースに適用される、コンピューターの端末に点滅するカーソルから発生した可能性があります。 そのカーソルは、どこに型指定された単語が [次へ] を表示し、画面上の現在の位置を示すと同様、結果セットのカーソルは結果セットとどのような行が次に返されますの現在の位置を示します。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  コミットまたはロールバック、トランザクションは、明示的に呼び出すか**SQLEndTran**または自動コミット モードで動作して一部のデータ ソース接続ですべてのステートメントでのすべてのカーソルを閉じると発生します。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR および SQL_CURSOR_ROLLBACK_BEHAVIOR 属性を参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。
-

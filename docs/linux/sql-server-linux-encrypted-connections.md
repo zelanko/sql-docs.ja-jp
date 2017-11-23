@@ -14,15 +14,13 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords:
-- Linux, encrypted connections
+helpviewer_keywords: Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: f2f0792202d3af6be0e24ff8b24532598c8d0c84
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux 上の SQL Server への接続を暗号化
 
@@ -33,7 +31,7 @@ ms.lasthandoff: 10/07/2017
 ## <a name="requirements-for-certificates"></a>証明書の要件 
 始める前に、証明書は、これらの要件を満たすかどうかを確認する必要があります。
 - 現在のシステム時刻は、証明書のプロパティをプロパティと有効期間の前に、証明書の発効後にする必要があります。
-- 証明書がサーバー認証に使用されていること。 つまり、証明書の [拡張キー使用法] プロパティで [ サーバー認証 ] \(1.3.6.1.5.5.7.3.1) が指定されている必要があります。
+- 証明書がサーバー認証に使用されていること。 つまり、証明書の [拡張キー使用法] プロパティで [ サーバー認証 ] (1.3.6.1.5.5.7.3.1) が指定されている必要があります。
 - AT_KEYEXCHANGE の KeySpec オプションを使用して、証明書を作成する必要があります。 通常、証明書のキー使用法プロパティ (KEY_USAGE) は、キーの暗号化 (CERT_KEY_ENCIPHERMENT_KEY_USAGE) も含まれます。
 - 証明書の Subject プロパティは、共通名 (CN) が同じであるホスト名またはサーバー コンピューターの完全修飾ドメイン名 (FQDN) として示す必要があります。 注: ワイルド カードの証明書がサポートされています。 
 
@@ -138,4 +136,3 @@ TLS は、クライアント アプリケーションからの接続の暗号化
 |対象のプリンシパル名が正しくありません。  |SQL Server の証明書の共通名 フィールドが、クライアントの接続文字列で指定されたサーバー名と一致していることを確認してください。 |  
 |既存の接続はリモート ホストによって強制的に切断されました。 |このエラーは、クライアントは、SQL Server で必要な TLS プロトコル バージョンをサポートしない場合に発生することができます。 たとえば場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を TLS 1.2 を必要とするクライアントも、TLS 1.2 プロトコルをサポートしているかどうかを確認するように構成します。 |
 | | |   
-

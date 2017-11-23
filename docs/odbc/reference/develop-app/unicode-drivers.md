@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e73a559545a870d83e3d8e2e94dd20f6731f72eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-drivers"></a>Unicode のドライバー
 ドライバーが、ANSI、Unicode ドライバーにするかどうかは、データ ソースの種類に完全に依存します。 データ ソースは、Unicode データをサポートする場合、ドライバーは、Unicode ドライバーをする必要があります。 データ ソースは、ANSI データのみをサポートする場合、ドライバーに ANSI ドライバーしておきます。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ドライバーの種類を決定するとき、ドライバー マネージャーが呼び出す**SQLSetConnectAttr**し、接続時に SQL_ATTR_ANSI_APP 属性を設定します。 SQL_ATTR_ANSI_APP は SQL_AA_TRUE に設定する場合は、アプリケーションは、ANSI Api を使用して、および Unicode を使用している場合 SQL_AA_FALSE の値に設定されます。 ドライバーも、アプリケーションの種類に基づく動作の違いに優れているため、この属性を使用します。 属性をアプリケーションで、直接設定することはできずではサポートされていません**SQLGetConnectAttr**です。 場合は、ドライバーは、ANSI と Unicode の両方のアプリケーションの同じ動作を示します、この属性の SQL_ERROR を返します。 ドライバーは SQL_SUCCESS を返します、ドライバー マネージャーは、接続プールが使用するときに、ANSI と Unicode の接続を分割します。
-

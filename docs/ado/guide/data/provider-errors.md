@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
 プロバイダー エラーが発生したときに-2147467259 の実行時エラーが返されます。 このエラーが表示されたら、確認、**エラー**のアクティブなコレクション**接続**問題の概要を説明する 1 つ以上のエラーを含むオブジェクト。  
@@ -87,4 +85,3 @@ End Function
  **エラー**イベントに関連するエラーが発生したときにも、オブジェクトが使用されます。 チェックして、ADO イベントを発生させたプロセスでエラーが発生するかどうかを決定できます、**エラー**イベント パラメーターとして渡されるオブジェクト。  
   
  イベントの原因となる操作が正常に行われる場合、 *adStatus*イベント ハンドラーのパラメーターに設定されます*adStatusOK*です。 その一方で、イベントを発生させた操作が成功しなかった場合、 *adStatus*にパラメーターが設定されている*adStatusErrorsOccurred*です。 その場合は、 *pError*パラメーターが含まれます、**エラー**エラーを説明するオブジェクト。
-

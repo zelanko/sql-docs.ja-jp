@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literals"></a>間隔のリテラル
 ODBC では、すべてのドライバーが、SQL_CHAR 型または SQL_VARCHAR データ型のすべての C interval データ型への変換をサポートする必要があります。 基になるデータ ソースが interval データ型をサポートしていない場合はただし、ドライバーをこれらの変換をサポートするために、正しい形式の SQL_CHAR フィールドの値を知る必要があります。 同様に、ODBC では、ドライバーは、どのような形式の文字のフィールドに格納されている間隔を知る必要があるために、型が SQL_CHAR、SQL_VARCHAR、またはに変換できる任意の ODBC C を使用する必要があります。 このセクションでは、ドライバーの作成者を使用するか、C interval データ型からの変換中に、SQL_CHAR フィールドを検証する必要がある間隔リテラルの構文について説明します。  
@@ -102,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{間隔 '223.16' 第 2}<br /><br /> {間隔 '223' YEAR}|先頭の有効桁数が指定された既定値は 2、これが指定されたリテラルを保持するためには小さすぎます。|  
 |{間隔 '22.1234567' 第 2}|既定値は 6 ために、秒の有効桁数は指定しません。 リテラルは、7 桁の数字を小数点後がします。|  
 |{月間隔 ' 163-13' YEAR(3)}<br /><br /> {INTERVAL ' 163 65' 時間に DAY(3)}<br /><br /> {間隔分に '163 62:39' DAY(3)}<br /><br /> {間隔 SECOND(3) に '163 12:125:59.163' DAY(3)}<br /><br /> {間隔 '163:144' 分に HOUR(3)}<br /><br /> {間隔 '163:567:234.163' SECOND(4) に HOUR(3)}<br /><br /> {間隔 '163:591.163' SECOND(5) に MINUTE(3)}|末尾のフィールドが構成のグレゴリオ暦カレンダーの規則に従っていません。|
-

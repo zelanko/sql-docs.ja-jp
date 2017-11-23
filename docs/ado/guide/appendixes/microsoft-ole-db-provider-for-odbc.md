@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b3753748a9e76d24dc968983fa358b5d0050f41
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界がいずれかですべてのデータ ソースは、OLE DB インターフェイスを公開する ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースはこの方法はまだ公開されません。 ただし、現在使用しているほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -208,26 +206,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |方法|ForwardOnly|動的|Keyset|静的|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|はい|可|可|はい|
-|[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|可|可|はい|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|はい|可|可|はい|
-|[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|可|可|はい|
-|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|不可|いいえ|はい|はい|
-|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|可|可|はい|
-|[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|可|可|はい|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|可|可|はい|
-|[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|はい|可|可|はい|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|可|可|はい|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|はい|可|はい|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|可|可|はい|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|はい|可|はい|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|はい|可|可|はい|
-|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|可|可|はい|
-|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|はい|可|可|はい|
-|[再同期](../../../ado/reference/ado-api/resync-method.md)|不可|いいえ|はい|はい|
-|[サポートしています](../../../ado/reference/ado-api/supports-method.md)|はい|可|可|はい|
-|[Update](../../../ado/reference/ado-api/update-method.md)|はい|可|可|はい|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|はい|可|可|はい|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|可|可|可|可|
+|[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|可|可|可|可|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|可|可|可|可|
+|[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|可|可|可|可|
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|不可|いいえ|はい|可|
+|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|可|可|可|可|
+|[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|可|可|可|可|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|可|可|可|可|
+|[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|可|可|可|可|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|可|可|可|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|はい|可|可|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|可|可|可|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|はい|可|可|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|可|可|可|可|
+|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|可|可|可|可|
+|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|可|可|可|可|
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|不可|いいえ|はい|可|
+|[サポートしています](../../../ado/reference/ado-api/supports-method.md)|可|可|可|可|
+|[Update](../../../ado/reference/ado-api/update-method.md)|可|可|可|可|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|可|可|可|可|
 
  * Microsoft Access データベースはサポートされていません。
 
@@ -440,4 +438,3 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 ## <a name="see-also"></a>参照
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [実行メソッド (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md) [メソッド (ADO レコード セット) を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [メソッドをサポートしています](../../../ado/reference/ado-api/supports-method.md)
-

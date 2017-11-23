@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac7d08e9ca59738686baa079d87af8c158bca35a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a99ea01cbd5a00ea4aa12e4b1461ca7f1ce9afa5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="result-generating-and-result-free-statements"></a>ステートメントの結果を生成して、結果のないステートメント
 SQL ステートメントは、次の 5 つのカテゴリに疎分類できます。  
@@ -45,4 +43,3 @@ SQL ステートメントは、次の 5 つのカテゴリに疎分類できま�
 -   **管理ステートメント**これらは、データベースの管理の目的で使用する SQL ステートメント。 たとえば、 **GRANT**と**取り消す**です。  
   
  最初の 2 つのカテゴリ内の SQL ステートメントは、として総称*ステートメントの結果を生成する*です。 後者の 3 つのカテゴリ内の SQL ステートメントは、として総称*ステートメントの結果のない*です。 ODBC では、ステートメントの結果をもたらすだけを含むバッチのセマンティクスを定義します。 これらのセマンティクスは、大きく異なるし、データ ソース固有であるためです。 たとえば、オブジェクトを削除してを参照するか、同じバッチ内の同じオブジェクトを再作成するには、この SQL Server driver はサポートされません。 そのため、用語*バッチ*このマニュアルは結果を生成するのバッチのみを参照で使用されているステートメント。
-

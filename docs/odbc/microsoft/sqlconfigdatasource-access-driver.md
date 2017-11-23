@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ffa0ff5fe4f788a3ec72ee003db166514f132db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Access ドライバー)
 > [!NOTE]  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 |スレッド|使用する、エンジンのバック グラウンド スレッドの数。 この値は、既定値は 3 が、変更することができます。<br /><br /> 同じオプションを設定**スレッド**設定 ダイアログ ボックスをオンにします。|  
 |UID|ユーザー ID の名前は、Microsoft Access ドライバーのログインに使用します。|  
 |USERCOMMITSYNC|Microsoft Access ドライバーがユーザー定義のトランザクションを非同期的に実行されるかどうかを判断します。 この値は"Yes"は、Microsoft Access ドライバーが完了するユーザー定義のトランザクションのコミットを待機することを意味する初期設定されます。<br /><br /> このオプションの値は、結果を入念に考慮することがなくいない変更しなければなりません。 オプションの詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマ ガイド*です。<br /><br /> これと同じオプションを設定**UserCommitSync**設定 ダイアログ ボックスをオンにします。|
-

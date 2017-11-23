@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHECKPOINT_TSQL
 - CHECKPOINT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - events [SQL Server], checkpoints
 - automatic checkpoints
@@ -30,17 +28,16 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 80afa328b185c25a8bae3af127720ccf6d7c529d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d3c0dd607231880ebd7a43b3740eb2cb22b9c195
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   手動チェックポイントを生成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースは現在、接続先をします。  
   
 > [!NOTE]  
->  さまざまな種類のデータベースのチェックポイントと一般的なチェックポイント操作については、次を参照してください。[データベース チェックポイント & #40 です。SQL Server &#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+>  さまざまな種類のデータベースのチェックポイントと一般的なチェックポイント操作については、次を参照してください。[データベース チェックポイント &#40;です。SQL Server &#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +74,6 @@ CHECKPOINT [ checkpoint_duration ]
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Recovery interval サーバー構成オプションを構成します。](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)   
- [シャット ダウン & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/shutdown-transact-sql.md)  
+ [シャット ダウン &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/shutdown-transact-sql.md)  
   
   
-

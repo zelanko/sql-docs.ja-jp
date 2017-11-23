@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>埋め込み SQL プログラムのコンパイル
 埋め込み SQL プログラムには、SQL とホスト言語のステートメントの組み合わせが含まれている、ために、ホスト言語のコンパイラに直接送信することはできません。 代わりに、複数の手順の手順は、コンパイルします。 このプロセスには、製品が異なる場合は、操作は、ほぼすべての製品と同じです。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  プリ コンパイラによって生成されたデータベースの要求のモジュールは、特別なバインド ユーティリティに送信されます。 このユーティリティ SQL ステートメントを調べ、解析、検証すると、および、それらを最適化およびアクセスの各ステートメントに対してプランを生成します。 結果は、埋め込まれた SQL ステートメントの実行可能ファイルのバージョンを表すプログラム全体の統合されたアクセス プランです。 バインディング ユーティリティでは、データベース、通常それを使用するアプリケーション プログラムの名前を割り当てることで、プランが格納されます。 この手順がコンパイル時または実行時の場所を実行するかどうかは、DBMS に依存します。  
   
  埋め込み SQL プログラムをコンパイルするための手順は、前述の手順と非常に密接に関連付けるために注意してください[SQL ステートメントの処理](../../odbc/reference/processing-a-sql-statement.md)です。 具体的には、確認するプリはホスト言語コードから SQL ステートメントを区切りますバインディング ユーティリティを解析し、SQL ステートメントを検証し、アクセス プランを作成します。 Dbms が 5 のステップが実行されるコンパイル時に、SQL ステートメントの処理の最初の 4 つの手順行わ、コンパイル時に (実行) の最後の手順の実行時に実行中です。 これは、このような Dbms 非常に高速でクエリの実行を行うことの影響です。
-
