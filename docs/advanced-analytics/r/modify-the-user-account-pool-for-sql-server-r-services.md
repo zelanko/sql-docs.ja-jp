@@ -1,73 +1,72 @@
 ---
-title: "SQL Server R Services のユーザー アカウント プールを変更する | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/03/2017
-ms.prod: sql-server-2016
+title: "SQL Server の機械学習のユーザー アカウント プールを変更する |Microsoft ドキュメント"
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 1baa301134ea01aa5c13a579fdb1aac01b2dbcf5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 33e22f7edec807d046798d89a9cd5daa642e8d3b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="modify-the-user-account-pool-for-sql-server-r-services"></a>SQL Server R サービスのユーザー アカウント プールを変更する
-  [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスによるタスクの実行をサポートするために、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] のインストール プロセスの一部として、新しい Windows "ユーザー アカウント プール" が作成されました。** これらのワーカー アカウントの目的は、異なる SQL ユーザーによる R スクリプトの同時実行を隔離することです。 
+# <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>SQL Server の機械学習のユーザー アカウント プールを変更します。
 
-このトピックでは、ワーカー アカウントの既定の構成、セキュリティおよび容量と、既定の構成の変更方法について説明します。
+[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスによるタスクの実行をサポートするために、[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] のインストール プロセスの一部として、新しい Windows "ユーザー アカウント プール" が作成されました。** これらのワーカー アカウントの目的は、別の SQL ユーザーの外部のスクリプトの同時実行を分離します。
 
-## <a name="worker-accounts-used-by-r-services"></a>R Services によって使用されるワーカー アカウント   
+この記事では、既定の構成、セキュリティ、および容量のワーカー アカウント、および既定の構成を変更する方法について説明します。
 
-Windows アカウント グループは、R Services がインストールされている各インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって作成されます。 そのため、R をサポートするインスタンスを複数インストールした場合は、複数のユーザー グループが作成されます。
+**適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]、 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
--   既定のインスタンスでは、グループ名は **SQLRUserGroup** です。 
--   名前付きインスタンスでは、既定のグループ名にインスタンス名が付加されます: たとえば、 **SQLRUserGroupMyInstanceName**。 
+## <a name="worker-accounts-used-for-external-script-execution"></a>外部スクリプトの実行に使用されるワーカー アカウント
 
-既定では、ユーザー アカウント プールには 20 個のユーザー アカウントが含まれています。 ほとんどの場合は、20 個で R セッションを十分サポートできますが、アカウント数を変更することもできます。
--  既定のインスタンスでは、個々のアカウントは **MSSQLSERVER01** ～ **MSSQLSERVER20** と命名されます。  
--   名前付きインスタンスの場合、個々のアカウントはインスタンス名に基づいて命名されます。たとえば、 **MyInstanceName01** ～ **MyInstanceName20**。  
+によって Windows アカウント グループが作成された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]学習をインストールして有効にするコンピューターは、各インスタンスをセットアップします。
 
-### <a name = "HowToChangeGroup"> </a>R ワーカー アカウントの数を変更する方法
+-   既定のインスタンスでは、グループ名は **SQLRUserGroup** です。 名前は、R、Python またはその両方を使用するかどうかは同じです。
+-   名前付きインスタンスでは、既定のグループ名にインスタンス名が付加されます: たとえば、 **SQLRUserGroupMyInstanceName**。
 
-アカウント プール内のユーザー数を変更するには、以下に示すように、[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスのプロパティを編集する必要があります。  
-  
-各ユーザー アカウントに関連付けられるパスワードはランダムに生成されますが、アカウントの作成後に変更することもできます。  
-  
+既定では、ユーザー アカウント プールには 20 個のユーザー アカウントが含まれています。 ほとんどの場合、20 以上の機械学習タスクをサポートするために十分ながアカウントの数を変更することができます。
+-  既定のインスタンスでは、個々のアカウントは **MSSQLSERVER01** ～ **MSSQLSERVER20** と命名されます。
+-   名前付きインスタンスの場合、個々のアカウントはインスタンス名に基づいて命名されます。たとえば、 **MyInstanceName01** ～ **MyInstanceName20**。
+
+複数のインスタンスは、機械学習を使用している場合、コンピューターは、複数のユーザー グループがあります。 グループは、インスタンスで共有することはできません。
+
+### <a name = "HowToChangeGroup"></a>ワーカー アカウントの数を変更する方法
+
+アカウント プール内のユーザー数を変更するには、以下に示すように、[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスのプロパティを編集する必要があります。
+
+各ユーザー アカウントに関連付けられるパスワードはランダムに生成されますが、アカウントの作成後に変更することもできます。
+
 1. SQL Server 構成マネージャーを開き、**[SQL Server のサービス]** をクリックします。
-2. SQL Server スタート パッド サービスをダブルクリックし、サービスが実行されている場合は、サービスを停止します。 
-3.  **[サービス]** タブで、[開始モード] が [自動] に設定されていることを確認します。 スタート パッドが実行されていない場合、R スクリプトは失敗します。
-4.  **[詳細設定]** タブをクリックし、必要であれば、**[外部ユーザーの数]** の値を編集します。 この設定は、R でクエリを同時に実行できる SQL ユーザーの数 を制御します。既定値は、20 アカウントです。
-5. パスワードを定期的に変更するポリシーが組織で実施されている場合は、オプションで、**[外部ユーザーのパスワードのリセット]** を _[はい]_ に設定できます。 これを行うと、ユーザー アカウントに対してスタート パッドが保持している暗号化パスワードが再生成されます。 詳しくは、「[パスワード ポリシーの実施](#bkmk_EnforcePolicy)」をご覧ください。    
-6.  サービスを再起動します。  
+2. SQL Server スタート パッド サービスをダブルクリックし、サービスが実行されている場合は、サービスを停止します。
+3.  **[サービス]** タブで、[開始モード] が [自動] に設定されていることを確認します。 スタート パッドが実行されていない場合、外部スクリプトを開始できません。
+4.  **[詳細設定]** タブをクリックし、必要であれば、**[外部ユーザーの数]** の値を編集します。 この設定で制御さまざまな SQL ユーザーの数ことができます外部スクリプト実行セッションを同時にします。 既定では 20 アカウントです。
+5. パスワードを定期的に変更するポリシーが組織で実施されている場合は、オプションで、**[外部ユーザーのパスワードのリセット]** を _[はい]_ に設定できます。 これを行うと、ユーザー アカウントに対してスタート パッドが保持している暗号化パスワードが再生成されます。 詳しくは、「[パスワード ポリシーの実施](#bkmk_EnforcePolicy)」をご覧ください。
+6.  スタート パッド サービスを再起動します。
 
-## <a name="managing-r-workload"></a>R のワークロードの管理
+## <a name="managing-machine-learning-workloads"></a>Machine learning のワークロードを管理します。
 
-このプール内のユーザー アカウント数によって、同時にアクティブにできる R セッションの数が決まります。  既定では、20 個のアカウントが作成されます。つまり、20 人のユーザーが、アクティブな R セッションを同時に利用することができます。 より多くのユーザーが R スクリプトを同時に実行することが予想される場合は、ワーカー アカウントの数を増やすこともできます。 
+このプール内のアカウントの数では、外部スクリプトの数のセッション同時実行が可能かを決定します。  既定では、20 アカウントが作成された、20 の異なるユーザーがアクティブの R または Python セッション一度に 1 つを持つことを意味します。 20 を超える同時スクリプトを実行する予定の場合は、ワーカー アカウントの数を増やすことができます。
 
-同じユーザーが複数の R スクリプトを同時に実行した場合、そのユーザーが実行したセッションにはすべて、同じワーカー アカウントが使用されます。 たとえば、1 人のユーザーが 100 個のスクリプトを同時に実行した場合は、リソースが許す限り、1 つのワーカー アカウントが使用されます。
+同じユーザーでは、同時に複数の外部スクリプトを実行するとき、セッションがそのユーザーが実行すべてワーカーと同じアカウントを使用します。 たとえば、1 人のユーザーには、リソースは許可されてがすべてのスクリプトは、1 つのワーカー アカウントを使用して実行は限りが同時に実行 100 の異なる R スクリプトがあります。
 
-サポートできるワーカー アカウントの数と、1 人のユーザーが同時に実行できる R セッションの数は、サーバーのリソースによってのみ制限されます。  通常、R ランタイムの使用時に遭遇する最初のボトルネックは、メモリです。
+次のようにサポートできますが、ワーカー アカウントの数と、1 人のユーザーが実行できる、同時セッションの数は、サーバーのリソースによってのみ制限されます。 通常、R ランタイムの使用時に遭遇する最初のボトルネックは、メモリです。
 
-R Services では、R スクリプトで使用できるリソースは SQL Server によって管理されます。 SQL Server の DMV を使用してリソースの使用状況を監視するか、または関連する Windows ジョブ オブジェクトのパフォーマンス カウンターを見て、サーバー メモリの使用量を必要に応じて調整することをお勧めします。 
- 
-SQL Server Enterprise Edition を使用している場合は、[外部リソース プール](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)を構成することで、R スクリプトの実行に使用されるリソースを割り当てることができます。 
+Python または R スクリプトで使用できるリソースは、SQL Server によって管理されます。 SQL Server の DMV を使用してリソースの使用状況を監視するか、または関連する Windows ジョブ オブジェクトのパフォーマンス カウンターを見て、サーバー メモリの使用量を必要に応じて調整することをお勧めします。 SQL Server Enterprise Edition がある場合は、構成することによって外部スクリプトを実行するために使用されているリソースを割り当てることができます、[外部リソース プール](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)です。
 
-R スクリプトの容量管理について詳しくは、次の記事をご覧ください。
+マシンの管理に関する詳細について学習のタスクの容量、以下を参照します。
 
-- [R Services 用の SQL Server の構成](../../advanced-analytics/r-services/sql-server-configuration-r-services.md)
--  [R Services のパフォーマンス ケース スタディ](../../advanced-analytics/r-services/performance-case-study-r-services.md)
+- [R Services の SQL Server の構成](../../advanced-analytics/r/sql-server-configuration-r-services.md)
+-  [R Services のパフォーマンスのケース スタディ](../../advanced-analytics/r/performance-case-study-r-services.md)
 
 ## <a name="security"></a>セキュリティ
 
@@ -89,7 +88,7 @@ R スクリプトの容量管理について詳しくは、次の記事をご覧
 
 既定では、R ワーカー アカウントのグループには、それが関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対するログイン権限が**ありません**。 そのため、リモート クライアントから SQL Server に接続して R スクリプトを実行するユーザーが いる場合や、ODBC を使用して追加データを取得するスクリプトがある場合には、問題が生じる場合があります。 
 
-これらのシナリオをサポートする必要がある場合、データベース管理者は、R スクリプトが実行される SQL Server インスタンスへのログイン権限 (**Connect to** 権限) を、R ワーカー アカウントのグループに提供する必要があります。 これは*暗黙の認証*と呼ばれ、これにより SQL Server は、リモート ユーザーの資格情報を使用して R スクリプトを実行できるようになります。
+これらのシナリオをサポートする必要がある場合、データベース管理者は、R スクリプトが実行される SQL Server インスタンスへのログイン権限 (**Connect to** 権限) を、R ワーカー アカウントのグループに提供する必要があります。 これを呼びます*黙示的な認証*、により、SQL Server のリモート ユーザーの資格情報を使用して R スクリプトを実行するとします。
 
 > [!NOTE]
 > SQL ログインを利用し、リモート ワークステーションから R スクリプトを実行する場合、この制限は適用されません。SQL ログインの資格情報は、R クライアントから SQL Server インスタンスに、それから ODBC に明示的に渡されるためです。
@@ -97,7 +96,7 @@ R スクリプトの容量管理について詳しくは、次の記事をご覧
 
 ### <a name="how-to-enable-implied-authentication"></a>暗黙の認証を有効にする方法
 
-1. R コードを実行するインスタンスで、SQL Server Management Studio を監理者として開きます。
+1. R または Python コードを実行するインスタンスの管理者として SQL Server Management Studio を開きます。
 
 2. 次のスクリプトを実行します。 ユーザー グループの名前 (既定値を変更した場合) と、コンピューターとインスタンスの名前を必ず編集してください。
 
@@ -106,12 +105,6 @@ R スクリプトの容量管理について詳しくは、次の記事をご覧
     GO
     
     CREATE LOGIN [computername\SQLRUserGroup] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[language]
-    GO  
+    GO
     ````
-
-
-  
-## <a name="see-also"></a>参照  
- [構成 (SQL Server R Services)](../../advanced-analytics/r-services/configuration-sql-server-r-services.md)
-  
 

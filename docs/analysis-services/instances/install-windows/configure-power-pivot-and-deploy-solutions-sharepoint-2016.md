@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b0e3fa74aed98e00a64a155a8fb43d2cc6db3e1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01d737c9c1ac225ca00f4b824567d013673a8f57
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2016)
   このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーといった [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能に対する中間層機能強化の配置および構成について説明します。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 構成** ツールを実行して、以下の操作を完了します。  
@@ -135,11 +133,10 @@ ms.lasthandoff: 09/01/2017
   
 4.  **[正常性データの収集を有効にする]** が選択されていることを確認します。  
   
-5.  [ **OK**] を選択します。  
+5.  **[OK]** を選択します。  
   
  データ更新のトラブルシューティングに関する詳細については、「 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) 」 (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) を参照してください。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   
   
-

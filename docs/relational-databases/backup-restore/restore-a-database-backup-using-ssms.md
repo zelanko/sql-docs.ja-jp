@@ -8,8 +8,7 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用したデータベース バックアップの復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     
 2.  **[データベース]** を右クリックして、 **[データベースの復元...]**を選択します。    
     
-3.  **[全般]** ページの **ソース** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。    
+3.  **[全般]** ページの **** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。    
     
     -   **データベース**    
     
@@ -104,7 +102,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     
         > **注:** この一覧は **[デバイス]** を選択した場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。    
      
-4.  **復元先のセクション** の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。    
+4.  **** 復元先のセクションの **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。    
     
 5.  **[復元先]** ボックスで、既定値の **[最後に作成されたバックアップ]** のままにするか、 **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスし、具体的にどの時点で復旧アクションを停止するかを手動で選択します。 特定の時点を指定する方法の詳細については、「 [バックアップ タイムライン](../../relational-databases/backup-restore/backup-timeline.md)」をご覧ください。    
     
@@ -183,7 +181,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 
 5.  **[OK]** をクリックして、 **[全般]** ページに戻ります。
 
-6.  **復元先のセクション** の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。  データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。
+6.  **** 復元先のセクションの **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。  データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。
 
 7.  **[ページの選択]** ペインの **[オプション]** をクリックします。
 
@@ -289,4 +287,3 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
  [[データベースの復元] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)    
     
   
-

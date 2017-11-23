@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - TYPE_TSQL
 - TYPE
 - CREATE_TYPE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - UDTs [SQL Server], creating
 - CLR user-defined types [SQL Server]
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 92
+caps.latest.revision: "92"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 145f60bcec81e8a29761a44146df025f66a21b80
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e7f411871d98fc6854b97478402567017d28222
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,17 +178,17 @@ column_name <data_type>
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
 |**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar (**  *n*  **)**|**ntext**|**numeric**|  
-|**nvarchar (**  *n*  & #124 です。**最大)**|**real**|**smalldatetime**|**smallint**|  
+|**nvarchar (**  *n*  &#124;です。**最大)**|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**time**|  
-|**tinyint**|**uniqueidentifier**|**varbinary (**  *n*  & #124 です。**最大)**|**varchar (**  *n*  & #124 です。**最大)**|  
+|**tinyint**|**uniqueidentifier**|**varbinary (**  *n*  &#124;です。**最大)**|**varchar (**  *n*  &#124;です。**最大)**|  
   
  *base_type*これらのシステム データ型のいずれかにマップされる任意のデータ型のシノニムをすることもできます。  
   
  *有効桁数 (precision)*  
- **Decimal**または**数値**は、小数点の右側および左側に格納できる 10 進数字の最大合計数を示す正の整数。 詳細については、次を参照してください[decimal および numeric 型 &#40;。TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ **Decimal**または**数値**は、小数点の右側および左側に格納できる 10 進数字の最大合計数を示す正の整数。 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  *scale*  
- **Decimal**または**数値**正の整数を小数点の右側に格納できる 10 進数字の最大数を示す、有効桁数未満にする必要があります. 詳細については、次を参照してください[decimal および numeric 型 &#40;。TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ **Decimal**または**数値**正の整数を小数点の右側に格納できる 10 進数字の最大数を示す、有効桁数未満にする必要があります. 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  **NULL** |NOT NULL します。  
  型が NULL 値を保持できるかどうかを指定します。 指定しない場合は、NULL が既定値です。  
@@ -207,25 +204,25 @@ column_name <data_type>
  **[.** *class_name***]**   
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name*有効な識別子である必要があり、アセンブリの可視性を持つアセンブリ内のクラスとして存在する必要があります。 *class_name*は、データベースの照合順序に関係なく大文字小文字が区別し、対応するアセンブリ内のクラス名と一致する必要があります。 クラス名が角かっこで囲まれた名前空間の修飾名を指定できます (****) 場合は、クラスを記述するために使用するプログラミング言語は c# などの名前空間の概念を使用します。 場合*class_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同じであると仮定*type_name*です。  
+ ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name*有効な識別子である必要があり、アセンブリの可視性を持つアセンブリ内のクラスとして存在する必要があります。 *class_name*は、データベースの照合順序に関係なく大文字小文字が区別し、対応するアセンブリ内のクラス名と一致する必要があります。 クラス名が角かっこで囲まれた名前空間の修飾名を指定できます (**[ ]**) 場合は、クラスを記述するために使用するプログラミング言語は c# などの名前空間の概念を使用します。 場合*class_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同じであると仮定*type_name*です。  
   
  \<column_definition >  
  ユーザー定義テーブル型の列を定義します。  
   
  \<データ型 >  
- ユーザー定義テーブル型の列でデータ型を定義します。 データ型の詳細については、次を参照してください。[データ型 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md). テーブルの詳細については、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
+ ユーザー定義テーブル型の列でデータ型を定義します。 データ型の詳細については、次を参照してください。[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). テーブルの詳細については、次を参照してください。 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  \<column_constraint >  
- ユーザー定義テーブル型の列制約を定義します。 PRIMARY KEY、UNIQUE、CHECK などの制約がサポートされています。 テーブルの詳細については、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
+ ユーザー定義テーブル型の列制約を定義します。 PRIMARY KEY、UNIQUE、CHECK などの制約がサポートされています。 テーブルの詳細については、次を参照してください。 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  \<computed_column_definition >  
- 計算列の式をユーザー定義テーブル型の列として定義します。 テーブルの詳細については、次を参照してください。 [CREATE TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).  
+ 計算列の式をユーザー定義テーブル型の列として定義します。 テーブルの詳細については、次を参照してください。 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  \<table_constraint >  
  ユーザー定義テーブル型のテーブル制約を定義します。 PRIMARY KEY、UNIQUE、CHECK などの制約がサポートされています。  
   
  \<index_option >  
- 一意のクラスター化インデックスまたは一意の非クラスター化インデックスにおいて、複数行の挿入操作で重複したキー値が見つかった場合の、エラー応答を指定します。 インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ 一意のクラスター化インデックスまたは一意の非クラスター化インデックスにおいて、複数行の挿入操作で重複したキー値が見つかった場合の、エラー応答を指定します。 インデックス オプションの詳細については、次を参照してください。 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
  INDEX  
  CREATE TABLE ステートメントの一部として列インデックスとテーブル インデックスを指定する必要があります。 メモリ最適化テーブルでは、CREATE INDEX および DROP INDEX はサポートされません。  
@@ -298,7 +295,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-user-defined-table-type"></a>C. ユーザー定義テーブル型を作成する  
- 次の例では、2 つの列を持つユーザー定義テーブル型が作成されます。 作成して、テーブル値パラメーターを使用する方法の詳細については、次を参照してください。[テーブル値パラメーター (&) #40";"データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ 次の例では、2 つの列を持つユーザー定義テーブル型が作成されます。 作成して、テーブル値パラメーターを使用する方法の詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
   
 ```  
 CREATE TYPE LocationTableType AS TABLE   
@@ -309,8 +306,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [アセンブリ &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-assembly-transact-sql.md)   
- [ドロップ タイプ & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-type-transact-sql.md)   
+ [ドロップ タイプ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

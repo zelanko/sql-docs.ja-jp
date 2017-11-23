@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - JSON, querying
 - JSON_QUERY function
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 310d85e26226cd54eff5d1c99e94b235348a90f7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 56b50c0497a2e0ee40f9cf086124eba8e55bdd03
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  オブジェクトまたは配列を JSON 文字列から抽出します。  
   
- オブジェクトまたは配列ではなく、JSON 文字列からスカラー値を抽出する、次を参照してください。 [JSON_VALUE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/json-value-transact-sql.md). 間の相違点について**JSON_VALUE**と**JSON_QUERY**を参照してください[JSON_VALUE の比較と JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)です。  
+ オブジェクトまたは配列ではなく、JSON 文字列からスカラー値を抽出する、次を参照してください。 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). 間の相違点について**JSON_VALUE**と**JSON_QUERY**を参照してください[JSON_VALUE の比較と JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,9 +54,9 @@ JSON_QUERY ( expression [ , path ] )
  *パス*  
  オブジェクトまたは抽出先の配列を指定する JSON のパス。
 
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
 
-JSON のパスを解析するための lax または strict モードを指定できます。 解析モードを指定しない場合は、既定値は lax モードです。 詳細については、次を参照してください。 [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+JSON のパスを解析するための lax または strict モードを指定できます。 解析モードを指定しない場合は、既定値は lax モードです。 詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
 
 既定値*パス*'$' がします。 値を指定しない場合、結果として*パス*、 **JSON_QUERY** 、入力を返します*式*です。
 
@@ -94,7 +92,7 @@ JSON のパスを解析するための lax または strict モードを指定�
 } 
 ```  
   
- 次の表の動作を比較して**JSON_QUERY**厳密でないモードでは厳格モードでします。 省略可能なパス モードの仕様 (lax または strict) に関する詳細については、次を参照してください。 [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 次の表の動作を比較して**JSON_QUERY**厳密でないモードでは厳格モードでします。 省略可能なパス モードの仕様 (lax または strict) に関する詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  
@@ -135,6 +133,5 @@ FOR JSON PATH
 ```  
   
 ## <a name="see-also"></a>参照  
- [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ & #40 です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
-
+ [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  

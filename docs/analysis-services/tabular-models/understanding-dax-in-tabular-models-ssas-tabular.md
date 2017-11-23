@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 73a56576091a746db0ca8c52ea2be22f60a50148
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX では、テーブル モデル (SSAS テーブル)
   Data Analysis Expressions (DAX) は、Analysis Services、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
@@ -50,7 +49,7 @@ ms.lasthandoff: 10/23/2017
   
  メジャーの数式で、COUNT や SUM など、オート SUM 機能を使用して自動的に作成された標準の集計関数を使用することも、DAX を使用して独自の数式を定義することもできます。 数式バーでメジャーの数式を定義すると、現在のコンテキスト全体に対する結果のプレビューがツールヒント機能を使用して表示されます。ただし、それ以外の結果はすぐには表示されません。 メジャーに関するその他の詳しい情報は、 **[プロパティ]** ペインに表示されます。  
   
- (フィルターされた) 計算結果をすぐに確認できない理由は、コンテキストがない限りメジャーの結果が決定されないためです。 メジャーを評価するには、各セルに関連するデータを取得して、各セルの式を評価するために必要なコンテキストを提供できるレポート クライアント アプリケーションが必要です。 そのクライアントには、Excel のピボット テーブルまたはピボット グラフ、Power BI レポート、または MDX クエリがあります。 レポート クライアントにかかわらず、結果では各セルについて個別のクエリが実行されます。 つまり、ピボット テーブルの行および列ヘッダーの組み合わせごとまたは選択した各スライサーとフィルターは、Power BI レポートでは、異なる、メジャーを計算するデータのサブセットを生成します。 たとえば、数式を含んだメジャーで`Total Sales:=SUM([Sales Amount])`、ピボット テーブルの [値] ウィンドウで [合計] メジャーを配置すると、場所、DimProductCategory 列フィルターウィンドウ、Sales Amount の合計に DimProduct テーブルからは、計算および各製品カテゴリを表示します。  
+ (フィルターされた) 計算結果をすぐに確認できない理由は、コンテキストがない限りメジャーの結果が決定されないためです。 メジャーを評価するには、各セルに関連するデータを取得して、各セルの式を評価するために必要なコンテキストを提供できるレポート クライアント アプリケーションが必要です。 そのクライアントには、Excel のピボット テーブルまたはピボット グラフ、Power BI レポート、または MDX クエリがあります。 レポート クライアントにかかわらず、結果では各セルについて個別のクエリが実行されます。 つまり、ピボット テーブルの行および列ヘッダーの組み合わせごとまたは選択した各スライサーとフィルターは、Power BI レポートでは、異なる、メジャーを計算するデータのサブセットを生成します。 たとえば、数式を含んだメジャーで`Total Sales:=SUM([Sales Amount])`、ピボット テーブルの [値] ウィンドウで [合計] メジャーを配置すると、場所、DimProductCategory 列フィルター ウィンドウ、Sales Amount の合計に DimProduct テーブルからは、計算および各製品カテゴリを表示します。  
   
  計算列や行フィルターとは異なり、メジャーの構文では、数式の前にメジャーの名前が付きます。 この例では、" **Total Sales:** " という名前が数式の前に付きます。 メジャーの作成が終了すると、名前と定義がレポート クライアント アプリケーションのフィールド リストに表示され、パースペクティブとロールに応じて、モデルのすべてのユーザーがメジャーを利用できるようになります。  
   
@@ -407,4 +406,3 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [サポートされているデータ ソース](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
-

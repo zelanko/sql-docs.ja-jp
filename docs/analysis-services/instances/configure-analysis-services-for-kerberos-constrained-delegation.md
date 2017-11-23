@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 60e56d6d5643afee56cf5d30a548a90ebd5ff7f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6158c7263fcd620f1ac577522b09f8ac4b9e08d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos の制約付き委任のための Analysis Services の構成
   Kerberos 認証用に Analysis Services を構成する際は、通常、データを照会するときに Analysis Services でユーザー ID の権限を借用すること、Analysis Services でユーザー ID を下位レベル サービスに委任すること、またはその両方を実現することが重要になります。 これらのシナリオで求められる構成要件はそれぞれ異なります。 どちらのシナリオでも、構成が正しく行われたことを確認するための検証が必要になります。  
@@ -113,7 +112,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  Analysis Services インスタンスで **SQL Server Profiler** を開始し、新しいトレースを開始します。  
   
-2.  [イベントの選択] で、[Security Audit] セクションの [ **Audit Login** ] および [ **Audit Logout** ] のチェック ボックスがオンになっていることを確認します。  
+2.  [イベントの選択] で、[Security Audit] セクションの **[Audit Login]** および **[Audit Logout]** のチェック ボックスがオンになっていることを確認します。  
   
 3.  リモート クライアント コンピューターから、アプリケーション サービス (SharePoint、Reporting Services など) を介して Analysis Services に接続します。 Audit Login イベントに、Analysis Services に接続しているユーザーの ID が表示されます。  
   
@@ -129,4 +128,3 @@ ms.lasthandoff: 09/01/2017
  [接続文字列プロパティ (Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   
-

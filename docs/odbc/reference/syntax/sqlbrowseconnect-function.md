@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBrowseConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBrowseConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBrowseConnect
-helpviewer_keywords:
-- SQLBrowseConnect function [ODBC]
+f1_keywords: SQLBrowseConnect
+helpviewer_keywords: SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 839cf9ec1e802d0bce8da8cc0134bf89b0646bb2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f8117cc5238576f840cdb98f5ffaded38aed0d6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 関数
 **準拠**  
@@ -65,7 +59,7 @@ SQLRETURN SQLBrowseConnect(
  [入力]長さ **InConnectionString*文字です。  
   
  *OutConnectionString*  
- [出力][参照の結果の接続文字列を返す文字バッファーへのポインター (を参照してください"*OutConnectionString*引数"「コメント」内)。  
+ [出力]参照の結果の接続文字列を返す文字バッファーへのポインター (を参照してください"*OutConnectionString*引数"「コメント」内)。  
   
  場合*OutConnectionString* null、 *StringLength2Ptr*は文字 (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能なによって示される*OutConnectionString*です。  
   
@@ -92,7 +86,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|サーバー接続を拒否しました|データ ソースには、実装定義上の理由から、接続の確立が拒否されました。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとする、ドライバーが接続を試みたデータ ソース間の通信リンクが失敗しました。|  
 |28000|無効な権限の指定|ユーザー id、承認文字列またはその両方の参照で指定された要求の接続文字列 (*InConnectionString*)、データ ソースで定義された制限に違反します。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバー マネージャーは、(DM) は、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。<br /><br /> ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|呼び出して非同期操作が取り消されました[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)です。 その後、元の関数が再度呼び出さ上、 *ConnectionHandle*です。<br /><br /> 呼び出して、操作が取り消されました**SQLCancelHandle**上、 *ConnectionHandle*マルチ スレッド アプリケーションで別のスレッドからです。|  
 |HY010|関数のシーケンス エラー|(DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *ConnectionHandle*この関数が呼び出されたときに実行されているとします。|  
@@ -119,7 +113,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 引数  
  参照の要求の接続文字列には、次の構文があります。  
   
- *接続文字列*:: =*属性*[;] & #124 です。*属性*です。*接続 stringattribute* :: =*属性キーワード*=*属性と値*& #124 です。ドライバー = [{}]*属性と値 [*}]*属性キーワード*:: = DSN & #124 です。UID & #124 です。PWD & #124 です。*ドライバーの定義の属性と keywordattribute-値*:: =*文字-stringdriver の定義の属性-キーワード*:: =*識別子*  
+ *接続文字列*:: =*属性*[;] &#124;です。*属性*です。*接続 stringattribute* :: =*属性キーワード*=*属性と値*&#124;です。ドライバー = [{}]*属性と値 [*}]*属性キーワード*:: = DSN &#124;です。UID &#124;です。PWD &#124;です。*ドライバーの定義の属性と keywordattribute-値*:: =*文字-stringdriver の定義の属性-キーワード*:: =*識別子*  
   
  ここで*文字列*0 個以上の文字です。*識別子*が 1 つ以上の文字です。*属性キーワード*; 大文字小文字を区別することはありません*属性と値*可能性があります。 大文字小文字を区別しの値、 **DSN**空白だけのキーワードはで構成されていません。 接続文字列および初期化ファイルの文法、キーワード、および属性値のため、文字を含む**{} ()、;?\*=! @**避ける必要があります。 システム情報の文法、ためキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。 ODBC 2 の場合。*x*ドライバー、DRIVER キーワードの属性値を囲む中かっこが必要です。  
   
@@ -130,7 +124,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 引数  
  参照の結果の接続文字列は、接続属性の一覧です。 接続属性は、属性キーワードと対応する属性値で構成されます。 参照の結果の接続文字列には、次の構文があります。  
   
- *接続文字列*:: =*属性*[;] & #124 です。*属性*です。*接続 stringattribute* :: = [\*]*属性キーワード = 属性-valueattribute-キーワード*:: = *ODBC 属性キーワード*& #124 です。*driver-defined-attribute-keywordODBC-attribute-keyword* = {UID & #124 です。PWD} [:*ローカライズ識別子*]*ドライバーの定義の属性-キーワード*:: =*識別子*[:*ローカライズ識別子*]*属性と値*:: = {*属性値リスト*} &#124; しますか? (中かっこはリテラル以外の場合は、ドライバーによって返される。)*属性値リスト*:: =*文字列*[:*ローカライズされた文字の文字列*] & #124 です。*文字列*[:*ローカライズされた文字の文字列*]、*属性値リスト*  
+ *接続文字列*:: =*属性*[;] &#124;です。*属性*です。*接続 stringattribute* :: = [\*]*属性キーワード = 属性-valueattribute-キーワード*:: = *ODBC 属性キーワード*&#124;です。*driver-defined-attribute-keywordODBC-attribute-keyword* = {UID &#124;です。PWD} [:*ローカライズ識別子*]*ドライバーの定義の属性-キーワード*:: =*識別子*[:*ローカライズ識別子*]*属性と値*:: = {*属性値リスト*} &#124; しますか? (中かっこはリテラル以外の場合は、ドライバーによって返される。)*属性値リスト*:: =*文字列*[:*ローカライズされた文字の文字列*] &#124;です。*文字列*[:*ローカライズされた文字の文字列*]、*属性値リスト*  
   
  ここで*文字列*と*ローカライズされた文字の文字列*0 個以上の文字です。*識別子*と*ローカライズ識別子*1 つまたは複数の文字です。*属性キーワード*小文字は区別; されず*属性と値*大文字小文字を区別することがあります。 接続のための文字列と初期化ファイル文法、キーワード、ローカライズされた識別子は、および属性値を文字を含む**{} ()、;?\*=! @**避ける必要があります。 システム情報の文法、ためキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。  
   
@@ -295,4 +289,3 @@ int main() {
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)
-

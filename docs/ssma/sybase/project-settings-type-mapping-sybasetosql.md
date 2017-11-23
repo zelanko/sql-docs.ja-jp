@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c1040ad5e3aba40b6ee9565a41e2f8ba6888509
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
-ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Sybase Adaptive Server Enterprise (ASE) データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
@@ -88,7 +86,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**倍精度**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*..15]**|**float [24]**|  
-|**float [16\*]**|**float [53]**|  
+|**float [16..\*]**|**float [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**整数 (integer)**|**int**|  
@@ -152,4 +150,3 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**varchar [\*..8000]**|**varchar [\*]**|  
 |**varchar [8001..\*]**|**varchar(max)**|  
   
-

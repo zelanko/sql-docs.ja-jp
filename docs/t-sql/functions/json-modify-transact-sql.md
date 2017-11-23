@@ -8,22 +8,20 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0c4f5c0f65e6f7ae8b532cb42d117fa49fc83b00
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70f2c1456da6469c39389fada6a74ccf46383582
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,9 +59,9 @@ JSON_MODIFY ( expression , path , newValue )
     プロパティによって参照されることを示す *\<json のパス >* JSON 式である必要があります。 プロパティが存在しない場合、JSON_MODIFY はエラーを返します。  
   
 -   *\<json のパス >*  
-    更新するプロパティのパスを指定します。 詳細については、次を参照してください。 [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+    更新するプロパティのパスを指定します。 詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
 
 **JSON_MODIFY**エラーが返されますの形式*パス*が無効です。  
   
@@ -80,13 +78,13 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合、新しい�
 ## <a name="remarks"></a>解説  
  JSON_MODIFY 関数では、既存のプロパティの値を更新して、新しいキーと値のペアを挿入またはモードの組み合わせに基づいており、値を提供したキーを削除することができます。  
   
- 次の表の動作を比較して**JSON_MODIFY**厳密でないモードでは厳格モードでします。 省略可能なパス モードの仕様 (lax または strict) に関する詳細については、次を参照してください。 [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 次の表の動作を比較して**JSON_MODIFY**厳密でないモードでは厳格モードでします。 省略可能なパス モードの仕様 (lax または strict) に関する詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 |既存の値|パスが存在します。|厳密でないモード|厳格モード|  
 |--------------------|-----------------|--------------|-----------------|  
-|NULL でないです。|はい|既存の値を更新します。|既存の値を更新します。|  
+|NULL でないです。|可|既存の値を更新します。|既存の値を更新します。|  
 |NULL でないです。|不可|指定したパスに新しいキーと値のペアを作成しようとしてください。<br /><br /> これが失敗する可能性があります。 たとえば、パスを指定する場合`$.user.setting.theme`、JSON_MODIFY がキーを挿入できません`theme`場合、`$.user`または`$.user.settings`オブジェクトが存在しないかどうかの設定は、配列またはスカラー値またはします。|Error – INVALID_PROPERTY|  
-|NULL|はい|既存のプロパティを削除します。|既存の値を null に設定します。|  
+|NULL|可|既存のプロパティを削除します。|既存の値を null に設定します。|  
 |NULL|不可|操作はありません。 最初の引数は、結果として返されます。|Error – INVALID_PROPERTY|  
   
  厳密でないモードでは、JSON_MODIFY は、新しいキーと値のペアを作成しようとしていますが、場合によっては失敗する可能性があります。  
@@ -311,8 +309,7 @@ WHERE EmployeeID=17
 ```  
   
 ## <a name="see-also"></a>参照  
- [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ & #40 です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON データ &#40;です。SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   
-

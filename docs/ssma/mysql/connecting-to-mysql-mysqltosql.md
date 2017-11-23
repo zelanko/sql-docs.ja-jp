@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 18c53f8c1e8118fe1eb3cedcd12c7851c35ec10a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc29e681e7065b3f09a16504ea3fb5bd35f6d65a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL) に接続します。
 MySQL データベースを他の SQL Server または SQL Azure に移行するには、移行する MySQL データベースに接続する必要があります。 接続すると、SSMA は、すべての MySQL スキーマに関するメタデータを取得し、MySQL メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -77,7 +75,7 @@ MySQL データベースへの接続に使用されるアカウントが少な�
     > [!NOTE]  
     > 有効にする**構成**に SSL を設定する必要があります**True**です。  
   
-    [構成] ボタンをクリックすると、ダイアログ ボックスが表示されます。 MySQL データベースを次の 3 つの証明書ファイルダイアログ ボックス内に存在するパスに接続する必要があります中に暗号化を使用するには、[プライバシー強化メール証明書 (PEM)] に定義されています。  
+    [構成] ボタンをクリックすると、ダイアログ ボックスが表示されます。 MySQL データベースを次の 3 つの証明書ファイル ダイアログ ボックス内に存在するパスに接続する必要があります中に暗号化を使用するには、[プライバシー強化メール証明書 (PEM)] に定義されています。  
   
     -   **SSL 証明機関:**信頼の SSL の Ca の一覧で、ファイルへのパスを指定します。  
   
@@ -125,4 +123,3 @@ MySQL データベースについてのメタデータは、自動的に更新�
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

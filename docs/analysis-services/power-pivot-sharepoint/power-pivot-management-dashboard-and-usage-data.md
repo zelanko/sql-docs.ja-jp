@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 54ed8cfaefb6bf4af33f5acb804fa61f49503416
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5833c1dae2cc6b5cf8f85a52bec088d96e609537
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードとは、SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
@@ -105,7 +104,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  テキスト エディターで .odc ファイルを開きます。  
   
-6.   **\<Odc:ConnectionString >**要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =**です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
+6.  **\<Odc:ConnectionString >**要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =**です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
   
 7.  このファイルを保存します。 残りの手順は、使用している [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] と Excel のバージョンによって異なります。  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 09/01/2017
   
     7.  接続の名前を指定して、 **[次へ]**をクリックします。  
   
-    8.  [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集します。 **** "Edit Mode プロパティ名の形式が正しくありません。" というエラー メッセージが表示される場合は、.ODC ファイルを編集していることを確認してください。  
+    8.  [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集します。 **Edit Mode プロパティ名の形式が正しくありません。** というエラー メッセージが表示される場合は、.ODC ファイルを編集していることを確認してください。  
   
     9. **[OK]** をクリックし、 **[完了]**をクリックします。  
   
@@ -152,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

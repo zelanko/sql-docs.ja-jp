@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 48fb9c051deb490a2652bda4d8cd39be335c3270
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="formal-shape-grammar"></a>図形の正式な文法
 これは、正式な文法任意図形のコマンドを作成するためです。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 |----------|----------------|  
 |\<shape コマンド >|図形 [\<テーブル exp > [と]\<エイリアス >] [\<図形アクション >]|  
 |\<テーブル exp >|{\<プロバイダー コマンド テキスト >} &#124; です。<br /><br /> (\<shape コマンド >) &#124;<br /><br /> テーブル\<引用符で囲まれた名 > &#124; です。<br /><br /> \<引用符で囲まれた名前 >|  
-|\<アクション図形 >|APPEND\<エイリアス フィールド リスト > &#124; です。<br /><br /> コンピューティング\<エイリアス> [BY\<フィールド リスト >]|  
+|\<アクション図形 >|APPEND\<エイリアス フィールド リスト > &#124; です。<br /><br /> コンピューティング\<エイリアス > [BY\<フィールド リスト >]|  
 |\<エイリアス >|\<エイリアス フィールド > [、\<エイリアス フィールド… >]|  
 |\<エイリアス フィールド >|\<フィールド exp > [と]\<エイリアス >]|  
 |\<フィールド exp >|(\<関係 exp >) &#124;<br /><br /> \<計算 exp > &#124; です。<br /><br /> \<集計 exp > &#124; です。<br /><br /> \<新しい exp >|  
@@ -82,5 +80,4 @@ ms.lasthandoff: 09/09/2017
  [図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
  [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
  [図形の COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md)   
- [Visual Basic アプリケーション関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-
+ [Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

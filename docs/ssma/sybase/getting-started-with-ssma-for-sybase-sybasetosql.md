@@ -5,25 +5,23 @@ ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4cc7553ec5936efeafdde72f87b19c9656a699e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
-ms.openlocfilehash: aafb1156f2036e09fa4f610380a5a1d24a5dbdad
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) for SSMA の概要
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) の SAP ASE できます迅速に変換する SAP Adaptive Server Enterprise (ASE) データベースのスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースのスキーマへの結果として得られるスキーマのアップロード[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースからデータを移行し、SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 10/03/2017
 ## <a name="installing-and-licensing-ssma"></a>インストールとライセンス SSMA  
 SSMA を使用する必要がありますに初めてインストールする SSMA クライアント プログラム SAP ASE のソース インスタンスとのターゲット インスタンスの両方にアクセスできるコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。 サーバー側のデータ移行を使用する必要がありますにインストールする拡張機能パックは、および少なくとも 1 つの SAP ASE プロバイダー (OLE DB、または ADO.NET) を実行しているコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントは、データの移行と SAP ASE システム関数のエミュレーションをサポートします。 インストール手順については、次を参照してください[SSMA SAP ASE &#40; for をインストールする。SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md).  
   
-SSMA を起動するには、クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Sybase**、し、 **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Sybase**です。 初めて、SSMA を起動するライセンスのダイアログ ボックスが表示されます。 SSMA は、SSMA を使用する前に、Windows Live ID を使用してライセンスする必要があります。 ライセンスの手順で、インストールの手順に記載されて、 [SSMA Sybase クライアント &#40; for をインストールします。SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)トピックです。  
+SSMA を起動するには、クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Sybase**、し、  **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Sybase**です。 初めて、SSMA を起動するライセンスのダイアログ ボックスが表示されます。 SSMA は、SSMA を使用する前に、Windows Live ID を使用してライセンスする必要があります。 ライセンスの手順で、インストールの手順に記載されて、 [SSMA Sybase クライアント &#40; for をインストールします。SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)トピックです。  
   
 ## <a name="ssma-for-sap-ase-user-interface"></a>SSMA for SAP ASE ユーザー インターフェイス  
 SSMA がインストールされ、ライセンス後に、SAP ASE データベースを移行 SSMA を使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。 開始する前に、SSMA ユーザー インターフェイスを理解するのに役立ちます。 次の図は、SSMA を含むメタデータ エクスプ ローラー、メタデータ、ツールバー、出力ウィンドウ、およびエラー一覧 ウィンドウのユーザー インターフェイスを示しています。  
@@ -46,7 +44,7 @@ SSMA がインストールされ、ライセンス後に、SAP ASE データベ�
   
 変換後のスキーマの読み込み後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベース、Sybase メタデータ エクスプ ローラーに戻ってをしたへの SAP ASE データベースからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。  
   
-これらのタスクとその実行方法の詳細については、次を参照してください。 [SAP ASE へのデータベース移行 SQL Server - Azure SQL データベース & #40 です。SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md).  
+これらのタスクとその実行方法の詳細については、次を参照してください。 [SAP ASE へのデータベース移行 SQL Server - Azure SQL データベース &#40;です。SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md).  
   
 次のセクションでは、SSMA ユーザー インターフェイスの機能を説明します。  
   
@@ -60,7 +58,7 @@ Sybase メタデータ エクスプ ローラーを使用すると、次のタ�
   
 -   各データベース内のテーブルを参照します。  
   
--   変換に、オブジェクトを選択し、オブジェクトに変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL Database の構文。 詳細については、次を参照してください。 [SAP ASE データベース オブジェクトの変換 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
+-   変換に、オブジェクトを選択し、オブジェクトに変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL Database の構文。 詳細については、次を参照してください。 [SAP ASE データベース オブジェクトの変換 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
   
 -   データ移行のためのオブジェクトを選択し、それらのオブジェクトをからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。 詳細については、次を参照してください[SQL Server - Azure SQL データベース &#40; への SAP ASE データの移行。SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md).  
   
@@ -118,6 +116,5 @@ SSMA には、次のメニューが含まれています。
 -   [エラー一覧] ウィンドウでは、並べ替えることができますを一連のエラー、警告、および情報メッセージを示します。  
   
 ## <a name="see-also"></a>参照  
-[SAP ASE データベースを移行するには、SQL Server - Azure SQL データベース & #40 です。SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-[ユーザー インターフェイス リファレンス & #40 です。SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
-
+[SAP ASE データベースを移行するには、SQL Server - Azure SQL データベース &#40;です。SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[ユーザー インターフェイス リファレンス &#40;です。SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

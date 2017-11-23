@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fe464bedc22fa5ebc47fc7f783e75b994d0cff49
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 27eeb54d6493bb200e56caada1238d6fafb5b339
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -106,9 +104,9 @@ FROM OPENJSON(@json)
 |ObjectValue|{"obj":"ect"}|5|  
 
 ### <a name="path"></a>*パス*  
-オブジェクトまたは配列内で参照される省略可能な JSON パス式は、 *jsonExpression*です。 **OPENJSON**シークを指定した位置にある JSON テキストに、参照先のフラグメントのみを解析します。 詳細については、次を参照してください。 [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
+オブジェクトまたは配列内で参照される省略可能な JSON パス式は、 *jsonExpression*です。 **OPENJSON**シークを指定した位置にある JSON テキストに、参照先のフラグメントのみを解析します。 詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]し、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]、変数の値として使用できる*パス*です。
   
 次の例では、入れ子になったオブジェクトを返しますを指定して、*パス*:  
 
@@ -159,7 +157,7 @@ JSON 式のプロパティを持つパス ステップの照合に使用する�
   
 JSON の式のプロパティを持つパスの手順を照合に使用する比較では、大文字と小文字および照合順序に関係なく (つまり、BIN2 の比較)。  
   
-パスの詳細については、次を参照してください。 [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+パスの詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 *JSON として*  
 使用して、 **AS JSON**列定義のオプションは、参照されたプロパティには、内部の JSON オブジェクトまたは配列が含まれているを指定します。 指定した場合、 **AS JSON**オプション、列の型は nvarchar (max) である必要があります。
@@ -246,7 +244,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
 -   **Lax**モード、 **OPENJSON**オブジェクトまたは指定したパスの値が見つからない場合、エラーが発生しません。 パスが見つからない場合**OPENJSON**空の結果セットまたは NULL 値を返します。
 -   **Strict**、モード**OPENJSON**パスが見つからない場合はエラーを返します。
 
-このページの例のいくつかは、path モード、lax または strict を明示的に指定します。 Path モードではオプションです。 厳密でないモードは、明示的に path モードを指定しない場合は、既定になります。 Path モードとパス式についての詳細については、次を参照してください。 [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).    
+このページの例のいくつかは、path モード、lax または strict を明示的に指定します。 Path モードではオプションです。 厳密でないモードは、明示的に path モードを指定しない場合は、既定になります。 Path モードとパス式についての詳細については、次を参照してください。 [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md).    
 
 列名が*with_clause* JSON テキスト内のキーと照合されます。 列名を指定する場合`[Address.Country]`、キーと対応している`Address.Country`です。 入れ子になったキーを参照する場合は、`Country`オブジェクト内で`Address`、パスを指定する必要が`$.Address.Country`列のパスにします。
 
@@ -312,7 +310,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ```  
   
 > [!TIP] 
-> 通常使用順に展開するときに、JSON 配列が個々 のフィールドに格納されているし、その親の行に結合して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CROSS APPLY 演算子。 詳細については、CROSS APPLY を参照してください。 [FROM & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md).  
+> 通常使用順に展開するときに、JSON 配列が個々 のフィールドに格納されているし、その親の行に結合して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CROSS APPLY 演算子。 詳細については、CROSS APPLY を参照してください。 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 使用して、同じクエリを書き直すことができます`OPENJSON`で明示的に定義されたスキーマを返す行の。  
   
@@ -367,10 +365,9 @@ DECLARE @json NVARCHAR(max)  = N'{
 ```  
   
 ## <a name="see-also"></a>参照  
- [JSON パス式 & #40 です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON パス式 &#40;です。SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [行と OPENJSON &#40; を持つ列に JSON データを変換します。SQL Server &#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
  [既定のスキーマ &#40; を OPENJSON を使用します。SQL Server &#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
  [OPENJSON、明示的なスキーマ &#40; を使用します。SQL Server &#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   
   
-

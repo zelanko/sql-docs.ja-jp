@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 67932080ad5ec8edc79232387a7b72df8627c076
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e92a6ac8d430b88c18ecae14c2a52771b566d39d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>ブック内のデータ接続に関するデータを更新できません
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックで、Excel Services は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  1 つ以上のサービスが一貫性のない状態にある可能性があります。 IISRESET を実行すると問題が解決することがあります。  
   
   
-

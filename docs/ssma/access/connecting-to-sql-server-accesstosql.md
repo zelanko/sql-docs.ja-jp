@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f282c03b5492ea05fefe3d65b968d42ce146333c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9f2633151345d57fbba2fe7c40b3ca52b492e68
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL) に接続します。
 Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のターゲット インスタンスに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 SSMA がのインスタンス内のデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でデータベースのメタデータを表示および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続しているが、パスワードは保存されません。  
@@ -73,7 +71,7 @@ SQL Server のインスタンスに関するメタデータが自動的に同期
   
     -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュとインスタンス名を入力します。 例: myserver \myinstance です。  
   
-    -   アクティブなユーザー インスタンスへの接続に[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]、名前付きパイプを使用して接続プロトコル、パイプ名をなどを指定して\\ \\.\pipe\sql\query です。 詳細については、次を参照してください。、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]ドキュメント。  
+    -   アクティブなユーザー インスタンスへの接続に[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]、名前付きパイプを使用して接続プロトコル、パイプ名をなどを指定して\\ \\.\pipe\sql\query です。 詳細については、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のドキュメントを参照してください。  
   
 3.  場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定以外のポートで接続を受け入れる、使用されるポート番号を入力するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]内の接続、**サーバー ポート**ボックス。 既定のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既定のポート番号は 1433 です。 名前付きインスタンスは、SSMA はからのポート番号の取得を試みます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser サービス。  
   
@@ -106,12 +104,12 @@ SQL Server のインスタンスに関するメタデータが自動的に同期
 ||||||||
 |-|-|-|-|-|-|-|
 |**プロジェクトの種類と対象サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 (バージョン: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2008 (バージョン: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||はい|[ユーザー アカウント制御]|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||はい|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||はい||
-|SQL Azure||||||はい|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|可|可|可|可|可||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||可|可|可|可||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||可|可|可||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||可|可||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||可||
+|SQL Azure||||||可|
   
 > [!IMPORTANT]  
 > 接続されている SQL Server のバージョンに従っていませんが、プロジェクトの種類に従って、データベース オブジェクトの変換を実施します。 SQL Server 2005 プロジェクトが発生した場合の変換は実行がに従って SQL Server 2005 を SQL Server (SQL Server 2008/SQL Server 2012]/[SQL Server 2014/SQL Server 2016) の上位バージョンに接続している場合でもです。  
@@ -134,4 +132,3 @@ SQL Server のインスタンスに関するメタデータが自動的に同期
 ## <a name="see-also"></a>参照  
 [SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

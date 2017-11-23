@@ -3,10 +3,12 @@ title: "CREATE INDEX (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - INDEX
 - INDEX_TSQL
 - CREATE_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - PRIMARY XML INDEX statement
@@ -53,20 +54,19 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "223"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ce92f7f55f82a7245818cbe669da76900f76be89
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   テーブルまたはビューをリレーショナル インデックスを作成します。 行ストア インデックスは、いずれかのクラスター化または非クラスター化 btree インデックスであるためにも呼び出されます。 テーブルにデータが前に、行ストア インデックスを作成することができます。 クエリでは、特定の列から選択するか、特定の順序で並べ替えの基準値を要求する場合は特に、クエリのパフォーマンスを向上させるために、行ストア インデックスを使用します。  
   
@@ -262,7 +262,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  決定的な計算列、および正確または不正確な計算列を、付加列にできます。 派生した計算列**イメージ**、 **ntext**、**テキスト**、 **varchar (max)**、 **nvarchar (max)**、**varbinary (max)**、および**xml**計算列のデータ型が含まれる列として使用できる限り、非キー列のデータ型を含めることができます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  
   
- XML インデックスを作成する方法については、次を参照してください。 [CREATE XML INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md).  
+ XML インデックスを作成する方法については、次を参照してください。 [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md).  
   
  ここで\<filter_predicate > インデックスに含める行を指定してフィルター選択されたインデックスを作成します。 フィルター選択されたインデックスは、テーブル上の非クラスター化インデックスである必要があります。 フィルター選択されたインデックスのデータ行のフィルター選択された統計情報を作成します。  
   
@@ -639,10 +639,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。  
   
 ## <a name="spatial-indexes"></a>空間インデックス  
- 空間インデックスについては、次を参照してください。 [CREATE SPATIAL INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)と[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
+ 空間インデックスについては、次を参照してください。 [CREATE SPATIAL INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)と[空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)です。  
   
 ## <a name="xml-indexes"></a>XML インデックス  
- XML インデックスについては、「の[CREATE XML INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)と[XML インデックス & #40 です。SQL Server &#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ XML インデックスについては、「の[CREATE XML INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)と[XML インデックス &#40;です。SQL Server &#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="index-key-size"></a>インデックス キーのサイズ  
  インデックス キーの最大サイズは 900 バイトをクラスター化インデックスと非クラスター化インデックスの 1,700 バイトです。 (前に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]V12 および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]制限が 900 バイトでは常にします)。インデックス**varchar**列の既存のデータは、インデックスが作成時の制限を超えない場合をバイトの制限を超える列を作成することができますただし、後続の挿入や更新操作となる列、合計サイズの制限を超えることは失敗します。 クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ **varchar** 列を含めることはできません。 クラスター化インデックスが **varchar** 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。  
@@ -760,7 +760,7 @@ INSERT INTO t1 VALUES (1, 0);
 -   ビューにインデックスを作成できません。  
   
 ## <a name="metadata"></a>メタデータ  
- 既存のインデックス情報を表示するにはクエリ、 [sys.indexes & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
+ 既存のインデックス情報を表示するにはクエリ、 [sys.indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)カタログ ビューです。  
   
 ## <a name="version-notes"></a>バージョンのメモ  
  SQL データベースは、ファイル グループと filestream オプションをサポートしていません。  
@@ -1044,19 +1044,6 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
-### <a name="p-add-a-column-to-an-index"></a>P. インデックスに列を追加します。  
- 次の例では、dbo から 2 つの列をインデックス IX_FF を作成します。FactFinance テーブルです。  次のステートメントでは、同じ名前と 1 つ以上の列には、そのインデックスを再構築を示します。  
-  
-```  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey ASC, DateKey ASC );  
-  
---Rebuild and add the OrganizationKey  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey, DateKey, OrganizationKey DESC)  
-WITH ( DROP_EXISTING = ON );  
-```  
-  
 ## <a name="see-also"></a>参照  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
@@ -1067,12 +1054,11 @@ WITH ( DROP_EXISTING = ON );
  [XML インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.xml_indexes & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
-
 

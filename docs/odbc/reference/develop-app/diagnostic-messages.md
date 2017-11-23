@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a242628af9898a3a437ec11000de626135e9d79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-messages"></a>診断メッセージ
 診断メッセージには、各 SQLSTATE が返されます。 同じ SQLSTATE の種類のメッセージの数が多くの場合、返されます。 たとえば、SQL 構文ではほとんどのエラーの SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。 ただし、各構文エラーは、別のメッセージで説明する可能性があります。  
@@ -58,5 +56,4 @@ ms.lasthandoff: 09/09/2017
   
  [1] この場合は、ドライバーは、ドライバーと、データ ソースの両方として機能します。  
   
- 角かっこ (****) メッセージに含める必要があるし、省略可能な項目が示されていません。
-
+ 角かっこ (**[ ]**) メッセージに含める必要があるし、省略可能な項目が示されていません。

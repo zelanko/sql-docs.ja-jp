@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa0bd590b7eeea51fa12627488215067cb46ecf6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c2534d88a10602dcabb594e5a18925ce2547194
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot の可用性と災害復旧
   可用性と災害復旧計画[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]主に、SharePoint ファーム、さまざまなコンポーネントで許容されるダウンタイムの量と、ツールと SharePoint の可用性の実装のベスト プラクティスの設計に依存します。 このトピックでは、さまざまなテクノロジについて要約し、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置に関して可用性とディザスター リカバリーを計画するときに考慮する必要のあるトポロジ図の例を示します。  
@@ -91,8 +90,11 @@ ms.lasthandoff: 09/01/2017
 |-|--------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 同期コミット モードの AlwaysOn を推奨します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 同期コミット モードの|サポートされ、なおかつ推奨されます。|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
+|
+            [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
+|
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+            [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|Supported|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
@@ -105,9 +107,11 @@ ms.lasthandoff: 09/01/2017
   
 ##  <a name="bkmk_more_resources"></a> 詳細情報へのリンク  
   
--   [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   
+            [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
--   [ディザスター リカバリーを計画する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
+-   
+            [ディザスター リカバリーを計画する (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
 -   [SQL Server クラウドのバックアップと復旧に関するホワイト ペーパー](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
@@ -117,4 +121,3 @@ ms.lasthandoff: 09/01/2017
   
 -   [SharePoint 2013 でのサービス インスタンスの管理](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
-

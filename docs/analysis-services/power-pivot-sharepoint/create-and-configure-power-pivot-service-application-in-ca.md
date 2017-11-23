@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 27d009450f9bdfac7eeff0f1bc9e1909d8968f01
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>作成し、CA で Power Pivot サービス アプリケーションを構成します。
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスの共有サービス インスタンスです。 各サービス アプリケーションは、固有のアプリケーション ID、構成設定、プロパティ、および内部データ ストレージを備えています。  
@@ -135,9 +134,9 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="AssignGSA"></a> Power Pivot サービス アプリケーションの Web アプリケーションへの割り当て  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの構成が完了したら、Web アプリケーションに関連するサービス アプリケーションの接続リストに追加することによって、サービス アプリケーションを Web アプリケーションに割り当てることができます。 これには 2 つの方法があります。  
   
--   "既定" **** の接続グループに追加します。 *既定の接続グループ* とは、そのグループを参照する任意の Web アプリケーションで使用できるサービス アプリケーション接続のコレクションです。 このリストに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを 1 つ追加する必要があります。  
+-   **既定** の接続グループに追加します。 *既定の接続グループ* とは、そのグループを参照する任意の Web アプリケーションで使用できるサービス アプリケーション接続のコレクションです。 このリストに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを 1 つ追加する必要があります。  
   
--   特定の Web アプリケーションの "カスタム" **** 接続リストを作成します。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、カスタム リストで選択することによって、使用するサービス アプリケーションを選択できます。  
+-   特定の Web アプリケーションの **カスタム** 接続リストを作成します。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、カスタム リストで選択することによって、使用するサービス アプリケーションを選択できます。  
   
  既定の接続グループに同じ型のサービス アプリケーションを複数含めることもできますが、 このリストに複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを追加する構成はサポートされていません。  
   
@@ -166,4 +165,3 @@ ms.lasthandoff: 09/01/2017
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-
