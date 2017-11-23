@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8944c6b5ca481e61a1ca18e7c453d2c2035e1acb
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db211fa0988f2dbe6a72291f898d670d44d3f215
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="match-transact-sql"></a>一致する (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -157,4 +154,3 @@ AND Person1.name = 'Alice';
  [TABLE &#40; を作成します。グラフの SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [挿入 (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017 を使用した処理グラフ](../../relational-databases/graphs/sql-graph-overview.md)  
-

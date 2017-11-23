@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>マイニング モデル (Analysis Services - データ マイニング)
   *マイニング モデル* は、データにアルゴリズムを適用することによって作成されますが、単なるアルゴリズムまたはメタデータ コンテナーではなく、予測を生成し、リレーションシップを推定するために新しいデータに適用されるデータ、統計情報、およびパターンのセットです。  
@@ -157,4 +156,3 @@ ms.lasthandoff: 09/01/2017
  [データベース オブジェクト &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

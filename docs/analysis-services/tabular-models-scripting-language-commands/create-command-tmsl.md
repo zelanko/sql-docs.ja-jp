@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae07d8b17fc659bb8a8bc2bef1cdcb6421606c29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9ab10d4af0caa658bff323c2bcd484d37ee354f3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-command-tmsl"></a>コマンド (TMSL) を作成します。
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="request"></a>要求  
  要求の構造は、オブジェクトによって異なります。 親であるオブジェクトがすべての子、兄弟と親の完全なオブジェクトの定義は必要ありませんがあります。  
   
- [データベース オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)データベース サーバーを追加します。  
+ [データベース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)データベース サーバーを追加します。  
   
 ```  
 {   
@@ -57,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 }  
 ```  
   
- [データ ソース オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [データ ソース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -81,7 +80,7 @@ ms.lasthandoff: 09/01/2017
 }  
 ```  
   
- [Tables オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)テーブルに列を追加します。  
+ [Tables オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)テーブルに列を追加します。  
   
 ```  
 {   
@@ -99,7 +98,7 @@ ms.lasthandoff: 09/01/2017
 }   
 ```  
   
- [パーティション オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)親テーブルのオブジェクトにパーティションを追加します。  
+ [パーティション オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)親テーブルのオブジェクトにパーティションを追加します。  
   
 ```  
 {  
@@ -119,7 +118,7 @@ ms.lasthandoff: 09/01/2017
 }  
 ```  
   
- [ロール オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)最小限のメンバーシップまたはフィルターせずに、データベースにロールを追加します。  
+ [ロール オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)最小限のメンバーシップまたはフィルターせずに、データベースにロールを追加します。  
   
 ```  
 {  
@@ -176,7 +175,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="usage-endpoints"></a>使用状況 (エンドポイント)  
- このコマンドの要素がのステートメントで使用される、[メソッドの実行 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
+ このコマンドの要素がのステートメントで使用される、[メソッドの実行 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
   
 -   SQL Server Management Studio (SSMS) での XMLA ウィンドウとして  
   
@@ -186,10 +185,9 @@ ms.lasthandoff: 09/01/2017
   
  SSMS からこのコマンドの既製のスクリプトを生成できます。  たとえば、既存のデータベースを右クリックする >**スクリプト** > **データベースをスクリプト** > **Create**です。  
   
- [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語 & #40 です。TMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
+ [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語 &#40;です。TMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
 
 ## <a name="see-also"></a>参照  
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.celldata.f1
+f1_keywords: sql13.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
 - user access rights [Analysis Services], cell data
 - permissions [Analysis Services], cells
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f199fb9b23b2837c4d886c2c5721c6cd762b7fad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb753663f77dbe9fae2eb37cce9a654bfa22f483
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>セル データへのカスタム アクセス権の付与 (Analysis Services)
   セルのセキュリティは、キューブ内のメジャー データへのアクセスを許可または拒否するために使用します。 次の図は、ロールに特定のメジャーへのアクセスのみが許可されているユーザーとして接続されたときに、ピボットテーブルで許可されるメジャーと拒否されるメジャーの組み合わせを示しています。 この例では、このロールで利用できるメジャーは **Reseller Sales Amount** と **Reseller Total Product Cost** だけです。 他のすべてのメジャーは、暗黙的に拒否されます (この結果を取得するために使用する手順については、次のセクション「特定のメジャーへのアクセスの許可」で説明します)。  
@@ -109,10 +107,9 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="see-also"></a>参照  
  [MDX ビルダー (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
  [基本的な MDX スクリプト &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [処理権限の Grant & #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [処理権限の Grant &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
  [ディメンション &#40; に対する権限を付与します。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
  [データ &#40; をディメンションにカスタムのアクセスを許可します。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   
-

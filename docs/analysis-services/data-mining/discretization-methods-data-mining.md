@@ -24,17 +24,16 @@ helpviewer_keywords:
 - EQUAL_AREAS method
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e9dcfdfb3fa3edb5691c04d8887d4dfe1be99f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ed262fff96572408e85067eb1e760c3ae11373e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discretization-methods-data-mining"></a>分離メソッド (データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルを作成するための一部のアルゴリズムでは、正常に機能するために特定の種類のコンテンツが必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  
@@ -70,9 +69,8 @@ ms.lasthandoff: 09/01/2017
  [コンテンツの種類 (DMX)](../../dmx/content-types-dmx.md)   
  [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [データ型 (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [データ型 &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)   
  [列の分布 (データ マイニング)](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   
   
-

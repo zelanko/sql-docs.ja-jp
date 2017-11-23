@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 8678d4abd61ca93e53c217b295650c9d3998fe50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 84ee0eaf4743cc4a3b188dd700b1ccbdc4ca42cc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>スケジュール SQL Server Integration Services パッケージの cron と Linux の実行
 
@@ -79,4 +78,3 @@ Crontab ファイル形式のより詳細な説明を取得するには、次の
 この記事の内容の例を説明するのに役立つ出力の部分的な例を次に示します。
 
 ![Crontab 形式の詳細の部分的な説明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
-

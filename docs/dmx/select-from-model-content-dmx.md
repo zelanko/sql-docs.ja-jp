@@ -17,23 +17,21 @@ f1_keywords:
 - SELECT
 - FROM
 - Content
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - SELECT FROM <model>.CONTENT statement
 ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7eaccd559a0898e489bf7befead782c7d3387245
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4a5f64e297e59d612be82f99e14f89df081be12
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;モデル&gt;です。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +79,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|ノードに対応する属性の名前です。|  
 |NODE_NAME|ノードの名前。|  
 |NODE_UNIQUE_NAME|モデル内のノードの一意な名前です。|  
-|NODE_TYPE|ノードの種類を表す整数です。 」をご覧ください。|  
+|NODE_TYPE|ノードの種類を表す整数です。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
 |NODE_GUID|ノードの GUID です。 GUID がない場合は NULL です。|  
 |NODE_CAPTION|ノードに関連付けられているラベルまはたキャプションです。 主に表示のために使用されます。 キャプションが存在しない場合は、NODE_NAME を返します。|  
 |CHILDREN_CARDINALITY|ノードが持つ子の数です。|  
@@ -168,4 +166,3 @@ WHERE NODE_TYPE = 26
  [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

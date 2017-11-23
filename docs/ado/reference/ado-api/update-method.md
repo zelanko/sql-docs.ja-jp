@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::Update
-helpviewer_keywords:
-- Update method [ADO]
+f1_keywords: Recordset15::Update
+helpviewer_keywords: Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 287fb5bf8b87a8371ee84d89ba4e5efee6b3587f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="update-method"></a>Update メソッド
 現在の行に加えたあらゆる変更を保存、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。  
@@ -78,7 +74,7 @@ record.Fields.Update
   
 |||  
 |-|-|  
-|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>参照  
  [更新プログラムとただしメソッドの例 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
@@ -87,4 +83,3 @@ record.Fields.Update
  [ただしメソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
  [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)
-

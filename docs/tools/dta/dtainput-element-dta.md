@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- DTAInput element
+dev_langs: XML
+helpviewer_keywords: DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01ce41754770e58ae35e5c1ca6c1d94dab4d5fb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22a7b07a5dee4e826d2b438d384d44796ca23480
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 要素 (DTA)
   データベース エンジン チューニング アドバイザーに対する XML 入力の定義が含まれます。  
@@ -64,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

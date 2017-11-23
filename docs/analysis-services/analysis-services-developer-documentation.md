@@ -17,17 +17,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services の開発者向けドキュメント
 Analysis Services ではほとんどすべてのオブジェクトとワークロードは、プログラミング、および多くの場合からを選択する 1 つ以上の方法もあります。  マネージ コードの記述、スクリプト、または場合は、ソリューションの要件は、.NET framework を使用できないわけでは、XMLA および MSOLAP などのオープン スタンダードを使用して、オプションが含まれます。
@@ -74,15 +73,14 @@ Analysis Services には、コード内のソリューションをカスタマ�
 
 [Analysis Services のスキーマ行セット](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)サーバーの状態、サーバー操作、およびデータベース オブジェクトに関する情報を提供するスキーマ行セットについて説明します。
 
-[XML for Analysis & #40 です。XMLA &#41;参照](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)するのに役立つ XMLA の説明の概念は、XMLA が、カスタム ソリューションに貢献する方法を理解します。 XMLA 1.1 仕様への準拠のレベルについても説明します。
+[XML for Analysis &#40;です。XMLA &#41;参照](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)するのに役立つ XMLA の説明の概念は、XMLA が、カスタム ソリューションに貢献する方法を理解します。 XMLA 1.1 仕様への準拠のレベルについても説明します。
 
-[Analysis Services スクリプト言語 & #40 です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) XMLA に対する ASSL 拡張について説明します。 ASSL では、XMLA 仕様を補完する、Analysis Services 多次元モデルのデータ定義と操作言語を提供します。
+[Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) XMLA に対する ASSL 拡張について説明します。 ASSL では、XMLA 仕様を補完する、Analysis Services 多次元モデルのデータ定義と操作言語を提供します。
 
 [表形式モデルの言語 &#40; のスクリプトTMSL &#41;参照](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL は、互換性レベル 1200 以上の表形式モデルの JSON 表現。 オブジェクトの定義は、テーブル、列、およびリレーションシップではなく Analysis Services データをモデリングする新しい表形式モードである場合に使い慣れたでない可能性のあるマルチ ディメンションのメタデータと同様に、表形式のメタデータ構造に基づいています。
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)ドキュメントの管理の機能に加えて、汎用的な使用されるコマンドレット**Invoke ASCmd**を任意のスクリプトまたはクエリの入力として受け取るコマンドレット。
 
 ## <a name="see-also"></a>参照
-[テクニカル リファレンス & #40 です。SSAS &#41;](../analysis-services/powershell/technical-reference-ssas.md) 
-[クエリと式言語リファレンス & #40 です。Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-
+[テクニカル リファレンス &#40;です。SSAS &#41;](../analysis-services/powershell/technical-reference-ssas.md) 
+[クエリと式言語リファレンス &#40;です。Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)

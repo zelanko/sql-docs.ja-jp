@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ba4c5cc9ac78e89f5984c96cdad06255e13cfb8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07787bcccbd64ab9c81a22e169fb3124606bc400
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>属性と名前のプロパティの例 (VB)
 この例の値を表示、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。 使用して、[名前](../../../ado/reference/ado-api/name-property-ado.md)それぞれの名前を表示するプロパティを**フィールド**と**プロパティ**オブジェクト。  
@@ -139,5 +136,4 @@ End Sub
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Name プロパティ (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [プロパティのオブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-
+ [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

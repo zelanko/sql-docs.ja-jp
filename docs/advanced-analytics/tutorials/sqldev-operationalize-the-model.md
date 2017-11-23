@@ -1,31 +1,30 @@
 ---
 title: "レッスン 6: R モデルを操作運用 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/23/2016
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 52b05828-11f5-4ce3-9010-59c213a674d1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: dd1ea47b8b687f371e4f4656e5953f72654e153d
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0fbdebc582650b0bd524d583d936848ae42e5f6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="lesson-6-operationalize-the-r-model"></a>レッスン 6: 運用 R モデル
 
@@ -44,40 +43,36 @@ ms.lasthandoff: 09/01/2017
 ストアド プロシージャ _PredictTip_ は、ストアド プロシージャで予測呼び出しをラップする基本構文を示します。
 
 ```SQL
-CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max)  
-AS  
-BEGIN  
+CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
+AS 
+BEGIN 
   
-  DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model  
-  FROM nyc_taxi_models);  
-  EXEC sp_execute_external_script @language = N'R',  
-                                  @script = N'  
-mod <- unserialize(as.raw(model));  
-print(summary(mod))  
-OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,   
-          predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
-str(OutputDataSet)  
-print(OutputDataSet)  
-',  
+DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);  
+EXEC sp_execute_external_script @language = N'R',
+  @script = N' 
+    mod <- unserialize(as.raw(model)); 
+    print(summary(mod)) 
+    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE); 
+    str(OutputDataSet) 
+    print(OutputDataSet) 
+    ', 
   @input_data_1 = @inquery, 
   @params = N'@model varbinary(max)',
-  @model = @lmodel2  
-  WITH RESULT SETS ((Score float));  
-  
-END  
-  
+  @model = @lmodel2 
+  WITH RESULT SETS ((Score float));
+END
 GO
 ```
 
-- SELECT ステートメントは、シリアル化されたモデルをデータベースから取得し、R を利用してさらに処理するために R 変数 `mod` にモデルを保存します。
++ SELECT ステートメントは、データベースからシリアル化されたモデルを取得し、R 変数に、モデルを格納`mod`R. を使用してさらに処理
 
-- スコアリングのための新しいケースがから取得した、[!INCLUDE[tsql](../../includes/tsql-md.md)]で指定されたクエリ`@inquery`、ストアド プロシージャの最初のパラメーターです。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは R の `rxPredict` 関数に渡され、スコアが生成されます。
++ スコアリングのための新しいケースがから取得した、[!INCLUDE[tsql](../../includes/tsql-md.md)]で指定されたクエリ`@inquery`、ストアド プロシージャの最初のパラメーターです。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは R の `rxPredict` 関数に渡され、スコアが生成されます。
   
-    `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,            predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
+    `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     data.frame には 1 つの行を含めることができるため、一括または 1 回のスコア付けに同じコードを利用できます。
   
--   によって返される値、`rxPredict`関数は、 **float**ドライバーを任意の量のヒントを取得する確率を表すです。
++ によって返される値、`rxPredict`関数は、 **float**ドライバーを任意の量のヒントを取得する確率を表すです。
 
 ## <a name="batch-scoring"></a>バッチ スコアリング
 
@@ -86,23 +81,16 @@ GO
 1.  まず、少量の入力データを用意します。 このクエリは、予測に必要な乗客数とその他の機能を利用し、乗車の "上位 10" 一覧を作成します。
   
     ```SQL
-    SELECT TOP 10 a.passenger_count AS passenger_count,
-        a.trip_time_in_secs AS trip_time_in_secs, 
-        a.trip_distance AS trip_distance, 
-        a.dropoff_datetime AS dropoff_datetime, 
-        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
-    FROM
-    (
-        SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance,
-         dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
-    LEFT OUTERJOIN
-    (
-    SELECT medallion, hack_license, pickup_datetime
-    FROM nyctaxi_sample
-    TABLESAMPLE (70 percent) REPEATABLE (98052)
-    )b
+    SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
+    
+    FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
+
+    LEFT OUTER JOIN
+
+    (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052)    )b
+
     ON a.medallion=b.medallion AND a.hack_license=b.hack_license 
-    AND a.pickup_datetime=b.pickup_datetime  
+    AND a.pickup_datetime=b.pickup_datetime
     WHERE b.medallion IS NULL
     ```
 
@@ -124,16 +112,16 @@ GO
     CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
     AS
     BEGIN
-      DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model
-      FROM nyc_taxi_models);
-      EXEC sp_execute_external_script @language = N'R',
-        @script = N'
-          mod <- unserialize(as.raw(model));
-          print(summary(mod))
-          OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
-          str(OutputDataSet)
-          print(OutputDataSet)
-        ',
+    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    EXEC sp_execute_external_script 
+      @language = N'R',
+      @script = N'
+        mod <- unserialize(as.raw(model));
+        print(summary(mod))
+        OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
+        str(OutputDataSet)
+        print(OutputDataSet)
+      ',
       @input_data_1 = @inquery,
       @params = N'@model varbinary(max)',
       @model = @lmodel2
@@ -146,36 +134,18 @@ GO
     ```SQL
     -- Define the input data
     DECLARE @query_string nvarchar(max)
-    SET @query_string='
-    select top 10 a.passenger_count as passenger_count,
-        a.trip_time_in_secs as trip_time_in_secs,
-        a.trip_distance as trip_distance,
-        a.dropoff_datetime as dropoff_datetime,
-        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) as direct_distance
-    from
-        select medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance,
-            dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude
-        from nyctaxi_sample
-    )a  
-    LEFT OUTER JOIN
-    (
-    SELECT medallion, hack_license, pickup_datetime
-    FROM nyctaxi_sample  
-    TABLESAMPLE (70 percent) REPEATABLE (98052)
-    )b 
-    ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime  
-    WHERE b.medallion is null'
+    SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
 
     -- Call the stored procedure for scoring and pass the input data
     EXEC [dbo].[PredictTip] @inquery = @query_string;
     ```
   
-4. ストアド プロシージャでは、一連の上位 10 件トリップの各予測を表す値を返します。 最上位のトリップもドライバーは、ヒントを取得する可能性がない、比較的短い形式のトリップ距離で単一乗客トリップです。
+4. ストアド プロシージャでは、一連の上位 10 トリップの各予測を表す値を返します。 最上位のトリップもドライバーは、ヒントを取得する可能性がない、比較的短い形式のトリップ距離で単一乗客トリップです。
   
 
 > [!TIP]
 > 
-> チップあり/チップなしの結果だけを返すのではなく、予測の確率スコアを返し、WHERE 句を _Score_ 列値に適用し、0.5 や 0.7 などのしきい値を利用して "チップを得る確率が高い" や "チップを得る確率が低い" のようにスコアを分類することもできます。 この手順はストアド プロシージャに含まれていませんが、導入は簡単です。
+> 「はいヒント」と「no ヒント」結果だけを返すのではなくした可能性があります、予測の確率のスコアを返すことも適用して WHERE 句を_スコア_「ヒントする可能性が」としてスコアを分類する列の値または"低いヒント"、0.5 または 0.7 などのしきい値の値を使用してください。 この手順はストアド プロシージャに含まれていませんが、導入は簡単です。
 
 ## <a name="single-row-scoring"></a>単一行のスコア付け
 
@@ -186,53 +156,29 @@ GO
 1. 少しの時間を取り、(ダウンロードに含まれる) ストアド プロシージャ _PredictTipSingleMode_のコードを確認してください。
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
-    @trip_distance float = 0,
-    @trip_time_in_secs int = 0,
-    @pickup_latitude float = 0,
-    @pickup_longitude float = 0,
-    @dropoff_latitude float = 0,
-    @dropoff_longitude float = 0
-    AS  
-    BEGIN  
-      DECLARE @inquery nvarchar(max) = N'  
-      SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count,  
-    @trip_distance,  
-    @trip_time_in_secs,  
-    @pickup_latitude,  
-    @pickup_longitude,  
-    @dropoff_latitude,  
-    @dropoff_longitude)  
-        '  
-      DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model  
-      FROM nyc_taxi_models);  
-      EXEC sp_execute_external_script @language = N'R',  
-                                      @script = N'  
-    mod <- unserialize(as.raw(model));  
-    print(summary(mod))  
-    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,   
-              predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
-    str(OutputDataSet)  
-    print(OutputDataSet)  
-    ',  
-    @input_data_1 = @inquery,  
-    @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,@trip_time_in_secs int ,  
-    @pickup_latitude float ,@pickup_longitude float ,@dropoff_latitude float ,@dropoff_longitude float',  
-    @model = @lmodel2,  
-    @passenger_count =@passenger_count ,  
-    @trip_distance=@trip_distance,  
-    @trip_time_in_secs=@trip_time_in_secs,    
-    @pickup_latitude=@pickup_latitude,  
-    @pickup_longitude=@pickup_longitude,  
-    @dropoff_latitude=@dropoff_latitude,  
-    @dropoff_longitude=@dropoff_longitude  
+    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    AS
+    BEGIN
+    DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
+    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    EXEC sp_execute_external_script  
+      @language = N'R',
+      @script = N'  
+        mod <- unserialize(as.raw(model));  
+        print(summary(mod));  
+        OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
+        str(OutputDataSet);
+        print(OutputDataSet); 
+        ',  
+      @input_data_1 = @inquery,  
+      @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,@trip_time_in_secs int ,  @pickup_latitude float ,@pickup_longitude float ,@dropoff_latitude float ,@dropoff_longitude float', @model = @lmodel2, @passenger_count =@passenger_count, @trip_distance=@trip_distance, @trip_time_in_secs=@trip_time_in_secs, @pickup_latitude=@pickup_latitude, @pickup_longitude=@pickup_longitude, @dropoff_latitude=@dropoff_latitude, @dropoff_longitude=@dropoff_longitude  
       WITH RESULT SETS ((Score float));  
     END
     ```
   
     - このストアド プロシージャは、乗客数や走行距離など、複数の単一値を入力として取得します。
   
-        外部アプリケーションからこのストアド プロシージャを呼び出す場合、データを R モデルの要件に一致させてください。 場合によっては、入力データを R データ型にキャストまたは変換できなければなりません。あるいは、データ型やデータ長を検証する必要があります。 詳細については、「 [R データ型の処理](https://msdn.microsoft.com/library/mt590948.aspx)」を参照してください。
+        外部アプリケーションからストアド プロシージャを呼び出す場合は、データが、R モデルの要件と一致することを確認します。 場合によっては、入力データを R データ型にキャストまたは変換できなければなりません。あるいは、データ型やデータ長を検証する必要があります。 
   
     -   このストアド プロシージャは、保存された R モデルに基づいてスコアを作成します。
   
@@ -242,12 +188,12 @@ GO
 
     ```
     EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
-    @trip_distance float = 2.5,
-    @trip_time_in_secs int = 631,
-    @pickup_latitude float = 40.763958,
-    @pickup_longitude float = -73.973373,
-    @dropoff_latitude float =  40.782139,
-    @dropoff_longitude float = 73.977303
+    @trip_distance = 2.5,
+    @trip_time_in_secs = 631,
+    @pickup_latitude = 40.763958,
+    @pickup_longitude = -73.973373,
+    @dropoff_latitude =  40.782139,
+    @dropoff_longitude = 73.977303
     ```
 
     またはのサポートされているこの短い形式を使用して[ストアド プロシージャにパラメーター](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
@@ -256,7 +202,7 @@ GO
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. 結果は、単一乗客のトリップ距離が比較的短い形式はすべてためのヒントを取得する確率は、これらのトップ 10 トリップで非常に低いことを示します。
+3. 結果は、単一乗客のトリップ距離が比較的短い形式はすべてためのヒントを取得する確率が、これらのトップ 10 トリップで不足しているを示します。
 
 ## <a name="conclusions"></a>結論
 
@@ -265,4 +211,3 @@ GO
 ## <a name="previous-lesson"></a>前のレッスン
 
 [レッスン 5: トレーニングおよび T-SQL を使用して R モデルを保存します。](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-

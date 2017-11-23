@@ -1,27 +1,24 @@
 ---
 title: "SQL Server R Services の拡張イベント | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0b4d65cd2812fea830bbdd7127b8f47569979e94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 814dacf2dbc7f3be05ad163c8c7162acf53fe404
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extended-events-for-sql-server-r-services"></a>SQL Server R Services の拡張イベント
   [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] は、 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に送信される R ジョブに関するトラブルシューティング処理で使用する一連の拡張イベントを提供します。  
@@ -184,4 +181,3 @@ select o.name as event_name, o.description
  [R ソリューションの管理と監視](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
   
   
-

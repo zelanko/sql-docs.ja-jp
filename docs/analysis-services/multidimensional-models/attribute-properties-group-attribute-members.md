@@ -27,17 +27,16 @@ helpviewer_keywords:
 - members [Analysis Services], groups
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6779eda5faf42a64a6d6f87494f57ac0166ab31c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dd9947d01b6f916d19c1115e767c4b2eb5bdb807
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---group-attribute-members"></a>属性のプロパティ]-[グループ メンバーの属性
   メンバー グループは、連続したディメンション メンバーが含まれている、システムによって生成されたコレクションです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、分離と呼ばれるプロセスにより、1 つの属性のメンバーを複数のメンバー グループに分割できます。 階層内のレベルには、メンバー グループまたはメンバーのどちらかが含まれています。 メンバー グループが属するレベルをビジネス ユーザーが参照すると、メンバー グループの名前とセル値が表示されます。 メンバー グループをサポートするために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されたメンバーはグループ化メンバーと呼ばれ、通常のメンバーと同じように表示されます。  
@@ -123,4 +122,3 @@ ms.lasthandoff: 09/01/2017
  [属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-

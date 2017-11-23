@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6d23fcaca8e9ad0d73d1e79566d2fa11348382a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7d64bc30a5d36d810e55d012fcd7fc302730a0ec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>データベースのバックアップ、復元、および同期 (XMLA)
   XML for Analysis には、データベースのバックアップ、復元、および同期を行う 3 つのコマンドがあります。  
@@ -157,10 +155,9 @@ ms.lasthandoff: 09/01/2017
  使用することができます、**場所**ROLAP オブジェクトを同期する同期コマンド内の要素。 各**場所**要素のデータ ソースを再配置するために使用、 **%datasourcetype**明示的にプロパティを設定する必要があります*ローカル*です。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 設定する必要も、 **ConnectionString**のプロパティ、**場所**を新しい場所の接続文字列の要素。 同期中に、**同期**コマンドには、によって識別されるデータ ソースの接続文字列が置き換えられます、 **DataSourceID**のプロパティ、**場所**値を持つ要素、 **ConnectionString**のプロパティ、**場所**要素。  
   
 ## <a name="see-also"></a>参照  
- [Backup 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Backup 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [要素 &#40; を復元します。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
  [Synchronize 要素 (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installing ODBC components [ODBC], setup program
+helpviewer_keywords: installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 741ccfc8e9a096b60eca94b125890d48f65eb764
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-program"></a>セットアップ プログラム
 > **注:**以降では、Windows XP および Windows Server 2003、 **ODBC は、Windows オペレーティング システムに含まれる**です。 以前のバージョンの Windows で ODBC を明示的にのみインストールしてください。  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  インストールの量を行うことも、セットアップ プログラムによっては、インストーラー DLL での呼び出し機能によって異なります。 DLL のインストーラーには、ODBC の個々 のコンポーネントをインストールする機能が含まれています。 セットアップ プログラムを呼び出すだけ**SQLInstallDriverManager**、 **SQLInstallDriverEx**、または**SQLInstallTranslatorEx**インストーラーのパスを取得するための DLL で、コンポーネントがインストールされると、コンポーネントの概要情報をレジストリに追加するディレクトリ。 これらの関数がファイルを実際にはコピーしないでください。セットアップ プログラムはこの情報を使用して、これらの関数の引数で行われます。  
   
  インストーラーの DLL には、ODBC コンポーネントを削除する関数も含まれています。 セットアップ プログラム呼び出し**SQLRemoveDriverManager**、 **SQLRemoveDriver**、または**SQLRemoveTranslator**内のインストーラーに、コンポーネントの使用状況をデクリメントするための DLL の数、レジストリと、コンポーネントの新しい使用状況カウントが 0 になった場合は、コンポーネントに関するすべての情報をレジストリから削除します。 これらの関数が、コンポーネントのファイルを実際には削除しないでください。新しい使用状況カウントが 0 になる場合はこのセットアップ プログラムによって行われます。
-

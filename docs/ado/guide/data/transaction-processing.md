@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-processing"></a>トランザクション処理
 A*トランザクション*の先頭と末尾の一連のデータ アクセス操作の間の接続で実行を区切ります。 データ ソースのトランザクション機能により制限、**接続**オブジェクトでは作成し、トランザクションを管理することもできます。 たとえば、Microsoft SQL Server 上のデータベースにアクセスする、Microsoft OLE DB Provider for SQL Server を使用して、トランザクションを作成できます複数入れ子になったを実行するコマンドをします。  
@@ -53,4 +51,3 @@ A*トランザクション*の先頭と末尾の一連のデータ アクセス�
   
 ## <a name="nested-transactions"></a>入れ子になったトランザクション  
  呼び出し入れ子になったトランザクションをサポートするプロバイダのため、 **BeginTrans**開いているトランザクション内でメソッドが、新しい入れ子になったトランザクションを開始します。 戻り値は、入れ子のレベルを示します:「1」の戻り値は、最上位レベルのトランザクションを開いていることを示します (つまり、トランザクションは入れ子になっていない別のトランザクション内で)、「2」は、(第 2 レベルのトランザクションが開かれていることを示しますトランザクション内で入れ子に最上位レベルのトランザクション) などです。 呼び出す**CommitTrans**または**RollbackTrans**影響のみ、最後に開いたトランザクション以外の場合は、上位レベルのトランザクションを解決する前に、現在のトランザクションをロールバック閉じたりする必要があります。
-

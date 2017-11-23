@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getTime (java.lang.String, java.util.Calendar)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getTime (java.lang.String, java.util.Calendar)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 186b07d3ab60bdd384b57af8bb4cc93bcedda66f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e11256953955a44528d681424c2719a74f684730
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getTime (java.lang.String, java.util.Calendar) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,9 +60,8 @@ public java.sql.Time getTime(java.lang.String colName,
  このメソッドの有効な時刻部分を返します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime または smalldatetime データ型の日付部分の 1970/01/01 から、指定されたカレンダーのタイムゾーンにおける Java のベースラインの日付に設定します。  
   
 ## <a name="see-also"></a>参照  
- [getTime メソッド & #40 です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [getTime メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

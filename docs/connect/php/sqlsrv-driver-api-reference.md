@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 48d43c13a850e057d675d3abaaec612bc51723e1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2bd1cf731f49119e54fb9e5a548a8988af1ef9fc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV ドライバー API リファレンス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,8 +65,7 @@ SQLSRV ドライバーには、次の関数が含まれています。
   
 ## <a name="see-also"></a>参照  
 [PHP SQL ドライバーの概要](../../connect/php/overview-of-the-php-sql-driver.md)
-[定数 & #40 です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [プログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 [作業の開始](../../connect/php/getting-started-with-the-php-sql-driver.md)
   
-

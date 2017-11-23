@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- AddNew method [ADO], VBScript
+dev_langs: VB
+helpviewer_keywords: AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aca6cd90b92d654906245eac91e40966b2858610
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1fda34e3ef8b25a7bae5257da5ef80c2587e3927
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew メソッドの例 (VBScript)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
@@ -222,5 +218,4 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

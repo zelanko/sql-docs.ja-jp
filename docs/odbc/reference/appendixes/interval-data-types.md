@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-data-types"></a>Interval データ型
 間隔は 2 つの日付と時刻の差として定義されます。 間隔は 2 つの方法のいずれかで表されます。 1 つは、*年-月*年と月の整数単位の間隔を表す間隔。 もう 1 つは、*日時間*日間、分、および秒単位の間隔を表す間隔。 これら 2 種類の間隔は、distinct か月間で異なる数の日数があるため、混在させることはできません。  
@@ -67,13 +65,12 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [C の間隔の構造体](../../../odbc/reference/appendixes/c-interval-structure.md)  
+-   [C Interval 構造体](../../../odbc/reference/appendixes/c-interval-structure.md)  
   
 -   [Interval データ型の精度](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
   
 -   [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)  
   
--   [間隔のリテラル](../../../odbc/reference/appendixes/interval-literals.md)  
+-   [Interval のリテラル](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [Interval データ型のトップ レベルの既定値と秒の有効桁数を上書きします。](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
-
+-   [Interval データ型での既定の先頭有効桁数と秒小数部分の上書き](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

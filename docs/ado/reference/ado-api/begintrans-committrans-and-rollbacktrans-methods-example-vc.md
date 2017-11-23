@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - BeginTrans method [ADO], VC++ example
 - RollbackTrans method [ADO], VC++ example
 - CommitTrans method [ADO], VC++ example
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 807aaf72d48c7eec13a3dff96281206206f2d295
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80a319b5d3edd7f8b2c901b928e1321e068ac46e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、CommitTrans、およびメソッドの例を示し (vc++)
 この例ですべての心理学の本型を変更する、***タイトル***データベースのテーブルです。 後に、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドに加えられたすべての変更を分離するトランザクションを開始する、***タイトル***、テーブル、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは、変更を保存します。 使用することができます、[ロールバック](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して保存した変更を元に戻す、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。  
@@ -277,4 +274,3 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ## <a name="see-also"></a>参照  
  [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)
-

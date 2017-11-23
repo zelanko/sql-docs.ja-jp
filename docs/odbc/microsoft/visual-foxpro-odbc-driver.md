@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC]
 - FoxPro ODBC driver [ODBC], about FoxPro ODBC driver
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 656919413dd62e701e53736d5f5f044e0bdfd8fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dab3cacffff383170a6403065c555f5ef105f672
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバー
 Microsoft Visual FoxPro は、データベースの構築とアプリケーションの開発のための強力なオブジェクト指向の環境です。 Visual FoxPro の Microsoft ODBC Driver では、アプリケーションを開くには、クエリ、および Visual FoxPro と開く Database Connectivity (ODBC) インターフェイスを通じて FoxPro の以前のバージョンのデータを更新できるようにします。  
@@ -47,10 +45,9 @@ Microsoft Visual FoxPro は、データベースの構築とアプリケーシ�
   
 |変換先|参照先|  
 |--------|---------|  
-|Microsoft office Visual FoxPro データの使用に関する詳細を調べる|[Microsoft Office から Visual FoxPro データにアクセスします。](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
+|Microsoft office Visual FoxPro データの使用に関する詳細を調べる|[Microsoft Office から Visual FoxPro データへのアクセス](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
 |Visual Basic アプリケーションで Visual FoxPro データの使用についてください。|[Visual FoxPro ODBC ドライバーを使用してアプリケーションを使用して Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|  
 |Visual FoxPro データにアクセスする Visual C を使用して簡単な例を表示します。|[C または C++ アプリケーションで Visual FoxPro ODBC ドライバーの使用](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |サポートされているハードウェアとソフトウェアの一覧を参照してください。|[システム要件](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
  ダウンロードして、Visual FoxPro ODBC ドライバーのインストールについては、次を参照してください。 [Visual FoxPro ODBC ドライバー](http://go.microsoft.com/fwlink/?LinkId=121318) MSDN のダウンロードをします。
-

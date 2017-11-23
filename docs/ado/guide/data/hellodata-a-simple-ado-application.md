@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 339f65cf1d4715d66e6c96316b04b072873d015d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションをステップ実行の 4 つの主要な ADO 操作: を取得する、検査、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている、Northwind サンプル データベースに対して実行されます。 ADO の基礎に集中し、コードの煩雑さを防ぐためには、エラー処理の例では最小限です。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
 ||Caption|データを編集します。|  
 |コマンド ボタン|名前|cmdUpdateData|  
 ||Caption|更新データ|
-

@@ -7,19 +7,17 @@ ms.service:
 ms.component: php
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 author: ulvii
 ms.author: v-ulibra
 manager: Hadis Fard
 ms.workload: Inactive
+ms.openlocfilehash: f57df5092dfa9a1eabe1e0dc04eba28cd256d978
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ca464b620a092a910d341c90b0fec364dadd89b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="php-linux-and-mac-drivers-installation-tutorial"></a>PHP の Linux および Mac のドライバーのインストールのチュートリアル
 以下の手順は、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache、および Microsoft PHP をインストールする方法を示して Ubuntu 15.10、16.04、Red Hat 7、Debian 8、および Mac OS X 上のドライバーです。
@@ -380,5 +378,4 @@ function FormatErrors( $errors )
 ?>
 ```
 http://localhost/testsql.php (macos http://localhost:8080/testsql.php) をお使いのブラウザーをポイントします。 SQL Server と Azure SQL データベースに接続できるようになりましたに。
-
 

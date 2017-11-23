@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 1649bfe2e52102242f8850b343c1e5616666c0f2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
   **ssbdiagnose** ユーティリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換または [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの構成に関する問題を報告します。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。  
@@ -452,7 +450,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
   
 ## <a name="see-also"></a>参照  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [BEGIN DIALOG CONVERSATION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [ブローカーの優先順位 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [コントラクト &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-contract-transact-sql.md)   
@@ -464,9 +462,8 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [受信 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [sys.transmission_queue &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
+ [sys.conversation_endpoints &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   
-

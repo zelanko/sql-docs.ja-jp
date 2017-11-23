@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STDistance_TSQL
 - STDistance (geography Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STDistance method
+dev_langs: TSQL
+helpviewer_keywords: STDistance method
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f504f3b6617786f4268dfedb16985a9b86f5bb0a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f79891d789938a6f4615c0e4be9cc3ba5d361f1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ ms.lasthandoff: 09/01/2017
  STDistance() は、場合常に null を返しますの spatial reference Id (Srid)、 **geography**インスタンスが一致しません。  
   
 > [!NOTE]  
->  メソッドを**geography**面積や距離を計算するデータ型は、メソッドで使用されるインスタンスの srid に応じて、異なる結果を返します。   Srid の詳細については、次を参照してください。 [Spatial Reference Id & #40 です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  メソッドを**geography**面積や距離を計算するデータ型は、メソッドで使用されるインスタンスの srid に応じて、異なる結果を返します。   Srid の詳細については、次を参照してください。 [Spatial Reference Id &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>使用例  
  次の例は、2 つの間の距離を検索**geography**インスタンス。  
@@ -77,4 +73,3 @@ SELECT @g.STDistance(@h);
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

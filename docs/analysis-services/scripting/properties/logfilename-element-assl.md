@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LogFileName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LogFileName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- LogFileName
-helpviewer_keywords:
-- LogFileName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: LogFileName
+helpviewer_keywords: LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4be722fb63b1e25f438333c7ed7d02e67dd541b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6a63ce9d911bc029489ed5ddcd03be97f7e79d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="logfilename-element-assl"></a>LogFileName 要素 (ASSL)
   ログ ファイルのファイル名を含む、[トレース](../../../analysis-services/scripting/objects/trace-element-assl.md)要素。  
@@ -72,8 +66,7 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**LogFileName**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Trace>します。  
   
 ## <a name="see-also"></a>参照  
- [Traces 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Traces 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 430ecbc0ed6814d2a626f67c3e36ab49cc930262
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52b7a92280566258321a46ecfb2c489e81267965
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-representationtabular"></a>データベース表現 (テーブル)
   表形式モードでは、データベースは、表形式モデルのすべてのオブジェクトのコンテナーです。  
@@ -100,4 +98,3 @@ catch (Exception createDBxc)
  AMO を使用して作成し、データベース表現を操作する方法の実用的な知識、Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には次のソース ファイルで確認してください: Database.cs です。 このサンプルは、Codeplex から入手できます。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
   
   
-

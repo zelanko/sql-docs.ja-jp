@@ -1,26 +1,24 @@
 ---
 title: "ユーザーのライブラリでインストールされている R パッケージでエラーが生じないように |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>ユーザーのライブラリでインストールされている R パッケージのエラーを回避します。
 
@@ -35,7 +33,7 @@ ms.lasthandoff: 10/10/2017
 たとえば、一般的な R 開発環境でユーザーを追加したパッケージの場所、R の環境変数に`libPath`、または次のように、完全なパッケージ パスを参照します。
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 ただし、このことができますは機能しません、SQL Server で R ソリューションを実行する場合、インスタンスに関連付けられている特定の既定のライブラリに R パッケージをインストールする必要があるためです。
@@ -68,7 +66,6 @@ SQL Server では、複数のパッケージ バージョンを管理し、フ�
 
     + アドホック ディレクトリまたはユーザーのライブラリからではなく、既定のライブラリからのパッケージが読み込まれていることを確認するためのコードを編集します。
 
-+ ソリューションの一部としてアドホック パッケージのインストールを回避します。 インストールされていないパッケージは、または動的にパッケージをインストールするコードに呼び出しが存在しないかどうかを確認するコードを確認します。 アクセス許可を持っていない場合、コードが失敗し、アクセス許可が、必要がありますパッケージをインストールするとは別に実行する他のコードからです。
++ ソリューションの一部としてアドホック パッケージのインストールを回避します。 インストールされていないパッケージは、または動的にパッケージをインストールするコードに呼び出しが存在しないかどうかを確認するコードを確認します。 パッケージをインストールするアクセス許可を持っていない場合、コードは失敗します。 場合でも、パッケージをインストールするアクセス許可がある、これとは別に実行する他のコードから行ってください。
 
-+ R パッケージのライブラリへの直接のパスを変更します。 パッケージが既定のライブラリにインストールされていると、R コードで別のライブラリが指定されている場合でも、R ランタイムは既定のライブラリからパッケージを読み込みます。
-
++ R パッケージまたは R ライブラリのパスへの直接参照を削除するコードを更新します。 パッケージが既定のライブラリにインストールされていると、R コードで別のライブラリが指定されている場合でも、R ランタイムは既定のライブラリからパッケージを読み込みます。

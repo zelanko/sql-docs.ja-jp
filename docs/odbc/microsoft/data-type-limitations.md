@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data types [ODBC], desktop database drivers
 - desktop database drivers [ODBC], data types
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac29132cf37fe6e4b13774826dd2467243e152fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 558789a4f435e9fc54176b1423d71369f6b4cc22
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-type-limitations"></a>データ型の制限事項
 Microsoft ODBC のデスクトップ データベース ドライバーでは、データ型で、次の制限を課します。  
@@ -43,4 +41,3 @@ Microsoft ODBC のデスクトップ データベース ドライバーでは、
 |timestamp|TIMESTAMP データ型は、CONVERT 関数によってそれ自体に変換できません。|  
 |TINYINT|TINYINT 値は常に符号付きではありません。|  
 |長さ 0 の文字列|DBASE、Excel、Paradox、または Textdriver 使用すると、長さ 0 の文字列を列に挿入実際には NULL が挿入、代わりにします。|
-

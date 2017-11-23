@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DatabaseID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DatabaseID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DatabaseID element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e112fa75d1995a5d96293e11054f62bb06c1fa32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 181a86188f90bc881e8af0ba267a00d0fd1fb08c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databaseid-element-assl"></a>DatabaseID 要素 (ASSL)
   識別、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)の行外に関連付けられている要素[バインド](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)要素。  
@@ -65,10 +60,9 @@ ms.lasthandoff: 09/01/2017
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
- アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとのバインド & #40 です。SSAS 多次元 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ アウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとのバインド &#40;です。SSAS 多次元 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

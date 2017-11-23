@@ -8,30 +8,27 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|database-console-commands
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-caps.latest.revision: 10
+dev_langs: TSQL
+caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb41140783d4c334e7ee701f44d523ec68e41435
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9d1a4659deeab00589a09e66d885d7f7005f7a43
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 サイズと各パーティション内のテーブルの行の数を表示、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベース。
   
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
@@ -70,7 +67,6 @@ DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
 ## <a name="see-also"></a>参照
-[DBCC PDW_SHOWEXECUTIONPLAN & #40 です。TRANSACT-SQL と #41 です。](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED & #40 です。TRANSACT-SQL と #41 です。](dbcc-pdw-showspaceused-transact-sql.md)  
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;です。TRANSACT-SQL と #41 です。](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;です。TRANSACT-SQL と #41 です。](dbcc-pdw-showspaceused-transact-sql.md)  
   
-

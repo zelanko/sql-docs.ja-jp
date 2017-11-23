@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d14d16deabb83c9eedc448e9b8e063aa56b662cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f06975fb10ab27d6087b1f46a543034aa01ca308
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>レッスン 6-2 - 名前付きセットを定義します。
 名前付きセットとは、ディメンション メンバーのセットを返す多次元式 (MDX) です。 名前付きセットを定義し、キューブ定義の一部として保存できます。さらに、名前付きセットをクライアント アプリケーションで作成することもできます。 名前付きセットは、キューブ データ、算術演算子、数値、関数を組み合わせることによって作成します。 名前付きセットは、クライアント アプリケーションの MDX クエリの中で使用できます。また、サブキューブのセットを定義するときも使用できます。 サブキューブは、クロス結合によるセットのコレクションであり、後続のステートメントに対して、キューブ空間を定義されたサブスペースに制限します。 制限されたキューブ領域の定義は MDX スクリプティングの基本概念です。  
@@ -150,4 +147,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

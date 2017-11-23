@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b4cf136ccd49b461578f7a34941465a54c4e4183
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5a7fc2b4872a309bb93d249cda407c030f61be90
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 **WillMove**イベントが保留中の操作が現在の位置を変更する前に呼び出されます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 **MoveComplete**イベントは、現在の位置の後に呼び出されます、 **Recordset**変更します。  
@@ -74,5 +72,4 @@ MoveComplete adReason, pError, adStatus, pRecordset
 ## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

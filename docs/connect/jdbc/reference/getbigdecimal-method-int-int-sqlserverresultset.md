@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getBigDecimal (int, int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getBigDecimal (int, int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e846c83b1603bca2d0055a85b1958af2601bfff
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2a85dff4212c53a76fb26a0c9296ced2197388d8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getbigdecimal-method-int-int-sqlserverresultset"></a>getBigDecimal (int, int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,9 +61,8 @@ public java.math.BigDecimal getBigDecimal(int columnIndex,
  この getBigDecimal メソッドは、java.sql.ResultSet インターフェイスの getBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [getBigDecimal メソッド & #40 です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   
+ [getBigDecimal メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

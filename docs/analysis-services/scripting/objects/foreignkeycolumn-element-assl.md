@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ForeignKeyColumn Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ForeignKeyColumn Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ForeignKeyColumn
-helpviewer_keywords:
-- ForeignKeyColumn element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ForeignKeyColumn
+helpviewer_keywords: ForeignKeyColumn element
 ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ac9ec9482e108fae87e772e63a791334f73a36a7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cc3000d1bdab66434e4cc8134567da46f87f0544
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="foreignkeycolumn-element-assl"></a>ForeignKeyColumn 要素 (ASSL)
   リレーショナル データ ソースの親テーブルへの結合を識別します。  
@@ -70,10 +64,9 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素、 **ForeignKeyColumns**分析管理オブジェクト (AMO) オブジェクト モデルのコレクションが<xref:Microsoft.AnalysisServices.TableMiningStructureColumn>です。  
   
 ## <a name="see-also"></a>参照  
- [TableMiningStructureColumn データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)   
- [MiningStructureColumn データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)   
- [MiningStructure 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)   
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [TableMiningStructureColumn データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)   
+ [MiningStructureColumn データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)   
+ [MiningStructure 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)   
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

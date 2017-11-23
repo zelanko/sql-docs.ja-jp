@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 291c94f63ebc86869682e769ef93b93c86f60ffc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f47eb454958dce0e41a3f864c54581b202f44e1c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>setNCharacterStream (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,8 +63,7 @@ public final void setNCharacterStream(java.lang.String parameterName,
  ストリームの長さが、不明の場合、*長さ*ドライバーがその長さに関係なく、ストリームを受け入れることを示すために、パラメーターを-1 に設定することがあります。 Sqljdbc4.jar、ことをお勧め、JDBC 4.0 メソッドを使用する[setNCharacterStream メソッド &#40;java.lang.String、java.io.Reader &#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)アプリケーションが列の長さがストリームを更新するときに不明なです。  
   
 ## <a name="see-also"></a>参照  
- [setNCharacterStream メソッド & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
+ [setNCharacterStream メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   
-

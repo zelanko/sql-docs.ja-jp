@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- 'Property collection [ADO], Visual C++ syntax index with #import'
+dev_langs: C++
+helpviewer_keywords: 'Property collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e4f89d7d933bfa1afc3ed888f52273d5690bfd4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e739c4b9e29ecb2a77fbf1c0720840efae1f9f76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>プロパティ (Visual C++ 構文のインデックス #import)
 ## <a name="properties"></a>[プロパティ]  
@@ -51,5 +47,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## <a name="see-also"></a>参照  
- [プロパティのオブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-
+ [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

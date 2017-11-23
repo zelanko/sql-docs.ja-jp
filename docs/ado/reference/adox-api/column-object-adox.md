@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Column
-helpviewer_keywords:
-- Column object [ADOX]
+f1_keywords: Column
+helpviewer_keywords: Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a12b65adf6e13dd04573453c588f07b796e778d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5a8a5047f4cd4655ebe1dd041e44949ca361c54
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="column-object-adox"></a>Column オブジェクト (ADOX)
 テーブル、インデックス、またはキーから列を表します。  
@@ -67,7 +63,7 @@ ms.lasthandoff: 09/09/2017
   
  このセクションには、次のトピックが含まれています。  
   
--   [列オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
+-   [Column オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
  [列とテーブル名プロパティの例 (VB) のメソッドを追加します。](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -77,5 +73,4 @@ ms.lasthandoff: 09/09/2017
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [SortOrder プロパティの例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

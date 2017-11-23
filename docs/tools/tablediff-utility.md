@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1d424e7c3b7e59d0bd80f4c02a020ffea7f62024
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
   **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
@@ -230,4 +228,3 @@ tablediff
  [レプリケートされたテーブルを比較して相違があるかどうかを確認する &#40;レプリケーション プログラミング&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   
-

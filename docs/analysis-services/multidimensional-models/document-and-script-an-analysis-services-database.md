@@ -22,17 +22,16 @@ helpviewer_keywords:
 - databases [Analysis Services], documenting
 - databases [Analysis Services], scripts
 ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bf7f3de5da4b7477ba27fd3f46a8627ac94aedb2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be00d2f69b130ff3787167062e97926ae141a869
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="document-and-script-an-analysis-services-database"></a>Analysis Services データベースのドキュメントとスクリプトの作成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを配置した後、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データベースのメタデータまたはデータベースに含まれているオブジェクトのメタデータを XML for Analysis (XMLA) スクリプトとして出力できます。 このスクリプトは、新しい **[XMLA クエリ エディター]** ウィンドウ、ファイル、またはクリップボードに出力できます。 XMLA の詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)」を参照してください。  
@@ -49,8 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [Analysis Services データベースの変更または削除](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)   
- [Alter 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)   
+ [Alter 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)   
  [要素 &#40; を作成します。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ae5c046b-8242-4046-ae76-2c070503fd93
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 239c6e21a7c0e05f52fa00c17d11c5ff81d8a216
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d10567517408ad6789b5b4aad9dbb7dcd3f92d2b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-object-tmsl"></a>データベース オブジェクト (TMSL)
 
@@ -53,7 +52,7 @@ ms.lasthandoff: 09/01/2017
  作成する場合、置換、またはデータベース オブジェクトを変更することは、オブジェクト定義のすべての読み取り/書き込みプロパティを指定します。 読み取り/書き込みプロパティの省略は、削除であると見なされます。  
   
 ## <a name="partial-syntax"></a>一部の構文  
- このオブジェクトの定義が非常に大きいため、直接プロパティのみが一覧表示されます。 **モデル**オブジェクトはデータベースの定義の大部分を提供します。 参照してください[モデルのオブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)オブジェクトの定義方法にします。  
+ このオブジェクトの定義が非常に大きいため、直接プロパティのみが一覧表示されます。 **モデル**オブジェクトはデータベースの定義の大部分を提供します。 参照してください[モデルのオブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)オブジェクトの定義方法にします。  
   
 ```  
     "database": {  
@@ -91,4 +90,3 @@ ms.lasthandoff: 09/01/2017
  [高可用性とスケーラビリティの Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)  
   
   
-

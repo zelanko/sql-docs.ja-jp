@@ -18,17 +18,16 @@ helpviewer_keywords:
 - scripts [MDX], exceptions
 - exceptions [MDX]
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8679c6d912e6dab8fa89f4f67ddfa9070c04460f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbd604d132fa204da606b44d72551f198661c81a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-handling-mdx"></a>エラー処理 (MDX)
   各キューブでは、多次元式 (MDX) スクリプト内のエラーの処理方法を制御できます。 エラー処理は、 **ScriptErrorHandlingMode** 列挙子を通して実行されます。 この列挙子は、以下のいずれかの値をとります。  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  <xref:Microsoft.AnalysisServices.Cube.ScriptErrorHandlingMode%2A>  
   
   
-

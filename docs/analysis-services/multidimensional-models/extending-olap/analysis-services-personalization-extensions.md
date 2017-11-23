@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e1e10612e9e0f93206299e07271b3795c92962a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8da5ac35a5e9f46fbaedf831555d6b1475b41234
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services のパーソナル化拡張機能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、プラグイン アーキテクチャを実装するという概念の基盤です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、次を実現するためにできるようにする機能を提供します。  
@@ -128,17 +125,17 @@ ms.lasthandoff: 09/01/2017
   
 -   [CREATE MEMBER ステートメント (MDX)](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [UPDATE MEMBER ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-update-member.md)  
+-   [UPDATE MEMBER ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP MEMBER ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [DROP MEMBER ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-member.md)  
   
 -   [CREATE SET ステートメント (MDX)](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [DROP SET ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [DROP SET ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-set.md)  
   
 -   [KPI ステートメント &#40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [DROP KPI ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [DROP KPI ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>MDX の拡張と強化  
  CREATE MEMBER コマンドがで強化され、**キャプション**プロパティ、 **display_folder**プロパティ、および**associated_measure_group**プロパティです。  
@@ -157,4 +154,3 @@ ms.lasthandoff: 09/01/2017
  MDSCHEMA_KPIS に scope 列が追加されました。 スコープの値は MDKPI_SCOPE_GLOBAL=1 と MDKPI_SCOPE_SESSION=2 です。  
   
   
-

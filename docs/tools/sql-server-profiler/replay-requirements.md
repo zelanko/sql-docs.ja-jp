@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - replaying traces
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5000a910eb0868ed2113b71c698e7de5ec7163ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff145164aac36b5047a9c3ea7f380800ef9a6b63
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  
@@ -128,11 +126,10 @@ ms.lasthandoff: 08/02/2017
  トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [トレース テーブル &#40; を再生します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
- [再生トレース ファイル & #40 です。SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
+ [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [再生トレース ファイル &#40;です。SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server イベント クラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   
-

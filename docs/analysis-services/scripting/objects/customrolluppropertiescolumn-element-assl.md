@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CustomRollupPropertiesColumn Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CustomRollupPropertiesColumn Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CustomRollupPropertiesColumn
-helpviewer_keywords:
-- CustomRollupPropertiesColumn element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CustomRollupPropertiesColumn
+helpviewer_keywords: CustomRollupPropertiesColumn element
 ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d7a2ae9701e0f4d13ce9207f07bfac4e8f0ea2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: da50f28fffe9c7a9c0552200c1970afe7860fe0c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customrolluppropertiescolumn-element-assl"></a>CustomRollupPropertiesColumn 要素 (ASSL)
   カスタム ロールアップ式のプロパティを指定する列の詳細を定義します。  
@@ -72,8 +66,7 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**CustomRollupPropertiesColumn**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   
 ## <a name="see-also"></a>参照  
- [CustomRollupColumn 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/customrollupcolumn-element-assl.md)   
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [CustomRollupColumn 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/customrollupcolumn-element-assl.md)   
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

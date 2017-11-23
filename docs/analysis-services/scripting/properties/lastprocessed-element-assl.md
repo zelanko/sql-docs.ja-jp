@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LastProcessed Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LastProcessed Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- LastProcessed
-helpviewer_keywords:
-- LastProcessed element
+applies_to: SQL Server 2016 Preview
+f1_keywords: LastProcessed
+helpviewer_keywords: LastProcessed element
 ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bfb97c53960e13c6d1df6d9ca9769408cd8ead9d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2b75c11f304c72eec83f6eb5baa429ad33a3c0f8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lastprocessed-element-assl"></a>LastProcessed 要素 (ASSL)
   親要素が含まれているデータベースが最後に処理された時刻を示す読み取り専用のタイムスタンプを格納します。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**LastProcessed**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.Cube>、 <xref:Microsoft.AnalysisServices.Database>、 <xref:Microsoft.AnalysisServices.Dimension>、 <xref:Microsoft.AnalysisServices.MeasureGroup>、 <xref:Microsoft.AnalysisServices.MiningModel>、 <xref:Microsoft.AnalysisServices.MiningStructure>、および<xref:Microsoft.AnalysisServices.Partition>です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

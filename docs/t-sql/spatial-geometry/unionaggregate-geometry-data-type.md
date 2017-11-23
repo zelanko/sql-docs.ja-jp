@@ -8,26 +8,22 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- UnionAggregate method (geometry)
+dev_langs: TSQL
+helpviewer_keywords: UnionAggregate method (geometry)
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8883efb9f63f65034386934cf8b9b8b81d7ee6c3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 65759e7e4d7701b36d79b8ce27bb5bfe176ba3e3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ UnionAggregate ( geometry_operand )
  入力値が無効である場合は、`FormatException` をスローします。 参照してください[STIsValid (& a) #40; geometry データ型 &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>解説  
- メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 & #40 です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ メソッドを返します。 **null**入力が空または入力がの Srid が異なる場合。 参照してください[空間参照識別子 &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  メソッドは無視**null**入力します。  
   
@@ -80,5 +76,4 @@ UnionAggregate ( geometry_operand )
  [拡張された静的なジオメトリ メソッド](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

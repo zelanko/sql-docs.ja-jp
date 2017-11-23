@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6b0dc608dc62db0f8f06092843c0c2a0e7b747ca
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7de6c4bb3e3bb28fefb5eba0fa52a5de8684fa6d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="wrappers-and-interfaces"></a>ラッパーとインターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,27 +37,27 @@ ms.lasthandoff: 09/09/2017
   
 -   [isWrapperFor メソッドと #40 です。SQLServerCallableStatement &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
   
--   [unwrap メソッド & #40 です。SQLServerCallableStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
+-   [unwrap メソッド &#40;です。SQLServerCallableStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
   
 -   [isWrapperFor メソッドと #40 です。SQLServerConnectionPoolDataSource &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
   
--   [unwrap メソッド & #40 です。SQLServerConnectionPoolDataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
+-   [unwrap メソッド &#40;です。SQLServerConnectionPoolDataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
   
 -   [isWrapperFor メソッドと #40 です。SQLServerDataSource &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
   
--   [unwrap メソッド & #40 です。SQLServerDataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
+-   [unwrap メソッド &#40;です。SQLServerDataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
   
 -   [isWrapperFor メソッドと #40 です。SQLServerPreparedStatement &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
   
--   [unwrap メソッド & #40 です。SQLServerPreparedStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
+-   [unwrap メソッド &#40;です。SQLServerPreparedStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
   
 -   [isWrapperFor メソッドと #40 です。SQLServerStatement &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
   
--   [unwrap メソッド & #40 です。SQLServerStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
+-   [unwrap メソッド &#40;です。SQLServerStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
   
 -   [isWrapperFor メソッドと #40 です。SQLServerXADataSource &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
   
--   [unwrap メソッド & #40 です。SQLServerXADataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
+-   [unwrap メソッド &#40;です。SQLServerXADataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>インターフェイス  
  以降で[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]JDBC Driver 3.0 では、インターフェイスを関連付けられたクラスからドライバー固有のメソッドにアクセスするアプリケーション サーバーを使用できます。 アプリケーション サーバーは、プロキシを公開することを作成することで、クラスをラップすることができます、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-インターフェイスから固有の機能です。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を持つインターフェイスをサポートする、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]固有のメソッドと定数をアプリケーション サーバーは、クラスのプロキシを作成できるようにします。  
@@ -116,7 +114,6 @@ public class UnWrapTest {
 ```  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーのデータ型をについてください。](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

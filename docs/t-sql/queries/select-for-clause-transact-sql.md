@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,24 +16,22 @@ f1_keywords:
 - FOR CLAUSE
 - FOR_TSQL
 - FOR_CLAUSE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - XML option [SQL Server]
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f092e78608e8fa2b44061056ef4e5b9e7e1649a7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT の FOR 句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -183,7 +180,7 @@ JSON
   
 ## <a name="for-xml"></a>FOR XML  
  XML  
- クエリの結果を XML ドキュメントとして返します。 XML モードとして、RAW、AUTO、EXPLICIT のいずれか 1 つを指定する必要があります。 XML データの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[FOR XML & #40 です。SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
+ クエリの結果を XML ドキュメントとして返します。 XML モードとして、RAW、AUTO、EXPLICIT のいずれか 1 つを指定する必要があります。 XML データの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[FOR XML &#40;です。SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  生 [ **('***ElementName***')** ]  
  クエリの結果を受け取り、汎用識別子を持つ XML 要素に結果セット内の各行を変換\<行/> 要素タグとして。 必要に応じて、その行要素に名前を指定することもできます。 結果の XML 出力が、指定した*ElementName*行ごとに生成される行要素として。 詳細については、次を参照してください。 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)と[FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)です。  
@@ -224,7 +221,7 @@ JSON
  ルート [ **('***RootName***')** ]  
  単一のトップレベル要素を、結果として生成される XML に追加します。 必要に応じて、生成するルート要素名を指定することもできます。 省略可能なルートの名前が指定されていない場合、既定\<ルート > 要素を追加します。  
   
- 詳細については、次を参照してください。 [FOR XML & #40 です。SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
+ 詳細については、次を参照してください。 [FOR XML &#40;です。SQL Server &#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  **XML の例**  
   
@@ -268,4 +265,3 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
-

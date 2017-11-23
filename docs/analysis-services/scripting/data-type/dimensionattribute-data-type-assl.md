@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DimensionAttribute Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DimensionAttribute Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DimensionAttribute
-helpviewer_keywords:
-- DimensionAttribute data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: DimensionAttribute
+helpviewer_keywords: DimensionAttribute data type
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4070c34393b5704950431921646607d5c86f33fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea4cdde9cf38c673b5894849097c2cc3c6c43309
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute データ型 (ASSL)
   ディメンション内の属性を表すプリミティブ データ型を定義します。  
@@ -153,7 +147,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

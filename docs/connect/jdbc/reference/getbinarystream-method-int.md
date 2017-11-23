@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getBinaryStream (int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getBinaryStream (int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ff5be6d0a47439f1226ff098c747cd73bb4c991
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f822af6387e66df4ed6f9a2fba28835220a6156
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getbinarystream-method-int"></a>getBinaryStream (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,9 +60,8 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 >  返されたストリーム内のデータはすべて、他の列の値を取得する前に読み取る必要があります。 次に getter メソッドを呼び出すと、ストリームは暗黙的に閉じます。 また、ストリーム 0 を返します InputStream.available メソッドが呼び出されると、データが使用できるかどうかどうか。  
   
 ## <a name="see-also"></a>参照  
- [getBinaryStream メソッド & #40 です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
+ [getBinaryStream メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

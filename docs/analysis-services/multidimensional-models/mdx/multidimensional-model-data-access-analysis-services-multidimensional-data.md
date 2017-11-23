@@ -25,17 +25,16 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b659b4fd581742270fe5d38e5791ef215002757b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
   このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
@@ -109,7 +108,6 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services への接続](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Analysis Services の XMLA による開発](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [表形式モデルのデータ アクセス](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [テーブル モデル データ アクセス](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
-

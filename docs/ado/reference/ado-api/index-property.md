@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset21::Index
-helpviewer_keywords:
-- Index property
+f1_keywords: Recordset21::Index
+helpviewer_keywords: Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9091e9a65b178806c8695faffa50f11946c6b2ca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-property"></a>Index プロパティ
 有効にインデックスを現在の名前を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -58,10 +54,9 @@ ms.lasthandoff: 09/09/2017
  組み込み**インデックス**プロパティが動的に関連しない[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティ、インデックスを扱うこれら両方ができます。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [メソッドとインデックスのプロパティの例 (VB) にシークします。](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)
-

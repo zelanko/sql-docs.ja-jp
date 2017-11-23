@@ -8,22 +8,20 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: af61ec5c670bdc48a3f661080983fac3e7263014
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="explain-transact-sql"></a>説明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ EXPLAIN SQL_statement
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)]をステートメント**説明**実行されます。 *SQL_statement*これらのコマンドのいずれかです:**選択**、**挿入**、**更新**、**削除**、 **CREATE TABLE AS SELECT**、**リモート テーブルを作成する**です。  
   
 ## <a name="permissions"></a>Permissions  
- 必要があります、 **SHOWPLAN**アクセス許可、および実行する権限*SQL_statement*です。 参照してください[アクセス許可: GRANT、DENY、REVOKE & #40 です。Azure SQL Data Warehouse、並列データ ウェアハウス &#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ 必要があります、 **SHOWPLAN**アクセス許可、および実行する権限*SQL_statement*です。 参照してください[アクセス許可: GRANT、DENY、REVOKE &#40;です。Azure SQL Data Warehouse、並列データ ウェアハウス &#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>戻り値  
  戻り値、**説明**コマンドは、次に示す構造を持つ XML ドキュメントです。 この XML ドキュメントが、指定したクエリのクエリ プランのすべての操作を示してで囲まれた各、`<dsql_operation>`タグ。 型の戻り値は、 **nvarchar (max)**です。  
@@ -310,5 +308,4 @@ GO
 -   行 136 では、9 の操作を開始します。 行 140 を通じて 137: すべてのノードに一時テーブルの削除**TEMP_ID_16894**です。  
   
   
-
 

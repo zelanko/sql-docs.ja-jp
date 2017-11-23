@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ae03bc24451bb038581c53d5830c54a49f9c7d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4462aa5a323af4b957fedc5bdbb522705f4f7140
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
   データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
@@ -230,4 +229,3 @@ ms.lasthandoff: 09/01/2017
  [ワークスペース データベース (SSAS テーブル)](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   
-

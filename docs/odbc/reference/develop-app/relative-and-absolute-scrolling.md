@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>相対パスと絶対スクロール
 スクロール オプションのほとんど**SQLFetchScroll**相対的な現在の位置または絶対位置にカーソルを置きます。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セット、相対パスとしてもフェッチとして (行セットをフェッチ *n* 現在の行セットの先頭からの行) と絶対フェッチ (fetch、。行セットの行で始まる *n* )。 場合 *n* は行が結果セットの最後から数えられます絶対フェッチで負の値。 したがって、– 1 の行の絶対フェッチは結果セットの最後の行で始まる行セットをフェッチすることです。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
  結果のサイズであると、カーソル内の行の数は、設定、診断のヘッダーの SQL_DIAG_CURSOR_ROW_COUNT フィールドとして使用できます。 このフィールドの値が後でだけ定義されている**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResult**が呼び出されています。 この数には、カウントの概数またはドライバーの機能によって、正確な数のいずれかを指定できます。 ドライバーのサポートを呼び出すことによって判断**SQLGetInfo**カーソルの属性の種類の情報と SQL_CA2_CRC_APPROXIMATE または SQL_CA2_CRC_EXACT ビットがカーソルの型に対して返されるかどうかをチェックします。  
   
  動的カーソルの正確な行の数がサポートされていることはありません。 他の種類のカーソルでは、ドライバーは、真数または概数値の行カウントが両方をサポートできます。 ドライバーには、正確なもおおよそがサポートされている場合は、行カウントの種類の特定のカーソルに対して、SQL_DIAG_CURSOR_ROW_COUNT フィールドが、これまでにフェッチされる行の数が含まれています。 どのようなドライバーをサポートするのに関係なく**SQLFetchScroll**で、*操作*SQL_FETCH_LAST のにより SQL_DIAG_CURSOR_ROW_COUNT フィールドに正確な行の数を格納します。
-

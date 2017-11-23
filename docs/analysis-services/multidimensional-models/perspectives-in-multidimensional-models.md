@@ -25,17 +25,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], perspectives
 - deleting perspectives
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9961af8c7f6edef8ed330d70df42dc63ff5b9d9b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dae8d8bd48e302e4d3ece6b7445ce900d328702e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多次元モデルのパースペクティブ
   パースペクティブは、特定のアプリケーションまたはユーザーのグループに対して作成されるキューブのサブセットです。 キューブ自体は既定のパースペクティブになります。 パースペクティブは、キューブとしてクライアントに表示されます。 ユーザーがパースペクティブを表示すると、キューブと同じように表示されます。 パースペクティブで書き戻しによりキューブ データに行われる変更は、元のキューブに対して行われます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のビューの詳細については、「 [パースペクティブ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)」を参照してください。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [多次元モデルのキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   
-

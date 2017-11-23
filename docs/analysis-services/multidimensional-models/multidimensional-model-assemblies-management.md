@@ -26,17 +26,16 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多次元モデルのアセンブリの管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、標準偏差計算から階層内でのメンバーのスキャンまで、あらゆる動作を実現するためにデザインされた、多次元式 (MDX) 言語およびデータ マイニング拡張機能 (DMX) 言語で使用するための多数の組み込み関数が提供されています。 ただし、他のすべての複雑で強力な製品がそうであるように、この製品も常に機能の拡張を求められています。  
@@ -127,4 +126,3 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  [ストアド プロシージャの定義](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

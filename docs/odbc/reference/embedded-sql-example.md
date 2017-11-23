@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL の使用例
 次のコードは c 言語で記述された単純な埋め込み SQL プログラムです。プログラムは、埋め込みのすべてではありませんが、ほとんどの SQL 方法を示しています。 プログラムは、注文番号の入力を求めます、顧客番号、販売員、および、注文ステータスを取得し、画面で取得した情報を表示します。  
@@ -81,4 +79,3 @@ bad_number:
 -   **エラー処理**DBMS が、SQL 通信領域、または SQLCA によるアプリケーションのプログラムを実行時のエラーを報告します。 前のコード例では、最初の埋め込まれた SQL ステートメントは、含める SQLCA がします。 これは、プログラムに含める SQLCA 構造体、またはプリコンパイル済みを示しています。 これは、機能は、プログラムは、DBMS によって返されたエラーを処理するたびに必要です。 WHENEVER しています.GOTO ステートメントは、特定のラベルを使用しているときにエラーを分岐に発生するエラー処理コードを生成するプリを指示します。  
   
 -   **単一選択**データを返すために使用するステートメントは単一の SELECT ステートメントです。 つまり、1 行のデータのみを返します。 そのため、コード例を宣言したり、しないカーソルを使用します。
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Field
-helpviewer_keywords:
-- Field object [ADO]
+f1_keywords: Field
+helpviewer_keywords: Field object [ADO]
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f0838ea34dbc5117c5c52ed7848e60b9bcf9ef6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f876e76b29dbc2436d6d1dba317c5035ebbc9ca1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="field-object"></a>Field オブジェクト
 一般的なデータ型のデータの列を表します。  
@@ -63,5 +59,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>参照  
  [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

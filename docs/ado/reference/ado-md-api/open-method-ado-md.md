@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Open
 - Cellset::Open
-helpviewer_keywords:
-- Open method [ADO MD]
+helpviewer_keywords: Open method [ADO MD]
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b80a0a92956315d7d19db5d17a535b6fe2204b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35faf0a1217f5b558c9781644cb9ea115e602584
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-md"></a>Open メソッド (ADO MD)
 多次元クエリの結果を取得し、結果を返します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)です。  
@@ -52,7 +49,7 @@ Cellset.Open Source, ActiveConnection
  **開く**メソッドでは、そのパラメーターのいずれかを省略するし、開こうとしての前に、対応するプロパティ値が設定されていないエラーが生成されます、**セルセット**です。  
   
 ## <a name="applies-to"></a>適用対象  
- [Cellset オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
  [セル セットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
@@ -61,4 +58,3 @@ Cellset.Open Source, ActiveConnection
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Source プロパティ (ADO MD)](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
  [State プロパティ (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)
-

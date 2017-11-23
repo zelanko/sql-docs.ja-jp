@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 184f33a603d94f3c40e139c8b4a1fdeb6556d012
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af1ecf7ed9f4702d986d6f1881b3264ab8171c87
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="streams-and-persistence"></a>ストリームと永続性
 [レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[保存](../../../ado/reference/ado-api/save-method.md)メソッド ストア、または*が引き続き発生する*、**レコード セット**ファイル、および[を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド復元、 **Recordset**そのファイルからです。  
@@ -172,4 +170,3 @@ function GetRs()
  [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)
-

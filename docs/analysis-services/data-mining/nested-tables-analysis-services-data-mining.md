@@ -18,17 +18,16 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>入れ子になったテーブル (Analysis Services - データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データを、ケース テーブル内の一連のケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *入れ子になったテーブル*を使用して、このようなケースを扱うための独自の方法が用意されています。 次の図は、入れ子になったテーブルの概念を示しています。  
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - sessions [Analysis Services]
 ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a147bc9deee4d199e2e90d5f0b006ad3317f4f38
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb53b656c14090ada93184d8453ad79ab1ff706c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Analysis Services サーバー上のユーザーとセッションの切断
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、ワークロード管理の一環としてユーザー操作を終了できます。 ユーザー操作を終了するには、セッションと接続を取り消します。 セッションは、クエリの実行時に自動的に作成される場合 (暗黙的) と、管理者が作成時に名前を付ける場合 (明示的) があります。 接続は、クエリを実行できる開かれたパイプのようなものです。 セッションと接続は両方とも、アクティブなときに終了できます。 たとえば、処理に時間がかかりすぎる場合や、実行中のコマンドが正しく記述されているかどうかについて疑問が生じた場合、管理者はセッションの処理を終了できます。  
@@ -83,9 +82,8 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [接続およびセッションの管理 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [EndSession 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Session 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
+ [BeginSession 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
+ [EndSession 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
+ [Session 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
   
   
-

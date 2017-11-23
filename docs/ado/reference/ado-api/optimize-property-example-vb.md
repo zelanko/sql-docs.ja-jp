@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Optimize property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9c42c39a9d91b78bb57fc9ae1731c3d61513088
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6137ef4be778a659107458ba9fe6f1a7f3000cfa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-property-example-vb"></a>プロパティの例 (VB) の最適化します。
 この例で、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの動的**最適化**プロパティです。 ***Zip***のフィールド、***作成者***テーブルに、 ***Pubs***データベースのインデックスが付いていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 ***zip***フィールド承認のパフォーマンスを向上させるインデックスを作成する ADO、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッドです。  
@@ -96,5 +92,4 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [動的プロパティ (ADO) を最適化します。](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Optimize プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

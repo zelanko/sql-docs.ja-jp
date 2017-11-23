@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - connection strings [Database Engine], TCP/IP
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2490a7bd74e31b317c30b14835153f255dcad992
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8611848c01d854e373e3e945e9d7c6d69df0c2ce
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP を使用した有効な接続文字列の作成
   TCP/IP を使用した有効な接続文字列を作成するには、次の操作を行ってください。  
@@ -42,9 +40,9 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client コンポーネントは接続の時点で、指定された別名のサーバー、プロトコル、ポート番号の値をレジストリから読み取り、 `tcp:<servername>[\<instancename>],<port>` または `tcp:<IPAddress>[\<instancename>],<port>`の形式で接続文字列を作成します。  
   
 > [!NOTE]  
->  既定では、ポート 1433 が [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ファイアウォールによって閉じられます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信ポート 1433 を経由する必要があります、再度ポートを開く場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]TCP/IP を使用して、着信クライアント接続をリッスンするように構成します。 ファイアウォールの構成方法については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「SQL Server アクセスのためのファイアウォール構成方法」か、またはファイアウォールについてのドキュメンテーションを参照してください。  
+>  既定では、ポート 1433 が [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ファイアウォールによって閉じられます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はポート 1433 経由で通信するため、TCP/IP を使用する着信クライアントをリッスンするように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成している場合は、このポートを再度開く必要があります。 ファイアウォールの構成方法については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「SQL Server アクセスのためのファイアウォール構成方法」か、またはファイアウォールについてのドキュメンテーションを参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方に完全にサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager は、IPv4 と IPv6 の両方を受け入れる形式の IP アドレス。 IPv6 の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「IPv6 を使用した接続」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方が完全にサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは、IPv4 と IPv6 のどちらの形式の IP アドレスも受け入れます。 IPv6 の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「IPv6 を使用した接続」を参照してください。  
   
 ## <a name="connecting-to-the-local-server"></a>ローカル サーバーへの接続  
  クライアントと同じコンピューター上で実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合は、サーバー名として `(local)` を使用することもできます。 このような指定はあいまいさを残すのでお勧めできませんが、対象のコンピューター上でクライアントを実行していることがわかっている場合には便利な機能です。 たとえば、営業スタッフは、ノート型コンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行し、プロジェクト データもそのノート型コンピューターに保存しておきます。このように、ネットワークに接続しないモバイル ユーザー用のアプリケーションの場合、 `(local)` に接続するクライアントは、常にそのノート型コンピューターで実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することになります。 `localhost` の代わりに**またはピリオド (**. `(local)`) を使用することもできます。  
@@ -174,9 +172,8 @@ Server             .\<instancename>
 >  **sqlcmd** パラメーターとしてネットワーク プロトコルを指定することについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「sqlcmd.exe を使用してデータベース エンジンに接続する方法」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [共有メモリ プロトコルを使用して有効な接続文字列を作成します。](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [名前付きパイプを使用して有効な接続文字列を作成します。](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
- [ネットワーク プロトコルを選択します。](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [ネットワーク プロトコルの選択](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 02/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9301120891d028837ae241be3a0f1b87eebe0024
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42372fde9b8b948c65093f635bda0ffa70441d26
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>sqlrutils パッケージを使用した R コード用の R ストアド プロシージャの生成
 **sqlrutils** パッケージは R ユーザーに、R スクリプトを T-SQL ストアド プロシージャに配置し、そのストアド プロシージャをデータベースに登録し、R 開発環境からそのストアド プロシージャを実行するメカニズムを提供します。 
@@ -94,5 +91,4 @@ help(package="sqlrutils")
 
 ## <a name="see-also"></a>参照
 [sqlrutils を使用してストアド プロシージャを作成する方法](../../advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md)
-
 

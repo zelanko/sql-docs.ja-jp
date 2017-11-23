@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f763d43aed3312a87fb4c4a16b3ad28b77f0efaf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92e249a7c2d5b0c01e291f4829d5c4f8c580fb2c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="batch-mode"></a>バッチ モード
 バッチ モードが有効になってときに、 **LockType**プロパティに設定されている**adLockBatchOptimistic**バッチ更新は、プロバイダーでサポートされています。 特定のロックの種類の設定は、カーソル位置に応じてご利用いただけません。 たとえば、排他ロックの種類場合は使用できません、 **CursorLocation**に設定されている**adUseClient**です。 逆に、プロバイダーは、カーソルの場所は、サーバーの場合、バッチ オプティミスティック ロックをサポートできません。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  
@@ -36,15 +34,14 @@ ms.lasthandoff: 09/09/2017
   
  このセクションのトピックは次のとおりです。  
   
--   [更新プログラムを送信する: UpdateBatch メソッド](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [更新プログラムの送信: UpdateBatch メソッド](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
--   [更新されたレコードにフィルター処理](../../../ado/guide/data/filtering-for-updated-records.md)  
+-   [更新されたレコードのフィルター処理](../../../ado/guide/data/filtering-for-updated-records.md)  
   
--   [失敗した更新を処理します。](../../../ado/guide/data/dealing-with-failed-updates.md)  
+-   [失敗した更新の処理](../../../ado/guide/data/dealing-with-failed-updates.md)  
   
--   [検出および競合の解決](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
+-   [競合の検出および解決](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
   
--   [接続を切断および再接続をレコード セット](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [レコードセットの切断と再接続](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [一意テーブルを更新すると、結果が参加しています。](../../../ado/guide/data/updating-joined-results-unique-table.md)
-
+-   [JOINed の結果の更新: Unique Table](../../../ado/guide/data/updating-joined-results-unique-table.md)

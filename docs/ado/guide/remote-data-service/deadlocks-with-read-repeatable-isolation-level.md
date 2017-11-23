@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deadlocks in RDS [ADO]
 - read repeatable in RDS [ADO]
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 41c5bba6a874904ed7b1e323e96779a46afcbe7b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 02e8b890b7973626676b8439471a782d6fba3f27
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>読み取り反復可能な分離レベルを使用してデッドロック
 カスタム ビジネス オブジェクトは repeatable read の分離レベルを使用して、SQL Server へのアクセスをして、ビジネス オブジェクトが、クエリを送信し、同じトランザクションで更新する 2 つのクライアントで同時に呼び出されると、デッドロックは可能性があります。 リモート データ サービスが、デッドロックを解除する際にタイムアウトにプロセスの 1 つを許可するように設計されていますが、そのクライアントの更新プログラムは失敗します。  
@@ -38,7 +36,6 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

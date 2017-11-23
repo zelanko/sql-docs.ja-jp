@@ -30,17 +30,16 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdf7e955c5c4dd36d604bffa5dce1602f93788d2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
@@ -122,10 +121,9 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [コンテンツの種類 (DMX)](../../dmx/content-types-dmx.md)   
- [データ型 (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [データ型 (&) #40";"DMX"&"#41;](../../dmx/data-types-dmx.md)   
+ [データ型 &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [データ型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

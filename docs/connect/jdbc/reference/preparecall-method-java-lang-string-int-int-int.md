@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.prepareCall (java.lang.String, int, int, int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.prepareCall (java.lang.String, int, int, int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67154127b6428a0b41960b6b822c3e727d6224f5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac3d0d3c239c76d187954e6a4568a140aba73ade
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="preparecall-method-javalangstring-int-int-int"></a>prepareCall (java.lang.String, int, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,9 +68,8 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
  この prepareCall メソッドは、java.sql.Connection インターフェイスの prepareCall メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [prepareCall メソッド & #40 です。SQLServerConnection &#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
+ [prepareCall メソッド &#40;です。SQLServerConnection &#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

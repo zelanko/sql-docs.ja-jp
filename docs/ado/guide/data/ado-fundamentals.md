@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO では、プログラムへのアクセス、編集、およびさまざまなシステムの OLE DB インターフェイス経由でデータ ソースからデータの更新の開発者強力で論理オブジェクト モデルを使用します。 ADO の最も一般的な使用法が、テーブルやリレーショナル データベース内のテーブルをクエリを取得し、アプリケーションでは、結果を表示し、おそらくユーザー データへの変更を保存します。 その他のタスクを以下に示します。  
@@ -71,4 +69,3 @@ ADO では、プログラムへのアクセス、編集、およびさまざま�
 -   [OLE DB プロバイダー](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [エラー](../../../ado/guide/data/errors-ado.md)
-

@@ -5,29 +5,25 @@ ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - empty function
 - fn:empty function
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7c2a6ac42c0cd7a405fc461c9fcfbbe6c6ecefd0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ca580d89bf60046aaf2d02315f18b12772e0bea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="functions-on-sequences---empty"></a>シーケンスの空の関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +115,6 @@ ProductModelID Result
   
 ## <a name="see-also"></a>参照  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [存在 (& m); #40"&"#41;メソッド (&) #40";"xml データ型"&"#41;](../t-sql/xml/exist-method-xml-data-type.md)  
+ [存在 (& m); #40&#41;メソッド &#40;xml データ型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   
-

@@ -5,30 +5,26 @@ ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - XQuery, functions
 - xml data type [SQL Server], XQuery
 - functions [SQL Server], XQuery
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: db7579e4281ef0b4351f9aa0a95a4248a9c720ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f950e3bbeb239537bc606c38469b9fb79e36837b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml データ型に対する XQuery 関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 |[文字列値に XQuery 関数](http://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
 ||[含まれています](../xquery/functions-on-string-values-contains.md)|  
 ||[部分文字列](../xquery/functions-on-string-values-substring.md)|  
-||[lower-case 関数 & #40 です。XQuery と #41 です。](../xquery/functions-on-string-values-lower-case.md)|  
+||[lower-case 関数 &#40;です。XQuery と #41 です。](../xquery/functions-on-string-values-lower-case.md)|  
 ||[文字列長](../xquery/functions-on-string-values-string-length.md)|  
 ||[大文字関数と #40 です。XQuery と #41 です。](../xquery/functions-on-string-values-upper-case.md)|  
 |ブール値に対する関数|[じゃない](../xquery/functions-on-boolean-values-not-function.md)|  
@@ -64,10 +60,10 @@ ms.lasthandoff: 09/01/2017
 ||[最小値](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
 ||[合計](../xquery/aggregate-functions-sum.md)|  
-|[コンス トラクター関数 & #40 です。XQuery と #41 です。](../xquery/constructor-functions-xquery.md)|[コンス トラクター関数](../xquery/constructor-functions-xquery.md)|  
+|[コンス トラクター関数 &#40;です。XQuery と #41 です。](../xquery/constructor-functions-xquery.md)|[コンス トラクター関数](../xquery/constructor-functions-xquery.md)|  
 |[データ アクセサー関数](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[データ](../xquery/data-accessor-functions-data-xquery.md)|  
-|[ブール値コンス トラクター関数 & #40 です。XQuery と #41 です。](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 関数 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
+|[ブール値コンス トラクター関数 &#40;です。XQuery と #41 です。](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 関数 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 関数 (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Qname &#40; に関連する関数XQuery と #41 です。](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[Expanded-qname() (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
 ||[ローカル名-からの QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
@@ -81,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   
-

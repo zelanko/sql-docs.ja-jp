@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Sort property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dda70721ad495502a56928e101de193148c0be8f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24c8c70d0e09614df2ce7811c1e2a1f20ff50a16
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-property-example-vc"></a>並べ替えプロパティの例 (vc++)
 この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[並べ替え](../../../ado/reference/ado-api/sort-property.md)の行の順序を変更するプロパティ、**レコード セット**から派生した、***作成者***のテーブル**Pubs**データベース。 セカンダリ ユーティリティ ルーチンは、各行を出力します。  
@@ -142,5 +138,4 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>参照  
  [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [並べ替えのプロパティ](../../../ado/reference/ado-api/sort-property.md)
-
+ [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)

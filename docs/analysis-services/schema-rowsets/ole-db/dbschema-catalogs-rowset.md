@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_CATALOGS
+apiname: DBSCHEMA_CATALOGS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_CATALOGS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_CATALOGS rowset
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6e001700aab7f231e186576226ae97468572698d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0632d90765112ee54de8e78a66fdefa1ff27334f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemacatalogs-rowset"></a>DBSCHEMA_CATALOGS 行セット
   データベース管理システム (DBMS) からアクセス可能なカタログに関連付けられている物理属性を識別します。  
@@ -56,7 +52,6 @@ ms.lasthandoff: 09/01/2017
 |**CATALOG_NAME**|**DBTYPE_WSTR**|省略可|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [OLE DB Schema 行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c624a1c14614d62c200e1f3afdfe5623a318853
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e26ac40b7cb47370107f348548cf2cc7489efa1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス
   Microsoft シーケンス クラスター アルゴリズムは、複合的なアルゴリズムです。このアルゴリズムでは、Markov 連鎖分析を使用して順序付けられたシーケンスを特定し、この分析結果とクラスタリング技法を組み合わせて、シーケンスおよびモデル内のその他の属性に基づいてクラスターを生成します。 このトピックでは、アルゴリズムの実装、アルゴリズムをカスタマイズする方法、およびシーケンス クラスター モデルの特別な要件について説明します。  
@@ -157,4 +156,3 @@ ms.lasthandoff: 09/01/2017
  [シーケンス クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

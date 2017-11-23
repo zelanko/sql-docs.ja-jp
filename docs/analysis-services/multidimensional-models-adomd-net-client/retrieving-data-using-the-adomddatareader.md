@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e1e086fd6662a00e79b87a02fbaf3528b08895de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a04a25d6bf72a8bacd5af46313982e8ff0197170
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>AdomdDataReader を使用したデータの取得
   <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、オーバーヘッドと対話性のバランスがとれた分析データ取得方法です。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> オブジェクトは、分析データ ソースから、読み取り専用かつ順方向専用のフラットなデータ ストリームを取得します。 このようにデータ ストリームがバッファリングされないことで、手順ロジックにより、分析データソースから取得した結果を順次効率的に処理することができます。 大量のデータを取得して表示する場合は、データがメモリ キャッシュに格納されない <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> が適しています。  
@@ -129,7 +127,6 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="see-also"></a>参照  
  [分析データ ソースからデータを取得します。](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [セルセットを使用してデータを取得します。](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
- [XmlReader を使用してデータを取得します。](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
+ [XmlReader を使用したデータの取得](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   
-

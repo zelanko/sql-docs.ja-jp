@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating data
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa432de213eba0d6bf36b18115324c5a505f9238
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb89d4a2220c487f2e126b50ecf8cbedd20857cc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos によるデータの更新
 アプリケーションの更新または削除を含む行セットの任意の行**SQLSetPos**です。 呼び出す**SQLSetPos**便利な代替手段を作成して SQL ステートメントを実行します。 これにより、odbc データ ソースが配置されている SQL ステートメントをサポートしていない場合でも、位置指定更新をサポートできます。 関数呼び出しを使用してデータベースの完全なアクセスを実現するためのパラダイムの一部です。  
@@ -44,7 +42,6 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [SQLSetPos で行セット内の行を更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)  
+-   [SQLSetPos による行セットの行の更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)  
   
--   [SQLSetPos を含む行セット内の行を削除します。](../../../odbc/reference/develop-app/deleting-rows-in-the-rowset-with-sqlsetpos.md)
-
+-   [SQLSetPos による行セットの行の削除](../../../odbc/reference/develop-app/deleting-rows-in-the-rowset-with-sqlsetpos.md)

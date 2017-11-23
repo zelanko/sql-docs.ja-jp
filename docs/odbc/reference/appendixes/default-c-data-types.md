@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ff8e2e111db13f67c80189d225dad5084bfdb6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83040ffdab8b9715fc8caeb024bec6a9fc05d4d4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="default-c-data-types"></a>既定の C データ型
 アプリケーションで SQL_C_DEFAULT を指定する場合**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**ドライバーは、その出力、入力バッファーの C データ型が前提としています。列またはパラメーターのバッファーのバインド先の SQL データ型に対応します。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
      SQL_C_DEFAULT はプログラミングの利便性としてのみ提供される、ため、アプリケーションが実際の C データ型を指定する場合の機能をすべてを失うしていません。  
   
  各 SQL データ型の既定の C データ型を示すテーブルが含まれている[に変換するデータを SQL から C データ型に](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)、後の「します。
-

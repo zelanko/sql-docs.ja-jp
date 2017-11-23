@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - レポートのテーブル動作プロパティを構成します。
   テーブル モデルを [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]のデータ モデルとして使用している場合は、詳細行をより細かなレベルで公開するテーブル動作プロパティを設定できます。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびグラフのレイアウトを使用して、識別情報 (名前、写真 ID、ロゴ イメージなど) の適切な既定位置を設定できます。  
@@ -147,4 +145,3 @@ ms.lasthandoff: 09/01/2017
  モデルでテーブルを評価し、常に個別のアイテムとして表示する必要のある詳細行を含むテーブルにテーブル動作プロパティを設定した後で、追加のプロパティまたは設定によってモデルをさらに最適化できます。  
   
   
-

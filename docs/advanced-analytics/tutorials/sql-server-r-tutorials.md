@@ -1,30 +1,25 @@
 ---
 title: "SQL Server R チュートリアル |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-caps.latest.revision: 1
+applies_to: SQL Server 2016
+dev_langs: R
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 341ec619ee5976ca7488f3662f010358b4457437
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a313a6f26283b96d138671991438197ae0cc0332
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R チュートリアル
 
@@ -118,4 +113,3 @@ SQL Server セットアップを実行した後、これらの重要な手順を
 + SQL ログインまたは Windows ユーザー アカウントが、データを読み取ると、このサンプルで必要なすべてのデータベース オブジェクトを作成するのには、サーバーに接続するために必要な権限を持つことを確認してください。
 
 問題が実行する場合は、いくつかの一般的な問題には、この記事を参照してください: [Machine Learning のサービスのトラブルシューティング](../machine-learning-troubleshooting-faq.md)
-

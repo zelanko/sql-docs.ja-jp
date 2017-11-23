@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 接続プールのオプションの設定
 接続プールにより、アプリケーションを使用するたびに再確立する必要がない接続プールから接続を使用します。 使用することができます、**接続プール**のタブ、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックスを有効にし、パフォーマンスの監視を無効にします。 接続タイムアウト期間を設定するドライバー名をダブルクリックします。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 |作成されたプール|作業中に、削除のプールを含む、アクティブなプールの数。 このカウンターは、接続プール内の接続を管理するドライバーを Windows 8 で追加されました。 詳細については、次を参照してください。[ドライバー対応接続プール](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)です。|  
   
  独自の監視パラメーターを指定する必要があります。 パフォーマンスの監視用のサンプルは、ODBC のこのバージョンに付属されています。
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 47dc4be8925623a9dad87f1f7233211956ea5b67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17a82974d8531d0524f4bac89701d6c97a05198d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  により、アプリケーションによって割り当てられたパラメーターのセットに複数の値を指定する[SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md)です。 パラメーターのセットに複数の値を指定することは、一括挿入やさまざまなパラメーター値を複数回、同じ SQL ステートメントを処理するデータ ソースを必要とするその他の作業に役立ちます。 たとえば、アプリケーションが 3 つのパラメーターに関連付けられている一連の値を指定できます、**挿入**ステートメントし、実行、**挿入**3 つを実行するステートメントを 1 回の挿入操作です。  
   
  詳細については、次を参照してください。 [SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md)で、 *ODBC プログラマ リファレンス*です。
-

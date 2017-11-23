@@ -14,14 +14,12 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: d6fb9839ee1ba7f583eca9445599422469212083
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>パフォーマンスのベスト プラクティスと Linux 上の SQL Server 2017 の構成ガイドライン
 
 このトピックでは、ベスト プラクティスと推奨事項を Linux に SQL Server に接続するデータベース アプリケーションのパフォーマンスを最大化を提供します。 これらの推奨事項は、Linux プラットフォームで実行されているに固有です。 インデックスのデザインなどに、すべての標準 SQL Server 勧告が引き続き適用されます。
@@ -118,4 +116,3 @@ Linux の多くのインストールは、既定は、このオプションが�
 パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux に SQL Server の概要](sql-server-linux-overview.md)です。
-

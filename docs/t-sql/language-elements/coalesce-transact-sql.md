@@ -3,37 +3,37 @@ title: "結合 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COALESCE
 - COALESCE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], nonnull
 - COALESCE function
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9cb11cb46ab14ab7b1efee597371799882f0e55
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 順序で引数を評価し、最初に評価されない最初の式の現在の値を返します`NULL`です。 たとえば、 `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` 3 番目の値が null ではない最初の値であるために、3 番目の値を返します。 
   
@@ -56,7 +56,7 @@ COALESCE ( expression [ ,...n ] )
  すべての引数が場合`NULL`、`COALESCE`返します`NULL`です。 型指定された null 値の少なくとも 1 つある必要があります`NULL`です。  
   
 ## <a name="comparing-coalesce-and-case"></a>COALESCE と CASE の比較  
- `COALESCE`式は、構文のショートカットを`CASE`式。  コードは、 `COALESCE`(*expression1*、*...n*) には、次のクエリ オプティマイザーによって書き換えられます`CASE`式。  
+ `COALESCE`式は、構文のショートカットを`CASE`式。  コードは、 `COALESCE`(*expression1*、*.. .n*) には、次のクエリ オプティマイザーによって書き換えられます`CASE`式。  
   
  ```sql  
  CASE  
@@ -69,7 +69,7 @@ COALESCE ( expression [ ,...n ] )
   
  つまり、入力値 (*expression1*、 *expression2*、 *expressionN*など) は、複数回評価されます。 また、SQL 標準に準拠して、サブクエリを含む値式は不明確な式と見なされ、サブクエリは 2 回評価されます。 どちらの場合も、最初の評価とその後の評価で返される結果が異なります。  
   
- たとえば、コード`COALESCE((subquery), 1)`が実行すると、サブクエリは 2 回評価されます。 その結果、クエリの分離レベルによっては、得られる結果が異なる場合があります。 たとえば、コードが返されます`NULL`下にある、`READ COMMITTED`マルチ ユーザー環境での分離レベル。 安定した結果が返されることを確認するを使用して、`SNAPSHOT ISOLATION`分離レベル、または置換`COALESE`で、`ISNULL`関数。 また、次の例で示すように、サブクエリをサブセレクトにプッシュするクエリを書き直すことができます。  
+ たとえば、コード`COALESCE((subquery), 1)`が実行すると、サブクエリは 2 回評価されます。 その結果、クエリの分離レベルによっては、得られる結果が異なる場合があります。 たとえば、コードが返されます`NULL`下にある、`READ COMMITTED`マルチ ユーザー環境での分離レベル。 安定した結果が返されることを確認するを使用して、`SNAPSHOT ISOLATION`分離レベル、または置換`COALESCE`で、`ISNULL`関数。 また、次の例で示すように、サブクエリをサブセレクトにプッシュするクエリを書き直すことができます。  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -298,8 +298,7 @@ ORDER BY TotalSalary;
  ```  
   
 ## <a name="see-also"></a>参照  
- [ISNULL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/isnull-transact-sql.md)   
+ [ISNULL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/isnull-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_XML_METADATA
+apiname: DISCOVER_XML_METADATA
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_XML_METADATA rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b53ac5b9c24da68c50fa06644e80389ac53f509
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0f2a0a63ff4d08a3a273f303a956b49f4932a21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 行セット
   要求されたオブジェクトについて記述する XML ドキュメントを返します。 返される行セットは、必ず 1 行および 1 列で構成されます。  
@@ -78,7 +74,7 @@ ms.lasthandoff: 09/01/2017
 |**DataSourcePermissionID**|**DBTYPE_WSTR**|省略可。|  
 |**ObjectExpansion**|**DBTYPE_WSTR**|省略可。|  
   
- 制限、 **ObjectExpansion**のすべての主要なオブジェクトがある[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 クライアントを使用して、DDL を返される OLAP オブジェクトを記述する制限を使用する通常、 **ObjectExpansion**返された ddl の拡張度を定義する制限。 次の表は、の列挙値が許可されているかどうかを示す[Alter 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)コマンド。  
+ 制限、 **ObjectExpansion**のすべての主要なオブジェクトがある[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 クライアントを使用して、DDL を返される OLAP オブジェクトを記述する制限を使用する通常、 **ObjectExpansion**返された ddl の拡張度を定義する制限。 次の表は、の列挙値が許可されているかどうかを示す[Alter 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)コマンド。  
   
 |列挙値|Description|  
 |-----------------------|-----------------|  
@@ -88,7 +84,6 @@ ms.lasthandoff: 09/01/2017
 |**ExpandFull**|要求されたオブジェクトを、含まれるすべてのオブジェクトの一番下まで再帰的に完全に展開します。|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e7db92207b2a518c3d697b997a22ed7c076cd0b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>計算テーブルを作成する (SSAS 表形式)
   *計算テーブル* は、DAX クエリまたは式に基づいて計算されたオブジェクトで、同じモデル内の他のテーブルの全部または一部から派生しています。  
@@ -77,8 +75,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Analysis Expressions (&) #40";"DAX"&"#41;Analysis services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
+ [Data Analysis Expressions &#40;DAX&#41;Analysis services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [テーブル モデルでの DAX について (SSAS テーブル)](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   
-

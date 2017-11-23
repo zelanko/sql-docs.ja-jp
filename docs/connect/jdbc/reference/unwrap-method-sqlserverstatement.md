@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 26a0e6fd3cec7cde459dc72416e35bc98275e3f1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dbda74967315c5d918a1810ff9221a5c86325078
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +53,7 @@ public <T> T unwrap(Class<T> iface)
   
  このメソッドが呼び出されると、オブジェクトにアンラップ、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)クラスです。  
   
- コード例を参照してください[大規模なデータの更新のサンプル](../../../connect/jdbc/updating-large-data-sample.md)、または[unwrap メソッド & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
+ コード例を参照してください[大規模なデータの更新のサンプル](../../../connect/jdbc/updating-large-data-sample.md)、または[unwrap メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
  詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)です。  
   
@@ -65,4 +63,3 @@ public <T> T unwrap(Class<T> iface)
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

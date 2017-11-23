@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- VARP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- VarP function [MDX]
+f1_keywords: VARP
+dev_langs: kbMDX
+helpviewer_keywords: VarP function [MDX]
 ms.assetid: feca648d-bbc8-44c8-9a0e-38f66d914c72
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: aa95af6ba3e2c2e2d1d0386d58c753989865cb2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4f0d30afa0147f62bea4b58661ee735deb61a429
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +48,6 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  **VarP**関数は、バイアスをかけた母集団を使用しているときに、数式、 [Var](../mdx/var-mdx.md)関数は、バイアスをかけない母集団の公式を使用します。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

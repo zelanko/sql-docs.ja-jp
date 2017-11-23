@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords:
-- Find method [ADO]
+helpviewer_keywords: Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 検索、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した条件を満たす行にします。 必要に応じて、検索、開始行、および開始行からのオフセットの方向を指定することがあります。 検出されたレコード; で現在の行位置を設定、条件が満たされる場合それ以外の場合、位置に設定されている (先頭または末尾) の**Recordset**です。  
@@ -72,11 +69,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 >  呼び出す場合は、**検索**、レコード セットと、レコード セット内の現在位置でメソッドが、最後のレコードまたはファイルの末尾 (EOF) には、何も検索されません。 呼び出す必要があります、 **MoveFirst**レコード セットの先頭に現在の位置/カーソルを設定します。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [メソッドの例 (VB) を検索します。](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Index プロパティ](../../../ado/reference/ado-api/index-property.md)   
  [動的プロパティ (ADO) を最適化します。](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)
-

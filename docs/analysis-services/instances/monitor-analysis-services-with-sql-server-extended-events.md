@@ -21,17 +21,16 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7857edc132bbf7e82b749b752fafa72c78e9e890
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 拡張イベントを使用した Analysis Services の監視
   拡張イベント (*xEvents*) は、わずかなシステム リソースを運用サーバーとテスト サーバーの両方の問題を診断するための理想的なツールに変える、軽量のトレースおよびパフォーマンス監視システムです。 また、拡張性が高く、詳細な構成が可能で、SQL Server 2016 では、新しい組み込みのツール サポートにより使用が簡単です。 SQL Server Management Studio で Analysis Services インスタンスに接続すると、SQL Server Profiler を使用するようにライブ トレースを構成、実行、および監視することができます。 優れたツールを追加することで、SQL Server Profiler から xEvent に置き換える合理性が高まり、データベース エンジンと Analysis Services ワークロードの問題を同等に診断できるようになります。  
@@ -178,4 +177,3 @@ ms.lasthandoff: 09/01/2017
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbf4124c957394d692976eef60d62742741bd949
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0abbf1d371f7fb97547b7e52331c150c7c003ae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
   コマンド プロンプトから **sqlservr** アプリケーションを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを起動、停止、一時停止、または続行します。  
@@ -66,7 +64,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを最小構成で起動します。 設定値によりサーバーが起動できないとき (たとえば使用できるメモリが不足している場合) などに便利です。  
   
  **-e** *error_log_path*  
- エラー ログ ファイルのフル パスを指定します。 指定しない場合、既定の場所は、 *\<ドライブ >*: 既定のインスタンスの \Program Files\Microsoft SQL server \mssql\log\errorlog と*\<ドライブ >*: \Program Files\Microsoft SQL server \mssql$*instance_name*\Log\Errorlog 名前付きインスタンス。 **-e** と *error_log_path* の間には空白を入れません。  
+ エラー ログ ファイルのフル パスを指定します。 指定しない場合、既定の場所は、 *\<ドライブ >*: 既定のインスタンスの \Program Files\Microsoft SQL server \mssql\log\errorlog と*\<ドライブ >*: \Program Files\Microsoft SQL server \mssql$*instance_name*\Log\Errorlog 名前付きインスタンス。 **-e** と *error_log_path*の間には空白を入れません。  
   
  **-l** *master_log_path*  
  **master** データベース トランザクション ログ ファイルの完全修飾パスを指定します。 **-l** と *master_log_path*の間には空白を入れません。  
@@ -75,7 +73,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  シングル ユーザー モードで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを起動します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動した場合、1 人のユーザーのみ接続できます。 CHECKPOINT メカニズムは起動しません。CHECKPOINT メカニズムとは、完了したトランザクションをディスク キャッシュからデータベース デバイスに正しく書き込むことを保証する機能です。 一般的に、システム データベースを修復する必要がある問題が発生したときに、このオプションを使用します。このオプションによって **sp_configure allow updates** オプションが有効になります。 既定の設定では、 **allow updates** は無効になります。  
   
  **-n**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの起動を可能にします。 **-s** パラメーターを設定しない場合、既定のインスタンスが起動します。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に \mssql$Instance1 を使用する場合、ユーザーは \mssql$Instance1\binn ディレクトリで **sqlservr.exe -s instance1**を起動する必要があります。 インスタンスを起動する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で、  **-n** オプションは、使用することをお勧めです、 **-e**オプションも、または[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]イベントは記録されません。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスの起動を可能にします。 **-s** パラメーターを設定しない場合、既定のインスタンスが起動します。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に \mssql$Instance1 を使用する場合、ユーザーは \mssql$Instance1\binn ディレクトリで **sqlservr.exe -s instance1**を起動する必要があります。 インスタンスを起動する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で、  **-n** オプションは、使用することをお勧めです、 **-e**オプションも、または[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]イベントは記録されません。  
   
  **-T** *trace#*  
  指定された、有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
@@ -94,11 +92,11 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  このオプションの使用はメモリの割り当ての調整に役立ちますが、オペレーティング システムによって構成されたアプリケーション用の仮想メモリの制限設定よりも、物理メモリの容量が大きい場合にのみ使用してください。 このオプションは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で必要とされるメモリ使用量が通常より多い大容量メモリ構成で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスの仮想アドレス領域の全体が使用される場合に効果があります。 このオプションを誤って使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が起動しないことや、実行時エラーが発生することがあります。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エラー ログに次の警告が記録されない限り、**-g** パラメーターの既定値を使用してください。  
+ **エラー ログに次の警告が記録されない限り、** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] パラメーターの既定値を使用してください。  
   
--   "仮想 Allocate バイトに失敗しました: FAIL_VIRTUAL_RESERVE\<サイズ >"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"  
   
--   "仮想 Allocate バイトに失敗しました: FAIL_VIRTUAL_COMMIT\<サイズ >"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
  これらのメッセージは、拡張ストアド プロシージャ .dll ファイルやオートメション オブジェクトなどのアイテムの格納領域を確保するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ プールの一部を解放しようとしていることを示している場合があります。 その場合は、 **-g**スイッチによって確保するメモリ量を増やすことを検討してください。  
   
@@ -114,4 +112,3 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
-

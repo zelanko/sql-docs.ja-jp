@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AggregationID element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 586dccadb5eabbf14fecd5e1434a830e54a2e8c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 839014c19a80b8689d4a94178c25af7fb4c673c8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationid-element-assl"></a>AggregationID 要素 (ASSL)
   集計定義を識別、 [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)集計インスタンスの作成に使用する要素。  
@@ -70,7 +65,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**AggregationID**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.AggregationInstance>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

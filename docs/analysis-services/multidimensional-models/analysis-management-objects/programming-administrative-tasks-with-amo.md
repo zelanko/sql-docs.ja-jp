@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, programming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e585db13b3c3562cd454ef41fdbb7d60bbd94c26
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55e99f0c8abe8a0527af77d06a2fd4ab863a8491
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO による管理タスクのプログラミング
   分析管理オブジェクト (AMO) は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] を管理するためにクライアント アプリケーションから使用されるプログラミング ライブラリです。 ここでは、AMO オブジェクトを使用したプログラミング方法について説明します。  
@@ -41,15 +38,14 @@ ms.lasthandoff: 09/01/2017
 |-------------|--------------|  
 |[AMO 基本オブジェクトのプログラミング](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)|Server、Database、DataSource、および DataSourceView の各オブジェクトのプログラミング方法について説明します。 AMOException についても説明します。|  
 |[AMO OLAP 基本オブジェクトのプログラミング](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)|Dimension、Cube、MeasureGroup、Partition、および Aggregation の各オブジェクトのプログラミング方法について説明します。|  
-|[プログラミング AMO OLAP オブジェクトの詳細](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)|Action、KPI、Perspective、ProactiveCaching、および Translation の各オブジェクトのプログラミング方法について説明します。|  
+|[高度な AMO OLAP オブジェクトのプログラミング](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)|Action、KPI、Perspective、ProactiveCaching、および Translation の各オブジェクトのプログラミング方法について説明します。|  
 |[AMO データ マイニング オブジェクトのプログラミング](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)|MiningStructure オブジェクトおよび MiningModel オブジェクトのプログラミング方法について説明します。|  
 |[AMO セキュリティ オブジェクトのプログラミング](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)|Roles、Members、および Permissions の各オブジェクトのプログラミング方法について説明します。|  
-|[プログラミング AMO の補足的なクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md)|Assembly オブジェクト、Backup メソッドと Restore メソッド、Trace クラス、CaptureLog クラス、および CaptureXML 属性のプログラミング方法について説明します。|  
+|[AMO の補足的なクラスとメソッドのプログラミング](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md)|Assembly オブジェクト、Backup メソッドと Restore メソッド、Trace クラス、CaptureLog クラス、および CaptureXML 属性のプログラミング方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [データベース オブジェクト & #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

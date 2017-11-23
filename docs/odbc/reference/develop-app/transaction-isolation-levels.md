@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f0b5499af07c7bbb5309ff87037f7c3825872dab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transaction-isolation-levels"></a>トランザクション分離レベル
 *トランザクション分離レベル*分離が成功するトランザクションにエクステントの指標です。 具体的には、トランザクション分離レベルは、次の現象の有無によって定義されます。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |Serializable|他のトランザクションによる書き込みロックされた行のロックが解除されるまで、トランザクションが待機します。このできなくなります「ダーティ」データの読み取り。<br /><br /> (行の読み取りしか行わない) 場合、トランザクションが読み取りロックを保持または書き込みロック (更新または行の削除) 場合の範囲にその行に影響します。 例では、トランザクションには、SQL ステートメントが含まれている場合の**選択\*から注文**範囲は、全体 Orders テーブル以外のトランザクション読み取りロックは、テーブルの場合は、新しい行を挿入するのには許可しません。 トランザクションには、SQL ステートメントが含まれている場合**削除からの注文が状態 'CLOSED' の =**範囲は、"CLOSED"のステータスを持つすべての行以外のトランザクションの書き込みロックの注文のすべての行の表に"CLOSED"ありの状態でないです。すべての行を挿入または更新された結果の行がある"CLOSED"の状態を許可します。<br /><br /> 他のトランザクションは、更新または範囲の行を削除できません、ため、現在のトランザクションは、反復不能読み取りを回避できます。 他のトランザクションは、範囲の任意の行を挿入することはできません、ため、現在のトランザクションは、ファントムを回避できます。 トランザクションは、コミットまたはロールバック時にロックを解放します。|  
   
  トランザクション分離レベルが、独自の変更を表示するトランザクションの機能に影響を及ぼさないように注意してください。トランザクションでは、変更することが常に表示します。 たとえば、トランザクションは、2 つの構成可能性があります**更新**ステートメントの最初の 10% ですべての従業員の給与を発生させるし、2 番目がその容量を最大程度経由で任意の従業員の給与を設定します。 成功すると、単一のトランザクションとしてだけであるため、2 つ目**更新**ステートメントは、最初の結果を確認できます。
-

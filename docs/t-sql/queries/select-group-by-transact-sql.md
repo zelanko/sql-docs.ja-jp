@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - GROUP_TSQL
 - CUBE_TSQL
 - ROLLUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - GROUP BY clause, about GROUP BY clause
 - dividing tables into groups
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01e2c02cade5b84f3560fe5cb415cece4f815abf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---group-by--transact-sql"></a>-グループで、TRANSACT-SQL を選択します。
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>構文  
 
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -133,7 +130,7 @@ GROUP BY {
 - サブクエリ。 エラー 144 が返されます。 
 - インデックス付きビューの列。 
  
-### <a name="group-by-column-expression--n-"></a>GROUP BY*列式*[、...n] 
+### <a name="group-by-column-expression--n-"></a>GROUP BY*列式*[、.. .n] 
 
 1 つまたは複数の列の式のリスト内の値に従って SELECT ステートメントの結果をグループ化します。 
 
@@ -268,7 +265,7 @@ FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
 ```
 
-### <a name="group-by--all--column-expression--n-"></a>式列グループで [すべて] [、...n] 
+### <a name="group-by--all--column-expression--n-"></a>式列グループで [すべて] [、.. .n] 
 
 適用されます SQL Server と Azure SQL Database。
 
@@ -350,7 +347,7 @@ GROUP BY 句には、次の構文の例外、sql-2006 標準規格に含まれ�
 |機能|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 集計|WITH CUBE および WITH ROLLUP ではサポートされていません。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE、および ROLLUP でサポートされています。|互換性レベル 100 と同じです。|  
-|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|ユーザー定義関数**dbo.cube (***arg1***、***...argN***)**または**dbo.rollup (***arg1***、**.*argN***)**で GROUP BY 句は許可します。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|ユーザー定義関数**dbo.cube (***arg1***、**...argN**)**または**dbo.rollup (**arg1**、***...argN***)**で GROUP BY 句は許可されません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます"キーワード 'cube' &#124; 付近に構文が正しくない '。プログラムのロールアップ '."<br /><br /> この問題を避けるためには、置換`dbo.cube`で`[dbo].[cube]`または`dbo.rollup`で`[dbo].[rollup]`です。<br /><br /> 次の例は使用できます。`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|ユーザー定義関数**dbo.cube (***arg1***、***...argN*) または**dbo.rollup (** *arg1***、***...argN***)**で GROUP BY 句は許可<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|ユーザー定義関数**dbo.cube (***arg1***、***.. .argN***)**または**dbo.rollup (***arg1***、**.*argN***)**で GROUP BY 句は許可します。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|ユーザー定義関数**dbo.cube (***arg1***、**.. .argN**)**または**dbo.rollup (**arg1**、***.. .argN***)**で GROUP BY 句は許可されません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます"キーワード 'cube' &#124; 付近に構文が正しくない '。プログラムのロールアップ '."<br /><br /> この問題を避けるためには、置換`dbo.cube`で`[dbo].[cube]`または`dbo.rollup`で`[dbo].[rollup]`です。<br /><br /> 次の例は使用できます。`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|ユーザー定義関数**dbo.cube (***arg1***、***.. .argN*) または**dbo.rollup (** *arg1***、***.. .argN***)**で GROUP BY 句は許可<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|サポートされていません|Supported|Supported|  
 |CUBE|サポートされていません|Supported|サポートされていません|  
 |ROLLUP|サポートされていません|Supported|サポートされていません|  
@@ -471,13 +468,12 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>参照  
- [GROUPING_ID & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING_ID &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/functions/grouping-id-transact-sql.md)   
  [グループ化と #40 です。TRANSACT-SQL と #41 です。](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [SELECT 句 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/queries/select-clause-transact-sql.md)  
+ [SELECT 句 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
-
 
 
 

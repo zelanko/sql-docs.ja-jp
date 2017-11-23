@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Partitioning element
+dev_langs: XML
+helpviewer_keywords: Partitioning element
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c84705492db53c29b2f430d6e105a239e4393de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1937f32556c442460ee0ed051ae5aed7b14b13b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 要素 (DTA)
   データベース エンジン チューニング アドバイザーでの分析時に使用するパーティション分割構成が含まれます。  
@@ -62,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

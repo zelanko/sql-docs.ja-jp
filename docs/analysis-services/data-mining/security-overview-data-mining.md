@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services - data mining], about security
+helpviewer_keywords: security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e41132d9c98186073c67799bea6e9d677f5b3c82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-overview-data-mining"></a>セキュリティの概要 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のセキュリティ保護は、複数レベルで行われます。 まず [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスと、そのデータ ソースのセキュリティを保護して、認証されたユーザーのみが、選択されたディメンション、マイニング モデル、およびデータ ソースに対する読み取り、または読み取り/書き込み権限を持つことを確認する必要があります。 基になるデータ ソースのセキュリティを保護して、権限のないユーザーが機密のビジネス情報を悪意で危険にさらすことを防ぐ必要もあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのセキュリティを保護するプロセスは、次のトピックで説明しています。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [ロールと権限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
-

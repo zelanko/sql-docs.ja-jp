@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: ja-jp
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -34,7 +32,7 @@ ms.lasthandoff: 11/08/2017
 ## <a name="available-features"></a>利用可能な機能  
 以下のセクション、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ODBC 用 Native Client のドキュメント ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) macOS および Linux で ODBC driver を使用しているときに有効。  
 
--   [SQL Server (ODBC) との通信](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [SQL Server との通信 (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [接続とクエリのタイムアウトのサポート](http://msdn.microsoft.com/library/ms130822.aspx)  
 -   [カーソル](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
 -   [日付/時刻の強化 (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/08/2017
 -   [Kerberos 認証](http://msdn.microsoft.com/library/cc280459.aspx)  
 -   [大きな CLR ユーザー定義型 (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [実行 (分散トランザクション) を除くトランザクション (ODBC)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [処理結果 (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
+-   [結果の処理 (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
 -   [ストアド プロシージャの実行](http://msdn.microsoft.com/library/ms131440.aspx)
 -   [スパース列のサポート (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL 暗号化](http://msdn.microsoft.com/library/ms131691.aspx)
@@ -118,4 +116,3 @@ UTF-8 マルチバイト文字または UTF-16 サロゲートが SQLPutData バ
 [このバージョンのドライバーの既知の問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [リリース ノート](../../../connect/odbc/linux-mac/release-notes.md)
-

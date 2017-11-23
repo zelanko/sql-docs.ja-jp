@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6243c644b6a64aea05bbc826652ea9a09e1d19f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20583ed71781b093b3195d8dc1f192258a5b569a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>サンプルのコンソール スクリプト ファイル (DB2ToSQL) の操作
 いくつかのサンプル ファイルは、ユーザーの参照と使用法について、製品と共に用意されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 08/02/2017
   
     レポートを生成する方法の詳細については、次を参照してください。[レポートを生成する &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)です。  
   
-    **Notes:**  
+    **注:**  
   
     コンソール アプリケーションに渡される変数の値ファイルのコマンドライン引数を使用すると、VariableValueFileSample.xml が指定したユーザーに更新されることを確認して値。  
   
@@ -90,4 +88,3 @@ ms.lasthandoff: 08/02/2017
 [サーバーの接続ファイル &#40;DB2ToSQL&#41; の作成](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [生成するレポート &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)  
   
-

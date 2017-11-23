@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pattern-value-arguments"></a>パターン値の引数
 などのいくつかの引数で、カタログ関数、 *TableName*引数**SQLTables**、検索パターンをそのまま使用します。 これらの引数は、検索パターンをそのまま使用 SQL_ATTR_METADATA_ID ステートメント属性が SQL_FALSE; に設定されている場合これらは、この属性が SQL_TRUE に設定されている場合、検索パターンを受け入れない識別子引数です。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 2 です。*x*ドライバー内の検索パターンをサポートしていません、 *CatalogName*引数**SQLTables**です。 ODBC 3*.x* SQL_ATTR ODBC_VERSION 環境属性を SQL_OV_ODBC3 に設定されている場合、ドライバーはこの引数での検索パターンを受け入れる; SQL_OV_ODBC2 に設定されている場合、この引数での検索パターンは同意しません。  
   
  検索パターン引数に null ポインターを渡すことです。 その引数の検索を制限しませんつまり、null ポインターと、検索パターン % (任意の文字) は等価です。 ただし、パターンの検索に長さ 0: 長さがゼロの文字列には、有効なポインター: 空の文字列のみと一致する ("") です。
-

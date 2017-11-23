@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>ディスクの使用領域の構成 (Power Pivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースをキャッシュします。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

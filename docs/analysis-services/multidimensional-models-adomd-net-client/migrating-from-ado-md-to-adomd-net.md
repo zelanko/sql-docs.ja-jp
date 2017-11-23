@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ADOMD.NET, migrating to
 - migrating ADO MD to ADOMD.NET
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a4b442d18188a5ba57066d6c9f3b2f1c2bdd18f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f487a18b188dad430c88531e82e747e9edf349f2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>ADO MD から ADOMD.NET への移行
   ADOMD.NET ライブラリは、ActiveX Data Objects (ADO) ライブラリを機能拡張した ActiveX Data Objects Multidimensional (ADO MD) ライブラリに似ています。このライブラリは、COM (Component Object Model) ベースのクライアント アプリケーションで多次元データへアクセスするときに使用されます。 ADO MD を使用すると、C++ や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic などのアンマネージ言語から多次元データへ簡単にアクセスできます。 ADOMD.NET では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] C# や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET などのマネージ言語から、分析データ (多次元データとデータ マイニングの両方) へ簡単にアクセスできます。 また、ADOMD.NET は、高度な機能を備えたメタデータ オブジェクト モデルでもあります。  
@@ -271,4 +269,3 @@ End Sub
 ```  
   
   
-

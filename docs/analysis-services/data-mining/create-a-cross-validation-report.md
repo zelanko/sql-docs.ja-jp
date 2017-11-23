@@ -19,17 +19,16 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cross-validation-report"></a>クロス検証レポートの作成
   このトピックでは、データ マイニング デザイナーの [精度チャート] タブを使用してクロス検証レポートを作成する方法を順を追って説明します。 クロス検証レポートの外観およびレポートに含まれる統計メジャーに関する一般的な情報については、「[相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   
-

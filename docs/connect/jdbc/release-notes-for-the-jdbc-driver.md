@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC ドライバーのリリース ノート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -133,17 +131,17 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  高可用性、障害復旧接続での AlwaysOn 可用性グループのサポート[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]です。 参照してください[High Availability, Disaster Recovery の JDBC ドライバー サポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)詳細についてはします。  
   
- **Kerberos 統合認証を使用して SQL Server に接続**  
+ **Kerberos 統合認証による SQL Server への接続**  
   
  接続するアプリケーションのタイプ 4 の Kerberos 統合認証のサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 詳細については、次を参照してください。[を使用して Kerberos 統合認証を SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)です。 (タイプ 2 の Kerberos 統合認証で使用できる[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]4.0 より前のバージョンです)。  
   
- **拡張イベント ログの診断情報にアクセスします。**  
+ **拡張イベント ログの診断情報へのアクセス**  
   
  サーバーの拡張イベント ログにアクセスして、接続エラーに関する情報を得ることができます。 詳細については、次を参照してください。[へのアクセス ログの診断情報、拡張イベント](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)です。  
   
  **スパース列の追加のサポート**  
   
- スパース列が使用されているテーブル内のデータに既にアクセスしているアプリケーションでは、パフォーマンスが向上します。 列 (スパース列の情報を含む) に関する情報を取得できる[getColumns メソッド & #40 です。SQLServerDatabaseMetaData &#41;](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、スパース列を参照してください[スパース列の使用](http://go.microsoft.com/fwlink/?LinkId=224244)です。  
+ スパース列が使用されているテーブル内のデータに既にアクセスしているアプリケーションでは、パフォーマンスが向上します。 列 (スパース列の情報を含む) に関する情報を取得できる[getColumns メソッド &#40;です。SQLServerDatabaseMetaData &#41;](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、スパース列を参照してください[スパース列の使用](http://go.microsoft.com/fwlink/?LinkId=224244)です。  
   
  **Xid.getFormatId**  
   
@@ -157,4 +155,3 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1165b694dbbdedb73fded1178bbc568cbcf0a467
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>レコード セット内を移動する方法
 次の 4 つの方法は、移動またはスクロールするのに使用、 **Recordset**: [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)です。 (これらのメソッドの一部は順方向専用カーソルで使用できます)  
@@ -63,4 +61,3 @@ If oRs.BOF Then oRs.MoveFirst
  中に特定の行を配置した場合、別の例として、**レコード セット**を呼び出す**削除**し**MoveNext**、表示されているようになりましたレコード削除されたレコードの直後です。 呼び出し元が**MovePrevious** 、削除したレコードがアクティブなメンバーシップの数えられる不要になったために、現在のレコードを削除する 1 つを前のレコード、**レコード セット**です。  
   
  現在のレコードに対して相対的に移動するメソッドのすべてのプロバイダーで一貫性のある移動セマンティクスを定義することは困難である — **MovePrevious**、 **MoveNext**、および**を移動** : 現在のレコード内のデータを変更した場合。 たとえば、並べ替えられたで作業している場合がフィルター処理**Recordset**と、他のすべてのレコードより前にそのように現在のレコード内のデータを変更するが、変更したデータも不要になったフィルターに一致する、where をはっきりしない場合は、**MoveNext**操作を実行する必要があります。 最も安全な結論は内でその相対移動、**レコード セット**絶対移動するより危険は、(を使用してなど**MoveFirst**または**MoveLast**)、データをする場合変更レコードの編集中に追加、または削除します。 並べ替えとフィルター処理は、この種類の値が変わらないようにするために、プライマリ キーまたは ID に基づく必要があります。
-

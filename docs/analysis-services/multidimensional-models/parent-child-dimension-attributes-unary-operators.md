@@ -19,17 +19,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4ceea7fc4a5d84d571a45c00f2e6291405544f3a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 69317cd95bee97df95a5504dcbef2113e0453d1c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>親子ディメンションの属性の単項演算子
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンション デザイナーで、ビジネス インテリジェンス ウィザードを起動します。](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   
-

@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0c44abd2ba4be59a86b46a9b0ff74196c570e5e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis スキーマ行セット
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーには、サーバーの状態、アクティビティ、およびオブジェクトに関するメタデータを返すスキーマ行セットが含まれています。 構造と特性が変化する Analysis Services モデルに接続するクライアント アプリケーションを開発する場合は、メタデータを取得する必要があります。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 |[DISCOVER_DIMENSION_STAT 行セット](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|指定したディメンションで統計を返します。|  
 |[DISCOVER_ENUMERATORS 行セット](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|特定のデータ ソースの XMLA プロバイダーによってサポートされている列挙子の名前、データ型、および列挙値の一覧を返します。|  
 |[DISCOVER_JOBS 行セット](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|サーバーで実行されているアクティブなジョブに関する情報を提供します。|  
-|[DISCOVER_KEYWORDS 行セット & #40 です。XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|XMLA プロバイダーによって予約されているキーワードに関する情報を返します。|  
+|[DISCOVER_KEYWORDS 行セット &#40;です。XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|XMLA プロバイダーによって予約されているキーワードに関する情報を返します。|  
 |[DISCOVER_LITERALS 行セット](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|XMLA プロバイダーによってサポートされているデータ型や値などを含むリテラルに関する情報を返します。|  
 |[DISCOVER_LOCATIONS 行セット](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|バックアップ ファイルの内容に関する情報を返します。|  
 |[DISCOVER_LOCKS 行セット](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|サーバー上で現在保持されているロックに関する情報を提供します。|  
@@ -82,8 +80,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [Analysis Services の XMLA による開発](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [使用して動的管理ビュー (&) #40 です。 Dmv (&) #41;Analysis Services を監視するには](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
- [分析データ ソースからメタデータを取得します。](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
+ [使用して動的管理ビュー (&) #40 です。 Dmv &#41;Analysis Services を監視するには](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [分析データ ソースからのメタデータの取得](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

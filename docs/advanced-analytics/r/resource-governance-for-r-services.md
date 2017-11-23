@@ -1,90 +1,100 @@
 ---
-title: "R Services のリソース管理 | Microsoft Docs"
+title: "SQL Server での機械学習用リソース ガバナンス |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e5f334edf065d691a78469c01bf2cd3352a71544
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5475c2258971c48c2e19bba69d9ec962ae48be87
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="resource-governance-for-r-services"></a>R Services のリソース管理
-  R の問題点の 1 つは、実稼働環境の大容量データを分析するために追加のハードウェアが必要になることです。また、多くの場合、データベースから IT で制御されないコンピューターにデータが移動されます。  高度な分析処理を実行するため、お客様はデータベース サーバー リソースを活用することを望みます。データを保護するためには、このような処理がセキュリティやパフォーマンスに関してエンタープライズ レベルのコンプライアンス要件を満たす必要があります。  
+# <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server での機械学習用リソース ガバナンス
+
+この記事は、リソース管理の概要を割り当てるし、R と Python スクリプトによって使用されているリソースのバランスをとるに役立つ SQL Server の機能を提供します。
+
+**適用されます:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] 
+ [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]と[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+
+## <a name="goals-of-resource-governance-for-machine-learning"></a>機械学習用リソース ガバナンスの目的
+
+1 つの R、Python などの machine learning 言語と既知の問題点はデータがによって制御されていないコンピューターに移動、データベース外部の多くの場合、IT です。 別は R がシングル スレッドで、メモリ内で使用できるデータでのみ作業できることを意味します。 
+
+SQL Server の Machine Learning のサービスは、これら両方の問題を軽減し、企業のコンプライアンス要件を満たすのに役立ちます。 データベース内の高度な分析を保持し、ストリーミングと操作のチャンキングなどの機能を通じて、大規模なデータセットに対するパフォーマンスの向上をサポートします。 ただし、データベース内 R、Python の計算を移動正規ユーザー クエリ、外部アプリケーションは、データベースのスケジュールされたジョブなどのデータベースを使用する他のサービスのパフォーマンスに影響することができます。
+
+このセクションでは、他のコア データベース サービスへの影響を軽減するために、R、Python などの外部のランタイムによって使用されているリソースを管理する方法に関する情報を提供します。 通常、データベース サーバーの環境は、複数の依存アプリケーションとサービスのハブです。
+
+使用することができます[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md) R、Python の外部のランタイムで使用したリソースを管理します。  機械学習には、リソース管理には、これらのタスクが含まれます。
+
++ サーバー リソースを過剰に使用するスクリプトの特定
   
- このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを計算コンテキストとして使用して、R ランタイムおよび R ジョブで使用されるリソースを管理する方法を説明します。  
+     管理者は、消費するリソースが多すぎるジョブを停止または調整できる必要があります。
   
-## <a name="what-is-resource-governance"></a>リソース管理とは  
- リソース管理の目的は、データベース サーバー環境で一般的な問題を特定して防ぐことです。このような環境には多くの場合、複数の依存アプリケーション、サポートや負荷分散を行う複数のサービスがあります。 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] の場合、リソース管理には次のタスクが含まれます。  
++ 予測できないワークロードの軽減
   
--   サーバー リソースを過剰に使用するスクリプトの特定  
+     たとえば場合 machine learning の複数のジョブは、同時に、サーバー上で実行している、結果として得られるリソースの競合でしたまたはする可能性予期しないパフォーマンス、ワークロードの完了が脅かされることです。 ただし、リソース プールを使用している場合、ジョブは互いから分離のようにできます。
   
-     管理者は、消費するリソースが多すぎるジョブを停止または調整できる必要があります。  
+-   ワークロードの優先順位付け
   
--   予測できないワークロードの軽減  
+     管理者や設計者は、優先、またはリソースの競合が発生するときに行う特定のワークロードを保証する必要があるワークロードを指定することである必要があります。
+
+## <a name="how-to-use-resource-governor-to-manage-machine-learning"></a>リソース ガバナーを使用して、機械学習を管理する方法
+ 
+作成することで R または Python のセッションに割り当てられたリソースを管理する、*外部リソース プール*、プールまたはプールにワークロードを割り当てるとします。 外部リソース プールは、新しいリソース プールの種類で導入された[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]R ランタイムとその他の管理に役立つ、外部データベース エンジンに処理します。
+
+SQL Server では、既定のリソース プールの次の 3 つの種類をサポートします。 
   
-     たとえば、複数の R ジョブがサーバーで同時に実行しており、ジョブがリソース プールを使用して互いに分離されていない場合は、結果としてリソース競合が発生し、予測できないパフォーマンスにつながったり、ワークロードの完了を脅かしたりする可能性があります。  
+-   "*内部プール*" は、SQL Server そのもので使用されるリソースを表します。変更または制限することはできません。
   
--   ワークロードの優先順位付け  
+-   "*既定プール*" は定義済みのユーザー プールです。サーバー全体のリソース使用を変更するために使用できます。 このプールに属するユーザー グループを定義して、リソースへのアクセスを管理することもできます。
   
-     管理者または設計者は、優先されるワークロードを指定したり、リソース競合が発生した際に特定のワークロードの完了を保証したりできることが必要です。  
+-   "*既定外部プール*" は、外部リソース用の定義済みユーザー プールです。 また、新しく外部リソース プールを作成して、そのプールに属するユーザー グループを定義できます。
   
- [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] では、[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)を使用して、R ランタイムとリモート R ジョブで使用されるリソースを管理できます。  
+ さらに、"*ユーザー定義リソース グループ*" を作成して、リソースをデータベース エンジンまたは他のアプリケーションに割り当てることや、"*ユーザー定義外部リソース プール*" を作成して R やその他の外部プロセスを管理することができます。
   
-## <a name="how-to-use-resource-governor-to-manage-r-jobs"></a>リソース ガバナーを使用して R ジョブを管理する方法  
- 一般に、R ジョブに割り当てられたリソースを管理するには、"*外部リソース プール*" を作成して、ワークロードをプール (1 つまたは複数) に割り当てます。 外部リソース プールは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に導入された新しい種類のリソース プールです。データベース エンジン外部の R ランタイムやその他のプロセスの管理に役立ちます。  
-  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には現在 3 種類の既定リソース プールがあります。  
-  
--   "*内部プール*" は、SQL Server そのもので使用されるリソースを表します。変更または制限することはできません。  
-  
--   "*既定プール*" は定義済みのユーザー プールです。サーバー全体のリソース使用を変更するために使用できます。 このプールに属するユーザー グループを定義して、リソースへのアクセスを管理することもできます。  
-  
--   "*既定外部プール*" は、外部リソース用の定義済みユーザー プールです。 また、新しく外部リソース プールを作成して、そのプールに属するユーザー グループを定義できます。  
-  
- さらに、"*ユーザー定義リソース グループ*" を作成して、リソースをデータベース エンジンまたは他のアプリケーションに割り当てることや、"*ユーザー定義外部リソース プール*" を作成して R やその他の外部プロセスを管理することができます。  
-  
- 用語および一般的な概念について詳しくは、「[Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)」(リソース ガバナーのリソース プール) をご覧ください。  
+ 用語および一般的な概念について詳しくは、「[Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)」(リソース ガバナーのリソース プール) をご覧ください。
 
   
-## <a name="resource-management-using-resource-governor"></a>リソース ガバナーを使用したリソース管理 
+## <a name="resource-management-walkthrough-with-resource-governor"></a>リソース管理のチュートリアルをリソース ガバナー
 
-   リソース ガバナーを初めて使用する場合は、インスタンスの既定リソースの変更方法や新しい外部リソース プールの作成方法のチュートリアルとして、「[How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)」(方法: R のリソース プールを作成する) をご覧ください。   
+リソース ガバナーを新しい場合は、インスタンスの既定のリソースを変更し、新しい外部リソース プールを作成する方法の簡単なチュートリアルについては、このトピックを参照してください:[外部スクリプトのリソース プールの作成](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
   
- "*外部リソース プール*" メカニズムを使用して、次の R 実行可能ファイルによって使用されるリソースを管理できます。  
-  
--   Rterm.exe およびサテライト プロセス  
-  
--   BxlServer.exe およびサテライト プロセス  
-  
--   スタート パッドで起動されたサテライト プロセス  
-  
- ただし、リソース ガバナーによるスタート パッド サービスの直接管理はサポートされません。 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] は信頼済みサービスであり、仕様により Microsoft 提供のランチャーしかホストできないためです。 信頼済みランチャーも、リソースを過度に消費しないように構成できます。  
-  
- リソース ガバナーを使用して、サテライト プロセスを管理し、個々のデータベース構成とワークロードのニーズを満たすように調整することをお勧めします。  たとえば、個々のサテライト プロセスは実行中に要求時に作成または破棄することができます。  
-  
-## <a name="disable-external-script-execution"></a>外部スクリプト実行の無効化  
- 外部スクリプトのサポートは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではオプションです。 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] をインストールした後でも、外部スクリプトを実行する機能は既定でオフになっています。スクリプトの実行を有効にするには、プロパティを手動で再構成し、インスタンスを再起動する必要があります。  
-  
- このため、直ちに軽減する必要があるリソースの問題あるいはセキュリティの問題がある場合、管理者は [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用し、プロパティ `external scripts enabled` を FALSE または 0 に設定することで、外部スクリプトの実行をすぐに無効化できます。  
-  
-## <a name="see-also"></a>参照  
- [R ソリューションの管理と監視](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
- [R 用のリソース プールを作成する方法](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)  
- [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-  
+ 使用することができます、*外部リソース プール*機械学習で使用されている次の実行可能ファイルで使用したリソースを管理するためのメカニズム。
 
++ Rterm.exe およびサテライト プロセス
++ Python.exe およびサテライト プロセス
++ BxlServer.exe およびサテライト プロセス
++ スタート パッドを起動するサテライト プロセス
+  
+> [!NOTE]
+> 
+> リソース ガバナーを使用して、スタート パッド サービスのダイレクト管理はサポートされていません。 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] は信頼済みサービスであり、仕様により Microsoft 提供のランチャーしかホストできないためです。 信頼されたランチャーが過剰にリソースを消費しないように構成されます。
+>   
+> リソース ガバナーを使用して、サテライト プロセスを管理し、個々のデータベース構成とワークロードのニーズを満たすように調整することをお勧めします。  たとえば、個々のサテライト プロセスは実行中に要求時に作成または破棄することができます。
+  
+## <a name="disable-external-script-execution"></a>外部スクリプトの実行を無効にします。
 
+外部スクリプトのサポートは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではオプションです。 機械学習機能をインストールした後でも、既定では、外部スクリプトを実行する機能は OFF です。 し、手動でプロパティを再構成し、スクリプトの実行を有効にするインスタンスを再起動する必要があります。
+
+そのため、すぐに、軽減する必要があるリソースの問題またはセキュリティ上の問題がある場合、管理者直ちにを無効にできます、外部スクリプトの実行を使用して[sp_configure &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)プロパティを設定および`external scripts enabled`FALSE または 0 にします。
+  
+## <a name="see-also"></a>参照
+
+[Machine Learning ソリューションの管理と監視](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
+
+[Machine Learning 用のリソース プールの作成](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
+
+[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

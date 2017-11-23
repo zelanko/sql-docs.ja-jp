@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 338956898cd000448d547d23f18b649ee36cfe7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d67a595c97547934b04794f036d58445e8c282
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM 上で実行する DLL を有効にします。
 > [!IMPORTANT]
@@ -50,6 +48,5 @@ ms.lasthandoff: 09/09/2017
      .Dll を DCOM と IIS を介して、同じコンピューター上でアクセス可能にするには、コンポーネント サービス MMC スナップインで、コンポーネントのアクティベーション属性を設定する必要があります。 属性を設定した後**作成者のプロセスで**、表示になります、 **Inproc**コンポーネント サービスへのポインターが .dll をサロゲート サーバーのレジストリ キーが追加されました。  
   
  コンポーネント サービス (または Microsoft トランザクション サービス、Windows NT を使用している場合) の詳細については、および方法を次の手順を実行し、Microsoft Transaction Server Web サイトを参照してください。
-
 
 

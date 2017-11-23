@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fb3d67744b5616a031beee8ec3f329ed02f73c48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c36c15a75929b0c758ab32fdf952c1e0aa034508
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>レッスン 5-2-ファクト リレーションシップの定義
 ディメンション メジャーをファクト テーブルのデータ アイテムに関連付けなければならない場合があります。また、特定の販売ファクター (請求番号や受注番号) など、関連している特定の補足情報について、ファクト テーブルから情報を抽出しなければならない場合があります。 このように、ファクト テーブル アイテムに基づいて定義されたディメンションを、 *ファクト ディメンション*と呼びます。 ファクト ディメンションは、逆ディメンションとも呼ばれます。 特定の請求番号に関連するすべての行をグループ化する場合などのように、関連するテーブルの行をまとめてグループ化するには、ファクト ディメンションを使用すると便利です。 この情報は、リレーショナル データベースの個々のディメンション テーブルに格納することができます。しかし、情報ごとに異なるディメンション テーブルを作成してもメリットはありません。ファクト テーブルのサイズに比例してディメンション テーブルが大きくなり、データを複製することによって不要な複雑さを招くことになるからです。  
@@ -136,4 +133,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

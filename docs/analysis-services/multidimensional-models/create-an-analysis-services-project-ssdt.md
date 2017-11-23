@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, defining projects [Analysis Services]
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a5b26af390b901d6f23eacd409d919a6d1c656ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25b3c2bf3c86f69e9333b5e62541bbcfbbc877ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services プロジェクトの作成 (SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して定義できます。具体的には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト テンプレートを使用するか、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのインポート ウィザードを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのコンテンツを読み取ります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に読み込まれているソリューションがない場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成すると自動的に新しいソリューションが作成されます。 それ以外の場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトが既存のソリューションに追加されます。 ソリューション開発のベスト プラクティスでは、アプリケーション データの種類ごとにプロジェクトを個別に作成することが必要です。複数のプロジェクトが関係していても、使用するソリューションは 1 つです。 たとえば、Integration Services パッケージ、Analysis Services データベース、および Reporting Services レポートすべてを同じビジネス アプリケーションが使用し、これらのための独立した複数プロジェクトを含むソリューションが 1 つ存在する場合があります。  
@@ -175,4 +174,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   
-

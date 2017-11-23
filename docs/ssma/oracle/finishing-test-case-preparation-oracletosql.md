@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 8448cff10ca1eab050189cffe99b585cb229d60e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 92bb189027afd6c5e91428017c5aa356676d575c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>テスト_ケース準備 (OracleToSQL) の終了
 ウィザードの最終ページには、テスト_ケースの説明と、テストに関連するオブジェクトに関する情報が表示されます。 さらに、このページで設定できます、テストの実行オプション。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 08/02/2017
 [実行するテスト_ケース &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

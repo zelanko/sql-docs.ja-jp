@@ -5,8 +5,7 @@ ms.date: 7/7/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3ad9d4d4762a085ee63ce142c6998af07b3c018c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9ce18e13fa735921846ea7f564ff53983d0c2dca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler の実行
   実行することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、さまざまな方法でのトレースの収集をサポートするために出力をさまざまなシナリオでします。 開始することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、Windows 10 から**開始**] メニューの [から、**ツール**メニューの[!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニング アドバイザーと複数の場所から[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-steps"></a>次の手順  
  [SQL Server Profiler の概要](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Management Studio の使用 [SQL Server]](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-

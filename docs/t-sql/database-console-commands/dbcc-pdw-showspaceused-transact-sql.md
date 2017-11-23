@@ -8,31 +8,28 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|database-console-commands
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ce89806ad869f18333d535402c1d112ae5873de
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a16d4a7a10eb4f36d0ead2a19f8e37d251e417f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 行の数、ディスク領域が予約されている、特定のテーブルまたはすべてのテーブルで使用されるディスク領域が表示されます、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]データベース。
   
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
@@ -98,8 +95,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 DBCC PDW_SHOWSPACEUSED;  
 ```  
  ## <a name="see-also"></a>参照
-[DBCC PDW_SHOWEXECUTIONPLAN & #40 です。TRANSACT-SQL と #41 です。](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWPARTITIONSTATS & #40 です。TRANSACT-SQL と #41 です。](dbcc-pdw-showpartitionstats-transact-sql.md)
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;です。TRANSACT-SQL と #41 です。](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWPARTITIONSTATS &#40;です。TRANSACT-SQL と #41 です。](dbcc-pdw-showpartitionstats-transact-sql.md)
 
   
-

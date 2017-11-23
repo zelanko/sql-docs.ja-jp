@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,23 +19,21 @@ f1_keywords:
 - '>=_TSQL'
 - Greater Than
 - Equal
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - greater than or equal to operator (>=)
 - '>= (greater than or equal to operator)'
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c3a6bb29426989cb19df574eab60e76b754c89a8
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3d062fde7d244e2b5697d68701315faa31671f57
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (より大きいか等しい) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,10 +91,9 @@ DepartmentID Name
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [= (& a) #40 です。等しい &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/equals-transact-sql.md)   
- [& #62 です。& #40 です。大きい (& a) #41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [= (& a) #40 です。等しい &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/equals-transact-sql.md)   
+ [&#62;です。&#40;です。大きい (& a) #41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

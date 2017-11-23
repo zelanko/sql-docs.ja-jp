@@ -1,13 +1,14 @@
 ---
 title: "ALTER データベース スコープ ベースの構成 (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER データベース スコープ ベースの構成 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このステートメントで複数のデータベース構成設定を使用する、**個々 のデータベース**レベル。 このステートメントは、両方で使用できる[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]し、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 これらの設定は次のとおりです。  
   
@@ -135,7 +135,7 @@ PRIMARY
 
 IDENTITY_CACHE  **=**  { **ON** |オフ}  
 
-**適用されます**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)](機能は、パブリック プレビューで) 
+**適用されます**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]と[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 有効またはデータベース レベルで id キャッシュを無効にします。 既定値は**ON**です。 Identity キャッシュは、id 列を持つテーブルの挿入のパフォーマンスを向上させるために使用されます。 サーバーが予期せず再起動やセカンダリ サーバーにフェールオーバーした場合、id 列の値のギャップを回避するのには、IDENTITY_CACHE オプションを無効にします。 このオプションは、既存のような[トレース フラグ 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), サーバー レベルでのみではなく、データベース レベルで設定できる点が異なります。   
 
@@ -300,4 +300,3 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
  [サーバー構成オプション &#40;です。SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40;です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
-

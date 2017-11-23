@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 515c034ba96c93101ea8346dd0207e17143d2e80
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89be4ac89e89f5ebba68fb9261f32cf315bb81c1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
   トレース ファイルの保存とトレース テンプレートの保存は、区別して考えることが重要です。 トレース ファイルを保存すると、キャプチャされたイベント データが特定の場所に保存されます。 トレース テンプレートを保存すると、特定のデータ列、イベント クラス、フィルターなどのトレースの定義が保存されます。  
@@ -67,12 +65,11 @@ ms.lasthandoff: 08/02/2017
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [トレース結果のテーブル &#40; への保存します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [トレース テンプレート &#40; を作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [トレース結果のテーブルへの保存 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [実行中のトレース &#40; からのテンプレートを作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [トレース ファイルまたはトレース テーブル &#40; からテンプレートを作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [トレース テンプレート &#40; をエクスポートします。SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートのインポート &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   
-

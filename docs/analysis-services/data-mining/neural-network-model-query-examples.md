@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13781c0cce77831d0a33553fec137f61761e5d7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16343214615687c3a2ac39c9083c867c6d1e91c1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="neural-network-model-query-examples"></a>ニューラル ネットワーク モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、ニューラル ネットワーク モデルのコンテンツ クエリでは、非表示層の数などのモデル メタデータを取得できます。 また、予測クエリでは、入力に基づいて分類を提示し、必要に応じて各分類の確率を提供することもできます。  
@@ -237,4 +236,3 @@ NATURAL PREDICTION JOIN
  [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル &#40; 中級者向けデータ マイニング チュートリアル &#41; の作成](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
-

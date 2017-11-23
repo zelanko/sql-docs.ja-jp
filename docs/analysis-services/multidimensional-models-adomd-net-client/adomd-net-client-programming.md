@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8a7debab516c8f48b4184c66028c42f44d5bdd2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET クライアント プログラミング
   ADOMD.NET クライアント コンポーネントが内に存在、 **Microsoft.AnalysisServices.AdomdClient**名前空間 (microsoft.analysisservices.adomdclient.dll)。 これらのクライアント コンポーネントによりクライアントの機能と分析データ ストアから簡単にクエリ データおよびメタデータへの中間層アプリケーションなど[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。  
@@ -40,9 +38,9 @@ ms.lasthandoff: 09/01/2017
 |タスク|Description|  
 |----------|-----------------|  
 |[ADOMD.NET で接続を確立します。](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)|ADOMD.NET では、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースなどの分析データ ソースに接続します。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトを使用して、分析データ ソースからコマンドの実行、データの取得、およびメタデータの取得を実行できます。|  
-|[分析データ ソースからメタデータを取得します。](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|分析データ ソースに接続したら、さまざまなオブジェクトを使用して、そのデータ ソースに関する情報を取得できます。 この機能を使用して、アプリケーションは、接続先のデータ ソースに適合することができます。|  
-|[分析データ ソースに対してコマンドを実行します。](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> オブジェクトには、基になる分析データ ソースに対してコマンドを実行するために必要なインターフェイスが用意されています。|  
-|[分析データ ソースからデータを取得します。](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)|データが取得できませんでした、いずれかを使用して解析とコマンドの実行後、 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>、 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>、または**System.XmlReader**オブジェクト。|  
+|[分析データ ソースからのメタデータの取得](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|分析データ ソースに接続したら、さまざまなオブジェクトを使用して、そのデータ ソースに関する情報を取得できます。 この機能を使用して、アプリケーションは、接続先のデータ ソースに適合することができます。|  
+|[分析データ ソースに対するコマンドの実行](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> オブジェクトには、基になる分析データ ソースに対してコマンドを実行するために必要なインターフェイスが用意されています。|  
+|[分析データ ソースからのデータの取得](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)|データが取得できませんでした、いずれかを使用して解析とコマンドの実行後、 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>、 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>、または**System.XmlReader**オブジェクト。|  
 |[ADOMD.NET でトランザクションを実行します。](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions.md)|この表の上記に記載されているすべての操作は READ COMMITTED トランザクション内で実行できます。READ COMMITTED トランザクションでは、ダーティ リードを回避するため、データの読み込み中は共有ロックが保持されます。 ただし、その場合でも、トランザクションが終了する前にデータが変更され、反復不能読み取りやファントム データとなる場合があります。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> オブジェクトは、ADOMD.NET でトランザクション機能を提供します。|  
   
  ADOMD.NET オブジェクト階層との対話は、通常、次の表で説明するように、最上位層の 1 つまたは複数のオブジェクトで開始されます。  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [ADOMD.NET での開発](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   
-

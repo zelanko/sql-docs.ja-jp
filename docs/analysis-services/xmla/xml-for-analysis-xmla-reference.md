@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, reference
 - XMLA, reference
 ms.assetid: 88045e05-ce47-4e28-999b-7f9c74af9faf
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 826536d6f28df078b3ca0899176303cbe1a06865
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c85218c4cf2bdbd20db1f45b46efe9dd677dfea4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML for Analysis (XMLA) リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML for Analysis (XMLA) プロトコルを使用してクライアント アプリケーションと Analysis Services インスタンスの間のすべての通信を処理します。 最も基本的なレベルでは、XMLA だけを使用する Analysis Services インスタンスとの仲介役として、ADOMD.NET や AMO などの他のクライアント ライブラリが要求の作成と応答のデコードを XMLA で行います。  
@@ -42,21 +40,20 @@ ms.lasthandoff: 09/01/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[XML 要素 & #40 です。XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)|XMLA 仕様の要素について説明します。|  
-|[XML データ型 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)|XMLA 仕様のデータ型について説明します。|  
+|[XML 要素 &#40;です。XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)|XMLA 仕様の要素について説明します。|  
+|[XML データ型 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)|XMLA 仕様のデータ型について説明します。|  
 |[XML for Analysis への準拠と #40 です。XMLA &#41;](../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)|XMLA 1.1 仕様への準拠のレベルについて説明します。|  
   
 ## <a name="related-sections"></a>関連項目  
  [Analysis Services スクリプト言語 (ASSL) での開発](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [XML for Analysis スキーマ行セット](../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema 行セット](../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
  [ADOMD.NET での開発](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
  [分析管理オブジェクト &#40;AMO&#41; による開発](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
 ## <a name="see-also"></a>参照  
- [Microsoft OLAP アーキテクチャをについてください。](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
+ [Microsoft OLAP アーキテクチャについて](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
   
-

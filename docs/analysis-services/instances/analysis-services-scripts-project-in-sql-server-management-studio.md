@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Analysis Server Scripts project
 - items [Analysis Services]
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c974474663bf17f49f235ef57983a61196054d16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9edf723461387a102050c299f05d63281a4dd5a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services スクリプト プロジェクト
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に Analysis Services スクリプト プロジェクトを作成し、開発、管理、およびソース管理の目的のために、関連するスクリプトをグループにまとめることができます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に読み込まれているソリューションがない場合は、新しい Analysis Services スクリプト プロジェクトを作成すると自動的に新しいソリューションが作成されます。 ソリューションが SQL Server Management Studio に読み込まれている場合は、既存のソリューションに新しい Analysis Services スクリプト プロジェクトを追加するか、または新しいソリューションで Analysis Services スクリプト プロジェクトを作成できます。  
@@ -71,7 +70,6 @@ ms.lasthandoff: 09/01/2017
  [多次元式 (MDX) リファレンス](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services スクリプト言語 & #40 です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

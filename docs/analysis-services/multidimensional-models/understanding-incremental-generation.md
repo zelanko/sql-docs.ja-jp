@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
   スキーマを初めて生成した後は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [スキーマ生成ウィザード &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   
-

@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MemberUniqueNameStyle Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MemberUniqueNameStyle Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MemberUniqueNameStyle element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a166f1ffdf623cbc809bd090b1babf95983b2c31
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e0ed38f78c485e3c0178ac4dcc02cd318d065b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 要素 (ASSL)
   一意の名前が決定に含まれる階層のメンバーに対して生成される、 [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)要素。  
@@ -76,9 +71,8 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**MemberUniqueNameStyle**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CubeDimension>します。  
   
 ## <a name="see-also"></a>参照  
- [Cube 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Dimension 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [CubeDimension データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)  
+ [Cube 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Dimension 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [CubeDimension データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)  
   
   
-

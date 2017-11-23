@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55ccf421e9db76c570608b4bfc380e0c48dc1f2d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption マッピング
 ODBC 2 時にします。*x*アプリケーション呼び出し**SQLSetConnectOption**から ODBC 3*.x*ドライバーへの呼び出し  
@@ -67,4 +65,3 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  ODBC 2 です。*x*、アプリケーションが呼び出し**SQLSetConnectOption**ステートメント オプションを設定します。 ドライバーがステートメントのオプションを既定としてを確立するインストールが完了したら、その接続に割り当てられた後ですべてのステートメント。 ドライバーで定義されて、ドライバーがすべて既存ステートメントで指定した接続に関連付けられているステートメント オプションを設定するかどうか。  
   
  ODBC 3 でこの機能は廃止されて*.x*です。 ODBC 3*.x*ドライバーのみをサポートする必要 ODBC 2 を設定します*。x* ODBC 2 を使用する場合は、接続レベルでのステートメント属性*。x*これを実行するアプリケーション。 ODBC 3*.x*アプリケーションは、接続レベルでステートメント属性を設定しない必要があります。 ODBC 3*.x*を除き、SQL_ATTR_METADATA_ID と SQL_ATTR_ASYNC_ENABLE 属性接続属性とステートメント属性の両方が可能であり、接続レベルでのステートメント属性を設定することはできません接続のレベルまたはステートメント レベルのいずれかに設定します。
-

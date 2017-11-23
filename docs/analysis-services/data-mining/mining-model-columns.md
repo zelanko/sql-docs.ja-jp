@@ -22,17 +22,16 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - usage property [data mining]
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7d248c8c2e0394a73ff815730ced125176a23893
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2691f87c4ded8d2e9f00e4390681c936591bc83
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-columns"></a>マイニング モデル列
   データ マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。 マイニング構造と同様に、マイニング モデルには列が含まれています。 マイニング モデルはマイニング構造内に含まれ、マイニング構造によって定義されるプロパティのすべての値を継承します。 マイニング モデルは、マイニング構造に含まれているすべての列またはその一部を使用することができます。  
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

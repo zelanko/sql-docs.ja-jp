@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Assessment reports
+helpviewer_keywords: Assessment reports
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 58df45157252c3fc54fe54d91edce69cbcb0bd28
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 24e18761f50997b32da67a8ed2277259f5d53516
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>変換 (MySQLToSQL) の MySQL データベースを評価します。
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure 移行が複雑な方法で、どれ時間だけを決定する必要があります、移行になります。 SSMA は、正常に変換されるオブジェクトの割合が表示される評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  
@@ -93,4 +90,3 @@ SSMA 変換を選択した MySQL データベース オブジェクトでこの�
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB &#40; への MySQL データベースの移行MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

@@ -3,36 +3,36 @@ title: "外部データ ソース (TRANSACT-SQL) を作成 |Microsoft ドキュ�
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
 ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 477d2f682da2c91ba8e4bfd42186c4b1b9735f85
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   PolyBase、柔軟なデータベース クエリ、または Azure Blob ストレージの外部データ ソースを作成します。 シナリオによっては、構文が大幅に異なります。 PolyBase 用に作成されたデータ ソースは、弾力性データベースのクエリは使用できません。  同様に、PolyBase などの柔軟なデータベース クエリ用に作成されたデータ ソースを使用できません。 
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/07/2017
   
  PolyBase のシナリオで、外部データ ソースは、Hadoop ファイル システム (HDFS)、Azure ストレージ blob コンテナーの場合、または Azure Data Lake Store のいずれかです。 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
- 弾力性データベース クエリ シナリオでは、外部のソースはシャードのマップ マネージャー (Azure SQL データベース) もありますが、上またはリモートのデータベース (Azure SQL データベース) 上のいずれかです。  使用して[sp_execute_remote & #40 です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md)外部データ ソースを作成した後です。 詳細については、次を参照してください。[柔軟なデータベース クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)です。  
+ 弾力性データベース クエリ シナリオでは、外部のソースはシャードのマップ マネージャー (Azure SQL データベース) もありますが、上またはリモートのデータベース (Azure SQL データベース) 上のいずれかです。  使用して[sp_execute_remote &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md)外部データ ソースを作成した後です。 詳細については、次を参照してください。[柔軟なデータベース クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)です。  
 
   Azure Blob ストレージの外部データ ソースのサポートしている`BULK INSERT`と`OPENROWSET`構文、PolyBase の Azure Blob ストレージとは異なるとします。
     
@@ -418,31 +418,7 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>例: Azure SQL Data Warehouse
 
-### <a name="g-create-external-data-source-to-reference-azure-blob-storage"></a>G. Azure blob ストレージを参照する外部データ ソースを作成します。
-Azure blob ストレージ コンテナーを参照する外部データ ソースを作成するには、Azure blob ストレージ URI と、Azure ストレージ アカウント キーを含むデータベース スコープ資格情報を指定します。
-
-この例では、外部データ ソースは、Azure のストレージ アカウント名 myaccount の下にある dailylogs と呼ばれる Azure blob ストレージ コンテナーはします。 Azure ストレージの外部データ ソースがデータ転送だけ、述語のプッシュ ダウンをサポートしていません。
-
-この例では、Azure ストレージへの認証データベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットでは、Azure ストレージ アカウント キーを指定します。 任意の文字列でデータベース スコープ資格情報 id、Azure ストレージへの認証は使用されませんを指定します。 次に、資格情報は、外部データ ソースを作成するステートメントで使用されます。
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### <a name="h-create-external-data-source-to-reference-azure-data-lake-store"></a>H. Azure Data Lake Store を参照する外部データ ソースを作成します。
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Azure Data Lake Store を参照する外部データ ソースを作成します。
 Azure Data lake Store の接続は、ADLS URI と、Azure のアクティブなディレクトリ アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションを作成するドキュメントはあります[Active Directory を使用してデータ lake store 認証](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)です。
 
 ```tsql
@@ -465,18 +441,7 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>例: 並列データ ウェアハウス
 
-### <a name="i-create-external-data-source-to-reference-hadoop"></a>I. Hadoop を参照する外部データ ソースを作成します。
-Hortonworks または Cloudera Hadoop クラスターを参照する外部データ ソースを作成するには、マシン名または Hadoop Namenode とポートの IP アドレスを指定します。
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### <a name="j-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>J. プッシュ ダウンを有効になっている Hadoop を参照する外部データ ソースを作成します。
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. プッシュ ダウンを有効になっている Hadoop を参照する外部データ ソースを作成します。
 PolyBase クエリの Hadoop にプッシュ ダウン計算を有効にする JOB_TRACKER_LOCATION オプションを指定します。 有効にすると、PolyBase はコストベースの判断を使用して、クエリの計算を Hadoop にプッシュする必要がありますか、SQL Server で、クエリの処理にすべてのデータを移動するかを判断します。 
 
 ```tsql
@@ -488,7 +453,7 @@ WITH (
 );
 ```
 
-### <a name="k-create-external-data-source-to-reference-azure-blob-storage"></a>K. Azure blob ストレージを参照する外部データ ソースを作成します。
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Azure blob ストレージを参照する外部データ ソースを作成します。
 外部を作成するには、データ ソース、外部のデータとして Azure blob ストレージ URI を指定する、Azure blob ストレージ コンテナーを参照するソースの場所。 認証用の PDW core-site.xml ファイルを Azure ストレージ アカウント キーを追加します。
 
 この例では、外部データ ソースは、Azure のストレージ アカウント名 myaccount の下にある dailylogs と呼ばれる Azure blob ストレージ コンテナーはします。 Azure ストレージの外部データ ソースがデータ転送だけ、述語のプッシュ ダウンをサポートしていません。
@@ -501,7 +466,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>例: 一括操作   
-### <a name="l-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>L. 一括操作が Azure Blob ストレージからデータを取得する外部データ ソースを作成します。   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 一括操作が Azure Blob ストレージからデータを取得する外部データ ソースを作成します。   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。   
 一括操作を使用して次のデータ ソースを使用して[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)または[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)です。 使用して、使用する資格情報を作成する必要があります`SHARED ACCESS SIGNATURE`id として。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。   
 ```tsql
@@ -523,5 +488,4 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 [sys.external_data_sources (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
-
 

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
   **osql** ユーティリティを使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを入力できます。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
@@ -194,7 +192,7 @@ osql -E -q "select name, object_id from %table%"
  また、このオプションは DOS ERRORLEVEL の既定値を -1 に設定します。  
   
 > [!NOTE]  
->   **-n** 、 **-O**と**-d**オプションはサポートされなく**osql**です。  
+>  **-n** 、 **-O**と**-d**オプションはサポートされなく**osql**です。  
   
 ## <a name="remarks"></a>解説  
  **osql** ユーティリティは、ここに記載された、大文字と小文字では異なる機能を持つオプションを使用して、オペレーティング システムから直接起動されます。 起動されると、 **osql**は SQL ステートメントを受け取り、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対話的に送ります。 結果はフォーマットされ、画面に表示されます (**stdout**)。 **osql**を終了するには、QUIT または EXIT を使用します。  
@@ -341,9 +339,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [コメント &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [--& #40 です。コメント &#41;& #40 です。MDX と #41 です。](../mdx/comment-mdx-operator-reference.md)   
- [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [--&#40;です。コメント &#41;&#40;です。MDX と #41 です。](../mdx/comment-mdx-operator-reference.md)   
+ [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-

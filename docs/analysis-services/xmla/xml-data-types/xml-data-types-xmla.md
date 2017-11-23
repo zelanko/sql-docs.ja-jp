@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML data types [XMLA]
 - data types [XML for Analysis]
 - XMLA, data types
 - XML for Analysis, data types
 ms.assetid: 979b5384-90d9-4e09-9286-1d1eafdc4864
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ba74f6ec5cb8ad35d4cdbb76e408bcb6cc203dea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 60a10edf09c041b563f15bf5fec83cd1b5ec4ec7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-data-types-xmla"></a>XML データ型 (XMLA)
   XML for Analysis (XMLA) 1.1 仕様では、XML 1.0 勧告で定義された標準的なプリミティブ型および派生型に加えて、多次元データおよび表形式データの表記をサポートする追加のデータ型が定義されています。  
@@ -54,8 +52,7 @@ ms.lasthandoff: 09/01/2017
  標準的な XML データ型の詳細な説明については、World Wide Web Consortium (W3C) 勧告候補を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [XML 要素 & #40 です。XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
- [XML for Analysis & #40 です。XMLA &#41;参照](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [XML 要素 &#40;です。XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [XML for Analysis &#40;です。XMLA &#41;参照](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   
-

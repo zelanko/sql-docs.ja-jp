@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 - Atom data feeds
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b6ee3f4fe47a524fb645040adb6e6a61691decc6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-data-feeds"></a>Power Pivot データ フィード
   データ フィードは、オンライン データ ソースからクライアント アプリケーションに要求時にデータのストリームを提供します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データ フィードを使用して、Atom 対応の Web サービスまたはアプリケーションから Excel ブックの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースにデータを追加できます。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [データ フィード ライブラリを使用したデータ フィードの共有 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
-

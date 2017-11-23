@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cfe5f8e48eb88233949102e988f3a2296cf373b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11617fc364b3ce9f2c4f5b37623f4c74f968517
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-streams"></a>レコードとストリーム
 ADO は、現在、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト リレーショナル データベースなどのデータ ソース内の情報にアクセスする主な手段として。 ただし、一部のプロバイダーのサポート、[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)のプロバイダーからのデータを操作できるオブジェクトの代替または補完としてオブジェクト。 特性について**レコード**動作、プロバイダーのマニュアルを参照してください。  
@@ -74,7 +72,6 @@ ADO は、現在、 [Recordset](../../../ado/reference/ado-api/recordset-object-
   
 -   [コマンド ストリーム](../../../ado/guide/data/command-streams.md)  
   
--   [ストリームへの結果セットの取得](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
+-   [ストリーム形式で結果セットを取得する](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
--   [インターネットへの発行の ADO を使用します。](../../../ado/guide/data/using-ado-for-internet-publishing.md)
-
+-   [インターネットへの発行に ADO を使用する](../../../ado/guide/data/using-ado-for-internet-publishing.md)

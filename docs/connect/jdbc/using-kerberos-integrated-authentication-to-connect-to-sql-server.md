@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4ddd65d18a4a335ac7ad5d416d87afccf1748fbb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f26a429563aaf5c079c45b064b4723cb19cada90
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -193,7 +191,6 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 Krb5.conf ファイルで設定 default_realm にユーザーが属している場合、ユーザー名プロパティによる領域は不要です。 ときに`userName`と`password`と共に設定されている`integratedSecurity=true;`と`authenticationScheme=JavaKerberos;`プロパティ、接続が確立されるユーザー名の値を持つに沿って Kerberos プリンシパルとして指定されたパスワードを使用します。
  
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーで SQL Server に接続します。](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

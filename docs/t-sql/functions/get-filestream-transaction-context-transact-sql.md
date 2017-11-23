@@ -8,34 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL
 - GET_FILESTREAM_TRANSACTION_CONTEXT
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
+dev_langs: TSQL
+helpviewer_keywords: GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ca5d2fac23dfa3c74689265915c498a4d6858fbc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5ba8077d0df80044a66da4863bba1dd603d369f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  セッションの現在のトランザクション コンテキストを表すトークンを返します。 アプリケーションでは、このトークンを使用して、FILESTREAM のファイル システム ストリーミング操作をトランザクションにバインドします。 FILESTREAM のトピックの一覧は、次を参照してください。[バイナリ ラージ オブジェクト & #40 です。Blob &#41;データ & #40 です。SQL Server &#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  セッションの現在のトランザクション コンテキストを表すトークンを返します。 アプリケーションでは、このトークンを使用して、FILESTREAM のファイル システム ストリーミング操作をトランザクションにバインドします。 FILESTREAM のトピックの一覧は、次を参照してください。[バイナリ ラージ オブジェクト &#40;です。Blob &#41;データ &#40;です。SQL Server &#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -284,8 +280,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>参照  
- [パス名 & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [パス名 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   
-

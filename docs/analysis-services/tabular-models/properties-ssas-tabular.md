@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: efb844dd4888a93bf805a7b22a278366bdf5d388
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="properties-ssas-tabular"></a>プロパティ (SSAS テーブル)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の表形式モデル プロジェクトには、プロジェクト、モデル、レポート、および配置の方法を定義するさまざまなプロパティがあります。 プロパティ設定は、Model.bim ファイルに XML 形式で保存されます。ただし、ここで説明するすべてのプロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウで構成できます。  
@@ -42,4 +41,3 @@ ms.lasthandoff: 09/01/2017
 |[既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|既定のモデリングおよび配置のプロパティについての説明と構成手順が記載されています。 既定のプロパティは、新しい表形式モデル プロジェクトに適用されます。 プロジェクトの作成後も、要件に応じて、特定のモデル プロジェクトのこれらのプロパティを変更できます。|  
   
   
-

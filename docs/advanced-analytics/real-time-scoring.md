@@ -1,26 +1,23 @@
 ---
 title: "リアルタイムのスコアリング |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea8977d555bc30f661817b72fbf90f9198cf3088
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="realtime-scoring"></a>リアルタイムのスコアリング
 
 このトピックでは、SQL Server 2016 とほぼリアルタイムで機械学習モデルのスコア付けをサポートする SQL Server 2017 で利用できる機能について説明します。
@@ -54,56 +51,56 @@ RxPredict する方法の例は、スコア付けの使用を参照してくだ�
 
 これらのプラットフォームでは、リアルタイムのスコア付けがサポートされています。
 
-+ SQL Server 2017 Machine Learning Services (Microsoft R Server 9.1.0 が含まれています)
++ SQL Server 2017 Machine Learning サービス
 + SQL Server R Services 2016、Microsoft R Server 9.1.0 に R Services のインスタンスのアップグレードまたはそれ以降
-+ マイクロソフトの機械学習のサーバー (スタンドアロン)
++ Machine Learning Server (スタンドアロン)
 
 SQL Server の機能を事前にスコア付けリアルタイムを有効にする必要があります。 これは、機能には、SQL Server に ライブラリの CLR ベースのインストールが必要とするためです。
 
-リアルタイムに関する情報、Microsoft R Server に基づく分散環境でスコアリングを参照してください、 [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice)関数で使用できる、 [mrsDeploy パッケージ](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy)、サポートします。R Server で実行されている web サービスを新しいスコアリング リアルタイムのモデルを公開します。
+リアルタイムに関する情報、Microsoft R Server に基づく分散環境でスコアリングを参照してください、 [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)関数で使用できる、 [mrsDeploy パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)、サポートします。R Server で実行されている web サービスを新しいスコアリング リアルタイムのモデルを公開します。
 
 ### <a name="restrictions"></a>制限
 
-+ 事前に、サポートされているのいずれかを使用して、モデルをトレーニングする必要があります**rx**アルゴリズムです。 詳細については、「[アルゴリズムがサポートされている](#bkmk_rt_supported_algos)です。 スコアリング sp_rxPredict リアルタイムには、RevoScaleR と MicrosoftML の両方のアルゴリズムがサポートしています。
++ 事前に、サポートされているのいずれかを使用して、モデルをトレーニングする必要があります**rx**アルゴリズムです。 詳細については、「[アルゴリズムがサポートされている](#bkmk_rt_supported_algos)です。 スコアリング リアルタイム`sp_rxPredict`RevoScaleR と MicrosoftML の両方のアルゴリズムをサポートしています。
 
-+ Microsoft R Server 9.1.0 で提供される新しいシリアル化の関数を使用して、モデルを保存する必要があります。 シリアル化メソッドは、高速のスコア付けをサポートするために最適化されています。
++ 新しいシリアル化関数を使用して、モデルを保存する必要があります: [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) r、および[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) Python のためです。 これらのシリアル化の関数は、高速のスコア付けをサポートするために最適化されています。
 
-+ リアルタイムのスコアリングは、R インタープリター; を使用しません。そのため、R インタープリターが必要となるすべての機能は、スコア付けの手順ではサポートされません。  たとえば、次のようなものがあります。
++ リアルタイムのスコアリングは、インタープリター インタープリター; を使用しません。そのため、インタープリターが必要となる機能をすべては、スコア付けの手順ではサポートされません。  たとえば、次のようなものがあります。
 
   + 使用してモデル化、`rxGlm`または`rxNaiveBayes`アルゴリズムは現在サポートされていません
 
   + R 変換関数の場合は、またはように、変換を含む数式を使用するモデルの RevoScaleR<code>A ~ log(B)</code>リアルタイムのスコアリングでサポートされていません。 この種類のモデルを使用することをお勧めで変換を実行し、リアルタイムのスコア付けするデータを渡す前にデータを入力します。
 
-+ リアルタイムのスコアリングは現在、いくつかの行から何百もの行の数千個に至るまで、データのサイズの小さいセットでの予測の高速に最適化されています。 非常に大きなデータセットは、r rxPredict を使用してスコア付けが早くなります。
++ リアルタイムのスコアリングは現在、いくつかの行から何百もの行の数千個に至るまで、データのサイズの小さいセットでの予測の高速に最適化されています。 使用して、非常に大きなデータセット[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)処理が速くなる場合があります。
 
 ### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-realtime-scoring"></a><a name="bkmk_rt_supported_algos">リアルタイムのスコア付けをサポートするアルゴリズム
 
 + RevoScaleR モデル
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
   
   マークされたモデル\*ネイティブ スコアリング、PREDICT 関数もサポートします。
 
 + MicrosoftML モデル
 
-  + [rxFastTrees](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + MicrosoftML によって提供される変換
 
-  + [featurizeText](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/r-server/r-reference/microsoftml/concat)
-  + [カテゴリ](https://docs.microsoft.com/r-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [カテゴリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>サポートされていないモデルの種類
 
@@ -122,4 +119,3 @@ SQL Server の機能を事前にスコア付けリアルタイムを有効にす
 ## <a name="next-steps"></a>次の手順
 
 [リアルタイムのスコア付けを行う方法](r/how-to-do-realtime-scoring.md)
-

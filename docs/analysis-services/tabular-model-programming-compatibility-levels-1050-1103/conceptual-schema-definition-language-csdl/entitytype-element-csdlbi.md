@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f5b62cad891d4d02120b3325d57e327e299ef1be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf36253ccc373fb260538fdbc3d78764ce5548f9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 要素 (CSDLBI)
   **EntityType**要素は複合型であり、顧客やデータ モデル内の注文などの高レベルのエンティティの構造体を表します。 **Bi: EntityType**要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)です。  
@@ -39,12 +37,12 @@ ms.lasthandoff: 09/01/2017
 |名前|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
 |目次|不可|列内のデータの種類を含む文字列です。 値は、データ モデルの DimensionAttributeTypeEnumType の値から取得されます。<br /><br /> DimensionAttributeTypeEnumType の値が ExtendedType の場合は、Contents の値は DimensionAttribute の ExtendedType 要素から取得されます。 クライアントはこれらの値に対応する必要はありません。|  
-|DefaultDetails|不可|プロパティ参照のリスト。テーブル内の列のセットを表します。<br /><br /> 参照してください[DefaultDetails 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
-|DefaultImage|不可|エンティティを示すイメージを含む列への参照。<br /><br /> 多次元モデルでは、この要素は、ディメンション属性のバイナリ属性に対応します。 この属性が存在する場合、要素にはただ 1 つの MemberRef 要素が必ず含まれます。<br /><br /> 参照してください[MemberRef 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DefaultMeasure|不可|エンティティ上での計算時に既定として使用されるエンティティのメジャーへの参照です。 指定しない場合は、SUM が既定値です。<br /><br /> 参照してください[MemberRef 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DisplayKey|不可|列またはロール エンドに対する参照のリスト。エンティティ インスタンスを一意に識別する強い識別子を構成します。<br /><br /> 参照してください[DisplayKey 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
-|階層|不可|モデルの階層のリスト。<br /><br /> 参照してください[Hierarchy 要素 & #40 です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
-|ReferenceName|はい|Data Analysis Expressions (DAX) クエリでこのエンティティを参照するために使用できる識別子。<br /><br /> この属性が存在しない場合は、エンティティの完全修飾されたフィールド名が使用されます。|  
+|DefaultDetails|不可|プロパティ参照のリスト。テーブル内の列のセットを表します。<br /><br /> 参照してください[DefaultDetails 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
+|DefaultImage|不可|エンティティを示すイメージを含む列への参照。<br /><br /> 多次元モデルでは、この要素は、ディメンション属性のバイナリ属性に対応します。 この属性が存在する場合、要素にはただ 1 つの MemberRef 要素が必ず含まれます。<br /><br /> 参照してください[MemberRef 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DefaultMeasure|不可|エンティティ上での計算時に既定として使用されるエンティティのメジャーへの参照です。 指定しない場合は、SUM が既定値です。<br /><br /> 参照してください[MemberRef 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DisplayKey|不可|列またはロール エンドに対する参照のリスト。エンティティ インスタンスを一意に識別する強い識別子を構成します。<br /><br /> 参照してください[DisplayKey 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
+|階層|不可|モデルの階層のリスト。<br /><br /> 参照してください[Hierarchy 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
+|ReferenceName|可|Data Analysis Expressions (DAX) クエリでこのエンティティを参照するために使用できる識別子。<br /><br /> この属性が存在しない場合は、エンティティの完全修飾されたフィールド名が使用されます。|  
 |SortMembers|不可|並べ替えるの基準となるプロパティの一覧です。 SortDirection 属性が昇順または降順を示します。|  
   
 ## <a name="contents-element"></a>Contents 要素  
@@ -135,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [CSDL への BI 注釈のテクニカル リファレンス](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

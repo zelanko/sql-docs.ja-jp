@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5766323ffd6f50fff6f6b73bddf52e665f9bcab8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad8d85e820ae8940a1b80dd130c57d5d06f140e6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>テーブル モデル ソリューションの配置 (SSAS テーブル)
   テーブル モデル プロジェクトを作成した後、ユーザーがレポート クライアント アプリケーションを使用してモデルを参照できるように配置する必要があります。 このトピックでは、テーブル モデル ソリューションを環境に配置する際に使用できるさまざまなプロパティと方法について説明します。  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
  [テーブル モデル データベースへの接続 &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   
-

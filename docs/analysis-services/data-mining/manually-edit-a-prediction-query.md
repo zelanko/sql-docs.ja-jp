@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ab8bb78ceb4bfe411030cf160c84751b6176682a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57f892500d2ef26dc2227b4c0710c4d039dcb34e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動での予測クエリの編集
   予測クエリ ビルダーでクエリのデザインを終えたら、データ マイニング デザイナーの **[マイニング モデル予測]** タブにあるクエリ テキスト ビューに切り替えて、クエリを変更できます。 画面の下部に、クエリ ビルダーによって作成されたクエリを含んでいるテキスト エディターが表示されます。  
@@ -53,8 +52,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
- [予測クエリ ビルダー (&) #40";"データ マイニング"&"#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
+ [予測クエリ ビルダー &#40;データ マイニング&#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
  [レッスン 6: 予測の作成と操作 &#40;基本的なデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   
-

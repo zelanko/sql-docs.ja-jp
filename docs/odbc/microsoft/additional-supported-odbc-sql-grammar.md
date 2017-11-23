@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72efaedb35351454fbf464ed1a2c941239ff9c58
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>サポートされているその他の ODBC SQL 文法
 ODBC ドライバーでは、コアと拡張 ODBC 2.5 の文法で最小 ODBC 2.5 文法と、次の句を完全にサポートします。 ジャンプすることで追加情報を表示できる、 [ALTER TABLE ステートメント](../../odbc/microsoft/alter-table-statement.md)、[相関名](../../odbc/microsoft/correlation-names.md)、および[プロシージャの呼び出し](../../odbc/microsoft/procedure-invocation.md)トピックです。  
@@ -57,7 +55,7 @@ ODBC ドライバーでは、コアと拡張 ODBC 2.5 の文法で最小 ODBC 2.
   
 -   [ORDER BY 式リスト](../../odbc/microsoft/order-by-expression-list.md)  
   
--   [GROUP BY と ORDER BY](../../odbc/microsoft/order-by-with-group-by.md)  
+-   [ORDER BY と GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
 -   EXISTS 述語 (コア)  
   
@@ -72,4 +70,3 @@ ODBC ドライバーでは、コアと拡張 ODBC 2.5 の文法で最小 ODBC 2.
 -   [スカラー関数](../../odbc/microsoft/scalar-functions.md)  
   
 -   [テーブル名](../../odbc/microsoft/table-names.md)
-

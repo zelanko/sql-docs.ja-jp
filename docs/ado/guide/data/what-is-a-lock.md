@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 133cd38feed1b55557112abe45872d333cc08c2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4975dd903c6d012976f9288b9758e1acab52f1f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-a-lock"></a>ロックとは何ですか。
 ロックは、DBMS が、マルチ ユーザー環境での行にアクセスを制限するプロセスです。 行または列が排他的にロックとロックが解放されるまでロックされたデータにアクセスする他のユーザーを作成できません。 これにより、2 人のユーザーが行の同じ列を同時に更新できません。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  このセクションでは、次のトピックを扱います。  
   
 -   [ロックの種類](../../../ado/guide/data/types-of-locks.md)
-

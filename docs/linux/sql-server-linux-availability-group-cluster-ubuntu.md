@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
+ms.openlocfilehash: cc6eee565499d696c4f634d6eedc562547bc8253
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7aa90eb3fd0a0ea66ea4b4fa09bd17d3e6887d7e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu クラスターと可用性グループ リソースを構成します。
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/02/2017
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 すべてのノードで同じパスワードを使用します。 
+2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 すべてのノードで同じパスワードを使います。 
 
    ```bash
    sudo passwd hacluster
@@ -124,7 +123,7 @@ sudo systemctl enable pacemaker
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-次のコマンドでは、3 つのノードのクラスターを作成します。 スクリプトを実行する前に、までの値を置き換える`**< ... >**`です。 プライマリ ノードで次のコマンドを実行します。 
+次のコマンドでは、3 つのノードのクラスターを作成します。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。 プライマリ ノードで次のコマンドを実行します。 
 
    ```bash
    sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
@@ -234,5 +233,4 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>次の手順
 
 [HA 可用性グループを操作します。](sql-server-linux-availability-group-failover-ha.md)
-
 

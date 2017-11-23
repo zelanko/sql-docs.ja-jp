@@ -19,17 +19,16 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09d9c1909f093547dedd79823a06d9647f0bd6a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft シーケンス クラスター アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、シーケンス分析とクラスタリングを組み合わせた独自のアルゴリズムです。 このアルゴリズムを使用すると、 *シーケンス*でリンク可能なイベントを含むデータを調べることができます。 このアルゴリズムは最も一般的なシーケンスを見つけ、クラスタリングを実行して類似したシーケンスを見つけます。 次の例では、機械学習用にデータを取り込むことができるシーケンスの種類を示し、一般的な問題やビジネス シナリオの理解を深めます。  
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   
-

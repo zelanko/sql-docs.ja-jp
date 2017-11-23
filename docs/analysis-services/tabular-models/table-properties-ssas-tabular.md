@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.tableprop.f1
+f1_keywords: sql13.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 695089ef33e005c2fec56afb3401b10a7dc81403
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a72cbc5fe8e27ee559f748fd93c50a7db8f75a94
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-properties-ssas-tabular"></a>Table Properties (SSAS Tabular)
   このトピックでは、テーブル モデルのテーブルのプロパティについて説明します。 ここで説明するプロパティは、ソースのどの列をインポートするかを定義する [テーブルのプロパティの編集] ダイアログ ボックスのプロパティとは異なります。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/01/2017
 2.  **[プロパティ]** ウィンドウで、プロパティをクリックして値を入力するか、ボタンをクリックして追加の構成オプションを選択します。  
   
   
-

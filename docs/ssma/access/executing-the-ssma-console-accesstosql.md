@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 081772fe0e2101a50f1e6f66780a3ac790e9fbcc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76f31cffc8f947449d6825a6659b1bb22e0c0b1d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) を実行します。
 Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと実行および SSMA アクティビティを制御するコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -136,7 +134,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 **Windows 認証**と**ポート**パラメーターは、SQL Azure に接続する場合は適用されません。  
   
-'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 & #40 です。AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md).  
+'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;です。AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md).  
   
 **Command**  
   
@@ -727,10 +725,9 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 & #40 です。AccessToSQL &#41;](../../ssma/access/managing-passwords-accesstosql.md).  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 &#40;です。AccessToSQL &#41;](../../ssma/access/managing-passwords-accesstosql.md).  
   
--   レポートの生成に、次を参照してください。[レポートの生成 & #40 です。AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md).  
+-   レポートの生成に、次を参照してください。[レポートの生成 &#40;です。AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md).  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング & #40 です。AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md).  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;です。AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md).  
   
-

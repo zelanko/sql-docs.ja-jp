@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70649ee51ec7b5c2ef3926706f802da8189fc3b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="batches-of-sql-statements"></a>SQL ステートメントのバッチ
 SQL ステートメントのバッチは、2 つ以上の SQL ステートメントまたはを 2 つ以上の SQL ステートメントのグループと同じ効果を持つ単一の SQL ステートメントのグループです。 一部の実装では、すべての結果を利用する前に、バッチ全体のステートメントが実行されます。 これは、多くの場合、複数のネットワーク トラフィックが低下することができ、データ ソースが SQL ステートメントのバッチの実行を最適化できる場合がありますので、個別にステートメントを送信するよりも効率的です。 呼び出し、他の実装で**SQLMoreResults**バッチ内の次のステートメントの実行を開始します。 ODBC には、次の種類のバッチがサポートされています。  
@@ -71,9 +69,8 @@ SQL ステートメントのバッチは、2 つ以上の SQL ステートメン
   
  このセクションでは、次のトピックを扱います。  
   
--   [ステートメントの結果を生成して、結果のないステートメント](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
+-   [結果生成および結果解放ステートメント](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
   
 -   [バッチの実行](../../../odbc/reference/develop-app/executing-batches.md)  
   
--   [エラーとバッチ](../../../odbc/reference/develop-app/errors-and-batches.md)
-
+-   [エラーおよびバッチ](../../../odbc/reference/develop-app/errors-and-batches.md)

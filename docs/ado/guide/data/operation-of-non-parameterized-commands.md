@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a19b939b0b0eb33d436a3924a04562473b4c06a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非パラメーター化コマンドの操作
 コマンドのパラメーターのないすべてのプロバイダー コマンドが実行されると、**レコード セット**コマンドの実行中に作成されます。 コマンドが同期的に実行される場合すべて、**レコード セット**が完全に設定されます。 非同期モードを選択した場合のデータが設定された状態、**レコード セット**母集団モードとのサイズによって異なりますが、**レコード セット**です。  
@@ -52,5 +50,4 @@ SHAPE {SELECT * FROM Customers}
 ## <a name="see-also"></a>参照  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

@@ -1,13 +1,14 @@
 ---
 title: "SQL Server 2016 Analysis Services の旧バージョンと互換性 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b7c58d201f40123ab206d02a4b32948c3d976c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services の旧バージョンとの互換性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,9 +52,9 @@ A*非推奨の機能*将来のリリースで製品から廃止されますが�
 |多次元|セッション キューブ。 これに代わる機能はありません。|  
 |多次元|ローカル キューブ。 これに代わる機能はありません。|  
 |テーブル|表形式モデルの 1100 および 1103 互換性レベルは、将来のリリースではサポートされません。 代わりのモデルの互換性レベル 1200 以上に設定モデル定義を表形式メタデータに変換を開始します。 「 [Analysis Services での表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。|  
-|ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「[SQL Server 拡張イベントを使用した Analysis Services の監視](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
+|ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
 |ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
-|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> - トレース構成:  Microsoft.SqlServer.Management.XEvent<br />- トレース読み取り:  Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
+|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> トレース構成: Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り: Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
   
 > [!NOTE]  
 >  以前の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での非推奨機能の発表内容は有効です。 これらの機能のコードはまだ製品から削除されていないため、これらの機能の多くはこのリリースにおいても存在します。 以前非推奨機能の中に可能性があるアクセス可能は変わらず廃止されており、物理的にある可能性があります製品からいつでも削除です。  
@@ -83,7 +83,7 @@ A*提供が中止された機能*以前のリリースでは推奨されなく�
  Analysis Services 管理オブジェクト (AMO)、ADOMD.NET、および表形式オブジェクト モデル (TOM) のクライアント ライブラリのターゲットを .NET 4.0 ランタイム。 これは、.NET 3.5 をターゲットとするアプリケーションにとって重大な変更になる可能性があります。 これらのアセンブリの新しいバージョンを使用するアプリケーションは、.NET 4.0 以降をターゲットとする必要があります。  
   
 ### <a name="amo-version-upgrade"></a>AMO のバージョン アップグレード  
- このリリースのバージョンのアップグレードは、 [Analysis Services 管理オブジェクト & #40 です。AMO &#41;](https://msdn.microsoft.com/library/mt436122.aspx)は特定の状況での互換性に影響する変更です。  以前のバージョンからアップグレードした場合でも、AMO を呼び出す既存のコードやスクリプトは従来と同様に動作します。 ただし、する必要がある場合*再コンパイル*を SQL Server 2016 Analysis Services インスタンスの対象として、アプリケーション、コードまたはスクリプトを稼働させるために次の名前空間を追加する必要があります。  
+ このリリースのバージョンのアップグレードは、 [Analysis Services 管理オブジェクト &#40;です。AMO &#41;](https://msdn.microsoft.com/library/mt436122.aspx)は特定の状況での互換性に影響する変更です。  以前のバージョンからアップグレードした場合でも、AMO を呼び出す既存のコードやスクリプトは従来と同様に動作します。 ただし、する必要がある場合*再コンパイル*を SQL Server 2016 Analysis Services インスタンスの対象として、アプリケーション、コードまたはスクリプトを稼働させるために次の名前空間を追加する必要があります。  
   
 ```  
   
@@ -129,4 +129,3 @@ using Microsoft.AnalysisServices.Core;
 
 ## <a name="see-also"></a>参照
 [Analysis Services の旧バージョンとの互換性 (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)
-

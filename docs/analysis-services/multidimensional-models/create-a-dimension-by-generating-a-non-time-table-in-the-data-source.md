@@ -20,17 +20,16 @@ helpviewer_keywords:
 - dimensions [Analysis Services], creating without data source
 - standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83c9ceffb0bf846992b020722a2a47ebd7106634
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20035f6d8fff0c5d45b4c807cf6202531156741d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して、既存のデータ ソースを使用せずにディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
@@ -115,7 +114,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [時間テーブルを生成することによって時間ディメンションを作成します。](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
+ [時間テーブルの生成による時間ディメンションの作成](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   
-

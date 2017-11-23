@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STArea (geography Data Type)
 - STArea_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STArea method
+dev_langs: TSQL
+helpviewer_keywords: STArea method
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d183c65aaaa21a36d6b157e230c79d7c38f2aecf
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e96ee94983746e162990b8eadad4f6affb4f92fd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ ms.lasthandoff: 09/01/2017
  STArea() は 0 を返します、 **geography**インスタンスには、0-1 次元の図形のみが含まれています。 空である場合またはします。  
   
 > [!NOTE]  
->  メソッドを**geography**データ型の基準の戻り値は、メソッドで使用されるインスタンスの srid に応じて、異なる結果を生成します。 Srid の詳細については、次を参照してください。 [Spatial Reference Id & #40 です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  メソッドを**geography**データ型の基準の戻り値は、メソッドで使用されるインスタンスの srid に応じて、異なる結果を生成します。 Srid の詳細については、次を参照してください。 [Spatial Reference Id &#40;です。Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>使用例  
  次の例で`STArea()`を作成する、`Polygon``geography`をインスタンス化し、多角形の面積を計算します。  
@@ -68,4 +64,3 @@ SELECT @g.STArea();
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

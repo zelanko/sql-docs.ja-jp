@@ -4,17 +4,22 @@ description: "インストール、更新、および Linux に SQL Server を�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: Active
+ms.openlocfilehash: 8d61ba8334d81c46643d15b38173b6b2dd2e1a93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
@@ -94,31 +99,82 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 > [!NOTE]
 > SQL Server 2017 など、同じメジャー バージョンのリリースにダウン グレードすることのみサポートされます。
 
-> [!IMPORTANT]
-> ダウン グレードは、この時点で RTM、RC2 では、RC1 の間でのみサポートされます。
+## <a id="versioncheck"></a>インストールされている SQL Server のバージョンを確認します。
+
+現在のバージョンと Linux に SQL Server のエディションを確認するには、次の手順を使用します。
+
+1. インストールされていない場合は、インストール、 [SQL Server コマンド ライン ツール](sql-server-linux-setup-tools.md)です。
+
+1. 使用して**sqlcmd** SQL Server のバージョンとエディションを表示する TRANSACT-SQL コマンドを実行します。
+
+   ```bash
+   sqlcmd -S localhost -U SA -Q 'select @@VERSION'
+   ```
+
+## <a id="uninstall"></a>SQL Server をアンインストールします。
+
+削除する、 **mssql サーバー** Linux でパッケージ化、プラットフォームに基づく次のコマンドのいずれかを使用します。
+
+| プラットフォーム | パッケージの削除コマンド |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+パッケージを削除しても、生成されたデータベース ファイルは削除されません。 データベース ファイルを削除する場合は、次のコマンドを使用します。
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
 
 ## <a id="repositories"></a>ソース リポジトリを構成します。
 
-インストールまたは SQL Server をアップグレードするときに、構成されている Microsoft リポジトリから SQL Server の最新バージョンを取得します。 ことが重要の各配布リポジトリの 2 つの主な種類があることに注意してください。
+インストールまたは SQL Server をアップグレードするときに、構成されている Microsoft リポジトリから SQL Server の最新バージョンを取得します。
+
+### <a name="repository-options"></a>リポジトリのオプション
+
+各配布用のリポジトリの 2 つの主な種類があります。
 
 - **累積的な更新プログラム (CU)**:、累積的な更新プログラム (CU) リポジトリには、そのリリース以降、基本の SQL Server リリースおよびバグの修正や改善用のパッケージが含まれます。 累積的更新プログラムは、SQL Server 2017 などのリリース バージョンに固有です。 正規わかりませんがリリースされます。
 
 - **GDR**: の GDR リポジトリには、そのリリース以降、基本の SQL Server リリースのみ重要な修正プログラムとセキュリティ更新プログラム用のパッケージが含まれています。 これらの更新プログラムは、次の CU リリースにも追加されます。
 
-各 CU および GDR のリリースには、完全な SQL Server パッケージとそのリポジトリの以前のすべての更新が含まれています。 CU リリースに GDR のリリースから更新は、SQL Server 用に構成されているリポジトリを変更することによってサポートされています。 こともできます[ダウン グレード](#rollback)メジャー バージョン内で任意のリリースに (ex: 2017)。
+各 CU および GDR のリリースには、完全な SQL Server パッケージとそのリポジトリの以前のすべての更新が含まれています。 CU リリースに GDR のリリースから更新は、SQL Server 用に構成されているリポジトリを変更することによってサポートされています。 こともできます[ダウン グレード](#rollback)メジャー バージョン内で任意のリリースに (ex: 2017)。 更新 CU から GDR リリースにリリースはサポートされていません。
 
-> [!NOTE]
-> 更新 CU から GDR リリースにリリースはサポートされていません。
+### <a name="check-your-configured-repository"></a>構成されているリポジトリを確認します。
+
+どのようなリポジトリが構成されていることを確認する場合は、次のプラットフォームに依存する手法を使用します。
+
+| プラットフォーム | 手順 |
+|-----|-----|
+| RHEL | 1.内のファイルを表示、 **/etc/yum.repos.d**ディレクトリ。`sudo ls /etc/yum.repos.d`<br/>2.など、SQL Server ディレクトリを構成するファイルを探します**mssql server.repo**です。<br/>3.ファイルの内容を出力します。`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4.**名前**プロパティが構成されているリポジトリ。|
+| SLES | 1.コマンド `sudo zypper info mssql-server` を実行します。<br/>2.**リポジトリ**プロパティが構成されているリポジトリ。 |
+| Ubuntu | 1.コマンド `sudo cat /etc/apt/sources.list` を実行します。<br/>2.Mssql サーバーのパッケージ URL を確認します。 |
+
+リポジトリの URL の末尾は、リポジトリの種類を確認します。
+
+- **mssql サーバー**: プレビュー リポジトリです。
+- **mssql サーバー-2017**: CU リポジトリです。
+- **mssql サーバー 2017 gdr**: GDR のリポジトリ。
+
+### <a name="change-the-source-repository"></a>ソース リポジトリを変更します。
 
 CU または GDR のリポジトリを構成するのには、次の手順を使用します。
 
+> [!NOTE]
+> [のクイック スタート チュートリアル](#platforms)CU リポジトリを構成します。 これらのチュートリアルを実行する場合は、引き続き CU リポジトリを使用する次の手順を使用する必要はありません。 次の手順では、構成されているリポジトリを変更するために必要なのみです。
+
 1. 必要に応じて、以前に構成のリポジトリを削除します。
 
-   | プラットフォーム | リポジトリの削除 コマンド |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+   | プラットフォーム | リポジトリ | リポジトリの削除 コマンド |
+   |---|---|---|
+   | RHEL | **すべて** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. **Ubuntu のみ**、パブリック リポジトリ鍵キーをインポートします。
 
@@ -137,26 +193,10 @@ CU または GDR のリポジトリを構成するのには、次の手順を使
    | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
-1. [インストール](#platforms)または[更新](#upgrade)新しいリポジトリから SQL Server。
+1. [インストール](#platforms)または[更新](#upgrade)と SQL Server は、新しいリポジトリからパッケージを関連します。
 
    > [!IMPORTANT]
-   > 使用して、フル インストールを実行する場合、この時点で、[クイック スタート チュートリアル](#platforms)ターゲットのリポジトリを構成したことに注意してください。 チュートリアルではその手順は繰り返されません。 これは、クイック スタート チュートリアル CU リポジトリを使用するために GDR リポジトリを構成する場合に特に当てはまります。
-
-## <a id="uninstall"></a>SQL Server をアンインストールします。
-
-削除する、 **mssql サーバー** Linux でパッケージ化、プラットフォームに基づく次のコマンドのいずれかを使用します。
-
-| プラットフォーム | パッケージの削除コマンド |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-パッケージを削除しても、生成されたデータベース ファイルは削除されません。 データベース ファイルを削除する場合は、次のコマンドを使用します。
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
+   > この時点などを使用してインストール チュートリアルのいずれかを選択した場合、[クイック スタート チュートリアル](#platforms)ターゲットのリポジトリを構成したことに注意してください。 チュートリアルではその手順は繰り返されません。 これは、クイック スタート チュートリアル CU リポジトリを使用するために GDR リポジトリを構成する場合に特に当てはまります。
 
 ## <a id="unattended"></a>無人インストール
 
@@ -232,4 +272,3 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
 - [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-ubuntu.md)
-

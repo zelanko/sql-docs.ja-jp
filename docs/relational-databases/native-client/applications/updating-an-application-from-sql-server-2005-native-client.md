@@ -1,0 +1,59 @@
+---
+title: "SQL Server 2005 Native Client からのアプリケーションの更新 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: native-client|applications
+ms.reviewer: 
+ms.suite: sql
+ms.technology: docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: SQL Server Native Client, updating applications
+ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
+caps.latest.revision: "42"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: bde56c3efe2231d54463c4d23f311237415a6f53
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client からのアプリケーションの更新
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+
+  このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以降の [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client における重大な変更について説明します。  
+  
+ Microsoft Data Access Components (MDAC) を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client にアップグレードした場合も、一部の動作で違いが生じます。 詳細については、次を参照してください。 [MDAC から SQL Server Native Client へのアプリケーションの更新](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)です。  
+  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 9.0 が付属[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 が付属[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]です。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に付属する [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 10.5。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] に付属する [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0。  
+  
+|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降の SQL Server Native Client で変更された動作|Description|  
+|------------------------------------------------------------------------------------|-----------------|  
+|OLE DB によって定義された有効桁数までしか埋め込まれない|サーバーへの変換後のデータの送信先の変換を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) の最大長までしかデータの後続の 0 パッド**datetime**値。 SQL Server Native Client 9.0 では、9 桁まで埋め込まれていました。|  
+|ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP を検証します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])、OLE DB 要件が実装され*bScale* DBTYPE_DBTIMESTAMP の秒の小数部の有効桁数を設定する ICommandWithParameter::SetParameterInfo でします。|  
+|**Sp_columns**ストアド プロシージャを今すぐ返します**"NO"**の代わりに**"NO"**によって IS_NULLABLE 列にします。|以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])、 **sp_columns**ストアド プロシージャを今すぐ返します**"NO"**の代わりに**"NO"**によって IS_NULLABLE 列.|  
+|Sqlsetdescrec による、SQLBindCol、SQLBindParameter、一貫性チェックが実行されます。|前のバージョン[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLSetDescRec、SQLBindParameter、または SQLBindCol 記述子の型に対して整合性チェックが Native Client 10.0、SQL_DESC_DATA_PTR を設定では発生しませんでした。|  
+|SQLCopyDesc が、記述子の一貫性をチェックします。|前のバージョン[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 SQLCopyDesc しなかった、整合性チェック、SQL_DESC_DATA_PTR フィールドが特定のレコードで設定されたときにします。|  
+|SQLGetDescRec 不要になったは記述子の一貫性を確認します。|前のバージョン[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 SQLGetDescRec 実行記述子の一貫性チェック、SQL_DESC_DATA_PTR フィールドが設定されたときにします。 この一貫性チェックは、ODBC 仕様では不要になったため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 以降のバージョンでは行われなくなりました。|  
+|日付が範囲外の場合に別のエラーが返される|**Datetime**型、別のエラー番号が返されます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) の範囲の外の日付以前のバージョンで返されていた。<br /><br /> 具体的には、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 では、すべてへの文字列変換で年の値が範囲外の 22007 が返されます**datetime**、および[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]バージョン 10.0 Native Client 以降 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) ときに 22008 が返されますサポートされる範囲内での日付が**datetime2**でサポートされる範囲外**datetime**または**smalldatetime**です。|  
+|**datetime**値によって秒の小数部が切り捨てられ、ない場合にラウンド丸め処理によって日が変わる。|前のバージョン[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 で、クライアントの動作**datetime**サーバーに送信された値が 1 の近似値に丸めが/300 秒です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 以降では、丸め処理によって日が変わる場合、秒の小数部が切り捨てられます。|  
+|秒の考えられる trunction **datetime**値。|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 以降でビルドしたアプリケーションが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 サーバーに接続する場合、型識別子を DBTYPE_DBTIMESTAMP (OLE DB) または SQL_TIMESTAMP (ODBC) に設定し、小数点以下桁数を 0 に設定して datetime 列にバインドすると、サーバーに送信されるデータの時刻部分の秒および秒の小数部が切り捨てられます。<br /><br /> 例:<br /><br /> 入力データ: 1994-08-21 21:21:36.000<br /><br /> 挿入されるデータ: 1994-08-21 21:21:00.000|  
+|DBTYPE_DBTIME から DBTYPE_DATE への OLE DB データ変換で日が変更されなくなる|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 より前のバージョンでは、DBTYPE_DATE の時刻部分が午前 0 時から 0.5 秒以内の場合、OLE DB の変換コードによって日が変更されました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 以降では、日は変更されません (秒の小数部は丸められずに切り捨てられます)。|  
+|IBCPSession::BCColFmt 変換の変更。|以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IBCPSession::BCOColFmt を使用して SQLDATETIME または SQLDATETIME を文字列型、小数部の値に変換するときに、Native Client 10.0 をエクスポートします。 たとえば、SQLDATETIME 型を SQLNVARCHARMAX 型に変換すると、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、<br /><br /> 1989-02-01 00:00:00 が返されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 以降のバージョンでは、1989-02-01 00:00:00.0000000 が返されます。|  
+|送信するデータのサイズを SQL_LEN_DATA_AT_EXEC で指定した長さと一致させる必要がある|SQL_LEN_DATA_AT_EXEC を使用する場合、データのサイズを SQL_LEN_DATA_AT_EXEC で指定した長さと一致させる必要があります。 SQL_DATA_AT_EXEC を使用することはできますが、SQL_LEN_DATA_AT_EXEC を使用するとパフォーマンスが向上する可能性があります。|  
+|BCP API を使用するカスタム アプリケーションで警告が表示される|指定されたフィールド長をデータ長が上回る場合、どの型の場合でも BCP API によって警告メッセージが生成されます。 以前のバージョンでは、この警告は、すべての型ではなく文字型についてのみ表示されました。|  
+|空の文字列を挿入する、 **sql_variant**バインド日付/時刻型には、エラーが生成されます。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 でに空の文字列を挿入する、 **sql_variant**バインド日付/時刻型では、エラーは生成されませんでした。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 以降では、この場合に正しくエラーが生成されます。|  
+|SQL_C_TYPE_TIMESTAMP と DBTYPE_DBTIMESTAMP のパラメーターの検証がより厳密に行われる|前のバージョン[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]Native Client、 **datetime**値が小数点以下桁数に合わせて丸められていました**datetime**と**smalldatetime**列、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 以降では、秒の小数部に対して、ODBC のコア仕様で定義されている、より厳密な検証規則が適用されます。 クライアントのバインドで明示的または暗黙的に指定された桁数を使用することによって、末尾の桁を切り捨てることなくパラメーター値を SQL 型に変換できない場合は、エラーが返されます。|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トリガーの実行時に異なる結果を返す場合がある|導入された変更[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]に結果が異なるときに実行するトリガーを原因となったステートメントから返されたアプリケーションが発生する可能性があります**NOCOUNT OFF**有効であった。 このような場合、アプリケーションでエラーが発生することがあります。 このエラーを解決するには、次のように設定します。 **NOCOUNT ON**トリガーまたは SQLMoreResults を呼び出し、次の結果に進みます。|  
+  
+## <a name="see-also"></a>参照  
+ [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
+  
+  

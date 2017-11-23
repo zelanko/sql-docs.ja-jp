@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - connection transitions [ODBC]
 - state transitions [ODBC], connection
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b3fe5506d1bcaa644ba1a1b60ef06c5fe9b9ac4e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-transitions"></a>接続の切り替え
 ODBC 接続では、次の状態があります。  
@@ -308,4 +306,3 @@ ODBC 接続では、次の状態があります。
 |C0<br /><br /> ありません Env です。|C1<br /><br /> 未割り当て|C2<br /><br /> 割り当てられています。|C3<br /><br /> データが必要|C4<br /><br /> 接続済み|C5<br /><br /> ステートメントから削除してください。|C6<br /><br /> トランザクション|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(組み込み)|(組み込み)|(組み込み)|(組み込み)|(組み込み)|--|--|
-

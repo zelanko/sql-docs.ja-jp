@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-compute-clause"></a>図形の COMPUTE 句
 図形の COMPUTE 句には、親が生成されます**レコード セット**、子への参照で構成されている列を持つ**レコード セット**以外の場合は省略可能な列の内容が章では、新しい、または計算列、または子で集計関数の実行結果**レコード セット**以前形または**レコード セット**; 子からの列と**レコード セット**に一覧表示オプションの BY 句。  
@@ -150,5 +148,4 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
  [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value プロパティ (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
- [Visual Basic アプリケーション関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-
+ [Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

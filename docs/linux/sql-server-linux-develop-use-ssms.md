@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
+ms.openlocfilehash: 9f774a7fde6a67bd5be6cd1bd395131c3c6ee0ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio (SSMS) を使用して、Linux 上の SQL Server を管理するには
 
@@ -90,4 +89,3 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
 T-SQL を新しい場合を参照してください[チュートリアル: TRANSACT-SQL ステートメントの記述](../t-sql/tutorial-writing-transact-sql-statements.md)と[TRANSACT-SQL リファレンス (データベース エンジン)](https://msdn.microsoft.com/library/bb510741.aspx)です。
 
 SSMS を使用する方法の詳細については、次を参照してください。 [SQL Server Management Studio を使用して](https://msdn.microsoft.com/library/ms174173.aspx)です。
-

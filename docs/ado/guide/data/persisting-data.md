@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ecda57863abf45f1256f192d933c99bfb09a67dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9862fc9f45674d3995b857eec222d8f560870a6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-data"></a>データの永続化
 (たとえば、ラップトップを使用)、ポータブル コンピューター、接続および切断されている状態の両方で実行できるアプリケーションの必要性が生成されます。 ADO には、開発者に、クライアント カーソルを保存する機能を提供することによりこのサポートが追加されて**Recordset**をディスクに、後で再読み込みします。  
@@ -123,9 +121,8 @@ Destination, PersistFormat
 ## <a name="remarks"></a>解説  
  このセクションでは、次のトピックを扱います。  
   
--   [レコード セットの保存に関する詳細情報](../../../ado/guide/data/more-about-recordset-persistence.md)  
+-   [レコードセットの保持に関する詳細情報](../../../ado/guide/data/more-about-recordset-persistence.md)  
   
--   [レコード セットは、フィルター選択された階層を保持します。](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
+-   [フィルター処理されたレコードセットおよび階層レコードセットの保持](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
   
--   [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+-   [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -1,30 +1,26 @@
 ---
 title: "PowerShell (チュートリアル) を使用してデータを準備する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (チュートリアル) を使用してデータを準備します。
 
@@ -111,7 +107,7 @@ SQL Server にパッケージをインストールできるように、さまざ
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - この例では、R grep 関数を使用して、使用できるパスのベクトルを検索し、"Program Files" 内のパッケージを見つけます。 詳細については、 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)を参照してください。
+    - この例では、正規表現の R 関数を使用して、使用可能なパスのベクターを検索し、"Program Files"を含むパスを見つけます。 詳細については、 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)を参照してください。
 
     - パッケージが既にインストールされている場合は、実行してインストールされているパッケージの一覧を確認します。`installed.packages()`です。
 
@@ -129,7 +125,7 @@ SQL Server にパッケージをインストールできるように、さまざ
 
 - R スクリプト ファイルの引数を、指定したデータベース名を使用するように書き換えます。
 
-ソリューションをビルドするコンピューターでこのスクリプトを実行する必要があります。 たとえば、ラップトップ コンピューターを開発して、R コードをテストします。 このコンピューター (これをデータ サイエンス クライアントと呼びます) は、名前付きパイプ プロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターに接続できる必要があります。
+ソリューションをビルドするコンピューターでこのスクリプトを実行します。 たとえば、ラップトップ コンピューターを開発して、R コードをテストします。 このコンピューター (これをデータ サイエンス クライアントと呼びます) は、名前付きパイプ プロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターに接続できる必要があります。
 
 1. PowerShell のコマンドラインを開いて**管理者として**です。
   
@@ -156,7 +152,7 @@ SQL Server にパッケージをインストールできるように、さまざ
       > [!WARNING]
       > 資格情報を指定する PowerShell スクリプトで、プロンプトを使用する場合は、パスワードがプレーン テキストで更新されたスクリプト ファイルに書き込まれます。 必要な R オブジェクトの作成が完了したら、すぐにファイルを編集し、資格情報を削除してください。
       
-    **CSV ファイルへのパス**: データ ファイルへの完全パスを指定します。 既定のパスとファイル名は、`C:\tempR\nyctaxi1pct.csv1` です。
+    **CSV ファイルへのパス**: データ ファイルへの完全パスを指定します。 既定のパスとファイル名は、`C:\tempR\nyctaxi1pct.csv` です。
   
 4.  Enter キーを押してスクリプトを実行します。
 
@@ -260,7 +256,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 データベースには、同じ名前と、同じスキーマの既存のテーブルが含まれている場合**bcp**既存のデータを上書きするのではなく、データの新しいコピーを挿入します。
 
-データの重複を回避するには、スクリプトを実行する前に、既存のテーブルを切り詰めてください。
+データの重複を回避するのには、スクリプトを再度実行する前に、既存のテーブルを切り捨てます。
 
 ## <a name="whats-included-in-the-sample"></a>このサンプルに含まれるもの
 
@@ -274,7 +270,7 @@ GitHub リポジトリからファイルをダウンロードするときに、�
 
 ### <a name="bkmk_data"></a>トレーニング セットとデータをスコア付け
 
-このデータは、ニューヨーク市タクシー データ セットの代表的なサンプル データです。各乗車で支払われた乗車料金やチップなど、2013 年の 1 億 7,300 万件の乗車記録が含まれています。 データを使用しやすくするために、Microsoft データ サイエンス チームはダウンサンプリングを実行し、わずか 1% のデータを取得しました。  このデータは、Azure のパブリック BLOB ストレージ コンテナーに .CSV 形式で共有されています。 ソース データは圧縮されておらず、350 MB 未満です。
+このデータは、ニューヨーク市タクシー データ セットの代表的なサンプル データです。各乗車で支払われた乗車料金やチップなど、2013 年の 1 億 7,300 万件の乗車記録が含まれています。 データを使用しやすくするために、Microsoft データ サイエンス チームはダウンサンプリングを実行し、わずか 1% のデータを取得しました。  このデータは、Azure のパブリック BLOB ストレージ コンテナーに .CSV 形式で共有されています。 ソース データは、圧縮されていないファイル、わずかは 350 MB です。
 
 + パブリック データセット: [NYC タクシーとリムジン Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +290,7 @@ PowerShell スクリプト実行複数[!INCLUDE[tsql](../../includes/tsql-md.md)
 
 |SQL スクリプト ファイル名|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|データベースと 2 つのテーブルを作成します。<br /><br /> *nyctaxi_sample*: トレーニング データ (ニューヨーク市のタクシーのデータ セットの 1% サンプル) を格納するテーブルです。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。<br /><br /> *nyc_taxi_models*: トレーニングした分類モデルの保存に後で使用する空のテーブルです。|
+|create-db-tb-upload-data.sql|データベースと 2 つのテーブルを作成します。<br /><br /> *nyctaxi_sample*: トレーニング データ (ニューヨーク市のタクシーのデータ セットの 1% サンプル) を格納するテーブルです。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。<br /><br /> *nyc_taxi_models*: バイナリ形式でトレーニング済みモデルを格納するために使用されるテーブル。|
 |PredictTipBatchMode.sql|トレーニングしたモデルを呼び出し、新しい監視のラベルを予測するストアド プロシージャを作成します。 入力パラメーターとしてクエリを指定できます。|
 |PredictTipSingleMode.sql|トレーニングした分類モデルを呼び出し、新しい監視のラベルを予測するストアド プロシージャを作成します。 新しい監視の変数は、インライン パラメーターとして渡されます。|
 |PersistModel.sql|データベースのテーブルに分類モデルのバイナリ表現を格納できるストアド プロシージャを作成します。|
@@ -315,4 +311,3 @@ PowerShell スクリプト実行複数[!INCLUDE[tsql](../../includes/tsql-md.md)
 [R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル](/walkthrough-data-science-end-to-end-walkthrough.md)
 
 [データ サイエンスのチュートリアルの前提条件](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-

@@ -6,23 +6,28 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: On Demand
+ms.openlocfilehash: de348a584333eb113cca2e5eb052b21bbc3d1c54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Linux 上の SQL Server の Always On 可用性グループを構成します。
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-この記事では、Linux 上の高可用性の可用性グループに SQL サーバーを常に作成する方法について説明します。 可用性グループの 2 つの構成の種類があります。 A*高可用性*構成では、クラスター マネージャーを使用して、ビジネス継続性を提供します。 この構成では、読み取りのスケール アウト レプリカを含めることもできます。 このドキュメントでは、可用性グループの高可用性構成を作成する方法について説明します。
+この記事では、Linux 上の高可用性の可用性グループに SQL サーバーを常に作成する方法について説明します。 可用性グループの 2 つの構成の種類があります。 A*高可用性*構成では、クラスター マネージャーを使用して、ビジネス継続性を提供します。 この構成では、読み取りスケール レプリカを含めることもできます。 このドキュメントでは、可用性グループの高可用性構成を作成する方法について説明します。
 
-作成することも、*読み取りのスケール アウト*クラスター マネージャーがない可用性グループです。 のみ、この構成は、パフォーマンスのスケール アウトの読み取り専用レプリカを提供します。高可用性は提供されません。 読み取りのスケール アウト可用性グループを作成するを参照してください。 [Linux に SQL Server のスケール アウトの可用性グループを読み取る構成](sql-server-linux-availability-group-configure-rs.md)です。
+作成することも、*読み取りスケール*クラスター マネージャーがない可用性グループです。 のみ、この構成は、パフォーマンスのスケール アウトの読み取り専用レプリカを提供します。高可用性は提供されません。 読み取りのスケールの可用性グループを作成するを参照してください。 [Linux に SQL Server の読み取りスケール可用性グループを構成する](sql-server-linux-availability-group-configure-rs.md)です。
 
 高可用性とデータ保護を保証する構成では、2 または 3 つの同期コミット レプリカが必要です。 次の 3 つの同期レプリカ、可用性グループが自動的に回復場合でも、1 つのサーバーは使用できません。 詳細については、次を参照してください。[可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)です。 
 
@@ -81,13 +86,19 @@ Linux 上の高可用性の可用性グループを作成します。 使用し�
 * プライマリ レプリカとセカンダリ レプリカを設定`FAILOVER_MODE = EXTERNAL`です。 
    レプリカが対話ペースのように、外部のクラスター マネージャーを指定します。 
 
-次の TRANSACT-SQL スクリプトという名前の高可用性の可用性グループを作成する`ag1`です。 スクリプトは、構成、可用性グループ レプリカと`SEEDING_MODE = AUTOMATIC`です。 この設定は、各セカンダリ サーバーで、データベースを自動的に作成する SQL Server をによりします。 環境内の次のスクリプトを更新します。 置換、 `**<node1>**`、および`**<node2>**`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 置換、`**<5022>**`データのミラーリング エンドポイントのポートを設定します。 可用性グループを作成するには、プライマリ レプリカをホストする SQL Server インスタンスで次の TRANSACT-SQL を実行します。
+次の TRANSACT-SQL スクリプトという名前の高可用性の可用性グループを作成する`ag1`です。 スクリプトは、構成、可用性グループ レプリカと`SEEDING_MODE = AUTOMATIC`です。 この設定は、各セカンダリ サーバーで、データベースを自動的に作成する SQL Server をによりします。 環境内の次のスクリプトを更新します。 置換、 `**<node1>**`、 `**<node2>**`、または`**<node3>**`レプリカをホストする SQL Server インスタンスの名前を持つ値です。 置換、`**<5022>**`データのミラーリング エンドポイントのポートを設定します。 可用性グループを作成するには、プライマリ レプリカをホストする SQL Server インスタンスで次の TRANSACT-SQL を実行します。
 
 実行**1 つだけ**以下のスクリプト。 
 
+- [次の 3 つの同期レプリカが可用性グループの作成](#threeSynch)です。
+- [2 つの同期レプリカと構成のレプリカの可用性グループを作成します。](#configOnly)
+- [次の 3 つの同期レプリカが可用性グループの作成](#readScale)です。
+
+<a name="threeSynch"></a>
+
 - 次の 3 つの同期レプリカが可用性グループを作成します。
 
-   ```Transact-SQL
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
@@ -119,6 +130,33 @@ Linux 上の高可用性の可用性グループを作成します。 使用し�
    >[!IMPORTANT]
    >次の 3 つの同期レプリカが可用性グループを作成する前のスクリプトを実行した後、次のスクリプトを実行しません。
 
+- 2 つの同期レプリカと構成のレプリカの可用性グループを作成します。
+
+   >[!IMPORTANT]
+   >このアーキテクチャにより、3 番目のレプリカをホストする SQL Server の任意のエディションです。 たとえば、SQL Server Enterprise Edition で 3 番目のレプリカをホストすることができます。 Enterprise Edition でのみ有効なエンドポイント タイプは`WITNESS`します。 
+
+   ```SQL
+   CREATE AVAILABILITY GROUP [ag1] 
+      WITH (CLUSTER_TYPE = EXTERNAL) 
+      FOR REPLICA ON 
+       N'**<node1>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node2>**' WITH (  
+          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node3>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+          AVAILABILITY_MODE = CONFIGURATION_ONLY  
+          );
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+   ```
 <a name="readScale"></a>
 
 - 2 つの同期レプリカが可用性グループを作成します。
@@ -126,9 +164,9 @@ Linux 上の高可用性の可用性グループを作成します。 使用し�
    同期の可用性モードの 2 つのレプリカが含まれます。 次のスクリプトがという可用性グループを作成するなど、`ag1`です。 `node1`および`node2`自動シード処理を自動フェールオーバーを伴うの同期モードでのレプリカをホストします。
 
    >[!IMPORTANT]
-   >のみと 2 つの同期レプリカの可用性グループを作成する次のスクリプトを実行します。 前述のスクリプトを実行した場合、次のスクリプトは実行されません。 
+   >のみと 2 つの同期レプリカの可用性グループを作成する次のスクリプトを実行します。 上記のスクリプトを実行した場合、次のスクリプトは実行されません。 
 
-   ```Transact-SQL
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
       WITH (CLUSTER_TYPE = EXTERNAL)
       FOR REPLICA ON
@@ -164,9 +202,9 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->可用性グループを作成した後は、高可用性のペースのようなクラスター テクノロジを統合を構成する必要があります。 以降で、可用性グループを使用して読み取りのスケール アウト構成[!INCLUDE[バージョンの SQL Server](..\includes\sssqlv14-md.md)]クラスターのセットアップは必要ありません。
+>可用性グループを作成した後は、高可用性のペースのようなクラスター テクノロジを統合を構成する必要があります。 以降で、可用性グループを使用して読み取りのスケール構成[!INCLUDE[SQL Server version](..\includes\sssqlv14-md.md)]クラスターのセットアップは必要ありません。
 
-このドキュメントで手順を実行する場合は、クラスター化されていない可用性グループがあります。 次の手順では、クラスターを追加します。 この構成は、読み取りのスケール アウト/負荷分散シナリオに対して有効は高可用性のために完了しません。 高可用性を実現するには、可用性グループをクラスター リソースとして追加する必要があります。 参照してください[次のステップ](#next-steps)手順についてはします。 
+このドキュメントで手順を実行する場合は、クラスター化されていない可用性グループがあります。 次の手順では、クラスターを追加します。 この構成が読み取り-スケールまたは負荷分散シナリオで有効では高可用性のために完了しません。 高可用性を実現するには、可用性グループをクラスター リソースとして追加する必要があります。 参照してください[次のステップ](#next-steps)手順についてはします。 
 
 ## <a name="notes"></a>注
 
@@ -184,4 +222,3 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [SQL Server 可用性グループのクラスター リソースの SUSE Linux Enterprise Server クラスターを構成します。](sql-server-linux-availability-group-cluster-sles.md)
 
 [Ubuntu クラスターは、SQL Server 可用性グループのクラスター リソースを構成します。](sql-server-linux-availability-group-cluster-ubuntu.md)
-

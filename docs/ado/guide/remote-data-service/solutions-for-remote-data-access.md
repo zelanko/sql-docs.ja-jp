@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS [ADO]
+helpviewer_keywords: RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: babb34e20499612b34c5adb4e17f6eec0b9ed840
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9030af4a02555aac77428ba9490ee72e87b93681
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="solutions-for-remote-data-access"></a>リモート データ アクセス用のソリューション
 ## <a name="the-issue"></a>問題  
@@ -55,6 +52,5 @@ ms.lasthandoff: 09/09/2017
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

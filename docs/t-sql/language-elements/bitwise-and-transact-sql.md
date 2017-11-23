@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bitwise
 - '&'
 - '&_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d249ca1552197a5fb7e53540c40e70c864d134bb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e862f742a97f0ea66edcfe32d28224c6fbbeff70
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(ビット演算 AND)(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +60,7 @@ expression & expression
  **tinyint**場合は、入力値**tinyint**または**ビット**です。  
   
 ## <a name="remarks"></a>解説  
-  **&** ビットごとの演算子は、対応する各ビット両方の式の 2 つの式の間でビットごとの論理 AND を実行します。 入力式の中で現在処理の対象にあるビットについて、両方のビットが 1 という値を持つ場合だけ、結果セットのビットは 1 に設定されます。それ以外の場合、結果は 0 に設定されます。  
+ **&** ビットごとの演算子は、対応する各ビット両方の式の 2 つの式の間でビットごとの論理 AND を実行します。 入力式の中で現在処理の対象にあるビットについて、両方のビットが 1 という値を持つ場合だけ、結果セットのビットは 1 に設定されます。それ以外の場合、結果は 0 に設定されます。  
   
  左と右の式が異なる整数データ型を持つかどうか (たとえば、左側*式*は**smallint**と右*式*は**int**)、小さいデータ型の引数が大きいデータ型に変換します。 ここで、 **smallint***式*に変換されます、 **int**です。  
   
@@ -110,13 +107,12 @@ GO
   
   
 ## <a name="see-also"></a>参照  
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
- [ビット処理演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [& = (& a) #40 です。ビットごとの AND 代入 &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
- [複合の演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ビット処理演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [& = (& a) #40 です。ビットごとの AND 代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+ [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

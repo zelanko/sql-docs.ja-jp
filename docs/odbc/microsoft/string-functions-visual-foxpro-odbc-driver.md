@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], string functions
 - FoxPro ODBC driver [ODBC], string functions
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c62e64602162e71916624d3185426fbf73cf0bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3fa7491ea354cc616d6b58de17e6fa82c785a3a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>文字列関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC 文字列操作関数同じ関数の場合、Visual FoxPro 文法は、ODBC 構文によって異なります、同等の Visual FoxPro が一覧表示されます。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |領域*(数)*||  
 |部分文字列*(string_exp、開始、長さ)*|SUBSTR *(string_exp、開始、長さ)*|  
 |UCASE *(string_exp)*|上限*(string_exp)*|
-

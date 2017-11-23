@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningStructureColumn Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningStructureColumn Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructureColumn
-helpviewer_keywords:
-- MiningStructureColumn data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningStructureColumn
+helpviewer_keywords: MiningStructureColumn data type
 ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e72e005add03ab6e7136fab540de5bd4b435d45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebd94bb266ae4cf9c918e1e8cabd801ddd4d631c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="miningstructurecolumn-data-type-assl"></a>MiningStructureColumn データ型 (ASSL)
   内の列に関する情報を表す抽象プリミティブ データ型を定義、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MiningStructureColumn>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

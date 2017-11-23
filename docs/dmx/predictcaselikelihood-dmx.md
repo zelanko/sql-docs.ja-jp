@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictCaseLikelihood
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictCaseLikelihood function
+f1_keywords: PredictCaseLikelihood
+dev_langs: DMX
+helpviewer_keywords: PredictCaseLikelihood function
 ms.assetid: b00180e5-b2eb-49e2-891d-e39fb378f50a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a06a137456fc9ffde1137ac6ec2afdb69c5a69cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 99a6d2927d0164f4c23dbb2c34d1d9ab6bab511f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,10 +93,9 @@ NATURAL PREDICTION JOIN
  これらの結果の違いは、正規化の影響を示します。 生の値**CaseLikelihood**提案をケースの確率約 20% です。 ただし、結果を正規化するときに明らかになり、ケースの発生確率が非常に低いことです。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

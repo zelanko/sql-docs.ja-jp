@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5179285d3be63f166773dab8fd7dee99292d416
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988ee74394f53d5275a8b8e1cc3772702792a4f3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-alias-alias-tab"></a>[別名 - 新規] ダイアログ ボックス ([別名] タブ)
   別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 **[別名 - 新規]** ダイアログ ボックスの **[別名]** ページでは、別名の接続文字列の各要素を指定できます。 既存の別名の接続文字列を変更する場合は、「[[&#60;Alias&#62; のプロパティ] ダイアログ ボックス ([別名] タブ)](../../tools/configuration-manager/alias-properties-alias-tab.md)」を参照してください。  
@@ -53,11 +51,10 @@ ms.lasthandoff: 08/02/2017
 ## <a name="creating-a-valid-connection-string"></a>有効な接続文字列の作成  
  別名のプロパティの有効な組み合わせに関する説明と例については、以下のトピックを参照してください。  
   
--   [共有メモリ プロトコルを使用して有効な接続文字列を作成します。](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
+-   [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
--   [TCP/IP を使用した有効な接続文字列を作成します。](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+-   [TCP/IP を使用した有効な接続文字列の作成](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [名前付きパイプを使用して有効な接続文字列を作成します。](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+-   [名前付きパイプを使用した有効な接続文字列の作成](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cross-validation-formulas"></a>クロス検証の式
   生成したクロス検証レポートには、マイニング モデルの種類 (つまり、モデルの作成に使用したアルゴリズム)、予測可能な属性のデータ型、および予測可能な属性の値に応じて、モデルごとの精度のメジャーが含まれます。  
@@ -58,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   
-

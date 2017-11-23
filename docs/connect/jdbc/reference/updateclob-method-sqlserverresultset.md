@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateClob
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateClob
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dd8c034488dafcf8d02d57a5b96c8cff7d615bae
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af7a71cb4279f775929744c36fb96e9eb5bc08d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>updateClob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,14 +37,13 @@ ms.lasthandoff: 09/09/2017
 |----------|-----------------|  
 |[updateClob (int, java.sql.Clob)](../../../connect/jdbc/reference/updateclob-method-int-java-sql-clob.md)|渡された列インデックスを使用して、指定された列を java.sql.Clob 値で更新します。|  
 |[updateClob メソッド (&) #40 です int, java.io.Reader &#41;。](../../../connect/jdbc/reference/updateclob-method-int-java-io-reader.md)|指定された Reader オブジェクトを使用して、指定された列を更新します。|  
-|[updateClob メソッド &#40;java.lang.String、java.io.Reader、時間の長い (&) #41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|指定された文字数である指定された Reader オブジェクトを使用して、指定された列を更新します。|  
+|[updateClob メソッド &#40;java.lang.String、java.io.Reader、時間の長い &#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|指定された文字数である指定された Reader オブジェクトを使用して、指定された列を更新します。|  
 |[updateClob (java.lang.String, java.sql.Clob)](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-sql-clob.md)|渡された列名を使用して、指定された列を java.sql.Clob 値で更新します。|  
 |[updateClob メソッド &#40;java.lang.String、java.io.Reader &#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader.md)|指定された Reader オブジェクトを使用して、指定された列を更新します。|  
-|[updateClob メソッド &#40;java.lang.String、java.io.Reader、時間の長い (&) #41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|指定された文字数である指定された Reader オブジェクトを使用して、指定された列を更新します。|  
+|[updateClob メソッド &#40;java.lang.String、java.io.Reader、時間の長い &#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|指定された文字数である指定された Reader オブジェクトを使用して、指定された列を更新します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

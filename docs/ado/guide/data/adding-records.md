@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d46cb8e801f39cf8b87c0c3187667247e3da9d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f2804e2662e15c993fb3c5de7e1278a623ffcd47
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adding-records-to-a-recordset"></a>レコードをレコード セットに追加します。
 使用して、 **AddNew**メソッドを作成し、既存の新しいレコードの初期化を**Recordset**です。 使用することができます、**サポート**メソッドを**CursorOptionEnum**の値**adAddNew**現在のレコードを追加できるかどうかを確認する**レコードセット**オブジェクト。
@@ -39,11 +37,10 @@ ms.lasthandoff: 09/09/2017
 
  このセクションでは、次のトピックを扱います。
 
--   [AddNew を使用してレコードを追加します。](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [AddNew を使用してレコードを追加する](../../../ado/guide/data/adding-records-using-addnew.md)
 
--   [複数のフィールドを追加します。](../../../ado/guide/data/adding-multiple-fields.md)
+-   [複数のフィールドの追加](../../../ado/guide/data/adding-multiple-fields.md)
 
 -   [編集モードの決定](../../../ado/guide/data/determining-edit-mode.md)
 
--   [イミディ エイト AddNew とバッチ モードを使用してください。](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
-
+-   [イミディエイト モードとバッチ モードで AddNew を使用する](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)

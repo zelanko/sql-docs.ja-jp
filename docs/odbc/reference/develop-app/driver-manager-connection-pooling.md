@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールを使用するたびに再確立する必要がない接続プールからの接続を使用するアプリケーションを有効にします。 接続が作成され、プールに格納されて、アプリケーションは、完全な接続プロセスを実行しないで、その接続を再利用できます。  
@@ -93,4 +91,3 @@ ms.lasthandoff: 09/09/2017
  [データに接続するソースまたはドライバー](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft Data Access Components のプール](http://go.microsoft.com/fwlink/?LinkId=120776)
-

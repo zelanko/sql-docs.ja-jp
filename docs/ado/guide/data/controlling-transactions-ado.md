@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactions [ADO]
+helpviewer_keywords: transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1535ff20e7dbc40b8f478902512d068fd5501b27
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="controlling-transactions-ado"></a>トランザクション (ADO) を制御します。
 ADO のヘルプへの接続内のトランザクション処理をサポートする、 **BeginTrans**、 **CommitTrans**、および**RollbackTrans**のメソッド、 **接続**オブジェクト。 次の単純なコード スニペットは、ADO のトランザクション処理を実装する一般的なという概念を示しています。  
@@ -88,4 +85,3 @@ oConn.Close
  ここでトランザクション処理は、ことを確認して、操作の 1 つの単位として 2 つのレコードが更新に交換またはまったく変更されていない 2 つの製品名であることに使用されます。  
   
  トランザクション処理の詳細な説明を参照してください[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)です。
-

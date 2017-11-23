@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,20 +20,18 @@ f1_keywords:
 - Recordset15::GetSource
 - Recordset15::PutRefSource
 - Recordset15::put_Source
-helpviewer_keywords:
-- Source property [ADO Recordset]
+helpviewer_keywords: Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 36180bafb53d72985c2dc671d80147c8ffaa8588
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea45eae107fa55355adeb195e7e4fc5cf0a3c762
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-ado-recordset"></a>Source プロパティ (ADO レコード セット)
 データ ソースを示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -52,10 +49,9 @@ ms.lasthandoff: 09/09/2017
  **ソース**閉じられたために、プロパティは読み取り/書き込み**Recordset**オブジェクトおよび読み取り専用開く**レコード セット**オブジェクト。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [ソース プロパティの例 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Source プロパティ (ADO エラー)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Source プロパティ (ADO レコード)](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Source プロパティ (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)

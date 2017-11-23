@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b1b441eb4718e5f362fb1ef6f6a3a889cf5dc812
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2822b60d236ab7d961ce02bf76cbc7ac996aefb0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="decision-trees-model-query-examples"></a>デシジョン ツリー モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、デシジョン ツリー モデルでコンテンツ クエリを使用すると、ツリーの各レベルのケースの数に関する統計や、ケースを区別するルールを取得できます。 一方、予測クエリを使用すると、モデルを新しいデータにマップして、提案や分類などを生成することができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -287,4 +286,3 @@ WHERE NODE_TYPE = 25
  [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   
-

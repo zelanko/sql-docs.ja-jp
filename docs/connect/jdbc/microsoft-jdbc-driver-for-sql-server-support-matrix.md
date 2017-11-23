@@ -3,24 +3,25 @@ title: "Microsoft JDBC Driver for SQL Server のサポート マトリックス 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9867704e5fe3b5522d22c70cc1b79b495de1bfa5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35747cff6a18c79a828e5269d7085c710338bf18
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server 用 JDBC Driver のサポート表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 |ドライバー名|ドライバー パッケージのバージョン|該当する JAR(s)|メイン ストリーム サポートの終了|
 |-|-|-|-|  
-|SQL Server 用 Microsoft JDBC Driver 6.2|6.2|mssql jdbc-6.2.1.jre8.jar<br> mssql jdbc-6.2.1.jre7.jar|2022 年 6 月 30日|    
+|Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql jdbc-6.2.2.jre8.jar<br> mssql jdbc-6.2.2.jre7.jar|2022 年 6 月 30日|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14日|    
 |Microsoft SQL Server 用 JDBC Driver 4.2|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|  
 |Microsoft SQL Server 用 JDBC Driver 4.1|4.1|sqljdbc41.jar|2019 年 12 月 12日|  
@@ -55,20 +56,20 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="sql-version-compatibility"></a>SQL バージョンの互換性  
   
-|ドライバーのバージョン|SQL Server 2008:|SQL Server 2008R2|SQL Server 2012|Azure SQL データベース|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
-|-|-|-|-|-|-|-|-| 
-|6.2|Y|Y|Y|Y|Y|Y|Y|  
-|6.1|Y|Y|Y|Y|Y|Y|Y|  
-|6.0|Y|Y|Y|Y|Y|Y|Y|  
-|4.2|Y|Y|Y|Y|Y|Y|Y|  
-|4.1|Y|Y|Y|Y|Y|Y|Y|  
-|4.0|Y|Y|Y|Y|Y|Y|Y|  
-|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|×|Y<sup>5</sup>|×|  
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|×|×|×|×|×|  
-|1.2|Y<sup>3</sup>|×|×|×|×|×|×|  
-|1.1|×|×|×|×|×|×|×|  
-|1.0|×|×|×|×|×|×|×|  
-|2000|×|×|×|×|×|×|×|  
+|ドライバーのバージョン|SQL Server 2008:|SQL Server 2008R2|SQL Server 2012|Azure SQL データベース|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|  
+|-|-|-|-|-|-|-|-|-| 
+|6.2|Y|Y|Y|Y|Y|Y|Y|Y|  
+|6.1|Y|Y|Y|Y|Y|Y|Y|×|  
+|6.0|Y|Y|Y|Y|Y|Y|Y|×|  
+|4.2|Y|Y|Y|Y|Y|Y|Y|×|  
+|4.1|Y|Y|Y|Y|Y|Y|Y|×|  
+|4.0|Y|Y|Y|Y|Y|Y|Y|×|  
+|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|×|Y<sup>5</sup>|×|×|  
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|×|×|×|×|×|×|  
+|1.2|Y<sup>3</sup>|×|×|×|×|×|×|×|  
+|1.1|×|×|×|×|×|×|×|×|  
+|1.0|×|×|×|×|×|×|×|×|  
+|2000|×|×|×|×|×|×|×|×|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver version 3.0 は、下位クライアントとして SQL Server 2012 に接続できます。  
   
@@ -106,4 +107,3 @@ ms.lasthandoff: 09/09/2017
  Microsoft SQL Server 用 JDBC Driver は、さまざまなアプリケーション サーバーでテストされています。  これらの製品と互換性のあるドライバー バージョンの詳細情報については、ご利用のアプリケーション サーバーの製造元にお問い合わせください。  
   
   
-

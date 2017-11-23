@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 269c901b4242ae199f6d83fc7f678c29be39e5e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 プロジェクトの種類のマッピング設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -77,7 +75,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |blob (blob)|varbinary(max)|  
 |blob [0..1]|varbinary [1]|  
 |blob [2..8000]|varbinary [*]|  
-|blob [8001..*]|varbinary(max)|  
+|blob [8001.. *]|varbinary(max)|  
 |[bool]|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
@@ -125,18 +123,18 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |各国語文字 varying|nvarchar [1]|  
 |各国語文字がさまざまな [0..1]|nvarchar [1]|  
 |各国語文字がさまざまな [2..4000]|nvarchar [*]|  
-|各国語文字 varying [4001..*]|nvarchar(max)|  
+|各国語文字 varying [4001.. *]|nvarchar(max)|  
 |各国語文字 [0..1]|nchar [1]|  
 |各国語文字 [2..255]|nchar [*]|  
 |各国語 varchar|nvarchar [1]|  
 |各国語 varchar [0..1]|nvarchar [1]|  
 |各国語 varchar [2..4000]|nvarchar [*]|  
-|各国語 varchar [4001..*]|nvarchar(max)|  
+|各国語 varchar [4001.. *]|nvarchar(max)|  
 |nchar|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [0..1]|nvarchar [1]|  
 |nchar varchar [2..4000]|nvarchar [*]|  
-|nchar varchar [4001..*]|nvarchar(max)|  
+|nchar varchar [4001.. *]|nvarchar(max)|  
 |nchar [0..1]|nchar [1]|  
 |nchar [2..255]|nchar [*]|  
 |numeric|numeric|  
@@ -145,7 +143,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |nvarchar|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
-|nvarchar [4001..*]|nvarchar(max)|  
+|nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
 |real [*..255][\*..30]|数値 [*] [\*]|  
 |シリアル|bigint|  
@@ -154,7 +152,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |text|nvarchar(max)|  
 |テキスト [0..1]|nvarchar [1]|  
 |テキスト [2..4000]|nvarchar [*]|  
-|テキスト [4001..*]|nvarchar(max)|  
+|テキスト [4001.. *]|nvarchar(max)|  
 |time|time|  
 |timestamp|datetime|  
 |tinyblob|varbinary [255]|  
@@ -195,10 +193,10 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |符号なし tinyint [*..255]|tinyint|  
 |varbinary [0..1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
-|varbinary [8001..*]|varbinary(max)|  
+|varbinary [8001.. *]|varbinary(max)|  
 |varchar [0..1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
-|varchar [4001..*]|nvarchar(max)|  
+|varchar [4001.. *]|nvarchar(max)|  
 |year|smallint|  
 |year [2..2]|smallint|  
 |year [4..4]|smallint|  
@@ -215,4 +213,3 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 ##### <a name="reset-to-default"></a>[既定値にリセット]  
 すべてのデータ型マッピングを SSMA の既定値にリセットする をクリックします。  
   
-

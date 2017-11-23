@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2611012fe27e268f40f85647411dd8ad66a6651b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 512ad22b6529adcf065cacb219d1f0acc025c306
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-4-populate-the-details-text-box"></a>手順 4: 設定の詳細 テキスト ボックス
 詳細テキスト ボックスに入力、という名前の新しいサブルーチンを作成**recFields**し、次のコードを挿入します。  
@@ -56,5 +54,4 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [インターネット発行シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
- [手順 3: フィールドのリスト ボックスを表示します。](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
-
+ [手順 3: Fields リスト ボックスに値を設定する](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

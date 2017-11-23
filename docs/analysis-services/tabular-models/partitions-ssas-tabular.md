@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions"></a>パーティション
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時に SSDT の [パーティション] ダイアログ ボックスを使用して作成されたパーティションは、モデル ワークスペース データベースに適用されます。 モデルが配置されたときに、モデル ワークスペース データベースに定義されたパーティションが配置済み model データベースで複製されます。 さらに、作成し、SSMS の [パーティション] ダイアログ ボックスを使用して、配置済みモデル データベースのパーティションを管理することができます。  このトピックで提供される情報には、SSDT のパーティション マネージャー ダイアログ ボックスを使用してモデルを作成中に作成されたパーティションがについて説明します。 作成して、配置済みモデルのパーティションの管理については、次を参照してください。[作成および表形式モデル パーティションの管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)です。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/01/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[ワークスペース データベースでのパーティション作成し、管理](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|作成し、SSDT で Partition Manager を使用して、モデル ワークスペース データベースでパーティションを管理する方法について説明します。|  
+|[ワークスペース データベースのパーティションの作成と管理](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|作成し、SSDT で Partition Manager を使用して、モデル ワークスペース データベースでパーティションを管理する方法について説明します。|  
 |[ワークスペース データベースでパーティションの処理](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [データの処理](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
-

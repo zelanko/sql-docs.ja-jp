@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7c63f5ceb89e975cf320d9e84419d34a5fe4ecfc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 086bcee8a9512b74e0f0c81e73400d8fcc20ad3c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-new-tabular-model-project-analysis-services"></a>新しいテーブル モデル プロジェクトを作成する (Analysis Services)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、新しい空白のテーブル モデル プロジェクトを作成する方法について説明します。 新しいモデル プロジェクトを作成した後は、データ ソースからデータをインポートすることによって、モデル プロジェクトの作成を開始できます。  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [モデルのプロパティ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   
-

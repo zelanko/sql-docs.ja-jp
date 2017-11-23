@@ -8,22 +8,20 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86bae72aacde357b372e48f83a429e8102553325
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS での DirectQuery モードの有効化
 
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[モデル]**  >  **[既定のモード]** の順にクリックします。  
   
-2.  モードを [ **DirectQuery**] に設定します。  
+2.  モードを **[ DirectQuery]** に設定します。  
   
     |||  
     |-|-|  
@@ -82,7 +80,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]**の順にクリックします。  
   
-2.  モードを [ **DirectQuery**] に設定します。  
+2.  モードを **[ DirectQuery]** に設定します。  
   
      既定のモードのプロパティは、次のように構成されています。  
   
@@ -113,9 +111,9 @@ ms.lasthandoff: 09/01/2017
   
      DirectQuery モデルの場合は、データベースに定義されている接続は 1つのみです、また、データ ソースはリレーショナルで、サポートされているデータベース型にする必要があります。 手順については、「 [サポートされているデータ ソース &amp;#40;SSAS テーブル&amp;#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)」(DirectQuery モード &#40;SSAS テーブル&#41;) に記載されています。  
   
-2.  [**接続文字列** ] がサーバー、データベース名、および DirectQuery 操作で使用する認証方法を指定します。 SQL Server 認証を使用している場合は、こちらでデータベース ログインを指定できます。  
+2.  **[接続文字列 ]** がサーバー、データベース名、および DirectQuery 操作で使用する認証方法を指定します。 SQL Server 認証を使用している場合は、こちらでデータベース ログインを指定できます。  
   
-3.  [**権限借用情報** ] は、Windows の認証に使用されます。 DirectQuery モードの表形式モデルで有効なオプションは次のとおりです。  
+3.  **[権限借用情報 ]** は、Windows の認証に使用されます。 DirectQuery モードの表形式モデルで有効なオプションは次のとおりです。  
   
     -   **サービス アカウントの使用**。 Analysis Services サービス アカウントがリレーショナル データベースの読み取りアクセス許可を所有している場合、このオプションを選べます。  
   
@@ -142,4 +140,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services インスタンスの監視](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

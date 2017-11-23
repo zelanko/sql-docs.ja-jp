@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b71de5782de713c1c672c527b0c4f495aa865674
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c56107c8558e61e62a98d670ad7e0e2ede9316aa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-the-input-trace-data"></a>入力トレース データの準備
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して分散再生を開始する前に、分散再生管理ツールから前処理段階を開始することで、入力トレース データを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
@@ -64,9 +62,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理ツールのコマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Distributed Replay を構成します。](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

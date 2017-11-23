@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ec20c538020cd9d81e8df262dca3f5b171dbc7a7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
-ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/19/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーで Always Encrypted を使用する
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -259,8 +257,8 @@ Microsoft JDBC Driver for SQL Server は、次の組み込み列マスター キ
 | クラス | 説明 | プロバイダー (検索) 名 |事前登録されているか。|
 |:---|:---|:---|:---|
 |**SQLServerColumnEncryptionAzureKeyVaultProvider**| Azure Key Vault のキー ストアのプロバイダー。| AZURE_KEY_VAULT|不可|
-|**SQLServerColumnEncryptionCertificateStoreProvider**| Windows 証明書ストアのプロバイダー。|MSSQL_CERTIFICATE_STORE|はい
-|**SQLServerColumnEncryptionJavaKeyStoreProvider**| Java キーストアのプロバイダー|MSSQL_JAVA_KEYSTORE|はい|
+|**SQLServerColumnEncryptionCertificateStoreProvider**| Windows 証明書ストアのプロバイダー。|MSSQL_CERTIFICATE_STORE|可
+|**SQLServerColumnEncryptionJavaKeyStoreProvider**| Java キーストアのプロバイダー|MSSQL_JAVA_KEYSTORE|可|
 
 事前登録済みのキー ストア プロバイダーはこれらのプロバイダーを使用し、次に注意してくださいアプリケーション コード変更を加える必要はありません。
 
@@ -635,4 +633,3 @@ SQLServerBulkCopy、既に暗号化され、データの暗号化を解除せず
  [Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
-

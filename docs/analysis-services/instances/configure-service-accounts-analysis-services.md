@@ -20,17 +20,16 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8557ed990a03d36aaf4728726de1bb3dd67d6c9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
   製品全体のアカウントの準備については、 [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)サービスに関する包括的なサービス アカウントの情報を提供するトピック、「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows サービス アカウントと権限の構成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
@@ -168,4 +167,3 @@ ms.lasthandoff: 09/01/2017
  [アクセス制御リスト (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   
-

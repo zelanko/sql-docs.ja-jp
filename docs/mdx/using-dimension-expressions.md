@@ -5,34 +5,31 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - expressions [MDX], dimensions
 - dimensions [Analysis Services], MDX
 ms.assetid: 1d40cffb-e88f-4284-93cf-d62ab4f08395
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c48cf34963f4fb496537cf1573cd4974949a672e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66a955b547f5760ae1193b541fde5f3dc13d323f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-dimension-expressions"></a>ディメンション式の使用
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   ディメンション式と階層式は通常、階層からメンバー、セット、または組を返すために多次元式 (MDX) 内で関数にパラメーターを渡す場合に使用します。  
   
- ディメンション式はオブジェクト識別子なので、単純式のみを指定できます。 参照してください[式 & #40 です。MDX と #41 です。](../mdx/expressions-mdx.md)単純式と複合式の説明。  
+ ディメンション式はオブジェクト識別子なので、単純式のみを指定できます。 参照してください[式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)単純式と複合式の説明。  
   
 ## <a name="dimension-expressions"></a>ディメンション式  
  ディメンション式には、ディメンション識別子またはディメンション関数のいずれかが含まれます。  
@@ -73,7 +70,6 @@ ms.lasthandoff: 08/02/2017
  階層識別子は*Dimension_Name**.**Hierarchy_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
   
 ## <a name="see-also"></a>参照  
- [式 & #40 です。MDX と #41 です。](../mdx/expressions-mdx.md)  
+ [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)  
   
   
-

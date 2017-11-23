@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PerspectiveMeasureGroup Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PerspectiveMeasureGroup Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- PerspectiveMeasureGroup
-helpviewer_keywords:
-- PerspectiveMeasureGroup data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: PerspectiveMeasureGroup
+helpviewer_keywords: PerspectiveMeasureGroup data type
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 734858ba7fe6e474935e69c326dd32699b730b53
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d4d08c7ed06c8b13d648858d2024dfe605d7cbe4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>PerspectiveMeasureGroup データ型 (ASSL)
   内のメジャー グループに関する情報を表すプリミティブ データ型を定義、[パースペクティブ](../../../analysis-services/scripting/objects/perspective-element-assl.md)要素。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

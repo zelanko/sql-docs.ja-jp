@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NullKeyNotAllowed Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NullKeyNotAllowed Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NullKeyNotAllowed
-helpviewer_keywords:
-- NullKeyNotAllowed element
+applies_to: SQL Server 2016 Preview
+f1_keywords: NullKeyNotAllowed
+helpviewer_keywords: NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 45ad433dc247749c466f05896a89bc25bee0680d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 834a0e3728c99d41db1e7871e2c95eec96d1b922
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nullkeynotallowed-element-assl"></a>NullKeyNotAllowed 要素 (ASSL)
   決定する方法、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]処理エンジンが処理中に発生した null キー エラーを処理します。  
@@ -80,7 +74,6 @@ ms.lasthandoff: 09/01/2017
  許可される値に対応する列挙**NullKeyNotAllowed**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ErrorOption>します。  
   
 ## <a name="see-also"></a>参照  
- [ErrorConfiguration 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)  
+ [ErrorConfiguration 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)  
   
   
-

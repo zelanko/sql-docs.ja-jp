@@ -24,17 +24,16 @@ helpviewer_keywords:
 - PROBABILITY_VARIANCE column
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 32b46928378a30daa9d998090d61b9a3ef19438c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d114c3495c213e5493e3ccb87c1201d0517e4edf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="classified-columns-data-mining"></a>分類済みの列 (データ マイニング)
   分類済みの列を定義する場合は、マイニング構造内の現在の列と別の列の間でリレーションシップを作成します。 マイニング構造内で分類済みの列として指定した列のデータには、その構造内の別の列の値について説明した分類情報が含まれています。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [データ型 (データ マイニング)](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   
-

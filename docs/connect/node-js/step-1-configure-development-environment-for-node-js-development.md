@@ -8,22 +8,20 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4e41033ffb30801fd388f7816c34c8a7751daa9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>手順 1: Node.js 開発のための開発環境を構成します。
 SQL Server の Node.js のドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。  面倒のモジュールをインストールするノードのパッケージ マネージャー (npm) を使用する最も一般的な方法ですが、直接に面倒なモジュールをダウンロードする[Github](https://github.com/pekim/tedious)したい場合。  
@@ -107,4 +105,3 @@ c. ダウンロードされると、実行、dmg Node.js をインストール�
 > npm install tedious  
 ```  
   
-

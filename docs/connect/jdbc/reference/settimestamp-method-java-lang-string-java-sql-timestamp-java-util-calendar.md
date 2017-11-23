@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar))
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar))
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 09dca1f9-225a-4acb-9857-9a947e0829be
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8a03050ce13735ea1e4adaf35fec1563885b9ff
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6e4c2ce26ae2a057f1b184311e31fbdb907e9ba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp-javautilcalendar"></a>setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,9 +60,8 @@ public void setTimestamp(java.lang.String sCol,
  この setTimestamp メソッドは、java.sql.CallableStatement インターフェイスの setTimestamp メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [setTimestamp メソッド & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
+ [setTimestamp メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - editing data [ADO], adding multiple fields
 - editing data [ADO], AddNew method
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 545e1aa8853390a5aed0153bef8a312b220d1e96
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61f6d3c21d4260126f67511c31bbcc680a2da6fa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adding-multiple-fields-and-values"></a>複数のフィールドと値の追加
 フィールドとを対応する値の配列を渡す方が効率的である可能性がある場合によっては、 **AddNew**設定ではなく、メソッド、**値**の新しいフィールドごとに複数回です。 場合*FieldList* 、配列は、*値*配列でなければなりませんも同じメンバーの数、それ以外のエラーが発生します。 フィールド名の順序は、各配列内のフィールド値の順序と一致する必要があります。 次のコードは、フィールドの配列と値の配列を渡します、 **AddNew**メソッドです。
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
     objRs1.UpdateBatch
 'EndAddNew2
 ```
-

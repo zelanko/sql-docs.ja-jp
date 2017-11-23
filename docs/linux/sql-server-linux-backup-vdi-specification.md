@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI クライアント SDK 仕様 SQL Server
 
@@ -200,7 +199,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**pCmd** |これは以前 ClientVirtualDevice::GetCommand から返されたコマンドのアドレスです。
 | |**completionCode** |これは、完了ステータスを示すステータス コードです。 このパラメーターは、すべてのコマンドを返す必要があります。 返されたコードを実行中のコマンドを適切にする必要があります。 すべてのケースでは、error_success を返しますを使用して正常に実行されたコマンドを表すできます。 コードの完全な一覧をファイルを参照してください。 vdierror.h です。 このドキュメントの後半で、「コマンド」に各コマンドの一般的なステータス コードの一覧が表示されます。
 | |**bytesTransferred** |これは、正常に転送されたバイト数です。 これは、コマンドは、読み取りし、書き込みのデータ転送にのみ返されます。
-| |**position** |これは、GetPosition コマンドのみへの応答です。
+| |**位置** |これは、GetPosition コマンドのみへの応答です。
         
 | 戻り値 | 引数 | 説明
 | ----- | ----- | ------ |
@@ -330,6 +329,5 @@ Remarks GetBufferHandle 関数を呼び出すプロセスは、データ転送�
 | |**VD_E_INVALID** |PpBuffer は、無効なハンドルです。
 
 **「解説」**は注意が必要、ハンドルを正常に通信します。 ハンドルは、1 つの仮想デバイスのセットに対してローカルです。 ハンドルを共有するパートナーのプロセスは、そのバッファー ハンドルを使用して、仮想デバイスのバッファーが最初に取得されたセットのスコープ内でのみを確認してください。
-
 
 

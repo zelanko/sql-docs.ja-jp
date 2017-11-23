@@ -24,17 +24,16 @@ helpviewer_keywords:
 - dimensions [Analysis Services], modifying
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 015ecb28286589516d78476caf0f12938980ad5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5ca1ff1e48da8fb464ffe9d2e8c7a4427980030
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>BI ウィザード - ディメンションの書き戻しを有効にします。
   キューブまたはディメンションにディメンション書き戻し拡張機能を追加すると、ユーザーはディメンション構造とメンバーを手動で変更できます。 書き込みが可能なディメンションに加えた更新は、ディメンション テーブルに直接記録されます。 この拡張機能により、ディメンションの **WriteEnabled** プロパティ設定が変更されます。  
@@ -66,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [書き込み許可ディメンション](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

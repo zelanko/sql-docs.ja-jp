@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables オブジェクト (TMSL)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
  IsHidden  
  テーブルを扱うかどうかを示すブール値の視覚エフェクトのクライアント ツールで非表示として。  
-テーブルとして扱われる場合は true。 非表示になります。それ以外の場合は false。  
+テーブルを非表示扱いとする場合は true、それ以外の場合は false です。  
   
  列  
  テーブル内の列を表します。 Table オブジェクトの子です。 各列は、さまざまなクライアント アプリケーションが、列のデータを視覚化する方法に影響を与えることで定義されたプロパティを持っています。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/01/2017
  クライアント アプリケーションの論理階層ドリルダウン パスを提供するレベルのコレクションを表します。 Table オブジェクトの子です。  
   
 ## <a name="usage"></a>使用方法  
- テーブル オブジェクトを使用[Alter コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、[コマンド &#40; を更新TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ テーブル オブジェクトを使用[Alter コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、[コマンド &#40; を更新TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  作成する場合、置換、またはテーブル オブジェクトを変更することは、オブジェクト定義のすべての読み取り/書き込みプロパティを指定します。 読み取り/書き込みプロパティの省略は、削除であると見なされます。  
   
@@ -825,4 +824,3 @@ ms.lasthandoff: 09/01/2017
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2308e32d81d9a3044bfe0583373fd54fdd93852
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9b92232ff44db431bf7b6f05a7f61da100dc556
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>フィルターおよび RecordCount のプロパティの例 (vc++)
 この例では、[フィルター](../../../ado/reference/ado-api/filter-property.md)を開くには、新しいプロパティ[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)既存に適用される、指定した条件に基づいて**Recordset**です。 使用して、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)を 2 つのレコードの数を表示するプロパティ**レコード セット**です。 FilterField 関数は、この手順を実行する必要があります。  
@@ -313,5 +310,4 @@ Scootney Books, USA
 ## <a name="see-also"></a>参照  
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

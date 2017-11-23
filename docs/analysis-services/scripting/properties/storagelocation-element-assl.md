@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- StorageLocation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: StorageLocation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- StorageLocation
-helpviewer_keywords:
-- StorageLocation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: StorageLocation
+helpviewer_keywords: StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f29d736c11dd7297d024bc9e6f72c93a521e84ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cce8a6a58798784adfe4885a18b26670a6af756b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="storagelocation-element-assl"></a>StorageLocation 要素 (ASSL)
   親要素のコンテンツを収めるファイル システム ストレージの場所を格納します。  
@@ -76,7 +70,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**StorageLocation**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.Cube>、 <xref:Microsoft.AnalysisServices.MeasureGroup>、および<xref:Microsoft.AnalysisServices.Partition>です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

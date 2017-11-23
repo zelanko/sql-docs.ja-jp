@@ -8,29 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], string concatenation
 - plus sign (+)
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0b59fd1684371e3b05920a3cb8b438487bf7628d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bf0c19cc6e7058878de8daf3e3d263b4a06b283
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="string-operators-transact-sql"></a>文字列演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +37,14 @@ ms.lasthandoff: 09/01/2017
 ## <a name="section-heading"></a>セクション見出し  
  [+ (文字列連結)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+ = (文字列連結)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [+ = (文字列連結代入)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
  [% (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [& #91。& #93 です。(ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+ [& #91。&#93;です。(ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
  [& #91、^ (& a) #93 です。(ワイルドカード - 一致しない文字列)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
  [_ (ワイルドカード - 一致する 1 文字)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   
-

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20af8fee22fed66c9ed516d37fc73ea413682e69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6b5e8e22040a8d2c680e7ab14ead804ead600d77
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;サービス名&gt;プロパティ ([サービス] タブ)
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
@@ -50,14 +48,13 @@ ms.lasthandoff: 08/02/2017
  **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   [手動]: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   「自動」: このサービスは、コンピューターの起動時に開始を試みます。  
+-   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
   
--   「無効」: このサービスは開始できません。  
+-   \[無効]: このサービスは開始できません。  
   
  **状態**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  
   
   
-

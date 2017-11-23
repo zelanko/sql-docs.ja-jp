@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 035348a23627db2346d319c69030e74e128e744b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
   このトピックでは、SharePoint 配置の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーのシングル サーバー インストールを行う手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **中間層:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーなどの SharePoint の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] エクスペリエンスを強化します。 中間層のインストールと構成の詳細については、以下を参照してください。  
   
-    -   [インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+    -   [Power Pivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
     -   [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -128,7 +127,7 @@ ms.lasthandoff: 09/01/2017
   
     -   サービス アカウントには自分のドメイン ユーザー アカウントを指定しないでください。 このようなアカウントを使用すると、ネットワークのリソースに対して持っている権限と同じ権限をサーバーに付与することになります。 悪意のあるユーザーがサーバーに侵入した場合、そのユーザーは管理者のドメイン資格情報を使用してログオンします。 そのユーザーは、管理者と同じデータやアプリケーションをダウンロードしたり使用したりする権限を持ちます。  
   
-     **[ 次へ]** を選択します。  
+     **[次へ]** を選択します。  
   
      ![SQL のセットアップ - サーバー構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL セットアップ - サーバー構成のランディング ページ")  
   
@@ -319,4 +318,3 @@ ms.lasthandoff: 09/01/2017
  [ブックと定期データ更新 &#40; をアップグレードします。SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   
-

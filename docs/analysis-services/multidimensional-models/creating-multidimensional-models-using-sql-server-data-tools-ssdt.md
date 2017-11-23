@@ -21,17 +21,16 @@ helpviewer_keywords:
 - projects [Analysis Services]
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8069e4cb513ca83cd161564c6d9a0b2284890fdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f6516c119723c537d64481d17692d504df7f651
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>SQL Server データ ツール (SSDT) を使用した多次元モデルの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの作成、配置、管理を行うために [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]という 2 つの環境が提供されています。 この 2 つの環境には、プロジェクト システムが実装されています。 Visual Studio プロジェクトの詳細については、MSDN ライブラリの「 [コンテナーとしてのプロジェクト](http://go.microsoft.com/fwlink/?LinkId=63960) 」を参照してください。  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [多次元モデル データベース &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7e2cfa87e6eca8ee933fa42686f12070ce9dca7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 646c4b12597380221671a5894118b86a57f84dd1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>データ ソース ビューでのスキーマの更新 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベースでデータ ソース ビュー (DSV) を定義した後に、基になるデータ ソースのスキーマが変更される場合があります。 開発プロジェクトでは、これらの変更は自動的に検出または更新されません。 さらに、プロジェクトをサーバーに配置した場合に、Analysis Services が外部データ ソースに接続できないという処理エラーが発生します。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

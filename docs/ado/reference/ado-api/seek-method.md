@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset21::Seek
 - Recordset21::raw_Seek
-helpviewer_keywords:
-- Seek method [ADO]
+helpviewer_keywords: Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2e6e7d303e8cf1bad6edc21b22832ab76df5244
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d401bca51d735b2d0d633716cee732ad2ab9a086
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="seek-method"></a>Seek メソッド
 インデックスを検索、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に指定した値に一致する行に現在の行位置を変更した行をすばやく検索します。  
@@ -58,11 +55,10 @@ recordset.Seek KeyValues, SeekOption
  このメソッドは、必ず際に使用される、 **Recordset**でオブジェクトが開かれた、 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)の値**adCmdTableDirect**です。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [メソッドとインデックスのプロパティの例 (VB) にシークします。](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [メソッドとインデックスのプロパティの例 (vc++) にシークします。](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Index プロパティ](../../../ado/reference/ado-api/index-property.md)
-

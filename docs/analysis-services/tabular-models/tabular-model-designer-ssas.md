@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>テーブル モデル デザイナー (SSAS)
 テーブル モデル デザイナーは、Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の一部であり、プロフェッショナルなテーブル モデル ソリューションの開発のために特化したプロジェクトの種類のテンプレートが付属しています。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。    
@@ -121,7 +119,7 @@ ms.lasthandoff: 10/20/2017
  既定では、 **エラー一覧** は、エラーが返されない限り表示されません。 ただし、 **エラー一覧** ウィンドウはいつでも表示できます。 **エラー一覧** ウィンドウを表示するには、 **[表示]** メニューをクリックしてから **[エラー一覧]**をクリックします。  
   
 ### <a name="output"></a>出力  
- ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **表示** をクリックしてから 出力をクリックします。  
+ ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **[表示]** をクリックしてから [出力] をクリックします。  
   
 ### <a name="menu-items"></a>メニュー項目  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルの作成のために特化したメニュー項目が Visual Studio のメニュー バーに追加されます。 **[モデル]** メニューを使用して、データ インポート ウィザードを起動したり、既存の接続を表示したり、ワークスペース データを処理したりできるほか、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel でモデル ワークスペースを参照することもできます。 **[テーブル]** メニューは、テーブル間のリレーションシップの作成と管理、メジャーの作成と管理のほか、データ テーブルの設定や計算オプションなど、各種のテーブル プロパティを指定する際に使用します。 **[列]** メニューでは、テーブル内の列の追加と削除、列の表示と非表示のほか、列のプロパティ (データ型、フィルターなど) を指定することができます。 テーブル モデル ソリューションは、 **[ビルド]** メニューからビルドおよび配置できます。 コピーと貼り付けの機能は、 **[編集]** メニューに含まれています。  
@@ -146,4 +144,3 @@ ms.lasthandoff: 10/20/2017
  [プロパティ (SSAS テーブル)](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
-

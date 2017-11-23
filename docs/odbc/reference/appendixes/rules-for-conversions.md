@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 673b0a0ca903e5607822f78363c300f40a2df0ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rules-for-conversions"></a>変換に関する規則
 このセクションの規則は、数値リテラルを使用する変換の適用されます。 これらの規則の目的で、次の用語が定義されています。  
@@ -83,7 +81,7 @@ ms.lasthandoff: 09/09/2017
   
     -   NS が 0 未満の場合は、結果である Y を使用します。  
   
-         '-' &#124; & #124 です。YP  
+         '-' &#124; &#124;です。YP  
   
          場所 ' (& a) #124; &#124;' は、文字列連結演算子です。  
   
@@ -110,4 +108,3 @@ ms.lasthandoff: 09/09/2017
          (2)、ドライバーが適切な小数点以下桁数 (これも 0 にすることができます) を Y で文字列を丸めます、-2-x に結果を書き込みます  
   
          (3) ドライバーも切り捨てますも丸めますがだけ-2-x に Y の最初の LT 文字をコピー
-

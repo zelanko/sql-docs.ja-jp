@@ -23,17 +23,16 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f690c0226a15794d36b70a72d679972a5f34918
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX データ操作のパスを理解する順序し、解決順序
   MDX スクリプトの結果としてキューブが計算される場合、計算に関連するさまざまな機能の使われ方によっては、キューブは多数の計算段階をたどることがあります。 それらの各段階は、計算パスと呼ばれます。  
@@ -224,9 +223,8 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [CalculationCurrentPass (MDX)](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue & #40 です。MDX と #41 です。](../../../mdx/calculationpassvalue-mdx.md)   
+ [CalculationPassValue &#40;です。MDX と #41 です。](../../../mdx/calculationpassvalue-mdx.md)   
  [CREATE MEMBER ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
  [データの操作 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

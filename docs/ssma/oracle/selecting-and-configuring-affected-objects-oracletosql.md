@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 8679e3f18c8352b1a10f110354af6dafc0c7e81c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 75fd62bd569709733c1915357057d9b8a88556e6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けたオブジェクト (OracleToSQL) の選択と構成
 このページでは、テーブルを選択して、SSMA、前の手順で選択されたオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズすることができます。  
@@ -33,7 +31,7 @@ Oracle オブジェクト ツリーで、ウィンドウの左側にある、テ
   
 SSMA テスターは、これらのオブジェクトのいずれかを確認できない場合、は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトを比較することはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>テーブル  
 あるテーブル タブには、選択されたテーブルのグリッド ビューが含まれています。 グリッドには、選択したテーブルについては、次の情報が含まれています。  
   
 -   列名  
@@ -55,10 +53,10 @@ SSMA テスターは、これらのオブジェクトのいずれかを確認で
 ## <a name="sql"></a>Sql  
 [SQL] タブには、"Create table"が含まれています。 選択されたテーブルの SQL です。  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>data  
 [データ] タブでは、選択されたテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>[プロパティ]  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更されました。  
@@ -119,4 +117,3 @@ SSMA テスターによって生成された SELECT ステートメントを表�
 [実行するテスト_ケース &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

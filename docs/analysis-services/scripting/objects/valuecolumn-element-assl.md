@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ValueColumn Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ValueColumn Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ValueColumn element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ValueColumn element
 ms.assetid: 6c2d6822-8ecc-46df-9fa9-bb92ac716c36
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4413367639b3cc712e2b068ef0b34fce1f277431
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c17b9dea933e1beee1f4957a9bb6f82c669963be
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="valuecolumn-element-assl"></a>ValueColumn 要素 (ASSL)
   親要素の値を指定する列を識別します。  
@@ -67,12 +62,11 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>解説  
  場合、 [NameColumn](../../../analysis-services/scripting/objects/namecolumn-element-assl.md)要素の**DimensionAttribute**が指定されている同じ**DataItem**値の既定値として使用されます、 **ValueColumn**要素。 場合、 **NameColumn**要素の**DimensionAttribute**が指定されていないと、 [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)のコレクション**DimensionAttribute**1 つを含む[KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)要素のキー列と同じ文字列データ型を表す**DataItem**値の既定値として使用されます、 **ValueColumn**要素。  
   
- 詳細については、 **DataItem**の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、 **DataItem**を入力しを参照してください[DataItem データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+ 詳細については、 **DataItem**の Analysis Services スクリプト言語 (ASSL) オブジェクトおよびプロパティのテーブルを含む、型、 **DataItem**を入力しを参照してください[DataItem データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
  親に対応する要素**NameColumn**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.DimensionAttribute>と<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>です。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

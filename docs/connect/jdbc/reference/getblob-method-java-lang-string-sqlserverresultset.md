@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getBlob (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getBlob (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9f730d45-b54a-4961-950e-f4447f7225e1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f99791ca535b7c143c982f18af2709b8bbf1d625
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56b49a9516497f629f538421c7af495e057f870f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getblob-method-javalangstring-sqlserverresultset"></a>getBlob (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,9 +53,8 @@ public java.sql.Blob getBlob(java.lang.String colName)
  この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [getBlob メソッド & #40 です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [getBlob メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

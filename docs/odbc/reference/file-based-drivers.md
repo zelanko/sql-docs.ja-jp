@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], file-based drivers
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c36060b8f5ddf3962b0ba28426f5454d98c04dc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-based-drivers"></a>ファイル ベースのドライバー
 ファイル ベースのドライバーがドライバーを使用するためのスタンドアロン データベース エンジンを提供しない dBASE などのデータ ソースで使用されます。 これらのドライバーでは、物理的なデータに直接アクセスし、プロセス SQL ステートメントをデータベース エンジンを実装する必要があります。 標準的な方法は、ファイル ベースのドライバーでのデータベース エンジンは、最小 SQL への準拠レベルによって定義された ODBC SQL のサブセットを実装します。この準拠レベル内の SQL ステートメントの一覧は、次を参照してください。[付録 c: SQL 文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)です。  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  次の図は、ネットワーク ファイル サーバー上のファイル ベースのドライバー、データがローカルに存在する 1 つが存在する 2 つの異なる構成を示します。  
   
  ![ファイルの 2 つの構成 &#45; ベースのドライバー](../../odbc/reference/media/pr06.gif "pr06")
-

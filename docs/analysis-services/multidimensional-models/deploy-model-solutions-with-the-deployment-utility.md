@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a14f483af32bdef3383020b48e858e6b26280809
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>配置ユーティリティを使用したモデル ソリューションの配置
   **Microsoft.AnalysisServices.Deployment** ユーティリティを使用すると、コマンド プロンプトから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Engine を起動することができます。 入力ファイルとして、このユーティリティは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]プロジェクトを構築することによって生成される XML 出力ファイルを使用します。 この入力ファイルを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置をカスタマイズするための変更を容易に行うことができます。 生成された配置スクリプトは直ちに実行することも、今後の配置のために保存することもできます。  
@@ -99,4 +98,3 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|現在の位置がストリームの末尾にするかどうかを示します。|  
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|内のデータにフィルターを示します、 **Recordset**です。|  
 |[HelpContext と HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|ヘルプ ファイルとに関連付けられているトピックを示します、**エラー**オブジェクト。<br /><br /> **ヘルプ コンテキスト Id**として、コンテキスト ID を返します、**長い**ヘルプ ファイルのトピックの値。<br /><br /> **HelpFile**を返します、**文字列**ヘルプ ファイルの完全に解決されたパスに評価される値。|  
-|[インデックス](../../../ado/reference/ado-api/index-property.md)|有効にインデックスを現在の名前を示す、 **Recordset**オブジェクト。|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|有効にインデックスを現在の名前を示す、 **Recordset**オブジェクト。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|分離のレベルを示す、**接続**オブジェクト。|  
 |[アイテム](../../../ado/reference/ado-api/item-property-ado.md)|名前または序数で、コレクションの特定のメンバーを示します。|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|テキストの行区切り記号として使用するバイナリの文字を示す**ストリーム**オブジェクト。|  
@@ -96,7 +94,7 @@ ms.lasthandoff: 09/09/2017
 |[ステータス (ADO フィールド)](../../../ado/reference/ado-api/status-property-ado-field.md)|状態を示す、**フィールド**オブジェクト。|  
 |[ステータス (ADO レコード セット)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|バッチ更新またはその他の一括操作に関する現在のレコードの状態を示します。|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|階層構造内に示します**レコード セット**オブジェクトかどうか、基になる子レコードへの参照 (つまり、*章*)、親の行の位置が変わったときに変更します。|  
-|[ストリームのプロパティ](../../../ado/reference/ado-api/stream-property.md)|OLE DB の設定を取得または**ストリーム**オブジェクトから/上、 **ADOStreamConstruction**オブジェクト。|  
+|[Stream プロパティ](../../../ado/reference/ado-api/stream-property.md)|OLE DB の設定を取得または**ストリーム**オブジェクトから/上、 **ADOStreamConstruction**オブジェクト。|  
 |[型](../../../ado/reference/ado-api/type-property-ado.md)|操作の種類またはデータ型を示す、**パラメーター**、**フィールド**、または**プロパティ**オブジェクト。|  
 |[型 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)|含まれているデータの種類を示す、**ストリーム**(バイナリまたはテキスト)。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|データベースの現在の値を示す、**フィールド**オブジェクト。|  
@@ -112,5 +110,4 @@ ms.lasthandoff: 09/09/2017
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-
+ [ADO のオブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)

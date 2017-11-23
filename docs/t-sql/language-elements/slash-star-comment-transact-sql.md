@@ -1,5 +1,5 @@
 ---
-title: "スラッシュ スター コメント (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "スラッシュ スター (ブロック コメント) (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -8,36 +8,34 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /*...*/_TSQL
 - Comment
 - /*...*/
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nonexecuting text strings [SQL Server]
 - /*...*/ (comment)
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 60ae52af725a065a8319a2fde1e87e1b8bb52e02
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e617c6f0108906046d6c6ea983d1bbc26082709
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="slash-star-comment-transact-sql"></a>スラッシュ スター コメント (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="slash-star-block-comment-transact-sql"></a>スラッシュ スター (ブロック コメント) (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   ユーザーが入力したテキストを示します。 テキストの間、/* と\*サーバーによっては評価されません。  
   
@@ -109,9 +107,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [--& #40 です。コメント &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/comment-transact-sql.md)   
- [フロー制御言語 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)  
+ [--&#40;です。コメント &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/comment-transact-sql.md)   
+ [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)  
   
   
-
 

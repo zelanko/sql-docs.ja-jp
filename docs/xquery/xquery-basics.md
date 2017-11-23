@@ -5,28 +5,23 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
-helpviewer_keywords:
-- XQuery, about XQuery
+applies_to: SQL Server
+dev_langs: XML
+helpviewer_keywords: XQuery, about XQuery
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e391180ff27492ae72ab8a73c1aa8b7d090c69c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c8e6d9adeadc648dbfe1019fe270d13f26b2e40
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xquery-basics"></a>XQuery の基礎
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +29,7 @@ ms.lasthandoff: 09/01/2017
   ここでは、XQuery の基礎について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [シーケンスと Qname & #40 です。XQuery と #41 です。](../xquery/sequence-and-qnames-xquery.md)  
+ [シーケンスと Qname &#40;です。XQuery と #41 です。](../xquery/sequence-and-qnames-xquery.md)  
  シーケンス、QName、事前定義された名前空間について説明します。  
   
  [式のコンテキストとクエリの評価と #40 です。XQuery と #41 です。](../xquery/expression-context-and-query-evaluation-xquery.md)  
@@ -43,7 +38,7 @@ ms.lasthandoff: 09/01/2017
  [アトミック化と #40 です。XQuery と #41 です。](../xquery/atomization-xquery.md)  
  任意のアイテムの型指定された値を抽出するプロセスであるアトミック化について説明します。  
   
- [有効なブール値 & #40 です。XQuery と #41 です。](../xquery/effective-boolean-value-xquery.md)  
+ [有効なブール値 &#40;です。XQuery と #41 です。](../xquery/effective-boolean-value-xquery.md)  
  実効ブール値について説明します。 この値は、単一のブール値、ノード シーケンス、または空のシーケンスを返す式で計算されます。  
   
  [型システムと #40 です。XQuery と #41 です。](../xquery/type-system-xquery.md)  
@@ -62,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

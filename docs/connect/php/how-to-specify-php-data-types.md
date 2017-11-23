@@ -8,25 +8,23 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bdf64df41db9f108b3131a4a60f328ce0bdeb61
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-specify-php-data-types"></a>方法: PHP データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +39,7 @@ PDO_SQLSRV ドライバーを使用する場合、PDOStatement::bindColumn と P
   
 3.  省略可能な 3 つ目のパラメーターとして指定した目的の PHP データ型の [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、返される行のフィールド データを取得します。 省略可能な 3 つ目のパラメーターが指定されていない場合、既定の PHP 型に従ってデータが返されます。 既定の PHP の戻り値の型については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。  
   
-    PHP データ型の指定に使用される定数については、の Phptype のセクションを参照してください。[定数 & #40 です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    PHP データ型の指定に使用される定数については、の Phptype のセクションを参照してください。[定数 &#40;です。Microsoft Drivers for PHP for SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>例  
 次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルから行を取得します。 返される各行で、 *ReviewDate* フィールドは文字列として取得され、 *Comments* フィールドはストリームとして取得されます。 ストリーム データを表示するには、PHP の [fpassthru](http://php.net/manual/en/function.fpassthru.php) 関数を使用します。  
@@ -118,4 +116,3 @@ sqlsrv_close( $conn);
 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   
-

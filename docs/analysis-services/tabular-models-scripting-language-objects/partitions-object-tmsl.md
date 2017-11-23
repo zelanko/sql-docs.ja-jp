@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6ea3c1f7486caa923bcf5cfc07d83a65e76578e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7580d00c4fa5fa35b215fed991c811489c3f5571
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions-object-tmsl"></a>パーティション オブジェクト (TMSL)
 
@@ -61,14 +60,14 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|  
 |**[なし]**|インポート モード、データの読み込みし、メモリに格納されている場所に使用されます。|  
-|**クエリ**|DirectQuery モードでは、これは、モデルの指定されたリレーショナル データベースに対して実行される SQL クエリ**データソース**です。 参照してください[データソース オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
+|**クエリ**|DirectQuery モードでは、これは、モデルの指定されたリレーショナル データベースに対して実行される SQL クエリ**データソース**です。 参照してください[データソース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
 |**計算**|テーブルの作成時に指定された式から計算テーブルに基づいています。 この式は、計算テーブル用に作成されたパーティションのソースと見なされます。|  
   
  dataview  
  DirectQuery パーティションは、さらに、追加の dataView プロパティは、データを取得するクエリがサンプルか、完全なデータセットがかどうかを指定します。 有効な値は**完全**、**サンプル**、または**既定**(継承)。 前述のように、サンプルは、データ モデリングと、テスト中にのみ使用されます。 参照してください[デザイン モードで DirectQuery モデルにサンプル データを追加する](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md)詳細についてはします。  
   
 ## <a name="usage"></a>使用方法  
- パーティション オブジェクトを使用[Alter コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、[コマンド &#40; を更新TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ パーティション オブジェクトを使用[Alter コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、[コマンド &#40; を更新TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  作成する場合、置換、またはパーティション オブジェクトを変更することは、オブジェクト定義のすべての読み取り/書き込みプロパティを指定します。 読み取り/書き込みプロパティの省略は、削除であると見なされます。 読み取り/書き込みプロパティには、名前、説明、モード、およびソースが含まれます。  
   
@@ -252,4 +251,3 @@ ms.lasthandoff: 09/01/2017
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

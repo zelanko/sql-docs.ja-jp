@@ -23,17 +23,16 @@ helpviewer_keywords:
 - databases [Analysis Services], attach
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f7cc88be76e8ad64d81465543ab4f463c98687e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services データベースのインポートとデタッチ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを一時的にオフラインにした後、そのデータベースを同じサーバー インスタンスまたは別のサーバー インスタンス上でオンラインに戻すことは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。 このような状況だけでなくさまざまな場合に、 **Attach** コマンドと **Detach** コマンドを使用することによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA は、データベースをオフラインにした後、簡単にオンラインに戻すことができます。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Attach 要素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   
   
-

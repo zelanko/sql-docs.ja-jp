@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>キューブ、パーティション、およびディメンションの処理のエラーの構成
   処理中にデータ整合性エラーが発生した場合、キューブ、パーティション、またはディメンション オブジェクトのエラー構成プロパティによって、サーバーの応答が決定します。 通常、キー列の重複キー、見つからないキー、および NULL 値がこのようなエラーをトリガーします。エラーの原因となるレコードはデータベースに追加されず、次の動作を指定するプロパティを設定することができます。 既定では、処理が停止します。 ただし、キューブの開発中に、不完全でもインポートされたデータのキューブの動作をテストできるように、エラーが発生した場合に処理を続行する必要がある場合もあります。  
@@ -195,4 +194,3 @@ ms.lasthandoff: 09/01/2017
  [不明なメンバーと Null 処理のプロパティを定義します。](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

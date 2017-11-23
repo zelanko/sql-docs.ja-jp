@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9704f41686d4859e2b6ba10fbf1ef86ea7a5b23b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1463d2f715bb957c28064840dcf0ce33e3a0f1e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 接続されている DB2 に接続すると後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 データベース オブジェクトに変換するにはプロジェクトの設定とデータのマッピング オプションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトです。  
@@ -160,4 +158,3 @@ DB2 データベース オブジェクトに変換するには、最初に、変
 ## <a name="see-also"></a>参照  
 [SQL Server &#40;DB2ToSQL&#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
-

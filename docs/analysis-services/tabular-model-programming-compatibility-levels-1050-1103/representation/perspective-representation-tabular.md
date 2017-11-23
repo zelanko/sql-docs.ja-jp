@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d4945666e8650497c57bc2795f82378cc4bb269e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fbef7caf08fe13a1f86e9797277c609b836bc5d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspective-representation-tabular"></a>パースペクティブ表現 (テーブル)
   パースペクティブは、クライアント アプリケーション向けに、テーブル モデルをより小さな部分に簡素化したり絞りこんだりするメカニズムです。  
@@ -144,4 +142,3 @@ private void updatePerspective_Click(
  ただし、理解を使用する方法の作成およびパースペクティブ表現を操作するのには AMO を参照してください、AMO to Tabular サンプルのソース コードです。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   
-

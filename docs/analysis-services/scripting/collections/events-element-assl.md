@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Events Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Events Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Events
-helpviewer_keywords:
-- Events element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Events
+helpviewer_keywords: Events element
 ms.assetid: de887998-dc4b-44dc-8fec-08d67b92f96d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8503b64150d65bbe27f87e04fd451630b91c63e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4aca2a4a312bec68facb49b1dda7cbf7f76e242
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="events-element-assl"></a>Events 要素 (ASSL)
   [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) によってキャプチャされる [Event](../../../analysis-services/scripting/objects/event-element-assl.md) 要素のコレクションを定義します。  
@@ -72,8 +66,7 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.TraceEventCollection>します。  
   
 ## <a name="see-also"></a>参照  
- [Traces 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
- [コレクション & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Traces 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
+ [コレクション &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

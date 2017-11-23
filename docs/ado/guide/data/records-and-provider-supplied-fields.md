@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、開いているは、現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL、開いていると組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  
@@ -86,5 +84,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>参照  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

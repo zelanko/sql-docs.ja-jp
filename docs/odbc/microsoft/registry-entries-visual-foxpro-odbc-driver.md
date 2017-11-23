@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>レジストリ エントリ (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーをインストールするときに、インストール プログラムは Microsoft Visual FoxPro ドライバーと呼ばれる新しいキーを追加する、HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini のレジストリ キーに、システムのレジストリを更新します。 そのキーの下では、次の表で説明する値が追加されます。  
@@ -65,4 +63,3 @@ Visual FoxPro ODBC ドライバーをインストールするときに、イン�
  この情報を直接アクセスしないでください。レジストリのすべての管理には、追加、変更、またはデータ ソースを削除するときに ODBC アドミニストレーターによっては処理されます。  
   
  これらのキーワードと値の一部を使用するにはパラメーターとして、 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 関数。
-

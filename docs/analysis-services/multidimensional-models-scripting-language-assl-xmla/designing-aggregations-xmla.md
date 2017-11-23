@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a70f23c8d37218d50713de2f2c65d915ea5f496
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="designing-aggregations-xmla"></a>集計のデザイン (XMLA)
   集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することにより、パーティションに対して同じ記憶域の構造を使用して、 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)です。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 09/01/2017
  たとえば文字列 "011" は、3 つの属性を持つディメンションを処理するクエリの中に、2 番目と 3 番目の属性が含まれることを示しています。  
   
 > [!NOTE]  
->  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外される属性の詳細については、次を参照してください。 [Query 要素 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外される属性の詳細については、次を参照してください。 [Query 要素 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
   
  集計デザインを含むメジャー グループ内の各ディメンションは、 *Query* 要素の **Dataset** の値によって表されます。 *Dataset* の値の順序は、メジャー グループに含まれるディメンションの順序と一致している必要があります。  
   
@@ -124,7 +122,6 @@ ms.lasthandoff: 09/01/2017
  それぞれの後に返される行セットに含まれるデザインの統計を使用する**DesignAggregations**反復の両方でコマンドとバッチ設計します。 反復処理によるデザインの場合、進行状況の判別と表示を行うために、デザインの統計を使用できます。 集計をバッチ処理によってデザインする場合は、コマンドによって作成された集計の数を判断するために、デザインの統計を使用できます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

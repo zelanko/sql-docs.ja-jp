@@ -1,24 +1,22 @@
 ---
 title: "SQL Server での Python 統合コンポーネント |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Python の統合をサポートするために SQL Server のコンポーネント
 
@@ -116,9 +114,9 @@ SQL サテライトは、windows の拡張イベント (Xevent) を使用して�
 
 ストアド プロシージャに埋め込まれたスクリプト、ストアド プロシージャを呼び出すと、すべてのアプリケーションは、Python コードの実行を開始できます。  その後[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]の次の図に示すように、コードの実行を管理します。
 
-![スクリプトで db python](../../advanced-analytics/python/media/script-in-db-python.png)
+![スクリプトで db python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Python ランタイムの要求が、パラメーターで示される _@language= 'Python'_ストアド プロシージャに渡されます。 SQL Server では、スタート パッド サービスにこの要求を送信します。
+1. Python ランタイムの要求が、パラメーターで示される`@language='Python'`ストアド プロシージャに渡されます。 SQL Server では、スタート パッド サービスにこの要求を送信します。
 2. スタート パッド サービスの開始、適切なランチャーです。この場合、PythonLauncher です。
 3. PythonLauncher は、Python35 の外部プロセスを開始します。
 4. BxlServer は、データの交換と作業の結果のストレージを管理する Python ランタイムと連携します。
@@ -131,11 +129,11 @@ SQL サテライトは、windows の拡張イベント (Xevent) を使用して�
 ラップトップなどのリモート コンピューターから Python スクリプトを実行し、これらの条件が満たされる場合がある SQl Server コンピューターのコンテキストで実行したりできます。
 
 + スクリプトを適切にデザインします。
-+ リモート コンピューターには、Machine Learning サービスによって使用されている機能拡張ライブラリがインストールされています。
++ リモート コンピューターには、Machine Learning サービスによって使用されている機能拡張ライブラリがインストールされます。 [Revoscalepy](what-is-revoscalepy.md)パッケージがリモート計算コンテキストを使用するために必要です。
 
 次の図は、スクリプトがリモート コンピューターから送信されるときに、全体的なワークフローをまとめたものです。
 
-![リモート sqlcc から python](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
+![リモート sqlcc から python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. サポートされている関数の**revoscalepy**、Python ランタイムは BxlServer を呼び出し、リンクの関数を呼び出します。
 2. BxlServer では、Machine Learning Services (In-database) に含まれてし、Python ランタイムから別のプロセスで実行します。
@@ -150,4 +148,3 @@ SQL サテライトは、windows の拡張イベント (Xevent) を使用して�
 ## <a name="next-steps"></a>次の手順
 
 [SQL Server での Python のアーキテクチャの概要](architecture-overview-sql-server-python.md)
-

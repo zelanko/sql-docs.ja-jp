@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, objects and collections
+helpviewer_keywords: ADO, objects and collections
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a6796b6511c81dc2a4f9100f656478bef3711b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ec860c8e4d3766b983e38589418637c1d4eb3cc9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-objects-and-collections"></a>ADO オブジェクトとコレクション
 ADO は、次の 9 つのオブジェクトと 4 つのコレクションで構成されます。  
@@ -47,5 +44,4 @@ ADO は、次の 9 つのオブジェクトと 4 つのコレクションで構�
 |**エラー**コレクション|すべてが含まれています、**エラー** 1 つのプロバイダーに関連する障害への応答で作成されたオブジェクト。|  
   
 ## <a name="see-also"></a>参照  
- [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)
-
+ [ADO のオブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)

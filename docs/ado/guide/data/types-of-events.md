@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f33ed98f367560da7f4b60d5a754d99937319358
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 502c77b55eb0e3a60497fa10bf9fe8c8a412dc4d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="types-of-events"></a>イベントの種類
 2 つの基本的な種類のイベントがあります。 「は、イベント」と呼ばれる操作の開始前に、通常、名前に「は」を含める-たとえば、 **WillChangeRecordset**または**WillConnect**です。 通常、イベントが完了した後に呼び出されるイベントが、名前に「完了」を含める-たとえば、 **RecordChangeComplete**または**ConnectComplete**です。 例外の存在-など**InfoMessage** — がこれらは、関連する操作が完了した後にエラーが発生します。  
@@ -49,5 +47,4 @@ ms.lasthandoff: 09/09/2017
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [言語によって、ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [イベントのパラメーター](../../../ado/guide/data/event-parameters.md)   
- [イベント ハンドラーがどのように連携](../../../ado/guide/data/how-event-handlers-work-together.md)
-
+ [複数のイベント ハンドラーの連携方法](../../../ado/guide/data/how-event-handlers-work-together.md)

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 797d3439b378cb5caef62af019352ff6797fdb43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>ドライバー マネージャーの &#39; 接続プロセスでの役割
 あるアプリケーション直接呼び出さないでくださいドライバー関数に注意してください。 同じ名前のドライバー マネージャーの関数を呼び出すし、ドライバー マネージャーがドライバー関数を呼び出します。 通常、これはほぼ即座にです。 たとえば、アプリケーションを呼び出す**SQLExecute**ドライバー マネージャーで、いくつかのエラー チェックした後、ドライバー マネージャーは、呼び出し**SQLExecute**ドライバーにします。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  ドライバー マネージャーは、環境ハンドルがロックされます (*henv*)、運転免許を呼び出す前に**SQLAllocHandle**と**SQLFreeHandle**とき*HandleType*に設定されている**sql_handle_dbc として**です。  
   
  アプリケーションを呼び出すと**SQLDisconnect**、ドライバー マネージャー呼び出し**SQLDisconnect**ドライバーにします。 ただし、アプリケーションがドライバーに再接続する場合に読み込まれているドライバーに任せます。 アプリケーションを呼び出すと**SQLFreeHandle** sql_handle_dbc としてオプションを使用して、ドライバー マネージャーを呼び出す**SQLFreeHandle**ドライバーにします。 他の接続で、ドライバーを使用しない場合、ドライバー マネージャーは、呼び出し**SQLFreeHandle** sql_handle_env として使用してドライバーのオプションを選択し、ドライバーをアンロードします。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>カーソルの特性とカーソルの種類
 アプリケーションでは、(順方向専用、静的、キーセット ドリブンまたは動的) カーソルの種類を指定する代わりに、カーソルの特性を指定できます。 これを行うには、アプリケーションが選択されます (属性を設定して、SQL_ATTR_CURSOR_SCROLLABLE ステートメント) のカーソルのスクロール機能と感度 (属性を設定して、SQL_ATTR_CURSOR_SENSITIVITY ステートメント) のステートメントでカーソルを開く前に処理します。 ドライバーは、アプリケーションが要求した特性をする最も効率的に提供する、カーソルの種類を選択します。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_CURSOR_FORWARD_ONLY に SQL_ATTR_CURSOR_TYPE|SQL_ATTR_CURSOR_SCROLLABLE を SQL_NONSCROLLABLE にします。|  
 |SQL_CURSOR_KEYSET_DRIVEN に SQL_ATTR_CURSOR_TYPE|SQL_SCROLLABLE に SQL_ATTR_SCROLLABLE です。<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED または SQL_SENSITIVE (ドライバーの定義済み条件に従って、SQL_ATTR_CONCURRENCY を SQL_CONCUR_READ_ONLY ではない場合)。|  
 |SQL_CURSOR_STATIC に SQL_ATTR_CURSOR_TYPE|SQL_SCROLLABLE に SQL_ATTR_SCROLLABLE です。<br /><br /> SQL_ATTR_SENSITIVITY SQL_INSENSITIVE (SQL_ATTR_CONCURRENCY が SQL_CONCUR_READ_ONLY の場合) にします。<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED または SQL_SENSITIVE (SQL_ATTR_CONCURRENCY が SQL_CONCUR_READ_ONLY でない場合)。|
-

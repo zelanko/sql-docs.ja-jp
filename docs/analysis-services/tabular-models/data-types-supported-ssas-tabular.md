@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 79512ded963b6568346c261b69c100b77e03bc74
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: d86b23c7c1b56d7407e0068c2e77e184be1aa36d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表形式モデルでサポートされるデータ型
 
@@ -86,7 +85,7 @@ ms.lasthandoff: 10/21/2017
   
 -   2 つの列内の値を加算する場合に、1 つの値がテキスト ("12") で表現され、他の値が数値 (12) で表現されているとき、DAX では文字列を数値に暗黙的に変換してから加算が実行され、数値の結果が得られます。 次の式では、44: = "22" + 22 が返されます。  
   
--   2 つの数値を連結しようとする場合は文字列として表示し、連結しています。 次の式では、"1234": = 12 & 34 が返されます。  
+-   2 つの数値を連結しようとする場合は文字列として表示し、連結しています。 次の式では、"1234": = 12 &34;が返されます。  
   
  次の表に、数式で実行される暗黙的なデータ型変換をまとめました。 通常、セマンティック モデル デザイナーの動作は Microsoft Excel と似ていますが、指定された演算に必要な場合は可能な限り暗黙的な変換を実行します。  
   
@@ -172,4 +171,3 @@ ms.lasthandoff: 10/21/2017
   
  特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)」セクションの各 DAX 関数のトピックを参照してください。  
   
-

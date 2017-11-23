@@ -11,20 +11,18 @@ ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, about
+helpviewer_keywords: ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0d9da4cba3b4d90d82b3ac66ffec68a0e961ec40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28fa2c279cfd7964d8516514a3caed129e335692
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -56,13 +54,13 @@ ADO は、SQL Server に接続する C++ プログラムで使用されます。
  ADOX は、コア ADO オブジェクト コンパニオン ライブラリです。 これは、作成、変更、およびテーブルおよびプロシージャなどのスキーマ オブジェクトを削除するオブジェクトを公開します。 ユーザーとグループの管理とを与えるオブジェクトに対する権限を取り消すセキュリティ オブジェクトも含まれています。  
   
 ## <a name="documentation"></a>ドキュメント  
- [ADO セキュリティのデザインに関する問題](../ado/guide/ado-security-design-issues.md)  
+ [ADO セキュリティ デザイン機能に関する問題](../ado/guide/ado-security-design-issues.md)  
   
- [ADO プログラマ ガイド](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO プログラマー ガイド](../ado/guide/ado-programmer-s-guide.md)  
   
  ADO、RDS、ADO MD ADOX を使用して概要です。  
   
- [ADO プログラマーズ リファレンス](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO プログラマー リファレンス](../ado/reference/ado-programmer-s-reference.md)  
   
  ADO のドキュメントのこのセクションには、各 ADO、RDS、ADO MD と ADOX オブジェクト、コレクション、プロパティ、動的なプロパティ、メソッド、イベント、および列挙体についてのトピックが含まれています。  
   
@@ -72,6 +70,5 @@ ADO は、SQL Server に接続する C++ プログラムで使用されます。
  無料の ADO 問題がある役立ちますが、ADO パブリック ニュースグループに投稿してください。 このニュースグループは、他の経験を積んだ ADO 開発者と ADO をカバーするマイクロソフト製品サポート サービス (PSS) のサポート担当者によって監視されます。  
   
  サポート オプションの詳細については、Microsoft ヘルプとサポート Web サイトで参照できます。
-
 
 

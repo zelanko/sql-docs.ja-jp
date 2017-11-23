@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LNum Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LNum Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.lnum
 - urn:schemas-microsoft-com:xml-analysis#LNum
 - http://schemas.microsoft.com/analysisservices/2003/engine#LNum
-helpviewer_keywords:
-- LNum element
+helpviewer_keywords: LNum element
 ms.assetid: 7b9cc143-0c5e-4a8c-a288-8921bfcfd103
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 92c25621cf0f67598f99bc451df37e01f6cd5a2c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e020166ca3b3d1d2923e64ebfaaa6cba14a27edf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lnum-element-xmla"></a>LNum 要素 (XMLA)
   親のレベルの序数位置に関する情報を格納[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md)または[メンバー](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)要素。  
@@ -74,7 +69,6 @@ ms.lasthandoff: 09/01/2017
  **メンバー** 、要素、 **LNum**要素には、0 から始まる序数の位置、階層のルート レベルから親によって表されるメンバーにはが含まれています[メンバー](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)。要素。 値 0 は、階層のルート レベルを表します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

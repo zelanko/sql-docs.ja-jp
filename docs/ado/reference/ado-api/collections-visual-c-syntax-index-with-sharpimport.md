@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,25 +12,23 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - 'syntax indexes [ADO], ADO for Visual C++ syntax with #import'
 - 'collections [ADO], ADO for Visual C++ syntax with #import'
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5d88dfcfe9d05d5f78f4f8e61ee32a23a67048d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 093e3933796d490f2dc40d8af493dc639fdb19a3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文のインデックス #import)
 コレクションが、一般的なメソッドとプロパティを継承ことを確認すると便利です。  
@@ -108,5 +105,4 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
  [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

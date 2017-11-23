@@ -1,33 +1,30 @@
 ---
 title: "ALTER DATABASE (Azure SQL Data Warehouse) |Microsoft ドキュメント"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b5e328da952c853409437f7c3a4993f17022de22
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 名前、最大サイズは、またはデータベースのサービス目標を変更します。  
   
@@ -42,8 +39,18 @@ ALTER DATABASE database_name
 | MODIFY ( <edition_option> [, ... n] )  
   
 <edition_option> ::=   
-      MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB  
-    | SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000'}  
+      MAXSIZE = { 
+            250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 
+          | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 
+          | 92160 | 102400 | 153600 | 204800 | 245760 
+      } GB  
+      | SERVICE_OBJECTIVE = { 
+            'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' 
+          | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' 
+          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c' 
+          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
+          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+      }  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -54,10 +61,18 @@ MODIFY NAME = *new_database_name*
 として指定された名前のデータベースの名前を変更*new_database_name*です。  
   
 MAXSIZE  
-データベースの最大サイズまでを拡張することがあります。 この値を設定すると、設定サイズを超えてデータベース サイズの増加ができなくなります。 既定値*MAXSIZE* 10240 gb (10 TB) を指定しない場合。 その他の考えられる値の範囲は 250 GB から最大 240 TB です。  
+既定では 10,240 GB (10 TB) です。  
+
+**適用されます:**パフォーマンス層の柔軟性の最適化
+
+データベースの最大許容サイズ。 データベースは、MAXSIZE を超えることはできません。 
+
+**適用されます:**コンピューティング パフォーマンス層用に最適化されました。
+
+データベース内の行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストアまたはクラスター化列ストア インデックスに非クラスター化インデックスに格納されたデータは、MAXSIZE を超えることはできません。  列ストア形式に圧縮されたデータは、サイズの制限はありませんし、MAXSIZE による制約を受けない。 
   
 SERVICE_OBJECTIVE  
-パフォーマンス レベルを指定します。 サービス目標の詳細については[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]を参照してください[SQL データ ウェアハウスのスケールのパフォーマンス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-manage-compute-overview/)です。  
+パフォーマンス レベルを指定します。 サービス目標の詳細については[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]を参照してください[パフォーマンス層](https://azure.microsoft.com/documentation/articles/performance-tiers/)です。  
   
 ## <a name="permissions"></a>Permissions  
 これらのアクセス許可が必要です。  

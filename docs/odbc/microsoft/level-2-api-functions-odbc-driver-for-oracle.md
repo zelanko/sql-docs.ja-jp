@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6232a890c5898bcf543df9e47c97f363e2bfca12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>レベル 2 API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|データ ソース内のプロシージャの一覧を返します。 パッケージ化されたプロシージャの場合、プロシージャ名の列はで*packagename.procedurename*形式です。<br /><br /> Oracle で関数をパッケージにパッケージ化されたプロシージャを区別するための方法が提供されないため、ドライバーは PROCEDURE_TYPE 列を SQL_PT_UNKNOWN を返します。|  
 |**SQLSetPos**|行セットのカーソル位置を設定します。 使用することができます**SQLSetPos**で**SQLGetData**行セット内の特定の行にカーソルを配置した後、バインドされていない列から行を取得します。 使用して設定の結果に追加された行*fOption* SQL_ADD が結果セットの最後の行の後に追加されます。|  
 |**SQLSetScrollOptions**|Hstmt、ステートメント ハンドルに関連付けられているカーソルの動作を制御するオプションを設定します。 詳細については、「[カーソルの種類および同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)です。|
-

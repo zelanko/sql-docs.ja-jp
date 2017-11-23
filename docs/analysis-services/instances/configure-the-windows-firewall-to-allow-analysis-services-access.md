@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: d1edb8853dcc8faa1ff632ea9379f937881c9886
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services のアクセスを許可するための Windows ファイアウォールの構成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] や [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をネットワーク上で利用できるようにするための重要な最初の手順は、ファイアウォールのポートのブロックを解除する必要があるかどうかを判断することです。 ほとんどのインストールでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への接続を許可する受信ファイアウォール ルールを少なくとも 1 つ作成する必要があります。  
@@ -247,4 +246,3 @@ ms.lasthandoff: 09/01/2017
  [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   
-

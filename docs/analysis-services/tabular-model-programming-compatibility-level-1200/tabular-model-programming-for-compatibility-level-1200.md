@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2a2b814f4944c0e135c345d8f78970a1d08c8918
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4f4511a8c7cda17fbadba2df4b1ee16766790643
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>表形式モデル プログラミングの互換性レベル 1200 以降
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/01/2017
  DAX と MDX については、すべてのテーブル モデルのサポートします。  
   
 ## <a name="expression-language"></a>式の言語  
- DAX では、フィルターとメジャー、Kpi などの計算されるオブジェクトを作成するために使用する式が策定されました。 参照してください[表形式モデルでの DAX を理解する](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)と[Data Analysis Expressions (&) #40";"DAX"&"#41 です。 Analysis Services で](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)です。  
+ DAX では、フィルターとメジャー、Kpi などの計算されるオブジェクトを作成するために使用する式が策定されました。 参照してください[表形式モデルでの DAX を理解する](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)と[Data Analysis Expressions &#40;DAX"&"#41 です。 Analysis Services で](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)です。  
   
 ## <a name="managed-code-for-tabular-models-and-databases"></a>表形式モデルとデータベースのマネージ コード  
  AMO には、モデルをプログラムで使用するための新しい名前空間、Microsoft.AnalysisServices.Tabular が含まれています。 参照してください[Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx)詳細についてはします。  
@@ -63,8 +62,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>参照  
  [Analysis Services Developer Documentation (Analysis Services の開発者向けドキュメント)](../../analysis-services/analysis-services-developer-documentation.md)   
  [互換性のためのテーブル モデルのプログラミング レベルを 1050 から 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [テクニカル リファレンス & #40 です。SSAS &#41;](../../analysis-services/powershell/technical-reference-ssas.md) [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [テクニカル リファレンス &#40;です。SSAS &#41;](../../analysis-services/powershell/technical-reference-ssas.md) [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [表形式モデルとデータベースの互換性レベル](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   
-

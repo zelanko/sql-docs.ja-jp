@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>リレーションシップ オブジェクト (TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  すべてのオブジェクトは、共通の名前、型、説明、プロパティのコレクション、および注釈を含むプロパティのセットを持ちます。 **リレーションシップ**オブジェクトでは、次のプロパティもがあります。  
   
  isActive  
- リレーションシップがアクティブまたは非アクティブとしてマークされているかどうかを示すブール値。 アクティブなリレーションシップはテーブル間でフィルター処理用に自動的に使用されます。 非アクティブなリレーションシップは、USERELATIONSHIP 関数での DAX 計算で明示的に使用できます。  
+ リレーションシップがアクティブまたは非アクティブとしてマークされているかどうかを示すブール値。 アクティブなリレーションシップは、テーブル間のフィルター処理に自動的に使用されます。 非アクティブなリレーションシップは、USERELATIONSHIP 関数を使用して DAX 計算で明示的に使用できます。  
   
  crossFilteringBehavior  
  リレーションシップがデータのフィルター処理に及ぼす影響を示します。 参照してください[双方向クロス フィルターの SQL Server 2016 Analysis services 表形式モデル](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)詳細についてはします。 有効な値は次のとおりです。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 -   BothDirections (2) - フィルターのリレーションシップの両端に自動的にテーブルをフィルター処理、他のです。  
   
 ## <a name="usage"></a>使用方法  
- リレーションシップ オブジェクトを使用[Alter コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、および[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
+ リレーションシップ オブジェクトを使用[Alter コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、および[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
   
  作成する場合、置換、または、リレーションシップ オブジェクトを変更することは、オブジェクト定義のすべての読み取り/書き込みプロパティを指定します。 読み取り/書き込みプロパティの省略は、削除であると見なされます。  
   
@@ -179,4 +178,3 @@ ms.lasthandoff: 09/01/2017
  [リレーションシップの作成](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

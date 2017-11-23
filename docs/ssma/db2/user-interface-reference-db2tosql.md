@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c7e0a6e50df2e448d63be99d4aefe9bea9e3e5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b19bd52df094e13cadb042208cc42fb8da1a418c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-db2tosql"></a>ユーザー インターフェイス リファレンス (DB2ToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2 です。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 |[DB2 データベース &#40;DB2ToSQL&#41; への接続](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用して、 **DB2 への接続**を移行する DB2 データベースに接続する ダイアログ ボックス。|  
 |[SQL Server &#40;DB2ToSQL&#41; への接続します。](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用して、 **SQL Server への接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に移行します。|  
 |[データ移行レポート &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|結果を表示する DB2 からのデータの移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
-|[データ移行の設定](http://msdn.microsoft.com/en-us/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
+|[データの移行設定](http://msdn.microsoft.com/en-us/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
 |[型マッピングの編集 &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用して、**新しい型のマッピング**または**型マッピングの編集**ダイアログ ボックスを作成またはソースとターゲット データベースとデータベース オブジェクトの間のデータ型のマッピングを変更します。|  
 |[グローバルの設定 &#40;です。エディター &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|エディター ページを使用して、**グローバル設定**コード エディターのオプションを構成するダイアログ ボックス。|  
 |[グローバル設定 (&) #40 です。 ダイアログ ボックス &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|ダイアログ ページを使用して、**グローバル設定**ダイアログ ボックスを既定値 ダイアログ ボックスと警告の設定を構成します。|  
@@ -59,4 +57,3 @@ ms.lasthandoff: 08/02/2017
 [入門 SSMA for DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [SQL Server &#40;DB2ToSQL&#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

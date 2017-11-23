@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - denying permissions [SQL Server], XML schema collections
 - XML schema collections [SQL Server], permissions
 - DENY statement, XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e5740ac99d06b23851652a8d4faccd7d1ffa9c1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d50f055c6dbc419c8a979160f45a884f46f795d6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY (XML スキーマ コレクションの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,11 +129,10 @@ GO
   
 ## <a name="see-also"></a>参照  
  [XML スキーマ コレクションの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [XML スキーマ コレクションの権限を REVOKE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [XML スキーマ コレクションの権限を REVOKE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+ [sys.xml_schema_collections &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [XML スキーマ コレクション &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-

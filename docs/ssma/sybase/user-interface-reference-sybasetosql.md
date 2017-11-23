@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e749491aea64728e8e58aa4bb041e28a3cbc20fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bd746a4a3eeb4876ad061aed817f03c01d45506e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-sybasetosql"></a>ユーザー インターフェイス リファレンス (SybaseToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Sybase です。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 |[Azure SQL DB &#40; への接続します。SybaseToSQL &#41;](../../ssma/sybase/connect-to-azure-sql-db-sybasetosql.md)|使用して、 **SQL Azure への接続**SQL Azure に移行する先のインスタンスに接続する ダイアログ ボックス。|  
 |[Sybase &#40; への接続します。SybaseToSQL &#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)|使用して、 **Sybase への接続**ASE に接続する ダイアログ ボックス。|  
 |[データ移行のレポートと #40 です。SybaseToSQL &#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|結果を表示する ASE からのデータの移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。|  
-|[データ移行の設定](http://msdn.microsoft.com/en-us/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
+|[データの移行設定](http://msdn.microsoft.com/en-us/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
 |[型のマッピング &#40; を編集します。SybaseToSQL &#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|使用して、**新しい型のマッピング**または**型マッピングの編集** ダイアログ ボックスを作成またはソースとターゲット データベースとデータベース オブジェクトの間のデータ型のマッピングを編集します。|  
 |[グローバルの設定 &#40;です。エディター &#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|エディター ページを使用して、**グローバル設定**コード エディターのオプションを構成するダイアログ ボックス。|  
 |[グローバル設定 (&) #40 です。 ダイアログ ボックス &#41; &#40;です。SybaseToSQL &#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|エディター ページを使用して、**グローバル設定**ダイアログ ボックスを既定のダイアログ ボックスと警告の設定を構成します。|  
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/02/2017
 [For Sybase &#40; SSMA の概要SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
 [SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

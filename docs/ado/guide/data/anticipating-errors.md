@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72dc8972826c149430203b95c14e6b5153620527
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="anticipating-errors"></a>エラーを予測します。
 エラーの防止は、エラー処理と少なくとも同じくらい重要です。 この最後のセクションには、エラーが発生しにくくするために、アプリケーションがかかることが対策の短い一覧が含まれています。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  確認して**Recordset**の境界を越えてオブジェクトは、**レコード セット**レコード ポインターを移動する前にします。 しようとする場合**MoveNext**とき**EOF** true または**MovePrev**とき**BOF** True の場合は、エラーが発生します。 いずれかを実行する場合、**移動**メソッドと両方**EOF**と**BOF** True は、エラーが生成されます。  
   
  などの操作を実行しようとする場合に、エラーも発生は**シーク**と**検索**、空で**レコード セット**です。
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fd440e03226082527441116517bb511b25099101
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 388ff1302e12c602c605c05acb1541eec2c599eb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>レッスン 5-1-参照されているリレーションシップを定義します。
 このチュートリアルのこれまでの実習では、主キーから外部キーへのリレーションシップを使用し、メジャー グループのファクト テーブルに直接リンクしているテーブルに基づいて、各キューブ ディメンションを定義しました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
@@ -139,4 +136,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

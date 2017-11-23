@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f30b38b27a56bf3af10c4f39681b160feec34fd5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-report-data-source"></a>レポート データ ソースの作成
   Power View が多次元モデルに接続するためには、共有レポート データ ソース定義 (.rsds ファイル) を SharePoint ライブラリに作成する必要があります。 .rsds ファイルは、多次元モデルへの接続に使用する Analysis Services サーバー インスタンスの名前、接続の種類、接続文字列、および資格情報の名前を指定します。 ユーザーが .rsds ファイルをクリックすると、新しい空白の Power View レポート (.rdlx ファイル) がブラウザーで開きます。  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/01/2017
 8.  データ ソースをアクティブにする場合は、 **[このデータ ソースを有効にする]** を選択します。 データ ソースが構成されていてもアクティブでない場合は、ユーザーがレポートを作成しようとするとエラー メッセージが表示されます。  
   
   
-

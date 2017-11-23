@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>デスクトップ データベース ドライバーのアーキテクチャ
 使用するには、Microsoft Windows 95 以降、または Windows NT 4.0 および Windows 2000 には、これらのドライバーが設計されています。 Windows 95 以降; のみの 32 ビット アプリケーションがサポートされます。Windows NT 4.0 と Windows 2000 では、16 ビットおよび 32 ビット アプリケーションをサポートします。  
@@ -39,13 +37,13 @@ ms.lasthandoff: 09/09/2017
   
  Windows 95 以降のアプリケーション/ドライバー アーキテクチャ。  
   
- ![アプリ (&) #47; ドライバーのアーキテクチャ: Windows 95 以降](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![アプリ &#47; ドライバーのアーキテクチャ: Windows 95 以降](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  Windows 95 で 16 ビット アプリケーションでこれらのドライバーの使用はサポートされていません。  
   
  Windows NT 4.0 および Windows 2000 上のアプリケーション/ドライバー アーキテクチャ。  
   
- ![アプリ (&) #47; ドライバーのアーキテクチャ: NT 4.0 および Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![アプリ &#47; ドライバーのアーキテクチャ: NT 4.0 および Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  デスクトップ データベース ドライバーは、2 層ドライバーです。 2 層構成で、ドライバーでは、解析、検証、最適化、およびクエリの実行のプロセスは実行されません。 代わりに、Microsoft Jet は、これらのタスクを実行します。 ODBC API の呼び出しを処理し、SQL エンジンとして機能します。 Microsoft Jet は、整数型、分離不可能の部分で、ドライバーになりました: ドライバーに付属しているし、ドライバーが存在する場合でも、コンピューター上の他のアプリケーションが使用しないことです。  
   
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll では、Microsoft Jet API の上に ODBC 関数を実装します。 ODBC および Microsoft Jet の関数の間で直接マッピングただしです。 カーソル モデルでは、SQL のマッピングなど、さまざまな要因は、関数の直接的な相関関係を回避します。  
   
  ODBC ドライバーは、Microsoft Jet エンジンと ODBC ドライバー マネージャーの間に存在します。 アプリケーションによって呼び出されたいくつかの ODBC 関数がドライバー マネージャーによって処理され、ドライバーに渡されません。 Microsoft Jet をこれらの関数には、ドライバー マネージャーへの直接接続があるないために、呼び出す関数を表示されません。
-

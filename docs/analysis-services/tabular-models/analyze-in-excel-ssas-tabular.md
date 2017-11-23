@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analyze-in-excel"></a>[Excel で分析]
   Excel で分析機能、SSDT は、表形式モデルの作成者に迅速に開発中にモデル プロジェクトを分析する方法を提供します。 "Excel で分析" 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 ワークスペース データベース オブジェクト (テーブル、列、およびメジャー) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれます。 これによりオブジェクトとデータは、有効なユーザーまたはロールおよびパースペクティブのコンテキスト内で表示できるようになります。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
 |**トピック**|**Description**|  
 |---------------|---------------------|  
-|[Excel でテーブル モデルを分析します。](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|このトピックでは、モデル デザイナーで "Excel で分析" 機能を使用する方法、モデル ワークスペース データベースへのデータ ソース接続を作成する方法、およびワークシートにピボットテーブルを追加する方法について説明します。|  
+|[Excel でのテーブル モデルの分析](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|このトピックでは、モデル デザイナーで "Excel で分析" 機能を使用する方法、モデル ワークスペース データベースへのデータ ソース接続を作成する方法、およびワークシートにピボットテーブルを追加する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [Excel でテーブル モデルを分析します。](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

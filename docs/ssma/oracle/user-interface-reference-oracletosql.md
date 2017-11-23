@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f01bfe2d06f8dcbf6ea20d7037a109509860bc34
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a09dd49a6178aef1762c889bfbd00d4ccef07b76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-oracletosql"></a>ユーザー インターフェイス リファレンス (OracleToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle です。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 |[Oracle &#40;OracleToSQL&#41; への接続します。](../../ssma/oracle/connect-to-oracle-oracletosql.md)|使用して、 **Connect to Oracle**を移行する Oracle データベースに接続する ダイアログ ボックス。|  
 |[SQL Server &#40;OracleToSQL&#41; への接続します。](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|使用して、 **SQL Server への接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に移行します。|  
 |[データ移行レポート &#40;OracleToSQL&#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|結果を表示する Oracle からのデータの移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
-|[データ移行の設定](http://msdn.microsoft.com/en-us/91f7f558-025d-4f4d-ac2c-aa095e7d1ace)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
+|[データの移行設定](http://msdn.microsoft.com/en-us/91f7f558-025d-4f4d-ac2c-aa095e7d1ace)|使用して、**データ移行の設定の拡張** タブのデータ移行のカスタム クエリを記述します。|  
 |[型マッピングの編集 &#40;OracleToSQL&#41;](../../ssma/oracle/edit-type-mapping-oracletosql.md)|使用して、**新しい型のマッピング**または**型マッピングの編集**ダイアログ ボックスを作成またはソースとターゲット データベースとデータベース オブジェクトの間のデータ型のマッピングを変更します。|  
 |[グローバルの設定 &#40;です。エディター &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/global-settings-editor-oracletosql.md)|エディター ページを使用して、**グローバル設定**コード エディターのオプションを構成するダイアログ ボックス。|  
 |[グローバル設定 (&) #40 です。 ダイアログ ボックス &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/global-settings-dialogs-oracletosql.md)|ダイアログ ページを使用して、**グローバル設定**ダイアログ ボックスを既定値 ダイアログ ボックスと警告の設定を構成します。|  
@@ -57,4 +55,3 @@ ms.lasthandoff: 08/02/2017
 [入門 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [SQL Server &#40;OracleToSQL&#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

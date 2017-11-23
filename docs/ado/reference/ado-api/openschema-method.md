@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
 - Connection15::raw_OpenSchema
-helpviewer_keywords:
-- OpenSchema method [ADO]
+helpviewer_keywords: OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5c547eb8a6c1208bedffb988096f45b4c871d09
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
 プロバイダーからデータベース スキーマ情報を取得します。  
@@ -75,7 +72,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Visual C と C++ ユーザー**クライアント側のカーソルを使用していない場合は、MDAC 2.7、MDAC 2.8、および Windows Data Access Components (Windows DAC) 6.0 では、MDAC で使用される型の中に種類 VT_R8 のバリアント型を返します ADO 内の列のスキーマの"ORDINAL_POSITION"を取得します。2.6 はでした VT_I4 です。 MDAC 2.6 のバリアント型の唯一の外観に書かれたプログラムは、VT_I4 にすべての序数変更しなくても、MDAC 2.7、MDAC 2.8、および Windows DAC 6.0 で実行する場合に 0 を得られる型の返されます。 OLE DB を返すデータ型が、DBTYPE_UI4 であるために、この変更が行われ、符号付きの VT_I4 型がないが発生していると、原因となり、データが失われる可能性のある切り捨てることがなく使用可能なすべての値を格納する十分な空き領域。  
   
 ## <a name="applies-to"></a>適用対象  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [OpenSchema メソッドの例 (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
@@ -84,5 +81,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open メソッド (ADO レコード)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

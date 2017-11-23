@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords:
-- WillExecute event [ADO]
+helpviewer_keywords: WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5988a43be066f61019223eb6a501d1bc73e8bc23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 63062a2b16cc423c1188aef4302f5b0f8b1e0677
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="willexecute-event-ado"></a>アクティビ ティー イベント (ADO)
 **アクティビ ティー**イベントは、接続で保留中のコマンドを実行する前に呼び出されます。  
@@ -79,5 +76,4 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

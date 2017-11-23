@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6b535c1eba06e7f023ef9a1f7b00476e7be39eb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4763973d0ea4bf905b1c38ace337667c92186e3a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-data-access"></a>テーブル モデル データ アクセス
   Analysis Services のテーブル モデル データベースは、多次元モデルからデータまたはメタデータを取得するときとほぼ同じクライアント、インターフェイス、および言語でアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
@@ -140,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

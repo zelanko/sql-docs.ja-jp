@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], preparing and executing commands
+helpviewer_keywords: Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc77ab26c705aaaaed4a7171f8c9349be8ac7f0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preparing-and-executing-commands"></a>準備とコマンドの実行
 コマンドは、基になるデータ ソースに対して操作を実行する、プロバイダーに発行された手順です。 たとえば、SQL ステートメントは、Microsoft SQL データ プロバイダーにコマンドです。 ADO では、コマンドは、通常によって表される**コマンド**もから簡単なコマンドを発行できますが、オブジェクト**接続**または**Recordset**オブジェクト。  
@@ -39,17 +36,16 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [コマンド オブジェクトの概要](../../../ado/guide/data/command-object-overview.md)  
+-   [Command オブジェクトの概要](../../../ado/guide/data/command-object-overview.md)  
   
--   [作成して、簡単なコマンドを実行します。](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [簡単なコマンドの作成と実行](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [コマンド オブジェクトのパラメーター](../../../ado/guide/data/command-object-parameters.md)  
+-   [Command オブジェクトのパラメーター](../../../ado/guide/data/command-object-parameters.md)  
   
--   [コマンドでストアド プロシージャを呼び出す](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
+-   [Command を使用してストアド プロシージャを呼び出す](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
 -   [接続オブジェクトのメソッドとしてストアド プロシージャの呼び出し](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
 -   [名前付きコマンド](../../../ado/guide/data/named-commands.md)  
   
 -   [名前付きコマンドにパラメーターを渡す](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
-

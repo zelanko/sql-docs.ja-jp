@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11ccfc309d772d3b26a5a0e72a77c094e2624282
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structure-columns"></a>マイニング構造列
   マイニング構造を作成するときは、外部データの列を選択し、データをどのようにモデリングに使用するかを指定して、マイニング構造の列を定義します。 したがって、マイニング構造列は、単なるデータ ソースのデータのコピーではなく、マイニング モデルでソースのデータがどのように使用するかを定義するものです。 データの分離方法を決定するプロパティ (データ値の分布を記述するプロパティ) を割り当てることができます。  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

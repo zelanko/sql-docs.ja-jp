@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- business objects in RDS [ADO]
+helpviewer_keywords: business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45f9656022a71deab0cb91a3d9667cbd314c2ffb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a2131b594d20c4215a2c52422d930c0ac2edfb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>スクリプトを実行しても安全だとビジネス オブジェクトをマークします。
 > [!IMPORTANT]
@@ -52,6 +49,5 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  最後の手順では、アプリケーションのセットアップ ウィザードは、.htm ファイル、.cab ファイルを作成します。 ターゲット コンピューターにこれら 2 つのファイルをコピーし、ページを読み込むし、サーバーを正しく登録するには、.htm ファイルをダブルクリックします。  
   
  ビジネス オブジェクトは、既定で Windows\System32\Occache ディレクトリにインストールされるが、windows \system32 ディレクトリに移動し、変更、 **hkey_classes_root \clsid\\**  \< *MyActiveXGUID*>\\**InprocServer32**レジストリ キーに正しいパスと一致します。
-
 
 

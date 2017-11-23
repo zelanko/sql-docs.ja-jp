@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeTranslation Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeTranslation Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeTranslation
-helpviewer_keywords:
-- AttributeTranslation data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeTranslation
+helpviewer_keywords: AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b28b436df1b4c8dc37be83fb29c36be4d1c8ad0e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c59eb5b832f4d00b8e651569065dbfbc1566033f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributetranslation-data-type-assl"></a>AttributeTranslation データ型 (ASSL)
   関連付けられている翻訳を表す派生データ型を定義、[属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)要素  
@@ -70,7 +64,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.AttributeTranslation>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

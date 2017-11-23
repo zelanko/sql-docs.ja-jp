@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], naming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 116ee643ee52c3bdb8c5b6188ba5198afc24265d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
@@ -94,7 +91,7 @@ ms.lasthandoff: 09/01/2017
 |MOLAP (すべてのバージョン)|不可|  
 |表形式の 1050|不可|  
 |表形式 - 1100|不可|  
-|表形式 – 1130 以上|はい|  
+|表形式 – 1130 以上|可|  
   
  データベースは既定の ModelType を持つことができます。 既定値は多次元モデルと同等です。そのため、列名での予約文字の使用はサポートされません。  
   
@@ -104,4 +101,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis への準拠と #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   
-

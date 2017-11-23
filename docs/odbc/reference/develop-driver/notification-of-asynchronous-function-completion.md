@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f62fa079b098785feb7467e90a3b4bd75d579792
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91c63c55a3d36e1b0c788361a8ae13a01ece9a38
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>関数の非同期完了の通知
 Windows 8 SDK では、ODBC は、非同期操作が完了したら、これを「完了時に通知」と呼びますがアプリケーションに通知するためのメカニズムを追加します。 (を参照してください[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)詳細についてはします)。このトピックでは、ドライバーの開発者の問題の一部を説明します。  
@@ -45,4 +43,3 @@ Windows 8 SDK では、ODBC は、非同期操作が完了したら、これを�
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-

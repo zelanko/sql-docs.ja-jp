@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - functions [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1871de9ebb81ef5bd88063a3a26067e86b32ad3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>データ マイニング拡張機能 (DMX) 関数リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |関数|Description|  
 |--------------|-----------------|  
 |[一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)|すべての種類のモデルで使用できる関数の一覧を示し、特定の種類のマイニング モデルに対してクエリを実行する方法に関する詳細情報へのリンクを提供します。|  
-|[構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|DMX を使用して予測クエリを作成する方法の概要について説明します。|  
+|[構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|DMX を使用して予測クエリを作成する方法の概要について説明します。|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|順位付け式に基づいてデータを昇順に並べ替え、最下位行から指定数を含むテーブルを返します。|  
   
  次の表は、DMX がサポートする関数の一覧を示しています。  
@@ -85,7 +83,6 @@ ms.lasthandoff: 08/02/2017
  [データ マイニング拡張機能 &#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [DMX の Select ステートメントを理解します](../dmx/understanding-the-dmx-select-statement.md)  
+ [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

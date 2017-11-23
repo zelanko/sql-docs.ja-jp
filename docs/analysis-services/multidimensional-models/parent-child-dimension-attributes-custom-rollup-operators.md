@@ -21,17 +21,16 @@ helpviewer_keywords:
 - unary operators
 - parent-child dimensions [Analysis Services]
 ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1d731ba3666e4569a45b6ab3e9254a1eaafdda35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 328bd8977389ac39d049d44095c447a2843efdbe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>親子ディメンションの属性のカスタム ロールアップ演算子
   カスタム ロールアップ演算子を使用すると、親子階層でメンバーの値を親の値にロール アップする方法を簡単に制御できます。 親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーのロールアップを指定する単項演算子を含んでいる列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [親子ディメンションの単項演算子](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
   
   
-

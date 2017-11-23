@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
+helpviewer_keywords: aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-aggregate-functions"></a>集計関数の使用
   メジャーをスライスするためにディメンションを使用する場合、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は **Sum**になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
@@ -78,8 +76,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [メジャーおよびメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../mdx/mdx-function-reference-mdx.md)   
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../mdx/mdx-function-reference-mdx.md)   
  [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   
-

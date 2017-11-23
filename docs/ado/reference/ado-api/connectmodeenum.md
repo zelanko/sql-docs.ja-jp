@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ConnectModeEnum
-helpviewer_keywords:
-- ConnectModeEnum enumeration [ADO]
+f1_keywords: ConnectModeEnum
+helpviewer_keywords: ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd3a2912bdc0e204bfbbe1c16a878302f181679c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc9a29f1f46ab56a87b318761b4b0809fd76e6fd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 内のデータを変更するため利用可能なアクセス許可を指定、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、opening、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の値を指定するか、[モード](../../../ado/reference/ado-api/mode-property-ado.md)のプロパティ、 **レコード**と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -64,6 +60,5 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open メソッド (ADO レコード)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[ストリーム オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
-
+|[Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|

@@ -32,17 +32,16 @@ helpviewer_keywords:
 - tuples
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 56f991716d78e8b4638ab57e7dc981c5942d81b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5929d1c9d926005cd919d4e939e46c950723b64
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>メンバー、組、およびセットの操作 (MDX)
   MDX には、1 つ以上のメンバー、組、またはセットを返す操作や、メンバー、組、またはセットに対する操作を行うための関数が各種用意されています。  
@@ -138,7 +137,6 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>参照  
  [MDX の主な概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

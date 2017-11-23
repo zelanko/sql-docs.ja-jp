@@ -19,17 +19,16 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2866844f0004bc37c7bead147a88dbf009199495
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 16b5b9f2bcb04c11adae59f9b50f4611c157d604
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>属性のプロパティ - 名前列に属性をバインド
   この手順では、ディメンション デザイナーの **[属性]** ペインと、 **[オブジェクトのバインド]** ダイアログ ボックスを使用して、手動で名前列に属性をバインドする方法について説明します。  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 5.  **[基になる列]** ボックスの一覧で、属性をバインドする列を選択し、 **[OK]**をクリックします。  
   
   
-

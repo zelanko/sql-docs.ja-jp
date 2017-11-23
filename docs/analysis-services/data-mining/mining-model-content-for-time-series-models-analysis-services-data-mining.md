@@ -18,17 +18,16 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d399cf55c957ed129e0f37e821f23eb9379b1e5b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   すべてのマイニング モデルは同じ構造を使用してコンテンツを格納します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
@@ -452,4 +451,3 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   
-

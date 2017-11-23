@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>識別子の引数
 識別子の引数の文字列が引用符で囲まれた場合、ドライバーは先頭と末尾の空白を削除しは引用符で囲まれた文字列をそのまま処理します。 文字列が引用符で囲まれていない場合、ドライバーを削除末尾の空白およびフォールド文字列を大文字にします。 SQL_ERROR と SQLSTATE HY009 識別子の引数を null ポインターに設定を返します (null ポインターの無効な使用)、ない場合は、引数は、カタログ名のカタログがサポートされていません。  
@@ -44,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  引用符で囲まれた識別子は、Oracle で ROWID など、同じ名前の擬似列の場合は true。 列名を区別するために使用されます。 "ROWID"が、カタログ関数の引数で渡される場合がある場合に、関数は ROWID 擬似列を持つ機能します。 擬似列が存在しない場合、関数は"ROWID"列では動作します。 ROWID がカタログ関数の引数で渡されると場合、関数は、ROWID 列と連動します。  
   
  引用符で囲まれた識別子の詳細については、次を参照してください。[引用符で囲まれた識別子](../../../odbc/reference/develop-app/quoted-identifiers.md)です。
-

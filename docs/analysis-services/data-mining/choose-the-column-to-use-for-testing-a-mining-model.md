@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b5b70b350d54987869c77ced1cebfbd8f7b00ec1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>マイニング モデルのテストに使用する列の選択
   マイニング モデルの精度を測定する前に、評価するのがどの結果なのかを決定する必要があります。 多くのデータ マイニング モデルでは、モデルの作成時に、予測可能な属性として使用する少なくとも 1 つの列を選択する必要があります。 そのため、モデルの精度をテストするときに、通常はその属性をテスト対象として選択する必要があります。  
@@ -65,7 +64,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [精度チャートの種類と設定を選択してグラフのオプション](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [精度チャートの種類の選択とグラフのオプションの設定](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - NextRecordset
 - Recordset15::NextRecordset
 - Recordset15::raw_NextRecordset
-helpviewer_keywords:
-- NextRecordset method [ADO]
+helpviewer_keywords: NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7650cb3516311f3eb93e93304ba9d20ec874466
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 現在のクリア[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを返します**レコード セット**一連のコマンドを進めることで。  
@@ -68,9 +65,8 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
  ただし、他のプロバイダー可能性がありますの次のコマンドで実行ステートメント NextRecordset が呼び出された後にのみです。 これらのプロバイダーでは、明示的に閉じる場合、 **Recordset**全体コマンド ステートメントをステップ実行する前にオブジェクトの他のコマンドは実行されません。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [NextRecordset メソッドの例 (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
- [NextRecordset メソッドの例 (vc++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
-
+ [NextRecordset メソッドの例 (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

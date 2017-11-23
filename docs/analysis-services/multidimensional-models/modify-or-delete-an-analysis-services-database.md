@@ -22,17 +22,16 @@ helpviewer_keywords:
 - databases [Analysis Services], deleting
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 65f53460a5a967744e23895b965bda0c9501f8cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58ba47239da28dfa023bb59a1bbb6ed77e11d425
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Analysis Services データベースの変更または削除
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前と説明は、配置前には [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、配置後には [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で変更できます。 また、環境に応じて [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの追加の設定を調整することもできます。  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services データベースのドキュメントとスクリプトの作成](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
   
-

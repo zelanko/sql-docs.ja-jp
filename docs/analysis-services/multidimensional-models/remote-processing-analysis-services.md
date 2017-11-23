@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59113cc41bf1e7805b033ff0af68ee2c1accda3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f32eb86f0d4b18ac576df77a28885c7f2053d962
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remote-processing-analysis-services"></a>リモート処理 (Analysis Services)
   あるコンピューターから発行された処理要求を同じネットワーク上の別のコンピューターで実行する場合、スケジュールされた処理や自動処理をリモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで実行できます。  
@@ -103,9 +102,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>参照  
  [sysadmin](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [SQL Server エージェントで SSAS 管理タスクのスケジュール設定](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [バッチ処理 & #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [バッチ処理 &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [オブジェクトの処理 & #40 です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [オブジェクトの処理 &#40;です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   
-

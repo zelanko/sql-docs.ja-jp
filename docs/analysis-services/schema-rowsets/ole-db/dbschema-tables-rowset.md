@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_TABLES
+apiname: DBSCHEMA_TABLES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_TABLES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 50ba3f0ac4c0dc0090df5fd3122dcff7e7e6923a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bc193f33395521c62e1b5e998c2098721313d9b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES 行セット
   メジャー グループおよび内のテーブルとして公開されているディメンションを識別[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
@@ -66,7 +62,6 @@ ms.lasthandoff: 09/01/2017
 |**TABLE_OLAP_TYPE**|**DBTYPE_WSTR**|省略可|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [OLE DB Schema 行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

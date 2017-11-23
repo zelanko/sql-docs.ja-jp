@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 文法を選択します。
 使用するには、どの文法は、SQL ステートメントを構築するときに最初に決定します。 Open Group、ANSI、ISO など、さまざまな標準機関から使用可能な文法に加えては、ほぼすべて DBMS ベンダーは、それぞれが多少異なります、標準の独自の文法を定義します。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  したがってが本当に文法を使用する 2 つの選択肢: SQL 92 文法 (およびエスケープ シーケンス ODBC)、DBMS に固有の文法とします。 2 つの SQL 92 文法のみは、相互運用可能なすべての相互運用可能なアプリケーションで使用する必要があります。 相互運用可能なアプリケーションには、SQL 92 文法または DBMS 固有の文法を使用できます。 DBMS に固有の文法がある 2 つの利点: sql-92 に含まれないすべての機能を利用して、ドライバーに修正することがあるないために若干速くはします。 後者の機能は、ドライバーの検索と置換のエスケープ シーケンスを停止する、SQL_ATTR_NOSCAN ステートメント属性を設定して、部分的に適用できます。  
   
  SQL 92 文法を使用する場合、アプリケーションがわかる修正方法、ドライバーによって呼び出すことによって**SQLNativeSql**です。 これは、アプリケーションのデバッグ時に多くの場合に便利です。 **SQLNativeSql** SQL ステートメントを受け取り、ドライバーが変更された後にそれを返します。 この関数は、コア インターフェイスへの準拠レベルにあるため、すべてのドライバーでサポートされています。
-

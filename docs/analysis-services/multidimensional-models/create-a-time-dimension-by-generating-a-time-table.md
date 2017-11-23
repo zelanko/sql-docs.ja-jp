@@ -23,17 +23,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 023c54c55fde8b75af335f29c20d9d0135c905c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c4302e55bd6b91daf8d3d1073be96fe35501af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、ソース データベースに使用できる時間テーブルがない場合に、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して時間ディメンションを作成できます。 この操作を行うには、 **[作成方法の選択]** ページで次のいずれかのオプションを選択します。  
@@ -68,7 +67,6 @@ ms.lasthandoff: 09/01/2017
  [日付型ディメンションを作成します。](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [データベース ディメンションのプロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [ディメンション リレーションシップ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [データ ソースのない時間テーブルを生成することによって、ディメンションを作成します。](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
-

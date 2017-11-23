@@ -21,17 +21,16 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], retrieving
 - data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: afa0eedc469956d5b3e8886775feaf8f61a36328
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>データ マイニング スキーマ行セット (SSAS)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既存の OLE DB データ マイニング スキーマ行セットの多くが、データ マイニング拡張機能 (DMX) ステートメントを使用して照会できるシステム テーブルのセットとして公開されます。 データ マイニング スキーマ行セットに対するクエリを作成することによって、利用可能なサービスの特定、モデルおよび構造の状態の更新、モデル コンテンツまたはパラメーターに関する詳細の確認を行うことができます。 データ マイニング スキーマ行セットの説明については、「 [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)」を参照してください。  
@@ -86,4 +85,3 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
-

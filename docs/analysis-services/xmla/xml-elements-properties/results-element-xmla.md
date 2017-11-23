@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- results Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: results Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.results
 - urn:schemas-microsoft-com:xml-analysis#results
 - http://schemas.microsoft.com/analysisservices/2003/engine#results
-helpviewer_keywords:
-- results element
+helpviewer_keywords: results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e75b40b624d2f39fb718efdd55e1888cafaf9358
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 791512ba71ef92a9e220936b138faf9eff2a4872
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="results-element-xmla"></a>results 要素 (XMLA)
   コレクションを格納[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)要素によって返される、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドを使用して、[バッチ](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)コマンド。  
@@ -76,7 +71,6 @@ ms.lasthandoff: 09/01/2017
  非トランザクション**バッチ**コマンド、**結果**要素を 1 つ**ルート**で実行される各コマンドの要素、**バッチ**コマンド、コマンドは成功と失敗が完了するかどうか。 トランザクション**バッチ**コマンドを**結果**要素は 1 つだけ**ルート**要素は、内で失敗したコマンドのエラー情報が含まれています、**バッチ**コマンド。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 187c615e8dd9369fba4bdd4b88336e0bd8fcfcc9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f1c097e900a9ed76bb5160ecab37238344d7a33
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>トレースに表示される列の構成 (SQL Server Profiler)
   トレース テーブルまたは **[トレース ファイルのプロパティ]** ダイアログ ボックスで **[列の構成]** をクリックするか、またはトレースを定義するときに、トレースのデータ列をグループ化できます。 データ列をグループ化すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)」を参照してください。  
@@ -88,9 +86,8 @@ ms.lasthandoff: 08/02/2017
 7.  トレース データの通常のビューに戻すには、 **[表示]** メニューの **[集計ビュー]** をクリックし、選択を取り消します。 集計ビューに戻す場合は、 **[表示]** メニューの **[集計ビュー]** を再びクリックします。 **[表示]** メニューの **[グループ化ビュー]** をクリックして、グループ化されたトレース イベントを折りたたまずに表示することもできます。  
   
 ## <a name="see-also"></a>参照  
- [トレース &#40; を作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [トレースの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [トレース テーブル &#40; を開くSQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   
-

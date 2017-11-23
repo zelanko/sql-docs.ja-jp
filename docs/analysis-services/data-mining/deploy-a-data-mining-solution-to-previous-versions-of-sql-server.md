@@ -22,17 +22,16 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6abe08512e8ff66299a7d50e0fcc90b7355a54ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
   ここでは、 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] のインスタンスで作成されたデータ マイニング モデルまたはデータ マイニング構造を、SQL Server 2005 Analysis Services を使用するデータベースに配置しようとする際、または SQL Server 2005 で作成されたモデルを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに配置する際に発生する可能性のある、互換性に関する既知の問題について説明します。  
@@ -90,4 +89,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services の旧バージョンとの互換性](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   
-

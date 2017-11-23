@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- errors [ADO]
+helpviewer_keywords: errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73f1b516ebc7f133219764506b340bbf428f8207
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 54a44c69afd01647c5dca1cab97993f890d81c21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-run-time-errors"></a>ADO の実行時エラー
 ADO エラーは、プログラムを実行時エラーとして報告されます。 トラップして、それらの処理に使用するプログラミング言語のエラー トラップ メカニズムを使用できます。 たとえば、Visual Basic を使用して、 **On Error**ステートメントです。 Visual c で ADO ライブラリへのアクセスに使用するメソッドに依存します。 #Import を使用して、 **try catch**ブロックします。 それ以外の場合、C++ プログラマは、明示的に呼び出すことによって、エラー オブジェクトを取得する必要があります。 **GetErrorInfo**です。 次の Visual Basic sub プロシージャでは、ADO エラーをトラップを示しています。
@@ -106,4 +103,3 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  次のトピックでは、ADO のエラーの詳細についてを説明します。
 
 -   [ADO エラー リファレンス](../../../ado/guide/data/ado-error-reference.md)
-

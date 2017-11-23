@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2017 Analysis Services の旧バージョンと互換性 |Microsoft ドキュメント"
 ms.date: 07/11/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.custom: 
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,12 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 57a03d325a7415f08fd073ea805e022935f3fce7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
-ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services の旧バージョンとの互換性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -62,7 +64,7 @@ A*提供が中止された機能*以前のリリースでは推奨されなく�
 |多次元|リンク ディメンション|
 |ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
 |ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
-|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> - トレース構成:  Microsoft.SqlServer.Management.XEvent<br />- トレース読み取り:  Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
+|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> トレース構成: Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り: Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
 
 ## <a name="breaking-changes"></a>重大な変更
 A*互換性に影響する変更*現在のリリースにアップグレードした後、機能、データ モデル、アプリケーション コードまたはスクリプトが機能しなくをによりします。
@@ -77,4 +79,3 @@ MDSCHEMA_MEASUREGROUP_DIMENSIONS と DISCOVER_CALC_DEPENDENCY への変更の詳
 
 ## <a name="see-also"></a>参照
 [Analysis Services の旧バージョンとの互換性 (SQL Server 2016)](analysis-services-backward-compatibility.md)
-

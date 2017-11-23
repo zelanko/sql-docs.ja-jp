@@ -18,17 +18,16 @@ helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7c951e3abb2fffc3882869e31570342e7647bd6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a253d7cc22d90a06369a914b7aec8b4a8ec315f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>パーティションの編集または削除 (Analysis Services - 多次元)
   キューブ パーティションを変更するには、 **でキューブ デザイナーの** [パーティション] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]タブを使用します。 **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。  
@@ -58,8 +57,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [ローカル パーティションの作成と管理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [デザインの集計 & #40 です。Analysis Services - 多次元 &#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
+ [デザインの集計 &#40;です。Analysis Services - 多次元 &#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
  [Analysis Services でのパーティションのマージ (SSAS - 多次元)](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

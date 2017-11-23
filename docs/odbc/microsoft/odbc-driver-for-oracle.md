@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f878719719f1f6cab234294301bbb47922178a98
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e66dd7ed6406287c0fb4e6722d8b5915428f705b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
@@ -39,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
  Oracle 用の ODBC ドライバーにより、アプリケーションを ODBC インターフェイスを通じて Oracle データベースでデータにアクセスします。 ドライバーがローカルの Oracle データベースにアクセスできるか、SQL を使用するネットワークと通信できる * Net です。 次の図では、このアプリケーションとドライバーのアーキテクチャについて説明します。  
   
- ![ODBC ドライバー用 Oracle アプリ (&) #47; ドライバーのアーキテクチャ](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![ODBC ドライバー用 Oracle アプリ &#47; ドライバーのアーキテクチャ](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
  ODBC Driver for Oracle は、API への準拠レベル 1 および SQL への準拠レベル コアに準拠します。 API への準拠レベル 2 とほとんどのコアと拡張 SQL への準拠レベル文法の一部の関数もサポートしています。 ドライバーは ODBC 2.5 に準拠し、32 ビット システムをサポートしています。 Oracle 7.3 x はサポートされている完全;Oracle8 には、サポートが制限されています。 For Oracle ODBC ドライバーには新しい Oracle8 データ型はサポートされません: Unicode データ型、Blob、Clob、具合 — もサポート Oracle の新規のリレーショナル オブジェクト モデルです。 サポートされるデータ型の詳細については、次を参照してください。 [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)このガイドでします。  
   
@@ -66,5 +64,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [ODBC Driver for Oracle ユーザー ガイド](../../odbc/microsoft/odbc-driver-for-oracle-user-s-guide.md)  
   
--   [ODBC Driver for Oracle プログラマーズ リファレンス](../../odbc/microsoft/odbc-driver-for-oracle-programmer-s-reference.md)
-
+-   [ODBC Driver for Oracle プログラマー向けリファレンス](../../odbc/microsoft/odbc-driver-for-oracle-programmer-s-reference.md)

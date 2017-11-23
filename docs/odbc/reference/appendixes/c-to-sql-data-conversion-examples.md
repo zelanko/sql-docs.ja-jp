@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d900ac7b21b75a5cecbb92f41a95dc9cbb836423
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>SQL データの変換例 C
 次の例では、ドライバーに SQL データを C データを変換する方法を示しています。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  [この一覧に c] の数値は、SQL_DATE_STRUCT 構造体のフィールドに格納されている番号です。  
   
  [この一覧に d] で、数値は、SQL_TIMESTAMP_STRUCT 構造体のフィールドに格納されている番号です。
-

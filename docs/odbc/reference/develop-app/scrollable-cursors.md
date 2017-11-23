@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors"></a>スクロール可能なカーソル
 最新のスクリーン ベースのアプリケーションでは、ユーザーは、データを前後をスクロールします。 このようなアプリケーションでは、以前にフェッチした行を返すことは問題です。 1 つの可能性を開始、カーソル閉じてから、必要な行がカーソルに到達するまでの行をフェッチします。 別の方法としては、結果セットを読み取り、それをローカルにキャッシュおよびアプリケーションでのスクロールを実装するのにです。 どちらが小さい結果セットにのみ使用し、後者が可能な実装が困難です。 良いソリューションは、使用する、*スクロール可能なカーソルは、*後ろに移動し、結果セットに転送することができます。  
@@ -45,9 +43,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [スクロール可能なカーソルの種類](../../../odbc/reference/develop-app/scrollable-cursor-types.md)  
   
--   [スクロール可能なカーソルを使用します。](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
+-   [スクロール可能なカーソルの使用](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
   
--   [相対パスと絶対スクロール](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
+-   [相対と絶対のスクロール](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)
-

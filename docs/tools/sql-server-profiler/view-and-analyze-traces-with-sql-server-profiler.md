@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 961e3ea99f4c6f8d801528ab20b3c9ed99465e81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 026f6f0422de3345be3dc5d44c17bf9dfcdc1137
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler を使用したトレースの表示と分析
   トレースにキャプチャされたイベント データを表示するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義されたトレース プロパティに基づいてデータが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを分析するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーなどの別のプログラムにデータをコピーする方法があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、 **Text** データ列がトレースに含まれている場合、SQL バッチおよびリモート プロシージャ コール (RPC) のイベントを含んだトレース ファイルを使用できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用する適切なイベントと列がキャプチャされるようにするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に付属の定義済みチューニング テンプレートを使用します。  
@@ -89,10 +87,9 @@ AND     CPU < (Duration * 1000)
 ## <a name="see-also"></a>参照  
  [保存されているトレースの表示 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [フィルター情報の表示 & #40 です。SQL Server Profiler &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [フィルター情報の表示 & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
+ [フィルター情報の表示 &#40;です。SQL Server Profiler &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [フィルター情報の表示 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
  [トレース ファイル &#40; を開くSQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   
-

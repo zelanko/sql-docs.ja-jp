@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4c13b9095224d1c33e09c9513121e46483da05c0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services と Kerberos の制約付き委任 (KCD) の構成
   Kerberos の制約付き委任 (KCD) は、環境全体にわたってクライアントの資格情報をサービス間で委任するために Windows 認証で構成できる認証プロトコルです。 KCD には、ドメイン コントローラーなどの追加のインフラストラクチャと環境の追加構成が必要です。 KCD は、SharePoint 2016 で [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータが関係する一部のシナリオの要件となっています。 SharePoint 2016 では、Excel Services が SharePoint ファームの外部にある別の新しいサーバーである **Office Online Server**に移動しました。 Office Online Server は独立しているため、一般的な 2 つのホップ シナリオでクライアントの資格情報を委任する方法の必要性が高まります。  
@@ -229,4 +227,3 @@ ms.lasthandoff: 09/01/2017
  [SQL Server® の Microsoft® Kerberos Configuration Manager](http://www.microsoft.com/en-us/download/details.aspx?id=39046)  
   
   
-

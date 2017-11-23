@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
+f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b20e6017b116f716309627caa50e1821a7e7d981
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>データ マイニング ビューアーで使用する色の変更
   データ マイニング ビューアーでデータ系列、ノード、またはクラスターを表示する際に使用する色を変更できます。 これを行うには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオプションを設定します。 設定を変更すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して表示するすべてのモデルに色の選択が適用されます。ただし、新しい色を表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を閉じて、ビューアーでモデルを再度開く必要があります。  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/01/2017
     >  カスタム色を使用する場合は、色アイコンと色の RGB 値によって色が表されます。 システム色または Web 色を使用する場合は、色アイコンと色の名前によって色が表されます。  
   
   
-

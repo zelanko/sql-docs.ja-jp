@@ -8,16 +8,14 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -31,20 +29,19 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 4fe1477de1f1aa087d622d687249ee4a10ad2524
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="raiserror-transact-sql"></a>RAISERROR Transact SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   エラー メッセージを生成し、セッションのエラー処理を開始します。 RAISERROR では、sys.messages カタログ ビューに格納されているユーザー定義のメッセージを参照することまたは、メッセージを動的に作成できます。 メッセージは、サーバー エラー メッセージとして、呼び出し元のアプリケーションまたは関連する TRY...CATCH 構造の CATCH ブロックに返されます。 新しいアプリケーションを使用する必要があります[スロー](../../t-sql/language-elements/throw-transact-sql.md)代わりにします。  
   
@@ -289,21 +286,21 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [宣言@local_variable(TRANSACT-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md) [組み込み関数 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/functions/functions.md)   
+ [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [sp_addmessage & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_addmessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [xp_logevent & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
+ [xp_logevent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   
-
 

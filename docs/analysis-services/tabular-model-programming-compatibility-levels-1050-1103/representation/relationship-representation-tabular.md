@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 948614ea176ef4cb4cc506272daed33ac7435ded
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c11ae09c8c6bef956333c8a9cbee62f43992f91b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationship-representation-tabular"></a>リレーションシップ表現 (テーブル)
   リレーションシップとは、2 つのデータ テーブルの間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。  
@@ -236,4 +234,3 @@ private void setPKColumn(AMO.Database tabularDb, string PKTableName, string PKCo
  ただし、AMO を使用してリレーションシップ表現の作成と操作を行う方法については、AMO to Tabular サンプルのソース コードを参照してください。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   
-

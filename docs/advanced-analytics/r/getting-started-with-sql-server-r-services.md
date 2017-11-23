@@ -1,27 +1,24 @@
 ---
 title: "機械学習の getting Started with SQL Server |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 12/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 734deaac0381a3c5826038e7b5e133061749319f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea25548e0dfb3aa8a433c0fb014ad44a0f031f07
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>機械学習の getting Started with SQL Server
 
@@ -135,4 +132,3 @@ SQL Server で、リソースの管理およびセキュリ ティー機能の�
 ## <a name="solutions"></a>ソリューション
 
 他のサンプルについての業界を含む = 特定のソリューション テンプレートを参照してください[SQL Server マシン ラーニング チュートリアル](../tutorials/machine-learning-services-tutorials.md)です。
-

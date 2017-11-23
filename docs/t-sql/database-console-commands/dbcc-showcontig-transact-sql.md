@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC SHOWCONTIG
 - SHOWCONTIG
 - SHOWCONTIG_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - displaying defragmentation information
 - DBCC SHOWCONTIG statement
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 901067b9bd9c85887b66ea8d32999cf439873952
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -162,7 +159,7 @@ DBCC SHOWCONTIG にデータは表示されません**ntext**、**テキスト**
 -   DBCC SHOWCONTIG は表示されません行オーバーフロー ストレージ情報とその他の新しい行外のデータ型など**nvarchar (max)**、 **varchar (max)**、 **varbinary (max)**、および**xml**です。  
 -   空間インデックスは、DBCC SHOWCONTIG ではサポートされません。  
   
-すべての新機能は完全にサポートによって、 [sys.dm_db_index_physical_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動的管理ビュー。
+すべての新機能は完全にサポートによって、 [sys.dm_db_index_physical_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動的管理ビュー。
   
 ## <a name="table-fragmentation"></a>テーブルの断片化  
 DBCC SHOWCONTIG は、テーブルに著しい断片化が生じているかどうかを調べます。 テーブルの断片化は、テーブルに対するデータの変更処理 (INSERT、UPDATE、DELETE ステートメント) によって発生します。 このような変更処理は、テーブルのすべての行にわたって均等に分散するわけではないので、時間の経過と共に、各ページの充填率に差が生じることがあります。 そのため、テーブルの一部または全体をスキャンするクエリでは、このようなテーブルの断片化によって、余分なページ読み込みが必要になり、 データの並列スキャンの妨げになります。
@@ -360,5 +357,4 @@ GO
 [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
   
   
-
 

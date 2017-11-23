@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, prerequisites
+helpviewer_keywords: ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8449ce51322ebc605bbfb8a5406e92489334dda
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f24131913e671adb505f51ad467db0cdb1b7caf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO のドキュメントを使用するための前提条件
 使用するにはこのドキュメントが必要には、少なくとも一部エクスペリエンス ガイドの例のほとんどがこの言語で記述されているために、Microsoft Visual Basic でのアプリケーションを開発します。 Microsoft Visual C、Java、Visual Basic Scripting Edition (VBScript) および Microsoft JScript で記述された例をいくつかもあります。  
@@ -32,4 +30,3 @@ ms.lasthandoff: 09/09/2017
  リレーショナル データベース管理システムとオンライン分析処理 (OLAP) およびインターネットとインターネットに関する基本的な知識のいくつかについて理解する必要もさまざまなソースからデータにアクセスする ADO を使用するためのプロトコルです。  
   
  ADO および OLE DB に関する技術基づいているために、Microsoft コンポーネント オブジェクト モデル (COM)、COM の知識は役立ちます ADO では高度な概念を理解するのには。
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.getObject (jnt)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.getObject (jnt)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: c4b8366b-c065-48e1-b712-19e2d9834228
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c68b20ad1ee124a1244d67fecce2ebc82b9cfbb5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e43c9e04aefe5b0c658ab41112cfdf764454291
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getobject-method-int"></a>getObject (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -71,9 +67,8 @@ public java.lang.Object getObject(int index)
 -   型の値**datetimeoffset**は microsoft.sql.DateTimeOffset オブジェクトとして返されます。  
   
 ## <a name="see-also"></a>参照  
- [getObject メソッド & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+ [getObject メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

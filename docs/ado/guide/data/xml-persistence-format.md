@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- XML persistence [ADO], persistence format
+helpviewer_keywords: XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ef8f1495b6c790abe7b3b616e2d37908c42517b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8694aac4f8699d102d94664862f5ad357579eab9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-persistence-format"></a>XML の永続化の形式
 ADO では、utf-8 が解決されない XML ストリームのエンコーディングを使用します。  
@@ -79,5 +76,4 @@ xmlns:z="#RowsetSchema">
  データ セクションには、運送会社に関する情報を含む 3 つの行があります。 データのセクションが空である空の行セットのですが、 \<rs: データ > タグが存在する必要があります。 データのない、記述することも、タグの短縮形単に\<rs: データ/>。 "Rs"の付いたすべてのタグは、urn: スキーマで定義された名前空間内にあることを示す-microsoft-com:rowset です。  
   
 ## <a name="see-also"></a>参照  
- [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

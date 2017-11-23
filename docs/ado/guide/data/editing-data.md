@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a7328007b213817e0d306fe3329e434304dedfa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76a5921185f6643f328559e3bc73dfac46bfee0c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editing-data"></a>データの編集
 について説明してきました ADO を使用してデータ ソースへの接続、コマンドの実行で、結果を得る方法、**レコード セット**オブジェクト内を移動したり、 **Recordset**です。 ここで、次の基本的な ADO 操作について説明します。 データを編集します。  
@@ -93,11 +91,10 @@ End Function
   
 -   [既存のレコードの編集](../../../ado/guide/data/editing-existing-records.md)  
   
--   [レコードを追加します。](../../../ado/guide/data/adding-records.md)  
+-   [レコードの追加](../../../ado/guide/data/adding-records.md)  
   
--   [サポートされている機能を決定します。](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [サポートされている機能を特定する](../../../ado/guide/data/determining-what-is-supported.md)  
   
--   [Delete メソッドを使用してレコードを削除します。](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Delete メソッドを使用してレコードを削除する](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [他の方法: SQL ステートメントの使用](../../../ado/guide/data/alternatives-using-sql-statements.md)
-
+-   [他の方法: SQL ステートメントを使用する](../../../ado/guide/data/alternatives-using-sql-statements.md)

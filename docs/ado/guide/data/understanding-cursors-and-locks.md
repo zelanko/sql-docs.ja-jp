@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 75209516e372612beb8885051fd22882b967894c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96231e4b76ab2a01f2d817c0fd85aa2d0dca33e4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-cursors-and-locks"></a>カーソルとロック
 アプリケーションのデータ アクセスの要件については、最適なと最も効率的なカーソルの種類を選択する、カーソルの動作を理解しておく必要があります。 最適の小さいカーソルの構成を落としてデータ アクセス操作となります。  
@@ -35,17 +33,16 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [カーソルとは何ですか。](../../../ado/guide/data/what-is-a-cursor.md)  
+-   [カーソルとは](../../../ado/guide/data/what-is-a-cursor.md)  
   
 -   [カーソルの種類](../../../ado/guide/data/types-of-cursors-ado.md)  
   
 -   [カーソル位置の有意性](../../../ado/guide/data/the-significance-of-cursor-location.md)  
   
--   [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
+-   [OLE DB 向けの Microsoft カーソル サービス](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
   
--   [ロックとは何ですか。](../../../ado/guide/data/what-is-a-lock.md)  
+-   [ロックとは](../../../ado/guide/data/what-is-a-lock.md)  
   
--   [CacheSize を使用します。](../../../ado/guide/data/using-cachesize.md)  
+-   [CacheSize を使用する](../../../ado/guide/data/using-cachesize.md)  
   
--   [カーソルやロック特性](../../../ado/guide/data/cursor-and-lock-characteristics.md)
-
+-   [カーソルとロックの特性](../../../ado/guide/data/cursor-and-lock-characteristics.md)

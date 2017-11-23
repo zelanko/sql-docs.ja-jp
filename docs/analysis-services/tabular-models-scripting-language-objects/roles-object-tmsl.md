@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1812f60b-bd5f-417c-96bc-3d834bdb4d3c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d8db20290efa59425ff28d0ab3ff0b816abf6709
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8073ac6a467673a5781f747c1a8ab60be17f31a3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="roles-object-tmsl"></a>ロール オブジェクト (TMSL)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
                   読み取り、  
                   readRefresh、  
                   更新します。  
-                  および管理者。 参照してください[ロールとアクセス許可 & #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)データベース アクセス許可についてはします。  
+                  および管理者。 参照してください[ロールとアクセス許可 &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)データベース アクセス許可についてはします。  
   
  メンバー  
  メンバーは、メンバーの名前と ID、メンバーの名前が別名データ型または Windows セキュリティの方針のフレンドリ名、ID は、セキュリティ識別子の両方で構成されます。 ロールの定義の両方を指定します。参照してください[SID コンポーネント](https://msdn.microsoft.com/en-us/library/windows/desktop/aa379597\(v=vs.85\).aspx)識別子の詳細についてはします。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
  テーブルのアクセス許可は、DAX 式を使用して定義されているアクセス許可を持つ名前付きオブジェクトです。 このプロパティは省略可能でセキュリティ フィルターを適用するために使用します。  
   
 ## <a name="usage"></a>使用方法  
- **ロール**オブジェクトを使用[Alter コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、および[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
+ **ロール**オブジェクトを使用[Alter コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、および[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
   
  A**ロール**オブジェクトは、モデルのプロパティですが、モデルとデータベース間の一対一のマッピングを指定されたデータベース オブジェクトのプロパティとして指定することもできます。  
   
@@ -274,4 +273,3 @@ ms.lasthandoff: 09/01/2017
  [ロールと権限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
-

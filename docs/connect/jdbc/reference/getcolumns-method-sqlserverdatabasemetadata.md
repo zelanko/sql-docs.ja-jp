@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getColumns
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getColumns
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75d9ab3fb70f854e56df0c659275a2983a8487ff
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -86,7 +82,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|列の小数点以下の桁数です。|  
 |NUM_PREC_RADIX|**smallint**|列の基数です。|  
 |NULLABLE|**smallint**|列が null を許容するかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**文字列**|列に関連付けられているコメントです。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常にこの列の null を返します。  |  
+|REMARKS|**文字列**|列に関連付けられているコメントです。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常にこの列の null を返します。|  
 |COLUMN_DEF|**文字列**|列の既定値です。|  
 |SQL_DATA_TYPE|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 datetime データ型と SQL-92 interval データ型以外は、DATA_TYPE 列と同じです。 この列は、常に値を返します。|  
 |SQL_DATETIME_SUB|**smallint**|datetime および SQL-92 interval データ型のサブタイプ コードです。 他のデータ型の場合、この列は NULL を返します。|  
@@ -218,4 +214,3 @@ public class c1 {
  [SQLServerDatabaseMetaData クラス](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

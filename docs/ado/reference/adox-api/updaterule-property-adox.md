@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Key::PutUpdateRule
 - _Key::put_UpdateRule
 - _Key::UpdateRule
-helpviewer_keywords:
-- UpdateRule property [ADOX]
+helpviewer_keywords: UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ded3322bf28cb627ea74573fcef872611918c9b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b4b037edbf6f5acc663e688c2a7cd3a0f7a9561
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule プロパティ (ADOX)
 プライマリ アクションが実行されることを示します[キー](../../../ado/reference/adox-api/key-object-adox.md)が更新されます。  
@@ -44,8 +41,7 @@ ms.lasthandoff: 09/09/2017
  このプロパティは読み取り専用で[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトをコレクションに既に追加されています。  
   
 ## <a name="applies-to"></a>適用対象  
- [キー オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [キーは、メソッド、キーの種類、RelatedColumn、RelatedTable および UpdateRule プロパティの例 (VB を) 追加します。](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
-
+ [Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

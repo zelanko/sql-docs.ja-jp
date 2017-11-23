@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- what's new in version 1.1
+helpviewer_keywords: what's new in version 1.1
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7614ac9453d6021503ac6f5c86ef852269df30fd
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c63079bda91844995540aade94bac397be6b94c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-php-sql-driver"></a>PHP SQL ドライバーのリリース ノート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 - [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]で追加された LocalDB のサポート。 詳細については、「 [PHP Driver for SQL Server Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)」を参照してください。
 - AttachDBFileName 接続オプションが追加されています。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
 - 高可用性のディザスター リカバリー機能のサポート。 詳細については、「 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」(高可用性、障害復旧の PHP Driver for SQL Server のサポート) を参照してください。
-- クライアント側のカーソル (結果セットのメモリ内キャッシュ) のサポート。 詳細については、次を参照してください。[カーソルの種類 & #40 です。SQLSRV ドライバー &#41;](../../connect/php/cursor-types-sqlsrv-driver.md)と[カーソルの種類 & #40 です。PDO_SQLSRV ドライバー &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
+- クライアント側のカーソル (結果セットのメモリ内キャッシュ) のサポート。 詳細については、次を参照してください。[カーソルの種類 &#40;です。SQLSRV ドライバー &#41;](../../connect/php/cursor-types-sqlsrv-driver.md)と[カーソルの種類 &#40;です。PDO_SQLSRV ドライバー &#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 - PDO::ATTR_EMULATE_PREPARES 属性が追加されました。 詳細については、次を参照してください。 [pdo::prepare](../../connect/php/pdo-prepare.md)です。  
   
 ## <a name="whats-new-in-version-20"></a>バージョン 2.0 の新機能  
@@ -77,4 +74,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>参照  
 [Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/overview-of-the-php-sql-driver.md)
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - statement options [ODBC]
 - ODBC driver for Oracle [ODBC], statement options
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 702aa4a49a3db1c22c90be40486cb212fc1479a2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-options"></a>ステートメントのオプション
 > [!IMPORTANT]  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|結果セット内の現在の行の位置を示す 32 ビット整数を返します。 取得のみです。設定できません。|  
 |SQL_ROWSET_SIZE|4,294,967,296 行を超えることはできません。ただし、リクエストを処理するコンピューターに十分な仮想メモリが必要です。|  
 |SQL_USE_BOOKMARKS|SQL_UB_ON に SQL_USE_BOOKMARKS の設定をサポートし、固定長のブックマークを公開します。|
-

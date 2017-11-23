@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RecordStatusEnum
-helpviewer_keywords:
-- RecordStatusEnum enumeration [ADO]
+f1_keywords: RecordStatusEnum
+helpviewer_keywords: RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1caa261bbc1a66caa7137b6608410230b95255f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bf2413bed1bbdf96b83b7e805aac90529a721c9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordstatusenum"></a>可能
 指定します、[ステータス](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新およびその他の一括操作に関して、レコードのです。  
@@ -81,5 +77,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>適用対象  
- [Status プロパティ (ADO レコード セット)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
-
+ [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

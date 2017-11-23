@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 054bbee8341112ae2600dcd1280f134ce0336647
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 06cda31832fca59fec1a0b064d211cfabc8cdac6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-sybasetosql"></a>プロジェクトの設定 (移行) (SybaseToSQL)
 [移行] ページ、**プロジェクト設定** ダイアログ ボックスには、どのように SSMA はデータ移行から Sybase Adaptive Server Enterprise (ASE) をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 08/02/2017
 > [!IMPORTANT]  
 > ときに、**並列のデータ移行モード**にオプションが設定されている**カスタム**、オプションを設定する新しいプロジェクト**スレッド数**が表示されます。 データの移行に使用されるスレッドの数を指定します。  
   
-

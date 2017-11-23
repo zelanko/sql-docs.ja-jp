@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3de186cec4b3299bbdc43cf2fe63c806c228cb66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 行セット
   データ プロバイダーによってサポートされている (基本) データ型を識別します。  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|型インジケーターがある場合は、小数点の右側に許可する最大桁数**DBTYPE_VARNUMERIC**、 **DBTYPE_DECIMAL**、または**DBTYPE_NUMERIC**以外の場合、N**U**LL です。|  
 |**GUID**|**DBTYPE_GUID 型**|(将来使用するためのもの)**GUID**型がタイプ ライブラリに記述されている場合は、型のです。 それ以外の場合、 **NULL**です。|  
 |**タイプ ライブラリ**|**DBTYPE_WSTR**|(将来使用する予定) 型がタイプ ライブラリに記述されている場合は、型の記述を含んでいるタイプ ライブラリ。 それ以外の場合は、NULL。|  
-|**バージョン**|**DBTYPE_WSTR**|(将来使用する予定) 型定義のバージョン。 プロバイダーは、型定義をバージョン管理できます。 プロバイダーによって、タイムスタンプや番号 (整数または浮動小数点数) などの異なるバージョン管理スキームが使用されます。 **NULL**サポートされていない場合。|  
+|**VERSION**|**DBTYPE_WSTR**|(将来使用する予定) 型定義のバージョン。 プロバイダーは、型定義をバージョン管理できます。 プロバイダーによって、タイムスタンプや番号 (整数または浮動小数点数) などの異なるバージョン管理スキームが使用されます。 **NULL**サポートされていない場合。|  
 |**IS_LONG**|**DBTYPE_BOOL**|データ型がバイナリ ラージ オブジェクト (BLOB) で、非常に長いデータを持つかどうかを示すブール値。<br /><br /> **VARIANT_TRUE**データの種類があることを示します、 **BLOB**非常に長いデータを格納している以外の非常に長いデータの定義は、プロバイダーに固有です。<br /><br /> **VARIANT_FALSE**データの種類があることを示します、 **BLOB**を非常に長いデータを含まないかが、 **BLOB**です。<br /><br /> この値の設定を決定する、 **DBCOLUMNFLAGS_ISLONG**によって返されたフラグ**GetColumnInfo**で**IColumnsInfo**と**GetParameterInfo**で**ICommandWithParameters**です。|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|最も一致するデータ型かどうかを示すブール値。<br /><br /> **VARIANT_TRUE**データ型がデータ ストア内のすべてのデータ型との値によって示される OLE DB データ型間の最適な一致であることを示します、 **DATA_TYPE**列です。<br /><br /> **VARIANT_FALSE**データ型が最適な一致でないことを示します。<br /><br /> ある行のセットごとの値、 **DATA_TYPE**列は、同じ、 **、BEST_MATCH**に列が設定されている**VARIANT_TRUE** 1 行のみにします。|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|列が固定長かどうかを示すブール値。<br /><br /> **VARIANT_TRUE**固定長データ定義言語 (DDL) によって作成されたこの型の列があることを意味します。<br /><br /> **VARIANT_FALSE** DDL で作成されたこの型の列が可変長のことを示します。<br /><br /> フィールドがある場合**NULL**プロバイダーが固定長または可変長列を持つこのフィールドをマップするかどうかが不明です。|  
@@ -74,7 +70,6 @@ ms.lasthandoff: 09/01/2017
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [OLE DB Schema 行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

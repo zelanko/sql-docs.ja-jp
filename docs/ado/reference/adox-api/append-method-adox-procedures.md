@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Procedures::Append
 - Procedures::raw_Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac280aebcf98c593124cabb6876a0dd5b6a56826
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 679f7691a8f93026ce1f6a68ea232d01818e6dc9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-procedures"></a>Append メソッド (ADOX プロシージャ)
 新しく追加[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクション。  
@@ -57,7 +54,7 @@ Procedures.Append Name, Command
 >  For Microsoft Jet OLE DB プロバイダーを使用する場合、**プロシージャ**コレクション**Append**を指定するメソッドを使用できる、**ビュー**ではなく、 **プロシージャ**で、*コマンド*パラメーター。 **ビュー**がデータ ソースに追加されに追加されます、**プロシージャ**コレクション。 後に、 **Append**場合、**プロシージャ**と**ビュー**コレクションが更新されると、**ビュー** でしなくなる**プロシージャ**コレクションに表示されます、**ビュー**コレクション。  
   
 ## <a name="applies-to"></a>適用対象  
- [プロシージャのコレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
 ## <a name="see-also"></a>参照  
  [プロシージャは、メソッドの例 (VB) を追加します。](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
@@ -67,5 +64,4 @@ Procedures.Append Name, Command
  [Append メソッド (ADOX キー)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append メソッド (ADOX テーブル)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append メソッド (ADOX ユーザー)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append メソッド (ADOX ビュー)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)

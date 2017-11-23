@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7a8be23faf9284ee4e2bccce79f4015f8f99973
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66f717eee45a790016e4dc03d2f6b696f39ea365
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>主キーと一意のプロパティの例 (VB)
 この例で、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、2 つの列を新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して、1 つの列に重複する値が許可されていません、主キーを作成します。  
@@ -124,4 +121,3 @@ End Sub
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [主キー プロパティ (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique プロパティ (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)
-

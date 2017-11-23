@@ -24,17 +24,16 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>オブジェクトと操作へのアクセスの承認 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services でサポートされる認証方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   
-

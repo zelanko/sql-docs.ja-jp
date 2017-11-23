@@ -13,33 +13,28 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Execute Method
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Execute Method
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - EXECUTE
 - urn:schemas-microsoft-com:xml-analysis#
 - http://schemas.microsoft.com/analysisservices/2003/engine#
 - microsoft.xml.analysis.execute
 - urn:schemas-microsoft-com:xml-analysis#Execute
-helpviewer_keywords:
-- Execute method
+helpviewer_keywords: Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2743ccdbe0f2186db5721479c812f61adfcfe92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22bf60ae16e6b4e5f30bf694505e77857b6c0600
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---methods---execute"></a>XML 要素のメソッドを実行します。
   For Analysis (XMLA) コマンドのインスタンスに XML を送信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 これには、サーバー上のデータの取得や更新など、データ転送に関連した要求が含まれます。  
@@ -99,11 +94,10 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="see-also"></a>参照  
- [XML データ型 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [XML データ型 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [方法 &#40; を検出します。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [メソッドと #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [XML 要素 & #40 です。XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [XML 要素 &#40;です。XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Analysis Services のスキーマ行セット](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

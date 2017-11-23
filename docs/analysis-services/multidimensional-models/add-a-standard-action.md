@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ed8e041cef62cb1782d0f00a90fe5c09986c7d81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-standard-action"></a>標準アクションの追加
   アクションをデータベースに追加するには、キューブ デザイナーの [アクション] ビューを使用します。 このビューには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 作成されたアクションは、関連キューブの再処理後、使用可能になります。 詳細については、「 [Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
@@ -91,4 +90,3 @@ ms.lasthandoff: 09/01/2017
     -   **[キャプションに MDX を使用]** ボックスの一覧では、キャプションが MDX かどうかを指定します。 このフィールドは、サーバーに対して **[キャプション]** の内容を MDX 式として評価するかどうかを示します。  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5fbdacd6a82296b08d0f395502df71f0a9e65eb8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 78144684dfeab222e031ce1151401fae77ab4350
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>レッスン 5-4-メジャー グループ内のディメンションの粒度の定義
 ファクト データは、利用目的ごとに異なる粒度でディメンションを作成しなければならない場合があります。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
@@ -239,4 +236,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

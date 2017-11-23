@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - collating sequences [ODBC]
 - Visual FoxPro ODBC driver [ODBC], international support
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06d85711cc234a8245e22b6b923b02641259eeef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>国際化サポート (Visual FoxPro ODBC ドライバー)
 Microsoft Visual FoxPro ODBC ドライバーをサポートします。  
@@ -49,4 +47,3 @@ Microsoft Visual FoxPro ODBC ドライバーをサポートします。
   
 ## <a name="sort-order"></a>並べ替え順 (sort order)  
  並べ替え順序は、別の並べ替え規則を組み込む*ロケール*s、それらの言語でデータを正しく並べ替えるにすることができます。 Visual FoxPro には、現在の並べ替え順序は、文字式の比較と、レコード内の表示インデックスまたはテーブルの並べ替え順序の結果を決定します。
-

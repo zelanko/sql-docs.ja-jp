@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- customization file in RDS [ADO]
+helpviewer_keywords: customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cadf89ac579b11ab829ecd288fec77df81eb0603
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます (**:operator[]**) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**接続**、 **sql**、 **userlist**、または**ログ**です。 パラメーターでは、リテラル文字列、既定値、ユーザー指定の識別子では、または何も行われません。  
@@ -82,7 +79,6 @@ identifier
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

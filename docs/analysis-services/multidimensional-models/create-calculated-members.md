@@ -20,17 +20,16 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
   キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
@@ -94,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

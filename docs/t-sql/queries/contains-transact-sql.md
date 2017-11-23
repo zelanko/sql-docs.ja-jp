@@ -3,17 +3,18 @@ title: "(TRANSACT-SQL) が含まれています |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - CONTAINS predicate (Transact-SQL)
@@ -34,20 +35,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
+caps.latest.revision: "117"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での検索、または重み付き検索を行います。 使用される述語は、 [WHERE 句](../../t-sql/queries/where-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントを実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フルテキスト検索をフルテキスト インデックス文字ベースのデータ型を含む列を作成します。  
   
@@ -169,7 +169,7 @@ CONTAINS (
   
  *language_term*文字列、整数、または、言語の LCID に対応する 16 進数の値として指定できます。 場合*language_term*を指定すると、その言語は、検索条件のすべての要素に適用します。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
- 文字列として指定されている場合*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。 文字列は、ように、単一引用符で囲む必要があります '*language_term*' です。 整数として指定すると*language_term*言語を識別する実際の LCID です。 16 進数の値として指定する*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ 文字列として指定されている場合*language_term*に対応する、**エイリアス**列の値、 [sys.syslanguages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューです。 文字列は、ように、単一引用符で囲む必要があります '*language_term*' です。 整数として指定すると*language_term*言語を識別する実際の LCID です。 16 進数の値として指定する*language_term*は 0 x 後に LCID の 16 進数の値。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
  値が 2 バイト文字セット (DBCS) の形式である場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Unicode に変換します。  
   
@@ -178,7 +178,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  内で検索するテキストを示す*column_name*と一致するための条件。  
   
-*\<contains_search_condition >*は**nvarchar**です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 次の例で、`@SearchWord`として定義されている変数`varchar(30)`で暗黙的な変換により、`CONTAINS`述語。
+*\<contains_search_condition >*は**nvarchar**です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例で、`@SearchWord`として定義されている変数`varchar(30)`で暗黙的な変換により、`CONTAINS`述語。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -288,7 +288,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  内部の検索用語、通知`CC`はカウントされません。  
   
- **最大値**  
+ **MAX**  
  距離に関係なく、指定した語句が含まれているすべての行を返します。 これは既定値です。  
   
  \<match_order >  
@@ -552,8 +552,7 @@ GO
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [ここで & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
+ [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
  [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

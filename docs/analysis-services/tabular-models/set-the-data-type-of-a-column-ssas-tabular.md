@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 770ce419a167c71914334ea6fa1b3fd397566b34
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>列のデータ型の設定 (SSAS テーブル)
   モデルにデータをインポートするか、データを貼り付けると、モデル デザイナーによってデータ型の検出と適用が自動的に行われます。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
@@ -89,4 +88,3 @@ ms.lasthandoff: 09/01/2017
  [サポートされているデータ型 (SSAS テーブル)](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   
-

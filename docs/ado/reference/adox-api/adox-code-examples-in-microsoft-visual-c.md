@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- ADOX code examples, Visual C++
+dev_langs: C++
+helpviewer_keywords: ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dcf0e1bd104d8ecb986bb5e854f17de3d8779fd7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cae03e9ba39212f0a8052089befd3874b08d0267
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C のコード例を ADOX
 これらのトピックでは、ADOX を使用する方法を理解するためのサンプル コードを提供します。 すべてのコード例は、Microsoft Visual C を使用して書き込まれます。  
@@ -37,55 +33,54 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="methods"></a>メソッド  
   
--   [列とテーブルの追加メソッド、プロパティの使用例の名前 (vc++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Columns および Tables Append メソッド、Name プロパティの例 (VC++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
--   [Close メソッドの接続、テーブル型のプロパティの例 (vc++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [Connection Close メソッド、Table Type プロパティの例 (VC++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
--   [メソッドの例 (vc++) を作成します。](../../../ado/reference/adox-api/create-method-example-vc.md)  
+-   [Create メソッドの例 (VC++)](../../../ado/reference/adox-api/create-method-example-vc.md)  
   
--   [GetObjectOwner と SetObjectOwner メソッドの例 (vc++)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vc.md)  
+-   [GetObjectOwner および SetObjectOwner メソッドの例 (VC++)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vc.md)  
   
--   [GetPermissions と SetPermissions メソッドの例 (vc++)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vc.md)  
+-   [GetPermissions および SetPermissions メソッドの例 (VC++)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vc.md)  
   
--   [グループとユーザーの追加、ChangePassword メソッドの例 (vc++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)  
+-   [Groups および Users Append、ChangePassword メソッドの例 (VC++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)  
   
--   [インデックスの追加メソッドの例 (vc++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
+-   [Indexes Append メソッドの例 (VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
 -   [キーを追加メソッド、キーの種類、RelatedColumn、RelatedTable、および UpdateRule プロパティの使用例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>[プロパティ]  
   
--   [属性プロパティの例 (vc++)](../../../ado/reference/adox-api/attributes-property-example-vc.md)  
+-   [Attributes プロパティの例 (VC++)](../../../ado/reference/adox-api/attributes-property-example-vc.md)  
   
--   [カタログ ActiveConnection プロパティの例 (vc++)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vc.md)  
+-   [Catalog ActiveConnection プロパティの例 (VC++)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vc.md)  
   
--   [クラスター化されたプロパティの例 (vc++)](../../../ado/reference/adox-api/clustered-property-example-vc.md)  
+-   [Clustered プロパティの例 (VC++)](../../../ado/reference/adox-api/clustered-property-example-vc.md)  
   
--   [コマンドと CommandText プロパティの例 (vc++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
+-   [Command プロパティおよび CommandText プロパティの例 (VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
 -   [コマンドのプロパティ、パラメーター コレクションの例 (vc++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
--   [作成日時と最終更新日時プロパティの例 (vc++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
+-   [DateCreated および DateModified プロパティの例 (VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
--   [DefinedSize プロパティの例 (vc++)](../../../ado/reference/adox-api/definedsize-property-example-vc.md)  
+-   [DefinedSize プロパティの例 (VC++)](../../../ado/reference/adox-api/definedsize-property-example-vc.md)  
   
--   [DeleteRule プロパティの例 (vc++)](../../../ado/reference/adox-api/deleterule-property-example-vc.md)  
+-   [DeleteRule プロパティの例 (VC++)](../../../ado/reference/adox-api/deleterule-property-example-vc.md)  
   
--   [IndexNulls プロパティの例 (vc++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
+-   [IndexNulls プロパティの例 (VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
 -   [キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティ、キーの追加メソッドの例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 -   [Name プロパティ、列およびテーブルの追加方法の例 (vc++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
--   [NumericScale と (vc++) の有効桁数のプロパティの例](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
+-   [NumericScale および Precision プロパティの例 (VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
--   [ParentCatalog プロパティの例 (vc++)](../../../ado/reference/adox-api/parentcatalog-property-example-vc.md)  
+-   [ParentCatalog プロパティの例 (VC++)](../../../ado/reference/adox-api/parentcatalog-property-example-vc.md)  
   
--   [主キーと一意のプロパティの例 (vc++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
+-   [PrimaryKey および Unique プロパティの例 (VC++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
 -   [テーブル型のプロパティ、接続の終了メソッドの例 (vc++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>コレクション  
   
--   [パラメーターのコレクション、プロパティの使用例のコマンド (vc++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)
-
+-   [Parameters コレクションおよび Command プロパティの例 (VC++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e2145a720c1fd9cfedeafe123ac24e7e5ac77173
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="structured-query-language-sql"></a>構造化照会言語 (SQL) (Structured Query Language) (SQL)
 一般的な DBMS では、保存、アクセス、および整理された、効率的な方法でデータを変更することができます。 最初に、Dbms のユーザーには、プログラマがでした。 格納されたデータにアクセスする COBOL などのプログラミング言語で、プログラムの作成が必要です。 これらのプログラムは、技術スタッフ以外のユーザーにわかりやすいインターフェイスを提供する多くの場合、書き込まれた、データ自体へのアクセスでは、知識の豊富なプログラマのサービスが必要です。 カジュアル データにアクセスするが実用的なでした。  
@@ -55,9 +53,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [SQL ステートメントの処理](../../odbc/reference/processing-a-sql-statement.md)  
   
--   [Embedded SQL](../../odbc/reference/embedded-sql.md)  
+-   [埋め込み SQL](../../odbc/reference/embedded-sql.md)  
   
 -   [SQL モジュール](../../odbc/reference/sql-modules.md)  
   
--   [呼び出しレベルのインターフェイス](../../odbc/reference/call-level-interfaces.md)
-
+-   [コールレベル インターフェイス](../../odbc/reference/call-level-interfaces.md)

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::CacheSize
-helpviewer_keywords:
-- CacheSize property [ADO]
+f1_keywords: Recordset15::CacheSize
+helpviewer_keywords: CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d5a36905a4de936dcac630adf97688d2b40855
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cachesize-property-ado"></a>CacheSize プロパティ (ADO)
 レコードの数を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)メモリにローカルにキャッシュされたオブジェクト。  
@@ -53,10 +49,9 @@ ms.lasthandoff: 09/09/2017
  場合**CacheSize** 1 ナビゲーション メソッドよりも大きい値に設定されます ([移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) へのナビゲーションで発生する可能性があります、レコードを取得した後、削除が発生した場合、レコードが削除されます。 最初のフェッチ後以降の削除は反映されませんデータ キャッシュ内の削除された行のデータ値にアクセスしようとするまで。 ただし、設定**CacheSize**いずれかに削除された行は取得できないためにこの問題を排除します。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [CacheSize プロパティの例 (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize プロパティの例 (vc++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [CacheSize プロパティの例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
-

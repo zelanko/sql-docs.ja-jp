@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef699835a26775c42b20e5a439cec06a1ff133ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2b555cebf6fbfda157b72e8bc71b10600da54d39
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>アクセス コンソール (AccessToSQL) for SSMA の概要
 このセクションを起動し、Access のコンソール アプリケーションで作業を開始する手順について説明します。 一覧表示、ここで、規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -40,7 +38,7 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムで、コンソールを正常に起動した後、次の手順を使用して作業する可能性があります。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 & #40 です。AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md).  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;です。AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md).  
   
 2.  [変数値ファイル &#40; を作成します。AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
@@ -73,4 +71,3 @@ SSMA スクリプトのコマンドとオプションを実行すると、コン
 ## <a name="see-also"></a>参照  
 [SQL Server Migration Assistant for Access をインストールします。](http://msdn.microsoft.com/en-us/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>キーセット ドリブン カーソル
 キーセット ドリブン カーソルは、静的および動的カーソルの間で変更を検出する機能にあります。 静的カーソルと同様に常に検出されない、メンバーシップと、結果セットの順序を変更します。 動的カーソルの場合と同様には、行の値が変更を検出、結果セット (SQL_ATTR_TXN_ISOLATION 接続属性によって設定された、トランザクションの分離レベル) に従います。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  キーセット ドリブン カーソルでは、結果セットの各行のキーを格納する一時テーブルを作成することで一般的な実装されます。 カーソルは、行が更新されているかどうかも決定する必要があります、ために、このテーブルには行バージョン管理情報を持つ列もよく含まれています。  
   
  元の結果セットをスクロールするには、キーセット ドリブン カーソルは、一時テーブルには静的カーソルを開きます。 元の結果セット内の行を取得するには、カーソルは最初に、一時テーブルから適切なキーを取得や、行の現在の値を取得します。 ブロック カーソルを使用している場合、カーソルは複数のキーと行を取得する必要があります。
-

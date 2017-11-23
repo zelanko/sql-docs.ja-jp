@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Query Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Query Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Query element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 03370b495578b0b4bb219e726dd81b5afc1c095e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d61494c22eda620a17ccf56fa6a8be74193fedb5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-element-assl"></a>Query 要素 (ASSL)
   通知の目的で実行するクエリのテキストを格納します。  
@@ -66,8 +61,7 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**クエリ**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.QueryNotification>します。  
   
 ## <a name="see-also"></a>参照  
- [ProactiveCachingQueryBinding データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/proactivecachingquerybinding-data-type-assl.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [ProactiveCachingQueryBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/proactivecachingquerybinding-data-type-assl.md)   
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

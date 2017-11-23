@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data mining [Analysis Services], tools
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a39d648c6e9a7abb24c1c5a936fa1908b4ddd91a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebbfe4e003be235b2265c215bfd731f8f2c1562
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-tools"></a>データ マイニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データ マイニング ソリューションの作成に使用できる次のツールが用意されています。  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

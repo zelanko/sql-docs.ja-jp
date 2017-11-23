@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Materialization Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Materialization Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Materialization element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Materialization element
 ms.assetid: a87a95ae-d89c-4005-b22c-47c8991673b7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8a74df70c3b922efb0e40e75cf43c5fc80ecbd23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: afc9aca54cee6c40c04e13dc330fd299e401c888
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="materialization-element-assl"></a>Materialization 要素 (ASSL)
   メジャー グループと参照ディメンションの間のリレーションシップの種類を示します。  
@@ -75,8 +70,7 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**具体化**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>します。  
   
 ## <a name="see-also"></a>参照  
- [Dimension 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Dimension 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

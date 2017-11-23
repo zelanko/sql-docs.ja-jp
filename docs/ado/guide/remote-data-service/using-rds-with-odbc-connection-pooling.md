@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connection pooling in RDS [ADO]
+helpviewer_keywords: connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e06c138bc3eec4c9ece503f98b0d4951ffdaea6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26342c07b2efe10a98a1cef4ff258d7fe5715094
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS を使用して、ODBC 接続プール
 ODBC データ ソースを使用している場合は、クライアントの負荷の処理は高パフォーマンスを実現するために、接続オプションでは、インターネット インフォメーション サービス (IIS) のプールを使用できます。 接続プールは、頻繁に使用される接続を開いた状態を維持する接続は、リソース マネージャーです。  
@@ -133,7 +130,6 @@ ODBC データ ソースを使用している場合は、クライアントの�
   
 ## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: 
 ms.workload: Inactive
+ms.openlocfilehash: dc3182262a297df176e8c8ca28b2e8273cb809ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux 上の SQL Server にデータベースと構造化データを移行します。 
 
@@ -53,4 +52,3 @@ Linux 上の SQL Server 2017 に他のデータベース システム上のデ�
 
 - [Bcp を使用したデータの一括コピー](sql-server-linux-migrate-bcp.md)
 - [抽出、変換、および SQL Server on Linux と SSIS のデータを読み込む](sql-server-linux-migrate-ssis.md) 
-

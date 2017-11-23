@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - REVOKE statement, XML schema collections
 - XML schema collections [SQL Server], permissions
 - schema collections [SQL Server], permissions
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5d73cd5f12601cfc3abab5cb6dee736fd805ad8a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4d7d530e89bdd3dcb320c4a08c340071b7faba3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (XML スキーマ コレクションの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -139,11 +136,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="see-also"></a>参照  
  [XML スキーマ コレクションの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
  [XML スキーマ コレクションの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [sys.xml_schema_collections &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [XML スキーマ コレクション &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

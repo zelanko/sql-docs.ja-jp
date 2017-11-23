@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 607e516c8654631ab032dfc6159a8990d464a023
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20767544a83219c6583eaf03a78e240e15e19be2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-overview"></a>ODBC の概要
 オープン データベース コネクティビティ (ODBC) は、データベース アクセスの広く受け入れられているアプリケーション プログラミング インターフェイス (API) です。 データベース Api のグループを開くと ISO/IEC から呼び出しレベル インターフェイス (CLI) 仕様に基づいていてには、データベース アクセスの言語として構造化照会言語 (SQL) を使用します。  
@@ -35,9 +33,8 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [ODBC が作成されたはなぜですか。](../../odbc/reference/why-was-odbc-created.md)  
+-   [ODBC の作成の目的](../../odbc/reference/why-was-odbc-created.md)  
   
--   [ODBC とは何ですか。](../../odbc/reference/what-is-odbc.md)  
+-   [ODBC とは](../../odbc/reference/what-is-odbc.md)  
   
 -   [ODBC と標準の CLI](../../odbc/reference/odbc-and-the-standard-cli.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a46f7218cee1a6561428ad83babf288bf8e24bb5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f617fdf969c0bdd238b07cb0def1b0a948a4d328
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-stored-procedures"></a>ストアド プロシージャでのステートメントの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -57,14 +55,13 @@ ms.lasthandoff: 09/09/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[パラメーターなしのストアド プロシージャを使用します。](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|JDBC ドライバーを使用して、入力または出力パラメーターのないストアド プロシージャを実行する方法を説明します。|  
-|[入力パラメーターを使用してストアド プロシージャを使用します。](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|JDBC ドライバーを使用して、入力パラメーターがあるストアド プロシージャを実行する方法を説明します。|  
-|[出力パラメーターを持つストアド プロシージャを使用します。](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|JDBC ドライバーを使用して、出力パラメーターのないストアド プロシージャを実行する方法を説明します。|  
-|[戻り値を持つストアド プロシージャを使用します。](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|JDBC ドライバーを使用して、状態の戻り値があるストアド プロシージャを実行する方法を説明します。|  
-|[更新数がストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|JDBC ドライバーを使用して、更新数を返すストアド プロシージャを実行する方法を説明します。|  
+|[パラメーターのないストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|JDBC ドライバーを使用して、入力または出力パラメーターのないストアド プロシージャを実行する方法を説明します。|  
+|[入力パラメーターがあるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|JDBC ドライバーを使用して、入力パラメーターがあるストアド プロシージャを実行する方法を説明します。|  
+|[出力パラメーターがあるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|JDBC ドライバーを使用して、出力パラメーターのないストアド プロシージャを実行する方法を説明します。|  
+|[状態の戻り値があるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|JDBC ドライバーを使用して、状態の戻り値があるストアド プロシージャを実行する方法を説明します。|  
+|[更新数があるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|JDBC ドライバーを使用して、更新数を返すストアド プロシージャを実行する方法を説明します。|  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーでステートメントを使用します。](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [JDBC ドライバーでのステートメントの使用](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a688b9544642ecb9dc5cbca1d7c5e3af90a5ebd4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 868de22e20887c0d038cf65690649ae6a41530e1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-classes---introduction"></a>AMO クラスの概要
   分析管理オブジェクト (AMO) のインスタンスを管理するためのクラスのライブラリは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]クライアント アプリケーションからです。 AMO クラスは、データベース、ディメンション、キューブ、マイニング構造およびマイニング モデル、ロールおよび権限、例外などの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトを管理するために使用されるクラスです。  
@@ -46,13 +44,12 @@ ms.lasthandoff: 09/01/2017
 |[AMO OLAP クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の OLAP オブジェクトの管理を可能にするクラスについて説明します。|  
 |[AMO データ マイニング クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のデータ マイニング オブジェクトの管理を可能にするクラスについて説明します。|  
 |[AMO セキュリティ クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|他のオブジェクトへのアクセスの制御やセキュリティのメンテナンスを可能にするクラスについて説明します。|  
-|[AMO の他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP またはデータ マイニングの管理者の日常業務の遂行に役立つクラスとメソッドについて説明します。|  
+|[AMO のその他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP またはデータ マイニングの管理者の日常業務の遂行に役立つクラスとメソッドについて説明します。|  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices>   
  [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト & #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [分析管理オブジェクト &#40; を使用した開発AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   
-

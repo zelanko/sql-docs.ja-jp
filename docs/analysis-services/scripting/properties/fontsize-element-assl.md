@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- FontSize Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: FontSize Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- FontSize
-helpviewer_keywords:
-- FontSize element
+applies_to: SQL Server 2016 Preview
+f1_keywords: FontSize
+helpviewer_keywords: FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 170c1ecf03be938c4a39da3709e0c03956bbfe29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8037b52fb4332a10129c87a15dbbe87b8c7f26b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fontsize-element-assl"></a>FontSize 要素 (ASSL)
   フォントに関連する表示特性を記述、 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)または[メジャー](../../../analysis-services/scripting/objects/measure-element-assl.md)親要素です。  
@@ -72,10 +66,9 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**FontSize**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CalculationProperty>と<xref:Microsoft.AnalysisServices.Measure>です。  
   
 ## <a name="see-also"></a>参照  
- [CalculationProperties 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
- [MdxScript 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
- [MdxScripts 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [CalculationProperties 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
+ [MdxScript 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
+ [MdxScripts 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

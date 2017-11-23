@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +14,19 @@ helpviewer_keywords:
 - health monitor [SQL Server]
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4cfeb511776dc078c118ee41ea7ce039bdbda1e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-options-sql-server-profiler"></a>再生オプション (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、キャプチャされたトレースを再生するには、**[構成の再生]** ダイアログ ボックスで、以下の再生オプションを指定します。 このダイアログ ボックスを表示するには、再生するトレース ファイルまたはトレース テーブルを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で開き、 **[再生]** メニューの **[開始]**をクリックします。 トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、キャプチャされたトレースを再生するには、 **[構成の再生]** ダイアログ ボックスで、以下の再生オプションを指定します。 このダイアログ ボックスを表示するには、再生するトレース ファイルまたはトレース テーブルを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で開き、 **[再生]** メニューの **[開始]**をクリックします。 トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
   
  このトピックでは、 **[構成の再生]** ダイアログ ボックスで指定できるオプションについて説明します。  
   
@@ -83,9 +81,8 @@ ms.lasthandoff: 08/02/2017
  ヘルス モニターは、トレースの再生に伴うシミュレートされたプロセスを監視するアプリケーション スレッドです。これらのプロセスのうち、再生内でブロックされているプロセスを終了します。 **[再生の構成]** ダイアログ ボックスの **[再生オプションの詳細設定]** タブで、ブロックされているプロセスを終了するまでにヘルス モニターが待機する時間を秒単位で指定できます (**[ヘルス モニターの待機間隔]**)。 この間隔が 0 に設定されていると、ヘルス モニターは、再生されているトレース中のブロックしているシミュレートされたプロセスを終了しません。  
   
 ## <a name="see-also"></a>参照  
- [トレースを再生します。](../../tools/sql-server-profiler/replay-traces.md)   
+ [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   
  [再生の要件](../../tools/sql-server-profiler/replay-requirements.md)   
- [トレース &#40; の再生に関する注意点SQL Server Profiler &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+ [トレースの再生に関する注意点 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   
-

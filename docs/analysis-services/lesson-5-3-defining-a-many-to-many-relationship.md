@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5943b62c11c717ce9e3ccf29b4b1c3fe98489cc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3872befe63b01c0de21efa14c5b4fdbaa9fbed89
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>レッスン 5-3-多対多リレーションシップを定義します。
 通常、ディメンションを定義する場合、1 つのディメンション メンバーは多数のファクトに結合できますが、各ファクトを結合できるのは 1 つのディメンションのみです。 たとえば、各顧客は多数の商品を注文できますが、それぞれの注文は 1 人の顧客に所属します。 リレーショナル データベース用語では、これを *一対多のリレーションシップ*と呼びます。 しかし、1 つのファクトが複数のディメンション メンバーに結合する場合があります。 リレーショナル データベース用語では、これを *多対多のリレーションシップ*と呼びます。 たとえば、1 回の購入には複数の購入動機があることが考えられ、また、1 つの購入動機が複数の購入に結び付く (関連付けられる) ことがあります。 結合テーブルは、各購入に関連する購入動機の定義に使用されます。 このようなリレーションシップから作成された Sales Reason ディメンションには、1 回の販売取り引きに関連付けられるメンバーが複数存在します。 多対多のディメンションは、従来のスター スキーマ以上にディメンショナル モデルを展開し、ディメンションが直接ファクト テーブルに関連付けられていなくても複雑な分析を可能にします。  
@@ -189,4 +186,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

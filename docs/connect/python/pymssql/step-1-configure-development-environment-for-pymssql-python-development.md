@@ -8,22 +8,20 @@ ms.service:
 ms.component: python
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a1932b41ada3469deed6d36a3c68c3827687cc5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>手順 1: pymssql Python 開発用の開発環境を構成します。
 SQL Server 用 Python ドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。    
@@ -90,4 +88,3 @@ c. 1 回ダウンロードした実行 Python ランタイムをインストー�
 ```  
 > sudo -H pip install pymssql  
 ```
-

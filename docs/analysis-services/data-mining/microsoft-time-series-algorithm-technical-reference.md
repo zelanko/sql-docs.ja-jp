@@ -31,17 +31,16 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b1109ae6cf12199d9e38d231497b8126b8fa0ebe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6d4e3cded028a4674ddb432c322b8fc18106db30
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、時系列を分析するための 2 つの異なるアルゴリズムが含まれています。  
@@ -181,4 +180,3 @@ ms.lasthandoff: 09/01/2017
  [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
-

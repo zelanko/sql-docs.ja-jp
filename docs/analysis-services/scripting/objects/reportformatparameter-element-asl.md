@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReportFormatParameter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReportFormatParameter Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportFormatParameter
-helpviewer_keywords:
-- ReportFormatParameter element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReportFormatParameter
+helpviewer_keywords: ReportFormatParameter element
 ms.assetid: 064a8683-c44b-4261-be4d-32226d3d3119
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 043474622aff2a8f0ff3d19de636d17efa12341c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0c5717a4f1896e42c35d035a6b91438bed998ae3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reportformatparameter-element---asl"></a>ReportFormatParameter 要素 - ASL
   指定するパラメーターの値と名前を含む方法、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]実行時にレポートを書式設定します。  
@@ -71,9 +65,8 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**ReportFormatParameter**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ReportAction>します。  
   
 ## <a name="see-also"></a>参照  
- [ReportAction データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md)   
- [Action 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)   
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [ReportAction データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md)   
+ [Action 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)   
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

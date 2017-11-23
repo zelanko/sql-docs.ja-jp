@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Collection::Count
-helpviewer_keywords:
-- Count property [ADO]
+f1_keywords: _Collection::Count
+helpviewer_keywords: Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 899b0eab595e939d9a42456785fcea492f1fd606
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 173b2fc9073676e77ad3068e9e9dc3ca76089702
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
 コレクション内のオブジェクトの数を示します。  
@@ -49,14 +45,13 @@ ms.lasthandoff: 09/09/2017
 |-|-|-|  
 |[Axes コレクション (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs コレクション (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
 |[Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[グループのコレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchies コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[キーのコレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels コレクション (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[メンバーのコレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[位置コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[プロシージャのコレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[テーブル コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[ユーザー コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[ビューのコレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
+|[Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchies コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels コレクション (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
+|[Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Positions コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
+|[Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>参照  
  [Count プロパティの例 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Count プロパティの例 (vc++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-

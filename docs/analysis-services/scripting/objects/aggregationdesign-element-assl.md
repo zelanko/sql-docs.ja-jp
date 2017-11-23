@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationDesign Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationDesign Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregationDesign
-helpviewer_keywords:
-- AggregationDesign element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AggregationDesign
+helpviewer_keywords: AggregationDesign element
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 81d1fbd4f314b713e0177af58ef27b3caed4f28a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 37820498904def60b0bdbd35afddeccf461cdb34
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationdesign-element-assl"></a>AggregationDesign 要素 (ASSL)
   データベース内の複数のパーティションで共有できる一連の集計定義を定義します。  
@@ -77,10 +71,9 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.AggregationDesign>します。  
   
 ## <a name="see-also"></a>参照  
- [Partition 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Aggregation 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Aggregations 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Partition 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Aggregation 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Aggregations 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

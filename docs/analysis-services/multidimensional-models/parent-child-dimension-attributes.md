@@ -24,17 +24,16 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 - MembersWithData property
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edadec950e3a3e38ff235bf20d05b5a1e8b15f2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2e7e84b9951c019440331b829aadeaa615daa9d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parent-child-dimension-attributes"></a>親子ディメンションの属性
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では通常、ディメンションのメンバーのコンテンツに関して一般的な前提条件が適用されます。 リーフ メンバーには、基になるデータ ソースから直接派生したデータが含まれ、非リーフ メンバーには、子メンバーで実行した集計から算出したデータが含まれています。  
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [親子ディメンション](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   
-

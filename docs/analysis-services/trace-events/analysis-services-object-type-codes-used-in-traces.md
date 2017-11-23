@@ -8,22 +8,20 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>トレースで使用される Analysis Services オブジェクトの種類のコード
   このページは、Analysis Services データ モデル内の各オブジェクトのオブジェクトの種類 (6 桁の数字) を一覧表示します。 これらのコードは、トレース ログに表示され、特定のロックに関連付けられているオブジェクトの種類を識別するために使用されます。 たとえば、データベースでのロックのタイムアウトは、オブジェクトの種類が 100002 で、これはデータベース オブジェクトの種類を示します。  
@@ -130,4 +128,3 @@ ms.lasthandoff: 09/01/2017
 |100155|PerspectiveCollection|  
   
   
-

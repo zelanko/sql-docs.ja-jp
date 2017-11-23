@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>[アプリケーション]
 *アプリケーション*データにアクセスする、ODBC API を呼び出すプログラムです。 可能なさまざま種類のアプリケーションが、ほとんどは、このガイドで説明する例として使用されている 3 つのカテゴリに分類されます。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/09/2017
 -   データ ソースからの接続を切断します。  
   
  SQL を使用した、ほとんどのデータにアクセスする作業が行われるために、アプリケーションが ODBC を使用する主なタスクは SQL ステートメントを送信し、これらのステートメントによって生成された結果 (存在する場合) を取得するです。 アプリケーションが ODBC を使用するその他のタスクには、特定しドライバーの機能を調整して、データベース カタログの参照が含まれます。
-

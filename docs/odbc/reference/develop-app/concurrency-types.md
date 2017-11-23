@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1b457d3cc344821cbcfc567ba1617089ca4a7b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="concurrency-types"></a>同時実行の種類
 カーソルの削減の同時実行の問題を解決するには、ODBC は、次の 4 つのさまざまな種類のカーソルの同時実行を公開します。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   **行のバージョンを使用してオプティミスティック同時実行と値を使用してオプティミスティック同時実行**カーソルはオプティミスティック同時実行制御を使用: 更新または最後の読み取り以降に変更されていない場合にのみ、行を削除します。 変更を検出するには、行のバージョンまたは値を比較します。 カーソルは更新または行を削除するようになりますが、同時実行性がロックを使用する場合より高い保証はありません。 詳細については、次のセクションを参照してください。[オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)です。  
   
  アプリケーションでは、SQL_ATTR_CONCURRENCY ステートメント属性で使用するカーソルが同時実行の種類を指定します。 サポートされる種類を決定するには、呼び出し**SQLGetInfo** SQL_SCROLL_CONCURRENCY オプションを使用します。
-

@@ -13,38 +13,33 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProtocolCapabilities Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProtocolCapabilities Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.protocolcapabilities
 - http://schemas.microsoft.com/analysisservices/2003/engine#ProtocolCapabilities
 - urn:schemas-microsoft-com:xml-analysis#ProtocolCapabilities
-helpviewer_keywords:
-- ProtocolCapabilities element
+helpviewer_keywords: ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42ff93dce6b71f7cfd69ed85d92c4c4f7912faee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d2ff72b1fdc3a3e3a4b09a046933d3ead88fc78
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
-# ProtocolCapabilities 要素 (XMLA)
+# <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 要素 (XMLA)
   インスタンス間のプロトコル機能を識別する、SOAP 要求メッセージの SOAP ヘッダーを使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]とクライアント アプリケーション。  
   
  **Namespace**`http://schemas.microsoft.com/analysisservices/2003/engine`  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```xml  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 </soap:Envelope>  
 ```  
   
-## 要素の特性  
+## <a name="element-characteristics"></a>要素の特性  
   
 |特性|説明|  
 |--------------------|-----------------|  
@@ -70,14 +65,14 @@ ms.lasthandoff: 09/01/2017
 |既定値|なし|  
 |Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
-## 要素の関係  
+## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|なし|  
 |子要素|[機能](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## 解説  
+## <a name="remarks"></a>解説  
  **ProtocolCapabilities**要素により、クライアント アプリケーションでバイナリ XML や圧縮サポートなどのプロトコル機能をネゴシエートする、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]いつでもインスタンス。 プロトコルのネゴシエーションは以下の手順で行われます。  
   
 1.  クライアント アプリケーションは、SOAP ヘッダー内に **ProtocolCapabilities** 要素を含む SOAP 要求を送信することにより、自らのプロトコル機能を示します。  
@@ -94,9 +89,8 @@ ms.lasthandoff: 09/01/2017
   
  プロトコル機能を明示的にネゴシエートする必要はありません。 つまり、クライアント アプリケーションで **ProtocolCapabilities** 要素を SOAP 要求に含める必要はありません。 SOAP 要求が含まれていない場合、 **ProtocolCapabilities**要素、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスは SOAP 要求と同じ形式を使用して応答を行います。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [管理接続およびセッション (&) #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [ヘッダーと #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
-

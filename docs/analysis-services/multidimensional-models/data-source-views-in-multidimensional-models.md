@@ -23,17 +23,16 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多次元モデルのデータ ソース ビュー
   データ ソース ビュー (DSV) は、リレーショナル データ ソースを抽象化し、多次元プロジェクト内でキューブやディメンションを作成する基礎となります。 DSV の目的は、プロジェクトで使用するデータ構造をユーザーが制御できるようにすることと、基になるデータ ソースから独立して動作することです (たとえば、元のデータ ソースを変更せずに、列の名前の変更や列の連結を行うことができます)。  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [サポートされるデータ ソース &#40;SSASSSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
-

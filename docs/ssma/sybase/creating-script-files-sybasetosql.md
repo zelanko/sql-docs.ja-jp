@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da140d71612c135152befbf2527f016903a2d97a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ef30f1ff45422bbe034c1fe815753ebb7e2543df
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-sybasetosql"></a>スクリプト ファイル (SybaseToSQL) を作成します。
 最初の手順とスクリプト ファイルの作成には、SSMA コンソール アプリケーションを起動する前に、変数の値のファイルと、サーバー接続ファイルを作成するために必要な場合は。  
   
-スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
+スクリプト ファイルを viz 3 つのセクションに分割できます。。、します。  
   
 1.  **config:**コンソール アプリケーションの構成パラメーターを設定することができます。  
   
@@ -406,9 +404,8 @@ ms.lasthandoff: 08/02/2017
 ユーザーが、スキーマ定義ファイルに対して自分のスクリプト ファイルを簡単に検証**'S2SSConsoleScriptSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[変数値ファイルの作成 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+コンソールの運用には、次の手順は[変数値ファイルの作成 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
 ## <a name="see-also"></a>参照  
 [変数値ファイル &#40; を作成します。SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
-

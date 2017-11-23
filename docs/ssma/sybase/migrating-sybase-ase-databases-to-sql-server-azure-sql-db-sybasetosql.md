@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bc6d8b076588b53d83e6af9e88be5dff14f08f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 63dc9188d93def41a5116386f93bf29e3b744e8e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-sybase-ase-databases-to-sql-server---azure-sql-db-sybasetosql"></a>SQL Server - Azure SQL DB (SybaseToSQL) への Sybase ASE データベースの移行
 SQL Server Migration Assistant (SSMA) for Sybase は包括的な環境を Sybase Adaptive Server Enterprise (ASE) データベースを簡単に移行するのに役立つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 SSMA for Sybase を使用することができます、確認するデータベース オブジェクトとデータ、移行対象のデータベースを評価するデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB へのデータを移行してから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。  
@@ -33,7 +31,7 @@ ASE データベースからオブジェクトとデータを正常に移行す�
   
 1.  [新しい SSMA プロジェクトを作成](http://msdn.microsoft.com/en-us/11091d95-c488-48c3-891a-743cac94ac93)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクト オプションの設定 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md). データ型マッピングのカスタマイズの概要については、次を参照してください。 [Sybase ASE のマッピングと SQL Server データ型 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクト オプションの設定 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md). データ型マッピングのカスタマイズの概要については、次を参照してください。 [Sybase ASE のマッピングと SQL Server データ型 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
 2.  [Sybase ASE データベース サーバーに接続](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614)です。  
   
@@ -57,4 +55,3 @@ ASE データベースからオブジェクトとデータを正常に移行す�
 [SSMA の Sybase &#40; のインストールSybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [For Sybase &#40; SSMA の概要SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   
-

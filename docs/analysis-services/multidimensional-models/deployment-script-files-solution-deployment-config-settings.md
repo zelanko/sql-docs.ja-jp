@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Analysis Services deployments, configuration settings
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 01012bd3fe63789ed1a6d6f12c6d734884559333
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24861b3e40c12d28c0bdbf25772fabad9f6c1107
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>配置スクリプト ファイル、ソリューションの展開の構成設定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置ウィザードでは読み取りますパーティションおよびロールから、配置スクリプトで使用する展開オプションを\<*プロジェクト名*> >.configsettings ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]現在のプロジェクトの構成設定を使用して、作成、 \<*プロジェクト名*> >.configsettings ファイル。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [処理オプションの指定](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   
-

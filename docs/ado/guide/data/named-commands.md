@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0eca9ac410156f891f4bd383a7100342c69662c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 21d9575ef237a01b97f4d272abb96e85fd5786f6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="named-commands"></a>名前付きコマンド
 [作成して、簡単なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)コマンドを実行する方法を示しています。 別の方法がある: 名前付きのコマンドを作成し、この名前付き上で直接コマンドを呼び出すことができます、**接続**オブジェクト (に割り当てられている、 **ActiveConnection**のプロパティ、**コマンド**オブジェクト)。 コマンドの名前を付けることを意味に名前が割り当てられて、**名前**のプロパティ、**コマンド**オブジェクト。 例を次に示します。  
@@ -98,5 +96,4 @@ ErrHandler:
 ```  
   
 ## <a name="see-also"></a>参照  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

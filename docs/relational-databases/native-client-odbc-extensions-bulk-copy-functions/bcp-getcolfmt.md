@@ -1,0 +1,84 @@
+---
+title: "bcp_getcolfmt |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: native-client-odbc-extensions-bulk-copy-functions
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: reference
+apiname: bcp_getcolfmt
+apilocation: sqlncli11.dll
+apitype: DLLExport
+helpviewer_keywords: bcp_getcolfmt function
+ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
+caps.latest.revision: "36"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8056470fbe4f5ce7c6c78bf0e595a738354d0a37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+
+  列形式のプロパティ値を確認するために使用します。  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+RETCODE bcp_getcolfmt (  
+        HDBC hdbc,  
+        INT field,  
+        INT property,  
+        void* pValue,  
+        INT cbvalue,  
+        INT* pcbLen);  
+```  
+  
+## <a name="arguments"></a>引数  
+ *hdbc*  
+ 一括コピーが有効な ODBC 接続ハンドルです。  
+  
+ *フィールド*  
+ プロパティを取得する列番号です。  
+  
+ *プロパティ*  
+ プロパティ定数のいずれかを指定します。  
+  
+ *pValue*  
+ プロパティ値を取得するバッファーへのポインターです。  
+  
+ *cbValue*  
+ プロパティ バッファーのバイト単位の長さです。  
+  
+ *pcbLen*  
+ プロパティ バッファーに返されるデータの長さへのポインターです。  
+  
+## <a name="returns"></a>返します。  
+ 成功または失敗します。  
+  
+## <a name="remarks"></a>解説  
+ 列形式のプロパティの値は、「、 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)トピックです。 呼び出して列形式のプロパティ値の設定、 **bcp_setcolfmt**関数、および**bcp_getcolfmt**列形式のプロパティ値を検索する関数を使用します。  
+  
+ 接続するときの動作の変更を確認することがあります、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (またはそれ以降) と比較すると前のサーバー コンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン。 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)です。  
+  
+## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt による機能強化された日付と時刻のサポート  
+ 使用される型、 **BCP_FMT_TYPE**日付/時刻型のプロパティで指定した[強化された日付と時刻型 &#40; OLE DB と ODBC &#41; の変更の一括コピー](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)です。  
+  
+ 詳細については、次を参照してください。[日付と時刻の強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
+  
+## <a name="see-also"></a>参照  
+ [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+  
+  

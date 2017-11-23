@@ -18,17 +18,16 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX クエリ軸とスライサー軸にスライサー軸の内容を指定します。
   スライサー軸は、多次元式 (MDX) の SELECT ステートメントから返されるデータを絞り込み、指定されているメンバーと重なり合うデータだけが返されるように、返されるデータを制限します。 クエリ内の見えない追加の軸であると考えることができます。 スライサー軸は、MDX の SELECT ステートメントの WHERE 句で定義します。  
@@ -92,4 +91,3 @@ WHERE(
  上で説明したように、WHERE 句でセットを使用すると、セット内のすべてのメンバーに関する値が暗黙的に集計されます。 この例の場合、クエリは各セルに米国と英国の集計値を表示します。  
   
   
-

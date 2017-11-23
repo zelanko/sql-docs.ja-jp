@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Procedures
 - Catalog::Procedures
-helpviewer_keywords:
-- Procedures collection [ADOX]
+helpviewer_keywords: Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0a3c09cf4c82a12882ab4716830c580f2716fd4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52ea3d1aa490325f3abe4f5fdca80dea6edb5174
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="procedures-collection-adox"></a>プロシージャのコレクション (ADOX)
 すべてを含む[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)カタログのオブジェクト。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/09/2017
   
  このセクションには、次のトピックが含まれています。  
   
--   [インデックスのコレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Indexes コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
  [コマンドと CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
@@ -61,5 +58,4 @@ ms.lasthandoff: 09/09/2017
  [プロシージャは、メソッドの例 (VB) の更新します。](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
  [プロシージャのコレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
  [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [プロシージャのオブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
-
+ [Procedure オブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

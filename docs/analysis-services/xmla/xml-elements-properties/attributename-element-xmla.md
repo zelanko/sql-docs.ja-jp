@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#AttributeName
 - http://schemas.microsoft.com/analysisservices/2003/engine#AttributeName
 - microsoft.xml.analysis.attributename
-helpviewer_keywords:
-- AttributeName element
+helpviewer_keywords: AttributeName element
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9797232e605faa2bded4b7b10d6ce96d19deddf9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89ddb2ccc53736da2361c31f168ff450677eb6d7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributename-element-xmla"></a>AttributeName 要素 (XMLA)
   親によって表される属性の名前を含む[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)要素。  
@@ -71,11 +66,10 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [Drop 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
+ [Drop 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
  [要素 &#40; を挿入します。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [場所要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)   
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Update 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [場所要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)   
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

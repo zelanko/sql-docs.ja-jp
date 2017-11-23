@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- RefreshInterval Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: RefreshInterval Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- RefreshInterval
-helpviewer_keywords:
-- RefreshInterval element
+applies_to: SQL Server 2016 Preview
+f1_keywords: RefreshInterval
+helpviewer_keywords: RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: be823034fa1531164bf278ad012c989890470f9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7d5d7b519d52d60c042ecb0830a9d36e897ad86c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refreshinterval-element-assl"></a>RefreshInterval 要素 (ASSL)
   親要素に関連付けられたバインド データの更新間隔を指定します。  
@@ -70,7 +64,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**RefreshInterval**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.DimensionBinding>、 <xref:Microsoft.AnalysisServices.MeasureGroupBinding>、 <xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding>、および<xref:Microsoft.AnalysisServices.ProactiveCachingQueryBinding>です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

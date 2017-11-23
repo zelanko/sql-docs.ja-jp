@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f31253851c76e9f41fa14a8f6a150b67704280d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95ea01c8cfb495ce104e60cbb3e24110fac98116
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>テーブル型のプロパティの例 (VB) である接続 Close メソッド
 設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**カタログへの接続を閉じる必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 任意のプロパティがキャッシュされているこれらのオブジェクトで使用可能なは引き続きプロバイダーへの呼び出しを必要とするプロパティの読み取り試行は失敗します。  
@@ -88,4 +85,3 @@ Attribute VB_Name = "Connection"
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [テーブル コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type プロパティ (テーブル) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-

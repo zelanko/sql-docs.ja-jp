@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a89d3f9b45c4d4e56e80baf915bde76c5aea87d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ceb01feacc5557b9e7a0d1979e4f9c3d79242abe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-logging-accesstosql"></a>グローバル設定 (ログ) (AccessToSQL)
 使用して、**グローバル設定**ダイアログ ボックスを SSMA のログ設定を指定します。 通常、製品のサポートを使用する場合にのみこれらの設定を変更するは。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/02/2017
 **ログ ファイルの合計数**  
 1 つのログがいっぱいになる、SSMA は、ログ ファイルの名前を変更し、新しいを開始します。 この設定を使用すると、保持するログ ファイルの最大数を指定します。 最小値は 2 です。  
   
-

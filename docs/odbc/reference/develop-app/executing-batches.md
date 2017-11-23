@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0ca3a769ca983cae0cb7a2bc629c366b184b067e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3235040d910f2dd9b5bdbf4a81765d25dcd8be1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-batches"></a>バッチの実行
 アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずチェックする必要があります。 これには、アプリケーションの呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS と SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションでは、行のカウント – 生成および – セットを生成するステートメントが明示的なバッチおよび後者 2 つのオプションの戻り値の行の数と結果の可用性に関する情報を設定中に、プロシージャでサポートされる結果がパラメーター化するかどうかが返されます。実行します。  
@@ -59,4 +57,3 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 ```  
   
  パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。
-

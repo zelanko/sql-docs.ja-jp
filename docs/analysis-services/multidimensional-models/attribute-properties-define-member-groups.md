@@ -19,17 +19,16 @@ helpviewer_keywords:
 - grouping members
 - DiscretizationMethod property
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 70a192c25c9271824bcf1ea74c7de68ce0b44651
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f527aef051d304dc9cc89a953888c8b41090789d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---define-member-groups"></a>属性のプロパティ - メンバー グループの定義
   特定の属性に多数のメンバーが存在する場合は、そのメンバーをバケットにグループ化すると、階層内のデータを参照するときに表示されるメンバーの数を減らすことができます。 メンバーをグループ化するバケットの数を指定したり、バケットの名前付けスキーマを設定したりできます。 詳細については、[「属性メンバーのグループ化 (分離)](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  **[DiscretizationMethod]** の横のドロップダウン リストから、メンバーのグループ化方法を選択します。 **[DiscretizationMethod]** の設定の詳細については、「[属性メンバーのグループ化 (分離)](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
   
-

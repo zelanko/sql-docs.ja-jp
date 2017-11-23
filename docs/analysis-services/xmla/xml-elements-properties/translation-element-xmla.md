@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Translation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Translation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Translation
 - microsoft.xml.analysis.translation
 - http://schemas.microsoft.com/analysisservices/2003/engine#Translation
-helpviewer_keywords:
-- Translation element
+helpviewer_keywords: Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 33ffa6460f843949ec0e4b5659f614a036fdf0a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ab9951740db08b5043dee72223a1c5fc135727a4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translation-element-xmla"></a>Translation 要素 (XMLA)
   属性メンバーに対する翻訳を定義します。  
@@ -75,7 +70,6 @@ ms.lasthandoff: 09/01/2017
  A**翻訳**要素中に特定の属性に対して定義されている翻訳を属性メンバーを関連付けに必要な情報を定義する、[挿入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)または[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)コマンド。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

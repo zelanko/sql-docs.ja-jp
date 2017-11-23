@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 38917d4e3a7cbd53be9a638d0d4dc3f5b2c2b179
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>デスクトップのデータベースの Microsoft ODBC ドライバー
 ODBC は、データベース アクセスの言語として構造化照会言語 (SQL) を使用する API です。 アプリケーションのソース コードに直接組み込まれている同じ ODBC ソース コードにさまざまなデータベース管理システム (Dbms) にアクセスできます。 Microsoft ODBC のデスクトップ データベース ドライバーと ODBC 対応アプリケーションのユーザーが開くには、クエリ、および ODBC インターフェイスを使用してデスクトップ データベースを更新します。  
@@ -60,7 +58,7 @@ ODBC は、データベース アクセスの言語として構造化照会言�
   
 -   [製品のサポート](../../odbc/microsoft/product-support.md)  
   
--   [デスクトップ データベース ドライバーを実装します。](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
+-   [デスクトップ データベース ドライバーの実装](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   
 -   [Microsoft Access ドライバーのプログラミングに関する考慮事項](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
   
@@ -79,4 +77,3 @@ ODBC は、データベース アクセスの言語として構造化照会言�
 -   [ODBC エラー](../../odbc/microsoft/odbc-errors.md)  
   
 -   [サポートされている ODBC API 関数](../../odbc/microsoft/supported-odbc-api-functions.md)
-

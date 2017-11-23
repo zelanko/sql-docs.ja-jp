@@ -23,17 +23,16 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93df14efa013e5f8768db94184aaf2f4203a62ef
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、一定期間の製品売上などの連続値を予測するために最適化された複数のアルゴリズムが採用されています。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
@@ -169,4 +168,3 @@ ms.lasthandoff: 09/01/2017
  [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
-

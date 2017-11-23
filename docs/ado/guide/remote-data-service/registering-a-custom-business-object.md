@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be54505545b80211ec34216a67596c32ca8ce2b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="registering-a-custom-business-object"></a>カスタム ビジネス オブジェクトを登録します。
 Web サーバーを経由 (.dll または .exe) は、カスタム ビジネス オブジェクトが正常に起動するにはこの手順で説明したようにビジネス オブジェクトの ProgID レジストリに入力する必要があります。 この RDS 機能は、認められている実行可能ファイルだけを実行して、Web サーバーのセキュリティを保護します。  
@@ -49,6 +47,5 @@ Web サーバーを経由 (.dll または .exe) は、カスタム ビジネス 
 4.  選択、 **ADCLaunch**キー、し、**編集** メニューのをポイント**新規** をクリック**キー**です。  
   
 5.  カスタム ビジネス オブジェクトの ProgID を入力し、をクリックして**Enter**です。 ままにして、**値**空白エントリです。
-
 
 

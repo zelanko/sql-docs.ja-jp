@@ -22,17 +22,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52470e4818d24aeb2288d41f60114f040e669cd6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>データベース ディメンション - 日付型ディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、時間ディメンションとは、属性が年、半期、四半期、月、日などの時間間隔を表すディメンションの種類を指します。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
@@ -83,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンションの種類](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   
-

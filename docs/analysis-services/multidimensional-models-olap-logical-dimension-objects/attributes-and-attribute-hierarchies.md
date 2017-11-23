@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - regular attributes [Analysis Services]
 - parent attributes [Analysis Services]
@@ -28,23 +27,22 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a86eb2f15fe0109a2e5b2492a61ca7102e662e7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f51cefdbc4e81a1bfbc59014ebf6ce34afefb72
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>属性と属性階層
   ディメンションとは属性のコレクションで、これらの属性はデータ ソース ビュー内のテーブルまたはビューの 1 つ以上の列にバインドされています。  
   
 ## <a name="key-attribute"></a>キー属性  
- 各ディメンションにはキー属性が含まれています。 各属性は、ディメンション テーブル内の 1 つ以上の列にバインドされています。 キー属性は、各ディメンションに含まれている属性で、ファクト テーブルとの外部キー リレーションシップで使用されるディメンション メイン テーブル内の列を識別します。 通常、キー属性は、ディメンション テーブルに含まれている 1 つまたは複数の主キー列を表します。 基になるデータ ソースに物理主キーがないテーブルには、データ ソース ビューで論理主キーを定義できます。 **詳細については**を参照してください[定義で論理主キー データ ソース ビュー & #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). キー属性を定義する場合、キューブ ウィザードとディメンション ウィザードは、データ ソース ビューでディメンション テーブルの主キー列を使用しようとします。 ディメンション テーブルに論理主キーまたは物理主キーが定義されていない場合、これらのウィザードでは、ディメンションのキー属性を正しく定義できない可能性があります。  
+ 各ディメンションにはキー属性が含まれています。 各属性は、ディメンション テーブル内の 1 つ以上の列にバインドされています。 キー属性は、各ディメンションに含まれている属性で、ファクト テーブルとの外部キー リレーションシップで使用されるディメンション メイン テーブル内の列を識別します。 通常、キー属性は、ディメンション テーブルに含まれている 1 つまたは複数の主キー列を表します。 基になるデータ ソースに物理主キーがないテーブルには、データ ソース ビューで論理主キーを定義できます。 **詳細については**を参照してください[定義で論理主キー データ ソース ビュー &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). キー属性を定義する場合、キューブ ウィザードとディメンション ウィザードは、データ ソース ビューでディメンション テーブルの主キー列を使用しようとします。 ディメンション テーブルに論理主キーまたは物理主キーが定義されていない場合、これらのウィザードでは、ディメンションのキー属性を正しく定義できない可能性があります。  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>データ ソース ビュー テーブルまたはビュー内の列への属性のバインド  
  属性は、1 つ以上のデータ ソース ビュー テーブルまたはビュー内の列にバインドされています。 属性は常に 1 つ以上のキー列にバインドされており、これによって属性に含まれるメンバーが決定されます。 既定では、これは属性のバインド先の唯一の列になります。 1 つの属性を、特定の目的で 1 つ以上の列にバインドすることもできます。 たとえば、属性の**NameColumn**プロパティは、各属性メンバーをユーザーに表示される名前を決定 - 属性には、このプロパティがデータ ソース ビューから特定のディメンション列にバインドすることができますかを指定できますデータ ソース ビューの計算列にバインドします。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)です。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-
