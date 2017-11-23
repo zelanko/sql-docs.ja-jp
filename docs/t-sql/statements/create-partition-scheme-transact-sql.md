@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - CREATE_PARTITION_SCHEME_TSQL
 - SCHEME_TSQL
 - PARTITION_SCHEME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - partitioned indexes [SQL Server], schemes
 - partitioned tables [SQL Server], schemes
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 993a96a957d617a53b008a6929522ab468bc3e1e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 13bd8b623604f8bfe93dcf4483c65be14f43f003
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,14 +66,14 @@ AS PARTITION partition_function_name
  ALL  
  すべてのパーティションがで提供されるファイル グループにマップすることを示す*file_group_name*、またはプライマリ ファイル グループに場合**[**プライマリ**]**が指定されています。 ALL を指定した場合は、1 つだけ*file_group_name*を指定できます。  
   
- *file_group_name* | **[**プライマリ**]** [ **、***...n*]  
+ *file_group_name* | **[**プライマリ**]** [ **、***.. .n*]  
  によって指定されたパーティションを保持するファイル グループの名前を指定*partition_function_name*です。 *file_group_name*データベースに既に存在する必要があります。  
   
- 場合**[**プライマリ**]**を指定すると、プライマリ ファイル グループにパーティションを格納します。 ALL を指定した場合は、1 つだけ*file_group_name*を指定できます。 以降では、パーティション 1 でのファイル グループが表示される順序でのファイル グループに割り当てられているパーティション [**、***...n*] です。 同じ*file_group_name*で 1 つ以上の時間を指定することができます [**、***...n*] です。 場合 *n* で指定されたパーティションの数を保持するのに十分ではない*partition_function_name*、CREATE PARTITION SCHEME がエラーで失敗します。  
+ 場合**[**プライマリ**]**を指定すると、プライマリ ファイル グループにパーティションを格納します。 ALL を指定した場合は、1 つだけ*file_group_name*を指定できます。 以降では、パーティション 1 でのファイル グループが表示される順序でのファイル グループに割り当てられているパーティション [**、***.. .n*] です。 同じ*file_group_name*で 1 つ以上の時間を指定することができます [**、***.. .n*] です。 場合 *n* で指定されたパーティションの数を保持するのに十分ではない*partition_function_name*、CREATE PARTITION SCHEME がエラーで失敗します。  
   
  場合*partition_function_name*生成ファイル グループよりも少ないパーティション、割り当てられていない最初のファイル グループが NEXT USED の場合、マークされているし、情報メッセージは、NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一*file_group_name*これの NEXT USED プロパティを保持*partition_function_name*です。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 割り当てられていないファイル グループを追加作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
   
- プライマリ ファイル グループを指定すると*file_group_name* [1**、***...n*]、プライマリように区切る必要があります**[**プライマリ**]**キーワードであるため、します。  
+ プライマリ ファイル グループを指定すると*file_group_name* [1**、***.. .n*]、プライマリように区切る必要があります**[**プライマリ**]**キーワードであるため、します。  
   
  唯一のプライマリがサポートされている[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。 例 E 以下を参照してください。 
   
@@ -177,17 +174,16 @@ ALL TO ( [PRIMARY] );
    
 ## <a name="see-also"></a>参照  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION SCHEME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [パーティション テーブルとインデックスを作成します。](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)   
  [sys.partition_schemes と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
  [sys.partitions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-

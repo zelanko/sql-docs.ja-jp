@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 306dbd7c423a167806b01d0e3f00d1eafbd1a140
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-conformance"></a>関数への準拠
 次の表では、これは適切に定義された ODBC の各関数の準拠レベルを示します。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 09/09/2017
 |**SQLGetCursorName**|コア|  
 |**SQLGetData**|コア|  
 |**SQLGetDescField**|コア|  
-|**Sqlgetdescrec による**|コア|  
+|**SQLGetDescRec**|コア|  
 |**SQLGetDiagField**|コア|  
 |**SQLGetDiagRec**|コア|  
 |**SQLGetEnvAttr**|コア|  
@@ -86,8 +84,8 @@ ms.lasthandoff: 09/09/2017
 |**SQLRowCount**|コア|  
 |**SQLSetConnectAttr**|[2] のコア|  
 |**SQLSetCursorName**|コア|  
-|**Sqlsetdescfield による**|コア [1]|  
-|**Sqlsetdescrec による**|コア|  
+|**SQLSetDescField**|コア [1]|  
+|**SQLSetDescRec**|コア|  
 |**SQLSetEnvAttr**|[2] のコア|  
 |**SQLSetPos**|レベル 1 [1]|  
 |**SQLSetStmtAttr**|[2] のコア|  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/09/2017
  [1] 重要な機能がこの関数は、上位の準拠レベルでのみ使用可能なです。  
   
  [2] の特定の属性を既定以外の値に設定すると、準拠レベルに依存します。 詳細については、次のセクションを参照してください。[属性への準拠](../../../odbc/reference/develop-app/attribute-conformance.md)です。
-

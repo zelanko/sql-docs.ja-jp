@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb3cd6b0bcb1d159e3c32a672b8b9f1038057b51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d829e53d2ab774ce248d0c89ef6267111c66334
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
 次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、SQL 文法を制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかの方法を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS の値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
@@ -151,4 +149,3 @@ ms.lasthandoff: 09/09/2017
 |INTERSECT|[YEAR]|  
 |INTERVAL|ZONE|  
 |INTO||
-

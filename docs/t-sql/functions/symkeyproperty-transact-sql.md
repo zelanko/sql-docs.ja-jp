@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYMKEYPROPERTY_TSQL
 - SYMKEYPROPERTY
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- SYMKEYPROPERTY
+dev_langs: TSQL
+helpviewer_keywords: SYMKEYPROPERTY
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 12f285530db5557acb4b1317656bc53abbe59df0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 12eaae508f3e6874e02e67ef7ece84da070bbb28
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,14 +64,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASYMKEY_ID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [ASYMKEY_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [KEY_ID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/key-id-transact-sql.md)   
- [ASYMKEYPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [KEY_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/key-id-transact-sql.md)   
+ [ASYMKEYPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>データを選択するソースまたはドライバー
 データ ソースまたはドライバー、アプリケーションで使用される場合があります、アプリケーションにハードコーディングします。 1 つのデータ ソースからのデータには、それらのデータ ソースの名前にが含まれますを転送する MIS 部門で記述された、カスタム アプリケーションなど、アプリケーションだけで動作しない他のデータ ソース。 別の例は、いずれかの注文エントリの使用などの垂直方向のアプリケーションです。 このようなアプリケーションは常には、定義済みのスキーマが既知のアプリケーションによって同じデータ ソースを使用します。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   **特定の DBMS に 1 回だけにアクセスします。** たとえば、ODBC 関数を呼び出すことによってデータを取得するスプレッドシートがあります、**ドライバー**キーワードを特定のドライバーを識別します。 ドライバー名は、そのドライバーを持っている任意のユーザーに意味のあるであるため、スプレッドシートをそれらのユーザー間で渡すことができます。 スプレッドシートにデータ ソース名が含まれている場合は、各ユーザーがスプレッドシートを使用する同じデータ ソースを作成する必要があります。  
   
 -   **特定のドライバーにアクセスできるすべてのデータベースのシステムを参照しています。** 詳細については、次を参照してください。 [SQLBrowseConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)、このセクションで後述します。
-

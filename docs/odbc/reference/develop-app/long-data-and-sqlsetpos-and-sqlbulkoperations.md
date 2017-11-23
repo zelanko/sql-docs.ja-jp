@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51662d6540fb8db0eed5456e918313a71ccbccc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>長い形式のデータおよび SQLSetPos SQLBulkOperations
 行の更新時に長いデータを送信できるように SQL ステートメントのパラメーターを持つ場合は、 **SQLBulkOperations**または**SQLSetPos**を持つ行を挿入するときに、または**SQLBulkOperations**. 複数回呼び出すと、部分にデータが送信される**SQLPutData**です。 実行時にデータを送信する列と呼ばれる*実行時データ列*です。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 6.  呼び出し**SQLParamData**のすべての列のデータ、送信されたことを示すためにもう一度です。 ドライバーが SQL_NEED_DATA と、次の実行時データ列の一意の値を返します、データが送信されていないすべての実行時データ列がある場合アプリケーションは、手順 5 を返します。 すべての実行時データ列のデータが送信された場合、行のデータはデータ ソースに送信します。 **SQLParamData**返し SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返す任意の SQLSTATE を**SQLBulkOperations**または**SQLSetPos**返すことができます。  
   
  後に**SQLBulkOperations**または**SQLSetPos** SQL_NEED_DATA を返しますあり、データが最後の実行時データ列を完全に送信される前に、ステートメントで状態のデータの必要があります。 この状態で、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; 他のすべての関数を返す SQLSTATE HY010 (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、以前の状態を返します。 詳細については、次を参照してください。[付録 b: ODBC 状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)です。
-

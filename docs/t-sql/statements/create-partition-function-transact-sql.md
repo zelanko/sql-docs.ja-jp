@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - PARTITION_FUNCTION_TSQL
 - PARTITION_TSQL
 - CREATE_PARTITION_FUNCTION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RANGE RIGHT partition functions
 - RANGE LEFT partition functions
@@ -30,17 +28,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a08cf71066a3713d2eb96ff11bafd951795819ff
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,11 +72,11 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 > [!NOTE]  
 >  場合*boundary_value*から成る**datetime**または**smalldatetime** us_english はセッション言語は、想定されるので、リテラルは、これらのリテラルが評価されます。 ただし、この動作は廃止予定となっています。 すべてのセッション言語でパーティション関数の定義が正しく認識されるようにするには、yyyymmdd 形式のようにすべての言語設定で同様に解釈される定数を使用するか、リテラルを特定の型に明示的に変換することをお勧めします。 サーバーのセッション言語を確認するには、実行`SELECT @@LANGUAGE`です。  
   
- *...n*  
+ *.. .n*  
  によって指定された値の数を指定*boundary_value*ではなく、14,999 します。 作成されたパーティションの数と等しい *n*  + 1 です。 値を順序どおり指定する必要はありません。 値が順番にない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]並べ替えを実行し、関数を作成し、順序で値が指定されていないという警告を返します。 データベース エンジン エラーが返されます *n* 重複する値が含まれています。  
   
  **左**|そうです  
- 各境界値間隔、左または右の辺を指定、 *boundary_value* [ **、***...n* ] が属している、間隔の値が、で並べ替えられた[!INCLUDE[ssDE](../../includes/ssde-md.md)]左から右に昇順にします。 指定しない場合は、LEFT が既定値です。  
+ 各境界値間隔、左または右の辺を指定、 *boundary_value* [ **、***.. .n* ] が属している、間隔の値が、で並べ替えられた[!INCLUDE[ssDE](../../includes/ssde-md.md)]左から右に昇順にします。 指定しない場合は、LEFT が既定値です。  
   
 ## <a name="remarks"></a>解説  
  パーティション関数のスコープは、関数が作成されたデータベース内に制限されます。 データベース内では、パーティション関数は、他の関数から別の名前空間に存在します。  
@@ -112,7 +109,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**値**|**col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. int 型の列に RANGE RIGHT パーティション関数を作成する  
- 次のパーティション関数と同じ値を使用して*boundary_value* [ **、***...n* ] RANGE RIGHT を示す点を除いて、前の例とします。  
+ 次のパーティション関数と同じ値を使用して*boundary_value* [ **、***.. .n* ] RANGE RIGHT を示す点を除いて、前の例とします。  
   
 ```tsql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
@@ -195,22 +192,21 @@ GO
   
 ## <a name="see-also"></a>参照  
  [パーティション テーブルとインデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
- [$PARTITION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/partition-transact-sql.md)   
- [ALTER PARTITION FUNCTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [$PARTITION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/partition-transact-sql.md)   
+ [ALTER PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.partition_functions & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partition_functions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
  [sys.partitions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-
 

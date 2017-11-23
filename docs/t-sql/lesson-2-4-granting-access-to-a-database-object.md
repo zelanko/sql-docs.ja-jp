@@ -2,32 +2,31 @@
 title: "データベース オブジェクトにアクセス権の付与 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- granting access to database objects
+applies_to: SQL Server 2016
+helpviewer_keywords: granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5ccbacfe52541c59e12b992220f40806cae46bca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cc5c15a44f16e4049974ff76095a389348707c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-4---granting-access-to-a-database-object"></a>レッスン 2-4-データベースのオブジェクトへのアクセスを許可します。
-管理者は **Products** テーブルおよび **vw_Names** ビューから SELECT を実行し、 **pr_Names** プロシージャを実行できますが、ユーザー Mary は実行できません。 Mary に必要な権限を付与するには、GRANT ステートメントを使用します。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]管理者からの SELECT を実行することができます、**製品**テーブルおよび**vw_Names**表示、および実行、 **pr_Names**プロシージャであるただし、Mary ことはできません。 Mary に必要な権限を付与するには、GRANT ステートメントを使用します。  
   
 ### <a name="procedure-title"></a>手順のタイトル  
   
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

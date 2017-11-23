@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], support
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f862c55c67fca4c14b5c8d3ede20c6a9ec4ca791
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo サポート
 ODBC 2 時にします。*x*アプリケーション呼び出し**SQLGetInfo** ODBC 3*.x*ドライバー、*情報の種類*次の表に引数をサポートする必要があります。  
@@ -47,4 +45,3 @@ ODBC 2 時にします。*x*アプリケーション呼び出し**SQLGetInfo** O
  ODBC 3*.x* ODBC 3 作業アプリケーション*.x*ドライバー呼び出す必要はありません**SQLGetInfo**で、*情報の種類*で引数の説明前述のテーブルが、ODBC 3 を使用する必要があります*.x* *情報の種類*引数は、次の段落に一覧表示します。 一対一の対応関係がない*情報の種類*ODBC 2 で使用される引数*。x* ODBC 3 で使用されるものと*.x*です。 ODBC 3*.x* ODBC 2 を使用するアプリケーション*。x*ドライバー、その一方で、使用する必要があります、*情報の種類*引数が以前に説明します。  
   
  カーソルの属性情報の種類を優先するため、前の表の情報の種類の一部は推奨されません。 これらには、種類は SQL_FETCH_DIRECTION、SQL_LOCK_TYPES、SQL_POS_OPERATIONS、SQL_POSITIONED_STATEMENTS、SQL_SCROLL_CONCURRENCY、および SQL_STATIC_SENSITIVITY 情報が使用されなくなりました。 新しい種類のカーソルの属性は、SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2、DYNAMIC、FORWARD_ONLY、KEYSET_DRIVEN、または静的 XXX と等しいです。 それぞれの新しい型には、ドライバーの機能は、1 つのカーソルの種類のことを示します。 これらのオプションの詳細については、次を参照してください。、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。
-

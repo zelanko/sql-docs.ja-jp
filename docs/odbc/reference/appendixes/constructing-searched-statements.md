@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7b989547fa41d187ac33efe65050bc09add3a0f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-searched-statements"></a>ステートメントを検索の構築
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 -   **C のバイナリ データのバッファーを null 以外の長さを指定します。** カーソル ライブラリが場合にのみ、そのキャッシュの長バッファーを割り当て、 *StrLen_or_IndPtr*引数**SQLBindCol**以外の場合します。 ときに、 *TargetType*引数は、SQL_C_BINARY、カーソル ライブラリを構築するバイナリ データの長さが必要です、**場所**データから句。 SQL_C_BINARY 列およびアプリケーションの呼び出しの長バッファーがないかどうか**SQLGetData**または位置指定更新を実行または delete ステートメントをカーソル ライブラリを返し SQL_ERROR SQLSTATE SL014 しよう (位置指定要求が発行されがバッファー内のすべての列数のフィールド)。  
   
 -   **Null 許容列の null 以外の長バッファーを指定します。** カーソル ライブラリが場合にのみ、そのキャッシュの長バッファーを割り当て、 *StrLen_or_IndPtr*引数**SQLBindCol**以外の場合します。 SQL_NULL_DATA が長さのバッファーに格納されているため、カーソル ライブラリは、バッファーが指定されている長さのない任意の列が null 非許容であると仮定します。 Null 許容列長の列が指定されていない場合、カーソル ライブラリを構築、**場所**列のデータ値を使用する句。 この句が行を正しく識別しません。
-

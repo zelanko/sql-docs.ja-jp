@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - hierarchyid
 - hierarchyid_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Hierarchy data type
 - hierarchyid data type
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8f69a5bae73c7c1b6ab868bc008c98a652900ae6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 44299e7ddb90bdd52e2638dd859993513bd6f966
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid データ型メソッド リファレンス
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +38,9 @@ ms.lasthandoff: 09/01/2017
 値、 **hierarchyid** データ型は、ツリー階層内の位置を表します。 値を **hierarchyid** 、次のプロパティがあります。
   
 -   非常にコンパクト  
-     平均を持つツリー内のノードを表すために必要なビット数 *n* ノードは平均ファンアウト (ノードの子の平均数) によって異なります。 小さなファンアウト場合 (0 ~ 7)、このサイズは約 6\*logA *n* ビット、A は平均ファンアウトします。 平均ファンアウトが 6 レベルで、100,000 人から成る組織階層の場合、1 つのノードには約 38 ビットが必要です。 格納時には、これが 40 ビット (5 バイト) に切り上げられます。  
+     *n* 個のノードを持つツリー内の、1 つのノードを表すために必要な平均ビット数は、平均ファンアウト (ノードあたりの子の平均数) によって決まります。 小さなファンアウト場合 (0 ~ 7)、このサイズは約 6\*logA *n* ビット、A は平均ファンアウトします。 平均ファンアウトが 6 レベルで、100,000 人から成る組織階層の場合、1 つのノードには約 38 ビットが必要です。 格納時には、これが 40 ビット (5 バイト) に切り上げられます。  
 -   深さ優先順で比較  
-     **a** と **b** の 2 つの **hierarchyid** 値がある場合、**a<b** は、ツリーの深さ優先検査において a が b の前に来ることを意味します。 インデックス **hierarchyid** に深さ優先順では、データ型があり、深さ優先検査で近接ノードは互いに近い格納します。 たとえば、あるレコードの子は、そのレコードに隣接して格納されます。 詳細については、次を参照してください。[階層データ & #40 です。SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).  
+     **a** と **b** の 2 つの **hierarchyid** 値がある場合、**a<b** は、ツリーの深さ優先検査において a が b の前に来ることを意味します。 インデックス **hierarchyid** に深さ優先順では、データ型があり、深さ優先検査で近接ノードは互いに近い格納します。 たとえば、あるレコードの子は、そのレコードに隣接して格納されます。 詳細については、次を参照してください。[階層データ &#40;です。SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   任意の挿入および削除のサポート  
      [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) メソッドを使用すると、指定したノードの右側や左側、または任意の 2 つの兄弟間に、いつでも兄弟を生成できます。 階層に対して任意の数のノードを挿入または削除しても、比較の特性は維持されます。 ほとんどの挿入や削除では、コンパクトさも維持されます。 ただし、2 ノード間に挿入した場合は、hierarchyid 値のコンパクトさがやや失われます。  
 -   使用するエンコーディング、 **hierarchyid**型は 892 バイトに制限されています。 その結果、892 バイトに収まるように表現が多すぎますのレベルを持つノードで表せない、 **hierarchyid**型です。  
@@ -103,4 +100,3 @@ ms.lasthandoff: 09/01/2017
 [hierarchyid データ型メソッド リファレンス](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   
-

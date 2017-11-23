@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb888ab7920bdac942c60d26980a71a34a54800
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-driver-performance-issues"></a>デスクトップ データベース ドライバー パフォーマンスの問題
 既存の ANSI アプリケーションとの互換性のために、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR データ型は Microsoft アクセス 4.0 または上位のデータ ソースとして SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR に公開されます。 データ ソースはデータ型のワイド文字を返しませんが、データもする必要があります送信 jet ワイド文字形式で。 変換が行われる SQL_C_CHAR パラメーターまたは結果の列が、ANSI アプリケーションで SQL_CHAR データ型にバインドされている場合を理解しておく必要があります。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  バージョン 4.0 を Microsoft ODBC のデスクトップ データベース ドライバーを使用して Jet 3.5 データベースを使用してアプリケーションをアップグレードすると、パフォーマンスが低下し、ワーキング セット サイズの増加が発生します。 これは、ためと、バージョン 3 です。*x*データベースでは、新しいバージョン 4.0 ドライバーを使用して開くときは、Jet 4.0 を読み込みます。 Jet 4.0 データベースを開くし、データベースが 3 が表示されます。*x*バージョン、Jet 3.5 エンジンは、同様の読み込みと等価のインストール可能な ISAM ドライバーを読み込みます。 パフォーマンスとサイズの低下、Jet 3 を削除します。*x* Jet 4.0 形式のデータベースにデータベースを圧縮する必要があります。 これにより、2 つの Jet エンジンの読み込みを排除され、データへのコード パスを最小限に抑えるされます。  
   
  また、Jet 4.0 のエンジンは、Unicode エンジンです。 すべての文字列が保存され、Unicode で処理します。 ときに、ANSI アプリケーションでは、Jet 3 にアクセスします。*x* Jet 4.0 データベース エンジン、データを使用してデータベースは、Unicode、ANSI に ANSI から変換されます。 場合は、データベースを更新して、バージョン 4.0 の形式を文字列が文字列の変換の 1 つのレベルを削除するだけでなく 1 つだけの Jet エンジンを通過して、データへのコード パスを最小限に抑える、Unicode に変換されます。
-

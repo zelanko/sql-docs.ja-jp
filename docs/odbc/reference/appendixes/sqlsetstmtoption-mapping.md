@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e70f226277b3ad4932756095a8ebc2f3121ee0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3aba3d69d8bbb90b1296bf821b6552d25a05b7b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption マッピング
 アプリケーションを呼び出すと**SQLSetStmtOption**から ODBC 3*.x*ドライバーへの呼び出し  
@@ -64,4 +62,3 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
  アプリケーションを呼び出すと**SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS を SQL_UB_ON ODBC 3 に設定する*.x*ドライバー、SQL_ATTR_USE_BOOKMARKS ステートメント属性が SQL_UB_FIXED に設定します。 SQL_UB_ON は、SQL_UB_FIXED として同じ定数です。 ドライバー マネージャーは、を通じて SQL_UB_FIXED をドライバーに渡します。 ODBC 3 SQL_UB_FIXED は廃止されて*.x*が、ODBC 3*.x*ドライバーは ODBC 2 と連動するを実装する必要があります*。x*固定長のブックマークを使用するアプリケーション。  
   
  ODBC 3*.x*ドライバー、ドライバー マネージャーがチェックされなくなるかどうかを*オプション*SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。
-

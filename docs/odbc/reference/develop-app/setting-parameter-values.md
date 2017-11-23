@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter values [ODBC]
+helpviewer_keywords: parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-parameter-values"></a>パラメーター値の設定
 パラメーターの値を設定するには、アプリケーションは単に、パラメーターにバインドされた変数の値を設定します。 重要ではありませんこの値が設定されている場合、ステートメントが実行される前に設定されている限り、します。 変数をバインドする、前後に、アプリケーションは、値を設定でき、必要に応じて何度値を変更することができます。 ステートメントを実行すると、ドライバーは単に、変数の現在の値を取得します。 これは、準備されたステートメントが複数回実行されたときに特に便利です。アプリケーションは、ステートメントが実行されるたびに、変数の一部またはすべての新しい値を設定します。 この例は、次を参照してください。[準備された実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)、このセクションで前述しました。  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [d] ドライバーでは、SQL_NULL_DATA などの特殊な値であるかどうかを確認するには、この値を必ず確認する必要があります。  
   
  ドライバーの動作が実行時にパラメーター値は、ドライバーによって異なります。 必要に応じて、ドライバーは、値をバインドされた変数の C データ型とバイト長から SQL データ型、有効桁数、およびパラメーターの小数点以下桁数に変換します。 ほとんどの場合、ドライバーは、データ ソースに値を送信します。 場合によっては、値がテキストとして書式設定し、データ ソースに、ステートメントを送信する前に、SQL ステートメントに挿入します。
-

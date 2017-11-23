@@ -3,17 +3,18 @@ title: "ALTER INDEX (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   インデックスの無効化、再構築、再構成によって、またはインデックスに関するオプションの設定によって、既存のテーブルやビュー インデックス (リレーショナルまたは XML) を変更します。  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |パーティションの再編成 = *partition_number*|非パーティション インデックス、XML インデックス、空間インデックス、または無効化されたインデックス|  
 |IGNORE_DUP_KEY = ON|XML インデックス<br /><br /> 空間インデックス<br /><br /> 列ストア インデックス:**に適用されます:** SQL Server (SQL Server 2012 以降) と Azure SQL データベースです。|  
 |ONLINE = ON|XML インデックス<br /><br /> 空間インデックス<br /><br /> 列ストア インデックス:**に適用されます:** SQL Server (SQL Server 2012 以降) と Azure SQL データベースです。|
-| 再開可能な = ON  | サポートされていません、再開可能なインデックス**すべて**キーワード。 <br /><br /> **適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる |   
+| 再開可能な = ON  | サポートされていません、再開可能なインデックス**すべて**キーワード。 <br /><br /> **適用されます**: 以降では、SQL Server 2017 と Azure SQL Database |   
   
 > [!WARNING]
 >  詳細についてはオンラインで実行できるインデックス操作についてを参照してください。[オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)です。
@@ -436,7 +436,7 @@ FILLFACTOR = *fillfactor*
 
 再開可能な **=**  {ON |**OFF**}
 
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる  
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database   
 
  オンライン インデックス操作が再開可能かどうかを指定します。
 
@@ -444,9 +444,9 @@ FILLFACTOR = *fillfactor*
 
  インデックスをオフは、操作は再開可能な状態ではありません。
 
-MAX_DURATION  **=**  *時間*[**分**] と共に使用**再開可能 = ON** (必要**ONLINE = ON**).
+MAX_DURATION  **=**  *時間***[分]** と共に使用**再開可能 = ON** (必要**ONLINE = ON**).
  
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる  
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database 
 
 時間を示します (分単位で指定された整数値)、再開可能なオンライン インデックス操作が一時停止する前に実行します。 
 
@@ -583,7 +583,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY**オンライン インデックス再構築操作が他の操作を続行しながら、オンライン インデックス構築操作が待機している、優先度の低いロックを待つことを示します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。 詳細については、次を参照してください。 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)です。 
   
- MAX_DURATION =*時間*[**分**]  
+ MAX_DURATION =*時間***[分]**  
   
 **適用されます**: SQL Server (SQL Server 2014 以降) と Azure SQL データベースです。
   
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**適用されます**: SQL Server 2017 年 (機能が公開プレビュー) で始まる
+**適用されます**: SQL Server 2017 年 1 で始まる  
 
 手動でまたはエラーのために一時停止しているインデックス操作を再開します。
 
 MAX_DURATION の併用**再開可能 ON を =**
 
  
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database
 
 時間 (分単位で指定された整数値)、再開可能なオンライン インデックス操作が再開された後に実行します。 時間が切れると、まだ実行されている場合、再開操作が一時停止します。
 
 WAIT_AT_LOW_PRIORITY を併用**再開可能 = ON**と**ONLINE = ON**です。  
   
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database 
   
  このテーブルに対するブロック操作の待機を一時停止した後は、オンラインのインデックスの再構築を再開しています。 **WAIT_AT_LOW_PRIORITY**オンライン インデックス再構築操作が他の操作を続行しながら、オンライン インデックス構築操作が待機している、優先度の低いロックを待つことを示します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。 詳細については、次を参照してください。 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)です。 
 
 
 一時停止
  
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database 
   
 再開可能なオンライン インデックス再構築の操作を一時停止します。
 
 中止
 
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる   
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database   
 
 再開可能として宣言されている、実行中または一時停止中のインデックス操作を中止します。 明示的に実行する必要がある、**中止**コマンドが終了、再開可能なインデックス操作を再構築します。 障害または一時停止、再開可能なインデックス操作の実行を終了しません代わりに、不定の一時停止状態で、操作に任せます。
   
@@ -712,7 +712,7 @@ WAIT_AT_LOW_PRIORITY を併用**再開可能 = ON**と**ONLINE = ON**です。
 
 ### <a name="resumable-index-operations"></a>再開可能なインデックス操作
 
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database 
 
 オンライン インデックス再構築は、再開可能を使用して再開可能として指定 = ON オプション。 
 -  再開可能なオプションで指定されたインデックスのメタデータは保持されず、現在の DDL ステートメントの実行中にのみ適用されます。 再開可能ではそのため、= ON 句でアップロードを有効にする明示的に指定する必要があります。
@@ -786,7 +786,7 @@ WAIT_AT_LOW_PRIORITY を併用**再開可能 = ON**と**ONLINE = ON**です。
   
 -   列ストア インデックスは、SQL Server 2012 より前にご利用いただけません。 
 
--  再開可能なインデックス操作は、SQL Server 2017、および Azure SQL データベース (機能は、パブリック プレビューで) から使用可能 |   
+-  再開可能なインデックス操作は、SQL Server 2017 と Azure SQL Database から使用可能   
   
 ## <a name="basic-syntax-example"></a>基本構文例:   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. 再開可能なオンラインのインデックス再構築
 
-**適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる    
+**適用されます**: 以降では、SQL Server 2017 と Azure SQL Database   
 
  次の例では、再開可能なオンラインのインデックス再構築を使用する方法を示します。 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

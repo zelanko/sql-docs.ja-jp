@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>長さとインジケーターの値を使用してください。
 長さ/インジケーター バッファーを使用して、データ バッファーやデータが NULL であることを示す SQL_NULL_DATA などの特殊なインジケーター内のデータのバイトの長さを渡します。 使用されている、関数によっては、長さ/インジケーター バッファーは、SQLINTEGER または、SQLSMALLINT に定義されます。 そのため、それを記述する 1 つの引数が必要です。 データ バッファーが使用中として入力バッファーの場合は、この引数には、データ自体のバイトの長さまたはインジケーターの値が含まれます。 という名前が多くの場合、 *StrLen_or_Ind*または類似した名前です。 たとえば、次のコード呼び出し**SQLPutData**にバッファーを渡すデータの完全; バイトの長さ (*ValueLen*) あるために、直接渡すはデータ バッファー (*ValuePtr*) は入力バッファー。  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM です。 プロシージャでは、対応するデータ バッファー内の値ではなくプロシージャの入力パラメーターの既定値を使用します。  
   
 -   SQL_COLUMN_IGNORE です。 **SQLBulkOperations**または**SQLSetPos**が、データ バッファーに値を無視します。 呼び出しによってデータの行を更新するときに**SQLBulkOperations**または**SQLSetPos、**列の値は変更されません。 呼び出しによって新しいデータの行を挿入するときに**SQLBulkOperations**列の値が既定の設定にまたは、列には、null、既定値はありません。
-

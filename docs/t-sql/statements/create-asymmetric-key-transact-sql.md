@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CREATE ASYMMETRIC KEY
 - CREATE_ASYMMETRIC_KEY_TSQL
 - ASYMMETRIC KEY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - asymmetric keys [SQL Server], creating
 - encryption [SQL Server], asymmetric keys
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server]
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: eeacba0076f6fed7b6dcda8802616dd9398df7ef
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f39a31a9b2de4cd8153fa617b9cab1c1235f2a7a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +99,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ENCRYPTION BY  *\<key_name_in_provider >*キーの暗号化方法を指定します。 証明書、パスワード、または非対称キーを指定できます。  
   
  KEY_NAME ='*key_name_in_provider*'  
- 外部プロバイダーからキー名を指定します。 外部キー管理の詳細については、次を参照してください。[拡張キー管理 & #40 です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 外部プロバイダーからキー名を指定します。 外部キー管理の詳細については、次を参照してください。[拡張キー管理 &#40;です。EKM &#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  CREATION_DISPOSITION = CREATE_NEW  
  拡張キー管理デバイス上で新しいキーを作成します。 デバイス上のキー名を指定するには、PROV_KEY_NAME を使用する必要があります。 デバイスでキーが既に存在する場合、ステートメントはエラーで失敗します。  
@@ -171,4 +168,3 @@ GO
  [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   
-

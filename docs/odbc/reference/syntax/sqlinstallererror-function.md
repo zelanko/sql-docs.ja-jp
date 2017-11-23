@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallerError
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallerError
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallerError
-helpviewer_keywords:
-- SQLInstallerError [ODBC]
+f1_keywords: SQLInstallerError
+helpviewer_keywords: SQLInstallerError [ODBC]
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 039de577f9c7d31bd3968494e1fc9113c041007e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 関数
 **準拠**  
@@ -88,4 +82,3 @@ RETCODE SQLInstallerError(
  アプリケーションが呼び出す関数の呼び出しを複数のエラーを取得する**SQLInstallerError**複数回です。  
   
  詳細についてがない場合に**SQLInstallerError** 、SQL_NO_DATA が返される、 *pfErrorCode*引数が定義されていない、 *pcbErrorMsg*引数が 0 に等しいと*lpszErrorMsg*引数には、1 つの null 終了文字が含まれています (しない限り、 *cbErrorMsgMax*引数が 0 に等しい)。
-

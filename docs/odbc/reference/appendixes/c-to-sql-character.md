@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], character
 - converting data from c to SQL types [ODBC], character
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21c35898f3fb80309f1dfb4ef3c4eb749def1d42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-character"></a>SQL を C: の文字
 ODBC C データ型の文字の識別子は次のとおりです。  
@@ -56,13 +54,13 @@ ODBC C データ型の文字の識別子は次のとおりです。
   
  [a] のタイムスタンプの時刻部分が切り詰められています。  
   
- [b] タイムスタンプの場合は、の日付部分は無視されます。  
+ [タイムスタンプの場合は、b] の日付部分は無視されます。  
   
  [c]、タイムスタンプの時刻部分は、0 に設定されます。  
   
- [d]タイムスタンプの で、日付部分は、現在の日付に設定されます。  
+ [タイムスタンプの d] で、日付部分は、現在の日付に設定されます。  
   
- [e] [電子メール] で、ドライバー/データ ソースは、文字列全体が受信されるまでに効果的に待機する (文字データへの呼び出しによって個別に送信される場合でも**SQLPutData**) 変換を実行する前にします。  
+ [電子メール] で、ドライバー/データ ソースは、文字列全体が受信されるまでに効果的に待機する (文字データへの呼び出しによって個別に送信される場合でも**SQLPutData**) 変換を実行する前にします。  
   
  文字データは、数値、変換後の日付、時刻、または SQL のタイムスタンプ データには、先頭と末尾の空白は無視されます。  
   
@@ -72,4 +70,3 @@ ODBC C データ型の文字の識別子は次のとおりです。
   
 > [!NOTE]  
 >  アプリケーション開発者は、文字データをバイナリ SQL データ型にバインドしないことお勧めします。 この変換は、非効率的で低速では通常です。
-

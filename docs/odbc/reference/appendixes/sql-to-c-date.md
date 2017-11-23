@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7629ed6d683be048f6649db10a4a6c6f2dd593b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-date"></a>SQL には、c: 日付
 ODBC SQL データ型が日付の識別子。  
@@ -51,4 +49,3 @@ ODBC SQL データ型が日付の識別子。
  [c] これは、対応する C データ型のサイズです。  
   
  SQL データの日付が文字データに変換されると、結果の文字列は、"*yyyy*-*mm*-*dd*"の形式です。 この形式は Windows® 国設定の影響を受けません。
-

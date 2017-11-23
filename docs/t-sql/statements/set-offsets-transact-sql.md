@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - OFFSETS_TSQL
 - SET OFFSETS
 - OFFSETS
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - position relative to start of statement [SQL Server]
 - OFFSETS option
 - offsets [SQL Server]
 - SET OFFSETS statement
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 232550be5756505082b615a84ccbd35ef84b1477
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b0723941708284de7e1489ed9c44f5a3d869f3dd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +69,6 @@ SET OFFSETS keyword_list { ON | OFF }
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [[SET parseonly] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-parseonly-transact-sql.md)  
+ [[SET parseonly] &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-parseonly-transact-sql.md)  
   
   
-

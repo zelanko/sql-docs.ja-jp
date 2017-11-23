@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662370f1e782edfc5f932ad26cdbc38643bcda7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-manager-does"></a>ドライバー マネージャーの新機能
 次の表方法 ODBC 3*.x*ドライバー マネージャーは、ODBC 2 への呼び出しをマップします*。x*と ODBC 3*.x*ドライバー。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetchScroll**|指定した行セットを返します。 実装の詳細を次に示します。<br /><br /> のアプリケーションを呼び出すと**SQLFetchScroll** ODBC 2 *。x*ドライバー、ODBC 3*.x*ドライバー マネージャーにマップ**SQLExtendedFetch**です。 SQL_ATTR_ROW_STATUS_PTR ステートメント属性のキャッシュされた値を使用して、 *RowStatusArray*引数と SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性のキャッシュされた値、 *RowCountPtr*引数。 場合、 *FetchOrientation*引数**SQLFetchScroll** sql_fetch_bookmark を指定しては、SQL_ATTR_FETCH_BOOKMARK_PTR ステートメント属性のキャッシュされた値を使用して、 *FetchOffset*引数エラーを返す場合、 *FetchOffset*の引数**SQLFetchScroll**が 0 ではありません。<br />-アプリケーションを呼び出すとこの ODBC 3*.x*ドライバー、ODBC 3*.x*ドライバー マネージャーがドライバーに呼び出しを渡します。|  
 |**SQLSetPos**|さまざまな位置指定操作を実行します。 ODBC 3*.x*ドライバー マネージャーへの呼び出しに渡します**SQLSetPos**ドライバーのバージョンに関係なく、ドライバーにします。|  
 |**SQLSetScrollOptions**|ドライバー マネージャーのマップと**SQLSetScrollOptions** ODBC 3 を使用するアプリケーションの*.x*ドライバーをサポートしない**SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**です。 その結果、 **SQLSetScrollOptions**への呼び出しによって複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**です。 フェッチの複数の行への呼び出しによって場合にのみ使用できます**SQLExtendedFetch**です。|
-

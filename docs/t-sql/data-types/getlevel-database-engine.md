@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetLevel
 - GetLevel_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- GetLevel [Database Engine]
+dev_langs: TSQL
+helpviewer_keywords: GetLevel [Database Engine]
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a12afc32b16a6cd6af3cf5a5551b783a450207e1
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aac401d8fbe9546404f44f5fa2455f9e9c5dfe9d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ SqlInt16 GetLevel ( )
 ## <a name="remarks"></a>解説  
 1 つ以上のノードのレベルを確認するとき、または指定したレベルのメンバーにノードを限定するときに使用します。 階層のルートはレベル 0 です。
   
-GetLevel は、幅優先の検索インデックスに非常に便利です。 詳細については、次を参照してください。[階層データ & #40 です。SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).
+GetLevel は、幅優先の検索インデックスに非常に便利です。 詳細については、次を参照してください。[階層データ &#40;です。SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>使用例  
   
@@ -103,4 +99,3 @@ this.GetLevel()
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
   
   
-

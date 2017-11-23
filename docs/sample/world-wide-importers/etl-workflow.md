@@ -1,30 +1,31 @@
 ---
 title: "ETL ワークフロー |Microsoft ドキュメント"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 3b81a6494458f7d9f2e89b120119e402786e21ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85898dfc3a12ee195910bf965f0099b35f95b239
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL ワークフロー
-WWI_Integration ETL パッケージを使用して、データの変化に応じて WideWorldImportersDW データベースへの WideWorldImporters データベースからデータを移行します。 パッケージを定期的に実行 (最もよく毎日) です。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WWI_Integration ETL パッケージを使用して、データの変化に応じて WideWorldImportersDW データベースへの WideWorldImporters データベースからデータを移行します。 パッケージを定期的に実行 (最もよく毎日) です。
 
 ## <a name="overview"></a>概要
 
@@ -80,4 +81,3 @@ SSIS パッケージ ファイルをダウンロード**毎日 ETL.ispac**です
    - ジョブを作成するには、[ok] をクリックします。
 
 3. 実行またはジョブ スケジュールを設定します。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c62e19d2d7c2c856b358649955a5b1540a802a12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>標準に準拠したアプリケーションやドライバー
 標準に準拠したアプリケーションやドライバーは、オープンなグループ CAE 仕様"データ管理:: SQL 呼び出しレベル インターフェイス (CLI)"と ISO/IEC 9075 に準拠している 1 つの 3:1995 (E) 呼び出しレベルのインターフェイス (SQL/CLI)。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 -   ISO CLI、ODBC 3 に合うように*.x*ヘッダー ファイルへの呼び出しで使用される情報の型のエイリアスを含める**SQLGetInfo**です。 標準に準拠したアプリケーションは、これらの別名を使用して、ODBC 3 ではなく*.x*情報の種類。 詳細については、次のトピックを参照してください。[ヘッダー ファイル](../../../odbc/reference/develop-app/header-files.md)です。  
   
 -   標準に準拠したアプリケーションでは、サポートするすべての機能は、ドライバーでは動作でサポートされていることを確認してください。 SQL_SCROLLABLE と設定に SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性を設定する SQL_INSENSITIVE または SQL_SENSITIVE SQL_ATTR_CURSOR_SENSITIVITY ステートメント属性は、標準のオプション機能として利用可能な機能ODBC 3 に含まれていませんが、*.x*コア レベルおよび可能性がありますでサポートされていないすべての ODBC 3*.x*ドライバー。 標準に準拠したアプリケーションでは、これらの機能を使用する場合、ドライバーでは動作をサポートしていることを確認する必要があります。
-

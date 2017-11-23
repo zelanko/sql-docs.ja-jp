@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deferred-fields"></a>遅延のフィールド
 値*フィールドを遅延*設定されているが、ドライバーは、遅延の影響用の変数のアドレスを保存する場合は使用しません。 ドライバー、アプリケーション パラメーター記述子への呼び出し時に、変数の内容を使用して**SQLExecDirect**または**SQLExecute**です。 アプリケーション行記述子では、ドライバーは、フェッチ時に、変数の内容を使用します。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   APD の SQL_DESC_OCTET_LENGTH_PTR フィールドに null 値があり、ユーザーが、パラメーターは、文字の文字列は、ドライバーは、文字列が null で終わるであると仮定します。 出力の動的パラメーターに対してこのフィールドに null 値には、長さの情報を返すからドライバーができなくなります。 (SQL_DESC_TYPE フィールドが文字の文字列パラメーターを示していない場合、SQL_DESC_OCTET_LENGTH_PTR フィールドは無視されます。)  
   
  アプリケーションは、割り当てを解除できませんまたはフィールドとそれらを関連付けます時間と、ドライバーの読み取りまたは書き込みに時間の間の遅延のフィールドに使用される変数を破棄します。
-

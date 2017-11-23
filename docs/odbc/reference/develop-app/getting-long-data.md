@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>長い形式のデータを取得します。
 Dbms 定義*長いデータ*任意の文字または 255 文字などの特定のサイズ以上のバイナリ データとして。 このデータは、いくつかの文字が 1000 単位のパーツの説明など、1 つのバッファーに格納するのに十分な小さ可能性があります。 ただし、長いテキスト ドキュメントやビットマップなどのメモリに格納するには長すぎる場合があります。 ドライバーを使用してパーツにから取得されたこのようなデータは、1 つのバッファーに格納されることはできません、ので**SQLGetData**行の他のデータがフェッチされた後にします。  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  一部のドライバーでは、これらの制限は適用されません。 存在したり、呼び出すことによって制限は適用されませんを調べたり、相互運用可能なアプリケーションが想定するか、必要があります**SQLGetInfo** SQL_GETDATA_EXTENSIONS オプションを使用します。  
   
  アプリケーションに文字またはバイナリ データ列のすべてのデータが必要がない場合、ネットワーク トラフィックが減少 DBMS に基づいたドライバーの属性を設定して、SQL_ATTR_MAX_LENGTH ステートメント、ステートメントを実行する前にします。 これは、任意の文字またはバイナリ列に返されるデータのバイト数を制限します。 たとえば、列には、長いテキストのドキュメントが含まれているとします。 この列を含むテーブルを参照するアプリケーションは、各ドキュメントの最初のページのみを表示する必要があります。 このステートメント属性をシミュレートできるは、ドライバーで、ただし、これを行う必要はありません。 具体的には、アプリケーションは、文字またはバイナリ データの切り捨てを希望する場合にする必要がありますバインド小さなバッファー列に**SQLBindCol**し、データの切り捨て、ドライバーを使用できます。
-

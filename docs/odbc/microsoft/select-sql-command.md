@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- select [ODBC]
+helpviewer_keywords: select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f9b8b9b4b5b69d257dccafc2567ebb59eab5bba2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3604d435a8a95e3690d335e25e1a94b3bbb0b1a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select---sql-command"></a>SQL コマンドを選択します。
 1 つまたは複数のテーブルからデータを取得します。  
@@ -111,7 +108,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias*で指定したテーブルの一時的な名前を指定*テーブル*です。 ローカルのエイリアスを指定する場合は、SELECT ステートメントでテーブル名の代わりにローカルのエイリアスを使用する必要があります。 ローカルのエイリアスでは、Visual FoxPro 環境は影響しません。  
   
- ここで*JoinCondition* [AND *JoinCondition* ...]   [と & #124 です。または*FilterCondition* [と & #124 です。または*FilterCondition* ...]  
+ ここで*JoinCondition* [AND *JoinCondition* ...]   [と &#124;です。または*FilterCondition* [と &#124;です。または*FilterCondition* ...]  
  Visual FoxPro、クエリの結果に特定のレコードだけを含めるように指示します。 複数のテーブルからデータを取得するために必要な場所です。  
   
  *JoinCondition* FROM 句でテーブルをリンクするフィールドを指定します。 クエリで複数のテーブルを含める場合、最初より後のすべてのテーブルの結合条件を指定する必要があります。  
@@ -160,7 +157,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  フィルター条件には、すべてが含まれている場合、フィールドは、そのレコードは、クエリの結果に追加する前に、サブクエリによって生成されたすべての値の比較条件を満たす必要があります。  
   
- **例 4** *FieldName 比較*任意 & #124 です。いくつか (*サブクエリ*)  
+ **例 4** *FieldName 比較*任意 &#124;です。いくつか (*サブクエリ*)  
   
  `company < ANY ;`  
   
@@ -266,7 +263,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  プレース ホルダーは、それらを表すフィールドと同じ型である必要があります。 プレース ホルダーをする必要があります、フィールドが日付型の場合は、{//}。 フィールドが文字のフィールドの場合は、プレース ホルダーは、空の文字列をする必要があります ("") です。  
   
- ORDER BY *Order_Item* [ASC & #124 です。DESC] [、 *Order_Item* [ASC & #124 です。DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124;です。DESC] [、 *Order_Item* [ASC &#124;です。DESC]...]  
  1 つまたは複数の列のデータをに基づいて、クエリの結果を並べ替える。 各*Order_Item*クエリ結果内の列に対応して、次のいずれかになります。  
   
 -   テーブルのフィールドに、FROM (サブクエリ) ではなくメイン SELECT 句で select 項目になっています。  
@@ -293,4 +290,3 @@ WHERE customer.cust_id NOT IN ;
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [セットの ANSI](../../odbc/microsoft/set-ansi-command.md)   
  [正確な設定します。](../../odbc/microsoft/set-exact-command.md)
-

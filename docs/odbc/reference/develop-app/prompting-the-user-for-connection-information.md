@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>接続情報をユーザーに確認
 アプリケーションで使用する場合**SQLConnect**接続についてユーザーに確認する必要があるなど、ユーザー名とパスワードに行ってください自体です。 これにより、アプリケーションは、「ルック アンド フィール」を制御する、中にドライバー固有のコードを格納するアプリケーションが強制的に可能性があります。 これは、アプリケーションは、ドライバー固有の接続についてユーザーに確認する必要がある場合に発生します。 これは、汎用アプリケーション、アプリケーションが書き込まれるときに存在しないドライバーを含む、すべてのドライバーを使用するように設計されているため不可能の状況を表示します。  
@@ -57,4 +55,3 @@ DSN=XYZ Corp;
  ユーザーは、データ ソースを選択し、ドライバー マネージャーがそのデータ ソースを指定する接続文字列を構築して、ドライバーに渡します。 ドライバーは、必要なその他の情報のユーザーを要求し、ことができます。  
   
  ドライバーが、ユーザーを要求する条件はによって制御されます、 *DriverCompletion*フラグ以外の場合は、常に確認する、必要に応じての確認、またはメッセージを表示せずにオプションがあります。 このフラグの詳細については、次を参照してください。、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明。
-

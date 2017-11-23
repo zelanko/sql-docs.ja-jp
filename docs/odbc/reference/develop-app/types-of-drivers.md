@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2872802c5f870337f64606bbc412d4b3f38a55c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-drivers"></a>ドライバーの種類
 ODBC ドライバーは、次のように分類できます。  
@@ -70,4 +68,3 @@ ODBC ドライバーは、次のように分類できます。
   
 > [!NOTE]  
 >  16 ビット ODBC ドライバーは、ODBC 3 と直接は機能しません。*x*ドライバー マネージャー。 ただし、可能であれば、後で、3 つまでサンク 2.0 ODBC ドライバー マネージャーを使用する 16 ビット ドライバー用です。*x*ドライバー マネージャー。
-

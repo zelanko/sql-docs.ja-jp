@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 36cc6b00223185a5a1e21708109842384c6ecb1e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-attributes"></a>ステートメント属性
 ステートメント属性は、ステートメントの特性です。 たとえば、ステートメントの結果で使用するカーソルの設定の種類、ブックマークと新機能を使用するかどうかは、ステートメント属性です。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 3 で導入された、ステートメント属性でもないです。*x* (SQL_ATTR_METADATA_ID) を除くと、接続レベルで設定できます。  
   
  詳細については、次を参照してください。、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明。
-

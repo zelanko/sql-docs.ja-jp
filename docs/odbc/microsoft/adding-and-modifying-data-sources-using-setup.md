@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data sources [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], adding data sources
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7d077ab78f40b498ea7c43c7899c629e8eae5e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd665c63873ba8331290ddeae4ad91137ef1e3c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>追加して、セットアップを使用してデータ ソースを変更します。
 > [!IMPORTANT]  
@@ -86,4 +84,3 @@ ms.lasthandoff: 09/09/2017
 3.  適用可能なデータ ソース フィールドを変更し、[ok] をクリックします。  
   
  このダイアログ ボックスで情報の変更が完了したら、odbc データ ソース アドミニストレーターは、レジストリ情報を更新します。
-

@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Read_TSQL
 - Read
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- Read [Database Engine]
+dev_langs: TSQL
+helpviewer_keywords: Read [Database Engine]
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 72ebda7a9bd00b44983d29db2ef433c9f7d43f94
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 21f27c627a36f747d9e3ecbb52d14d1ac6bc5d28
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="read-database-engine"></a>Read (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,10 +64,9 @@ hid.Read(br);
 ```  
   
 ## <a name="see-also"></a>参照  
-[書き込み (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/write-database-engine.md)  
-[ToString (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[書き込み &#40;データベース エンジン&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid データ型メソッド リファレンス](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   
-

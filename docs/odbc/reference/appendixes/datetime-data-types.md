@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - compatibility [ODBC], datetime data types
 - data types [ODBC], time
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff5b0244e54432e28d5a1b43d813911b3f90ffd2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datetime-data-types"></a>Datetime データ型
 ODBC 3*.x*、識別子、日付、時刻、および timestamp SQL データ型は SQL_DATE、SQL_TIME、および SQL_TIMESTAMP から変更された (のインスタンスと**#define** 9、10、および 11 のヘッダー ファイルで) に sql _TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP (のインスタンスと**#define** 91、92、および 93 のヘッダー ファイルで)、それぞれします。 識別子から変更された SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、SQL_C_TYPE_TIMESTAMP、それぞれ、対応する C 型のインスタンスとインスタンス**#define**が変更されましたそれに従っています。  
@@ -48,4 +46,3 @@ ODBC 3*.x*、識別子、日付、時刻、および timestamp SQL データ型�
  呼び出しですべてのデータ型を要求するときに**SQLGetTypeInfo**、関数によって返される結果セットが格納されます両方 SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP ODBC 3 で定義されている*.x*、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP ODBC 2 で定義されています。*x*です。  
   
  方法により、ODBC 3*.x*ドライバー マネージャーが、日付、時刻、および timestamp データ型、ODBC 3 のマッピングを実行*.x*だけ必要なドライバーが認識**#defines** 91 の 92、および入力した日付、時刻、および timestamp C データ型の 93、 *TargetType*の引数**SQLBindCol**と**SQLGetData**または*ValueType*の引数**SQLBindParameter**、必要なだけが認識と**#defines** 91 92、93 の日付、時間、および timestamp SQL データ型が、で入力*ParameterType*の引数**SQLBindParameter**または*DataType*の引数**SQLGetTypeInfo**です。 詳細については、次を参照してください。 [Datetime データ型の変更](../../../odbc/reference/develop-app/datetime-data-type-changes.md)です。
-

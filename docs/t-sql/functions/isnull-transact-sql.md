@@ -8,33 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ISNULL
 - ISNULL_TSQL
 - IFNULL_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - replacing null values
 - null values [SQL Server], ISNULL
 - null values [SQL Server], replacement values
 - ISNULL function
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ad067dd6df83e49c3a46fd5955945f79c20d1b96
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d364548d3303de493343365bd16677ffdfd5641
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +60,7 @@ ISNULL ( check_expression , replacement_value )
  値*check_expression*かどうかは NULL それ以外の場合、返される*replacement_value*はの型に暗黙的に変換した後に返される*check_expression*。型が異なる場合は、します。 *replacement_value*場合に切り捨てられる*replacement_value*よりも長い*check_expression*です。  
   
 > [!NOTE]  
->  使用して[COALESCE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/coalesce-transact-sql.md)を最初の null 以外の値を返します。  
+>  使用して[COALESCE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/coalesce-transact-sql.md)を最初の null 以外の値を返します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -188,12 +185,11 @@ WHERE Weight IS NULL;
 ```  
   
 ## <a name="see-also"></a>参照  
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [NULL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/is-null-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [ここで & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
- [合体 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/coalesce-transact-sql.md)  
+ [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
+ [合体 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
-
 

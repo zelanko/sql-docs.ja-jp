@@ -3,17 +3,18 @@ title: "USER_NAME (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USER_NAME
 - USER_NAME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - usernames [SQL Server]
 - IDs [SQL Server], databases
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定した識別番号から、データベース ユーザー名を返します。  
   
@@ -56,7 +56,7 @@ USER_NAME ( [ id ] )
  **nvarchar (256)**  
   
 ## <a name="remarks"></a>解説  
- ときに*id*は省略すると、現在のコンテキストで現在のユーザーが想定されます。 場合は、パラメーターには、NULL は NULL を返しますという単語が含まれています。指定せずに USER_NAME を呼び出したときに、 *id*実行後にステートメントとして USER_NAME が権限を借用したユーザーの名前を返します。 場合は、Windows プリンシパルをアクセスすると、グループのメンバーシップを使用して、データベース、ユーザー名の名前を返します、Windows グループではなくプリンシパル。  
+ ときに*id*は省略すると、現在のコンテキストで現在のユーザーが想定されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。 指定せずに USER_NAME を呼び出したときに、 *id*実行後にステートメントとして USER_NAME が権限を借用したユーザーの名前を返します。 場合は、Windows プリンシパルをアクセスすると、グループのメンバーシップを使用して、データベース、ユーザー名の名前を返します、Windows グループではなくプリンシパル。  
   
 ## <a name="examples"></a>使用例  
   
@@ -161,12 +161,11 @@ User7
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/session-user-transact-sql.md)   
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
+ms.openlocfilehash: ace4b62046bdb10ab32718d2c941892ef83d0ee8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
 
@@ -459,4 +458,3 @@ traceflag = 3456
 環境変数を使用してこれらの構成変更の一部を代わりに、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)です。
 
 その他の管理ツールとシナリオには、「 [Linux 上の SQL Server の管理](sql-server-linux-management-overview.md)です。
-

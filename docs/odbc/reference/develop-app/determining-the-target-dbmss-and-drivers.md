@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76daa1e2753c91df7a016d4801ddea48bc285eb5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>ターゲットの Dbms とドライバーを決定します。
 考慮すべき、次の質問に対しては、アプリケーションのターゲットの Dbms とそれらの Dbms をサポートするためにどのようなドライバが利用可能ですか。 汎用アプリケーションは、高い相互運用できるようにする傾向があります、ためターゲットの Dbms の質問はカスタムおよび垂直方向のアプリケーションに最適です。 ただし、ドライバーの速度、品質、機能のサポート、および可用性にばらつきためには、すべてのアプリケーションにターゲット ドライバーの質問が適用されます。 また、ドライバー、アプリケーションと共に再配布する場合、コストとライセンス プランの可用性する必要がありますと見なされます。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  Oracle、DB2、および SQL Server などのデータベースをサーバー完全トランザクション サポートを提供するには、多数の同時ユーザーをサポートおよびリッチ sql です。 これらは高コストいてより小規模のインストール ベースです。 その一方で、ソフトウェアの価格は、以降では、やや小さい潜在的な市場をオフセットする傾向があります。  
   
  このため、ターゲットの Dbms 場合がありますを選択できます、アプリケーションと、アプリケーションのターゲットの市場によって必要とされる機能に基づいて。 たとえば、大規模企業向けの注文入力システム可能性があります対象デスクトップ データベースの適切なトランザクションのサポートをこれらがないためです。 小規模企業向けのようなシステムでは、ほとんどのサーバー データベースはコストに基づいてを除外できます。 汎用アプリケーションの開発者は対象に両方 server データベースでの高度な機能を使用しないでください。
-

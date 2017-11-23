@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12d0e4edc34ceb02f9b902016eb82b489c4ca71d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7e27c80832143ff9907878ffc35c9479ce39ce1e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 DBMS に SQL ステートメントを送信するための最初の手法が埋め込まれた SQL です。 SQL は、変数および流れ制御ステートメントは使用しないので、多くの場合、C または COBOL などの従来のプログラミング言語で書かれたプログラムを追加できるデータベース サブ言語として使用されます。 これは、embedded SQL の中心: ホスト プログラミング言語で書かれたプログラムで SQL ステートメントを配置することです。 簡単に、ホスト言語で SQL ステートメントを埋め込むには、次の手法が使用されます。  
@@ -46,11 +44,10 @@ DBMS に SQL ステートメントを送信するための最初の手法が埋�
   
  このセクションでは、次のトピックを扱います。  
   
--   [Embedded SQL の使用例](../../odbc/reference/embedded-sql-example.md)  
+-   [埋め込み SQL の例](../../odbc/reference/embedded-sql-example.md)  
   
 -   [埋め込み SQL プログラムのコンパイル](../../odbc/reference/compiling-an-embedded-sql-program.md)  
   
 -   [静的 SQL](../../odbc/reference/static-sql.md)  
   
 -   [動的 SQL](../../odbc/reference/dynamic-sql.md)
-

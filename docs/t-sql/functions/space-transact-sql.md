@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SPACE_TSQL
 - SPACE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - strings [SQL Server], repeated spaces
 - repeated spaces
 - SPACE function
 ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d3cfb89c5b62f7b3be6b3ecf6ead66f2df8d55c8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f5de41d3d7619af5f83fa2bee8cd30f980f291b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +48,7 @@ SPACE ( integer_expression )
  *integer_expression*  
  空白文字の個数を表す正の整数を指定します。 場合*であれば、任意*は負の場合、null 文字列が返されます。  
   
- 詳細については、次を参照してください。[式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)  
+ 詳細については、次を参照してください。[式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)  
   
 ## <a name="return-types"></a>戻り値の型  
  **varchar**  
@@ -84,11 +81,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [REPLICATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/replicate-transact-sql.md)   
- [文字列関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
+ [REPLICATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/replicate-transact-sql.md)   
+ [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-
 
 

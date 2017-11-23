@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ntext_TSQL
 - ntext
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - text data type, about text data type
 - text [SQL Server], data types
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - ntext data type, about ntext data type
 - image data type, about image data type
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 43acc9a88b483aa119e7b8b0c7d00039fd33e8a2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 76b78b01596b484bc35df1a1e468c5b2bb8ece63
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext 型、text 型、image 型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,18 +56,17 @@ ms.lasthandoff: 09/01/2017
   
 |関数|ステートメント|  
 |---|---|
-|[DATALENGTH & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/readtext-transact-sql.md)|  
-|[PATINDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/patindex-transact-sql.md)|[[SET textsize] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md)|  
-|[部分文字列と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/substring-transact-sql.md)|[UPDATETEXT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/updatetext-transact-sql.md)|  
-|[TEXTPTR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)|  
-|[TEXTVALID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
+|[DATALENGTH &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/readtext-transact-sql.md)|  
+|[PATINDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/patindex-transact-sql.md)|[[SET textsize] &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/statements/set-textsize-transact-sql.md)|  
+|[部分文字列と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/substring-transact-sql.md)|[UPDATETEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/updatetext-transact-sql.md)|  
+|[TEXTPTR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)|  
+|[TEXTVALID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[データ型の変換 (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[ような & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)  
+[ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)
-
 

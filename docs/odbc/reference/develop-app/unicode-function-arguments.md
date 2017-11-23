@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b8d2ee5be47e77fe639299da0851029494d88c4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff461881ea10c904ceefd1c51a364984ca10971b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-function-arguments"></a>Unicode 関数の引数
 ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI と Unicode の両方の引数の文字列や文字の SQLPOINTER へのポインターをそのまま使用するすべての関数のバージョンをサポートします。 Unicode 関数は、関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (のサフィックスの有無を呼び出すことができる*A*) 現在の ODBC API 関数と同じです。  
@@ -52,12 +50,12 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI
 |**SQLDrivers**|**SQLSetConnectAttr**|  
 |**SQLError**|**SQLSetConnectOption**|  
 |**SQLExecDirect**|**SQLSetCursorName**|  
-|**SQLForeignKeys**|**Sqlsetdescfield による**|  
+|**SQLForeignKeys**|**SQLSetDescField**|  
 |**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
 |**SQLGetConnectOption**|**SQLSpecialColumns**|  
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
-|**Sqlgetdescrec による**|**SQLTables**|  
+|**SQLGetDescRec**|**SQLTables**|  
   
  Unicode (W) や ANSI (A) の両方のバージョンをサポートする ODBC インストーラーと ODBC トランスレーター関数の一覧を次に示します。  
   
@@ -79,7 +77,6 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI
   
 -   [Unicode アプリケーション](../../../odbc/reference/develop-app/unicode-applications.md)  
   
--   [Unicode のドライバー](../../../odbc/reference/develop-app/unicode-drivers.md)  
+-   [Unicode ドライバー](../../../odbc/reference/develop-app/unicode-drivers.md)  
   
--   [関数マッピングでは、ドライバー マネージャー](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)
-
+-   [ドライバー マネージャーの関数マッピング](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)

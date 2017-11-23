@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 224a4c7f7c2540d78c69dc7c1ed61267db564261
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>テキスト形式 (テキスト ファイル ドライバー) を定義します。
 使用することができます、テキストのドライバーを使用する場合、**テキスト形式の定義**ダイアログ ボックスを選択したファイル内の列の形式を定義します。 このダイアログ ボックスでは、各データ テーブルのスキーマを指定することができます。 この情報は、データのソース ディレクトリにある Schema.ini ファイルに書き込まれます。 別の Schema.ini ファイルでは、各テキスト データのソース ディレクトリが作成されます。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |**スキャンする行数**|列と既存のデータに基づいて列のデータ型を設定するときにセットアップまたはドライバーをスキャンする行の数。<br /><br /> 1 から番号をスキャンする行の数の 32767 まで入力できます。 既定値は 25 場合に選択した項目の形式、**テーブル**リストが以前によって定義されていませんこのダイアログ ボックス。 (制限外の数値はエラーを返します。)|  
 |**テーブル**|選択したディレクトリ内のすべてのファイルの一覧を含む、**テキスト セットアップ**指定された拡張機能の一覧と一致する ダイアログ ボックス。<br /><br /> ときに\<既定 > が選択されている場合、true、テーブルの属性の値は、次のいずれかと、**テーブル**グループ、Schema.ini (Schema.ini の他のエントリが接してなし) に書き込まれます。<br /><br /> 指定したディレクトリ内 Schema.ini が-はありません。<br />-Schema.ini ファイルが存在するが、Schema.ini 拡張子を持つ、指定したディレクトリ内のテキスト ファイルの 1 つのセクションではありません。<br />の Schema.ini でテキスト ファイルのセクションが存在しますが、本文は空です。<br /><br /> ときに\<既定 > を選択すると、**列**グループが無効にします。|  
 |**幅**|CHAR または LONGCHAR 列の列の幅を変更できます。 場合は、1 で選択した項目の形式の既定値、幅、**テーブル**リストが以前によって定義されていませんこのダイアログ ボックス。<br /><br /> 他のデータ型の幅の制御が無効になり、値は表示されません。|
-

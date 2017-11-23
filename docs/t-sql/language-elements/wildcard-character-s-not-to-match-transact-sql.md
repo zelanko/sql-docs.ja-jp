@@ -1,5 +1,5 @@
 ---
-title: "(ワイルドカード - 一致しない文字列)(TRANSACT-SQL) |Microsoft ドキュメント"
+title: "[^](ワイルドカード - 一致しない文字列)(TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -20,26 +19,24 @@ f1_keywords:
 - '[^]_TSQL'
 - '[^]'
 - Not Match
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[^] (wildcard - character(s) not to match)'
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d80ac01fe5fbfcfce5da1a60acc15ab1b76bda70
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96749cb88e4d98b112de2ce1eb9bff4c7e156e42
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="wildcard---characters-not-to-match-transact-sql"></a>(ワイルドカード - 一致しない文字列)(TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\](ワイルドカード - 一致しない文字列)(TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   角かっこで指定した範囲または集合に該当しない、任意の 1 文字を判別します。  
   
@@ -56,11 +53,10 @@ ORDER BY FirstName;
 ```  
   
 ## <a name="see-also"></a>参照  
- [ような & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/patindex-transact-sql.md)   
- [% & #40 です。ワイルドカード - 文字 (&) #40; s &#41;一致と #41 です。& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [& #91。& #93 です。(ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [_ (ワイルドカード - 一致する 1 文字)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [ような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/patindex-transact-sql.md)   
+ [% &#40;です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+  [& #91。&#93;です。&#40;です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [\_&#40;です。ワイルドカード - 一致する 1 文字 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   
-

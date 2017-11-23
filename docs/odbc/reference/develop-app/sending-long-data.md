@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fdd0c7da1074a5f6a1d86a941fd29330145f07c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-long-data"></a>長い形式のデータを送信します。
 Dbms 定義*長いデータ*任意の文字または文字で 254 文字などの特定のサイズ以上のバイナリ データとして。 項目が、長いテキスト ドキュメントまたはビットマップを表す場合など、メモリ内の長い形式のデータ項目全体を格納できない可能性があります。 このようなデータは、1 つのバッファーに格納されることはできません、ので、データ ソースに送信ドライバーを使用してパーツに**SQLPutData**ステートメントが実行されるとします。 実行時にデータを送信するパラメーターと呼ばれる*実行時データ パラメーター*です。  
@@ -53,4 +51,3 @@ Dbms 定義*長いデータ*任意の文字または文字で 254 文字など�
  後に**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返しますあり、データが最後の実行時データ パラメーターに完全に送信される前に、ステートメントで状態のデータの必要があります。 アプリケーションがのみ呼び出すことができます、ステートメントは、データの必要がある状態では、 **SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; 他のすべての関数を返す SQLSTATE HY010 (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、以前の状態を返します。 詳細については、次を参照してください。[付録 b: ODBC 状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)です。  
   
  実行時にデータを送信するの例は、次を参照してください。、 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)関数の説明。
-

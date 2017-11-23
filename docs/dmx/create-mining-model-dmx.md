@@ -2,9 +2,12 @@
 title: "マイニング モデル (DMX) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -14,8 +17,7 @@ f1_keywords:
 - CREATE MINING MODEL
 - CREATE
 - CREATE_MINING_MODEL
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - RELATED TO column
 - mining models [Analysis Services], creating
@@ -24,19 +26,19 @@ helpviewer_keywords:
 - SESSION clause
 - CREATE MINING MODEL statement
 ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 279d4750f6264cbffb07e26a0d75317a1457cb56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8cdeac4e5da9e232959777278e5b5d0c45d7ac7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   新しいマイニング モデルとマイニング構造の両方をデータベースに作成します。 モデルを作成するには、新しいモデルをステートメントで定義するか、Predictive Model Markup Language (PMML) を使用します。 後者については、詳しい知識のあるユーザーのみ使用してください。  
   
@@ -75,7 +77,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *XML 文字列*  
  (詳しい知識のあるユーザーのみ。)XML でエンコードされたモデル (PMML) です。 文字列を示すには必ず単一引用符 (') を使用してください。  
   
- **セッション**句では、接続を閉じるか、またはセッションがタイムアウトになるときに、サーバーから自動的に削除されるマイニング モデルを作成することができます。 **セッション**には、データベース管理者、ユーザーは不要のみを使用するためのディスク領域、接続が開いている限り、マイニング モデルは便利です。  
+ **セッション**句では、接続を閉じるか、またはセッションがタイムアウトになるときに、サーバーから自動的に削除されるマイニング モデルを作成することができます。**セッション**には、データベース管理者、ユーザーは不要のみを使用するためのディスク領域、接続が開いている限り、マイニング モデルは便利です。  
   
  **WITH DRILLTHROUGH**句は、新しいマイニング モデルでドリルスルーを使用します。 ドリルスルーは、モデルの作成時にのみ可能です。 モデルの種類によっては、カスタム ビューアーでモデルを参照するためにドリルスルーが必要な場合があります。 Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルを予測または参照する場合は、ドリルスルーは必要ありません。  
   
@@ -131,7 +133,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |\<予測 > 句|Description|  
 |---------------------------|-----------------|  
-|**予測**|この列は、モデルによって予測が可能で、入力ケースで指定されることで、その他の予測可能列の値を予測することができます。|  
+|**PREDICT**|この列は、モデルによって予測が可能で、入力ケースで指定されることで、その他の予測可能列の値を予測することができます。|  
 |**PREDICT_ONLY**|この列は、モデルによって予測が可能ですが、その他の予測可能列の値を予測するためにこの列の値を入力ケースで使用することはできません。|  
   
 ### <a name="parameter-definition-list"></a>パラメーター定義リスト  
@@ -212,4 +214,3 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

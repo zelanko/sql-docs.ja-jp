@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7742b8f95ba8fef61777e2cb106b6df12285ee3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-type-conversions"></a>データ型変換
 データに変換できる 1 つの型から別に 4 回のいずれかの: 転送するときにデータが 1 つのアプリケーションの変数から間 (C に C)、ステートメントのパラメーター (C から SQL へ) をアプリケーション変数にデータを送信するときに結果セット列のデータが返される場合アプリケーション変数 (SQL から C へ) とときにデータを転送 1 つのデータ ソースの列から (SQL to SQL) のもう 1 つです。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  ODBC では、それぞれ SQL および C データ型間でデータを変換する方法を定義します。 基本的には、ODBC では、整数および浮動小数点、整数の文字など、すべての適切な変換をサポートし、日付する浮動小数点数など、正しく定義されていない変換をサポートしていません。 ドライバーがサポートする各 SQL データ型のすべての変換をサポートするために必要です。 SQL と C データ型間の変換の一覧については、次を参照してください。[に変換するデータを SQL から C データ型に](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)と[に変換するデータを C から SQL データ型を](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d: データ型にします。  
   
  ODBC では、データに変換する 1 つの SQL データ型から別のスカラー関数も定義します。 **変換**スカラー関数は、基になるスカラー関数または変換を実行するデータ ソースで定義されている関数へのドライバーによってもマップされます。 この関数が DBMS 固有の関数にマップされているために、これらの変換のしくみや、どのような変換をサポートする必要がありますが ODBC に定義されていません。 アプリケーション検出で SQL_CONVERT オプションによって、特定のドライバーとデータ ソースでどのような変換がサポートされている**SQLGetInfo**です。 詳細については、**変換**スカラー関数を参照してください[odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)と[明示的なデータ型変換関数](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)です。
-

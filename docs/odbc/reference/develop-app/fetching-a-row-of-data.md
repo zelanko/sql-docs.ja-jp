@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1136751fc7ec479cd3538814369cafed8ca45abf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-a-row-of-data"></a>データの行のフェッチ
 アプリケーションを呼び出すデータの行をフェッチする**SQLFetch**です。 **SQLFetch**をカーソルの種類と呼ばれることができますが、順方向専用の方向に行セットのカーソルだけ移動します。 **SQLFetch**次の行にカーソルを移動し、データへの呼び出しにバインドされていたすべての列を返します**SQLBindCol**です。 設定すると、カーソルが結果の末尾に達したとき、 **SQLFetch** SQL_NO_DATA が返されます。 例については、呼び出し元の**SQLFetch**を参照してください[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)です。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  文字データがあります、ドライバーによって null で終わる、アプリケーションに返される前に場合でもが切り捨てられました。 Null 終端文字は返されるバイトの長さに含まれていないが、バインドされたバッファー内の領域は必要です。 たとえば、アプリケーションは、ASCII 文字セット内の文字データで構成される文字列を使用して、ドライバーが 50 文字を返すには、データおよびアプリケーションのバッファーが 25 バイト長。 アプリケーションのバッファーでは、ドライバーは、最初の 24 文字の後に、null 終端文字を返します。 長さ/インジケーター バッファー 50 バイトの長さを返します。  
   
  アプリケーションでは、設定、結果を作成するステートメントを実行する前に SQL_ATTR_MAX_ROWS ステートメント属性を設定して、結果セット内の行の数を制限できます。 たとえば、レポートを書式設定に使用するアプリケーションでプレビュー モードでは、レポートの最初のページを表示するための十分なデータのみが必要です。 結果セットのサイズを制限するでは、このような機能が高速に実行されます。 このステートメント属性は、ネットワーク トラフィックを削減するためのものし、すべてのドライバーでサポートされていない可能性があります。
-

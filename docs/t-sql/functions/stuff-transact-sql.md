@@ -1,19 +1,20 @@
 ---
 title: "STUFF (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 11/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUFF
 - STUFF_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting characters
 - STUFF function
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df9a3d019f22ec8a0ba610f2dd694e45a8bd9da3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   STUFF 関数は、文字列を別の文字列に挿入します。 まず、1 番目の文字列の指定された開始位置から指定された長さの文字を削除し、次に、2 番目の文字列を 1 番目の文字列の指定された開始位置に挿入します。  
   
@@ -53,11 +53,11 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。  
   
  *開始*  
- 削除と挿入を開始する位置を整数で指定します。 場合*開始*または*長さ*は負の場合、null 文字列が返されます。 場合*開始*最初よりも長い*character_expression*、null 文字列が返されます。 *開始*型でも**bigint**です。  
+ 削除と挿入を開始する位置を整数で指定します。 場合*開始*が負の値または 0 の場合、null 文字列が返されます。 場合*開始*最初よりも長い*character_expression*、null 文字列が返されます。 *開始*型でも**bigint**です。  
   
  *length*  
- 削除する文字数を整数で指定します。 場合*長さ*最初よりも長い*character_expression*、文字までが削除最後に、最後の*character_expression*です。 *長さ*型でも**bigint**です。  
-  
+ 削除する文字数を整数で指定します。 場合*長さ*は負の場合、null 文字列が返されます。 場合*長さ*最初よりも長い*character_expression*、文字までが削除最後に、最後の*character_expression*です。  場合*長さ*0 の場合は、カーソルが、文字列の最初の文字の前に発生します。 *長さ*型でも**bigint**です。
+
  *replaceWith_expression*  
  [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。 この式が置き換えられます*長さ*の文字*character_expression*始点*開始*です。 提供する`NULL`として、 *replaceWith_expression*、何も挿入しないで文字を削除します。   
   
@@ -91,5 +91,4 @@ aijklmnef
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [文字列関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
-
+ [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  

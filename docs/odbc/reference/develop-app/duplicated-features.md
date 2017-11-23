@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b27da2aac2c42987f6eeaba4f104b647912df0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="duplicated-features"></a>重複する機能
 次の ODBC 2.*x* ODBC 3 で関数が重複しています*。x*関数。 結果として、ODBC 2 です。*x*関数、ODBC 3 で廃止されました*。x*です。 ODBC 3 です。*x*関数を置換機能と呼びます。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  関数は、 **SQLBindParam**特殊なケースです。 **SQLBindParam**が重複している機能です。 これは、ODBC 2 ではありません*.x*関数が、Open Group および ISO 規格に存在する関数。 この関数によって提供される機能はのによって完全に包含されています。 **SQLBindParameter**です。 ドライバー マネージャーがへの呼び出しをマップするため、 **SQLBindParam**に**SQLBindParameter**基になるドライバーが ODBC 3 の場合*。x*ドライバー。 ただし、ときに、基になるドライバーは、ODBC 2*.x*ドライバー、ドライバー マネージャーはこのマッピングを実行していません。
-

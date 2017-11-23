@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Reparent_TSQL
 - Reparent
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- Reparent [Database Engine]
+dev_langs: TSQL
+helpviewer_keywords: Reparent [Database Engine]
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e0b054e9651cce9a486d4acf9e997a601114e98a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57f565258c7fd95347d7d9bd36b2dd2034712efe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +58,7 @@ A **hierarchyid**入れ替えられるノードを表す、 *oldRoot*ノード�
 **CLR の戻り値の型: SqlHierarchyId**
   
 ## <a name="remarks"></a>解説  
-ノードを移動して、ツリーを変更するために使用する*oldRoot*に*ページャー*です。 GetReparentedValue を使用すると、ある階層のノードを階層内の新しい位置に移動できます。 **Hierarchyid**データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid が新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 **hierarchyid**データ型のエントリの重複を防ぐのに役立ちます。 サブツリー全体を移動の例は、次を参照してください。[階層データ & #40 です。SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).
+ノードを移動して、ツリーを変更するために使用する*oldRoot*に*ページャー*です。 GetReparentedValue を使用すると、ある階層のノードを階層内の新しい位置に移動できます。 **Hierarchyid**データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid が新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 **hierarchyid**データ型のエントリの重複を防ぐのに役立ちます。 サブツリー全体を移動の例は、次を参照してください。[階層データ &#40;です。SQL Server &#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>使用例  
   
@@ -123,4 +119,3 @@ this. GetReparentedValue(oldParent, newParent)
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
   
   
-

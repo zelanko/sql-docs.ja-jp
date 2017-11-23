@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3ac713de27efa4ddc41ec52285231dde7518402
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="text-file-data-types"></a>テキスト ファイルのデータ型
 次の表では、テキスト データ型を ODBC SQL データ型にマップする方法を示します。 すべての ODBC SQL データ型は、テキストの ODBC ドライバーでサポートされていることに注意してください。  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|固定長のいずれかで LONGCHAR 列の幅に、理論的な制限または区切り記号付きのテーブルが 65500 K です。 テキスト ISAM は、最大で約 32 K の信頼性の高いサポートを提供する可能性が高くなります。|  
   
  データ型に複数の制限事項は含まれて[データ型の制限事項](../../odbc/microsoft/data-type-limitations.md)です。
-

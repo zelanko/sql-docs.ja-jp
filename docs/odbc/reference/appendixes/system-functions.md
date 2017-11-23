@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 91f84144d571982819e063f4c1d61e9bada238dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="system-functions"></a>システム関数
 次の表は、ODBC スカラー関数のセットに含まれているシステム関数を一覧表示します。 呼び出して**SQLGetInfo**で、*情報の種類*するシステム関数は、ドライバーでサポートされる SQL_SYSTEM_FUNCTIONS のアプリケーションを決定できます。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 |**データベースに関するページ ()** (ODBC 1.0)|接続ハンドルに対応するデータベースの名前を返します。 (を呼び出して、データベースの名前が使用可能なも**SQLGetConnectOption** SQL_CURRENT_QUALIFIER 接続オプションを使用します)。|  
 |**見つかれば (** *exp*、*値***)** (ODBC 1.0)|場合*exp*が null、*値*が返されます。 場合*exp*が null でない*exp*が返されます。 考えられるデータ型または型の*値*のデータ型と互換性のある必要があります*exp*です。|  
 |**ユーザー ()** (ODBC 1.0)|DBMS のユーザー名を返します。 (ユーザー名がによって使用可能なも**SQLGetInfo**情報の種類を指定することによって: SQL_USER_NAME)。これは、ログイン名とは異なることができます。|
-

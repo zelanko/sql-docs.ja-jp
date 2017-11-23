@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>カタログ関数によって返されるデータ
 各カタログ関数では、データがその結果セットを返します。 この結果セットは、その他の結果セットから変わりません。 生成される通常、定義済みでパラメーター化された**選択**ドライバーで、ハードコーディングまたはストアド プロシージャは、データ ソース内にあるステートメントです。 結果セットからデータを取得する方法については、次を参照してください。[が、結果セットを作成しますか?](../../../odbc/reference/develop-app/was-a-result-set-created.md)です。  
@@ -46,4 +44,3 @@ SELECT "Customer Name" FROM "Accounts Payable"
  カタログ関数は、ユーザー名とパスワードに基づいての接続が確立され、ユーザーが特権を持ってデータのみが返されます SQL に似た承認モデルに基づきます。 このモデルに適合しません、個々 のファイルのパスワード保護では、ドライバー定義されます。  
   
  カタログ関数によって返される結果セットは更新可能なほとんどありませんし、これらの結果セット内のデータを変更することによって、データベースの構造を変更することができるアプリケーションを期待できません。
-

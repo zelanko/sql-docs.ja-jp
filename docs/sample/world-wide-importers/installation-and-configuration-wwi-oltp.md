@@ -1,30 +1,31 @@
 ---
 title: "インストールと構成 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: ef13bdeef7991953bf910b97a220a3edc824ce4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
-Wide World importers 社の OLTP データベースのインストールと構成手順です。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World importers 社の OLTP データベースのインストールと構成手順です。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -96,5 +97,4 @@ Azure SQL Database の監査が構成されているを通じて、 [Azure ポ�
 行レベルのセキュリティは、WideWorldImporters の bacpac ダウンロードに既定では無効です。 データベースに行レベル セキュリティを有効にするには、次のストアド プロシージャを実行します。
 
     EXECUTE [Application].[Configuration_ApplyAuditing]
-
 

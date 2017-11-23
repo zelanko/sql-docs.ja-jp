@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TRY_PARSE_TSQL
 - TRY_PARSE
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- TRY_PARSE function
+dev_langs: TSQL
+helpviewer_keywords: TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0b26f46431909dd4fbfaa820db8c3869333f555d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 735d1e38b81a08da50cba340b0e5663d6e6d5755
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -86,12 +82,12 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |数値|real|Single|NumberStyles.Float|  
 |数値|smallmoney|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
-|日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces & #124 です。DateTimeStyles.AssumeUniversal|  
-|日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces & #124 です。DateTimeStyles.AssumeUniversal|  
-|日時|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124 です。DateTimeStyles.AssumeUniversal|  
-|日時|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124 です。DateTimeStyles.AssumeUniversal|  
-|日時|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces & #124 です。DateTimeStyles.AssumeUniversal|  
-|日時|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces & #124 です。DateTimeStyles.AssumeUniversal|  
+|日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
+|日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
+|日時|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
+|日時|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
+|日時|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
+|日時|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124;です。DateTimeStyles.AssumeUniversal|  
   
  **カルチャ パラメーターの詳細について**  
   
@@ -193,8 +189,7 @@ False
 ## <a name="see-also"></a>参照  
  [PARSE &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/parse-transact-sql.md)   
  [変換関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/conversion-functions-transact-sql.md)   
- [TRY_CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/try-convert-transact-sql.md)   
+ [TRY_CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-
