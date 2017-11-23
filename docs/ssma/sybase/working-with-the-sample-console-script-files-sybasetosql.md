@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Sample Console Script Files
+helpviewer_keywords: Sybase Console,Sample Console Script Files
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6777922c0282df350ed0107dc3a37ef7102ef5d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cb3c0f4f2e9f57b10527b9e524eae10563efebe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>サンプルのコンソール スクリプト ファイル (SybaseToSQL) の操作
 いくつかのサンプル ファイルは、ユーザーの参照と使用法について、製品と共に用意されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 -   **VariableValueFileSample.xml:**  
     スクリプト ファイルのサンプルのコンソールで使用されているすべての変数と`ServersConnectionFileSample.xml`このファイルで照合されています。 ユーザーが単純に置き換えます。 サンプル変数にサンプルのコンソール スクリプトを実行するには、ユーザーに値は定義されているものと、このファイルをスクリプト ファイルと共に追加のコマンドライン引数として渡します。  
   
-    値のさまざまなファイルの詳細については、次を参照してください。[変数値ファイルの作成 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+    値のさまざまなファイルの詳細については、次を参照してください。[変数値ファイルの作成 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
 -   **AssessmentReportGenerationSample.xml:**  
     このサンプルでは、使用できる、ユーザーが分析のために変換し、データの移行は開始する前に xml 評価レポートを生成するユーザーを使用できます。  
@@ -63,7 +60,7 @@ ms.lasthandoff: 08/02/2017
   
     ユーザーが複数のオブジェクトを評価する/彼のデータベースの場合は複数指定できます`metabase-object`ノードに示すように、`generate-assessment-report`サンプル コンソール スクリプト ファイルのコマンドの例 4 です。  
   
-    レポートを生成する方法の詳細については、次を参照してください。[レポートの生成 & #40 です。SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+    レポートを生成する方法の詳細については、次を参照してください。[レポートの生成 &#40;です。SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
     > [!NOTE]  
     > -   コンソール アプリケーションに渡される変数の値ファイルのコマンドライン引数を使用すると、VariableValueFileSample.xml が指定したユーザーに更新されることを確認して値。  
@@ -135,4 +132,3 @@ ms.lasthandoff: 08/02/2017
 [サーバーの接続ファイル &#40; を作成します。SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [生成するレポートと #40 です。SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   
-

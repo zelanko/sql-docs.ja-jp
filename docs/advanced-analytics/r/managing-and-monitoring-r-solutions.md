@@ -1,27 +1,24 @@
 ---
 title: "管理と監視 machine learning ソリューション |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7b5737f9b8713688d654a0b1b286162e8f38929
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 388104730e6d8839843ce61d1c142449d9b02707
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理と machine learning のソリューションの監視
 
@@ -66,4 +63,3 @@ ms.lasthandoff: 09/01/2017
 + [R Services の監視](../r/monitoring-r-services.md)
 
 + [構成および Advanced Analytics Extensions の管理](../r/configure-and-manage-advanced-analytics-extensions.md)
-

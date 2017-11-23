@@ -30,17 +30,16 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4610c996aa58fc71090c5a724447cfe733ede5d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、ストレージ モードおよびキャッシュ オプションの標準ストレージ構成がいくつか用意されています。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
@@ -91,4 +90,3 @@ ms.lasthandoff: 09/01/2017
  [多次元モデル内のパーティション](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   
-

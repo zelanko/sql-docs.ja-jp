@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Binding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Binding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- BINDING
-helpviewer_keywords:
-- Binding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: BINDING
+helpviewer_keywords: Binding data type
 ms.assetid: 0a777219-b885-4961-ac66-b76faeb520db
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 64b5234cdeb661c3f25b0d6ed2e00db330ea0ca7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d252931193ef06109c1d353ddc8fa42b3e4b6dfb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="binding-data-type-assl"></a>Binding データ型 (ASSL)
   あるオブジェクトのデータまたはメタデータがバインド対象オブジェクトのデータまたはメタデータに依存している 2 つのオブジェクト間の依存関係を表す抽象プリミティブ データ型を定義します。  
@@ -65,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>解説  
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Binding>します。  
   
- データ バインディングの詳細については、次を参照してください。[データ ソースとのバインド & #40 です。SSAS 多次元 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ データ バインディングの詳細については、次を参照してください。[データ ソースとのバインド &#40;です。SSAS 多次元 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="elements-of-type-binding"></a>Binding 型の要素  
  次の表に、型の要素**バインド**です。  
@@ -90,11 +84,10 @@ ms.lasthandoff: 09/01/2017
 |[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|[ソース](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|型、**バインド**する必要があります[CubeDimensionBinding](../../../analysis-services/scripting/data-type/cubedimensionbinding-data-type-assl.md)、 [DataSourceViewBinding](../../../analysis-services/scripting/data-type/datasourceviewbinding-data-type-assl.md)、または[DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md)|  
 |[パーティション](../../../analysis-services/scripting/objects/partition-element-assl.md)|[ソース](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|型、**バインド**する必要があります[TabularBinding](../../../analysis-services/scripting/data-type/tabularbinding-data-type-assl.md)|  
 |[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)|[ソース](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|型、**バインド**する必要があります[ProactiveCachingBinding](../../../analysis-services/scripting/data-type/proactivecachingbinding-data-type-assl.md)|  
-|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|[ソース](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|型、**バインド**する必要があります[AttributeBinding](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md)、 [CubeAttributeBinding データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)、または[MeasureBinding データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/measurebinding-data-type-assl.md)|  
+|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|[ソース](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|型、**バインド**する必要があります[AttributeBinding](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md)、 [CubeAttributeBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)、または[MeasureBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/measurebinding-data-type-assl.md)|  
 |[TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|[SourceMeasureGroup](../../../analysis-services/scripting/objects/sourcemeasuregroup-element-assl.md)|型、**バインド**する必要があります[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

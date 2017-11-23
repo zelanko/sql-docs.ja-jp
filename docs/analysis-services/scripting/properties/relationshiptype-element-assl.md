@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- RelationshipType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: RelationshipType Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- RelationshipType
-helpviewer_keywords:
-- RelationshipType element
+applies_to: SQL Server 2016 Preview
+f1_keywords: RelationshipType
+helpviewer_keywords: RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6d93ac8d20a63e5815d388652e35e6d606502492
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c851069422e2e2f89c9c00decae26a9b872d93d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationshiptype-element-assl"></a>RelationshipType 要素 (ASSL)
   示すかどうかのメンバー リレーションシップ、 [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md)変更できます。  
@@ -80,7 +74,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

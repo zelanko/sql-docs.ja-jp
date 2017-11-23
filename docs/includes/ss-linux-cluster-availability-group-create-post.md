@@ -1,7 +1,7 @@
 
-## <a name="add-a-database-to-the-availability-group"></a>データベースを可用性グループに追加します。
+## <a name="add-a-database-to-the-availability-group"></a>可用性グループにデータベースを追加する
 
-可用性グループに追加するデータベースは、完全復旧モードではあり、有効なログ バックアップを確認します。 テスト データベースまたは作成された新しいデータベースの場合は、データベース バックアップを実行します。 プライマリ SQL サーバーで実行を作成し、という名前のデータベースをバックアップの次の TRANSACT-SQL`db1`です。
+可用性グループに追加するデータベースが、完全回復モードであり、有効なログ バックアップがあることを確認します。 テスト データベースまたは新規作成データベースの場合は、データベース バックアップを実行します。 プライマリ SQL Server で、次の Transact-SQL を実行して、`db1` という名前のデータベースを作成してバックアップします。
 
 ```Transact-SQL
 CREATE DATABASE [db1];
@@ -10,15 +10,15 @@ BACKUP DATABASE [db1]
    TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
-SQL Server のプライマリ レプリカで実行をという名前のデータベースを追加する次の TRANSACT-SQL`db1`を可用性グループと呼ばれる`ag1`です。
+SQL Server のプライマリ レプリカで、次の Transact-SQL を実行して、`db1` という名前のデータベースを `ag1` という名前の可用性グループに追加します。
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 ```
 
-### <a name="verify-that-the-database-is-created-on-the-secondary-servers"></a>セカンダリ サーバー上のデータベースが作成されたことを確認してください。
+### <a name="verify-that-the-database-is-created-on-the-secondary-servers"></a>セカンダリ サーバーにデータベースが作成されたことを確認する
 
-各セカンダリ SQL Server レプリカでかどうかを次のクエリを実行、`db1`データベースが作成されが同期されています。
+各セカンダリ SQL Server レプリカで次のクエリを実行して、`db1` データベースが作成されて同期されているかどうかを確認します。
 
 ```Transact-SQL
 SELECT * FROM sys.databases WHERE name = 'db1';

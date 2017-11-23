@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 08/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: 5a2959f1904fb878f497eecfc6fe93802bee0941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) の概要
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) のアクセスでは、すばやくアクセス使用するデータベース オブジェクトを変換することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Azure SQL DB オブジェクトに結果として得られるオブジェクトのアップロードまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB へのアクセスからデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 かどうか必要に応じて、リンクすることもアクセス テーブルを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]既存の Access のフロント エンド アプリケーションでの使用を継続できるように Azure SQL DB がテーブルまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/07/2017
 このトピックでは、インストール プロセスについて説明し、SSMA ユーザー インターフェイスを使用することを理解するのに役立ちます。  
   
 ## <a name="installing-ssma"></a>SSMA のインストール  
-SSMA を使用する必要がありますに初めてインストールする SSMA クライアント プログラムを移行する、両方のデータベースにアクセスできるコンピューターとのターゲット インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 インストール手順については、次を参照してください。[をインストールする SQL Server Migration Assistant for Access & #40 です。AccessToSQL &#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
+SSMA を使用する必要がありますに初めてインストールする SSMA クライアント プログラムを移行する、両方のデータベースにアクセスできるコンピューターとのターゲット インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 インストール手順については、次を参照してください。[をインストールする SQL Server Migration Assistant for Access &#40;です。AccessToSQL &#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
   
 SSMA を起動するには、クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント**SQL Server Migration Assistant for Access**、し、 **SQL Server Migration Assistant for Access**です。  
   
@@ -142,4 +140,3 @@ SSMA には、次のメニューが含まれています。
 ## <a name="see-also"></a>参照  
 [SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

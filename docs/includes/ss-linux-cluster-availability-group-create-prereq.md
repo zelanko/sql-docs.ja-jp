@@ -2,7 +2,7 @@
 
 可用性グループを作成する前に、以下のことを行う必要があります。
 
-- 可用性レプリカをホストするすべてのサーバーが通信できるように環境を設定する
+- 可用性レプリカをホストするすべてのサーバーが通信できるように環境を設定します
 - SQL Server をインストールする
 
 >[!NOTE]
@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 オプションで、Always On 可用性グループの拡張イベントを有効にすると、可用性グループのトラブルシューティング時に根本原因を診断するために役立ちます。 SQL Server の各インスタンスで次のコマンドを実行します。 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ GO
 
 次の Transact-SQL スクリプトでは、`dbm_login` という名前のログインと `dbm_user` という名前のユーザーを作成します。 強力なパスワードでスクリプトを更新します。 データベース ミラーリング エンドポイントのユーザーを作成するために、すべての SQL Server インスタンスで次のコマンドを実行します。
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ Linux 上の SQL Server サービスは、ミラーリングのエンドポイ�
 
 次の Transact-SQL スクリプトは、マスター キーと証明書を作成します。 その後、証明書をバックアップし、秘密キーでファイルをセキュリティ保護します。 強力なパスワードでスクリプトを更新してください。 プライマリ SQL Server インスタンスに接続し、証明書を作成する次の Transact-SQL を実行します。
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 次の Transact-SQL スクリプトは、SQL Server のプライマリ レプリカで作成したバックアップからマスター キーと証明書を作成します。 また、ユーザーに証明書へのアクセスを承認します。 強力なパスワードでスクリプトを更新してください。 暗号化解除パスワードは、前の手順で .pvk ファイルの作成に使ったものと同じパスワードです。 すべてのセカンダリ サーバーで次のスクリプトを実行し、証明書を作成します。
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>すべてのレプリカにデータベース ミラーリング エンドポイントを作成する
 
-データベース ミラーリング エンドポイントでは、伝送制御プロトコル (TCP) を使用して、データベース ミラーリング セッションに参加するサーバー インスタンス間、または可用性レプリカをホストするサーバー インスタンス間でメッセージを送受信します。 データベース ミラーリング エンドポイントでは、一意な TCP ポート番号でリッスンします。 
+データベース ミラーリング エンドポイントでは、伝送制御プロトコル (TCP) を使用して、データベース ミラーリング セッションに参加するサーバー インスタンス間、または可用性レプリカをホストするサーバー インスタンス間でメッセージを送受信します。 データベース ミラーリング エンドポイントでは、一意な TCP ポート番号でリッスンします。 TCP リスナーには、リスナーの IP アドレスが必要です。 リスナーの IP アドレスは、IPv4 アドレスである必要があります。 使用することも`0.0.0.0`します。 
 
 次の Transact-SQL は、可用性グループに対して `Hadr_endpoint` という名前のリスニング エンドポイントを作成します。 エンドポイントを開始し、作成したユーザーに接続許可を付与します。 スクリプトを実行する前に、`**< ... >**` の間の値を置き換えます。
 
->[!NOTE]
->このリリースでは、リスナーの IP アドレスに別の IP アドレスを使わないでください。 この問題の修正を行っていますが、現時点で使用できる値は "0.0.0.0" のみです。
+すべての SQL Server インスタンスで、環境の次の TRANSACT-SQL を更新します。 
 
-すべての SQL Server インスタンスで、環境に合わせて次の Transact-SQL を更新します。 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->ファイアウォールの TCP ポートをリスナー ポート用に開く必要があります。
+>[!NOTE]
+>ロールの唯一の有効な値は、1 つのノードの構成のみのレプリカをホストする SQL Server Express Edition を使用している場合、`WITNESS`です。 SQL Server Express Edition では、次のスクリプトを実行します。
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->SQL Server 2017 リリースでは、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は `CERTIFICATE` です。 `WINDOWS` オプションが将来のリリースで有効になる予定です。
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)」をご覧ください。
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

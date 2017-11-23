@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS security [ADO]
+helpviewer_keywords: RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a84a52dc353d11a391ff79c5f0975d71540cd08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72a46915beed5bb65953788b2b1b7283d90cb8e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="securing-rds-applications"></a>RDS アプリケーションのセキュリティ保護
 このトピックでは rds. のセキュリティについて  
@@ -50,6 +47,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="password-authentication"></a>パスワード認証  
  RDS が 3 つのパスワードの認証モードのいずれかで実行されている IIS Web サーバーと通信できる: 匿名、基本、または NT チャレンジ/レスポンス認証 (Windows 2000 で統合 Windows 認証と呼ばれます)。 これらの設定は、Web サーバーがクライアント コンピューターにある NT Web サーバー上の明示的なアクセス特権を必要とするなど、アクセスを制御する方法を定義します。
-
 
 

@@ -5,24 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f006e161323a8f86147a63e2dde9ae4eebbcbb5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
+# <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
   **[MSSQLSERVER のプロトコルのプロパティ]** ダイアログ ボックスの **[詳細設定]** タブを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]の**認証の拡張保護**を構成します。 **拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 で使用でき、それ以前のオペレーティング システムではサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。 **拡張保護** の利点には、 **[フラグ]** タブで **[強制的に暗号化]** を選択していないと得られないものもあります。  
   
 > [!IMPORTANT]  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
  **拡張保護** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Native Client によって完全にサポートされています。 その他の **クライアント プロバイダーでは、** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は現時点ではサポートされていません。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **拡張保護**  
  指定可能な 3 つの値は次のとおりです。  
   
@@ -45,8 +43,7 @@ ms.lasthandoff: 08/02/2017
  **[承認された NTLM SPN]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが複数の NTLM サービス プリンシパル名 (SPN) で識別されると、ここに、SPN がセミコロンで区切られた一連の文字列として表示されます。 たとえば、値 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**は、 **MSSQLSvc/HOST1.Contoso.com** および **MSSQLSvc/HOST2.Contoso.com** という名前の SPN への接続を試みているクライアントが許可されることを示します。 変数の最大長は 2048 文字です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Reporting Services での認証の拡張保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
-

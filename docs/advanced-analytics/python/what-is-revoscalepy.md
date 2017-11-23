@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy の概要
 
@@ -125,7 +123,7 @@ Python の MicrosoftML もなどが含まれるさまざまな変換およびヘ
 
 ローカルでの実行中、通常、コマンドラインまたは Python の開発環境から Python スクリプトを実行してのいずれかを使用して SQL Server のコンピューティング コンテキストを指定、 **revoscalepy**関数。 全体のコードでは、または個々 の関数のリモート計算コンテキストを使用することができます。 たとえば、モデルのトレーニングを最新のデータを使用し、データ移動を回避するためにサーバーの負荷を軽減することができます。
 
-ストアド プロシージャ内の完全な Python スクリプトを配置する場合[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)入力と出力を明確に定義される 1 つの関数として、コードを書き換えることをお勧めします。 入力と出力がある必要があります**パンダ**データ フレーム。 これを実行すると、T-SQL をサポートする任意のクライアントからストアド プロシージャを呼び出して、簡単に SQL クエリを入力として渡すでき SQL テーブルに結果を保存できます。 例については、次を参照してください。 [L 開発者向けのデータベースでの Python 分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)です。
+ストアド プロシージャ内の完全な Python スクリプトを配置する場合[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)入力と出力を明確に定義される 1 つの関数として、コードを書き換えることをお勧めします。 入力と出力がある必要があります**パンダ**データ フレーム。 これを実行すると、T-SQL をサポートする任意のクライアントからストアド プロシージャを呼び出して、簡単に SQL クエリを入力として渡すでき SQL テーブルに結果を保存できます。 例については、次を参照してください。 [SQL 開発者のため、データベース内の Python Analytics](../tutorials/sqldev-in-database-python-for-sql-developers.md)です。
 
 ### <a name="using-remote-compute-contexts"></a>リモート計算コンテキストを使用します。
 

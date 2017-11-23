@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f51708cf47cf84a33cefee3003e0edb94baaae6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="return-codes-odbc"></a>ODBC のリターン コード
 ODBC の各関数と呼ばれる、コードが返されますその*リターン コード、*全体的な成功または関数の失敗を示します。 一般的に、プログラミング ロジックはリターン コードを基に組み立てます。  
@@ -61,4 +59,3 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|以上のデータを使用でした。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 クラス 02xxx 内の 1 つまたは複数のドライバーの定義済みの状態レコードが返される可能性があります。 **注:** Odbc 2 *。x*、これは、コードが SQL_NO_DATA_FOUND という名前が返されます。|  
 |SQL_NEED_DATA|実行時にパラメーターのデータが送信されたときより多くのデータが必要なまたは、追加の接続情報が必要です。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合、追加の情報を取得します。|  
 |SQL_STILL_EXECUTING|非同期的に起動された関数が実行中です。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合、追加の情報を取得します。|
-

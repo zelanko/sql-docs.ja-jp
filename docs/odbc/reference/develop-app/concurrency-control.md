@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d40d92b6771aa27a0fbfbdbfefd485496b10984c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a10dc30810a1ea71bd4e2c9d823ed010f7f611d4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="concurrency-control"></a>同時実行制御
 *同時実行*同時に同じデータを使用する 2 つのトランザクションの機能は、トランザクション分離通常は同時実行が少なくします。 これはトランザクションの分離は通常、行をロックで実装が、ロックされた行が少なくとも一時的にブロックされることがなく少ないトランザクションを完了できる複数の行がロックされている、です。 トランザクション分離レベルが高いデータベースの整合性を維持するために必要なのトレードオフとして同時実行が少なく、一般的に、中にカーソルを使用してを高い読み取り/書き込み活動で、インタラクティブなアプリケーションで問題になります。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 -   [同時実行の種類](../../../odbc/reference/develop-app/concurrency-types.md)  
   
 -   [オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)
-

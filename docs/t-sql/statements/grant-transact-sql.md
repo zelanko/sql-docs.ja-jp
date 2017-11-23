@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
 - GRANT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - granting permissions [SQL Server], GRANT statement
 - schema-level securables [SQL Server]
@@ -27,22 +25,21 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb9bf548f042a4a6f41322fb789a2cd7e5b6bec9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  セキュリティ保護可能なリソースに対する権限をプリンシパルに許可します。  一般的な概念は GRANT を\<権限 > ON \<、一部のオブジェクト > TO\<いくつかのユーザー、ログイン、またはグループ >。 アクセス許可の概要については、次を参照してください。[アクセス許可 (&) #40";"データベース エンジン"&"#41;](../../relational-databases/security/permissions-database-engine.md)です。  
+  セキュリティ保護可能なリソースに対する権限をプリンシパルに許可します。  一般的な概念は GRANT を\<権限 > ON \<、一部のオブジェクト > TO\<いくつかのユーザー、ログイン、またはグループ >。 アクセス許可の概要については、次を参照してください。[アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -169,37 +166,37 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
   
 |||  
 |-|-|  
-|アプリケーション ロール|[データベース プリンシパルの権限の GRANT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|アプリケーション ロール|[データベース プリンシパルの権限の GRANT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |アセンブリ|[アセンブリの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
-|非対称キー|[非対称キーの権限の GRANT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
-|可用性グループ|[GRANT 可用性グループの権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
-|Certificate|[GRANT 証明書の権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
-|コントラクト|[GRANT Service Broker の権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|データベース|[データベース権限の許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
+|非対称キー|[非対称キーの権限の GRANT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
+|可用性グループ|[GRANT 可用性グループの権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
+|Certificate|[GRANT 証明書の権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
+|コントラクト|[GRANT Service Broker の権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|データベース|[データベース権限の許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
 |データベース スコープ資格情報|[GRANT データベース スコープ資格情報 (TRANSACT-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
 |エンドポイント|[GRANT Endpoint Permissions &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
-|フルテキスト カタログ|[GRANT、フルテキストの権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|フルテキスト ストップリスト|[GRANT、フルテキストの権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|関数|[GRANT オブジェクトのアクセス許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Login|[サーバー プリンシパルの権限の GRANT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
-|メッセージの種類|[GRANT Service Broker の権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|オブジェクト|[GRANT オブジェクトのアクセス許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|キュー|[GRANT オブジェクトのアクセス許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|リモート サービス バインド|[GRANT Service Broker の権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|ロール|[データベース プリンシパルの権限の GRANT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Route|[GRANT Service Broker の権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|フルテキスト カタログ|[GRANT、フルテキストの権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|フルテキスト ストップリスト|[GRANT、フルテキストの権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|関数|[GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Login|[サーバー プリンシパルの権限の GRANT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
+|メッセージの種類|[GRANT Service Broker の権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|オブジェクト|[GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|キュー|[GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|リモート サービス バインド|[GRANT Service Broker の権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|ロール|[データベース プリンシパルの権限の GRANT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Route|[GRANT Service Broker の権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |スキーマ|[スキーマの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
-|検索プロパティ リスト|[許可の検索プロパティ リスト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
+|検索プロパティ リスト|[許可の検索プロパティ リスト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
 |[サーバー]|[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
-|サービス|[GRANT Service Broker の権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|ストアド プロシージャ|[GRANT オブジェクトのアクセス許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|対称キー|[対称キーの権限の GRANT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
-|シノニム|[GRANT オブジェクトのアクセス許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|サービス|[GRANT Service Broker の権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|ストアド プロシージャ|[GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|対称キー|[対称キーの権限の GRANT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
+|シノニム|[GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |システム オブジェクト|[GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
-|テーブル|[GRANT オブジェクトのアクセス許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|型|[アクセス許可の付与の種類 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
-|ユーザー|[データベース プリンシパルの権限の GRANT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|表示|[GRANT オブジェクトのアクセス許可 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|テーブル|[GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|型|[アクセス許可の付与の種類 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
+|ユーザー|[データベース プリンシパルの権限の GRANT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|表示|[GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |XML スキーマ コレクション|[XML スキーマ コレクションの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>参照  
@@ -207,10 +204,9 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_helprotec &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helpuser &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   
-

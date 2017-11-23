@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- TableID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: TableID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TableID
-helpviewer_keywords:
-- TableID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TableID
+helpviewer_keywords: TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5fff4e89787afd9f845e68dee89bb10c6bb0274
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89a10083cd42179ad72af682e337c67691dff491
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tableid-element-assl"></a>TableID 要素 (ASSL)
   テーブルの識別子 (ID) が含まれています (から、 [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md)要素)、親要素に関連付けられています。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**TableID**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.ColumnBinding>、 <xref:Microsoft.AnalysisServices.DSVTableBinding>、 <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>、および<xref:Microsoft.AnalysisServices.RowBinding>です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

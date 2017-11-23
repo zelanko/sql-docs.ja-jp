@@ -1,80 +1,64 @@
 ---
-title: "R ツールのセットアップまたは構成 | Microsoft Docs"
+title: "SQL Server セットアップに含まれている R ツール |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/20/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 37910463066855d8929d554cb7f850c410dac4a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3baf97a960d7e8f950bb6e9cd251550f4c4b942
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="setup-or-configure-r-tools"></a>R ツールのセットアップまたは構成
-  Microsoft R Server では、R コードの開発とテストに必要となる、基本の R ライブラリ、ScaleR パッケージのセット、および標準 R ツールがすべて提供されます。 ただし、R 開発専用環境を使用したい場合は、多くの無料ツールも含め、使用できるものがいくつかあります。  
-  
-## <a name="basic-r-tools"></a>基本の R ツール  
- Microsoft R Server のインストールには追加のツールは必要ありません。R の*基本インストール*に含まれる標準 R ツールはすべて既定でインストールされるためです。
+# <a name="r-tools-included-with-sql-server-setup"></a>SQL Server セットアップに含まれている R のツール
 
--   **RTerm**: R スクリプトを実行するためのコマンドライン ツール 
-  
--   **RGui.exe**:  R のための単純な対話型エディター。コマンドライン引数は RGui.exe と RTerm で同じです。 
-  
--   **RScript**: R スクリプトをバッチ モードで実行するためのコマンドライン ツール。  
+いずれかでインストールされているのと同じ R ツールを取得する SQL Server で R をインストールするときに**基本**RGui、Rterm などの R のインストール。 このため実際があるすべてのツールを開発し、R コードをテストする必要があります。
 
-これらのツールを見つけるには、R ライブラリの場所を確認してください。 これは、SQL Server R Services のみをインストールしたか、R Server (スタンドアロン) もインストールしたかによって異なります。 詳しくは、「[インストールされる内容と R パッケージの置かれる場所](https://msdn.microsoft.com/library/mt695941(sql.130).aspx#Anchor_1)」をご覧ください。
-
-フォルダー `..\R_SERVER\bin\x64` の中を見てください。  
-
-> [!TIP]  
->  R ツールの使用方法にお困りですか。 セットアップ フォルダー `C:\Program Files\Microsoft SQL Server\R_SERVER\doc` および `C:\Program Files\Microsoft SQL Server\R_SERVER\doc\manual` にドキュメントが含まれています。  
->   
->  または、**RGui** を開いて **[ヘルプ]** をクリックし、いずれかのオプションを選択してください。  
-
-## <a name="microsoft-r-client"></a>Microsoft R Client
-
-Microsoft R Client は無料でダウンロードでき、これを使用すると、Microsoft R Server または SQL Server R Services で簡単に実行できる R ソリューションを開発できます。 このオプションは、R Server (Enterprise Edition で使用可能) へのアクセス権を持たないデータ サイエンティストが、ScaleR を使用するソリューションを開発する際に役立ちます。 
-
-別の R 開発環境 (R Tools for Visual Studio つまり RStudio など) を使用して ScaleR を使用する場合は、Microsoft R Client が R 実行可能ファイルとして使用されることを指定する必要があります。 こうすると、RevoScaleR パッケージと他の Microsoft R Server 機能に対する完全なアクセス権を得ることができます。ただし、パフォーマンスは制限されます。
-
-また、R Client で提供されるツール (RGui や RTerm など) を使用して、スクリプトの実行や、アドホック R コードの作成や実行を行うこともできます。
-
-[Microsoft R Client をインストールする](https://msdn.microsoft.com/microsoft-r/r-client-install)
-  
-##  <a name="bkmk_RTools"></a> R Tools for Visual Studio  
-
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用する際の利便性のために、[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] を開発環境として使用することを検討してください。 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] は Visual Studio の無料アドインです。Visual Studio のすべてのエディションで作動します。 Visual Studio では Python および F# 統合のサポートも提供されます。  
-
- インストール手順については、次を参照してください。 [R Tools for Visual Studio のインストール方法](https://docs.microsoft.com/visualstudio/rtvs/installation)です。
+このトピックでは、インストールに付属のツールを示します。
 
 > [!TIP]
-> 新しいパッケージをインストールする前に、どの R ランタイムが既定で使用されているかを確認します。 そうしないと、既定のライブラリの場所に新しい R パッケージをインストールしてしまい、R Server から新しいパッケージを見つけられなくなる可能性があります。
+> 
+> 通常のデバッグし、専用の開発環境を使用して R コードをテストする簡単です。 テストする場合は、あらかじめ外部ツールでは、詳細なエラー メッセージを読み取るしてソリューションをデバッグできるように、SQL Server で R コードを実行しやすくすることもあります。
+> 
+> SQL Server で動作するように構成する方法と、R ソリューションを開発に使用できる無料ツールの一覧については、この記事を参照してください:[データ サイエンス クライアントのセットアップ](set-up-a-data-science-client.md)
 
+**適用されます:** SQL Server 2016 R Services (In-database) および Microsoft R Server (スタンドアロン) です。SQL Server 2017 機械学習の Services (In-database) と機械学習のサーバー (スタンドアロン)
 
-## <a name="rstudio"></a>RStudio
+## <a name="r-tools-included-with-installation"></a>R ツールのインストールに含まれています。
 
-RStudio を使用する場合は、RevoScaleR ライブラリを使用するために追加の手順が必要です。
-- Microsoft R Server または Microsoft R Client をインストールして必要なパッケージとライブラリを取得します。
-- R Server ランタイムを使用する R パスを更新します。
+次の標準的な R ツールが含まれている、*基本インストール*R のし、そのため、既定でインストールされます。
 
-詳しくは、「[Configure Your IDE](https://msdn.microsoft.com/microsoft-r/r-client-get-started#step-2-configure-your-ide)」(IDE の構成) をご覧ください。
++ **RTerm**: R スクリプトを実行するためのコマンド ライン ターミナル
 
++ **RGui.exe**:  R のための単純な対話型エディター。コマンドライン引数は RGui.exe と RTerm で同じです。
 
-## <a name="see-also"></a>参照  
- [スタンドアロン R Server の作成](../../advanced-analytics/r-services/create-a-standalone-r-server.md)   
- [Microsoft R Server の概要 &#40;スタンドアロン&#41;](../../advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md)  
-  
-  
++ **RScript**: R スクリプトをバッチ モードで実行するためのコマンドライン ツール。
 
+これらのツールを検索するには、SQL Server または機能を学習するスタンドアロンのマシンを設定するときにインストールされた R ライブラリを決定します。 たとえば、既定のインストールでは、R ツールはこれらのフォルダーにあります。
+
++ SQL Server 2016 R Services:`~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server のスタンドアロン:`~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 2017 マシン サービスを学習します。`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ 機械学習のサーバー (スタンドアロン)。`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+R ツールのヘルプを必要がある場合は、開く**RGui**をクリックして**ヘルプ**オプションのいずれかを選択します。
+
+## <a name="introducing-microsoft-r-client"></a>Microsoft R クライアントの概要
+
+Microsoft R クライアントは、開発用に、RevoScaleR パッケージに対するアクセスを提供する無料でダウンロードします。 R のクライアントをインストールするには、SQL Server データベース内の分析、および Hadoop、Spark、または Machine Learning のサーバーを使用して Linux 上の分散 R コンピューティングを含む、すべてのサポートされているコンピューティング コンテキストで実行できる R ソリューションを作成できます。
+
+別の R 開発環境が既にインストールされている場合 RStudio などは、ライブラリおよび Microsoft R クライアントによって提供される実行可能ファイルを使用する環境を再構成します。 により、RevoScaleR パッケージのすべての機能を使用することができますが、パフォーマンスが制限されます。
+
+詳細については、次を参照してください。 [Microsoft R クライアントは何ですか。](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)

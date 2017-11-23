@@ -13,22 +13,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- comparison operators [DMX]
+dev_langs: DMX
+helpviewer_keywords: comparison operators [DMX]
 ms.assetid: eea3cf90-9683-4453-b1f3-da740f3a4885
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4ac50c6884356bf98384d330e85afbc837a0c2f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 92362f5158b23b0425030092fe7b9372a08b13ca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operators---comparison"></a>演算子の比較
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +56,6 @@ ms.lasthandoff: 08/02/2017
  [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [DMX の Select ステートメントを理解します](../dmx/understanding-the-dmx-select-statement.md)  
+ [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

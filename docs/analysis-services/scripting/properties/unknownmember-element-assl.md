@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- UnknownMember Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: UnknownMember Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- UnknownMember
-helpviewer_keywords:
-- UnknownMember element
+applies_to: SQL Server 2016 Preview
+f1_keywords: UnknownMember
+helpviewer_keywords: UnknownMember element
 ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e0c6483ed91f2bdfdf156cda64a9ea255e7eb7ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5da9cdc237512a47a27b21691864b3da523ce70a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unknownmember-element-assl"></a>UnknownMember 要素 (ASSL)
   不明なメンバーが表示されるかどうかを示します。  
@@ -78,9 +72,8 @@ ms.lasthandoff: 09/01/2017
  許可される値に対応する列挙**UnknownMember**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.UnknownMemberBehavior>します。  
   
 ## <a name="see-also"></a>参照  
- [UnknownMemberName 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/unknownmembername-element-assl.md)   
- [UnknownMemberTranslation 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [UnknownMemberName 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/unknownmembername-element-assl.md)   
+ [UnknownMemberTranslation 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)   
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

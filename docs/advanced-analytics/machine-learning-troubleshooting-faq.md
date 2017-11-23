@@ -5,22 +5,19 @@ ms.date: 06/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e110a2578d6663c2c7c4c2e0dd92957744b44f4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 6e45e8dc4df1404833fddd9000eb40cad6e5299f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="troubleshoot-machine-learning"></a>機械学習をトラブルシューティングします。
 
 この記事では、マシン学習機能によって SQL Server のセットアップと構成に関連するトラブルシューティングの情報を提供します。 情報には、セットアップ ガイド、既知の問題、およびリリース ノートへのリンクが含まれています。 この記事から、SQL Server の machine learning ソリューションのパフォーマンスの最適化に関するアドバイスを提供する他のアーティクルがリンクされています。
@@ -61,7 +58,7 @@ ms.lasthandoff: 09/08/2017
 
 機械学習のインターネット接続がないコンピューターの機能をインストールする必要がある場合は、この記事の内容のリンクを使用して、セットアップを開始する前に、R、Python のコンポーネントをダウンロードします。
 
-+ [インターネットにアクセスできないマシン ラーニング コンポーネントをインストールします。](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [インターネットへのアクセスなしで Machine Learning コンポーネントをインストールする](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### <a name="configuration"></a>構成
 
@@ -78,4 +75,3 @@ ms.lasthandoff: 09/08/2017
 + [Azure VM での R サーバーをセットアップします。](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [Windows 用の R Server をインストールします。](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [R Tools for Visual Studio を入手します。](https://www.visualstudio.com/vs/rtvs/)
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alignment"></a>Alignment
 ODBC アプリケーションで配置の問題は一般にまったく同じ、他のアプリケーションよりも。 つまり、ほとんどの ODBC アプリケーションでは、配置にほとんどまたはまったくの問題があります。 処罰のアドレスを配置できませんハードウェアとオペレーティング システムでさまざまであり、わずかなパフォーマンスの低下としてとしてマイナーまたは実行時の致命的なエラーとして、メジャーがあります。 したがって、ODBC アプリケーション、およびポータブルの ODBC アプリケーション具体的には、する必要がありますデータを正しく整列するように注意します。  
@@ -55,4 +52,3 @@ ODBC アプリケーションで配置の問題は一般にまったく同じ、
  ![最大の配置境界によるバインド](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  このソリューションより大きな穴を残します、それを実装するコードが比較的単純で高速です。 ほとんどの場合は、未使用のメモリ内で、パフォーマンス低下をオフセットします。 このメソッドを使用する例は、次を参照してください。[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)です。
-

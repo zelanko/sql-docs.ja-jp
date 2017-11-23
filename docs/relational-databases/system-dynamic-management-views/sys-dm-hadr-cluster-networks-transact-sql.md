@@ -1,0 +1,68 @@
+---
+title: "sys.dm_hadr_cluster_networks (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: dmv's
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- dm_hadr_cluster_networks
+- sys.dm_hadr_cluster_networks_TSQL
+- sys.dm_hadr_cluster_networks
+- dm_hadr_cluster_networks_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- Availability Groups [SQL Server], WSFC clusters
+- sys.dm_hadr_cluster_networks dynamic management view
+ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 77d2eaee6ce6ac28370a2c825eece9ade0440df0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sysdmhadrclusternetworks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+  可用性グループのサブネット構成に参加している WSFC クラスター メンバーごとに 1 行のデータを返します。 この動的管理ビューを使用して、可用性レプリカごとに構成されているネットワーク仮想 IP を検証できます。  
+  
+ 主キー: **member_name** + **network_subnet_IP** + **network_subnet_prefix_length**  
+  
+ > [!TIP]
+ > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、この動的管理ビューは、Always On フェールオーバー クラスター インスタンスだけでなく Always On 可用性グループをサポートしています。  
+  
+|列名|データ型|Description|  
+|-----------------|---------------|-----------------|  
+|**member_name**|**nvarchar (128)**|WSFC クラスター内のノードのコンピューター名。|  
+|**network_subnet_ip**|**nvarchar(48)**|コンピューターが属するサブネットのネットワーク IP アドレス。 IPv4 または IPv6 のアドレスになります。|  
+|**network_subnet_ipv4_mask**|**nvarchar(45)**|IP アドレスが属するサブネットを指定するネットワーク サブネット マスク。 **network_subnet_ipv4_mask**の WITH DHCP 句で DHCP < network_subnet_option > オプションを指定する、 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。<br /><br /> NULL = IPv6 サブネットです。|  
+||||  
+|**network_subnet_prefix_length**|**int**|コンピューターが属するサブネットを指定するネットワーク IP プレフィックス長。|  
+|**is_public**|**bit**|WSFC クラスターでネットワークがプライベートかパブリックか。次のいずれかになります。<br /><br /> 0 = プライベート<br /><br /> 1 = パブリック|  
+|**is_ipv4**|**bit**|サブネットの種類。次のいずれかになります。<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
+  
+## <a name="security"></a>セキュリティ  
+  
+### <a name="permissions"></a>Permissions  
+ サーバーに対する VIEW SERVER STATE 権限が必要です。  
+  
+## <a name="see-also"></a>参照  
+ [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [sys.dm_os_cluster_nodes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+  
+  

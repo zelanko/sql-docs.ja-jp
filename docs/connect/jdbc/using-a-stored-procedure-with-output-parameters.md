@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7dc04aac6bf9ec53b72705322ebe7f056caf8bfb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e5c3b945652c04cbbe75563d853703b5676b43f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>出力パラメーターがあるストアド プロシージャの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +102,6 @@ public static void executeStoredProcedure(Connection con) {
  ストアド プロシージャは、更新数および複数の結果セットを返すことができます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を複数の結果セットと更新数を取得する、OUT パラメーターが取得されるまで状態 JDBC 3.0 の仕様に準拠します。 アプリケーションはすべての結果セット オブジェクトを取得および更新数 CallableStatement.getter メソッドを使用して、OUT パラメーターを取得する前にします。 それ以外の場合、結果セット オブジェクトと既に取得されていない更新数は失われます、OUT パラメーターを取得するときにします。 複数の結果セットと更新数の詳細については、次を参照してください。[ストアド プロシージャを使用して、更新数を含む](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)と[複数の結果セットを使用して](../../connect/jdbc/using-multiple-result-sets.md)です。  
   
 ## <a name="see-also"></a>参照  
- [ストアド プロシージャでステートメントを使用](../../connect/jdbc/using-statements-with-stored-procedures.md)  
+ [ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
-

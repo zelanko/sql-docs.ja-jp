@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SkippedLevels Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SkippedLevels Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#SkippedLevels
 - microsoft.xml.analysis.skippedlevels
 - urn:schemas-microsoft-com:xml-analysis#SkippedLevels
-helpviewer_keywords:
-- SkippedLevels element
+helpviewer_keywords: SkippedLevels element
 ms.assetid: 4887b557-0ffc-4f42-b6b9-c98ad1208ca5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7c3a96b54d5cae93650cbd2348bd87da4efff43
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d50b4f548b1eee9a45e996e78610c7aa83b3f65e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="skippedlevels-element-xmla"></a>SkippedLevels 要素 (XMLA)
   親によって表される属性メンバーがスキップするレベル数が含まれる[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)要素。  
@@ -73,8 +68,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [要素 &#40; を挿入します。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Update 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

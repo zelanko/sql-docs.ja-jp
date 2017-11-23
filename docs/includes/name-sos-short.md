@@ -1,0 +1,1 @@
+<Token>SQL 操作 Studio (プレビュー)</Token>

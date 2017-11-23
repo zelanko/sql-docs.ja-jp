@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 行セット
   計算間の依存関係、およびこれらの計算で参照されるているオブジェクトについてレポートします。 クライアント アプリケーションでは、複雑な式に伴う問題についてレポートする場合や、関連するオブジェクトが削除または変更されたときに警告を生成する場合に、この情報を使用できます。 また、この行セットを使用して、メジャーまたは計算列で使用される DAX 式を抽出することもできます。  
@@ -40,10 +37,10 @@ ms.lasthandoff: 09/01/2017
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|はい|依存関係分析を要求する際の対象となるオブジェクトを含んだデータベースの名前を指定します。 省略した場合は、現在のデータベースが使用されます。<br /><br /> **DISCOVER_DEPENDENCY_CALC** 行セットはこの列を使用して制限できます。|  
-|**OBJECT_TYPE**|**DBTYPE_WSTR**|はい|依存関係分析の要求対象となるオブジェクトの種類を示します。 オブジェクトの種類は次のいずれかに該当する必要があります。<br /><br /> **ACTIVE_RELATIONSHIP**: アクティブなリレーションシップ<br /><br /> **CALC_COLUMN**: 計算列<br /><br /> **HIERARCHY**: 階層<br /><br /> **MEASURE**: メジャー<br /><br /> **RELATIONSHIP**: リレーションシップ<br /><br /> **KPI**: KPI (主要業績評価指標)<br /><br /> <br /><br /> なお、 **DISCOVER_DEPENDENCY_CALC**この列を使用して行セットを制限することができます。|  
-|**クエリ**|**DBTYPE_WSTR**|はい|[!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] で作成されたテーブル モデルの場合は、DAX クエリまたは式を含めて、そのクエリまたは式の依存グラフを表示できます。 クライアント アプリケーションでは、QUERY 制限を使用して、DAX クエリで使用されているオブジェクトを確認できます。<br /><br /> **QUERY** 制限は、XMLA または DMV クエリの WHERE 句で指定できます。 詳細については、「例」を参照してください。|  
-|**テーブル**|**DBTYPE_WSTR**||依存関係情報の生成対象となるオブジェクトを含んだテーブルの名前です。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|可|依存関係分析を要求する際の対象となるオブジェクトを含んだデータベースの名前を指定します。 省略した場合は、現在のデータベースが使用されます。<br /><br /> **DISCOVER_DEPENDENCY_CALC** 行セットはこの列を使用して制限できます。|  
+|**OBJECT_TYPE**|**DBTYPE_WSTR**|可|依存関係分析の要求対象となるオブジェクトの種類を示します。 オブジェクトの種類は次のいずれかに該当する必要があります。<br /><br /> **ACTIVE_RELATIONSHIP**: アクティブなリレーションシップ<br /><br /> **CALC_COLUMN**: 計算列<br /><br /> **HIERARCHY**: 階層<br /><br /> **MEASURE**: メジャー<br /><br /> **RELATIONSHIP**: リレーションシップ<br /><br /> **KPI**: KPI (主要業績評価指標)<br /><br /> <br /><br /> なお、 **DISCOVER_DEPENDENCY_CALC**この列を使用して行セットを制限することができます。|  
+|**クエリ**|**DBTYPE_WSTR**|可|[!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] で作成されたテーブル モデルの場合は、DAX クエリまたは式を含めて、そのクエリまたは式の依存グラフを表示できます。 クライアント アプリケーションでは、QUERY 制限を使用して、DAX クエリで使用されているオブジェクトを確認できます。<br /><br /> **QUERY** 制限は、XMLA または DMV クエリの WHERE 句で指定できます。 詳細については、「例」を参照してください。|  
+|**TABLE**|**DBTYPE_WSTR**||依存関係情報の生成対象となるオブジェクトを含んだテーブルの名前です。|  
 |**オブジェクト**|**DBTYPE_WSTR**||依存関係情報の生成対象となるオブジェクトの名前です。 オブジェクトがメジャーまたは計算列である場合は、メジャーの名前を使用します。 オブジェクトがリレーションシップである場合は、リレーションシップに参加している列を含んだテーブル (またはキューブ ディメンション) の名前になります。|  
 |**式**|**DBTYPE_WSTR**||依存関係の検出対象となるオブジェクトを含んでいる式です。|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||参照先オブジェクトに依存しているオブジェクトの種類を返します。 返されるオブジェクトの種類は、次のいずれかです。<br /><br /> **CALC_COLUMN**:  計算列<br /><br /> **COLUMN**: データ列<br /><br /> **MEASURE**: メジャー<br /><br /> **RELATIONSHIP**: リレーションシップ<br /><br /> **KPI**: KPI (主要業績評価指標)|  
@@ -136,7 +133,6 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のスキーマ行セット](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [使用して動的管理ビュー (&) #40 です。 Dmv (&) #41;Analysis Services を監視するには](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用して動的管理ビュー (&) #40 です。 Dmv &#41;Analysis Services を監視するには](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-
