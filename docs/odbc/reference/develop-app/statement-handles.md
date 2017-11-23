@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dedc2ece9c73c0be4e9bbab61e231ab8e2d3060a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-handles"></a>ステートメント ハンドル
 A*ステートメント*を最も簡単に考えるの SQL ステートメントとしてなど**選択\*から従業員**です。 ただし、ステートメントは、SQL ステートメントでは単 — のすべての結果セットが、ステートメントによって作成された、ステートメントの実行で使用されるパラメーターなど、その SQL ステートメントに関連付けられた情報で構成されます。 ステートメントは、アプリケーション定義の SQL ステートメントでもは必要ありません。 カタログなどの関数とではたとえば、 **SQLTables**が実行されるテーブル名の一覧を返す定義済みの SQL ステートメントを実行して、ステートメントでします。  
@@ -46,4 +44,3 @@ A*ステートメント*を最も簡単に考えるの SQL ステートメント
  ステートメント ハンドルは、ほとんどの ODBC 関数で使用されます。 特に、パラメーターをバインドし、結果セット列に関数で使用されます (**SQLBindParameter**と**SQLBindCol**)、準備のステートメントを実行 (**SQLPrepare**、 **SQLExecute**、および**SQLExecDirect**)、メタデータの取得 (**SQLColAttribute**と**SQLDescribeCol**)、フェッチ結果 (**SQLFetch**)、および診断の取得 (**SQLGetDiagField**と**SQLGetDiagRec**)。 カタログ関数で使用されることも (**SQLColumns**、 **SQLTables**など) とその他の関数の数。  
   
  ステートメント ハンドルが割り当てられます**SQLAllocHandle**およびに解放された**SQLFreeHandle**です。
-

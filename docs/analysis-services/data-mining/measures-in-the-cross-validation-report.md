@@ -20,17 +20,16 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures-in-the-cross-validation-report"></a>相互検証レポートのメジャー
   相互検証では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はマイニング構造のデータを複数のセクションにパーティション分割し、構造および関連マイニング モデルのテストを反復的に実行します。 この分析に基づき、構造および各モデルの標準の精度のメジャーを出力します。  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

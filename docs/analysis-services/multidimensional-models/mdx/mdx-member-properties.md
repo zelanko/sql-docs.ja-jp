@@ -20,17 +20,16 @@ helpviewer_keywords:
 - member properties [MDX]
 - members [MDX], properties
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e4a587ba090f15293bed42bff0d37afa874c7223
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1c3f560f0be83b17b31db8cfd46bc0b7939ee05d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-member-properties"></a>MDX メンバー プロパティ
   メンバー プロパティは、各組内の各メンバーに関する基本的な情報を対象とします。 基本的な情報には、メンバー名、親レベル、子の数などが含まれます。 メンバー プロパティは特定レベルのすべてのメンバーで使用できます。 編成の点では、メンバー プロパティは 1 つのディメンション上に格納され、ディメンション別に編成されるデータとして扱われます。  
@@ -87,4 +86,3 @@ SELECT [<axis_specification>
  [プロパティ値の作成および使用 (MDX)](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - StatisticsStoreSize property
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f855fdbc56dee39c971448dd5e764c5490fb176e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="general-properties"></a>全般プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
@@ -165,7 +163,7 @@ ms.lasthandoff: 09/01/2017
  **ポート**  
  サーバーがクライアント接続をリッスンするポート番号を定義する整数のプロパティです。 このプロパティを設定しない場合、サーバーは最初の未使用ポートを動的に検出します。  
   
- このプロパティの既定値は 0 であり、ポート 2383 が既定により使用されます。 ポートの構成の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
+ このプロパティの既定値は 0 であり、ポート 2383 が既定により使用されます。 ポートの構成の詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
   
  **ServerTimeout**  
  クエリのタイムアウトを秒単位で定義する整数です。 既定値は 3600 秒 (60 分) です。 ゼロ (0) はクエリがタイムアウトにならないことを指定します。  
@@ -185,4 +183,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

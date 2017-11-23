@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-arrays-of-parameters"></a>パラメーターの配列の使用
 アプリケーションの呼び出し、パラメーターの配列を使用する**SQLSetStmtAttr**で、*属性*SQL_ATTR_PARAMSET_SIZE パラメーター セットの数を指定の引数。 呼び出す**SQLSetStmtAttr**で、*属性*SQL_ATTR_PARAMS_PROCESSED_PTR ドライバーが処理された、パラメーターのセットの数を返すことができます、変数のアドレスを指定の引数などのエラーを設定します。 呼び出す**SQLSetStmtAttr**で、*属性*パラメーター値の行ごとに状態情報を返す対象の配列を指す SQL_ATTR_PARAM_STATUS_PTR の引数。 ドライバーは、ステートメントを保持する構造体でこれらのアドレスを格納します。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 -   ドライバーでの値が解釈されないため、 *ParameterValuePtr*の引数**SQLBindParameter**アプリケーションが、配列へのポインターを提供している場合、実行時データ パラメーターの**SQLParamData**いませんを抽出し、アプリケーションをこの配列の要素を返します。 代わりに、アプリケーションのスカラー値が提供を返します。 つまり、によって返される値**SQLParamData**は対象のパラメーターを指定する十分なアプリケーションに必要なデータを送信以外の場合は、アプリケーションが現在の行番号を考慮する必要もします。  
   
      ときにだけでパラメーターの配列の要素の一部は実行時データ パラメーターで、アプリケーションする必要がありますのアドレスを渡すの配列で*ParameterValuePtr*すべてのパラメーターの要素を含むです。 この配列は、実行時データ パラメーターではないパラメーターの通常どおりに解釈されます。 実行時データ パラメーターの値を**SQLParamData**への提供、アプリケーションでは、通常を使用すると、ドライバーを何度でこの要求しているデータを特定するのには、配列のアドレスでは常にします。
-

@@ -4,28 +4,32 @@ description: "バックアップおよび、Linux 上の SQL Server データベ
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 11/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
+ms.openlocfilehash: 4693d53a8318a4d8ac5ecfa696203688737dad25
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux 上のバックアップと復元の SQL Server データベース
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-他のプラットフォームと同じツールを使用して、Linux 上の SQL Server 2017 からのデータベースのバックアップを実行できます。 使用することができます、Linux サーバー `sqlcmd` SQL Server に接続し、バックアップを実行します。 Windows は、Linux 上の SQL Server に接続し、ユーザー インターフェイスとバックアップを実行します。 バックアップ機能は、プラットフォーム間で同じです。 ローカルをリモート ドライブ、またはデータベースをバックアップするなど、 [Microsoft Azure Blob ストレージ サービス](http://msdn.microsoft.com/library/dn435916.aspx)です。 
+他のプラットフォームと同じツールを使用して、Linux 上の SQL Server 2017 からのデータベースのバックアップを実行できます。 使用することができます、Linux サーバー **sqlcmd** SQL Server に接続し、バックアップを実行します。 Windows は、Linux 上の SQL Server に接続し、ユーザー インターフェイスとバックアップを実行します。 バックアップ機能は、プラットフォーム間で同じです。 ローカルをリモート ドライブ、またはデータベースをバックアップするなど、 [Microsoft Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-to-url.md)です。
 
-## <a name="backup-with-sqlcmd"></a>Sqlcmd でのバックアップ
+## <a name="backup-a-database"></a>データベースのバックアップ
 
-次の例で`sqlcmd`ローカルの SQL Server インスタンスに接続し、完全をという名前のユーザー データベースのバックアップにかかる`demodb`です。
+次の例で**sqlcmd**ローカルの SQL Server インスタンスに接続し、完全をという名前のユーザー データベースのバックアップにかかる`demodb`です。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
@@ -50,28 +54,39 @@ Processed 2 pages for database 'demodb', file 'demodb_log' on file 1.
 BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec).
 ```
 
-### <a name="backup-log-with-sqlcmd"></a>Sqlcmd でのバックアップのログ
+### <a name="backup-the-transaction-log"></a>トランザクション ログをバックアップします。
 
-次の例では、`sqlcmd`はローカルの SQL Server インスタンスに接続し、ログ末尾のバックアップを取得します。 ログ末尾のバックアップが完了したら、データベースは復元中の状態になります。 
+データベースが完全復旧モデルの場合はより詳細な復元オプションのトランザクション ログ バックアップもすることができます。 次の例では、 **sqlcmd**ローカルの SQL Server インスタンスに接続し、トランザクション ログのバックアップを受け取る。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
-## <a name="restore-with-sqlcmd"></a>Sqlcmd での復元します。
+## <a name="restore-a-database"></a>データベースを復元します。
 
-次の例で`sqlcmd`は SQL Server のローカル インスタンスに接続し、データベースを復元します。
+次の例で**sqlcmd**は SQL Server のローカル インスタンスに接続し、demodb データベースを復元します。 なお、`NORECOVERY`のログ ファイルのバックアップの復元を追加できるようにするオプションを使用します。 追加のログ ファイルを復元する予定がない場合は、削除、`NORECOVERY`オプション。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+```
+
+> [!TIP]
+> コマンドを実行を誤って、NORECOVERY を使用していて、追加のログ ファイルのバックアップはありません、`RESTORE DATABASE demodb`追加パラメーターなしでします。 これは、復元を完了.、データベースを運用状態
+
+### <a name="restore-the-transaction-log"></a>トランザクション ログを復元します。
+
+次のコマンドは、以前のトランザクション ログ バックアップを復元します。
+
+```bash
+sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak'"
 ```
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>Backup and Restore with SQL Server Management Studio (SSMS)
 
-Windows コンピューターからは、SSMS を使用して、Linux データベースに接続し、ユーザー インターフェイスからバックアップを実行することができます。 
+Windows コンピューターからは、SSMS を使用して、Linux データベースに接続し、ユーザー インターフェイスからバックアップを実行することができます。
 
 >[!NOTE] 
-> SQL Server に接続するには、SSMS の最新バージョンを使用します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SSMS のダウンロード](http://msdn.microsoft.com/library/mt238290.aspx)です。 
+> SQL Server に接続するには、SSMS の最新バージョンを使用します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SSMS のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)です。 SSMS を使用する方法の詳細については、次を参照してください。 [Linux 上の SQL Server の管理を使用して SSMS](sql-server-linux-manage-ssms.md)です。
 
 次の手順では、SSMS でのバックアップの作成について説明します。 
 
@@ -83,15 +98,13 @@ Windows コンピューターからは、SSMS を使用して、Linux データ�
  
 SQL Server では、データベースのバックアップを完了します。
 
-詳細については、次を参照してください。 [Linux 上の SQL Server の管理を使用して SSMS](sql-server-linux-manage-ssms.md)です。
-
 ### <a name="restore-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して復元します。 
 
 次の手順では、SSMS でデータベースを復元について説明します。
 
 1. SSMS で、右クリック**データベース** をクリック**データベースの復元しています.**. 
 
-1. [**ソース**] をクリックして**デバイス:**省略記号 (...) をクリックします。
+1. **[ソース]** をクリックして**デバイス:**省略記号 (...) をクリックします。
 
 1. データベースのバックアップ ファイルを見つけてクリックして**OK**です。 
 
@@ -101,8 +114,7 @@ SQL Server では、データベースのバックアップを完了します。
 
 ## <a name="see-also"></a>参照
 
-* [データベースの完全バックアップ (SQL Server) を作成します。](http://msdn.microsoft.com/library/ms187510.aspx)
-* [トランザクション ログ (SQL Server) のバックアップします。](http://msdn.microsoft.com/library/ms179478.aspx)
-* [BACKUP (Transact-SQL)](http://msdn.microsoft.com/library/ms186865.aspx)
-* [SQL Server Backup to URL](http://msdn.microsoft.com/library/dn435916.aspx)
-
+* [データベースの完全バックアップ (SQL Server) を作成します。](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
+* [トランザクション ログ (SQL Server) のバックアップします。](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
+* [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
+* [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)

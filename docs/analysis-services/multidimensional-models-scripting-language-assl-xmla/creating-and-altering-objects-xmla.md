@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - subordinate objects [XML for Analysis]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - deleting objects
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: be8a71595f444b18c68324fcb18375665525ddd1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4b96c43a4004e69969af12d83798f9fe76fc801c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-and-altering-objects-xmla"></a>オブジェクトの作成と変更 (XMLA)
   主要なオブジェクトは、個別に作成、変更、削除することができます。 主要なオブジェクトには以下のオブジェクトが含まれます。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/01/2017
  使用する、[作成](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)のインスタンスで、主要なオブジェクトを作成するコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および[Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)インスタンス上の既存の主要なオブジェクトを変更するコマンド。 使用して両方のコマンドは、実行、 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
   
 ## <a name="creating-objects"></a>オブジェクトを作成します。  
- 使用してオブジェクトを作成する場合、**作成**メソッド、親オブジェクトを含むまず特定する必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトを作成します。 内のオブジェクト参照を提供することにより、親オブジェクトを識別する、 [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)のプロパティ、**作成**コマンド。 それぞれのオブジェクト参照には親オブジェクトを一意に識別するために必要なオブジェクト識別子が含まれています、**作成**コマンド。 オブジェクト参照の詳細については、次を参照してください。[定義とオブジェクトを識別する & #40 です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ 使用してオブジェクトを作成する場合、**作成**メソッド、親オブジェクトを含むまず特定する必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトを作成します。 内のオブジェクト参照を提供することにより、親オブジェクトを識別する、 [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)のプロパティ、**作成**コマンド。 それぞれのオブジェクト参照には親オブジェクトを一意に識別するために必要なオブジェクト識別子が含まれています、**作成**コマンド。 オブジェクト参照の詳細については、次を参照してください。[定義とオブジェクトを識別する &#40;です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  たとえば、キューブに新しいメジャー グループを作成するには、キューブへのオブジェクト参照を指定する必要があります。 キューブ内のオブジェクトの参照、 **ParentObject**プロパティが含まれています、データベース識別子と、キューブ識別子の両方、別のデータベースで同じキューブ識別子を使用することも可能性があります。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 09/01/2017
   
  設定した場合、 **AllowOverwrite**の属性、**作成**true の場合に使用するコマンドを指定した識別子を持つ既存の主要なオブジェクトを上書きすることができます。 そうしない場合、親オブジェクト内に指定された識別子を持つ主要なオブジェクトが既に存在するときに、エラーが発生します。  
   
- 詳細については、**作成**コマンドを参照してください[要素の作成 & #40 です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
+ 詳細については、**作成**コマンドを参照してください[要素の作成 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
   
 ### <a name="creating-session-objects"></a>セッション オブジェクトの作成  
  セッション オブジェクトは一時オブジェクトであり、クライアント アプリケーションで使用される明示的または暗黙的なセッションでのみ使用でき、セッションの終了時には削除されます。 セッション オブジェクトを作成するには設定して、**スコープ**の属性、**作成**コマンドを*セッション*です。  
@@ -81,7 +79,7 @@ ms.lasthandoff: 09/01/2017
 >  使用する場合、*セッション*を設定する、 **ObjectDefinition**要素を含めることができますのみ[ディメンション](../../analysis-services/scripting/objects/dimension-element-assl.md)、[キューブ](../../analysis-services/scripting/objects/cube-element-assl.md)、または[MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL の要素。  
   
 ## <a name="altering-objects"></a>オブジェクトの変更  
- 使用してオブジェクトを変更するときに、 **Alter**メソッド内のオブジェクト参照を提供することによって変更されるオブジェクトまず特定する必要があります、[オブジェクト](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、 **をAlter**コマンド。 それぞれのオブジェクト参照にはであるオブジェクトを一意に識別するために必要なオブジェクト識別子が含まれています、 **Alter**コマンド。 オブジェクト参照の詳細については、次を参照してください。[定義とオブジェクトを識別する & #40 です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ 使用してオブジェクトを変更するときに、 **Alter**メソッド内のオブジェクト参照を提供することによって変更されるオブジェクトまず特定する必要があります、[オブジェクト](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、 **をAlter**コマンド。 それぞれのオブジェクト参照にはであるオブジェクトを一意に識別するために必要なオブジェクト識別子が含まれています、 **Alter**コマンド。 オブジェクト参照の詳細については、次を参照してください。[定義とオブジェクトを識別する &#40;です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  たとえば、キューブの構造を変更するためには、キューブへのオブジェクト参照を指定する必要があります。 キューブ内のオブジェクトの参照、**オブジェクト**プロパティが含まれています、データベース識別子と、キューブ識別子の両方、別のデータベースで同じキューブ識別子を使用することも可能性があります。  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 09/01/2017
 >  使用する場合、*セッション*を設定する、 **ObjectDefinition**要素を含めることができますのみ[ディメンション](../../analysis-services/scripting/objects/dimension-element-assl.md)、[キューブ](../../analysis-services/scripting/objects/cube-element-assl.md)、または[MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL の要素。  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>下位オブジェクトの作成または変更  
- ただし、**作成**または**Alter**作成または変更されている、主要なオブジェクトが、それを囲む内の定義を含めることができます、コマンドで作成または 1 つだけの最上位の主要なオブジェクトを変更**ObjectDefinition**従属する他のメジャーおよびマイナー オブジェクトのプロパティです。 たとえば、キューブを定義する場合の親データベースを指定**ParentObject**とでのキューブ定義内で**ObjectDefinition**メジャー グループおよびメジャー内で、キューブに対して定義できます。グループの各メジャー グループのパーティションを定義することができます。 副次オブジェクトは、それを格納する主要なオブジェクトの中でのみ定義できます。 メジャーおよびマイナー オブジェクトに関する詳細については、次を参照してください。[データベース オブジェクト & #40 です。Analysis Services - 多次元データ &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
+ ただし、**作成**または**Alter**作成または変更されている、主要なオブジェクトが、それを囲む内の定義を含めることができます、コマンドで作成または 1 つだけの最上位の主要なオブジェクトを変更**ObjectDefinition**従属する他のメジャーおよびマイナー オブジェクトのプロパティです。 たとえば、キューブを定義する場合の親データベースを指定**ParentObject**とでのキューブ定義内で**ObjectDefinition**メジャー グループおよびメジャー内で、キューブに対して定義できます。グループの各メジャー グループのパーティションを定義することができます。 副次オブジェクトは、それを格納する主要なオブジェクトの中でのみ定義できます。 メジャーおよびマイナー オブジェクトに関する詳細については、次を参照してください。[データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
   
 ## <a name="examples"></a>使用例  
   
@@ -159,7 +157,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>参照  
  [方法 &#40; を実行します。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Analysis Services の XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

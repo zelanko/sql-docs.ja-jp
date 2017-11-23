@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>データ ソース ビューを使用しないテンプレートからのキューブの作成
   キューブ ウィザードの最初のページで **[データ ソースを使用せずにキューブを構築する]** を選択すると、データ ソース ビューを使用せずにキューブを作成できます。 後で、スキーマ生成ウィザードを使用して、キューブ (および場合によっては他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト) の構造に基づいて、データ ソース ビューのリレーショナル スキーマを作成できます。 スキーマ生成の詳細については、「[スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)」を参照してください。  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  **[ウィザードの完了]** ページで新しいキューブの構造を確認し、 **[キューブ名]** ボックスにキューブ名を入力します。 必要に応じて、 **[今すぐスキーマを生成する]** チェック ボックスをオンにして、スキーマ生成ウィザードを開始します。 追加オブジェクトを作成する計画がある場合は、このチェック ボックスはオンにしないでください。 また、キューブ デザイナーを使用して、後でスキーマを生成することもできます。  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Administer Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Administer Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Administer
-helpviewer_keywords:
-- Administer element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Administer
+helpviewer_keywords: Administer element
 ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: de42ea2bc2782f03aa31b875f8a6a6c3758dcb12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38f477ef873f841698755561f14740433b6e9cfa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-element-assl"></a>Administer 要素 (ASSL)
   関連付けられたアクセス許可を管理する権限が含まれるかどうかを示します、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
@@ -72,9 +66,8 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**Administer**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DatabasePermission>します。  
   
 ## <a name="see-also"></a>参照  
- [Permission データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)   
- [Role 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Permission データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)   
+ [Role 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

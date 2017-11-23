@@ -8,24 +8,21 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC data source administrator [ODBC], concepts
+helpviewer_keywords: ODBC data source administrator [ODBC], concepts
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1f62308694c54a62d2cc83669e49e9983bcec4a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-drivers-and-data-sources"></a>ドライバーとデータ ソースについて
 *ドライバー* ODBC 要求を処理し、アプリケーションにデータを返すコンポーネントはインストールされています。 必要に応じて、ドライバーは、データ ソースで認識できる形式にアプリケーションの要求を変更します。 ドライバーのセットアップ プログラムを使用して、追加またはドライバーをコンピューターから削除する必要があります。  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  ユーザーおよびシステム データ ソースは、として総称*マシン*データ ソースをローカル コンピューターにあるためです。  
   
  これらのデータ ソースは、タブ、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックス。 使用できるデータ ソースの詳細については、「 [データ ソース](../../odbc/reference/data-sources.md)」を参照してください。
-

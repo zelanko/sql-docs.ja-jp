@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DbTableName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DbTableName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#DbTableName
 - microsoft.xml.analysis.dbtablename
 - urn:schemas-microsoft-com:xml-analysis#DbTableName
-helpviewer_keywords:
-- DbTableName element
+helpviewer_keywords: DbTableName element
 ms.assetid: 0ffda645-2a88-4f42-8929-9d7385c19a74
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 37326c78577bbee960f9fea63b4c39de094caf13
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62be2c6d1b8b605cddd074e59bf925e52b291d02
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbtablename-element-xmla"></a>DbTableName 要素 (XMLA)
   親によって使用されるテーブルの名前を含む[TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)要素。  
@@ -71,8 +66,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [DbSchemaName 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/dbschemaname-element-xmla.md)   
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [DbSchemaName 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/dbschemaname-element-xmla.md)   
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

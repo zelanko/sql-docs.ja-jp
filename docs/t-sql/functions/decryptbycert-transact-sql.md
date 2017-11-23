@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DecryptByCert_TSQL
 - DECRYPTBYCERT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - certificates [SQL Server], decryption
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b49bdceb3d27af9c252739938ca9ec309f1510ec
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebdc328e49635af823cd64e8539ee5b7cfa95c76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,10 +86,9 @@ GO
 ## <a name="see-also"></a>参照  
  [ENCRYPTBYCERT および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [証明書 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

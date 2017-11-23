@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f58efc6ca7f6587ce7d7070bc02ad935efe06bff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-concise-functions"></a>簡潔な関数の使用
 一部の ODBC 関数へのアクセス暗黙の型記述子。 アプリケーション ライターがありますに呼び出し元より便利**SQLSetDescField**または**SQLGetDescField**です。 これらの関数を呼び出す*簡潔な*のさまざまな機能、設定、記述子フィールドの取得などを実行するために機能します。 いくつかの簡潔な関数は、1 つの関数の呼び出しで複数の関連する記述子フィールドを取得または設定アプリケーションを使用できます。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  **Sqlsetdescrec による**と**SQLGetDescRec**簡潔な関数は、1 回の呼び出しとデータ型および列またはパラメーターのデータの記憶域に影響する複数の記述子フィールドを取得または設定します。 **SQLSetDescRec**を 1 つのステップ内の列またはパラメーターのデータのバインドを変更する効果的な方法です。  
   
  **SQLSetStmtAttr**と**SQLGetStmtAttr**場合によっては簡潔な関数として機能します。 (を参照してください[記述子フィールド](../../../odbc/reference/develop-app/descriptor-fields.md))。
-

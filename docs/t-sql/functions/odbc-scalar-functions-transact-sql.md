@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CURDATE ODBC function
 - DAYOFMONTH ODBC function
@@ -54,17 +52,16 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2838242bcef767206af71446f9decd9ed798536a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b248e52c25e3c4a7cdbb0e52b1df50623e048189
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +86,7 @@ ms.lasthandoff: 09/01/2017
   
 |関数|Description|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 Numeric_exp に切り捨てられます integer_exp が負の場合は、&#124; integer_exp & #124 です。小数点の左側に位置します。|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 Numeric_exp に切り捨てられます integer_exp が負の場合は、&#124; integer_exp &#124;です。小数点の左側に位置します。|  
   
 ### <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数  
   
@@ -259,7 +256,6 @@ SELECT {fn WEEK( @date_exp )};
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-
 
 
 

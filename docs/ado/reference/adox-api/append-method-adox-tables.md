@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Tables::Append
 - Tables::raw_Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c5ab4e01e7478f1501dc550c8d45a86f5e8a600
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f350249377a89e70ebd8e21313032e02826d184e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-tables"></a>Append メソッド (ADOX テーブル)
 新しく追加[テーブル](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトを[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクション。  
@@ -49,7 +46,7 @@ Tables.Append Table
  プロバイダーがテーブルの作成をサポートしていない場合は、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
- [テーブル コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
 ## <a name="see-also"></a>参照  
  [列とテーブル名プロパティの例 (VB) のメソッドを追加します。](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -60,5 +57,4 @@ Tables.Append Table
  [Append メソッド (ADOX キー)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append メソッド (ADOX プロシージャ)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append メソッド (ADOX ユーザー)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append メソッド (ADOX ビュー)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)

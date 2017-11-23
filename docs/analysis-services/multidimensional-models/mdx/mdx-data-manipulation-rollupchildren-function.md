@@ -20,17 +20,16 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2b5133c23454a8281e028a848403e18f5d89eae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa1200dd746dcb1ffc7ae7372b0d85a3d60d49f2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX データ操作 - RollupChildren 関数
   多次元式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 関数は、メンバーの子をロール アップし、それぞれの子に異なる単項演算子を適用して、このロールアップの値を数値として返します。 単項演算子は、子メンバーに関連付けられたメンバー プロパティによって提供されるか、関数に直接指定される文字列式の場合もあります。  
@@ -86,4 +85,3 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  [データの操作 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

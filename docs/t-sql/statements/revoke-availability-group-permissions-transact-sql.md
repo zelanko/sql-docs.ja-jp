@@ -8,29 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], permissions
 - REVOKE statement, availability groups
 - revoking permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f7bd88af97183e7cb5f3bd36a4bc5194be62a4d6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1573f866cec3105cde4eeab59c230ede46144ac3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>可用性グループの権限の取り消し (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -95,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="remarks"></a>解説  
  現在のデータベースが場合にのみ、サーバー スコープの権限を取り消すことができます**マスター**です。  
   
- 可用性グループに関する情報は、 [sys.availability_groups & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)カタログ ビューです。 サーバー権限に関する情報は、 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)カタログ ビュー、およびサーバー プリンシパルに関する情報に表示されて、 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビューです。  
+ 可用性グループに関する情報は、 [sys.availability_groups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)カタログ ビューです。 サーバー権限に関する情報は、 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)カタログ ビュー、およびサーバー プリンシパルに関する情報に表示されて、 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビューです。  
   
  可用性グループは、サーバー レベルのセキュリティ保護可能なリソースです。 次の表に、可用性グループで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
@@ -145,14 +142,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [GRANT 可用性グループの権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+ [GRANT 可用性グループの権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
  [可用性グループの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys.availability_groups & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

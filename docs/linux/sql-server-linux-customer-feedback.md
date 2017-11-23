@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 2fcc328140d3812d6000a137c8aabf9294b98de3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2736223d2a333738ca17b3b3307034c6744512d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux での SQL Server カスタマー フィードバック
 
@@ -145,4 +144,3 @@ Docker でローカルの監査を有効にする必要があります Docker [�
 ## <a name="next-steps"></a>次の手順
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)です。
-

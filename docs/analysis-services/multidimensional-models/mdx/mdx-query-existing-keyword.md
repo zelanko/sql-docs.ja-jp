@@ -14,22 +14,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EXISTING
-helpviewer_keywords:
-- Existing keyword
+f1_keywords: EXISTING
+helpviewer_keywords: Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c8542b33d91ff7a228eb2f8b2be29b6b6748c4c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5078aa14be3c476e8b89545ed1541f12b7686f4e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query---existing-keyword"></a>MDX クエリ - EXISTING キーワード
   指定されたセットを現在のコンテキストで評価するように設定します。  
@@ -88,13 +85,12 @@ WHERE
   
 ## <a name="see-also"></a>参照  
  [Count (セット) (MDX)](../../../mdx/count-set-mdx.md)   
- [AddCalculatedMembers & #40 です。MDX と #41 です。](../../../mdx/addcalculatedmembers-mdx.md)   
- [集計 & #40 です。MDX と #41 です。](../../../mdx/aggregate-mdx.md)   
+ [AddCalculatedMembers &#40;です。MDX と #41 です。](../../../mdx/addcalculatedmembers-mdx.md)   
+ [集計 &#40;です。MDX と #41 です。](../../../mdx/aggregate-mdx.md)   
  [フィルターと #40 です。MDX と #41 です。](../../../mdx/filter-mdx.md)   
- [プロパティ & #40 です。MDX と #41 です。](../../../mdx/properties-mdx.md)   
- [DrilldownLevel & #40 です。MDX と #41 です。](../../../mdx/drilldownlevel-mdx.md)   
+ [プロパティ &#40;です。MDX と #41 です。](../../../mdx/properties-mdx.md)   
+ [DrilldownLevel &#40;です。MDX と #41 です。](../../../mdx/drilldownlevel-mdx.md)   
  [Hierarchize (& a) #40 です。MDX と #41 です。](../../../mdx/hierarchize-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

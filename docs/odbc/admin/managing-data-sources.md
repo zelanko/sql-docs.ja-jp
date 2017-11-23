@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d80594ac41f27d28051fc64f489b5cad59335c00
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-data-sources"></a>データ ソースの管理
 ドライバーのセットアップ プログラムから ODBC ドライバーをインストールした後は、その 1 つまたは複数のデータ ソースを定義できます。 データ ソース名 (DSN) が作成したデータの一意の説明を提供する必要があります。たとえば、*給与*または*Accounts Payable*です。 現在インストールされているすべてのドライバーに定義されているユーザーおよびシステム データ ソースは、「、**ユーザー DSN**または**システム DSN**のタブ、 **ODBC データ ソース アドミニストレーター** ダイアログ ボックス。 特定のディレクトリ内のファイル データ ソースは、「、**ファイル DSN** ; タブに表示されるディレクトリを入力、**ファイルの場所**ボックスに、**ファイル DSN**  タブ。  
@@ -57,4 +55,3 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
 ## <a name="see-also"></a>参照  
  [ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)
-

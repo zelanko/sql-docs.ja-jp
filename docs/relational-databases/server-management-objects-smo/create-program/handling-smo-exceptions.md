@@ -1,0 +1,128 @@
+---
+title: "SMO 例外の処理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 08/06/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: smo
+ms.reviewer: 
+ms.suite: sql
+ms.technology: docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SMO [SQL Server], exceptions
+- exceptions [SMO]
+- SQL Server Management Objects, exceptions
+- inner exceptions [SMO]
+ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
+caps.latest.revision: "40"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 6aa28e97c1fc20086dd03d1fc48173a02cde29d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="handling-smo-exceptions"></a>SMO 例外の処理
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]マネージ コードでは、エラーが発生したときに例外がスローされます。 SMO のメソッドやプロパティは、戻り値で成功や失敗をレポートしません。 代わりに、例外ハンドラーによって例外のキャッチと処理を行うことができます。  
+  
+ SMO にはさまざまな例外クラスが存在します。 例外の詳細は、例外に関するテキスト メッセージを指定している **Message** プロパティなどの例外プロパティから抽出することができます。  
+  
+ 例外処理ステートメントは、プログラミング言語に固有です。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic では、**キャッチ**ステートメントです。  
+  
+## <a name="inner-exceptions"></a>内部例外  
+ 例外は、一般または固有のどちらかです。 一般例外には、固有の例外のセットが含まれています。 いくつかの **Catch** ステートメントを使用して、予想されるエラーの処理を行い、残りのエラーを一般例外の処理コードでは処理されないようにすることができます。 例外は、連鎖シーケンスによってしばしば発生します。 SMO 例外が、別の SQL 例外によって生じていることが少なくありません。 これを検出する方法は、 **InnerException** プロパティを連続的に使用して、最終的なトップレベル例外を発生している元の例外を判断します。  
+  
+> [!NOTE]  
+>  **SQLException**で例外が宣言されている、 **System.Data.SqlClient**名前空間。  
+  
+ ![元のレベルを示す図、図](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "を元のレベルを示す図、図")  
+  
+ このダイアグラムは、アプリケーションの層を通じた例外のフローを示しています。  
+  
+## <a name="example"></a>例  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください[Visual C &#35; を作成する。Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。
+  
+## <a name="catching-an-exception-in-visual-basic"></a>Visual Basic での例外のキャッチ  
+ このコード例を使用する方法を示しています、**を再試行してください.キャッチしてください.最後に**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 例外をキャッチするステートメント。 SMO 例外はすべて SmoException 型であり、これらは SMO のリファレンスに一覧されています。 エラーの原因を示すために、内部例外のシーケンスが表示されます。 詳細については、次を参照してください。、 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET のドキュメントです。  
+  
+```VBNET
+'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
+'Connect to the local, default instance of SQL Server.
+Dim srv As Server
+srv = New Server
+'Define an Operator object variable by supplying the parent SQL Agent and the name arguments in the constructor.
+'Note that the Operator type requires [] parenthesis to differentiate it from a Visual Basic key word.
+Dim op As [Operator]
+op = New [Operator](srv.JobServer, "Test_Operator")
+op.Create()
+'Start exception handling.
+Try
+    'Create the operator again to cause an SMO exception.
+    Dim opx As OperatorCategory
+    opx = New OperatorCategory(srv.JobServer, "Test_Operator")
+    opx.Create()
+    'Catch the SMO exception
+Catch smoex As SmoException
+    Console.WriteLine("This is an SMO Exception")
+    'Display the SMO exception message.
+    Console.WriteLine(smoex.Message)
+    'Display the sequence of non-SMO exceptions that caused the SMO exception.
+    Dim ex As Exception
+    ex = smoex.InnerException
+    Do While ex.InnerException IsNot (Nothing)
+        Console.WriteLine(ex.InnerException.Message)
+        ex = ex.InnerException
+    Loop
+    'Catch other non-SMO exceptions.
+Catch ex As Exception
+    Console.WriteLine("This is not an SMO exception.")
+End Try
+``` 
+  
+## <a name="catching-an-exception-in-visual-c"></a>Visual C# での例外のキャッチ  
+ このコード例では、 **Try…Catch…Finally** Visual C# ステートメントを使用して SMO 例外をキャッチする方法を示しています。 SMO 例外はすべて SmoException 型であり、これらは SMO のリファレンスに一覧されています。 エラーの原因を示すために、内部例外のシーケンスが表示されます。 詳細については、C# のドキュメントを参照してください。  
+  
+```csharp  
+{   
+//This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace to be included.   
+//Connect to the local, default instance of SQL Server.   
+Server srv;   
+srv = new Server();   
+//Define an Operator object variable by supplying the parent SQL Agent and the name arguments in the constructor.   
+//Note that the Operator type requires [] parenthesis to differentiate it from a Visual Basic key word.   
+op = new Operator(srv.JobServer, "Test_Operator");   
+op.Create();   
+//Start exception handling.   
+try {   
+    //Create the operator again to cause an SMO exception.   
+    OperatorCategory opx;   
+    opx = new OperatorCategory(srv.JobServer, "Test_Operator");   
+    opx.Create();   
+}   
+//Catch the SMO exception   
+catch (SmoException smoex) {   
+    Console.WriteLine("This is an SMO Exception");   
+   //Display the SMO exception message.   
+   Console.WriteLine(smoex.Message);   
+   //Display the sequence of non-SMO exceptions that caused the SMO exception.   
+   Exception ex;   
+   ex = smoex.InnerException;   
+   while (!object.ReferenceEquals(ex.InnerException, (null))) {   
+      Console.WriteLine(ex.InnerException.Message);   
+      ex = ex.InnerException;   
+    }   
+    }   
+   //Catch other non-SMO exceptions.   
+   catch (Exception ex) {   
+      Console.WriteLine("This is not an SMO exception.");   
+}   
+}  
+```  
+  
+  

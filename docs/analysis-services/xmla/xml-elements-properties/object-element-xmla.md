@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Object Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Object Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Object
 - urn:schemas-microsoft-com:xml-analysis#Object
 - microsoft.xml.analysis.object
-helpviewer_keywords:
-- Object element
+helpviewer_keywords: Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 406b0807d592dfcef82d5d9afc8bef5c153b68f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea187bdeebdfeeb64eb2ff379181f1a03783afa8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="object-element-xmla"></a>Object 要素 (XMLA)
   親要素によって使用されるオブジェクト参照を含みます。  
@@ -81,7 +76,6 @@ ms.lasthandoff: 09/01/2017
  **Alter**要素のインスタンス[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]場合は、既定のオブジェクトとして使用、**オブジェクト**要素が指定されていません。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

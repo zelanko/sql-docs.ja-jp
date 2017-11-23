@@ -23,17 +23,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], queries
 - queries [MDX]
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 280033210c597c611ce1af8ff98c4ea94e1852f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cefad04fdadd4475863dccca5cba5f3e9cf4f48c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX クエリの基礎 (Analysis Services)
   多次元式 (MDX) を使用すれば、多次元オブジェクト (たとえばキューブ) をクエリして、キューブ データが格納された多次元セル セットを返すことができます。 このトピックとサブトピックでは、MDX クエリの概要を説明します。  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [多次元式 &#40;MDX&#41; リファレンス](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

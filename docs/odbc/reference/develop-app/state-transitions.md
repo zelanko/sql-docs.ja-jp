@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="state-transitions"></a>状態遷移
 ODBC 定義不連続*状態*の各環境や接続ごとに、各ステートメント。 たとえば、環境には 3 つの状態: (する環境が割り当てられていない) で、未割り当て、割り当てられた (を環境が割り当てられますが、接続が割り当てられていません)、および接続 (環境とがである 1 つまたは複数の接続割り当てられている)。 接続がある 7 つの可能な状態です。ステートメントが 13 の可能な状態であります。  
@@ -45,4 +43,3 @@ ODBC 定義不連続*状態*の各環境や接続ごとに、各ステートメ�
  アプリケーションの観点から見る、状態遷移は、通常は単純です: 有効な状態遷移が手での手の形を移動する傾向がありますと適切に記述されたアプリケーションのフロー。 状態遷移は、環境、接続ごとに、および各ステートメントの状態を追跡する必要があるため、ドライバー マネージャーとドライバーの複雑です。 この作業の大部分は、ドライバー マネージャーによって; で行われますドライバーで行う必要がある作業のほとんどは、保留中の結果を持つステートメントで発生します。  
   
  このマニュアルの部分を 1 と 2 (「ODBC の概要」および「アプリケーションとドライバーの開発」) の状態遷移を明示的に言うまでもなく傾向があります。 代わりに、関数を呼び出す必要があります、順序、について説明します。 たとえば、「を実行するステートメント」は状態と、ステートメントを準備する必要があります**SQLPrepare**をで実行する前に**SQLExecute**です。 状態と遷移には、ドライバー マネージャーによってがチェックされ、これは、ドライバーでチェックする必要がありますを含む、状態遷移の詳細については、次を参照してください。[付録 b: ODBC 状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)です。
-

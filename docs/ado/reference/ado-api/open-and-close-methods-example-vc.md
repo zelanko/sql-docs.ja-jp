@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Close method [ADO], VC++ example
 - Open method [ADO], VC++ example
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80c97e389a4741f3d45f3cd897ec404b66228a04
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c77eaed9a158270a9fa2067ec3e5b423f1514921
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open および Close メソッドの例 (vc++)
 この例では、**開く**と[閉じる](../../../ado/reference/ado-api/close-method-ado.md)両方のメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)が開かれているオブジェクト。  
@@ -218,5 +215,4 @@ void PrintComError(_com_error &e) {
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open メソッド (ADO 接続)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

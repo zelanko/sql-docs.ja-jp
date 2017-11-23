@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 205dce73a6fb5940be83c5082b730ddbd753ce3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>テーブルと列 (SSAS テーブル)
   テーブルのインポート ウィザードを使用してモデルにテーブルとデータを追加したら、新しいデータ列の追加、テーブル間のリレーションシップの作成、データを拡張する計算の定義、テーブルを見やすくするためのデータのフィルター処理と並べ替えなどを行ってテーブルを操作できます。  
@@ -82,4 +81,3 @@ ms.lasthandoff: 09/01/2017
 |[データのフィルター処理と並べ替え &#40;SSAS テーブル&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|このセクションのトピックでは、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを実行する方法について説明します。|  
   
   
-

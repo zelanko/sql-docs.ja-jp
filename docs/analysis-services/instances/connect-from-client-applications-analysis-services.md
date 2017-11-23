@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
   Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
@@ -119,7 +118,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  Analysis Services インスタンスで **SQL Server Profiler** を開始し、新しいトレースを開始します。  
   
-2.  [イベントの選択] で、[Security Audit] セクションの [ **Audit Login** ] および [ **Audit Logout** ] のチェック ボックスがオンになっていることを確認します。  
+2.  イベントの選択 で、Security Audit セクションの  **Audit Login ** および ** Audit Logout ** のチェック ボックスがオンになっていることを確認します。  
   
 3.  リモート クライアント コンピューターから、アプリケーション サービス (SharePoint、Reporting Services など) を介して Analysis Services に接続します。 Audit Login イベントに、Analysis Services に接続しているユーザーの ID が表示されます。  
   
@@ -144,8 +143,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>参照  
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [権限借用 & #40 です。SSAS テーブル &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [権限借用 &#40;です。SSAS テーブル &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [データ ソースの作成 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
-

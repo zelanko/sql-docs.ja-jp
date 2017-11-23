@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: defce52a3e89858c08eff6626601392066996891
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションに勘定科目インテリジェンスを追加します。
   勘定科目インテリジェンス拡張機能をキューブまたはディメンションに追加して、収益や費用などの標準の勘定科目の分類を勘定科目属性のメンバーに割り当てます。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分類を使用することによって、一定の期間にわたって勘定科目を集計できます。  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
 4.  **[集計関数]** の一覧で、この勘定科目の種類の既定の集計関数を変更します。  
   
   
-

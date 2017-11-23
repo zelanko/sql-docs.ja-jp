@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 071655069cbbd0548a513d2377f940467c040883
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d708887958eb78b625dce47914433761f434ed4a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getnclob-method-int"></a>getNClob (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,8 +52,7 @@ public java.sql.NClob getNClob(int parameterIndex)
  このメソッドは取得**NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**パラメーター。 これらのメソッドを他のデータ型のパラメーターで呼び出すと、例外が発生します。  
   
 ## <a name="see-also"></a>参照  
- [getNClob メソッド & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   
+ [getNClob メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   
-

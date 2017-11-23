@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="why-was-odbc-created"></a>ODBC が作成されたはなぜですか。
 従来、企業は、1 つの DBMS を使用します。 すべてのデータベース アクセスは、そのシステムのフロント エンド、またはそのシステムでのみ動作するアプリケーションを通じて行われました。 ただし、コンピューターの使用を拡張し、複数のコンピューターのハードウェアおよびソフトウェアが利用可能になった、会社のさまざまな Dbms の取得を開始します。 理由が多数: が最も高速などのような新機能が最も安価な購入したどのような既に知っていれば、市場で最適な 1 つのアプリケーションの動作内容最新何でした。 その他の理由は、部門を持っていた 1 つの DBMS 必要があるいくつかの再編成と、合併しました。  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  同様の問題には、独立系ソフトウェア ベンダー (Isv) が直面しています。 書き込みをサポートする高性能とメインフレーム データベース ソフトウェア ベンダーが通常しなければならない各 DBMS 用の 1 つのバージョンのアプリケーションを記述するかにアクセスしたい各 DBMS、DBMS 固有のコードを作成します。 書き込みのパーソナル コンピューター用のソフトウェア ベンダーは、作業ありました各さまざまな DBMS のデータ アクセスのルーチンを記述する必要があります。 多くの場合、このため、大量のリソースは、作成とデータが、アプリケーションではなく、ルーチンにアクセスし、品質ではなく、特定の DBMS のデータにアクセスする可能性があるかどうかでは、アプリケーションが多くの場合、販売されるものの保守に費やされたされました。  
   
  開発者の両方のセットが必要なさまざまな Dbms のデータにアクセスする方法をでした。 メインフレームとミニ グループには、パーソナル コンピューター グループにこの機能だけでなく、1 つの DBMS の独立した 1 つのアプリケーションを記述する手段が必要なときに、1 つのアプリケーションでさまざまな Dbms のデータを結合する方法が必要です。 両方のグループがデータにアクセスするの相互運用可能な方法を必要に応じて簡単に言えば、データベースとの接続を開くために必要なです。
-

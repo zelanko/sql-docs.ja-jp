@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1dbfd36d6761c539176165653bd2e3484c07d5c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 766c1292435eb11dcff94f7353d49478f554c6a7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
   **SQLdiag** ユーティリティは、コンソール アプリケーションまたはサービスとして実行できる汎用的な診断収集ユーティリティです。 **SQLdiag** を使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 **SQLdiag** は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスによる診断情報収集の高速化と簡素化も目的としています。  
@@ -53,11 +51,11 @@ ms.lasthandoff: 08/02/2017
   
 -   Windows イベント ログ  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]トレース  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレース  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ブロッキング情報  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のブロッキング情報  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]構成情報  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の構成情報  
   
  構成ファイル SQLDiag.xml を編集することで、 **SQLdiag** が収集する情報の種類を指定することができます。これについては、次のセクションで説明します。  
   
@@ -363,7 +361,7 @@ SQLDIAG START /A Instance1
  同一コンピューター上で複数の **SQLdiag** インスタンスを実行するには、コマンド ラインで **/A***SQLdiag_application_name* を指定します。 これは、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから別の診断セットを同時に収集する場合に便利です。 たとえば、簡単なデータ収集を連続して実行するように、 **SQLdiag** の名前付きインスタンスを構成できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で特定の問題が発生した場合は、既定の **SQLdiag** インスタンスを実行し、その問題に対する診断データを収集したり、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスが収集を要望している問題に対する一連の診断データを収集したりできます。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>クラスター化された SQL Server インスタンスからの診断データの収集  
- **SQLdiag** は、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスからの診断データの収集をサポートしています。 クラスター化から診断を収集する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス、ことを確認して**"です"。**が指定されて、**名前**の属性、 **\<マシン >**構成内の要素がファイル SQLDiag.Xml を指定しないと、 **/G**コマンドラインの引数。 既定では、構成ファイル内の **name** 属性に対して **"."** が指定されていて、**/G** 引数はオフになっています。 通常、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから収集する場合、構成ファイルの編集やコマンド ライン引数の変更は必要ありません。  
+ **SQLdiag** は、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスからの診断データの収集をサポートしています。 クラスター化から診断を収集する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス、ことを確認して**"です"。**が指定されて、**名前**の属性、 **\<マシン >**構成内の要素がファイル SQLDiag.Xml を指定しないと、 **/G**コマンドラインの引数。 既定では、構成ファイル内の **name** 属性に対して **"."** が指定されていて、 **/G** 引数はオフになっています。 通常、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから収集する場合、構成ファイルの編集やコマンド ライン引数の変更は必要ありません。  
   
  **"."** がコンピューター名として指定されている場合、 **SQLdiag** はこのコンピューターがクラスター上で実行されていることを検出し、同時に、クラスター上にインストールされているすべての仮想 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から診断情報を取得します。 1 つだけの仮想インスタンスから診断情報を収集するかどうか[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンピューターで実行されている、つまり仮想指定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の**名前**の属性、 **\<マシン >** SQLDiag.Xml 内の要素。  
   
@@ -374,4 +372,3 @@ SQLDIAG START /A Instance1
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

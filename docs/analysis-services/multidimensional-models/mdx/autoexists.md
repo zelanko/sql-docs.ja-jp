@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d7f38c656ff153989d16844fccf13e6598c69008
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="autoexists"></a>Autoexists
   *autoexists* の概念を導入すると、このキューブ空間を、同じ階層から属性階層メンバーの可能なすべての組み合わせを作成した結果として存在するセルでなく、実際に存在するセルのみに限定できます。 これは、1 つの属性階層のメンバーは、同じディメンション内の別の属性階層のメンバーと共存できないためです。 SELECT ステートメントに同じディメンションの属性階層を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。  
@@ -318,7 +317,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列です。参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
+ Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列です。参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
   
 ## <a name="see-also"></a>参照  
  [MDX の主な概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
@@ -330,4 +329,3 @@ WHERE (Measures.[Internet Sales Amount],
  [多次元式 &#40;MDX&#41; リファレンス](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

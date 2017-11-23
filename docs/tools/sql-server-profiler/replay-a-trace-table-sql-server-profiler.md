@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62c42d15040ef8377af16c03d6ce0e1f1b80a962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d3873687f408fa0a29ab338318c80e6572f0746
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>トレース テーブルの再生 (SQL Server Profiler)
   再生は、保存したトレースを開いて再実行する機能です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、ユーザー接続と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証をシミュレートできるマルチスレッド再生エンジンが備わっています。 再生は、アプリケーションまたはプロセスに関する問題のトラブルシューティングを行う際に役立ちます。 問題を特定して修正を実装したら、修正されたアプリケーションまたはプロセスに対して、発生する可能性のある問題を検出したトレースを実行します。 その後、元のトレースを再生し、結果を比較します。  
@@ -65,9 +63,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
- [トレースを再生します。](../../tools/sql-server-profiler/replay-traces.md)   
+ [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   
  [トレース テーブル &#40; を開くSQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

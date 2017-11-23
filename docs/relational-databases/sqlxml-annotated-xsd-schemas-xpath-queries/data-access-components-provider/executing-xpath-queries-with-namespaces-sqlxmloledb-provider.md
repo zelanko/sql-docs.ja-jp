@@ -1,0 +1,114 @@
+---
+title: "名前空間 (SQLXMLOLEDB プロバイダー) と XPath クエリの実行 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: sqlxml
+ms.reviewer: 
+ms.suite: sql
+ms.technology: dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQLXMLOLEDB Provider, executing XPath queries
+- namespaces property
+- queries [SQLXML], SQLXMLOLEDB Provider
+- XPath queries [SQLXML], namespaces
+- XPath queries [SQLXML], SQLXMLOLEDB Provider
+- namespaces [SQLXML], XPath queries
+ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
+caps.latest.revision: "29"
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: d1ce8d6b1a7a3d828112841bfcaa71921bfb215d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>名前空間を使用した、XPath クエリの実行 (SQLXMLOLEDB Provider)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XPath クエリでは、名前空間を含めることができます。 スキーマ要素が名前空間で限定されている (対象の名前空間を含んでいる) 場合、そのスキーマに対する XPath クエリでは、この名前空間を指定する必要があります。  
+  
+ SQLXML 4.0 ではワイルドカード文字 (*) の使用がサポートされないため、XPath クエリは、名前空間プレフィックスを使用して指定する必要があります。 このプレフィックスを解決するには、名前空間プロパティを使用して、名前空間のバインドを指定します。  
+  
+ XPath クエリは、次の例では、ワイルドカード文字を使用して名前空間を指定します (\*) および local-name() and namespace-uri() XPath 関数。 この XPath クエリは、ローカルの名前がすべての要素を返します**連絡先**と名前空間 URI が**urn: myschema:Contacts**です。  
+  
+```  
+/*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
+```  
+  
+ SQLXML 4.0 では、この XPath クエリを名前空間プレフィックスと共に指定する必要があります。 例としては**x: 連絡先**ここで、 **x**名前空間のプレフィックスします。 次の XSD スキーマについて考えてみます。  
+  
+```  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
+            xmlns:con="urn:myschema:Contacts"  
+            targetNamespace="urn:myschema:Contacts">  
+<complexType name="ContactType">  
+  <attribute name="CID" sql:field="ContactID" type="ID"/>  
+  <attribute name="FName" sql:field="FirstName" type="string"/>  
+  <attribute name="LName" sql:field="LastName"/>   
+</complexType>  
+<element name="Contact" type="con:ContactType" sql:relation="Person.Contact"/>  
+</schema>  
+```  
+  
+ このスキーマでは対象の名前空間が定義されているため、このスキーマに対して "Employee" などの XPath クエリを実行するときには、クエリに名前空間を含める必要があります。  
+  
+ これは、上の XSD スキーマに対して XPath クエリ (x:Employee) を実行する [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションのサンプルです。 プレフィックスを解決するには、名前空間のバインドは名前空間プロパティを使用して指定します。  
+  
+> [!NOTE]  
+>  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例ではデータ プロバイダーとして [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) を使用するよう指定していますが、これには追加ネットワーク クライアントがインストールされていることが必要です。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)です。  
+  
+```  
+Option Explicit  
+Private Sub Form_Load()  
+    Dim con As New ADODB.Connection  
+    Dim cmd As New ADODB.Command  
+    Dim stm As New ADODB.Stream  
+    con.Open "provider=SQLXMLOLEDB.4.0;Data Provider=SQLNCLI11;Data Source=SqlServerName;Initial Catalog=AdventureWorks;Integrated Security=SSPI;"  
+    Set cmd.ActiveConnection = con  
+    stm.Open  
+    cmd.Properties("Output Stream").Value = stm  
+    cmd.Properties("Output Encoding") = "utf-8"  
+    cmd.Properties("Mapping schema") = "C:\DirectoryPath\con-ex.xml"  
+    cmd.Properties("namespaces") = "xmlns:x='urn:myschema:Contacts'"  
+    '  Debug.Print "Set Command Dialect to DBGUID_XPATH"  
+    cmd.Dialect = "{ec2a4293-e898-11d2-b1b7-00c04f680c56}"  
+    cmd.CommandText = "x:Contact"  
+    cmd.Execute , , adExecuteStream   
+    stm.Position = 0  
+    Debug.Print stm.ReadText(adReadAll)  
+End Sub  
+```  
+  
+### <a name="to-test-this-application"></a>このアプリケーションをテストするには  
+  
+1.  サンプルの XSD スキーマをフォルダーに保存します。  
+  
+2.  Visual Basic 実行可能プロジェクトを作成し、プロジェクト内にコードをコピーして、 指定されたディレクトリ パスを適切に変更します。  
+  
+3.  次のプロジェクト参照を追加します。  
+  
+    ```  
+    "Microsoft ActiveX Data Objects 2.8 Library"  
+    ```  
+  
+4.  アプリケーションを実行します。  
+  
+ 結果の一部を次に示します。  
+  
+```  
+<y0:Employee xmlns:y0="urn:myschema:Contacts"   
+             LName="Achong" CID="1" FName="Gustavo"/>  
+<y0:Employee xmlns:y0="urn:myschema:Employees"   
+             LName="Abel" CID="2" FName="Catherine"/>  
+```  
+  
+ XML ドキュメント内に生成されるプレフィックスはその都度変わりますが、マップされる名前空間は同じです。  
+  
+  

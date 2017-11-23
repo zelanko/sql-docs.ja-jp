@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- translation DLLs [ODBC]
+helpviewer_keywords: translation DLLs [ODBC]
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ba263755a392b0a4567733670b72db8ecf426e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 06e496e3999904a019f481374598a9a774729ab3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="translation-dlls"></a>翻訳の Dll
 アプリケーションとデータ ソース多くの場合、異なる文字セットでデータを格納します。 ODBC では、1 つの文字セットを他のデータを変換するドライバーを使用する汎用メカニズムを提供します。 変換関数を実装する DLL で構成されて**SQLDriverToDataSource**と**SQLDataSourceToDriver**、データ ソースの間をフローさせるすべてのデータを変換するドライバーと呼ばれるドライバーです。 この DLL は、ドライバーの開発者に、アプリケーション開発者によって書き込まれることができますか、サード パーティ製です。  
@@ -35,4 +32,3 @@ ms.lasthandoff: 09/09/2017
  翻訳オプションは、特定の翻訳 DLL でのみ解釈できる値です。 たとえば、異なるコード ページ間 DLL の変換を平行移動、オプションはアプリケーションおよびデータ ソースで使用されるコード ページの番号を与える可能性があります。 トランスレーター DLL 翻訳オプションを使用する必要はありません。  
   
  DLL が指定されている翻訳した後は、ドライバーが読み込まれるときにし、呼び出し元アプリケーションとデータ ソースの間をフローさせるすべてのデータを変換します。 これには、すべての SQL ステートメントと、データ ソースに送信される文字パラメーターが含まれ、データ ソースからすべての文字の結果、列名、およびエラー メッセージなどの文字のメタデータを取得します。 アプリケーションがデータ ソースに接続した後に、トランスレーター DLL は、まで読み込まれていないため、接続のデータは翻訳されません。
-

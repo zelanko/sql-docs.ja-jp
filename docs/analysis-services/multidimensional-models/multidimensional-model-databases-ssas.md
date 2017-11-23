@@ -23,17 +23,16 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: dae9c7f18acbf630b7b8780498e06465085822b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b9b4fa79c4ef7a37158c1fbeea32a80c56effa2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多次元モデル データベース (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースは、データ ソース、データ ソース ビュー、キューブ、ディメンション、およびロールのコレクションです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースには、データ マイニング用の構造、およびユーザー定義の関数をデータベースに追加するために使用されるカスタム アセンブリをオプションで含めることができます。  
@@ -72,7 +71,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>参照  
  [Analysis Services データベースへのオンライン モードでの接続](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   
  [Analysis Services プロジェクトの作成 (SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
- [MDX による多次元データのクエリを実行します。](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
+ [MDX による多次元データのクエリ](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
   
-

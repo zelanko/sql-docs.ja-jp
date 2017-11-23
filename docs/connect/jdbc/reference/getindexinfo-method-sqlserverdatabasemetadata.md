@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getIndexInfo
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getIndexInfo
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 028937d023b6cf899eb5fa47354cb0c5d21545bc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -89,10 +85,10 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**短い**|インデックスの種類。 次の値のいずれかを指定できます。<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**短い**|インデックス内での列の位置を示す序数です。 インデックスの最初の列は 1 です。|  
 |COLUMN_NAME|**文字列**|列の名前です。|  
-|ASC_OR_DESC|**文字列**|インデックスの照合で使用される順序です。 次の値のいずれかを指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に"A"を返します。  |  
+|ASC_OR_DESC|**文字列**|インデックスの照合で使用される順序です。 次の値のいずれかを指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に"A"を返します。|  
 |CARDINALITY|**int**|テーブル内の行数またはインデックス内の一意の値の個数です。|  
 |PAGES|**int**|インデックスまたはテーブルの格納に使用するページ数です。|  
-|FILTER_CONDITION|**文字列**|フィルター条件です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に null を返します。  |  
+|FILTER_CONDITION|**文字列**|フィルター条件です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に null を返します。|  
   
 > [!NOTE]  
 >  GetIndexInfo メソッドによって返されるデータに関する詳細については、「sp_indexes (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  
@@ -129,4 +125,3 @@ public static void executeGetIndexInfo(Connection con) {
  [SQLServerDatabaseMetaData クラス](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

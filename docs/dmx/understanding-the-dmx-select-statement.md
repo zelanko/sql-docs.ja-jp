@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - Data Mining Extensions [Analysis Services], statements
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - copying mining models
 ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f8429c48fb398f1d1a9e3f20741c7eecfd0810b5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431bc5b84d76725904fff27f63c73121e13fa48
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-the-dmx-select-statement"></a>DMX 選択ステートメントについて
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -115,7 +113,7 @@ ms.lasthandoff: 08/02/2017
   
 |クエリの型|Description|  
 |----------------|-----------------|  
-|SELECT FROM *\<モデル >*です。場合|マイニング モデルのトレーニングに使用されたケースを返します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX を使用したドリルスルー クエリを作成します。](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
+|SELECT FROM *\<モデル >*です。場合|マイニング モデルのトレーニングに使用されたケースを返します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX を使用したドリルスルー クエリの作成](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM *\<モデル >*です。SAMPLE_CASES|マイニング モデルのトレーニングに使用されたケースを表すサンプル ケースを返します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT FROM &#60; モデル &#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
 |SELECT FROM *\<構造 >*です。 場合|基になるマイニング構造から詳細なデータ行を返します。この詳細情報は、マイニング モデルのトレーニングで使用されなかった場合にも返されます。<br /><br /> [SELECT FROM &#60; 構造 &#62;。場合](../dmx/select-from-structure-cases.md)<br /><br /> [ドリルスルー クエリ &#40;データ マイニング&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
@@ -127,4 +125,3 @@ ms.lasthandoff: 08/02/2017
  [データ マイニング拡張機能 &#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   
-

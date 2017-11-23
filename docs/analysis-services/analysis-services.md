@@ -8,8 +8,7 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8c3a514f91e9af8de54fdbd4d9ef851c72f1911e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services とは
   Analysis Services は、意思決定支援とビジネスの分析、Reporting Services レポート、ビジネス レポートおよび Power BI では、Excel などのクライアント アプリケーションの分析データを提供およびその他のデータの視覚化ツールで使用される分析データ エンジンです。  
@@ -65,8 +63,7 @@ Analysis Services がクラウドで Azure のサービスとして使用でき�
 *  [多次元モデル](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [データ マイニング](../analysis-services/data-mining/data-mining-ssas.md)  
 *  [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
-*  [インスタンスの管理](../analysis-services/instances/analysis-services-instance-management.md)    
+*  [インスタンス管理](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [チュートリアル](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [開発者向けドキュメント](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [テクニカル リファレンス (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
-

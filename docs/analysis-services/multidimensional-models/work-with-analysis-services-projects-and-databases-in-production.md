@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services, projects
+helpviewer_keywords: Analysis Services, projects
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec62b7e30c7060a92b4ccfb36a8e5bfa2a0e6520
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 027e9cfb4f69cbdb89d776b80916afa8ac89eb69
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-production"></a>扱う Analysis Services プロジェクトおよび実稼働環境でのデータベース
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを開発して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置したら、配置したデータベース内のオブジェクトに対する変更方法を指定する必要があります。 セキュリティ ロール、パーティション分割、ストレージ設定などの変更は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のいずれかを使用して行うことができます。 その他の変更 (属性やユーザー定義階層の追加など) を行うには、プロジェクト モードまたはオンライン モードで [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を実行する必要があります。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/01/2017
 -   方法 3 : [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] をオンライン モードで使用することにより、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベースの実稼働バージョンにのみ変更を加えます。 SQL Server Management Studio と Business Intelligence Development Studio のいずれのツールも、同じオンライン サーバーだけを操作するので、バージョンが異なってもデータベースの同期が外れる可能性はありません。  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b88fa63c77014702fe3328e049bffe96da81e67
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cbafc8acfd5ed1b51fa8ffafe5539a68ab622911
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>setAsciiStream (java.lang.String, java.io.InputStream, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,8 +61,7 @@ public final void setAsciiStream(java.lang.String parameterName,
  ストリームの長さが、不明の場合、*長さ*ドライバーがその長さに関係なく、ストリームを受け入れることを示すために、パラメーターを-1 に設定することがあります。 Sqljdbc4.jar、ことをお勧め、JDBC 4.0 メソッドを使用する[setAsciiStream (java.lang.String, java.io.InputStream) メソッド](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)アプリケーションが列の長さが不明なストリームを更新するときにします。  
   
 ## <a name="see-also"></a>参照  
- [setAsciiStream & #40 です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
+ [setAsciiStream &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   
-

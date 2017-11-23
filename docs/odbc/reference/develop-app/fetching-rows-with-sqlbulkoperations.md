@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84b8e31821e1571da8272806c5fcd7f5563a4182
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations を持つ行のフェッチ
 呼び出しによってブックマークを使用して行セットにデータを再フェッチ**SQLBulkOperations です。** フェッチする行は、バインドされたブックマーク列内のブックマークで識別されます。 SQL_COLUMN_IGNORE の値を持つ列はフェッチされません。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 4.  呼び出し**SQLBulkOperations**で、*操作*引数 SQL_FETCH_BY_BOOKMARK に設定します。  
   
  特定の列上で実行される操作を防ぐために、行操作配列を使用するアプリケーションの必要はありません。 アプリケーションでは、バインドされたブックマーク配列にこれらの行のブックマークのみをコピーすることによってフェッチする行を選択します。
-

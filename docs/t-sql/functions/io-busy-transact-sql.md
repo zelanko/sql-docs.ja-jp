@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@IO_BUSY'
 - '@@IO_BUSY_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ticks [SQL Server]
 - I/O [SQL Server], time spent performing operations
@@ -25,25 +23,24 @@ helpviewer_keywords:
 - input operations [SQL Server]
 - time [SQL Server], I/O operations
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d42b1961a8e2c4b6feb43f415f43968fbf68fd8a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 48e1bcd5a80825715ad6aed8649dad843e92c1ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降の入力と出力の操作の実行に費やした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。 結果は CPU time increment (「ティック」) であり、他のすべての Cpu の累積的なため、実際の経過時間を超える可能性があります。 乗算@TIMETICKS(マイクロ秒) に変換します。  
+  時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降の入力と出力の操作の実行に費やした[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。 結果は CPU time increment (「ティック」) であり、他のすべての Cpu の累積的なため、実際の経過時間を超える可能性があります。 乗算 @@TIMETICKS (マイクロ秒) に変換します。  
   
 > [!NOTE]  
->  に時間が返された場合@CPU_BUSY、または @@IO_BUSY約 49 日の累積 CPU 時間を超える場合、演算オーバーフロー警告が表示されます。 その場合の値を @@CPU_BUSY、@@IO_BUSYおよび @@IDLE変数が正確ではありません。  
+>  に時間が返された場合@CPU_BUSY、または @@IO_BUSY約 49 日の累積 CPU 時間を超える場合、演算オーバーフロー警告が表示されます。 その場合の値を @@CPU_BUSY 、 @@IO_BUSY および @@IDLE 変数が正確ではありません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,4 +80,3 @@ IO microseconds as of
  [システム統計関数 &#40;Transact-SQL&#41;す。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
-

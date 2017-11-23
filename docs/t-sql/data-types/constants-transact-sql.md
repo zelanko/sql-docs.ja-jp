@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - uniqueidentifier data type
 - bit data type
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - real data type
 - negative values
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: aae955a177f637e3c359eabf02679025cbecdb3a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9b212354492b96ca69ebf29afbc39c8ed1de6e3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="constants-transact-sql"></a>定数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,12 +203,11 @@ $542023.14
 ```
   
 ## <a name="enhanced-collations"></a>拡張照合順序  
-SQL Server では、拡張照合順序をサポートする文字列定数および Unicode 文字列定数がサポートされています。 詳細については、次を参照してください。、 [COLLATE & #40 です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)句。
+SQL Server では、拡張照合順序をサポートする文字列定数および Unicode 文字列定数がサポートされています。 詳細については、次を参照してください。、 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)句。
   
 ## <a name="see-also"></a>参照
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)
+[演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)
   
   
-

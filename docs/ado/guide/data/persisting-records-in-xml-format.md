@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>XML 形式で保持するレコード
 Adtg 形式形式のように**Recordset**永続性 XML 形式では、Microsoft OLE DB 永続化プロバイダーが実装されています。 このプロバイダーは、保存されている XML ファイルまたは ADO によって生成されるスキーマ情報を格納しているストリームから順方向専用、読み取り専用の行セットを生成します。 同様に、ADO をかかる**レコード セット**、XML を生成し、ファイルまたは COM を実装する任意のオブジェクトに保存、 **IStream**インターフェイスです。 (ファイルをサポートするオブジェクトの一例は、実際には、 **IStream**)。バージョン 2.5 以降では、ADO 依存している場合に、Microsoft XML パーサー (MSXML) に XML を読み込む、**レコード セット**; したがって行いますが必要です。  
@@ -78,7 +76,7 @@ rs.Save "btitles.sav", adPersistXML
   
  このセクションでは、次のトピックを扱います。  
   
--   [XML の永続化の形式](../../../ado/guide/data/xml-persistence-format.md)  
+-   [XML 保存形式](../../../ado/guide/data/xml-persistence-format.md)  
   
 -   [名前空間](../../../ado/guide/data/namespaces.md)  
   
@@ -86,9 +84,9 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [データ セクション](../../../ado/guide/data/data-section.md)  
   
--   [XML での階層のレコード セット](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
+-   [XML での階層レコードセット](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [XML 内のレコード セットの動的プロパティ](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [XML でのレコードセットの動的プロパティ](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [XSLT 変換](../../../ado/guide/data/xslt-transformations.md)  
   
@@ -96,5 +94,4 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [XML のセキュリティに関する考慮事項](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [XML レコード セットを保存するシナリオ](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
-
+-   [XML レコードセットの保持シナリオ](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DataFactory object [ADO], members
+helpviewer_keywords: DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f5343dacd2ae5369e5d21fcd72df46ea9f11a9e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1375d8c681129f2be813257dbc805b2ed02517b3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント
 > [!IMPORTANT]
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/09/2017
 |[Execute21 メソッド (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|要求を実行し、(ADO 2.1 を使用する) ため、高度なデータの行セットを作成します。|  
 |[クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|要求を実行し、高度なデータの行セットを作成します。|  
 |[SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|保留中の変更を含むレコード セットを指定するには、このメソッドに送信接続文字列で指定されるデータベース。|  
-|[同期メソッド (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|(ADO 2.5 以降で使用する) の接続文字列で指定されたデータベースと特定のレコード セットを同期します。|  
+|[Synchronize メソッド (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|(ADO 2.5 以降で使用する) の接続文字列で指定されたデータベースと特定のレコード セットを同期します。|  
 |[Synchronize21 メソッド (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|(ADO 2.1 を使用する) ため、接続文字列によって指定されたデータベースと特定のレコード セットを同期します。|  
   
 ## <a name="events"></a>イベント  
@@ -52,6 +49,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>参照  
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

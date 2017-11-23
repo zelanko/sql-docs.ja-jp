@@ -26,17 +26,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0dd79b27089f73b537969889cf78f1d86ba57526
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec5fa6be2358366b181b0608025d3d3a4b94a321
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes ビューアーを使用したモデルの参照
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)」を参照してください。  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

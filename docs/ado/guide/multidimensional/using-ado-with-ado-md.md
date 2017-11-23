@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, using with ADO MD
+helpviewer_keywords: ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e762bf200d81596f99cd20352f8da381bffe9255
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38df55c27ced6e0a7b32c321e2b3968bedb73aa1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD と ADO の併用
 ADO および ADO MD は、関連するけれども、異なるオブジェクト モデルです。 ADO では、データ ソースへの接続、コマンドを実行する、表形式のデータとスキーマのメタデータを表形式での取得、およびプロバイダーのエラー情報を表示するためのオブジェクトを提供します。 ADO MD では、多次元データを取得し、マルチ ディメンション スキーマのメタデータを表示するためのオブジェクトを提供します。  
@@ -58,4 +55,3 @@ ADO および ADO MD は、関連するけれども、異なるオブジェク�
  [マルチ ディメンション スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [多次元データの操作](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

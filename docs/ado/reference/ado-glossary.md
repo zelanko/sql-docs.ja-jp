@@ -11,19 +11,17 @@ ms.service:
 ms.component: reference
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2be20e46a7ddbf25d0d694618f996a9be8919e0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary"></a>ADO の用語集
 このトピックでは、ADO に関連する用語を定義します。  
@@ -192,7 +190,7 @@ ms.lasthandoff: 09/09/2017
  ISAPI (インターネット サーバー アプリケーション プログラミング インターフェイス)  
  インターネット サーバーでは、Microsoft® インターネット インフォメーション サービス (IIS) を実行している Windows NT® Server または Windows 2000 Server などの関数のセット。  
   
- [キー]  
+ Key  
  列またはテーブル内の 1 つの行を一意に識別する列多くの場合、テーブルのインデックス化に使用されます。  
   
 ## <a name="m"></a>M  
@@ -299,4 +297,3 @@ ms.lasthandoff: 09/09/2017
   
  Web サーバー  
  Web サービス、およびイントラネットおよびインターネット ユーザーにページを提供するコンピューター。
-

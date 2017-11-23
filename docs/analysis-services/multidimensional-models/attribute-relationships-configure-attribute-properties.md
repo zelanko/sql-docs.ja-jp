@@ -21,17 +21,16 @@ helpviewer_keywords:
 - properties [Analysis Services], attribute relationships
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d925529956009a97832235808466c16598a1d344
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b43a3d43e189279b45d5347b746a047f8f76eb88
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---configure-attribute-properties"></a>属性リレーションシップ-属性のプロパティを構成します。
   次の表で、属性リレーションシップのプロパティの一覧およびその説明を示します。  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
 |[表示]|属性リレーションシップの表示を決めます。 値は True または False です。 既定値は True です。|  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Command::Dialect
-helpviewer_keywords:
-- Dialect property
+f1_keywords: _Command::Dialect
+helpviewer_keywords: Dialect property
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a57fa4b9acd97cd2bfe96545680e3bd8ffc6f35b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73c7dfd6fe5aec706d5e27ce6d55f489285748c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dialect-property"></a>Dialect プロパティ
 言語を示す、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティです。 言語仕様では、構文と、プロバイダーを使用して文字列またはストリームを解析するための一般的な規則を定義します。  
@@ -42,8 +38,7 @@ ms.lasthandoff: 09/09/2017
  ユーザーが設定した場合、 **Dialect**プロパティ、ADO は GUID を検証し、指定された値が有効な GUID ではないエラーが発生します。 サポートされている GUID 値を決定する、プロバイダーのマニュアルを参照して、 **Dialect**プロパティです。  
   
 ## <a name="applies-to"></a>適用対象  
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Execute メソッド (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)
-
+ [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Type property [field] [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d52947b4401e7344af7b3edceea65b0b483a06ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7499b482e01272d0307de4d5daf6f785946b525
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-field-vb"></a>型のプロパティの例 (フィールド) (VB)
 この例で、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、[型](../../../ado/reference/ado-api/type-property-ado.md)すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  
@@ -116,4 +112,3 @@ Attribute VB_Name = "TypeField"
 ## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-

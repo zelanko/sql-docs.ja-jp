@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ServerProperty Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ServerProperty Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SERVERPROPERTY
-helpviewer_keywords:
-- ServerProperty element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SERVERPROPERTY
+helpviewer_keywords: ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edf7c78a2486d7e09dfb8eeb437b1215bff50bc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4352648eb41332b57e3d95508a6985982b4509e8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="serverproperty-element-assl"></a>ServerProperty 要素 (ASSL)
   関連付けられているサーバーのプロパティを定義、[サーバー](../../../analysis-services/scripting/objects/server-element-assl.md)要素。  
@@ -77,8 +71,7 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.ServerProperty>します。  
   
 ## <a name="see-also"></a>参照  
- [Server 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/server-element-assl.md)   
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Server 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/server-element-assl.md)   
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

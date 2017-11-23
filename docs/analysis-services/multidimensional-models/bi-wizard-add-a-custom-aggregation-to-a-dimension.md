@@ -21,17 +21,16 @@ helpviewer_keywords:
 - unary operators
 - custom aggregations [Analysis Services]
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63ad6f1d9e72fae70997c87aca194f7437c62d07
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI ウィザード - カスタム集計をディメンションに追加します。
   カスタム集計拡張機能をキューブまたはディメンションに追加して、ディメンション メンバーに関連付けられている既定の集計を、別の単項演算子に置き換えます。 この拡張機能では、親子階層内のメンバーのロールアップを定義する単項演算子列がディメンション テーブルに指定されます。 単項演算子は、親子階層内の親属性に適用されます。  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  **[基になる列]** で、単項演算子を含む文字列の列を選択します  (この選択によって、親属性の **UnaryOperatorColumn** プロパティが設定されます)。ディメンション テーブルには、単項ロールアップ演算子を指定する文字列の列も必要です。 この列の文字列値には、有効な集計演算子が含まれている必要があります。 行が空の場合は、対応するメンバーが普通に計算されます。 列の式が有効でない場合は、そのメンバーを使用するセル値が取得されたときに実行時エラーが発生します。 詳細については、 [「親子ディメンションの単項演算子」](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)を参照してください。  
   
   
-

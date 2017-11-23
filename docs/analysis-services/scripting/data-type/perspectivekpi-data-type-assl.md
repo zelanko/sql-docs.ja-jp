@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PerspectiveKpi Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PerspectiveKpi Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- PerspectiveKpi
-helpviewer_keywords:
-- PerspectiveKpi data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: PerspectiveKpi
+helpviewer_keywords: PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 99540f2d29c0ae2d40d07b6ef66b8b7bc036026e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ccfedeadddb5cdaa96d640f7a253016619c88bc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectivekpi-data-type-assl"></a>PerspectiveKpi データ型 (ASSL)
   主要業績評価指標 (KPI) に関する情報を表すプリミティブ データ型を定義、[パースペクティブ](../../../analysis-services/scripting/objects/perspective-element-assl.md)要素。  
@@ -69,7 +63,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.PerspectiveKpi>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

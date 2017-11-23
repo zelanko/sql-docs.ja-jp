@@ -18,17 +18,16 @@ helpviewer_keywords:
 - cellsets [MDX]
 - query axis [MDX]
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c58b048b5452719382c45c9c160293d5d7b6918f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b8149620e62d94c97cfb499006d55b798c829324
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX クエリ軸とスライサー軸、クエリ軸の内容を指定します。
   クエリ軸は、多次元式 (MDX) の SELECT ステートメントから返されるセル セットの範囲を指定します。 セル セットの範囲を指定することで、返されるデータのうち、クライアントで表示するデータを限定できます。  
@@ -128,4 +127,3 @@ FROM [Adventure Works]
  [スライサー軸の内容の指定 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 421606292e30977064f96bf5e77efca396b90032
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>テーブル モデルの文字列ストレージと照合順序
   文字列 (テキスト値) は高度に圧縮された形式でテーブル モデルに格納されます。この圧縮により、文字列の全体または一部を取得するときに予期しない結果を取得することがあります。 文字列のロケールと照合順序は最も近い親プロジェクトから階層的に継承されるため、文字列の言語が明示的に定義されていない場合、親のロケールと照合順序は、文字列の格納方法、および文字列が一意であるか親の照合順序の定義に従って同様の文字列と結合されるかに影響することがあります。  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  通常、ソース データベースでの言語識別子と照合順序はテーブル モデルの列に値が格納される方法にほとんど影響しないかまったく影響しないことに注意してください。 例外は、ソース データベースが要求された値を変換またはフィルター選択する場合です。  
   
   
-

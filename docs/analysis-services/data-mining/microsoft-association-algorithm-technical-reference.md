@@ -24,17 +24,16 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a029a6efad9ebdbc15e42d593db28f9530b1b8e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、よく知られている Apriori アルゴリズムの直接的な実装です。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 09/01/2017
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
- マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでは使用してもパラメーターを変更することができます、<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>コレクション AMO、またはを使用して、 [MiningModels 要素 & #40 です。ASSL &#41;](../../analysis-services/scripting/collections/miningmodels-element-assl.md) XMLA でします。 次の表では、各パラメーターについて説明します。  
+ マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでは使用してもパラメーターを変更することができます、<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>コレクション AMO、またはを使用して、 [MiningModels 要素 &#40;です。ASSL &#41;](../../analysis-services/scripting/collections/miningmodels-element-assl.md) XMLA でします。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
 >  DMX ステートメントを使用して既存のモデルのパラメーターを変更することはできません。パラメーターは、モデルを作成するときに DMX CREATE MODEL または ALTER STRUCTURE… ADD MODEL で指定する必要があります。  
@@ -176,4 +175,3 @@ ms.lasthandoff: 09/01/2017
  [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   
-

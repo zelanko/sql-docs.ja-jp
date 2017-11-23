@@ -19,17 +19,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 54ecfb3c65f3ab31caf318f6760c653db16ecb78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55c4e6d43ffedd933e968e8fc2355871c698d290
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>オブジェクト メタデータに対する定義の読み取り権限の付与 (Analysis Services)
   管理者は、選択したオブジェクトのオブジェクト定義またはメタデータを読み取る権限を使用して、オブジェクトの定義の変更、オブジェクトの構造の変更、またはオブジェクトの実際のデータの表示を行う権限を付与することなく、オブジェクト情報を表示する権限を付与できます。 **[定義の読み取り]** 権限は、データベース、データ ソース、ディメンション、マイニング構造、マイニング モデルの各レベルで付与できます。 キューブの **[定義の読み取り]** 権限が必要である場合は、データベースの **[定義の読み取り]** を有効にする必要があります。権限は加算的であることに注意してください。 たとえば、あるロールではキューブのメタデータを読み取るための権限を付与し、別のロールでは同じユーザーにディメンションのメタデータを読み取るための権限を付与します。 これら 2 つの異なるロールの権限は組み合わされ、キューブのメタデータを読み取る権限と、そのデータベース内のディメンションのメタデータを読み取る権限をユーザーに与えることになります。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [処理権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   
-

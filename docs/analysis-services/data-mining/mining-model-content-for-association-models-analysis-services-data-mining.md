@@ -20,17 +20,16 @@ helpviewer_keywords:
 - rules [Data Mining]
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec958a3d197bec1574d1264ff78c886cf746d3a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -207,4 +206,3 @@ ms.lasthandoff: 09/01/2017
  [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

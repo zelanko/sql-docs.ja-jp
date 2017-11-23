@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - encryption [SQL Server], system objects
 - system objects [SQL Server]
 - GRANT statement, system objects
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 68fc428edb12c5b62d5e6eadb6d92bc090e66fde
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3bd1f78212ef050c6610eab57f95cd44d51d9fbf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (システム オブジェクトの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,10 +99,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.system_objects & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.system_objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.database_permissions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [システム オブジェクトの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
  [システム オブジェクトの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   
-

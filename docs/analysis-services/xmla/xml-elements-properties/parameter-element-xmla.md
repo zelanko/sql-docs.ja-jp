@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Parameter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Parameter Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Parameter
 - microsoft.xml.analysis.parameter
 - http://schemas.microsoft.com/analysisservices/2003/engine#Parameter
-helpviewer_keywords:
-- Parameter element
+helpviewer_keywords: Parameter element
 ms.assetid: fe31ac3d-a3e8-4f60-a81a-c43271ddbed4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9eeead961dda269f0491d8627c75664a27aea5ca
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b2305957444f451b11d4522c9a4ace1dd1c53f5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameter-element-xmla"></a>Parameter 要素 (XMLA)
   によって使用されるパラメーターの値と名前が含まれています、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
@@ -75,7 +70,6 @@ ms.lasthandoff: 09/01/2017
  などのいくつかの XML for Analysis (XMLA) コマンド、[プロセス](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)コマンド、追加情報が必要になることができます。 **パラメーター**要素は、XMLA コマンドのチャンクされた情報を含む、追加の情報を提供するためのメカニズムを提供します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

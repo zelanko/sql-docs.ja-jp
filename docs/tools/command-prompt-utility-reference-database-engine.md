@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - utilities [SQL Server], command prompt
 - command prompt [SQL Server], utilities
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
-caps.latest.revision: 90
+caps.latest.revision: "90"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 347b5128bb87f455b662bdd5266422948a316af6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL コマンド プロンプト ユーティリティ (データベース エンジン)
   コマンド プロンプト ユーティリティを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の操作のスクリプトを作成できます。 次の表は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に付属するコマンド プロンプト ユーティリティの一覧です。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/28/2017
 |[rsconfig ユーティリティ &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)|レポート サーバー接続を構成します。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[rskeymgmt ユーティリティ &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)|レポート サーバー上の暗号化キーを管理します。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlagent90 アプリケーション](../tools/sqlagent90-application.md)|コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントを開始します。|\<ドライブ >: \Program Files\Microsoft SQL Server\\<*instance_name*> \MSSQL\Binn|  
-|[sqlcmd Utility](../tools/sqlcmd-utility.md)|[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|\<*ドライブ*: > \Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
+|[sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)|[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|\<*ドライブ*: > \Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
 |[SQLdiag ユーティリティ](../tools/sqldiag-utility.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービス用の診断情報を収集します。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqllogship アプリケーション](../tools/sqllogship-application.md)|バックアップ、コピー、および復元ジョブを実行することなく、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行うために使用されます。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SqlLocalDB ユーティリティ](../tools/sqllocaldb-utility.md)|プログラムの開発者を対象とした [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の実行モードです。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\|  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/28/2017
  [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   
-

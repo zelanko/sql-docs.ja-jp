@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0dc4f526fa88d678305afdf5c21623b19aaa5190
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables---key-performance-indicator-representation"></a>テーブルの主要業績評価指標表現
   KPI は、対象の値に対するベース メジャーによって定義された、値のパフォーマンスを測定に使用されます。  
@@ -235,4 +233,3 @@ private void addStaticKPI(object sender, EventArgs e)
  表現は、AMO を使用して作成し、主要業績評価指標を操作する方法を理解するには、AMO to Tabular サンプル; のソース コードを参照してください。具体的には次のソース ファイルで確認してください: AddKPIs.cs です。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   
-

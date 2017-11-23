@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storing data [Analysis Services], cells
 - hierarchies [Analysis Services], cells
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - leaf members
 - leaf cells
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96d7b596c1434dce62dfd9013f277b182f5ff4c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7da5c513675b85a209e76da5787828eb31be24f8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>キューブ セル (Analysis Services - 多次元データ)
   キューブはメジャー グループとディメンションで編成されたセルで構成されています。 セルは、キューブ内の各ディメンションの 1 メンバーのキューブ内の論理的な一意の交差部分を表します。 たとえば、次のダイアグラムで示すキューブには、Source、Route、Time という 3 つのディメンションで編成された 2 つのメジャーを持つメジャー グループが 1 つ含まれています。  
@@ -87,7 +85,7 @@ ms.lasthandoff: 09/01/2017
   
  ![空のセルを示すキューブ図](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro7.gif "空のセルを示すキューブ図")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、空のセルはセルを特別な性質を持ちます。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、次を参照してください。[多次元式 & #40 です。MDX と #41 です。参照](../../mdx/multidimensional-expressions-mdx-reference.md)、および[重要な概念で MDX & #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、空のセルはセルを特別な性質を持ちます。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、次を参照してください。[多次元式 &#40;です。MDX と #41 です。参照](../../mdx/multidimensional-expressions-mdx-reference.md)、および[重要な概念で MDX &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>セキュリティ  
  セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、次を参照してください[データ &#40; をディメンションにカスタムのアクセスを許可。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)、および[データ &#40; をセルにカスタムのアクセスを許可Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
@@ -97,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
-

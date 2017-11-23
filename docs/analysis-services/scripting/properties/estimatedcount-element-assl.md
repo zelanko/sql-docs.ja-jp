@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EstimatedCount Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EstimatedCount Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EstimatedCount
-helpviewer_keywords:
-- EstimatedCount element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EstimatedCount
+helpviewer_keywords: EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 70ce6096c424234d144203044e53eb80ccb7fcb5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 683f8dee8bdb1e765bb6af695a1109093842bd29
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="estimatedcount-element-assl"></a>EstimatedCount 要素 (ASSL)
   ユーザーによって定義された属性のメンバーの推定数を格納します。  
@@ -67,12 +61,11 @@ ms.lasthandoff: 09/01/2017
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
- この値がユーザーによって割り当てられるし、によって使用される、 [AggregationDesign 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md).  
+ この値がユーザーによって割り当てられるし、によって使用される、 [AggregationDesign 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md).  
   
  親に対応する要素**EstimatedCount**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>と<xref:Microsoft.AnalysisServices.DimensionAttribute>です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

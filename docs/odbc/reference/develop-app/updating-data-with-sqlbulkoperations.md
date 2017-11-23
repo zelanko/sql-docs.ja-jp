@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2bcfa39dca534aaa03fe95293b6143180ac9920
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75e5f954065c0b41935aa231c85c093d5ee10226
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations によるデータの更新
 アプリケーションは、データ ソースへの呼び出しと基になるテーブルでの一括更新、削除、fetch、または挿入操作を実行できる**SQLBulkOperations**です。 呼び出す**SQLBulkOperations**便利な代替手段を作成して SQL ステートメントを実行します。 これにより、odbc データ ソースが配置されている SQL ステートメントをサポートしていない場合でも、位置指定更新をサポートできます。 関数呼び出しを使用してデータベースの完全なアクセスを実現するためのパラダイムの一部です。  
@@ -42,11 +40,10 @@ ms.lasthandoff: 09/09/2017
   
  このセクションでは、次のトピックを扱います。  
   
--   [SQLBulkOperations とブックマークによる行の更新](../../../odbc/reference/develop-app/updating-rows-by-bookmark-with-sqlbulkoperations.md)  
+-   [SQLBulkOperations を使ったブックマークによる行の更新](../../../odbc/reference/develop-app/updating-rows-by-bookmark-with-sqlbulkoperations.md)  
   
--   [SQLBulkOperations とブックマークによる行の削除](../../../odbc/reference/develop-app/deleting-rows-by-bookmark-with-sqlbulkoperations.md)  
+-   [SQLBulkOperations を使ったブックマークによる行の削除](../../../odbc/reference/develop-app/deleting-rows-by-bookmark-with-sqlbulkoperations.md)  
   
--   [SQLBulkOperations で行を挿入します。](../../../odbc/reference/develop-app/inserting-rows-with-sqlbulkoperations.md)  
+-   [SQLBulkOperations による行の挿入](../../../odbc/reference/develop-app/inserting-rows-with-sqlbulkoperations.md)  
   
--   [SQLBulkOperations を持つ行のフェッチ](../../../odbc/reference/develop-app/fetching-rows-with-sqlbulkoperations.md)
-
+-   [SQLBulkOperations による行のフェッチ](../../../odbc/reference/develop-app/fetching-rows-with-sqlbulkoperations.md)

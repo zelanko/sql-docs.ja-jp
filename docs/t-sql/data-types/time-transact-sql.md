@@ -3,17 +3,18 @@ title: "時間 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
 - time
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - time [SQL Server]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   1 日の時刻を定義します。 時刻は 24 時間形式でタイム ゾーンは認識されません。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 10/05/2017
 |構文|**時間**[(*小数部の 2 番目のスケール*)]|  
 |使用方法|宣言@MyTime **time (7)**<br /><br /> Table1 のテーブルの作成 (Column1 **time (7)** )|  
 |*秒の小数部の桁数*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の 0 から 3 の整数を指定できます。<br /><br /> 既定の小数部のスケールは、7 (100 ns) です。|  
-|既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|hh:mm:ss [.nnnnnnn] (Informatica の hh:mm:ss [.nnn])<br /><br /> 詳細については、これに続く「ダウンレベルのクライアントの旧バージョンとの互換性」セクションを参照してください.|  
+|既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|Informatica の hh:mm:ss [.nnnnnnn])<br /><br /> 詳細については、これに続く「ダウンレベルのクライアントの旧バージョンとの互換性」セクションを参照してください.|  
 |範囲|00:00:00.0000000 から 23:59:59.9999999 (00:00:00.000 Informatica の 23:59:59.999 経由)|  
 |要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n\*0 ~ 9999999、秒の小数部を表す、0 ~ 7 桁の数字です。 Informatica での n\* 0 から 999 まで 3 桁の数字のゼロです。|  
 |文字長|最大 16 (hh:mm:ss.nnnnnnn) に 8 文字以上 (hh:mm:ss)。 Informatica、最大値は 12 (hh:mm:ss.nnn) です。|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 10/05/2017
 |ストレージのサイズ|既定では 5 バイト固定 (秒部分の既定の有効桁数は 100ns) です。 Informatica、既定値は 4 バイト、小数部を 1 ミリ秒の既定値は、固定有効桁数を 2 番目です。|  
 |精度|100 ナノ秒 (Informatica で 1 ミリ秒)。|  
 |既定値|00:00:00<br /><br /> この値はの追加された時刻の部分からの暗黙的な変換の使用**日付**に**datetime2**または**datetimeoffset**です。|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|可|  
 |タイム ゾーン オフセットへの対応と保持|不可|  
 |夏時間への対応|不可|  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 10/05/2017
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss [.nnnnnnn] [+ &#124;-] hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付型データと時刻型データの変換  
- 日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ 日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>time(n) データ型から他の日付/時刻データ型への変換  
  このセクションでは、どうなるかについて説明しますと、**時間**データ型は他の日付と時刻のデータ型に変換します。  
@@ -277,4 +277,3 @@ SELECT
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

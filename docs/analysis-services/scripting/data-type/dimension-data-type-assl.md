@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Dimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Dimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Dimension data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Dimension data type
 ms.assetid: 3fe6adc2-5206-44c3-a689-a731705f43ca
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aec187232caf3bab2c6108c7424ba75bb49795e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3db273659dd3401684dbad1fa19b11a92a47f874
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-data-type-assl"></a>Dimension データ型 (ASSL)
   データベース ディメンションを表すプリミティブ データ型を定義します。  
@@ -113,7 +108,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデル内の対応する要素が<xref:Microsoft.AnalysisServices.Dimension>、 <xref:Microsoft.AnalysisServices.AggregationDimension>、 <xref:Microsoft.AnalysisServices.AggregationDesignDimension>、 <xref:Microsoft.AnalysisServices.CubeDimension>、 <xref:Microsoft.AnalysisServices.MeasureGroupDimension>、および<xref:Microsoft.AnalysisServices.PerspectiveDimension>です。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

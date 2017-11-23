@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_DATASOURCES
+apiname: DISCOVER_DATASOURCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DATASOURCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9c91d5b1d3e0fb7ec972e47079a1bf36d8f9b87
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行セット
   サーバーまたは Web サービスで使用できる XML for Analysis (XMLA) プロバイダー データ ソースの一覧を返します。 パブリッシュされたデータ ソースは、アプリケーション Web サーバーの URL から返されます。 クライアントは、この一覧内のいずれかのデータ ソースに接続できます。  
@@ -47,13 +43,13 @@ ms.lasthandoff: 09/01/2017
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**データ ソース名**|**DBTYPE_WSTR**|はい|データ ソースの名前など**Adventure Works**です。|  
+|**データ ソース名**|**DBTYPE_WSTR**|可|データ ソースの名前など**Adventure Works**です。|  
 |**DataSourceDescription**|**DBTYPE_WSTR**||パブリッシャーによって入力されるデータ ソースの説明。<br /><br /> 返す可能性があります**NULL**です。|  
-|**[URL]**|**DBTYPE_WSTR**|はい|そのデータ ソースに対して XML for Analysis (XMLA) メソッドを呼び出す場所を示す一意のパス。<br /><br /> 返す可能性があります**NULL**です。|  
+|**[URL]**|**DBTYPE_WSTR**|可|そのデータ ソースに対して XML for Analysis (XMLA) メソッドを呼び出す場所を示す一意のパス。<br /><br /> 返す可能性があります**NULL**です。|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||データ ソースに接続するために必要な追加情報が含まれている文字列。<br /><br /> 返す可能性があります**NULL**です。|  
-|**ProviderName**|**DBTYPE_WSTR**|はい|データ ソースのプロバイダーの名前。<br /><br /> 例:`"MSOLAP"`<br /><br /> 返す可能性があります**NULL**です。|  
-|**プロバイダーの種類**|**DBTYPE_WSTR**|はい|プロバイダーによってサポートされているデータ型。 この配列には、次の 1 つまたは複数の型を含めることができます。<br /><br /> **MDP**: 多次元データ プロバイダー。<br /><br /> **TDP**: 表形式のデータ プロバイダー。<br /><br /> **DMP**: データ マイニング プロバイダー (を実装して、OLE db for Data Mining 仕様)。|  
-|**AuthenticationMode**|**DBTYPE_WSTR**|はい|データ ソースで使用するセキュリティ モードの種類の指定。 値は次のいずれかです。<br /><br /> **認証されていない**: 送信するユーザー ID またはパスワードを持たない。<br /><br /> **認証**: データ ソースへの接続に必要な情報では、ユーザー ID とパスワードを含める必要があります。<br /><br /> **統合型**: データ ソースによって提供される統合セキュリティなどの承認を決定する、基になるセキュリティを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)]インターネット インフォメーション サービス (IIS)。|  
+|**ProviderName**|**DBTYPE_WSTR**|可|データ ソースのプロバイダーの名前。<br /><br /> 例:`"MSOLAP"`<br /><br /> 返す可能性があります**NULL**です。|  
+|**プロバイダーの種類**|**DBTYPE_WSTR**|可|プロバイダーによってサポートされているデータ型。 この配列には、次の 1 つまたは複数の型を含めることができます。<br /><br /> **MDP**: 多次元データ プロバイダー。<br /><br /> **TDP**: 表形式のデータ プロバイダー。<br /><br /> **DMP**: データ マイニング プロバイダー (を実装して、OLE db for Data Mining 仕様)。|  
+|**AuthenticationMode**|**DBTYPE_WSTR**|可|データ ソースで使用するセキュリティ モードの種類の指定。 値は次のいずれかです。<br /><br /> **認証されていない**: 送信するユーザー ID またはパスワードを持たない。<br /><br /> **認証**: データ ソースへの接続に必要な情報では、ユーザー ID とパスワードを含める必要があります。<br /><br /> **統合型**: データ ソースによって提供される統合セキュリティなどの承認を決定する、基になるセキュリティを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)]インターネット インフォメーション サービス (IIS)。|  
   
  このスキーマ行セットは並べ替えられません。  
   
@@ -71,7 +67,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|DataSources|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset20::Clone
 - Recordset20::raw_Clone
-helpviewer_keywords:
-- Clone method [ADO]
+helpviewer_keywords: Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34f8e0161fa85ec497ec6a1e6b414691161ff7a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b7586bef017cd4e5f3a89586b8600abfd183f5a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clone-method-ado"></a>Clone メソッド (ADO)
 複製を作成[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 、既存のオブジェクト**Recordset**オブジェクト。 必要に応じて、複製が読み取り専用であることを指定します。  
@@ -80,20 +77,19 @@ rsNew.Filter = rsOriginal.Filter
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|不可|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|不可|  
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|不可|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|はい|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|可|  
 |[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|不可|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|はい|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|可|  
 |[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|不可|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|はい|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|はい|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|可|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|可|  
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|不可|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|不可|  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [メソッドの例 (VB) の複製します。](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [メソッドの例 (VBScript) の複製します。](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
- [メソッドの例を複製 (vc++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
-
+ [Clone メソッドの例 (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - RollbackTrans method [ADO], Visual Basic example
 - CommitTrans method [ADO], Visual Basic example
 - BeginTrans method [ADO], Visual Basic example
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 95e490863b80fa226e5f310560f0b1a197227620
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b2c434a90d90ff2e84456b67a10c9a36370fe9a0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)
 この例ですべての心理学の本型を変更する、***タイトル***データベースのテーブルです。 後に、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドに加えられたすべての変更を分離するトランザクションを開始する、***タイトル***、テーブル、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは、変更を保存します。 使用することができます、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して保存した変更を元に戻す、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。  
@@ -141,5 +138,4 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

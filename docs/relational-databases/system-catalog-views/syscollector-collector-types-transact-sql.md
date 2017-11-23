@@ -1,0 +1,74 @@
+---
+title: "syscollector_collector_types (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-catalog-views
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- syscollector_collector_types
+- syscollector_collector_types_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- data collector view
+- syscollector_collector_types view
+ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
+caps.latest.revision: "20"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 9fc7ec14a669ad20e5d044b237875d9575ed2f6c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
+---
+# <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  コレクション アイテムのコレクターの種類に関する情報を提供します。  
+  
+||  
+|-|  
+|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+  
+|列名|データ型|Description|  
+|-----------------|---------------|-----------------|  
+|**collector_type_uid**|**uniqueidentifer**|コレクション型の GUID。 NULL 値は許可されません。|  
+|**name**|**sysname**|コレクション型の名前。 NULL 値は許可されません。|  
+|**parameter_schema**|**xml**|指定されたコレクターの種類の構成を記述する XML スキーマ。 この XML スキーマは、特定のコレクション アイテム インスタンスに関連付けられた実際の XML 構成を検証するときに使用されます。 NULL 値が許可されます。|  
+|**parameter_formatter**|**xml**|コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートを指定します。 NULL 値が許可されます。|  
+|**collection_package_id**|**uniqueidentifer**|コレクション パッケージの GUID。 NULL 値は許可されません。|  
+|**collection_package_path**|**nvarchar (4000)**|コレクション パッケージのパス。 NULL 値が許可されます。|  
+|**collection_package_name**|**sysname**|コレクション パッケージの名前。 NULL 値は許可されません。|  
+|**upload_package_id**|**uniqueidentifer**|アップロード パッケージの GUID。 NULL 値は許可されません。|  
+|**upload_package_path**|**nvarchar (4000)**|アップロード パッケージのパス。 NULL 値が許可されます。|  
+|**upload_package_name**|**sysname**|アップロード パッケージの名前。 NULL 値は許可されません。|  
+|**is_system**|**bit**|オン (1) またはオフ (0) を示す、コレクター型は、データ コレクターで出荷された場合、または後で追加された場合、 **dc_admin**です。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
+  
+## <a name="permissions"></a>Permissions  
+ SELECT 権限が必要**dc_operator**、 **dc_proxy**です。  
+  
+## <a name="change-history"></a>変更履歴  
+  
+|変更内容|  
+|---------------------|  
+|更新**collection_type_uid**列名を**collector_type_uid**です。|  
+|説明を修正、 **parameter_schema**列値が null 許容であることを示します。|  
+|追加、 **parameter_formatter**列です。|  
+|データ型を修正、 **collection_package_path**列、値が null 許容であることを示す説明を更新します。|  
+|データ型を修正、 **upload_package_path**列、値が null 許容であることを示す説明を更新します。|  
+  
+## <a name="see-also"></a>参照  
+ [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
+  
+  

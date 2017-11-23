@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54298b1c08235452f5717888754569d55442a47a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3047d17ff1e9785e203b6be0ab48c7c27fd88d1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>名前 (名前付きパラメーター) でパラメーターのバインド
 特定の Dbms では、アプリケーションの代わりに、プロシージャ呼び出し内の位置での名前でストアド プロシージャにパラメーターを指定できるようにします。 このようなパラメーターと呼びます*名前付きパラメーター*です。 ODBC では、名前付きパラメーターの使用をサポートします。 ODBC では、名前付きパラメーターはストアド プロシージャ呼び出しでのみ使用し、他の SQL ステートメントでは使用できません。  
@@ -65,4 +63,3 @@ SQLSetDescField(hIpd, 1, SQL_DESC_NAME, "@quote", SQL_NTS);
 // execute.  
 SQLExecute(hstmt);  
 ```
-

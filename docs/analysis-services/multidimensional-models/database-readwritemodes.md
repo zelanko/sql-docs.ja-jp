@@ -18,17 +18,16 @@ helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f91af75c3ecd493ec781e7c5a8e0e45cca075202
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 917f9e3802cdf0c003a956b464c7df8d8b10ca5e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-readwritemodes"></a>データベースの ReadWriteMode
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを、読み書き可能から読み取り専用に変更したり、読み取り専用から読み書き可能に変更したりすることは少なくありません。 こうした状況は、ソリューションのスケールアウトやパフォーマンスの向上のために 1 つのデータベース フォルダーを複数のサーバー間で共有するなど、ビジネス上のニーズによって頻繁に発生します。 このような場合は、 **ReadWriteMode** データベース プロパティを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA はデータベースの動作モードを容易に変更できます。  
@@ -63,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [Attach 要素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   
   
-

@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - database roles [SQL Server], permissions
 - REVOKE statement, roles
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c02242a5428a6ae7c2426efd517809f8e374da4e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee64655f9ac49775692d88ff6bcd95fd7ff28f4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +194,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース プリンシパルの権限の GRANT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [データベース プリンシパルの権限の GRANT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
  [データベース プリンシパルの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_permissions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
@@ -209,5 +206,4 @@ GO
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-
 

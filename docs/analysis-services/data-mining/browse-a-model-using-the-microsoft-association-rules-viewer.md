@@ -24,17 +24,16 @@ helpviewer_keywords:
 - Microsoft Association Rules Viewer
 - dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41ef2091d63d1a4e5f2f3bf294e590be5cd173e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8145dd87dd2c1e09663a8b6f6c0cea6dcb1ae7f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Microsoft アソシエーション ルール ビューアーを使用したモデルの参照
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アソシエーション ルール ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析に使用できるデータ マイニング モデルを作成するときに使用するアソシエーション アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)」を参照してください。  
@@ -100,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

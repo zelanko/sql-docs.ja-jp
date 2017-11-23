@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-functions"></a>文字列関数
 次の表は、文字列操作関数を一覧表示します。 文字列関数が呼び出すことによって、ドライバーでサポートされる、アプリケーションを判別**SQLGetInfo**で、*情報の種類*SQL_STRING_FUNCTIONS のです。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**領域 (** *カウント* **)** (ODBC 2.0)|成る文字列を返します*カウント*スペースです。|  
 |**部分文字列 (** *string_exp*、*開始*、長さ**)** (ODBC 1.0)|派生した文字列を返します*string_exp*で指定された文字位置から始まる、*開始*の*長さ*文字です。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|文字列を以下にするを返します*string_exp*、すべて小文字を大文字に変換します。|
-

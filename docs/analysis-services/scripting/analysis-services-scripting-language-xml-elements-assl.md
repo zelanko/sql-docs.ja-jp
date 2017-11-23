@@ -14,24 +14,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8f9da21d5e3584a41ac9285be6c6541baf3de999
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af8401c0f7fb3b4e5a9088bc3698ce83fad70119
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services スクリプト言語の XML 要素 (ASSL)
   Analysis Services スクリプト言語 (ASSL) のスキーマには XML 要素のみが含まれますが、開発者にとって、これらの要素は次の概念に対応します。  
@@ -45,19 +43,18 @@ ms.lasthandoff: 09/01/2017
 -   などのデータ型**バインド**と**権限**、子要素とその他のオブジェクトのプロパティの定義に使用されます。  
   
     > [!NOTE]  
-    >  このセクションでは、データ型要素について説明しません。 詳細についてを参照してください、 [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md).  
+    >  このセクションでは、データ型要素について説明しません。 詳細についてを参照してください、 [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md).  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[オブジェクト & #40 です。ASSL &#41;](../../analysis-services/scripting/objects/objects-assl.md)|ASSL スキーマでオブジェクトとして使用する各要素の構文と使用方法について説明します。|  
-|[コレクション & #40 です。ASSL &#41;](../../analysis-services/scripting/collections/collections-assl.md)|ASSL スキーマでコレクションとして使用する各要素の構文と使用方法について説明します。|  
-|[プロパティ & #40 です。ASSL &#41;](../../analysis-services/scripting/properties/properties-assl.md)|ASSL スキーマでオブジェクト プロパティとして使用する各要素の構文と使用方法について説明します。|  
+|[オブジェクト &#40;です。ASSL &#41;](../../analysis-services/scripting/objects/objects-assl.md)|ASSL スキーマでオブジェクトとして使用する各要素の構文と使用方法について説明します。|  
+|[コレクション &#40;です。ASSL &#41;](../../analysis-services/scripting/collections/collections-assl.md)|ASSL スキーマでコレクションとして使用する各要素の構文と使用方法について説明します。|  
+|[プロパティ &#40;です。ASSL &#41;](../../analysis-services/scripting/properties/properties-assl.md)|ASSL スキーマでオブジェクト プロパティとして使用する各要素の構文と使用方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML 要素の階層 & #40 です。ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
- [Analysis Services スクリプト言語 & #40 です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語の XML 要素の階層 &#40;です。ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
+ [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

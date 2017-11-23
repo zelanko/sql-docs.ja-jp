@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerPreparedStatement.setTime (int, java.sql.Time, java.lang.Calendar)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerPreparedStatement.setTime (int, java.sql.Time, java.lang.Calendar)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8fbe886670a2ffdb6065b57cfb8a27a9ff078e99
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36eaa1edfddd88ee0d61820f65c0ff5e6f57fef3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime (int, java.sql.Time, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -68,9 +64,8 @@ public final void setTime(int n,
  詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)です。  
   
 ## <a name="see-also"></a>参照  
- [setTime メソッド & #40 です。SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   
+ [setTime メソッド &#40;です。SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   
-

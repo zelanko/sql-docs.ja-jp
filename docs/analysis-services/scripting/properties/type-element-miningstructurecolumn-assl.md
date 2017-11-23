@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Type Element (MiningStructureColumn)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Type Element (MiningStructureColumn)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TYPE
-helpviewer_keywords:
-- Type element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TYPE
+helpviewer_keywords: Type element
 ms.assetid: ce999716-9487-4348-bc42-270a2026a452
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42050369954e449e63e0c9029378b0b1bf95065e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1fbc9ce30cd9f436a3bce1d96e532d6264b08a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-element-miningstructurecolumn-assl"></a>Type 要素 (MiningStructureColumn) (ASSL)
   型を含む、 [MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)要素。  
@@ -83,7 +77,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningStructureColumn>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

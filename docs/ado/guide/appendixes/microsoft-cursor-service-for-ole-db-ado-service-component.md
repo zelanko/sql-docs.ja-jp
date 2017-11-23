@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7a1f8568b633417196c6c9dda3e8a3615146603
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB の概要の Microsoft カーソル サービス
 OLE DB 用の Microsoft カーソル サービスは、データ プロバイダーのカーソル サポート機能を補完します。 その結果、ユーザーは、すべてのデータ プロバイダーで比較的一定な機能を認識します。
@@ -98,4 +96,3 @@ rs.Properties("Optimize") = True
 
 ## <a name="method-behavior"></a>メソッドの動作
  OLE DB のカーソルのサービスを有効またはの動作に影響、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの[Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドおよび**レコード セット**オブジェクトの[を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)、[再同期](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[保存](../../../ado/reference/ado-api/save-method.md)メソッドです。
-

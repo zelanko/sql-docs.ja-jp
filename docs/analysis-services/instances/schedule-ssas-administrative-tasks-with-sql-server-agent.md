@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 28be70a8fe43d1c22ba3e7787d507c694b09750a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 857540f661aa8eaecd42d98a648c03c043d06e2a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
   SQL Server エージェント サービスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理タスクのスケジュールを設定して、必要なときに必要な順序で実行できます。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -232,7 +231,6 @@ ms.lasthandoff: 09/01/2017
 16. ジョブが完了したら、 **[閉じる]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションと設定 & #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [処理オプションと設定 &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   
-

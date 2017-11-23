@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9a21b23-3a06-4ef8-bc06-9c79cdc54870
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7c69264c070a5cbae9ed5eee3b6103505633ab4f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 81cee939240fd9379f2c521443272ae478de6243
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Analysis Services からのインポート (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のサーバーからインポート プロジェクト テンプレートを使用して既存の表形式モデルからメタデータをインポートし、新しい表形式モデル プロジェクトを作成する方法を説明します。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [プロジェクトのプロパティ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   
-

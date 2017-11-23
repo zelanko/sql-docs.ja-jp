@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4442e8fe5464f1eb8c7e79fe4df347ae10959b36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd0ace9aabf10c2b7e5b34d28bd54dbde84cfd0a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="static-cursors"></a>静的カーソル
 常に、静的カーソルには、カーソルが最初に開いた時点と、結果セットが表示されます。 実装によって静的カーソルは読み取り専用または読み取り/書き込みと前方と後方スクロールを提供します。 静的カーソルは、メンバーシップ、順序、または、カーソルが開かれた後に結果セットの値に加えられた変更を通常は検出されません。 静的カーソルは、これらは、これを行うには必要ありませんが、独自の更新、削除、および挿入を検出することがあります。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  [順方向専用カーソル](../../../ado/guide/data/forward-only-cursors.md)   
  [Keyset カーソル](../../../ado/guide/data/keyset-cursors.md)   
  [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)
-

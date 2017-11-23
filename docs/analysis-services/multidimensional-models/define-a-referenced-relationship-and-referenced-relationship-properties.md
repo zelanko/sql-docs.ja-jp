@@ -18,17 +18,16 @@ helpviewer_keywords:
 - referenced dimension relationship
 - relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82aefe81ab4b5229034cb88e0e4648f998373209
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>参照リレーションシップと参照リレーションシップのプロパティの定義
   参照ディメンションのリレーションシップは、キューブ デザイナーの **[ディメンションの使用法]** タブで定義します。 参照ディメンションのリレーションシップを定義するには、以下を指定します。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  参照ディメンションでは、参照ディメンションと参照ディメンションのメイン テーブルに対応するメジャー グループ間のリレーションシップを定義する属性を特定することにより、粒度が指定されます。 複数の参照ディメンションを連結すると、最も外側のディメンションからメジャー グループまでのリレーションシップが参照によって定義されます。  
   
   
-

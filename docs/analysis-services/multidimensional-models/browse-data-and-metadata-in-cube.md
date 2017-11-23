@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>キューブ内のデータおよびメタデータの参照
   キューブ デザイナーの **[ブラウザー]** タブを使用すると、キューブ データを参照できます。 このビューでは、キューブ構造を検証し、データベース オブジェクトのデータ、計算、書式設定、およびセキュリティを確認できます。 レポート ツールや他のクライアント アプリケーションで、キューブがユーザーにどのように表示されるかを迅速に検証できます。 キューブのデータを参照すると、異なるディメンションを表示し、メンバーをドリル ダウンし、ディメンションをスライスできます。  
@@ -116,4 +115,3 @@ ms.lasthandoff: 09/01/2017
  データ ペイン内を右クリックして **[空のセルを表示]**をクリックすると、データ グリッド内の空のセルを非表示にすることができます。  
   
   
-

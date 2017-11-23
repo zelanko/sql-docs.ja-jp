@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
 - RESTORE REWINDONLY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - closing backup devices
 - backup devices [SQL Server], rewinding
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 457ce42346ec53d30cc8a47a6bc4f82a3271d8fc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 731cb91434fcf193d7a3391151400942061dfd21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメントで REWINDONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ FROM <backup_device> [ ,...n ]
  {ディスク |テープ}  **=**  { **'***physical_backup_device_name***'**  |   **@** *physical_backup_device_name_var* }  
  指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります。 ディスク = 'C:\Program files \microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' や TAPE ='\\\\。 \TAPE0' です。 変数として指定されている場合 (**@***physical_backup_device_name_var*)、デバイス名を指定できます文字列定数として指定 ( **@**  *physical_backup_device_name_var* = '*physcial_backup_device_name*') または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
- ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名の使用の詳細については、次を参照してください。[バックアップ デバイス & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名の使用の詳細については、次を参照してください。[バックアップ デバイス &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  Microsoft SQL Server を実行しているアカウントによっては、復元操作を実行するために、リモート コンピューターまたはネットワーク サーバーへの読み取りアクセスが必要です。  
   
@@ -113,5 +110,4 @@ FROM <backup_device> [ ,...n ]
  [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-
 

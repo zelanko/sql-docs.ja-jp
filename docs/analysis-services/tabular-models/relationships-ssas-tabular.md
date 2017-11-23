@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec09d62c989f8a01c3984491ab4aa187e1eea654
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-ssas-tabular"></a>リレーションシップ (SSAS テーブル)
   テーブル モデルでは、リレーションシップは 2 つのデータ テーブル間の接続を表します。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
@@ -182,8 +181,8 @@ ms.lasthandoff: 09/01/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[2 つのテーブル間のリレーションシップを作成します。](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|2 つのテーブル間のリレーションシップを手動で作成する方法について説明します。|  
-|[リレーションシップを削除します。](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|リレーションシップを削除する方法とリレーションシップの削除がもたらす影響について説明します。|  
+|[2 つのテーブル間のリレーションシップの作成](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|2 つのテーブル間のリレーションシップを手動で作成する方法について説明します。|  
+|[リレーションシップの削除](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|リレーションシップを削除する方法とリレーションシップの削除がもたらす影響について説明します。|  
 |[SQL Server 2016 Analysis Services における表形式モデルの双方向のクロス フィルター](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|関連するテーブルの双方向クロス フィルターについて説明します。 テーブル間の関係があり、双方向のクロス フィルターが定義されている場合は、あるテーブル リレーションシップのフィルター コンテキストを 2 つ目のテーブル リレーションシップ間でクエリを実行するときに使用できます。|  
   
 ## <a name="see-also"></a>参照  
@@ -191,4 +190,3 @@ ms.lasthandoff: 09/01/2017
  [データのインポート](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
-

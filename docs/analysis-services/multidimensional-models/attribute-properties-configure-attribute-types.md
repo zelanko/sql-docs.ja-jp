@@ -22,17 +22,16 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 60ccef2ddc36c4a8dda691526cb3209eb6737c6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 740d140999a182df59eb9741c5addedd9dac0aac
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>属性のプロパティ - 属性の種類を構成します。
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、属性の型を使用して、ビジネス機能で属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
@@ -320,4 +319,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

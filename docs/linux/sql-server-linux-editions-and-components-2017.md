@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>エディションと SQL Server 2017 on Linux のサポートされる機能
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/25/2017
 インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
 
 最新のリリース ノートと新機能については、以下の情報を参照してください。
-- [Linux のリリース ノート SQL Server](sql-server-linux-release-notes.md)
+- [Linux 上の SQL Server のリリース ノート](sql-server-linux-release-notes.md)
 - [SQL Server on Linux の新機能](sql-server-linux-whats-new.md)
 
 Linux で使用できない SQL Server 機能の一覧は、次を参照してください。[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)です。
@@ -105,9 +104,9 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |-------------|----------------|--------------|---------|------------------------|  
 |ログ配布|はい|可|可|不可|  
 |バックアップ圧縮|はい|可|いいえ|不可| 
-|データベース スナップショット|はい|いいえ|いいえ|不可|
-|Always On フェールオーバー クラスター インスタンス<sup>1</sup>|はい|可|いいえ|不可| 
-|Always On 可用性グループ<sup>2</sup>|はい|いいえ|いいえ|不可|
+|データベース スナップショット|可|いいえ|いいえ|不可|
+|Always On フェールオーバー クラスター インスタンス<sup>1</sup>|可|可|いいえ|不可| 
+|Always On 可用性グループ<sup>2</sup>|可|いいえ|いいえ|不可|
 |基本的な可用性グループ<sup>3</sup>|不可|可|いいえ|不可|
 |最小レプリカ コミット可用性グループ|はい|可|いいえ|不可|
 |クラスターを使用しない可用性グループ|はい|可|いいえ|不可|
@@ -121,11 +120,11 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |暗号化されたバックアップ|はい|可|いいえ|不可|
 |Windows Azure へのハイブリッド バックアップ (URL へのバックアップ)|はい|可|いいえ|不可|
   
-<sup>1</sup> Enterprise edition、ノードの数はオペレーティング システムの最大値。 Standard edition では、2 つのノードのサポートです。 
+<sup>1</sup> Enterprise edition、ノードの数はオペレーティング システムの最大値。 Standard Edition では、2 つのノードがサポートされます。 
 
 <sup>2</sup>の Enterprise edition は、2 つの同期セカンダリ レプリカを含む、最大 8 個のセカンダリ レプリカのサポートを提供します。 
 
-<sup>3</sup> standard edition には、基本的な可用性グループがサポートしています。 基本的な可用性グループには、1 つのデータベースで、2 つのレプリカがサポートしています。 基本的な可用性グループの詳細については、次を参照してください。[基本的な可用性グループ](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)です。    
+<sup>3</sup> standard edition には、基本的な可用性グループがサポートしています。 基本的な可用性グループは、1 つのデータベースで、2 つのレプリカをサポートします。 基本的な可用性グループの詳細については、「[基本的な可用性グループ](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。    
 
 ##  <a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス  
   
@@ -135,7 +134,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |クラスター化列ストア インデックス内のラージ オブジェクト バイナリ|はい|可|可|はい|  
 |オンライン非クラスター化列ストア インデックスの再構築|はい|いいえ|いいえ|不可|
 |インメモリ OLTP <sup>1</sup>|はい|可|可|はい|
-|恒久的なメイン メモリ|はい|可|可|はい|
+|恒久的なメイン メモリ|はい|可|可|可|
 |テーブルとインデックスのパーティション分割|はい|可|可|はい|  
 |データ圧縮|はい|可|可|はい|
 |[リソース ガバナー]|はい|いいえ|いいえ|不可|  
@@ -145,8 +144,8 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |遅延持続性|はい|可|可|はい|
 |自動調整|はい|いいえ|いいえ|不可|
 |バッチ モードの適応型結合|はい|いいえ|いいえ|不可|
-|バッチ モード メモリ許可フィードバック|はい|いいえ|いいえ|不可|
-|複数ステートメントのテーブル値関数のインターリーブ実行|はい|可|可|はい|
+|バッチ モード メモリ許可フィードバック|可|いいえ|いいえ|不可|
+|複数ステートメントのテーブル値関数のインターリーブ実行|可|可|可|可|
 |一括挿入の機能強化|はい|可|可|はい|
 
 
@@ -217,7 +216,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |空間インデックス|はい|可|可|はい|   
 |平面データ型と測地データ型|はい|可|可|はい| 
 |高度な空間的なライブラリ|はい|可|可|はい|   
-|業界標準の空間データ形式のインポート/エクスポート|はい|可|可|はい|   
+|業界標準の空間データ形式のインポート/エクスポート|はい|可|可|可|   
 
   
 ## <a name="next-steps"></a>次の手順 
@@ -229,4 +228,3 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 
   
   
-

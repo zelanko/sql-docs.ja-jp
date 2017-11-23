@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Catalog::raw_GetObjectOwner
 - _Catalog::GetObjectOwner
-helpviewer_keywords:
-- GetObjectOwner method [ADOX]
+helpviewer_keywords: GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb2c0957c4bda61387986eb1d05c4483954045ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3c6f6aa4401646f43dd303988cc151d1ed43d21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner メソッド (ADOX)
 内のオブジェクトの所有者を返します、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)です。  
@@ -58,9 +55,8 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  プロバイダーが返すオブジェクトの所有者をサポートしていない場合は、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
- [カタログ オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
  [GetObjectOwner と SetObjectOwner メソッドの例 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [SetObjectOwner メソッド](../../../ado/reference/adox-api/setobjectowner-method.md)
-

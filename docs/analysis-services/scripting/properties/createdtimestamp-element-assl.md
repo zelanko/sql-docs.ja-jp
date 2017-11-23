@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CreatedTimestamp Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CreatedTimestamp Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CreatedTimestamp
-helpviewer_keywords:
-- CreatedTimestamp element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CreatedTimestamp
+helpviewer_keywords: CreatedTimestamp element
 ms.assetid: 35f5dd33-ea82-4be3-a117-69136aa9d1a4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f6e722dba2f6483f5314c7513e00d175cea1e88c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1c17436e60809006e7204ed149d128eab4c0338
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="createdtimestamp-element-assl"></a>CreatedTimestamp 要素 (ASSL)
   親要素の読み取り専用の作成タイムスタンプを格納します。  
@@ -72,7 +66,6 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**CreatedTimestamp**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.Assembly>、 <xref:Microsoft.AnalysisServices.Cube>、 <xref:Microsoft.AnalysisServices.Database>、 <xref:Microsoft.AnalysisServices.DataSource>、 <xref:Microsoft.AnalysisServices.DataSourceView>、 <xref:Microsoft.AnalysisServices.Dimension>、 <xref:Microsoft.AnalysisServices.MdxScript>、 <xref:Microsoft.AnalysisServices.MeasureGroup>、 <xref:Microsoft.AnalysisServices.MiningModel>、 <xref:Microsoft.AnalysisServices.MiningStructure>、 <xref:Microsoft.AnalysisServices.Partition>、 <xref:Microsoft.AnalysisServices.Permission>、および<xref:Microsoft.AnalysisServices.Perspective>です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

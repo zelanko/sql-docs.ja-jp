@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c157c41d046585806c7ae3f00ef822fa90e06b2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce39b2b1c7a580be7cc4e51dd0c5c83b2d863907
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>属性と名前のプロパティの例 (vc++)
 この例の値を表示、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。 使用して、[名前](../../../ado/reference/ado-api/name-property-ado.md)それぞれの名前を表示するプロパティを**フィールド**と**プロパティ**オブジェクト。  
@@ -193,5 +190,4 @@ void PrintComError(_com_error &e) {
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Name プロパティ (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [プロパティのオブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-
+ [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

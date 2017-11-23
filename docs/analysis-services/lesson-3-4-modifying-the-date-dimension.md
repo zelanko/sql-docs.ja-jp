@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ce770ce3ac600e086ea0b6d1ed03ed1b26b4ee3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c514356aeabd59525fdab80e6e1c03f93d9ae34f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>レッスン 3、4、Date ディメンションの変更
 このトピックの実習では、ユーザー定義階層を作成し、Date、Month、Calendar Quarter、および Calendar Semester 属性に表示されるメンバー名を変更します。 また、属性の複合キーの定義、ディメンション メンバーの並べ替え順序の制御、および属性リレーションシップの定義も行います。  
@@ -312,4 +309,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>参照  
 [多次元モデル内のディメンション](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
-

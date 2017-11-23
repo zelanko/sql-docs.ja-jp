@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO]
+helpviewer_keywords: Recordset object [ADO]
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d14f7bc8b5130c7779ab4e065b9d2d73ae388bc8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a18651f533044220deededf86c6bc7b60a9ada38
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-recordset-structure"></a>レコード セットの構造を理解します。
 すべて**Recordset**が、**フィールド**1 つ以上から成るコレクション**フィールド**オブジェクト。 A**フィールド**オブジェクトは、通常、テーブルの列を表します。 次のトピックでは、内を移動する方法を説明します。、**フィールド**各フィールドに関する情報のコレクションを取得します。 どのような情報が経由で利用可能なについても説明してから、**フィールド**オブジェクトとその使用方法です。  
@@ -34,5 +31,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [Field オブジェクト](../../../ado/guide/data/the-field-object.md)  
   
--   [レコード セットの操作](../../../ado/guide/data/working-with-recordsets.md)
-
+-   [レコードセットの操作](../../../ado/guide/data/working-with-recordsets.md)

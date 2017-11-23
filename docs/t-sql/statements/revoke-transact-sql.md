@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - REVOKE_TSQL
 - REVOKE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - schema-level securables [SQL Server]
 - REVOKE statement, Transact-SQL syntax
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - permissions [SQL Server], revoking
 - dropping permissions
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3f96892b5671d9616a3c809aa6b83fbcaa071b6d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa08be63c0d792ed1e0422860b55a0c8f2abdc8b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +170,8 @@ REVOKE
 |---------------|-----------|  
 |アプリケーション ロール|[データベース プリンシパルの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |アセンブリ|[アセンブリの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
-|非対称キー|[非対称キーの権限を REVOKE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
-|可用性グループ|[REVOKE 可用性グループの権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
+|非対称キー|[非対称キーの権限を REVOKE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
+|可用性グループ|[REVOKE 可用性グループの権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
 |Certificate|[証明書の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
 |コントラクト|[Service Broker の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |データベース|[データベースのアクセス許可 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
@@ -182,11 +179,11 @@ REVOKE
 |データベース スコープ資格情報|[REVOKE データベース スコープ資格情報 (TRANSACT-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |フルテキスト カタログ|[フルテキストの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |フルテキスト ストップリスト|[フルテキストの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|関数|[REVOKE オブジェクト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|関数|[REVOKE オブジェクト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Login|[サーバー プリンシパルの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |メッセージの種類|[Service Broker の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|オブジェクト|[REVOKE オブジェクト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|キュー|[REVOKE オブジェクト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|オブジェクト|[REVOKE オブジェクト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|キュー|[REVOKE オブジェクト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |リモート サービス バインド|[Service Broker の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |ロール|[データベース プリンシパルの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |Route|[Service Broker の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
@@ -194,15 +191,15 @@ REVOKE
 |検索プロパティ リスト|[検索プロパティ リスト権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
 |[サーバー]|[サーバーのアクセス許可 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
 |サービス|[Service Broker の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|ストアド プロシージャ|[REVOKE オブジェクト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|対称キー|[対称キーの権限を REVOKE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
-|シノニム|[REVOKE オブジェクト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|ストアド プロシージャ|[REVOKE オブジェクト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|対称キー|[対称キーの権限を REVOKE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
+|シノニム|[REVOKE オブジェクト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |システム オブジェクト|[システム オブジェクトの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
-|テーブル|[REVOKE オブジェクト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|テーブル|[REVOKE オブジェクト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |型|[型の権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |ユーザー|[データベース プリンシパルの権限 &#40; を取り消すTRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|表示|[REVOKE オブジェクト権限 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|XML スキーマ コレクション|[XML スキーマ コレクションの権限を REVOKE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
+|表示|[REVOKE オブジェクト権限 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|XML スキーマ コレクション|[XML スキーマ コレクションの権限を REVOKE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>参照  
  [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
@@ -210,10 +207,9 @@ REVOKE
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_helprotec &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helpuser &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   
-

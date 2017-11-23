@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerPreparedStatement.setObject (int, java.lang.Object, int, int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerPreparedStatement.setObject (int, java.lang.Object, int, int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: d190ee20-d669-4c6f-a081-d5cfec2f72ca
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15a3f73b3b0cd455b560b85a8fffefecfd6b9709
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dda180cf7e5969704458e0d324ecc3322c6eaf18
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setobject-method-int-javalangobject-int-int"></a>setObject (int, java.lang.Object, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -73,9 +69,8 @@ public final void setObject(int n,
  詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)です。  
   
 ## <a name="see-also"></a>参照  
- [setObject メソッド & #40 です。SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
+ [setObject メソッド &#40;です。SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   
-

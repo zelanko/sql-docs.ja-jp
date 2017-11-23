@@ -18,17 +18,16 @@ helpviewer_keywords:
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8caea228dd0ddd646c90b7e5661a8d4fd2b4a722
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-types-data-mining"></a>データ型 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でマイニング モデルまたはマイニング構造を作成する場合は、マイニング構造のそれぞれの列に対してデータ型を定義する必要があります。 分析エンジンは、データ型に基づいて、データ ソース内のデータが数値とテキストのどちらであるか、およびデータをどのように処理するかを判断します。 たとえば、ソース データに数値データが含まれる場合、数値を整数として扱うかまたは小数点を使用して扱うかを指定できます。  
@@ -64,9 +63,8 @@ ms.lasthandoff: 09/01/2017
  [コンテンツの種類 (DMX)](../../dmx/content-types-dmx.md)   
  [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [データ型 (&) #40";"DMX"&"#41;](../../dmx/data-types-dmx.md)   
+ [データ型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

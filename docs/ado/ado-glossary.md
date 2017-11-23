@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1566fc59ac51e0923392a3cc0bee6d24dd3bfa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary-terms"></a>ADO 用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -222,4 +219,3 @@ ms.lasthandoff: 09/09/2017
  ツリー (ノード) の要素間の階層リレーションシップを表す構造です。 (ルート) ツリーの最上位レベルに 1 つのノードがあります。 ルートの下に、複数の子があります。 それぞれの子順番の他の子、したがってツリーのように分岐の親があります。 ドキュメントとその他のフォルダーを含むフォルダーでは、ツリー構造の一般的な例を示します。 階層ノード、ルート、子である親も参照してください。
 
  Web サーバーを Web サービス、およびイントラネットおよびインターネット ユーザーにページを提供するコンピューター。
-

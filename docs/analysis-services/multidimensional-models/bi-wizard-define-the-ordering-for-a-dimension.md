@@ -22,17 +22,16 @@ helpviewer_keywords:
 - ordering dimensions [Analysis Services]
 - OrderByAttributeID property
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0224266d87494010d6009a619085b67f76b035a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 879c7266c06551aa040a075e4af4ed537e58cab9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>BI ウィザード - は、ディメンションの順序を定義します。
   キューブまたはディメンションに属性の順序指定の拡張機能を追加して、属性のメンバーの順序付け方法を指定します。 メンバーは、属性の名前またはキー、あるいは、属性リレーションシップに基づいた別の属性の名前またはキーによって順序を指定できます。 既定では、名前によってメンバーの順序を指定します。 この拡張機能により、ディメンション内にある属性の **OrderBy** および **OrderByAttributeID** プロパティ設定が変更されます。  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  **[条件]** 列で、 **[キー]** または **[名前]**のどちらによって属性のメンバーを順序付けるかを選択できます。  
   
   
-

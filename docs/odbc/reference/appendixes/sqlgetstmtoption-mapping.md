@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 478c7c00205a161d366a1052b52604047f9755dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption マッピング
 アプリケーションを呼び出すと**SQLGetStmtOption** ODBC 3*.x*への呼び出しをサポートしていないドライバー  
@@ -62,4 +60,3 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  ODBC 3 SQL_GET_BOOKMARK ステートメント オプションが廃止*.x*です。 ODBC 3*.x* ODBC 2 を使用するドライバー *。x* SQL_GET_BOOKMARK を使用するアプリケーション SQL_GET_BOOKMARK をサポートする必要があります。 ODBC 3*.x* ODBC 2 を使用するドライバー *。x*アプリケーションは、その必要がありますサポート SQL_UB_ON SQL_USE_BOOKMARKS に設定し、固定長のブックマークを公開する必要があります。 場合、ODBC 3*.x*ドライバーは、可変長ブックマークいない固定長のブックマークをサポートしている、SQLSTATE HYC00 を返す必要があります (省略可能な機能が実装されていません) 場合は、ODBC 2 *。x*アプリケーション SQL_UB_ON に SQL_USE_BOOKMARKS を設定しようとしました。  
   
  ODBC 3*.x*ドライバー、ドライバー マネージャーは、不要になったを確認するかどうか*オプション*SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。 ドライバーは、これをチェックする必要があります。
-

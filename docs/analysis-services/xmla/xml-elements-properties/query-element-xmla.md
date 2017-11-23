@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Query Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Query Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Query
 - microsoft.xml.analysis.query
 - http://schemas.microsoft.com/analysisservices/2003/engine#Query
-helpviewer_keywords:
-- Query element
+helpviewer_keywords: Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8502824a41e2193a31e0e2b34b41e9ffb3515eaa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b3b6b989932fcb37fba1c137c30658238a0c05df
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-element-xmla"></a>Query 要素 (XMLA)
   内のクエリが含まれています、[クエリ](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)によって使用されるコレクション、 [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)使用法に基づく最適化中にコマンド。  
@@ -91,8 +86,7 @@ ms.lasthandoff: 09/01/2017
  集計デザインを含むメジャー グループ内の各ディメンションは、 *Query* 要素の **Dataset** の値によって表されます。 *Dataset* の値の順序は、メジャー グループに含まれるディメンションの順序と一致している必要があります。  
   
 ## <a name="see-also"></a>参照  
- [デザインの集計 & #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [デザインの集計 &#40;です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

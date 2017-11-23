@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8419aeccf298788898fa6b764682faa0cff73e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 82a065d797a7c4ba9f2fcd7dc4bbe6f7a47216e6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-wise-binding"></a>列方向のバインド
 列方向のバインドを使用する場合、アプリケーションは、データが返される対象の各列に 1 つまたは 2 つ、または場合によっては、次の 3 つの配列をバインドします。 最初の配列が、データ値を保持し、2 番目の配列が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これは、3 番目の配列はバインドされています。 各配列には、行セットの行数が同じ数の要素が含まれています。  
@@ -100,4 +98,3 @@ while ((rc = SQLFetchScroll(hstmt,SQL_FETCH_NEXT,0)) != SQL_NO_DATA) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1618d681f19e3aff5885a61f347ebbb7481bd1ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 31b0bb389b188c39b4590a774ac453a9de17fd56
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="address-book-command-buttons"></a>アドレス帳コマンド ボタン
 アドレス帳アプリケーションには、次のコマンド ボタンが含まれます。  
@@ -95,6 +93,5 @@ End Sub
 ## <a name="see-also"></a>参照  
  [アドレス帳のナビゲーション ボタン](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
 
 

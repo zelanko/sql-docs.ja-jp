@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b25100a54d5a98a9db06bb26be4a3e1a6871b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-field-conformance"></a>記述子フィールドへの準拠
 次の表では、各 ODBC 記述子のヘッダー フィールド、これは、定義済みの準拠レベルを示します。  
@@ -84,4 +82,3 @@ ms.lasthandoff: 09/09/2017
  [これらのレコードのフィールドのサポート 1] が、ドライバーは、該当するデータ型をサポートしている場合にのみ必要です。  
   
  [2] のコア レベルへの準拠、ドライバーは SQL_PARAM_INPUT をサポートする必要があります。 レベル 2 インターフェイスへの準拠のドライバーを SQL_PARAM_INPUT_OUTPUT と SQL_PARAM_OUTPUT もサポートする必要があります。
-

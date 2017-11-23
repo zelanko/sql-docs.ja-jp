@@ -8,34 +8,30 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STWithin_TSQL
 - STWithin (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STWithin (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa8935b7f67d593be8a1246bbc035e1f8d6c520a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb38281ba8e4c4cc7c483a7662b2bdeb95a8b4f9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-場合 1 を返します、 **geometry**インスタンスが別内では完全に**geometry**インスタンスです。 それ以外の場合は 0 を返します。
+場合 1 を返します、 **geometry**インスタンスが別内では完全に**geometry**インスタンスです。 それ以外の場合は 0 を返します。 `STWithin`コマンドは、大文字小文字を区別します。
   
 ## <a name="syntax"></a>構文  
   
@@ -54,7 +50,7 @@ ms.lasthandoff: 09/01/2017
  CLR の戻り値の型: **SqlBoolean**  
   
 ## <a name="remarks"></a>解説  
- このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。  
+ このメソッドは、場合常に null を返しますの spatial reference Id (Srid)、 **geometry**インスタンスが一致しません。
   
 ## <a name="examples"></a>使用例  
  次の例で`STWithin()`2 つのテストに`geometry`インスタンスのかどうか、2 番目のインスタンス内で最初のインスタンスが完全にを参照してください。  
@@ -72,5 +68,4 @@ SELECT @g.STWithin(@h);
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-partition-writeback"></a>パーティションの書き戻しの設定
   メジャー グループを書き込み許可にすると、エンド ユーザーはキューブを参照しているときにキューブ データを変更できます。この場合、変更内容は、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルに保存されます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [有効にして、Analysis Services の書き戻しデータ エントリのセキュリティ保護](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   
-

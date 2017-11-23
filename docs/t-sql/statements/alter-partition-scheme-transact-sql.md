@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER PARTITION SCHEME
 - ALTER_PARTITION_SCHEME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER PARTITION SCHEME statement
 - partition schemes [SQL Server], modifying
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - adding filegroups
 - NEXT USED filegroups
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 16b15945c8e6f56621516f16707d61be908e9972
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 545fe3da48f0d0c98d72b32e5a82d9fd55579d00
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,20 +85,19 @@ NEXT USED test5fg;
   
 ## <a name="see-also"></a>参照  
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION FUNCTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [ALTER PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.partition_schemes と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
  [sys.partitions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-

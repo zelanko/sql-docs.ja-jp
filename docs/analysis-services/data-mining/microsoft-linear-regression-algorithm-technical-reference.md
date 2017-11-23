@@ -18,17 +18,16 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed842a83a00412da1fce19e7519049d4171baf21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
@@ -99,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

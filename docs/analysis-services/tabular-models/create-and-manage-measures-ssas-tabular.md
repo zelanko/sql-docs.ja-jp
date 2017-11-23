@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3314afb5a5351b541e29d403ac4a41d98ec27263
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>メジャーを作成および管理する (SSAS テーブル)
   メジャーとは、レポートまたは Excel ピボットテーブル (またはピボットグラフ) で使用するために作成される数式のことです。 COUNT や SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 このトピックのタスクでは、テーブルのメジャー グリッドを使用してメジャーを作成し管理する方法について説明します。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [計算列 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
-

@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET_LANGUAGE_TSQL
 - SET LANGUAGE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - LANGUAGE option
 - languages [SQL Server], setting language
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - options [SQL Server], date
 - default languages
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 606c97d144bf209836ae89db199bd4d81ef137c0
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f334049b696685b366c36484857d1340853a4b15
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -52,7 +49,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>引数  
- [**N**]**'***言語***'**  |   **@**  *language_var*  
+ **[N]****'***言語***'**  |   **@**  *language_var*  
  格納されている言語の名前は、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)です。 Unicode、または Unicode に変換される DBCS のいずれかを指定できます。 Unicode での言語を指定するには使用**N'***言語***'**です。 変数を指定する必要がありますを変数として指定すると場合、 **sysname**です。  
   
 ## <a name="remarks"></a>解説  
@@ -81,8 +78,7 @@ GO
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
- [sp_helplanguage & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
+ [sp_helplanguage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-

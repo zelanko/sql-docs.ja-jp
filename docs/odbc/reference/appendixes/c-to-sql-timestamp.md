@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 472afd8fa958dd4602510a04c14a1268fe713194
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bbb6396dc1a49d984834ec6f105b3a9ba42d95c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-timestamp"></a>C から SQL へ: タイムスタンプ
 Timestamp ODBC C データ型の識別子です。  
@@ -51,4 +49,3 @@ Timestamp ODBC C データ型の識別子です。
  C のタイムスタンプ データが文字 SQL データに変換されると、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"の形式です。  
   
  ドライバーは、タイムスタンプ C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズが timestamp C データ型のサイズであると見なされます。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
-

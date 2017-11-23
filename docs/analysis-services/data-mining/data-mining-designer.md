@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4020ae2dd9bd8fa07a97f5817a0f06969fc0bb73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f173bca2b294cb839e542d1bc5e8a650b6d7afb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-designer"></a>データ マイニング デザイナー
   データ マイニング デザイナーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のマイニング モデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

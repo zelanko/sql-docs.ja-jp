@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: bf4eecc1e72f1eadcb0feeab5ca046e75155a66d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a0d6ff0a983f1d1d1ad8fdcc7de37d9a06032025
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>リポジトリをプレビュー リポジトリから GA リポジトリに変更します。
 
@@ -78,4 +77,3 @@ SQL Server 2017 を CTP 2.1、RC1、または RC2 から一般公開 (GA) リリ
 ## <a name="next-steps"></a>次の手順
 
 Linux に SQL Server 2017 をインストールする方法の詳細については、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
-

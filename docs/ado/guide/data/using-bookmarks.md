@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-bookmarks"></a>ブックマークの使用
 移動した後、特定のレコードに直接取得すると便利です、 **Recordset**すべてのレコードをスクロールし、値を比較する必要はありません。 たとえばを使用してレコードを検索しようとする場合、**検索**メソッドが、検索、レコードが返されない、いずれかの端に自動的に、**レコード セット**です。 位置をマークを使用する前にブックマークを使用できる、プロバイダーは、それらをサポートする場合、**検索**メソッドの場所に戻れるようにします。 ブックマークは、**バリアント**内のレコードを一意に識別する値を入力、 **Recordset**オブジェクト。  
@@ -57,4 +55,3 @@ End If
  [サポート](../../../ado/reference/ado-api/supports-method.md)メソッドは、後で詳しく説明します。  
   
  場合を除き、複製された**レコード セット**、ブックマークに固有の**レコード セット**で作成された、同じコマンドを使用する場合でもです。 つまり、使用できません、**ブックマーク**いずれかから取得した**レコード セット**同じレコードが 1 秒あたりに移動する**レコード セット**同じコマンドを使用して開いたです。
-

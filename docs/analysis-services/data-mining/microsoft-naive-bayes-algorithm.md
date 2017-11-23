@@ -20,17 +20,16 @@ helpviewer_keywords:
 - classification algorithms [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 074a93f83cd89449898f0fe66e3680b8dfd95b21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、Bayes の定理に基づく分類アルゴリズムであり、探索および予測モデリングで使用できます。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  
@@ -100,10 +99,9 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [機能の選択 (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
+ [機能の選択 &#40;データ マイニング&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
  [Naive Bayes モデルのクエリ例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
  [Naive Bayes モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   
-

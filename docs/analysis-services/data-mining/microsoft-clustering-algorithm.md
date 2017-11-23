@@ -24,17 +24,16 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7210acf3d0fa168c7bea0decd573995e4703b94d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムとは、データセット内のケースを反復処理して類似した特性を持つクラスターにグループ化する " *セグメンテーション* " または " *クラスタリング* " アルゴリズムです。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
@@ -97,4 +96,3 @@ ms.lasthandoff: 09/01/2017
  [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - deleting logical primary keys
 - data source views [Analysis Services], logical primary keys
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c6ba2ab3a2fb37400a47b9d54981d48190f7f0e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 34a94946c37d6a0b5abc5fe48db70e02c111a2ba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理主キーの定義 (Analysis Services)
   データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データベース テーブルから生成されたデータ ソース ビューにテーブルを追加した場合、そのテーブルの主キーが自動的に定義されます。  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   
-

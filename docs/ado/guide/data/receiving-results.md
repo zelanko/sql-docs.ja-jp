@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4803dcc8225400232e52890a2ce55edc80af5e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="receiving-results"></a>結果を受信
 ADO ではほとんどのコマンドは、呼び出し元に返される一部の情報とは、します。 行セットを返すコマンドの結果の受信、**レコード セット**はおそらく、最も使用されている ADO オブジェクトのオブジェクト。  
@@ -47,5 +45,4 @@ ADO ではほとんどのコマンドは、呼び出し元に返される一部�
   
  1 つ以上の結果セットを受信する手段がいくつか作成する必要がありますのラウンド トリップにカプセル化されたデータ セットごとに 1 つ、ネットワーク経由で、 **Recordset**オブジェクト。 低速か混雑しているネットワークでは、ラウンド トリップの数を減らすために役立つアプリケーションのパフォーマンスを向上させます。 一部のプロバイダーが複数の受信には、サポートを提供するそのため、 **Recordset**1 回のラウンド トリップで s。 これは、次のトピックについて説明します。  
   
--   [複数のレコード セットの受信](../../../ado/guide/data/receiving-multiple-recordsets.md)
-
+-   [複数のレコードセットの受信](../../../ado/guide/data/receiving-multiple-recordsets.md)

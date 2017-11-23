@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5d77d1cc5f03ac2d6894cefa6458f9096b47b3a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44bf68cba02b03faad632d4b93fe3cca361e62f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>配置済みテーブル モデル データベースを管理します。
   テーブル モデル データベースは、Analysis Services のテーブル モデル プロジェクト テンプレートを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成する Analysis Services データベースであり、テーブルおよびリレーションシップがデータを表すための主な構造です。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/01/2017
   
  [テーブル モデル パーティション](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)  
   
- [表形式モデル データベースへの接続します。](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [テーブル モデル データベースへの接続](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
  [Power Pivot から復元](../../analysis-services/tabular-models/restore-from-power-pivot.md)  
   
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
   
  [Analysis Services データベースのインポートとデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
-

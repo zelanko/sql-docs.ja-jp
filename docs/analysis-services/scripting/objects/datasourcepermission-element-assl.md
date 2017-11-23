@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSourcePermission Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSourcePermission Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DataSourcePermission element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98e1742be14d8d7e16bc967e3d5202e046d894d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fd41a100589e86a889698253bbb5f256b3bc788b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasourcepermission-element-assl"></a>DataSourcePermission 要素 (ASSL)
   既定のアクセス許可を定義、[データソース](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)、特定のデータ型[ロール](../../../analysis-services/scripting/objects/role-element-assl.md)要素。  
@@ -68,8 +63,7 @@ ms.lasthandoff: 09/01/2017
  **DataSourcePermission** オブジェクトはデータベースに所有されているロールに対してのみ存在し、任意のロールに対して存在できる **DataSourcePermission** オブジェクトは 1 つだけです。  
   
 ## <a name="see-also"></a>参照  
- [Role 要素 & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Role 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

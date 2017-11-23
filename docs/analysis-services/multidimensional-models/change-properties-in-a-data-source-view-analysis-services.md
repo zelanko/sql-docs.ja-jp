@@ -22,17 +22,16 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa1e0fa67c2a9dca58b4cfcff33407994810baa5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>データ ソース ビューのプロパティの変更 (Analysis Services)
   データ ソース ビュー ウィザードを使用してデータ ソース ビューを定義し、テーブル、ビュー、名前付き計算、および名前付きクエリをデータ ソース ビューに追加した後、以下の項目に関するプロパティを変更できます。  
@@ -94,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   
-

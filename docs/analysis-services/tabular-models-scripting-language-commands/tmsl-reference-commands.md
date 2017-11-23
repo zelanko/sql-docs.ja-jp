@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4eb07192-6f53-4426-830a-d63a945dbcab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 71b44ae1e5f8e5db2859bb4d3b2457c752de4dc6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71255018da8c60209183f70492fae184cf8f8069
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tmsl-reference---commands"></a>参照の TMSL - コマンド
 
@@ -36,23 +35,23 @@ ms.lasthandoff: 09/01/2017
   
 |||  
 |-|-|  
-|[Alter コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)|完全定義を指定せずには、オブジェクトへのインライン変更を行います。|  
+|[Alter コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)|完全定義を指定せずには、オブジェクトへのインライン変更を行います。|  
 |[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)|その子孫を含む、新しいオブジェクトを作成します。|  
-|[CreateOrReplace コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)|作成またはオブジェクト定義の一部を置換します。 完全定義を指定する必要があります。|  
+|[CreateOrReplace コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)|作成またはオブジェクト定義の一部を置換します。 完全定義を指定する必要があります。|  
 |[コマンド &#40; を削除します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)|その子孫を含むオブジェクトを削除します。|  
   
 ## <a name="data-refresh-operations"></a>データ更新操作  
   
 |||  
 |-|-|  
-|[MergePartitions コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md)|ソースに対象パーティションをマージし、ターゲットを削除します。|  
-|[更新コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)|データベース、テーブル、またはパーティションを処理します。|  
+|[MergePartitions コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md)|ソースに対象パーティションをマージし、ターゲットを削除します。|  
+|[更新コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)|データベース、テーブル、またはパーティションを処理します。|  
   
 ## <a name="scripting"></a>スクリプトの作成  
   
 |||  
 |-|-|  
-|[Sequence コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)|バッチ処理を順次または並列で|  
+|[Sequence コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)|バッチ処理を順次または並列で|  
   
 ## <a name="database-management-operations"></a>データベースの管理操作  
   
@@ -61,8 +60,8 @@ ms.lasthandoff: 09/01/2017
 |[Attach コマンドと #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)|サーバーにファイルを追加します。|  
 |[コマンド &#40; をデタッチします。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)|サーバーからファイルを削除します。|  
 |[Backup コマンドと #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)|データベースのバックアップ ファイルを作成します。|  
-|[復元コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)|サーバーにデータベースを復元します。|  
-|[同期コマンド & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/synchronize-command-tmsl.md)|Analysis Services データベースを既存の別のデータベースと同期させます。|  
+|[復元コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)|サーバーにデータベースを復元します。|  
+|[同期コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/synchronize-command-tmsl.md)|Analysis Services データベースを既存の別のデータベースと同期させます。|  
   
 ## <a name="see-also"></a>参照  
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

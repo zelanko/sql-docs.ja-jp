@@ -18,17 +18,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], usage setting
 - usage options [Analysis Services]
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8fcc3776686ea2b7a1099628a4ca84b464df57e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1dfeeb95c534bd68879d101cd208eae8871d817c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---set-usage-property"></a>属性のプロパティ - 使用法プロパティの設定
   属性の使用法を設定するには、ディメンション デザイナーの **[ディメンション構造]** ビューを使用します。ディメンション デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスします。  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンションに属性を追加します。](../../analysis-services/multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>モデル オブジェクト (TMSL)
 
@@ -44,10 +43,10 @@ ms.lasthandoff: 09/01/2017
  すべてのオブジェクトは、共通の名前、型、説明、プロパティのコレクション、および注釈を含むプロパティのセットを持ちます。 **モデル**オブジェクトでは、次のプロパティもがあります。  
   
  StorageLocation  
- モデルを配置するディスク上の場所。  
+ モデルを配置するディスク上の場所です。  
   
  defaultMode  
- データで利用可能にパーティションの既定の方法です。  
+ データをパーティションで利用できるようにする既定のメソッドです。  
   
  defaultDataView  
  DirectQuery モードのモデルは、このプロパティは、どのパーティションは、モデルに対するクエリを実行するために使用を決定します。  有効な値には、フル インストール オプションとサンプルが含まれます。  
@@ -56,16 +55,16 @@ ms.lasthandoff: 09/01/2017
  書式設定に使用するカルチャ。  
   
  照合順序 (collation)  
- 照合順序。 参照してください[Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)詳細についてはします。  
+ 照合順序です。 参照してください[Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)詳細についてはします。  
   
  表  
  パーティション、列、メジャー、Kpi、および注釈を含む、モデル内のテーブルのすべてのコレクション。 参照してください[オブジェクト &#40; をテーブルTMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)詳細についてはします。  
   
  リレーションシップ  
- フィルターの方向とセキュリティ設定のプロパティを含むテーブルの各ペア間のリレーションシップを指定します。 参照してください[リレーションシップ オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md)詳細についてはします。  
+ フィルターの方向とセキュリティ設定のプロパティを含むテーブルの各ペア間のリレーションシップを指定します。 参照してください[リレーションシップ オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md)詳細についてはします。  
   
  データ ソース  
- データ モデルを提供するための外部データベースに 1 つまたは複数の接続は、クエリを通過します。 参照してください[データソース オブジェクト & #40 です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)詳細についてはします。  
+ データ モデルを提供するための外部データベースに 1 つまたは複数の接続は、クエリを通過します。 参照してください[データソース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)詳細についてはします。  
   
  ロール  
  データベース アクセス許可、メンバーのアカウント、および必要に応じて、DAX でカスタム アクセス制御のためのセキュリティ フィルターを関連付けるオブジェクト。  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

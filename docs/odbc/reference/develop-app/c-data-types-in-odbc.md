@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b042185cb49c00e61d090934a9c8ed8d2258059f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65a5bd882462dbd72c39c751dcfed52c61ab194c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC における C データ型
 ODBC では、アプリケーション変数とその対応する型識別子で使用される C データ型を定義します。 これらは、結果セットの列とステートメントのパラメーターにバインドされているバッファーで使用されます。 たとえば、アプリケーションが文字形式で結果セット列からデータを取得しようとします。 SQLCHAR を持つ変数を宣言して * データ型であり、結果セット列と SQL_C_CHAR の種類の識別子にこの変数をバインドします。 C データ型と型識別子の一覧については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。  
@@ -60,4 +58,3 @@ ODBC では、アプリケーション変数とその対応する型識別子で
   
 ## <a name="see-also"></a>参照  
  [C データ型](../../../odbc/reference/appendixes/c-data-types.md)
-

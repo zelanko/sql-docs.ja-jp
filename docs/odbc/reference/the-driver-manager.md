@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], about driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ee227f7fab393cdf563daab2aa695cd469281ff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-driver-manager"></a>ドライバー マネージャー
 *ドライバー マネージャー*ライブラリで、アプリケーションおよびドライバーとの間の通信を管理します。 たとえば、Microsoft® Windows® プラットフォームでは、ドライバー マネージャーは、ダイナミック リンク ライブラリ (DLL) は Microsoft によって作成され、再頒布可能パッケージの MDAC 2.8 SP1 SDK のユーザーによって再配布できます。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  ドライバー マネージャーの最終的な主な役割は読み込みと、ドライバーをアンロードします。 アプリケーションでは、ロードし、ドライバー マネージャーだけをアンロードします。 接続関数を呼び出して特定のドライバーを使用する必要がある場合 (**SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**) ドライバー マネージャーでしを指定します特定のデータ ソースまたは「会計」や"Sqlserver"などのドライバーの名前 この名前を使用して、ドライバー マネージャーは、ドライバーのファイル名、Sqlsrvr.dll などのデータ ソース情報を検索します。 (まだ読み込まれていないと想定) ドライバーを読み込み、driver では、各関数のアドレスを格納し、自体を初期化し、データ ソースに接続すると、ドライバーで接続関数を呼び出します。  
   
  アプリケーションが完了すると、ドライバーを使用して、呼び出す**SQLDisconnect**ドライバー マネージャーでします。 ドライバー マネージャーは、データ ソースからの接続が切断されると、ドライバーでこの関数を呼び出します。 ただし、ドライバー マネージャーは、アプリケーションがそれに再接続する場合に、メモリ内で、ドライバーを保持します。 他の接続は、ドライバーを使用しないと、アプリケーションがドライバーによって使用される接続を解放または別のドライバーの接続を使用している場合にのみ、ドライバーをアンロードします。 読み込みとアンロードのドライバーのドライバー マネージャーの役割の詳細については、次を参照してください。[接続プロセスでドライバー マネージャーの役割](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)です。
-

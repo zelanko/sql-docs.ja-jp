@@ -17,17 +17,16 @@ helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8d0cc7b52ecffbc7a85be31047a8db97e7a1922b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c14ab5147125207eb63ad9e97ba2a94876d4ddce
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ
   このトピックでは、Microsoft シーケンス クラスター アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -272,7 +271,6 @@ ORDER BY Count(*) DESC
 ## <a name="see-also"></a>参照  
  [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [シーケンス クラスター モデルのクエリの例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   
-

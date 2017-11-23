@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eb06cb663a0a94a0611d95532e80f15e5df2da7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b9d92a7620ed165d661fe4c48726a8049d33500
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="features-off-by-default-analysis-services"></a>既定でオフになっている機能 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、既定でセキュリティ保護されるようにデザインされています。 したがって、セキュリティを損なう可能性のある機能は既定では無効になっています。 次の機能は、無効状態でインストールされ、使用するときに明示的に有効にする必要があります。  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
 -   グループ アフィニティ。 詳細については、「 [Thread Pool Properties](../../analysis-services/server-properties/thread-pool-properties.md) 」を参照してください。  
   
   
-

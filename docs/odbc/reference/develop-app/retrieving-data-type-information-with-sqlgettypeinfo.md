@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a440ee58a5c59237ee31186beb19d1847e814637
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo とデータ型情報の取得中
 ODBC が関数を提供する ODBC 型識別子を基になる SQL データ型マッピングは概数であるため (**SQLGetTypeInfo**) を介して、ドライバーは完全にデータ ソース内の各 SQL データ型について説明します。 この関数は、各行が名、型識別子、有効桁数、小数点以下桁数、null 値許容属性などの単一のデータ型の特性を記述、結果セットを返します。  
@@ -42,4 +40,3 @@ ODBC が関数を提供する ODBC 型識別子を基になる SQL データ型�
 -   ODBC で使用するためのデータ型の名前を定義しません**CREATE TABLE**と**ALTER TABLE**ステートメントです。 代わりに、アプリケーションがによって返される結果セットの TYPE_NAME 列で返される名前を使用する必要があります**SQLGetTypeInfo**です。 この理由は、する SQL のほとんどが一定の Dbms の間で、データ型の名前も異なります大幅です。 ドライバーを SQL ステートメントを解析し、標準的なデータ型の名前を DBMS に固有のデータ型の名前に置き換えるのではなく、ODBC には、まず DBMS 固有の名前を使用するアプリケーションが必要です。  
   
  なお**SQLGetTypeInfo**必ずしもについては説明しませんすべてのデータ型が、アプリケーションが発生することができます。 具体的には、結果セットには、直接サポートされていないデータ ソースのデータ型があります。 たとえば、ODBC カタログ関数によって返される結果セット内の列のデータ型の定義は、およびこれらのデータ型は、データ ソースでサポートされていない可能性があります。 結果セット内のデータ型の特性を判断するには、アプリケーションが呼び出す**SQLColAttribute**です。
-

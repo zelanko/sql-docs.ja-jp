@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Dimension Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Dimension Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Dimension
 - urn:schemas-microsoft-com:xml-analysis#Dimension
 - microsoft.xml.analysis.dimension
-helpviewer_keywords:
-- Dimension element
+helpviewer_keywords: Dimension element
 ms.assetid: 85093468-e971-4b8e-9ee4-7b264ad01711
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 312aaf4cee438179b25a2958cc24d771dd9309b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb5f7e0e5c8cb8032074396d43a24efb0429bfe4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-element-xmla"></a>Dimension 要素 (XMLA)
   親によって表されるキューブ ディメンションを識別[オブジェクト](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)要素。  
@@ -72,9 +67,8 @@ ms.lasthandoff: 09/01/2017
  **ディメンション**要素は、オブジェクト識別子によって表されるキューブ ディメンションの名前を含む、**オブジェクト**要素。  
   
 ## <a name="see-also"></a>参照  
- [Database 要素 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   
+ [Database 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   
  [Dimension 要素 (XMLA)](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)   
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

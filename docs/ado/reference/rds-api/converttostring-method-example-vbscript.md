@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- ConvertToString method [ADO], VBScript example
+dev_langs: VB
+helpviewer_keywords: ConvertToString method [ADO], VBScript example
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 02454c6f5acec9779084ed0eb6bbdb7d352a0579
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf005c26d97b484d7cf5473419166410fb34427
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString メソッドの例 (VBScript)
 > [!IMPORTANT]
@@ -103,8 +99,7 @@ MIME Encoded RS: <BR>
   
 ## <a name="see-also"></a>参照  
  [ConvertToString メソッド (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 
 

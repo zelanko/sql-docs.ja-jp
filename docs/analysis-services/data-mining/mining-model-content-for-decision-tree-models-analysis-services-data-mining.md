@@ -18,17 +18,16 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: da90bcdea225f4a27fdd28339bdeb127943ea15a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
@@ -309,4 +308,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   
-

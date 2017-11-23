@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.rollback ()
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.rollback ()
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 384d2cac20f8764daa7cbcee2803f56f9a79a625
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6c913613419a1922cba3166c7d967eef9ef4d635
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="rollback-method-"></a>rollback () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,9 +47,8 @@ public void rollback()
  このメソッドは、自動コミット モードが無効になっている場合にのみ使用してください。  
   
 ## <a name="see-also"></a>参照  
- [rollback メソッド & #40 です。SQLServerConnection &#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+ [rollback メソッド &#40;です。SQLServerConnection &#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
-

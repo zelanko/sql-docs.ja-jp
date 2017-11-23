@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed2d2412cf8314875f9469689677c22ae4e60e7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリームへの結果セットの取得
 従来の結果を受信するのではなく**Recordset**オブジェクト、ADO がストリームにクエリの結果を代わりに取得できます。 ADO**ストリーム**オブジェクト (またはその他のオブジェクト、COM をサポートする**IStream** ASP などのインターフェイス**要求**と**応答**オブジェクト) これらの結果を含めるために使用できます。 この機能の 1 つの用途は、XML 形式で結果を取得です。 SQL server などの XML 結果は返されません SQL SELECT クエリを使用した FOR XML 句を使用して、XPath クエリを使用するなど、複数の方法でします。  
@@ -188,4 +186,3 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>解説  
  この時点では、クライアントのブラウザーにストリーミングされた XML とを表示する準備ができた。 これは、XML ドキュメントを html 形式での製品の一覧を作成する DOM とそれぞれの子ノードのループのインスタンスにバインドするクライアント側の VBScript を使用して行います。
-

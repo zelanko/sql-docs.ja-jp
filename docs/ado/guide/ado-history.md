@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, what's new
+helpviewer_keywords: ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594152a9dd7e6d4fdb4d00668692239d09bdf373
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-features-for-each-release"></a>ADO の各リリースの機能
 このトピックでは、ADO、ADO MD および ADOX の各リリースで導入された新機能を示します。
@@ -51,17 +49,17 @@ ms.lasthandoff: 09/09/2017
  *64 ビット プラットフォームのサポート*ADO 2.7 64 ビット プロセッサのサポートが導入されています。
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)です。   親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)です。
+ **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)です。 親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)です。
 
  *コマンド ストリーム*、**コマンド**オブジェクトでは、ストリームの形式でコマンドをサポートを使用する代わりに、 **CommandText**プロパティです。 [CommandStream プロパティ (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) XML テンプレートまたはアップデート グラムとしてを指定するために使用する、**コマンド**for SQL Server、Microsoft OLE DB プロバイダーで入力します。
 
- **Dialect***プロパティ* [Dialect](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的な規則を文字列またはストリームを解析するプロバイダーを使用することです。  
+ **Dialect***プロパティ* [Dialect](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的な規則を文字列またはストリームを解析するプロバイダーを使用することです。
 
- **Command.Execute***メソッド*、[メソッドを実行する](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**入力と出力にストリームを使用するオブジェクトが強化されました。  
+ **Command.Execute***メソッド*、[メソッドを実行する](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**入力と出力にストリームを使用するオブジェクトが強化されました。
 
  *フィールド statusvalues*ユーザーを変更する場合、DB_E_ERRORSOCCURRED エラーが発生した場合、**フィールド**の**Recordset**、ADO に収まるようになりました、 **Field.Status**プロパティを適切なステータス情報を使用できるように、ユーザーの詳細については、どのような問題が発生しました。 参照してください[Status プロパティ (ADO フィールド)](../../ado/reference/ado-api/status-property-ado-field.md)です。
 
- **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティ、**コマンド**という名前のオブジェクトを示す、プロバイダーを使用する必要がありますパラメーター。  
+ **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティ、**コマンド**という名前のオブジェクトを示す、プロバイダーを使用する必要がありますパラメーター。
 
  *ストリームの結果セット*ADO は、データ ソースからの結果セットを返すことができます、**ストリーム**ではなく、 **Recordset**オブジェクト。 Microsoft OLE DB プロバイダーの最新バージョンを使用して、SQL Server 用、する XML 結果が得られますプロバイダーから"の XML"クエリを実行します。 A**ストリーム**結果セットを受け取る、ソースとして"XML の"コマンドを使用して開くことができます。 参照してください[ストリームに結果セットを取得する](../../ado/guide/data/retrieving-resultsets-into-streams.md)です。
 
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
  *URL バインディング*ADO 2.5 がデータ ストア オブジェクトの名前に、接続文字列とコマンド テキストの代わりとして、URL の使用方法を紹介します。 既存の URL を使用できます**接続**と**レコード セット**、オブジェクトに新しいとして**レコード**と**ストリーム**オブジェクト。
 
  *URL のバインディングをサポートするデータ プロバイダー* ADO 2.5 に URL スキームを認識する OLE DB プロバイダーがサポートされています。 これには、Windows 2000 のファイル システムにアクセスし、既存の HTTP スキームを認識する Internet Publishing の OLE DB プロバイダーが含まれます。
-

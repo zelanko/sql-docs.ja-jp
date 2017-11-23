@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 154261b999911bcc02050634901b199d0ae49be1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-handling-rules"></a>診断の処理ルール
 次の規則は、処理、診断**SQLGetDiagRec**と**SQLGetDiagField**です。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  1 つの ODBC コンポーネント、ドライバー マネージャー以外。  
   
 -   ネイティブのエラーに基づいて SQLSTATE を設定する必要があります。 ファイル ベースのドライバーとゲートウェイを使用しない DBMS に基づいたドライバーの場合は、ドライバーは SQLSTATE を設定する必要があります。 DBMS に基づいたドライバーのゲートウェイを使用する場合は、ドライバーまたは ODBC をサポートするゲートウェイのいずれかが、SQLSTATE を設定できます。
-

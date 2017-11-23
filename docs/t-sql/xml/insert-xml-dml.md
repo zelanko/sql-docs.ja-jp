@@ -8,29 +8,26 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - XML DML [SQL Server]
 - inserting nodes
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d3c534510b174ce98a4bff06b538e1f4dc8e62c6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f995a0dcd0b91c0835c4121a7a2072c2a586f35
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -420,7 +417,6 @@ GO
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
- [XML データ変更言語 & #40 です。XML DML"&"#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML データ変更言語 &#40;です。XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

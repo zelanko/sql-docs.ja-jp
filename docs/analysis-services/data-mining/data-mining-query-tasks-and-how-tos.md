@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], how-to topics
+helpviewer_keywords: mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ffbdae6e1ffbd491d1191df8543e8b3f831921d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91ae26748640ae6fbcafe12ae1545fadc2adbde6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>データ マイニングのクエリ タスクと操作方法
   データ マイニング モデルを利用する場合は、クエリを作成できることが不可欠です。 ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で提供されるツールを使用して、データ マイニング モデルに対するクエリの作成例のリンクを示します。 データ マイニング クエリとは何かに関する情報、または作成できるさまざまな種類のクエリに関する情報が必要な場合は、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [データ マイニングのストアド プロシージャ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,28 +16,26 @@ f1_keywords:
 - ALTER_COLUMN_ENCRYPTION_TSQL
 - ALTER COLUMN ENCRYPTION KEY
 - ALTER_COLUMN_ENCRYPTION_KEY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a6bc70a7cafdbf69549435b44099b903cfc60327
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6aaa1f85f860272cdb672d29bccdda39380f728a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  データベースでは、追加、または暗号化された値を削除する列の暗号化キーを変更します。 CEK には、これにより、対応する列のマスター キーのローテーション用に最大 2 つの値を持つことができます。 使用して列を暗号化するときに、CEK が使用される、 [Always Encrypted & #40";"データベース エンジン"&"#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)機能します。 CEK 値を追加する前を使用して、値の暗号化に使用された列マスター _ キーを定義する必要があります[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)ステートメントです。  
+  データベースでは、追加、または暗号化された値を削除する列の暗号化キーを変更します。 CEK には、これにより、対応する列のマスター キーのローテーション用に最大 2 つの値を持つことができます。 使用して列を暗号化するときに、CEK が使用される、 [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)機能します。 CEK 値を追加する前を使用して、値の暗号化に使用された列マスター _ キーを定義する必要があります[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)ステートメントです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,7 +69,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 ## <a name="remarks"></a>解説  
  通常、1 つだけの暗号化された値は、列の暗号化キーが作成されます。 列のマスター_キーが必要な場合は、(現在列マスター_キーのニーズに新しい列のマスター_キーに置き換えられます) を回転する、列の暗号化キーの新しい値を追加する列の新しいマスター_キーで暗号化します。 これは、オプションを選択するクライアント アプリケーションは、新しい列マスター_キーはクライアント アプリケーションで使用できるに確立している間に、列の暗号化キーで暗号化されたデータにアクセスできることを確認することができます。 常に暗号化するには、新しいマスター_キーにアクセスできない、列の古いマスター_キーで暗号化された列の暗号化のキー値を使用して機密データにアクセスできるクライアント アプリケーションでのドライバーを有効になっています。 暗号化アルゴリズム、常に暗号化のサポートでは、256 ビットをプレーン テキストの値が必要です。 列のマスター キーを押しながらキー ストアをカプセル化するキー ストア プロバイダーを使用して、暗号化された値を生成する必要があります。  
   
- 使用して[sys.columns & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、 [sys.column_encryption_keys & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)と[sys.column_encryption_key_values & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)列暗号化キーに関する情報を表示します。  
+ 使用して[sys.columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、 [sys.column_encryption_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)と[sys.column_encryption_key_values &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)列暗号化キーに関する情報を表示します。  
   
 ## <a name="permissions"></a>Permissions  
  必要があります**ALTER ANY COLUMN ENCRYPTION KEY**データベースに対する権限。  
@@ -116,4 +113,3 @@ GO
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
-

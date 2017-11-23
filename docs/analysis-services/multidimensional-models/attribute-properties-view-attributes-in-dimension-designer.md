@@ -19,17 +19,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], viewing
 - viewing attributes
 ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec4596584aafb35d54506d244855447b0ce67c7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e73cba395d806e834dc03e7f7cd79d030eb5c36e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---view-attributes-in-dimension-designer"></a>属性のプロパティ - ディメンション デザイナーでの属性の表示
   属性はディメンション オブジェクトで作成されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンション デザイナーを使用して、属性を表示したり構成したりできます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]** ペインには、ディメンションの属性が一覧表示されます。 このペインを使用して、属性の追加、削除、または構成を行います。 また、新しい階層でレベルとして使用する属性や、既存の階層にレベルとして追加する属性を選択できます。  
@@ -67,11 +66,10 @@ ms.lasthandoff: 09/01/2017
 |アイコン|属性の使用法|  
 |----------|---------------------|  
 |![属性アイコン](../../analysis-services/multidimensional-models/media/as-icon-attribute.gif "属性アイコン")|Regular または AccountType|  
-|![キー属性アイコン](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "キー属性アイコン")|[キー]|  
+|![キー属性アイコン](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "キー属性アイコン")|Key|  
 |![親属性アイコン](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "親属性アイコン")|Parent|  
   
 ## <a name="see-also"></a>参照  
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

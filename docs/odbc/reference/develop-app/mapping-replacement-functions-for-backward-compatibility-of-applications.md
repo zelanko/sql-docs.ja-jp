@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>アプリケーションの旧バージョンとの互換性のための置換関数のマップ
 ODBC 3*.x* ODBC 3 での作業アプリケーション*.x*ドライバー マネージャーは、ODBC 2 に対して動作します*。x*ドライバー限り、新しい機能は使用されません。 重複している両方の機能および動作の変更を行う方法に影響するただしを ODBC 3 です。*x* ODBC 2 にアプリケーションが動作します*。x*ドライバー。 ODBC 2 を使用場合します。*x*ドライバー、ドライバー マネージャーは、次の ODBC 3 にマップします*。x*関数で、1 つまたは複数の ODBC 2 が置き換えられます*。x*関数は、対応する ODBC 2 にします*。x*関数。  
@@ -486,4 +484,3 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLSetStmtAttr** SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS 属性を設定するにドライバー マネージャーが、基になる ODBC 2 で SQL_UB_ON に属性を設定します*。x*ドライバー。
-

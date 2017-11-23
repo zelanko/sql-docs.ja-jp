@@ -18,17 +18,16 @@ helpviewer_keywords:
 - automatic attribute creation
 - attributes [Analysis Services], creating
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdf5101c35d3245c027b64a767546d655fc582e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 56bb141f18d96c1a598b83a14d3f301764df5ecf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---define-a-new-attribute-automatically"></a>属性のプロパティ -、自動的に新しい属性の定義
   ディメンション デザイナーでは、ドラッグ アンド ドロップ編集を使用して、ディメンションに新しい属性を作成することができます。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

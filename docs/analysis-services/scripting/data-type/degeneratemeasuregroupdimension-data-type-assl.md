@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DegenerateMeasureGroupDimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DegenerateMeasureGroupDimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DegenerateMeasureGroupDimension
-helpviewer_keywords:
-- DegenerateMeasureGroupDimension data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: DegenerateMeasureGroupDimension
+helpviewer_keywords: DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97075971104b9f277d17aaaf8f8944e3fd0d8d82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b40aa4385a78f54e4c01b637849678777036ee66
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>DegenerateMeasureGroupDimension データ型 (ASSL)
   逆ディメンション (つまり、ファクト ディメンション) とメジャー グループとの間のリレーションシップを表す派生データ型を定義します。  
@@ -70,7 +64,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

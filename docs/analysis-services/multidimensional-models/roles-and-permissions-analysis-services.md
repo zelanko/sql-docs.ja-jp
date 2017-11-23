@@ -18,17 +18,16 @@ helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c9205b1908bbb4be6678d752fa0808cb2676d5f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2981ab6e8c529fa24fc2256c93dc903dc58857d7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="roles-and-permissions-analysis-services"></a>ロールと権限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、操作、オブジェクト、およびデータへのアクセスを許可する、ロールベースの承認モデルが用意されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスまたはデータベースにアクセスするすべてのユーザーは、ロールのコンテキスト内でアクセスする必要があります。  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [ロールの作成および管理 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
   
   
-

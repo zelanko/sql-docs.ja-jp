@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fa55853548b825b04ac75d5cb4af9689e34e3cd7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cda6c82147648f35adb80012d0810d514d08de86
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)
 First、last に移動次、または前のレコードを指定した[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトと現在のレコードを記録できるようにします。  
@@ -66,7 +64,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  場合、 **Recordset**のみを転送、前方および後方スクロールがサポートする場合は、使用することができます、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)旧バージョンとカーソルの移動をサポートするレコードのキャッシュを作成するプロパティを介して、[移動](../../../ado/reference/ado-api/move-method-ado.md)メソッドです。 キャッシュされているレコードがメモリに読み込まれ、ために、必要以上のレコードをキャッシュを回避する必要があります。 呼び出すことができます、 **MoveFirst**順方向専用のメソッド**Recordset**オブジェクト以外のプロバイダーを生成したコマンドを再実行することがありますが、**レコード セット**オブジェクト.  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
@@ -74,5 +72,4 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (vc++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
- [後続のメソッド (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-
+ [MoveRecord メソッド (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cef352e37903dd18048f7496928f9e96faaba26c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6b2eca528b40afd905661e2508e93529159b8627
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - データ マイニング)
   マイニング構造と関連するすべてのモデル (クラスター モデルを除く) に対するクロス検証の精度基準を返します。  
@@ -169,8 +167,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>参照  
  [SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults & #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
-

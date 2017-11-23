@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADO]
+helpviewer_keywords: enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-enumerated-constants"></a>ADO 列挙定数
 デバッグに役立つ、ADO 列挙体には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADO の 1 つのリリース別に変更があります。 コードは、列挙定数の実際の値ではなく、名前に依存する必要がありますのみです。  
@@ -47,7 +44,7 @@ ms.lasthandoff: 09/09/2017
 |[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)|カーソル エンジンの場所を指定します。|  
 |[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)|どのような機能を指定、**サポート**のメソッドをテストする必要があります。|  
 |[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)|使用するカーソルの種類を指定します、 **Recordset**オブジェクト。|  
-|[格納](../../../ado/reference/ado-api/datatypeenum.md)|データ型を指定します、**フィールド**、**パラメーター**、または**プロパティ**です。|  
+|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|データ型を指定します、**フィールド**、**パラメーター**、または**プロパティ**です。|  
 |[EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)|レコードの編集状態を指定します。|  
 |[ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md)|ADO の実行時エラーの種類を指定します。|  
 |[EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)|イベントを発生の原因となった理由を指定します。|  
@@ -65,13 +62,13 @@ ms.lasthandoff: 09/09/2017
 |[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)|動作を指定します、**レコード**オブジェクト**後続**メソッドです。|  
 |[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)|オブジェクトがオープンかクローズは、コマンドの実行またはデータのフェッチで、データ ソースに接続するかどうかを指定します。|  
 |[ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md)|属性を指定、**パラメーター**オブジェクト。|  
-|[値](../../../ado/reference/ado-api/parameterdirectionenum.md)|指定するかどうか、**パラメーター**入力パラメーター、出力パラメーター、またはその両方を表すパラメーターがストアド プロシージャからの戻り値の場合またはします。|  
+|[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)|指定するかどうか、**パラメーター**入力パラメーター、出力パラメーター、またはその両方を表すパラメーターがストアド プロシージャからの戻り値の場合またはします。|  
 |[PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)|保存する形式を指定します、 **Recordset**です。|  
 |[PositionEnum](../../../ado/reference/ado-api/positionenum.md)|内のレコードのポインターの現在位置を示す、 **Recordset**です。|  
 |[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)|属性を指定、**プロパティ**オブジェクト。|  
 |[RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)|指定、**レコード**オブジェクト**開く**メソッド既存かどうか**レコード**開かれている、または、新規にする必要があります**レコード**作成する必要があります。|  
 |[RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)|開くのためのオプションを指定します、**レコード**です。 これらの値は、OR 演算子を使用して組み合わせることができます。|  
-|[可能](../../../ado/reference/ado-api/recordstatusenum.md)|バッチ更新およびその他の一括操作に関して、レコードの状態を指定します。|  
+|[RecordStatusEnum](../../../ado/reference/ado-api/recordstatusenum.md)|バッチ更新およびその他の一括操作に関して、レコードの状態を指定します。|  
 |[RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md)|型を指定**レコード**オブジェクト。|  
 |[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)|呼び出しによって基になる値を上書きするかどうかを示す**再同期**です。|  
 |[SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md)|ファイルを作成またはからの保存時に上書きするかどうかを指定します、**ストリーム**オブジェクト。 値は、AND 演算子と組み合わせることができます。|  
@@ -95,4 +92,3 @@ ms.lasthandoff: 09/09/2017
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO のプロパティ](../../../ado/reference/ado-api/ado-properties.md)
-

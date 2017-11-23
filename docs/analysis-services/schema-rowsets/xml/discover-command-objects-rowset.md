@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_COMMAND_OBJECTS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 130ebbaa5453b61e0c473edea40c97eb0b65b0f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cae36b0ff5492555137952c2ad9b19f609c53948
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 行セット
   参照先のコマンドによって使用中のオブジェクトに関するリソース使用状況とアクティビティ情報を提供します。  
@@ -40,11 +37,11 @@ ms.lasthandoff: 09/01/2017
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**SESSION_SPID**|**DBTYPE_I4**|はい|セッション ID。|  
-|**SESSION_ID**|**DBTYPE_WSTR**|はい|GUID としてのセッションの一意識別子。|  
+|**SESSION_SPID**|**DBTYPE_I4**|可|セッション ID。|  
+|**SESSION_ID**|**DBTYPE_WSTR**|可|GUID としてのセッションの一意識別子。|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||コマンドのシーケンス番号。|  
-|**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|はい|現在のオブジェクトの親へのパス。|  
-|**OBJECT_ID**|**DBTYPE_WSTR**|はい|作成したときに定義されたオブジェクトの ID。|  
+|**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|可|現在のオブジェクトの親へのパス。|  
+|**OBJECT_ID**|**DBTYPE_WSTR**|可|作成したときに定義されたオブジェクトの ID。|  
 |**OBJECT_VERSION**|**DBTYPE_I4**||オブジェクトのメタデータ バージョン番号。この番号は、オブジェクトが変更されるたびに変わります。|  
 |**OBJECT_DATA_VERSION**|**DBTYPE_I4**||オブジェクト内のデータの系列番号。 この番号は、オブジェクトが処理されるたびに増加します。|  
 |**OBJECT_CPU_TIME_MS**|**DBTYPE_I8**||コマンドの開始以降にオブジェクトによって使用された CPU 時間 (ミリ秒単位)。|  
@@ -71,7 +68,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|CommandObjects|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

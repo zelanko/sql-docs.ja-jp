@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>プロシージャを使用する場合
 プロシージャを使用する利点を次の数と、すべて、という事実に基づいてプロシージャを使用して SQL ステートメントから移動、アプリケーション、データ ソースをします。 新機能はのまま、アプリケーションには、相互運用可能なプロシージャ呼び出しです。 これらの利点は次のとおりです。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
  2 つ目の欠点は、多くの Dbms によってプロシージャがサポートされないことです。 ここでも、さまざまな Dbms を実行するように設計垂直方向のアプリケーションの問題が発生する可能性がします。 アプリケーションを呼び出すプロシージャがサポートされているかどうかを判断するのに**SQLGetInfo** SQL_PROCEDURES オプションを使用します。  
   
  3 つ目の欠点は、特にアプリケーションの開発環境に適切であるが、ODBC には、プロシージャを作成するための標準的な文法は定義しません。 つまり、アプリケーションでは、interoperably プロシージャを呼び出すことができます、これらは作成できません interoperably。
-

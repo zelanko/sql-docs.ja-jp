@@ -19,17 +19,16 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)
   データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) に追加されたテーブル間のリレーションシップが、基になるデータベース リレーションシップまたは指定した名前一致条件に基づき、自動的に定義されます。  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98ec1ace5b819a123fd4a8949c92caa5e3be4e5f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbffc4a5312dc83976915653141247d27dc8eae4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>モデリング フラグの表示または変更 (データ マイニング)
   モデリング フラグは、マイニング構造列またはマイニング モデル列に設定して、分析時にアルゴリズムがデータを処理する方法を制御するためのプロパティです。  
@@ -64,4 +63,3 @@ ms.lasthandoff: 09/01/2017
  [モデリング フラグ (データ マイニング)](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   
-

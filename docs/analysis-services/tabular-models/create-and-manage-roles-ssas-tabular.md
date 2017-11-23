@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.rolemanager.f1
 - sql13.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13aa039fc89a95af9f977c191ef90b624edb6b9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c625fce817af3072e059d5d2b1172383fcdafea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>ロールの作成および管理 (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 モデル プロジェクトのロールは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義します。 モデルが配置されると、データベース管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してロールを管理することができます。  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.getString (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.getString (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f387e0af0531590920d526fd40ab42bbf0aa55aa
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b30c55710c767eb602c48e320b1bc5361a20d442
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,9 +59,8 @@ public java.lang.String getString(java.lang.String columnName)
  ユーザー定義型は 16 進数として返されます**文字列**値。  
   
 ## <a name="see-also"></a>参照  
- [getString メソッド & #40 です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   
+ [getString メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

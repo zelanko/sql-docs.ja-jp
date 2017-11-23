@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::Move
 - Recordset15::raw_Move
-helpviewer_keywords:
-- Move method [ADO]
+helpviewer_keywords: Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d1db74ef70a98467e320dc09ff4e19c5935ac04
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 69f3ce38f87be4670bcb08f80db076ce88d37212
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 現在のレコードの位置を移動、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -69,7 +66,7 @@ recordset.Move NumRecords, Start
 >  順方向専用の逆行サポート**Recordset**プロバイダーによっては、予測可能ではありません。 現在のレコードは、後の最後のレコードに位置付けられている場合、 **Recordset**、**移動**後方されないことがある現在の位置が正しい。  
   
 ## <a name="applies-to"></a>適用対象  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [メソッドの例 (VB) を移動します。](../../../ado/reference/ado-api/move-method-example-vb.md)   
@@ -77,5 +74,4 @@ recordset.Move NumRecords, Start
  [メソッドの例 (vc++) に移動します。](../../../ado/reference/ado-api/move-method-example-vc.md)   
  [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
- [後続のメソッド (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-
+ [MoveRecord メソッド (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

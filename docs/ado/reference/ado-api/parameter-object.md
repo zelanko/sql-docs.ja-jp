@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Parameter
-helpviewer_keywords:
-- Parameter object [ADO]
+f1_keywords: Parameter
+helpviewer_keywords: Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7916c054b41b63b358f8330ff1a21b05689f2920
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ed793606962eda3b6d7b29fedad3bb0f0dd18b0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameter-object"></a>Parameter オブジェクト
 パラメーターまたはに関連付けられている引数を表します、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトがパラメーター化されたクエリまたはストアド プロシージャに基づいています。  
@@ -62,5 +58,4 @@ ms.lasthandoff: 09/09/2017
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

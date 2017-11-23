@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>ディメンションおよびパーティションの文字列ストレージの構成
   文字列ストレージは、ディメンション属性またはパーティションの非常に大きな文字列 (文字列ストアの 4 GB のファイル サイズ制限を超えるもの) に対応するように再構成できます。 このサイズの文字列ストアがディメンションまたはパーティションに含まれている場合、ディメンション レベルまたはパーティション レベルで **[StringStoresCompatibilityLevel]** プロパティを変更することによって、ファイル サイズの制約を回避できます。これは、ローカル オブジェクトとリンクされている (ローカルまたはリモート) オブジェクトの両方に適用されます。  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [ディメンションのストレージ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   
-

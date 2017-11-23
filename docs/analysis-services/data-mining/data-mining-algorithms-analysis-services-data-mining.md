@@ -25,17 +25,16 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85f1333bc1f9674dcdb5274e0b2768c401fd2d7c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>データ マイニング アルゴリズム (Analysis Services - データ マイニング)
   データ マイニング (機械学習) の *アルゴリズム* は、データからモデルを作成するヒューリスティクスと計算のセットです。 モデルを作成するために、データ マイニング アルゴリズムは、まず提供されたデータを分析し、特定の種類のパターンまたは傾向を探します。 この分析を繰り返し実行した結果を使用して、マイニング モデルを作成するための最適化されたパラメーターが定義されます。 これらのパラメーターはデータセット全体に適用され、実用的なパターンおよび詳細な統計情報が抽出されます。  
@@ -111,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

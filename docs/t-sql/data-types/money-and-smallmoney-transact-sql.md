@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - money
 - smallmoney
 - smallmoney_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - money data type, about money data type
 - money data type
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - values [SQL Server], monetary
 - currency [SQL Server]
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: c9c66d9934618b1b8b21b0d4dcb0a234ff94731f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bd07ecd1cdacc686e0f831320fd5e939c0c174da
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money および smallmoney (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,13 +79,12 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 ```  
   
 ## <a name="see-also"></a>参照
-[ALTER TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md) 
- [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md) 
-[テーブルを作成する & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md) 
-[データ型 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md) 
- [DECLARE @local_variable & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
-[設定@local_variable& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
- [sys.types & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md) 
+ [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md) 
+[テーブルを作成する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md) 
+[データ型 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md) 
+ [DECLARE @local_variable &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
+[設定@local_variable&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
+ [sys.types &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   
-

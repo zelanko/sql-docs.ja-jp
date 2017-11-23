@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CalculationProperty Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CalculationProperty Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CalculationProperty
-helpviewer_keywords:
-- CalculationProperty element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CalculationProperty
+helpviewer_keywords: CalculationProperty element
 ms.assetid: 5f0b4cfc-7d25-4c01-a517-cc2e89859be3
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f975a682331240400bbb9c215ca6596220d064c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 499f002694022d737b7711c0d69891a5b08059eb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculationproperty-element-assl"></a>CalculationProperty 要素 (ASSL)
   使用する計算のユーザー インターフェイスのプロパティのコレクションを格納、 [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)要素。  
@@ -84,7 +78,6 @@ ms.lasthandoff: 09/01/2017
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.CalculationProperty>します。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト & #40 です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

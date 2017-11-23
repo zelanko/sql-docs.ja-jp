@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alter table [ODBC]
+helpviewer_keywords: alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 79fbb4e4f6c143d693e1b41cc1660938bc61cde1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bafb2f2a11b7108d550dae66db0b5d8e158086a3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE の SQL コマンド
 プログラムによって、テーブルの構造を変更します。  
@@ -84,7 +81,7 @@ ALTER TABLE TableName1
   
  *nFieldWidth*と*nPrecision* D、G、I、L、M、P、T、および Y を無視する型。 既定では、 *nPrecision*場合は 0 (数値) は、 *nPrecision*は、B、F、または N 型に含まれません。  
   
- NULL & #124 です。NOT NULL します。  
+ NULL &#124;です。NOT NULL します。  
  許可または、フィールドの値は null を防止します。  
   
  NULL を省略して NOT NULL、SET NULL の現在の設定は、フィールドで null 値を許容するかどうかを決定します。 ただし、NOT NULL しし、主キーまたは一意の句を含める省略 NULL、SET NULL の現在の設定は無視されフィールドではありません既定では NULL です。  
@@ -202,4 +199,3 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ## <a name="see-also"></a>参照  
  [テーブルの SQL コマンドを作成します。](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX コマンド](../../odbc/microsoft/index-command.md)
-

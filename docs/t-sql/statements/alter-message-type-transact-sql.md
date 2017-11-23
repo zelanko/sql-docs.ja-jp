@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_MESSAGE_TYPE_TSQL
 - ALTER MESSAGE TYPE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER MESSAGE TYPE statement
 - modifying message types
 - message types [Service Broker], modifying
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e659485217967bdfb97be4bc12aeebc9bccf1055
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ed67afafb33faa22ececbea51c1ed502b1e5725
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,10 +90,9 @@ ALTER MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER AUTHORIZATION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [メッセージの種類 &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-message-type-transact-sql.md)   
  [メッセージの種類 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

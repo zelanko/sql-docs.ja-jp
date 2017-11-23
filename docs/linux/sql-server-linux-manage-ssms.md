@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 57c13b89e4bb8410f40e4a75ed93b08fa9812722
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: f8dd1654dc05a89147ecf9d658d492adeb3d0ceb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Linux 上の SQL Server を管理するのに Windows 上の SQL Server Management Studio の使用します。
 
@@ -99,4 +98,3 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
 - [チュートリアル: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
 - [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [サーバーのパフォーマンスと利用状況の監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)
-

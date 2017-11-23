@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures"></a>メジャー
   テーブル モデルでは、メジャーとはレポート クライアントで使用するために DAX 数式を使用して作成される計算のことです。 メジャーの評価は、ユーザーがレポート クライアント アプリケーションで選択するフィールド、フィルター、またはスライサーに基づいて行われます。  
@@ -96,7 +95,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[作成するメジャーおよび管理します。](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|モデル デザイナーのメジャー グリッドを使用してメジャーを作成および管理する方法について説明します。|  
+|[メジャーを作成および管理する](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|モデル デザイナーのメジャー グリッドを使用してメジャーを作成および管理する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
@@ -104,4 +103,3 @@ Sum of TotalProfit: =SUM([TotalProfit])
  [計算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
-

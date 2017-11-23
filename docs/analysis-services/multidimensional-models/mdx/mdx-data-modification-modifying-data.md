@@ -20,17 +20,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], data modifications
 - data modifications [MDX]
 ms.assetid: 363b662c-b839-4971-bbd7-1842f73ce141
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63268d2f905d91833ad1ec542d0db78ab7b921cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2f703f4f86c7c16118026ff2209bf0a1e35c8d3a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-modification---modifying-data"></a>MDX データ変更のデータの変更
   多次元式 (MDX) は、ディメンションやキューブのデータの取得や操作を行うためだけでなく、ディメンションやキューブのデータの更新、つまり *書き戻し* を行うためにも使用できます。 これらの更新は、推測分析または "what-if" 分析の場合のように一時的なものであることも、データ分析に基づいて変更を加える必要がある場合のように永続的なものになることもあります。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

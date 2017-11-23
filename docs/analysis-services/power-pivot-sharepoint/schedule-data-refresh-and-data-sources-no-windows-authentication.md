@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64cd9d5e1b628da9f4ceff1ac75663fb558238f4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>定期データ更新とデータ ソースに Windows 認証は行われません
   このトピックでは、Windows 認証をサポートしない [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**データ ソースを使用できる** for SharePoint 定期データ更新のワークフローについて説明します。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
@@ -180,4 +179,3 @@ ms.lasthandoff: 09/01/2017
 -   [SharePoint 2013 と SQL Server 2012 SP1 (Analysis Services) での Power Pivot データの更新に関する記事](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)の「定期データ更新」セクションをご覧ください。  
   
   
-

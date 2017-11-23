@@ -8,26 +8,22 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER TABLE statement
+dev_langs: TSQL
+helpviewer_keywords: ALTER TABLE statement
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: faff7cbb4f4eec1cf68601805d0dbbe1a3a84b3e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70972816a0b7259dd7c455e2c65c45491d31e5f0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +98,7 @@ FILLFACTOR =*fillfactor*
  どの程度を指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インデックス データの格納に使用される各インデックス ページを作成する必要があります。 ユーザーが指定した*fillfactor* 1 ~ 100 の値を指定できます。 値を指定しない場合の既定値は 0 です。  
   
 > [!IMPORTANT]  
->  マニュアルは、WITH FILLFACTOR = *fillfactor* PRIMARY KEY または UNIQUE 制約に適用される唯一のインデックス オプションは、旧バージョンとの互換性のために維持されますが、この方法で、将来的には記載いないようを解放します。 他のインデックス オプションを指定することができます、 [index_option & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-index-option-transact-sql.md) ALTER TABLE の句。  
+>  マニュアルは、WITH FILLFACTOR = *fillfactor* PRIMARY KEY または UNIQUE 制約に適用される唯一のインデックス オプションは、旧バージョンとの互換性のために維持されますが、この方法で、将来的には記載いないようを解放します。 他のインデックス オプションを指定することができます、 [index_option &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-index-option-transact-sql.md) ALTER TABLE の句。  
   
 FOREIGN KEY REFERENCES  
  1 つ以上の列内のデータに参照整合性を持たせる制約です。 FOREIGN KEY 制約では、列内の各値が、参照されるテーブル内のその値に対応する参照される列に存在している必要があります。 FOREIGN KEY 制約は、参照されるテーブル内の PRIMARY KEY 制約または UNIQUE 制約である列、または参照されるテーブルの UNIQUE INDEX で参照される列のみを参照できます。 計算列の外部キーには、PERSISTED も設定する必要があります。  
@@ -158,4 +154,3 @@ ON { *partition_scheme_name*(*partition_column_name*) |*filegroup*|"default"}
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

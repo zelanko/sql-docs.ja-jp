@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b5d294aaeebab45e0ff0ce36db0fa39b9738571
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC の動的カーソル
 動的カーソルは、その: 動的です。 メンバーシップ、順序、および、カーソルが開かれた後に結果セットの値に加えられた変更を検出できます。 たとえば、動的カーソルが 2 つの行をフェッチし、別のアプリケーションは、これらの行のいずれかを更新し、もう一方を削除します。 動的カーソルは、し、それらの行の再フェッチを試みると、削除された行は見つかりませんが、更新された行の新しい値を返します。  
@@ -51,4 +49,3 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  このステートメントを作成する最初の行セットは、元の結果セット内の次の行セット、2 つ目の結果セット: この場合は、Customers テーブル内の行のセット。 カーソルは、この行セットをアプリケーションに返します。  
   
  興味深いは、この方法で実装される動的カーソルは、多くの結果セットを実際に作成して、元の結果セットに変更を検出することができます。 アプリケーションはこれら補助次の結果セットの存在を学習します。カーソルが元の結果セットへの変更を検出できない場合は、単が表示されます。
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerStatement.getMoreResults (int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerStatement.getMoreResults (int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 94667aabdcc08693f4f7a8647f9333a18053e956
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0daf7ce3684ce376ea228adcc9e4b2c0d32f831b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -68,9 +64,8 @@ public final boolean getMoreResults(int mode)
 >  JDBC ドライバーは、定数 KEEP_CURRENT_RESULT の使用をサポートしていません。 この定数を使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [getMoreResults メソッド & #40 です。SQLServerStatement &#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
+ [getMoreResults メソッド &#40;です。SQLServerStatement &#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
-

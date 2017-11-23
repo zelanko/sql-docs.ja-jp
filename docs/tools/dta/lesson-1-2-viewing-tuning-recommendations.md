@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>レッスン 1、2、チューニングの推奨設定を表示します。
 ここでは、「 [チューニング ワークロードの作成](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成したチューニング セッションを使用します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] スクリプト MyScript.sql を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをチューニングすると、その結果が [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの **[推奨設定]** タブに表示されます。次の作業では、 **チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の** [推奨設定] [!INCLUDE[ssDE](../../includes/ssde-md.md)] タブについて学習し、このタブに表示されるチューニング セッションの結果について検証します。  
@@ -65,4 +61,3 @@ MySession チューニング セッションの内容を **[推奨設定]** タ�
   
   
   
-

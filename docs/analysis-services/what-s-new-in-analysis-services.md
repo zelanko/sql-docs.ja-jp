@@ -8,22 +8,20 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 97
+caps.latest.revision: "97"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 212fbb3618bbccc58ea077d59f15dca3c31ca71f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services の新機能
 各種 SQL Server 2016 Analysis Services パフォーマンスの向上、簡単にソリューションの作成、データベースの自動管理を提供する新しい機能強化、双方向クロス フィルター処理、強化された関係並列パーティションの処理、およびいっそうです。 このリリースのほとんどの拡張機能の核となるのは、表形式モデル データベースの新しい互換性レベル 1200 です。     
@@ -212,5 +210,4 @@ Visual Studio 2015 の [コードの表示] で、表形式モデル 1200 の BI
 [Analysis Services チーム ブログ](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)    
      
-
 

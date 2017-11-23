@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_COMMANDS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 759228adb8cdd02f6d9f4573cf4c1225709487d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49d95852f838c67a34e175ed160c6abdad93bd61
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 行セット
   サーバーで、現在実行中または最後のコマンドの実行で開いている接続に関するリソース使用状況とアクティビティ情報を提供します。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**SESSION_SPID**|**DBTYPE_I4**|はい|セッション ID。|  
+|**SESSION_SPID**|**DBTYPE_I4**|可|セッション ID。|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||セッションの開始以降に実行されたコマンドの数。|  
 |**COMMAND_START_TIME**|**DBTYPE_DBTIMESTAMP**||最後のコマンドが開始された日時。サーバーの UTC 時刻で表されます。|  
 |**COMMAND_ELAPSED_TIME_MS**|**DBTYPE_I8**||コマンドが開始されてからの経過時間 (ミリ秒単位)。|  
@@ -65,7 +62,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|コマンド|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

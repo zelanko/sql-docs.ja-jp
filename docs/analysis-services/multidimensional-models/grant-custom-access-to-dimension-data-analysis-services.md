@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
+f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - AllowedSet property
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - VisualTotals property
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
   キューブに対する読み取りアクセスを有効にすると、ディメンション メンバー (キューブで使用されるすべてのメジャーを含むメジャー ディメンションのメジャーを含む) へのアクセスを明示的に許可または拒否する追加の権限を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
@@ -145,4 +143,3 @@ ms.lasthandoff: 09/27/2017
  [データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   
-

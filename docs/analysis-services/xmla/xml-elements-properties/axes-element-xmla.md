@@ -13,32 +13,27 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Axes Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Axes Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - Axes
 - http://schemas.microsoft.com/analysisservices/2003/engine#Axes
 - microsoft.xml.analysis.axes
 - urn:schemas-microsoft-com:xml-analysis#Axes
-helpviewer_keywords:
-- Axes element
+helpviewer_keywords: Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 949574c5719b09dceb8dd1fa6f252d097b014237
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fd10148d82ac0be83bfab721653cc1e200464fa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="axes-element-xmla"></a>Axes 要素 (XMLA)
   コレクションを格納[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)要素に含まれる軸データを表す、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)を使用する要素、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型。  
@@ -72,7 +67,7 @@ ms.lasthandoff: 09/01/2017
 |子要素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>解説  
- 下にある、**軸**要素、**軸**要素は、0 から始まる、データセット内の出現順序で一覧表示されます。 **AxisFormat** XMLA プロパティの設定の決定方法**軸**要素が書式設定します。 詳細については、 **AxisFormat**プロパティを参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ 下にある、**軸**要素、**軸**要素は、0 から始まる、データセット内の出現順序で一覧表示されます。 **AxisFormat** XMLA プロパティの設定の決定方法**軸**要素が書式設定します。 詳細については、 **AxisFormat**プロパティを参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  軸は、次元が同じである複数の組から成るセットを表します。 1 つのセットを表す方法はいくつかあり、それぞれの方法に利点があります。 たとえば、次のような 4 つの組から成るセットは、2 次元の組のコレクションとして表すことも、2 つの 1 次元セットのデカルト積として表すこともできます。  
   
@@ -128,8 +123,7 @@ CrossProduct (
  クライアントが使用できる、 **AxisFormat**プロパティを特定の表現を要求します。  
   
 ## <a name="see-also"></a>参照  
- [MDDataSet データ型 & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [MDDataSet データ型 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

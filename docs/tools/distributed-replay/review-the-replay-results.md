@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b5509f22c53e1c285175969964abc4b977f8d9bc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能が分散再生を完了した後は、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、**replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -83,9 +81,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理ツールのコマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Distributed Replay を構成します。](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

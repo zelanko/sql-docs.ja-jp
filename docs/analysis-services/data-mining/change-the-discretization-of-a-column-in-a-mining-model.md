@@ -19,17 +19,16 @@ helpviewer_keywords:
 - discretized columns [data mining]
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5a3ce24b220b3a4cf26e0c6874da26f4671ec528
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3f4295bb22bdc8d3e66fa8e69c1346b7d226953
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>マイニング モデルでの列の分離の変更
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、特定の状況で値が自動的に分離 (データが数値列にビン分割) されます。 たとえば、データに連続する数値データが含まれている場合にデシジョン ツリー モデルを作成すると、データの分布に応じて、連続するデータの各列が自動的にビン分割されます。 データの分離方法を制御するには、モデルでのデータの使用方法を制御するマイニング構造列のプロパティを変更する必要があります。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 09/01/2017
   
 ### <a name="to-change-the-discretization-method"></a>分離メソッドを変更するには  
   
-1.  **[マイニング プロパティ]** ウィンドウで、 **[コンテンツ]**の横にあるテキスト ボックスをクリックし、一覧から [ **Discretized** ] を選択します。  
+1.  **マイニング プロパティ]**[ ウィンドウで、 ]**[コンテンツ**の横にあるテキスト ボックスをクリックし、一覧から **[ Discretized ]** を選択します。  
   
      マイニング モデル全体に関連付けられているプロパティが、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> プロパティと <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> プロパティが有効になりました。  
   
@@ -68,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

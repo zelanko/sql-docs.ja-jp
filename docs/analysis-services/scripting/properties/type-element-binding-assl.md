@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Type Element (Binding)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Type Element (Binding)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TYPE
-helpviewer_keywords:
-- Type element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TYPE
+helpviewer_keywords: Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8e90c53373c0f73a286157be247796866baff3f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 978a5ce423cfa50bbe958046ff7f5da77314cd83
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-element-binding-assl"></a>Type 要素 (Binding) (ASSL)
   属性バインドの型を格納します。  
@@ -84,8 +78,7 @@ ms.lasthandoff: 09/01/2017
  親に対応する要素**型**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.AttributeBinding>と<xref:Microsoft.AnalysisServices.CubeAttributeBinding>です。  
   
 ## <a name="see-also"></a>参照  
- [バインディング データ型 & #40 です。ASSL &#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
- [プロパティ & #40 です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [バインディング データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
+ [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

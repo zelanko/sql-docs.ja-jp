@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-helpviewer_keywords:
-- Getrows method [ADO], JScript example
+dev_langs: JScript
+helpviewer_keywords: Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a81c58c0a9f131993b5b41c130ddd599d42c0d91
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3309dde1d1d69ceb1f5cd720f3e97037fd3068a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows メソッドの例 (JScript)
 この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)のすべての行を取得する方法を*Custiomers*からテーブル、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)および結果として得られるデータの配列を設定します。 **GetRows**メソッドが返す行の必要な数より少ない: 場合[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達している場合、または**GetRows**したレコードを取得しようとしています。別のユーザーによって削除されます。 この関数を返します**False** 2 番目のケースが発生した場合にのみです。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**GetRowsJS.asp**です。  
@@ -168,5 +164,4 @@ BODY {
   
 ## <a name="see-also"></a>参照  
  [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

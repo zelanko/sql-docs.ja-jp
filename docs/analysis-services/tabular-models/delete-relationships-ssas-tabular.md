@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c17aa3e6662d37dfb3863756597dd95022f7f02
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b71d8acb6016e425d62c49caa536fafaed8404c9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-relationships-ssas-tabular"></a>リレーションシップの削除 (SSAS テーブル)
   ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)」を参照してください。  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   
-

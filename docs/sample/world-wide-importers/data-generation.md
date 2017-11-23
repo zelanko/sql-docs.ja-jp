@@ -3,28 +3,29 @@ title: "データ生成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: cb816c1d41f0f5b77aa1dd6434cf912a6fbf4592
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters データの生成
-WideWorldImporters と WideWorldImportersDW データベースのリリース バージョンには、年 1 月 1 日の 2013、最大 1 日に、これらのデータベースが生成されたデータが含まれています。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters と WideWorldImportersDW データベースのリリース バージョンには、年 1 月 1 日の 2013、最大 1 日に、これらのデータベースが生成されたデータが含まれています。
 
 サンプル データベースが、後で、デモや図の目的で使用されている場合は、データベースに最新のサンプル データを含めると役に立つ場合があります。
 
@@ -85,4 +86,3 @@ WideWorldImportersDW 任意パフォーマンス テスト、たとえばクラ�
 約、必要な数の行が挿入され、 `Fact.Sale` 2012 年内のテーブルです。 プロシージャ 50000 1 日あたりの行の数に制限します。 これにより、変更する可能性がありますを誤って overinflations テーブルを回避するのにはあります。
 
 さらに、プロシージャは既に適用されていない場合のようにクラスター化列ストア インデックスの作成を適用します。
-

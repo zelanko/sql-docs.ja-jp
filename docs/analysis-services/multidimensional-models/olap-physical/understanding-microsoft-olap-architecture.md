@@ -13,32 +13,29 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- multidimensional data [Analysis Services], about multidimensional data
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 77fae4f9fd4b057a5388029b1544aa72842d91ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6416855a4cfac989e9571f187d95a65343dba196
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
   以下のトピックを参照して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多次元データベースを十分に理解し、ビジネス インテリジェンス ソリューションに多次元データベースを実装する計画を立てます。  
   
  ![小さいファイル フォルダー アイコン](../../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン")**論理アーキテクチャ**  
- [サーバー オブジェクト & #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
+ [サーバー オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
   
- [ディメンション オブジェクト & #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
+ [ディメンション オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
   
- [キューブ オブジェクト & #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+ [キューブ オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  [詳細情報](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
@@ -60,7 +57,6 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services のグローバリゼーションのシナリオ](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
 ## <a name="see-also"></a>参照  
- [テクニカル リファレンス & #40 です。SSAS &#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
+ [テクニカル リファレンス &#40;です。SSAS &#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   
-

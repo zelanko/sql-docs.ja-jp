@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_COLUMNS
+apiname: DBSCHEMA_COLUMNS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_COLUMNS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ce502f05dbbb701f694f4699f2867b92c0b3158c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 93cd52a3f37c9e14af6132708fd36591ac846f59
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 行セット
   指定された制約条件を満たすすべての列の列情報を提供します。  
@@ -85,7 +81,6 @@ ms.lasthandoff: 09/01/2017
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|省略可|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [OLE DB Schema 行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

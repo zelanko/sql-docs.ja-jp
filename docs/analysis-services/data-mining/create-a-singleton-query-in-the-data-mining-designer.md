@@ -17,17 +17,16 @@ helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cd960d2d0f0628e2c8a8c568cf7e5bb065caa2a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>データ マイニング デザイナーでの単一クエリの作成
   単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
@@ -92,4 +91,3 @@ AS [t]
  [予測クエリ (データ マイニング)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
-

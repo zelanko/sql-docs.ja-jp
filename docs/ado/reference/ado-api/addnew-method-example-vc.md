@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- AddNew method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: AddNew method [ADO], VC++ example
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6658d31453d43918167112dc7b1209e44cf7840
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67ae165ea28ec1bc7a62451e9734a882f16566b9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="addnew-method-example-vc"></a>AddNew メソッドの例 (vc++)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
@@ -223,5 +219,4 @@ void PrintProviderError(_ConnectionPtr pConnection) {
   
 ## <a name="see-also"></a>参照  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

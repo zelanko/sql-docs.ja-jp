@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94f4cf7687c8e1469ea5f3a4260b69224e0ddbc0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行セット
   CSDLBI 形式 (BI 注釈付き概念スキーマ定義言語) でモデル定義を提供しながら、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ モデル (テーブル モデルまたは多次元) に関する情報を返します。 CSDLBI は、Entity Data Framework によって使用される XML スキーマである CSDL に基づくもので、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーと [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] クライアントの間の通信に使用されます。 ビジネス インテリジェンス (BI) 注釈は、テーブル モデルとテーブル モデル内のオブジェクトに関する追加のメタデータを提供します。 テーブル データ モデルの詳細については、「[ビジネス インテリジェンス向け CSDL 注釈 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)」を参照してください。  
@@ -40,11 +38,11 @@ ms.lasthandoff: 09/01/2017
   
 |**列名**|**型インジケーター**|**制限**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|はい|CSDLBI 記述の要求対象となるデータベースの名前を指定します。 省略した場合は、現在のデータベースが使用されます。<br /><br /> この制限は、すべての種類のモデルに対して必要です。|  
-|**PERSPECTIVE_ID**|**DBTYPE_WSTR**|はい|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの ID を指定します。<br /><br /> 省略可能な制限。 すべての種類のモデルに適用されます。|  
-|**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|はい|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの名前を指定します。<br /><br /> この制限は、テーブル モデルにパースペクティブが含まれるか、多次元ソリューションに複数のキューブまたはパースペクティブが含まれる場合に必要です。|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|可|CSDLBI 記述の要求対象となるデータベースの名前を指定します。 省略した場合は、現在のデータベースが使用されます。<br /><br /> この制限は、すべての種類のモデルに対して必要です。|  
+|**PERSPECTIVE_ID**|**DBTYPE_WSTR**|可|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの ID を指定します。<br /><br /> 省略可能な制限。 すべての種類のモデルに適用されます。|  
+|**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|可|CATALOG_NAME によって指定されたモデルに定義されているパースペクティブの名前を指定します。<br /><br /> この制限は、テーブル モデルにパースペクティブが含まれるか、多次元ソリューションに複数のキューブまたはパースペクティブが含まれる場合に必要です。|  
 |**メタデータ**|**DBTYPE_WSTR**|不可|データ ソースとそのプロパティの XML 定義を CSDLBI スキーマに従って保持する文字列です。|  
-|**CUBE_ID**|**DBTYPE_WSTR**|はい|文字列識別子。<br /><br /> この制限は、多次元データベースに対しては省略可能です。 複数のキューブが利用可能であるときに、制限が省略されると、既定のキューブが返されます。|  
+|**CUBE_ID**|**DBTYPE_WSTR**|可|文字列識別子。<br /><br /> この制限は、多次元データベースに対しては省略可能です。 複数のキューブが利用可能であるときに、制限が省略されると、既定のキューブが返されます。|  
   
 ## <a name="remarks"></a>解説  
  DISCOVER_CSDL_METADATA には、次の要件があります。  
@@ -136,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [Business Intelligence &#40; 向けの CSDL 注釈CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - data sources [Analysis Services]
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7be6a20c985f7af2f6560856f0e2b361e22949ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fb419325bc8490fdfb62fb044cb81c81e111e6e3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多次元モデルのデータ ソース
   多次元モデルにインポートするデータまたは読み込むデータは、すべて外部データ ソースから取得されます。 通常、ソース データはレポート生成用に設計されたデータ ウェアハウスから取得されますが、直接的または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージなどを介して間接的にアクセスされるリレーショナル データベースから取得される場合もあります。  
@@ -74,7 +73,6 @@ ms.lasthandoff: 09/01/2017
  [データベース オブジェクト &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [論理アーキテクチャ (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [データ ソースとのバインド & #40 です。SSAS 多次元 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [データ ソースとのバインド &#40;です。SSAS 多次元 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   
-

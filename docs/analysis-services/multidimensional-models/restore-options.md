@@ -18,17 +18,16 @@ helpviewer_keywords:
 - databases [Analysis Services], restoring
 - restoring databases [Analysis Services]
 ms.assetid: 75c73802-f321-4671-afc7-54505d62c013
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 23b028bc2e8819d63fafe0a8f915238492088fc4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70d9a29f303e2bf476fe6bfca56abe3d0e317ad2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-options"></a>[復元オプション]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法は数多くありますが、どの方法でもサーバー コンピューターと [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの両方に対する管理者権限が必要です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元するには、 **で** [データベースの復元] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを開き、このダイアログ ボックスから適切なオプション構成を選択して、復元を実行します。 または、ファイルに既に指定されている設定を使用してスクリプトを作成できます。このスクリプトを保存して、必要に応じて実行できます。 この場合、次のセクションの説明に従って、XMLA を使用して復元を実行します。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [データベースのバックアップ、復元、および同期 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   
-

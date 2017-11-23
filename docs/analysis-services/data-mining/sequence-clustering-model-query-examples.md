@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、モデルに格納されている情報の詳細を取得できます。予測クエリでは、モデル内のパターンを使用して、指定した新しいデータに基づく予測を行うことができます。 シーケンス クラスター モデルでコンテンツ クエリを使用すると、一般に、検出されたクラスターやクラスター内の遷移に関する追加情報を取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -287,4 +286,3 @@ AS t
  [シーケンス クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

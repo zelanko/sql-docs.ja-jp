@@ -11,24 +11,22 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7369fe9b75148c7b0d448ff4fd2b9457dc77212
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a14a03b6b0a0e2e879d745fd8d2f341c1bbf6c54
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 アプリケーションで ADO ライブラリを参照します。
 Microsoft Visual Basic 6 アプリケーションに、ADO ライブラリをインポートするには、Visual Basic プロジェクトで参照を設定する必要があります。  
@@ -61,4 +59,3 @@ Microsoft Visual Basic 6 アプリケーションに、ADO ライブラリをイ
 -   *msado20.tlb*、ADO 2.0 タイプ ライブラリ  
   
  アプリケーションではこれらの ADO ライブラリを使用の旧バージョンと互換性の理由から必要がある場合は、タイプ ライブラリの適切なバージョンをインポートする必要があります。 これを行うには、前のセクションの手順に従います交換*msado15.dll*によって*msadoXX.tlb*ここで、 *XX*をインポートする必要があります。 バージョン番号を表します。
-
