@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER ENDPOINT
 - ALTER_ENDPOINT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER ENDPOINT statement
 - modifying endpoints
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a035e71325993e088b9910d6538c8bdd61e03f7e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2552e1b3ece67afb0f73b1ab9e1f9911ee235703
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 -   エンドポイントのプロパティを変更する。  
   
 > [!NOTE]  
->  このトピックでは、ALTER ENDPOINT に固有の構文および引数について説明します。 CREATE ENDPOINT と ALTER ENDPOINT の両方に共通する引数の説明については、次を参照してください。 [CREATE ENDPOINT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  このトピックでは、ALTER ENDPOINT に固有の構文および引数について説明します。 CREATE ENDPOINT と ALTER ENDPOINT の両方に共通する引数の説明については、次を参照してください。 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からは、ネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除されます。  
   
@@ -107,7 +104,7 @@ FOR DATABASE_MIRRORING (
 ## <a name="arguments"></a>引数  
   
 > [!NOTE]  
->  次の引数は、ALTER ENDPOINT に固有の引数です。 残りの引数の詳細については、次を参照してください。 [CREATE ENDPOINT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  次の引数は、ALTER ENDPOINT に固有の引数です。 残りの引数の詳細については、次を参照してください。 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
  **AS** { **TCP** }  
  トランスポート プロトコルを変更することはできません**ALTER ENDPOINT**です。  
@@ -115,7 +112,7 @@ FOR DATABASE_MIRRORING (
  **承認***ログイン*  
  **承認**オプションでは使用できません**ALTER ENDPOINT**です。 エンドポイントの作成時にのみ所有者を割り当てることができます。  
   
- **** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
+ **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  ペイロードの種類を変更することはできません**ALTER ENDPOINT**です。  
   
 ## <a name="remarks"></a>解説  
@@ -133,7 +130,7 @@ FOR DATABASE_MIRRORING (
 ## <a name="permissions"></a>Permissions  
  ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロール、エンドポイントの所有者または ALTER ANY ENDPOINT 権限が与えられています。  
   
- 既存のエンドポイントの所有権を変更するには、ALTER AUTHORIZATION ステートメントを使用する必要があります。 詳細については、次を参照してください。 [ALTER AUTHORIZATION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ 既存のエンドポイントの所有権を変更するには、ALTER AUTHORIZATION ステートメントを使用する必要があります。 詳細については、次を参照してください。 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  詳細については、「[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
@@ -142,4 +139,3 @@ FOR DATABASE_MIRRORING (
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

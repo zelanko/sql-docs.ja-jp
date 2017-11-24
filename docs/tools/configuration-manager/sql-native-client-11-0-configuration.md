@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client configuration [SQL Server], SQL Server Native Client
+helpviewer_keywords: client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8ae731300f9e8ca6064db17cfce5311c77c71b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f77a66d5136676a3d68f1225b4eef07fd7cf10bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 の構成
-  ここでは、 **** 構成マネージャーの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client はクライアント コンピューターへの接続を使用するネットワーク ライブラリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの **[SQL Server Native Client の構成]** ダイアログ ボックスの F1 ヘルプ トピックについて紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client はクライアント コンピューターへの接続を使用するネットワーク ライブラリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の構成] ダイアログ ボックスの設定は、クライアント プログラムを実行するコンピューターで使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューター上で構成された設定は、サーバー上で実行するクライアント プログラムだけに影響します。  
   
@@ -53,9 +50,8 @@ ms.lasthandoff: 08/02/2017
   
     -   [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
-    -   [TCP/IP を使用した有効な接続文字列を作成します。](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+    -   [TCP/IP を使用した有効な接続文字列の作成](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [名前付きパイプを使用して有効な接続文字列を作成します。](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+    -   [名前付きパイプを使用した有効な接続文字列の作成](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
-
