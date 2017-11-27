@@ -66,7 +66,7 @@ ms.lasthandoff: 11/22/2017
   
  この問題を回避するには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーと同じドメインにコンピューターを所属させるか、ローカル コンピューターにドメイン コントローラーをインストールします。 2 番目の解決策として、ドメイン コントローラーのインストールを行う場合は、すべてのサービスとユーザーのローカル ドメイン アカウントを作成することが必要になります。 それには、サービス アカウントを構成して、定義したアカウントの SharePoint 権限を構成する必要があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] をオフラインで使用する方法の詳細については、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] http://www.powerpivotgeek.com [で "](http://go.microsoft.com/fwlink/?LinkId=184241)サーバーのオフライン化" に関するブログ エントリを参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] をオフラインで使用する方法の詳細については、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) で "サーバーのオフライン化" に関するブログ エントリを参照してください。  
   
  **シナリオ 4: 不安定なサーバー**  
   
