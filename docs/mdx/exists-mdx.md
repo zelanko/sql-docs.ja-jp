@@ -2,28 +2,35 @@
 title: "(MDX) が存在する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: Exists function
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Exists function
 ms.assetid: 1e1d93b5-5be6-421c-b82b-839538ea50b1
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e84cc419442fdd5435d926b247e5cf9d27c919e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5483a7da135f6e486610d8a53e9dc23078a6cd3b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   1 番目に指定されている組のセットのうち、2 番目に指定されているセットの 1 つ以上の組と共存する組のセットを返します。 この関数は、autoexist によって自動的に実行される操作を手動で実行するために使用します。 詳細については自動が存在するを参照してください[MDX &#40; の主な概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
@@ -100,10 +107,11 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [クロス結合 &#40;です。MDX と #41 です。](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;です。MDX と #41 です。](../mdx/nonemptycrossjoin-mdx.md)   
- [空でない &#40;です。MDX と #41 です。](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;です。MDX と #41 です。](../mdx/isempty-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [クロス結合 & #40 です。MDX と #41 です。](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin & #40 です。MDX と #41 です。](../mdx/nonemptycrossjoin-mdx.md)   
+ [空でない & #40 です。MDX と #41 です。](../mdx/nonempty-mdx.md)   
+ [IsEmpty & #40 です。MDX と #41 です。](../mdx/isempty-mdx.md)  
   
   
+

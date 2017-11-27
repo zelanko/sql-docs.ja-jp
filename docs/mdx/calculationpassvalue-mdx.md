@@ -2,29 +2,37 @@
 title: "CalculationPassValue (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: CALCULATIONPASSVALUE
-dev_langs: kbMDX
-helpviewer_keywords: CalculationPassValue function
+f1_keywords:
+- CALCULATIONPASSVALUE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- CalculationPassValue function
 ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 749d3329c4036616c937158f80e818c90a09c3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2eb9e6cf8f043427238c150b03ce2c58defb1904
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   キューブに対して指定された計算パスを評価し、多次元式 (MDX) 式の数値または文字列値を返します。  
   
@@ -68,8 +76,9 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 >  管理者のみが使用できる、 **CalculationPassValue** MDX スクリプト内の関数。 管理者権限を持たないロールのコンテキストでこの関数を含んだ MDX スクリプトを実行すると、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
- [CalculationCurrentPass &#40;です。MDX と #41 です。](../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass & #40 です。MDX と #41 です。](../mdx/calculationcurrentpass-mdx.md)   
  [Iif 関数と #40 です。MDX と #41 です。](../mdx/iif-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
+

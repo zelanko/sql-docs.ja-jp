@@ -2,31 +2,38 @@
 title: "SELECT ステートメント (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: SELECT
-dev_langs: kbMDX
+f1_keywords:
+- SELECT
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e1ee7e86f258e4023378aa1b3d9cf0002cb993b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f6ad16fe8fd4bfc9c8bfeecf86b7a1954ae8a0e6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX データ操作の選択
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指定されたキューブからデータを取得します。  
   
@@ -126,7 +133,7 @@ FROM
   
  サブセレクト ステートメントで NON VISUAL オプションを使用すると、フィルター選択された合計ではなく、実際の合計を維持しながら、メンバーを除外することができます。 これにより、上位 10 件の売上 (販売員、製品、地域) のクエリを実行するときに、返された上位 10 件の売上の合計額ではなく、クエリ対象となるすべてのメンバーに対する実際の売上合計を取得することができます。 詳細については、以下の例を参照してください。  
   
- 計算されるメンバーを含めることが\<SELECT クエリ軸句 > するたびに、接続が開かれた接続文字列パラメーターを使用して*サブクエリ = 1*; を参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。 サブセレクトで計算されるメンバーの例を以下に示します。  
+ 計算されるメンバーを含めることが\<SELECT クエリ軸句 > するたびに、接続が開かれた接続文字列パラメーターを使用して*サブクエリ = 1*; を参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。 サブセレクトで計算されるメンバーの例を以下に示します。  
   
 ## <a name="autoexists"></a>Autoexists  
  SELECT ステートメントに特定のディメンションの属性を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。 たとえば、Geography ディメンションの属性を指定したとします。 一方の式で City 属性のすべてのメンバーを返し、もう一方の式で Country 属性のメンバーを、欧州内の国のみに限定した場合、結果として得られる City メンバーは、欧州の国に属する市区町村に限定されます。 Analysis Services が備えているこの特性は Autoexists と呼ばれ、同じディメンション内の属性にのみ適用されます。 Autoexists が同じディメンションの属性にのみ適用されるのは、一方の属性式で排除されたディメンション レコードが、もう一方の属性式で含められるのを防ぐように機能するためです。 ディメンション レコードに複数の属性式を適用した結果の共通集合と考えることもできます。 次の例を考えてみてください。  
@@ -349,7 +356,7 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列です。参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
+ Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列です。参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
   
 ## <a name="examples"></a>使用例  
  次の例は、の合計を返して、`Measures.[Order Quantity]`集計に含まれている 2003 年の最初の 8 月のメンバー、`Date`ディメンションから、 **Adventure Works**キューブ。  
@@ -474,8 +481,9 @@ WHERE
   
 ## <a name="see-also"></a>参照  
  [MDX &#40; の主な概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX データ操作ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [MDX データ操作ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [クエリおよびスライサー軸 &#40; を使用してクエリを制限します。MDX と #41 です。](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
+
 

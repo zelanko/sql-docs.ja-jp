@@ -2,30 +2,36 @@
 title: "空の値の操作 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - expressions [MDX], empty values
 - empty values [MDX]
 ms.assetid: 6338fb85-f513-4c3e-a774-4fd7c6986a91
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 977f5378647d306ce14bc01709b6229bead48929
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: aef26d6b575ca340111054824fe024e81c6f7115
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="working-with-empty-values"></a>空の値の操作
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   空の値は、特定のメンバー、組、またはセルが空であることを示します。 空のセル値は、指定されたセルのデータが基になるファクト テーブルに見つからないこと、あるいは指定されたセルの組の表すメンバーの組み合わせをキューブに適用できないことのいずれかを示します。  
   
@@ -57,7 +63,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   [IsEmpty](../mdx/isempty-mdx.md)関数が返される**TRUE**場合にだけ、この関数で指定された組で識別されるセルが空です。 関数を返しますそれ以外の場合、 **FALSE**です。  
   
     > [!NOTE]  
-    >  **IsEmpty**関数では、メンバー式が null 値を返すかどうかを判断できません。 Null のメンバーが式から返されるかどうかを判断するのには、使用、 [IS](../mdx/is-mdx.md)演算子。  
+    >  **IsEmpty** 関数では、メンバー式が null 値を返すかどうかを判断できません。 Null のメンバーが式から返されるかどうかを判断するのには、使用、 [IS](../mdx/is-mdx.md)演算子。  
   
 -   空のセル値が数値演算子 (+、-、*、/) のいずれかのオペランドである場合、もう一方のオペランドが空でない値であるなら、空のセル値は 0 として扱われます。 オペランドが両方とも空なら、数値演算子は空のセル値を返します。  
   
@@ -122,7 +128,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 詳細については、次を参照してください。 [NonEmpty &#40;です。MDX と #41 です。](../mdx/nonempty-mdx.md).  
+ 詳細については、次を参照してください。 [NonEmpty & #40 です。MDX と #41 です。](../mdx/nonempty-mdx.md).  
   
 ## <a name="empty-values-and-comparison-operators"></a>空の値と比較演算子  
  データに空の値がある場合、論理演算子と比較演算子は、TRUE または FALSE ではなく EMPTY を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 次の表は、空の値の比較を採用した場合の結果を示しています。  
@@ -152,8 +158,9 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)   
- [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)   
+ [式 & #40 です。MDX と #41 です。](../mdx/expressions-mdx.md)  
   
   
+

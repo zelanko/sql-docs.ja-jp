@@ -2,10 +2,14 @@
 title: "CREATE CELL CALCULATION ステートメント (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,25 +20,27 @@ f1_keywords:
 - CREATE_CELL_CALCULATION
 - CREATE CELL
 - CREATE CELL CALCULATION
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - calculations [Analysis Services], creating
 - CREATE CELL CALCULATION statement
 - cubes [Analysis Services], calculations
 ms.assetid: 01ced1b3-ada1-4b55-b350-e4255c3cc679
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6ad2921ddea1c822c7b83ef38c43bbd771320e21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8d371e3ca64f848cb30f54fe1f0ce4eb98a648a4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX データ定義のセル計算の作成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   キューブ内で指定されている組のセットに対して多次元式 (MDX) 式を評価する計算を作成します。  
   
@@ -98,6 +104,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  [セルのプロパティ &#40; を使用します。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [FORMAT_STRING の内容と #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [FORE_COLOR および BACK_COLOR の内容と #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX データ定義ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
+

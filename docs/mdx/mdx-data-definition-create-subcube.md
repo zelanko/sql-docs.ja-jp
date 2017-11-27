@@ -2,10 +2,14 @@
 title: "CREATE SUBCUBE ステートメント (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,24 +17,26 @@ f1_keywords:
 - CREATE SUBCUBE
 - CREATE
 - SUBCUBE
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - CREATE SUBCUBE statement
 ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5fd57d53dd07238781c452730f00e526fb6c2fff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b7a444247915755ca1e9d002acf868a7d6eecc4f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX データ定義のサブキューブの作成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指定されたキューブまたはサブキューブのキューブ空間を指定されたサブキューブに再定義します。 このステートメントを実行すると、後続の操作で使用する見かけのキューブ空間が変わります。  
   
@@ -56,11 +62,11 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
 |元の既定のメンバー|集計可能/不可能|サブセレクト|変更後の既定のメンバー|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|可|{Time.Year.2003}|変更はありません。|  
-|Time.Year です。[1997]|可|{Time.Year.2003}|Time.Year.All|  
-|Time.Year です。[1997]|不可|{Time.Year.2003}|Time.Year です。[2003]|  
-|Time.Year です。[1997]|可|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year です。[1997]|不可|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] または<br /><br /> Time.Year.[2004]|  
+|Time.Year.All|はい|{Time.Year.2003}|変更はありません。|  
+|Time.Year です。[1997]|はい|{Time.Year.2003}|Time.Year.All|  
+|Time.Year です。[1997]|いいえ|{Time.Year.2003}|Time.Year です。[2003]|  
+|Time.Year です。[1997]|はい|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time.Year です。[1997]|いいえ|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] または<br /><br /> Time.Year.[2004]|  
   
  [All] のメンバーは、常にサブキューブ内に存在します。  
   
@@ -143,8 +149,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 ## <a name="see-also"></a>参照  
  [MDX &#40; の主な概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX スクリプト ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-select.md)  
+ [MDX スクリプト ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP SUBCUBE ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-drop-subcube.md)   
+ [SELECT ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-manipulation-select.md)  
   
   
+

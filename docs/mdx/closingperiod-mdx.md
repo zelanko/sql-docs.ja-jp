@@ -2,29 +2,37 @@
 title: "ClosingPeriod (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: CLOSINGPERIOD
-dev_langs: kbMDX
-helpviewer_keywords: ClosingPeriod function
+f1_keywords:
+- CLOSINGPERIOD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- ClosingPeriod function
 ms.assetid: ae709017-219d-43e1-a98a-a85bd365b4cd
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: db1f3170f51d72f912dc84efce36eceeb9e839ec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 921c058bf83cb8e3b54b310dcc9e65bc8202d569
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指定されたレベルの指定されたメンバーの子孫の中から、最後の兄弟を返します。  
   
@@ -53,7 +61,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  **ClosingPeriod**関数は、次の MDX ステートメントに相当します。  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`」をご覧ください。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`」を参照してください。  
   
 > [!NOTE]  
 >  [OpeningPeriod](../mdx/openingperiod-mdx.md)関数がに似ていますが、 **ClosingPeriod**関数点を除いて、 **OpeningPeriod**関数は、最後の兄弟ではなく、最初の兄弟を返します。  
@@ -88,8 +96,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [OpeningPeriod &#40;です。MDX と #41 です。](../mdx/openingperiod-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40;です。MDX と #41 です。](../mdx/lastsibling-mdx.md)  
+ [OpeningPeriod & #40 です。MDX と #41 です。](../mdx/openingperiod-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [LastSibling & #40 です。MDX と #41 です。](../mdx/lastsibling-mdx.md)  
   
   
+

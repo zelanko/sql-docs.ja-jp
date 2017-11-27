@@ -2,31 +2,37 @@
 title: "MDX の予約語 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - reserved words [MDX]
 - Multidimensional Expressions [Analysis Services], reserved words
 - MDX [Analysis Services], reserved words
 ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5f25b4718ec55d6e7d41c626cc6f0f499cf49d4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8bec4b29379b4ad31c8da4074786e95dc058ad10
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-reserved-words"></a>MDX の予約語
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   次の表に、多次元式 (MDX) で使用する予約語を示します。 これらの語を、MDX のキューブ名などの識別子やユーザー定義関数名の一部として使用することはできません。  
   
@@ -72,7 +78,7 @@ ms.lasthandoff: 11/09/2017
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|[COUNT]|INDEX|PROPERTY|Value|  
+|[COUNT]|INDEX|PROPERTY|VALUE|  
 |COUSIN|INTERSECT|QTD|[VAR]|  
 |COVARIANCE|IS|RANK|VARIANCE|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
@@ -88,7 +94,8 @@ ms.lasthandoff: 11/09/2017
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
 ## <a name="see-also"></a>参照  
- [予約済みキーワード &#40;です。MDX 構文 &#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX 言語リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)  
+ [予約済みキーワード & #40 です。MDX 構文 &#41;](../mdx/reserved-keywords-mdx-syntax.md)   
+ [MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)  
   
   
+

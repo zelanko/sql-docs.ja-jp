@@ -2,29 +2,37 @@
 title: "Count (セット) (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: COUNT
-dev_langs: kbMDX
-helpviewer_keywords: Count function [MDX]
+f1_keywords:
+- COUNT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Count function [MDX]
 ms.assetid: 22f530e9-f8e1-4608-affa-9a2bc0821591
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 21b41a98a21a9b3561358bf18c65ceb606facae0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 97a997760b2796bc0fb7708503caf1a278e0d59d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="count-set-mdx"></a>Count (セット) (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   セット内のセル数を返します。  
   
@@ -99,16 +107,17 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>参照  
- [カウント &#40;ディメンション&#41;&#40;です。MDX と #41 です。](../mdx/count-dimension-mdx.md)   
- [カウント &#40;です。階層レベルが&#41;&#40;です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)   
- [カウント &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
+ [カウント (&) #40";"ディメンション"&"#41;& #40 です。MDX と #41 です。](../mdx/count-dimension-mdx.md)   
+ [カウント & #40 です。階層レベルが"&"#41;& #40 です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)   
+ [カウント & #40 です。組と #41 です。& #40 です。MDX と #41 です。](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel & #40 です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers & #40 です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
  [Hierarchize (& a) #40 です。MDX と #41 です。](../mdx/hierarchize-mdx.md)   
- [プロパティ &#40;です。MDX と #41 です。](../mdx/properties-mdx.md)   
- [集計 &#40;です。MDX と #41 です。](../mdx/aggregate-mdx.md)   
+ [プロパティ & #40 です。MDX と #41 です。](../mdx/properties-mdx.md)   
+ [集計 & #40 です。MDX と #41 です。](../mdx/aggregate-mdx.md)   
  [フィルターと #40 です。MDX と #41 です。](../mdx/filter-mdx.md)   
- [PrevMember &#40;です。MDX と #41 です。](../mdx/prevmember-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [PrevMember & #40 です。MDX と #41 です。](../mdx/prevmember-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
+

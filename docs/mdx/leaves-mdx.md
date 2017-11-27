@@ -2,29 +2,37 @@
 title: "リーフ (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: LEAVES
-dev_langs: kbMDX
-helpviewer_keywords: Leaves function
+f1_keywords:
+- LEAVES
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Leaves function
 ms.assetid: 09f908aa-1b2d-4af9-8c8d-c023915241b2
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1920799f04128a692a333e80ac5024cbdbae564a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0c6201939c5bfb6f5ad61c009aac5a7e4740af63
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   すべての属性から構成されるセットを返します。必要に応じて特定のディメンションに属している属性のみを返すこともできます。 返すセット内の各属性 x について、x が粒度属性であるか、直接または間接的に粒度属性に関連付けられている属性である場合、粒度はスライスに影響することなく属性 x に対して設定されます。 **まま**関数が SCOPE ステートメント内または代入の左辺で使用するために設計されています。  
   
@@ -55,6 +63,7 @@ Leaves( [ Dimension_expression ] )
     >  現在のスコープのメジャー グループに対する粒度が異なる属性が 1 つでもあると、エラーが生成されます。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
+

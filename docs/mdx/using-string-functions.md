@@ -2,28 +2,35 @@
 title: "文字列関数の使用 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: string functions
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- string functions
 ms.assetid: 962e820a-a1f9-49b5-90f0-a05261e6682b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5838cb18091adab8ee4e8b2c0a43042001c530dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 12fc2dca6c7a0eb1c7d126ef0cfdc87df869c878
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-string-functions"></a>文字列関数の使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   文字列関数は、多次元式 (MDX) 内のほとんどすべてのオブジェクトに対して使用できます。 ストアド プロシージャでは、主にオブジェクトを文字列表記に変換するために文字列関数を使用します。 また、文字列式をオブジェクトに対して評価して値を返すために文字列関数を使用することもできます。  
   
@@ -110,10 +117,11 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>参照  
  [生成 (& a) #40 です。MDX と #41 です。](../mdx/generate-mdx.md)   
  [名前と #40 です。MDX と #41 です。](../mdx/name-mdx.md)   
- [UniqueName &#40;です。MDX と #41 です。](../mdx/uniquename-mdx.md)   
+ [UniqueName & #40 です。MDX と #41 です。](../mdx/uniquename-mdx.md)   
  [関数と #40 です。MDX 構文 &#41;](../mdx/functions-mdx-syntax.md)   
  [ストアド プロシージャ &#40; を使用します。MDX と #41 です。](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;です。MDX と #41 です。](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;です。MDX と #41 です。](../mdx/strtoset-mdx.md)  
+ [StrToMember & #40 です。MDX と #41 です。](../mdx/strtomember-mdx.md)   
+ [StrToSet & #40 です。MDX と #41 です。](../mdx/strtoset-mdx.md)  
   
   
+

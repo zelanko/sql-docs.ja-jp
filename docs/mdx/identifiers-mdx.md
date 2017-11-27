@@ -2,13 +2,18 @@
 title: "識別子 (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - formats [Analysis Services]
 - Multidimensional Expressions [Analysis Services], identifiers
@@ -18,19 +23,20 @@ helpviewer_keywords:
 - regular identifiers [MDX]
 - formats [Analysis Services], identifiers
 ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 00a7afcd3ff4b5c6be42f88bf4f7435ac4c20054
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cd13b81771d319352845a9bc2121a0e17a6e0926
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="identifiers-mdx"></a>識別子 (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   識別子の名前は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]オブジェクト。 各[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]オブジェクトができるし、識別子を持つ必要があります。 これには、キューブ、ディメンション、階層、レベル、メンバーなどが含まれます。 多次元式 (MDX) ステートメントの中でオブジェクトを参照するには、オブジェクトの識別子を使用します。  
   
@@ -58,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
     -   アンダー スコア (_)。  
   
-3.  MDX の予約されたキーワードを識別子にすることはできません。 MDX の予約されたキーワードには大文字小文字の区別がありません。 詳細については、次を参照してください。[予約済みキーワード &#40;です。MDX 構文 &#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  MDX の予約されたキーワードを識別子にすることはできません。 MDX の予約されたキーワードには大文字小文字の区別がありません。 詳細については、次を参照してください。[予約済みキーワード & #40 です。MDX 構文 &#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  埋め込み型スペースおよび特殊文字は使用できません。  
   
@@ -137,8 +143,9 @@ ms.lasthandoff: 11/09/2017
  さらに、上の例の場合、複数の識別子を区切るようすを示すために Measures 識別子が区切られています。  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)   
  [MDX クエリの基礎と #40 です。Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 構文の要素 &#40;です。MDX と #41 です。](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 構文の要素 & #40 です。MDX と #41 です。](../mdx/mdx-syntax-elements-mdx.md)  
   
   
+

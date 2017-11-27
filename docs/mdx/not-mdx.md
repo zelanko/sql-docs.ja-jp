@@ -2,29 +2,37 @@
 title: "されません (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: NOT
-dev_langs: kbMDX
-helpviewer_keywords: NOT operator [MDX]
+f1_keywords:
+- NOT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- NOT operator [MDX]
 ms.assetid: c11bd3b0-54b3-4a6d-babc-6067722194db
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 513dcff2862aa024684702017b9281b6163fcf5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b6da446a370065c3782ac3c76445988d266b60d7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="not-mdx"></a>NOT (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   1 つの数値式の論理否定を実行します。  
   
@@ -47,10 +55,11 @@ NOT Expression1
   
 |*Expression1*|戻り値|  
 |-------------------|------------------|  
-|**true**|**オプション**|  
-|**オプション**|**true**|  
+|**true**|**false**|  
+|**false**|**true**|  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
   
   
+

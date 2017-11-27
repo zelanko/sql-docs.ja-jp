@@ -2,29 +2,37 @@
 title: "Head (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: HEAD
-dev_langs: kbMDX
-helpviewer_keywords: Head function
+f1_keywords:
+- HEAD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Head function
 ms.assetid: 2a909bda-1366-4537-93b0-c089554fc11f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fa23c17ba90453c735c41782c208f388d706f434
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: aa8d09c49700caad3d11e5e7b6ba7557f6c901a3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="head-mdx"></a>Head (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   セットの先頭から、指定された数の要素を返します (重複要素も保持します)。  
   
@@ -39,7 +47,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *カウント*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
 ## <a name="remarks"></a>解説  
@@ -70,3 +78,4 @@ FROM [Adventure Works]
  [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
+

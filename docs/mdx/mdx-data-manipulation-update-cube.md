@@ -2,10 +2,14 @@
 title: "UPDATE CUBE ステートメント (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,26 +17,28 @@ f1_keywords:
 - UPDATE CUBE
 - UPDATE_CUBE
 - UPDATE
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - updating cubes
 - cubes [Analysis Services], modifying
 - modifying cubes
 - UPDATE CUBE statement
 ms.assetid: 6c8f23bb-401b-49de-843a-5324ac977239
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a5b55ccb969f2e4c7d18cdedab4c60f2ee13ef4b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0be79c064b4c4f7044b495056295420094aa13e8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作、UPDATE CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   UPDATE CUBE ステートメントは、SUM 集計によって親に対して集計を行うキューブ内の任意のセルにデータを書き戻すために使用します。 詳細な説明と例では、このブログ投稿の割り当てについて」を参照してください: [Analysis Services (ブログ) での書き戻しアプリケーションを構築](http://go.microsoft.com/fwlink/?LinkId=394977)です。  
   
@@ -124,6 +130,7 @@ Weight_Expression = <leaf cell value> / <existing value>
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [MDX データ操作ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX データ操作ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   
+
