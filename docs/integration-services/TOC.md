@@ -27,6 +27,7 @@
 ## [チュートリアル - Azure でのパッケージを配置、実行、監視する](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Azure で SSIS カタログに接続する](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
+## [Azure に配置されたパッケージの検証](lift-shift/ssis-azure-validate-packages.md)
 ## [Windows 認証でデータ ソースに接続する](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [ファイルとファイル共有への接続](lift-shift/ssis-azure-files-file-shares.md)
 
