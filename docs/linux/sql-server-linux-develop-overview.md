@@ -4,7 +4,7 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,19 +13,21 @@ ms.component: linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: ed4f34bf3e08897ab13cae24f47fc74292ce38bc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
+ms.contentlocale: ja-jp
+ms.lasthandoff: 10/02/2017
+
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 用のアプリケーションの開発を開始する方法
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 接続し、c#、Java、Node.js、PHP、Python、Ruby、および C++ などのプログラミング言語のさまざまな Linux に SQL Server 2017 を使用するアプリケーションを作成することができます。 一般的な web フレームワーク、およびオブジェクト リレーショナル マッピング (ORM) フレームワークを使用することもできます。
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > これらと同じ開発オプションでは、他のプラットフォームでは、SQL Server を対象することもできます。 アプリケーションがオンプレミスで実行して SQL Server を対象またはクラウドでは、Linux、Windows、または Docker で macos です。 または、Azure SQL Database と Azure SQL Data Warehouse を対象にできます。
@@ -82,3 +84,4 @@ Linux のネイティブな新しいコマンド ライン ツールを使用す
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
 - [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-ubuntu.md)
+
