@@ -1,5 +1,5 @@
 ---
-title: "カスタム アセンブリの厳密な名前の使用 |Microsoft ドキュメント"
+title: "複雑な名前を持つカスタム アセンブリの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AllowPartiallyTrustedCallersAttribute attribute
 - strong-named custom assemblies [Reporting Services]
@@ -19,22 +18,22 @@ helpviewer_keywords:
 - assemblies [Reporting Services], strong names
 - custom assemblies [Reporting Services], strong-named
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 6aa028091c9076fc3f3d7517344dfaf6f56267da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: cf8ee5462bd75ab82ea4296a5b71136cb2eb9ee9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-strong-named-custom-assemblies"></a>複雑な名前を持つカスタム アセンブリの使用
   複雑な名前はアセンブリを識別します。この名前には、アセンブリのマニフェストに格納されたアセンブリのテキスト名、4 つの部分から成るバージョン番号、カルチャ情報 (指定されている場合)、公開キー、およびデジタル署名が含まれます。 複雑な名前は、共通言語ランタイム (CLR) にアセンブリを一意に識別し、バイナリの整合性を確保します。  
   
 ## <a name="using-allowpartiallytrustedcallersattribute"></a>AllowPartiallyTrustedCallersAttribute の使用  
- レポートでは、アセンブリの厳密な名前を使用するには、厳密な名前付きアセンブリを使用して、アセンブリの部分的に信頼されたコードから呼び出すことを許可する必要が**AllowPartiallyTrustedCallers**属性。 使用することができます**AllowPartiallyTrustedCallersAttribute**レポート デザイナーまたはレポートの式でレポート サーバーによって呼び出されるアセンブリの厳密な名前を使用できるようにします。 部分的に信頼されるコードが複雑な名前を持つアセンブリを呼び出すことを許可するには、アセンブリ属性ファイルに次のアセンブリ レベル属性を追加します。  
+ 複雑な名前を持つアセンブリをレポートと一緒に使用するには、アセンブリの **AllowPartiallyTrustedCallers** 属性を使用する部分的に信頼されるコードが複雑な名前を持つアセンブリを呼び出すことを許可する必要があります。 **AllowPartiallyTrustedCallersAttribute** を使用すると、レポート デザイナーまたはレポート サーバーが複雑な名前を持つアセンブリをレポート式で呼び出すことを許可できます。 部分的に信頼されるコードが複雑な名前を持つアセンブリを呼び出すことを許可するには、アセンブリ属性ファイルに次のアセンブリ レベル属性を追加します。  
   
 ```vb  
 <assembly:AllowPartiallyTrustedCallers>  
@@ -44,10 +43,10 @@ ms.lasthandoff: 08/12/2017
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- **AllowPartiallyTrustedCallersAttribute**アセンブリ レベルでの厳密な名前のアセンブリによって適用される場合にのみ有効です。 詳細については、アセンブリ レベル属性を適用するの属性の適用」を参照して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK のドキュメントです。  
+ **AllowPartiallyTrustedCallersAttribute** は、アセンブリ レベルで複雑な名前を持つアセンブリによって適用された場合のみ有効です。 アセンブリ レベルでの属性適用の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK ドキュメントの「属性の適用」を参照してください。  
   
 > [!CAUTION]  
->  ときに**AllowPartiallyTrustedCallersAttribute**が含まれている既定**FullTrustLinkDemand**セキュリティ チェックが行われないため、部分的に、他の呼び出しを可能にするには、アセンブリのアセンブリを信頼します。 すべてのセキュリティ チェックは、クラス レベルやメソッド レベルの宣言セキュリティ属性を含め、明示的に指定する必要があります。  
+>  **AllowPartiallyTrustedCallersAttribute** が存在する場合は、既定の **FullTrustLinkDemand** セキュリティ チェックが行われないため、部分的に信頼される他のすべてのアセンブリからそのアセンブリを呼び出すことができます。 すべてのセキュリティ チェックは、クラス レベルやメソッド レベルの宣言セキュリティ属性を含め、明示的に指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  

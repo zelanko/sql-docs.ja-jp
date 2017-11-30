@@ -1,32 +1,32 @@
 ---
 title: "SQL Server 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 9abddcd8544221c5d6dff0eeb12dc441df632933
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
-SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。
+SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](https://docs.microsoft.com/sql/linux/)をご覧ください
 
 [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **お試しください:** [SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
->**Linux での SQL Server の実行** 詳細については、「[SQL Server ドキュメントの再編成](https://docs.microsoft.com/sql/linux/)」を参照してください。
+> [!NOTE]
+> 以下の変更に加えて、GA リリースの後も累積的な更新プログラムが定期的にリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、[SQL Server 2017 の累積的な更新プログラム](http://aka.ms/sql2017cu)に関するページをご覧ください。
 
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 データベース エンジン
 
@@ -95,9 +95,10 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 詳細については、「[What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)」 (SQL Server Analysis Services 2017 の新機能) を参照してください。
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
-CTP 2.1 の時点で、SSRS は SQL Server セットアップを通じてインストールできなくなりました。 [Microsoft SQL Server 2017 Reporting Services リリース候補をダウンロード](https://www.microsoft.com/download/details.aspx?id=55252)するには、Microsoft ダウンロード センターに移動します。 
-- レポートでコメントが使用できるようになり、分析観点の追加や、他のユーザーとの共同作業ができるようになりました。 コメントに添付ファイルを含めることもできます。 (CTP 2.1)
+SQL Server Reporting Services は、SQL Server セットアップでインストールできなくなりました。 Microsoft ダウンロード センターに移動し、[Microsoft SQL Server 2017 Reporting Services をダウンロード](https://www.microsoft.com/download/details.aspx?id=55252)してください。 
+- レポートでコメントが使用できるようになり、分析観点の追加や、他のユーザーとの共同作業ができるようになりました。 コメントに添付ファイルを含めることもできます。
 - レポート ビルダーと SQL Server Data Tools の最新リリースでは、クエリ デザイナーで必要なフィールドをドラッグ アンド ドロップすることで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリを作成できます。 [Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
+- 最新のアプリケーションとカスタマイズを開発できるようにするため、SSRS は OpenAPI に完全に対応する RESTful API をサポートするようになっています。 API の完全な仕様とドキュメントは、[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) で入手できます。
 
 詳細については、「[What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」 (SQL Server Reporting Services (SSRS) の新機能) を参照してください。
 
@@ -125,3 +126,4 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

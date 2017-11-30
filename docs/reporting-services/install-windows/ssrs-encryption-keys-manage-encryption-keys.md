@@ -1,12 +1,11 @@
 ---
-title: "構成暗号化キーと管理 (SSRS 構成マネージャー) |Microsoft ドキュメント"
+title: "暗号化キーの構成と管理 (SSRS 構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1433e2532fc1deeb8abe5ac0ca71de69956730e0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 798344004af25af275625a88f4569acca84c8eb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS の暗号化キーの暗号化キーを管理します。
+# <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 暗号化キー - 暗号化キーの管理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化キーを使用して、レポート サーバー データベースに格納されている資格情報および接続情報をセキュリティで保護します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の暗号化では、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、レポート サーバーをインストールまたは構成するとき、レポート サーバーの初期化中に作成されます。レポート サーバーはこの対称キーを使用して、レポート サーバーに保存される機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、レポート サーバー データベースに機密データを格納するレポート サーバー インスタンスごとに作成されます。  
   
  暗号化キーを管理するには、対称キーのバックアップ コピーを作成するほか、キーの復元、削除、変更のタイミングと方法を知る必要があります。 レポート サーバーのインストールを移行する場合、またはスケールアウト配置を構成する場合は、対称キーを新しいインストールに適用できるように、対称キーのバックアップ コピーが必要です。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
 [Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-

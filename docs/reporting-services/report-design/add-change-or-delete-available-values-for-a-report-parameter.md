@@ -1,5 +1,5 @@
 ---
-title: "追加、変更、またはレポート パラメーターの使用可能な値を削除 |Microsoft ドキュメント"
+title: "レポート パラメーターの値の追加、変更、または削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 17df333a21a99d3f25c98cab94a0af7199ecf3a7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49059743233ab5f2f3ba2162b646e1f4013d174a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>レポート パラメーターの値の追加、変更、または削除
   レポート パラメーターを作成した後、ユーザーに対して表示する使用可能な値の一覧を指定できます。 使用可能な値の一覧を使用すると、ユーザーがパラメーターに選択できる値が有効な値のみに制限されます。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- レポートをパブリッシュした後、パラメーター プロパティの値をレポート サーバーに設定して、レポート作成ツールのレポートで定義される使用可能な値を上書きできます。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ レポートをパブリッシュした後、パラメーター プロパティの値をレポート サーバーに設定して、レポート作成ツールのレポートで定義される使用可能な値を上書きできます。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>レポート パラメーターに使用可能な値を追加または変更するには  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
     -   **[値の指定]** をクリックして値のリストを手動で設定し、必要に応じて値の表示名 (ラベル) を設定します。  
   
-         **[追加]** をクリックし、 **[値]** ボックスに値を入力します。必要に応じて、 **[ラベル]** ボックスにラベルを入力します。 ラベルを指定しない場合は、値が使用されます。 値を求める式を記述することもできます。 データ型はパラメーターのデータ型と一致する必要があります。 フィールド名は、パラメーターの式では使用できません。 例については、「[一般的に使用されるフィルター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)」を参照してください。  
+         **[追加]** をクリックし、 **[値]** ボックスに値を入力します。必要に応じて、 **[ラベル]** ボックスにラベルを入力します。 ラベルを指定しない場合は、値が使用されます。 値を求める式を記述することもできます。 データ型はパラメーターのデータ型と一致する必要があります。 フィールド名は、パラメーターの式では使用できません。 例については、「[一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)」を参照してください。  
   
          設定するすべての値に対して、この手順を繰り返します。 この一覧に表示されるアイテムの順序によって、ユーザーに表示されるドロップダウン リストのアイテムの順序が決まります。 一覧のアイテムの順序を変更するには、 **[値]** または **[ラベル]** ボックスをクリックしてアイテムを選択し、上矢印および下矢印ボタンを使用して一覧内のアイテムを上下に移動します。  
   
@@ -82,13 +81,12 @@ ms.lasthandoff: 08/09/2017
      レポートをプレビューすると、パラメーターに使用可能な値のドロップダウン リストが表示されなくなります。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーター &#40; の順序を変更します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [追加、変更、またはレポート パラメーター &#40; を削除レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [レポートと &#40; へのカスケード型パラメーターを追加します。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [追加、変更、またはレポート パラメーター &#40; の既定値を削除します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Parameters コレクションの参照と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [チュートリアル: レポートと &#40; へのパラメーターを追加します。レポート ビルダーと &#41; です。](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [レポート パラメーターの既定値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

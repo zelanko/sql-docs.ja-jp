@@ -1,5 +1,5 @@
 ---
-title: "拡張機能の概要の表示 |Microsoft ドキュメント"
+title: "表示拡張機能の概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: bf4ef7421e85e95d40a28803adec2c279b9a80bc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 78da7dbcbe7df3c4b53f6df4559963d74e877208
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-extensions-overview"></a>表示拡張機能の概要
-  表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 7 つの表示拡張機能が含まれています: HTML、Excel、Word、CSV やテキスト、XML、イメージ、および PDF です。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
+  表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、7 種類の表示拡張機能 (HTML、Excel、Word、CSV (Text)、XML、Image、PDF) を備えています。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
   
 > [!NOTE]  
 >  どの表示拡張機能を利用できるかは、RSReportServer.config ファイルのインストール済み拡張機能の一覧で確認できます。  
@@ -48,12 +46,12 @@ ms.lasthandoff: 08/12/2017
 |**MHTML** (HTML 表示拡張機能の一部)|MHTML 形式でレポートを表示します。 レポートは、Internet Explorer で開きます。 この形式は、レポート ツール バーの [エクスポート] ボックスに **[Web アーカイブ]** として表示されます。|  
 |**NULL**|レポートを特定の形式で表示しません。 この表示拡張機能はレポートをキャッシュするのに有用です。 Null 表示形式は、スケジュールされた実行または配信と連動して使用する必要があります。|  
   
- 推奨される形式とその使用方法の詳細については、次を参照してください。[レポートのエクスポート & #40 です。レポート ビルダーおよび SSRS &#41;](../../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ 推奨形式とその使い方の詳細については、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] によって [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に実装された表示拡張機能は、すべて共通のインターフェイスを使用します。 これにより、すべての拡張機能で同じレベルの機能性が実装され、レポート サーバーのコア部分での表示処理用コードがより単純になります。  
   
 ## <a name="rendering-object-model"></a>表示オブジェクト モデル  
- レポートが処理されると、その処理結果は、表示オブジェクト モデル (ROM) として知られる、公開オブジェクト モデルになります。 この表示オブジェクト モデルは、処理されたレポートの内容、レイアウト、およびデータを定義するクラスのコレクションです。 開発者は、ROM を使用して、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能を設計、開発、展開できます。 ROM は、レポートの XML 定義とユーザーにより定義されたレポート データが、レポート サーバーにより処理される際に作成されます。 処理が完了すると、表示拡張機能によりこの公開オブジェクト モデルが使用され、レポートの出力が定義されます。 ROM の利用可能なパブリック クラスが定義されている、 **Microsoft.ReportingServices.OnDemandReportRendering**名前空間。  
+ レポートが処理されると、その処理結果は、表示オブジェクト モデル (ROM) として知られる、公開オブジェクト モデルになります。 この表示オブジェクト モデルは、処理されたレポートの内容、レイアウト、およびデータを定義するクラスのコレクションです。 開発者は、ROM を使用して、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能を設計、開発、展開できます。 ROM は、レポートの XML 定義とユーザーにより定義されたレポート データが、レポート サーバーにより処理される際に作成されます。 処理が完了すると、表示拡張機能によりこの公開オブジェクト モデルが使用され、レポートの出力が定義されます。 ROM の利用可能なパブリック クラスは、**Microsoft.ReportingServices.OnDemandReportRendering** 名前空間に定義されています。  
   
 ## <a name="writing-custom-rendering-extensions"></a>カスタム表示拡張機能の記述  
  カスタム表示拡張機能の作成を決める前に、より簡単な代替手段を評価する必要があります。 可能な代替手段としては以下の方法があります。  
@@ -62,13 +60,12 @@ ms.lasthandoff: 08/12/2017
   
 -   XML 表現形式の出力に XSL 変換 (XSLT) を組み合わせることで、カスタムの形式と表現機能を追加する。  
   
- カスタム表示拡張機能の記述は難しい作業です。 表示拡張機能は、一般的には、レポートの要素のあらゆる組み合わせをサポートする必要があり、多くのクラス、インターフェイス、メソッド、およびプロパティを実装しなければなりません。 場合に含まれていない形式でレポートをレンダリングする必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]表示拡張機能のコードを実装する必要があります、表示拡張機能のマネージ コード実装を独自に作成されることと、 **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**レポート サーバーに必要なインターフェイスです。  
+ カスタム表示拡張機能の記述は難しい作業です。 表示拡張機能は、一般的には、レポートの要素のあらゆる組み合わせをサポートする必要があり、多くのクラス、インターフェイス、メソッド、およびプロパティを実装しなければなりません。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によりサポートされていない形式でレポートを表示する必要があり、独自の表示拡張機能のコードを記述して実装する場合、開発する表示拡張機能のコードは **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** インターフェイスを実装する必要があります。このインターフェイスはレポート サーバーにより必要とされます。  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に関する補足資料とホワイト ペーパーについては、[Reporting Services Web サイト](http://go.microsoft.com/fwlink/?LinkId=19951)の最新の技術文書を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [表示拡張機能を実装します。](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [表示拡張機能の実装](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

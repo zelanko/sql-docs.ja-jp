@@ -1,5 +1,5 @@
 ---
-title: "アイテム (レポート ビルダーおよび SSRS) を非表示 |Microsoft ドキュメント"
+title: "項目の非表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 285d84aaa0f73cb8e366b6c96fcf279883591667
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>アイテムを非表示にする (レポート ビルダーおよび SSRS)
   レポート パラメーターやその他の式を指定して、アイテムを条件付きで非表示にする場合は、レポート アイテムの表示/非表示を設定します。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
         > [!NOTE]  
         >  表示/非表示を設定する式を指定する場合、次の図のように、レポート アイテムの Hidden プロパティを設定します。 この値が False の場合、式の評価によってレポート アイテムが表示され、値が True の場合、レポート アイテムは非表示になります。   
-        > ![Properties_Visibility ダイアログとプロパティを非表示](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility ダイアログとプロパティを非表示")  
+        > ![[プロパティ] の [表示] のダイアログと [非表示] プロパティ](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "[プロパティ] の [表示] のダイアログと [非表示] プロパティ")  
   
 4.  **[OK]** を 2 回クリックします。  
   
@@ -77,8 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [項目と &#40; への展開または折りたたみアクションを追加します。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "(レポート ビルダーおよび SSRS) レポートにドリルスルー アクションを追加 |Microsoft ドキュメント"
+title: "レポートへのドリルスルー アクションの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aea97d13582353816693b5e1a2345001071c685b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>レポートへのドリルスルー アクションの追加 (レポート ビルダーおよび SSRS)
   メイン レポートのリンクをクリックすると開くレポートが *詳細レポート*です。 このドリルスルー リンクを使用すると、ドリルスルー アクションを実行できます。  
   
  詳細レポートはメイン レポートと同じレポート サーバーにパブリッシュする必要がありますが、別のフォルダーでもかまいません。 テキスト ボックス、画像、グラフ上のデータ ポイントなど、 **Action** プロパティがあるアイテムにドリルスルー リンクを追加できます。  
   
- レポートにドリルスルー リンクを追加するには、まず、メイン レポートからリンクする詳細レポートを作成する必要があります。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。また、多くの場合、メイン レポートから渡されるパラメーターに基づいて詳細レポートをフィルターするパラメーターも含まれます。 詳細レポートの作成方法については、「[詳細レポートレポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)」を参照してください。  
+ レポートにドリルスルー リンクを追加するには、まず、メイン レポートからリンクする詳細レポートを作成する必要があります。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。また、多くの場合、メイン レポートから渡されるパラメーターに基づいて詳細レポートをフィルターするパラメーターも含まれます。 詳細レポートの作成方法については、「[詳細レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  **[レポートの指定]**で、 **[参照]** をクリックして移動先レポートを指定するか、移動先レポートの名前を入力します。 または、式 (**[fx]**) ボタンをクリックしてレポート名の式を作成します。  
   
-     詳細レポートのパスの形式は、ネイティブ モードと SharePoint 統合モードとで異なります。 参照によってレポートを指定した場合は、パスが正しい形式で指定されます。 詳細については、「[外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
+     詳細レポートのパスの形式は、ネイティブ モードと SharePoint 統合モードとで異なります。 参照によってレポートを指定した場合は、パスが正しい形式で指定されます。 詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
      詳細レポートのパラメーターを指定する必要がある場合は、次の手順に従ってください。  
   
@@ -66,9 +65,8 @@ ms.lasthandoff: 08/09/2017
 7.  リンクをテストするには、レポートを実行し、このリンクを設定したレポート アイテムをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [[アクション プロパティ] ダイアログ ボックス & #40 です。レポート ビルダーおよび SSRS &#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
- [グラフと &#40; 上のデータ ポイントの書式設定レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [系列 &#40; にツールヒントを表示します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [アクション プロパティ ダイアログ ボックス (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   
-

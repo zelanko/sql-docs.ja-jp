@@ -1,5 +1,5 @@
 ---
-title: "レポート モデル クエリ デザイナーのユーザー インターフェイス |Microsoft ドキュメント"
+title: "レポート モデル クエリ デザイナーのユーザー インターフェイス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a7fd4f315f8fe171a6b5e8df47c5e5be5b01fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-model-query-designer-user-interface"></a>レポート モデル クエリ デザイナーのユーザー インターフェイス
   レポート デザイナーには、レポートに必要なデータを指定して、Report Server Model データ ソースから抽出するためのクエリ デザイナーが 2 つ用意されています。 モデルのエンティティやエンティティのフィールドを参照したり選択したりする場合は、グラフィカル クエリ デザイナーを使用します。 XML 形式の SMDL (セマンティック モデル定義言語) 仕様を直接操作するには、テキストベースのクエリ デザイナーを使用します。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 |----------|--------------|  
 |エクスプローラー ペイン|モデル内のエンティティやエンティティ フィールドをグラフィカルに表示します。 このペインは、エンティティや、そのエンティティに関連したエンティティ、フィールドを参照するときに使用します。|  
 |デザイン領域|モデルからフィールドが一覧表示されます。 このペインは、選択したフィールドのレイアウトを調整するときに使用します。|  
-|Results pane|クエリの結果を表示します。 クエリを実行する任意のペインを右クリックし、をクリックして**実行**、 をクリックして、**実行**(![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")) ツールバーのボタンをクリックします。|  
+|Results pane|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]**をクリックするか、ツール バーの **[実行]** (![クエリの実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリの実行")) ボタンをクリックします。|  
   
  エクスプローラー ペインまたはデザイン領域ペインの情報を変更した場合、 **[実行]**をクリックしたときに、変更内容が結果ペインに反映されます。  
   
@@ -61,11 +60,11 @@ ms.lasthandoff: 08/09/2017
 |ボタン|Description|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 レポート サーバー モデル データ ソースのクエリは、XML 形式の SMQL (セマンティック モデル クエリ言語) 仕様です。|  
-|**[インポート]**|ファイル システムのレポート定義 (.rdl) ファイルから既存のクエリをインポートします。 詳細については、「[レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。|  
-|![アクションを元に戻す](../../reporting-services/report-data/media/rsqdicon-undo.gif "アクションを元に戻す")|最後の操作を元に戻します。|  
-|![操作をやり直す](../../reporting-services/report-data/media/rsqdicon-redo.gif "操作をやり直す")|最後の操作を再実行します。|  
+|**[インポート]**|ファイル システムのレポート定義 (.rdl) ファイルから既存のクエリをインポートします。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
+|![操作を元に戻す](../../reporting-services/report-data/media/rsqdicon-undo.gif "操作を元に戻す")|最後の操作を元に戻します。|  
+|![操作を再実行する](../../reporting-services/report-data/media/rsqdicon-redo.gif "操作を再実行する")|最後の操作を再実行します。|  
 |![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、その結果として得られた行を結果ペインに表示します。|  
-|![選択したフィルター列の横にあるフィルター グラフィック](../../reporting-services/report-data/media/rsqdicon-filter.gif "選択したフィルター列の横にある画像のフィルター処理")|**[データのフィルター選択]** ダイアログ ボックスを開きます。このダイアログ ボックスでは、フィルターを適用するデータを選択できます。 フィルターは、デザイン領域に現在表示されているデータとは無関係に指定できます。|  
+|![選択したフィルター列の横にあるフィルターの画像](../../reporting-services/report-data/media/rsqdicon-filter.gif "選択したフィルター列の横にあるフィルターの画像")|**[データのフィルター選択]** ダイアログ ボックスを開きます。このダイアログ ボックスでは、フィルターを適用するデータを選択できます。 フィルターは、デザイン領域に現在表示されているデータとは無関係に指定できます。|  
   
 ## <a name="text-based-query-designer"></a>テキストベースのクエリ デザイナー  
  Report Server Model データセット クエリを作成する場合、グラフィカル クエリ デザイナーが既定のデザイナーとなります。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。  
@@ -95,8 +94,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツール &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [外部データ ソースのデータを追加する &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [レポート モデルの接続 & #40 です。SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [レポート モデルの接続 &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

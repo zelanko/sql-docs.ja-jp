@@ -8,8 +8,7 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b06de61335e318438f4e75e694de7c0eb3521bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation コマンドレット
   **Invoke-PolicyEvaluation** は、SQL Server オブジェクトの対象セットが 1 つまたは複数のポリシーベースの管理ポリシーに指定された条件に準拠しているかどうかを報告する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットです。  
@@ -92,9 +90,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>対象セットの指定  
  3 つのパラメーターを使用して、対象オブジェクトのセットを指定します。  
   
--   **-TargetServerName** は、対象オブジェクトを格納している SQL Server のインスタンスを指定します。 情報は、<xref:System.Data.SqlClient.SqlConnection> クラスの ConnectionString プロパティに定義されている形式を使用する文字列に指定できます。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> クラスを使用して、適切な形式の接続文字列を作成できます。 また、<xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> オブジェクトを作成して、**-TargetServer** に渡すこともできます。 サーバー名のみの文字列を渡した場合、 **Invoke-PolicyEvaluation** は、Windows 認証を使用してサーバーに接続します。  
+-   **-TargetServerName** は、対象オブジェクトを格納している SQL Server のインスタンスを指定します。 情報は、 <xref:System.Data.SqlClient.SqlConnection> クラスの ConnectionString プロパティに定義されている形式を使用する文字列に指定できます。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> クラスを使用して、適切な形式の接続文字列を作成することができます。 また、 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> オブジェクトを作成し、それを **-TargetServer**のパイプ出力からのオブジェクトが消費されます。 サーバー名のみの文字列を渡した場合、 **Invoke-PolicyEvaluation** は、Windows 認証を使用してサーバーに接続します。  
   
--   **-TargetObjects** は、1 つのオブジェクト、または対象セット内の SQL Server オブジェクトを表すオブジェクトの配列を受け取ります。 たとえば、<xref:Microsoft.SqlServer.Management.Smo.Database> クラス オブジェクトの配列を作成し、**-TargetObjects** に渡すことができます。  
+-   **-TargetObjects** は、1 つのオブジェクト、または対象セット内の SQL Server オブジェクトを表すオブジェクトの配列を受け取ります。 たとえば、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラス オブジェクトの配列を作成し、 **-TargetObjects**のパイプ出力からのオブジェクトが消費されます。  
   
 -   **-TargetExpressions** は、対象セット内のオブジェクトを指定するクエリ式が含まれた文字列を受け取ります。 クエリ式には、ノードを '/' 文字で区切って指定します。 各ノードは、ObjectType[Filter] 形式で記述します。 ObjectType は、SQL Server 管理オブジェクト (SMO) オブジェクト階層のいずれかのオブジェクトです。 Filter は、そのノードのオブジェクトをフィルター処理する式です。 詳細については、「 [クエリ式と Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)」を参照してください。  
   
@@ -148,4 +146,3 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
  [データベース エンジン コマンドレットの使用](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
-

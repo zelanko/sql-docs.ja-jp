@@ -13,17 +13,16 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f13a760e8176eb0d0bafbac29cf162f473caf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server のヘルプ ビューアーとオフライン コンテンツ
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 09/08/2017
   
    >[!IMPORTANT] 
    >SQL Server Management Studio と Visual Studio では、ドキュメントの追加プロセス中に、ヘルプ ビューアーのアプリケーションが凍結 (ハング) することがあります。 この問題を解決するには、以下の手順を実行します。 この問題の詳細については、「 [Visual Studio ヘルプ ビューアーがフリーズする](https://msdn.microsoft.com/library/mt654096.aspx)」を参照してください。  
-   >>メモ帳で %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings ファイルを開き、次のコード内の日付を将来の日付に変更します。 このファイルは、Visual Studio をインストールした場合にのみ、ローカル コンピューターで利用できます。 
+   >>メモ帳で %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings ファイルを開き、次のコード内の日付を将来の日付に変更します。 このファイルは、Visual Studio をインストールした場合にのみ、ローカル コンピューターで利用できます。 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     左ペインにある目次が自動的に更新され、追加したドキュメントが反映されます。  
@@ -139,7 +138,5 @@ F1 キーを押すと、対応するトピックがオンラインで表示さ�
 また、ヘルプ ビューアーは、プロキシ設定および ISO 形式をサポートしていません。 
 
 ## <a name="additional-information"></a>関連情報
-[Microsoft ヘルプ ビューアー - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft ヘルプ ビューアー - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

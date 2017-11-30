@@ -1,5 +1,5 @@
 ---
-title: "Windows アプリケーションで URL アクセスの使用 |Microsoft ドキュメント"
+title: "Windows アプリケーションでの URL アクセスの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Windows applications [Reporting Services]
 - Web Browser controls [Reporting Services]
@@ -19,19 +18,18 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 782be214cb491e1fdddf6ff7d45ac377fcfbf8a4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: bd579f1ce1b2f44de76c41b2e6f3c8062589f0c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL アクセスの Windows アプリケーションを使用して Reporting Services の統合
+# <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL アクセスを使用した Reporting Services の統合 - Windows アプリケーション
   レポート サーバーへの URL アクセスは Web 環境用に最適化されていますが、URL アクセスを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションに埋め込むこともできます。 ただし、Windows フォームに関連する URL アクセスでは、Web ブラウザー テクノロジを使用する必要があります。 URL アクセスと Windows フォームでは、次の統合シナリオを使用できます。  
   
 -   プログラムで Web ブラウザーを起動し、Windows フォーム アプリケーションからレポートを表示します。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/12/2017
 -   Windows フォームで <xref:System.Windows.Forms.WebBrowser> コントロールを使用し、レポートを表示します。  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Windows フォームからの Internet Explorer の起動  
- <xref:System.Diagnostics.Process> クラスを使用して、コンピューターで実行されているプロセスにアクセスできます。 <xref:System.Diagnostics.Process>クラスは、便利な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]開始、停止、制御、およびアプリケーションの監視を構成します。 表示するには、特定のレポート、レポート サーバー データベースにすることができます、 **IExplore**プロセス、レポートに URL を渡しています。 次のコード例を使用すると、ユーザーが Windows フォームのボタンをクリックしたときに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer が起動し、特定のレポート URL を渡すことができます。  
+ <xref:System.Diagnostics.Process> クラスを使用して、コンピューターで実行されているプロセスにアクセスできます。 <xref:System.Diagnostics.Process> クラスは、アプリケーションの起動、停止、制御、および監視に役立つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の構成要素です。 レポート サーバー データベースの特定のレポートを表示するには、レポートへの URL を渡して **IExplore** プロセスを起動できます。 次のコード例を使用すると、ユーザーが Windows フォームのボタンをクリックしたときに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer が起動し、特定のレポート URL を渡すことができます。  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -95,17 +93,17 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Windows フォームに WebBrowser コントロールを追加するには  
   
-1.  いずれかで新しい Windows アプリケーションを作成[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]です。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で新しい Windows アプリケーションを作成します。  
   
-2.  検索、<xref:System.Windows.Forms.WebBrowser>内の制御、**ツールボックス** ダイアログ ボックス。  
+2.  **[ツールボックス]** ダイアログ ボックスで <xref:System.Windows.Forms.WebBrowser> コントロールを探します。  
   
-     場合、**ツールボックス**は非表示、アクセスできる をクリックして、**ビュー**メニュー項目を選択して**ツールボックス**です。  
+     **ツールボックス**が表示されていない場合は、**[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
   
-3.  ドラッグ、<xref:System.Windows.Forms.WebBrowser>コントロールを Windows フォームのデザイン画面にします。  
+3.  <xref:System.Windows.Forms.WebBrowser> コントロールを Windows フォームのデザイン画面にドラッグします。  
   
-     <xref:System.Windows.Forms.WebBrowser>WebBrowser1 という名前のコントロールがフォームに追加  
+     webBrowser1 という <xref:System.Windows.Forms.WebBrowser> コントロールがフォームに追加されます。  
   
- 直接、<xref:System.Windows.Forms.WebBrowser>コントロールを呼び出すことによって、URL、**移動**メソッドです。 次の例に示すように、実行時に特定の URL アクセス文字列を <xref:System.Windows.Forms.WebBrowser> コントロールに割り当てることができます。  
+ <xref:System.Windows.Forms.WebBrowser> コントロールを URL に指定するには、その **Navigate** メソッドを呼び出します。 次の例に示すように、実行時に特定の URL アクセス文字列を <xref:System.Windows.Forms.WebBrowser> コントロールに割り当てることができます。  
   
 ```vb  
 Dim url As String = "http://localhost/reportserver?/" & _  
@@ -123,10 +121,9 @@ webBrowser1.Navigate(url);
   
 ## <a name="see-also"></a>参照  
  [アプリケーションへの Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [URL アクセスを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [SOAP を使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
- [ReportViewer コントロールを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
- [URL アクセスと #40 です。SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [URL アクセスを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [SOAP を使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
+ [ReportViewer コントロールを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
+ [URL アクセス &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

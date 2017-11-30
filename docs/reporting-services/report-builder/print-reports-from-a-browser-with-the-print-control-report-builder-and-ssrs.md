@@ -1,5 +1,5 @@
 ---
-title: "(レポート ビルダーおよび SSRS) の印刷コントロールを使用したブラウザーからレポートを印刷 |Microsoft ドキュメント"
+title: "印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 99405d9622cc89a1605c6aa9ee821f15844bc9ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)
   レポートを表示するための最も一般的なクライアント アプリケーションはブラウザーですが、ブラウザーの印刷機能はレポートの印刷には適していません。 ブラウザーの印刷機能は、Web ページを印刷するための機能です。 通常、ブラウザーから印刷したページには、Web ページ上にあるすべての可視要素と、ページまたは Web サイトを識別するヘッダーおよびフッター情報が含まれます。 ブラウザーからの印刷では現在のウィンドウの内容が印刷されるため、 レポートが数ページあっても最初のページしか印刷されません。また、レポート ページのサイズが印刷ページのサイズより大きい場合には、ページの全体を印刷しきれない場合もあります。  
@@ -43,11 +42,10 @@ ms.lasthandoff: 08/09/2017
  レポートをプレビューするには、 **[印刷]** ダイアログ ボックスで **[プレビュー]** ボタンをクリックします。 これによりレポートの最初のページが別のプレビュー ウィンドウ内に表示されます。 残りのページは、レポート サーバーでレポートが表示されると利用可能になります。 レポートのプレビューは、EMF 形式で表示されます。 プレビューでは前後のページに移動することができ、最後のページに到達すると、 **[次へ]** ボタンが無効になります。  
   
 ### <a name="adjusting-print-margins"></a>余白の調整  
- レポートを印刷する前に、表示される EMF レポートの余白を変更できます。 余白を変更するには、 **[印刷]** ダイアログ ボックスで **[プレビュー]** ボタンをクリックします。 プレビュー ページの上部にある **[余白]** ボタンをクリックします。 [余白] ダイアログ ボックスが表示されます。 必要に応じて上下および左右の余白を設定します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]ダイアログ ボックスを閉じるし、プレビューの表示および印刷の設定が格納されます。  
+ レポートを印刷する前に、表示される EMF レポートの余白を変更できます。 余白を変更するには、 **[印刷]** ダイアログ ボックスで **[プレビュー]** ボタンをクリックします。 プレビュー ページの上部にある **[余白]** ボタンをクリックします。 [余白] ダイアログ ボックスが表示されます。 必要に応じて上下および左右の余白を設定します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] ダイアログ ボックスが閉じ、プレビューの表示および印刷の設定が保存されます。  
   
 ## <a name="see-also"></a>「  
- [レポートの印刷 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [印刷するレポートと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   
-

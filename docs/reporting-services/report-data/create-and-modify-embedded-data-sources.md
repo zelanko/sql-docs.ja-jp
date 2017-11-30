@@ -1,5 +1,5 @@
 ---
-title: "作成し、埋め込みデータ ソースの変更 |Microsoft ドキュメント"
+title: "埋め込みデータ ソースを作成および変更する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 50ec28d3a5080187c0bd844dcba364295bcdef35
-ms.contentlocale: ja-jp
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>埋め込みデータ ソースを作成および変更する
   埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。  
@@ -41,13 +40,13 @@ ms.lasthandoff: 11/07/2017
   
     2.  次の選択肢の 1 つを使用して、接続文字列を指定します。  
   
-        -   **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧は、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)または[データ接続、データ ソース、および接続文字列と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧については、「[レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」または[データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)に関するページを参照してください。  
   
         -   式 (**[fx]** ) ボタンをクリックして、接続文字列を評価する式を作成します。 **[式]** ダイアログ ボックスで、式ペインに式を直接入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
         -   **[編集]** をクリックして、手順 2 で選択したデータ ソースの種類の **[接続のプロパティ]** ダイアログ ボックスを開きます。  
   
-             データ ソースの種類に合わせて **[接続のプロパティ]** ダイアログ ボックスのフィールドに入力します。 接続のプロパティには、データ ソースの種類、データ ソースの名前、および使用する資格情報が含まれます。 このダイアログ ボックスで値を指定した後、 **[接続テスト]** をクリックして、データ ソースが使用可能であること、および指定した資格情報が正しいことを確認します。 特定のデータ ソースの種類の詳細については、トピックを参照して[外部データ ソース &#40; からのデータの追加SSRS &#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
+             データ ソースの種類に合わせて **[接続のプロパティ]** ダイアログ ボックスのフィールドに入力します。 接続のプロパティには、データ ソースの種類、データ ソースの名前、および使用する資格情報が含まれます。 このダイアログ ボックスで値を指定した後、 **[接続テスト]** をクリックして、データ ソースが使用可能であること、および指定した資格情報が正しいことを確認します。 特定のデータ ソースの種類の詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」のトピックを参照してください。  
   
     3.  **[資格情報]**をクリックします。  
   
@@ -88,4 +87,3 @@ ms.lasthandoff: 11/07/2017
  [レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
   
-

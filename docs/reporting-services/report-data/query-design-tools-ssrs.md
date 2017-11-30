@@ -1,5 +1,5 @@
 ---
-title: "クエリ デザイン ツール (SSRS) |Microsoft ドキュメント"
+title: "クエリ デザイン ツール (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb010d0c545e0ff6031a07ff0d4439f5d9dc8116
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f185e21b61d68b2f3e5c66ff355fcea54a5a1d0f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-design-tools-ssrs"></a>クエリ デザイン ツール (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート デザイナーのデータセット クエリを作成するために使用できる、さまざまなクエリ デザイン ツールが用意されています。 ビジュアル モードで作業するか、クエリ言語で直接作業するかを選択できるモードがあるクエリ デザイナーもあります。 このトピックでは、各ツールを紹介し、それぞれがサポートするデータ ソースの種類を説明します。 ここでは、次のツールについて説明します。  
@@ -101,12 +100,12 @@ ms.lasthandoff: 08/09/2017
   
  ![Analysis Services DMX クエリ デザイナー、デザイン ビュー](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX クエリ デザイナー、デザイン ビュー")  
   
- DMX クエリ デザイナーを使用するには、データ マイニング モデルを利用できる有効なデータ ソースを定義する必要があります。 データ ソースのデータセットを定義する際、DMX クエリ デザイナーでクエリを開くことができます。 必要に応じて、ツール バーの MDX ボタンと DMX ボタンを使用し、MDX モードと DMX モードとを切り替えることができます。 モデルを選択した後、レポートにデータを提供するデータ マイニング予測クエリを作成できます。 詳細については、「 [Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」をご覧ください。  
+ DMX クエリ デザイナーを使用するには、データ マイニング モデルを利用できる有効なデータ ソースを定義する必要があります。 データ ソースのデータセットを定義する際、DMX クエリ デザイナーでクエリを開くことができます。 必要に応じて、ツール バーの MDX ボタンと DMX ボタンを使用し、MDX モードと DMX モードとを切り替えることができます。 モデルを選択した後、レポートにデータを提供するデータ マイニング予測クエリを作成できます。 詳細については、「 [Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」を参照してください。  
   
 ##  <a name="SAPBW"></a> Sap NetWeaver BI クエリ デザイナー  
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] クエリ デザイナーは、 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] データベースからデータを取得する場合に使用します。 このクエリ デザイナーを使用するには、少なくとも 1 つの InfoCube、MultiProvider、または Web 対応クエリが定義されている [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] データ ソースが必要です。 次の図は、 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] クエリ デザイナーを示しています。 詳細については、「 [SAP NetWeaver BI Query Designer のユーザー インターフェイス](../../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md)」を参照してください。  
   
- ![クエリ デザイナーがデザイン モードで MDX を使用して](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "クエリ デザイナーがデザイン モードで MDX を使用")  
+ ![デザイン モードで MDX を使用するクエリ デザイナー](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "デザイン モードで MDX を使用するクエリ デザイナー")  
   
 ##  <a name="Hyperion"></a> Hyperion Essbase クエリ デザイナー  
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] クエリ デザイナーは、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データベースおよびアプリケーションからデータを取得する場合に使用します。 次の図は、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] クエリ デザイナーを示しています。  
@@ -121,9 +120,8 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Reporting Services のチュートリアル & #40 です。SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Reporting Services &#40; でサポートされるデータ ソースSSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [埋め込みまたは共有データ ソース &#40; を作成します。SSRS &#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
+ [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   
-

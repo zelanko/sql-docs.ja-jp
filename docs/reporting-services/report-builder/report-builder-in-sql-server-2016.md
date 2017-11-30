@@ -1,5 +1,5 @@
 ---
-title: "レポート ビルダーで SQL Server 2016 |Microsoft ドキュメント"
+title: "SQL Server 2016 のレポート ビルダー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- "10428"
+f1_keywords: "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bc8ac3d0ed00a6fda642ab09bf2a28e705a6b419
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 のレポート ビルダー
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、改ページ調整されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] でレポートをプレビューすることも、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
@@ -99,5 +97,4 @@ ms.lasthandoff: 08/09/2017
  [キーボード ショートカット (レポート ビルダー)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でレポートのナビゲーションとデザインに使用できるショートカット キーについて説明します。  
   
-
 

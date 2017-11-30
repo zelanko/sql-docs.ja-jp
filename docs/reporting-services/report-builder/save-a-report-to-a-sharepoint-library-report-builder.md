@@ -1,5 +1,5 @@
 ---
-title: "レポートを保存する SharePoint ライブラリ (レポート ビルダー) |Microsoft ドキュメント"
+title: "SharePoint ライブラリへのレポートの保存 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,26 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6e87cb6c8daa8744b676d5ed78ed8339705f28e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 35f571e5e21fd0be911d2b244a97ee5321a9f73f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>SharePoint ライブラリへのレポートの保存 (レポート ビルダー)
-  SharePoint 統合用に構成されているレポート サーバーにレポートを保存するには、SharePoint サーバーを参照して、レポート サーバーへの接続を確立する必要があります。 レポート定義では、レポートに関連するアイテムへのすべての参照で、SharePoint レポート サーバー固有の値を使用する必要があります。 関連するアイテムには、サブレポート、詳細レポート、および Web ベースの画像などのリソースがあります。 詳細については、「[外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
+  SharePoint 統合用に構成されているレポート サーバーにレポートを保存するには、SharePoint サーバーを参照して、レポート サーバーへの接続を確立する必要があります。 レポート定義では、レポートに関連するアイテムへのすべての参照で、SharePoint レポート サーバー固有の値を使用する必要があります。 関連するアイテムには、サブレポート、詳細レポート、および Web ベースの画像などのリソースがあります。 詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
- プロジェクトにプロパティを設定するには、SharePoint サイトの**メンバー**権限または**所有者**権限が必要です。  
+ プロジェクトにプロパティを設定するには、SharePoint サイトの **メンバー** 権限または **所有者** 権限が必要です。  
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>SharePoint サイトにレポートを保存するには  
   
-1.  レポート ビルダーのボタンの **[保存]**をクリックします。 **名前を付けて保存***\<レポート アイテム >*  ダイアログ ボックスが表示されます。  
+1.  レポート ビルダーのボタンの **[保存]**をクリックします。 **[Save As***\<Report Item>]\(<レポート アイテム> として保存\)* ダイアログ ボックスが開きます。  
   
     > [!NOTE]  
     >  レポートを再保存すると、自動的に以前の場所に再保存されます。 場所を変更するには、 **[名前を付けて保存]** を使用します。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 08/09/2017
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

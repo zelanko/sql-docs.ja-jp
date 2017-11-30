@@ -1,5 +1,5 @@
 ---
-title: "Windows アプリケーションで SOAP API の使用 |Microsoft ドキュメント"
+title: "Windows アプリケーションでの SOAP API の使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,28 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 7dd1e6d2ddd35132ab1a9f297621218aab268e39
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: a577d15cbc8f3e11ea3672dd3fb6afe823f3bc35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP、Windows アプリケーションを使用して Reporting Services の統合
-  Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスです。したがって、SOAP API に容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 Windows アプリケーションの Web サービスにアクセスするには、サービスへの呼び出しを作成するコードを記述します。 使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]プロパティを公開するプロキシ クラスを生成することができます、および Web のメソッドは、サービスし、上に構築されたビジネス アプリケーションを構築する、使い慣れたインフラストラクチャとツールを使用することができます[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]テクノロジです。  
+# <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP を使用した Reporting Services の統合 - Windows アプリケーション
+  Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスです。したがって、SOAP API に容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 Windows アプリケーションの Web サービスにアクセスするには、サービスへの呼び出しを作成するコードを記述します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用すると、プロキシ クラスを生成して、Web サービスのプロパティとメソッドを表示し、使い慣れたインフラストラクチャとツールを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の技術に基づいたビジネス アプリケーションを構築できます。  
   
 ## <a name="integrating-report-management-functionality-using-windows-forms"></a>Windows フォームを使用したレポート管理機能の統合  
  SOAP API は、URL アクセスとは異なり、レポート サーバーで使用できる管理機能の完全なセットを提供します。 つまり、SOAP を使用すれば、開発者はレポート マネージャーのすべての管理機能を利用することができます。 したがって、Windows フォームを使用して完全な管理ツールを開発できます。 たとえば、Windows アプリケーションにおいて、レポート サーバー名前空間のコンテンツをユーザーが取得できるようにするとします。 そのためには、Web サービス <xref:ReportService2010.ReportingService2010.ListChildren%2A> メソッドを使用してレポート サーバー データベースの全アイテムを一覧表示した後、Listview、Treeview、または Combobox コントロールを使用してアイテムをユーザーに表示します。 次の Web サービス コードを使用した場合、ユーザーがフォームのボタンをクリックすると、ユーザーの [個人用レポート] フォルダー内にある使用可能なレポートの現在の一覧を取得できます。  
@@ -97,16 +95,15 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  ただし、SOAP API の <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを使用すると、プログラムによってさまざまな出力形式でレポートを表示および保存できます。 これは、ユーザーとの対話を必要とする URL アクセスよりも優れた点です。 SOAP API の <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを使用してレポートを表示すると、サポートされている出力形式のいずれでも表示できます。  
   
- 含まれている自由に配布可能な ReportViewer コントロールを使用することができますも[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]です。 ReportViewer コントロールでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能をカスタム アプリケーションに容易に埋め込むことができます。 ReportViewer コントロールは、事前にデザインして完全な形にしあげたレポートを、アプリケーションの機能セットの一部として提供することを予定している開発者を対象にしています (たとえば、Web サイト管理アプリケーションであれば、企業の Web サイトに関するクリックストリーム分析を表示するレポートなどが考えられます)。 これらのコントロールをアプリケーションに埋め込む方法は、アプリケーションの配置に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー コンポーネントを組み込む方法を簡略化したものと言えます。 これらのコントロールではレポート機能が提供されますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれる他の機能 (レポートの作成、パブリッシュ、配布、配信のためのサポート) はありません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] に含まれている配信可能な ReportViewer コントロールも自由に使用できます。 ReportViewer コントロールでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能をカスタム アプリケーションに容易に埋め込むことができます。 ReportViewer コントロールは、事前にデザインして完全な形にしあげたレポートを、アプリケーションの機能セットの一部として提供することを予定している開発者を対象にしています (たとえば、Web サイト管理アプリケーションであれば、企業の Web サイトに関するクリックストリーム分析を表示するレポートなどが考えられます)。 これらのコントロールをアプリケーションに埋め込む方法は、アプリケーションの配置に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー コンポーネントを組み込む方法を簡略化したものと言えます。 これらのコントロールではレポート機能が提供されますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれる他の機能 (レポートの作成、パブリッシュ、配布、配信のためのサポート) はありません。  
   
  ReportViewer コントロールには 2 つのバージョンがあります。1 つは Windows リッチ クライアント アプリケーション、もう 1 つは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションを対象にしています。 また、これらのコントロールは、ローカル処理モードとリモート処理モードの両方をサポートしています。 ローカル処理モードの場合は、アプリケーションによってレポートの定義とデータセットを提供し、レポートの処理を起動します。 リモート処理モードの場合は、データの取得とレポートの処理をレポート サーバー側で実行し、これらのコントロールをレポートの表示とナビゲーションのために使用します。 このモデルを使用すれば、デスクトップの規模にもエンタープライズの規模にも対応できるスケーラビリティの高いリッチ アプリケーションを作成できます。  
   
  ReportViewer コントロールの説明は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のオンライン ヘルプにあります。 詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の製品ドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Web サービスと、.NET Framework を使用してアプリケーションの構築](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Web サービスと .NET Framework を使用したアプリケーションの構築](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [アプリケーションへの Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Web アプリケーションで SOAP API の使用](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
+ [Web アプリケーションでの SOAP API の使用](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
   
   
-

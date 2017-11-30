@@ -1,34 +1,31 @@
 ---
-title: "パラメーターのレポート ビューアーでドリルスルー (RDLC) レポートを作成 |Microsoft ドキュメント"
+title: "パラメーターを含む詳細 (RDLC) レポートを作成する - ReportViewer | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8ce79884745b9e2fc9fbddfd7d312e982b2dd61c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c55971d60d82f2f0d7be1f30cddfe6b271566c12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>パラメーターのレポート ビューアーでドリルスルー (RDLC) レポートを作成します。
+# <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>パラメーターを含む詳細 (RDLC) レポートを作成する - ReportViewer
 [詳細](http://technet.microsoft.com/library/ff519554.aspx) レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルでは、次のレッスンを通じて、 [ローカル モード レポート](http://msdn.microsoft.com/library/ff487969.aspx)でパラメーターとクエリを使用した詳細レポートを作成します。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルを使用するには、 **AdventureWorks2014** サンプル データベースへのアクセス権が必要です。 **AdventureWorks2014** サンプル データベースの取得方法の詳細については、 [Microsoft SQL Server データベースの製品サンプル](http://msftdbprodsamples.codeplex.com/)に関するページを参照してください。  
+このチュートリアルを使用するには、 **AdventureWorks2014** サンプル データベースへのアクセス権が必要です。 **AdventureWorks2014** サンプル データベースの取得方法の詳細については、「[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks のサンプル データベース) を参照してください。  
   
 このチュートリアルでは、Transaction-SQL クエリおよび ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) および [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) オブジェクトを理解していることを前提とします。  
   
@@ -49,5 +46,4 @@ Visual Studio 2015 と ASP.NET Web アプリケーションを使用して、Rep
 [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  
 [レポート デザイナーを使用してレポートをデザインする (SSRS)](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
-
 

@@ -1,26 +1,24 @@
 ---
-title: "日付の Analysis Services のモバイル レポートの書式設定を保持 |Reporting Services |Microsoft ドキュメント"
+title: "モバイル レポートで Analysis Services の日付の書式設定を保持する | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5e0c04239913d5978a77afbbaac24ad4f7c37ecb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>モバイル レポートで Analysis Services の日付の書式設定を保持する
 レポート ビルダー内の共有データセットにメジャーを追加して、 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] データ ソースの日付のデータ型が [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]で保持されるようにします。
@@ -45,6 +43,5 @@ ms.lasthandoff: 08/09/2017
    
 ### <a name="see-also"></a>参照
 
--  [Reporting Services モバイル レポート用のデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Reporting Services モバイル レポートのデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [Reporting Services モバイル レポート用にデータを準備する](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
-

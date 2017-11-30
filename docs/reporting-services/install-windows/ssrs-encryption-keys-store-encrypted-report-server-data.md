@@ -1,12 +1,11 @@
 ---
-title: "暗号化されたレポート サーバーのデータ (SSRS 構成マネージャー) 保存 |Microsoft ドキュメント"
+title: "暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0727e4e4fa6290396d08bedbd1404722c18e6807
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS の暗号化キーの暗号化されたレポート サーバー データを格納します。
+# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS の暗号化キー - 暗号化されたレポート サーバー データの保存
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化された値がレポート サーバー データベースおよび構成ファイルに保存されます。 暗号化された値の大部分は資格情報です。これらの資格情報は、レポートにデータを提供する外部データ ソースへのアクセスに使用されます。 このトピックでは、暗号化される値、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で使用される暗号化機能、および理解が必要な他の種類の保存された機密データについて説明します。  
   
 ## <a name="encrypted-values"></a>暗号化された値  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   内部サーバー データを格納するレポート サーバー データベースに接続するために、レポート サーバーで使用される接続情報および資格情報。  
   
-     これらの値は、セットアップ中またはレポート サーバー構成中に指定および暗号化されます。 Reporting Services 構成ツールまたは **rsconfig** ユーティリティを使用すると、いつでも接続情報を更新できます。 構成設定の暗号化には、ローカル コンピューターのマシン レベル キーが使用されます。このキーは、すべてのユーザーが使用できます。 暗号化されたレポート サーバーの接続情報は rsreportserver.config ファイルに保存されます (他の構成ファイルには、暗号化された設定が保存されません)。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+     これらの値は、セットアップ中またはレポート サーバー構成中に指定および暗号化されます。 Reporting Services 構成ツールまたは **rsconfig** ユーティリティを使用すると、いつでも接続情報を更新できます。 構成設定の暗号化には、ローカル コンピューターのマシン レベル キーが使用されます。このキーは、すべてのユーザーが使用できます。 暗号化されたレポート サーバーの接続情報は rsreportserver.config ファイルに保存されます (他の構成ファイルには、暗号化された設定が保存されません)。 詳細については、「 [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」で確認します。  
   
 -   レポートにデータを提供する外部データ ソースに接続するためにレポート サーバーで使用される保存された資格情報。  
   
@@ -67,10 +65,9 @@ ms.lasthandoff: 08/09/2017
  レポート サーバーには暗号化されていない各種のデータが保存されますが、その中には保護が必要な重要な情報が含まれていることがあります。 特に、レポート履歴スナップショットおよびレポート実行スナップショットには、クエリ結果が含まれています。このクエリ結果には、権限を持つユーザー向けのデータが含まれることがあります。 機密データを含むレポートのスナップショット機能を使用している場合、レポート サーバー データベースでテーブルを開くことができるユーザーは、テーブルの内容を調べることで、保存されたレポートの一部を参照できる可能性があるという点に注意してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]キャッシュをサポートしていませんまたはユーザーのセキュリティに基づいたパラメーターを使用するレポートのレポート履歴を識別します。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ユーザーのセキュリティ ID に基づくパラメーターを使用するレポートのキャッシュおよびレポート履歴がサポートされません。  
   
 ## <a name="see-also"></a>参照  
- [構成および暗号化キー &#40; を管理します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

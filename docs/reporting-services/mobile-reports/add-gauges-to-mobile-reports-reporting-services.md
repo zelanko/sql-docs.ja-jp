@@ -1,26 +1,24 @@
 ---
-title: "モバイル レポートにゲージを追加 |Reporting Services |Microsoft ドキュメント"
+title: "モバイル レポートにゲージを追加する | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>モバイル レポートにゲージを追加する | Reporting Services
 ゲージは、モバイル レポートで広く使用されている最も基本的なビジュアルです。 データセットに含まれる 1 つの値 (値自体か、目標値と比較した値) を表示します。
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
 *[レイアウト] タブに表示されたゲージの視覚エフェクト*  
   
-SQL Server Mobile Report Publisher ですべてのゲージには、少なくとも 1 つのプロパティに共通がある。 メイン値を使用し、モバイル レポート内のデータ テーブルの 1 つの数値フィールドに設定します。  
+SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 つの共通プロパティ (主要な値) があります。このプロパティは、モバイル レポート内のいずれかのデータ テーブルに含まれる 1 つの数値フィールドに設定されています。  
 
 [数値] ゲージを除くすべてのゲージには、比較対象値、または主要な値と比較対象値の間の関係を示す *差分*値を表示することもできます。 多くの場合、比較対象値は目標値となっており、ゲージは、目標の達成状況や、実際の値と目標値の間の差分を視覚的に示します。
 
@@ -95,4 +93,3 @@ SQL Server Mobile Report Publisher ですべてのゲージには、少なくと
 * [Reporting Services モバイル レポートのナビゲーター](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートの視覚エフェクト](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートのデータ グリッド](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

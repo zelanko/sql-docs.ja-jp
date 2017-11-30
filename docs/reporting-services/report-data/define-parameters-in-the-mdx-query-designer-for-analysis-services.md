@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services の MDX クエリ デザイナーでパラメーターを定義 |Microsoft ドキュメント"
+title: "Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e3a54629b97f7e774a75d33711d34ba866b86c6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services の MDX クエリ デザイナーでのパラメーターの定義
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに対する MDX クエリをパラメーター化するには、そのクエリにクエリ パラメーターを追加する必要があります。 MDX クエリ デザイナーでは、デザイン モードとクエリ モードの両方で、フィルターを指定することによって、クエリ パラメーターを追加できます。 クエリ パラメーターを使用してクエリを定義すると、Reporting Services によってレポート パラメーターとデータセットが自動的に作成され、有効な値の一覧が示されます。 これにより、クエリに直接渡される値を指定できます。  
@@ -65,9 +64,9 @@ ms.lasthandoff: 08/09/2017
   
 2.  ツール バーの **[デザイン]** をクリックして、クエリ モードに切り替えます。  
   
-3.  MDX クエリ デザイナー ツールバーで、をクリックして**クエリ パラメーター** (![クエリ パラメーター ダイアログ ボックスのアイコン](../../reporting-services/report-data/media/iconqueryparameter.gif "クエリ パラメーター ダイアログ ボックスのアイコン"))。 [クエリ パラメーター] ダイアログ ボックスが表示されます。  
+3.  MDX クエリ デザイナー ツール バーで **[クエリ パラメーター]** (![[クエリ パラメーター] ダイアログ ボックスのアイコン](../../reporting-services/report-data/media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")) をクリックします。 [クエリ パラメーター] ダイアログ ボックスが表示されます。  
   
-4.  **パラメーター**列で、をクリックして**\<パラメーターの入力 >**、パラメーターの名前を入力します。  
+4.  **[パラメーター]** 列で **[\<パラメーターの入力>]** をクリックし、パラメーター名を入力します。  
   
 5.  **[ディメンション]** 列のボックスの一覧から値を選択します。  
   
@@ -88,8 +87,7 @@ ms.lasthandoff: 08/09/2017
      レポート パラメーターで使用可能な値を示すデータセットを確認するには、レポート データ ペインの空白部分を右クリックし、 **[非表示のデータセットの表示]**をクリックします。 レポート データ ペインに、レポート内のすべてのデータセットが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [MDX &#40; analysis Services 接続の種類SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services MDX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   
-

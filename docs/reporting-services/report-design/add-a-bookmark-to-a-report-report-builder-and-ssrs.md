@@ -1,5 +1,5 @@
 ---
-title: "(レポート ビルダーおよび SSRS) レポートにブックマークを追加 |Microsoft ドキュメント"
+title: "レポートへのブックマークの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b63dc6993525970f131b89ac6aea79f8a9c6e72
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6b1596b50f62a3e42ce592d3bc675cf19165ee46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
   カスタマイズされた目次を指定したり、レポートにカスタマイズされた内部ナビゲーション リンクを指定したりする場合は、レポートにブックマークおよびブックマーク リンクを追加します。 通常、各テーブルやグラフ、テーブルやマトリックスに表示される固有のグループ値など、ユーザーが直接アクセスするレポート内の場所にブックマークを追加します。 ブックマークとして使用する独自の文字列を作成できます。また、グループの場合はブックマークをグループ式に設定できます。  
@@ -61,9 +60,8 @@ ms.lasthandoff: 08/09/2017
 7.  リンクをテストするには、 **[実行]** をクリックしてレポートをプレビューし、リンクを設定したレポート アイテムをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [対話的な並べ替え、ドキュメント マップ、およびリンクと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-

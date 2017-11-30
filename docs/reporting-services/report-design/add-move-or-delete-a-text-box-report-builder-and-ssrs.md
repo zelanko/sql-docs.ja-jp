@@ -1,5 +1,5 @@
 ---
-title: "追加、移動、または削除 (レポート ビルダーおよび SSRS) は、テキスト ボックス |Microsoft ドキュメント"
+title: "テキスト ボックスの追加、移動、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 96e5c879ff7427c121ae2a90a39587f475280ab2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>テキスト ボックスの追加、移動、または削除 (レポート ビルダーおよび SSRS)
   テキスト ボックスは [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート内で最も一般的に使用されるレポート アイテムです。 テキスト ボックスをレポート本文に追加して、タイトル、パラメーターの選択肢、組み込みフィールド、日付などの情報を表示できます。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
  テキスト ボックスを一覧データ領域に追加するには、テキスト ボックスを追加してから一覧にドラッグする必要があります。  
   
 > [!NOTE]  
->  テキスト ボックスをクリックすると、すぐにテキスト ボックスのテキストを編集できる状態になります。 テキストではなくテキスト ボックスそのものを選択するには、Esc キーを押します。  
+>  テキスト ボックスをクリックすると、すぐにテキスト ボックスのテキストを編集できる状態になります。 テキストではなくテキスト ボックスそのものを選択するには、<localizedText>Esc</localizedText> キーを押します。  
   
 ## <a name="to-add-a-text-box"></a>テキスト ボックスを追加するには  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 5.  テキスト ボックスが一覧内で正しく入れ子になっていることを確認するには、テキスト ボックスを選択します。  
   
     > [!NOTE]  
-    >  テキスト ボックスの中をクリックして編集モードになった場合は、Esc キーを押すとテキスト ボックスを選択できます。  
+    >  テキスト ボックスの中をクリックして編集モードになった場合は、&lt;localizedText&gt;Esc&lt;/localizedText&gt; キーを押すとテキスト ボックスを選択できます。  
   
 6.  プロパティ ペインで、 **Parent** プロパティが一覧データ領域に自動的に追加された四角形であることを確認します。  
   
@@ -63,21 +63,21 @@ ms.lasthandoff: 08/09/2017
 1.  レポート デザイン ビューで、テキスト ボックス内の空白部分をクリックして、テキスト ボックスを選択します。  
   
     > [!NOTE]  
-    >  テキスト ボックスの中をクリックして編集モードになった場合は、Esc キーを押すとテキスト ボックスを選択できます。  
+    >  テキスト ボックスの中をクリックして編集モードになった場合は、&lt;localizedText&gt;Esc&lt;/localizedText&gt; キーを押すとテキスト ボックスを選択できます。  
   
 2.  テキスト ボックスのハンドルをクリックし、テキスト ボックスを新しい場所にドラッグします。   
     または、方向キーを使用して、選択したテキスト ボックスを横方向または縦方向に移動します。 デザイン画面でテキスト ボックスを細かく移動するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら方向キーを使用します。  
   
 ## <a name="to-delete-a-text-box"></a>テキスト ボックスを削除するには  
   
-1.  レポート デザイン ビューで、テキスト ボックス内の空白部分を右クリックして選択し、 **[削除]**をクリックします。 または、テキスト ボックス内の空白部分をクリックして、Del キーを押します。  
+1.  レポート デザイン ビューで、テキスト ボックス内の空白部分を右クリックして選択し、 **[削除]**をクリックします。 または、テキスト ボックス内の空白部分をクリックして、<localizedText>Del</localizedText> キーを押します。  
   
     > [!NOTE]  
-    >  テキスト ボックスの中をクリックして編集モードになった場合は、Esc キーを押すとテキスト ボックスを選択できます。  
+    >  テキスト ボックスの中をクリックして編集モードになった場合は、&lt;localizedText&gt;Esc&lt;/localizedText&gt; キーを押すとテキスト ボックスを選択できます。  
   
 ## <a name="see-also"></a>参照  
- [テキスト ボックス &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [キーボード ショートカットと #40 です。レポート ビルダー&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [テキスト ボックス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [キーボード ショートカット (レポート ビルダー)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

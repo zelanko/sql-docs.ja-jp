@@ -1,5 +1,5 @@
 ---
-title: "RDL ファイル内のアセンブリを参照している |Microsoft ドキュメント"
+title: "RDL ファイルのアセンブリの参照 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - RDL [Reporting Services], referencing assemblies
 - referencing custom assemblies
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: fb34fd3f73b8b7451d52c9794697e4a6c3f8b82e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>RDL ファイルのアセンブリの参照
-  RDL 仕様にレポート定義ファイルでカスタム コード アセンブリの使用をサポートするために 2 つのレポート定義言語 (RDL) 要素が含まれている: **CodeModules**要素および**クラス**要素。  
+  レポート定義ファイルでのカスタム コード アセンブリの使用をサポートするため、2 つのレポート定義言語 (RDL) 要素 **CodeModules** と **Classes** が RDL 仕様に含まれています。  
   
- **CodeModules**要素では、レポート式でマネージ コード アセンブリを参照することができます。 **CodeModules**特殊な関数を呼び出すことで、レポート定義ファイルを使用するアセンブリへの参照を含む最上位の要素。 カスタム アセンブリの使用をサポートするレポート定義のエントリは次のようになります。  
+ **CodeModules** 要素を使用すると、レポート式でマネージ コード アセンブリを参照できます。 **CodeModules** は、レポート定義ファイルで特殊な関数の呼び出しに使用するアセンブリへの参照を含むトップレベルの要素です。 カスタム アセンブリの使用をサポートするレポート定義のエントリは次のようになります。  
   
 ```  
 <CodeModules>  
@@ -41,9 +40,9 @@ ms.lasthandoff: 08/12/2017
 </CodeModules>  
 ```  
   
- 呼び出す代わりに<xref:System.Reflection.Assembly.Load%2A>、カスタム コードから手動で追加するかによって、カスタム アセンブリを登録**CodeModule**要素を RDL ファイルにまたはを使用して、**参照**のタブ、**レポート プロパティ**ダイアログ。 詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
+ カスタム コードから <xref:System.Reflection.Assembly.Load%2A> を呼び出すのではなく、**CodeModule** 要素を RDL ファイルに手動で追加するか、**[レポートのプロパティ]** ダイアログの **[参照]** タブを使用してカスタム アセンブリを登録します。 詳細については、「 [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)を表しています。  
   
- **クラス**要素が、レポート定義のインスタンス メンバーの使用をサポートします。 **クラス**クラス名とインスタンス名への参照を含む最上位の要素。 インスタンス メンバーの使用をサポートするレポート定義のエントリは次のようになります。  
+ **Classes** 要素では、レポート定義でのインスタンス メンバーの使用がサポートされます。 **Classes** は、クラス名とインスタンス名への参照を含むトップレベルの要素です。 インスタンス メンバーの使用をサポートするレポート定義のエントリは次のようになります。  
   
 ```  
 <Classes>  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/12/2017
 </Classes>  
 ```  
   
- 詳細については、次を参照してください。 [Custom Assemblies Through Expressions にアクセスする](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)です。  
+ 詳細については、「[式を使用したカスタム アセンブリへのアクセス](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  

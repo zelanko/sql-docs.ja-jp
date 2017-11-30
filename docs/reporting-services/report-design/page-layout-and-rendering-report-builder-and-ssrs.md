@@ -1,5 +1,5 @@
 ---
-title: "ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c68aa21a9134e0d964c4728182141ad61937dfca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
 ページ レイアウト、改ページ、用紙サイズなど、意図したとおりのレポートを作成できるように、ページ分割されたレポートに関する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表示拡張機能について説明します。 
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
  たとえば、HTML 形式や MHTML 形式としてレンダリングされたレポートは、コンピューター画面での操作性を重視して最適化され、ページの長さは固定的ではありません。  
   
- 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
+ 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
    
 ##  <a name="Pagination"></a> ページ割り付け  
  ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でのページ割り付けは、レポートの閲覧と作成に使用する表示拡張機能のほか、レポートに使用する改ページのオプションと同一ページ表示のオプションによって異なります。  
@@ -124,4 +123,3 @@ ms.lasthandoff: 08/09/2017
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

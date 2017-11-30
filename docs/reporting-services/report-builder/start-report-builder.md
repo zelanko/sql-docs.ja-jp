@@ -1,5 +1,5 @@
 ---
-title: "レポート ビルダーを起動 |Microsoft ドキュメント"
+title: "レポート ビルダーの起動 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,22 +16,20 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 35ea064c1e269af81534a219f093e2f9c47a4a2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="start-report-builder"></a>レポート ビルダーの起動
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]スタンドアロン レポートは、環境を作成します。 この環境を使用すると、ページ分割されたレポートを作成して、ネイティブ モードまたは SharePoint 統合モードでインストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にパブリッシュできます。  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、スタンドアロンのレポート作成環境です。 この環境を使用すると、ページ分割されたレポートを作成して、ネイティブ モードまたは SharePoint 統合モードでインストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にパブリッシュできます。  
   
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web ポータルまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を初めて起動する場合は、Microsoft ダウンロード センターからダウンロードするように求められます。 
  
@@ -39,13 +37,13 @@ ms.lasthandoff: 08/09/2017
  
  ユーザー自身、または管理者が [Microsoft ダウンロード センターからユーザーのコンピューターにレポート ビルダーをインストールする](http://go.microsoft.com/fwlink/?LinkID=219138)こともできます。 詳細については、「 [レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md) 」の「Systems Manager Server を使用したレポート ビルダーのインストール」を参照してください。
  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]SQL Server Reporting Services; をインストールするときにインストールされていませんダウンロードして、個別にインストールする必要があります。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、SQL Server Reporting Services のインストール時にインストールされません。別途ダウンロードして、インストールする必要があります。  
   
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] を Web ポータルまたは SharePoint サイトから起動したときに [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] の以前のバージョンが開く場合は、Web ポータルまたは SharePoint サイト上のバージョンを更新できる管理者に相談してください。  
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルから起動するには  
   
-1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。 既定では、URL は http://\<*servername*>/reports です。  
+1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。 既定の URL は http://\<*servername*>/reports です。  
   
 2.  Web ポータルの上部のバーで、 **[新規]** > **[ページ分割されたレポート]**の順に選択します。  
   
@@ -74,7 +72,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
-[レポート ビルダーの既定のオプションを設定します。](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
+[レポート ビルダーの既定のオプションを設定する](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

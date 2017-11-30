@@ -1,12 +1,11 @@
 ---
-title: "バックアップし、復元の Reporting Services の暗号化キー |Microsoft ドキュメント"
+title: "Reporting Services の暗号化キーのバックアップと復元 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +14,23 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a4344a31ac18bc128845935fa2dce6223dab5710
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS の暗号化キーのバックアップし、暗号化キーの復元
+# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーのバックアップと復元
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   レポート サーバー構成で重要なのは、機密情報の暗号化に使用される対称キーのバックアップ コピーの作成です。 キーのバックアップ コピーは多くのルーチン処理で必要とされ、キーのバックアップ コピーにより新しいインストールで既存のレポート サーバー データベースを再利用できます。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード  
   
  次のいずれかが行われた場合、暗号化キーのバックアップ コピーを復元する必要があります。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  格納されたキーを含むファイルを指定します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ファイルに .snk ファイル拡張子が付けられます。 このファイルを、レポート サーバーとは別のディスクに保存することを検討してください。  
   
-5.  [ **OK**] を選択します。  
+5.  **[OK]** を選択します。  
   
 ###  <a name="bkmk_backup_rskeymgmt"></a> 暗号化キーのバックアップ - rskeymgmt (ネイティブ モード)  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 08/09/2017
   
 -   以前格納した対称キー データ (以前の配置から既にレポート サーバー データベースにあったキー情報など) は削除されます。  
   
- 暗号化キーを復元するには、暗号化キーのコピーがファイルにある必要があります。 また、格納したコピーのロックを解除するパスワードを知っている必要もあります。 キーおよびパスワードがある場合、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを実行して、キーを復元できます。 対称キーは、レポート サーバー データベースに現在格納されている暗号化されたデータをロックおよびロック解除するキーと同じものである必要があります。 有効ではないコピーを復元すると、レポート サーバーは、レポート サーバー データベースに現在格納されている暗号化されたデータにアクセスできません。 暗号化されたデータにアクセスできず、有効なキーを復元できない場合、すべての暗号化された値を削除する必要が生じることがあります。 なんらかの理由で暗号化キーを復元できない場合 (バックアップ コピーがない場合など)、既存のキーおよび暗号化されたコンテンツを削除する必要があります。 詳細については、「[暗号化キーの削除と再作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)」を参照してください。 対称キーの作成の詳細については、「[レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
+ 暗号化キーを復元するには、暗号化キーのコピーがファイルにある必要があります。 また、格納したコピーのロックを解除するパスワードを知っている必要もあります。 キーおよびパスワードがある場合、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを実行して、キーを復元できます。 対称キーは、レポート サーバー データベースに現在格納されている暗号化されたデータをロックおよびロック解除するキーと同じものである必要があります。 有効ではないコピーを復元すると、レポート サーバーは、レポート サーバー データベースに現在格納されている暗号化されたデータにアクセスできません。 暗号化されたデータにアクセスできず、有効なキーを復元できない場合、すべての暗号化された値を削除する必要が生じることがあります。 なんらかの理由で暗号化キーを復元できない場合 (バックアップ コピーがない場合など)、既存のキーおよび暗号化されたコンテンツを削除する必要があります。 詳細については、「[暗号化キーの削除と再作成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)」を参照してください。 対称キーの作成の詳細については、「[レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
   
 ###  <a name="bkmk_restore_configuration_manager"></a> 暗号化キーの復元 - Reporting Services 構成マネージャー (ネイティブ モード)  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  ファイルのロックを解除するパスワードを入力します。  
   
-5.  [ **OK**] を選択します。 
+5.  **[OK]** を選択します。 
   
 ###  <a name="bkmk_restore_rskeymgmt"></a> 暗号化キーの復元 - rskeymgmt (ネイティブ モード)  
   
@@ -115,4 +113,3 @@ ms.lasthandoff: 08/09/2017
  [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

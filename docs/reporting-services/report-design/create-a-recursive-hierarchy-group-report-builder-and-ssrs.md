@@ -1,5 +1,5 @@
 ---
-title: "再帰型階層グループ (レポート ビルダーおよび SSRS) を作成 |Microsoft ドキュメント"
+title: "再帰型階層グループの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e61ce0c404a8544ac95b505f40f34d070543908b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  プロパティ ペインが表示されない場合は、 **[表示]** タブの **[プロパティ]** をクリックします。  
   
-2.  プロパティ ウィンドウで、展開、 **Padding**ノード、 をクリックして**左**、ドロップダウン リストから選択し、 **\<式… >**です。  
+2.  プロパティ ペインで、**[余白]** ノードを展開して **[左]** をクリックします。次に、ドロップダウン リストから **[\<式…>]** を選びます。  
   
 3.  式ペインで次の式を入力します。  
   
@@ -69,13 +68,12 @@ ms.lasthandoff: 08/09/2017
      レポートを実行します。 グループ化されたデータの階層ビューがレポートに表示されます。  
   
 ## <a name="see-also"></a>参照  
- [再帰型階層グループ &#40; を作成します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [集計関数リファレンス & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [テーブルと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [マトリックスと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [リストと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

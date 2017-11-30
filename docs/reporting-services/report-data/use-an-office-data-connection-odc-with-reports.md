@@ -1,5 +1,5 @@
 ---
-title: "レポートでの Office データ接続 (.odc) の使用 |Microsoft ドキュメント"
+title: "レポートで Office Data Connection (.odc) を使用する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 2d6f6fa222bb8d4c5c9cd53a560c093c814ccd01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>レポートで Office Data Connection (.odc) を使用する
   限られたシナリオでは、既存の Office データ接続 (.odc) ファイルを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに接続情報を提供できます。 共有データ ソースの作成時には、.rsds ファイルの代わりに .odc ファイルを使用できます。 レポート サーバーでは、.rsds ファイルの場合と同様に .odc ファイルを使用して、データ ソースの種類、接続文字列、および資格情報をファイルから読み取ります。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  .odc ファイルに関する知識があまりなくても、次の手順を使用して .odc ファイルを作成およびエクスポートすることができます。 OLE DB データ ソース用に .odc ファイルを作成する簡単な方法の 1 つは、Excel 2007 とデータ接続ウィザードを使用することです。 ただし、このウィザードではデータ ソースが作成されないので、定義済みの外部データ ソースを用意しておく必要があります。  
   
- 既存の .odc ファイルは、レポートやクエリと完全な互換性がある場合にのみ使用してください。 レポートまたは .odc ファイルに対して大幅な変更が必要になるようなエラーが発生する場合は、レポート用に .rsds ファイルを新しく作成します。 .Rsds ファイルを使用する共有データ ソースを作成する方法の詳細については、次を参照してください。[作成および共有データ ソースの管理 &#40;です。Reporting Services の SharePoint モード &#41; と統合](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ 既存の .odc ファイルは、レポートやクエリと完全な互換性がある場合にのみ使用してください。 レポートまたは .odc ファイルに対して大幅な変更が必要になるようなエラーが発生する場合は、レポート用に .rsds ファイルを新しく作成します。 .rsds ファイルを使用する共有データ ソースを作成する方法の詳細については、「[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。  
   
 ### <a name="to-create-and-export-an-odc-file"></a>.odc ファイルを作成してエクスポートするには  
   

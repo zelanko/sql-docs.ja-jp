@@ -1,27 +1,24 @@
 ---
-title: "Reporting Services モバイル レポートを Excel のデータを準備する |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services モバイル レポート用に Excel データを準備する | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0403dcd2f622f6bd6c8cbc88d12a4f8a955d8605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用に Excel データを準備する
   
@@ -83,7 +80,7 @@ Excel ファイルをモバイル レポート用のデータセットとして�
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-セルを変換したら、セルを日付として書式設定する必要があります。そのためには、該当するセルを選択するか、列全体を選択し、**[コンテキスト]** メニュー > **[セルの書式設定]** の順に選択し、**[カテゴリ]** ボックスの一覧から**[日付]** を選択します。 また、Excel の区切り位置ウィザードを使用して、テキスト セルを適切に書式設定された日付に変換することができます。  
+セルを変換したら、セルを日付として書式設定する必要があります。そのためには、該当するセルを選択するか、列全体を選択し、**[コンテキスト]** メニュー  >  **[セルの書式設定]** の順に選択し、**[カテゴリ]** の一覧から **[日付]** を選択します。 また、Excel の区切り位置ウィザードを使用して、テキスト セルを適切に書式設定された日付に変換することができます。  
   
 ## <a name="unsupported"></a>サポートされていない  
   
@@ -103,5 +100,4 @@ Excel ワークシート内のカスタム オブジェクト (ピボット テ�
   
   
   
-
 

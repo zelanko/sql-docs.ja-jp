@@ -1,28 +1,26 @@
 ---
-title: "Reporting Services モバイル レポートでマップ |Microsoft ドキュメント"
+title: "Reporting Services モバイル レポート内のマップ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
+# <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート内のマップ
 マップは、地理的データを視覚化するための優れた方法です。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] は、3 種類のマップの視覚エフェクト、および大陸と多数の個々の国の組み込みのマップを提供します。 [カスタム マップをアップロードして使用する](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)こともできます。   
   
 ## <a name="types-of-maps"></a>マップの種類  
@@ -39,7 +37,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
   
 ## <a name="select-the-map-type-and-region"></a>マップの種類と領域の選択  
   
-1. [**レイアウト**] タブで、マップの種類を選択して、それをデザイン画面にドラッグし、必要なサイズにします。  
+1. **[レイアウト]** タブで、マップの種類を選択して、それをデザイン画面にドラッグし、必要なサイズにします。  
   
 2. **[レイアウト]** ビュー、**[表示プロパティ]** パネル、**[マップ]** の順に選択し、必要な特定のマップ領域を選択します。  
   
@@ -63,12 +61,12 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
   
 1. 左上隅にある **[データ]** タブを選択します。  
   
-2. 選択**データ追加**、し、いずれか**ローカル Excel**または**SSRS サーバー**です。  
+2. **[データの追加]**を選択し、次に **ローカル Excel** または **[SSRS サーバー]**を選択します。  
   
    > **ヒント**: データが [モバイル レポートに適した形式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)であることを確認してください。  
   
 3. 目的のワークシートを選択し、 **[インポート]**を選択します。  
-   [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] でデータを確認します。  
+   [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]でデータを確認します。  
   
 4. **[データ]** ビュー、**[データのプロパティ]** パネル、**[キー]** の順に移動して、左のボックスからマップ データを含むテーブルを選択し、右のボックスから、マップ内の領域に一致するキー フィールドを選択します。  
   
@@ -85,8 +83,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
 8. 左上隅の **[保存]** アイコンを選択して、コンピューターに **[ローカルに保存]** するか、または **[サーバーに保存]**します。  
   
 ### <a name="see-also"></a>参照  
--  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Reporting Services モバイル レポートのカスタム マップ](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

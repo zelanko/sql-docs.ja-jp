@@ -1,5 +1,5 @@
 ---
-title: "警告デザイナーでデータ警告を編集 |Microsoft ドキュメント"
+title: "警告デザイナーでのデータ警告の編集 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - editing, alerts
 - updating, alerts
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f2e052aec58464a761713a1a2fd2341415955786
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 74be156217a78fa56212760321c2c62212b93bff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>警告デザイナーでのデータ警告の編集
 
@@ -37,11 +36,11 @@ ms.lasthandoff: 08/09/2017
 編集対象のデータ警告定義は、データ警告マネージャーから開きます。 警告の定義は、作成したユーザーのみが編集できます。 詳細については、「 [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」をご覧ください。
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
 
  次の図は、データ警告マネージャーでの、データ警告のショートカット メニューを示しています。  
   
- ![データ警告デザイナーを編集 をクリックして開く](../reporting-services/media/rs-alertmanageriwopendesigner.gif "編集 をクリックしてデータ警告デザイナーを開く")  
+ ![[編集] をクリックしてデータ警告デザイナーを開く](../reporting-services/media/rs-alertmanageriwopendesigner.gif "[編集] をクリックしてデータ警告デザイナーを開く")  
   
  次の手順には、データ警告デザイナーで編集するためにデータ警告マネージャーから警告定義を開く手順が含まれます。  
   
@@ -59,12 +58,11 @@ ms.lasthandoff: 08/09/2017
 3.  **[保存]**をクリックします。  
   
     > [!NOTE]  
-    >  レポートが変更され、レポートから生成されたデータ フィードが変更されている場合、警告の定義が無効になっている可能性があります。 この状況が生じるのは、警告定義のルールで参照される列がレポートから削除された場合、列のデータ型が変更された場合、またはレポートが削除または移動された場合です。 無効な警告定義は開くことはできますが、基になるレポート データ フィードの現行バージョンに基づいて有効になるまでは再保存できません。 レポートからデータ フィードが生成される方法の詳細については、「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」をご覧ください。  
+    >  レポートが変更され、レポートから生成されたデータ フィードが変更されている場合、警告の定義が無効になっている可能性があります。 この状況が生じるのは、警告定義のルールで参照される列がレポートから削除された場合、列のデータ型が変更された場合、またはレポートが削除または移動された場合です。 無効な警告定義は開くことはできますが、基になるレポート データ フィードの現行バージョンに基づいて有効になるまでは再保存できません。 レポートからデータ フィードが生成される方法の詳細については、「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。  
 
 ## <a name="see-also"></a>参照
 
 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)  
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "(レポート ビルダーおよび SSRS) のフィルターの追加 |Microsoft ドキュメント"
+title: "フィルターの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b6692664b434161cce324e0e81f45f30361b30fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>フィルターの追加 (レポート ビルダーおよび SSRS)
   計算や表示の対象として特定の値だけを含めたり除外したりするには、データセット、データ領域、またはグループにフィルターを追加します。 実行時には、フィルターが最初にデータセットに適用され、次にデータ領域に適用された後、グループに (グループ階層の上から順に) 適用されます。 テーブル、マトリックス、または一覧では、行グループ、列グループ、および隣接するグループに対するフィルターが別々に適用されます。 グラフでは、カテゴリ グループと系列グループに対するフィルターが別々に適用されます。  
@@ -38,10 +38,10 @@ ms.lasthandoff: 08/09/2017
   
 1.  **[デザイン]** ビューでレポートを開きます。  
   
-2.  デザイン サーフェイス上のデータ領域を選択して右クリックし、 *\<データ領域 >***プロパティ**です。 ゲージの場合は、**[ゲージ パネルのプロパティ]** を選択します。 *\<データ領域 >***プロパティ** ダイアログ ボックスが表示されます。  
+2.  デザイン画面でデータ領域を選択し、*[\<データ領域>* **のプロパティ]** を右クリックします。 ゲージの場合は、 **[ゲージ パネルのプロパティ]**を選択します。 *[\<データ領域>* **のプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  Tablix データ領域でコーナー セル、行、または列のハンドルを右クリックし、**[Tablix のプロパティ]** をクリックします。  
+    >  Tablix データ領域でコーナー セル、行、または列のハンドルを右クリックし、 **[Tablix のプロパティ]**をクリックします。  
   
 3.  **[フィルター]**をクリックします。 現在のフィルター式の一覧が表示されます。 既定では、何も表示されません。  
   
@@ -127,15 +127,15 @@ ms.lasthandoff: 08/09/2017
   
 9. **[値]** ボックスで、 **[式]**の値を評価するフィルター用の式または値を入力します。  
   
-     フィルター式の例については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+     フィルター式の例については、「[フィルター式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターと &#40; を追加します。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [ゲージと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "レポート ビルダーの既定のオプションを設定 |Microsoft ドキュメント"
+title: "レポート ビルダーの既定のオプションを設定する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10427"
+f1_keywords: "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94d44bd81cda6f1afb8c4e027137f7df4c5915d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-default-options-for-report-builder"></a>レポート ビルダーの既定のオプションを設定する
   レポート ビルダーで、レポート作成を簡単かつ迅速にすることができる既定値を設定できます。  たとえば、既定のレポート サーバーを設定または変更すると、特に指定しない限り、同じレポート サーバーに自動的にレポートが保存されます。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 08/09/2017
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

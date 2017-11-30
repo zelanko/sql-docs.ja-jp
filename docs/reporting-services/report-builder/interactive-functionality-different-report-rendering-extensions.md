@@ -1,5 +1,5 @@
 ---
-title: "対話機能のさまざまなレポート表示拡張機能 |Microsoft ドキュメント"
+title: "さまざまなレポート表示拡張機能の対話機能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e91731abe741a802252475bb054c826454ee2a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="interactive-functionality---different-report-rendering-extensions"></a>対話機能のさまざまなレポート表示拡張機能
+# <a name="interactive-functionality---different-report-rendering-extensions"></a>さまざまなレポート表示拡張機能の対話機能
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、実行時にページ分割されたレポートと対話するための機能を備えています。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  
   
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 |-------------------|-------------------------|  
 |プレビュー/レポート ビューアー、HTML|ユーザーは展開および折りたたみのアイコンをクリックして、レポートのセクションを表示します。|  
 |PDF|レポート サーバーは、レポートの現在の表示/非表示の状態を Word にエクスポートします。 対話的な切り替えはサポートされていません。|  
-|Excel|Excel では、ドリル ダウン リンクとドリル ダウン アイテムは、折りたたみ可能なアウトラインとして表示されます。 Excel でレポートのセクションを展開したり、折りたたんだりすることができます。 Excel による制限の詳細については、次を参照してください[Microsoft Excel &#40; へのエクスポート。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Excel では、ドリル ダウン リンクとドリル ダウン アイテムは、折りたたみ可能なアウトラインとして表示されます。 Excel でレポートのセクションを展開したり、折りたたんだりすることができます。 Excel による制限の詳細については、「[Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。|  
 |Word|レポート サーバーは、レポートの現在の表示/非表示の状態を Word にエクスポートします。 対話的な切り替えはサポートされていません。|  
 |その他|MHTML、XML、または CSV では使用できません。 Image 形式にエクスポートする場合、レポート サーバーは、レポートの現在の表示/非表示の状態を Image にエクスポートします。 対話的な切り替えはサポートされていません。|  
   
@@ -116,10 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンク &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

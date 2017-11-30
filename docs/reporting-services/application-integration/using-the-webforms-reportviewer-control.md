@@ -1,5 +1,5 @@
 ---
-title: "WebForms ReportViewer コントロールの使用 |Microsoft ドキュメント"
+title: "WebForms ReportViewer コントロールの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -10,47 +10,44 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3b92dbd07d94a0e30c93d994c5eaaa28cb7627d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WebForms ReportViewer コントロールを使用して Web アプリケーションにレポートを表示します。  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Web アプリケーションで ReportViewer コントロールを使用するには  
   
-1.  新しい[!INCLUDE[msCoName](../../includes/msconame-md.md)]いずれかを使用して ASP.NET Web サイト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]です。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] を使用して、新しい [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web サイトを作成します。  
   
-     \- または、  
+     \- または -  
   
      既存の ASP.NET Web サイトを開いて新しい Web フォームを追加します。  
   
-2.  検索、 **ScriptManager**で制御、 **AJAX Extensions**グループにおいて、**ツールボックス**ウィンドウで、Web フォームのデザイン画面にドラッグします。  
+2.  **[ツールボックス]** ウィンドウの **[AJAX Extensions]** で **ScriptManager** コントロールを見つけて、Web フォームのデザイン画面にドラッグします。  
   
-     場合、**ツールボックス**は、非表示にアクセスできるから、**ビュー**メニューを選択して**ツールボックス**です。  
+     **ツールボックス**が表示されていない場合は、**[表示]** メニューの **[ツールボックス]** をクリックするとアクセスできます。  
   
-3.  検索、 **ReportViewer**内の制御、**ツールボックス**以下のデザイン画面にドラッグし、 **ScriptManager**コントロール。  
+3.  **[ツールボックス]** で **ReportViewer** コントロールを見つけて、デザイン画面の **ScriptManager** コントロールの下にドラッグします。  
   
-     **ReportViewer** reportViewer1 という名前のコントロールがフォームに追加します。  
+     reportViewer1 という名前の **ReportViewer** コントロールがフォームに追加されます。  
   
- コントロールをフォームに追加した後、 **ReportViewer タスク**レポートを選択するように求められますスマート タグを表示します。 レポート サーバーの選択を表示するレポートが展開されている場合、 **\<サーバー レポート >**オプションを**レポートの選択**ドロップダウン リスト。 1 回、 **\<サーバー レポート >**オプションは、選択した 2 つ追加のプロパティが表示され、**レポート サーバーの Url**と**レポート パス**です。 **レポート サーバーの Url**レポート サーバーのアドレスは、および**レポート パス**をレンダリングするレポートを完全なパスです。  
+ コントロールがフォームに追加されると、**[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。 表示するレポートがレポート サーバーに配置されている場合は、**[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、**[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、**[レポートのパス]** は表示するレポートへの完全なパスです。  
   
- ローカル モードでレポートを表示する場合は、いずれかを選択、**新しいレポートをデザイン**オプションを起動して、レポート デザイナーまたはレポートが既に既存のプロジェクトの一部を選択します。 レポートを選択した後はレポート RDLC ファイルの名前を入力することを確認して、 **ReportPath** ReportViewer コントロールのプロパティです。 このプロパティが表示されます、 **LocalReport**内のノード、**プロパティ**ウィンドウです。  
+ レポートをローカル モードで表示する場合は、**[新しいレポートをデザインします]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。 レポートを選択した後、ReportViewer コントロールの **[レポートのパス]** プロパティにレポート RDLC ファイルの名前を入力してください。 このプロパティは、**[プロパティ]** ウィンドウの **[LocalReport]** ノードの下に表示されます。  
   
- レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツールバー項目を非表示にするには次の ReportViewer プロパティを設定**False**で、**プロパティ**ウィンドウです。  
+ レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツール バーの項目を非表示にするには、**[プロパティ]** ウィンドウで次の ReportViewer プロパティを **False** に設定します。  
   
 -   **ShowBackButton**  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="viewing-reports-in-remote-processing-mode"></a>リモート処理モードでのレポートの表示  
  次の例では、レポート サーバーに配置されているレポートの表示方法を示します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル レポート プロジェクトに含まれている Sales Order Detail レポートを使用します。  
   
- この例では統合 Windows 認証を使用するので、最初に権限の借用を有効にする必要があります。 次の行を挿入これを行うには、 **web.config**ファイル。  
+ この例では統合 Windows 認証を使用するので、最初に権限の借用を有効にする必要があります。 これを行うには、次の行を **web.config** ファイルに挿入します。  
   
 ```  
 <!-- Web.config file. -->  
@@ -79,7 +76,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  既定では、権限借用は無効になっています。  
 
-**(C#)**
+**C#**
 ```
 protected void Page_Init(object sender, EventArgs e)  
 {  
@@ -155,23 +152,23 @@ End Class
   
 1.  レポートを追加する Web サイトを開きます。  
   
-2.  **Web サイト**メニューの **既存項目の追加**です。  
+2.  **[Web サイト]** メニューの **[既存項目の追加]** を選択します。  
   
 3.  AdventureWorks Report Samples プロジェクトがインストールされている場所を参照します。  
   
      既定の場所は C:\Program Files\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports です。  
   
-4.  Sales Order Detail.rdl ファイルを選択し、クリックして、**追加**ボタンをクリックします。  
+4.  Sales Order Detail.rdl ファイルを選択して **[追加]** ボタンをクリックします。  
   
      Sales Order Detail.rdl ファイルが、プロジェクトの一部になります。  
   
-5.  ソリューション エクスプ ローラーで、Sales Order Detail.rdl ファイルを右クリックし **の名前を変更**です。 レポートの名前を変更**Sales Order Detail.rdlc** ENTER キーを押します。  
+5.  ソリューション エクスプローラーで Sales Order Detail.rdl ファイルを右クリックし、**[名前の変更]** を選択します。 レポートの名前を **Sales Order Detail.rdlc** に変更し、Enter キーを押します。  
   
-     ソリューション エクスプ ローラーが表示されない場合からを開くことができます、**ビュー** ] メニューの [ソリューション エクスプ ローラーを選択します。  
+     ソリューション エクスプローラーが表示されていない場合は、**[表示]** メニューの [ソリューション エクスプローラー] を選択して開くことができます。  
   
  次のコード例では、販売注文データのデータセットが作成され、Sales Order Detail レポートがローカル モードで表示されます。  
 
-**(C#)**
+**C#**
 ```csharp  
 protected void Page_Init(object sender, EventArgs e)  
 {  
@@ -490,8 +487,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>参照  
- [ReportViewer コントロールを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- [ReportViewer コントロール 2016年でのデータの収集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+ [ReportViewer コントロールを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [ReportViewer コントロール 2016 でのデータ収集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   
-

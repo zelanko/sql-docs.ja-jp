@@ -1,5 +1,5 @@
 ---
-title: "複数値パラメーターをレポートに追加 |Microsoft ドキュメント"
+title: "複数の値を持つパラメーターのレポートへの追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 44d81cbf6e89d5e3a387f3660417195fdb17c7dd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/12/2017
-
+ms.openlocfilehash: dd7b6d4607b86ec03f2c84fe1f7f8a05d1035885
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
   ユーザーがパラメーター値として複数の値を選択できるパラメーターをレポートに追加できます。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/12/2017
   
 2.  レポート データセットを右クリックし、 **[データセットのプロパティ]**をクリックします。  
   
-3.  **[クエリ]** ボックスでクエリ テキストを編集するか、クエリ デザイナーを使用してフィルターを追加することで、データセット クエリに変数を追加します。 詳細については、次を参照してください[はリレーショナル クエリ デザイナー &#40; でクエリを作成。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+3.  **[クエリ]** ボックスでクエリ テキストを編集するか、クエリ デザイナーを使用してフィルターを追加することで、データセット クエリに変数を追加します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
   
     ```  
     WHERE  
@@ -58,11 +57,10 @@ ms.lasthandoff: 09/12/2017
   
      使用可能な値の一覧を使用すると、ユーザーがパラメーターに選択できる値が有効な値のみに制限されます。 値が複数ある場合は、一覧の先頭に **[すべて選択]** という項目が用意されるため、ユーザーは 1 回のクリックですべての値を選択またはクリアできます。 レポート パラメーターで使用できる値をデータセット クエリから取得する場合は、同じレポート パラメーターに関連付けられているクエリ変数を含まないデータセットを選択してください。  
   
-     詳細については、次を参照してください[追加、変更、またはレポート パラメーター &#40; の使用可能な値の削除。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     詳細については、「[レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)」を参照してください。  
 
 ## <a name="see-also"></a>参照  
  [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   
-

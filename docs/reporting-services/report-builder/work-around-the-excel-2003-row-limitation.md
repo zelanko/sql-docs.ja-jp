@@ -1,5 +1,5 @@
 ---
-title: "Excel 2003 の行制限を回避 |Microsoft ドキュメント"
+title: "Excel 2003 の行制限を回避するには | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 764b6da1c5ea43d02d7b5b950aa056434acf1a12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   このトピックでは、ページ分割されたレポートを Excel にエクスポートするときに Excel 2003 の行制限を回避する方法について説明します。 回避策は、テーブルのみを含むレポート向けのものです。  
@@ -53,17 +52,16 @@ ms.lasthandoff: 08/09/2017
   
 5.  **[行グループ]** の **[グループ 1]** を右クリックし、 **[グループ プロパティ]**をクリックします。  
   
-     ![グループのプロパティを表示](../../reporting-services/report-builder/media/groupproperties-updated.png "グループのプロパティを表示")  
+     ![グループのプロパティの表示](../../reporting-services/report-builder/media/groupproperties-updated.png "グループのプロパティの表示")  
   
 6.  **[グループ プロパティ]** ダイアログ ボックスの **[並べ替え]** ページで、既定の並べ替えオプションを選択し、 **[削除]**をクリックします。  
   
-     ![既定の並べ替えを削除](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "既定の並べ替えを削除")  
+     ![既定の並べ替えの削除](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "既定の並べ替えの削除")  
   
 7.  **[改ページ]** ページで、 **[グループの各インスタンスの間]** をクリックし、 **[OK]**をクリックします。  
   
-     ![改ページ設定](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "改ページを設定")  
+     ![改ページの設定](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "改ページの設定")  
   
 8.  レポートを保存します。 Excel にレポートをエクスポートするとき、複数のワークシートへのエクスポートが行われ、各ワークシートには最大で 65,000 行が含まれます。  
   
   
-

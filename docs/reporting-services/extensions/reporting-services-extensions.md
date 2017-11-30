@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 拡張機能 |Microsoft ドキュメント"
+title: "Reporting Services の拡張機能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - SQL Server Reporting Services, extending
 - extensions [Reporting Services], about extensions
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - Reporting Services, extending
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 92ee52d36b171d76a3c3cb0c6eb73f500c3f506c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services の拡張機能
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージ コード API を使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 プライベートを作成することができますまたは共有アセンブリを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]新規追加および[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をビジネスのニーズを満たすように機能します。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージ コード API を使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 プライベートまたは共有のアセンブリを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して作成し、変化するビジネス要件に応じて新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を追加できます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のユニークな拡張可能アーキテクチャによって、開発者は、製品とそのコンポーネントの特定の機能を拡張できます。 現在では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ処理機能を拡張するために幅広いサポートがあります。 データ処理 API では、使い慣れた [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーのコンストラクトと規約が採用されているので、開発者は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に新しいデータ処理を追加することができます。 これらのデータ処理拡張機能によって、レポート サーバーとレポート デザイナーの両方に機能を追加し、カスタム データをレポートにシームレスに統合できます。  
   

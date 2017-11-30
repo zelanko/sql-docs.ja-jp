@@ -1,5 +1,5 @@
 ---
-title: "円グラフ (レポート ビルダーおよび SSRS) 上の小さいスライスをまとめる |Microsoft ドキュメント"
+title: "円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e25526de7b4ae194d0aa510c12a9a995208c035a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a791e5bae17ab1259fb664d065a9a13fcde21aa1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)
-スライスが多すぎると、円グラフは、煩雑で確認できます。 1 つの 1 つのスライスに円グラフで多数の小さいスライスを収集する方法を学習[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]ページネーションのあるレポートします。
+スライスが多すぎる円グラフは、煩雑に見えることがあります。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで円グラフの多数の小さいスライスを 1 つのスライスにまとめる方法を説明します。
  
  小さいスライスを 1 つのスライスにまとめるには、まず小さいスライスを収集するためのしきい値を円グラフに対する比率と固定値のどちらで表すかを決定します。 
  
- [チュートリアル: レポート (レポート ビルダー) に円グラフを追加](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)順を追ってする 1 つのスライスに小さいスライスをまとめる最初にこのサンプル データを使用したい場合。
+ 最初にサンプル データを使って試してみたい場合は、「[チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」で小さいスライスを 1 つのスライスにまとめる手順が説明されています。
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/09/2017
          [CollectedThreshold] プロパティを **10**に設定します。  
   
         > [!NOTE]  
-        >  CollectedStyle に設定する場合**SingleSlice**より大きい値に CollectedThreshold **100**とに CollectedThresholdUsePercent **True**、グラフに対する比率を計算できないため、例外がスローされます。 この問題を解決するには、' éý ' CollectedThreshold 値より小さい**100**です。  
+        >  [CollectedStyle] を **[SingleSlice]** に、[CollectedThreshold] を **100** より大きい値に、[CollectedThresholdUsePercent] を **[True]** に設定した場合、グラフではパーセンテージを計算できないため、例外がスローされます。 この問題を解決するには、[CollectedThreshold] を **100** 未満の値に設定します。  
   
     -   **データ値で設定します。** たとえば、円グラフ上の 5,000 未満の小さいスライスを 1 つのスライスにまとめるには、次の手順を実行します。  
   
@@ -87,10 +86,9 @@ ms.lasthandoff: 08/09/2017
 >  2 つ目の円グラフの書式は設定できません。 このため、円スライスを収集する際は最初の方法を使用することを強くお勧めします。  
   
 ## <a name="see-also"></a>参照  
-* [チュートリアル: レポート (レポート ビルダー) への円グラフの追加します。](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [円グラフの外側へのデータ ポイント ラベルの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
 *  [円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)     
   
-

@@ -1,5 +1,5 @@
 ---
-title: "カスタム データ処理拡張機能の接続を指定 |Microsoft ドキュメント"
+title: "カスタム データ処理拡張機能の接続を指定する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2a24b319e99347c18d45743c74be2b15c9df0a45
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>カスタム データ処理拡張機能の接続を指定する
   サード パーティ製のカスタム データ処理拡張機能をレポート サーバー上で作成または使用して、サポートされているデータ ソースのデータ処理能力を向上したり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のインストールで使用できないその他の種類のデータ ソースをサポートしたりできます。 接続の処理方法は実装によって異なります。 データ処理拡張機能に使用できる実装は次のとおりです。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/09/2017
 |資格情報なし|カスタム .NET データ プロバイダーでは、資格情報なしのオプションを使用できます。 自動実行アカウントが指定されている場合、使用する資格情報は接続文字列によって決定されます。 レポート サーバーでは、自動実行アカウントの権限が借用され、接続が行われます。<br /><br /> 自動実行アカウントが定義されていない場合、レポート サーバーは接続に失敗します。 アカウントの定義の詳細については、「 [自動実行アカウントの構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。|  
   
 ## <a name="connections-for-idbconnection"></a>IDbConnection の接続  
- のみをサポートするカスタム データ処理拡張機能を使用しているかどうかは<xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>、次のように、接続を指定する必要があります。  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> のみサポートするカスタム データ処理拡張機能を使用する場合、次の方法で接続を指定する必要があります。  
   
 1.  自動実行アカウントを構成する。 **IDbConnection**を使用する接続を行うためにはこのアカウントを構成する必要があります。 レポート サーバーでは、接続時にアカウントの権限が借用されます。  
   
@@ -84,12 +83,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [自動実行アカウントの構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [資格情報とレポート データ ソースの接続情報を指定します。](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [データ処理拡張機能の実装](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [共有データ ソースの作成、削除、または変更 &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [レポート &#40; のデータ ソースのプロパティを構成します。レポート マネージャー &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [共有データ ソースを作成、削除、または変更する (レポート マネージャー)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

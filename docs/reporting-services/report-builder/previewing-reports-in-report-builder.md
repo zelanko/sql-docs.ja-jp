@@ -1,5 +1,5 @@
 ---
-title: "レポート ビルダーでレポートのプレビュー |Microsoft ドキュメント"
+title: "レポート ビルダーでのレポートのプレビュー | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f28003b3e3460e2450c17f68ab944ae2aeab55e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports-in-report-builder"></a>レポート ビルダーでのレポートのプレビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページページ分割されたレポートを作成する際は、レポートが思いどおりに表示されるかどうかを確認するために、レポートをたびたびプレビューすると効果的です。 レポートをプレビューするには、 **[実行]**をクリックします。 レポートがプレビュー モードで表示されます。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
  また、埋め込みデータ ソースが使われているレポートや、レポート サーバーに保存されているアイテム (画像やサブレポートなど) を参照するレポートを編集できるのも編集セッションの利点です。  
   
 > [!NOTE]  
-> レポート ビルダーでプレビューして、ブラウザーで表示するいくつか違いがあります。 たとえば、日付/時刻型のパラメーターを指定すると、レポートに追加される、予定表コントロールは、ブラウザーとレポート ビルダーでは、異なるです。 
+> レポート ビルダーでのプレビューとブラウザーでの表示には、いくつか違いがあります。 たとえば、日付/時刻型パラメーターを指定するときにレポートに追加するカレンダー コントロールは、レポート ビルダーとブラウザーで異なります。 
   
 ## <a name="improving-preview-performance"></a>プレビュー パフォーマンスの向上  
  レポート プレビュー時のレンダリング速度は、レポートをどのように作成し、どのように更新するかによって異なります。 サーバー上のアイテムを参照するレポートを初めてプレビューすると、編集セッションが自動的に作成され、レポートの実行時に使用されるデータがレポート サーバー上のデータ キャッシュに追加されます。 そのデータに影響を及ぼさない範囲でレポートに変更が加えられた場合、レポートには、データのキャッシュ コピーが使用されます。 つまり、レポートをプレビューするたびに最新のデータが表示されるわけではありません。 新しいデータを表示するには、リボン上の **[更新]** ボタンをクリックします。  
@@ -82,11 +82,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [書式設定のレポート アイテムと #40 です。レポート ビルダーおよび SSRS &#41;です。](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [レポート &#40; を保存します。レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [レポートの保存 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "配信拡張機能の概要 |Microsoft ドキュメント"
+title: "配信拡張機能の概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 07f9b2fcb366ecf1b433917852462766d6cd0951
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delivery-extensions-overview"></a>配信拡張機能の概要
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]により、ユーザーを作成し、パブリッシュするレポートを作成し、パブリッシュした後のさまざまな場所に配信されることができます。 さらに、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には配信拡張機能と配信 API も用意されています。開発者は別の配信拡張機能を作成し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信機能をさらに拡張することもできます。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] により、ユーザーはレポートを作成し、パブリッシュできます。レポートは、作成しパブリッシュした後、さまざまな場所に配信できます。 さらに、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には配信拡張機能と配信 API も用意されています。開発者は別の配信拡張機能を作成し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信機能をさらに拡張することもできます。  
   
  次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] が備えている配信拡張機能を示しています。  
   
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/12/2017
 |レポート サーバーの電子メール|SMTP サーバーを使用して個々のユーザーまたはグループに電子メールでレポートを送信します。|  
 |レポート サーバーのファイル共有|組織内のレポートをネットワーク ファイル共有に配布するときに使用します。 指定したスケジュールでファイル共有にレポートを自動的にコピーできます。|  
   
- ![Reporting Services 配信拡張機能のアーキテクチャ](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services 配信拡張機能のアーキテクチャ")  
+ ![Reporting Services の配信拡張機能アーキテクチャ](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services の配信拡張機能アーキテクチャ")  
 Reporting Services の配信拡張機能アーキテクチャ  
   
  配信拡張機能はサブスクリプションと対になっています。 ユーザーはサブスクリプションを作成するとき、レポートの配信方法を決定するために、利用可能な配信拡張機能の 1 つを選択できます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、サブスクリプションはレポート サーバー データベースに置かれます。 イベントが発生すると、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はレポート サーバー データベースにあるサブスクリプションとイベントを照合します。 イベントに関連付けられたサブスクリプションごとに、レポート サーバーは通知を作成します。 データ ドリブン サブスクリプションの場合、受信者ごとに通知が作成されます。 通知が作成されると、レポート サーバーでは特定の配信拡張機能を呼び出し、通知に指定された拡張機能設定の値を渡します。 配信拡張機能は、選択された配信拡張機能により指定されたユーザーに通知を送信します。  
@@ -55,17 +53,16 @@ Reporting Services の配信拡張機能アーキテクチャ
   
 -   レポート サーバーがインストールされた配置用コンピューター  
   
--   開発用コンピューター[!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]または[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]ソフトウェア開発キット (SDK) がインストールされています。  
+-   [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) がインストールされた開発用コンピューター。  
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 機能、特にサブスクリプション機能と配信機能についてよく理解していること  
   
 -   レポート マネージャーに独自のサブスクリプション ユーザー インターフェイスを実装する場合は、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] および Web コントロールについてよく理解していること  
   
--   開発エクスペリエンス、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]などの言語[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual c# または[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET です。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること。  
   
 ## <a name="see-also"></a>参照  
- [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [配信拡張機能の実装](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

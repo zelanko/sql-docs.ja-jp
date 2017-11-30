@@ -1,5 +1,5 @@
 ---
-title: "RSReportServer.Config で拡張機能パラメーターの表示をカスタマイズする |Microsoft ドキュメント"
+title: "RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a04703eb04c9745fd5a1de0a5378b29210f61b65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする
   RSReportServer 構成ファイルで表示拡張機能パラメーターを設定すると、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーで実行されるレポートについて、既定のレポート表示動作を上書きできます。 表示拡張機能パラメーターは、次のように目的に応じて変更できます。  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **DeviceInfo** XML 構造は、表示拡張機能で使用するデバイス情報設定を定義しています。 ほとんどの表示拡張機能パラメーターは、デバイス情報設定として指定されます。  
   
- テキスト エディターでファイルを変更できます。 RSReportServer.config ファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。 構成ファイルの変更の詳細については、次を参照してください[Reporting Services の構成ファイル &#40; を変更。RSreportserver.config &#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ テキスト エディターでファイルを変更できます。 RSReportServer.config ファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。 構成ファイルの変更方法の詳細については、「[Reporting Services の構成ファイルの変更 &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
 ## <a name="changing-the-display-name"></a>表示名の変更  
  表示拡張機能の表示名は、レポート ツール バーのエクスポート一覧に表示されます。 既定の表示名の例として、Web アーカイブ、TIFF ファイル、Acrobat (PDF) ファイルなどがあります。 構成ファイルで **OverrideNames** 要素を指定すると、既定の表示名をカスタム値に置き換えることができます。 また、単一の表示拡張機能の 2 つのインスタンスを定義する場合は、 **OverrideNames** 要素を使用して、エクスポート一覧の各インスタンスを区別できます。  
@@ -142,8 +141,7 @@ ms.lasthandoff: 08/09/2017
  [HTML デバイス情報設定](../reporting-services/html-device-information-settings.md)   
  [画像デバイス情報設定](../reporting-services/image-device-information-settings.md)   
  [MHTML デバイス情報設定](../reporting-services/mhtml-device-information-settings.md)   
- [PDF デバイス情報設定](../reporting-services/pdf-device-information-settings.md)   
+ [PDF デバイス情報の設定](../reporting-services/pdf-device-information-settings.md)   
  [XML デバイス情報設定](../reporting-services/xml-device-information-settings.md)  
   
   
-

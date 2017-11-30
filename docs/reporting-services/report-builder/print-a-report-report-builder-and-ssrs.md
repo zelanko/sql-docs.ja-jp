@@ -1,5 +1,5 @@
 ---
-title: "レポートを印刷する (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "レポートの印刷 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 98680d72888f7c5bea47a6b1d7bf8e81d90bc06c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
-  レポート サーバーにレポートを保存した後は、表示し、ブラウザー、Reporting Services web ポータル、またはを使用するエクスポートされたレポートを表示するすべてのアプリケーションからレポートを印刷します。 レポートを保存する前にプレビューする場合は、印刷することができます。  
+  レポートをレポート サーバーに保存した後は、ブラウザー、Reporting Services Web ポータル、またはエクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
   
- レポートを印刷するときには、使用する用紙のサイズを指定できます。 用紙のサイズによって、レポート内のページ数や各ページに収まるレポート データが決定されます。 用紙のサイズは、PDF、画像、および印刷などのハード改ページ レンダラーを使用して表示されるレポートのみに影響します。 用紙サイズの設定はその他のレンダラーには影響しません。 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
+ レポートを印刷するときには、使用する用紙のサイズを指定できます。 用紙のサイズによって、レポート内のページ数や各ページに収まるレポート データが決定されます。 用紙のサイズは、PDF、画像、および印刷などのハード改ページ レンダラーを使用して表示されるレポートのみに影響します。 用紙サイズの設定はその他のレンダラーには影響しません。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
- レポート ビューアー ツールバーから Reporting Services web ポータルまたはレポート ビルダーでプレビュー、レポートをハード改ページ レンダラーにエクスポートまたはレポートのコピーを印刷印刷 ボタンをクリックできます。 用紙のサイズやその他のページ設定プロパティの設定が必要になる場合もあります。 **[レポートのプロパティ]** ダイアログ ボックスを使用すると、用紙のサイズを含むページ設定プロパティを変更できます。  
+ Reporting Services Web ポータルのレポート ビューアー ツール バー、またはレポート ビルダーのプレビューでは、レポートを強制改ページ レンダラーにエクスポートしたり、[印刷] ボタンをクリックしてレポートのコピーを印刷したりすることができます。 用紙のサイズやその他のページ設定プロパティの設定が必要になる場合もあります。 **[レポートのプロパティ]** ダイアログ ボックスを使用すると、用紙のサイズを含むページ設定プロパティを変更できます。  
   
  印刷ページの余白は、デザイン モードと実行モードの 2 か所で指定できます。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  印刷の余白は、デザイン モードでも実行モードでも表示されません。 デザイン画面領域とレポートの印刷領域の間に関連はありません。 印刷の余白を確認するには、実行モード時に、リボンの **[実行]** タブにある [印刷レイアウト] をクリックします。  
   
- レポートのページングの詳細については、次を参照してください[Reporting Services &#40; での改ページ。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ レポートの改ページの詳細については、「[Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-a-web-browser-application"></a>Web ブラウザー アプリケーションからレポートを印刷するには  
   
-1.  Reporting Services web ポータルでは、印刷するレポートに移動します。 レポートを開きます。  
+1.  Reporting Services Web ポータルで、印刷するレポートに移動します。 レポートを開きます。  
   
 3.  レポート上部のツール バーで **[印刷]**をクリックします。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-other-applications"></a>他のアプリケーションからレポートを印刷するには  
   
-1.  Reporting Services web ポータルでは、印刷するレポートに移動します。 レポートを開きます。  
+1.  Reporting Services Web ポータルで、印刷するレポートに移動します。 レポートを開きます。  
   
 2.  レポート上部のツール バーから表示形式を選択して、 **[エクスポート]**をクリックします。 選択した表示形式に対応するビューアー アプリケーションでレポートが表示されます。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [レポートのプロパティ] ダイアログ ボックス、[ページ設定 &#40;です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [[ページ設定] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

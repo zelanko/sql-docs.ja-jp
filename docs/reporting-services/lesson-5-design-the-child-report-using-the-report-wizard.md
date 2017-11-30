@@ -1,31 +1,28 @@
 ---
-title: "レッスン 5: レポート ウィザードを使用して、子レポートのデザイン |Microsoft ドキュメント"
+title: "レッスン 5: レポート ウィザードを使用して子レポートを設計する | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 285ade0eaf63fee0733fcfcb9e8f627e8c666a6b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b84722749ad94251c057a43858e2da98b37d2adb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
-子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、[「レポート デザイナーを使用してレポートをデザインする (SSRS)」](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) を参照してください。  
+子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>レポート ウィザードを使用して子レポートを設計するには  
   
@@ -41,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
     作成した DataTable で **[使用できるデータセット]** ボックスが自動的に更新されます。  
   
-5.  [ **次へ**] を選択します。  
+5.  **[次へ]** を選択します。  
   
 6.  **[フィールドの配置]** ページで、次の操作を行います。  
   
@@ -70,5 +67,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

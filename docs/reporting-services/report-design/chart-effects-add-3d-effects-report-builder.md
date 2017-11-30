@@ -1,5 +1,5 @@
 ---
-title: "(レポート ビルダーおよび SSRS) のグラフに 3D 効果の追加 |Microsoft ドキュメント"
+title: "グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7170699a3f0cbb26dd2376a8805978fe792223f0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 03dd78db6811c25fec35dcdb8b45ecf343194828
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---add-3d-effects-report-builder"></a>グラフの効果に 3D 効果 (レポート ビルダー)
+# <a name="chart-effects---add-3d-effects-report-builder"></a>グラフの効果 - 3D 効果の追加 (レポート ビルダー)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたグラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  
   
 > [!NOTE]  
@@ -91,8 +90,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [グラフに対する 3D、傾斜、およびその他の効果 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
- [グラフと &#40; を書式設定レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

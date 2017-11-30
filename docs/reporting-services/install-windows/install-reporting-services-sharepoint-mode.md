@@ -1,13 +1,11 @@
 ---
-title: "Reporting Services SharePoint モードのインストール |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services の SharePoint モードのインストール | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,28 +13,27 @@ helpviewer_keywords:
 - installing Reporting Services, SharePoint integrated mode
 - installation options [Reporting Services]
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 0579de9d264d5b81713fd47b25feeb1fb817b8e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="install-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードをインストールします。
+# <a name="install-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードのインストール
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services SharePoint で、有効にレポートの作成とドキュメント ライブラリでの表示[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]電子メールを使用したレポートのサブスクリプションの配信[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]のデータ アラート、およびすべての展開でのレポート管理機能に基づいて[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint。 SharePoint モードの機能に関する詳細についてを参照してください「機能サポートと動作の違いによってサーバー モード」で[Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)です。
+SharePoint の SQL Server Reporting Services では、レポートの作成とドキュメント ライブラリでの表示、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの電子メールを使用したレポートの配信、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、データ アラート、レポート管理機能をすべて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint ベースの配置で使用できます。 SharePoint モードの機能の詳細については、「[Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)」の「サーバー モードごとの機能サポートと動作の違い」を参照してください。
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
 
 SharePoint モードでの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、インストールする2 つの主な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコンポーネントがあります。  
 
@@ -71,4 +68,3 @@ SharePoint モードでの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
  [警告管理者用のデータ警告マネージャー](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -1,5 +1,5 @@
 ---
-title: "リモート管理のレポート サーバーの構成 |Microsoft ドキュメント"
+title: "リモート管理用のレポート サーバーの構成 | Microsoft Docs"
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 9c2bf31935e821aff995fead3f8aa0478114424e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー インスタンスをローカルでもリモートでも構成できます。 リモートのレポート サーバー インスタンスを構成するには、Reporting Services 構成ツールを使用するか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI (Windows Management Instrumentation) プロバイダーを利用するカスタム コードを作成します。 Reporting Services 構成ツールには WMI プロバイダーのグラフィカル インターフェイスが用意されているので、コードを記述しなくてもレポート サーバーの構成を行えます。 このツールを起動する際に、接続先のリモート サーバーを指定できます。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 9. 自分のアカウントの名前を入力して、 **[OK]**をクリックします。  
   
-10. **のアクセス許可\<ユーザーまたはグループ >**で、**許可**列で、選択**リモートからの起動**と**リモート アクティブ化**、クリックして**[ok]**です。  
+10. **[\<ユーザーまたはグループ のアクセス許可>]** で、**[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、**[OK]** をクリックします。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>管理者以外のユーザーにレポート サーバーの WMI 名前空間に対する権限を設定するには  
   
@@ -145,7 +145,6 @@ ms.lasthandoff: 08/09/2017
 13. **[許可]** 列の **[アカウントの有効化]**、 **[リモートの有効化]**、 **[セキュリティの読み取り]**をオンにして、 **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー &#40;です。ネイティブ モード &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

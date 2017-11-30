@@ -1,35 +1,31 @@
 ---
-title: "レッスン 1: サンプル サブスクライバー データベースの作成 |Microsoft ドキュメント"
+title: "レッスン 1: サンプル サブスクライバー データベースの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0a65cf856e571a25f985846c185c207e59375cc2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1 : サンプル サブスクライバー データベースの作成
 
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のチュートリアル レッスンでは、小さな "サブスクライバー" データベースを作成して、データドリブン サブスクリプションに使用するサブスクリプション データを格納します。 サブスクリプションを処理するときに、レポート サーバーはこのデータを取得し、レポート出力のカスタマイズに使用します。 たとえば、データの行に特定の順序の数値を含めてフィルターに使用したり、レポートの生成時に、レポートのファイル形式を指定したりすることができます。  
   
-このレッスンでは、使用するいると仮定[!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)]SQL Server データベースを作成します。  
+このレッスンでは、[!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] を使用して SQL Server データベースを作成することを前提としています。  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>サンプル サブスクライバー データベースを作成するには  
   
@@ -65,7 +61,7 @@ ms.lasthandoff: 08/09/2017
     GO  
     ```  
   
-7.  ツールバーの **[実行]** をクリックします。  
+7.  ツール バーの **[実行]** をクリックします。  
   
 8.  SELECT ステートメントを使用して、3 行のデータがあることを確認します。 例: `select * from OrderInfo`  
   
@@ -80,5 +76,4 @@ ms.lasthandoff: 08/09/2017
 [データベースの作成](../relational-databases/databases/create-a-database.md)  
 [基本的なテーブル レポートの作成](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

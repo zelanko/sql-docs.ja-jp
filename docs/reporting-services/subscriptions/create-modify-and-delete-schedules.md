@@ -1,5 +1,5 @@
 ---
-title: "作成、変更、およびスケジュールの削除 |Microsoft ドキュメント"
+title: "スケジュールの作成、変更、および削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   このトピックでは、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共有スケジュールを作成、変更、および削除する方法について説明します。  ネイティブ モードの共有スケジュールを管理するには、Web ポータルの [スケジュール] ページまたは [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の [共有スケジュール] フォルダーを使用します。 SharePoint モードの場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。  
@@ -146,9 +145,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [共有スケジュールを一時停止と再開](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [キャッシュするレポートと #40 です。レポート マネージャー &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [レポート履歴 &#40; にスナップショットを追加します。レポート マネージャー &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [共有スケジュールを一時停止および再開する](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [レポートのキャッシュ (レポート マネージャー)](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "データセットのプロパティ ダイアログ ボックスで、パラメーター |Microsoft ドキュメント"
+title: "[パラメーター] ([データセットのプロパティ] ダイアログ ボックス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,19 +15,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.parameters.f1
 - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4e4a62f8a01d973063370df81bfef5af1fc929c1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a45216068522ad248d850af14224976a8c91cadd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="dataset-properties-dialog-box-parameters"></a>[パラメーター] \([データセットのプロパティ] ダイアログ ボックス)
+# <a name="dataset-properties-dialog-box-parameters"></a>[パラメーター] ([データセットのプロパティ] ダイアログ ボックス)
   **[データセットのプロパティ]** ダイアログ ボックスの **[パラメーター]** を選択すると、クエリ パラメーター (レポート パラメーターにリンクするクエリ パラメーターを含む) の追加、変更、および削除を実行できます。  
   
  [クエリ] タブでクエリが変更されるたびに、クエリ コマンドが解析されます。 識別されたクエリ パラメーターごとに、大文字と小文字の区別も含めて同じ名前のレポート パラメーターが作成されます。 既定では、クエリ パラメーターは自動的にクエリ パラメーターの一覧に追加され、対応するレポート パラメーターにリンクされます。  
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/09/2017
  [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   
-

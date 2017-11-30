@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバー データベースのアップグレード |Microsoft ドキュメント"
+title: "レポート サーバー データベースのアップグレード | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,26 +15,24 @@ helpviewer_keywords:
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b17eda3ed38778a501f142b56e4f418ec8c21825
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
 
 レポート サーバー データベースは、1 台以上のレポート サーバー インスタンスの記憶域になります。 レポート サーバー データベースのスキーマは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が新たにリリースされるたびに変更される可能性があります。そのため、使用中のレポート サーバー インスタンスのバージョンとデータベースのバージョンを一致させる必要があります。 ほとんどの場合、レポート サーバー データベースは自動的にアップグレードされます。ユーザーは何も処理する必要がありません。  
   
  **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、実際には、レポート サーバー データベースは、"ReportServer" および "ReportServerTempDB" という既定の名前の付いた 2 つのデータベースで構成されます。  
   
- **SharePoint モード:** SQL Server 2016 Reporting Services SharePoint モードのレポート サーバーでデータベースが実際には一連のデータベースの各インスタンスに対して作成された、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アプリケーション。  
+ **SharePoint モード:** SQL Server 2016 Reporting Services の SharePoint モードでは、実際には、レポート サーバー データベースは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの各インスタンスに対して作成されたデータベースのコレクションです。  
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースをアップグレードする方法
 
@@ -75,11 +73,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="next-steps"></a>次の手順
 
-[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[レポート サーバー データベースを作成します。](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+[Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
 [データベースの変更ウィザード](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Reporting Services インストールを移行します。](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+[Reporting Services のインストールを移行する](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

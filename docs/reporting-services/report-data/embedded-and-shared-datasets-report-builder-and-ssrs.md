@@ -1,5 +1,5 @@
 ---
-title: "埋め込みデータ ソースと共有データセット (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e88bbc3a5f6f0d1bd51c1f943f3887fa2a264ba3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 外部データ ソースに関する情報はデータ接続に含まれており、データセットは、そのデータ接続によって異なります。 レポート定義にデータそのものは含まれていません。 データセットには、クエリ コマンド、フィールド コレクション、パラメーター、フィルター、および大文字と小文字の区別と照合順序を含むデータ オプションがあります。 データセットには次の 2 種類があります。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
  レポート ビルダーでは、次の操作を実行できます。  
   
-1.  共有データセットを作成するには、共有データセットのデザイン ビューを使用します。 それをレポート サーバーまたは SharePoint サイトに保存することによって、他のレポートと共有することができます。 レポート サーバー上の保存先を参照して既存のデータセットを選択し、編集することもできます。 このビューでは、クエリを作成してすべてのデータセット オプションを設定できます。 詳細については、次を参照してください。[共有データセット デザイン ビュー &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+1.  共有データセットを作成するには、共有データセットのデザイン ビューを使用します。 それをレポート サーバーまたは SharePoint サイトに保存することによって、他のレポートと共有することができます。 レポート サーバー上の保存先を参照して既存のデータセットを選択し、編集することもできます。 このビューでは、クエリを作成してすべてのデータセット オプションを設定できます。 詳細については、「[共有データセット デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)」を参照してください。  
   
 2.  レポートに共有データセットを追加するには、レポート デザイン ビューでレポート ビルダーを開きます。 ウィザードかレポート データ ペインから、レポート サーバーを参照し、共有データセットを選択してレポートに追加します。 このビューでは、フィールドを追加する以外に、クエリは変更できません。 他のデータ オプションを上書きし、フィルターを追加することはできます。 フィルターは削除できません。  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [共有データセットまたは埋め込みデータセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [データセット フィールド コレクションと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "用語集 (レポート ビルダー) |Microsoft ドキュメント"
+title: "用語集 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d58372b901950fa8a7f674a417aa76457e80c466
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 |色ルール (color rules)|色をマップ レイヤー上の各マップ要素に自動的に割り当てるアルゴリズム。|  
 |カラー スケール (color scale)|マップ上で表される色の表現に使用される、マップの凡例の一種。|  
 |共通言語ランタイム (common language runtime)|マネージ コードを実行する際に中核となるエンジン。 このランタイムにより、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージ コードに提供されます。|  
-|複合式 (complex expression)|1 つの組み込みフィールド参照として表されることはできませんし、としてデザイン画面に表示される式 <\<Expr >> です。|  
+|複合式 (complex expression)|単一の組み込みフィールド参照として表現できず、デザイン画面に <\<Expr>> として表示される式。|  
 |連結 (concatenation)|2 つ以上の文字列や式を結合して、1 つの文字列や式にすること。または、2 つ以上のバイナリ文字列やバイナリ式を結合して、1 つのバイナリ文字列やバイナリ式にすること。|  
 |同時実行 (concurrency)|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 SQL Server ではロックを使用して、複数のユーザーが互いに競合することなく共有データに同時にアクセスや変更を行うことができます。|  
 |構成ファイル (config file)|「構成ファイル (configuration file)」を参照。|  
@@ -130,7 +129,7 @@ ms.lasthandoff: 08/09/2017
 |距離スケール (distance scale)|マップ データの現在の解像度における距離単位を示す、マップの凡例の一種。|  
 |分布 (distribution)|マップ レイヤーで、分析値を部分範囲に分割するときに使用するアルゴリズム。 範囲の間隔は、開始値と終了値の間を等間隔にするように計算したり (等間隔)、アイテム数が各範囲の間隔で均等になるように設定したりできます (均等割り付け)。|  
 |ドキュメント マップ (document map)|レポート セクションおよびグループにリンクの階層として配置されるレポート内のナビゲーション ペイン。|  
-|ドメイン (domain)|1.Windows セキュリティでは、表示と管理のためにグループ化された、共通のセキュリティ データベースを共有するコンピューターの集まり。 2. リレーショナル データベースでは、列で使用できる有効な値のセット。|  
+|domain|1.Windows セキュリティでは、表示と管理のためにグループ化された、共通のセキュリティ データベースを共有するコンピューターの集まり。 2. リレーショナル データベースでは、列で使用できる有効な値のセット。|  
 |ドリル ダウン/ドリル アップ|最も集約されたレベル (最上位レベル) から最も詳細なレベル (最下位レベル) までの範囲内でデータのレベル間を移動すること。|  
 |ドリルスルー (drill through)|1.Analysis Services で、キューブ セルのデータの集約元である詳細データを取得すること。 2. Reporting Services で、メイン 詳細レポートのハイパーリンクをクリックして関連レポートを表示すること。|  
 |ドリル ダウン/ドリル アップ (drill down/drill up)|最も集約されたレベル (最上位レベル) から最も詳細なレベル (最下位レベル) までの範囲内でデータのレベル間を移動するための技法。 テーブルまたはマトリックスの各階層を表示したり非表示にしたりするための切り替え (プラスとマイナス記号) を追加することによって作成されます。|  
@@ -267,7 +266,7 @@ ms.lasthandoff: 08/09/2017
 |プロパティ ページ (properties page)|オブジェクトに関する情報を表示するダイアログ ボックス。|  
 |プロパティ|コントロール、フィールド、データベース オブジェクトの名前が付いた属性。オブジェクトの特性 (サイズ、色、画面上の位置など) のいずれか、または動作の特徴 (非表示かどうかなど) を定義するために設定します。|  
 |プロトコル (protocol)|コンピューターどうしで情報を交換できるようにするための、標準的な形式とプロシージャのセット。|  
-|プロバイダー (provider)|1.OLE DB プロバイダー。 2. データベースへのアクセスを提供するインプロセス DLL (ダイナミック リンク ライブラリ)。|  
+|provider|1.OLE DB プロバイダー。 2. データベースへのアクセスを提供するインプロセス DLL (ダイナミック リンク ライブラリ)。|  
 |クエリ パラメーター (query parameters)|Transact-SQL クエリなどのデータセット クエリで指定されるパラメーター。|  
 |RDL (RDL)|「レポート定義言語 (Report Definition Language)」を参照。|  
 |レコード (record)|関連する情報についてのフィールド (列) のグループ。1 つの単位として扱われます。 リレーショナル データベースでは、通常、レコードのことを行と呼びます。|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 08/09/2017
 |ユーザー インスタンス (user instance)|ユーザーに代わって親インスタンスによって生成される SQL Server Express のインスタンス。|  
 |値 (y) 軸 (value (y) axis)|グラフで数値データの値を表示する軸。 通常は縦軸です。 例外として、横棒グラフでは軸が逆になるため、y 軸でデータがグループ化されます。|  
 |値式 (value expression)|値を返す MDX (多次元式) の式。 値式は、集合、組、メンバー、レベル、数値、または文字列に対して実行されます。|  
-|変数 (variable)|1.Integration Services では、変数は、列の値やパッケージ オブジェクトのプロパティを設定するためにスクリプト、式、プロパティ式で使用される値を格納します。 <br />2.値が代入される定義されたエンティティ。 ローカル変数が定義されている、DECLARE@localvariableステートメントとそれが宣言されているいずれかで、SELECT ステートメントのバッチ内で最初に値を割り当てまたはSET@localvariableステートメントです。|  
+|変数 (variable)|1.Integration Services では、変数は、列の値やパッケージ オブジェクトのプロパティを設定するためにスクリプト、式、プロパティ式で使用される値を格納します。 <br />2.値が代入される定義されたエンティティ。 ローカル変数は、DECLARE@localvariable ステートメントで定義され、SELECT ステートメントまたは SET@localvariable ステートメントで宣言されているステートメント バッチ内で初期値が代入されます。|  
 |可変間隔 (variable interval)|Reporting Services のグラフで指定できるオプションの 1 つ。軸に配置できる最適な数のラベルが、グラフの幅または高さに基づいて自動的に計算されます。|  
 |視覚エフェクト (visualization)|マップ、グラフ、およびゲージで、分析データの視覚化のために選択できる方法。|  
 |Web サービス|Reporting Services において、SOAP (Simple Object Access Protocol) over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能するサービス。|  
@@ -379,4 +378,3 @@ ms.lasthandoff: 08/09/2017
  [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

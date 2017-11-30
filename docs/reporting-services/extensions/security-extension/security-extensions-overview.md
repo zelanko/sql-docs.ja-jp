@@ -1,5 +1,5 @@
 ---
-title: "セキュリティ拡張機能の概要 |Microsoft ドキュメント"
+title: "セキュリティ拡張機能の概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- security [Reporting Services], extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7e8c95a478e733722d3c80da4b5e12e992ef4da
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: d56cfaf647b8f54b7535416ead02fcfaa7c3fbac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-extensions-overview"></a>セキュリティ拡張機能の概要
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能を使用すると、ユーザーまたはグループの認証と承認を行えます。つまり、複数のユーザーがレポート サーバーにログオンし、それぞれ異なるタスクや操作を実行できます。 既定では、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は Windows ベースの認証拡張機能を使用します。この拡張機能は Windows アカウント プロトコルを使用して、システムのアカウントを持っていると主張するユーザーの ID を検証します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、ロールベースのセキュリティ システムを使用してユーザーを承認します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のロールベースのセキュリティ モデルは、他の技術に見られるロールベースのセキュリティ モデルと類似しています。  
   
  セキュリティ拡張機能はオープンで拡張可能な API に基づいているので、認証と承認の新しい拡張機能を [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に作成できます。 以下は、フォームベースの認証と承認を使用する一般的なセキュリティ拡張機能の実装例です。  
   
- ![Reporting Services のセキュリティ拡張フロー](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services のセキュリティ拡張フロー")  
+ ![Reporting Services のセキュリティ拡張機能プロセス](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services のセキュリティ拡張機能プロセス")  
   
  図に示すように、認証と承認は次のように行われます。  
   
@@ -63,15 +60,14 @@ ms.lasthandoff: 08/12/2017
 13. セッションが終了するまで、ユーザーは引き続き、レポート サーバーに対する操作を要求します。  
   
 ## <a name="when-to-implement-a-security-extension"></a>セキュリティ拡張機能を実装すべき状況  
- できるだけ Windows 認証を使用することをお勧めします。 ただし、次の場合は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] でカスタム認証と承認を使用した方が適していることがあります。  
+ 可能な限り Windows 認証を使用することをお勧めします。 ただし、次の場合は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] でカスタム認証と承認を使用した方が適していることがあります。  
   
 -   Windows アカウントを使用できないインターネット アプリケーションまたはエクストラネット アプリケーションを実行する。  
   
 -   ユーザーとロールを独自に定義しており、それに合わせた承認方法を [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で使用する必要がある。  
   
 ## <a name="see-also"></a>参照  
- [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [カスタム認証クッキーを渡すためのレポート マネージャーを構成します。](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
+ [セキュリティ拡張機能の実装](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+ [カスタム認証クッキーを送信するようにレポート マネージャーを構成する](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   
-

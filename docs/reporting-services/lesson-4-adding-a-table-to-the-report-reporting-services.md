@@ -1,27 +1,25 @@
 ---
-title: "レッスン 4: レポート (Reporting Services) をテーブルの追加 |Microsoft ドキュメント"
+title: "レッスン 4 : レポートへのテーブルの追加 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: c073de93cfb1abee01a05e207fbce087ec44ade0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4 : レポートへのテーブルの追加 (Reporting Services)
 データセットを定義したら、レポートのデザインを開始できます。 レポートのレイアウトを作成するには、データ領域、テキスト ボックス、画像、およびレポートに含めるその他のアイテムを、デザイン画面にドラッグ アンド ドロップします。  
@@ -30,7 +28,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>[テーブル] データ領域とフィールドをレポート レイアウトに追加するには  
   
-1.  **[ツールボックス]**で **[テーブル]**をクリックし、デザイン画面内をクリックして、マウスをドラッグします。 デザイン画面の中央に 3 列のテーブル データ領域が作成されます。 **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]**を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。 **[ツールボックス]** が表示されない場合は、 **[表示]** メニューの **[ツールボックス]**をクリックします。
+1.  **[ツールボックス]**で **[テーブル]**をクリックし、デザイン画面内をクリックして、マウスをドラッグします。 デザイン画面の中央に 3 列のテーブル データ領域が作成されます。 **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]**を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。**[ツールボックス]** が表示されない場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。
   
      ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
   
@@ -59,12 +57,12 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-preview-a-report"></a>レポートをプレビューするには  
   
--   **[プレビュー]** タブをクリックします。 レポート デザイナーによりレポートが実行され、[プレビュー] ビューに表示されます。
+-   **[プレビュー]** タブをクリックします。レポート デザイナーによりレポートが実行され、[プレビュー] ビューに表示されます。
 ![ssrs_ssdt_preview](../reporting-services/media/ssrs-ssdt-preview.png)  
   
     [プレビュー] ビューに表示されたレポートの一部を次の図に示します。  
   
-    ![プレビュー、5 つの列を含むテーブルの詳細行](../reporting-services/media/rs-basictabledetailspreview.png "プレビュー、5 つの列を含むテーブルの詳細行")  
+    ![プレビュー、列が 5 つあるテーブルの詳細行](../reporting-services/media/rs-basictabledetailspreview.png "プレビュー、列が 5 つあるテーブルの詳細行")  
   
     通貨 ([Line Total] 列) は小数点以下 6 桁まで表示され、日付にはタイム スタンプが付いています。 次のレッスンで書式設定を修正します。  
   
@@ -72,9 +70,8 @@ ms.lasthandoff: 08/09/2017
 > **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
-[テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 参照してください[レッスン 5: レポート &#40; を書式設定Reporting Services &#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+[テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 「[レッスン 5: レポートの書式設定 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-

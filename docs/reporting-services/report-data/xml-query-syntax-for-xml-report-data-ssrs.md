@@ -1,5 +1,5 @@
 ---
-title: "XML レポート データ (SSRS) の XML クエリ構文 |Microsoft ドキュメント"
+title: "XML レポート データの XML クエリ構文 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2505ed537c92255f1291e4f800a49bb070f1149
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML **Query** または要素パスを指定する必要があります。 XML**クエリ**で始まる、 **\<クエリ >**タグ、および名前空間およびデータ ソースによって異なります XML 要素が含まれています。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[XML レポート データの要素パス構文 &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML **クエリ** または要素パスを指定する必要があります。 XML **クエリ** は、**\<Query>** タグ内に、名前空間と XML 要素を指定したものです。指定する名前空間と XML 要素は、データ ソースによって異なります。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
   
  次のような種類の XML データについて、XML データ ソースを作成できます。  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 |XML ドキュメント (既定)|*クエリなし*。<br /><br /> 要素パスは XML ドキュメントそのものから取得され、名前空間には依存しません。|  
   
 > [!NOTE]  
->  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには新しいデータ ソースを作成し、接続文字列に設定`http://localhost/reportserver/reportservice2006.asmx`です。 <xref:ReportService2006.ReportingService2006.ListChildren%2A>メソッドが 2 つのパラメーターを受け取る:**項目**と**再帰**です。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
+>  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を `http://localhost/reportserver/reportservice2006.asmx` に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは、**Item** と **Recursive** の 2 つのパラメーターを受け取ります。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
   
 ## <a name="specifying-namespaces"></a>名前空間の指定  
  データ ソースから取得された XML データに使用する名前空間を指定するには、XML **Query** 要素を使用します。 次の XML クエリには、名前空間 **sales**が使用されています。 **および** の XML `sales:LineItems` ElementPath `sales:LineItem` ノードには、名前空間 **sales**が使用されています。  
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 |XML Query 要素|データセットとして取得されるフィールド|  
 |-----------------------|-------------------------------------|  
-|\<クエリ/>|A: の値`http://schemas.microsoft.com/...`<br /><br /> 値 b:`http://schemas.microsoft.com/...`<br /><br /> 値 c:`http://schemas.microsoft.com/...`|  
+|\<Query/>|Value A: `http://schemas.microsoft.com/...`<br /><br /> Value B: `http://schemas.microsoft.com/...`<br /><br /> Value C: `http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML document: DPNamespace.xml  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
 ```  
   
 ## <a name="see-also"></a>参照  
- [XML 接続の種類と &#40; です。SSRS と &#41; です。](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Reporting Services のチュートリアルと &#40; です。SSRS と &#41; です。](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [XML の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

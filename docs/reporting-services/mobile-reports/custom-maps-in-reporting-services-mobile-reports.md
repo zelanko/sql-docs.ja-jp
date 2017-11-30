@@ -1,31 +1,29 @@
 ---
-title: "Reporting Services モバイル レポートのカスタム マップ |Microsoft ドキュメント"
+title: "Reporting Services モバイル レポートのカスタム マップ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
-SQL Server Mobile Report Publisher で地理的マップと呼ばれる形式で定義されている*ESRI シェープファイル*です。  
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートのカスタム マップ
+SQL Server Mobile Report Publisher の地理的マップは、*ESRI シェープファイル*と呼ばれる形式で定義されます。  
   
-この形式は、もともとは一企業によって設計されたものですが、広く普及した準オープン形式として GIS アプリケーションの大部分で使用されるようになりました。 Mobile Report Publisher ではこの形式に従い、マップを定義するときに指定する 2 つのファイルが必要です。  
+この形式は、もともとは一企業によって設計されたものですが、広く普及した準オープン形式として GIS アプリケーションの大部分で使用されるようになりました。 この形式に従い、Mobile Report Publisher でマップを定義するときは、次の 2 つのファイルを提供する必要があります。  
   
 - 図形ジオメトリ用の .SHP ファイル  
 - メタデータ用の .DBF ファイル  
@@ -63,4 +61,3 @@ SQL Server Mobile Report Publisher で地理的マップと呼ばれる形式で
   
   
   
-

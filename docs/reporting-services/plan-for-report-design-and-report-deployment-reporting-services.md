@@ -1,5 +1,5 @@
 ---
-title: "レポート デザインとレポートの展開の計画 |Reporting Services |Microsoft ドキュメント"
+title: "レポート デザインとレポートの展開の計画 |Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 7a70068f6dff7c2304a9faac5a85be10d6e1968b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、ページ分割されたレポートの作成と配置に関していくつかのアプローチが用意されています。 レポートの作成とレポート サーバーを併用する環境を計画する方法について説明します。
@@ -121,4 +120,3 @@ ms.lasthandoff: 09/27/2017
  [レポート定義言語 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
-

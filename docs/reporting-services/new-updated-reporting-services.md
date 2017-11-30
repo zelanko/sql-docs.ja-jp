@@ -1,6 +1,6 @@
 ---
-title: "更新済み - Reporting Services の SQL Server のドキュメント |Microsoft ドキュメント"
-description: "更新されたコンテンツで最近変更したドキュメントについては、Microsoft SQL server Reporting Services 用のスニペットを表示します。"
+title: "更新済み - SQL Server 用 Reporting Services のドキュメント | Microsoft Docs"
+description: "Microsoft SQL Server 用 Reporting Services の最近変更されたドキュメントで更新されたコンテンツのスニペットを示します。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -15,14 +15,13 @@ ms.devlang: na
 ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: reporting-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: b4a8b5b8db36f4ae7418934311eb6706de0ea43a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>新規または最近更新された: 用 SQL Server Reporting Services
+# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>新規または最近更新: SQL Server 用 Reporting Services
 
 
 
@@ -34,8 +33,8 @@ ms.lasthandoff: 10/02/2017
 
 
 
-- *更新プログラムの日付範囲:* &nbsp; **2017 年-09-11** &nbsp;対&nbsp; **2017 年-09-27**
-- *サブジェクト領域:* &nbsp; **for SQL Server Reporting Services**です。
+- *更新日の範囲:* &nbsp; **2017 年 9 月 11 日**&nbsp;から &nbsp; **2017 年 9 月 27 日**
+- *対象領域:* &nbsp; **SQL Server 用 Reporting Services**。
 
 
 
@@ -47,8 +46,8 @@ ms.lasthandoff: 10/02/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [レポート ビューアー web パーツを SharePoint ページに追加します。](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
-2. [SharePoint サイト上のレポート ビューアー web パーツを展開します。](report-server-sharepoint/deploy-report-viewer-web-part.md)
+1. [SharePoint ページへのレポート ビューアー Web パーツの追加](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
+2. [SharePoint サイトでのレポート ビューアー Web パーツの配置](report-server-sharepoint/deploy-report-viewer-web-part.md)
 
 
 
@@ -98,20 +97,20 @@ ms.lasthandoff: 10/02/2017
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新しい + 更新 (0 + 1): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新しい + 更新 (0 + 1): **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
-- [新しい + 更新 (4 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
-- [新しい + 更新 (17 + 0): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [新しい + 更新 (3 + 0): **SQL の Linux** docs](../linux/new-updated-linux.md)
-- [新しい + 更新 (1 + 1):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [新しい + 更新 (2 + 0): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [新しい + 更新 (0 + 1): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (0 + 1): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (0 + 1): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (4 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (17 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 0): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (1 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新しい + 更新 (0 0 以降): **SQL への接続**docs](../connect/new-updated-connect.md)
+- [新規 + 更新 (0 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
@@ -119,11 +118,10 @@ ms.lasthandoff: 10/02/2017
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
-- [新しい + 更新 (0 0 以降): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 0): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
 - [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新しい + 更新 (0 0 以降): **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
-
 
 

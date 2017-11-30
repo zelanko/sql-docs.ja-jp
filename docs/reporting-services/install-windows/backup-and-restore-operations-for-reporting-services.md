@@ -1,5 +1,5 @@
 ---
-title: "バックアップし、復元の Reporting Services の操作 |Microsoft ドキュメント"
+title: "Reporting Services のバックアップおよび復元操作 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -20,28 +20,26 @@ helpviewer_keywords:
 - files [Reporting Services], restoring
 - files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b16289b6455ac596fcc05b58db3793e3c8d5c541
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services のバックアップおよび復元操作
 
   このトピックでは、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用するデータ ファイルの概要と、これらのファイルをバックアップするタイミングおよび方法について説明します。 レポート サーバー データベース ファイルのバックアップ/復元プランの作成は、復旧計画の最も重要な部分です。 ただし、さらに包括的な復旧計画には、暗号化キー、カスタム アセンブリや拡張機能、構成ファイル、レポートおよびモデルのソース ファイルのバックアップなども必要になります。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード  
   
  バックアップ操作および復元操作は、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の全体または一部を移動する際によく使用します。  
   
--   レポート サーバー データベースだけを移動する場合は、バックアップと復元またはアタッチとデタッチを使用して、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを再配置できます。 詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。  
+-   レポート サーバー データベースだけを移動する場合は、バックアップと復元またはアタッチとデタッチを使用して、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを再配置できます。 詳細については、「 [別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。  
   
 -   インストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を別のコンピューターへ移動することを "移行" といいます。 インストールを移行する場合、セットアップを実行して新しいレポート サーバー インスタンスをインストールし、次にインスタンス データを移行先のコンピューターにコピーします。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールの移行の詳細については、次のトピックを参照してください。  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースのバックアップおよび復旧の詳細については、「 [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  気に、SharePoint 構成データベースを含むその他のデータベースがある場合は、レポート サーバーは、SharePoint モードでは、および[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]警告データベース。 SharePoint モードでは、それぞれの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに対して 3 つのデータベースが作成されます。 その 3 つのデータベースとは、 **reportserver**、 **reportservertempdb**、および **dataalerting** です。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションのバックアップと復元](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)」を参照してください。  
+>  レポート サーバーが SharePoint モードの場合は、SharePoint 構成データベースや [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警告データベースなど、考慮する必要があるデータベースがあります。 SharePoint モードでは、それぞれの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに対して 3 つのデータベースが作成されます。 その 3 つのデータベースとは、 **reportserver**、 **reportservertempdb**、および **dataalerting** です。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションのバックアップと復元](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)」を参照してください。  
   
 ## <a name="backing-up-the-encryption-keys"></a>暗号化キーのバックアップ  
  インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を初めて構成するときは、暗号化キーをバックアップする必要があります。 サービス アカウントの ID やコンピューターの名前を変更する際にも、そのつど暗号化キーをバックアップする必要があります。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。 SharePoint モードのレポート サーバーについては、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
@@ -94,10 +92,9 @@ ms.lasthandoff: 08/09/2017
 
 [レポート サーバー データベース](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
-[rskeymgmt ユーティリティ](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
+[Rskeymgmt ユーティリティ](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
-[レポート サーバー データベースを管理します。](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
-[構成し、暗号化キーの管理](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+[レポート サーバー データベースを管理する](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+[暗号化キーの構成と管理](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

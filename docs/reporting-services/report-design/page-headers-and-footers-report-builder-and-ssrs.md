@@ -1,5 +1,5 @@
 ---
-title: "ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
   レポートには、各ページの上部と下部にヘッダーとフッターを含めることができます。 ヘッダーとフッターには、静的テキスト、画像、線、四角形、罫線、背景色、背景画像、式などを含めることができます。 式には、データセットが 1 つしかないレポートでのデータセット フィールド参照と、スコープとしてデータセットを指定する集計関数呼び出しが含まれます。  
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
 |ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例を次に示します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
- このトピックの以下のセクションでは、ヘッダーおよびフッターで一般的に使用される変数データを取得するための、すぐに使用できる式を示します。 また、Excel 表示拡張機能でヘッダーおよびフッターが処理される方法についても説明します。 式の詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
+ このトピックの以下のセクションでは、ヘッダーおよびフッターで一般的に使用される変数データを取得するための、すぐに使用できる式を示します。 また、Excel 表示拡張機能でヘッダーおよびフッターが処理される方法についても説明します。 式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="adding-calculated-page-totals-to-a-header-or-footer"></a>ヘッダーまたはフッターへの計算された合計ページ数の追加  
  レポートの種類によっては、各レポートのヘッダーまたはフッターに計算値 (たとえば、ページに数値が含まれている場合はページごとの合計) を含めると便利です。 フィールドを直接参照することはできないので、ヘッダーまたはフッターに配置する式は、次の例のように、データ フィールドではなく、レポート アイテム (たとえばテキスト ボックス) の名前を参照する必要があります。  
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
  データ行の繰り返しを含むテーブルまたは一覧内にテキスト ボックスがある場合、実行時にヘッダーまたはフッターに表示される値は、現在のページのテーブルまたは一覧のすべての `TextBox1` インスタンス データのすべての値の合計になります。  
   
- ページ合計を計算する場合、異なる表示拡張機能を使用してレポートを表示すると、合計に相違が生じる可能性があります。 ページ割り当てされた出力は、表示拡張機能の種類によって、異なった方法で計算されます。 HTML で表示したページと同じページを PDF で表示した場合、PDF ページ上のデータ量が異なると、表示される合計も異なる可能性があります。 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
+ ページ合計を計算する場合、異なる表示拡張機能を使用してレポートを表示すると、合計に相違が生じる可能性があります。 ページ割り当てされた出力は、表示拡張機能の種類によって、異なった方法で計算されます。 HTML で表示したページと同じページを PDF で表示した場合、PDF ページ上のデータ量が異なると、表示される合計も異なる可能性があります。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
 ### <a name="for-reports-with-multiple-datasets"></a>複数のデータ ソースがあるレポートの場合  
  複数のデータセットがあるレポートの場合は、ヘッダーまたはフッターにフィールドやデータバインド画像を追加することはできません。 ただし、ヘッダーまたはフッターで使用するフィールドやデータバインド画像を間接的に参照する式を記述することはできます。  
@@ -130,11 +129,10 @@ ms.lasthandoff: 08/09/2017
   
  より正確なページ数は、印刷されたページの寸法に相関する論理ページに基づいて計算されます。 Excel のページ フッターでは、論理ページ番号が自動的に使用されます。 ページ ヘッダーに論理ページ数を配置するには、単純なヘッダーを使用するようにデバイス情報設定を構成する必要があります。 単純なヘッダーを使用する場合は、ヘッダー領域で複雑なレポート レイアウトを処理する機能を削除してください。  
   
- 詳細については、「[Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)で操作できます。  
   
 ## <a name="see-also"></a>参照  
- [レポートに画像を埋め込む &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [四角形と線 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

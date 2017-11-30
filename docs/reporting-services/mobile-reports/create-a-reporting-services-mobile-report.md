@@ -1,37 +1,35 @@
 ---
-title: "Reporting Services モバイル レポートを作成 |Microsoft ドキュメント"
+title: "Reporting Services モバイル レポートの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 800aa539255c937b089c13999d57f64bf0ec6558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートの作成
-SQL Server Mobile Report Publisher でをすばやく調整可能なグリッド行と列、および柔軟なモバイル レポート要素を使用して、デザイン サーフェイス上の任意の画面サイズにスケール アウトする SQL Server 2016 Reporting Services モバイル レポートを作成することができます。  
+SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server 2016 Reporting Services モバイル レポートをすばやく作成できます。  
   
-初めてのモバイル レポートを作成する Reporting Services web ポータルからローカル コンピューターに SQL Server Mobile Report Publisher をインストールできます。 または、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=733527)からインストールすることもできます。 2 回目以降は、Web ポータルまたはローカルのいずれかから開始できます。   
+初めてモバイル レポートを作成するときは、Reporting Services Web ポータルから SQL Server Mobile Report Publisher をローカル コンピューターにインストールできます。 または、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=733527)からインストールすることもできます。 2 回目以降は、Web ポータルまたはローカルのいずれかから開始できます。   
     
-1. Reporting Services web ポータルの上部のバーで、選択**新規** > **モバイル レポート**です。  
+1. Reporting Services Web ポータルの上部のバーで、**[新規]** > **[モバイル レポート]** の順に選択します。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. **レイアウト**Mobile Report Publisher でタブをナビゲーター、ゲージ、グラフ、マップ、または datagrid を選択し、デザイン グリッドにドラッグします。  
+2. Mobile Report Publisher の **[レイアウト]** タブで、ナビゲーター、ゲージ、グラフ、マップ、またはデータグリッドを選択して、デザイン グリッドにドラッグします。  
   
 3. 要素の右下隅をクリックし、希望のサイズにドラッグします。  
   
@@ -69,7 +67,7 @@ SQL Server Mobile Report Publisher でをすばやく調整可能なグリッド
   
 11. 次にレポートを保存します。 左上隅の [保存] アイコンを選択して、 **[ローカルに保存]** または **[サーバーに保存]**を選択します。  
   
-   サーバーに、保存するには、SQL Server 2016 Reporting Services レポート サーバーへのアクセスが必要です。  
+   サーバーに保存するには、SQL Server 2016 Reporting Services レポート サーバーにアクセスできる必要があります。  
      
    ### <a name="see-also"></a>参照  
      
@@ -77,4 +75,3 @@ SQL Server Mobile Report Publisher でをすばやく調整可能なグリッド
 -   [スマートフォンやタブレット向けに Reporting Services モバイル レポートをレイアウトする](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-

@@ -1,5 +1,5 @@
 ---
-title: "テキスト ボックスの方向 (レポート ビルダーおよび SSRS) の設定 |Microsoft ドキュメント"
+title: "テキスト ボックスの方向の設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7be98cbb004342ae11cc316fa33e778ad0c82347
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cc52b4687f9a2c944ea3a93c15b637d894c7a96
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>テキスト ボックスの方向の設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、さまざまな方向にテキスト ボックスを回転することができます。   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [テキスト ボックス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [チュートリアル: テキストの書式設定 &#40;です。レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

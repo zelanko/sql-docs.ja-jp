@@ -1,5 +1,5 @@
 ---
-title: "ネイティブから SharePoint への移行 (SSRS) |Microsoft ドキュメント"
+title: "ネイティブ モードから SharePoint モードへの移行 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1a58f3884e041b06f741a40ada0bbff6ce7e3181
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 794f9a12c8350eb01234e7ab7d12a5467fbbf244
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
 
@@ -60,5 +59,4 @@ ms.lasthandoff: 08/17/2017
 |サブスクリプション|はい|ListSubscriptions メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 」) および <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> に関する説明を参照してください。|  
 |スナップショット|||
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

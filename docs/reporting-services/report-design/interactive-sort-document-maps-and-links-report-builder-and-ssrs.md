@@ -1,5 +1,5 @@
 ---
-title: "対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 304da15a594fff8a68074b1b1ff172c0b8eac2bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)
   Web ベースの環境では、ユーザーがレポートと対話できるようにするさまざまな機能を追加できます。 ユーザーは、レポート内の値の並べ替え順序を変更したり、レポート内のアイテムの表示と非表示を切り替えたり、リンクをクリックして他のレポートや Web ページを表示したりできます。 また、目次やドキュメント マップを追加することもできます。 レポート ユーザーは、目次またはドキュメント マップ内のアイテムをクリックして、レポート内の領域に直接移動できます。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **ハイパーリンク** URL アクセスを使用して Web ページのアドレスまたはレポート サーバー上のレポートを指定する URL に移動します。  
   
--   **詳細レポート リンク** 同じレポート サーバー上にあるその他のレポートに移動します。 詳細については、「[詳細レポートレポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)」を参照してください。  
+-   **詳細レポート リンク** 同じレポート サーバー上にあるその他のレポートに移動します。 詳細については、「[詳細レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  データセット フィールドにバインドされているリンクは、悪意的な改ざんに対して脆弱である可能性があります。 詳細については、msdn.microsoft.com で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)の「[レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [対話的な並べ替え &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [対話的な並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  対話型の並べ替えボタンを列ヘッダーに追加する方法について説明します。  
   
- [ドキュメント マップ &#40; を作成します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [ドキュメント マップの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  サイズの大きなレポートでの移動をサポートする目次を追加する方法について説明します。  
   
- [レポート &#40; にブックマークを追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  ブックマークを追加して、レポート内にリンクを作成する方法について説明します。  
   
- [ハイパーリンクの URL &#40; を追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  レポートから URL へのリンクを追加する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

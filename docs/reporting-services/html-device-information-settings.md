@@ -1,5 +1,5 @@
 ---
-title: "HTML デバイス情報設定 |Microsoft ドキュメント"
+title: "HTML デバイス情報設定 | Microsoft Docs"
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 111e6d65b6c74156b39e81a1b7d9af0cb45501d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fd4d18001040d87959d8529266724341d9e8fc44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="html-device-information-settings"></a>HTML デバイス情報設定
 次の表は、HTML 形式で表示するデバイス情報設定を示しています。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
 |設定|値|  
 |-------------|-----------|  
-|**AccessibleTablix**|スクリーン リーダー用の追加のアクセシビリティ メタデータを使用して表示するかどうかを示します。 追加のアクセシビリティ メタデータを使用すると、「Electronic and Information Technology Accessibility Standards (電子/情報技術アクセシビリティ基準)」(Section 508 (第 508 条)) の「Web-based Intranet and Internet Information and Applications (Web ベースのイントラネットとインターネットの情報およびアプリケーション)」(1194.22) で定められている次の技術標準に準拠したレポートを表示できます。<br /><br /> (g) データ テーブルの行と列のヘッダーは、識別できるようにすること。<br /><br /> (h) データ テーブルの行または列のヘッダーの論理階層が 2 階層以上になる場合は、マークアップを使用してデータ セルとヘッダー セルを関連付けること。<br /><br /> (i) 識別および移動しやすいように、フレームにはテキストによるタイトルを付けること。<br /><br /> <br /><br /> このパラメーターは、単純なグループ化が行われる、単純なテーブル構造またはマトリックス構造を持つレポートにのみ適用できます。 既定値は **false**です。<br /><br /> このパラメーターは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)]でサポートされていますが、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]ではサポートされていません。|  
+|**AccessibleTablix**|スクリーン リーダー用の追加のアクセシビリティ メタデータを使用して表示するかどうかを示します。 追加のアクセシビリティ メタデータを使用すると、「Electronic and Information Technology Accessibility Standards (電子/情報技術アクセシビリティ基準)」(Section 508 (第 508 条)) の「Web-based Intranet and Internet Information and Applications (Web ベースのイントラネットとインターネットの情報およびアプリケーション)」(1194.22) で定められている次の技術標準に準拠したレポートを表示できます。<br /><br /> (g) データ テーブルの行と列のヘッダーは、識別できるようにすること。<br /><br /> (h) データ テーブルの行または列のヘッダーの論理階層が 2 階層以上になる場合は、マークアップを使用してデータ セルとヘッダー セルを関連付けること。|  
 |**ActionScript(\*)**|ドリルスルーやブックマークのクリックなどのアクション イベントが発生したときに使用する JavaScript 関数の名前を指定します。 このパラメーターを指定した場合、アクション イベントが発生すると、サーバーへのポストバックを行う代わりに、名前付き JavaScript 関数がトリガーされます。|  
 |**BookmarkID**|レポート内のジャンプ先ブックマーク ID。|  
 |**DocMap**|レポートドキュメント マップの表示と非表示を切り替えます。 このパラメーターの既定値は **true**です。|  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 |**ReplacementRoot(\*)**|ReportViewer コントロールの外部に表示する場合、レポートのすべてのドリルスルー、トグル、およびブックマークのリンクの先頭に追加する文字列。 たとえば、ユーザーのクリックをカスタム ページにリダイレクトするために使用されます。|  
 |**ResourceStreamRoot(\*)**|切り替えや並べ替え用の画像など、すべての画像リソースの URL の先頭に追加する文字列。|  
 |**セクション**|表示するレポートのページ番号。 **0** の値は、レポートのすべてのセクションが表示されることを示します。 既定値は **1**です。|  
-|**StreamRoot (\*)**|レポート サーバーが返す HTML レポートで IMG 要素の **src** 属性の値の前に付けるパス。 既定では、レポート サーバーがパスを提供します。 この設定を使用するには、レポート内のイメージのルート パスを指定する (たとえば、 **http://\<servername >/リソース companyimages**)。|  
+|**StreamRoot (\*)**|レポート サーバーが返す HTML レポートで IMG 要素の **src** 属性の値の前に付けるパス。 既定では、レポート サーバーがパスを提供します。 この設定を使用して、レポートの画像のルート パスを指定できます (たとえば、**http://\<サーバー名>/resources/companyimages**)。|  
 |**StyleStream**|スタイルとスクリプトがドキュメント内ではなく、異なるストリームとして作成されるかどうかを示します。 既定値は **false**です。|  
 |**[ツール バー]**|ツール バーを表示するか非表示にするかを示します。 このパラメーターの既定値は **true**です。 このパラメーターの値が **false**である場合は、残りのオプション (ドキュメント マップを除く) すべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。<br /><br /> URL アクセスを使用してレポートを表示すると、レポート ビューアー ツール バーが表示されます。 ツール バーは SOAP API によっては表示されません。 しかし、 **Toolbar** デバイス情報設定は、SOAP の **Render** メソッドを使用したときにレポートの表示に反映されます。 SOAP を使用して HTML を表示するときにこのパラメーターの値が **true** である場合、レポートの最初のセクションのみが表示されます。 値が **false**である場合、HTML レポート全体が単一の HTML ページとして表示されます。|  
 |**UserAgent**|要求元ブラウザーの **user-agent** 文字列。HTTP 要求に含まれています。|  
@@ -60,8 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能にデバイス情報設定を渡す](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズします。](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [テクニカル リファレンス & #40 です。SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [テクニカル リファレンス &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
-

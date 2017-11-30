@@ -1,5 +1,5 @@
 ---
-title: "グラフ レポートに追加 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "レポートへのグラフの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8615ca29e17ae25e04030917049df7e0b3894041
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでデータをビジュアル形式でまとめるには、グラフ データ領域を使用します。 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>レポートにグラフを追加するには  
   
-1.  レポートを作成し、データセットを定義します。 詳細については、次を参照してください。[レポート データセット & #40 です。SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+1.  レポートを作成し、データセットを定義します。 詳細については、「[レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」を参照してください。  
   
 2.  **[挿入]** タブの **[グラフ]**をクリックし、次に **[グラフの挿入]**をクリックします。  
   
@@ -70,16 +69,15 @@ ms.lasthandoff: 08/09/2017
   
 10. レポートの作業を続行するには、 **[実行]** タブで **[デザイン]** をクリックします。  
   
- 横棒グラフや縦棒グラフなど、軸を使用するグラフでは、カテゴリ軸にすべてのカテゴリ ラベルが表示されるとは限りません。 軸ラベルを変更する方法の詳細については、次を参照してください。[軸の間隔 &#40; を指定します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
+ 横棒グラフや縦棒グラフなど、軸を使用するグラフでは、カテゴリ軸にすべてのカテゴリ ラベルが表示されるとは限りません。 軸ラベルの変更方法の詳細については、「[軸の間隔の指定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [グラフの種類 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [グラフ &#40; 内の空および Null データ ポイントレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポート (レポート ビルダー) への横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル: レポート (レポート デザイナー) への横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [チュートリアル: レポート (レポート ビルダー) への円グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [チュートリアル: レポート (レポート デザイナー) への円グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフの種類 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [チュートリアル: レポートへの横棒グラフの追加 (レポート デザイナー)](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [チュートリアル: レポートへの円グラフの追加 (レポート デザイナー)](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   
-

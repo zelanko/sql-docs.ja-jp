@@ -1,35 +1,32 @@
 ---
-title: "レッスン 2: 親レポートのデータ接続とデータ テーブルの定義 |Microsoft ドキュメント"
+title: "レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: adc2cc7d329586bae6fb85edb08d71fe51aaaef8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 29ff53a0c766ca791b2ca0e845fed7779e7c1e05
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する
 Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後は、親レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
   
 ## <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>DataSet を追加してデータ接続とデータ テーブルを定義するには (親レポート用)  
   
-1.  [ **Web サイト** ] メニューの [ **新しい項目の追加**] を選択します。  
+1.  **[Web サイト]** メニューの **[新しい項目の追加]** を選択します。  
   
 2.  **[新しい項目の追加]** ダイアログ ボックスで、 **[DataSet]** をクリックし、 **[追加]**を選択します。 メッセージが表示されたら、 **[はい]** を選択して **App_Code**フォルダーに項目を追加します。  
   
@@ -41,13 +38,13 @@ Visual C# 用の ASP.NET Web サイト テンプレートを使用して新し�
   
 5.  Visual Studio で初めてデータ ソースを作成する場合は、 **[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]**を選択します。  
   
-6.  [ **接続の追加** ] ダイアログ ボックスで、次の手順を実行します。  
+6.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
   
-    1.  [ **サーバー名** ] ボックスに、 **AdventureWorks2014** データベースが存在するサーバーを入力します。  
+    1.  **[サーバー名]** ボックスに、 **AdventureWorks2014** データベースが存在するサーバーを入力します。  
   
         既定の SQL Server Express インスタンスは **(local)\sqlexpress**です。  
   
-    2.  [ **サーバーへのログオン** ] セクションで、データへのアクセスを提供するオプションを選択します。 既定は**[Windows 認証を使用する]** です。  
+    2.  **[サーバーへのログオン]** セクションで、データへのアクセスを提供するオプションを選択します。 既定は**[Windows 認証を使用する]** です。  
   
     3.  **[データベース名の選択または入力]** ドロップダウン リストで、 **[AdventureWorks2014]**を選択します。  
   
@@ -55,7 +52,7 @@ Visual C# 用の ASP.NET Web サイト テンプレートを使用して新し�
   
 7.  手順 6. (b) で **[SQL Server 認証を使用する]** を選択した場合は、機密データを文字列に含めるか、またはその情報をアプリケーション コードで設定するかどうかを指定するオプションを選択します。  
   
-8.  **[接続文字列をアプリケーション構成ファイルに保存する]** ページで、接続文字列の名前を入力するか、既定値の **AdventureWorks2014ConnectionString**をそのまま使用します。 [ **次へ**] を選択します。  
+8.  **[接続文字列をアプリケーション構成ファイルに保存する]** ページで、接続文字列の名前を入力するか、既定値の **AdventureWorks2014ConnectionString**をそのまま使用します。 **[次へ]** を選択します。  
   
 9. **[コマンドの種類を選択します]** ページで、 **[SQL ステートメントを使用する]**を選択し、 **[次へ]**を選択します。  
   
@@ -65,7 +62,7 @@ Visual C# 用の ASP.NET Web サイト テンプレートを使用して新し�
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    また、 **[クエリ ビルダー]**を選択してクエリを作成し、 **[クエリの実行]**を選択してクエリを確認することもできます。 クエリを実行したときに期待したデータが返されない場合は、以前のバージョンの AdventureWorks を使用している可能性があります。 **AdventureWorks2014** サンプル データベースの取得方法の詳細については、 [Microsoft SQL Server データベースの製品サンプル](http://msftdbprodsamples.codeplex.com/)に関するページを参照してください。  
+    また、 **[クエリ ビルダー]**を選択してクエリを作成し、 **[クエリの実行]**を選択してクエリを確認することもできます。 クエリを実行したときに期待したデータが返されない場合は、以前のバージョンの AdventureWorks を使用している可能性があります。 **AdventureWorks2014** サンプル データベースの取得方法の詳細については、「[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks のサンプル データベース) を参照してください。  
   
 11. **[生成するメソッドの選択]** ページで、 **[更新を直接データベースに送信するためのメソッドを作成する (GenerateDBDirectMethods)]**チェック ボックスをオフにし、 **[完了]**を選択します。  
   
@@ -81,5 +78,4 @@ Visual C# 用の ASP.NET Web サイト テンプレートを使用して新し�
 ## <a name="next-task"></a>次の作業  
 これで、親レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して親レポートを設計します。 「 [レッスン 3: レポート ウィザードを使用して親レポートを設計する](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)」を参照してください。  
   
-
 

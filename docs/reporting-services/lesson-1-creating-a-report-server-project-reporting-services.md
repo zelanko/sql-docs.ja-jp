@@ -1,30 +1,28 @@
 ---
-title: "レッスン 1: 作成、レポート サーバー プロジェクト (Reporting Services) |Microsoft ドキュメント"
+title: "レッスン 1: レポート サーバー プロジェクトの作成 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3968a5183de7cc1ee81c7ee09faba79d06990884
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)
 
- > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。[レッスン 1: レポート サーバー プロジェクト (Reporting Services) を作成する](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx)です。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx)」を参照してください。
 
 このレッスンで、 *レポート サーバー プロジェクト* と *レポート定義 (.rdl)* ファイルを [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] Visual Studio 内に作成します。 
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]を開きます。  
   
-2.  **ファイル**メニュー >**新規** > **プロジェクト**です。  
+2.  **[ファイル]** メニューの **[新規]**  > **[プロジェクト]** をクリックします。  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 09/27/2017
 
 5. **[レポート サーバー プロジェクト]** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)でレポート サーバー プロジェクトを作成する方法を学習します。 
 
-   >**注**: が表示されない場合、 **Business Intelligence**または**レポート サーバー プロジェクト**オプション、ビジネス インテリジェンス テンプレートで SSDT を更新する必要があります。 「 [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。  
+   >**注**: **[ビジネス インテリジェンス]** または **[レポート サーバー プロジェクト]** オプションが表示されない場合、ビジネス インテリジェンス テンプレートを使用して SSDT を更新する必要があります。 「 [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。  
   
 5.  **[名前]**に「 **utorial**」と入力します。  
 
@@ -81,10 +79,9 @@ ms.lasthandoff: 09/27/2017
     **[レポート データ]** ペインでデータを定義します。 **[デザイン]** ビューではレポートのレイアウトを定義します。 **[プレビュー]** ビューではレポートを実行して結果を確認できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-ここでは、"Tutorial" というレポート プロジェクトを作成し、このレポート プロジェクトにレポート定義ファイル (.rdl) を追加しました。 次に、レポートで使用するデータ ソースを指定します。 参照してください[レッスン 2: 接続情報 &#40; を指定します。Reporting Services &#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+ここでは、"Tutorial" というレポート プロジェクトを作成し、このレポート プロジェクトにレポート定義ファイル (.rdl) を追加しました。 次に、レポートで使用するデータ ソースを指定します。 「[レッスン 2: 接続情報の指定 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
-
 

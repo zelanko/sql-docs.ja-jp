@@ -1,12 +1,11 @@
 ---
-title: "Verify a Reporting Services のインストール |Microsoft ドキュメント"
+title: "Reporting Services のインストール状態の検証 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156fe09f98f0afd9a091821e6f810fdcca6bd31a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services のインストール状態の検証
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブまたは SharePoint の 2 つのモードのうちのいずれかのモードでインストールできます。 インストールの確認に必要な手順は、レポート サーバーのモードによって変わります。  
@@ -77,9 +75,9 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="reporting-services-samples"></a>Reporting Services のサンプル  
   
-1.  Reporting Services のチュートリアルのいずれかを完了します。 詳細については、次を参照してください。 [Reporting Services のチュートリアル & #40 です。SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
+1.  Reporting Services のチュートリアルのいずれかを完了します。 詳細については、「[Reporting Services のチュートリアル (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)」を参照してください。  
   
-2.  CodePlex から AdventureWorks の作業のサンプル データベースと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サンプル レポートをダウンロードします。 詳細については、「 [AdventureWorks レポート サンプル](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)」を参照してください。  
+2.  GitHub から AdventureWorks のサンプル データベースと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートをダウンロードします。 詳細については、「[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks サンプル データベース) を参照してください。  
   
 ##  <a name="bkmk_nativemode"></a> ネイティブ モードのインストールの確認  
  既定の構成を使用してネイティブ モードでレポート サーバーをインストールする場合、セットアップでサーバーをインストールし、配置します。 いくつかの簡単なテストを行うことで、レポート サーバーが正常に配置されたかどうかを確認できます。 これらの手順を実行するには、ローカル管理者である必要があります。 他のユーザーがテストを実行する場合は、そのユーザーがレポート サーバーにアクセスできるように構成する必要があります。  
@@ -90,29 +88,28 @@ ms.lasthandoff: 08/09/2017
   
 2.  Services コンソール アプリケーションを開き、レポート サーバー サービスが実行されていることを確認します。 レポート サーバー サービスの状態を表示するには、 **[スタート]**ボタンをクリックし、 **[コントロール パネル]**をポイントして、 **[管理ツール]**をダブルクリックします。次に、 **[サービス]**をダブルクリックします。 サービスの一覧が表示されたら、 **[Report Server (MSSQLSERVER)]**までスクロールします。 状態が **[開始]**になっていることを確認してください。  
   
-3.  ブラウザーを開き、アドレス バーにレポート サーバーの URL を入力します。 アドレスは、セットアップ時にレポート サーバーに指定したサーバー名と仮想ディレクトリ名で構成されます。 既定では、レポート サーバーの仮想ディレクトリ名は **ReportServer**です。 次の URL を使用するをレポート サーバーのインストールの確認: http://*\<コンピューター名 >*/ReportServer*\<_instance name >*です。 レポート サーバーを名前付きインスタンスとしてインストールした場合、URL は異なります。 URL の形式の詳細については、次を参照してください。[レポート サーバー Url の構成 & #40 です。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Windows Vista または Windows Server 2008 上のローカル管理者の場合を参照してください[のローカルの管理 &#40; ネイティブ モードのレポート サーバーを構成する。SSRS &#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  ブラウザーを開き、アドレス バーにレポート サーバーの URL を入力します。 アドレスは、セットアップ時にレポート サーバーに指定したサーバー名と仮想ディレクトリ名で構成されます。 既定では、レポート サーバーの仮想ディレクトリ名は **ReportServer**です。 http://*\<コンピューター名>*/ReportServer*\<_インスタンス名>* という URL を使用して、レポート サーバーのインストール状態を確認できます。 レポート サーバーを名前付きインスタンスとしてインストールした場合、URL は異なります。 URL 形式の詳細については、「[レポート サーバー URL の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。 Windows Vista または Windows Server 2008 上のローカル管理者である場合は、「[ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
   
-4.  レポートを実行して、レポート サーバーの動作をテストします。 この手順では、チュートリアルからサンプル レポートを作成できます。 詳細については、次を参照してください[基本的なテーブル レポート &#40; を作成する。SSRS チュートリアル &#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  レポートを実行して、レポート サーバーの動作をテストします。 この手順では、チュートリアルからサンプル レポートを作成できます。 詳細については、「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] が正常にインストールされ、実行されていることを確認するには  
   
 1.  ブラウザーを開き、アドレス バーに Web ポータルの URL を入力します。 このアドレスは、セットアップ時または Reporting Services 構成ツールの [Web ポータル URL] ページで [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に対して指定したサーバー名と仮想ディレクトリ名で構成されます。 既定では、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の仮想ディレクトリは **Reports**です。 次の URL を使用して、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] のインストール状態を確認できます。  
   
-     http://*\<コンピューター名 >*/reports*\<_instance name >*です。  
+     http://*\<コンピューター名>*/Reports*\<_インスタンス名>*  
   
 2.  レポート サーバー データベースに定義が戻されるかどうかをテストするため、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] を使用して新しいフォルダーを作成するか、ファイルをアップロードします。 操作が成功した場合、接続は正しく機能しています。  
   
-     詳細については、次を参照してください。 [Web ポータル & #40 です。SSRS ネイティブ モード &#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     詳細については、「[Web ポータル (SSRS ネイティブ モード)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)」を参照してください。  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>レポート デザイナーが正常にインストールされ、実行されていることを確認するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を開き、レポート サーバーのプロジェクトの種類に基づいて新しいプロジェクトを作成します。 レポート サーバー プロジェクト ウィザードを使用する方法については、次を参照してください。 [Reporting Services の SQL Server Data Tools & #40 です。SSDT &#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) SQL Server オンライン ブック。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を開き、レポート サーバーのプロジェクトの種類に基づいて新しいプロジェクトを作成します。 レポート サーバー プロジェクト ウィザードの使用方法の詳細については、SQL Server オンライン ブックの「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
   
 2.  サンプル レポートをインストールした場合は、サンプル レポート プロジェクト ファイルを開き、レポート サーバーにレポートをパブリッシュします。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services インストール時の問題解決](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [原因と Reporting Services エラーの解決方法](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ [Reporting Services エラーの原因と解決方法](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   
-

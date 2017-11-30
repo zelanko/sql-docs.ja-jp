@@ -1,29 +1,27 @@
 ---
-title: "レッスン 9: アプリケーション ビルドし、実行、|Microsoft ドキュメント"
+title: "レッスン 9: アプリケーションをビルドして実行する | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: cc78414cb237f2be394106274628cca2e00ad95f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3e9d3ca3b3b708105bf428508ff52c021bd5dd0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>レッスン 9: アプリケーションをビルドして実行する
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 データ テーブルのデータ フィルターを作成した後は、Web サイト アプリケーションをビルドして実行します。  
   
 ### <a name="to-build-and-run-the-application"></a>アプリケーションをビルドして実行するには  
@@ -34,7 +32,8 @@ ms.lasthandoff: 08/09/2017
   
     Web ページがブラウザーに表示されます。 ReportViewer コントロールにレポートが表示されます。 ツール バーを使用して、レポート内の移動、ズーム、およびレポートの Excel へのエクスポートを行うことができます。  
   
-2.  **[名前]** 列の任意の行にマウス カーソルを合わせます。 手の形のマウス カーソルが表示されます。  
+2.  
+              **[名前]** 列の任意の行にマウス カーソルを合わせます。 手の形のマウス カーソルが表示されます。  
   
 3.  **[名前]** 列の値を選択します。 対応するフィルター選択されたデータを含む子レポートが表示されます。  
   
@@ -44,5 +43,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

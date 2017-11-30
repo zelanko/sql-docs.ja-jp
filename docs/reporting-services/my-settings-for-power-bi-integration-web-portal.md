@@ -1,11 +1,10 @@
 ---
-title: "Power BI 統合 (web ポータル) の設定 |Microsoft ドキュメント"
+title: "Power BI 統合の個人用設定 (Web ポータル) | Microsoft Docs"
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +12,22 @@ f1_keywords:
 - power bi
 - power bi integration
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 8e627f20918a4d6ee5f882677ccc7b2c26616e2f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ade5494f2849c8fd48fe9b81f00e5435dc242195
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Power BI 統合の個人用設定 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の **[個人用設定]** ページは、ユーザーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのサインインを管理するために使用します。 レポート アイテムをピン留めするための手順を実行すると、自動的にサインインするよう求められます。  ただし、手動でサインインする必要がある場合やサインアウトする必要がある場合は、 **[個人用設定]** ページを使用できます。  **[My Settings]** (個人用設定) メニュー オプションが表示されていない場合は、レポート サーバーが  [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合されていません。  詳細については、「 [Power BI レポート サーバーの統合 &#40;構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)へのサインインを管理するために使用します。  
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の **[個人用設定]** ページは、ユーザーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのサインインを管理するために使用します。 レポート アイテムをピン留めするための手順を実行すると、自動的にサインインするよう求められます。  ただし、手動でサインインする必要がある場合やサインアウトする必要がある場合は、 **[個人用設定]** ページを使用できます。**[個人用設定]** メニュー オプションが表示されていない場合は、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] と統合されていません。  詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。  
   
 ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -47,9 +45,9 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="next-steps"></a>次の手順
 
-[Power BI のレポート サーバーの統合](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
+[Power BI Report Server の統合](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI のダッシュボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

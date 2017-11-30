@@ -1,29 +1,26 @@
 ---
-title: "電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー) |Microsoft ドキュメント"
+title: "電子メールの設定 - Reporting Services のネイティブ モード (Configuration Manager) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords:
-- SQL11.rsconfigtool.emailsettings.F1
+f1_keywords: SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 6ecaee1ba9757745e7d1e884067fa9c06632c6e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
 Reporting Services にはメール配信拡張機能があり、メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
@@ -73,13 +70,13 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
      
      - **[ユーザー名とパスワード (基本)]** では、メール サーバーに接続するためのユーザー名とパスワードを指定できます。 **[セキュリティで保護された接続を使用]** を選んで、暗号化された接続でメール サーバーに接続することもできます。
      
-          このオプションを選ぶと、rsreportserver.config で `<SendUsing>` の値が **2** に、 `<SMTPAuthenticate>` の値が **1** に設定されます。 **[セキュリティで保護された接続を使用]** を選ぶと、 `SMTPUseSSL` が **True**に設定されます。 **[ユーザー名]** は暗号化された値として `<SendUserName>` に設定されます。 **[パスワード]** は暗号化された値として `<SendPassword>` に設定されます。
+          このオプションを選ぶと、rsreportserver.config で `<SendUsing>` の値が **2** に、 `<SMTPAuthenticate>` の値が **1** に設定されます。**[セキュリティで保護された接続を使用]** を選ぶと、`SMTPUseSSL` が **True** に設定されます。 **[ユーザー名]** は暗号化された値として `<SendUserName>` に設定されます。 **[パスワード]** は暗号化された値として `<SendPassword>` に設定されます。
      
      - **[レポート サーバー サービス アカウント (NTLM)]** では、レポート サーバー用に指定したサービス アカウントが使用されます。 認証用にレポート サーバー サービス アカウントを使用する場合は、そのサービス アカウントに SMTP サーバー上での **Send As** アクセス許可があることを確認します。
      
           このオプションを選ぶと、rsreportserver.config で `<SendUsing>` の値が **2** に、 `<SMTPAuthenticate>` の値が **2** に設定されます。
 
-5. [ **適用**] を選択します。
+5. **[適用]** を選択します。
 
 6. 必要に応じて、rsreportserver.config 内でメール構成用に追加フィールドを調整することもできます。
 
@@ -121,7 +118,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 
 使用している SMTP サーバーまたはフォワーダーで、ドメイン ユーザー アカウントとは別の電子メール アカウントを利用している場合、SMTP サーバーからそのユーザーにレポートの配信が試行されたときに配信が失敗します。
 
-この問題に対処するには、ユーザーが [ **宛先** ] フィールドに名前を入力できるように構成設定を変更します。
+この問題に対処するには、ユーザーが **[宛先]** フィールドに名前を入力できるように構成設定を変更します。
 
 1. テキスト エディターで RSReportServer.config を開きます。
 
@@ -134,9 +131,9 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 ## <a name="configuration-options-for-remote-smtp-service"></a>リモート SMTP サービスの構成オプション
 レポート サーバーと SMTP サーバーまたはフォワーダーの間の接続は、次の構成設定によって決まります。
 
-- `<SendUsing>`メッセージを送信する方法を指定します。 ネットワーク SMTP サービスまたはローカル SMTP サービスのピックアップ ディレクトリを選択できます。 リモート SMTP サービスを使用するには、RSReportServer.config ファイルでこの値を **2** に設定する必要があります。
-- `<SMTPServer>`リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
-- `<From>`表示される値の設定、**から:**電子メール メッセージの行にします。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
+- `<SendUsing>` メッセージを送信する方法を指定します。 ネットワーク SMTP サービスまたはローカル SMTP サービスのピックアップ ディレクトリを選択できます。 リモート SMTP サービスを使用するには、RSReportServer.config ファイルでこの値を **2** に設定する必要があります。
+- `<SMTPServer>` リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
+- `<From>` メール メッセージの **[送信者]** 行に使用する値を設定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
 
 リモート SMTP サービスで使用する他の値としては、次のものがあります (既定値を変更するのでない限り、これらの値を指定する必要はありません)。
 
@@ -232,4 +229,3 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 [Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   
-

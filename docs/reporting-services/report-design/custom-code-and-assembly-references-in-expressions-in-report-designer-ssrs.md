@@ -1,5 +1,5 @@
 ---
-title: "カスタム コードやアセンブリ参照の式でレポート デザイナー (SSRS) |Microsoft ドキュメント"
+title: "レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,23 +20,22 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d53894c807b9d9e80be441aa13fb442ea98f5819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
   レポート内に埋め込まれたカスタム コードや、ビルドして自分のコンピューターに保存 (またはレポート サーバーに配置) したカスタム アセンブリは、レポート内から参照することができます。 カスタム定数、複雑な関数、または 1 レポート内で何度も使用される関数には、埋め込みコードを使用します。 コードを 1 か所で管理し、そのコードを複数のレポートで共有する場合は、カスタム コード アセンブリを使用します。 カスタム コードには、新しいカスタム定数、変数、関数、またはサブルーチンを含めることができます。 Parameters コレクションなど、組み込みコレクションへの読み取り専用の参照を含めることが可能です。 ただし、レポート データ値セットをカスタム関数に渡すことはできません。特に、カスタム集計はサポートされていません。  
   
 > [!IMPORTANT]  
->  実行時にいったん評価し、レポート処理全体で同じ値を保持しておく必要のある、タイミングに依存するような計算の場合は、レポート変数とグループ変数のどちらを使用するかを検討してください。 詳細については、「[レポート変数コレクションとグループ変数コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)」を参照してください。  
+>  実行時にいったん評価し、レポート処理全体で同じ値を保持しておく必要のある、タイミングに依存するような計算の場合は、レポート変数とグループ変数のどちらを使用するかを検討してください。 詳細については、「[レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)」を参照してください。  
   
  カスタム コードをレポートに追加するための作成環境としては、レポート デザイナーの使用をお勧めします。 レポート ビルダーでサポートされるのは、有効な式を含んだレポートの処理、またはレポート サーバー上のカスタム アセンブリへの参照を含んだレポートの処理です。 カスタム アセンブリへの参照を追加する手段は、レポート ビルダーには用意されていません。  
   
@@ -197,12 +196,11 @@ End Function
  *Fields* コレクションおよび *ReportItems* コレクションの内容は実行時に動的に変更されるので、カスタム アセンブリ内への呼び出し間でそれらを保持することは避けてください (たとえば、メンバー変数内など)。 この推奨事項は、すべての組み込みコレクションについて共通に該当します。  
   
 ## <a name="see-also"></a>参照  
- [コードを追加、レポートと #40 です。SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [レポートでカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [レポート &#40; へのアセンブリ参照を追加します。SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services のチュートリアル & #40 です。SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [レポートにコードを追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [レポートにアセンブリへの参照を追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート サンプル (レポート ビルダーおよび SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   
-

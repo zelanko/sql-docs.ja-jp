@@ -1,5 +1,5 @@
 ---
-title: "分析のための Microsoft Business Intelligence (BI) ツールを選択して、レポート |Microsoft ドキュメント"
+title: "分析用とレポート用の Microsoft Business Intelligence (BI) ツールの選択 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a9684685e218cb0f2dd1fe01c11606ce750c66a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 70d7be18434e610fa3ed3a6d237a0a7b676e3274
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Microsoft Business Intelligence (BI) ツール分析やレポートを選択します。
+# <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>分析用とレポート用の Microsoft Business Intelligence (BI) ツールの選択
 適切なビジネス インテリジェンス ツールを選択することは困難な場合があります。 さまざまな Microsoft 製品を確認し、ニーズに最も合う製品を見つけてください。
 
 次の表は、データ分析とレポートに対応するワークロードを、これらのワークロードに最も適した Microsoft BI ツールに関連付けます。 製品に関する詳細については、表内の製品リンクをクリックしてください。  
@@ -39,19 +38,18 @@ ms.lasthandoff: 09/27/2017
 |セルフサービスの予測分析の実行||||||[Excel 用データ マイニング アドイン](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 対応)|  
 |データの視覚化と探索||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D マップ](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |自然言語クエリを使用した問い合わせの実施|||||[Q & A](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (表示をサポートしています < 10 MB のファイルを)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(モバイル デバイス用 Power BI アプリを使用)|  
+|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(モバイル デバイス用 Power BI アプリを使用)|  
 |コラボレーションと共有|||[SharePoint サイト](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint チーム サイト](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**企業 BI**|IT プロフェッショナル||||||  
 |多次元/表形式ビジネス モデルの作成||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |アドホック データ視覚エフェクトの作成|||[SharePoint 用の Power View](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |ダッシュボードの作成|||[SharePoint ダッシュボード](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Power BI のダッシュボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |運用レポートの作成||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
-|カスタム レポートと埋め込みレポートの作成|||||[埋め込まれた power BI](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|カスタム レポートと埋め込みレポートの作成|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Advanced Analytics**|データ サイエンティスト||||||  
 |セルフサービスの予測分析の実行||||||[Excel 用データ マイニング アドイン](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 対応)|  
-|データ マイニング アルゴリズムの使用||||||[Analysis Services のデータ マイニング](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R サービス](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|データ マイニング アルゴリズムの使用||||||[Analysis Services 内でのデータ マイニング](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R サービス](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
  *Reporting Services には改ページされた最新レポートの配信をサポートする多数の機能があります。  
   
   
-

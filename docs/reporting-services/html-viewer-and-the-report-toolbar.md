@@ -1,5 +1,5 @@
 ---
-title: "HTML ビューアーとレポート ツールバー |Microsoft ドキュメント"
+title: "HTML ビューアーとレポート ツール バー | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d42edc002d7dffe1747c0219e4da4dd48e9ba00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="report-toolbar"></a>レポート ツール バー  
  レポート ツール バーでは、HTML 表示拡張機能で表示されたレポートに対して、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、およびデータ フィード機能が提供されます。  
   
- 印刷機能はオプションです。 この機能が使用可能なときは、プリンターのアイコンがレポート ツール バーに表示されます。 最初に使用する際、[プリンター] アイコンをクリックすると、インストールする必要のある ActiveX コントロールがダウンロードされます。 コントロールがインストールされた後、[プリンター] アイコンをクリックして表示される [印刷] ダイアログ ボックスで、使用しているコンピューターに構成されているプリンターを選択できます。 印刷が可能かどうかは、サーバーの設定およびブラウザーの設定によって異なります。 詳細については、次を参照してください[印刷の管理 &#40; を使用したブラウザーから印刷レポート。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)と[を有効にして、Reporting Services のクライアント側印刷機能を無効にする](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)です。  
+ 印刷機能はオプションです。 この機能が使用可能なときは、プリンターのアイコンがレポート ツール バーに表示されます。 最初に使用する際、[プリンター] アイコンをクリックすると、インストールする必要のある ActiveX コントロールがダウンロードされます。 コントロールがインストールされた後、[プリンター] アイコンをクリックして表示される [印刷] ダイアログ ボックスで、使用しているコンピューターに構成されているプリンターを選択できます。 印刷が可能かどうかは、サーバーの設定およびブラウザーの設定によって異なります。 詳細については、「[印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)」および「[Reporting Services のクライアント側印刷機能の有効化と無効化](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。  
   
  レポート ツール バーは、次の図のように表示されます。 使用可能なレポート機能や表示オプションによっては、図とは異なるレポート ツール バーが表示される場合があります。  
   
@@ -51,8 +50,8 @@ ms.lasthandoff: 08/09/2017
 |![プリンターのアイコン](../reporting-services/media/printer-icon.gif "プリンターのアイコン")|**プリンターのアイコン**|[印刷] ダイアログ ボックスが表示され、印刷オプションの指定と、レポートの印刷ができます。 最初に使用する際、このアイコンをクリックすると、印刷コントロールをダウンロードするよう求められます。|  
 ||**表示および非表示のアイコン**|パラメーターを含んだレポートのパラメーター値を入力するフィールドと **[レポートの表示]** ボタンの表示と非表示を切り替えます。|  
 |![[レポート] ツールバーのブラウザー更新ボタン](../reporting-services/media/htmlviewer-refresh.GIF "[レポート] ツールバーのブラウザー更新ボタン")|**レポートの更新アイコン**|レポートを更新します。 アクティブなレポートのデータが更新されます。 キャッシュされたレポートが格納先の場所から再度読み込まれます。|  
-|![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**データ フィード アイコン**|レポートから生成されたデータ フィードです。|  
-|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Power BI ダッシュボードにピン留めする**|サポート レポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めします。 ボタンが表示されていない場合は、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合されていません。  詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。|  
+|![HTML ビューアーのデータ フィード](../reporting-services/media/htmlviewer-datafeed.gif "HTML ビューアーのデータ フィード")|**データ フィード アイコン**|レポートから生成されたデータ フィードです。|  
+|![SSRS レポート ビューアーの Power BI ボタン](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "SSRS レポート ビューアーの Power BI ボタン")|**Power BI ダッシュボードにピン留めする**|サポート レポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めします。 ボタンが表示されていない場合は、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合されていません。  詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。|  
   
 ### <a name="about-export-formats"></a>エクスポート形式について  
  レポート ツール バーを使用すると、さまざまな形式でレポートを表示できます。 レポート サーバーにインストールされている表示拡張機能によって、使用可能な形式が決まります。 他の形式を選択した場合、選択したエクスポート形式に関連付けられたビューアーを使用して、新しいブラウザー ウィンドウが開き、レポートが表示されます。 選択した形式をビューアーで利用できない場合、他の形式を選択することができます。  
@@ -80,8 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート データ ソースに関する資格情報と接続情報を指定する](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [検索、表示、およびレポート &#40; を管理します。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

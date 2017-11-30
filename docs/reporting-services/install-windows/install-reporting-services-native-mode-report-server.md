@@ -1,13 +1,11 @@
 ---
-title: "Reporting Services ネイティブ モード レポート サーバーのインストール |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services ネイティブ モードのレポート サーバーのインストール | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 15a6372f34d1490499880d89e32ac8f0804b0fb8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーのインストール
 
@@ -34,7 +31,7 @@ ms.lasthandoff: 10/06/2017
 ネイティブ モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールする方法について説明します。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] へのアクセスが提供されます。そこでレポートやその他のアイテムを管理できます。
 
 > [!NOTE]
-> Power BI のレポート サーバーを検索してください。 参照してください[Power BI のレポート サーバーのインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)です。
+> Power BI Report Server が見つからない場合は、 「[Power BI Report Server のインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)」を参照してください。
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード レポート サーバーは、既定の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド ラインからインストールできます。 セットアップ ウィザードで、ファイルをインストールして既定の設定でサーバーを構成するか、またはファイルのインストールのみを行うかのいずれかを選択できます。 このトピックでは *ネイティブ モードの既定の構成* について確認します。このインストールでは、セットアップでレポート サーバー インスタンスのインストールと構成の両方が行われます。 セットアップが完了したら、レポート サーバーが実行され、基本的なレポートの表示およびレポートの管理を行うために使用する準備ができます。  [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合やサブスクリプションの処理を伴う電子メール配信などの追加機能は、追加の構成が必要です。  
   
@@ -79,14 +76,14 @@ ms.lasthandoff: 10/06/2017
   
 -   セットアップの実行に使用するユーザー アカウントは、ローカルの Administrators グループのメンバーである必要があります。また、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンス上のデータベースにアクセスする権限と、そのデータベースを作成する権限が必要です。  
   
--   セットアップでは、既定値を使用して、レポート サーバーと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]にアクセスするための URL を予約できる必要があります。 これらの値には、ポート 80、強いワイルドカード、および形式の仮想ディレクトリ名**reportserver _\<***instance_name*  **>** と**reports _\<***instance_name***>**です。  
+-   セットアップでは、既定値を使用して、レポート サーバーと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]にアクセスするための URL を予約できる必要があります。 ここでの既定値とは、ポート 80、強いワイルドカード、および **ReportServer_\<***instance_name***>** と **Reports_\<***instance_name***>** の形式の仮想ディレクトリ名です。  
   
 -   セットアップでは、既定値を使用してレポート サーバー データベースを作成できる必要があります。 ここでの既定値とは、 **ReportServer** と **ReportServerTempDB**です。 以前のインストールのデータベースが既に存在する場合は、ネイティブ モードの既定の構成のセットアップでレポート サーバーを構成できないため、セットアップはブロックされます。 セットアップのブロックを解除するには、データベースの名前を変更するか、データベースを移動または削除する必要があります。  
   
  コンピューターで、既定インストールの要件のうち満たされていないものがある場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をファイルのみのモードでインストールし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してセットアップの完了後に構成する必要があります。
  
  > [!IMPORTANT]
- > 読み取り専用ドメイン コント ローラー (RODC) が存在する環境では、Reporting Services をインストールすることができます、Reporting Services では、正常に機能する読み取り専用ドメイン コント ローラーへのアクセスが必要です。 Reporting Services では、RODC へのアクセスのみがある、サービスを管理しようとするときにエラーが発生する可能性があります。
+ > 読み取り専用ドメイン コントローラー (RODC) が存在する環境に、Reporting Services をインストールすることができますが、Reporting Services は、正常に機能するために読み取り書き込みドメイン コントローラーへのアクセスが必要です。 Reporting Services が、RODC にのみアクセスできる場合、サービスを管理しようとするときにエラーが発生する可能性があります。
   
 ##  <a name="bkmk_defaultURLreservations"></a> 既定の URL 予約  
  URL 予約は、プレフィックス、ホスト名、ポート、および仮想ディレクトリで構成されます。  
@@ -94,15 +91,15 @@ ms.lasthandoff: 10/06/2017
 |要素|説明|  
 |----------|-----------------|  
 |プレフィックス|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|  
-|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、コンピューターに対して解決されるあらゆるホスト名の指定のポートに対するすべての HTTP 要求を受け付けることを指定を含む`http://<computername>/reportserver`、 `http://localhost/reportserver`、または`http://<IPAddress>/reportserver`です。|  
+|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`http://<computername>/reportserver`、`http://localhost/reportserver`、`http://<IPAddress>/reportserver`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|  
 |ポート|既定のポートは 80 です。 80 以外のポートを使用する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web アプリケーションをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があるので注意してください。|  
-|仮想ディレクトリ|既定では、仮想ディレクトリを作成して、reportserver _ の形式で\<*instance_name*> レポート サーバー Web サービスおよび reports _\<*instance_name*> の[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]です。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]の既定の仮想ディレクトリは、 **reports**です。|  
+|仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer_\<*instance_name*> の形式で、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] の場合は Reports_\<*instance_name*> の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]の既定の仮想ディレクトリは、 **reports**です。|  
   
  完全な URL 文字列の例を次に示します。  
   
--   `http://+:80/reportserver`、レポート サーバーへのアクセスを提供します。  
+-   `http://+:80/reportserver` は、レポート サーバーへのアクセスを提供します。  
   
--   `http://+:80/reports`、へのアクセスを提供、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]です。
+-   `http://+:80/reports` は、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] へのアクセスを提供します。
   
 ##  <a name="bkmk_installwithwizard"></a> SQL Server インストール ウィザードによるネイティブ モードのインストール  
  次に示すのは、SQL Server インストール ウィザードで選択する  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 固有の手順とオプションです。 ここでは、インストール ウィザードに表示されるそれぞれのページではなく、ネイティブ モードのインストールに含まれる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連のページについてのみ説明します。  
@@ -133,7 +130,7 @@ ms.lasthandoff: 10/06/2017
   
     -   (2) **[Reporting Services - ネイティブ]**。  
   
-     ![SSRS ネイティブ モードの機能の選択 を選択](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "機能の SSRS ネイティブ モードを選択します")  
+     ![機能の選択での SSRS ネイティブ モードの選択](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "機能の選択での SSRS ネイティブ モードの選択")  
   
 4.  渡された **[機能ルール]** を確認します。  
   
@@ -149,7 +146,7 @@ ms.lasthandoff: 10/06/2017
   
 8.  **[Reporting Services の構成]** ページで、 **[インストールと構成]**を選択します。  
   
-     ![SSRS ネイティブ モード構成](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS ネイティブ モードの構成")  
+     ![SSRS ネイティブ モードの構成](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS ネイティブ モードの構成")  
   
     > [!NOTE]  
     >  **インストールと構成** は、インストールするデータベース機能が選択されるまでは使用できません。  
@@ -174,23 +171,22 @@ ms.lasthandoff: 10/06/2017
   
 ##  <a name="bkmk_additional_configuration"></a> その他の構成  
   
--   構成する[!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]統合のため、レポートをピン留めできるアイテムを[!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]ダッシュ ボードを参照してください[Power BI のレポート サーバーの統合](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)です。  
+-   [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードにレポート アイテムを固定できるように、[!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合を構成するには、「[Power BI Report Server の統合](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)」を参照してください。  
   
--   サブスクリプションの処理用の電子メールを構成するのを参照してください。[電子メールの設定 - Reporting Services のネイティブ モード](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)と[Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)です。  
+-   サブスクリプション処理の電子メールを構成するには、「[電子メールの設定 - Reporting Services のネイティブ モード ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)」および「[Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
--   レポートを表示して管理レポート コンピューター上でアクセスできるように、web ポータルを構成するを参照してください。[レポート サーバー アクセスに対してファイアウォールを構成する](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)と[リモート管理のレポート サーバーを構成する](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)です。  
+-   レポートを表示および管理するためにレポート コンピューター上でアクセスできるように、Web ポータルを構成するには、「[レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」および「[リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 
 [Reporting Services インストール時の問題解決](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
 [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[レポート サーバー サービス アカウントを構成します。](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
-[レポート サーバー Url を構成します。](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[レポート サーバー データベース接続を構成します。](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[レポート サーバー サービス アカウントの構成](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+[レポート サーバーの URL の構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [ファイルのみのインストール &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
-[レポート サーバーを初期化します。](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+[レポート サーバーの初期化](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

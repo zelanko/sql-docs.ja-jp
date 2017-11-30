@@ -1,5 +1,5 @@
 ---
-title: "データ処理拡張機能の概要 |Microsoft ドキュメント"
+title: "データ処理拡張機能の概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,31 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data processing extensions [Reporting Services], about extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 11e8c43eb7b717227cf5a624f6a18a424b598967
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-processing-extensions-overview"></a>データ処理拡張機能の概要
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用することによって、データ ソースに接続し、データを取得できます。 データ処理拡張機能は、データ ソースとデータセット間のブリッジとしても機能します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]データ処理拡張機能のサブセットと似ている、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]データ プロバイダーのインターフェイスです。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用することによって、データ ソースに接続し、データを取得できます。 データ処理拡張機能は、データ ソースとデータセット間のブリッジとしても機能します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー インターフェイスのサブセットと似ています。  
   
  次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] が備えているデータ処理拡張機能を示しています。  
   
 |データ処理拡張機能|Description|  
 |-------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 向けデータ処理拡張機能|.NET Framework Data Provider for SQL Server を使用して [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]と接続し、データを取得します。|  
-|OLE DB 向けデータ処理拡張機能|OLE DB の .NET Framework データ プロバイダーを使用します。 この拡張機能を使用して、レポート サーバーは、OLE DB プロバイダーを持つすべてのデータ ソースをクエリできます。|  
-|Oracle 向けデータ処理拡張機能|Oracle の .NET Framework データ プロバイダーを使用します。 この拡張機能を使用して、レポート サーバーは、Oracle クライアント接続ソフトウェアをとおして Oracle データ ソースにアクセスできます。|  
-|ODBC 向けデータ処理拡張機能|ODBC 用の .NET Framework データ プロバイダーを使用します。 この拡張機能を使用して、レポート サーバーは、ODBC ドライバーが存在するすべてのデータベースのデータにアクセスできます。|  
+|OLE DB 向けデータ処理拡張機能|.NET Framework Data Provider for OLE DB を使用します。 この拡張機能を使用して、レポート サーバーは、OLE DB プロバイダーを持つすべてのデータ ソースをクエリできます。|  
+|Oracle 向けデータ処理拡張機能|.NET Framework Data Provider for Oracle を使用します。 この拡張機能を使用して、レポート サーバーは、Oracle クライアント接続ソフトウェアをとおして Oracle データ ソースにアクセスできます。|  
+|ODBC 向けデータ処理拡張機能|.NET Framework Data Provider for ODBC を使用します。 この拡張機能を使用して、レポート サーバーは、ODBC ドライバーが存在するすべてのデータベースのデータにアクセスできます。|  
   
  [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理 API を使用して、カスタム データ処理をレポート サーバーに追加できます。  
   
@@ -62,7 +59,7 @@ Reporting Services データ処理拡張機能のアーキテクチャ
 ## <a name="data-extension-process-flow"></a>データ拡張機能の処理フロー  
  カスタム データ拡張機能を開発する前に、レポート サーバーがデータ拡張機能を使用してどのようにデータを処理するか理解しておく必要があります。 レポート サーバーによって呼び出されるコンストラクターとメソッドも理解してください。  
   
- ![データ処理拡張機能のフローを処理](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "プロセス フロー データ処理拡張機能")  
+ ![データ処理拡張機能の処理の流れ](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "データ処理拡張機能の処理の流れ")  
 レポート サーバーによって呼び出されるデータ拡張機能のステップ バイ ステップ処理フロー  
   
  この図は、次の順序によるイベントを示しています。  
@@ -78,17 +75,16 @@ Reporting Services データ処理拡張機能のアーキテクチャ
   
 -   レポート デザイナーまたはレポート サーバーがインストールされた配置用コンピューター  
   
--   開発用コンピューター[!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)]またはそれ以降、または[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]ソフトウェア開発キット (SDK) がインストールされています。  
+-   [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 以上または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) がインストールされた開発用コンピューター  
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の機能についてよく理解していること  
   
--   詳細に検討する[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vstecado](../../../includes/vstecado-md.md)]アーキテクチャ、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]データ プロバイダー、ADO.NET DataSet オブジェクト、および共通[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]インターフェイスです。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] アーキテクチャ、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー、ADO.NET DataSet オブジェクト、および共通する [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] インターフェイスについてよく理解していること  
   
--   開発エクスペリエンス、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]などの言語[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual c# または[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET です。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services の拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services 拡張機能ライブラリ](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

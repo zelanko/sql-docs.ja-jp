@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Reporting services SQL Server 2016 での動作の変更 |Microsoft ドキュメント"
+title: "SQL Server 2016 における SQL Server Reporting Services の動作変更 | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -23,26 +23,24 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b6b571ac0d96c2221e41234fb3134ddcc6380b08
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 における SQL Server Reporting Services の動作変更します。
+# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 における SQL Server Reporting Services の動作変更
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]における動作変更について説明します。 動作の変更は、機能や操作方法で SQL Server 2016 SQL Server の以前のバージョンに比べてに影響します。  
+このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]における動作変更について説明します。 動作変更によって、SQL Server の以前のバージョンに比べて、SQL Server 2016 の機能の動作や操作方法が変わります。  
 
 動作に変更はありません。
 
@@ -53,5 +51,4 @@ ms.lasthandoff: 08/09/2017
 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [SQL Server 2016 における SQL Server Reporting Services における重大な変更](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "HTML (レポート ビルダーおよび SSRS) での表示 |Microsoft ドキュメント"
+title: "HTML での表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、ページ分割されたレポートが XML 形式で返されます。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  ドキュメント マップ ラベルが表示されると、ビューアー コントロールのドキュメント マップを使用することでそのラベルに移動できます。 データ領域のヘッダーが省略される場合、ラベルは最初の子セルに表示されます。 子セルが存在しない場合、ラベルはその前にある子に表示されます。  
   
 ### <a name="bookmarks"></a>ブックマーク  
- ブックマーク リンクは、ハイパーリンクとして表示されます。 ブックマーク対象が表示されると、ブックマーク リンクをクリックすることでその対象に移動できます。 ブックマーク リンクをクリックすると、レポート内で最初に出現する対象のブックマーク ラベルに移動します。さらに、可能な場合は、ブックマーク リンクがウィンドウの上部に表示されるようにブラウザーがスクロールされます。 HTML アンカー (\<>) タグは、ブックマーク対象を示すために使用されます。  
+ ブックマーク リンクは、ハイパーリンクとして表示されます。 ブックマーク対象が表示されると、ブックマーク リンクをクリックすることでその対象に移動できます。 ブックマーク リンクをクリックすると、レポート内で最初に出現する対象のブックマーク ラベルに移動します。さらに、可能な場合は、ブックマーク リンクがウィンドウの上部に表示されるようにブラウザーがスクロールされます。 HTML アンカー (\<a>) タグは、ブックマーク対象にマークを付けるために使用されます。  
   
 ### <a name="interactive-sorting"></a>対話的な並べ替え  
  テキスト ボックスでユーザーによる並べ替えが定義されている場合、HTML 表示拡張機能により、テキスト ボックス内で各項目の右側に並べ替えアイコンが表示されます。 ユーザーによる並べ替えが定義されているテキスト ボックスがレポートに含まれている場合は、JavaScript が表示されます。このスクリプトにより、並べ替えイメージをクリックしたときにサーバーへのポストバックが行われます。  
   
 ### <a name="hyperlinks-and-drillthrough"></a>ハイパーリンクとドリルスルー  
- ハイパーリンクとドリルスルー リンクは HTML アンカーを使用してレポート アイテムのハイパーリンクとしてレンダリングされます (\<>) タグで定義されている項目囲みます。  
+ ハイパーリンクとドリルスルー リンクは、これらのリンクが定義されているアイテムを HTML アンカー (\<a>) タグで囲むことにより、レポート アイテムのハイパーリンクとして表示されます。  
   
 ### <a name="search"></a>検索  
  検索機能を使用すると、ユーザーは、レポート内で文字列を検索することができます。  
@@ -100,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>参照  
- [Reporting Services &#40; の改ページレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [対話機能のさまざまなレポート表示拡張機能と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

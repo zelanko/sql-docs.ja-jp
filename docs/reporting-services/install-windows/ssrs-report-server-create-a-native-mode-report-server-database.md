@@ -1,35 +1,33 @@
 ---
-title: "ネイティブ モード レポート サーバー データベース (SSRS 構成マネージャー) を作成 |Microsoft ドキュメント"
+title: "ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースの作成
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが内部ストレージとして使用されます。 データベースは必須で、パブリッシュされたレポート、モデル、共有データ ソース、セッション データ、リソース、およびサーバー メタデータの格納に使用されます。  
+ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが内部ストレージとして使用されます。 データベースは必須で、パブリッシュされたレポート、モデル、共有データ ソース、セッション データ、リソース、およびサーバー メタデータの格納に使用されます。  
 
 レポート サーバー データベースの作成や、接続文字列または資格情報の変更を行うには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーの [データベース] ページにあるオプションを使用します。  
   
@@ -87,13 +85,13 @@ ms.lasthandoff: 08/09/2017
   
 4.  レポート サーバー データベースの作成およびホストに使用する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
-    1.  使用する [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンス名を入力します。 使用可能であれば、既定のインスタンスとして実行されているローカルの [!INCLUDE[ssDE](../../includes/ssde-md.md)] がウィザードに表示されます。 使用可能でない場合は、使用するサーバーとインスタンスの名前を入力する必要があります。 名前付きインスタンスは、この形式で指定された: \<servername >\\< instancename\>です。  
+    1.  使用する [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンス名を入力します。 使用可能であれば、既定のインスタンスとして実行されているローカルの [!INCLUDE[ssDE](../../includes/ssde-md.md)] がウィザードに表示されます。 使用可能でない場合は、使用するサーバーとインスタンスの名前を入力する必要があります。 名前付きインスタンスは、\<servername>\\<instancename\> の形式で指定します。  
   
     2.  レポート サーバー データベースを作成する目的で [!INCLUDE[ssDE](../../includes/ssde-md.md)] に一度だけ接続するために使用される資格情報を入力します。 この資格情報の使用方法の詳細については、このトピックの「 [開始前の準備](#rsdbrequirements) 」を参照してください。  
   
     3.  **[接続テスト]** を選択して、サーバーへの接続を検証します。  
   
-    4.  **[ 次へ]** を選択します。  
+    4.  **[次へ]** を選択します。  
   
 5.  データベースの作成に使用するプロパティを指定します。 このプロパティの使用方法の詳細については、このトピックの「 [開始前の準備](#rsdbrequirements) 」を参照してください。  
   
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/09/2017
   
     3.  [レポート サーバー モード] は常に **[ネイティブ]**に設定されます。  
   
-    4.  **[ 次へ]** を選択します。  
+    4.  **[次へ]** を選択します。  
   
 6.  レポート サーバーがレポート サーバー データベースに接続する際に使用する資格情報を指定します。  
   
@@ -115,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
          レポート サーバーの接続にレポート サーバーのサービス アカウントを使用する場合は、 **[サービス資格情報]** を選択します。 このオプションを指定すると、サーバーは統合セキュリティを使用して接続し、資格情報は暗号化されませんし、保存もされません。  
   
-    2.  **[ 次へ]** を選択します。  
+    2.  **[次へ]** を選択します。  
   
 7.  [概要] ページの情報で設定が正しいことを確認し、 **[次へ]**を選択します。  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 08/09/2017
   
     2.  **[接続テスト]** を選択して、サーバーへの接続を検証します。  
   
-    3.  **[ 次へ]** を選択します。  
+    3.  **[次へ]** を選択します。  
 
 4.  レポート サーバーがレポート サーバー データベースに接続する際に使用する資格情報を指定します。  
   
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/09/2017
   
          レポート サーバーの接続にレポート サーバーのサービス アカウントを使用する場合は、 **[サービス資格情報]** を選択します。 このオプションを指定すると、サーバーは統合セキュリティを使用して接続し、資格情報は暗号化されませんし、保存もされません。  
   
-    2.  **[ 次へ]** を選択します。 
+    2.  **[次へ]** を選択します。 
 
 5. 設定を確認し、 **[次へ]**を選択します。
 
@@ -155,8 +153,8 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>次の手順
 
-[レポート サーバー データベース接続を構成します。](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Reporting Services ネイティブ モード レポート サーバーを管理します。](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

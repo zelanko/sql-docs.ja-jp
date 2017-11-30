@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade1713f239c5933160ac5b33b8453a7ee859b16
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>テーブルの作成クエリの作成 (Visual Database Tools)
 テーブルの作成クエリを使用すると、新しいテーブルに行をコピーできます。これは、処理するデータのサブセットを作成したり、データベース間でテーブルの内容をコピーしたりするのに役立ちます。 テーブルの作成クエリは結果の挿入クエリと似ていますが、新しいテーブルを作成してそこに行をコピーする点で異なります。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   集計情報だけをコピーする場合は、[グループ化] オプション。  
   
-たとえば、次のクエリでは、新しく作成した `uk`_`customers` というテーブルに `customers` テーブルの情報をコピーします。  
+たとえば、次のクエリでは、新しく作成した `uk_customers` というテーブルに `customers` テーブルの情報をコピーします。  
   
 ```  
 SELECT *   
@@ -90,4 +89,3 @@ WHERE country = 'UK'
 [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [クエリの種類 (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

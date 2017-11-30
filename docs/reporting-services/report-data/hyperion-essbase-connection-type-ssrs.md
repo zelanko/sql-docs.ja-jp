@@ -1,5 +1,5 @@
 ---
-title: "Hyperion Essbase の接続の種類 (SSRS) |Microsoft ドキュメント"
+title: "Hyperion Essbase の接続の種類 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1002bb2ff985a9ee5c2eeaade2377789c136f248
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b04a9b00e87526b4ea030ff6359d0969e84f11cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase の接続の種類 (SSRS)
-  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のデータ拡張機能に基づいています。この拡張機能を使用すると、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースから多次元データを取得できます。  
+  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のデータ拡張機能に基づいています。この拡張機能を使用すると、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースから多次元データを取得できます。  
   
  このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -64,9 +63,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ処理拡張機能では、拡張データセット フィールド プロパティがサポートされています。 これらの値は外部データ ソースから取得できますが、レポート データ ペインには表示されません。 詳細については、このトピックの「 [拡張フィールド プロパティ](#Extended) 」を参照してください。  
   
   
-##  <a name="Parameters"></a> クエリ パラメーターを含めるには、クエリ デザイナーのフィルター領域でフィルターを作成し、そのフィルターをパラメーターとして設定します。 各パラメーターに対して、使用可能な値を提供するデータセットが自動的に作成されます。 既定では、これらのデータセットはレポート データ ペインに表示されません。 詳細については、「[多次元データのパラメーター値の非表示データセットの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)」を参照してください。  
+##  <a name="Parameters"></a> クエリ パラメーターを含めるには、クエリ デザイナーのフィルター領域でフィルターを作成し、そのフィルターをパラメーターとして設定します。 各パラメーターに対して、使用可能な値を提供するデータセットが自動的に作成されます。 既定では、これらのデータセットはレポート データ ペインに表示されません。 詳細については、「[多次元データのパラメーター値の非表示データセットの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)」を参照してください。  
   
- 各レポート パラメーターの既定のデータ型は **Text** です。 レポート パラメーターを作成した後に、既定値の変更が必要になる場合があります。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)のレポート データ ソースに基づいたデータセットが必要です。  
+ 各レポート パラメーターの既定のデータ型は **Text**です。 レポート パラメーターを作成した後に、既定値の変更が必要になる場合があります。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)のレポート データ ソースに基づいたデータセットが必要です。  
   
   
 ##  <a name="Extended"></a> 拡張フィールド プロパティ  
@@ -81,9 +80,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>定義済みフィールド プロパティ  
- 複数のデータ プロバイダーで一般的にサポートされ、レポート データセットの基となる MDX クエリに表示される定義済みフィールド プロパティ。 たとえば、MDX ディメンション プロパティ MEMBER_UNIQUE_NAME は、定義済みレポート データセット フィールド プロパティ **UniqueName**にマッピングされます。 含めるには、一意の名前値のテキスト ボックスに、式を使用して`=Fields!`  *\<FieldName >*`.UniqueName`です。  
+ 複数のデータ プロバイダーで一般的にサポートされ、レポート データセットの基となる MDX クエリに表示される定義済みフィールド プロパティ。 たとえば、MDX ディメンション プロパティ MEMBER_UNIQUE_NAME は、定義済みレポート データセット フィールド プロパティ **UniqueName**にマッピングされます。 一意な名前の値をテキスト ボックスに入力するには、`=Fields!`*\<FieldName>*`.UniqueName` という式を使用します。  
   
- 次の表に、[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースで使用できる定義済みフィールド プロパティの一覧を示します。  
+ 次の表に、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースで使用できる定義済みフィールド プロパティの一覧を示します。  
   
 |**プロパティ**|**型**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
@@ -98,7 +97,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>カスタム プロパティ  
- データ プロバイダーでサポートされ、レポート データセットの基となる MDX クエリで使用される一方で、レポートのデータセット ペインにはそのデータセットのフィールドとして表示されないカスタム フィールド プロパティ。 たとえば、**[長い名前]** はディメンション レベルで定義されたメンバー プロパティです。 式を使用するテキスト ボックスに値を含める、 `=Fields!`  *\<FieldName >*`("Long Names")`です。 この式ではフィールド名の大文字と小文字が区別されます。  
+ データ プロバイダーでサポートされ、レポート データセットの基となる MDX クエリで使用される一方で、レポートのデータセット ペインにはそのデータセットのフィールドとして表示されないカスタム フィールド プロパティ。 たとえば、 **[長い名前]** はディメンション レベルで定義されたメンバー プロパティです。 値をテキスト ボックスに入力するには、`=Fields!`*\<FieldName>*`("Long Names")` という式を使用します。 この式ではフィールド名の大文字と小文字が区別されます。  
   
  カスタム拡張プロパティを式の中で参照するには、次の構文を使用します。  
   
@@ -112,7 +111,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> 解説  
- このデータ プロバイダーでは使用できないレポート配信モードもあります。 このデータ処理拡張機能では、データ ドリブン サブスクリプションを使ったレポートの配信はサポートされません。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312) の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のドキュメントの「[サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)」を参照してください。  
+ このデータ プロバイダーでは使用できないレポート配信モードもあります。 このデータ処理拡張機能では、データ ドリブン サブスクリプションを使ったレポートの配信はサポートされません。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312) の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のドキュメントの「[サブスクライバー データに対して外部データ ソースを使用する &#40;データ ドリブン サブスクリプション&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)」を参照してください。  
   
  詳細については、「 [SQL Server 2005 Reporting Services を Hyperion Essbase と組み合わせて使用する方法](http://go.microsoft.com/fwlink/?LinkId=81970)」を参照してください。  
   
@@ -124,7 +123,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [データセットと &#40; にフィルターを追加します。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> 関連項目  
@@ -133,26 +132,25 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  データ接続とデータ ソースについて説明します。  
   
- [レポート埋め込みデータセットおよび共有データセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  埋め込みデータセットと共有データセットについて説明します。  
   
- [データセット フィールド コレクションと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  データセット クエリによって生成されるフィールド コレクションについて説明します。  
   
- [Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)  
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](http://go.microsoft.com/fwlink/?linkid=121312))。  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
   
- [Hyperion Essbase で SQL Server 2005 Reporting Services を使用します。](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [SQL Server 2005 Reporting Services を Hyperion Essbase と組み合わせて使用する方法](http://go.microsoft.com/fwlink/?LinkId=81970)  
  このデータ拡張機能の使用に関する詳細な情報です。  
   
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーターと &#40; です。レポート ビルダーおよびレポート デザイナーと &#41; です。](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

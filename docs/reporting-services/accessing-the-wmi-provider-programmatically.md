@@ -1,5 +1,5 @@
 ---
-title: "プログラムで WMI プロバイダーにアクセス |Microsoft ドキュメント"
+title: "プログラムによる WMI プロバイダーへのアクセス | Microsoft Docs"
 ms.custom: 
 ms.date: 11/02/2016
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a8608faf31e4132570de4e57e748d02057c3722d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3164c9bb0a62d74b1a647bdf3c9e2f82110aaddf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>プログラムによる WMI プロバイダーへのアクセス
 
 ## <a name="wmi-provider-overview"></a>WMI プロバイダーの概要  
- に関する情報を取得するために使用する名前空間[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]このトピックで示すサンプルのコードでは、 **System.Management**で見つかった、名前空間、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]です。 **System.Management**名前空間が使用されるマネージ コード クラスのセットを提供[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]アプリケーションがアクセスし、管理情報を操作できます。 Reporting Services の WMI を使用する方法についてのクラスを使用して、 **System.Management**名前空間の「System.Managment での管理情報のへのアクセス」を参照してください、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。  
+ このトピックに示すコード サンプルで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の情報を取得するために使用する名前空間は、**System.Management** 名前空間です。これは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] にあります。 **System.Management** 名前空間により、管理情報にアクセスしてその情報を操作するときに [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] アプリケーションで使用するマネージ コード クラスのセットが提供されます。 **System.Management** 名前空間による Reporting Services の WMI クラスの使用の詳細については、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK の「System.Management による管理情報へのアクセス」を参照してください。  
   
 ## <a name="finding-a-report-server-instance"></a>レポート サーバー インスタンスの検索  
  レポート サーバーのインストールの情報を検索するさらに適切な方法は、WMI インスタンスのコレクションを使用して列挙することです。 以下の例は、コレクションを作成し、コレクションによってループしてプロパティを表示することによって、レポート サーバー インスタンスごとにプロパティを検索する方法を示します。  
@@ -134,8 +132,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services WMI プロバイダーへのアクセスします。](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
+ [Reporting Services WMI プロバイダーへのアクセス](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
  [RsReportServer.config 構成ファイル](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

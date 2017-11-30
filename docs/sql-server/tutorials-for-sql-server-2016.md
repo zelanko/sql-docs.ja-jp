@@ -1,29 +1,28 @@
 ---
 title: "SQL Server チュートリアル | Microsoft Docs"
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 10/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には、新しいテクノロジと機能の学習に役立つチュートリアルが用意されています。 通常、以前のバージョンのチュートリアルを新しいバージョンで使用できます。 チュートリアルで新しい機能が使われている場合は、チュートリアルを実行できる最低限のバージョンが示されています。  
+
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には、新しいテクノロジと機能の学習に役立つチュートリアルが用意されています。 通常、以前のバージョンのチュートリアルを新しいバージョンで使用できます。 チュートリアルで新しい機能を扱っている場合は、そのチュートリアルを完了するための最低限のバージョンが示されています。  
      
 -   チュートリアルでいずれかの [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使われている場合は、最新のバージョンを CodePlex からダウンロードして使う必要があります。 詳しくは、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。    
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] チュートリアルで使用する [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ブックと [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] レポートをダウンロードし、 [「SQL Server 2012 用の Power View のサンプル」](http://go.microsoft.com/fwlink/?LinkId=220734)にアクセスしてください。  
@@ -40,9 +39,9 @@ ms.lasthandoff: 07/31/2017
 |[Integration Services のチュートリアル](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの作成と配置の方法を学習します。|  
 |[レプリケーションのチュートリアル](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してレプリケーション トポロジをセットアップして実行する方法について説明します。|  
 |[Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|基本的なレポートとサブスクリプションを作成する方法について説明します。|  
-|[SQL Server R Services のチュートリアル](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|R 言語を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データを操作する方法、 [!INCLUDE[tsql](../includes/tsql-md.md)]から R スクリプトを実行する方法について説明します。|  
+|[SQL Server Machine Learning チュートリアル](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|R または Python を使って [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータを処理する方法について説明します。 R または Python のスクリプトを [!INCLUDE[tsql](../includes/tsql-md.md)] から実行します。|  
   
- ## <a name="previously-published-tutorials"></a>以前に発行されたチュートリアル:  
+ ## <a name="previously-published-tutorials"></a>以前に公開されたチュートリアル 
   
  - [SQL Server 2014 チュートリアル](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 07/31/2017
  - [SQL Server 2008 R2 用のチュートリアル](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

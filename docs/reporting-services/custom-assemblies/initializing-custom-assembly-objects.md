@@ -1,5 +1,5 @@
 ---
-title: "カスタム アセンブリ オブジェクトの初期化 |Microsoft ドキュメント"
+title: "カスタム アセンブリ オブジェクトの初期化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,28 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 9eee278013576c8c943c5d484c8d867e23acc5c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: ab05efc7baba58a34180faa038cb58c7f57f4af2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="initializing-custom-assembly-objects"></a>カスタム アセンブリ オブジェクトの初期化
-  状況によっては、カスタム アセンブリ クラスのプロパティ値とフィールド値をインスタンス化する際、これらを初期化する必要があります。 初期化が必要になる可能性が最も高いのは、レポートのグローバル オブジェクト コレクションからカスタム クラスと値を使用する場合です。 オーバーライドすることで、これを行う、 **OnInit**のメソッド、**コード**レポートのオブジェクト。 アクセスする**OnInit**を使用して、**コード**レポート定義の要素。 レポートで使用しようとするカスタム アセンブリのクラスのプロパティまたはフィールドの値を初期化するための 2 つの手法があります: を宣言し、使用して、クラスの新しいインスタンスを作成する**OnInit**を使用して、パブリックに使用可能なメソッドを呼び出すことができますか**OnInit**です。  
+  状況によっては、カスタム アセンブリ クラスのプロパティ値とフィールド値をインスタンス化する際、これらを初期化する必要があります。 初期化が必要になる可能性が最も高いのは、レポートのグローバル オブジェクト コレクションからカスタム クラスと値を使用する場合です。 そのためには、レポートの **Code** オブジェクトの **OnInit** メソッドをオーバーライドします。 **OnInit** にアクセスするには、レポート定義の **Code** 要素を使用します。 レポートで使用する予定のカスタム アセンブリのクラスのプロパティ値またはフィールド値を初期化する方法は 2 つあります。1 つは、**OnInit** を使用してクラスの新しいインスタンスを宣言し、作成する方法、もう 1 つは、**OnInit** を使用してパブリックに使用できるメソッドを呼び出す方法です。  
   
 ## <a name="global-object-collections-and-initialization"></a>グローバル オブジェクト コレクションと初期化  
- カスタム クラス変数を初期化するときは、 使用することができます、 **Globals**と**ユーザー**コレクション。 **パラメーター**、**フィールド**と**ReportItems**コレクション レポート ライフ サイクルの時点で不足しているときに、 **OnInit**メソッドが呼び出されます。 共有のコレクションを使用する**Globals**または**ユーザー**、含める必要があります、**レポート**オブジェクト参照。 たとえば、カスタム クラスを初期化するために、レポートにアクセスするユーザーの現在の言語を基づいて、**コード**要素は、次のようになります。  
+ カスタム クラス変数を初期化するときは、 **Globals** および **User** の各コレクションを使用できます。 レポート ライフサイクルで、**OnInit** メソッドを呼び出す時点では、**Parameters**、**Fields** および **ReportItems** の各コレクションを使用できません。 共有コレクションの **Globals** または **User** を使用するには、**Report** オブジェクト参照を含める必要があります。 たとえば、レポートにアクセスしているユーザーの現在の言語に基づいてカスタム クラスを初期化する場合、**Code** 要素は次のようになります。  
   
 ```  
 <Code>  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/12/2017
   
  前述のように、クラスのプロパティ値とフィールド値を初期化する 1 つの方法は、オーバーライドされたコンストラクターを呼び出すことによってクラスを宣言し、その新しいインスタンスを作成することです。  
   
- カスタム アセンブリのクラスのプロパティとフィールドの値を初期化するために別の方法がから定義をパブリックに使用可能なメソッドを呼び出すには、 **OnInit**メソッドです。 最初に、レポート定義ファイルのクラスのインスタンス名を追加する必要があります。 適切なアセンブリ参照とインスタンス名を追加した後は、初期化メソッドを呼び出して、クラスのプロパティ値とフィールド値を初期化できます。 **OnInit**メソッドは、次のようになります。  
+ カスタム アセンブリのクラスのプロパティ値とフィールド値を初期化するもう 1 つの方法は、**OnInit** メソッドから定義したパブリックに使用できるメソッドを呼び出すことです。 最初に、レポート定義ファイルのクラスのインスタンス名を追加する必要があります。 適切なアセンブリ参照とインスタンス名を追加した後は、初期化メソッドを呼び出して、クラスのプロパティ値とフィールド値を初期化できます。 **OnInit** メソッドは、次のようになります。  
   
 ```  
 <Code>  
@@ -58,9 +57,9 @@ ms.lasthandoff: 08/12/2017
 </Code>  
 ```  
   
- カスタム クラスのアセンブリ参照とインスタンス名を追加する方法の詳細については、次を参照してください[レポート &#40; へのアセンブリ参照の追加。SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
+ カスタム クラスのアセンブリ参照とインスタンス名を追加する方法の詳細については、「[レポートにアセンブリへの参照を追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。  
   
- グローバル オブジェクト コレクションの詳細については、次を参照してください[式 &#40; 内で組み込みコレクション。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+ グローバル オブジェクト コレクションの詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  

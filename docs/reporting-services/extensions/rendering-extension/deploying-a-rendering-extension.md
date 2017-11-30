@@ -1,5 +1,5 @@
 ---
-title: "表示拡張機能を展開する |Microsoft ドキュメント"
+title: "表示拡張機能の配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 396fe5513bb713b1d3296a7edfaff386708de052
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-a-rendering-extension"></a>表示拡張機能の配置
-  書き込み、コンパイルした後、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポートに表示拡張機能、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]ライブラリ、およびレポート デザイナー、レポート サーバーで検出できるようにする必要があります。 それには、拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加します。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポート表示拡張機能は、作成して [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 それには、拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加します。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>構成ファイルの表示拡張機能要素  
- 表示拡張機能を .DLL にコンパイルした後、rsreportserver.config ファイルにエントリを追加します。 既定では、場所は、%ProgramFiles%\Microsoft SQL server \msrs10_50. です。\<InstanceName > \reporting です。 親要素は\<レンダリング >。 Render 要素の下には、各表示拡張機能の Extension 要素があります。 **Extension** 要素には、Name と Type という 2 つの属性があります。  
+ 表示拡張機能を .DLL にコンパイルした後、rsreportserver.config ファイルにエントリを追加します。 既定では、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer にあります。 親要素は \<Render> です。 Render 要素の下には、各表示拡張機能の Extension 要素があります。 **Extension** 要素には、Name と Type という 2 つの属性があります。  
   
  次の表では、表示拡張機能の **Extension** 要素の属性について説明します。  
   
@@ -50,9 +48,9 @@ ms.lasthandoff: 08/12/2017
   
 ### <a name="to-deploy-the-assembly"></a>アセンブリを配置するには  
   
-1.  ステージング場所から、表示拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの Bin ディレクトリの既定の場所は、%ProgramFiles%\Microsoft SQL server \msrs10_50. です。\<InstanceName > \Reporting Services\ReportServer\Bin です。  
+1.  ステージング場所から、表示拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの Bin ディレクトリの既定の場所は、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin です。  
   
-2.  アセンブリ ファイルをコピーした後、rsreportserver.config ファイルを開きます。 rsreportserver.config ファイルもレポート サーバーの bin ディレクトリにあります。 構成ファイルに拡張機能アセンブリ ファイルのエントリを作成する必要があります。 使用してファイルを開くことができます[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]または単純なテキスト エディター。  
+2.  アセンブリ ファイルをコピーした後、rsreportserver.config ファイルを開きます。 rsreportserver.config ファイルもレポート サーバーの bin ディレクトリにあります。 構成ファイルに拡張機能アセンブリ ファイルのエントリを作成する必要があります。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] または簡単なテキスト エディターを使用して、ファイルを開くことができます。  
   
      詳細については、「 [RsReportServer.config 構成ファイル](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
@@ -72,16 +70,15 @@ ms.lasthandoff: 08/12/2017
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** の値は、表示拡張機能の一意な名前です。 値は、**型**の完全修飾名前空間のエントリを含むコンマ区切りの一覧には、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>実装では、続けて、アセンブリ (.dll ファイル拡張子を含まない) の名前。 既定では、表示拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、 **Extension** 要素に **Visible** 属性を追加して、 **false**に設定します。  
+     **Name** の値は、表示拡張機能の一意な名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 実装の完全修飾名前空間に続けて、アセンブリの名前 (.dll ファイル拡張子を含まない) をコンマで区切って指定したものです。 既定では、表示拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、 **Extension** 要素に **Visible** 属性を追加して、 **false**に設定します。  
   
-## <a name="verifying-the-deployment"></a>展開の確認  
+## <a name="verifying-the-deployment"></a>配置の確認  
  また、レポート マネージャーを開き、配信拡張機能がレポートに有効なエクスポートの種類の一覧に含まれていることを確認することもできます。  
   
 ## <a name="see-also"></a>参照  
- [表示拡張機能を実装します。](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [表示拡張機能の実装](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [表示拡張機能の概要](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
  [IRenderingExtension インターフェイスの実装](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
  [拡張機能のセキュリティに関する考慮事項](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
   
   
-

@@ -1,32 +1,29 @@
 ---
-title: "Reporting Services モバイル レポートで共有データセットからのデータの取得 |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services モバイル レポートの共有データセットからデータを取得する | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f021de7ca981504a180b555b338e056342eafcf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートの共有データセットからデータを取得する
-それに[Excel ファイルからデータを読み込む](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)、SQL Server Mobile Report Publisher ではデータをほぼすべてのソースからもアクセスできます。 データにアクセスするには、Reporting Services web ポータルで構成されている、共有データ ソースが必要です。 詳細については、 [共有データ ソースの作成](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) についてのページと、 [共有データセットの作成](../../reporting-services/report-data/manage-shared-datasets.md)についてのページを参照してください。  
+SQL Server Mobile Report Publisher では、[Excel ファイルからのデータの読み込み](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)以外にも、ほぼすべてのソースからのデータにアクセスできます。 データへのアクセスには、Reporting Services Web ポータルで構成された共有データ ソースが必要です。 詳細については、 [共有データ ソースの作成](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) についてのページと、 [共有データセットの作成](../../reporting-services/report-data/manage-shared-datasets.md)についてのページを参照してください。  
   
-共有データ ソースおよび共有データセットが Reporting Services サーバーで構成されているで作成したモバイル レポートで使用することができます[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]です。   
+共有データ ソースと共有データセットを Reporting Services サーバー上で構成した後、[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] で作成したモバイル レポート内でそれらを使用できます。   
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] から [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]サーバーへの接続が完了したら、モバイル レポートを共有データセットに接続するのは簡単です。   
   
@@ -74,5 +71,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

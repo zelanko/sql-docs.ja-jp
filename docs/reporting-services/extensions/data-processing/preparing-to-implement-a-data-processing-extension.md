@@ -1,5 +1,5 @@
 ---
-title: "データ処理拡張機能を実装する準備 |Microsoft ドキュメント"
+title: "データ処理拡張機能を実装する準備 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,32 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6d516201d8018b1d58b77be8e3cf543745da037a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: cacd1a989748897d369d9e920a5b6e0410d7f063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>データ処理拡張機能を実装する準備
-  実装する前に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]データ処理拡張機能を実装するインターフェイスを定義する必要があります。 インターフェイスのセット全体の拡張機能に固有の実装を提供することがありますかなど、サブセットの実装を集中することが単に、<xref:Microsoft.ReportingServices.DataProcessing.IDataReader>と<xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>として結果セットと、主にクライアントが対話するインターフェイス、 **DataReader**オブジェクトを使用して、[!INCLUDE[ssRS](../../../includes/ssrs-md.md)]結果セットと、データ ソース間のブリッジとしてのデータ処理拡張機能です。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 インターフェイスのセット全体にわたって拡張機能固有の実装を行うことができます。<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスや <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> インターフェイスなど、サブセットだけを実装することもできます。このようなインターフェイスでは、クライアントが **DataReader** オブジェクトとして主に結果セットと対話し、[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能を結果セットとデータ ソース間のブリッジとして使用します。  
   
  データ処理拡張機能は、次の 2 種類の方法のいずれかで実装できます。  
   
--   データ処理拡張機能クラスに実装できる、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]データ プロバイダー インターフェイスおよび必要に応じてによって提供される拡張のデータ処理拡張機能インターフェイス[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]です。  
+-   データ処理拡張機能のクラスは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー インターフェイスを実装でき、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によって提供される拡張されたデータ処理拡張機能インターフェイスをオプションで実装できます。  
   
 -   データ処理拡張機能のクラスは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によって提供されるデータ処理拡張機能インターフェイスを実装でき、拡張されたデータ処理拡張機能インターフェイスをオプションで実装できます。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能が特定のプロパティやメソッドをサポートしない場合は、プロパティやメソッドを非操作として実装します。 場合は、クライアントには、特定の動作が必要ですが、スロー、 **NotSupportedException**例外。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能が特定のプロパティやメソッドをサポートしない場合は、プロパティやメソッドを非操作として実装します。 クライアントが特定の動作を必要とする場合は、**NotSupportedException** 例外をスローします。  
   
 > [!NOTE]  
 >  プロパティやメソッドの非操作実装は、実装することを選択したインターフェイスのプロパティとメソッドにのみ適用されます。 オプションのインターフェイスを実装しないことを選択した場合は、そのインターフェイスをデータ処理拡張機能アセンブリから除外してください。 インターフェイスが必須またはオプションのいずれであるかの詳細については、後述する表を参照してください。  
@@ -89,9 +87,8 @@ ms.lasthandoff: 08/12/2017
  データ処理拡張機能インターフェイスは、可能な場合は [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダーのインターフェイス、メソッド、およびプロパティのサブセットと同じです。 完全な [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダーの実装の詳細については、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) ドキュメントの「.NET Framework データ プロバイダーの実装」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services の拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [データ処理拡張機能の実装](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

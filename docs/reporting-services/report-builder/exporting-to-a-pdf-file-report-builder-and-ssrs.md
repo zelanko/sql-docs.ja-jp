@@ -1,5 +1,5 @@
 ---
-title: "PDF ファイル (レポート ビルダーおよび SSRS) へのエクスポート |Microsoft ドキュメント"
+title: "PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eac7c54b7b0c610af123a0822de11ddcc931a854
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   PDF 表示拡張機能を使用すると、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割レポートを、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことが可能なファイルとして表示できます。 PDF 1.3 は Adobe Acrobat 4.0 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるのは Adobe Acrobat 11.0 以降です。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  
   
- PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体字中国語、簡体字中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、次を参照してください。[レポートのエクスポート & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体字中国語、簡体字中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  PDF レンダラーは物理的なページ レンダラーなので、HTML や Excel などの他のレンダラーとは異なり、改ページ機能があります。 ここでは、PDF レンダラー固有の情報を提供し、規則の例外について説明します。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="document-map"></a>ドキュメント マップ  
  ドキュメント マップ ラベルがレポートに存在する場合、PDF ファイルにドキュメント アウトラインが追加されます。 各ドキュメント マップ ラベルは、ドキュメント アウトラインのエントリとして、レポートに表示される順番で表示されます。 Acrobat で、対象のブックマークがドキュメント アウトラインに追加されるのは、そのブックマークが存在するページが表示されている場合のみです。  
   
- 1 ページしか表示されていない場合、ドキュメント アウトラインは追加されません。 ドキュメント マップは、レポート内の入れ子レベルを反映するために階層状に配置されます。 ドキュメント アウトラインは、Acrobat の [しおり] タブからアクセスできます。 ドキュメント アウトライン内のエントリをクリックすると、ドキュメントでブックマークが設定された場所に移動できます。  
+ 1 ページしか表示されていない場合、ドキュメント アウトラインは追加されません。 ドキュメント マップは、レポート内の入れ子レベルを反映するために階層状に配置されます。 ドキュメント アウトラインは、Acrobat の [しおり] タブからアクセスできます。ドキュメント アウトライン内のエントリをクリックすると、ドキュメントでブックマークが設定された場所に移動できます。  
   
 ### <a name="bookmarks"></a>ブックマーク  
  PDF 表示では、ブックマークはサポートされていません。  
@@ -109,11 +109,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>参照  
- [Reporting Services &#40; の改ページレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [対話機能のさまざまなレポート表示拡張機能と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

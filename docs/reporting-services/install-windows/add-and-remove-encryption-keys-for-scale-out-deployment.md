@@ -1,12 +1,11 @@
 ---
-title: "追加およびスケール アウト配置に対する暗号化キーを削除する |Microsoft ドキュメント"
+title: "スケールアウト配置に関する暗号化キーの追加と削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a23fb6852d37ecfd760d2238b189383c3cfd1f00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>スケールアウト配置に関する暗号化キーの追加と削除
-  1 つのレポート サーバー データベースを複数のレポート サーバーで共有するように構成すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をスケールアウト配置モデルで実行できます。 スケールアウト配置でのメンバーシップは、レポート サーバーがレポート サーバー データベースに暗号化キーを格納するかどうかに基づいています。 特定のレポート サーバー インスタンスの暗号化キーを追加および削除することで、スケールアウト配置のメンバーシップを制御できます。 配置からノードを削除する場合は、それらを任意の順序で削除できます。 配置にノードを追加する場合は、既に配置の一部になっているレポート サーバーのすべての新しいインスタンスを結合する必要があります。  
+  1 つのレポート サーバー データベースを複数のレポート サーバーで共有するように構成すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をスケールアウト配置モデルで実行できます。 スケールアウト配置でのメンバーシップは、レポート サーバーがレポート サーバー データベースに暗号化キーを格納するかどうかに基づいています。 特定のレポート サーバー インスタンスの暗号化キーを追加および削除することで、スケールアウト配置のメンバーシップを制御できます。 配置からノードを削除する場合は、それらを任意の順序で削除できます。 配置にノードを追加する場合は、既に配置の一部になっているレポート サーバーのすべての新しいインスタンスを結合する必要があります。  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Reporting Services 構成ツールを使用したスケールアウト配置の構成  
  スケールアウト配置を最も簡単に構成するには、Reporting Services 構成ツールを使用します。 詳細情報と手順については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="how-to-remove-a-report-server-from-a-scale-out-deployment-rskeymgmt"></a>レポート サーバーをスケールアウト配置から削除する方法 (rskeymgmt)  
   
-1.  削除するレポート サーバーの rsreportserver.config ファイルを開き、インストール ID を見つけます。 既定では、このファイルにあるプログラム \microsoft SQL server \mssql です。 *n* \Reporting)。  
+1.  削除するレポート サーバーの rsreportserver.config ファイルを開き、インストール ID を見つけます。 既定では、このファイルは Program Files\Microsoft SQL Server\MSSQL.*n*\Reporting Services\ReportServer にあります。  
   
      単一のインスタンスをインストールした場合、rsreportserver.config ファイルはコンピューター上に 1 つしかありません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスがインストールされている場合は、Reporting Services 構成ツールの [サーバーの状態] ページを使用し、削除するレポート サーバーのインスタンス識別子 (たとえば、MSSQL.2) を検索します。 レポート サーバー インスタンスのプログラム ファイルを格納するフォルダーの名前は、インスタンス識別子に基づきます (たとえば、Program Files\Microsoft SQL Server\MSSQL.2)。  
   
@@ -69,8 +67,7 @@ ms.lasthandoff: 08/09/2017
  これらの手順によってスケール アウト配置からレポート サーバーが削除されますが、レポート サーバーの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスはアンインストールされません。 スケール アウト配置からレポート サーバーを削除した後、サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が不要になった場合は、そのサーバーから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアンインストールできます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [構成および暗号化キー &#40; を管理します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [レポート サーバー &#40; を初期化します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
-

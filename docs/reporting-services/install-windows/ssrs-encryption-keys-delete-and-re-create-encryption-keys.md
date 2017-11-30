@@ -1,12 +1,11 @@
 ---
-title: "削除し、再暗号化キー (SSRS 構成マネージャー) を作成 |Microsoft ドキュメント"
+title: "暗号化キーの削除と再作成 (SSRS 構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b918ecf448e9498c95b679843ccc857b75b92f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS の暗号化キーの削除し、暗号化キーを再作成
+# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーの削除と再作成
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  
   
 -   既存の対称キーに障害が発生したと考えられる場合は対称キーを再作成します。 セキュリティを重視する場合は、定期的にキーを再作成することもできます。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
  対称キーを再作成できるのは、レポート サーバーが動作中の場合のみです。 暗号化キーの再作成およびコンテンツの再暗号化を実行すると、サーバーの処理が中断されます。 再暗号化の実行中はサーバーをオフラインにする必要があります。 再暗号化中にレポート サーバーに対して要求を送信することはできません。  
   
- 対称キーおよび暗号化データを再設定するには、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを使用できます。 対称キーの作成方法の詳細については、「[レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
+ 対称キーおよび暗号化データを再設定するには、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを使用できます。 対称キーの作成方法の詳細については、「[レポート サーバーの初期化 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
   
 ### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>暗号化キーの再作成方法 (Reporting Services 構成ツール)  
   
@@ -121,8 +119,7 @@ ms.lasthandoff: 08/09/2017
 4.  暗号化されたデータ (ファイル共有の配信拡張機能や暗号化を使用するサードパーティ製の配信拡張機能など) を使用する各サブスクリプションを開いて、資格情報を再入力します。 レポート サーバーの電子メール配信を使用するサブスクリプションでは、暗号化されたデータが使用されないため、キーの変更による影響を受けません。  
   
 ## <a name="see-also"></a>参照  
- [構成および暗号化キー &#40; を管理します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [暗号化されたレポート サーバー データ &#40; の格納SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
-

@@ -1,26 +1,23 @@
 ---
-title: "レポート サーバー データベース (SSRS 構成マネージャー) を作成 |Microsoft ドキュメント"
+title: "レポート サーバー データベースの作成 (SSRS 構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: aac0bcb0b004a0c8225b580313281c9668c1c882
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 75f48182cdabaa731eca28d2e9a6ad3dc638178f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-report-server-database"></a>レポート サーバー データベースの作成
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -47,7 +44,7 @@ ms.lasthandoff: 09/21/2017
   
 -   自動: 既定の構成をインストールするオプションを選択した場合は、SQL Server セットアップ ウィザードを使用します。 SQL Server インストール ウィザードでは、これは [レポート サーバー インストール オプション] ページの **[インストールと構成]** です。 **[インストールのみ]** オプションを選択した場合は、Reporting Services 構成マネージャーを使用してデータベースを作成する必要があります。  
   
--   手動: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。 リモートの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用してデータベースをホストしている場合は、レポート サーバー データベースを手動で作成する必要があります。 詳細については、次を参照してください[ネイティブ モード レポート サーバー データベース &#40; を作成する。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+-   手動: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。 リモートの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用してデータベースをホストしている場合は、レポート サーバー データベースを手動で作成する必要があります。 詳細については、「[ネイティブ モードのレポート サーバー データベースの作成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
   
  **SharePoint モード:** [レポート サーバー インストール オプション] ページにある SharePoint モード用のオプションは 1 つ ( **[インストールのみ]**) だけです。 このオプションを選択すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのファイルと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共有サービスがインストールされます。 次に、次のいずれかの方法で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを少なくとも 1 つ作成します。  
   
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/21/2017
 [Reporting Services 構成マネージャー](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
 その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -1,5 +1,5 @@
 ---
-title: "Web アプリケーションで URL アクセスの使用 |Microsoft ドキュメント"
+title: "Web アプリケーションでの URL アクセスの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 123e0ff6bbc5a33214e515401ad38f7af5604b5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---web-application"></a>使用する URL アクセスの Web アプリケーションをサービス レポートの統合
+# <a name="integrating-reporting-services-using-url-access---web-application"></a>URL アクセスを使用した Reporting Services の統合 - Web アプリケーション
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL アクセスは、ネットワークを介して各レポートにアクセスできるように特別に設計されています。 この種類のアクセスは、レポートの表示およびナビゲーションをカスタム Web アプリケーションに統合するのに最適です。 Web アプリケーションで URL アクセスを使用するには、次の方法があります。  
   
 -   Web サイトまたはポータルから特定のレポート サーバーへの URL を指定する。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/12/2017
 -   フォームの POST メソッドを使用する。さらに、フォーム フィールドを使用してクエリ文字列パラメーターをレポート サーバーの URL に渡す。  
   
 ## <a name="url-access-through-direct-addressing"></a>直接アドレス指定による URL アクセス  
- レポート サーバーまたは URL を使用してレポート サーバー データベース アイテムにアクセスするには、単にから Web ブラウザーまたはアプリケーション内の URL アドレスを提供します。 また、アクセス中のレポートまたはリソースの外観に影響を与える可能性がある URL にパラメーターを指定することもできます。 URL を Web ブラウザーのアドレス バーを使用してレポート サーバーを対象にできますか、URL のソースとして使用できます、 **IFrame**より大規模な Web アプリケーションまたはポータルの一部であります。 レポートの特定のフレームを対象としたり、その過程で新しいブラウザー ウィンドウを開いたりするだけでなく、ポータルの Web ページでレポートのハイパーリンクを含めることもできます。  
+ URL を使用してレポート サーバーまたはレポート サーバー データベースのアイテムにアクセスする場合は、Web ブラウザーまたはアプリケーション内から URL アドレスを指定するだけです。 また、アクセス中のレポートまたはリソースの外観に影響を与える可能性がある URL にパラメーターを指定することもできます。 Web ブラウザーのアドレス バーで URL を指定してレポート サーバーを対象としたり、URL を大規模な Web アプリケーションまたはポータルの一部である **IFrame** のソースにしたりすることができます。 レポートの特定のフレームを対象としたり、その過程で新しいブラウザー ウィンドウを開いたりするだけでなく、ポータルの Web ページでレポートのハイパーリンクを含めることもできます。  
   
  次の例では、ハイパーリンクは "main" という名前のフレームを対象とし、ハイパーリンクを含むハイパーリンクとは異なります。 ハイパーリンクは、Web ポータルの一部となる場合もあります。  
   
@@ -51,9 +49,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- 前の例では、デバイス情報設定で**LinkTarget** URL のクエリ文字列に「メイン」の値は渡されます。 これにより、レポートのドリルスルー ハイパーリンクも確実に "main" という名前のフレームを対象とします。  
+ 前の例では、URL のクエリ文字列の "main" の値を使用して、デバイス情報設定 **LinkTarget** が渡されます。 これにより、レポートのドリルスルー ハイパーリンクも確実に "main" という名前のフレームを対象とします。  
   
- デバイス情報設定についての詳細については、次を参照してください。[表示拡張機能にデバイス情報設定を渡す](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)です。  
+ デバイス情報設定の詳細については、「[表示拡張機能にデバイス情報設定を渡す](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)」を参照してください。  
   
  多くのサーバーおよびブラウザーでは、URL に使用可能な文字数が制限されているので注意してください。 場合によっては、256 文字の制限が適用されます。 この制限を回避するには、フォーム送信による POST 要求を使用できます。  
   
@@ -88,9 +86,8 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
   
 ## <a name="see-also"></a>参照  
  [アプリケーションへの Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [URL アクセスを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Windows アプリケーションで URL アクセスの使用](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [URL アクセスと #40 です。SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [URL アクセスを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Windows アプリケーションでの URL アクセスの使用](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
+ [URL アクセス &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

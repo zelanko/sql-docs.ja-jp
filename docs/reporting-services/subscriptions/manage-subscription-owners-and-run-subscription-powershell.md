@@ -1,5 +1,5 @@
 ---
-title: "サブスクリプションの所有者を管理および PowerShell を実行するには、サブスクリプション - |Microsoft ドキュメント"
+title: "サブスクリプション所有者の管理とサブスクリプションの実行 - PowerShell | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 103cb28ac4917370c8f116b8de46a27f159261cc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 69906bfdbe7d544efd11ced80afe3c8cc5b1c8c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="manage-subscription-owners-and-run-subscription---powershell"></a>サブスクリプションの所有者を管理して、サブスクリプションに PowerShell の実行
+# <a name="manage-subscription-owners-and-run-subscription---powershell"></a>サブスクリプション所有者の管理とサブスクリプションの実行 - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの所有権をプログラムによってユーザー間で譲渡できます。 このトピックでは、サブスクリプションの所有権を変更または単純に一覧表示するために使用可能な、いくつかの Windows PowerShell スクリプトを説明します。 各サンプルには、ネイティブ モードと SharePoint モードの両方のサンプル構文が含まれています。 サブスクリプションの所有者を変更した後で、サブスクリプションは新しい所有者のセキュリティ コンテキストで実行され、レポート内の User!UserID フィールドには新しい所有者の値が表示されます。 PowerShell のサンプルが呼び出すオブジェクト モデルの詳細については、「<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>」を参照してください。  
+  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの所有権をプログラムによってユーザー間で譲渡できます。 このトピックでは、サブスクリプションの所有権を変更または単純に一覧表示するために使用可能な、いくつかの Windows PowerShell スクリプトを説明します。 各サンプルには、ネイティブ モードと SharePoint モードの両方のサンプル構文が含まれています。 サブスクリプションの所有者を変更した後で、サブスクリプションは新しい所有者のセキュリティ コンテキストで実行され、レポート内の User!UserID フィールドには新しい所有者の値が表示されます。 PowerShell のサンプルが呼び出すオブジェクト モデルの詳細については、「 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
@@ -398,4 +397,3 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   
-

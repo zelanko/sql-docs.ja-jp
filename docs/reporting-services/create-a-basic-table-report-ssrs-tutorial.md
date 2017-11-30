@@ -1,50 +1,46 @@
 ---
-title: "基本的なテーブル レポート (SSRS チュートリアル) を作成 |Microsoft ドキュメント"
+title: "基本的なテーブル レポートの作成 (SSRS チュートリアル) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 658a882ae3c4e907e50b71a5b98137aa009ea4e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
 
-このチュートリアルで使用するレポート デザイナー SQL Server Data Tools で基本的な[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]に基づいて、テーブルを含むレポートの改ページ調整、  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** データベース。 作成することも[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]ページネーションのあるレポート ビルダーでレポートします。 
+このチュートリアルでは、SQL Server Data Tools でレポート デザイナーを使用して、**[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** データベースに基づき、テーブルを含む基本的な [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成します。 レポート ビルダーで [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成することもできます。 
 
-このチュートリアルを進めるときにレポート プロジェクトを作成、接続情報を設定、クエリの定義、テーブル データ領域を追加、グループしいくつかのフィールドの合計してレポートをプレビューします。  
+このチュートリアルに従って、レポート プロジェクトの作成、接続情報の設定、クエリの定義、テーブルのデータ領域、グループおよび合計の一部のフィールドの追加、レポートのプレビュー表示を行います。  
   
 ## <a name="requirements"></a>必要条件  
 このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]SQL Server データベース エンジン。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server データベース エンジン。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] (ネイティブ モード)。  
   
--   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベース。  詳細については、「 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)」(Adventure Works 2014 サンプル データベース) を参照してください。  
+-   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベース。  詳細については、[Adventure Works 2014 のサンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)に関する記述を参照してください。  
   
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)インストールされて、レポート デザイナーがある場合は"SQL Server Reporting Services"のコンポーネントとします。    
+ -   レポート デザイナーが必要なため、"SQL Server Reporting Services" コンポーネントがインストールされた [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。    
   
 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベースからデータを取得するには読み取り専用権限も必要です。
 
@@ -68,4 +64,3 @@ ms.lasthandoff: 09/27/2017
 [Reporting Services のチュートリアル](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

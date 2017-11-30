@@ -1,5 +1,5 @@
 ---
-title: "配信拡張機能の IDeliveryReportServerInformation インターフェイスの使用 |Microsoft ドキュメント"
+title: "配信拡張機能での IDeliveryReportServerInformation インターフェイスの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,28 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - IDeliveryReportServerInformation interface
 - delivery extensions [Reporting Services], retrieving report server information
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: caebc70ede4475cef103d0d76598ea3125231252
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 9f1acb146323a301d90c5c4f4ac1df6fd5b477d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension"></a>配信拡張機能での IDeliveryReportServerInformation インターフェイスの使用
   <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> インターフェイスは、レポート サーバーに関する情報を取得する場合に使用できるいくつかのプロパティを表示します。 この情報を使用して、通知とレポートを配信できます。 配信拡張機能のクラスを実装する場合は、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> インターフェイスに必要な <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> プロパティを実装します。 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> プロパティは、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> インターフェイスを実装するオブジェクトを返します。 このオブジェクトからは、レポート サーバーで現在サポートされる表示拡張機能の一覧を取得できます。  
   
- 次**の**ループは、レポート サーバーで現在使用可能な表示拡張機能の一覧を格納するために使用でした、 **ArrayList**オブジェクト。  
+ 次の **for** ループを使用すると、**ArrayList** オブジェクトのレポート サーバーで現在使用できる表示拡張機能の一覧を格納できます。  
   
 ```vb  
 Dim renderFormats As New ArrayList()  
@@ -54,12 +52,11 @@ foreach (Microsoft.ReportingServices.Interfaces.Extension e in ReportServerInfor
 }  
 ```  
   
- 詳細については、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation>インターフェイスを参照してください[IDeliveryReportServerInformation インターフェイス配信拡張機能を使用して](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)です。  
+ <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> インターフェイスの詳細については、「[配信拡張機能での IDeliveryReportServerInformation インターフェイスの使用](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.ReportingServices.Interfaces>   
- [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [配信拡張機能の実装](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

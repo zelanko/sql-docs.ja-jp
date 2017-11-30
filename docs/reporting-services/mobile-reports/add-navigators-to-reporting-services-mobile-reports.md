@@ -1,28 +1,26 @@
 ---
-title: "Reporting Services モバイル レポートにナビゲーターを追加 |Microsoft ドキュメント"
+title: "Reporting Services モバイル レポートへのナビゲーターの追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートにナビゲーターを追加します。
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへのナビゲーターの追加
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]では、時間または選択したものによって視覚エフェクトのデータをフィルター処理するには、 *ナビゲーター* を追加します。 
 
 ナビゲーターは、Power BI や Excel のピボットテーブルのスライサーに似ていますが、ナビゲーター固有の特徴もいくつかあります。
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 その名前からもわかるように、時間ナビゲーターはデータの範囲を時間範囲によって選択します。   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*左側の 4 つの折れ線グラフは、時間の範囲のプリセットで設定されます。右側の折れ線グラフは、フィルターです。*  
+*左側の 4 つの折れ線グラフは、[時間範囲の事前設定] で設定されています。右側の折れ線グラフはフィルターです。*  
   
 [プレビュー] または [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルでレポートを表示するときは、時間ナビゲーターで矢印をドラッグして、レポートの残りの部分をフィルター処理します。  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/09/2017
 * [Reporting Services モバイル レポートの視覚エフェクト](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services モバイル レポートのゲージ](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Reporting Services モバイル レポートのデータ グリッド](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

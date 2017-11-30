@@ -1,5 +1,5 @@
 ---
-title: "共有データセット デザイン ビュー (レポート ビルダー) |Microsoft ドキュメント"
+title: "共有データセット デザイン ビュー (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a9ac302273553bb46457ab5edfb5d75d71b3e523
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 共有データセットはレポート サーバー上でパブリッシュされ、複数のレポートで使用できます。 他のユーザーと共有するデータセットを作成できます。 共有データセット デザイン ウィンドウで、共有データ ソースの選択、共有データセットのプロパティの指定、およびクエリ デザイナーによるクエリの作成を行います。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
  レポートで共有データ ソースを選択するか、レポート サーバーで共有データ ソースを参照するには、接続グループの **[選択]** ボタンを使用します。  
   
 > [!NOTE]  
->  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、次を参照してください。[作成、変更、および共有データ ソースの削除 & #40 です。SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
+>  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
   
  詳細については、「 [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
   
@@ -56,9 +55,9 @@ ms.lasthandoff: 08/09/2017
   
  共有データセットをレポートに追加した後に、レポート作成者が上書きできるオプションは、照合順序、大文字と小文字の区別、アクセントの区別、かなの区別、文字幅の区別、および小計です。 追加のデータセット フィルターを作成して、レポート内のデータを制限することもできます。  
   
- 詳細については、「[レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
- キャッシュ更新計画の詳細については、次を参照してください。[共有データセットのキャッシュと #40 です。SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+ キャッシュの更新の詳細については、「[複数の共有データセットのキャッシュ (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)」を参照してください。  
   
 ### <a name="query-designer"></a>[クエリ デザイナー]  
  クエリ デザイナー ツール バーを使用すると、データ接続から取得するデータを指定するクエリを作成できます。 データ接続のデータ ソースの種類に関連付けられているクエリ デザイナーによって、表示されるツール バーが異なります。  
@@ -99,8 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート パラメーターと &#40; です。レポート ビルダーおよびレポート デザイナーと &#41; です。](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

@@ -1,28 +1,25 @@
 ---
-title: "マルチ インスタンスの URL 予約をレポート サーバーの展開 |Microsoft ドキュメント"
+title: "レポート サーバーの複数インスタンス配置における URL 予約 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- URL reservations
+helpviewer_keywords: URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 811e58edf8d0b50e83826c94c5f8f5a54b80c17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>レポート サーバーの複数インスタンス配置における URL 予約
   同じコンピューターに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスをインストールする場合は、インスタンスごとに URL 予約を定義する方法を検討する必要があります。 各インスタンス内のレポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] には、それぞれ 1 つ以上の URL 予約が必要です。 予約はすべて、HTTP.SYS 内で一意にする必要があります。  
@@ -30,7 +27,7 @@ ms.lasthandoff: 08/09/2017
  重複する URL があれば、サービスの起動時に行われる URL の登録の際に検出されます。 一意でない URL 予約を作成した場合、サービスを起動するまで名前の競合が検出されない可能性があります。 このため、名前付け規則に従ってすべての値が一意になるようにしてください。  
   
 ## <a name="default-naming-conventions"></a>既定の名前付け規則  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス内にインストールできます。 名前付きインスタンス内にレポート サーバーをインストールまたは構成すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に用意されている既定の URL 予約の仮想ディレクトリにインスタンス名が自動的に含められます。 次の表に、既定のインスタンスと名前付きインスタンスの URL 予約を示します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス内にインストールできます。 名前付きインスタンス内にレポート サーバーをインストールまたは構成すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に用意されている既定の URL 予約の仮想ディレクトリにインスタンス名が自動的に含められます。 次の表に、既定のインスタンスと名前付きインスタンスの URL 予約を示します。  
   
 |SQL Server インスタンス|既定の URL 予約|  
 |-------------------------|-----------------------------|  
@@ -53,8 +50,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の基になるテクノロジには、一意の名前に関する要件があります。 HTTP.SYS のリポジトリ内の URL はすべて一意にする必要があります。 URL は、ポート、ホスト名、または仮想ディレクトリ名を変えることで一意にできます。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、同一プロセス内の各アプリケーション ID が一意である必要があります。 この要件は、仮想ディレクトリ名に影響します。 この要件では、同一レポート サーバー インスタンス内では重複する仮想ディレクトリ名を使用できないことが規定されています。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーの Url &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [URL &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
-

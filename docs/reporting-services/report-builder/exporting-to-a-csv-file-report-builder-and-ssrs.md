@@ -1,5 +1,5 @@
 ---
-title: "CSV ファイル (レポート ビルダーおよび SSRS) へのエクスポート |Microsoft ドキュメント"
+title: "CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e63d1c2405029118064144d99fc092ec6f4f139a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り値) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でページ分割されたレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  フィールド区切り記号を任意の文字 (タブなど) に変更するには、デバイス情報設定を変更します。 詳細については、「 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)」を参照してください。  
   
--   レコード区切り記号がキャリッジ リターンとライン フィード (\<cr >\<lf >)。  
+-   レコード区切り記号は、キャリッジ リターンとライン フィードの組み合わせ (\<cr>\<lf>) です。  
   
 -   テキスト修飾子は、二重引用符 (") です。  
   
@@ -150,11 +149,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>参照  
- [Reporting Services &#40; の改ページレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [対話機能のさまざまなレポート表示拡張機能と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

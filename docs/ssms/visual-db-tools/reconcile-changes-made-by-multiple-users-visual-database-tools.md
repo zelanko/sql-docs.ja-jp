@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>複数のユーザーによる変更の調整 (Visual Database Tools)
 マルチユーザー環境では、同一のオブジェクトに複数のユーザーが同時に変更を加える場合があります。 この現象は、テーブル デザイナーまたはデータベース ダイアグラム デザイナーでオブジェクトの構造を操作しているときに発生する可能性があります。また、クエリおよびビュー デザイナーの結果ペインに返された結果の値に、他のユーザーが変更を加えている場合もあります。 こうした現象により、解決を必要とする競合が発生する可能性があります。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/18/2017
   
 -   **[はい]** をクリックして、一覧内のすべての変更内容をデータベースに反映させます。  
   
-    このアクションを実行すると、同じデータベース オブジェクトを共有しているテーブルが影響を受けます。 たとえば、 `au`テーブルの`id` _ `titleauthors` 列を編集しているときに、他のユーザーが、 `authors` 列によって `titleauthors` テーブルと関連付けられている `au`\_`id` テーブルを操作しているとします。 このテーブルを保存すると、他のユーザーのテーブルが影響を受けます。 同様に、あるユーザーが `qty` テーブルの `sales` 列に CHECK 制約を定義したとします。 別のユーザーが `qty` 列を削除して `sales` テーブルを保存すると、最初のユーザーの CHECK 制約が影響を受けます。  
+    このアクションを実行すると、同じデータベース オブジェクトを共有しているテーブルが影響を受けます。 たとえば、`titleauthors` テーブルの `au_id` 列を編集しているときに、他のユーザーが `au_id` 列によって `titleauthors` テーブルと関連付けられている `authors` テーブルを操作するものとします。 このテーブルを保存すると、他のユーザーのテーブルが影響を受けます。 同様に、あるユーザーが `qty` テーブルの `sales` 列に CHECK 制約を定義したとします。 別のユーザーが `qty` 列を削除して `sales` テーブルを保存すると、最初のユーザーの CHECK 制約が影響を受けます。  
   
 -   保存を取り消すには、 **[いいえ]** をクリックします。  
   
@@ -65,4 +64,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>参照  
 [[データベースの変更を確認] ダイアログ ボックス (Visual Database Tools)](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

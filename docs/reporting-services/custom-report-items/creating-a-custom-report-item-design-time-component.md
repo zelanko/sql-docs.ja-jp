@@ -1,5 +1,5 @@
 ---
-title: "カスタム レポート アイテムのデザイン時コンポーネントの作成 |Microsoft ドキュメント"
+title: "カスタム レポート アイテムのデザイン時コンポーネントの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0b1f5649db2f99957ad3b2452b02d2f7b2db01cb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
   カスタム レポート アイテムのデザイン時コンポーネントは、Visual Studio レポート デザイナー環境で使用できるコントロールです。 カスタム レポート アイテムのデザイン時コンポーネントは、ドラッグ アンド ドロップ操作を使用できるアクティブ化されたデザイン画面、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーとの統合、およびカスタム プロパティ エディター機能を提供します。  
@@ -35,12 +32,12 @@ ms.lasthandoff: 08/12/2017
  開発環境でデザイン時コンポーネントを使用して設定されるプロパティは、ホスト デザイン環境によってシリアル化およびシリアル化解除され、レポート定義言語 (RDL) ファイルに要素として格納されます。 レポート プロセッサによるレポートの実行時には、デザイン時コンポーネントを使用して設定されたプロパティが、レポート プロセッサによってカスタム レポート アイテムの実行時コンポーネントに渡されます。実行時コンポーネントは、カスタム レポート アイテムを表示してレポート プロセッサに返します。  
   
 > [!NOTE]  
->  カスタム レポート アイテムのデザイン時コンポーネントとして実装、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]コンポーネントです。 ここでは、カスタム レポート アイテムのデザイン時コンポーネントに固有の実装詳細について説明します。 使用してコンポーネントの開発の詳細については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を参照してください[Visual Studio のコンポーネント](http://go.microsoft.com/fwlink/?LinkId=116576)MSDN ライブラリです。  
+>  カスタム レポート アイテムのデザイン時コンポーネントは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装されます。 ここでは、カスタム レポート アイテムのデザイン時コンポーネントに固有の実装詳細について説明します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用したコンポーネント開発の詳細については、MSDN ライブラリの「[Visual Studio のコンポーネント](http://go.microsoft.com/fwlink/?LinkId=116576)」を参照してください。  
   
- 完全に実装されたカスタム レポート アイテムのサンプルについては、次を参照してください。 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)です。  
+ 完全に実装されたカスタム レポート アイテムの例については、「[SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
   
 ## <a name="implementing-a-design-time-component"></a>デザイン時コンポーネントの実装  
- カスタム レポート アイテムのデザイン時コンポーネントのメイン クラスを継承、 **Microsoft.ReportDesigner.CustomReportItemDesigner**クラスです。 標準の属性の使用に加えて、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]コントロール、コンポーネント クラスを定義する必要があります、 **CustomReportItem**属性。 この属性は、reportserver.config ファイルに定義されたカスタム レポート アイテム名と同じにする必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 属性の完全な一覧については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK ドキュメントの「属性」を参照してください。  
+ カスタム レポート アイテムのデザイン時コンポーネントのメイン クラスは、**Microsoft.ReportDesigner.CustomReportItemDesigner** クラスから継承されます。 コンポーネント クラスには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コントロールで使用される標準の属性に加えて、**CustomReportItem** 属性を定義してください。 この属性は、reportserver.config ファイルに定義されたカスタム レポート アイテム名と同じにする必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 属性の完全な一覧については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK ドキュメントの「属性」を参照してください。  
   
  次のコード例では、カスタム レポート アイテムのデザイン時コントロールに属性が適用されています。  
   
@@ -58,9 +55,9 @@ namespace PolygonsCRI
 ```  
   
 ### <a name="initializing-the-component"></a>コンポーネントの初期化  
- カスタム レポート アイテム用にユーザーが指定したプロパティは、<xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> クラスを使用して渡されます。 実装、 **CustomReportItemDesigner**クラスをオーバーライドする必要があります、 **InitializeNewComponent**コンポーネントの新しいインスタンスを作成するメソッド<xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>クラスし、既定値に設定します。  
+ カスタム レポート アイテム用にユーザーが指定したプロパティは、<xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> クラスを使用して渡されます。 コンポーネントの <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> クラスから新しいインスタンスを作成して既定値に設定するには、**CustomReportItemDesigner** クラスの実装で **InitializeNewComponent** メソッドをオーバーライドしてください。  
   
- 次のコード例は、カスタム レポート アイテムのデザイン時コンポーネント クラスをオーバーライドする例を示しています、 **CustomReportItemDesigner.InitializeNewComponent**コンポーネントの初期化するメソッドを<xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>クラス。  
+ 次のコード例は、コンポーネントの <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> クラスを初期化する際に、カスタム レポート アイテムのデザイン時コンポーネント クラスで **CustomReportItemDesigner.InitializeNewComponent** メソッドをオーバーライドする例を示しています。  
   
 ```csharp  
 public override void InitializeNewComponent()  
@@ -94,9 +91,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>コンポーネントのプロパティの変更  
- 変更することができます**CustomData**いくつかの方法で、デザイン環境でのプロパティです。 デザイン時コンポーネントによって公開され、<xref:System.ComponentModel.BrowsableAttribute> 属性でマークされたあらゆるプロパティは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーを使用して変更できます。 または、デザイン環境でコントロールを右クリックして、カスタム レポート アイテムのデザイン サーフェイスに項目をドラッグして、プロパティを変更するさらに、**プロパティ**ショートカット メニューのカスタム プロパティ ウィンドウを表示します。  
+ **CustomData** プロパティをデザイン環境で変更するには、複数の方法があります。 デザイン時コンポーネントによって公開され、<xref:System.ComponentModel.BrowsableAttribute> 属性でマークされたあらゆるプロパティは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーを使用して変更できます。 また、プロパティを変更するには、カスタム レポート アイテムのデザイン画面にアイテムをドラッグする方法や、デザイン環境でコントロールを右クリックし、ショートカット メニューの **[プロパティ]** をクリックしてカスタム プロパティ ウィンドウを表示する方法もあります。  
   
- 次のコード例は、 **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData**プロパティを持つ、<xref:System.ComponentModel.BrowsableAttribute>属性を適用。  
+ 次のコード例は、<xref:System.ComponentModel.BrowsableAttribute> 属性が適用された **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** プロパティを示しています。  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -160,7 +157,7 @@ private void EditableCombo_SelectedIndexChanged(object sender,
 ```  
   
 ### <a name="using-designer-verbs"></a>デザイナー動詞の使用  
- デザイナー動詞は、イベント ハンドラーにリンクされたメニュー コマンドです。 デザイナー動詞を追加して、カスタム レポート アイテムの実行時コントロールのデザイン環境での使用時に、コンポーネントのショートカット メニューに表示できます。 使用して、実行時コンポーネントから使用可能なデザイナー動詞の一覧を返すことができます、**動詞**プロパティです。  
+ デザイナー動詞は、イベント ハンドラーにリンクされたメニュー コマンドです。 デザイナー動詞を追加して、カスタム レポート アイテムの実行時コントロールのデザイン環境での使用時に、コンポーネントのショートカット メニューに表示できます。 実行時コンポーネントで **Verbs** プロパティを使用すると、使用可能なデザイナー動詞の一覧を返すことができます。  
   
  次のコード例では、デザイナー動詞とイベント ハンドラーが <xref:System.ComponentModel.Design.DesignerVerbCollection> に追加されています。イベント ハンドラー コードも示します。  
   
@@ -192,13 +189,13 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>装飾の使用  
- カスタム レポート アイテムのクラスに実装できるも、 **Microsoft.ReportDesigner.Design.Adornment**クラスです。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 **装飾**クラスで定義されている、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner**名前空間はのパススルー実装、<xref:System.Windows.Forms.Design.Behavior.Adorner>クラスは、Windows フォームで見つかりました。 完全なドキュメントについて、**装飾**クラスを参照してください[動作サービスの概要](http://go.microsoft.com/fwlink/?LinkId=116673)MSDN ライブラリです。 実装するサンプル コードについて、 **Microsoft.ReportDesigner.Design.Adornment**クラスを参照してください[SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)です。  
+ カスタム レポート アイテムのクラスでは、**Microsoft.ReportDesigner.Design.Adornment** クラスを実装することもできます。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の **Microsoft.ReportDesigner** 名前空間で定義された **Adornment** クラスは、Windows フォームで使用される <xref:System.Windows.Forms.Design.Behavior.Adorner> クラスのパススルー実装です。 **Adorner** クラスの完全なドキュメントについては、MSDN ライブラリの「[動作サービスの概要](http://go.microsoft.com/fwlink/?LinkId=116673)」を参照してください。 **Microsoft.ReportDesigner.Design.Adornment** クラスを実装したサンプル コードについては、「[SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] での Windows フォームを使ったプログラミングの詳細については、MSDN ライブラリの次のトピックを参照してください。  
   
 -   コンポーネントのデザイン時属性  
   
--   内のコンポーネント[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+-   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のコンポーネント  
   
 -   チュートリアル : Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成  
   
@@ -206,7 +203,6 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [カスタム レポート アイテムのアーキテクチャ](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [カスタム レポート アイテムの実行時コンポーネントの作成](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのクラス ライブラリ](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [方法: カスタム レポート アイテムを配置](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [カスタム レポート アイテムを配置する方法](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

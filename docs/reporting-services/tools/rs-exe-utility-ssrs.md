@@ -1,5 +1,5 @@
 ---
-title: "RS.exe ユーティリティ (SSRS) |Microsoft ドキュメント"
+title: "RS.exe ユーティリティ (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 8b31796877b7ae964b1d4ec124979d213d9be4b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -85,7 +85,7 @@ rs {-?}
  値が指定されていない場合は、Mgmt2005 エンドポイントが使用されます。 SOAP エンドポイントの詳細については、「 [Report Server Web Service Endpoints](../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)」を参照してください。  
   
  **-l** *time_out*  
- (省略可) サーバーへの接続がタイムアウトするまでの期間を秒数で指定します。 既定値は 60 秒です。 タイムアウト値を指定しない場合、既定値が使用されます。 値が **0** の場合は、接続はタイムアウトしません。  
+ (省略可) サーバーへの接続がタイムアウトするまでの期間を秒数で指定します。既定値は 60 秒です。 タイムアウト値を指定しない場合、既定値が使用されます。 値が **0** の場合は、接続はタイムアウトしません。  
   
  **-b**  
  (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理され、 **Main**から正常に値が返された場合、バッチはコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、「 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)」をご参照ください。  

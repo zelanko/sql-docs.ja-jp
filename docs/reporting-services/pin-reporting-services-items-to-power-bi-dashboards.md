@@ -1,13 +1,11 @@
 ---
-title: "Power BI のダッシュ ボードへの Reporting Services のアイテムをピン留め |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "Power BI ダッシュボードへの Reporting Services のアイテムのピン留め | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI ダッシュボードへの Reporting Services のアイテムのピン留め
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] では、レポート ビューアー ツール バーから [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードに新しいタイルとしてピン留めできます。   ピン留めするには、管理者がレポート サーバーを Azure Active Directory および [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合しておく必要があります。  
@@ -42,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   ピン留め、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート ビューアーでは t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]彼は、たとえば`http://myserver/Reports`します。  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のレポート デザイナー、またはレポート サーバーの URL  たとえば`http://myserver/ReportServer`します。  
+-   ピン留めは、[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート ビューアー (例: `http://myserver/Reports`) から実行します。  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のレポート デザイナー、またはレポート サーバーの URL  たとえば、`http://myserver/ReportServer` のようにします。  
   
 -   レポート サーバー サイトからのポップアップを許可するようにブラウザーを構成する必要があります。  
   
@@ -81,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
 4. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めするレポート アイテムをクリックします。 ピン留めできるアイテムは一度に 1 つに限られます。  レポート ビューアーにレポートの影付きのビューが表示されます。ピン留めできるレポート アイテムは強調表示され、ピン留めできないアイテムは濃い影付きになります。  
   
-    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   ![注](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")で更新を管理[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サブスクリプション、アイテムをピン留めすると後、サブスクリプションを編集して別の更新スケジュールを構成します。  
+    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -115,9 +112,9 @@ ms.lasthandoff: 08/09/2017
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **ピン留めされたアイテムに古いデータが表示**で、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]一定の時間のダッシュ ボードとそのを更新しました。  ユーザーの資格情報トークンの有効期限が切れているので、もう一度サインインする必要があります。  Azure と [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのユーザーの資格情報登録の有効期間は 90 日間です。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]**をクリックします。 詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)と統合しておく必要があります。  
+-   [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードで**ピン留めされたアイテムに古いデータが表示され**、一定期間更新されなかった:   ユーザーの資格情報トークンの有効期限が切れているので、もう一度サインインする必要があります。  Azure と [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのユーザーの資格情報登録の有効期間は 90 日間です。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]**をクリックします。 詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)と統合しておく必要があります。  
   
--   **ピン留めされたアイテムに古いデータが表示**で、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]ダッシュ ボードとそれが一度も更新されません。  問題は、保存された資格情報を使用するようにレポートが構成されていないことです。 レポート アイテムのピン留め操作により、タイルの更新スケジュールを管理する [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが作成されるため、レポートでは保存された資格情報を使用する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 **[個人用サブスクリプション]** ページを確認すると、次のようなエラー メッセージが表示されます。  
+-   [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードで**ピン留めされたアイテムに古いデータが表示され**、一度も更新されていない:   問題は、保存された資格情報を使用するようにレポートが構成されていないことです。 レポート アイテムのピン留め操作により、タイルの更新スケジュールを管理する [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが作成されるため、レポートでは保存された資格情報を使用する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 **[個人用サブスクリプション]** ページを確認すると、次のようなエラー メッセージが表示されます。  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
@@ -153,5 +150,4 @@ ms.lasthandoff: 08/09/2017
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

@@ -1,5 +1,5 @@
 ---
-title: "URL アクセスを使用してレポート サーバー アイテムにアクセス |Microsoft ドキュメント"
+title: "URL アクセスを使用したレポート サーバー アイテムへのアクセス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 010d16c1114ea7b8d7a1c7c0274aba2ecd44b8d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用したレポート サーバー アイテムへのアクセス
-  このトピックは、方法、レポート内のさまざまな種類のカタログ項目にアクセスするサーバー データベースまたは SharePoint サイトを使用してについて説明します。 *Rs:command*=*値*です。 実際にこのパラメーター文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  
+  このトピックでは、*rs:Command*=*Value* を使用してレポート サーバー データベースまたは SharePoint サイトにある異なる種類のカタログ アイテムにアクセスする方法について説明します。 実際にこのパラメーター文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  
   
  以下の例では、 `_vti_bin` プロキシ構文に注意してください。 プロキシ構文の詳細については、「 [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)」を参照してください。  
   
@@ -79,6 +79,5 @@ ms.lasthandoff: 08/09/2017
  表示されるユーザー インターフェイスは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) で使用されるディレクトリ参照モードと似ています。 ビルド番号を含むレポート サーバーのバージョン番号もフォルダー一覧の下に表示されます。  
   
 ## <a name="see-also"></a>参照  
- [URL アクセスと #40 です。SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md) 
-

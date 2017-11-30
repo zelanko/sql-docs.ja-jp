@@ -1,7 +1,6 @@
 ---
-title: "Reporting Services と Power View のブラウザー サポート |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services と Power View のブラウザー サポート | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -21,30 +20,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6dcf1d4b0423517113345f9ed6532fb6baf07e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-管理および SQL Server Reporting Services では、ReportViewer コントロールと Power View の表示についてどのようなブラウザー バージョンがサポートされているについて説明します。
+SQL Server Reporting Services、ReportViewer コントロール、Power View. の管理と表示にサポートされているブラウザーのバージョンについて説明します。
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
 
-## <a name="browser-requirements-for-the-web-portal"></a>Web ポータルのブラウザー要件
+## <a name="browser-requirements-for-the-web-portal"></a>Web ポータルのブラウザーの要件
 
-現在の web ポータルのサポートされているブラウザーの一覧を次に示します。
+次は、Web ポータルでサポートされているブラウザーの現行リストです。
 
 **Microsoft Windows**  
 *Windows 7、8.1、10、Windows Server 2008 R2、2012、2012 R2*
@@ -113,7 +111,7 @@ ms.lasthandoff: 08/09/2017
 
  スクリプトが有効になっていない場合は、レポートを開くときに次のようなエラー メッセージが表示されます。
 
-- **ブラウザーでスクリプトがサポートされていないか、スクリプトを許可するように構成されていません。ここをクリックすると、スクリプトを使用せずにこのレポートが表示されます**。
+- **ブラウザーでスクリプトがサポートされていないか、スクリプトを許可するように構成されていません。ここをクリックして、スクリプトを使用せずにこのレポートを表示します**。
 
  スクリプトを使用せずにレポートを表示することを選択した場合、レポート ツール バーやドキュメント マップなどのレポート ビューアー機能を使用しない HTML でレポートが表示されます。
 
@@ -155,12 +153,11 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>次の手順
 
-[検索して、web ポータルでレポートを表示します。](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Web ポータルを使用したレポートの検索と表示](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)  
 [Web ポータル (SSRS ネイティブ モード)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
 

@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services で、外部データセットの使用 |Microsoft ドキュメント"
+title: "Reporting Services での外部データセットの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services での外部データセットの使用
-  **データセット**切断されると、オブジェクトがサポートするサーバーの全体の分散データ シナリオを[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]です。 **データセット**オブジェクトは、データ ソースに関係なく一貫したリレーショナル プログラミング モデルを提供するデータのメモリ常駐型の表現。 また、複数の異なるデータ ソースや XML データで使用でき、アプリケーションのデータをローカルに管理することも可能です。 **データセット**オブジェクトが関連するテーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 ため、**データセット**を格納し、データのデータを公開するオブジェクトの用途のためには多くの場合、処理およびに変換する**データセット**オブジェクトに関するレポートをそのデータの発生前にします。  
+  非接続の分散データ シナリオを [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] でサポートする場合、その中心となるのが **DataSet** オブジェクトです。 **DataSet** オブジェクトはメモリ上に保持されたデータを表し、データ ソースとは無関係に一貫したリレーショナル プログラミング モデルを提供します。 また、複数の異なるデータ ソースや XML データで使用でき、アプリケーションのデータをローカルに管理することも可能です。 **DataSet** オブジェクトは、関連テーブル、制約、およびテーブル間のリレーションシップを含む、完全なデータセットを表します。 **DataSet** オブジェクトには、データを格納し、表示するための柔軟な機能が備わっています。そのため、データに関するレポートを生成するときは、多くの場合、事前にそのデータが処理され、**DataSet** オブジェクトに変換されます。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]データ処理拡張機能を統合でき、任意のカスタム**データセット**外部アプリケーションによって作成されるオブジェクト。 カスタム データ処理拡張機能を作成するためには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]間の仲介役となる、**データセット**オブジェクトとレポート サーバー。 これを処理するためのコードのほとんど**データセット**にオブジェクトが含まれている、 **DataReader**を作成するクラス。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用すると、外部アプリケーションによって作成されたあらゆるカスタム **DataSet** オブジェクトを統合できます。 そのためには、**DataSet** オブジェクトとレポート サーバー間の橋渡し役となるカスタム データ処理拡張機能を [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に作成してください。 この **DataSet** オブジェクトを処理するためのコードのほとんどは、作成する **DataReader** クラスに含まれています。  
   
- 公開するには、まず、**データセット**、レポート サーバーにオブジェクトが、プロバイダー固有のメソッドを実装するには、 **DataReader**読み込むことができるクラス、**データセット**オブジェクト。 次の例は、静的データを読み込む方法を示しています、**データセット**オブジェクト プロバイダーに固有のメソッドを使用して、 **DataReader**クラスです。  
+ **DataSet** オブジェクトをレポート サーバーに公開する場合、最初に **DataSet** オブジェクトを設定できるプロバイダー固有のメソッドを **DataReader** クラスに実装します。 次の例は、**DataReader** クラスのプロバイダー固有メソッドを使用して、静的データを **DataSet** オブジェクトに読み込む方法を示しています。  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,12 +166,11 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- を作成するか、データセットを取得するを使用して、**データセット**の実装にオブジェクト、**読み取り**、 **GetValue**、 **GetName**、 **GetOrdinal**、 **GetFieldType**、および**FieldCount**のメンバー、 **DataReader**クラスです。  
+ データセットを作成または取得したら、**DataReader** クラスの **Read**、**GetValue**、**GetName**、**GetOrdinal**、**GetFieldType**、および **FieldCount** の各メンバーの実装に **DataSet** オブジェクトを使用できます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services の拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [データ処理拡張機能の実装](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

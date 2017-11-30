@@ -1,5 +1,5 @@
 ---
-title: "rskeymgmt ユーティリティ (SSRS) |Microsoft ドキュメント"
+title: "rskeymgmt ユーティリティ (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5e71c6c5cb692355df51b2d9b7e2caa8c330f5b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
   重要なレポート サーバー データを不正アクセスから保護するための対称キーを、抽出、復元、作成、および削除します。 また、このユーティリティは、レポート サーバー インスタンスをスケール アウト配置に追加する場合にも使用されます。 *レポート サーバーのスケール アウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -155,7 +154,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>同じコンピューター上の複数のレポート サーバー インスタンスの追加  
  同じコンピューターにインストールされている複数のレポート サーバー インスタンスから、スケール アウト配置を作成できます。 ローカルにインストールされているレポート サーバー インスタンスを追加する場合、 **-u** および **-v** 引数は設定しないでください。 **-u** および **-v** 引数は、リモート コンピューターからインスタンスを追加する場合にのみ使用します。 これらの引数を指定すると、"ユーザー資格情報はローカル接続には使用できません" というエラーが返されます。  
   
- 次の例は、複数のローカル インスタンスを使用してスケール アウト配置を作成する構文です。 この例では\< **initializedinstance**> レポート サーバー データベースを使用して既に初期化されているインスタンスの名前を指定し、 \<**パラメタ**> 展開に追加するインスタンスの名前を指定します。  
+ 次の例は、複数のローカル インスタンスを使用してスケール アウト配置を作成する構文です。 この例で、\<**initializedinstance**> は、レポート サーバー データベースを使用するために初期化済みのインスタンスの名前であり、\<**newinstance**> は配置に追加するインスタンスの名前です。  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -171,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>ファイルの場所  
- Rskeymgmt.exe は  **\<*ドライブ*>: \Program Files\Microsoft SQL server \110\tools\binn * * または  **\<*ドライブ*>: \Program Files (x86) \Microsoft SQL Server\110\Tools\Binn** です。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
+ Rskeymgmt.exe is は、**\<*ドライブ*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** または **\<*ドライブ*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
 ## <a name="remarks"></a>解説  
  レポート サーバーは、格納された資格情報および接続情報を暗号化します。 データの暗号化には、公開キーおよび対称キーが使用されます。 レポート サーバーを実行するには、レポート サーバー データベースに有効なキーが含まれている必要があります。 キーのバックアップ、削除、復元を行うには **rskeymgmt** を使用します。 このツールには、キーを復元できない場合に、使用できなくなった暗号化されたコンテンツを削除する方法が用意されています。  
@@ -182,9 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>参照  
  [スケールアウト配置 - Reporting Services のネイティブ モード (構成マネージャー)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services レポート サーバー &#40;です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ &#40;です。SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [構成および暗号化キー &#40; を管理します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-
