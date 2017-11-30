@@ -1,5 +1,5 @@
 ---
-title: "式の合計、集計、および組み込みコレクションのスコープ |Microsoft ドキュメント"
+title: "合計、集計、および組み込みコレクションの式のスコープ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 238c0537821da0ab64a6eb27121a9f98d29ad9bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d713c0c3cf84bb17e0a2bd318a2b59179fa5edf9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>合計、集計、および組み込みコレクションの式のスコープ
   式の作成に関して、 *スコープ* という用語は、さまざまな文脈で用いられています。 スコープは、式を評価するのに使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。 *スコープ* という用語は、式の評価、集計関数の構文、条件付き表示に関連したトピックと、これらの領域に関連したエラー メッセージで使用されます。 次の説明を参考にして、どの意味で *スコープ* が適用されているかを区別してください。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **名前付きスコープ** 式のスコープ内にあるデータセット、データ領域、またはデータ領域グループの名前。 集計計算では、コンテナー スコープを指定できます。 行グループと列グループの両方の名前付きスコープを 1 つの式で指定することはできません。 式が集計の集計に使用される場合を除き、包含されたスコープを指定することはできません。  
   
-     次の式は、SellStartDate と LastReceiptDate の間にある年数を生成します。 これらのフィールドは、DataSet1 と DataSet2 の異なる 2 つのデータセットに含まれます。 [最初の関数と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)DataSet1 と DataSet2 にある LastReceiptDate の最初の値で SellStartDate の最初の値は、集計関数を返します。  
+     次の式は、SellStartDate と LastReceiptDate の間にある年数を生成します。 これらのフィールドは、DataSet1 と DataSet2 の異なる 2 つのデータセットに含まれます。 集計関数である [First 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) は、DataSet1 にある SellStartDate の最初の値と、DataSet2 にある LastReceiptDate の最初の値を返します。  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  レポートの場所によっては、スコープを指定する必要があります。 たとえば、デザイン画面上のテキスト ボックスには、 `=Max(Fields!Sales.Value,"Dataset1")`のように、使用するデータセットの名前を指定する必要があります。 その他の場所には、暗黙的な既定のスコープが存在します。 たとえば、グループ スコープ内でテキスト ボックスの集計を指定しない場合は、既定の集計 First が使用されます。  
   
- 各集計関数のトピックには、使用可能なスコープが一覧表示されます。 詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+ 各集計関数のトピックには、使用可能なスコープが一覧表示されます。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
 ##  <a name="Examples"></a> テーブル データ領域の集計式の例  
  既定以外のスコープを指定する式を作成するには練習が必要です。 次の図と表は、さまざまなスコープを理解するのに役立ちます。 図は、年度、四半期、および販売区域ごとの販売品目の数量を表した販売情報テーブル内の各セルの名称を示したものです。 行グループと列グループの構造を表示する行ハンドルと列ハンドルの視覚的な手掛かりが、入れ子になったグループを示しています。 テーブルの構造は次のとおりです。  
@@ -114,14 +114,14 @@ ms.lasthandoff: 08/09/2017
 |C07|外部行グループ "Cat"|[Cat]<br /><br /> [Sum(Qty)]|`=Fields!Cat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C08|C07 と同じ|||  
 |C09|外部行グループ "Cat" と内部列グループ "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C10|C07 と同じ|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
-|C11|外部行グループ "Cat" と列グループ "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
+|C10|C07 と同じ|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
+|C11|外部行グループ "Cat" と列グループ "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
 |C12|内部行グループ "Subcat"|[Subcat]<br /><br /> [Sum(Qty)]|`=Fields!SubCat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C13|内部行グループ "Subcat" と内部列グループ "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C14|内部行グループ "Subcat"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
-|C15|内部行グループ "Subcat" と列グループ "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C14|内部行グループ "Subcat"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C15|内部行グループ "Subcat" と列グループ "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- Tablix データ領域にある視覚的な合図の解釈に関する詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。 Tablix データ領域の詳細については、次を参照してください。 [Tablix データ領域のセル、行と列 &#40;です。レポート ビルダー&#41;SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)です。 式や集計に関する詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+ Tablix データ領域にある視覚的な合図の解釈に関する詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。 Tablix データ領域に関する詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。 式や集計に関する詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
   
 ##  <a name="Sparklines"></a> スパークラインのスケールの同期  
@@ -157,7 +157,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Sort"></a> 並べ替え順序を同期する並べ替え式の指定  
  対話的な並べ替えボタンをテーブル列に追加すると、共通のコンテナー スコープを持つ複数のアイテムの並べ替えを同期できます。 たとえば、並べ替えボタンをマトリックス内の列ヘッダーに追加し、コンテナー スコープをマトリックスにバインドされたデータセットの名前として指定します。 並べ替えボタンをクリックすると、マトリックス行が並べ替えられるだけでなく、同じデータセットにバインドされたグラフのグラフ系列グループも並べ替えられます。 この方法により、そのデータセットに依存するすべてのデータ領域を同期して、同じ並べ替え順で表示することができます。  
   
- 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="Nulls"></a> セルの NULL 値または 0 の非表示  
@@ -166,9 +166,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [グループ式の例 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [再帰型階層グループ &#40; を作成します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [書式設定テキストとプレース ホルダー (&) #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

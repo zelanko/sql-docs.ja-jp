@@ -1,5 +1,5 @@
 ---
-title: "SetServiceState メソッド (WMI MSReportServer_ConfigurationSetting) |Microsoft ドキュメント"
+title: "SetServiceState メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetServiceState method
+helpviewer_keywords: SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 85e26f683c03e9b411ae3dc7d17f1b326981740d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setservicestate"></a>SetServiceState ConfigurationSetting メソッド
+# <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting メソッド - SetServiceState
   レポート サーバーの Windows サービスおよび Web サービスを開始または停止します。  
   
 ## <a name="syntax"></a>構文  
@@ -57,7 +53,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  レポート マネージャーの目的の状態を示す **Boolean** 値。
  
  > [!NOTE] 
- > この設定は、SQL Server 2016 Reporting Services Cumulative Update 2 の時点で廃止されました。 Web ポータルは、常に有効にします。 値は無視されます。
+ > この設定は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で廃止されました。 Web ポータルは常に有効になります。 値は無視されます。
   
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
@@ -74,4 +70,3 @@ public void SetServiceState(Boolean EnableWindowsService,
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

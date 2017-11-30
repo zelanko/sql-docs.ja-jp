@@ -1,5 +1,5 @@
 ---
-title: "無効な要求を防止 |Microsoft ドキュメント"
+title: "無効な要求の回避 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - invalid requests [Reporting Services]
 - exceptions [Reporting Services], invalid requests
 - valid requests [Reporting Services]
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 830e388abe098bab402e5af56486d1e6cd528e98
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 73f896be02488d48233e041a60c26aff914634ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preventing-invalid-requests"></a>無効な要求の回避
-  アプリケーション フローを分析し、レポート サーバーに送信される要求が有効であることを確認することによって、ある種類の例外がスローされないようにすることができます。 たとえば、ユーザーがレポートの名前、データ ソース、その他のレポート サーバー アイテムを追加または更新できるアプリケーションで、ユーザーが入力するテキストを検証する必要があります。 また、要求をレポート サーバーに送信する前に予約文字を常に確認する必要があります。 使用条件**場合**ステートメントまたはレポート サーバーに要求を送信するために必要な条件を満たしていないことをユーザーにアラートを生成する、コード内の他の論理コンストラクト。  
+  アプリケーション フローを分析し、レポート サーバーに送信される要求が有効であることを確認することによって、ある種類の例外がスローされないようにすることができます。 たとえば、ユーザーがレポートの名前、データ ソース、その他のレポート サーバー アイテムを追加または更新できるアプリケーションで、ユーザーが入力するテキストを検証する必要があります。 また、要求をレポート サーバーに送信する前に予約文字を常に確認する必要があります。 コードで条件付きの **if** ステートメントまたは他の論理構造を使って、要求をレポート サーバーに送信するために必要な条件を満たしていないことをユーザーに警告します。  
   
  次の単純な C# の例では、ユーザーがスラッシュ (/) 文字を含む名前でレポートを作成しようとすると、わかりやすいエラー メッセージが表示されます。  
   
@@ -75,11 +73,10 @@ private void PublishReport()
 }  
 ```  
   
- 要求がレポート サーバーに送信する前に回避できるエラーの種類の詳細については、次を参照してください。 [SoapException エラー テーブル](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)です。 Try ブロックと catch ブロックを使用して、前の例をさらに強化する方法の詳細については、次を参照してください。[再試行を使用すると、Catch ブロック](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)です。  
+ 要求がレポート サーバーに送信される前に回避できるエラーの種類については、「[SoapException エラー テーブル](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)」を参照してください。 try ブロックまたは catch ブロックを使用して上記の例をさらに強化した内容については、「[Try ブロックと Catch ブロックの使用](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services での例外処理の概要](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services における例外処理の概要](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException クラス](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "データ ドリブン サブスクリプション |Microsoft ドキュメント"
+title: "データ ドリブン サブスクリプション | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e4ffac2b4342d0f8b3c30a9d76cdc7b0ecf098c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cd7d94c80d9198348f0f91ec39b7296d6602ef02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-driven-subscriptions"></a>データ ドリブン サブスクリプション
   データ ドリブン サブスクリプションでは、実行時に外部データ ソースから取得した動的サブスクリプション データを使用できます。 サブスクリプションの定義時に指定した静的テキストや既定値を使用することもできます。 データ ドリブン サブスクリプションを使用すると、次のようなことが可能になります。  
@@ -66,8 +65,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [データ ドリブン サブスクリプション ページ &#40; を作成します。レポート マネージャー &#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
- [事前に読み込むキャッシュ & #40 です。レポート マネージャー &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [[データ ドリブン サブスクリプションの作成] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

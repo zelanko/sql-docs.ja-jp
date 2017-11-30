@@ -1,5 +1,5 @@
 ---
-title: "レポート定義スキーマのバージョン (SSRS) の検索 |Microsoft ドキュメント"
+title: "レポート定義スキーマのバージョンを確認する (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,19 +15,17 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dadc45cb80ec7fa1fedca54af2a17eef5eef2bf6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="find-the-report-definition-schema-version-ssrs"></a>レポート定義スキーマのバージョンを確認する (SSRS)
 
 レポート定義ファイルでは、rdl ファイルの検証に使用されるレポート定義スキーマのバージョンに対応して、RDL 名前空間が指定されます。 以前の名前空間に対応するレポートが作成済みの場合、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーやレポート ビルダーなどのレポート作成環境で .rdl ファイルを開くと、バックアップ ファイルが自動的に作成され、レポートが現在の名前空間にアップグレードされます。 アップグレードされたレポート定義を保存すると、変換された .rdl ファイルが保存されることになります。 これは、レポート定義をアップグレードする唯一の方法です。 レポート定義そのものはレポート サーバーでアップグレードされません。 コンパイル済みレポートが、レポート サーバーで自動的にアップグレードされます。 詳細については、「 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>レポート デザイナーの RDL スキーマのバージョンを確認する方法  
   
-1.  新しいプロジェクトを開きます。 選択したプロジェクトのバージョンにより、RDL スキーマのバージョンが決まります。 SQL Server で 1 つ以上のスキーマ バージョンはサポートされています。 詳細については、次を参照してください。[展開および SQL Server Data Tools のバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)です。  
+1.  新しいプロジェクトを開きます。 選択したプロジェクトのバージョンにより、RDL スキーマのバージョンが決まります。 SQL Server では、複数のスキーマ バージョンがサポートされています。 詳細については、「[SQL Server データ ツールの配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)」を参照してください。  
   
 2.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
@@ -91,7 +89,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)   
-[レポート定義言語](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[レポート定義言語 (Report Definition Language)](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

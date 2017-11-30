@@ -1,5 +1,5 @@
 ---
-title: "レポート ページ上の Tablix データ領域の表示を制御する |Microsoft ドキュメント"
+title: "レポート ページでの Tablix データ領域の表示の制御 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>レポート ページでの Tablix データ領域の表示の制御
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでテーブル、マトリックス、または一覧のデータ領域に設定して、レポートを表示するときのそれらの外観を変更できるプロパティについて説明します。  
@@ -29,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="controlling-the-appearance-of-data"></a>データの外観の制御  
 テーブル、マトリックス、および一覧のデータ領域はすべて、 *Tablix* データ領域の例です。 次の機能を使用して、Tablix データ領域の外観を制御できます。  
   
--   **データの書式設定:** テーブル、マトリックス、または一覧のデータを書式設定するには、セル内のテキスト ボックスの書式設定のプロパティを設定します。 複数のセルのプロパティを同時に設定できます。 グラフ内のデータを書式設定するには、系列の書式設定のプロパティを設定します。 詳細については、「[レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)」および「[グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)」を参照してください。  
+-   **データの書式設定:** テーブル、マトリックス、または一覧のデータを書式設定するには、セル内のテキスト ボックスの書式設定のプロパティを設定します。 複数のセルのプロパティを同時に設定できます。 グラフ内のデータを書式設定するには、系列の書式設定のプロパティを設定します。 詳細については、「[レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)」と「[グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **式を作成する。** 詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="controlling-tablix-data-region-position-and-expansion-on-a-page"></a>ページ上の Tablix データ領域の位置および拡張の制御  
  次の機能を使用して、表示されたレポートにおける Tablix データ領域の表示方法を制御できます。  
   
--   **その他のレポート アイテムに対する Tablix データ領域の位置を制御する。** Tablix データ領域は、レポート デザイン画面上のその他のレポート アイテムの上、横、または下に配置できます。 実行時に、Tablix データ領域は、リンクされたデータセット用に取得されたデータに応じて [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって拡張され、必要に応じてピア レポート アイテムが移動します。 Tablix を別のレポート アイテムの横に固定するには、レポート アイテムをピアとして設定して、それらの相対的位置を調整します。 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
+-   **その他のレポート アイテムに対する Tablix データ領域の位置を制御する。** Tablix データ領域は、レポート デザイン画面上のその他のレポート アイテムの上、横、または下に配置できます。 実行時に、Tablix データ領域は、リンクされたデータセット用に取得されたデータに応じて [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって拡張され、必要に応じてピア レポート アイテムが移動します。 Tablix を別のレポート アイテムの横に固定するには、レポート アイテムをピアとして設定して、それらの相対的位置を調整します。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
 -   **拡張方向を変更する。** Tablix データ領域がページの左から右 (LTR) に拡張するのか、右から左 (RTL) に拡張するのかを制御するには、[プロパティ] ウィンドウからアクセスできる Direction プロパティを使用します。 詳細については、「[データ領域の表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -75,15 +74,14 @@ ms.lasthandoff: 08/09/2017
  別の形式にレポートをエクスポートすることが、ページ上の Tablix データ領域の表示に与える影響の詳細については、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [同じデータセット &#40; に複数のデータ領域のリンクレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [入れ子になったデータ領域と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [式のスコープの合計、集計、および組み込みコレクション & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [改ページ、見出し、列、および行 &#40; を制御します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Tablix データ領域と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [テーブルと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [マトリックスを作成します。](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [リストを持つ請求書とフォームを作成します。](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [改ページ、見出し、列、および行の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [マトリックスを作成する](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [一覧がある請求書とフォームを作成する](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

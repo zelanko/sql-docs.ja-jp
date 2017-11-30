@@ -1,5 +1,5 @@
 ---
-title: "表示 (レポート ビルダーおよび SSRS) のグループでヘッダーとフッター |Microsoft ドキュメント"
+title: "グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,29 +11,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 5c1004a59c0cda51fb5cf9230b81a18945765005
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域では、グループに関連付けられている動的行と一緒に、静的行 (グループ ヘッダー、グループ フッターなど) を表示するかどうかを制御できます。  
   
- 複数のページですべての列見出しまたは行見出しを繰り返し表示するには、Tablix データ領域のプロパティを設定します。 詳細については、次を参照してください。[表示行および列ヘッダーを複数のページ (レポート ビルダーおよび SSRS) で](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)です。  
+ 複数のページですべての列見出しまたは行見出しを繰り返し表示するには、Tablix データ領域のプロパティを設定します。 詳細については、「[複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
   
- 入れ子になったグループに関連付けられている動的行と動的列の表示動作、または、ラベルや小計に関連付けられている静的行と静的列の表示動作を制御するには、Tablix メンバーのプロパティを設定する必要があります。 Tablix メンバーは、静的な行または列、あるいは動的な行または列を表します。 静的メンバーが表示されるのは 1 回だけです。 たとえば、代表的な静的行に、総計行があります。 動的メンバーは、1 グループにつき 1 回表示されます。 たとえば、特定のグループに対し [Territory] というグループ式が割り当てられているとき、そのグループに関連付けられている行は、一意の区域 (territory) 値ごとに 1 回表示されることになります。 Tablix メンバーの詳細については、次を参照してください。 [Tablix データ領域のセル、行と列 &#40;です。レポート ビルダー"&"#41;SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)です。  
+ 入れ子になったグループに関連付けられている動的行と動的列の表示動作、または、ラベルや小計に関連付けられている静的行と静的列の表示動作を制御するには、Tablix メンバーのプロパティを設定する必要があります。 Tablix メンバーは、静的な行または列、あるいは動的な行または列を表します。 静的メンバーが表示されるのは 1 回だけです。 たとえば、代表的な静的行に、総計行があります。 動的メンバーは、1 グループにつき 1 回表示されます。 たとえば、特定のグループに対し [Territory] というグループ式が割り当てられているとき、そのグループに関連付けられている行は、一意の区域 (territory) 値ごとに 1 回表示されることになります。 Tablix のメンバーに関する詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
  Tablix メンバーのプロパティを設定するには、グループ化ペインで Tablix メンバーを選択し、プロパティ ペインで **KeepWithGroup**、 **KeepTogether**、および **RepeatOnNewPage** の各プロパティを設定します。 グループ ヘッダーとグループ フッターをグループと同じページに表示するには、 **KeepWithGroup** を使用します。 グループの行または列と一緒に静的メンバーを表示するには、 **KeepTogether** を使用します。 **KeepWithGroup** 値によって指定された行グループ メンバーの少なくとも 1 つの完全なインスタンスが表示されるページごとにグループ ヘッダーまたはグループ フッターを繰り返すには、 **RepeatOnNewPage** を使用します。 列グループ メンバーに対して、**RepeatOnNewPage** はサポートされません。  
   
 > [!NOTE]  
->  **KeepWithGroup**、 **KeepTogether**、および**RepeatOnNewPage**グループ メンバーのプロパティを使用して設定できるは、 **詳細設定モード**のグループ化ウィンドウです。 詳細については、次を参照してください。[グループ化ペインと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  **KeepWithGroup**、**KeepTogether**、および **RepeatOnNewPage** は、グループ化ペインの **[詳細設定モード]** を使用して設定できるグループ メンバーのプロパティです。 詳細については、「[グループ化ペイン &#40;レポート ビルダー&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,8 +74,7 @@ ms.lasthandoff: 09/27/2017
 5.  (省略可) レポートをプレビューします。 可能な限り、レポート レンダラーは指定された列グループ メンバーと共にこのメンバーを維持します。  
   
 ## <a name="see-also"></a>参照  
- [Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   
-

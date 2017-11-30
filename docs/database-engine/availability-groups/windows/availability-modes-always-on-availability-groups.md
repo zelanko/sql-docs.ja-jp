@@ -1,12 +1,14 @@
 ---
 title: "可用性モード (Always On 可用性グループ) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +19,23 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性モード (AlwaysOn 可用性グループ)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の *可用性モード* は、可用性レプリカが同期コミット モードで動作できるかどうかを指定するレプリカのプロパティです。 可用性レプリカごとに、可用性モードを同期コミット モードまたは非同期コミット モードとして構成する必要があります。  プライマリ レプリカが *非同期コミット モード*で構成されている場合、プライマリ レプリカはセカンダリ レプリカによる受信トランザクション ログ レコードのディスクへの書き込みを ( *ログ書き込み*) 待機しません。 特定のセカンダリ レプリカが非同期コミット モードで構成されている場合、プライマリ レプリカはそのセカンダリ レプリカによるログ書き込みを待機しません。 プライマリ レプリカとセカンダリ レプリカの両方が *同期コミット モード*で構成されている場合、プライマリ レプリカはログが書き込まれたことをセカンダリ レプリカが確認するまで待機します (プライマリの *セッション タイムアウト期間*内に、セカンダリ レプリカがプライマリ レプリカに対する ping に失敗した場合を除きます)。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の *可用性モード* は、可用性レプリカが同期コミット モードで動作できるかどうかを指定するレプリカのプロパティです。 可用性レプリカごとに、可用性モードを同期コミット モード、非同期コミット モード、または構成のみモードとして構成する必要があります。  プライマリ レプリカが *非同期コミット モード*で構成されている場合、プライマリ レプリカはセカンダリ レプリカによる受信トランザクション ログ レコードのディスクへの書き込みを ( *ログ書き込み*) 待機しません。 特定のセカンダリ レプリカが非同期コミット モードで構成されている場合、プライマリ レプリカはそのセカンダリ レプリカによるログ書き込みを待機しません。 プライマリ レプリカとセカンダリ レプリカの両方が *同期コミット モード*で構成されている場合、プライマリ レプリカはログが書き込まれたことをセカンダリ レプリカが確認するまで待機します (プライマリの *セッション タイムアウト期間*内に、セカンダリ レプリカがプライマリ レプリカに対する ping に失敗した場合を除きます)。 
   
+
 > [!NOTE]  
 >  セカンダリ レプリカがプライマリのセッション タイムアウト期間を超えた場合、プライマリ レプリカはそのセカンダリ レプリカに対して一時的に非同期コミット モードに移行します。 セカンダリ レプリカがプライマリ レプリカと再接続すると、同期コミット モードが再開されます。  
   
@@ -58,6 +61,8 @@ ms.lasthandoff: 08/02/2017
 -   *同期コミット モード* は、パフォーマンスよりも高可用性が重視され、トランザクションの遅延が増加するのが欠点です。 同期コミット モードでは、セカンダリ レプリカでログがディスクに書き込まれるまで、トランザクションの確認はクライアントに送信されません。 セカンダリ データベースでデータの同期が開始されると、セカンダリ レプリカで、対応するプライマリ データベースから受信したログ レコードの適用が開始されます。 すべてのログ レコードが書き込まれるとすぐに、セカンダリ データベースが SYNCHRONIZED 状態になります。 その後、すべての新しいトランザクションがセカンダリ レプリカによって書き込まれてから、ログ レコードがローカル ログ ファイルに書き込まれます。 特定のセカンダリ レプリカのすべてのセカンダリ データベースが同期されると、同期コミット モードでは、手動でのフェールオーバーがサポートされます (オプションで自動フェールオーバーがサポートされます)。  
   
      詳細については、このトピックの「 [同期コミット可用性モード](#SyncCommitAvMode)」を参照してください。  
+
+-   "*構成のみモード*" は、Windows Server フェールオーバー クラスター上にない可用性グループに適用されます。 構成のみモードのレプリカには、ユーザー データは含まれません。 構成のみモードでは、レプリカの master データベースに可用性グループの構成メタデータが格納されます。 詳しくは、[構成のみのレプリカでの可用性グループ](../../../linux/sql-server-linux-availability-group-ha.md)に関するページをご覧ください。
   
  次の図には、5 つの可用性レプリカがある可用性グループを示しています。 プライマリ レプリカおよびセカンダリ レプリカの 1 つには、自動フェールオーバーが指定された同期コミット モードが構成されています。 もう 1 つのセカンダリ レプリカは、計画的な手動フェールオーバーのみが指定された同期コミット モードで構成されています。残りの 2 つのセカンダリ レプリカは、強制手動フェールオーバー (通常は *強制フェールオーバー*と呼ばれます) のみをサポートする非同期コミット モードで構成されています。  
   
@@ -185,4 +190,3 @@ ms.lasthandoff: 08/02/2017
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Library Delivery in Reporting Services |Microsoft ドキュメント"
+title: "Reporting Services での SharePoint ライブラリへの配信 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
  対象ライブラリ内のレポートの **Title** プロパティ (オプション) を指定します。 これは、ライブラリに格納されているすべてのアイテムに対する標準プロパティです。 ユーザーは、SharePoint サイトでライブラリ コンテンツを表示するときに、このプロパティを表示するか非表示にするかを指定できます。  
   
  [パス]  
- SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 例:`http://mySharePointWeb/MySite/MyDocLib`以外の場合は、 `http://mySharePointWeb` Web アプリケーションを示す"MySite"は、SharePoint サイトと、"MyDocLib"は、SharePoint ライブラリ、レポートが配信されます。  
+ SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 たとえば、`http://mySharePointWeb/MySite/MyDocLib` の場合、`http://mySharePointWeb` は Web アプリケーションを表し、"MySite" は SharePoint サイト、"MyDocLib" はレポートが配信される SharePoint ライブラリです。  
   
  ページ、サイト、またはリストを指定することはできません。 対象コンテナーは、同じサイトまたはファームにあるライブラリであることが必要です。  
   
@@ -91,9 +90,8 @@ ms.lasthandoff: 08/09/2017
  [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 **[自動増分]** または **[なし]**を指定した場合、配信が失敗し、 **rsDeliveryError** エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint モードのレポート サーバーのサブスクリプション作成し、管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [サブスクリプションと配信 & #40 です。Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [資格情報とレポート データ ソースの接続情報を指定します。](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

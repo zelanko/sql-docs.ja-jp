@@ -1,5 +1,5 @@
 ---
-title: "SharePoint ライブラリに共有データ ソースをパブリッシュ |Microsoft ドキュメント"
+title: "SharePoint ライブラリへの共有データ ソースのパブリッシュ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6fc6dc084a6434a8c0524136ca589a40c4adba41
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9446eee0c8c36cb9a962de16da272c6ba5829891
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint ライブラリへの共有データ ソースのパブリッシュ
   SharePoint 統合モードで実行されているレポート サーバーに共有データ ソースをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、既存または新規のレポート サーバー プロジェクトを開きます。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]**をクリックします。 *\<プロジェクト >***プロパティ ページ** ダイアログ ボックスが表示されます。  
+2.  **[プロジェクト]** メニューの **[プロパティ]**をクリックします。 *[\<プロジェクト>***プロパティ ページ]** ダイアログ ボックスが開きます。  
   
 3.  SharePoint サイトへのパブリッシュに使用する **[構成]** を選択します。  
   
@@ -55,15 +54,14 @@ ms.lasthandoff: 08/09/2017
 9. ソリューション エクスプローラーで、パブリッシュする共有データ ソースを右クリックし、 **[配置]**をクリックします。 これで、 **[TargetDataSourceFolder]**で指定した場所にデータ ソースがパブリッシュされます。 配置エラーは出力ウィンドウに表示されます。  
   
     > [!NOTE]  
-    >  共有データ ソースを SharePoint サイトにパブリッシュすると、ファイル名拡張子が .rsds に変更されます。 共有データ ソースの編集と管理は、SharePoint サイト上で直接行うことができます。 詳細については、「[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。  
+    >  共有データ ソースを SharePoint サイトにパブリッシュすると、ファイル名拡張子が .rsds に変更されます。 共有データ ソースの編集と管理は、SharePoint サイト上で直接行うことができます。 詳細については、「[共有データ ソースを作成および管理する &#40;Reporting Services の SharePoint 統合モード&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint ライブラリへのレポートのパブリッシュ](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [レポート サーバーにレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [Office データ接続 &#40; を使用します。odc &#41;でレポートと #40 です。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [レポート サーバーへのレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
+ [レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   
-

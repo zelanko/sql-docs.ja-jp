@@ -1,5 +1,5 @@
 ---
-title: "InitializeReportServer メソッド (WMI MSReportServer_ConfigurationSetting) |Microsoft ドキュメント"
+title: "InitializeReportServer メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- InitializeReportServer method
+helpviewer_keywords: InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 54b03cf3453777e6d1cc74e27d77686978e2516c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cc11b7a514b96c08cc87f8563977dadb9fb71cf8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---initializereportserver"></a>InitializeReportServer ConfigurationSetting メソッド
+# <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting メソッド - InitializeReportServer
   指定されたレポート サービス インスタンスを初期化します。  
   
 ## <a name="syntax"></a>構文  
@@ -74,4 +70,3 @@ public void InitializeReportServer(string InstallationID,
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

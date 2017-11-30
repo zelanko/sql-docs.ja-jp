@@ -2,11 +2,13 @@
 title: "SQL Server:Deprecated Features オブジェクト | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨機能が検出された回数を示す使用カウントを表示します。  
   
@@ -114,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ヒンディー語|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。 代わりに Indic_General_90 を使用してください。|  
 |かっこのない HOLDLOCK テーブル ヒント||  
 |IDENTITYCOL|IDENTITYCOL 構文が見つかりました。 $identity 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
-|COUNT_BIG(*) がないインデックス付きビューの選択リスト|集計インデックス付きビューの選択リストには、COUNT_BIG (*) を含める必要があります。|  
+|COUNT_BIG(\*) がないインデックス付きビューの選択リスト|集計インデックス付きビューの選択リストには、COUNT_BIG (\*) を含める必要があります。|  
 |INDEX_OPTION|オプションがかっこで囲まれていない CREATE TABLE、ALTER TABLE、または CREATE INDEX 構文が見つかりました。 現在の構文を使用してステートメントを書き直してください。 クエリごとに 1 回発生します。|  
 |INDEXKEY_PROPERTY|INDEXKEY_PROPERTY 構文が見つかりました。 sys.index_columns をクエリするようにステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |間接的な TVF ヒント|ビュー経由で複数ステートメントのテーブル値関数 (TVF) を呼び出す、テーブル ヒントの間接アプリケーションは、今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。|  
@@ -292,4 +294,3 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

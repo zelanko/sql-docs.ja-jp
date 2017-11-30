@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバーでカスタム認証またはフォーム認証を構成 |Microsoft ドキュメント"
+title: "レポート サーバーでカスタム認証またはフォーム認証を構成する | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>レポート サーバーでカスタム認証またはフォーム認証を構成する
 
@@ -32,9 +31,9 @@ Reporting Services に用意されている拡張可能なアーキテクチャ�
 実際に、カスタム認証拡張機能を配置するには、アセンブリとアプリケーション ファイルのコピー、構成ファイルの変更、テストを含む、複数の手順を実行する必要があります。 ここでは、構成ファイルで指定する認証設定のみに焦点を当てて説明します。  
 
 > [!NOTE]
->  カスタム認証拡張機能を作成するには、カスタム コードと [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] セキュリティに関する専門知識が必要です。 カスタム認証拡張機能を作成しない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory のグループとアカウントを使用できます。ただし、レポート サーバーの配置のスコープを大幅に縮小する必要があります。 カスタム認証について詳しくは、「 [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)」をご覧ください。
+>  カスタム認証拡張機能を作成するには、カスタム コードと [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] セキュリティに関する専門知識が必要です。 カスタム認証拡張機能を作成しない場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory のグループとアカウントを使用できます。ただし、レポート サーバーの配置のスコープを大幅に縮小する必要があります。 カスタム認証について詳しくは、「 [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)」をご覧ください。
 
-さらに、SharePoint 製品と統合されている SQL Server Reporting Services 環境でフォーム認証またはカスタム認証拡張機能を使用する場合は、選択した認証方法を使用する SharePoint サイトを構成する必要があります。 SharePoint における認証の構成に関する詳細については、 [Developer Network (MSDN) の「](http://go.microsoft.com/fwlink/?LinkId=115575) 認証の例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」をご覧ください。
+さらに、SharePoint 製品と統合された SQL Server Reporting Services 環境でフォーム認証またはカスタム認証拡張機能を使用する場合は、選択した認証方法を使用するように SharePoint サイトを構成する必要があります。 SharePoint における認証の構成に関する詳細については、 [Developer Network (MSDN) の「](http://go.microsoft.com/fwlink/?LinkId=115575) 認証の例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」をご覧ください。
 
 
 
@@ -42,7 +41,7 @@ Reporting Services に用意されている拡張可能なアーキテクチャ�
 
 1.  テキスト エディターで RSReportServer.config を開きます。
 
-2.  検索\<**認証**>。
+2.  \<**Authentication**> を検索します。
 
 3.  次の XML 構造をコピーします。
 
@@ -55,7 +54,7 @@ Reporting Services に用意されている拡張可能なアーキテクチャ�
     </Authentication>
     ```
 
-4.  既存のエントリを貼り付けます\<**認証**>。
+4.  これを \<**Authentication**> の既存のエントリ上に貼り付けます。
 
      **Custom** は他の認証の種類と併用できないので注意してください。
 
@@ -74,7 +73,7 @@ Reporting Services に用意されている拡張可能なアーキテクチャ�
     ```
     <identity impersonate = "false" />  
     ```
-9. 構成ファイルに **PassThroughCookies** 要素構造を追加します。 詳細については、次を参照してください[カスタム認証クッキーを Web ポータルを構成する。](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. 構成ファイルに **PassThroughCookies** 要素構造を追加します。 詳細については、「[カスタム認証クッキーを送信するように Web ポータルを構成する](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)」を参照してください。
   
 10. ファイルを保存します。  
   
@@ -85,9 +84,9 @@ Reporting Services に用意されている拡張可能なアーキテクチャ�
 ## <a name="see-also"></a>参照
 
 [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
-[Reporting Services のカスタム セキュリティのサンプル (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
+[Reporting Services カスタム セキュリティ サンプル (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
 [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   
 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [レポート サーバーで基本認証を構成する](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[レポート サーバーで Windows 認証を構成します。](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-他に質問しますか。 [Reporting Services のフォーラムを再試行してください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+[レポート サーバーで Windows 認証を構成する](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+その他の質問 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)

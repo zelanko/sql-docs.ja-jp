@@ -1,5 +1,5 @@
 ---
-title: "Tablix データ領域 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "Tablix データ領域 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]の Tablix データ領域は、行と列で構成されたセルにページ分割されたレポート データを表示する、汎用のレイアウト レポート アイテムです。 レポート データには、データ ソースから取得される詳細データや、指定したグループに分類される集計詳細データなどがあります。 各 Tablix セルには、テキスト ボックスや画像、Tablix 領域などの他のデータ領域、グラフ、ゲージなど、任意のレポート アイテムを含めることができます。 複数のレポート アイテムをセルに追加するには、まず、コンテナーとして機能する四角形を追加します。 次に、四角形にレポート アイテムを追加します。  
@@ -84,10 +83,9 @@ ms.lasthandoff: 08/09/2017
  [合計の追加] 機能によって、そのグループにスコープが設定されている値を表示するための行が、現在のグループの外側に自動的に作成されます。 静的な行および動的な行は、手動で追加することもできます。 視覚インジケーターは、静的な行と動的な行を見分けるのに便利です。 詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [同じデータセット &#40; に複数のデータ領域のリンクレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [レポート ページ &#40; での Tablix データ領域の表示を制御します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Tablix データ領域 &#40; の柔軟性をについてください。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

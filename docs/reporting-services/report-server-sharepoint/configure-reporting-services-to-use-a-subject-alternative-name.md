@@ -1,5 +1,5 @@
 ---
-title: "サブジェクト代替名を使用する Reporting Services の構成 |Microsoft ドキュメント"
+title: "サブジェクト代替名を使用するように Reporting Services を構成する | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,26 +14,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f1ead2884fe5826814d79e869c4c345cbf3d5b6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>サブジェクト代替名を使用する Reporting Services の構成します。
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>サブジェクト代替名を使用するように Reporting Services を構成する
 
-このトピックでは、Reporting Services (SSRS)、rsreportserver.config ファイルを変更し、Netsh.exe ツールを使用して、サブジェクトの別名 (SAN) を使用するを構成する方法について説明します。
+このトピックでは、rsreportserver.config ファイルを変更し、Netsh.exe ツールを使用することによって、サブジェクト代替名 (SAN) を使用するように Reporting Services (SSRS) を構成する方法について説明します。
 
 この手順は、レポート サービスの URL および Web サービス URL に適用されます。
 
 SAN を使用するには、SSL 証明書がサーバーに登録され、署名され、秘密キーを保持している必要があります。 自己署名証明書は使用できません  
   
- SSL 証明書を使用する Reporting Services の Url を構成することができます。 通常、証明書にはサブジェクト名のみが記載されているため、SSL (Secure Sockets Layer) セッションに対して許可される URL は 1 つだけです。 SAN は、多くの Url をリッスンし、他のアプリケーションとの SSL ポートを共有する SSL サービスを許可する証明書の追加フィールドです。 次のよう、SAN`www.s2.com`です。  
+ SSL 証明書を使用するように、Reporting Services の URL を構成できます。 通常、証明書にはサブジェクト名のみが記載されているため、SSL (Secure Sockets Layer) セッションに対して許可される URL は 1 つだけです。 SAN は証明書の追加フィールドであり、SSL サービスでさまざまな URL を待ち受け、SSL ポートを他のアプリケーションと共有することを可能にします。 SAN は `www.s2.com` のようになります。  
   
- Reporting Services の SSL 設定の詳細については、次を参照してください。[ネイティブ モードのレポート サーバーで SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)です。  
+ Reporting Services の SSL 設定の詳細については、「[ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>SSRS web サービスの URL のサブジェクトの別名を使用して構成します。
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>サブジェクト代替名を Web サービス URL に使用するように SSRS を構成する
   
 1.  Reporting Services 構成マネージャーを開始します。  
   
@@ -47,7 +46,7 @@ SAN を使用するには、SSL 証明書がサーバーに登録され、署名
   
 3.  rsreportserver.config ファイルを開きます。  
   
-     SSRS ネイティブ モードの場合、このファイルは既定では次のフォルダーにあります。  
+     SSRS ネイティブ モードの場合、ファイルは、既定では、次のフォルダーにあります。  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -55,7 +54,7 @@ SAN を使用するには、SSL 証明書がサーバーに登録され、署名
   
 4.  レポート サーバー Web サービス アプリケーションの URL セクションをコピーします。  
   
-     たとえば、次の元の URL セクションには。  
+     元の URL セクションの例:  
   
     ```  
         <URL>  
@@ -66,7 +65,7 @@ SAN を使用するには、SSL 証明書がサーバーに登録され、署名
   
     ```  
   
-     次の変更の URL セクションは次のとおりです。
+     変更後の URL セクション:
   
     ```  
     <URL>  
@@ -96,7 +95,7 @@ SAN を使用するには、SSL 証明書がサーバーに登録され、署名
     Netsh>http  
     ```  
   
-8.  次のように入力して、既存の urlacl を示してください。
+8.  次のように入力して、既存の urlacl を表示します。
   
     ```  
     Netsh http>show urlacl  
@@ -128,8 +127,7 @@ SAN を使用するには、SSL 証明書がサーバーに登録され、署名
 
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services 構成ファイルを変更します。](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [レポート サーバー Url を構成します。](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Reporting Services の構成ファイルの変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [レポート サーバーの URL の構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

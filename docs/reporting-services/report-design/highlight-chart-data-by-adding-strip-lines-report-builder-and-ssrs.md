@@ -1,5 +1,5 @@
 ---
-title: "ストリップ ライン (レポート ビルダーおよび SSRS) の追加によるグラフのデータを強調表示 |Microsoft ドキュメント"
+title: "ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bfe6d58d3ffc735c47359b94f1c368a1a6c3683
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS)
   ストリップ ライン (ストリップ) は、一定の間隔またはカスタムの間隔でグラフの背景を網掛け表示にする、横方向または縦方向の帯です。 ストリップ ラインを使用すると、次のことが可能になります。  
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/09/2017
 >  既定では、Interval は Auto に設定されます。つまり、グラフでは、カスタム ストリップ ラインの間隔が計算されません。 グラフでは、間隔値が設定されている場合のみ、ストリップ ラインの間隔が計算されます。  
   
 ## <a name="see-also"></a>参照  
- [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [グラフと &#40; を書式設定レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [移動平均をグラフ &#40; を追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフへの移動平均の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   
-

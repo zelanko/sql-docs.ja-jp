@@ -1,5 +1,5 @@
 ---
-title: "DatabaseLogonType プロパティ (WMI MSReportServer_ConfigurationSetting) |Microsoft ドキュメント"
+title: "DatabaseLogonType プロパティ (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseLogonType
-apilocation:
-- reportingservices.mof
+apiname: DatabaseLogonType
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseLogonType property
+helpviewer_keywords: DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69dbca2c2d131f82ca8734cf55eb633a6a83395e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 925aea3919ac0ef5e2787c3809576d52f9669d39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---databaselogontype"></a>DatabaseLogonType ConfigurationSetting プロパティ
+# <a name="configurationsetting-property---databaselogontype"></a>ConfigurationSetting プロパティ - DatabaseLogonType
   レポート サーバーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows サービス アカウント、Windows ユーザー アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのうちどれを使用してレポート サーバー データベースにアクセスするかを指定します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
@@ -71,4 +67,3 @@ public int DatabaseLogonType;
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

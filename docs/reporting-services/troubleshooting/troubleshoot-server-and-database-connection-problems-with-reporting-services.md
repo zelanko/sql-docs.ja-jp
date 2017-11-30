@@ -1,5 +1,5 @@
 ---
-title: "サーバーと Reporting Services を使ったデータベースの接続に関する問題のトラブルシューティング |Microsoft ドキュメント"
+title: "Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>サーバーと Reporting Services でのデータベース接続に関する問題をトラブルシューティングします。
+# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>データ ソース 'datasourcename' への接続を作成できません (rsErrorOpeningConnection)。  
@@ -63,7 +62,7 @@ SQL Server に接続している場合、既定の設定では SQL Server によ
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続したときの WMI エラー  
 Management Studio がレポート サーバーとの接続を確立する際、既定では、Reporting Services Windows Management Instrumentation (WMI) プロバイダーが使用されます。 WMI プロバイダーが正しくインストールされていない場合、レポート サーバーに接続しようとしたときに次のエラーが表示されます。  
   
-接続できません。\<サーバー名 >。 Reporting Services WMI プロバイダーがインストールされていないか、正しく構成されていません (Microsoft.SqlServer.Management.UI.RSClient)。  
+\<サーバー名> に接続できません。 Reporting Services WMI プロバイダーがインストールされていないか、正しく構成されていません (Microsoft.SqlServer.Management.UI.RSClient)。  
   
 このエラーを解決するにはソフトウェアを再インストールする必要があります。 それ以外の場合、一時的な回避策として、レポート サーバーに SOAP エンドポイント経由で接続する方法があります。  
   
@@ -127,5 +126,4 @@ SQL Server 2008 Reporting Services では、データベースへのアクセス
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

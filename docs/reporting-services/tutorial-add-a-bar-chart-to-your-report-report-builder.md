@@ -1,27 +1,25 @@
 ---
-title: "チュートリアル: レポート (レポート ビルダー) への横棒グラフの追加 |Microsoft ドキュメント"
+title: "チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 手順、レポート サーバーを参照する方法については、データセットを作成するデータ ソースを選択して参照してくださいこの系列の最初のチュートリアル:[チュートリアル: 基本的なテーブル レポート &#40;を作成します。レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、データ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
 このチュートリアルの推定所要時間: 15 分  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
-     ![レポート ビルダーを開始](../reporting-services/media/rb-getstarted.png "レポート ビルダーを開始")  
+     ![レポート ビルダーの作業の開始](../reporting-services/media/rb-getstarted.png "レポート ビルダーの作業の開始")  
   
      **[作業の開始]** ダイアログ ボックスが表示されない場合は、 **[ファイル]** >**[新規作成]**をクリックします。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。 
       
@@ -220,7 +218,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  グラフの底辺に沿った横軸をクリックして選択します。  
   
-3.  **ホーム**タブ >**数**グループ >**通貨**です。 横軸ラベルが通貨に変更されます。  
+3.  **[ホーム]** タブの **[数値]** グループで、**[通貨]** をクリックします。 横軸ラベルが通貨に変更されます。  
   
 3.  (省略可) 小数点以下の桁を削除します。 **[通貨]** ボタンの近くにある **[小数点表示桁下げ]** ボタンを 2 回クリックします。  
   
@@ -308,5 +306,4 @@ ms.lasthandoff: 08/09/2017
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

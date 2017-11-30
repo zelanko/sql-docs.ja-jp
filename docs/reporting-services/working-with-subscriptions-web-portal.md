@@ -1,28 +1,25 @@
 ---
-title: "サブスクリプション (web ポータル) の操作 |Microsoft ドキュメント"
+title: "サブスクリプションの操作 (Web ポータル) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 131c3a86efc1e3fe2c0e896f726f292ab5e0db55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-選択して [サブスクリプション] ページを取得することができます、**省略記号 (...)** 、レポートの選択**管理**を選択して**サブスクリプション**です。  
+レポートの **[省略記号 (...)]**、**[管理]**、**[サブスクリプション]** の順に選択して、[サブスクリプション] ページにアクセスすることができます。  
   
 [サブスクリプション] ページで、 **[+ 新しいサブスクリプション]**を選択すると、新しいサブスクリプションを作成できます。 既存のサブスクリプションを編集したり、選択したサブスクリプションを削除したりすることもできます。  
   
@@ -93,8 +90,7 @@ ms.lasthandoff: 08/09/2017
 クエリが作成された後、必要なフィールドに値を割り当てることができます。 手動のデータを入力するか、作成したデータセットからフィールドを選択できます。
 
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
-[改ページ調整されたレポートの使用](working-with-paginated-reports-web-portal.md)  
-[共有データセットを操作します。](../reporting-services/work-with-shared-datasets-web-portal.md)
+[ページ分割されたレポートの使用](working-with-paginated-reports-web-portal.md)  
+[共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

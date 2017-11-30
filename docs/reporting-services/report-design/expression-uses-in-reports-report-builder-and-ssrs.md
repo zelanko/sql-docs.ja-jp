@@ -1,5 +1,5 @@
 ---
-title: "式はレポート (レポート ビルダーおよび SSRS) の使用 |Microsoft ドキュメント"
+title: "レポートでの式の使用 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- expressions [Reporting Services], about expressions
+helpviewer_keywords: expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 040dc71113e8db518b1e98420241e1e6f2c3ba19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
-[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式を表示する ダイアログ ボックスで、プロパティの式を設定することができます (**fx**) をクリックするかを表示するドロップダウン リストで**\<式… >**です。  
+[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**[fx]**) ボタンが表示されるダイアログ ボックスや、**[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
   
  式には単純式と複合式があります。 *単純式* には、1 つのデータセット フィールド、パラメーター、または組み込みフィールドへの参照が含まれます。 複合式には、複数の組み込み参照、演算子、および関数呼び出しを含めることができます。 たとえば、複合式には売上フィールドに適用される Sum 関数が含まれる場合があります。  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 |値に応じてテキスト ボックス内のデータを書式設定します。|Tablix の詳細行のテキスト ボックス内のプレースホルダーの色。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[フォント]**を使用します。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |レポート全体で参照される値を 1 回計算します。|レポート変数の値。 [レポートのプロパティ] ダイアログ ボックスの **[変数]**を使用します。|`=Variables!MyCalculation.Value`|  
 |データセットからの複数のフィールドの特定の値が含まれます。|Tablix のグループの式にフィルターを適用します。 [Tablix のプロパティ] ダイアログ ボックスの **[フィルター]**を使用します。|データ型には、 **[ブール]**を選択します。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|デザイン画面のテキスト ボックスを非表示にします。これは *Show*というブール型パラメーターを使用して切り替えることができます。|テキスト ボックスの Hidden プロパティ。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[表示]**を使用します。|`=Not Parameters!`*表示\<ブール値パラメーター >*`.Value`|  
+|デザイン画面のテキスト ボックスを非表示にします。これは *Show*というブール型パラメーターを使用して切り替えることができます。|テキスト ボックスの Hidden プロパティ。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[表示]**を使用します。|`=Not Parameters!` *Show\<ブール型パラメーター>* `.Value`|  
 |ページ ヘッダーまたはページ フッターの動的なコンテンツを指定します。|ページ ヘッダーまたはページ フッターに配置されるテキスト ボックス内のプレースホルダーの値。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |パラメーターを使用してデータ ソースを動的に指定します。|データ ソースの接続文字列。 [データ ソースのプロパティ] ダイアログ ボックスの **[全般]**を使用します。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |ユーザーが選択した複数値パラメーターのすべての値を識別します。|テキスト ボックス内のプレースホルダーの値。 [Tablix のプロパティ] ダイアログ ボックスの **[フィルター]**を使用します。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -75,14 +73,13 @@ ms.lasthandoff: 08/09/2017
 |文字列と小数点 2 桁のパーセンテージとして書式設定された数を連結します。|データ領域のテキスト ボックス内のプレースホルダーの値。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[全般]**を使用します。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
 ## <a name="see-also"></a>参照  
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [レポート パラメーターと &#40; です。レポート ビルダーおよびレポート デザイナーと &#41; です。](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [フィルター式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [ページ ヘッダーおよびフッター & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [書式設定テキストとプレース ホルダー (&) #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [項目 &#40; を非表示にします。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [アイテムを非表示にする &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

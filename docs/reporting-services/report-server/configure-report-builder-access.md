@@ -1,5 +1,5 @@
 ---
-title: "レポート ビルダーへのアクセスを構成する |Microsoft ドキュメント"
+title: "レポート ビルダーへのアクセスの構成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d6553ed94b16c1811b4f7b8e8129367acf9c1089
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-report-builder-access"></a>レポート ビルダーへのアクセスの構成
   レポート ビルダーは、ネイティブ モードまたは SharePoint 統合モード用に構成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに付属しているカスタム レポート ツールです。  
@@ -54,14 +53,14 @@ ms.lasthandoff: 08/09/2017
   
  レポート サーバーのシステム プロパティを設定するには、Management Studio またはスクリプトを使用します。  
   
--   Management Studio を使用するには、レポート サーバーに接続し、[詳細なサーバー プロパティ] ページを使用して **EnableReportDesignClientDownload** を **false**に設定します。 このページを開く方法の詳細については、次を参照してください。[レポート サーバーのプロパティの設定 & #40 です。Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Management Studio を使用するには、レポート サーバーに接続し、[詳細なサーバー プロパティ] ページを使用して **EnableReportDesignClientDownload** を **false**に設定します。 このページを開く方法の詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)」を参照してください。  
   
 -   レポート サーバーのプロパティを設定するサンプル スクリプトを表示する方法は、「 [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)」(配置タスクおよび管理タスクのスクリプト作成) を参照してください。  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーにおけるレポート ビルダーへのアクセスを許可するロールの割り当て  
  ネイティブ モードのレポート サーバーでは、レポート ビルダーを使用するためのタスクを含むユーザー ロールの割り当てを作成します。 アイテムおよびサイト レベルでのロールの定義およびロールの割り当てを作成または変更できるのは、コンテンツ マネージャーとシステム管理者だけです。  
   
- 次に示す手順では、定義済みロールを使用しているものとします。 ロールの定義を変更した場合や SQL Server 2000 からアップグレードした場合は、ロールに必要なタスクが含まれていることを確認してください。 ロールの割り当ての作成の詳細については、次を参照してください[レポート サーバー &#40; をユーザー アクセスの許可。レポート マネージャー &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ 次に示す手順では、定義済みロールを使用しているものとします。 ロールの定義を変更した場合や SQL Server 2000 からアップグレードした場合は、ロールに必要なタスクが含まれていることを確認してください。 ロール割り当ての作成方法の詳細については、「[レポート サーバーへのデータベース アクセスの許可 &#40;レポート マネージャー&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)」を参照してください。  
   
  ロールの割り当てを作成すると、次の操作を行う権限がユーザーに許可されます。  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  レポート ビルダーへのアクセスを構成するユーザーまたはグループのロールの割り当てが既に存在する場合は、 **[編集]**をクリックします。  
   
-     存在しない場合は、 **[新しいロールの割り当て]**をクリックします。 グループまたはユーザーでは、この形式で Windows のドメイン ユーザーまたはグループ アカウントを入力:\<ドメイン >\\< アカウント\>です。 フォーム認証やカスタム セキュリティを使用している場合は、その環境に合った適切な形式でユーザー アカウントまたはグループ アカウントを指定します。  
+     存在しない場合は、 **[新しいロールの割り当て]**をクリックします。 [グループまたはユーザー] で、Windows ドメインのユーザー アカウントまたはグループ アカウントを \<ドメイン>\\<アカウント\> の形式で入力します。 フォーム認証やカスタム セキュリティを使用している場合は、その環境に合った適切な形式でユーザー アカウントまたはグループ アカウントを指定します。  
   
 5.  **[システム ユーザー]**を選択し、 **[OK]**をクリックします。  
   
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/09/2017
   
 9. レポート ビルダーへのアクセスを構成するユーザーまたはグループのロールの割り当てが既に存在する場合は、 **[編集]**をクリックします。  
   
-     存在しない場合は、 **[新しいロールの割り当て]**をクリックします。 グループまたはユーザーでは、この形式で Windows のドメイン ユーザーまたはグループ アカウントを入力:\<ドメイン >\\< アカウント\>です。 フォーム認証やカスタム セキュリティを使用している場合は、その環境に合った適切な形式でユーザー アカウントまたはグループ アカウントを指定します。  
+     存在しない場合は、 **[新しいロールの割り当て]**をクリックします。 [グループまたはユーザー] で、Windows ドメインのユーザー アカウントまたはグループ アカウントを \<ドメイン>\\<アカウント\> の形式で入力します。 フォーム認証やカスタム セキュリティを使用している場合は、その環境に合った適切な形式でユーザー アカウントまたはグループ アカウントを指定します。  
   
 10. **[レポート ビルダー]**を選択し、 **[適用]**をクリックします。  
   
@@ -172,9 +171,8 @@ ms.lasthandoff: 08/09/2017
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)   
- [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーのシステム プロパティ](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
-

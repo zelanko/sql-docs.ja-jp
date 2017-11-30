@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Word (レポート ビルダーおよび SSRS) へのエクスポート |Microsoft ドキュメント"
+title: "Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: fa120c78f7b443eb0dc6078a5444b79b20bbda8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
   Word 表示拡張機能は、改ページ調整されたレポートを  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) で表示します。 形式は、Office Open XML です。  
   
  このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.wordprocessingml.document** で、ファイル拡張子は .docx です。  
   
- 参照してください[レポート &#40; をエクスポートレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)を Word にエクスポートする方法の詳細。  
+ Word へのエクスポート方法については、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  レポートを Word 文書にエクスポートした後は、レポートの内容を変更したり、宛名ラベル、発注書、手紙など、文書形式のレポートをデザインしたりできます。  
   
@@ -114,7 +113,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="SquigglyLines"></a> エクスポートされたレポートの波線  
  レポート データまたは定数をエクスポートして Word で表示すると、その部分の下に赤または緑の波線が表示される場合があります。 赤い波線はスペル ミスを示します。 緑の波線は文法エラーを示します。 これは、Word で指定された編集言語の校正 (スペルおよび文法) 規則に適合しない単語がレポートに含まれている場合に生じます。 たとえば、レポートの列タイトルが英語である場合に、このレポートをスペイン語版の Word でレンダリングすると、列タイトルに赤い波線の下線が表示される可能性があります。 レポートには完全な文や段落ではなく短いテキストのみが含まれていることが多いため、レポートでは文法エラーとして認識されるエラーよりスペル ミスとして認識されるエラーの方がより一般的です。  
   
- レポート内に波線が存在する場合、そのレポートにエラーがある可能性を示していますが、実際のエラーではないことが少なくありません。 このような波線は、レポートの校正言語を変更することで除去できます。 校正言語を変更するには、レポートのコンテンツを選択し、そのコンテンツの適切な言語を指定します。 コンテンツをすべて選択することも、部分的に選択することもできます。 Word の言語オプションである **[校正言語の設定]** は、 **[校閲]** タブの **[言語]** にあります。 コンテンツを更新した後は、再度ドキュメントを保存する必要があります。  
+ レポート内に波線が存在する場合、そのレポートにエラーがある可能性を示していますが、実際のエラーではないことが少なくありません。 このような波線は、レポートの校正言語を変更することで除去できます。 校正言語を変更するには、レポートのコンテンツを選択し、そのコンテンツの適切な言語を指定します。 コンテンツをすべて選択することも、部分的に選択することもできます。 Word の言語オプションである **[校正言語の設定]** は、 **[校閲]** タブの **[言語]** にあります。コンテンツを更新した後は、再度ドキュメントを保存する必要があります。  
   
  Office プログラムの言語バージョンによって、選択した言語の校正ツール (辞書など) がプログラムに含まれている場合と、購入した [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 言語パックで提供されている場合があります。  
   
@@ -161,13 +160,13 @@ ms.lasthandoff: 08/09/2017
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 と互換性のある Word 表示拡張機能の以前のバージョンは、名前が Word 2003 に変更されます。 既定では、Word 表示拡張機能のみを使用できます。 Word 2003 表示拡張機能を使用できるようにするには、Reporting Services の構成ファイルを更新する必要があります。 Word 2003 レンダラーで生成されるファイルのコンテンツ タイプは **application/vnd.ms-word** で、ファイル名拡張子は .doc です。  
   
- 既定の Word レンダラーを表示するバージョンの SQL Server Reporting Services で、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx) 形式です。 これは、 **Web ポータルおよび SharePoint リストの** [エクスポート] **メニューに用意されている** [Word] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オプションです。 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 のみと互換性のある以前のバージョンは、Word 2003 という名前になり、この名前がメニューに表示されます。 **[Word 2003]** メニュー オプションは、既定では表示されません。このメニュー オプションを表示するには、管理者が RSReportServer 構成ファイルを更新する必要があります。 Word 2003 レンダラーを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からレポートをエクスポートするには、RSReportDesigner 構成ファイルを更新します。 ただし、Word 2003 レンダラーを表示するように設定しても、Word 2003 レンダラーがすべてのシナリオで使用できるわけではありません。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。 ツールまたは製品を切断モードまたはローカル モードで使用している場合、Word 2003 レンダラーを表示する設定は効果がありません。 **[Word 2003]** メニュー オプションは使用可能になりません。 RSReportDesigner 構成ファイルで Word 2003 レンダラーを表示するように設定した場合、 **のレポート プレビューで** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] メニュー オプションが常に使用可能になります。  
+ SQL Server Reporting Services の既定の Word レンダラーは、[!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) を表示するバージョンです。 これは、 **Web ポータルおよび SharePoint リストの** [エクスポート] **メニューに用意されている** [Word] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オプションです。 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 のみと互換性のある以前のバージョンは、Word 2003 という名前になり、この名前がメニューに表示されます。 **[Word 2003]** メニュー オプションは、既定では表示されません。このメニュー オプションを表示するには、管理者が RSReportServer 構成ファイルを更新する必要があります。 Word 2003 レンダラーを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からレポートをエクスポートするには、RSReportDesigner 構成ファイルを更新します。 ただし、Word 2003 レンダラーを表示するように設定しても、Word 2003 レンダラーがすべてのシナリオで使用できるわけではありません。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。 ツールまたは製品を切断モードまたはローカル モードで使用している場合、Word 2003 レンダラーを表示する設定は効果がありません。 **[Word 2003]** メニュー オプションは使用可能になりません。 RSReportDesigner 構成ファイルで Word 2003 レンダラーを表示するように設定した場合、 **のレポート プレビューで** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] メニュー オプションが常に使用可能になります。  
   
  **[Word 2003]** メニュー オプションは、次の状況では表示されません。  
   
 -   レポート ビルダーが切断モードのときにレポート ビルダーでレポートをプレビューした場合。  
   
--   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、次を参照してください。[ローカル モードとします。接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」をご覧ください  
   
  **[Word 2003]** レンダラーが表示されるように構成されている場合は、 **Word** と **Word 2003** の両方のメニュー オプションが次の状況で使用可能になります。  
   
@@ -203,4 +202,4 @@ ms.lasthandoff: 08/09/2017
 [レポート アイテムのレンダリング](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [テーブル、マトリックス、および一覧](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

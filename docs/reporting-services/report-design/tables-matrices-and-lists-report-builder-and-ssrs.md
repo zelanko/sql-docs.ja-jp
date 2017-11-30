@@ -1,5 +1,5 @@
 ---
-title: "テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -36,22 +36,21 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe304f126caffb096e5cd5a4610225f373fde504
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]のテーブル、マトリックス、および一覧は、行と列で構成されたセルにページ分割されたレポート データを表示する *データ領域* です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて *Tablix* データ領域と呼ぶことがあります。  
   
- テーブル、マトリックス、および一覧のテンプレートは、セルにデータを表示できる柔軟なグリッドである Tablix データ領域に基づいて構築されます。 テーブルおよびマトリックスのテンプレートでは、セルは行と列で構成されます。 テンプレートは基になる汎用の tablix データ領域の一種であるため、テンプレート形式の組み合わせでデータを表示し、レポートの作成と、別のデータ領域の機能を含めるでテーブル、マトリックス、または一覧を変更できます。 たとえば、追加したテーブルがニーズに合わない場合は、列グループを追加してテーブルをマトリックスに変更できます。  
+ テーブル、マトリックス、および一覧のテンプレートは、セルにデータを表示できる柔軟なグリッドである Tablix データ領域に基づいて構築されます。 テーブルおよびマトリックスのテンプレートでは、セルは行と列で構成されます。 テンプレートは基になる汎用の Tablix データ領域の一種であるため、レポートの作成時に、テンプレート形式を組み合わせてデータを表示し、テーブル、マトリックス、または一覧を変更して別のデータ領域の機能を含めることができます。 たとえば、追加したテーブルがニーズに合わない場合は、列グループを追加してテーブルをマトリックスに変更できます。  
   
  テーブルとマトリックスのデータ領域では、入れ子になったテーブル、マトリックス、一覧、グラフ、およびゲージを含めることで、データの複雑なリレーションシップを表示できます。 テーブルとマトリックスには表形式のレイアウトがあり、各データは 1 つのデータ ソースに基づいて構築された 1 つのデータセットから取得されます。 テーブルとマトリックスの重要な違いとして、テーブルに含めることができるのは行グループのみであるのに対し、マトリックスには行グループと列グループを含めることができます。  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Table"></a> Table  
  テーブルを使用すると詳細データの表示やデータの行グループへの編成、またはその両方が可能です。 テーブル テンプレートには、テーブル ヘッダー行およびデータの詳細行と共に、3 つの列が含まれます。 次の図では、デザイン画面で初期のテーブル テンプレートが選択されています。  
   
- ![テーブル テンプレートのデザイン画面で選択した](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "テーブル テンプレートのデザイン画面で選択されています。")  
+ ![デザイン画面上のテーブル テンプレート、選択](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")  
   
  データは、1 つのフィールドまたは複数のフィールドでグループ化することも、独自の式を記述してグループ化することもできます。 入れ子になったグループや独立した隣接するグループの作成、グループ化されたデータの集計値の表示、グループへの合計の追加などを行うことができます。 たとえば、テーブルに [Category] という名前の行グループがある場合は、各グループの小計とレポートの総計を追加できます。 テーブルを見やすくし、強調するデータを強調表示するには、セルを結合し、書式をデータとテーブルの見出しに適用します。  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Matrix"></a> マトリックス  
  PivotTable またはクロス集計と同様に、マトリックスは、行と列にグループ化した集計データ サマリの表示に使用します。 グループの行と列の数は、各行グループおよび列グループに含まれている一意の値の数によって決定します。 次の図では、デザイン画面で初期のマトリックス テンプレートが選択されています。  
   
- ![選択したツールボックスから追加されたマトリックスの新規作成](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "選択ツールボックスから追加されたマトリックスの新規作成")  
+ ![ツールボックスから追加された新しいマトリックス、選択](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
   
  データは、複数のフィールドまたは式によって、行グループと列グループにグループ化できます。 実行時にレポート データとデータ領域が組み合わされると、列グループに列、行グループに行がそれぞれ追加され、マトリックスはページ上で縦横に拡大されます。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。 たとえば、マトリックスに行グループ (Category) と売上の合計を表示する 2 つの列グループ (Territory および Year) がある場合、レポートには Category グループ内の各値に対して売上の合計を含む 2 つのセルが表示されます。 セルのスコープは 2 つの交差部分 (Category および Territory と Category および Year) です。 マトリックスには、入れ子になったグループと隣接するグループを含めることができます。 入れ子になったグループには親子リレーションシップ、隣接するグループにはピア リレーションシップがあります。 マトリックス内には、入れ子になった行および列グループの任意のレベルの小計や、すべてのレベルの小計が追加できます。  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="List"></a> 一覧  
  一覧は、自由形式のレイアウトの作成に使用します。 グリッド レイアウトのみに制限されず、フィールドは一覧内に自由に配置できます。 一覧は、多数のデータセット フィールドを表示するフォームの設計に使用したり、グループ化されたデータの場合は、複数のデータ領域を並列に表示するコンテナーとして使用したりすることができます。 たとえば、一覧にグループを定義し、テーブル、グラフ、およびイメージを追加し、従業員や患者のレコードを表示する際と同様に、各グループ値についてテーブルまたはグラフィック形式で値を表示することができます。  
   
- ![選択したツールボックスから追加された新しいリスト](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "ツールボックスから追加された新しいリストを選択")  
+ ![ツールボックスから追加された新しい一覧、選択](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "ツールボックスから追加された新しい一覧、選択")  
   
  詳細については、「一覧がある請求書とフォームを作成する」を参照してください。  
   
@@ -168,13 +167,12 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [入れ子になったデータ領域と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [同じデータセット &#40; に複数のデータ領域のリンクレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート パラメーターと &#40; です。レポート ビルダーおよびレポート デザイナーと &#41; です。](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [ゲージと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

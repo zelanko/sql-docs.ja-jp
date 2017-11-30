@@ -1,5 +1,5 @@
 ---
-title: "追加または削除するページ ヘッダーまたはページ フッター (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 551fbc941b9d0aaf5c2a4cbd9a7d0b2a7828096e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダーおよび SSRS)
   ページ ヘッダーまたはページ フッターには、静的テキスト、画像、線、四角形、および罫線を追加できます。 ヘッダーまたはフッターに変数または計算されたデータを使用する場合は、式およびデータバインド画像をテキスト ボックスに配置できます。  
   
 > [!NOTE]  
->  各表示拡張機能では、ページ ヘッダーとページ フッターの処理が異なります。 詳細については、「[ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)」および「[Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
+>  各表示拡張機能では、ページ ヘッダーとページ フッターの処理が異なります。 詳細については、「[ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)」および「[Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/09/2017
  [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
-

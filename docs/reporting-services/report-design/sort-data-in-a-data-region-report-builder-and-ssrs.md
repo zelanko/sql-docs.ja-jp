@@ -1,5 +1,5 @@
 ---
-title: "(レポート ビルダーおよび SSRS) は、データ領域内のデータを並べ替える |Microsoft ドキュメント"
+title: "データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1bd8061755f4dbacdf16106ecca5e7a22b1101e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)
   レポートを初めて実行したときのデータ領域内のデータの並べ替え順序を変更するには、データ領域またはグループに対して並べ替え式を設定する必要があります。 既定で、グループの並べ替え式は、グループ式と同じ値に自動的に設定されます。  
@@ -32,9 +31,9 @@ ms.lasthandoff: 08/09/2017
   
 -   ゲージには範囲を基準とした単一の値が表示されます。そのため、ゲージ データ領域では、データの並べ替えが必要とならないのが一般的です。 ゲージのデータを並べ替える必要がある場合は、最初にグループを定義し、次にグループの並べ替え式を設定します。  
   
- 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
- tablix データ領域の場合は、対話的な並べ替えボタンを列見出しの上に追加して、ユーザーがグループまたは詳細行の並べ替え順序を変更できるようにすることもできます。 詳細については、「[対話的な並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)」を参照してください。  
+ tablix データ領域の場合は、対話的な並べ替えボタンを列見出しの上に追加して、ユーザーがグループまたは詳細行の並べ替え順序を変更できるようにすることもできます。 詳細については、「[対話的な並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -132,10 +131,9 @@ ms.lasthandoff: 08/09/2017
  ゲージ内のデータをグループ化する方法の詳細については、「[ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダー&#93; ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
   
-

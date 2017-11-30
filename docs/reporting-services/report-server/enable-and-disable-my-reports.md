@@ -1,5 +1,5 @@
 ---
-title: "有効にして、個人用レポートを無効化 |Microsoft ドキュメント"
+title: "個人用レポートの有効化と無効化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>個人用レポートの有効化と無効化
   個人用レポート機能では、ユーザーが所有しているレポートを個人用のフォルダーに保存できるように、レポート サーバー データベースに個人の記憶域を割り当てます。 レポート サーバー管理者として、この機能を有効化または無効化したり、セキュリティ設定を変更してユーザーがこの作業領域で実行できる操作を制御することで機能の動作を変更することができます。  
@@ -57,8 +56,7 @@ ms.lasthandoff: 08/09/2017
  個人用レポートをアクティブ化すると、ユーザーが [個人用レポート] フォルダーを必要とするかどうかに関係なく、ドメイン アカウントを持つ各ユーザーが [個人用レポート] リンクをクリックしたときに、[個人用レポート] フォルダーが作成されます。 フォルダーが使用されているかどうかを判断する体系的な方法はありません。 フォルダーに含まれているデータがあるかどうかを調べるには、フォルダーを手動で確認する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [個人用レポートのセキュリティ保護します。](../../reporting-services/security/secure-my-reports.md)   
- [レポート サーバー コンテンツの管理 & #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)   
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "レポート ビューアー Web パーツのプログラミングに SharePoint 統合 |Microsoft ドキュメント"
+title: "SharePoint 統合でのレポート ビューアー Web パーツのプログラミング | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: fe234d83738bda4dd578d8be0a6d2c4619cd8b70
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9339b0f383efd757e9be49271f4a5bdd2d7a4d4f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 統合でのレポート ビューアー Web パーツのプログラミング
-  レポート ビューアー Web パーツは、サーバー コントロールは、開発者はカスタムの SharePoint アプリケーションを作成するパブリック アプリケーション プログラミング インターフェイス (API) のセットを含むです。 レポートのパスと Web パーツ接続を使用してレポート ビューアー Web パーツのパラメーターを指定するカスタム Web パーツを作成することができます。 Web パーツをカスタム SharePoint Web パーツ ページに埋め込み、パブリック API を使用してカスタマイズすることもできます。  
+  レポート ビューアー Web パーツは、開発者がカスタム SharePoint アプリケーションを作成するためのパブリック アプリケーション プログラミング インターフェイス (API) のセットが含まれているサーバー コントロールです。 Web パーツ接続を使用し、レポート ビューアー Web パーツにレポートのパスとパラメーターを指定するカスタム Web パーツを作成できます。 Web パーツをカスタム SharePoint Web パーツ ページに埋め込み、パブリック API を使用してカスタマイズすることもできます。  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>レポート ビューアー Web パーツとカスタム Web パーツとの接続  
- レポート ビューアー Web パーツは、実装する SharePoint Web パーツに接続するコンシューマー<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>または T:Microsoft.SharePoint.WebPartPages.IFilterValues です。 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツなど、**ドキュメント**Web パーツはレポート ビューアー Web パーツと同じ Web パーツ ページに配置されたレポート ビューアー Web パーツにレポート パスを指定できます。 同様に、T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツなど、**テキスト フィルター**または**フィルターの選択**、レポート ビューアー Web パーツと同じ Web パーツ ページに配置されたレポート ビューアー Web パーツにレポート パラメーターを指定できます。  
+ レポート ビューアー Web パーツは、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow> または T:Microsoft.SharePoint.WebPartPages.IFilterValues を実装する SharePoint Web パーツに接続するコンシューマーです。 **ドキュメント** Web パーツなどの <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツを同じ Web パーツ ページにレポート ビューアー Web パーツとして配置すると、レポート ビューアー Web パーツにレポート パスを指定できます。 同様に、**テキスト フィルター** Web パーツや**フィルターの選択** Web パーツなどの T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツを同じ Web パーツ ページにレポート ビューアー Web パーツとして配置すると、レポート ビューアー Web パーツにレポート パラメーターを指定できます。  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>レポート パス プロバイダーと IWebPartRow の実装  
  Web パーツ接続を通じてレポート ビューアー Web パーツにレポートのパスを指定するには、次の手順に従います。  
@@ -40,9 +39,9 @@ ms.lasthandoff: 08/12/2017
 3.  Web ベースの Web パーツ デザイン ユーザー インターフェイスで Web パーツをレポート ビューアー Web パーツに接続します。  
   
     > [!NOTE]  
-    >  いずれかを接続することができますのみ<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>一度に、するには、レポート ビューアー Web パーツを Web パーツ接続できません。 どちらも、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>を同時にレポート ビューアー Web パーツの T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツと Web パーツ。  
+    >  レポート ビューアー Web パーツに一度に接続できる <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツは 1 つだけです。レポート ビューアー Web パーツに <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツと T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツの両方を同時に接続することはできません。  
   
- <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 、T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart で正しく動作する Web パーツ、次を実行する必要があります、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A>メソッド。  
+ T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart と <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツを正しく連動させるには、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> メソッドで次を行う必要があります。  
   
 -   <xref:System.Data.DataRowView> オブジェクトを入力パラメーターとして使用してコールバック メソッドを呼び出します。  
   
@@ -58,11 +57,11 @@ ms.lasthandoff: 08/12/2017
   
 1.  T:Microsoft.SharePoint.WebPartPages.IFilterValues インターフェイスを実装する Web パーツを作成します。  
   
-2.  Web パーツを T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart と同じページに追加します。  
+2.  T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart と同じページに Web パーツを追加します。  
   
-3.  Web ベースの Web パーツ デザイン ユーザー インターフェイスでは、レポート ビューアー Web パーツに T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツを接続します。  
+3.  Web ベースの Web パーツ デザイン ユーザー インターフェイスで T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツをレポート ビューアー Web パーツに接続します。  
   
     > [!NOTE]  
-    >  複数の T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツは、一度にレポート ビューアー Web パーツに接続できます。 ただし、両方が接続できない、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>を同時にレポート ビューアー Web パーツの T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツと Web パーツ。  
+    >  複数の T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツをレポート ビューアー Web パーツに一度に接続できます。 ただし、<xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web パーツと T:Microsoft.SharePoint.WebPartPages.IFilterValues Web パーツの両方をレポート ビューアー Web パーツに同時に接続することはできません。  
   
   

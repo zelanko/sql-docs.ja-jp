@@ -1,34 +1,34 @@
 ---
 title: "Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   データベース管理者は Always On 可用性グループ ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 可用性グループ ダッシュボードの一般的な用途を次に示します。  
   
@@ -123,7 +123,10 @@ ms.lasthandoff: 08/02/2017
  接続されているサーバーのインスタンスと可用性グループがメンバー ノードになっているクラスターの名前と状態。  
   
 ##  <a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
- **[可用性レプリカ]** ペインには、次の列が表示されます。  
+
+プライマリ レプリカに接続されていると、**[Availability replica details]\(可用性レプリカの詳細\)** には可用性グループないのすべてのレプリカからの情報が表示されます。 セカンダリ レプリカに接続されいる場合は、接続されたレプリカからの情報のみが表示されます。  
+
+**[可用性レプリカ]** ペインには、次の列が表示されます。  
   
  **名前**  
  可用性レプリカをホストするサーバー インスタンスの名前。 この列は既定で表示されます。  
@@ -290,28 +293,28 @@ ms.lasthandoff: 08/02/2017
  **中断の理由**  
  中断状態の理由を示します。 この値は既定で非表示になります。  
   
- **[推定データ損失]\ (秒)**  
+ **[推定データ損失] (秒)**  
  プライマリ レプリカおよびセカンダリ レプリカ内の最後のトランザクション ログ レポートの時間の差分を示します。 プライマリ レプリカが失敗すると、時間枠内のすべてのトランザクション ログ レコードが失われます。 この値は既定で非表示になります。  
   
- **[推定復旧時間]\ (秒)**  
+ **[推定復旧時間] (秒)**  
  キャッチアップ時間の再実行にかかる時間を秒単位で示します。 *キャッチアップ時間* は、セカンダリ レプリカがプライマリ レプリカに追いつくためにかかる時間です。 この値は既定で非表示になります。  
   
- **[同期のパフォーマンス]\ (秒)**  
+ **[同期のパフォーマンス] (秒)**  
  プライマリ レプリカとセカンダリ レプリカ間の同期にかかる時間を秒単位で示します。 この値は既定で非表示になります。  
   
- **[ログ送信キューのサイズ] \(KB)**  
+ **[ログ送信キューのサイズ] (KB)**  
  まだセカンダリ レプリカに送信されていない、プライマリ データベースのログ ファイル内のログ レコードの量を示します。 この値は既定で非表示になります。  
   
  **[ログの送信速度 (KB/秒)]**  
  ログ レコードがセカンダリ レプリカに送信される比率を 1 秒あたりの KB 単位で示します。この値は既定で非表示になります。  
   
- **[再実行キューのサイズ] \(KB)**  
+ **[再実行キューのサイズ] (KB)**  
  まだ再実行されていないセカンダリ レプリカのログ ファイル内のログ レコードの量を示します。 この値は既定で非表示になります。  
   
  **[再実行率 (KB/秒)]**  
  ログ レコードが再実行される速度を 1 秒あたりの KB 単位で示します。 この値は既定で非表示になります。  
   
- **[FileStream 送信比率] \(KB/秒)**  
+ **[FileStream 送信比率] (KB/秒)**  
  トランザクションがレプリカに送信されるときの FileStream の比率を 1 秒あたりの KB 単位で示します。 この値は既定で非表示になります。  
   
  **[ログ LSN の最後]**  
@@ -362,4 +365,3 @@ ms.lasthandoff: 08/02/2017
  [可用性グループの監視 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

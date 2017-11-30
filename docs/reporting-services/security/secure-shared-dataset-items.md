@@ -1,5 +1,5 @@
 ---
-title: "共有データセット アイテムのセキュリティで保護された |Microsoft ドキュメント"
+title: "共有データセット アイテムをセキュリティで保護する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 40a9f5257e09cf35129c0f11d89675fdeb285c94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
   レポート サーバーでは、複数のレポートで共有データセット アイテムを使用できます。 共有データセットをセキュリティ保護することによって、共有データセットにユーザーがアクセスする度合いを制御できます。 既定では、あらかじめ登録された **Administrators** グループのメンバーであるユーザーのみが、共有データセットの表示、プロパティの変更、キャッシュの有効化、キャッシュ更新計画の作成、およびアイテムの削除を行えます。 他のすべてのユーザーについては、共有データセットへのアクセスを許可するロールの割り当てを作成する必要があります。  
@@ -55,11 +54,10 @@ ms.lasthandoff: 08/09/2017
  詳細については、「 [アイテムレベルのタスク](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) 」と「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [共有データセットを管理します。](../../reporting-services/report-data/manage-shared-datasets.md)   
- [セキュリティで保護されたフォルダー](../../reporting-services/security/secure-folders.md)   
- [セキュリティで保護されたレポート、およびリソース](../../reporting-services/security/secure-reports-and-resources.md)   
- [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)   
+ [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)   
+ [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
+ [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

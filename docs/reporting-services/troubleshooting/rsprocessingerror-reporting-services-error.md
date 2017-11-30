@@ -1,5 +1,5 @@
 ---
-title: "rsProcessingError - Reporting Services のエラー |Microsoft ドキュメント"
+title: "rsProcessingError - Reporting Services エラー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsProcessingError
+helpviewer_keywords: rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1ceb80c23e3c5e6d71d6857319da424a8815d504
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
     
@@ -78,16 +76,16 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート サーバーでレポートを表示していて、さらにレポート サーバーをローカル管理者として実行している場合は、ページを右クリックして **[ソースの表示]**をクリックすると、呼び出し履歴を表示できます。 呼び出し履歴には追加情報が記載されています。  
   
--   レポート サーバーでローカル管理者として処理を実行している場合は、ログ ファイル内で `ReportProcessingException`を検索します。 ログ エントリには詳細情報が含まれています。 レポート サーバーのログ ファイルがある通常\<*ドライブ*>: \Program Files\Microsoft SQL Server\MSRS12 です。MSSQLSERVER\Reporting \logfiles\reportserverservice__*datetimestamp*。 ログ。 詳細については、「[Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
+-   レポート サーバーでローカル管理者として処理を実行している場合は、ログ ファイル内で `ReportProcessingException`を検索します。 ログ エントリには詳細情報が含まれています。 通常、レポート サーバーのログ ファイルは \<*ドライブ*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log にあります。 詳細については、「 [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>式のホスト アセンブリの読み込みに失敗した  
  カスタム アセンブリには、厳密な名前の署名と、属性 AllowPartiallyTrustedCallers の設定が必要です。 詳細については、「 [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) 」と「 [セキュリティ ポリシーの概要](../../reporting-services/extensions/secure-development/understanding-security-policies.md)」を参照してください。  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>組み込みのグローバル名が存在しない  
- 式内のスペルを確認します。 組み込みのグローバル、パラメーター、およびフィールド名では、大文字と小文字が区別されます。 エラーが発生した式で、レポートに名前が実際に存在し、そのスペルが正しいことを確認します。 詳細については、「[式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
+ 式内のスペルを確認します。 組み込みのグローバル、パラメーター、およびフィールド名では、大文字と小文字が区別されます。 エラーが発生した式で、レポートに名前が実際に存在し、そのスペルが正しいことを確認します。 詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
 ### <a name="parameter-properties-and-null"></a>パラメーターのプロパティと NULL  
- 複数値パラメーターには NULL を設定できません。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 複数値パラメーターには NULL を設定できません。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>サブレポートを含むメイン レポートを処理できなかった  
  サブレポートを含むレポートは、同一バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理する必要があります。 レポートを最新バージョンのレポート定義スキーマにアップグレードする場合、メイン レポートとサブレポートは同時に更新されることもされないこともあります。 レポートとそのサブレポートの間でバージョンが一致しないと、"サブレポートを処理できませんでした。" というメッセージが表示されます。  
@@ -104,26 +102,26 @@ ms.lasthandoff: 08/09/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>フィルターのデータ型を比較できない  
  フィルターの演算式では、フィルターの対象を定義するフィルター式とフィルター値は、比較できるように同じデータ型にする必要があります。 次のいずれかのエラーが表示された場合は、データ型が一致するようにフィールド式またはフィルター値を変更します。  
   
--   処理*\<レポート アイテムの種類 >*の*\<レポート項目名 >*を実行できません。 型のデータを比較できません*\<型 >*と*\<型 >*です。 によって返されるデータ型を確認してください、 *\<レポート項目名 >*です。  
+-   *\<report item name>* の *\<report item type>* の処理は実行できません。 データ型 *\<type>* と *\<type>* を比較できません。 *\<report item name>* によって返されたデータ型を確認してください。  
   
--   評価に失敗しました、 *\<プロパティ名 >*です。  
+-   *\<property name>* を評価できませんでした。  
   
--   評価に失敗しました、 *\<プロパティ名 >*です。 エラーを含んでいるデータセット フィールドを参照して: *\<エラー文字列 >*です。  
+-   *\<property name>* を評価できませんでした。 次のエラーを含んでいるデータセット フィールドを参照しています。*\<error string>*。  
   
- 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>集計関数呼び出しでの無効または競合するスコープの指定  
  Tablix セルの式に集計関数呼び出しを含める場合、レポート プロセッサでは、セルが属している最も内側のグループのスコープでその式を評価します。  
   
  特定のスコープの名前を集計関数に渡すこともできます。 スコープでは、データセットの名前、データ領域、またはデータ階層のより上位のスコープの名前を参照できます。 これは、次のメッセージに当てはまります。  
   
--   *\<レポート アイテムの種類 >* '*\<レポート項目名 >*' が無効なスコープを持つ"*\<スコープ名 >*"です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
+-   *\<report item type>* '*\<report item name>*' のスコープ “*\<scope name>*” が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
   
--   *\<プロパティ名 >*の式、 *\<レポート アイテムの種類 >* '*\<レポート項目名 >*' 集計関数に対して無効なスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
+-   *\<report item type>* '*\<report item name>*' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
   
  累計を計算する集計関数 (**Previous**、 **RunningValue**、または **RowNumber**) の場合、行グループ名または列グループ名をスコープのパラメーターに指定できますが、両方を指定することはできません。 これは、次のエラー メッセージに当てはまります。  
   
--   **以前**、 **RunningValue**または**RowNumber**集計関数のデータ セルで使用される、 *\<レポート アイテムの種類 >* '*\<レポート項目名 >*' の行と列の両方のグループ化スコープを参照してください、 *\<レポート アイテムの種類 >*です。 すべてのスコープ パラメーター**前**、 **RunningValue**と**RowNumber**集計関数内で、 *\<レポート アイテムの種類 >*行グループまたはデータ列のグループ、両方ではなく参照できます。  
+-   *\<report item type>* '*\<report item name>*' のデータ セルに使用されている **Previous**、**RunningValue**、または **RowNumber** 集計関数では、*\<report item type>* の列と行両方のグループ化スコープが参照されています。 *\<report item type>* 内のすべての **Previous**、**RunningValue**、および **RowNumber** 集計関数のスコープのパラメーターでは、行のグループまたはデータ列のグループを参照できますが、両方を参照することはできません。  
   
  詳細については、「[合計、集計、および組み込みコレクションの式のスコープについて (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」および「[式での組み込みコレクションの使用 (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
@@ -131,14 +129,13 @@ ms.lasthandoff: 08/09/2017
  レポートに複数のデータセットがある場合、レポート デザイン画面に追加したテキスト ボックスの既定のスコープは使用できません。 スコープとしてデータセットの名前を含む式と、集計関数を使用してください。 たとえば、 `=First(Fields!FieldName.Value, "DataSet2")`のようにします。  
   
 ## <a name="see-also"></a>参照  
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [集計関数リファレンス & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [一般的に使用されるフィルターと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [データセット フィールド コレクションと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [カスタム コードやレポート デザイナー &#40; 内の式でのアセンブリ参照SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Parameters コレクションの参照と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   
-

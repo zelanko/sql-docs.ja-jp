@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +78,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、次のような推定実行プランが表示されます。  
   
- ![ディスク ベース テーブルの結合のためのクエリ プラン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![ディスク ベース テーブルの結合のためのクエリ プラン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "ディスク ベース テーブルの結合のためのクエリ プラン。")  
 ディスク ベース テーブルの結合のためのクエリ プラン。  
   
  このクエリ プランについて  
@@ -99,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  このクエリの推定プランは、次のとおりです。  
   
- ![ディスク ベース テーブルのハッシュ結合のクエリ プラン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![ディスク ベース テーブルのハッシュ結合のクエリ プラン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "ディスク ベース テーブルのハッシュ結合のクエリ プラン。")  
 ディスク ベース テーブルのハッシュ結合のクエリ プラン。  
   
  このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 これで、 **Hash Match** 物理演算子は **Inner Join**に使用されます。 Order のクラスター化インデックスは CustomerID で並べ替えられません。したがって、 **Merge Join** はパフォーマンスに影響を与えるソート演算子を必要とします。 前の例の **Hash Match** 演算子のコスト (46%) と比較して、 **Merge Join** 演算子 (75%) の相対コストを確認してください。 オプティマイザーでは、前の例でも **Hash Match** 演算子を検討したうえで、 **Merge Join** 演算子の方がパフォーマンスがよいと判断されています。  
@@ -107,7 +105,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
  次の図は、アドホック クエリに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリ処理フローの概要を示しています。  
   
- ![SQL Server クエリ処理パイプライン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![SQL Server クエリ処理パイプライン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server クエリ処理パイプライン。")  
 SQL Server クエリ処理パイプライン。  
   
  このシナリオでは、次のようになります。  
@@ -131,7 +129,7 @@ SQL Server クエリ処理パイプライン。
   
  解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、メモリ最適化テーブルとディスク ベース テーブルの両方にアクセスできます。 次の図は、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスのクエリ処理を示しています。  
   
- ![解釈された tsql のクエリ処理パイプライン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
+ ![解釈された tsql のクエリ処理パイプライン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "解釈された tsql のクエリ処理パイプライン。")  
 解釈された Transact-SQL によるメモリ最適化テーブルへのアクセスのクエリ処理パイプライン。  
   
  図で示すように、ほとんどの場合、クエリ処理パイプラインは変更されません。  
@@ -169,7 +167,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  推定プランは次のとおりです。  
   
- ![メモリ最適化テーブルの結合のためのクエリ プラン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
+ ![メモリ最適化テーブルの結合のためのクエリ プラン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "メモリ最適化テーブルの結合のためのクエリ プラン。")  
 メモリ最適化テーブルの結合のためのクエリ プラン。  
   
  ディスク ベース テーブルの同じクエリに対するプラン (図 1) で、次の相違点を確認します。  
@@ -210,7 +208,7 @@ END
 ### <a name="compilation-and-query-processing"></a>コンパイルとクエリ処理  
  次の図は、ネイティブ コンパイル ストアド プロシージャのコンパイル処理を示しています。  
   
- ![ストアド プロシージャのネイティブでのコンパイル](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![ストアド プロシージャのネイティブでのコンパイル。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "ストアド プロシージャのネイティブでのコンパイル。")  
 ストアド プロシージャのネイティブでのコンパイル  
   
  この処理は次のとおりです。  
@@ -227,7 +225,7 @@ END
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、DLL 内の関数の呼び出しに変換されます。  
   
- ![ネイティブ コンパイル ストアド プロシージャの実行。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![ネイティブ コンパイル ストアド プロシージャの実行。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "ネイティブ コンパイル ストアド プロシージャの実行。")  
 ネイティブ コンパイル ストアド プロシージャの実行。  
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、次のとおりです。  
@@ -313,4 +311,3 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

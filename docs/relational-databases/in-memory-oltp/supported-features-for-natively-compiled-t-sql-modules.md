@@ -1,29 +1,30 @@
 ---
 title: "ネイティブ コンパイル T-SQL モジュールでサポートされる機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   このトピックには、T-SQL 領域とネイティブ コンパイル T-SQL モジュールの本体でサポートされる機能が含まれています。ストアド プロシージャ ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md))、スカラー ユーザー定義機能、インライン テーブル値関数、トリガーなどです。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 07/31/2017
 次のクエリ構造がサポートされます。  
 
 CASE 式: CASE は、有効な式を使用できる任意のステートメントや句で使用できます。
-   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
+   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]」をご覧ください。  
     [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してサポートされています。
 
 SELECT 句:  
@@ -61,19 +62,19 @@ SELECT 句:
 -   列と名前のエイリアス (AS または = 構文を使用)。  
 
 -   スカラー サブクエリ
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、スカラー サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、DISTINCT 演算子はネイティブ コンパイル モジュールでサポートされています。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION および UNION ALL
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、UNION および UNION ALL 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 -   変数割り当て  
@@ -85,11 +86,11 @@ FROM 句:
 -   FROM \<ネイティブ コンパイル インライン TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、JOINS はネイティブ コンパイル モジュールでサポートされています。
 
 -   サブクエリ `[AS] table_alias`。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。 
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 WHERE 句:  
@@ -98,7 +99,7 @@ WHERE 句:
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、OR/NOT/IN/EXISTS 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 
@@ -195,8 +196,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   ビット演算子 ~、&、|、および ^  
 
 -   APPLY 演算子
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。  
+      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。
 
 ##  <a name="bfncsp"></a> ネイティブ コンパイル モジュールの組み込み関数  
  メモリ最適化テーブルの構造とネイティブ コンパイル T-SQL モジュールでは、次の関数がサポートされます。  
@@ -206,8 +207,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日付関数: CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、および YEAR  
 
 -   文字列関数: LEN、LTRIM、RTRIM、および SUBSTRING。  
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、組み込み関数の TRIM、TRANSLATE、CONCAT_WS もサポートされます。  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。  
+      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、組み込み関数の TRIM、TRANSLATE、CONCAT_WS もサポートされます。  
 
 -   ID 関数: SCOPE_IDENTITY  
 
@@ -216,8 +217,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 関数: NEWID および NEWSEQUENTIALID  
 
 -   JSON 関数  
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで JSON 関数がサポートされます。
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。  
+      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで JSON 関数がサポートされます。
 
 -   エラー関数: ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE  
 
@@ -307,6 +308,5 @@ GO
 ## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

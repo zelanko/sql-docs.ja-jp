@@ -1,5 +1,5 @@
 ---
-title: "作成、削除、またはロール (Management Studio) の変更 |Microsoft ドキュメント"
+title: "ロールを作成、削除、または変更する (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,24 +19,23 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7b5b8d11868d108447e1a3109bff28abcef2de33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="role-definitions---create-delete-or-modify"></a>ロールの定義の作成、削除、または変更
+# <a name="role-definitions---create-delete-or-modify"></a>ロールの定義 - 作成、削除、または変更
   Reporting Services には、レポート サーバーへのアクセス レベルをあらかじめ定義したロールが用意されています。 レポート サーバーにアクセスする各ユーザーまたはグループは、実行できるタスクが定義されたロールを介して、レポート サーバーにアクセスすることになります。 ロールは、レポート サーバー全体に対して定義されます。 レポート サーバーの特定の部分についてロール定義を変更したり、状況に依存するようなロールを指定したりすることはできません。  
   
  ロールを作成、変更、または削除するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 削除できるのは、使用されていないロールだけです。  
   
- 作成したロールにユーザーおよびグループを割り当てるには、レポート マネージャーを使用します。 詳細については、「[レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)」を参照してください。  
+ 作成したロールにユーザーおよびグループを割り当てるには、レポート マネージャーを使用します。 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)」を参照してください。  
   
 > [!NOTE]  
 >  レポート サーバーが SharePoint 統合モード用に構成されている場合、統合先の SharePoint サイトに接続すると、レポート サーバーのコンテンツや操作へのアクセスを制御する権限レベルを閲覧および変更できます。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
      また、システム レベルのロールの定義を作成する場合は、 **[システム ロール]**を右クリックし、 **[新しいシステム ロール]**をポイントします。  
   
-4.  ロールに対する一意の名前を入力します。 名前には、少なくとも 1 つの文字が含まれている必要があります。 スペースおよび記号を含めることもできますが、; ?  : @ & = + , $ / * < > | " または / は含めることができません。  
+4.  ロールに対する一意の名前を入力します。 名前には、少なくとも 1 つの文字が含まれている必要があります。 スペースおよび記号を含めることもできますが、; ? : @ & = + , $ / * < > | " または / は含めることができません。  
   
 5.  必要に応じて、説明を入力します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、この説明はこのページでのみ表示されます。 レポート マネージャーを使用してこのアイテムを表示するユーザーは、この説明をレポート マネージャーで参照できます。  
   
@@ -82,9 +81,8 @@ ms.lasthandoff: 08/09/2017
          このロールのメンバーが実行できるタスクを選択し、 **[OK]** をクリックして変更を適用します。  
   
 ## <a name="see-also"></a>参照  
- [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [作成および管理ロールの割り当て](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Reporting Services の SQL Server Management Studio &#40;です。SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
-

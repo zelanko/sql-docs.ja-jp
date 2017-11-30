@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services における SOAP の役割 |Microsoft ドキュメント"
+title: "Reporting Services における SOAP の役割 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
 - SOAP [Reporting Services], role in Reporting Services
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: ae2242cc79e7fb3d5719e374a45751d27d5c2b5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Reporting Services における SOAP の役割
   レポート サーバー Web サービスでは、Simple Object Access Protocol (SOAP) メッセージングを使用し、ネットワーク経由でテキストベースのコマンドを送信します。 これらのコマンドは XML テキスト形式であり、HTTP を使用して World Wide Web 経由で送信されます。 レポート サーバー Web サービスでは、通信プロトコルとして SOAP を使用することで、アプリケーションとコンポーネントが開放型で広く普及しているインフラストラクチャを使用してレポート サーバーとデータを交換できるようにしています。 SOAP 標準は www.w3.org/TR/SOAP で定義されています。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/12/2017
 </soap:Envelope>  
 ```  
   
- SOAP 自体は、メッセージに配置される必要があります、**エンベロープ**要素内にメッセージの一括、**本文**要素。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 作成することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]クライアント プロキシ クラスをすべての SOAP 操作をメソッドにカプセル化します。 次[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]メソッドは上記の SOAP の例を表します。  
+ SOAP 自体は、メッセージを **Envelope** 要素に入れるよう要求します。メッセージは一括して **Body** 要素内に入ります。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 すべての SOAP 操作をメソッドにカプセル化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クライアント プロキシ クラスを作成できます。 次の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] メソッドは上記の SOAP の例を表しています。  
   
 ```  
 public void DeleteItem(string item);  
@@ -67,10 +65,9 @@ public void DeleteItem(string item);
  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドに戻り値はないため、空の応答が返されます。  
   
 ## <a name="see-also"></a>参照  
- [SOAP API にアクセスします。](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [レポート サーバー Web サービス](../../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [SOAP API へのアクセス](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
+ [レポート サーバー web サービス](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "LookupSet 関数 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "LookupSet 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bd6668bfd3fe7553f9b132e4ad0f3843eb6351fd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 736ad16f4df2a6c1d58ed2f34d59ea2e5627a648
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---lookupset-function"></a>レポートのビルダー関数 - LookupSet 関数
+# <a name="report-builder-functions---lookupset-function"></a>レポート ビルダー関数 - LookupSet 関数
   名前と値のペアを含むデータセットから、指定された名前に対応する一連の値を返します  
   
 > [!NOTE]  
@@ -65,7 +64,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   結果式の一連の値を返します。  
   
- 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md) を使用します。 呼び出す**ルックアップ**一連の値を使用して[Multilookup 関数 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+ 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md) を使用します。 一連の値に対して **Lookup** を呼び出すには、[Multilookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) を使用します。  
   
  次の制限があります。  
   
@@ -146,17 +145,16 @@ End Function
 ```  
   
 ## <a name="example"></a>例  
- HTML を生成するには、関数を呼び出す必要があります。 次の式をテキスト ボックスの Value プロパティに貼り付け、テキストのマークアップの種類を HTML に設定します。 詳細については、「[レポートへの HTML の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)」を参照してください。  
+ HTML を生成するには、関数を呼び出す必要があります。 次の式をテキスト ボックスの Value プロパティに貼り付け、テキストのマークアップの種類を HTML に設定します。 詳細については、「[レポートへの HTML の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
 ```  
 =Code.MakeList(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"))  
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポート &#40; 内の式の使用レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [式 &#40; 内のデータ型レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [式のスコープの合計、集計、および組み込みコレクション & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

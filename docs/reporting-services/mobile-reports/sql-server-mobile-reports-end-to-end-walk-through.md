@@ -1,29 +1,26 @@
 ---
-title: "SQL Server モバイル レポート エンド ツー エンド チュートリアル |。Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+title: "SQL Server モバイル レポート: エンド ツー エンドのチュートリアル | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート エンド ツー エンドのチュートリアル。
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート: エンド ツー エンドのチュートリアル
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web ポータル上の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] で任意の画面サイズのモバイル レポートを作成し、Power BI モバイル アプリで表示するチュートリアル。
 
 調整可能なグリッド行とグリッド列、柔軟なモバイル レポート要素を備えたデザイン領域でモバイル レポートを作成します。 さまざまなオンプレミス データ ソースに接続するか、Excel ブックをアップロードしてモバイル レポートを作成します。 レポートを [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルに保存し、ブラウザーまたは Power BI モバイル アプリで表示します。  
@@ -38,11 +35,11 @@ ms.lasthandoff: 09/27/2017
 ## <a name="before-we-start"></a>開始前の準備  
 このチュートリアルを実行するには、以下の製品が必要です。  
   
-* アクセスが必要なデータ ソースと Kpi を作成し、データセットとモバイル レポートをパブリッシュ、[です。含める[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)です。  
-* [共有データセットを作成](../install-windows/install-report-builder.md)です。  
+* データ ソースと KPI を作成し、データセットとモバイル レポートをパブリッシュするには、[!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md) にアクセスする必要があります。  
+* [共有データセットを作成します](../install-windows/install-report-builder.md)。  
 * モバイル レポートを作成するには、 [SQL Server Mobile Report Publisher をインストールします](http://go.microsoft.com/fwlink/?LinkId=717766)。  
-* [AdventureWorks サンプル データベースとスクリプト](http://msftdbprodsamples.codeplex.com/)。  
-*  OR: World Wide Importers のサンプル データベースから使用可能な[Microsoft SQL Server のサンプル](../../sample/microsoft-sql-server-samples.md)ページ。
+* [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)。  
+*  または、[Microsoft SQL Server サンプル](../../sample/microsoft-sql-server-samples.md) ページから使用可能な、World Wide Importers サンプル データベース。
 * 結果を表示するには: 
   *   [Power BI サービスにサインアップする](http://go.microsoft.com/fwlink/?LinkID=513879) および
   *  iOS、Android フォン、Windows 10 デバイスなどのモバイル デバイスに[Power BI モバイル アプリをダウンロードする](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/)   
@@ -50,12 +47,12 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="create-a-shared-data-source"></a>共有データ ソースの作成  
   
-Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 参照してください、[サポートされているデータ ソースの一覧](../report-data/data-sources-supported-by-reporting-services-ssrs.md)です。  
+Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 「[サポートされるデータ ソースの一覧](../report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルから、 **[新規作成]** > **[データソース]**をクリックします。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. データ ソース情報を入力 > **OK**です。  
+3. データ ソースの情報を入力し、**[OK]** をクリックします。  
   
     既定では、データ ソースはポータルに表示されません。    
    
@@ -236,7 +233,7 @@ Reporting Services モバイル レポートを作成するには、 [SQL Server
   
 マスター レイアウトでビジュアルを作成したら、電話ユーザー用に最適化されたレイアウトを持つモバイル レポートを作成できます。    
   
-1. 右上隅のアイコンをクリックして、キャンバス > **Phone**です。  
+1. 右上隅で、キャンバス アイコン、**[電話]** の順にクリックします。  
   
 2. [レイアウト] タブの **[Control Instances (コントロール インスタンス)]**で、作成した 2 つのグラフを確認します。   
   
@@ -313,5 +310,4 @@ KPI とモバイル レポートは、Reporting Services Web ポータルにあ�
 -  [Windows 10 デバイス用の Power BI アプリで Reporting Services のモバイル レポートと KPI を表示する](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

@@ -1,27 +1,25 @@
 ---
-title: "チュートリアル: レポート (レポート ビルダー) への KPI の追加 |Microsoft ドキュメント"
+title: "チュートリアル: レポートへの KPI の追加 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル: レポートへの KPI の追加 (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] チュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに主要業績評価指標 (KPI) を追加します。  
@@ -59,7 +57,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 5.  **[次へ]**をクリックします。  
   
-6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、次を参照してください[チュートリアル: 基本的なテーブル レポート &#40;を作成する。レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 7.  **[次へ]**をクリックします。  
   
@@ -103,7 +101,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. クエリ デザイナーのツール バーで、[実行]\ (**!**) をクリックします。
+10. クエリ デザイナーのツール バーで、[実行] (**!**) をクリックします。
 
 11. **[次へ]**をクリックします。  
   
@@ -163,7 +161,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 3. Ctrl キーを押しながら、 [Sum(Sales)] が格納されている 4 つのセルを選択します。
 
-4. **ホーム**タブ >**数** > **通貨**です。 書式設定された通貨を表示するようにセルが変化します。
+4. **[ホーム]** タブで、**[数値]** > **[通貨]** の順に選択します。 書式設定された通貨を表示するようにセルが変化します。
 
    地域設定が英語 (米国) の場合、既定のサンプル テキストは [$12,345.00] です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。
     
@@ -173,7 +171,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 6. [SalesDate] が格納されたセルをクリックします。
 
-6. **数**グループ >**日付**です。
+6. **[数値]** グループの **[日付]** を選択します。
 
    セルに、日付の例として [2000/1/31] と表示されます。 
 
@@ -213,13 +211,13 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 1.  デザイン ビューに再び切り替えます。  
   
-2.  表に、Sales 列の列ハンドルを右クリックして >**列の挿入** > **右**です。 テーブルに新しい列が追加されます。  
+2.  テーブル内の Sales 列の列ハンドルを右クリックし、**[列の挿入]** > **[右]** の順にクリックします。 テーブルに新しい列が追加されます。  
 
     ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  列見出しに「 **Linear KPI** 」と入力します。  
   
-4.  **挿入**タブ >**データの視覚エフェクト** > **ゲージ**テーブルの外部のデザイン画面をクリックします。   
+4.  **[挿入]** タブで、**[データ ビジュアライゼーション]** > **[ゲージ]** の順にクリックし、テーブル外部のデザイン画面内をクリックします。   
   
 5.  **[ゲージの種類の選択]** ダイアログ ボックスで、最初の線形ゲージの種類として **[水平]**を選択します。  
   
@@ -233,15 +231,15 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
    
     ![report-builder-kpi-drag-sales-field](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
-9. **ゲージ データ** ウィンドウで、矢印をクリックして、次に**LinearPointer1** > **ポインターのプロパティ**です。  
+9. **[ゲージ データ]** ペインで、**[LinearPointer1]** の横にある矢印  > **[ポインターのプロパティ]** の順にクリックします。  
   
-10. **線形ポインターのプロパティ** ダイアログ ボックス >**ポインターのオプション**タブ >**ポインター型**、確認**バー**が選択されています。 
+10. **[線形ポインターのプロパティ]** ダイアログ ボックスで、**[ポインター オプション]** タブ、**[ポインター型]** の順にクリックし、**[バー]** が選択されていることを確認します。 
  
 11. **[OK]**をクリックします。  
   
 12. ゲージのスケールを右クリックし、 **[スケールのプロパティ]**をクリックします。  
   
-13. **線形スケールのプロパティ** ダイアログ ボックス >**全般** タブで、設定**最大**を 25000 にします。  
+13. **[線形スケールのプロパティ]** ダイアログ ボックスの **[全般]** タブをクリックし、**[最大]** を 25000 に設定します。  
 
     > [!NOTE]  
     > 25000 などの定数の代わりに、 **[最大]** オプションの値を動的に計算する式を使用することもできます。 その式では、入れ子になった集計の機能を使用します (例: `=Max(Sum(Fields!Sales.value), "Tablix1")`)。  
@@ -262,19 +260,19 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5.インジケーターを使用して KPI を表示する  
-インジケーターは、データ値をひとめでわかるようにするための単純で小さなゲージです。 そのサイズと単純さのために、テーブルやマトリックスでよく使用されます。 詳細については、次を参照してください。[インジケーター &#40; です。レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+インジケーターは、データ値をひとめでわかるようにするための単純で小さなゲージです。 そのサイズと単純さのために、テーブルやマトリックスでよく使用されます。 詳細については、「[インジケーター (レポート ビルダーおよび SSRS)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>インジケーターを使用して KPI の現在の状態を表示するには  
   
 1.  デザイン ビューに切り替えます。  
   
-2.  テーブルの最後の手順で追加した線形 KPI 列の列ハンドルを右クリックして >**列の挿入** > **右**です。 テーブルに新しい列が追加されます。  
+2.  テーブルにおいて、前回の手順で追加した Linear KPI 列の列ハンドルを右クリックし、**[列の挿入]** > **[右]** の順にクリックします。 テーブルに新しい列が追加されます。  
   
 3.  列見出しに「 **Stoplight KPI** 」と入力します。  
   
 4.  前回の手順で追加した線形ゲージの横にあるサブカテゴリの小計のセルをクリックします。  
   
-5.  **挿入**タブ >**データの視覚エフェクト**> をダブルクリックして**インジケーター。**  
+5.  **[挿入]** タブで、**[データ ビジュアライゼーション]** をクリックし、**[インジケーター]** をダブルクリックします。  
   
 6.  **[インジケーターの種類の選択]** ダイアログ ボックスの **[図形]**で、最初の図形の種類として、 **[3 つの信号 (枠なし)]**を選択します。  
   
@@ -352,5 +350,4 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 * [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)
 * [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

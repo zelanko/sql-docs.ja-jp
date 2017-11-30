@@ -1,5 +1,5 @@
 ---
-title: "有効にする Reporting Services の機能、オンまたはオフ |Microsoft ドキュメント"
+title: "Reporting Services 機能の有効化と無効化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1df708ed8e384371ea97b683b97733e0bcacb6e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
   運用レポート サーバーに対する外部からの攻撃の危険性を低減するためのロックダウン ストラテジには含まれないレポート サーバー機能を無効にできます。 ほとんどの場合は、複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を同時に実行して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供される機能をすべて利用します。 ただし、配置モデルによっては、不要な機能を無効にすることができます。 たとえば、すべてのレポート処理をスケジュールに従って実行するように構成すると、バックグラウンド処理だけを有効にすることもできます。 同様に、対話型の要求時レポートだけが必要な場合は、レポート サーバー Web サービスだけを実行することもできます。  
@@ -45,9 +44,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>構成を編集してレポート サーバー Web サービスを有効または無効にするには  
   
-1.  テキスト エディターで `RsReportServer.config` ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」をご覧ください。  
+1.  テキスト エディターで `RsReportServer.config` ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
-2.  レポート サーバー Web サービスを有効にするには、**IsWebServiceEnabled** を **true** に設定します。  
+2.  レポート サーバー Web サービスを有効にするには、 **IsWebServiceEnabled** を **true**に設定します。  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -81,9 +80,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>構成を編集して定期的なイベントおよび配信を有効または無効にするには  
   
-1.  テキスト エディターで RsReportServer.config ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」をご覧ください。  
+1.  テキスト エディターで RsReportServer.config ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
-2.  スケジュールされたレポート処理および配信を有効にするには、**IsSchedulingService**、**IsNotificationService**、および **IsEventService** を **true** に設定します。  
+2.  スケジュールされたレポート処理および配信を有効にするには、 **IsSchedulingService**、 **IsNotificationService**、および **IsEventService** を **true**に設定します。  
   
     ```  
     <IsSchedulingService>true</IsSchedulingService>  
@@ -123,9 +122,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  バックグラウンド処理によって、サーバー処理に必要なデータベース メンテナンス機能が提供されているため、バックグラウンド処理を完全に無効にすることはできません。  
   
-##  <a name="WebPortal"></a>Web ポータル
+##  <a name="WebPortal"></a> Web ポータル
   
-以前のバージョンで無効にすることレポート マネージャーを設定して**IsReportManagerEnabled**を false に設定します。 **IsReportManagerEnabled** SQL Server 2016 Reporting Services Cumulative Update 2 の時点では推奨されていません。 Web ポータルは、常に有効にします。
+以前のバージョンでは、**IsReportManagerEnabled** を false に設定することで、レポート マネージャーを無効にすることができました。 **IsReportManagerEnabled** は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で廃止されました。 Web ポータルは常に有効になります。
   
 ##  <a name="ReportBuilder"></a> レポート ビルダー  
   
@@ -161,7 +160,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
- 他に質問しますか。 [Reporting Services のフォーラムを再試行してください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+ その他の質問 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

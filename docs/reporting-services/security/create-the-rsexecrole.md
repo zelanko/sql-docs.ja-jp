@@ -1,5 +1,5 @@
 ---
-title: "RSExecRole を作成 |Microsoft ドキュメント"
+title: "RSExecRole を作成する | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,21 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RSExecRole
+helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 **RSExecRole** と呼ばれる定義済みのデータベース ロールを使用して、レポート サーバー データベースに対するレポート サーバーの権限が付与されます。 **RSExecRole** ロールは、レポート サーバー データベースで自動的に作成されます。 原則として、このロールを変更したり、他のユーザーをこのロールに割り当てたりすることはできません。 ただし、レポート サーバー データベースを新規または別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]に移動した場合は、master および MSDB システム データベースでロールを再作成する必要があります。  
@@ -193,11 +190,11 @@ ms.lasthandoff: 08/09/2017
 30. sysjobs テーブルに同じ操作を繰り返します。 RSExecRole には、両方のテーブルに対する選択権限を付与する必要があります。  
   
 ## <a name="move-the-report-server-database"></a>レポート サーバー データベースの移動  
- ロールを作成したら、レポート サーバー データベースを新しい SQL Server インスタンスに移動できます。 詳細については、次を参照してください。[別のコンピューターにレポート サーバー データベースを移動](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)です。  
+ ロールを作成したら、レポート サーバー データベースを新しい SQL Server インスタンスに移動できます。 詳細については、「[別のコンピューターへのレポート サーバー データベースの移動](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。  
   
- アップグレードする場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SQL Server 2016 にアップグレードできますが、データベースの移動の前後にします。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] を SQL Server 2016 にアップグレードする場合、そのアップグレードはデータベースを移動する前と後のどちらでも実行できます。  
   
- レポート サーバー データベースは、レポート サーバーに接続するときに自動的にアップグレードされます。 データベースをアップグレードするために特定の手順を実行する必要はありません。  
+ レポート サーバー データベースは、レポート サーバーがそのデータベースに接続するときに、自動的にアップグレードされます。 データベースをアップグレードするために特定の手順を実行する必要はありません。  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>暗号化キーの復元と作業の確認  
  レポート サーバー データベースをアタッチしたら、次の手順を実行して作業を確認します。  
@@ -212,7 +209,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  **[既存のレポート サーバー データベースを選択する]**をクリックします。  
   
-5.  データベース エンジンのサーバー名を入力します。 名前付きインスタンスにレポート サーバー データベースがアタッチされている場合は、この形式でインスタンス名を入力する必要があります: \<servername >\\< instancename\>です。  
+5.  データベース エンジンのサーバー名を入力します。 レポート サーバー データベースを名前付きインスタンスにアタッチした場合は、\<サーバー名>\\<インスタンス名\> の形式でインスタンス名を入力する必要があります。  
   
 6.  **[接続テスト]**をクリックします。  
   
@@ -241,4 +238,4 @@ ms.lasthandoff: 08/09/2017
 [ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

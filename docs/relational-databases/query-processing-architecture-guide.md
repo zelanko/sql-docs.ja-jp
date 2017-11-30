@@ -1,32 +1,33 @@
 ---
 title: "クエリ処理アーキテクチャ ガイド | Microsoft Docs"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、ローカル テーブル、パーティション テーブル、複数のサーバーに分散されたテーブルなどさまざまなデータ ストレージ アーキテクチャでクエリを処理します。 以下のトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリを処理して、実行プランのキャッシュによりクエリの再利用を最適化する方法について説明します。
 
@@ -38,7 +39,9 @@ ms.lasthandoff: 10/13/2017
 
 `SELECT` ステートメントは非手続き型であり、要求したデータを取得するときにデータベース サーバーで使用する手順が細かく指定されません。 つまり、データベース サーバーが SELECT ステートメントを分析して、要求したデータを抽出する最も効率的な方法を決定する必要があります。 これを、 `SELECT` ステートメントの最適化と呼びます。 また、最適化を行うコンポーネントをクエリ オプティマイザーと呼びます。 クエリ オプティマイザーへの入力は、クエリ、データベース スキーマ (テーブル定義やインデックスの定義)、およびデータベース統計で構成されます。 クエリ オプティマイザーの出力がクエリ実行プランです。これは、クエリ プランや単にプランと呼ばれることもあります。 クエリ プランの内容については、このトピックの後半で説明します。
 
-単一の `SELECT` ステートメントを最適化する場合のクエリ オプティマイザーの入出力は、次の図のようになります。 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+単一の `SELECT` ステートメントを最適化する場合のクエリ オプティマイザーの入出力は、次の図のようになります。
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` ステートメントは次の事項だけを定義します。  
 * 結果セットの形式。 ほとんどの場合、選択リスト内で指定します。 ただし、 `ORDER BY` や `GROUP BY` などの句も結果セットの最終形式に影響します。
@@ -619,7 +622,7 @@ WHERE ProductID = 63;
   各クエリまたはインデックス操作では、一定数のワーカー スレッドを実行する必要があります。 並列プランの実行には直列プランの場合よりも多くのワーカー スレッドが必要になり、必要なワーカー スレッド数は並列処理の次数が高くなるほど増加します。 並列処理の特定の次数に応じた並列プランのワーカー スレッド要件を満たすことができない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が並列処理の次数を自動的に下げるか、指定されたワークロード コンテキストでの並列プランを完全に破棄します。 その後、直列プラン (1 つのワーカー スレッド) を実行します。 
 
 3. 実行するクエリまたはインデックス操作の種類。  
-  インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)を使用して既定値の 5 から変更できますが、既定値はできるだけ変更しないでください。 
+  インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 適切なテストで実行中のワークロードには異なる値がより適していることが判明した場合、ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して既定値の 5 を変更することができます。 
 
 4. 処理する十分な数の行があるかどうか。  
   クエリ オプティマイザーによって行数が少なすぎると判断されると、行を分散するための交換操作は導入されません。 したがって、操作は直列に実行されます。 直列プランで操作を実行すると、並列操作を実行したときに得られる効果より、起動、分散、および調整のコストの方が上回る事態を回避することができます。
@@ -716,9 +719,9 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) 2 つのテーブルを結合する DOP が 4 のクエリ プラン
+以下の図は、並列処理の次数が 4 で実行され、2 つのテーブルが結合されているクエリ プランを示しています。
 
-この図は、並列処理の次数が 4 で実行され、2 つのテーブルが結合されているクエリ オプティマイザーのプランを示しています。
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 並列プランには、3 つの並列処理操作が含まれています。 `o_datkey_ptr` インデックスの Index Seek 操作と `l_order_dates_idx` インデックスの Index Scan 操作が並列で実行されます。 これにより、複数の排他ストリームが生成されます。 この処理は、Index Scan 操作と Index Seek 操作の上位にあり最も近い Parallelism 操作からそれぞれ決定できます。 どちらの操作もストリームを再分割し、交換の種類を決定しています。 つまり、単にストリーム間でデータを再移動して、入力時と同じ数のストリームを出力時に生成しているということです。 このストリーム数は並列処理の次数と同じになります。
 
@@ -727,6 +730,8 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 Index Seek 操作の上位にある並列操作は、`O_ORDERKEY` の値を使用して入力ストリームを再分割します。 この入力は `O_ORDERKEY` 列の値で並べ替えられておらず、`Merge Join` 操作の結合列であるので、並列操作と Merge Join 操作の間の Sort 操作により、`Merge Join` 操作のために入力を結合列で並べ替えています。 `Sort` 操作は、Merge Join 操作と同様に並列処理されます。
 
 最上位にある並列操作は、複数のストリームから得た結果を 1 つのストリームに集めます。 この並列操作の下位にある Stream Aggregate 操作で実行された部分集計は、並列操作の上位にある Stream Aggregate 操作の `O_ORDERPRIORITY` の異なる値ごとに 1 つの `SUM` 値に累計されます。 このプランには並列処理の次数が 4 に設定された 2 つの交換セグメントが含まれているため、8 個のワーカー スレッドが使用されます。
+
+この例で使用されている演算子の詳細については、「[Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)」 (プラン表示の論理および物理演算子のリファレンス) を参照してください。
 
 ### <a name="parallel-index-operations"></a>並列インデックス操作
 
@@ -1040,4 +1045,3 @@ GO
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基数推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "レポート定義言語 (SSRS) |Microsoft ドキュメント"
+title: "レポート定義言語 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bdd500541261f3bf9ce5435113aca70f6c93758d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  
@@ -51,14 +50,14 @@ ms.lasthandoff: 08/09/2017
   
  たとえば、スキーマには、 **ReportParametersType**複合型の RDL 要素 **ReportParameters**が含まれます。 通常、要素の複合型の名前は、要素名の後に **Type**という単語が続きます。 **ReportParameters** 要素は、 **Report** 要素 (複合型) に含めることができ、 **ReportParameter** 要素を含むことができます。 **ReportParameterType** は単純型で、 **Boolean**、 **DateTime**、 **Integer**、 **Float**、または **String**のいずれかの値のみを指定できます。 XML スキーマ データ型の詳細については、「 [XML スキーマ第 2 部: データ型 (第 2 版)](http://go.microsoft.com/fwlink/?linkid=4871)」を参照してください。  
   
- RDL XSD は、ReportDefinition.xsd ファイルから入手できます。このファイルは製品 CD-ROM の Extras フォルダーにあります。 次の URL を通じてレポート サーバーで利用できます:`http://servername/reportserver/reportdefinition.xsd`です。  
+ RDL XSD は、ReportDefinition.xsd ファイルから入手できます。このファイルは製品 CD-ROM の Extras フォルダーにあります。 また、次の URL からレポート サーバーで入手することもできます: `http://servername/reportserver/reportdefinition.xsd`  
   
 ##  <a name="bkmk_Creating_RDL"></a> RDL の作成  
  RDL は開放型で拡張可能な性質を持つため、XML スキーマに基づき RDL を生成するさまざまなツールとアプリケーションを作成できます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、RDL ファイルを作成するための複数のツールが用意されています。 詳細については、「 [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
   
- アプリケーションから RDL を生成する最も簡単な方法の 1 つは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間と <xref:System.Xml> 名前空間の <xref:System.Linq> クラスを使用することです。 特に、 **XmlTextWriter** クラスは RDL の記述に使用できます。 **XmlTextWriter**を使用すると、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アプリケーションで完全なレポート定義を最初から最後まで生成できます。 開発者は、カスタム プロパティを持つカスタム レポート アイテムを追加して、RDL を拡張することもできます。 詳細については、 **XmlTextWriter**クラスおよび<xref:System.Xml>名前空間を参照してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]開発者ガイド 』。 言語統合クエリ (LINQ) の詳細については、MSDN で「LINQ to XML」を検索してください。  
+ アプリケーションから RDL を生成する最も簡単な方法の 1 つは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間と <xref:System.Xml> 名前空間の <xref:System.Linq> クラスを使用することです。 特に、 **XmlTextWriter** クラスは RDL の記述に使用できます。 **XmlTextWriter**を使用すると、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アプリケーションで完全なレポート定義を最初から最後まで生成できます。 開発者は、カスタム プロパティを持つカスタム レポート アイテムを追加して、RDL を拡張することもできます。 **XmlTextWriter** クラスおよび <xref:System.Xml> 名前空間の詳細については、『[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 開発者ガイド』を参照してください。 言語統合クエリ (LINQ) の詳細については、MSDN で「LINQ to XML」を検索してください。  
   
  レポート定義の標準的なファイル拡張子は .rdl です。 .rdlc という拡張子のクライアント レポート定義ファイルを作成することもできます。 どちらの拡張子の場合も、MIME の種類は text/xml です。 レポートの詳細については、「[Reporting Services レポート &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)」を参照してください。  
   
@@ -94,8 +93,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
- [レポートでカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [カスタム レポート アイテム](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   
-

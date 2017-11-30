@@ -1,5 +1,5 @@
 ---
-title: "クリックスルー レポート (SSRS) |Microsoft ドキュメント"
+title: "クリックスルー レポート (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d38ad40a53843dbc1a1c636e37d3e4d9ada21b40
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clickthrough-reports-ssrs"></a>クリックスルー レポート (SSRS)
   クリックスルー レポートとは、メイン レポートに含まれるデータの詳細情報を提供するレポートです。 クリックスルー レポートは、メイン レポートに表示される対話型データをユーザーがクリックすると表示されます。 これらのレポートは、レポート サーバーによって自動的に生成されます。 クリックスルー レポートに表示される内容は、モデルをデザインするときに、レポート モデルのエンティティに割り当てる **DefaultDetailAttribute** プロパティと **DefaultAggregateAttribute** プロパティを設定することによって指定できます。  
@@ -39,12 +38,12 @@ ms.lasthandoff: 08/09/2017
 #### <a name="single-instance-templates"></a>単一インスタンス テンプレート  
  単一インスタンス テンプレートは、対象エンティティのすべての属性と、対象エンティティからの一対多のリレーションシップを持つ関連エンティティに対して指定されているすべての既定の集計属性を表示します。 単一インスタンス テンプレートは次の画像のようになります。  
   
- ![多対一のクリックスルー レポートします。](../../reporting-services/reports/media/manytooneclickthrough.gif "多対一のクリックスルー レポートします。")  
+ ![多対一のクリックスルー レポート。](../../reporting-services/reports/media/manytooneclickthrough.gif "多対一のクリックスルー レポート。")  
   
 #### <a name="multiple-instance-templates"></a>複数インスタンス テンプレート  
  複数インスタンス テンプレートは、対象エンティティの既定の詳細属性のみと、対象エンティティからの一対多のリレーションシップを持つ関連エンティティに対して指定されているすべての既定の集計属性を表示します。 複数インスタンス テンプレートは次の画像のようになります。  
   
- ![多対一のクリックスルー レポートします。](../../reporting-services/reports/media/onetomanyclickthrough.gif "多対一のクリックスルー レポートします。")  
+ ![多対一のクリックスルー レポート。](../../reporting-services/reports/media/onetomanyclickthrough.gif "多対一のクリックスルー レポート。")  
   
 ## <a name="customizing-clickthrough-reports"></a>クリックスルー レポートのカスタマイズ  
  レポート サーバーによって生成される既定のテンプレートを使用する代わりに、レポート ビルダーでレポートを作成して、カスタマイズしたクリックスルー レポートとして使用することができます。 次に、レポートを、レポート マネージャーの詳細レポートとしてモデルにリンクできます。  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [レポートをクリックスルー レポートとしてモデルにリンクする](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   
-

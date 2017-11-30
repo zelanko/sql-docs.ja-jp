@@ -1,5 +1,5 @@
 ---
-title: "MSRS 2011 Web Service のパフォーマンス オブジェクトのパフォーマンス カウンターの |Microsoft ドキュメント"
+title: "パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d75a88f416a41812b2e4e6cd99b87c2a5279e985
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>パフォーマンス カウンターが MSRS 2011 Web Service のパフォーマンス オブジェクト
+# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト
   このトピックでは、 **MSRS 2011 Web Service** および **MSRS 2011 Windows Service** パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。 これらのオブジェクトは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] のネイティブ モードの配置の一部です。  
   
 > [!NOTE]  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
 |**Total Snapshot Updates**|レポート実行スナップショットの更新回数の合計。|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは、CounterSetName が"msr"でカウンター セットを返します。  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まる一連のカウンターを返します。  
   
 ```  
 get-counter -listset msr*  
@@ -132,8 +131,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーのパフォーマンスの監視](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint モードのパフォーマンス オブジェクト &#40; 用のパフォーマンス カウンターSharePoint モード &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   
-

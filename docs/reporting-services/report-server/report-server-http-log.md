@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバー HTTP ログ |Microsoft ドキュメント"
+title: "レポート サーバーの HTTP ログ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- HTTP [Reporting Services]
+helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bea168c6ad15828b44ea5f77f5c7bd3fa05cfb9d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90732a6f209640298ec1776fd5368b26fd2526fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
   レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
@@ -35,8 +33,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|ファイル名|既定では、ファイル名が ReportServerService_HTTP_\<タイムスタンプ > です。 ログ。 ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
-|ファイルの場所|このファイルは \microsoft SQL Server\\*\<SQL Server インスタンス >*\reporting です。|  
+|ファイル名|既定のファイル名は ReportServerService_HTTP_\<timestamp>.log です。 ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
+|ファイルの場所|このファイルは、\Microsoft SQL Server\\*\<SQL Server Instance>*\Reporting Services\LogFiles に格納されています。|  
 |ファイル形式|このファイルは EN-US 形式です。 ASCII テキスト ファイルです。|  
 |ファイルの作成および保存|HTTP ログは、構成ファイルでログ機能を有効にし、サービスを再開した後、レポート サーバーによって HTTP 要求が処理されて初めて作成されます。 設定を構成したにもかかわらず、ログ ファイルが確認できない場合は、レポートを開くか、レポート サーバー アプリケーション (レポート マネージャーなど) を起動して、HTTP 要求を生成すると、ログ ファイルが作成されます。<br /><br /> ログ ファイルの新しいインスタンスは、各サービスが再開され、その後、HTTP 要求がレポート サーバーに送信されると作成されます。<br /><br /> 既定では、トレース ログのサイズの上限は 32 MB であり、14 日後に削除されます。|  
   
@@ -87,7 +85,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [エラーとイベントのリファレンス &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [エラーとイベントのリファレンス (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

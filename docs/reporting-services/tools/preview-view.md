@@ -1,5 +1,5 @@
 ---
-title: "[プレビュー] ビュー |Microsoft ドキュメント"
+title: "[プレビュー] ビュー | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.previewview.f1
-helpviewer_keywords:
-- Preview view [Reporting Services]
+f1_keywords: sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 55771c2f37d8d9d5913ab96a226f108a6e0f709d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preview-view"></a>[プレビュー] ビュー
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポート デザイナーで **[プレビュー]** ビューを使用すると、表示レポートを表示できます。 レポートをプレビューすると、レポート デザイナーでは、レポートがローカルで実行され、[プレビュー] ビューに表示されます。 プレビュー モードでは、レポート全体が処理されます。 レポートに複雑なクエリや大量のデータが含まれている場合、初回のプレビューは、完了するまでに数分かかることがあります。 その後の変更内容が、レポートの形式に関するのみである場合、プレビュー時にはキャッシュされたデータが使用されます。
@@ -95,4 +92,3 @@ ms.lasthandoff: 08/09/2017
 + [レポート デザイナーの F1 ヘルプ](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
-

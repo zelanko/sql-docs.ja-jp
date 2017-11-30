@@ -1,7 +1,6 @@
 ---
-title: "有効にして、Reporting Services のクライアント側印刷機能を無効にする |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services のクライアント側印刷機能の有効化と無効化 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -17,27 +16,25 @@ helpviewer_keywords:
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 633727df8bdb43072ab5780cfca394934c049801
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
 
   レポート ビューアーのツールバーにある印刷ボタンをクリックすると、ブラウザーに表示される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートのクライアント側印刷機能で Portable Document Format (PDF) 形式が使用されます。 新しいリモート印刷の動作では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれている PDF 表示拡張機能を使用して、レポートを PDF 形式で表示します。 PDF 形式のレポートはダウンロードできます。また、PDF ファイルを表示するためのアプリケーションがインストールされている場合は、印刷ボタンをクリックすると、PDF ファイルのページ サイズ、印刷の向き、プレビュー画像など、ページに共通の設定項目が印刷ダイアログ ボックスに表示されます。 クライアント側印刷機能は既定で有効になっていますが、無効にして使用できないようにすることもできます。  
   
- 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用されていた ActiveX コントロールは、レポート サーバーからクライアント コンピューターにダウンロードする必要がありました。 レポート サーバーを SQL Server 2016 にアップグレードする場合、印刷コントロールは、レポート サーバーまたはクライアント コンピューターからは削除されません。  
+ 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用されていた ActiveX コントロールは、レポート サーバーからクライアント コンピューターにダウンロードする必要がありました。 レポート サーバーを SQL Server 2016 にアップグレードしても、この印刷コントロールはレポート サーバーまたはクライアント コンピューターから削除されません。  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> 印刷時の動作  
- 印刷をクリックすると![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print")ボタン、レポート ビューアー ツールバーでのエクスペリエンスは新機能によって異なります。PDF 閲覧アプリケーションがクライアント コンピューターにインストールされているブラウザーを使用しています。   クライアント コンピューターの環境に応じて、PDF ファイルのダウンロード、ダイアログ ボックスでの印刷オプションの設定、またはその両方を行うことができます。  
+ レポート ビューアーのツールバーで印刷 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") ボタンをクリックしたときの動作は、クライアント コンピューターにインストールされている PDF 閲覧アプリケーションの種類と、使用しているブラウザーの種類によって異なります。   クライアント コンピューターの環境に応じて、PDF ファイルのダウンロード、ダイアログ ボックスでの印刷オプションの設定、またはその両方を行うことができます。  
   
  ![レポート ツールバー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツールバー")  
   
@@ -121,5 +118,4 @@ Dim rs As New ReportingService()
 End Class 'Sample  
 ```
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

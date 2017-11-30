@@ -1,5 +1,5 @@
 ---
-title: "GetReportServerUrls メソッド (WMI MSReportServer_Instance) |Microsoft ドキュメント"
+title: "GetReportServerUrls メソッド (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetReportServerUrls method
+helpviewer_keywords: GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a4b7067d9e6360902bf76b1bfe27c7ed6541f481
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310a7195267cb538eec621163b5d752a557df982
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>GetReportServerUrls MSReportServer_Instance メソッド
+# <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance メソッド - GetReportServerUrls
   ユーザーがレポート サーバーと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに使用できる URL の一覧を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -65,4 +63,3 @@ public void GetReportServerUrls(out string[] applicationName,
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

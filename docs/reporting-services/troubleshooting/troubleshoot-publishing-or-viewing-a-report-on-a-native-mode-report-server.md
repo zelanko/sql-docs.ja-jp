@@ -1,5 +1,5 @@
 ---
-title: "パブリッシュまたはネイティブ モード レポート サーバーでレポートを表示のトラブルシューティング |Microsoft ドキュメント"
+title: "ネイティブ モードのレポート サーバーでのレポートのパブリッシュまたは表示のトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでのレポートのパブリッシュまたは表示のトラブルシューティング
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>パブリッシュしたレポートでアイテムを切り替えても何も起こらない  
   ローカル プレビューでレポートを表示する場合は、レポートでアイテムを切り替えて、アイテムを表示または非表示にすることができます。 同じレポートをレポート サーバーにパブリッシュした後で表示すると、切り替えアイテムが機能しなくなります。   
   
-\<レポート サーバー名 > にアンダー スコア (_) が含まれます  
+\<レポート サーバー名> にアンダースコア (_) が含まれている  
   
 エラーが発生することなくレポートが実行されても切り替えアイテムが機能しない (たとえば、展開アイコン (+) をクリックしても何も起こらない) 場合、レポート サーバーをホストするコンピューターの名前を確認してください。 コンピューター名にアンダースコアが含まれていると、切り替えアイテムが機能しません。 これは既知の問題です。 回避策はありません。   
   
@@ -66,5 +65,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

@@ -1,5 +1,5 @@
 ---
-title: "傾斜、エンボス、および追加テクスチャのスタイルをグラフ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 204e67c4b1fb62e3e38188f155196d8edc095356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>グラフの効果の追加の傾斜、エンボス、またはテクスチャ (レポート ビルダー)
+# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>グラフの効果 - ベベル、エンボス、またはテクスチャの追加(レポート ビルダー)
   特定のグラフの種類を使用する場合、グラフの視覚的な効果を高めるために、描画効果を指定できます。 このような描画効果を適用できるのは、グラフの系列だけです。 その他のグラフ要素には影響しません。  
   
  円グラフまたはドーナツ グラフの一種を使用する場合、画像に適用できる傾斜やエンボスの効果と同様、ぼかしや凹状の描画スタイルを指定できます。  
@@ -63,13 +62,12 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  3D と、傾斜またはエンボスのスタイルを同じグラフに含めることはできません。 グラフで 3D を有効にした場合は、PieDrawingStyle プロパティが表示されません。  
   
- ![Lighttodark 描画効果横棒グラフ](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "lighttodark 描画効果横棒グラフ")  
+ ![LightToDark 描画効果付きの横棒グラフ](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "LightToDark 描画効果付きの横棒グラフ")  
   
 ## <a name="see-also"></a>参照  
  [横棒グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [縦棒グラフと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [円グラフと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [グラフ &#40; を書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [縦棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

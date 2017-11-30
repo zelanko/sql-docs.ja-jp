@@ -1,5 +1,5 @@
 ---
-title: "URL でデバイス情報設定を指定 |Microsoft ドキュメント"
+title: "URL でデバイス情報設定を指定する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - device information settings [Reporting Services], URLs
 - URL access [Reporting Services], device information settings
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09e1655e7945a459cf9d606d24cf7479ee4fc568
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c5713d081ad81a9ae889e1a875d2c32bb04de6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>URL でデバイス情報設定を指定する
   デバイス情報設定は、表示拡張機能に渡すパラメーターのことです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート サーバー Web サービスのメソッドを使用してレポートを表示する場合は、 **DeviceInfo** XML 要素を入力パラメーターとして渡す必要があります。 **DeviceInfo** 要素の子要素は、各種表示拡張機能のデバイス情報設定に固有です。 *rc:tag=value* パラメーターの文字列を使用することによって、デバイス情報設定を URL に含めることができます。ここでは、 *tag* はアクセス先デバイス情報設定要素の名前です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]デバイス情報設定の詳細については、「表 [示拡張機能にデバイス情報設定を渡す](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)」を参照してください。  
@@ -39,8 +38,7 @@ Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG
 ```  
   
 ## <a name="see-also"></a>参照  
- [URL アクセスと #40 です。SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
   
   
-

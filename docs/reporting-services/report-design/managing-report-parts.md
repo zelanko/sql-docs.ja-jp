@@ -1,5 +1,5 @@
 ---
-title: "レポート パーツの管理 |Microsoft ドキュメント"
+title: "レポート パーツの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   ページネーションのあるレポート内のレポート パーツは、複数のユーザーが複数のレポート内で再利用できます。 ユーザーはサーバー上のレポート パーツを検索し、それらをレポートに追加できます。  また、ユーザーはサーバー上のレポート パーツの更新について通知を受け、レポート パーツの新しいバージョンを再パブリッシュすることもできます。 これらのレポート作成アクションは、Reporting Services のセキュリティ権限によって管理および制御されます。  このトピックでは、既にサーバー上に配置されているレポート パーツのプロパティと動作について説明します。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  レポート ビルダーなどのレポート作成アプリケーションから SharePoint 統合モードのレポート サーバーにレポート パーツがパブリッシュされると、レポート サーバー カタログも更新されて、ギャラリーから検索するときに新しいレポート パーツまたは更新されたレポート パーツが正確に反映されるようになります。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint フォルダーへのレポート パーツの直接アップロード  
- レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
+ レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
   
  ファイルは、GetProperties や SetProperties などの、一部の Reporting Services 管理 API を呼び出すことによって同期することもできます。  
   
@@ -96,9 +95,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポート サーバー コンテンツの管理と &#40; です。SSRS ネイティブ モードと &#41; です。](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [レポート デザイナー &#40; でのレポート パーツSSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   
-

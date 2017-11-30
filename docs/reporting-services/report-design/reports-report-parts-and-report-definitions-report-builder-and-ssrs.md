@@ -1,5 +1,5 @@
 ---
-title: "レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4f8368ff8e8b2ce8674a7d74b973474c758717bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 388fcfa8fcd993428e35308d5070612992851993
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 初期定義、パブリッシュされたレポート、ユーザーに表示される表示レポートなど、改ページ調整されたレポートの異なる状態を示すさまざまな用語が使用されます。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/27/2017
  パブリッシュされたレポートのセキュリティは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のロールベースのセキュリティ モデルを使用したロールの割り当てによって確保されます。 パブリッシュされたレポートにアクセスするには、URL、SharePoint Web パーツ、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用します。また、レポート ビルダーでレポートの場所に移動して開くこともできます。  
   
 ### <a name="report-snapshots"></a>レポート スナップショット  
- レポートは、レイアウト情報とレポートが最初に実行された時点のデータの両方を含むスナップショットとしてパブリッシュすることもできます。 レポート スナップショットは、特定の表示形式では保存されません。 その代わりに、レポート スナップショットは、ユーザーまたはアプリケーションが要求したときのみ、最終的な表示形式 (HTML など) で表示されます。 詳細については、次を参照してください[の検索とレポート マネージャー &#40; でレポートを表示する。レポート ビルダーおよび SSRS &#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ レポートは、レイアウト情報とレポートが最初に実行された時点のデータの両方を含むスナップショットとしてパブリッシュすることもできます。 レポート スナップショットは、特定の表示形式では保存されません。 その代わりに、レポート スナップショットは、ユーザーまたはアプリケーションが要求したときのみ、最終的な表示形式 (HTML など) で表示されます。 詳細については、「[レポート マネージャーを使用したレポートの検索と表示 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="rendered-reports"></a>表示レポート  
  表示レポートは、表示に適した形式 (HTML など) で、データおよびレイアウト情報の両方を含む完全に処理されたレポートです。 レポートは出力形式に変換しないと、表示されません。 レポートを表示するには、次のいずれかの操作を実行します。  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/27/2017
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

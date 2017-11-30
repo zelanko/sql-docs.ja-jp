@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバーにパブリッシュするレポート |Microsoft ドキュメント"
+title: "レポート サーバーへのレポートのパブリッシュ | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c19bf5cffb0330cde3e8f9125c5f1c5cac55ad24
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-reports-to-a-report-server"></a>レポート サーバーへのレポートのパブリッシュ
   1 つまたは複数のレポートのデザインおよびテストが完了したら、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の組み込みのデプロイ機能を使用してレポート サーバーにレポートをパブリッシュします。 個々のレポート、または複数のレポートとデータ ソースを含めることができるレポート サーバー プロジェクトを発行することができます。 複数のレポートをパブリッシュする最も簡単な方法は、レポート サーバー プロジェクトをパブリッシュする方法です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、" *パブリッシュ*" の代わりに、" *配置*" という用語が使用されます。 この 2 つの用語は同義です。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-publish-all-reports-in-a-project"></a>プロジェクトのすべてのレポートをパブリッシュするには  
   
-**ビルド** メニューのをクリックして**展開\<レポート プロジェクト名 >**です。 または、ソリューション エクスプローラーでレポート プロジェクトを右クリックして、 **[配置]**をクリックします。 パブリッシュ処理の状態が、[出力] ウィンドウに表示されます。  
+**[ビルド]** メニューで **[\<レポート プロジェクト名> の配置]** をクリックします。 または、ソリューション エクスプローラーでレポート プロジェクトを右クリックして、 **[配置]**をクリックします。 パブリッシュ処理の状態が、[出力] ウィンドウに表示されます。  
   
 レポート サーバー プロジェクトを配置すると、レポート プロジェクトの共有データ ソースも配置されます。 すべてのレポートは、同じプロジェクト構成を使用して同じレポート サーバー、サーバー上の同じフォルダーというように配置されます。 異なるサーバーにレポートを配置するには、これらのレポートを 1 つずつパブリッシュするか、レポート サーバー プロジェクトに必要なレポートのみを含めます。 ソリューションには、複数のレポート サーバー プロジェクトを含めることができます。複数のプロジェクトを使用すると、異なる構成を使用してさまざまなプロジェクトを配置できるため、レポートの配置を簡単に管理できます。 
   
@@ -76,8 +75,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [レポート サーバー コンテンツの管理と &#40; です。SSRS ネイティブ モードと &#41; です。](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

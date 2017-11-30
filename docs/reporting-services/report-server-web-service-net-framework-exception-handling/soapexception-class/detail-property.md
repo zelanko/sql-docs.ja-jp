@@ -1,5 +1,5 @@
 ---
-title: "プロパティの詳細 |Microsoft ドキュメント"
+title: "Detail プロパティ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,57 +10,55 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0ec158ac41b62beef9f59b6378633e8926e4116a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="detail-property"></a>Detail プロパティ
-  **詳細**のプロパティ、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException**クラスには、次の XML 構造。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** クラスの **Detail** プロパティには、次の XML 構造があります。  
   
 ## <a name="elements"></a>要素  
- **詳細**  
+ **Detail**  
  他のすべてのエラー詳細要素を含む最上位要素。  
   
  **ErrorCode**  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 固有のエラー コード。  
   
- **サブコード**  
+ **HttpStatus**  
  HTTP 状態コード。  
   
  **メッセージ**  
  レポート サーバーが割り当てたエラー メッセージとエラー コード。  
   
  **HelpLink**  
- エラーの詳細情報を参照できる Web サイトへのヘルプ リンクの URL。 詳細については、次を参照してください。 [HelpLink 要素](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md)です。  
+ エラーの詳細情報を参照できる Web サイトへのヘルプ リンクの URL。 詳細については、「[HelpLink 要素](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md)」を参照してください。  
   
  **LinkID**  
  リンクに割り当てられた ID です。  
   
  **ProductName**  
- 製品の名前です。 既定値は**Microsoft SQL Server Reporting Services**です。  
+ 製品の名前です。 既定値は **Microsoft SQL Server Reporting Services** です。  
   
- **製品バージョン**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、8.00.0xxx.00 のようになります。  
+ **ProductVersion**  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、8.00.0xxx.00 のようになります。  
   
  **ProductLocaleId**  
  アプリケーションの INTL DLL のロケール ID または言語 ID (0x41A など)。  
   
- **オペレーティング システム**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストール先のオペレーティング システム。 有効な値は**0**独立しており、オペレーティング システムの**1**の[!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]、および**16** Windows XP 用です。  
+ **OperatingSystem**  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストール先のオペレーティング システム。 有効値は、依存しないオペレーティング システムの場合は **0**、[!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] の場合は **1**、Windows XP の場合は **16** です。  
   
  **CountryLocaleId**  
  オペレーティング システムのロケール ID または言語 ID。 たとえば、Windows のフランス語バージョンの値は 0x040c です。  
@@ -69,18 +67,17 @@ ms.lasthandoff: 08/12/2017
  メソッド実行中に発生した入れ子にされた例外を含む XML 文字列です。  
   
  **ソース**  
- 子要素**MoreInformation**です。 エラーのソースです。  
+ **MoreInformation** の子要素。 エラーのソースです。  
   
  **メッセージ**  
- 子要素**MoreInformation**です。 入れ子にされた例外のエラー メッセージです。 この要素には、XML 属性が含まれています。 **ErrorCode**と**HelpLink**です。  
+ **MoreInformation** の子要素。 入れ子にされた例外のエラー メッセージです。 この要素には、**ErrorCode** と **HelpLink** の XML 属性が含まれます。  
   
  **Warnings**  
  レポート処理から返された警告を含む XML 文字列です。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services での例外処理の概要](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services における例外処理の概要](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException クラス](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
- [Detail プロパティを使用して、特定のエラーを処理するには](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Detail プロパティを使用したエラー処理](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   
-

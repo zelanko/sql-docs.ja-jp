@@ -1,28 +1,25 @@
 ---
-title: "改ページ調整されたレポート (web ポータル) の使用 |Microsoft ドキュメント"
+title: "ページ分割されたレポートの使用 (Web ポータル) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -50,7 +47,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
 > [!NOTE]
 > フォルダーにページ分割されたレポートが表示されない場合は、ページ分割されたレポートを表示していることを確認してください。 Web ポータルの右上にあるメニュー バーで **[表示]** を選択します。 **[ページ分割されたレポート]** がチェックされていることを確認します。  
   
-1.  選択、**省略記号 (...)**を管理するデータセットのです。  
+1.  管理するデータセットの省略記号 **[...]** を選択します。  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +124,12 @@ Web ポータル内のページ分割されたレポートのプロパティを�
 このオプションを使用するには、レポート サーバー用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報の手段がない場合に、外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、「 [自動実行アカウントの構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」をご覧ください。  
   
 ## <a name="subscriptions"></a>サブスクリプション  
-Reporting Services サブスクリプションは、特定の時刻に、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。 詳細については、次を参照してください。[サブスクリプション操作](working-with-subscriptions-web-portal.md)です。
+Reporting Services サブスクリプションは、特定の時刻に、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。 詳細については、「[サブスクリプションの操作](working-with-subscriptions-web-portal.md)」を参照してください。
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>依存アイテム  
-[依存アイテム] ページを使用すると、このレポートを参照しているアイテムの一覧を表示できます。 各アイテムの種類のアイコンは、その内容を表しています。 選択することができますし、**省略記号 (...)**さらにそれらのアイテムを管理するには、各項目にします。  
+[依存アイテム] ページを使用すると、このレポートを参照しているアイテムの一覧を表示できます。 各アイテムの種類のアイコンは、その内容を表しています。 各アイテムの **省略記号 (…)** を選択すると、それらのアイテムの詳細を管理できます。  
   
 ## <a name="caching"></a>キャッシュ  
 ページ分割されたレポートのデータをキャッシュするにはいくつかのオプションがあります。 簡単な選択で始めことができます。  
@@ -149,7 +146,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-詳細については、次を参照してください。[スナップショット操作](working-with-snapshots-web-portal.md)です。
+詳細については、「[スナップショットの操作](working-with-snapshots-web-portal.md)」を参照してください。
   
 ### <a name="cache-expiration"></a>キャッシュの有効期限  
   
@@ -199,7 +196,6 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
 ## <a name="next-steps"></a>次の手順
 
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
-[共有データセットを操作します。](../reporting-services/work-with-shared-datasets-web-portal.md)
+[共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

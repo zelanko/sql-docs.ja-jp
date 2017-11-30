@@ -1,5 +1,5 @@
 ---
-title: "およびレポート パーツ (レポート ビルダーおよび SSRS) を再パブリッシュ |Microsoft ドキュメント"
+title: "レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03b06d981e4ff824fbdca3f598271fce666237af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 28b130f64609c404a07cac0b2b18d4857b3cb701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)
   レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のページ分割されたレポートで再利用できる、ページ分割されたレポート用のアイテムです。 レポート パーツを既定の設定を使用して既定の場所でパブリッシュすることも、名前や説明などのレポート パーツのメタデータを編集し、レポート サーバー上に保存することもできます。 適切な権限があれば、レポート サーバーと統合された SharePoint サイトに保存することもできます。  
@@ -64,10 +63,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [レポート パーツとレポート ビルダーでデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [レポート パーツの参照と既定のフォルダーの設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   
-

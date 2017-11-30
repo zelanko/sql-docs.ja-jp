@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services でレポート デザインに関する問題のトラブルシューティング |Microsoft ドキュメント"
+title: "Reporting Services でのレポートのデザインに関する問題のトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d9a5cbd4b8065a7344eeec2d7cd495e656ec941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services でのレポートのデザインに関する問題のトラブルシューティング
 レポートのデザインに関する問題は、レポート作成アプリケーションのデザイン ビューでレポート レイアウトを作成しているときに発生することがあります。 このトピックでは、このような問題のトラブルシューティングについて説明します。   
@@ -46,7 +45,7 @@ PageNumber と TotalPages がページ ヘッダーとページ フッターで�
   
 組み込みフィールド [&PageNumber] および [&TotalPages] は、ページ ヘッダーとページ フッターでのみ有効です。   
   
-[&PageNumber] または [&TotalPages] をレポートに追加するには、まずページ ヘッダーまたはページ フッターを追加する必要があります。 詳細については、「[ページ ヘッダーの追加または削除](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)」を参照してください。  
+[&PageNumber] または [&TotalPages] をレポートに追加するには、まずページ ヘッダーまたはページ フッターを追加する必要があります。 詳細については、「 [ページ ヘッダーの追加または削除](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 > [&TotalPages] をページ ヘッダーまたはページ フッターに含めると、レポート処理に影響する可能性があります。 詳細については、「レポートのトラブルシューティング : 特定のファイル形式にエクスポートされるレポート」を参照してください。  
@@ -68,5 +67,4 @@ PageNumber と TotalPages がページ ヘッダーとページ フッターで�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

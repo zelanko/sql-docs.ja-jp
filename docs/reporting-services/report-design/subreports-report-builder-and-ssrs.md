@@ -1,5 +1,5 @@
 ---
-title: "サブレポート (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "サブレポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1ef1efaa3eb6e369e4b46766b3ed13fcbd2c0725
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>サブレポート (レポート ビルダーおよび SSRS)
   サブレポートは、メインのレポート本文内に別のレポートを表示するレポート アイテムです。 概念上、レポート内のサブレポートは Web ページ内のフレームとほぼ同じです。 これは、レポートをレポート内に埋め込むために使用されます。 サブレポートには、任意のレポートを使用できます。 サブレポートとして表示されるレポートは、レポート サーバー上に保存され、通常は親レポートと同じフォルダーに置かれます。 親レポートからサブレポートにパラメーターを渡すようにも設定できます。 パラメーターを使用してサブレポートの各インスタンスのデータをフィルター処理することにより、サブレポートをデータ領域内で繰り返し使用することができます。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  サブレポートは、レポート本文内またはデータ領域内に配置できます。 データ領域にサブレポートを配置する場合、同じサブレポートがグループのインスタンスまたはデータ領域の行ごとに配置されます。 グループまたは行からサブレポートに値を渡すには、サブレポートの値のプロパティで、サブレポート パラメーターに渡す値を含むフィールド用のフィールド式を使用します。  
   
- サブレポートの操作の詳細については、次を参照してください[サブレポートおよびパラメーター &#40; を追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ サブレポートの操作方法の詳細については、「[サブレポートおよびパラメーターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="specifying-subreport-names-and-locations"></a>サブレポートの名前と場所の指定  
  同じレポート サーバー上の異なるフォルダーにあるサブレポートを指定するようにメイン レポートを設定できます。  
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
  レポート ビルダーからメイン レポートのサブレポートをプレビューするには、両方のレポートが同じレポート サーバーに存在するか、サブレポートの完全なパスを指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

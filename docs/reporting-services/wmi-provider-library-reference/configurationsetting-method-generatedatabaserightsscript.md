@@ -1,5 +1,5 @@
 ---
-title: "GenerateDatabaseRightsScript メソッド (WMI MSReportServer_ConfigurationSetting) |Microsoft ドキュメント"
+title: "GenerateDatabaseRightsScript メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- GenerateDatabaseRightsScript method
+helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2e7e3d80d7e67b3a6e0924f04600860039086c94
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9657229fa2bbdb3e7be35fd385162bf8debb53c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---generatedatabaserightsscript"></a>GenerateDatabaseRightsScript ConfigurationSetting メソッド
+# <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting メソッド - GenerateDatabaseRightsScript
   レポート サーバー データベースおよびレポート サーバーの実行に必要なその他のデータベースに対してユーザー権限を付与する際に使用できる、SQL スクリプトを生成します。 呼び出し元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーに接続して、スクリプトを実行する必要があります。  
   
 ## <a name="syntax"></a>構文  
@@ -72,7 +68,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>解説  
  *DatabaseName* が空の場合、 *IsRemote* は無視され、レポート サーバーの構成ファイルの値がデータベース名に使用されます。  
   
- 場合*IsWindowsUser*に設定されている**true**、 *UserName*形式である必要があります\<ドメイン >\\< ユーザー名\>です。  
+ *IsWindowsUser* を **true** に設定した場合、*UserName* は \<domain>\\<username\> 形式で指定する必要があります。  
   
  *IsWindowsUser* を **true**に設定した場合、生成されたスクリプトによって、レポート サーバー データベースが既定のデータベースとして設定され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのログイン権限がユーザーに付与されます。また、レポート サーバー データベース、レポート サーバー一時データベース、master データベース、および MSDB システム データベースの **RSExec** ロールが付与されます。  
   
@@ -82,12 +78,12 @@ out Int32 HRESULT);
   
 |変換されるアカウントまたは SID|共通名|リモート名|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Local System|\<ドメイン >\\< コンピューター名\>$|  
-|.\LocalSystem|Local System|\<ドメイン >\\< コンピューター名\>$|  
-|ComputerName\LocalSystem|Local System|\<ドメイン >\\< コンピューター名\>$|  
-|LocalSystem|Local System|\<ドメイン >\\< コンピューター名\>$|  
-|(S-1-5-20)|Network Service|\<ドメイン >\\< コンピューター名\>$|  
-|NT AUTHORITY\NetworkService|Network Service|\<ドメイン >\\< コンピューター名\>$|  
+|(S-1-5-18)|Local System|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Local Service|エラー (下記参照)|  
 |NT AUTHORITY\LocalService|Local Service|エラー (下記参照)|  
   
@@ -103,9 +99,9 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<コンピューター名 >|testlab14|  
-|\<MachineFQDN >|example.redmond.microsoft.com|  
-|\<Ip アドレス >|180.012.345,678|  
+|\<Machinename>|testlab14|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
+|\<IPAddress>|180.012.345,678|  
   
  *IsWindowsUser* を **true**に設定した場合、WMI プロバイダーは LookupAccountName を呼び出してアカウントの SID を取得し、次に LookupAccountSID を呼び出して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプトに含める名前を取得します。 このようにすると、使用するアカウント名は必ず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 検証に合格します。  
   
@@ -124,4 +120,3 @@ out Int32 HRESULT);
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

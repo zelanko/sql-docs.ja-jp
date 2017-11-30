@@ -1,5 +1,5 @@
 ---
-title: "行の高さまたは列の幅 (レポート ビルダーおよび SSRS) の変更 |Microsoft ドキュメント"
+title: "行の高さまたは列の幅の変更 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>行の高さまたは列の幅の変更 (レポート ビルダーおよび SSRS)
   行の高さを設定することは、表示されるレポートの行の最大の高さを指定することです。 ただし、既定では、行のテキスト ボックスは実行時に格納するデータに合わせて縦方向に拡張されるように設定されているので、行の高さが指定した高さを超える場合があります。 行の高さを固定するには、行の高さが自動的に拡張されないようにテキスト ボックスのプロパティを変更する必要があります。  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  [デザイン] ビューで、テーブル行のセルをクリックします。  
   
-     ![テーブルのセルを選択した](../../reporting-services/report-design/media/table-selectcell.png "テーブル内のセルの選択")  
+     ![テーブル内の選択されたセル](../../reporting-services/report-design/media/table-selectcell.png "テーブル内の選択されたセル")  
   
 2.  表示された **[プロパティ]** ペインで **[高さ]** プロパティを変更し、 **[プロパティ]** ペインの外側の任意の場所をクリックします。  
   
-     ![選択したテーブルのセルのプロパティ ペイン](../../reporting-services/report-design/media/cell-propertiespane.png "選択したテーブルのセルのプロパティ ペイン")  
+     ![選択したテーブルのセルの [プロパティ] ペイン](../../reporting-services/report-design/media/cell-propertiespane.png "選択したテーブルのセルの [プロパティ] ペイン")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>行の高さが自動的に拡張されないようにするには  
   
@@ -72,11 +71,10 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="see-also"></a>参照  
  [Tablix データ領域 (レポート ビルダーおよび SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [マトリックス (レポート ビルダーおよび SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
  [一覧 (レポート ビルダーおよび SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

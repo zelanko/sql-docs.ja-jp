@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services レポートのデータ取得に関する問題のトラブルシューティング |Microsoft ドキュメント"
+title: "Reporting Services レポートのデータ取得に関する問題のトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services レポートのデータ取得に関する問題のトラブルシューティング
 レポート処理の最初の手順は、データセット クエリを実行して各データセットのレポート データを取得することです。 レポートをローカルでプレビューする場合は、データ ソースの接続と資格情報で十分な権限を使用して、コンピューターにデータを取得する必要があります。 レポートをレポート サーバーで実行する場合は、データ ソースの接続と資格情報で十分な権限を使用して、レポート サーバーでデータを取得する必要があります。 このトピックでは、レポート データの取得に関する問題のトラブルシューティングを行います。   
@@ -73,7 +72,6 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

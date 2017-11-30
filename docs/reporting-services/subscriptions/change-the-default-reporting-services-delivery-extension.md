@@ -1,5 +1,5 @@
 ---
-title: "既定の Reporting Services 配信拡張機能の変更 |Microsoft ドキュメント"
+title: "Reporting Services の既定の配信拡張機能を変更する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Manager [Reporting Services], default delivery extension
+helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e46c81c5c96bc3c71eef8a2ca48a89c177ca1700
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Reporting Services の既定の配信拡張機能を変更する
   サブスクリプション定義ページの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [配信者] **リストに表示される既定の配信拡張機能は** の構成設定で変更できます。 たとえば、ユーザーが新しいサブスクリプションを作成したときに電子メール配信ではなくファイル共有配信が既定で選択されるように構成を変更することができます。 また、ユーザー インターフェイスにおける配信拡張機能の表示順を変更することもできます。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
      テキスト エディターで RSReportServer.config ファイルを開きます。 構成ファイルの詳細については、「 [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。 以下の画像は、構成変更後の UI を示しています。  
   
-     ![配信拡張機能の一覧を変更しました](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "配信拡張機能の一覧を変更しました")  
+     ![配信拡張機能の変更した一覧](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "配信拡張機能の変更した一覧")  
   
 2.  DeliveryUI セクションを以下の例のように変更します。主な変更点は次のとおりです。  
   
@@ -121,8 +119,7 @@ ms.lasthandoff: 08/09/2017
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services でのファイル共有の配信](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

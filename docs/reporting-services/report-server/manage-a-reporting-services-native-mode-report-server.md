@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services ネイティブ モード レポート サーバーの管理 |Microsoft ドキュメント"
+title: "Reporting Services ネイティブ モードのレポート サーバーの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b070f5ee2eaad2fbe831b281505189766a0e4e7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
   ここでは、Reporting Services 構成マネージャーを使用してネイティブ モードのレポート サーバー インスタンスを構成する手順について説明します。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
  レポート サーバーの要求の受信と応答の送信に使用されるポートを開く方法について説明します。  
   
  [ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- レポート マネージャーまたはを使用してレポート サーバーに接続するために必要な追加の手順について説明します`http://localhost`です。  
+ `http://localhost` を使用してレポート マネージャーまたはレポート サーバーに接続するために必要な追加手順について説明します。  
   
  [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  リモートのレポート サーバー インスタンスに接続したり別のコンピューターから構成したりすることができるようにインスタンスを構成する方法について説明します。  
@@ -73,7 +72,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [レポート サーバー &#40; の構成と管理Reporting Services SharePoint モード &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [レポート サーバーの構成と管理 &#40;Reporting Services SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバー データベース (SSRS ネイティブ モード) の管理 |Microsoft ドキュメント"
+title: "レポート サーバー データベースを管理する (SSRS ネイティブ モード) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 3fc4f3adeac32e917b5b218548906ca6a9cb664d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 464f02ee6324db06587ee1c7233f8fcd12026722
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>レポート サーバー データベースを管理する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の環境では、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースが内部記憶域として使用されます。 既定では、データベース名がそれぞれ ReportServer と ReportServerTempdb になります。 ReportServerTempdb は、レポート サーバーのプライマリ データベースと共に作成され、一時データ、セッション情報、およびキャッシュされたレポートを格納する目的に使用されます。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  レポート サーバー データベースを管理するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではさまざまなツールを用意しています。  
   
--   レポート サーバー データベースのバックアップや復元、移動、または復旧を行うには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド、またはデータベース コマンド プロンプト ユーティリティを使用します。 手順については、次を参照してください[別のコンピューター &#40; をレポート サーバー データベースの移動。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) SQL Server オンライン ブック。  
+-   レポート サーバー データベースのバックアップや復元、移動、または復旧を行うには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド、またはデータベース コマンド プロンプト ユーティリティを使用します。 手順については、SQL Server オンライン ブックの「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。  
   
 -   既存のデータベース コンテンツを他のレポート サーバー データベースにコピーする場合、レポート サーバー データベースのコピーをアタッチして、別のレポート サーバー インスタンスで使用します。 また、SOAP 呼び出しを使用して新しいデータベースにレポート サーバー コンテンツを再作成するスクリプトを作成して、実行することもできます。 スクリプトを実行するには、 **rs** ユーティリティを使用します。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="naming-conventions-for-the-report-server-databases"></a>レポート サーバー データベースの名前付け規則  
  プライマリ データベースを作成する際、データベースの名前は、「 [データベース識別子](../../relational-databases/databases/database-identifiers.md)」に指定されている規則に従う必要があります。 一時データベースには、レポート サーバーのプライマリ データベース名に、Tempdb というサフィックスを追加した名前を使用する必要があります。 一時データベースに別の名前を選択することはできません。  
   
- レポート サーバーのデータベースは内部コンポーネントと見なされているため、レポート サーバー データベースの名前変更はサポートされません。 レポート サーバーのデータベース名を変更するとエラーが発生します。 具体的には、プライマリ データベースの名前を変更すると、データベース名が同期されていないという内容のエラー メッセージが表示されます。 ReportServerTempdb データベースの名前を変更すると、レポートの実行時に次の内部エラーが発生します。  
+ レポート サーバーのデータベースは内部コンポーネントと見なされているため、レポート サーバー データベースの名前変更はサポートされません。 レポート サーバーのデータベース名を変更するとエラーが発生します。 具体的には、プライマリ データベースの名前を変更すると、データベース名が同期されていないという内容のエラー メッセージが表示されます。ReportServerTempdb データベースの名前を変更すると、レポートの実行時に次の内部エラーが発生します。  
   
  "レポート サーバーで内部エラーが発生しました。 詳細については、エラー ログを参照してください。 (rsInternalError)  
   
@@ -81,18 +81,18 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>データベースのバージョンについて  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 製品バージョン情報[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル バージョン情報、ログ ファイルをすべての SOAP 呼び出しのヘッダー内に表示されると、レポート サーバーの URL に接続する場合に示されます (たとえば、ブラウザーを開くと`http://localhost/reportserver`)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の製品バージョンの情報は、ログ ファイルに現れるファイルのバージョン情報、すべての SOAP 呼び出しのヘッダー、およびレポート サーバーの URL に接続したとき (ブラウザーを開いて `http://localhost/reportserver` を参照したときなど) に示されます。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [ネイティブ モード レポート サーバー データベース &#40; を作成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [レポート サーバー サービス アカウント &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [レポート サーバー データベース接続 &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [レポート サーバー データベース &#40; を作成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [バックアップと復元操作を Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [レポート サーバー データベース & #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [暗号化されたレポート サーバー データ &#40; の格納SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [構成および暗号化キー &#40; を管理します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Reporting Services のバックアップおよび復元操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

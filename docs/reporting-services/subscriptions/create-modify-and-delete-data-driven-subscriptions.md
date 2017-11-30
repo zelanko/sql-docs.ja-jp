@@ -1,5 +1,5 @@
 ---
-title: "作成、変更、およびデータ ドリブン サブスクリプションの削除 |Microsoft ドキュメント"
+title: "データ ドリブン サブスクリプションを作成、変更、および削除する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 0c9cdf45f989d471d7454914e7298bb504d20288
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>データ ドリブン サブスクリプションを作成、変更、および削除する
   データ ドリブン サブスクリプションは、サブスクリプションの処理に使用するデータ値を実行時に取得するためのクエリ ベースのサブスクリプションです。 データ ドリブン サブスクリプションが開始されると、クエリが実行され、受信者、レポート配信オプション、表示形式、およびパラメーター設定に関する最新情報が取得されます。 このクエリ結果がサブスクリプション定義に組み込まれ、既存のデータを使用する動的サブスクリプションが作成されます。この動的サブスクリプションは、従業員データベース、顧客データベースなど、サブスクライバーのデータ ソースとして利用可能なすべてのデータベースのデータを使用します。  
   
- データ ドリブン サブスクリプションの作成や、既存のサブスクリプションの変更を行うには、レポート マネージャーの [データ ドリブン サブスクリプションの作成] ページを使用します。 これらのページでは、サブスクリプションの作成または変更の各手順を進めていきます。 作成したサブスクリプションにアクセスするには、[個人用サブスクリプション] ページおよびレポートの [サブスクリプション] の一覧を使用します。 データ ドリブン サブスクリプションを作成する方法についてを参照してください[データ ドリブン サブスクリプション &#40; を作成します。SSRS チュートリアル &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ データ ドリブン サブスクリプションの作成や、既存のサブスクリプションの変更を行うには、レポート マネージャーの [データ ドリブン サブスクリプションの作成] ページを使用します。 これらのページでは、サブスクリプションの作成または変更の各手順を進めていきます。 作成したサブスクリプションにアクセスするには、[個人用サブスクリプション] ページおよびレポートの [サブスクリプション] の一覧を使用します。 データ ドリブン サブスクリプションを作成する方法については、「[データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。  
   
  このトピックの内容:  
   
@@ -70,9 +70,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  レポート マネージャーで、レポートのあるフォルダーに移動し、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[管理]**をクリックします。  
   
-2.  **[サブスクリプション]** タブをクリックします。 または、レポート マネージャーの上部にある **[個人用サブスクリプション]** リンクをクリックします。  
+2.  **[サブスクリプション]** タブをクリックします。または、レポート マネージャーの上部にある **[個人用サブスクリプション]** リンクをクリックします。  
   
-3.  変更するサブスクリプションを選択します。 次のアイコンは、データ ドリブン サブスクリプションを示します:![データ ドリブン サブスクリプション アイコン](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "データ ドリブン サブスクリプション アイコン")  
+3.  変更するサブスクリプションを選択します。 次のアイコンがデータ ドリブン サブスクリプションを表します: ![データ ドリブン サブスクリプション アイコン](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "データ ドリブン サブスクリプション アイコン")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>既存のデータ ドリブン サブスクリプションを変更するには (SharePoint モード)  
   
@@ -107,10 +107,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [サブスクリプションと配信 & #40 です。Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [[サブスクリプション] ページ & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [個人用サブスクリプション ページ & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [[サブスクリプション] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [[個人用サブスクリプション] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

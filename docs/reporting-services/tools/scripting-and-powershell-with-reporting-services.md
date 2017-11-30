@@ -1,5 +1,5 @@
 ---
-title: "スクリプトと Reporting Services を使った PowerShell |Microsoft ドキュメント"
+title: "Reporting Services を使ったスクリプトの作成と PowerShell | Microsoft Docs"
 ms.custom: 
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
@@ -15,31 +15,30 @@ helpviewer_keywords:
 - Reporting Services, scripting
 - scripting [Reporting Services]
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2bb429f6b2f7ffb876887714a1eea64d97d76773
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 717a36d9c27ab4fb7a982ce87d534ed8d1533b90
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services を使ったスクリプトの作成と PowerShell
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]さまざまなスクリプト、rs.exe コマンド ライン ユーティリティ、SharePoint モード レポート サーバー用の PowerShell コマンドレットを活用することなどを使った開発と管理のシナリオをサポートしている、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブ モードと SharePoint モードの PowerShell からのオブジェクト モデルです。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スクリプトによる開発および管理のさまざまなシナリオをサポートしています。スクリプトには、rs.exe コマンド ライン ユーティリティや SharePoint モードのレポート サーバー用の PowerShell コマンドレットを含むもの、またネイティブ モードと SharePoint モードの両方の PowerShell からの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オブジェクト モデルを利用するものがあります。  
   
 -   管理者は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] でスクリプトを作成して、レポート サーバーのインストールを配置および管理する方法を自動化できます。 また、レポート サーバー データベースを作成、構成、および更新する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成し、実行することもできます。 さらに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でスクリプトの記録機能と再生機能を使用して、定期的なメンテナンス タスクを自動化することもできます。  
   
 -   開発者は、スクリプトを含むカスタム アプリケーションを作成して、 レポート サーバー Web サービスを呼び出すスクリプトを実行できます。 マネージ コードで記述できるほとんどすべての操作は、スクリプトで記述することもできます。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サポートしている[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプトは RS.exe ユーティリティ、レポート サーバーで実行されるスクリプト ホストで処理可能なスクリプト言語として。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプトを、RS.exe ユーティリティ (レポート サーバーで実行されるスクリプト ホスト) によって処理されるスクリプト言語としてサポートします。  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Reporting Services SharePoint モードの PowerShell コマンドレットとサンプル  
  ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint モードを含む[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバーの管理用のコマンドレットです。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードには、レポート サーバー管理用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コマンドレットが含まれています。  
   
 -   [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) には、以下の例が含まれています。  
   
@@ -70,9 +69,8 @@ ms.lasthandoff: 08/09/2017
 -   その他のスクリプト、アプリケーション、および拡張機能の例については、「 [SQL Server Reporting Services の製品例](http://go.microsoft.com/fwlink/?LinkId=177889)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [RS.exe ユーティリティ & #40 です。SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [スクリプトを展開および管理タスク](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Rs.exe ユーティリティと Web サービスのスクリプト](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
+ [RS.exe ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
+ [配置タスクおよび管理タスクのスクリプト作成](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+ [rs.exe ユーティリティと Web サービスを使用したスクリプト](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
   
   
-

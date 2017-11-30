@@ -1,5 +1,5 @@
 ---
-title: "ドキュメント アウトライン |Microsoft ドキュメント"
+title: "ドキュメント アウトライン | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.documentoutline.f1
+f1_keywords: sql13.rtp.rptdesigner.documentoutline.f1
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 34e9d253aa34b936be7a9647f960d762a8db5d70
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d2e671ec8553abfe3b96d5fafa4dd639823d7e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="document-outline"></a>[ドキュメント アウトライン]
   [ドキュメント アウトライン] ウィンドウを使用すると、レポート内のレポート アイテムの階層を表示できます。 Tablix データ領域には、Tablix セルに含まれるテキスト ボックスおよびその他のレポート アイテムがすべて表示されます。 デザイン画面でレポート アイテムを選択すると、[ドキュメント アウトライン] ウィンドウでは、対応するレポート アイテムが選択されます。 このビューを使用すると、デザイン画面上でレポート アイテムを探すことができます。 たとえば、式にエラーが含まれるレポートをプレビューすると、出力ウィンドウに各エラーのメッセージが表示されます。 メッセージには、エラーを含む式が含まれているテキスト ボックスの名前が表示されます。 [ドキュメント アウトライン] ウィンドウでテキスト ボックスの名前をクリックすると、デザイン画面にそのテキスト ボックスが選択された状態で表示され、エラーを含む式を確認できます。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/09/2017
  階層内のすべてのノードを折りたたみます。  
   
   
-

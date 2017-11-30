@@ -1,47 +1,47 @@
 ---
 title: "クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 11/28/2016
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
-ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリのストア機能により、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用してクエリ ストアを構成できます。 
   
- Azure SQL Database におけるクエリ ストアの運用の詳細については、「 [Azure SQL Database でクエリ ストアを運用する](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)」を参照してください。  
+ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] におけるクエリ ストアの運用について詳しくは、「[Azure SQL Database でクエリ ストアを運用する](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)」をご覧ください。  
   
 ##  <a name="Enabling"></a> クエリのストアを有効にする  
  既定では、クエリのストアは新しいデータベースに対してアクティブではありません。  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>Management Studio でクエリのストアのページを使用する  
+#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [クエリ ストア] ページを使う  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**をクリックします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]バージョン以上が必要です。  
+    >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のバージョン 16 以降が必要です。  
   
 2.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
   
@@ -82,11 +82,11 @@ ms.lasthandoff: 08/03/2017
 -   特定のクエリまたはプランの待機の性質を理解します。
   
 クエリ ストアには 3 つのストアが含まれます。
-- **プラン ストア**は、実行プラン情報の保存用です
-- **ランタイム統計ストア**は、実行統計情報の保存用です 
+- **プラン ストア**は、実行プラン情報の保存用です。
+- **ランタイム統計ストア**は、実行統計情報の保存用です
 - **待機統計ストア**は、待機統計情報の保存用です
  
- クエリのためにプラン ストア内に格納できる一意のプラン数は、 **max_plans_per_query** 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報は つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
+ クエリのためにプラン ストア内に格納できる一意のプラン数は、 **max_plans_per_query** 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報はストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
   
  次のクエリは、クエリのストア内のクエリとプランに関する情報を返します。  
   
@@ -123,37 +123,38 @@ SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ �
 |データベースごとの高い RESOURCE_SEMAPHORE 待機|特定のクエリに対するクエリ ストアでの高いメモリ待機|クエリ ストアでメモリ消費量の多いクエリを探します。 これらのクエリは、影響を受けるクエリの進行をさらに遅らせる可能性があります。 これらのクエリまたは影響を受けるクエリに、MAX_GRANT_PERCENT クエリ ヒントを使うことを検討します。|
 |データベースごとの高い LCK_M_X 待機|特定のクエリに対するクエリ ストアでの高いロック待機|影響を受けるクエリのクエリ テキストを確認し、ターゲット エンティティを明らかにします。 クエリ ストアで同じエンティティを変更している他のクエリを探します。これらは、頻繁に実行されていたり、実行時間が長くなったりします。 これらのクエリを特定した後、同時実行が向上するようにアプリケーション ロジックを変更するか、制限の低い分離レベルを使うことを検討します。|
 |データベースごとの高い PAGEIOLATCH_SH 待機|特定のクエリに対するクエリ ストアでの高いバッファー IO 待機|クエリ ストアで、物理読み取り数が多いクエリを検索します。 それらが IO 待機の長いクエリと一致する場合は、スキャンではなくシークを行うように基になるエンティティにインデックスを導入して、クエリの IO オーバーヘッドを最小限に抑えることを検討します。|
-|データベースごとの高い SOS_SCHEDULER_YIELD 待機|特定のクエリに対するクエリ ストアでの高い CPU 待機|クエリ ストアで CPU 消費量の多いクエリを探します。 それらの中で、高い CPU 傾向が影響を受けるクエリの高い CPU 待機と関連性のあるクエリを特定します。 それらのクエリの最適化に注目します。プラン回帰または欠落インデックスが存在する可能性があります。| 
+|データベースごとの高い SOS_SCHEDULER_YIELD 待機|特定のクエリに対するクエリ ストアでの高い CPU 待機|クエリ ストアで CPU 消費量の多いクエリを探します。 それらの中で、高い CPU 傾向が影響を受けるクエリの高い CPU 待機と関連性のあるクエリを特定します。 それらのクエリの最適化に注目します。プラン回帰または欠落インデックスが存在する可能性があります。|
+
 ##  <a name="Options"></a> 構成オプション 
 
 次のオプションは、クエリ ストア パラメーターの構成に使用できます。
 
  `OPERATION_MODE`  
- READ_WRITE (既定値) または READ_ONLY。  
+ **READ_WRITE** (既定値) または READ_ONLY。  
   
  `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。 既定値は、30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は 7 日です。
+ STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。 既定値は、30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
   
  `DATA_FLUSH_INTERVAL_SECONDS`  
- クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を介して構成されます。 既定値は 900 (15 分) です。  
+ クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するには、クエリのストアで収集したデータ非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を介して構成されます。 既定値は **900** (15 分) です。  
   
  `MAX_STORAGE_SIZE_MB`  
- クエリのストアの最大サイズを構成します。 クエリのストア内のデータが MAX_STORAGE_SIZE_MB の上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。  既定値は 100Mb です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は 1 Gb、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は 10 Mb です。
+ クエリのストアの最大サイズを構成します。 クエリのストア内のデータが MAX_STORAGE_SIZE_MB の上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。  既定値は 100Mb です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB**、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
   
  `INTERVAL_LENGTH_MINUTES`  
- クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定された時間枠は、INTERVAL_LENGTH_MINUTES 引数を介して構成されます。 既定値は 60 です。 
+ クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定された時間枠は、INTERVAL_LENGTH_MINUTES 引数を介して構成されます。 既定値は **60**です。 
   
  `SIZE_BASED_CLEANUP_MODE`  
- データの総量が最大サイズに近付いたときにクリーンアップ プロセスを自動的にアクティブにするかどうかを制御します。 AUTO (既定値) または OFF。  
+ データの総量が最大サイズに近付いたときにクリーンアップ プロセスを自動的にアクティブにするかどうかを制御します。 **AUTO** (既定値) または OFF。  
   
  `QUERY_CAPTURE_MODE`  
- クエリのストアが、すべてのクエリをキャプチャするか、実行数とリソース消費量に基づいて関連するクエリをキャプチャするか、または新しいクエリの追加を停止して現在のクエリのみを追跡するかを指定します。 ALL (すべてのクエリをキャプチャする)、AUTO (不定期で、不必要なコンパイルと実行期間を持つクエリを無視する) または NONE (新しいクエリのキャプチャを停止する)。 SQL Server 2016 の既定値は ALL であり、Azure SQL Database の既定値は AUTO です。
+ クエリのストアが、すべてのクエリをキャプチャするか、実行数とリソース消費量に基づいて関連するクエリをキャプチャするか、または新しいクエリの追加を停止して現在のクエリのみを追跡するかを指定します。 ALL (すべてのクエリをキャプチャする)、AUTO (不定期で、不必要なコンパイルと実行期間を持つクエリを無視する) または NONE (新しいクエリのキャプチャを停止する)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) での既定値は **ALL** ですが、Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では AUTO です。
   
  `MAX_PLANS_PER_QUERY`  
- 各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。  
+ 各クエリに対して保持の計画の最大数を表す整数。 既定値は **200** です。  
  
  `WAIT_STATS_CAPTURE_MODE`  
- クエリ ストアが待機統計情報をキャプチャするかどうかを制御します。 OFF = 0 または ON = 1 (既定値) を指定できます  
+ クエリ ストアが待機統計情報をキャプチャするかどうかを制御します。 OFF または **ON** (既定値) にすることができます。  
  
  **sys.database_query_store_options** ビューにクエリを実行し、クエリ ストアの現在のオプションを確認します。 値に関する詳細については、「[sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。  
   
@@ -162,6 +163,9 @@ SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ �
 ##  <a name="Related"></a> 関連するビュー、関数、プロシージャ  
  クエリのストアは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] か、次のビューとプロシージャを使用して表示および管理します。  
 
+### <a name="query-store-functions"></a>クエリ ストア関数  
+ 関数は、クエリ ストアの操作に役立ちます。 
+ 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
@@ -309,7 +313,7 @@ DEALLOCATE adhoc_queries_cursor;
   
 -   **sp_query_store_reset_exec_stats** – 指定されたプランの実行時統計をクリアします。  
   
--   **sp_query_store_remove_plan** – つのプランを削除します。  
+-   **sp_query_store_remove_plan** –&1; つのプランを削除します。  
  
   
 ###  <a name="Peformance"></a> パフォーマンスの監査とトラブルシューティング  
@@ -346,7 +350,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **去 時間で平均実行時間が長かったクエリの上位。**  
+ **去&1; 時間で平均実行時間が長かったクエリの上位。**  
   
 ```tsql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -467,7 +471,7 @@ GROUP BY qt.query_text_id, q.query_id, p.plan_id
 ORDER BY sum_total_wait_ms DESC
  ```
  
- **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
+ **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去&1; 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
   
 ```tsql  
 --- "Recent" workload - last 1 hour  
@@ -585,4 +589,3 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
  [Azure SQL Database でクエリ ストアを運用する](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   
-

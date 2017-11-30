@@ -1,5 +1,5 @@
 ---
-title: "ドキュメント マップ (レポート ビルダーおよび SSRS) を作成 |Microsoft ドキュメント"
+title: "ドキュメント マップの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e0dc1672f1c03db4e7e5b4d7a6a8e11e9f6a9a66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
 
 ドキュメント マップは、表示レポート内のレポート アイテムへのナビゲーション リンクのセットを提供します。 ドキュメント マップを含むレポートを表示すると、別のサイド ペインがレポートの横に表示されます。 ドキュメント マップ内のリンクをクリックすると、そのアイテムが表示されているレポート ページに移動できます。 レポート セクションとグループは、リンクの階層として配置されます。 ドキュメント マップ内のアイテムをクリックすると、レポートが更新され、ドキュメント マップのアイテムに対応したレポートの領域が表示されます。  
@@ -114,13 +112,12 @@ ms.lasthandoff: 08/09/2017
   
      この URL を使用するには、コピーし、すべての改行を削除します。  
   
-4.  レポート マネージャーで URL を貼り付け、Enter キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
+4.  レポート マネージャーで URL を貼り付け、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
   
 > [!NOTE]  
->  サンプル レポートのダウンロードの詳細については、次を参照してください。[レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)です。  
+>  サンプル レポートをダウンロードする方法の詳細については、「 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
 >   
 >  詳細については、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
 
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

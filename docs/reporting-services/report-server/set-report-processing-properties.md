@@ -1,5 +1,5 @@
 ---
-title: "レポート処理プロパティを設定 |Microsoft ドキュメント"
+title: "レポート処理プロパティの設定 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,22 +18,21 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e2bae47182f317a699f968b6953015f7a2eac823
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-report-processing-properties"></a>レポート処理プロパティの設定
   レポート実行プロパティでは、レポートの処理方法を制御します。 実行プロパティは、各レポートごとに設定する必要があります。  
   
- レポート実行プロパティを設定するには、レポート マネージャーでレポートを開き、[実行] プロパティ ページに移動します。 詳細については、次を参照してください。[処理オプションのプロパティ ページ & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). 使用してプロパティを設定することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; を参照してください[処理オプションのプロパティ ページ & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ レポート実行プロパティを設定するには、レポート マネージャーでレポートを開き、[実行] プロパティ ページに移動します。 詳細については、「[[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してプロパティを設定することもできます。「[[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)」を参照してください。  
   
 ## <a name="report-execution-modes"></a>レポート実行モード  
  レポートは、要求時に実行するか、スナップショットとして実行することができます。 以下のセクションでは、各方法について説明します。  
@@ -59,14 +58,13 @@ ms.lasthandoff: 08/09/2017
   
 -   既存のサブスクリプションが、スナップショットに対して指定した既定のパラメーター値と異なるパラメーター値を使用するように構成されている場合。  
   
- この条件が存在する場合、レポート サーバーは、次にスケジュールされているサブスクリプションの実行時に、サブスクリプションを無効にします。 サブスクリプションを再度アクティブ化するには、サブスクリプションを開いてから保存します。 サブスクリプションを開くと、レポート サーバーにより、スナップショットに指定されたサブスクリプションのパラメーター値が更新されます。 サブスクリプションの詳細については、次を参照してください。[サブスクリプションと配信 & #40 です。Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ この条件が存在する場合、レポート サーバーは、次にスケジュールされているサブスクリプションの実行時に、サブスクリプションを無効にします。 サブスクリプションを再度アクティブ化するには、サブスクリプションを開いてから保存します。 サブスクリプションを開くと、レポート サーバーにより、スナップショットに指定されたサブスクリプションのパラメーター値が更新されます。 サブスクリプションの詳細については、「[サブスクリプションと配信 &#40;Reporting Services&#41](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [レポートの実行プロパティを構成する (レポート マネージャー)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [方法: レポート履歴にスナップショットを追加](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴にスナップショットを追加する方法](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

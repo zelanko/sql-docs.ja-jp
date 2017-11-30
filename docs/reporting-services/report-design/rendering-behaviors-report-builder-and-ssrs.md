@@ -1,5 +1,5 @@
 ---
-title: "レンダリングの動作 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "レンダリングの動作 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>レンダリングの動作 (レポート ビルダーおよび SSRS)
   選択したレンダラーによっては、レポートをレンダリングする際に、レポート本文とそのコンテンツに特定の規則が適用されます。 レポート アイテムが 1 ページにまとめられる際の方法は、次に示す要因の組み合わせによって決まります。  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/09/2017
  HTML 形式または MHTML 形式でレンダリングした場合、ページ ヘッダーおよびページ フッターには次の規則が適用されます。  
   
 > [!NOTE]  
->  Excel でのヘッダーとフッターの表示方法の詳細については、「[Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」(Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。 Word でのヘッダーとフッターの表示方法の詳細については、「[Exporting to Microsoft Word &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」(Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。  
+>  Excel でのヘッダーとフッターの表示方法の詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。 Word でのヘッダーとフッターの表示方法の詳細については、「[Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。  
   
 -   ヘッダーとフッターが存在する場合、すべてのページの使用可能なページ領域内の最上部と最下部にレンダリングされます。  
   
@@ -134,9 +133,8 @@ ms.lasthandoff: 08/09/2017
 -   テーブル セルまたはマトリックス セル内のアイテムで定義された論理的な改ページは保持されません。 これは、一覧にあるアイテムには当てはまりません。  
   
 ## <a name="see-also"></a>参照  
- [対話機能のさまざまなレポート表示拡張機能と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [HTML &#40; での表示レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [ページ レイアウトとレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [HTML での表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

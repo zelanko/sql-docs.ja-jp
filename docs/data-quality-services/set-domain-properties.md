@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21943e484d690d0ff26cf9a93e0688e0804dd02c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-domain-properties"></a>ドメインのプロパティの設定
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインのプロパティを設定する方法について説明します。  
@@ -57,7 +54,7 @@ ms.lasthandoff: 09/09/2017
  ドメインを作成した後に、ドメインの名前または説明を変更できます。 ドメイン名は、ナレッジ ベースに対して一意である必要があります。 説明は 256 文字まで指定できます。  
   
 ###  <a name="Type"></a> データ型  
- ドメインを作成する場合、ドメインの値のデータ型として **[String]** (既定値)、 **[Date]**、 **[Integer]**、 **[Decimal]**のいずれか 1 つを選択します。 ドメインを作成した後は、データ型を表示することはできますが、変更することはできません。 ドメイン用に選択したデータ型によって、ドメインにマップできるソース データの型が定義されます。 DQS の 4 つのドメイン データ型のそれぞれでサポートされているデータ型については、「 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
+ ドメインを作成する場合、ドメインの値のデータ型として **[String]** (既定値)、 **[Date]**、 **[Integer]**、 **[Decimal]**のいずれか 1 つを選択します。 ドメインを作成した後は、データ型を表示することはできますが、変更することはできません。 ドメイン用に選択したデータ型によって、ドメインにマップできるソース データの型が定義されます。 DQS の 4 つのドメイン データ型のそれぞれでサポートされているデータ型については、「[DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」をご覧ください。  
   
 ###  <a name="Leading"></a> [先頭の値を使用]  
  シノニムの値ではなく、シノニムのグループの先頭の値が出力されることを指定する場合は、このチェック ボックスをオンにします。 各シノニムの値が正しいフォームまたは修正されたフォームで出力され、そのグループの先頭の値で置き換えられないことを指定する場合は、 **[先頭の値を使用]** をオフにします。  
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
  データ型が **[String]**の場合は、このチェック ボックスをオンにして、クレンジング中にドメイン内の構文エラーが DQS で識別されないことを指定します。 このチェック ボックスは、そのドメインで構文エラーの識別が無関係の場合にオンにします。 たとえば、シリアル番号では構文エラーの識別は重要でない場合があります。 このコントロールは、string データ型でのみ使用できます。 DQS では、string 以外のデータ型について構文エラーはチェックされません。  
   
   
-

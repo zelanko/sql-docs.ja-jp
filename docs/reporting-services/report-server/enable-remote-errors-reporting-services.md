@@ -1,5 +1,5 @@
 ---
-title: "リモート エラー (Reporting Services) を有効にする |Microsoft ドキュメント"
+title: "リモート エラーの有効化 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d409aa01ca3d060068fa9045b0a1fafec8bf3fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-remote-errors-reporting-services"></a>リモート エラーの有効化 (Reporting Services)
   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージに "このエラーの詳細を表示するには、ローカルのサーバー コンピューターでレポート サーバーを開くか、リモート エラーを有効にしてください。" と表示されている場合は、 **EnableRemoteErrors** プロパティを設定すると、問題のトラブルシューティングに役立つ追加情報にアクセスできます。 詳細については、 [オンライン ブックの「](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) レポート サーバーのシステム プロパティ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  レポート サーバー ノードを右クリックして、 **[プロパティ]**をクリックします。  
   
-3.  **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[サーバーのプロパティ ([詳細設定] ページ) - Reporting Services」](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)を参照してください。  
+3.  **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[サーバーのプロパティ &#40;[詳細設定] ページ&#41; - Reporting Services」](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)を参照してください。  
   
 4.  **EnableRemoteErrors**で **True**を選択します。  
   
@@ -120,4 +119,3 @@ ms.lasthandoff: 08/09/2017
     >  レポート サーバー データベースで **ConfigurationInfo** テーブルを編集して、 **EnableRemoteErrors** を **True**に設定できますが、レポート サーバーが現在使用中の場合は、SQL Server Management Studio またはスクリプトを使用して設定を変更する必要があります。 データベース内で設定を変更した場合、変更は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの再起動後に反映されます。  
   
   
-

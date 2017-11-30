@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 統合モードのパブリッシュされたレポートのパラメーターを設定 |Microsoft ドキュメント"
+title: "パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,18 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57f464054989a20b56b729624d711b6520466d13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>SharePoint 統合モードのパブリッシュされたレポートのパラメーターを設定します。
+# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード
   パラメーター化されたレポートとは、レポートの実行時にデータのフィルター処理に使用する入力値を受け取るレポートです。 パラメーターは、レポートの作成時に定義します。 レポート定義でレポート パラメーターがどのように定義されているかによって、単一の値、複数の値、または動的な値を受け入れることができます。動的な値は、直前の選択に応じて変化します (たとえば、製品カテゴリを選択したとき、次の選択ではそのカテゴリの特定の製品を選択するなど)。 パラメーターには既定値を指定することもできます。フィルター選択したレポートを自動的に実行する場合に既定値を使用することも、既定値を別の値に置き換えることもできます。  
   
  このようなプロパティはレポート定義で設定することも、レポートがパブリッシュされた後で設定することもできます。 パブリッシュされたレポートの一部のパラメーター プロパティを変更して、値や表示プロパティを変更することはできますが、パラメーターの名前やデータ型を変更することはできません。 パラメーター名とデータ型は、レポート作成者のみがレポート定義内で変更できます。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
  パブリッシュ済みレポートのパラメーター プロパティを設定するには、レポートに対する "アイテムの編集" 権限が必要です。 SharePoint サイトから実行するレポートの、一部またはすべてのパラメーター プロパティを変更できます。 繰り返し使用するパラメーター値の組み合わせを保存することで、レポートを個人用にカスタマイズすることはできません。 指定した既定値は、レポートを開いたすべてのユーザーによって使用されます。  
   
- レポートを常に表示するように構成されたレポート ビューアー Web パーツにレポートを埋め込む場合には、レポート ビューアー Web パーツのプロパティを設定します。 詳細については、「[レポート ビューアー Web パーツを Web ページに追加する &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)」をご覧ください。  
+ レポートを常に表示するように構成されたレポート ビューアー Web パーツにレポートを埋め込む場合には、レポート ビューアー Web パーツのプロパティを設定します。 詳細については、「[レポート ビューアー Web パーツを Web ページに追加する &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)」を参照してください。  
   
 ### <a name="to-run-a-parameterized-report"></a>パラメーター化されたレポートを実行するには  
   
@@ -91,4 +90,3 @@ ms.lasthandoff: 08/09/2017
  [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
-

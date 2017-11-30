@@ -1,5 +1,5 @@
 ---
-title: "Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS |Microsoft ドキュメント"
+title: "Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f7fad3b96a6cdcf508e9b485219f533e50e426cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、「[テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」、「[マトリックスの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)」、または「[一覧がある請求書とフォームを作成する (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
@@ -46,13 +45,13 @@ ms.lasthandoff: 08/09/2017
   
 |アイコン|Description|  
 |----------|-----------------|  
-|![詳細行の 3 つの平行線がある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "詳細行の 3 つの平行線がある行ハンドル")|行グループ階層に詳細グループのみ|  
+|![詳細行の 3 本の平行線がある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")|行グループ階層に詳細グループのみ|  
 |![詳細行と 1 つの外部グループがある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "詳細行と 1 つの外部グループがある行ハンドル")|1 つの外部グループと子詳細グループ|  
-|![2 つの平行なかっこが入れ子になったグループを示す](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "2 つの平行なかっこが入れ子になったグループを示す")|1 つの外部グループ、1 つの内部グループがあり、詳細グループはなし|  
-|![2 つのかっこと三重線の入れ子し、詳細](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "2 つのかっこと三重線の入れ子し、詳細")|1 つの外部グループ、1 つの内部グループ、および子詳細グループ|  
-|![1 つの外部グループ フッター行と、1 つの内部グループ](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "フッター行に 1 つの外部グループ、1 つの内部グループ")|合計のフッター行のある 1 つの外部グループと、1 つの内部グループ|  
-|![外部グループのかっこ、角かっこの内側のグループ、詳細](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部グループのかっこ、角かっこの内側のグループ、詳細")|合計のフッター行のある 1 つの外部グループ、合計のフッター行のある 1 つの内部グループ、および 1 つの詳細行|  
-|![ヘッダーとフッター、および子グループの親](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "ヘッダーとフッター、および子グループの親")|ラベルのヘッダーと合計のフッターのある 1 つの外部グループと、内部グループがあり、詳細グループはなし|  
+|![入れ子になったグループを示す 2 つの平行なかっこ](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "入れ子になったグループを示す 2 つの平行なかっこ")|1 つの外部グループ、1 つの内部グループがあり、詳細グループはなし|  
+|![入れ子と詳細を示す 2 つのかっこと三重線](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "入れ子と詳細を示す 2 つのかっこと三重線")|1 つの外部グループ、1 つの内部グループ、および子詳細グループ|  
+|![フッター行がある 1 つの外部グループ、1 つの内部グループ](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "フッター行がある 1 つの外部グループ、1 つの内部グループ")|合計のフッター行のある 1 つの外部グループと、1 つの内部グループ|  
+|![外部グループのかっこ、内部グループのかっこ、詳細](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部グループのかっこ、内部グループのかっこ、詳細")|合計のフッター行のある 1 つの外部グループ、合計のフッター行のある 1 つの内部グループ、および 1 つの詳細行|  
+|![親ヘッダーとフッター、および子グループ](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "親ヘッダーとフッター、および子グループ")|ラベルのヘッダーと合計のフッターのある 1 つの外部グループと、内部グループがあり、詳細グループはなし|  
   
 ### <a name="group-rows"></a>グループ行  
  グループの内側の行は、一意のグループ値ごとに 1 回繰り返され、通常、集計サマリで使用されます。 グループの外側の行は、グループに関して 1 回繰り返され、ラベルや小計に使用されます。 Tablix セルを選択すると、Tablix データ領域内の行ハンドル、列ハンドル、および角かっこによって、セルが属するグループを確認できます。 この図は、次の視覚的手掛かりを示しています。  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 -   選択されたセルのすべてのグループ メンバーシップを示すグループ インジケーター  
   
- ![詳細と入れ子になった行グループを含むテーブル](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "詳細と入れ子になった行グループを含むテーブル")  
+ ![詳細行および入れ子になった行のグループがあるテーブル](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "詳細行および入れ子になった行のグループがあるテーブル")  
   
 ### <a name="total-rows"></a>合計行  
  行および列グループを追加した後、列の合計を表示する行や、行の合計を表示する列を追加できます。 次の図に、行グループ、列グループ、合計行、および合計列のあるマトリックスを示します。  
@@ -73,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="grouping-pane"></a>グループ化ペイン  
  グループ化ペインには、デザイン画面で現在選択されている Tablix データ領域の行グループと列グループが表示されます。 次の図に、この Tablix データ領域のグループ化ペインを示します。  
   
- ![入れ子になった行および列グループのグループ化ペイン](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "入れ子になった行および列グループのグループ化ペイン")  
+ ![入れ子になった行と列のグループのグループ化ペイン](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "入れ子になった行と列のグループのグループ化ペイン")  
   
  行グループ ペインに、親グループ Category と子グループ Subcat が表示されます。 列グループ ペインには、親グループ Geography と子グループ CountryRegion、および Geography グループに隣接する Year グループも表示されます。 行グループ ペインで Subcat グループを選択すると、グループ バーが濃いオレンジ色になり、対応する行グループのメンバー セルがデザイン画面で選択されます。  
   
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/09/2017
   
  Tablix データ領域に詳細データを表示する場合、詳細グループは最も内側の子グループです。 詳細グループに追加される行は、この Tablix データ領域にリンクされているデータセットのクエリの結果セットに含まれている行ごとに 1 回繰り返されます。 次の図に、表示されたレポートの最後のページを示します。 この図には、最新の詳細行と、最新の発注の小計行が示されています。  
   
- ![プレビュー、グループの合計があるテーブルの最後の行](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "プレビュー、グループの合計があるテーブルの最後の行")  
+ ![プレビュー、グループ合計があるテーブル、最後の行](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "プレビュー、グループ合計があるテーブル、最後の行")  
   
  Tablix データ領域内の各列についても同様です。 たとえば、列は、各列グループの内側または外側のいずれかにあり、合計を表示するには、グループの外側に列を追加します。  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 08/09/2017
   
  Tablix 本体領域では、セルは水平方向にのみ結合できます。 垂直方向のセルの結合はサポートされていません。  
   
- 詳細については、「[データ領域内のセルの結合 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「[データ領域内のセルの結合 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
  以前に結合したセルを分割できます。 セルを水平方向に列に分割するか、垂直方向に行に分割できます。 セルを、セルのブロックに分割するには、最初にセルを水平方向に分割し、次に、垂直方向に必要な数だけ分割します。  
   
@@ -129,4 +128,3 @@ ms.lasthandoff: 08/09/2017
  [Tablix データ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

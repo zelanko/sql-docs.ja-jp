@@ -1,5 +1,5 @@
 ---
-title: "レポート デザイナー (SSRS) でレポート データ ペインをドッキング |Microsoft ドキュメント"
+title: "レポート デザイナーのレポート データ ペインをドッキングする (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Data pane, docking
+helpviewer_keywords: Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69b608f7c673ccd05826c32c173d5cde014937a3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8739191250029846e3ed4e740cc44a0475fc80d7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>レポート デザイナーのレポート データ ペインをドッキングする (SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート デザイナーでは、データ ソース、データセット、フィールド、パラメーター、画像など、レポートで使用できるデータ オブジェクトの階層ビューがレポート データ ペインに表示されます。 このビューのデータ ソースは、埋め込みデータ ソースである場合と、ソリューション エクスプローラーに表示される共有データ ソースのデータ ソース参照である場合があります。  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/09/2017
  [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

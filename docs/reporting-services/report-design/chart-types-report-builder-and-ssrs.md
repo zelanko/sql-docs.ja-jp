@@ -1,5 +1,5 @@
 ---
-title: "グラフの種類 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "グラフの種類 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10423"
+f1_keywords: "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e755c783e76061ec86cd75a951c94e94b0b9576
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="chart-types-report-builder-and-ssrs"></a>グラフの種類 (レポート ビルダーおよび SSRS)
 
 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 たとえば、グラフのサイズに対して多数のデータ ポイントがデータセットに含まれている場合は、面グラフ、折れ線グラフ、または散布図を使用して表示するのが適しています。 選択したグラフの種類に応じてデータを準備する方法の詳細については、「 [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -36,30 +33,29 @@ ms.lasthandoff: 08/09/2017
 ## <a name="choosing-a-chart-type"></a>グラフの種類の選択  
  それぞれのグラフの種類には、データセットの視覚化に役立つ固有の特性があります。 どのグラフの種類を使用してもデータを表示できますが、レポートに表示する内容に基づいて、データに適したグラフの種類を使用すると、データは読み取りやすくなります。 次の表に、特定のデータセットに対するグラフの適性に影響する、グラフの機能を示します。  
   
- グラフの種類は、作成後に変更できます。 詳細については、「[グラフの種類の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)」を参照してください。  
+ グラフの種類は、作成後に変更できます。 詳細については、「[グラフの種類の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)」を参照してください。  
   
- これらの種類のグラフについては、サンプル レポートに多くの例が含まれています。 サンプル レポートのダウンロードの詳細については、次を参照してください。[レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)です。  
+ これらの種類のグラフについては、サンプル レポートに多くの例が含まれています。 サンプル レポートをダウンロードする方法の詳細については、「 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 |グラフの種類|比率データの表示|株価データの表示|線形データの表示|複数値データの表示|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[面グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)|||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
-|[横棒グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
-|[データ バー](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
-|[縦棒グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
-|[折れ線グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
-|[円グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||||  
-|[極座標グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||||  
-|[範囲グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
-|[散布図 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
-|[図形グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||||  
-|[スパークライン](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
-|[株価チャート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
+|[面グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)|||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
+|[横棒グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
+|[データ バー](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
+|[縦棒グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
+|[折れ線グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
+|[円グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||||  
+|[極座標グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||||  
+|[範囲グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
+|[散布図 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
+|[図形グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||||  
+|[スパークライン](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
+|[株価チャート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
 
 ## <a name="next-steps"></a>次の手順
 
 [グラフ](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[グラフ内の空および Null データ ポイント](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
-[レポートにグラフを追加します。](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+[グラフ内の空のデータ ポイントおよび NULL データ ポイント](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+[レポートにグラフを追加する](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "レポート、およびリソースをセキュリティで保護された |Microsoft ドキュメント"
+title: "レポートとリソースの保護 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
   各レポートおよびリソースのセキュリティを設定して、これらのアイテムへのユーザーのアクセスのレベルを制御できます。 既定では、組み込みの **Administrators** グループのメンバーであるユーザーのみ、レポートの実行、リソースの表示、プロパティの変更、およびアイテムの削除を行うことができます。 他のすべてのユーザーについては、レポートまたはリソースへのアクセスを許可するロール割り当てを作成する必要があります。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  レポート サーバーにパブリッシュされたレポートやその他の方法で公開されたレポートのレポート パラメーターの値が、Web ページの URL から制御できる状態になっている。  
   
-3.  攻撃者は、web ページまたはフォームで、パラメーターの値を指定するレポート サーバーへのリンクを作成する"javascript:\<悪意のあるスクリプト >"し、そのリンクをおびき寄せによる攻撃の他のユーザーに送信します。  
+3.  攻撃者が Web ページまたはレポート サーバーへのリンクを作成し、"javascript:\<悪意のあるスクリプト>" という形式でパラメーターの値を指定したうえで、そのリンクをおびき寄せによる攻撃で他のユーザーに送信する。  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>パブリッシュされたレポートまたはドキュメント内のハイパーリンクによるスクリプト インジェクション攻撃の緩和  
  レポートには、レポート アイテムまたはレポート アイテムの一部の Action プロパティの値を使用して、ハイパーリンクが埋め込まれることがあります。 ハイパーリンクは、レポートの処理時に外部データ ソースから取得されるデータにバインドできます。 悪意のあるユーザーによって基になるデータが変更された場合、このハイパーリンクには、スクリプティング攻撃のリスクが生じます。 パブリッシュまたはエクスポートされたレポート内のリンクをユーザーがクリックすると、悪意のあるスクリプトが実行される可能性があります。  
@@ -80,11 +79,10 @@ ms.lasthandoff: 08/09/2017
  機密情報を含むレポートは、重要なデータにアクセスするための資格情報の入力をユーザーに要求することによって、データアクセス レベルのセキュリティで保護する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。 また、未承認のユーザーがアクセスできないように、フォルダーをセキュリティで保護することもできます。 詳細については、「 [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [作成および管理ロールの割り当て](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [レポート ビルダーへのアクセスを構成します。](../../reporting-services/report-server/configure-report-builder-access.md)   
- [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [セキュリティで保護された共有データ ソース アイテム](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Reporting Services データ ソースの資格情報を保存します。](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [レポート ビルダーへのアクセスの構成](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [共有データ ソース アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

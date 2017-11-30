@@ -1,5 +1,5 @@
 ---
-title: "新規または既存のレポートをレポート プロジェクト (SSRS) に追加 |Microsoft ドキュメント"
+title: "新規または既存のレポートをレポート プロジェクトに追加する (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- reports [Reporting Services], creating
+helpviewer_keywords: reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6edee3df21691e6f9e53a167bb1bd1bce502e76a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、レポート ウィザードを使用するか、新しい空のレポートをプロジェクトに追加することによって、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割された新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  ソリューション エクスプローラーで [レポート] フォルダーを右クリックし、 **[新しいレポートの追加]**をクリックします。 **[レポート ウィザード]** ダイアログ ボックスが表示されます。  
   
-     ウィザードは、データ ソースの作成、クエリを使用したデータセットの作成、グループを定義する、レイアウトの指定およびレポートを作成する手順を説明します。 次のような手順で構成されます。  
+     ウィザードの手順に従うことで、データ ソースを作成したり、クエリでデータセットを作成したり、グループを定義したり、レイアウトを指定したり、レポートを作成したりできます。 次のような手順で構成されます。  
   
     -   **データ ソースの選択** レポート作成の最初の手順は、データ ソースを定義することです。 レポート ウィザードにより、レポート プロジェクト内のすべての共有データ ソースが表示されます。同時に、新しいデータ ソースを作成するオプションも表示されます。  
   
@@ -67,7 +65,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- 他に質問しますか。 [Reporting Services のフォーラムを再試行してください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+ その他の質問 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

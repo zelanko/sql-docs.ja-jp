@@ -1,5 +1,5 @@
 ---
-title: "グループ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "グループについて (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51a3e06f0a4c3ab0dfd26af525a11b52c2d84afb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>グループについて (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、グループは、データ領域にバインドされたレポート データセットの名前付きセットです。 グループは基本的に、レポート データセットのビューを整理します。 データ領域のグループはすべて、同じレポート データセットの異なるビューを指定します。  
@@ -42,12 +41,12 @@ ms.lasthandoff: 08/09/2017
  グループには、ユーザーが指定した名前とグループ式のセットがあります。 グループ式のセットは、単一のデータセット フィールド参照である場合も、複数の式の組み合わせである場合もあります。 グループ式は実行時に組み合わされ、グループに複数の式がある場合は、グループ内のデータに適用されます。 たとえば、データ領域のデータを整理するデータ フィールドを使用するグループがあるとします。 実行時に、データはまず日付で整理され、日付ごとに他のデータセット値の合計と共に表示されます。  
   
 ## <a name="when-do-i-create-groups"></a>グループを作成するタイミング  
- ほとんどの場合、データ領域をデザインすると、レポート ビルダーとレポート デザイナーによって自動的にグループが作成されます。 テーブル、マトリックス、または一覧の場合、グループはグループ化ペインにフィールドをドロップすると作成されます。 グラフの場合、グループはグラフのドロップゾーンにフィールドをドロップすると作成されます。 ゲージの場合は、[ゲージのプロパティ] ダイアログ ボックスを使用する必要があります。 テーブル、マトリックス、または一覧では、グループを手動で作成することもできます。 詳細については、「[データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。 レポートを作成するときにグループを追加する方法の例については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
+ ほとんどの場合、データ領域をデザインすると、レポート ビルダーとレポート デザイナーによって自動的にグループが作成されます。 テーブル、マトリックス、または一覧の場合、グループはグループ化ペインにフィールドをドロップすると作成されます。 グラフの場合、グループはグラフのドロップゾーンにフィールドをドロップすると作成されます。 ゲージの場合は、[ゲージのプロパティ] ダイアログ ボックスを使用する必要があります。 テーブル、マトリックス、または一覧では、グループを手動で作成することもできます。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。 レポートを作成するときにグループを追加する方法の例については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
 ## <a name="how-can-i-modify-a-group"></a>グループの変更方法  
- グループを作成したら、フィルターや並べ替え式、改ページ、グループ変数など、スコープ固有のデータを保持するためのデータ領域固有のプロパティを設定できます。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ グループを作成したら、フィルターや並べ替え式、改ページ、グループ変数など、スコープ固有のデータを保持するためのデータ領域固有のプロパティを設定できます。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
- 既存のグループを変更するには、適切なグループ プロパティのダイアログ ボックスを開きます。 グループの名前は変更できます。 また、1 つのフィールドや複数のフィールド、または実行時の値を指定するレポート パラメーターに基づいてグループ式を指定することもできます。 または、人口統計データの年齢範囲を指定する式など、式のセットに基づいてグループを指定することも可能です。 詳細については、「[グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)」を参照してください。  
+ 既存のグループを変更するには、適切なグループ プロパティのダイアログ ボックスを開きます。 グループの名前は変更できます。 また、1 つのフィールドや複数のフィールド、または実行時の値を指定するレポート パラメーターに基づいてグループ式を指定することもできます。 または、人口統計データの年齢範囲を指定する式など、式のセットに基づいてグループを指定することも可能です。 詳細については、「 [グループ式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  グループの名前を変更した場合は、グループの以前の名前を参照するグループ式をすべて手動で更新する必要があります。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  グループはデータ領域ごとに 1 つ以上の階層のメンバーとして内部編成されています。 グループ階層には、入れ子になっている親子グループがあり、隣接するグループがある場合もあります。  
   
- 親子グループをツリー構造と考えた場合、各グループ階層はツリー構造のフォレストと見なされます。 Tablix データ領域には、行グループ階層と列グループ階層があります。 行グループ メンバーに関連付けられているデータはページの横方向に展開され、列グループ メンバーに関連付けられているデータはページの下方向に展開されます。 グループ化ペインには、デザイン画面で現在選択されている Tablix データ領域の行グループと列グループのメンバーが表示されます。 詳細については、「[グループ化ペイン (レポート ビルダー)](../../reporting-services/report-design/grouping-pane-report-builder.md)」を参照してください。  
+ 親子グループをツリー構造と考えた場合、各グループ階層はツリー構造のフォレストと見なされます。 Tablix データ領域には、行グループ階層と列グループ階層があります。 行グループ メンバーに関連付けられているデータはページの横方向に展開され、列グループ メンバーに関連付けられているデータはページの下方向に展開されます。 グループ化ペインには、デザイン画面で現在選択されている Tablix データ領域の行グループと列グループのメンバーが表示されます。 詳細については、「[グループ化ペイン &#40;レポート ビルダー&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)」を参照してください。  
   
  グラフ データ領域には、カテゴリ グループ階層と系列グループ階層があります。 カテゴリ グループ メンバーはカテゴリ軸に表示され、系列グループ メンバーは系列軸に表示されます。  
   
@@ -97,19 +96,18 @@ ms.lasthandoff: 08/09/2017
   
  グループを追加すると、行と列でグループのメンバーシップを反映するようにデータ領域の変更が処理されます。 グループを削除する場合、グループ定義のみを削除する方法と、グループおよび関連付けられているすべての行および列を削除する方法があります。 詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
- 詳細またはグループ データの計算で表示または使用するデータを制限するには、グループにフィルターを設定します。 詳細については、｢[データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)」を参照してください。  
+ 詳細またはグループ データの計算で表示または使用するデータを制限するには、グループにフィルターを設定します。 詳細については、「 [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)」を参照してください。  
   
- 既定では、グループを作成すると、グループの並べ替え式はグループ式と同じです。 並べ替え順を変更するには、並べ替え式を変更します。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ 既定では、グループを作成すると、グループの並べ替え式はグループ式と同じです。 並べ替え順を変更するには、並べ替え式を変更します。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
 #### <a name="understanding-group-membership-for-tablix-cells"></a>Tablix セルのグループ メンバーシップについて  
- Tablix データ領域の行または列のセルは、複数の行グループおよび列グループに属することができます。 集計関数 ( `=Sum(Fields!FieldName.Value`など) を使用するセルのテキスト ボックスで式を定義すると、セルの既定のグループ スコープは所属する最も内側の子グループになります。 セルが行グループと列グループの両方に属する場合、スコープは両方とも最も内側のグループになります。 また、別のデータ セットのグループにスコープを設定した集計された小計を計算する式を記述することもできます。 たとえば、データ領域の列グループ、またはすべてのデータを基準にグループのパーセントを計算することができます (`=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")` など)。 詳細については、「[Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)」と「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
+ Tablix データ領域の行または列のセルは、複数の行グループおよび列グループに属することができます。 集計関数 ( `=Sum(Fields!FieldName.Value`など) を使用するセルのテキスト ボックスで式を定義すると、セルの既定のグループ スコープは所属する最も内側の子グループになります。 セルが行グループと列グループの両方に属する場合、スコープは両方とも最も内側のグループになります。 また、別のデータ セットのグループにスコープを設定した集計された小計を計算する式を記述することもできます。 たとえば、データ領域の列グループ、またはすべてのデータを基準にグループのパーセントを計算することができます ( `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`など)。 詳細については、「[Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)」と「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [追加またはデータ領域 &#40; 内のグループの削除レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [合計グループまたは Tablix データ領域 &#40; を追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [データ領域と &#40; のデータを並べ替えるレポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [ドリルダウン アクション & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [グループまたは Tablix データ領域への合計の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

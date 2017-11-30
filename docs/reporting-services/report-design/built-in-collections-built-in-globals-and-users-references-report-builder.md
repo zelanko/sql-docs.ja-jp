@@ -1,5 +1,5 @@
 ---
-title: "組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: db369d1d9cd1e8767da8dc25a2a2487f138044d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクションは、組み込み Globals および Users 参照 (レポート ビルダー)
+# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクション - 組み込み Globals および Users 参照 (レポート ビルダー)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す **Globals** コレクションと **User** コレクションの両方が含まれています。 **Globals** コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 **User** コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Globals コレクションの使用  
- **Globals** コレクションには、レポートのグローバル変数が保持されます。 デザイン サーフェイスでは、これらの変数が表示されますが付いた状態で、& (アンパサンド)、たとえば、`[&ReportName]`です。 次の表では、 **Globals** コレクションのメンバーについて説明します。  
+ **Globals** コレクションには、レポートのグローバル変数が保持されます。 デザイン画面では、これらの変数は、`[&ReportName]` など、先頭に & (アンパサンド) が付いた状態で表示されます。 次の表では、 **Globals** コレクションのメンバーについて説明します。  
   
 |**メンバー**|**型**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>User コレクションの使用  
- **User** コレクションには、レポートを実行しているユーザーのデータが保持されます。 このコレクションを使用すると、現在のユーザーのデータのみを表示するなど、レポートに表示されるデータをフィルター選択することも、レポート タイトルなどに UserID を表示することもできます。 デザイン サーフェイスでは、これらの変数が表示されますが付いた状態で、& (アンパサンド)、たとえば、`[&UserID]`です。  
+ **User** コレクションには、レポートを実行しているユーザーのデータが保持されます。 このコレクションを使用すると、現在のユーザーのデータのみを表示するなど、レポートに表示されるデータをフィルター選択することも、レポート タイトルなどに UserID を表示することもできます。 デザイン画面では、これらの変数は、`[&UserID]` など、先頭に & (アンパサンド) が付いた状態で表示されます。  
   
  次の表では、 **User** コレクションのメンバーについて説明します。  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [式 ダイアログ ボックス &#40;です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [式 &#40; 内のデータ型レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [書式の数値および日付 &#40; です。レポート ビルダーおよび SSRS & &#41; です。](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [式の例 &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [数値と日付の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

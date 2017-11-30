@@ -1,5 +1,5 @@
 ---
-title: "作成し、ロールの割り当ての管理 |Microsoft ドキュメント"
+title: "ロールの割り当てを作成および管理する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-role-assignments"></a>ロールの割り当てを作成および管理する
   *ロールの割り当て* は、ユーザーまたはグループが特定のレポート サーバー アイテムにアクセスできるか、または操作を実行できるかを決定するセキュリティ ポリシーです。 ロールの割り当ては、ユーザーまたはグループのアカウント名 1 つと、1 つ以上のロールの定義で構成されます。  
@@ -69,10 +68,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [変更または削除するロールの割り当てと #40 です。レポート マネージャー &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [ロールの割り当て](../../reporting-services/security/role-assignments.md)   
  [ロールの定義](../../reporting-services/security/role-definitions.md)   
- [定義済みのロール](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

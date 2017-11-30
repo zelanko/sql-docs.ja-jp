@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services レポートのレンダリングの問題のトラブルシューティング |Microsoft ドキュメント"
+title: "Reporting Services のレポート レンダリングの問題のトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91629c6d86f1616b19026cbc0e670fff51553dda
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5bd1f634ba25711137db413e2069cd7d9ae328cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services のレポート レンダリングの問題のトラブルシューティング
 レポートのデータとレイアウトの情報が結合されると、コンパイルされたレポートがレポート レンダラーに送信されます。 たとえば、レポートをローカルでプレビューする場合、HTML レンダラーを使用してコンパイル済みのレポートが表示されます。 このトピックでは、レポートの表示に固有の問題のトラブルシューティングを行います。   
@@ -80,5 +79,4 @@ Reporting Services には、レポートの最後にある空白を保持する�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

@@ -1,5 +1,5 @@
 ---
-title: "配置およびバージョン サポート SQL Server Data Tools (SSDT) |Microsoft ドキュメント"
+title: "SQL Server データ ツールの配置およびバージョン サポート (SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 02dc4f34643ca904f04c0f2c1b88fc3bdc202904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>配置および SQL Server Data tools (SSDT) のバージョン サポート
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの配置およびバージョン サポート (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
   
 -   レポート定義 (*.rdl) とレポート サーバー プロジェクト (\*.rptproj) を開く。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/06/2017
   
 -   [OutputPath] は、ビルドの検証、配置、およびレポートのプレビューで使用されるレポート定義の保存先フォルダーのパスを識別するビルド プロパティです。  
   
--   [ErrorLevel] は、エラーとしてレポートされるビルドの問題の重大度を識別するビルド プロパティです。 [ErrorLevel] の値以下の重大度レベルを持つ問題は、エラーとしてレポートされます。それ以外の問題は、警告としてレポートされます。 詳細については、「レポートの検証とエラー レベル」セクションを参照してください。[レポートをデザインすると、レポート デザイナーと #40 です。SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   [ErrorLevel] は、エラーとしてレポートされるビルドの問題の重大度を識別するビルド プロパティです。 [ErrorLevel] の値以下の重大度レベルを持つ問題は、エラーとしてレポートされます。それ以外の問題は、警告としてレポートされます。 詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」の「レポートの検証とエラー レベル」を参照してください。  
   
 -   [TargetServerVersion] は、TargetServerURL プロパティで指定された対象レポート サーバーにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の想定されるバージョンを識別する配置プロパティです。  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/06/2017
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、レポート サーバー プロジェクトの 32 ビット開発環境が上で実行するものでありません[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-ベースのコンピューターと、にインストールされていない[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-ベースのサーバー。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
+>  レポート サーバー プロジェクトの 32 ビット開発環境である [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのコンピューターで実行できるようにデザインされていないため、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
   
  次の表では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのレポートの作成およびパブリッシュをサポートするバージョンについて説明します。  
   
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/06/2017
  [データ ソースとレポートのパブリッシュ](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
-

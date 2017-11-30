@@ -1,16 +1,17 @@
 ---
 title: "レプリケーション管理オブジェクトの概念 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: c39d933b13d2ab43432d850c0233c2d0e8916142
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージ コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
   
@@ -187,7 +188,10 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスでは、プロパティを設定するときに明示的なトランザクションの宣言がサポートされますが、そのようなトランザクションでは内部的なレプリケーション トランザクションに干渉する場合があるため、予期しない結果が生じる可能性があります。RMO では使用しないでください。  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>RMO コンポーネントの TLS 1.2 サポートの有効化 
+ Windows 2012 以下の場合、RMO コンポーネントの TLS1.2 サポートは、更新プログラム [KB 3140245](http://support.microsoft.com/help/3140245) をインストールし、記事の説明に従ってレジストリ キーを作成することで有効にすることができます。 Windows 2012 R2 以降のバージョンの場合は、上記の記事に示されているレジストリ キーのみを作成する必要があります。
+ 
 ## <a name="example"></a>例  
  この例では、プロパティ変更のキャッシュを示します。 トランザクション パブリケーションの属性に加えられた変更は、明示的にサーバーに送られるまでキャッシュされます。  
   

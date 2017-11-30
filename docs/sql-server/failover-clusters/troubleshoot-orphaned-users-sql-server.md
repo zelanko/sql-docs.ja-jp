@@ -2,7 +2,10 @@
 title: "孤立ユーザーのトラブルシューティング (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: 
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-high-availability
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9ff0d42bc753de6e179e0cd4c7882bdfd9626cba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 53342ad62ae05d614acee18c2bbace0b2feaae6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立ユーザーのトラブルシューティング (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   データベース ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マスター **データベースのログインに基づくが、ログインが** マスター **に存在しなくなったとき、**の孤立ユーザーが発生します。 これはログインが削除されたか、データベースが別のサーバーに移され、ログインがなくなったときに発生します。 このトピックでは、孤立ユーザーを見つけ、ログインに再マッピングする方法について説明します。  
   

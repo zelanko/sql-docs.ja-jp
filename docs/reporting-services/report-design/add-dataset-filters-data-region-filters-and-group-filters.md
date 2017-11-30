@@ -1,5 +1,5 @@
 ---
-title: "フィルターの追加のデータセット、データ領域フィルター、およびグループ フィルターの |Microsoft ドキュメント"
+title: "データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ed3e111ebce37b58c5a76a0dcb56a5a87d6c8810
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加
   レポートのフィルターは、レポート内で使用されるデータを制限するために作成したデータセット、データ領域、またはデータ領域グループの一部です。 データセット クエリを変更できない場合 (共有データセットを使用している場合など)、レポート データを制御する方法としてフィルターを使用できます。  
@@ -105,8 +104,7 @@ ms.lasthandoff: 08/09/2017
  トップに戻る  
   
 ## <a name="see-also"></a>参照  
- [レポート &#40; 内の式の使用レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

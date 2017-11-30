@@ -1,5 +1,5 @@
 ---
-title: "レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10420"
+f1_keywords: "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b58eb34183d3ec9c1aaafaacb802a4507395d262
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2217e42cf49783db62169ee6d2634d929561ec4c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  **スキーマのメタデータ** データ プロバイダーで、クエリとは別にスキーマのクエリ コマンドを実行し、データセット フィールド コレクションのメタデータを取得します。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** statement returns the column names for a database table. データセット フィールド コレクションを表示するには、レポート データ ペインを使用してデータセットを展開します。  
   
- 事前定義済みの共有データセットとレポート パーツを使用して、データをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、次を参照してください。[レポート データセット &#40;です。SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md)と[レポート パーツと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ 事前定義済みの共有データセットとレポート パーツを使用して、データをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、「[レポートへのデータの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)」および「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
  ビルトイン データ ソースの種類およびデータ拡張機能の詳細については、「[外部データ ソースのデータを追加する &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」を参照してください。  
   
@@ -131,17 +130,17 @@ ms.lasthandoff: 08/09/2017
   
 |Description|埋め込み<br /><br /> [データ ソース]|Shared<br /><br /> [データ ソース]|  
 |-----------------|------------------------------|----------------------------|  
-|データ接続がレポート定義に埋め込まれる|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
-|レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
-|レポート サーバー上で管理|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
-|共有データセットに必要||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
-|コンポーネントに必要||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
+|データ接続がレポート定義に埋め込まれる|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")||  
+|レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
+|レポート サーバー上で管理|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
+|共有データセットに必要||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
+|コンポーネントに必要||![使用可能](../../reporting-services/report-data/media/greencheck.gif "使用可能")|  
   
  レポート デザイナーでは、レポート プロジェクトの一部として共有データセットを作成し、レポート サーバーに配置するかどうかを制御できます。 レポート サーバー上の保存先を参照して共有データセットを選択し、レポートに追加することはできません。  
   
  レポート ビルダーでは、次の操作を実行できます。  
   
--   共有データセットを作成するには、共有データセットのデザイン ビューを使用します。 それをレポート サーバーまたは SharePoint サイトに保存することによって、他のレポートと共有することができます。 レポート サーバー上の保存先を参照して既存のデータセットを選択し、編集することもできます。 このビューでは、クエリを作成してすべてのデータセット オプションを設定できます。 詳細については、次を参照してください。[共有データセット デザイン ビュー &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+-   共有データセットを作成するには、共有データセットのデザイン ビューを使用します。 それをレポート サーバーまたは SharePoint サイトに保存することによって、他のレポートと共有することができます。 レポート サーバー上の保存先を参照して既存のデータセットを選択し、編集することもできます。 このビューでは、クエリを作成してすべてのデータセット オプションを設定できます。 詳細については、「[共有データセット デザイン ビュー &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)」を参照してください。  
   
 -   レポートに共有データセットを追加するには、レポート デザイン ビューでレポート ビルダーを開きます。 ウィザードかレポート データ ペインから、レポート サーバーを参照し、共有データセットを選択してレポートに追加します。 このビューでは、フィールドを追加する以外に、クエリは変更できません。 他のデータ オプションを上書きし、フィルターを追加することはできます。 フィルターは削除できません。  
   
@@ -161,27 +160,27 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="SortGroupFilter"></a> データセット内のデータのフィルター処理、並べ替え、グループ化  
  データセット内のデータは、外部データ ソースに対してクエリ コマンドを実行することによって取得されたものです。 データ拡張機能のクエリ コマンド構文によって、データを並べ替えできるか、グループ化できるかどうかが決まります。 並べ替えとグループ化は、レポートのデータが取得される前にクエリで実行されます。 フィルター処理は、レポートのデータを取得した後に実行されます。  
   
- 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="filtering-data-in-a-dataset"></a>データセット内のデータのフィルター処理  
  フィルターは、レポートのデータセット定義の一部です。 データセット フィルターを使用して、データセットのどのデータをレポートに含めるかを指定します。 データセットでフィルターを指定すると、そのデータセットに基づくすべてのデータ領域には、データセット フィルターを通過したデータのみが表示されます。  
   
  フィルターは、共有データセット定義の一部です。 共有データセット フィルターは、共有データセットを含むすべてのレポートに影響を与えます。 レポートに共有データセットを追加した後、または依存する共有データセットを持つコンポーネントを追加した後、追加のデータセット フィルターを作成できます。 作成したフィルターは、自分のレポート内でのみ使用され、レポート サーバーの共有データセット定義の一部にはなりません。  
   
- 追加のフィルターは、データ領域またはデータ領域グループに対して設定できます。 また、パラメーターとフィルターの組み合わせを使用して、レポートに表示するデータを選択できます。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 追加のフィルターは、データ領域またはデータ領域グループに対して設定できます。 また、パラメーターとフィルターの組み合わせを使用して、レポートに表示するデータを選択できます。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 ### <a name="sorting-data-in-a-dataset"></a>データセットのデータの並べ替え  
  データセットでのデータの順序は、外部データ ソースから取得された順序と同じです。 この順序は、クエリ デザイナーでクエリを実行するときに表示される順序とも同じです。 クエリ コマンド構文が並べ替えをサポートしている場合は、レポート データとしてデータが返される前にクエリを編集してソースでデータを並べ替えることができます。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの場合、ORDER BY ステートメントが並べ替え順序を制御します。  
   
- レポートに返された後にデータを並べ替えるには、データ領域とデータ領域グループで並べ替え式を定義します。 詳細についてに、たとえば、データ領域の特定の型についてのトピックを参照してください[テーブル、マトリックス、およびリスト &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ レポートに返された後にデータを並べ替えるには、データ領域とデータ領域グループで並べ替え式を定義します。 詳細については、データ領域の特定の型についてのトピック (たとえば、「[テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」) を参照してください。  
   
- また、パラメーターと並べ替え式の組み合わせを使用して、レポートでのデータの並べ替え順序を選択できます。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ また、パラメーターと並べ替え式の組み合わせを使用して、レポートでのデータの並べ替え順序を選択できます。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 ### <a name="grouping-data-in-a-dataset"></a>データセットのデータのグループ化  
  データセットのデータはグループ化できません。 データセットのデータを集計するには、データがレポート用に取得される前に、クエリ コマンドを編集して集計を計算します。 これらは、 *サーバー集計*と呼ばれます。 式では、事前に計算された集計としてこれらの値を識別するため、Aggregate 関数を使用します。 詳細については、「[集計関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)」を参照してください。  
   
 ##  <a name="Parameters"></a> パラメーターとデータセットの使用  
- 埋め込みデータセット クエリにクエリ変数が含まれている場合、クエリ パラメーターと対応するレポート パラメーターが自動的に作成されます。 レポートを実行すると、レポート パラメーターの値は、このデータセット クエリ パラメーターにリンクされます。 その結果、外部データ ソースで実行されるクエリ コマンドには、レポート パラメーターで指定された値が含まれます。 ユーザーはレポート パラメーターを使用して、レポートに表示するデータを選択できます。 クエリ パラメーターとレポート パラメーターをリンクする方法を表示することができます、[データセットのプロパティ ダイアログ ボックスのパラメーターの場合も (&) #40 です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)ページ。  
+ 埋め込みデータセット クエリにクエリ変数が含まれている場合、クエリ パラメーターと対応するレポート パラメーターが自動的に作成されます。 レポートを実行すると、レポート パラメーターの値は、このデータセット クエリ パラメーターにリンクされます。 その結果、外部データ ソースで実行されるクエリ コマンドには、レポート パラメーターで指定された値が含まれます。 ユーザーはレポート パラメーターを使用して、レポートに表示するデータを選択できます。 クエリ パラメーターとレポート パラメーターがどのようにリンクされているかは、[[パラメーター] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) で確認できます。  
   
  共有データセットの場合、クエリ パラメーターは、レポートとは独立してレポート サーバーで管理できる共有データセット定義の一部です。 次の一覧では、クエリ パラメーター値のサポートについて説明します。  
   
@@ -193,14 +192,14 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート パラメーターを表す、組み込みコレクション パラメーターへの参照を含めることはできません。  
   
- データセット デザイン モードで共有データセットのクエリ パラメーターの値を構成するを参照、レポート サーバーから共有データセットを開き、オプションの設定、[データセットのプロパティ ダイアログ ボックスのパラメーターの場合も (&) #40 です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)ページ。 詳細については、「[共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  
+ データセット デザイン モードで共有データセットのクエリ パラメーター値を構成するには、レポート サーバーから共有データセットを参照して開き、[[パラメーター] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) でオプションを設定します。 詳細については、「 [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]などの多次元データ ソースによっては、グラフィカル クエリ デザイナーによって、クエリ フィルターを指定し、対応するクエリ パラメーターを作成するオプションを選択できます。 パラメーター オプションを選択すると、データ拡張機能では、別のレポート データセットが自動的に作成され、そのパラメーターのボックスの一覧で使用可能な値を提供します。 既定では、これらの非表示のデータセットはレポート データ ペインに表示されません。  
   
- クエリ パラメーターとリンクしているレポート パラメーターにより、外部データ ソースからデータが返される前に、データをフィルター処理できます。 レポート定義の一部であるフィルターを作成することによって、レポート内のデータをフィルター処理することもできます。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+ クエリ パラメーターとリンクしているレポート パラメーターにより、外部データ ソースからデータが返される前に、データをフィルター処理できます。 レポート定義の一部であるフィルターを作成することによって、レポート内のデータをフィルター処理することもできます。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="displaying-hidden-datasets"></a>非表示のデータセットの表示  
- 多次元データ ソースに対するパラメーター化クエリを作成すると、パラメーターに有効な値を提供するデータセットが自動的に作成されます。 一部のクエリ デザイナーでは、フィルターを指定して、パラメーターを作成するオプションを選択することによって、データセットを作成できます。 既定では、これらのデータセットはレポート データ ペインに表示されませんが、表示することも可能です。 詳細については、「[多次元データのパラメーター値の非表示データセットの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)」を参照してください。  
+ 多次元データ ソースに対するパラメーター化クエリを作成すると、パラメーターに有効な値を提供するデータセットが自動的に作成されます。 一部のクエリ デザイナーでは、フィルターを指定して、パラメーターを作成するオプションを選択することによって、データセットを作成できます。 既定では、これらのデータセットはレポート データ ペインに表示されませんが、表示することも可能です。 詳細については、「[多次元データのパラメーター値の非表示データセットの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)」を参照してください。  
   
 ##  <a name="Maps"></a> マップとデータセットの使用  
  レポートにマップを含める場合は、空間データを指定する必要があります。 空間データは、レポート データセットから、マップ ギャラリーのマップから、または ESRI シェープファイルから取得できます。 レポートまたは ESRI シェープファイルから取得した空間データは、レポート データ ペインにデータセットとして表示されません。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
@@ -208,25 +207,25 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Multiple"></a> 複数のデータセットからのデータの表示  
  レポートには通常、複数のデータセットがあります。 次の一覧では、レポートにおけるデータセットの使用方法について説明します。  
   
--   独立したデータ領域を使用して、各データセットのデータを表示します。 詳細については、次を参照してください。[データ領域とマップ &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
+-   独立したデータ領域を使用して、各データセットのデータを表示します。 詳細については、「[データ領域とマップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)」を参照してください。  
   
 -   複数のデータ領域をデータセットにリンクすることで、同じデータを複数の形式で表示することができます。 詳細については、「 [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
--   データセットを使用して、使用可能な値のドロップダウン リスト、またはレポート パラメーターの既定値を表示します。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+-   データセットを使用して、使用可能な値のドロップダウン リスト、またはレポート パラメーターの既定値を表示します。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
--   詳細レポートまたはサブレポートのパラメーターを使用して、複数のデータセットの関連データをリンクできます。 たとえば、売上レポートに全店舗の要約データを表示し、ドリルスルー リンクを使用して、指定の店舗の個々の売上高を取得するデータセット クエリが含まれたレポートに、パラメーターとして店舗 ID を指定することができます。 詳細については、次を参照してください。[ドリルスルー、ドリルダウン、サブレポート、およびデータ領域の入れ子になった &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)と[サブレポート &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+-   詳細レポートまたはサブレポートのパラメーターを使用して、複数のデータセットの関連データをリンクできます。 たとえば、売上レポートに全店舗の要約データを表示し、ドリルスルー リンクを使用して、指定の店舗の個々の売上高を取得するデータセット クエリが含まれたレポートに、パラメーターとして店舗 ID を指定することができます。 詳細については、「[ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)」と「[サブレポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)」を参照してください。  
   
--   1 つのデータ領域で複数のデータセットの詳細データを表示することはできません。 ただし、データ領域内で複数のデータセットの集計関数値または組み込み関数値を表示することは可能です。 詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。 複数のデータセットの詳細データを 1 つのデータ領域に組み合わせるには、データを 1 つのデータセットとして取得するようにクエリを書き直す必要があります。  
+-   1 つのデータ領域で複数のデータセットの詳細データを表示することはできません。 ただし、データ領域内で複数のデータセットの集計関数値または組み込み関数値を表示することは可能です。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。 複数のデータセットの詳細データを 1 つのデータ領域に組み合わせるには、データを 1 つのデータセットとして取得するようにクエリを書き直す必要があります。  
   
 ##  <a name="NoRows"></a> 行データが使用できない場合のメッセージの表示  
  レポート処理中、データセットのクエリを実行しても、結果のセットに行が含まれていないことがあります。 表示レポートでは、空のデータセットにリンクされているデータ領域は空のデータ領域として表示されます。 表示レポートの空のデータ領域部分に表示するテキストを指定できます。 また、すべてのデータセットのクエリを実行しても実行時にデータが生成されない場合にサブレポートに表示するメッセージも指定できます。 詳細については、「[データ領域にデータがないことを示すメッセージの設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="Options"></a> データセット オプションの設定  
- 各種言語データをサポートするデータ ソースの場合、並べ替え順、各種言語文字プロパティ、および大文字と小文字の区別に影響を与えるデータセットのプロパティを調整しなければならないことがあります。 これらのプロパティには、大文字小文字、かな、文字幅、アクセント、照合順序が含まれます。 詳細については、 [SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=98335)の「データベースとデータベース エンジン アプリケーションの国際化に関する注意点」および「照合順序の使用」を参照してください。 これらのプロパティを設定する方法の詳細については、次を参照してください。[データセットのプロパティ ダイアログ ボックス、オプション &#40;です。レポート ビルダー&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
+ 各種言語データをサポートするデータ ソースの場合、並べ替え順、各種言語文字プロパティ、および大文字と小文字の区別に影響を与えるデータセットのプロパティを調整しなければならないことがあります。 これらのプロパティには、大文字小文字、かな、文字幅、アクセント、照合順序が含まれます。 詳細については、 [SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=98335)の「データベースとデータベース エンジン アプリケーションの国際化に関する注意点」および「照合順序の使用」を参照してください。 これらのプロパティの設定方法については、「[[オプション] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

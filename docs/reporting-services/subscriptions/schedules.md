@@ -1,5 +1,5 @@
 ---
-title: "スケジュール |Microsoft ドキュメント"
+title: "スケジュール | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c4e737163256ada2f5b9188b31deb2671eeb5a6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="schedules"></a>Schedules
+# <a name="schedules"></a>スケジュール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
   
   -   共有スケジュールは、個別のアイテムとして作成されます。 共有スケジュールは、作成後、サブスクリプションまたは他のスケジュール操作を定義するときに参照します。  
@@ -140,11 +139,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート履歴のスナップショットの作成、変更および削除](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [サブスクリプションと配信 &#40;です。Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [キャッシュのレポートと #40 です。SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [レポート サーバー コンテンツの管理と &#40; です。SSRS ネイティブ モードと &#41; です。](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポートのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [共有データセットのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
-

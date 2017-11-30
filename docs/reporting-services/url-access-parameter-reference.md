@@ -1,7 +1,6 @@
 ---
-title: "URL アクセス パラメーター リファレンス |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "URL アクセス パラメーター リファレンス | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66dbaaaadcfc00cf52520f19f341ab7cd3b3c2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-access-parameter-reference"></a>URL アクセス パラメーター リファレンス
   次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -233,7 +231,7 @@ ms.lasthandoff: 08/09/2017
   
      既定値は **HTML5**です。 詳細については、「 [URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)」を参照してください。  
   
-     完全な一覧についてを参照してください。、 **\<レンダリング >** 、レポート サーバーの rsreportserver.config ファイルの拡張セクションです。  ファイルの場所については、「 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
+     完全な一覧が必要な場合、レポート サーバー rsreportserver.config ファイルの **\<Render>** 拡張セクションを参照してください。  ファイルの場所については、「 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
      **Native** モード レポート サーバーからレポートの PDF コピーを直接取得する例:  
   
@@ -381,7 +379,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)   
- [URL アクセスを使用して、レポートをエクスポートします。](../reporting-services/export-a-report-using-url-access.md)  
+ [URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)  
   
   
-

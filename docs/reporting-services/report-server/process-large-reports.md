@@ -1,5 +1,5 @@
 ---
-title: "サイズの大きなレポートの処理 |Microsoft ドキュメント"
+title: "サイズの大きなレポートの処理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53bf81960ca2faca6d14be007966a0713166d19e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
@@ -77,9 +76,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
- [資格情報とレポート データ ソースの接続情報を指定します。](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [レポート サーバー コンテンツの管理と &#40; です。SSRS ネイティブ モードと &#41; です。](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [事前に読み込むキャッシュ & #40 です。レポート マネージャー &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "MSReportServer_ConfigurationSetting クラス |Microsoft ドキュメント"
+title: "MSReportServer_ConfigurationSetting クラス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_ConfigurationSetting Class
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_ConfigurationSetting Class
+apilocation: reportingservices.mof
 apitype: MOFDef
 helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5fafb0a0252f8aa4f39a4ada65f1b22490690f95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting クラス
   レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。  
@@ -50,7 +47,7 @@ public class MSReportServer_ConfigurationSetting
  この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
 ## <a name="example"></a>例  
- 次のコードを実行するには、それぞれの代わりに、サーバー名を追加\< *servername*>。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、 *MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
+ このコードを実行するには、\<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、 *MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
   
 ```vb  
 Imports System  
@@ -183,4 +180,3 @@ class Class1
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

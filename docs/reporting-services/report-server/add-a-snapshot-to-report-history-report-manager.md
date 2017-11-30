@@ -1,5 +1,5 @@
 ---
-title: "スナップショット レポート履歴に追加 (レポート マネージャー) |Microsoft ドキュメント"
+title: "レポート履歴へのスナップショットの追加 (レポート マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - adding snapshots to report history
 - report snapshots [Reporting Services], adding
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d340621db8dc12cd981d75939babeff40e590f2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e0a70aba28016a7649a6b793581fe653649aef96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート スナップショットは、特定の時点で取得されたレイアウト情報およびクエリ結果を含むレポートです。 レポートを選択したときに最新のクエリ結果を取得する要求時レポートとは異なり、レポート スナップショットはスケジュールに従って処理され、その後、レポート サーバーに保存されます。 表示するレポート スナップショットを選択すると、レポート サーバーによってレポート サーバー データベースに格納されたレポートが取得され、スナップショット作成時点のレポートで最新だったデータとレイアウトを表示します。  
@@ -79,10 +78,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポートの実行プロパティを構成する (レポート マネージャー)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [レポートの開閉 &#40; レポート マネージャー&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [レポート履歴を制限 & #40 です。レポート マネージャー &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
- [スケジュール](../../reporting-services/subscriptions/schedules.md)   
+ [レポートを開閉する (レポート マネージャー)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [レポート履歴を制限する &#40;レポート マネージャー&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
+ [[スケジュール]](../../reporting-services/subscriptions/schedules.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "GetDatabaseVersionDisplayName メソッド (WMI) |Microsoft ドキュメント"
+title: "GetDatabaseVersionDisplayName メソッド (WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetDatabaseVersionDisplayName method
+helpviewer_keywords: GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b4743439f2edf3f3cfb253aa981af83350f5aff7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 176a1c770ccd5025a35250c7bc18847b8105dad9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>GetDatabaseVersionDisplayName ConfigurationSetting メソッド
+# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting メソッド - GetDatabaseVersionDisplayName
   指定したレポート サーバー データベースのバージョン文字列の表示名を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,12 +51,12 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
   
 |**リリース**|**バージョン**|**表示名**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|@DBVersion'C.0.8.54' を =|SQL Server 2005 SP2|  
-|RS 2005 SP1|@DBVersion'C.0.8.43' を =|SQL Server 2005 SP1|  
-|RS 2005 RTM|@DBVersion'C.0.8.40' を =|SQL Server 2005|  
-|RS 2000 SP2|@DBVersion'C.0.6.54' を =|SQL Server 2000 SP2|  
-|RS 2000 SP1|@DBVersion'C.0.6.51' を =|SQL Server 2000 SP1|  
-|RS 2000 RTM|@DBVersion'C.0.6.43' を =|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |修正プログラム||最も近い適用可能なバージョン|  
   
  *2000 より前の* Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、HRESULT として ACT_E_BAD_VERSION が返されます。  
@@ -73,4 +71,3 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

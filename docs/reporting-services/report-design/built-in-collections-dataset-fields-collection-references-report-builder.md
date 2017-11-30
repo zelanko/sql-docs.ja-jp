@@ -1,5 +1,5 @@
 ---
-title: "データセット フィールド コレクションの参照 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "データセット フィールド コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d9c1c724e1b097e842975de2e8095a34fbbbb2d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>組み込みコレクションのデータセット フィールド コレクションの参照 (レポート ビルダー)
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>組み込みコレクション - データセット フィールド コレクションの参照 (レポート ビルダー)
   レポート内の各データセットには、1 つのフィールド コレクションが含まれます。 フィールド コレクションは、データセット クエリによって指定されるフィールドと、ユーザーが作成する追加の計算フィールドのセットです。 データセットを作成すると、フィールド コレクションが **[レポート データ]** ペインに表示されます。  
   
- 式内の単純なフィールド参照は、デザイン画面に単純な式として表示されます。 たとえば、フィールド `Sales` をレポート データ ペインからデザイン画面のテーブル セルにドラッグすると、 `[Sales]` が表示されます。 この式は、テキスト ボックスの Value プロパティに対して設定されている基本となる式 `=Fields!Sales.Value` を表しています。 レポートが実行されると、レポート プロセッサによってこの式が評価され、テーブル セルのテキスト ボックスにデータ ソースの実際のデータが表示されます。 詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」および「[データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)」を参照してください。  
+ 式内の単純なフィールド参照は、デザイン画面に単純な式として表示されます。 たとえば、フィールド `Sales` をレポート データ ペインからデザイン画面のテーブル セルにドラッグすると、 `[Sales]` が表示されます。 この式は、テキスト ボックスの Value プロパティに対して設定されている基本となる式 `=Fields!Sales.Value` を表しています。 レポートが実行されると、レポート プロセッサによってこの式が評価され、テーブル セルのテキスト ボックスにデータ ソースの実際のデータが表示されます。 詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」および「[データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-the-field-collection-for-a-dataset"></a>データセットのフィールド コレクションの表示  
  フィールド コレクションの個々の値を表示するには、各フィールドをテーブル詳細行にドラッグして、レポートを実行します。 フィールド参照がテーブル データ領域または一覧データ領域の詳細行に含まれている場合は、データセットの行ごとの値が表示されます。  
   
- フィールドの集約値を表示するには、各数値フィールドをマトリックスのデータ領域にドラッグします。 行の総数を計算する既定の集計関数は、 `=Sum(Fields!Sales.Value)`などの Sum 関数です。 既定の関数を変更して、別の合計を計算することもできます。 詳細については、「[集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+ フィールドの集約値を表示するには、各数値フィールドをマトリックスのデータ領域にドラッグします。 行の総数を計算する既定の集計関数は、 `=Sum(Fields!Sales.Value)`などの Sum 関数です。 既定の関数を変更して、別の合計を計算することもできます。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
  テキスト ボックス内のフィールド コレクションに関する集約値を (データ領域の一部ではなく) デザイン画面に直接表示するには、集計関数のスコープとしてデータセット名を指定する必要があります。 たとえば、 `SalesData`という名前のデータセットの場合は、 `Sales`という式によってフィールド `=Sum(Fields!Sales,"SalesData")`のすべての値の合計が指定されます。  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>実行時の動的クエリにおける存在しないフィールドの検出  
- 既定では、フィールド コレクションのアイテムには、Value および IsMissing という 2 つのプロパティがあります。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリがストアド プロシージャを入力パラメーター、結果セットの変化、またはクエリがありますを呼び出す可能性があります`SELECT * FROM` *\<テーブル >*テーブルの定義が変更されました。  
+ 既定では、フィールド コレクションのアイテムには、Value および IsMissing という 2 つのプロパティがあります。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
   
 > [!NOTE]  
 >  IsMissing は、任意の種類のデータ ソースに関して、デザイン時と実行時の間にデータセット スキーマに加えられた変更を検出します。 IsMissing は、多次元キューブで空のメンバーを検出するために使用することはできません。また、 **EMPTY** および **NON EMPTY**という MDX クエリ言語の概念とは関連していません。  
@@ -92,7 +91,7 @@ End Function
  テキスト ボックスには、フィールド値または指定した文字列が表示されます。  
   
 ### <a name="using-extended-field-properties"></a>拡張フィールド プロパティの使用  
- 拡張フィールド プロパティは、データ処理拡張機能によってフィールドに定義された追加プロパティであり、データセットのデータ ソースの種類に基づいて決定されます。 拡張フィールド プロパティには、定義済みのものと、データ ソースの種類に固有のものがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
+ 拡張フィールド プロパティは、データ処理拡張機能によってフィールドに定義された追加プロパティであり、データセットのデータ ソースの種類に基づいて決定されます。 拡張フィールド プロパティには、定義済みのものと、データ ソースの種類に固有のものがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
  そのフィールドでサポートされていないプロパティを指定した場合、式は **null** (**では** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) に評価されます。 データ プロバイダーが拡張フィールド プロパティをサポートしていない場合や、クエリ実行時にフィールドが見つからなかった場合、 **文字列** 型と**オブジェクト** 型のプロパティの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(** では **Nothing**) に、 **整数**型のプロパティの値はゼロ (0) になります。 データ処理拡張機能は、この構文を含むクエリを最適化することにより、定義済みのプロパティを利用する場合があります。  
   
@@ -101,4 +100,3 @@ End Function
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

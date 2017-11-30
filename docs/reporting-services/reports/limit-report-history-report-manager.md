@@ -1,5 +1,5 @@
 ---
-title: "レポート履歴 (レポート マネージャー) を制限 |Microsoft ドキュメント"
+title: "レポート履歴を制限する (レポート マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - historical data [Reporting Services]
 - displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e1925f7527202ea251a6949a18e2f03af4f5952
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 30b57e9b6d59718f384bcfdbe35efc375f1324ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="limit-report-history-report-manager"></a>レポート履歴を制限する (レポート マネージャー)
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート履歴は必要時に作成できるほか、どの程度の頻度でスナップショットを作成し、レポート履歴に追加するかをスケジュールで設定することもできます。  
@@ -50,11 +49,10 @@ ms.lasthandoff: 08/09/2017
   
 3.  **[履歴]** タブをクリックします。  
   
-4.  レポートのオプションを選択し、**[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)」を参照してください。  
+4.  レポートのオプションを選択し、 **[適用]**をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴と &#40; にスナップショットを追加します。レポート マネージャーと &#41; です。](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

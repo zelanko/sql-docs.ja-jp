@@ -1,5 +1,5 @@
 ---
-title: "新しい共有スケジュール (Management Studio) |Microsoft ドキュメント"
+title: "[新しい共有スケジュール] (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.newschedule.f1
+f1_keywords: sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7d6032fde5bdfba4ba74330d162e25da8e5d8f75
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 37e0b1a6b2e64de4d63456050b094113e288c434
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] \(Management Studio)
+# <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] (Management Studio)
   このページを使用すると、パブリッシュされたレポートおよびサブスクリプションを実行するための共有スケジュールを作成できます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 集中管理されるスケジュール情報と、スケジュールされた操作を一時停止して再開する機能は、アイテム固有のスケジュールと共有スケジュールを区別する 2 つの重要な機能です。  
   
  1 つのスケジュールの中で、複数の頻度を組み合わせて使用することができない場合があります。 たとえば、毎週金曜日の正午と 午後 4 時 00 分まで レポートを実行する場合、実行日を金曜日に指定した日単位のスケジュールを 2 つ作成し、1 つは開始時刻を正午に、 もう 1 つは開始時刻を午後 4 時に設定する必要があります。  
@@ -54,27 +52,26 @@ ms.lasthandoff: 08/09/2017
  **型**  
  定期的なパターンが主に時間、日、週、または月のどれに基づくかを指定します。  
   
- **[時間]\ ([定期的なパターン])**  
+ **[時間] ([定期的なパターン])**  
  スケジュール設定した操作を一定時間ごとに実行する (たとえば 6 時間ごとにレポートを実行する) ためのオプションを選択します。 間隔は時間と分で指定できます。  
   
- **[日] \([定期的なパターン])**  
+ **[日] ([定期的なパターン])**  
  スケジュール設定した操作を数日間隔で実行する (たとえば 2 日ごとにレポートを実行する) ためのオプションを選択します。 間隔は日数で指定し、スケジュールを実行する時と分を指定できます。  
   
- **[週] \([定期的なパターン])**  
+ **[週] ([定期的なパターン])**  
  スケジュール設定した操作を毎週実行するか、繰り返しのパターンが週単位 (たとえば隔週でレポートを実行する) の場合のオプションを選択します。 週間スケジュールについて、スケジュールを実行する日、時、分を指定できます。  
   
- **[月] \([定期的なパターン])**  
+ **[月] ([定期的なパターン])**  
  スケジュール設定した操作を毎月実行するか、繰り返しのパターンが月単位の場合のオプションを選択します。 月間スケジュールについて、スケジュールを実行する日、時、分を指定できます。 スケジュールでは特定の月を指定しなくてもかまいません。  
   
  **1 回。**  
  特定の日時に 1 回のみスケジュールを実行する場合にこのオプションを選択します。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [作成、変更、およびスケジュールの削除](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [スケジュール](../../reporting-services/subscriptions/schedules.md)   
- [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [[スケジュール]](../../reporting-services/subscriptions/schedules.md)   
+ [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
-

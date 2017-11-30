@@ -1,5 +1,5 @@
 ---
-title: "ウィンドウをグループ化 |Microsoft ドキュメント"
+title: "グループ化ペイン | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -13,42 +13,40 @@ ms.topic: article
 f1_keywords:
 - "10033"
 - sql13.rtp.rptdesigner.group.f1
-helpviewer_keywords:
-- Grouping Pane dialog box
+helpviewer_keywords: Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 509fa346013874f26225d6e8263b4e6b9baf0caf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grouping-pane"></a>グループ化ペイン
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のレポートをデザインする際、グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインは、行グループ ペインと列グループ ペインで構成されています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
   ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) グループ化ペインが表示されない場合は、 **[レポート]** メニューの **[グループ化]**をクリックしてください。
   
- 行グループ領域と列グループ領域のセルは、グループの静的メンバーまたは動的メンバーです。 静的メンバーはグループごとに 1 回繰り返され、通常、ラベルまたは合計が格納されています。 動的メンバーはグループ インスタンスごとに 1 回繰り返され、通常、グループ式の固有の値が格納されています。 行グループ領域または列グループ領域で Tablix セルを選択すると、対応するグループ メンバーが行グループ ペインまたは列グループ ペインで選択されます。 反対に、グループ化ペインでグループを選択すると、そのグループ メンバーに関連した対応するセルがデザイン画面で選択されます。 Tablix の行および列グループ領域の詳細については、次を参照してください。 [Tablix データ領域部分 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ 行グループ領域と列グループ領域のセルは、グループの静的メンバーまたは動的メンバーです。 静的メンバーはグループごとに 1 回繰り返され、通常、ラベルまたは合計が格納されています。 動的メンバーはグループ インスタンスごとに 1 回繰り返され、通常、グループ式の固有の値が格納されています。 行グループ領域または列グループ領域で Tablix セルを選択すると、対応するグループ メンバーが行グループ ペインまたは列グループ ペインで選択されます。 反対に、グループ化ペインでグループを選択すると、そのグループ メンバーに関連した対応するセルがデザイン画面で選択されます。 Tablix の行グループ領域と列グループ領域の詳細については、「[Tablix データ領域部分 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
   
  グループ化ペインでは、次のモードがサポートされています。  
   
--   **既定値です。** グループの追加、編集、削除を行うには、既定モードを使用します。 レポート データ ペインからフィールドをドラッグし、グループ階層に挿入することによって、親グループ、子グループ、および詳細グループを追加できます。 隣接するグループを追加するには、**[グループの追加]** ショートカットを使用する必要があります。 詳細については、「[データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+-   **既定値です。** グループの追加、編集、削除を行うには、既定モードを使用します。 レポート データ ペインからフィールドをドラッグし、グループ階層に挿入することによって、親グループ、子グループ、および詳細グループを追加できます。 隣接するグループを追加するには、 **[グループの追加]** ショートカットを使用する必要があります。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
--   **詳細設定**。 行グループと列グループのすべてのメンバーを表示し、静的メンバーのプロパティを設定するには、 **詳細設定モード** を使用します。 グループを作成したり合計を追加したりすると、Tablix データ領域で各レポート ページの行と列の表示方法を制御するプロパティが自動的に設定されます。 これらのプロパティを手動で調整するには、Tablix メンバーのプロパティを設定する必要があります。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
+-   **詳細設定**。 行グループと列グループのすべてのメンバーを表示し、静的メンバーのプロパティを設定するには、 **詳細設定モード** を使用します。 グループを作成したり合計を追加したりすると、Tablix データ領域で各レポート ページの行と列の表示方法を制御するプロパティが自動的に設定されます。 これらのプロパティを手動で調整するには、Tablix メンバーのプロパティを設定する必要があります。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   
 ## <a name="default-mode"></a>既定モード  
  既定モードでは、行グループ ペインと列グループ ペインにすべての親グループ、子グループ、および隣接グループの階層ビューが表示されます。 子グループは親グループの下にインデント表示されます。 隣接グループは、その兄弟グループと同じインデント レベルに表示されます。 次の図に、行グループと隣接列グループが入れ子になった Tablix データ領域を示します。  
   
- ![Tablix、入れ子になった隣接する行と列グループ](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、入れ子になった隣接する行と列グループ")  
+ ![Tablix、入れ子になった隣接する行と列のグループ](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、入れ子になった隣接する行と列のグループ")  
   
  グループ化ペインには、対応する行グループと列グループが表示されます。 次の図では、サブカテゴリに基づくグループが行グループ ペインで選択され、[Subcat] グループ化セルが Tablix データ領域で選択されています。  
   
- ![入れ子になった行および列グループのグループ化ペイン](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "入れ子になった行および列グループのグループ化ペイン")  
+ ![入れ子になった行と列のグループのグループ化ペイン](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "入れ子になった行と列のグループのグループ化ペイン")  
   
  行グループ ペインでは、サブカテゴリに基づくグループは、カテゴリに基づくグループの子になります。 列グループ ペインでは、国/地域グループは地理グループの子になります。 年度グループと国/地域グループは、隣接するグループです。  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **ToggleItem。** 文字列です。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   
- Tablix データ領域にこの動作を制御する方法の詳細については、次を参照してください[レポート ページ &#40; での Tablix データ領域の表示を制御します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+ Tablix データ領域でのこれらの動作を制御する方法の詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   
  すべての静的メンバーにデザイン画面のセルに対応するヘッダーがあるわけではありません。 グループ化ペインでは、次の規則を使用して静的メンバーにヘッダーがあるかどうかを示します。  
   
@@ -87,8 +85,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータを並べ替える & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-

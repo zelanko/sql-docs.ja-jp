@@ -1,5 +1,5 @@
 ---
-title: "階段状レポート (レポート ビルダーおよび SSRS) を作成 |Microsoft ドキュメント"
+title: "階段状レポートの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c78e1a3998673851e9860a6e6a6e295cde2d7f3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
 階段状レポートは  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートで、次の例に示すように、親グループとその下でインデントされた詳細行または子グループが、同じ列内に表示されます。  
   
- ![階段状レポートをレンダリング](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered に階段状レポート")  
+ ![レンダリングされた階段状レポート](../../reporting-services/report-design/media/steppedreportrendered.gif "レンダリングされた階段状レポート")  
   
  従来の表形式のレポートでは、親グループがレポート上の隣接する列に配置されます。 新しい Tablix データ領域を使用すると、グループと、詳細行または子グループを同じ列に追加することができます。 グループ行を詳細行または子グループ行と区別するには、フォントの色などの書式設定を適用するか、詳細行にインデントを設定します。  
   
@@ -54,15 +53,15 @@ ms.lasthandoff: 08/09/2017
   
      これで、基本的なテーブル レポートが作成されました。 レポートが表示されると、1 つの列にグループ インスタンス値、1 つ以上の列にグループ化された詳細データが含まれています。 デザイン画面でのデータ領域の外観は次の図のようになります。  
   
-     ![テーブル データ領域グループ](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "グループにテーブル データ領域")  
+     ![グループを含むテーブル データ領域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "グループを含むテーブル データ領域")  
   
      レポートを表示したときの表示データ領域の外観は次の図のようになります。  
   
-     ![グループ化されたレポートをレンダリング](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered レポートをグループ化")  
+     ![レンダリングされたグループ化レポート](../../reporting-services/report-design/media/tablereportrendered.gif "レンダリングされたグループ化レポート")  
   
 3.  段階状レポートを作成する場合、最初の列にグループ インスタンスを表示する必要はありません。 その代わり、グループ ヘッダー セル内の値をコピーし、グループ列を削除し、グループ ヘッダー行内の最初のテキスト ボックスに貼り付けます。 グループ列を削除するには、グループ列またはセルを右クリックして、 **[列の削除]**をクリックします。 デザイン画面でのデータ領域の外観は次の図のようになります。  
   
-     ![グループ ヘッダー行を含むデータ領域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "グループ ヘッダー行を含むデータ領域")  
+     ![グループ ヘッダー行のあるデータ領域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "グループ ヘッダー行のあるデータ領域")  
   
 4.  グループ ヘッダー行の下で、同じ列にある詳細行にインデントを設定するには、詳細データ セルの余白を変更します。  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/09/2017
   
      ![階段状レポートのデータ領域](../../reporting-services/report-design/media/steppedreportdataregion.gif "階段状レポートのデータ領域")  
   
-     **階段状レポート レイアウトのデータ領域**  
+     **段階状レポート レイアウトのデータ領域**  
   
      **[ホーム]** タブで **[実行]**をクリックします。 レポートに、子グループ値がインデント設定されたグループが表示されます。  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/09/2017
     1.  行グループ ペインで、グループを右クリックし、 **[グループの追加]**をクリックして、追加するグループの種類を選択します。  
   
         > [!NOTE]  
-        >  データ領域にグループを追加するには、いくつかの方法があります。 詳細については、「[データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+        >  データ領域にグループを追加するには、いくつかの方法があります。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
     2.  **[Tablix のグループ]** ダイアログ ボックスで、名前を入力します。  
   
@@ -110,13 +109,12 @@ ms.lasthandoff: 08/09/2017
 3.  グループ データを表示するセルの埋め込みを変更します。  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーおよびフッター & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [書式設定のレポート アイテムと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tablix データ領域と #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [テーブルと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [マトリックスと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [リストと #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

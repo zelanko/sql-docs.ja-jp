@@ -1,7 +1,6 @@
 ---
-title: "エクスポート (レポート ビルダーおよび SSRS) レポート |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "レポートのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -11,21 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10437"
+f1_keywords: "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: f77f9fbab85eaff80f3f31e6190d737c35239ea4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="export-reports-report-builder-and-ssrs"></a>レポートのエクスポート (レポート ビルダーおよび SSRS)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートは、PowerPoint、画像、PDF、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] などの別の形式にエクスポートできます。また、レポートから利用できる Atom 準拠のデータ フィードを一覧表示する Atom サービス ドキュメントを生成してエクスポートすることもできます。 レポートはレポート ビルダー、レポート デザイナー ([!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)])、またはレポート サーバーからエクスポートできます。  
@@ -38,13 +35,13 @@ ms.lasthandoff: 08/09/2017
   
 -   **レポートのコピーを別の種類のファイルとして保存する。** たとえば、レポートを Word にエクスポートして保存することで、レポートのコピーを作成できます。  
   
--   **レポート データをデータ フィードとしてアプリケーションで使用する。** たとえば、Power Pivot や Power BI を消費する、Power Pivot や Power BI のデータを使用する Atom 準拠のデータ フィードを生成できます。 詳細については、次を参照してください[レポートからのデータ フィードの生成。](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)  
+-   **レポート データをデータ フィードとしてアプリケーションで使用する。** たとえば、Power Pivot または Power BI で使用できる Atom 準拠のデータ フィードを生成してから、そのデータを Power Pivot または Power BI で操作できます。 詳細については、「[1 つのレポートからのデータ フィードの生成](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
--   レポート サーバーでレポートを変換するのが便利なのは、サブスクリプションを設定したり電子メールでレポートを配信したりする場合や、レポート サーバーで利用可能なレポートを保存する場合です。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+-   レポート サーバーでレポートを変換するのが便利なのは、サブスクリプションを設定したり電子メールでレポートを配信したりする場合や、レポート サーバーで利用可能なレポートを保存する場合です。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、さまざまな表示拡張機能が用意されており、一般的なファイル形式へのレポートのエクスポートがサポートされます。 これらの表示拡張機能では、ソフト改ページを含むファイル形式 (Word や Excel など)、ハード改ページを含むファイル形式 (PDF や TIFF など)、またデータのみのファイル形式 (CSV や Atom 準拠の XML など) がサポートされます。  
   
- 異なる形式でレポートをエクスポートすると、レポートのページ割り当てに影響する場合があります。 レポートをプレビューすると、HTML 表示拡張機能により、ソフト改ページ規則に従ってレポートが表示されます。 レポートを、Adobe Acrobat (PDF) などの別のファイル形式にエクスポートする場合、改ページは、ハード改ページ規則に従う物理ページ サイズに基づきます。 また、レポートに追加した論理的な改ページによってページを区切ることもできますが、実際のページの長さは、使用するレンダラーの種類によって異なります。 レポートの改ページを変更するには、選択した表示拡張機能の改ページの動作を理解する必要があります。 この表示拡張機能に合わせてレポート レイアウトのデザインの調整が必要になる場合があります。 詳細については、「[ページ レイアウトとレンダリング](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)です。  
+ 異なる形式でレポートをエクスポートすると、レポートのページ割り当てに影響する場合があります。 レポートをプレビューすると、HTML 表示拡張機能により、ソフト改ページ規則に従ってレポートが表示されます。 レポートを、Adobe Acrobat (PDF) などの別のファイル形式にエクスポートする場合、改ページは、ハード改ページ規則に従う物理ページ サイズに基づきます。 また、レポートに追加した論理的な改ページによってページを区切ることもできますが、実際のページの長さは、使用するレンダラーの種類によって異なります。 レポートの改ページを変更するには、選択した表示拡張機能の改ページの動作を理解する必要があります。 この表示拡張機能に合わせてレポート レイアウトのデザインの調整が必要になる場合があります。 詳細については、「[ページ レイアウトとレンダリング](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -55,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  リボンの **[エクスポート]**をクリックします。  
   
-     ![レポートのエクスポートにビルダー](../../reporting-services/report-builder/media/ssrb-export.png "レポート ビルダーのエクスポート")  
+     ![レポート ビルダーのエクスポート](../../reporting-services/report-builder/media/ssrb-export.png "レポート ビルダーのエクスポート")  
   
 3.  使用する形式を選択します。  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  レポート ビューアー ツール バーの **[エクスポート]** ボックスの矢印をクリックします。  
   
-     ![Reporting Services の web ポータル エクスポート](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services web ポータルのエクスポート")  
+     ![Reporting Services Web ポータルのエクスポート](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services Web ポータルのエクスポート")  
   
 4.  使用する形式を選択します。  
   
@@ -123,20 +120,20 @@ ms.lasthandoff: 08/09/2017
   
 |Format|表示拡張機能の種類|Description|  
 |------------|------------------------------|-----------------|  
-|Acrobat (PDF) ファイル|ハード改ページ|PDF 表示拡張機能を使用すると、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことのできるファイルとしてレポートが表示されます。 PDF 1.3 は Adobe Acrobat 4 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Adobe Acrobat 6 以降がサポートされています。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。<br /><br /> 詳細については、次を参照してください。 [PDF ファイルにエクスポートする](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)です。|  
-|Atom|データ|Atom 表示拡張機能では、Atom 準拠のデータ フィードがレポートから生成されます。 データ フィードは、Power Pivot などのアプリケーションで読み取りと交換またはフィードの Power BI は、Atom 準拠のデータを利用することができます。<br /><br /> 出力は、レポートで使用可能なデータ フィードを一覧表示する Atom サービス ドキュメントです。 レポート内の各データ領域について、少なくとも 1 つのデータ フィードが作成されます。 データ領域の種類およびデータ領域に表示されるデータによっては、複数のデータ フィードが生成される場合があります。<br /><br /> 詳細については、次を参照してください。[レポートからのデータ フィードの生成](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)です。|  
-|CSV|データ|CSV (コンマ区切り) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。<br /><br /> 詳細については、次を参照してください。 [CSV ファイルにエクスポートする](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)です。|  
-|EXCELOPENXML|ソフト改ページ|レポートを表示するときにエクスポート メニューで "Excel" として表示されます。 Excel 表示拡張機能では、レポートは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 と互換性のある Excel ドキュメント (.xlsx) として表示されます。  詳細については、次を参照してください。 [Microsoft Excel にエクスポートする](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)です。|  
+|Acrobat (PDF) ファイル|ハード改ページ|PDF 表示拡張機能を使用すると、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことのできるファイルとしてレポートが表示されます。 PDF 1.3 は Adobe Acrobat 4 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Adobe Acrobat 6 以降がサポートされています。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。<br /><br /> 詳細については、「[PDF ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)」を参照してください。|  
+|Atom|データ|Atom 表示拡張機能では、Atom 準拠のデータ フィードがレポートから生成されます。 データ フィードは、Atom 準拠のデータ フィードを使用するアプリケーション (Power Pivot や Power BI など) で読み取りと交換が可能です。<br /><br /> 出力は、レポートで使用可能なデータ フィードを一覧表示する Atom サービス ドキュメントです。 レポート内の各データ領域について、少なくとも 1 つのデータ フィードが作成されます。 データ領域の種類およびデータ領域に表示されるデータによっては、複数のデータ フィードが生成される場合があります。<br /><br /> 詳細については、「[複数のレポートからのデータ フィードの生成](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。|  
+|CSV|データ|CSV (コンマ区切り) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。<br /><br /> 詳細については、「[CSV ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」を参照してください。|  
+|EXCELOPENXML|ソフト改ページ|レポートを表示するときにエクスポート メニューで "Excel" として表示されます。 Excel 表示拡張機能では、レポートは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 と互換性のある Excel ドキュメント (.xlsx) として表示されます。  詳細については、「[Microsoft Excel へのエクスポート](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。|  
 |PowerPoint|ハード改ページ|PowerPoint 表示拡張機能では、レポートは、PowerPoint 2013 と互換性のある PowerPoint ドキュメント (.pptx) として表示されます。|  
-|TIFF ファイル|ハード改ページ|画像表示拡張機能では、レポートがビットマップまたはメタファイルとして表示されます。 画像表示拡張機能では、既定でレポートの TIFF ファイルが生成されます。このファイルは、複数のページに表示することもできます。 クライアントは、受信した画像をイメージ ビューアーで表示したり、印刷したりできます。<br /><br /> 画像表示拡張機能では、 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]でサポートされている形式 (BMP、EMF、EMFPlus、GIF、JPEG、PNG、TIFF) でファイルを生成できます。<br /><br /> 詳細については、次を参照してください。[イメージ ファイルにエクスポート](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)です。|  
-|Web アーカイブ|ソフト改ページ|HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。<br /><br /> HTML 表示拡張機能は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルで実行する場合など、レポート ビルダーでプレビューされ、ブラウザーで表示されるレポートの既定の表示拡張機能です。<br /><br /> 詳細については、次を参照してください。 [HTML に表示する](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)です。|  
-|WORDOPENXML|ソフト改ページ|レポートを表示するときにエクスポート メニューで "Word" として表示されます。 Word 表示拡張機能では、レポートは、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 と互換性のある Word 文書 (.docx) として表示されます。  詳細については、次を参照してください。 [Microsoft Word へのエクスポート](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)です。|  
-|XML|データ|XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。<br/><br/> 詳細については、次を参照してください。 [XML へのエクスポート](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)です。|  
+|TIFF ファイル|ハード改ページ|画像表示拡張機能では、レポートがビットマップまたはメタファイルとして表示されます。 画像表示拡張機能では、既定でレポートの TIFF ファイルが生成されます。このファイルは、複数のページに表示することもできます。 クライアントは、受信した画像をイメージ ビューアーで表示したり、印刷したりできます。<br /><br /> 画像表示拡張機能では、 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]でサポートされている形式 (BMP、EMF、EMFPlus、GIF、JPEG、PNG、TIFF) でファイルを生成できます。<br /><br /> 詳細については、「[画像ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)」を参照してください。|  
+|Web アーカイブ|ソフト改ページ|HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。<br /><br /> HTML 表示拡張機能は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルで実行する場合など、レポート ビルダーでプレビューされ、ブラウザーで表示されるレポートの既定の表示拡張機能です。<br /><br /> 詳細については、「[HTML での表示](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)」を参照してください。|  
+|WORDOPENXML|ソフト改ページ|レポートを表示するときにエクスポート メニューで "Word" として表示されます。 Word 表示拡張機能では、レポートは、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 と互換性のある Word 文書 (.docx) として表示されます。  詳細については、「[Microsoft Word へのエクスポート](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。|  
+|XML|データ|XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。<br/><br/> 詳細については、「[XML へのエクスポート](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)」を参照してください。|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> レポートからのデータ フィードの生成  
  レポートからデータ フィードを生成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルでレポートを実行した後、Web ポータルのツール バーの **[データ フィードの生成]** アイコンをクリックします。 ファイルを保存するか、開くかを選択するメッセージが表示されます。 **[開く]**を選択すると、.atomsvc ファイル拡張子に関連付けられているアプリケーションで Atom サービス ドキュメントが開きます。 **[保存]**を選択すると、ドキュメントが .atomsvc ファイルとして保存されます。 既定では、ファイルの名前はレポートの名前です。 この名前は、わかりやすい名前に変更できます。  
   
- Atom サービス ドキュメントは自分のコンピューターに保存されます。 後でレポート サーバーまたは別のサーバーにレポートをアップロードして、他のユーザーがレポートを使用できるようにすることができます。 詳細については、次を参照してください。[レポートからのデータ フィードの生成](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)と[レポートからのデータ フィードの生成](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)です。  
+ Atom サービス ドキュメントは自分のコンピューターに保存されます。 後でレポート サーバーまたは別のサーバーにレポートをアップロードして、他のユーザーがレポートを使用できるようにすることができます。 詳細については、「[複数のレポートからのデータ フィードの生成](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」および「[1 つのレポートからのデータ フィードの生成](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="Troubleshooting"></a> エクスポートされたレポートのトラブルシューティング  
  レポートを別の形式にエクスポートした場合、表示が変わったり、思いどおりに動作しなかったりすることがあります。 これは、特定の規則や制限がレンダラーに適用されることがあるためです。 多くの制限には、レポートの作成時に考慮することにより対処可能です。 場合によっては、レポートで若干異なるレイアウトを使用する、レポート内へのアイテムの配置を工夫する、レポートのフッターを 1 行のテキストに制限するなどの作業が必要になります。  
@@ -171,9 +168,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、他の形式でも適切に動作するレポートを作成できるように、次の追加機能が用意されています。 Tablix データ領域 (テーブル、マトリックス、一覧) の改ページ、グループ、四角形により、レポートのページ割り当てをより適切に制御できます。 改ページで区切られたレポートのページに、さまざまなページ名を付け、ページ番号をリセットできます。 式を使用すると、レポートの実行時にページ名とページ番号を動的に更新できます。 詳細については、次を参照してください。 [Reporting Services の改ページ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)です。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、他の形式でも適切に動作するレポートを作成できるように、次の追加機能が用意されています。 Tablix データ領域 (テーブル、マトリックス、一覧) の改ページ、グループ、四角形により、レポートのページ割り当てをより適切に制御できます。 改ページで区切られたレポートのページに、さまざまなページ名を付け、ページ番号をリセットできます。 式を使用すると、レポートの実行時にページ名とページ番号を動的に更新できます。 詳細については、「[Reporting Services の改ページ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
- また、組み込みの RenderFormat グローバルを使用することにより、条件に応じてレンダラーごとに異なるレポート レイアウトを適用することもできます。 詳細については、次を参照してください[組み込み Globals および Users 参照。](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
+ また、組み込みの RenderFormat グローバルを使用することにより、条件に応じてレンダラーごとに異なるレポート レイアウトを適用することもできます。 詳細については、「[組み込み Globals および Users 参照](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」を参照してください。
 
 ##  <a name="OtherWaysExportingReports"></a> レポートをエクスポートするその他の方法  
  レポートのエクスポートは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたはレポート ビルダーでレポートを開くときに必要に応じて実行するタスクです。 エクスポート操作を自動化する場合は (レポートを、定期的なスケジュールで特定のファイルの種類として共有フォルダーにエクスポートする場合など)、レポートを共有フォルダーに配信するサブスクリプションを作成します。 詳細については、「 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  
@@ -192,13 +189,13 @@ http://<Report Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Exc
 http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
- 詳細については、「 [URL アクセスを使用してレポートをエクスポート](../../reporting-services/export-a-report-using-url-access.md)」を参照してください。  
+ 詳細については、「 [URL アクセスを使用してレポートをエクスポートする](../../reporting-services/export-a-report-using-url-access.md)」を参照してください。  
 
 ## <a name="next-steps"></a>次の手順
 
-[改ページ、見出し、列、および行 &#40; を制御します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[改ページ、見出し、列、および行の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
 [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
-[レポート &#40; を保存します。レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+[レポートの保存 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

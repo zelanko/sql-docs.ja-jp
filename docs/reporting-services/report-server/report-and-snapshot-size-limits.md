@@ -1,5 +1,5 @@
 ---
-title: "レポートとスナップショットのサイズ制限 |Microsoft ドキュメント"
+title: "レポートとスナップショットのサイズ制限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0016b55ab5b7a72b8e231a943df6db191bf8b6c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
@@ -87,8 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>参照  
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
- [レポート サーバー データベース & #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [サイズの大きなレポートの処理](../../reporting-services/report-server/process-large-reports.md)  
   
   
-

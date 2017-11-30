@@ -1,5 +1,5 @@
 ---
-title: "テキスト ボックス (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "テキスト ボックス (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 932f2277845e4e47032baf80443c0d339cb45ea7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>テキスト ボックス (レポート ビルダーおよび SSRS)
   テキスト ボックスといえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint のように領域にテキストを含むスタンド アロンのボックスを思い浮かべると思います。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、同じように、タイトル、説明、ラベルの静的なテキストや、式に基づく動的なテキストを表示できます。 ただし、テーブルまたはマトリックス (Tablix データ領域) の各セルにはテキスト ボックスがあり、レポート内のスタンドアロン テキスト ボックスと同じ方法で書式設定することもできます。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  自由形式レイアウトでテキストを繰り返し表示するには、一覧データ領域を作成し、そこにテキスト ボックスを配置します。 複数値に対し形式を繰り返す場合は、一覧を使用します。たとえば、各顧客につき 1 回繰り返される請求書フォームなどです。 詳細については、「 [一覧がある請求書とフォームを作成する](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
   
- テキスト ボックス レイアウト、および最後のテキスト ボックスの下の空白を制御するには、四角形のコンテナーを使用します。 詳細については、次を参照してください。[四角形と線 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ テキスト ボックス レイアウト、および最後のテキスト ボックスの下の空白を制御するには、四角形のコンテナーを使用します。 詳細については、「[四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)」を参照してください。  
   
  テキスト ボックス内で式を使用して、リテラル テキストを保持したり、データベースのフィールドを指定したり、データを計算したりできます。 すべての式はプレースホルダー テキストとして表示され、番号、色、および他の外観のプロパティを書式設定できます。 同じテキスト ボックス内でプレースホルダーをリテラル テキストと組み合わせることもできます。  
   
@@ -72,7 +71,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [書式設定の数値と日付 (&) #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   
-

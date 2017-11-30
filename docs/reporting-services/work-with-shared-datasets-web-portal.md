@@ -1,28 +1,26 @@
 ---
-title: "共有データセット (web ポータル) の操作 |Microsoft ドキュメント"
+title: "共有データセットの操作 (Web ポータル) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c51b1f46f86980d2f756a2a2244c80468b5c28f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>共有データセットの web ポータルを作業します。
+# <a name="work-with-shared-datasets---web-portal"></a>共有データセットの操作 - Web ポータル
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -55,7 +53,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
 > [!NOTE]
 > フォルダーに共有データセットが表示されない場合は、データセットを表示していることを確認します。 Web ポータルの右上にあるメニュー バーで **[表示]** を選択します。 **[データセット]** がオンになっていることを確認します。  
   
-1.  選択、**省略記号 (...)**を管理するデータセットのです。  
+1.  管理するデータセットの省略記号 **[...]** を選択します。  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
@@ -111,5 +109,4 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 一覧に表示されている計画は、 **[編集]** または **[削除]** できます。 **[既存のものから新規作成]** オプションは、キャッシュ更新計画が 1 つだけ選択されている場合に有効になります。 このオプションでは、新しい更新計画が元の計画からコピーされて作成されます。 キャッシュ更新計画ページは、選択された計画の詳細があらかじめ設定された状態で開きます。 その後、更新計画オプションを変更して、新しい説明で計画を保存できます。  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

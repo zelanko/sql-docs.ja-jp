@@ -1,5 +1,5 @@
 ---
-title: "マップ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "マップ (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 46d27d3ff4f777c42ef3c9e79bf43d80edf3b1e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -78,10 +77,10 @@ ms.lasthandoff: 08/09/2017
 #### <a name="sources-of-spatial-data"></a>空間データのソース  
  空間データには次のソースがサポートされます。  
   
--   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーがインストールされているで*\<ドライブ >*: \Program Files\Microsoft SQL server \report Builder \MapGallery です。  
+-   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
   
     > [!NOTE]  
-    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で提供される TIGER/Line シェープファイルのデータを使用します。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
+    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で提供される TIGER/Line シェープファイルのデータを使用します。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
 -   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI) のシェープファイル空間データ形式に準拠するデータが格納されています。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](http://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
@@ -261,4 +260,3 @@ ms.lasthandoff: 08/09/2017
  [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
-

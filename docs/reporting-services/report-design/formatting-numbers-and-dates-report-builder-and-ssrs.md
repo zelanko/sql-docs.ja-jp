@@ -1,5 +1,5 @@
 ---
-title: "数値と日付 (レポート ビルダーおよび SSRS) を書式設定 |Microsoft ドキュメント"
+title: "数値と日付の書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ f1_keywords:
 - "10285"
 - sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9807d69d7c71612180f57c371848a916643d92b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
@@ -64,10 +63,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [書式設定の線、色、およびイメージ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [グラフと &#40; を書式設定レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [スケール、ゲージ &#40; の書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   
-

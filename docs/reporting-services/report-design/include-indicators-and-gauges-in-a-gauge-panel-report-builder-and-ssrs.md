@@ -1,5 +1,5 @@
 ---
-title: "(レポート ビルダーおよび SSRS) は、ゲージ パネルにインジケーターとゲージを含める |Microsoft ドキュメント"
+title: "ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4597b87876b52b41810f62423a59fef7b45394b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS)
   ゲージ パネルは、1 つ以上のゲージとインジケーターを格納する最上位のコンテナーです。 インジケーターは、ゲージに埋め込んだり、ゲージ パネルのゲージの横に配置したりできます。  
@@ -37,9 +36,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  表示するデータのテーブルおよびマトリックスが含まれる既存のレポートを開くか、新しいレポートを作成します。   
   
-2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
+2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
   
-3.  **[挿入]** タブの **[データ領域]** グループで **[ゲージ]** をクリックし、次に新しい列のセルをクリックします。 **[ゲージの種類の選択]** ダイアログ ボックスが表示されます。  
+3.  **[挿入]** タブの **[データ領域]** グループで **[ゲージ]**をクリックし、次に新しい列のセルをクリックします。 **[ゲージの種類の選択]** ダイアログ ボックスが表示されます。  
   
 4.  **[放射状]**をクリックします。 最初の放射状ゲージが選択されます。  
   
@@ -67,9 +66,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  表示するデータのテーブルおよびマトリックスが含まれる既存のレポートを開くか、新しいレポートを作成します。  
   
-2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
+2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
   
-3.  **[挿入]** タブの **[データ領域]** グループで **[ゲージ]** をクリックし、挿入した列のセルをクリックします。 **[ゲージの種類の選択]** ダイアログ ボックスが表示されます。  
+3.  **[挿入]** タブの **[データ領域]** グループで **[ゲージ]**をクリックし、挿入した列のセルをクリックします。 **[ゲージの種類の選択]** ダイアログ ボックスが表示されます。  
   
 4.  **[放射状]**をクリックします。 最初の放射状ゲージが選択されます。  
   
@@ -109,4 +108,3 @@ ms.lasthandoff: 08/09/2017
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

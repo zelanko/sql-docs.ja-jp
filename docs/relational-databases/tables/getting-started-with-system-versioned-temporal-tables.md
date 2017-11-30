@@ -1,36 +1,37 @@
 ---
 title: "システム バージョン管理されたテンポラル テーブルの概要 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0318f2a574bcdb2f02016fc6d865252deb6fef4a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fd2178542c6f193986377a5a7dacd42420e7a86c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの概要
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   シナリオに応じて、システム バージョン管理された新しいテンポラル テーブルを作成するか、既存のテーブル スキーマにテンポラル属性を追加して既存のテーブルを変更できます。   
 テンポラル テーブル内のデータが変更されると、バージョン履歴がアプリケーションとエンド ユーザーに対して透過的に構築されます。 このため、システム バージョン管理されたテンポラル テーブルの操作では、テーブルの変更方法や最新 (実際の) データへのクエリの実行方法を変更する必要はありません。   
 また、テンポラルには、通常の DML やクエリ実行のほかに、拡張 Transact-SQL 構文でデータ履歴から情報を簡単かつ便利に取得する方法も用意されています。   
 すべてのシステム バージョン管理されたテーブルに履歴テーブルが割り当てられていますが、これはユーザーに対して完全に透過的です。ただし、ユーザーが追加のインデックスを作成するか、別のストレージ オプションを選択して、ワークロードのパフォーマンスまたはストレージの使用量を最適化する必要がある場合は除きます。    
 次の図は、システム バージョン管理されたテンポラル テーブルの一般的なワークフローを示しています。   
-![テンポラルの概要](../../relational-databases/tables/media/getting-started-with-temporal.png "Getting Started with Temporal")  
+![テンポラルの概要](../../relational-databases/tables/media/getting-started-with-temporal.png "テンポラルの概要")  
   
  このトピックには、次の 5 つのセクションがあります。  
   
@@ -58,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  [テンポラル テーブル メタデータのビューおよび関数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

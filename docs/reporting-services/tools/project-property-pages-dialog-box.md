@@ -1,5 +1,5 @@
 ---
-title: "プロジェクト プロパティ ページ ダイアログ ボックス |Microsoft ドキュメント"
+title: "[プロパティ ページ] ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.rpt.rptdesigner.projectpropertypages.general.f1
-helpviewer_keywords:
-- Project Property Pages dialog box
+f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62b7abef277143c52d2431e97420812b595347d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
 
-  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、**プロジェクト** メニューをクリックして*\<レポート プロジェクト名 >***プロパティ**です。  
+  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、**[プロジェクト]** メニューの *[\<レポート プロジェクト名>* **のプロパティ]** をクリックします。  
   
  構成プロパティを定義した後は、ツール バーの **[ソリューション構成]** ボックスの一覧から構成を選択できるようになります。  
 
@@ -63,7 +59,7 @@ ms.lasthandoff: 08/09/2017
  レポートのパブリッシュ時に、サーバー上のデータ ソースをプロジェクト内のデータ ソースで上書きする場合は、 **[True]** を選択します。 サーバー上の既存のデータ ソースを残す場合は、 **[False]** を選択します。  
   
  **[TargetServerVersion]**  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の適切なバージョンを選択するか、 **[バージョンの検出]** を選択して、 **TargetServer URL** プロパティによって識別される、サーバーにインストールされているバージョンを自動的に特定します。 既定値は**SQL Server 2016**です。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の適切なバージョンを選択するか、 **[バージョンの検出]** を選択して、 **TargetServer URL** プロパティによって識別される、サーバーにインストールされているバージョンを自動的に特定します。 既定値は **SQL Server 2016**をクリックします。  
   
  **[TargetDataSourceFolder]**  
  パブリッシュした共有データ ソースを保存するフォルダーの名前です。 フォルダーを指定しない場合、レポートと同じフォルダーにデータ ソースがパブリッシュされます。 フォルダーがレポート サーバー上に存在しない場合は、レポートのパブリッシュ時に、レポート デザイナーによってフォルダーが作成されます。  
@@ -87,14 +83,13 @@ ms.lasthandoff: 08/09/2017
  SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 例: 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`をインストールしたユーザーを対象にしています。  
++ `http:\\<servername>\<site>\<subsite>`」をご覧ください。  
 
 ## <a name="next-steps"></a>次の手順
 
 [レポートのパブリッシュ](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [SharePoint ライブラリへのレポートのパブリッシュ](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[展開プロパティの設定 & #40 です。Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [レポート デザイナーの F1 ヘルプ](../../reporting-services/tools/report-designer-f1-help.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services で認証に対する保護を拡張 |Microsoft ドキュメント"
+title: "Reporting Services での認証の拡張保護 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,35 +11,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
 
   拡張保護は、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに追加された一連の拡張機能です。 拡張保護により、アプリケーションで資格情報と認証を保護する方法の幅が広がります。 この機能自体は、資格情報の転送をはじめとする特定の攻撃を直接防ぐものではありませんが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] などのアプリケーションに対し、認証の拡張保護を適用するためのインフラストラクチャを提供します。  
   
  拡張保護に含まれる認証の拡張機能を代表するのが、サービス バインドとチャネル バインドです。 チャネル バインドでは、チャネル バインド トークン (CBT) を使用して、2 つのエンド ポイント間に確立されたチャネルに問題が生じていないかどうかを確認します。 サービス バインドでは、サービス プリンシパル名 (SPN) を使用して認証トークンの目的の送信先を検証します。 拡張保護の詳細な背景情報については、「 [拡張保護付き統合 Windows 認証](http://go.microsoft.com/fwlink/?LinkId=179922)」を参照してください。  
   
-SQL Server Reporting Services (SSRS) をサポートし、オペレーティング システムで有効になっているおよびで構成されている拡張保護を適用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はネゴシエート認証または NTLM 認証を指定する要求を受け入れるため、オペレーティング システムでの拡張保護のサポートと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を活用できます。  
+SQL Server Reporting Services (SSRS) でサポートおよび適用されるのは、オペレーティング システムで有効化し、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で構成した拡張保護です。 既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はネゴシエート認証または NTLM 認証を指定する要求を受け入れるため、オペレーティング システムでの拡張保護のサポートと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を活用できます。  
   
 > [!IMPORTANT]  
 >  既定では、Windows の拡張保護は有効になっていません。 Windows で拡張保護を有効にする方法の詳細については、「 [認証に対する保護の強化](http://go.microsoft.com/fwlink/?LinkID=178431)」を参照してください。 認証を成功させるためには、オペレーティング システムとクライアントの認証スタックが両方とも拡張保護をサポートしている必要があります。 旧バージョンのオペレーティング システムを使用している場合は、拡張保護に対応したコンピューターを準備するために、1 つ以上の更新プログラムのインストールが必要になることがあります。 拡張保護の最新情報については、 [こちら](http://go.microsoft.com/fwlink/?LinkId=183362)を参照してください。  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services の拡張保護の概要
 
-SSRS は、サポートおよびオペレーティング システムで有効になっている拡張保護を適用します。 オペレーティング システムが拡張保護をサポートしていないか、拡張保護機能がオペレーティング システムで有効化されていない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を使用した認証は失敗します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護では、SSL 証明書も必要になります。 詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
+SSRS では、オペレーティング システムで有効になっている拡張保護がサポートされ、適用されます。 オペレーティング システムが拡張保護をサポートしていないか、拡張保護機能がオペレーティング システムで有効化されていない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を使用した認証は失敗します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護では、SSL 証明書も必要になります。 詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護は有効になっていません。 この機能を有効にするには、 **rsreportserver.config** 構成ファイルを変更するか、WMI API を使用して構成ファイルを更新します。 SSRS では、拡張保護の設定を変更または表示するためのユーザー インターフェイスは提供されません。 詳細については、このトピックの [構成設定に関するセクション](#ConfigurationSettings) を参照してください。  
+>  既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護は有効になっていません。 この機能を有効にするには、 **rsreportserver.config** 構成ファイルを変更するか、WMI API を使用して構成ファイルを更新します。 SSRS には、拡張保護の設定を変更または確認するためのユーザー インターフェイスが用意されていません。 詳細については、このトピックの [構成設定に関するセクション](#ConfigurationSettings) を参照してください。  
   
  拡張保護の設定に加えた変更や設定の不適切な構成が原因で一般的な問題が発生しても、目に見えるエラー メッセージやダイアログ ウィンドウで示されることはありません。 拡張保護の構成や互換性に関係する問題が生じると、認証に失敗し、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のトレース ログにエラーが記録されます。  
   
@@ -53,7 +51,7 @@ SSRS は、サポートおよびオペレーティング システムで有効�
   
 ### <a name="upgrade"></a>アップグレード  
   
--   アップグレード、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 2016 へのサーバーが既定の値を持つ構成設定を追加、 **rsreportserver.config**ファイル。 SQL Server 2016 のインストールとそれらの場合は、設定は既に存在していた、保持、 **rsreportserver.config**ファイル。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーを SQL Server 2016 にアップグレードすると、既定値の設定された構成設定が **rsreportserver.config** ファイルに追加されます。 既存の設定がある場合は、SQL Server 2016 のインストールにより、その設定が **rsreportserver.config** ファイルで保持されます。  
   
 -   構成設定が **rsreportserver.config** 構成ファイルに追加されると、既定の動作として [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能が無効になるため、このトピックの説明に従って有効にする必要があります。 詳細については、このトピックの [構成設定に関するセクション](#ConfigurationSettings) を参照してください。  
   
@@ -179,4 +177,4 @@ SSRS は、サポートおよびオペレーティング システムで有効�
 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41; (SetExtendedProtectionSettings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

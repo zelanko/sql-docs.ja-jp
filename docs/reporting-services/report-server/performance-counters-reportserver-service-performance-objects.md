@@ -1,5 +1,5 @@
 ---
-title: "パフォーマンス カウンター - ReportServer サービス パフォーマンス オブジェクト |Microsoft ドキュメント"
+title: "パフォーマンス カウンター - ReportServer サービス、パフォーマンス オブジェクト | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Server service, performance counters
+helpviewer_keywords: Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 92bc628afcaed8a45652e58a6073bd5a53df4012
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 82b91953a753773f09586c10ed87d05b83bb2230
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="performance-counters---reportserver-service--performance-objects"></a>パフォーマンス カウンター - ReportServer サービス パフォーマンス オブジェクト
+# <a name="performance-counters---reportserver-service--performance-objects"></a>パフォーマンス カウンター - ReportServer サービス、パフォーマンス オブジェクト
   このトピックでは、 **の配置に含まれる** ReportServer:Service **および** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
   
 > [!NOTE]  
@@ -44,13 +42,13 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]」を参照してください。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)  
- **ReportServer:Service** パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、 **ReportServer:Service**という形式で表示されます。 形式で表示される名前付きインスタンスのカウンター **ReportServer$\<***instance_name***>: サービス**です。  
+ **ReportServer:Service** パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、 **ReportServer:Service**という形式で表示されます。 名前付きインスタンスのカウンターは、**ReportServer$\<***instance_name***>:Service** という形式で表示されます。  
   
  **ReportServer:Service** は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で新しく追加されたパフォーマンス オブジェクトです。以前のバージョンの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]やインターネット インフォメーション サービス (IIS) に含まれていたカウンターのサブセットを備えています。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
   
  次の表は、 **ReportServer:Service** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します。  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -83,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint モードのレポート サーバー)  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、**ReportServerSharePoint:Service** パフォーマンス オブジェクトが追加されました。  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します。  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -96,7 +94,7 @@ ms.lasthandoff: 08/09/2017
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは CounterSetName"ReportServerSharePoint:Service"のパフォーマンス カウンターの一覧を返します。  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName "ReportServerSharePoint:Service" のパフォーマンス カウンターの一覧を返します。  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -104,8 +102,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーのパフォーマンスの監視](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクト &#40; 用のパフォーマンス カウンターネイティブ モード &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   
-

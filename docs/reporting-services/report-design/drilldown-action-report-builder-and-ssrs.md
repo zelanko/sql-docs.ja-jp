@@ -1,5 +1,5 @@
 ---
-title: "ドリルダウン アクション (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "ドリルダウン アクション (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -41,17 +41,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
 - sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 546f4fda3c98349fd20fc261f7405d19e2f94d74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
   テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
@@ -69,9 +68,9 @@ ms.lasthandoff: 08/09/2017
 >   
 >  たとえば、入れ子構造のグループに関連付けられている行を非表示にするには、テキスト ボックスが、親グループに関連付けられている行にあるか、包含階層の上位にある必要があります。  
 >   
->  詳細グループ、列または行の設定の可視性の情報については、次を参照してください[項目 &#40; を展開または折りたたみアクションを追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)  
+>  グループ、列、または行の可視化の設定については、「[アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
   
- レポート アイテムを非表示の詳細については、次を参照してください[項目 &#40; を非表示にする。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
+ レポート アイテムを非表示にする方法については、「[アイテムを非表示にする &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -88,12 +87,11 @@ ms.lasthandoff: 08/09/2017
   
 -   Excel 表示拡張機能では、テーブル、マトリックス、または一覧の非表示の行および列が表示され展開されます。 行と列がすべて表示されます。  
   
- 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
+ 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンクと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

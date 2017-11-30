@@ -1,5 +1,5 @@
 ---
-title: "(レポート マネージャー) レポートを開いたり閉じたり |Microsoft ドキュメント"
+title: "レポートを開閉する (レポート マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 440fe0b9ff8468546cf7e8cfadf2533a3bdf82d7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d9541855640ec0be24c633ea3946a1cec03315d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-and-close-a-report-report-manager"></a>レポートを開閉する (レポート マネージャー)
   レポート サーバーにパブリッシュされたレポートは、レポート マネージャーを使って閲覧できます。 既定では、すべてのレポートが HTML 形式で表示されます。 開いたレポートをエクスポートすることにより、他のアプリケーションの形式で閲覧することもできます。 対話機能を持ったレポートや対話型データを含んだレポート ビルダーのレポートでは、リンクをクリックして追加のレポートまたはデータを閲覧できます。  
@@ -47,10 +46,9 @@ ms.lasthandoff: 08/09/2017
      レポートを閉じても、レポートはブラウザーのキャッシュから削除されません。 レポートへの接続を切断するには、ブラウザーを閉じる必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポートおよびその他の項目 &#40; を検索レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [[コンテンツ] ページと &#40;です。レポート マネージャーと&#41; です。](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [検索、表示、およびレポート &#40; を管理します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [レポート サーバー コンテンツの管理 & #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

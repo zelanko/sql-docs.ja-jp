@@ -1,5 +1,5 @@
 ---
-title: "共有スケジュールを一時停止と再開 |Microsoft ドキュメント"
+title: "共有スケジュールの一時停止と再開 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 71dcd66394cf96bd6994e40de76b10a519f32a74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pause-and-resume-shared-schedules"></a>共有スケジュールを一時停止および再開する
   使用中の共有スケジュールは、一時停止および再開することができます。 共有スケジュールを一時停止すると、レポート処理とサブスクリプションのトリガーとして使用しているスケジュールが一時的に無効になります。 一時停止や再開を行うことができるのは共有スケジュールだけです。 レポート固有のスケジュールは一時停止できません。  
@@ -69,10 +68,9 @@ ms.lasthandoff: 08/09/2017
 4.  スケジュールを選択し、 **[選択したスケジュールの一時停止]** または **[選択したスケジュールの実行]**をクリックします。 スケジュールが現在一時停止している場合は、 **[状態]** 列に **[一時停止]**が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [スケジュール](../../reporting-services/subscriptions/schedules.md)   
- [作成、変更、およびスケジュールの削除](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [タイム ゾーンと、レポート サーバーのクロック設定を変更します。](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [実行中のプロセスを管理します。](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [[スケジュール]](../../reporting-services/subscriptions/schedules.md)   
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [レポート サーバーでタイム ゾーンと時計の設定を変更する](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

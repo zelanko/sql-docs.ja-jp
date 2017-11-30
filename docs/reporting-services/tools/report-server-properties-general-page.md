@@ -1,5 +1,5 @@
 ---
-title: "サーバーのプロパティ ([全般] ページ) |Microsoft ドキュメント"
+title: "[サーバーのプロパティ] ([全般] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/08/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ca680b434f4b483fb2f3cc3d99df5598a0766f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-server-properties-general-page"></a>レポート サーバーのプロパティ ([全般] ページ)
+# <a name="report-server-properties-general-page"></a>[レポート サーバーのプロパティ] ([全般] ページ)
   このページを使用すると、レポート マネージャーで使用されるタイトルの表示と変更、個人用レポートの有効化と無効化、個人用レポートのセキュリティに関するロール定義の選択、およびクライアントの印刷コントロールの有効化または無効化ができます。  
   
  **このページを開くには:**
@@ -59,12 +57,11 @@ ms.lasthandoff: 08/09/2017
 
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティの設定 & #40 です。Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [有効にして、個人用レポートを無効にします。](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [レポート サーバーのプロパティを設定する (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)  
   
   
-
 

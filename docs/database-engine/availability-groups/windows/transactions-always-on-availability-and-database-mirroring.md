@@ -1,12 +1,14 @@
 ---
 title: "トランザクション - Always On 可用性グループとデータベース ミラーリング | Microsoft Docs"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.date: 11/01/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 74b2beeb4f74afab2dc7300e51093d3e271f58e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc86ef8e495bacaaaebf2470306b25d38d5158e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このトピックでは、Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクションのサポートについて説明します。  
 
@@ -65,7 +66,7 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
   
 -   可用性グループは、Windows Server 2016 または Windows Server 2012 R2 上で実行されている必要があります。 Windows Server 2012 R2 の場合は、 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
   
--   Availability groups must be created with the **CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。 現在、既存の可用性グループを変更することはできません。  
+-   可用性グループは、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC\_SUPPORT = PER_DB** 句を使って作成する必要があります。 現在、既存の可用性グループを変更することはできません。  
 
 - 可用性グループに参加するすべての SQL Server インスタンスは、SQL Server 2016 以降である必要があります。
  
@@ -93,8 +94,7 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
 > [!NOTE]  
 >  このトピックで承認されていない DTC とデータベース ミラーリングの使用または DTC と可用性グループの使用はサポートされていません。  これは、DTC に関係しない部分はサポートされないことを意味するものではありません。ただし、分散トランザクションの不適切な使用により発生する問題はサポートされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="next-steps"></a>次の手順  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: "Always Encrypted (データベース エンジン) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/31/2017
 
 次に、ドライバーは、暗号化された列暗号化キー値を復号化するために、列マスター キーを含むキー ストアに接続し、プレーンテキスト列の暗号化キーを使用してパラメーターを暗号化します。 以降、同じ列の暗号化キーを使用する際に、キー ストアに対するラウンド トリップ数を軽減するために、結果のプレーンテキスト列暗号化キーはキャッシュされます。 ドライバーは、暗号化された列を対象とするパラメーターのプレーンテキスト値を、暗号化値と置き換え、処理を実行するサーバーにクエリを送信します。
 
-サーバーは結果セットを計算し、結果セットに暗号化が含まれている場合、ドライバーは列の暗号化メタデータ (暗号化アルゴリズムや対応するキーに関する情報など) をアタッチします。 ドライバーは、まずローカル キャッシュ内でプレーンテキスト列の暗号化キーを検索しようと試み、キャッシュ内にキーが見つからなかった場合にのみ、列マスター キーを検索します。 次に、ドライバーは結果を復号化し、プレーンテキスト値をアプリケーションに返します。
+サーバーは結果セットを計算し、結果セットに暗号化された列が含まれている場合、ドライバーは列の暗号化メタデータ (暗号化アルゴリズムや対応するキーに関する情報など) をアタッチします。 ドライバーは、まずローカル キャッシュ内でプレーンテキスト列の暗号化キーを検索しようと試み、キャッシュ内にキーが見つからなかった場合にのみ、列マスター キーを検索します。 次に、ドライバーは結果を復号化し、プレーンテキスト値をアプリケーションに返します。
 
  クライアント ドライバーは、列マスター キー ストア プロバイダーを使用して、列マスター キーを含むキー ストアに接続します。このプロバイダーは、列マスター キーを含むキー ストアをカプセル化するクライアント側ソフトウェア コンポーネントです。 キー ストアの一般的な種類のプロバイダーは、Microsoft からのクライアント側ドライバーのライブラリで、またはスタンドアロンのダウンロードとして入手できます。 独自のプロバイダーを実装することもできます。 組み込みの列マスター キー ストア プロバイダーを含む Always Encrypted の機能は、ドライバー ライブラリとそのバージョンによって異なります。 
 
@@ -254,4 +254,3 @@ GO
 [sp_refresh_parameter_encryption (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

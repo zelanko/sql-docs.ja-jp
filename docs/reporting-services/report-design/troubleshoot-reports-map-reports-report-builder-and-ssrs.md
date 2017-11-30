@@ -1,5 +1,5 @@
 ---
-title: "レポートのトラブルシューティング: レポート (レポート ビルダーおよび SSRS) マップ |Microsoft ドキュメント"
+title: "レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2ed84682cda474d2cba6e7f0854e8cc1cde8d827
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでマップの問題が発生しやすいのは、マップまたはマップ レイヤーをレポートに追加するときや、レポート内の既存のマップまたはマップ レイヤーをカスタマイズするとき、レポートのマップをプレビューするとき、またはマップを含んだレポートをパブリッシュするときです。 このトピックでは、このような問題のトラブルシューティングについて説明します。  
@@ -164,7 +163,7 @@ ms.lasthandoff: 08/09/2017
   
  各凡例のタイトルと内容を制御するには、ルールに対する凡例のプロパティを使用します。 作成する区分の数を指定したり、各区分に対する値の代入計算を変更したりできるほか、範囲の上限と下限の値を設定したり、凡例テキストの書式を変更したりすることもできます。  
   
- 詳細については、「[マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="the-rules-that-i-set-do-not-give-the-results-that-i-expect"></a>ルールを設定したが想定した結果が得られない  
  ルールは、レイヤー上のマップ要素に関連付けられた分析データに適用されます。 次の箇条書きは、色ルール、サイズ ルール、幅ルール、マーカーの種類ルールなど、あらゆるルールの問題解決に役立てることができます。  
@@ -173,7 +172,7 @@ ms.lasthandoff: 08/09/2017
   
 -   対応フィールドの問題。 対応フィールドは、マップ要素と分析データ間のデータ バインドを可能にします。 空間データと分析データの (対応フィールドとして使用する) フィールドは、同じデータ型で、なおかつ、同じ形式でなければなりません。 空間データと分析データとで対応フィールドが完全に一致しない場合、ルールは作用しません。 たとえば、空間データの対応フィールドに (分析データの対応フィールドにはない) 余分な空白や句読点が含まれている場合、一致とは見なされません。  
   
--   詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
+-   詳細については、「 [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
 ## <a name="what-is-the-value-nan-on-the-color-scale"></a>カラー スケールの NaN という値について  
  **NaN** とは、非数 (Not a Number) を表します。 カラー スケールの値には数値が想定されています。 カラー スケールに関連付けられているルールの分布の設定と凡例のテキスト値をチェックしてください。 分布の範囲を独自に作成した場合は、最初の範囲に下限が、最後の範囲に上限が指定されていることを確認してください。  
@@ -181,7 +180,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>レポートを実行してもカラー スケールが表示されない  
  カラー スケールは、マップ レイヤーのレイヤー全体または埋め込みマップ要素に対し、多角形、線、またはポイントに対する色ルールが指定されている場合に、ユーザーに情報を表示するものです。 マップ要素に色ルールが指定されていない場合や、色ルールの指定に (カラー マップではなく) 凡例が使用されている場合、レンダリングされたレポートにカラー マップは表示されません。  
   
- カラー スケールを表示するには、レイヤーまたは埋め込みマップ要素に色ルールを指定します。 詳細については、「[マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
+ カラー スケールを表示するには、レイヤーまたは埋め込みマップ要素に色ルールを指定します。 詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="Tile"></a> タイルの問題  
  タイルの背景のオプションに関連した問題の解決方法については、このセクションを参照してください。  
@@ -213,8 +212,7 @@ ms.lasthandoff: 08/09/2017
  レポート データセットのものではない空間データに関連したデータを指定するには、# 記号に続けて、データの名前を指定するラベルを指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [マップ & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [レポート ビルダーをトラブルシューティングします。](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [レポート ビルダーのトラブルシューティング](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services の例外の処理 |Microsoft ドキュメント"
+title: "Reporting Services での例外を処理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,36 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], exceptions
 - .NET Framework [Reporting Services]
 - exceptions [Reporting Services], about exception handling
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 7e1472c11575ba8bed99992ec9630e408c347291
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 40b238f118a957a86f7fb0791d9a6012cc150ff6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Reporting Services の例外の処理
-  Reporting Services SOAP API クライアント要求を完了できない場合は、レポート サーバーが予期した呼び出しの結果ではなくエラーを返します。 呼び出しを完了できない場合、レポート サーバー Web サービスのエラーが SOAP として返されます。**フォールト**XML 要素です。 エラーのキーのわかりやすい要素は、**詳細**要素は、すべてのレポート サーバーだけでなく、追加の Web サービス エラー情報によって提供されるエラー情報が含まれています。 キー情報、**詳細**要素は、レポート サーバーのエラー コード。 メッセージとエラー コードから、アプリケーションで次にとるべき適切な処理を判断することができます。 SOAP エラーの詳細については、W3C (World Wide Web Consortium) の Web サイト (http://www.w3.org/TR/SOAP) を参照してください。  
+  Reporting Services SOAP API クライアント要求を完了できない場合は、レポート サーバーが予期した呼び出しの結果ではなくエラーを返します。 呼び出しを完了できない場合は、レポート サーバー Web サービスのエラーが SOAP **Fault** XML 要素として返されます。 エラー解消の鍵となる要素は **detail** 要素です。この要素には、レポート サーバーが提供するすべてのエラー情報に加えて、Web サービス エラー情報も含まれています。 **detail** 要素の中の最重要情報は、レポート サーバー エラー コードです。 メッセージとエラー コードから、アプリケーションで次にとるべき適切な処理を判断することができます。 SOAP エラーの詳細については、W3C (World Wide Web Consortium) の Web サイト (http://www.w3.org/TR/SOAP) を参照してください。  
   
 ## <a name="soap-faults-and-the-net-framework"></a>SOAP のエラーと .NET Framework  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、レポート サーバーの通信エラーをスローすることによって、Web サービスを呼び出すクライアント コードを Web サービスへのクライアント要求で、エラーが発生した場合、 **SoapException**オブジェクト。 **SoapException** SOAP エラーに含まれる情報をラップします。 **詳細**のプロパティ、 **SoapException**にマップ、**詳細**SOAP エラー内の要素。 アプリケーションをキャッチする必要があります、 **SoapException** try ブロックと catch ブロックでオブジェクトを使用して、**詳細**のプロパティ、 **SoapException**適切な操作を実行します。 詳細については、 **SoapException**クラスおよび**詳細**プロパティ[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[Reporting Services SoapException クラス](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)です。 詳細については、 **SoapException**クラスを参照してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK のドキュメントです。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] では、Web サービスへのクライアント要求にエラーが発生した場合に、レポート サーバーが **SoapException** オブジェクトをスローすることによって Web サービスを呼び出すクライアント コードにエラーを通知します。 **SoapException** は SOAP エラーに含まれる情報をラップします。 **SoapException** の **Detail** プロパティは、SOAP エラーの **detail** 要素にマップされます。 アプリケーションは **SoapException** オブジェクトを try ブロックまたは catch ブロックと共にキャッチし、**SoapException** の **Detail** プロパティを使用して適切な処理を行う必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の **SoapException** クラスと **Detail** プロパティの詳細については、「[Reporting Services SoapException クラス](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)」を参照してください。 **SoapException** クラスの詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK ドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Detail プロパティ](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)   
- [Reporting Services での例外処理の概要](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services における例外処理の概要](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException クラス](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   
-

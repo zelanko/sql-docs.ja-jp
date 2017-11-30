@@ -1,5 +1,5 @@
 ---
-title: "式のリファレンス (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "式のリファレンス (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df29e7308bc0992a9de611b2606b2bb2e624597d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>式のリファレンス (レポート ビルダーおよび SSRS)
   レポートの式には、各種の組み込み関数や組み込みコレクションの参照を使用できます。 レポートをパブリッシュまたは処理するには、式に有効な [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 構文が使用されている必要があります。  
   
- 複合式、またはカスタム コードやカスタム アセンブリを使った式を作成するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でレポート デザイナーを使用することをお勧めします。 詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
+ 複合式、またはカスタム コードやカスタム アセンブリを使った式を作成するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でレポート デザイナーを使用することをお勧めします。 詳細については、「 [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)を表しています。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

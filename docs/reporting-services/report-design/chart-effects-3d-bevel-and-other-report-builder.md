@@ -1,5 +1,5 @@
 ---
-title: "3 D、傾斜、およびその他のグラフ (レポート ビルダーおよび SSRS) 効果 |Microsoft ドキュメント"
+title: "グラフに対する 3D、傾斜、およびその他の効果 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10156"
+f1_keywords: "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90e2cfecc2090f5d09ac1a7a5fce1e6b4cbcca81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>グラフの効果 - 3 D、傾斜、およびその他の (レポート ビルダー)
+# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>グラフの効果 - 3D、ベベルなど (レポート ビルダー)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたグラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  
   
  3 次元効果は個々のグラフに適用することができます。また、2 次元グラフと 3 次元グラフの両方を同じレポートに表示することもできます。  
   
- すべての種類のグラフでは、 **[グラフ領域のプロパティ]** ダイアログ ボックスで **[3D の有効化]**チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。 詳細については、次を参照してください[グラフ &#40; に 3D 効果の追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
+ すべての種類のグラフでは、 **[グラフ領域のプロパティ]** ダイアログ ボックスで **[3D の有効化]**チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。 詳細については、「 [グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。  
   
  グラフの視覚的な効果を高めるには、傾斜、エンボス、およびテクスチャのスタイルを横棒グラフ、縦棒グラフ、円グラフ、およびドーナツ グラフに追加する方法もあります。 詳細については、「[グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)」を参照してください。  
   
@@ -66,9 +64,8 @@ ms.lasthandoff: 08/09/2017
  強調表示のスタイルは、 **Shading** プロパティを使用して 3D グラフに追加することができます。このプロパティは、グラフ領域を選択すると、プロパティ ペインの [Area3DStyle] の下に表示されます。 単純な光源のスタイルでは、グラフ領域の要素に同じ色合いが適用されます。 写実的なスタイルでは、指定された光源の角度に応じて、グラフ領域の要素の色合いが変わります。  
   
 ## <a name="see-also"></a>参照  
- [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [グラフと &#40; を書式設定レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフ &#40; に 3D 効果を追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフへの 3D 効果の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   
-

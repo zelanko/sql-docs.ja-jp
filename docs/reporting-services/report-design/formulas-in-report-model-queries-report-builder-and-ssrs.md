@@ -1,5 +1,5 @@
 ---
-title: "レポート内の数式 (レポート ビルダーおよび SSRS) のクエリをモデル化 |Microsoft ドキュメント"
+title: "レポート モデル クエリの数式 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>レポート モデル クエリの数式 (レポート ビルダーおよび SSRS)
   レポート モデルをデータ ソースとして使用するレポートでは、式の計算が値に対して実行されます。 レポート モデル データ ソースのクエリを定義する際に、レポート モデル クエリ デザイナーの **[式の定義]** ダイアログ ボックスで式を定義します。 式には、関数、演算子、定数、フィールドまたはエンティティの参照を含めることができます。 式を使用すると、数値データとテキスト データの結合、集計、フィルター、および評価を行うことができます。 式を作成して新しいフィールドとして保存することも、既存のフィールドの式を変更することもできます。  
   
- RDL の式とは異なり、先頭に等号 (=) は付きません。 RDL の式について詳しくは、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」をご覧ください。  
+ RDL の式とは異なり、先頭に等号 (=) は付きません。 RDL の式については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
  式には次のようなものがあります。  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  関数は、単純な計算または複雑な計算を実行するために使用できます。 関数の構造は、関数名で始まり、開きかっこ、コンマで区切られた関数の引数、および閉じかっこが続きます。  
   
- ![関数の例です。](../../reporting-services/report-design/media/functionexample.gif "関数の例です。")  
+ ![関数の例。](../../reporting-services/report-design/media/functionexample.gif "関数の例。")  
   
  引数には、フィールド参照、数値、テキスト、または **TRUE** や **FALSE**などの論理値を指定できます。 また、定数、式、または他の関数を指定することもできます。 入力する引数は、その引数に対応する有効な値を生成しなければなりません。 たとえば、式で 2 つの整数を乗算する場合、結果がテキスト文字列であってはなりません。  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |文字列関数|**CONCAT**、 **FIND**、 **LEFT**、 **LENGTH**、 **LOWER**、 **LTRIM**、 **REPLACE**、 **RIGHT**、 **RTRIM**、 **SUBSTRING**、 **UPPER**|  
   
   
-

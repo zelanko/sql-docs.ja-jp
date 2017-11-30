@@ -1,5 +1,5 @@
 ---
-title: "レポート実行の確認 |Microsoft ドキュメント"
+title: "レポート実行の確認 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - report processing [Reporting Services], verifying execution
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 05712a9ff9fe3f80b5fcdbafa772a4024c941860
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verifying-a-report-run"></a>レポート実行の確認
   レポート処理の状態に関する情報を表示するには、ログ ファイルを使用するか、またはレポート マネージャーでレポートと共に表示される状態の情報を参照します。  
@@ -46,8 +45,8 @@ ms.lasthandoff: 08/09/2017
   
 |レポートの種類|日時情報の参照先|情報の表示に必要な操作|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|レポート スナップショットとして実行するレポート|[コンテンツ] ページにあります。 詳細については、次を参照してください。[コンテンツ ページ & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) レポートが含まれているフォルダーを見つけます。<br /><br /> 2) フォルダーを詳細表示にします。<br /><br /> 3) **[実行時]** 列の日時を記録します。|  
-|レポート履歴のスナップショット|[履歴] プロパティ ページにあります。 詳細については、次を参照してください。[スナップショット オプション プロパティ ページ & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) レポートを開きます。<br /><br /> 2) **[プロパティ]** ページをクリックします。<br /><br /> 3) **[履歴]** タブをクリックします。<br /><br /> 4) **[実行時]** 列の日時を記録します。|  
+|レポート スナップショットとして実行するレポート|[コンテンツ] ページにあります。 詳細については、「[[コンテンツ] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)」を参照してください。|1) レポートが含まれているフォルダーを見つけます。<br /><br /> 2) フォルダーを詳細表示にします。<br /><br /> 3) **[実行時]** 列の日時を記録します。|  
+|レポート履歴のスナップショット|[履歴] プロパティ ページにあります。 詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)」を参照してください。|1) レポートを開きます。<br /><br /> 2) **[プロパティ]** ページをクリックします。<br /><br /> 3) **[履歴]** タブをクリックします。<br /><br /> 4) **[実行時]** 列の日時を記録します。|  
 |キャッシュされたレポート|キャッシュされたレポートの作成および更新に使用するスケジュールに含まれています。|1) レポートを開きます。<br /><br /> 2) **[プロパティ]** ページをクリックします。<br /><br /> 3) **[実行]** タブをクリックします。<br /><br /> 4) スケジュールを開きます。|  
   
 ## <a name="see-also"></a>参照  
@@ -56,4 +55,3 @@ ms.lasthandoff: 08/09/2017
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "トラブルシューティング: Reporting Services のサブスクリプションと配信 |Microsoft ドキュメント"
+title: "Reporting Services のサブスクリプションと配信に関するトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services のサブスクリプションと配信に関するトラブルシューティング
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 Post Office Protocol version 3 (POP3) を使用する電子メール アプリケーションを Microsoft Windows Server 2003 上で実行している場合、ローカル POP3 サーバーを使用してレポートを送信できない場合があります。 ローカル POP3 サーバーで電子メールが送信されるようにレポート サーバーを構成している場合に、レポートを送信するサブスクリプションを作成すると、次のエラー メッセージが表示されることがあります。  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-ここで\<エラー メッセージ > は Collaboration Data Objects (CDO) から返される追加のエラー メッセージの情報に置き換えられます。  
+\<error message> には Collaboration Data Objects (CDO) から返されたエラー メッセージの追加情報が記載されます。  
   
 ### <a name="to-resolve-this-problem"></a>この問題を解決するには、次のようにします。  
 * `SendUsing` Rsreportserver.config **ファイルの** 要素の値を 1 に設定します。  
@@ -84,5 +83,4 @@ Post Office Protocol version 3 (POP3) を使用する電子メール アプリ�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

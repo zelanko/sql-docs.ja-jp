@@ -1,5 +1,5 @@
 ---
-title: "フォルダーをセキュリティで保護された |Microsoft ドキュメント"
+title: "フォルダーをセキュリティで保護する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0eed722cabb60b072328181e82fe0c55f265d7aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-folders"></a>フォルダーをセキュリティで保護する
   フォルダーのセキュリティは、レポート サーバーのすべてのコンテンツをセキュリティで保護するための基盤となります。 セキュリティはフォルダー階層全体に継承されるので、フォルダー階層の大きさにかかわらず、特定のアクセス権を許可することができます。  
@@ -49,9 +48,8 @@ ms.lasthandoff: 08/09/2017
 |アイテムへのセキュリティの設定|フォルダーへのアクセスを制御するロールの割り当てを作成および変更できます。 このタスクは、"フォルダーの表示" または "フォルダーの管理" のいずれかと併用する必要があります。 それ以外の場合、ユーザーがアイテムを選択できないので効果がありません。|  
   
 ## <a name="see-also"></a>「  
- [セキュリティで保護されたレポート、およびリソース](../../reporting-services/security/secure-reports-and-resources.md)   
- [セキュリティで保護された共有データ ソース アイテム](../../reporting-services/security/secure-shared-data-source-items.md)   
- [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
+ [共有データ ソース アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

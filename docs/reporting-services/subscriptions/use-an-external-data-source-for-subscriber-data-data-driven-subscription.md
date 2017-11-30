@@ -1,5 +1,5 @@
 ---
-title: "サブスクライバー データ (データ ドリブン サブスクリプション) の外部データ ソースを使用して |Microsoft ドキュメント"
+title: "サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
   データ ドリブン サブスクリプションでは、外部データ ソースからデータを取得するクエリまたはコマンドによって、動的サブスクリプション データが提供されます。 サブスクリプション データは、データ ドリブン サブスクリプション処理の要件を満たす、サポートされているデータ ソースから取得できます。 クエリまたはコマンドの構文は、レポート サーバーと一緒にインストールされたデータ処理拡張機能に対して有効である必要があります。  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>サブスクライバー データベースからレポートへのパラメーター値の受け渡し  
  パラメーター化されたレポート用のデータ ドリブン サブスクリプションを作成する場合、変数パラメーター値を使用して、各レポートの出力をカスタマイズできます。 たとえば、サブスクライバー データベースには、レポート データのフィルター処理に使用できる従業員 ID 番号、雇用日、職種、および勤務地情報が含まれていることがあります。 これらの列データまたは他の使用可能な列データに基づいたパラメーターをレポートが受け取ると、そのパラメーターを適切な列にマップすることができます。  
   
- サブスクライバー フィールドをレポート パラメーターにマップするときは、データ型および列の長さに互換性があることを確認してください。 データ型に不一致がある場合、サブスクリプションの処理中にエラーが発生します。 パラメーター化されたレポートでサブスクライバーのデータの使用に関する詳細については、次を参照してください[データ ドリブン サブスクリプション &#40; を作成する。SSRS チュートリアル &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ サブスクライバー フィールドをレポート パラメーターにマップするときは、データ型および列の長さに互換性があることを確認してください。 データ型に不一致がある場合、サブスクリプションの処理中にエラーが発生します。 パラメーター化したレポートでのサブスクライバー データの使用については、「[データドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。  
   
 ## <a name="modifying-the-subscriber-data-source"></a>サブスクライバー データ ソースの変更  
  サブスクライバー データ ソースに以下の変更を加えると、サブスクリプションの実行を防ぐことができます。  
@@ -87,7 +86,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [サブスクリプションと配信 & #40 です。Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

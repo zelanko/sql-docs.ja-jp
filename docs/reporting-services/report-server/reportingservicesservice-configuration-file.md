@@ -1,5 +1,5 @@
 ---
-title: "ReportingServicesService 構成ファイル |Microsoft ドキュメント"
+title: "ReportingServicesService 構成ファイル | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 437760484aa49e7e4a8f806a2fd7bc64ec405f33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
  ||  
@@ -38,7 +37,7 @@ ReportingServicesService.exe.config ファイルには、トレースを構成�
  このファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。  
   
 ## <a name="editing-guidelines"></a>編集のガイドライン  
- このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル (RSreportserver.config) の変更 ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
+ このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成例  
  ReportingServicesService.exe.config ファイルにある設定および既定値の例を次に示します。  
@@ -99,4 +98,3 @@ ReportingServicesService.exe.config ファイルには、トレースを構成�
  [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
-

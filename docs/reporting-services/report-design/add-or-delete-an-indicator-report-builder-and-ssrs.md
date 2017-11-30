@@ -1,5 +1,5 @@
 ---
-title: "追加または削除 (レポート ビルダーおよび SSRS) を示すインジケーター |Microsoft ドキュメント"
+title: "インジケーターの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a5e6007bafae601a4d0c9fad48a6c62af16d261f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「 [インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
@@ -47,11 +46,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>テーブルまたはマトリックスにインジケーターを追加するには  
   
-1.  表示するデータのテーブルおよびマトリックスが含まれる既存のレポートを開くか、新しいレポートを作成します。 詳細については、「[テーブル (レポート ビルダーおよび SSRS&)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」または「[マトリックス (レポート ビルダーおよび SSRS&)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)」を参照してください。  
+1.  表示するデータのテーブルおよびマトリックスが含まれる既存のレポートを開くか、新しいレポートを作成します。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」または「[マトリックス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
-2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
+2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
   
-3.  必要に応じて、**[挿入]** タブで **[四角形]** をクリックし、新しい列のセルをクリックします。  
+3.  必要に応じて、 **[挿入]** タブで **[四角形]**をクリックし、新しい列のセルをクリックします。  
   
 4.  **[挿入]** タブで、 **[インジケーター]**をクリックし、新しい列のセルをクリックします。  
   
@@ -80,4 +79,3 @@ ms.lasthandoff: 08/09/2017
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

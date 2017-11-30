@@ -1,5 +1,5 @@
 ---
-title: "作成、変更、およびレポート履歴のスナップショットを削除 |Microsoft ドキュメント"
+title: "レポート履歴のスナップショットの作成、変更および削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9a85cae2bbc12b86357160781596b1730fba7c88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
   レポート履歴は、一連のレポート スナップショットです。 スナップショットの追加と削除、またはレポート履歴の記憶域に影響するプロパティの変更を行うことで、レポート履歴を管理できます。 レポート履歴は手動で、またはスケジュールに従って作成できます。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
  レポート履歴のスナップショットは、スナップショットの作成日時で識別されます。 その日時は、クエリが実行された日時に基づいています。  
   
 ## <a name="creating-snapshots-in-report-history"></a>レポート履歴でのスナップショットの作成  
- スナップショットは、自動的に実行できる任意のレポートに、手動で、またはスケジュールされた間隔で、作成できます。 レポートを自動的に実行するには、保存されている資格情報を使用するか、資格情報を使用しないようにする必要があります。 また、レポートでパラメーターを使用する場合、レポートの実行時に使用する既定値を指定する必要があります。 レポートのプロパティ ページで、格納された資格情報とパラメーター値を指定できます。 詳細については、「[[パラメーター] プロパティ ページ (レポート マネージャー)](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)」を参照してください。  
+ スナップショットは、自動的に実行できる任意のレポートに、手動で、またはスケジュールされた間隔で、作成できます。 レポートを自動的に実行するには、保存されている資格情報を使用するか、資格情報を使用しないようにする必要があります。 また、レポートでパラメーターを使用する場合、レポートの実行時に使用する既定値を指定する必要があります。 レポートのプロパティ ページで、格納された資格情報とパラメーター値を指定できます。 詳細については、「[[パラメーター] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)」を参照してください。  
   
  レポート スナップショットを作成すると、レポート スナップショットと共に、以下の要素がレポート サーバー データベースに格納されます。  
   
@@ -66,11 +65,10 @@ ms.lasthandoff: 08/09/2017
  また、レポートを削除するとレポート履歴も削除されます。 たとえば、月間の売上レポートを新しい売上レポートに置き換えるために削除する場合、そのレポートに関連付けられたすべてのレポート履歴も削除されます。 ただし、レポートを移動する場合、すべてのレポート履歴がそのレポートと共に移動されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴 &#40; を作成します。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [レポート履歴と &#40; にスナップショットを追加します。レポート マネージャーと &#41; です。](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [レポート履歴を制限 & #40 です。レポート マネージャー &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [レポート履歴の作成 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴を制限する &#40;レポート マネージャー&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   
-

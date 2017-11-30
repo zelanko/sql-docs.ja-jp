@@ -1,5 +1,5 @@
 ---
-title: "Disable or Pause Report and サブスクリプションの処理 |Microsoft ドキュメント"
+title: "レポートとサブスクリプションの処理を無効化または一時停止する | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2015
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7c8a74891d7629293de30b0929e323febec0ac17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を無効化または一時停止する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポートやサブスクリプションの処理を無効化または一時停止するには、複数の方法があります。 このトピックで説明する範囲は、サブスクリプションの無効化から、データ ソース接続の中断までです。 両方の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードですべての方法を使用することはできません。次の表は、方法とサポートされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードをまとめたものです。  
@@ -53,9 +52,9 @@ ms.lasthandoff: 08/09/2017
 > [!TIP]  
 >  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]での新機能です。 **サブスクリプションを有効または無効にすることができます**。 新しいユーザー インターフェイス オプションを使用して、サブスクリプションを簡単に無効または有効にできます。 サブスクリプションを無効にしても、スケジュールなどの他の構成プロパティは維持され、簡単に有効にすることができます。 また、プログラムを使用してサブスクリプションを有効または無効にしたり、無効にされたサブスクリプションを監査したりすることもできます。  
   
- ![reporting services のサブスクリプションのリボン](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "reporting services のサブスクリプションのリボン")  
+ ![Reporting Services サブスクリプションのリボン](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "Reporting Services サブスクリプションのリボン")  
   
- ネイティブ モードのレポート マネージャーで、 **[個人用サブスクリプション]** ページまたは個別のサブスクリプションの **[管理]** ページからサブスクリプションに移動します。 1 つまたは複数のサブスクリプションを選択し、無効にするかをクリックして![reporting services のサブスクリプションを無効にする](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "reporting services のサブスクリプションを無効にする")ボタンまたはボタンを有効にする![reporting services のサブスクリプションを有効にする](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "reporting services のサブスクリプションを有効にする")リボン上。 警告アイコンが無効なサブスクリプションのフラグが立てられて![services subscriptio のレポート処理のステータスの警告](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "subscriptio services のレポート処理のステータスの警告")として状態が表示されて**無効になっている**です。  
+ ネイティブ モードのレポート マネージャーで、 **[個人用サブスクリプション]** ページまたは個別のサブスクリプションの **[管理]** ページからサブスクリプションに移動します。 1 つまたは複数のサブスクリプションを選択し、リボンの無効 ![Reporting Services サブスクリプションの無効化](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "Reporting Services サブスクリプションの無効化") ボタンまたは有効 ![Reporting Services サブスクリプションの有効化](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "Reporting Services サブスクリプションの有効化") ボタンをクリックします。 無効になっているサブスクリプションには警告アイコン ![Reporting Services サブスクリプションの警告状態](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "Reporting Services サブスクリプションの警告状態") が表示され、状態は **[無効]** と表示されます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ログに 1 行書き込み、サブスクリプションが有効になると別のエントリを書き込みます。 次はレポート サーバーのログ ファイルの例です。  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
  `library!ReportServer_0-1!2eec!10/16/2014-16:44:18:: i INFO: Call to EnableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934).`  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")**を 1 つのサブスクリプションを無効にする Windows PowerShell を使用して:**を特定のサブスクリプションを無効にする、次の PowerShell スクリプトを使用します。 サーバー名とサブスクリプション ID を更新します。  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して 1 つのサブスクリプションを無効にする:** 特定のサブスクリプションを無効にするには、次の PowerShell スクリプトを使用します。 サーバー名とサブスクリプション ID を更新します。  
   
 ```  
 #disable specific subscription  
@@ -87,7 +86,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")**をすべて無効になったサブスクリプションを一覧表示する Windows PowerShell を使用して:**次の PowerShell スクリプトを使用して、現在のネイティブ モード レポート サーバーで無効なサブスクリプションのすべてを一覧表示します。 サーバー名を更新します。  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して無効になっているすべてのサブスクリプションを一覧表示する:** 現在のネイティブ モード レポート サーバーで無効になっているすべてのサブスクリプションを表示するには、次の PowerShell スクリプトを使用します。 サーバー名を更新します。  
   
 ```  
 #list all disabled subscriptions  
@@ -98,7 +97,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")**をすべて無効になったサブスクリプションを有効にする Windows PowerShell を使用して:**現在無効になっているすべてのサブスクリプションを有効にする、次の PowerShell スクリプトを使用します。 サーバー名を更新します。  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して無効になっているすべてのサブスクリプションを有効にする:** 現在無効になっているすべてのサブスクリプションを有効にするには、次の PowerShell スクリプトを使用します。 サーバー名を更新します。  
   
 ```  
 #enable all subscriptions  
@@ -112,7 +111,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")**すべてのサブスクリプションを無効にする Windows PowerShell を使用して:**リストを無効にするには、次の PowerShell スクリプトを使用して**すべて**サブスクリプション。  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用してすべてのサブスクリプションを無効にする:** **すべて**のサブスクリプションを無効にするには、次の PowerShell スクリプトを使用します。  
   
 ```  
 #DISABLE all subscriptions  
@@ -128,7 +127,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> 共有スケジュールを一時停止する  
  レポートまたはサブスクリプションが共有スケジュールから実行される場合、スケジュールを一時停止して処理を中止できます。 一時停止したスケジュールで実行されるすべてのレポートおよびサブスクリプションの処理は、スケジュールが再開されるまで延期されます。  
   
--   **SharePoint モード:** ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")で**サイトの設定****共有スケジュールの管理**です。 スケジュールを選択し、 **[選択したスケジュールの一時停止]**をクリックします。  
+-   **SharePoint モード:** ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") **[サイトの設定]** で **[共有スケジュールの管理]** を選択します。 スケジュールを選択し、 **[選択したスケジュールの一時停止]**をクリックします。  
   
 -   **ネイティブ モード:** レポート マネージャーで、 **[サイトの設定]**をクリックします。 スケジュールを選択し、 **[一時停止]**をクリックします。  
   
@@ -137,7 +136,7 @@ ForEach ($subscription in $subscriptions)
   
  データ ソースが使用できない場合でも、レポートは読み込まれることに注意してください。 レポートにはデータは含まれていませんが、適切な権限を持ったユーザーは、レポートに関連付けられたプロパティ ページ、セキュリティ設定、レポート履歴、およびサブスクリプション情報にアクセスできます。  
   
--   **SharePoint モード:** SharePoint モードのレポート サーバーで共有データ ソースを無効にするには、データ ソースを含むドキュメント ライブラリに移動します。 ![共有データ ソース アイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソース アイコン")データ ソースをクリックし、オフ、**このデータ ソースを有効にする**チェック ボックスをオンします。  
+-   **SharePoint モード:** SharePoint モードのレポート サーバーで共有データ ソースを無効にするには、データ ソースを含むドキュメント ライブラリに移動します。 ![共有データ ソースのアイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン") データ ソースをクリックし、**[このデータ ソースを有効にする]** チェック ボックスをオフにします。  
   
 -   **ネイティブ モード:** ネイティブ モードのレポート サーバーで共有データ ソースを無効にするには、レポート マネージャーでデータ ソースを開き、 **[このデータ ソースを有効にする]** チェック ボックスをオフにします。  
   
@@ -173,10 +172,9 @@ ForEach ($subscription in $subscriptions)
 ## <a name="see-also"></a>参照  
  [サブスクリプションと配信 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [レポート マネージャー &#40; を構成します。ネイティブ モード &#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
- [Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [セキュリティのプロパティ ページ、項目 & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [レポート マネージャーの構成 &#40;ネイティブ モード&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
+ [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   
-

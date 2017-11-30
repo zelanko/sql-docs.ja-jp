@@ -1,5 +1,5 @@
 ---
-title: "レポート作成の概念 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "レポート作成の概念 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 312291488481b09890f590db58ef416d5967c507
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>レポート作成の概念 (レポート ビルダーおよび SSRS)
   ここでは、ページ分割されたレポートを記述するためにレポート ビルダーとレポート デザイナーのドキュメントで使用する主要な概念について簡単に説明します。 特定の用語の定義については、「[用語集 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/glossary-report-builder.md)」を参照してください。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/27/2017
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   
-

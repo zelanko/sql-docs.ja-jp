@@ -1,5 +1,5 @@
 ---
-title: "グラフの種類 (レポート ビルダーおよび SSRS) の変更 |Microsoft ドキュメント"
+title: "グラフの種類の変更 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4e963dc1fbee3ca6c7d035a748fe49708b36a78
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fdc412e2ad4896548d07f4a747cb5e150bb68d4b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>グラフの種類の変更 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにグラフを初めて挿入すると、 **[グラフの種類を選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスを取り消すと、縦棒グラフというグラフの種類が既定で追加されます。  
@@ -44,8 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [ゲージと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "移動または項目を削除する (レポート マネージャー) |Microsoft ドキュメント"
+title: "アイテムの移動または削除 (レポート マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6b2c78c1794c54fe116d745ef0561cd93a6339c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
   レポート サーバーにパブリッシュしたレポートやレポート関連アイテムは、フォルダーに格納されます。 アイテムは異なるフォルダーに移動でき、それらのアイテムへの参照はレポート サーバーによって自動的に保持されます。 アイテムを削除する前に、そのアイテムに依存しているアイテムが他に存在しないか確認してください。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
-2.  レポート マネージャーで、**[コンテンツ]** ページに移動し、移動するアイテムを探します。  
+2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、移動するアイテムを探します。  
   
 3.  アイテムの上にマウス ポインターを移動し、下矢印をクリックします。  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
-2.  レポート マネージャーで、**[コンテンツ]** ページに移動し、削除するアイテムを探します。  
+2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、削除するアイテムを探します。  
   
 3.  アイテムの上にマウス ポインターを移動し、下矢印をクリックします。  
   
@@ -79,8 +78,7 @@ ms.lasthandoff: 08/09/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [[コンテンツ] ページと &#40;です。レポート マネージャーと&#41; です。](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [検索、表示、およびレポートと &#40;を管理レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [[コンテンツ] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

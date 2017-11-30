@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services で電子メールの配信 |Microsoft ドキュメント"
+title: "Reporting Services の電子メール配信 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メールでレポートを配信するには、1) 電子メール配信のレポート サーバーを構成し、2) 標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 単一のサブスクリプションでは、1 通の電子メール メッセージで複数のレポートを配信できません。 ただし、複数のサブスクリプションを作成することはできます。  
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/27/2017
  ネイティブ モード レポート サーバーの場合、電子メール配信拡張機能は、ネイティブ モード [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを編集することで構成されます。 SharePoint モード レポート サーバーの場合、電子メール配信拡張機能は、SharePoint 管理ページと PowerShell スクリプトで構成されます。  
   
  
- ネイティブ モード レポート サーバーを構成する方法については、次を参照してください[電子メール設定 - Reporting Services のネイティブ モード (構成マネージャー)。](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ ネイティブ モードのレポート サーバーを構成する方法については、「 [電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)」を参照してください。
  
  
  SharePoint モード レポート サーバーの構成方法については、次のトピックを参照してください。  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/27/2017
  [ロールの割り当て](../../reporting-services/security/role-assignments.md)  
   
   
-

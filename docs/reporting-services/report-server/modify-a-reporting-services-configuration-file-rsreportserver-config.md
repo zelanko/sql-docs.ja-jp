@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services の構成ファイル (RSreportserver.config) の変更 |Microsoft ドキュメント"
+title: "Reporting Services の構成ファイル (RSreportserver.config) の変更 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2cea3ba2d8e2a303a61a6af8bc4f7da4802cc88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Reporting Services の構成ファイル (RSreportserver.config) の変更
+# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  
   
  一部の構成設定は、ツールを使ってのみ設定できます。 暗号化された値を含んだ設定は、Reporting Services 構成ツール、セットアップ プログラム、または **rsconfig** コマンド ライン ユーティリティで変更する必要があります。 これらのツールを実行するには、ローカルの Administrators グループのメンバーである必要があります。  
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
     -   **RSReportServerServices.exe.config** は次のフォルダーにあります。  
     
         > [!NOTE] 
-        > これは、2017 年 1 月 1 日で使用可能ではありませんテクニカル プレビューの Power BI の SQL Server Reporting Services レポートします。
+        > これは、SQL Server Reporting Services の Power BI レポートの 2017 年 1 月 Technical Preview バージョンでは使用できません。
   
         ```  
         C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
     -   [カスタム認証クッキーを送信するように Web ポータルを構成する](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズします。](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  ファイルを保存します。  
   
@@ -113,8 +112,7 @@ ms.lasthandoff: 08/09/2017
  [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [データ処理拡張機能の配置](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [配信拡張機能の配置](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
- [表示拡張機能を展開します。](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
+ [表示拡張機能の配置](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
-

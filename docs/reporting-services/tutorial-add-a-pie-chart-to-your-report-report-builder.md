@@ -1,27 +1,25 @@
 ---
-title: "チュートリアル: レポート (レポート ビルダー) への円グラフの追加 |Microsoft ドキュメント"
+title: "チュートリアル: レポートへの円グラフの追加 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: f48e91fcf3ea24bacaf71649db1cb4d92c7f6962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)
 このチュートリアルでは、Reporting Services の改ページ調整されたレポートに円グラフを作成します。 パーセンテージを追加し、小さいスライスを 1 つのスライスに結合します。
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 円グラフのデータ ポイントが多すぎると、データ ポイント ラベルが過密状態になって見づらくなる場合があります。 その場合は、複数の小さいスライスを組み合わせて 1 つの大きなスライスにすることを検討してください。 円グラフは、データを少数のデータ ポイントに集計すると見やすくなります。  
  
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 手順については、レポート サーバーを参照するデータ ソースを追加、データセットを追加、参照してくださいこのシリーズの最初のチュートリアル:[チュートリアル: 基本的なテーブル レポート &#40; を作成します。レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
 このチュートリアルの推定所要時間: 10 分  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 08/09/2017
 
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  プロパティ ペインが表示されない場合に、**ビュー**タブ >**表示/非表示**グループ > 選択**プロパティ**です。  
+2.  [プロパティ] ペインが表示されない場合は、**[表示]** タブの **[表示/非表示]** グループで、**[プロパティ]** を選択します。  
   
 3.  デザイン画面で、円グラフの任意のスライスをクリックします。 系列のプロパティが [プロパティ] ペインに表示されます。  
   
@@ -197,7 +195,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  **Camera and Camcorder Sales** を選択し、**[ホーム]** タブの **[フォント]** セクションで **[太字]** をクリックします。  
   
-4.  選択**として a Percentage of Total Sales**、および、**ホーム**タブ >**フォント**セクション > フォント サイズを設定**10**です。  
+4.  **As a Percentage of Total Sales** を選択し、**[ホーム]** タブの **[フォント]** セクションで、フォント サイズを **[10]** に設定します。  
   
 5.  (省略可) 2 行のテキストに合わせて、[タイトル] テキスト ボックスの高さを高くする必要が生じる場合もあります。  
   
@@ -220,11 +218,10 @@ ms.lasthandoff: 08/09/2017
 レポートがレポート サーバーに保存されます。  
   
 ## <a name="next-steps"></a>次の手順  
-これで、「レポートへの円グラフの追加」チュートリアルを終了します。 グラフの詳細については、次を参照してください。[グラフ &#40;です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)と[スパーク ラインとデータ バー &#40;レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+これで、「レポートへの円グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

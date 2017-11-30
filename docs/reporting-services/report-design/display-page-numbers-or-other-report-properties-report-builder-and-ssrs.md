@@ -1,5 +1,5 @@
 ---
-title: "ページ番号またはその他のレポート プロパティ (レポート ビルダーおよび SSRS) の表示 |Microsoft ドキュメント"
+title: "ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7f3761ae99fd13d1f69ed59719967797d9af0c51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
   レポートのページ ヘッダーまたはページ フッターにページ番号、レポート タイトル、ファイル名、およびその他のレポート プロパティを簡単に追加できます。 これらのプロパティは、レポート データ ペインの [組み込みフィールド] フォルダーのフィールドとして保存されます。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 2.  **[ページ番号]** フィールドを、[レポート データ] ペインからレポート ヘッダーまたはレポート フッターにドラッグします。  
   
     > [!NOTE]  
-    >  ページ フッターはレポートに自動的に追加されます。 ページ ヘッダーを追加するには、**[挿入]** タブで、**[ヘッダー]** をクリックして **[ヘッダーの追加]** をクリックします。  
+    >  ページ フッターはレポートに自動的に追加されます。 ページ ヘッダーを追加するには、 **[挿入]** タブで、 **[ヘッダー]**をクリックして **[ヘッダーの追加]**をクリックします。  
     >   
     >  [&PageNumber] という単純な式が含まれているテキスト ボックスが追加されます。  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
      **[式の設定: 値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
   
-2.  カーソルを置き、= 記号と型の後に**「ページ」&**です。  
+2.  = (等号) の後ろにカーソルを置き、「**"ページ " &**」と入力します。  
   
      式は、="ページ "&Globals!PageNumber となります。  
   
@@ -78,19 +77,18 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-total-number-of-pages-after-the-page-number"></a>ページ番号の後ろに総ページ数を追加するには  
   
-1.  式が含まれているテキスト ボックスを右クリックし、**[式]** をクリックします。  
+1.  式が含まれているテキスト ボックスを右クリックし、 **[式]**をクリックします。  
   
 2.  式の末尾に「**&"/"&**」と入力します。  
   
-3.  [カテゴリ] ペインで、**[組み込みフィールド]** を展開し、**[TotalPages]** をダブルクリックします。  
+3.  [カテゴリ] ペインで、 **[組み込みフィールド]** を展開し、 **[TotalPages]**をダブルクリックします。  
   
      式は、="ページ "&Globals!PageNumber &"/"&Globals!TotalPages となります。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーおよびフッター & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [テキスト ボックス &#40; テキストの書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   
-

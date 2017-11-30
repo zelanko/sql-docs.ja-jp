@@ -1,5 +1,5 @@
 ---
-title: "レポートの計画 (レポート ビルダー) |Microsoft ドキュメント"
+title: "レポートの計画 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3d055e667ad01ff047e38aa3588205c84ad8d231
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
   レポート ビルダーでは、さまざまな種類のページ分割されたレポートを作成できます。 たとえば、売上データの概要または詳細、マーケティングと売上の傾向、経営報告、またはダッシュボードを示すレポートを作成できます。 また、販売注文、製品カタログ、定型書簡などの高度な書式付きテキストを利用したレポートも作成できます。 これらのレポートはすべて、レポート ビルダーの同じ基本的な構成要素をさまざまに組み合わせて作成されます。 便利でわかりやすいレポートを作成するには、まず計画を立てることが役立ちます。 開始する前に検討すると役立ついくつかの事項を次に示します。  
@@ -41,13 +40,13 @@ ms.lasthandoff: 08/09/2017
   
      レポート ビルダーには、レポートを読みやすくしたり、重要な情報を強調したり、対象ユーザーがレポート内を移動しやすくしたりするためにレポートに追加できる多数のレポート アイテムが用意されています。 レポートの希望の表示方法がわかっていれば、テキスト ボックス、四角形、画像、線などのレポート アイテムが必要かどうかを判断できます。 また、アイテムの表示と非表示を切り替えたり、ドキュメント マップを追加したり、詳細レポートまたはサブレポートを含めたり、他のレポートにリンクしたりすることもできます。 詳細については、「[画像、テキスト ボックス、四角形、および罫線 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)」と「[対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)」を参照してください。  
   
--   **どのデータを表示するか、データまたは形式フィルターをかけるようにさまざまな対象ユーザーですか。**  
+-   **どのデータを表示するか、データまたは形式をさまざまな対象ユーザーに合わせてフィルター選択する必要があるかどうか**  
   
-     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 -   **独自の計算を作成する必要があるかどうか**  
   
-     レポートに必要な特定のフィールドがデータ ソースやデータセットに含まれていない場合があります。 そのような状況では、独自の計算フィールドの作成が必要になることがあります。 たとえば、行アイテムの販売額を取得するために数量と単価を乗算するような場合があります。 条件付き書式やその他の拡張機能にも式が使用されます。 詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
+     レポートに必要な特定のフィールドがデータ ソースやデータセットに含まれていない場合があります。 そのような状況では、独自の計算フィールドの作成が必要になることがあります。 たとえば、行アイテムの販売額を取得するために数量と単価を乗算するような場合があります。 条件付き書式やその他の拡張機能にも式が使用されます。 詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **最初にレポート アイテムを非表示にするかどうか**  
   
@@ -55,12 +54,11 @@ ms.lasthandoff: 08/09/2017
   
 -   **どのようにしてレポートを配信するか**  
   
-     レポートをローカル コンピューターに保存して、引き続き操作したり、独自の情報に関してローカルで実行したりすることができます。 ただし、レポートを他のユーザーと共有するには、ネイティブ モードで構成されたレポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートを保存する必要があります。 サーバーに保存すると、他のユーザーが必要なときにいつでも実行できます。 または、レポート サーバー管理者がレポートのサブスクリプションを設定したり、他のユーザーへのレポートの電子メール配信を設定したりすることができます。 必要に応じて、レポートを特定のエクスポート形式で配信できます。 詳細については、「[レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
+     レポートをローカル コンピューターに保存して、引き続き操作したり、独自の情報に関してローカルで実行したりすることができます。 ただし、レポートを他のユーザーと共有するには、ネイティブ モードで構成されたレポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートを保存する必要があります。 サーバーに保存すると、他のユーザーが必要なときにいつでも実行できます。 または、レポート サーバー管理者がレポートのサブスクリプションを設定したり、他のユーザーへのレポートの電子メール配信を設定したりすることができます。 必要に応じて、レポートを特定のエクスポート形式で配信できます。 詳細については、「 [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [レポート作成の概念と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)  
   
   
-

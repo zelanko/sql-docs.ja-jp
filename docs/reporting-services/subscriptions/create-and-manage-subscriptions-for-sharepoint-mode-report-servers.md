@@ -1,5 +1,5 @@
 ---
-title: "作成し、SharePoint モードのレポート サーバーのサブスクリプションの管理 |Microsoft ドキュメント"
+title: "SharePoint モード レポート サーバーのサブスクリプションの作成と管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b34e48d7cda4b55a4162c2229f99e2bcdbcbb90e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
  サブスクリプションを作成する際には、出力ファイル形式を選択できます。 形式によっては正しく機能しないレポートもあります。 サブスクリプションで形式を選択する前に、レポートを開き、別の形式にエクスポートして、期待どおりに表示されることを確認します。  
   
- ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「 [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
+ ユーザーが **サブスクリプションを作成できるようにする場合は、そのユーザーは SharePoint の** アイテムの編集 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] リスト権限を必要とします。 詳細については、「 [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  ライブラリまたは共有フォルダーにレポートを配信するサブスクリプションでは、元のレポートに基づいて新しく静的ファイルが作成されますが、これはレポート ビューアー Web パーツで実行される実際のレポート定義ではありません。 元のレポートに対話機能 (ドリルスルー リンクなど) や動的コンテンツが含まれている場合、対象の場所に配信される静的ファイルでは、これらの機能を使用できません。 "Web ページ" を選択すると、ある程度の対話機能を維持することができます。しかし、このドキュメントはレポート ビューアーで実行される .rdl ファイルではないため、レポートをクリックすると新しいページがブラウザー セッションで作成され、サイトに戻るにはそれらをスクロールする必要があります。  
@@ -92,7 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  **[上書きオプション]**では、後続の配信でファイルを上書きするかどうかを決めるオプションを指定します。 以前に配信したファイルを残しておきたい場合は、 **[一意な名前のファイルを作成する]**を選択できます。 一意なファイル名を作成するために、新しいファイルには番号が付加されます。  
   
-9. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、次を参照してください。[処理オプションの設定 & #40 です。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、「[処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)」を参照してください。  
   
 10. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 選択したレポートにパラメーターが含まれていない場合、パラメーター セクションはこのページに表示されません。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
   
 10. **[ユーザー名]** および **[パスワード]**には、共有フォルダーに対する書き込み権限のある資格情報を入力します。  
   
-11. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、次を参照してください。[処理オプションの設定 & #40 です。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、「[処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)」を参照してください。  
   
 12. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
@@ -142,7 +141,7 @@ ms.lasthandoff: 08/09/2017
   
      表示形式およびブラウザーによって、レポートが埋め込まれるか添付されるかが決まります。 ブラウザーが HTML 4.0 および MHTML をサポートする場合、Web アーカイブ表示形式を選択すると、レポートがメッセージの一部として埋め込まれます。 その他すべての表示形式 (CSV、PDF など) では、添付ファイルとしてレポートを配信します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポートを送信する前に、添付ファイルまたはメッセージのサイズを確認しません。 添付ファイルまたはメッセージがメール サーバーで許可された最大サイズを超えると、レポートは配信されません。 レポートのサイズが大きい場合は、他の配信オプション (URL や通知など) のいずれかを選択します。  
   
-9. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、次を参照してください。[処理オプションの設定 & #40 です。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、「[処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)」を参照してください。  
   
 10. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
@@ -164,10 +163,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [サブスクリプションと配信 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services でのファイル共有の配信](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
+ [Reporting Services での SharePoint ライブラリへの配信](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
  [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

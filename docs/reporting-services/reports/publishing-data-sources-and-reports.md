@@ -1,5 +1,5 @@
 ---
-title: "ソースし、レポートのデータのパブリッシュ |Microsoft ドキュメント"
+title: "データ ソースとレポートのパブリッシュ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 593f339656de155d133534e6776283c8a2e1bd92
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3b34fc1fac9a7586410c844435aacfbabb6f1c94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-data-sources-and-reports"></a>データ ソースとレポートのパブリッシュ
   レポートをパブリッシュする前に、レポートをプレビューしてレポート実行時の表示を確認する必要があります。 プレビュー後も、表示結果に満足できるまでデザインを調整できます。  
@@ -38,20 +37,19 @@ ms.lasthandoff: 08/09/2017
  [レポートのプレビュー](../../reporting-services/reports/previewing-reports.md)  
  レポートをパブリッシュする前にプレビューする方法について説明します。  
   
- [レポート サーバーにレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
+ [レポート サーバーへのレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
  レポートをレポート サーバーにパブリッシュする方法について説明します。  
   
- [SharePoint モード &#40; 内のレポート サーバーにパブリッシュされたレポート アイテムの URL の例SSRS &#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  レポートを SharePoint サイトにパブリッシュする方法について説明します。  
   
 ## <a name="see-also"></a>参照  
  [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [ページ レイアウトとレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [検索、表示、およびレポート &#40; を管理します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [レポートの印刷 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
+ [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   
-

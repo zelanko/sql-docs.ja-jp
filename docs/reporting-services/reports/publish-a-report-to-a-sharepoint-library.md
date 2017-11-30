@@ -1,5 +1,5 @@
 ---
-title: "SharePoint ライブラリにレポートをパブリッシュ |Microsoft ドキュメント"
+title: "SharePoint ライブラリへのレポートのパブリッシュ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 88caf60aea658972b79c49948d882ce5f96e1d07
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9cc550a692cf3ae79403c5f45f2e6ed508e9e03f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint ライブラリへのレポートのパブリッシュ
   SharePoint 統合用に構成されている SharePoint サイトにレポートをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。 レポート定義では、サブレポートや詳細レポートへの参照、および Web ベースの画像などのリソースへの参照はすべて完全修飾 URL で指定する必要があります。  
@@ -36,9 +35,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で既存または新規のレポート サーバー プロジェクトを開きます。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]**をクリックします。 *\<プロジェクト >***プロパティ ページ** ダイアログ ボックスが表示されます。  
+2.  **[プロジェクト]** メニューの **[プロパティ]**をクリックします。 *[\<プロジェクト>***プロパティ ページ]** ダイアログ ボックスが開きます。  
   
-3.  **[構成]** ボックスで、レポートのビルドとパブリッシュに使用するソリューション ビルド構成の名前を選択します。 現在の構成が表示されている**Active**(*\<構成 >*)。  
+3.  **[構成]** ボックスで、レポートのビルドとパブリッシュに使用するソリューション ビルド構成の名前を選択します。 現在の構成は **[アクティブ]** (*\<configuration>*) として表示されます。  
   
 4.  プロジェクトの共有データ ソースをパブリッシュし、以前にパブリッシュされた共有データ ソースを上書きするには、 **[OverwriteDataSources]** を **[True]**に設定します。  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
      値を指定しない場合は、 **[TargetReportFolder]** の値が使用されます。  
   
-6.  **TargetReportFolder**、ライブラリまたはライブラリ フォルダーへの URL を入力 (たとえば、 `http://TestServer/TestSite/Documents/Reports`)。  
+6.  **[TargetReportFolder]** に、ライブラリまたはライブラリ フォルダーの URL (`http://TestServer/TestSite/Documents/Reports` など) を入力します。  
   
 7.  **[TargetServerURL]**に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます (たとえば、 `http://servername`、 `http://servername/site`、 `http://servername/site/subsite`) として表示されます。  
   
@@ -57,9 +56,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [レポート サーバーにレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
+ [レポート サーバーへのレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
  [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Office データ接続 &#40; を使用します。odc &#41;でレポートと #40 です。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   
-

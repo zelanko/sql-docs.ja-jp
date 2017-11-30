@@ -1,5 +1,5 @@
 ---
-title: "SetDatabaseQueryTimeout メソッド (WMI MSReportServer_ConfigurationSetting) |Microsoft ドキュメント"
+title: "SetDatabaseQueryTimeout メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetDatabaseQueryTimeout method
+helpviewer_keywords: SetDatabaseQueryTimeout method
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9956f48b4000cf02d7d7f10b56cd8e26fbd2fce9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c32088405b7b3f8573362c243b7ec8da1bf3a7a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setdatabasequerytimeout"></a>SetDatabaseQueryTimeout ConfigurationSetting メソッド
+# <a name="configurationsetting-method---setdatabasequerytimeout"></a>ConfigurationSetting メソッド - SetDatabaseQueryTimeout
   レポート サーバー データベース クエリの既定のタイムアウト値を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -62,4 +58,3 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "ゲージ (レポート ビルダーおよび SSRS) のスケールの書式設定 |Microsoft ドキュメント"
+title: "ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b35ef78ab099933bd7d86bab2818734d1f93836
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  
   
- ![ゲージのスケール上の要素の概要](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "ゲージのスケール上の要素の概要")  
+ ![ゲージのスケールの要素の概要](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "ゲージのスケールの要素の概要")  
   
  複数のグループが定義されるグラフとは異なり、ゲージには 1 つの値しか表示されません。 スケールの最小値と最大値を定義する必要があります。 間隔の数は、最小値と最大値として指定された値に基づいて自動的に計算されます。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  最小値と最大値を指定します。 これらの値はデータ セットに基づいて自動的に計算されないので、ゲージの **[プロパティ]** ダイアログ ボックスで値を指定する必要があります。  
   
-2.  間隔の値を指定しない場合、既定値は Auto です。 この場合、最初の手順で指定された最小値と最大値に基づいて、等間隔の数値がアプリケーションによって計算されます。 間隔の値を指定した場合は、ゲージで最大値と最小値の差が計算され、その数が間隔のプロパティに指定された値で除算されます。  
+2.  間隔の値を指定しない場合、既定値は Auto です。この場合、最初の手順で指定された最小値と最大値に基づいて、等間隔の数値がアプリケーションによって計算されます。 間隔の値を指定した場合は、ゲージで最大値と最小値の差が計算され、その数が間隔のプロパティに指定された値で除算されます。  
   
  ラベルおよび目盛りの間隔を定義するプロパティもあります。 これらのプロパティの値を指定すると、スケール間隔のプロパティとして指定された値よりも優先されます。 たとえば、スケール間隔が Auto で、ラベルの間隔に 4 を指定した場合、ラベルは 0、4、8 などと表示されますが、目盛りはゲージ固有の計算に基づいて算出されます。 これによって、ラベルと目盛りが同期しないという状況が生じます。 ラベルの間隔を設定する場合は、目盛りを非表示にすることを考慮してください。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
  スケールの半径は、ゲージの中心からスケール バーの中央までの距離です。 スケールの半径の値は、ゲージの直径に対する比率として計測されます。 スケールの半径は、35 より小さな値にすることをお勧めします。 35 よりも大きな値を指定した場合は、スケールがゲージの境界の外側に表示される場合があります。 次の図は、スケールの半径がスケール バー上でゲージの直径を基準にしてどのように計測されるかを示しています。  
   
- ![スケールの半径をゲージの直径を基準とした](../../reporting-services/report-design/media/scaleradiusdiagram.gif "スケールの半径をゲージの直径を基準としました。")  
+ ![ゲージの直径を基準にしたスケールの半径](../../reporting-services/report-design/media/scaleradiusdiagram.gif "ゲージの直径を基準にしたスケールの半径")  
   
  開始角度は、スケールが開始される回転角度で、0 ～ 360 の間です。 ゼロ (0) の位置はゲージの一番下で、開始角度は時計回りに回転した角度です。 たとえば、開始角度が 90 度であれば、スケールは 9 時の位置から始まります。  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/09/2017
 -   線形ゲージのゲージの高さまたは幅の最小値の 1%。  
   
 ## <a name="see-also"></a>参照  
- [ゲージ &#40; 書式の範囲レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [ゲージ &#40; ポインターの書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージのポインターの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [ゲージと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

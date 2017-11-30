@@ -1,5 +1,5 @@
 ---
-title: "書式設定テキストとプレース ホルダー (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7022c0f2662d62f5ff74a1c1d67a2e4f85f5a681
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)
   テキスト ボックスは、データ領域内のレポート アイテムまたは個々のセルであり、テキスト、計算フィールド、データベース内のフィールドへのポインター、またはこの 3 つのアイテムの組み合わせが格納されます。 フォントと色の組み合わせ、太字や斜体のスタイルの追加、整列配置やぶら下げインデントなどの段落スタイルの使用が可能です。 また、テキスト ボックス全体の書式を設定することも、テキスト ボックス内の特定のテキスト、数値、式、またはフィールドの書式を設定することも可能です。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   任意の単純型または複合型の式をテキスト ボックスに入力します。 たとえば、テキスト ボックスに「 **Name: [Name]** 」と入力すると、式 **を表すプレースホルダーとして** [Name] `=Fields!Name.Value`というテキストが表示されます。  
   
--   空のテキスト ボックスに、等号 (=) で始まる式を入力します。 テキスト ボックスからフォーカスを切り替えると、結果の式が編集可能なプレースホルダーに変換されます。 テキスト ボックスが空でない場合や、テキスト ボックス内のテキストが等号 (=) で始まっていない場合は、等号が文字列リテラルとして解釈され、プレースホルダーが作成されません。 単純式と複合式の定義の詳細については、次を参照してください[レポート &#40; で式を使用して。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+-   空のテキスト ボックスに、等号 (=) で始まる式を入力します。 テキスト ボックスからフォーカスを切り替えると、結果の式が編集可能なプレースホルダーに変換されます。 テキスト ボックスが空でない場合や、テキスト ボックス内のテキストが等号 (=) で始まっていない場合は、等号が文字列リテラルとして解釈され、プレースホルダーが作成されません。 単純型または複合型の式の定義方法については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>テキスト ボックス内のプレースホルダーと静的テキストの書式設定  
  **[プレースホルダーのプロパティ]** ダイアログ ボックスを使用してプレースホルダーの書式を設定できます。 書式設定できるのは、プレースホルダーの一部ではなく、プレースホルダー全体です。 基になる式を確認する場合は、プレースホルダーにポインターを合わせます。 基になる式を変更するには、プレースホルダーをダブルクリックするか、プレースホルダーを右クリックして **[プレースホルダーのプロパティ]**を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスの **[全般]** にある **[ラベル]** プロパティを使用すると、UI ラベルも指定できます。 これは、デザイン時に表示されるプレースホルダーのテキストになります。  
@@ -71,19 +70,18 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  テキスト ボックスに定義されたアクションは、テキスト ボックス内の個々のテキストに定義されたアクションよりも優先度が高くなります。  
   
- 混合書式設定の詳細については、次を参照してください[テキスト ボックス &#40; テキストの書式設定。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ 混合書式設定の詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="aligning-horizontal-text-using-general"></a>全般を使用した横方向のテキストの配置  
  **[テキスト ボックスのプロパティ]** ダイアログ ボックスの **[配置]** では、テキストを横方向に配置する方法を指定できます。 配置の値を指定しなければ、配置の既定値は **[既定]**になります。 つまり、テキストはプレースホルダーの値のフィールド タイプに基づいて配置されます。 非数など、文字列以外に評価される式を指定すると、テキストが右揃えになります。 数値など、式が文字列に評価される場合は、テキストが左揃えになります。  
   
 ## <a name="see-also"></a>参照  
  [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [スケール、ゲージ &#40; の書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [プレース ホルダー プロパティダイアログ ボックス、[全般] &#40;です。レポート ビルダーおよび SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Microsoft Excel &#40; へのエクスポートレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [テキスト ボックス &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [[プレースホルダーのプロパティ] ダイアログ ボックス、[全般] &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [テキスト ボックス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   
-

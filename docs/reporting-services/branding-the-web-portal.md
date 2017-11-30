@@ -1,26 +1,23 @@
 ---
-title: "Web ポータルをブランド化 |Microsoft ドキュメント"
+title: "Web ポータルのブランド化 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9c78d9480dd8d2bacca80fd06183b9d31f7714d5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -74,7 +71,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
         background-color:@primaryButtonBg;   
     }  
   
-これは、CSS 構文に似ていますは、色の値が付いて、@symbolは LESS に固有です。 値が json ファイルにより設定される変数です。  
+これは CSS 構文に似ていますが、@symbol が接頭辞として付く色値は LESS に固有のものです。 値が json ファイルにより設定される変数です。  
   
 たとえば、colors.json ファイルに次の値が含まれていたとします。  
   
@@ -247,5 +244,4 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
         }  
     }  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

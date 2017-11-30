@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ccacb5ac042cbfe0e72623b78cf930587c7dd7fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13743e56a9965e9a417b7c8222a7fa534b7feced
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのドメインの使用について説明します。 ドメインは、分析対象のデータ ソースの特定のフィールドに含まれているデータのセマンティック表現です。 ドメインは、データ ソースに対して作成するナレッジ ベースの一部で、サンプル データ ソースを分析するか、データをインポートして構築するナレッジは、ナレッジ ベースで定義されたドメインに追加されます。 これらのドメインのナレッジは、データ品質プロジェクトでクレンジングおよび照合を実行するために後で使用されます。 ドメインは、Data Quality Services のすべてのアクティビティの中核になります。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 09/09/2017
  共通データに関するナレッジを含む 2 つ以上の個別のドメインで構成される複合ドメインを作成することもできます。 詳しくは、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
   
 ## <a name="domain-properties"></a>ドメインのプロパティ  
- ドメインを作成する際には、ソース データからドメインを作成する方法とドメイン値を出力する方法に関する次のオプションがあります。 詳細については、「 [ドメインのプロパティを設定する](../data-quality-services/set-domain-properties.md)」を参照してください。  
+ ドメインを作成する際には、ソース データからドメインを作成する方法とドメイン値を出力する方法に関する次のオプションがあります。 詳しくは、「[ドメインのプロパティの設定](../data-quality-services/set-domain-properties.md)」をご覧ください。  
   
 -   ドメインの作成に使用するデータの型を選択します。 各ドメイン データ型でサポートされているデータ型については、「 [DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」を参照してください。  
   
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 |複合ドメインを作成し、ナレッジをドメインに追加します。|[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)|  
   
   
-

@@ -1,28 +1,31 @@
 ---
 title: "ATOMIC ブロック | Microsoft Docs"
 ms.custom: 
-ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ebc75200894e27976911f2c7413e027fbb1c5b14
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40d88b09043e3b21326dde6cb85ced071f2b89b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ネイティブ プロシージャの ATOMIC ブロック
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **BEGIN ATOMIC** は ANSI SQL 標準の一部です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ネイティブ コンパイル ストアド プロシージャの最上位だけでなく、ネイティブ コンパイル、スカラー ユーザー定義関数について、ATOMIC ブロックをサポートしています。 詳細については、「 [インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」を参照してください。  
   
 -   各ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが正確に 1 ブロックずつ含まれています。 これが ATOMIC ブロックです。  
@@ -128,7 +131,7 @@ ORDER BY c1
 GO  
 ```  
   
- メモリ最適化テーブルに固有の次のエラー メッセージは、トランザクションの失敗が決定的であることを示しています。 ATOMIC ブロックのスコープ内で、10772、41301、41302、41305、41325、41332、または 41333 のエラーが発生した場合、トランザクションは中止されます。  
+ メモリ最適化テーブルに固有の次のエラー メッセージは、トランザクションの失敗が決定的であることを示しています。 ATOMIC ブロックのスコープ内で、10772、41301、41302、41305、41325、41332、41333、または 41839 のエラーが発生した場合、トランザクションは中止されます。  
   
 ## <a name="session-settings"></a>セッションの設定  
  ATOMIC ブロックのセッション設定は、ストアド プロシージャのコンパイル時に固定されます。 一部の設定は **BEGIN ATOMIC** で指定できますが、その他の設定は常に同じ値に固定されます。  
@@ -170,4 +173,3 @@ GO
  [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-
