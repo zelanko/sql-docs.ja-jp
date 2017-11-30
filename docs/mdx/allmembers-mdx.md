@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ALLMEMBERS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- AllMembers function
+f1_keywords: ALLMEMBERS
+dev_langs: kbMDX
+helpviewer_keywords: AllMembers function
 ms.assetid: 202e81d4-d2ee-4ec1-a019-4835eb19f446
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: b4953bd5bff4ab578cc492991918ee5c90abb7a1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c677d421c70b6e05273db6ec437e7fe9667d638
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,9 +80,8 @@ FROM
 ```  
   
 ## <a name="see-also"></a>参照  
- [AddCalculatedMembers & #40 です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
+ [AddCalculatedMembers &#40;です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
  [子と #40 です。MDX と #41 です。](../mdx/children-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- OPENINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- OpeningPeriod function
+f1_keywords: OPENINGPERIOD
+dev_langs: kbMDX
+helpviewer_keywords: OpeningPeriod function
 ms.assetid: bebf55cf-e5c6-42b1-98f2-1d6e54093d4c
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d950359ce36e6d6db5e1345598cd9efaeba32c00
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 30100b2762d3365c1599e665db54e2446e392fb3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -96,9 +91,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [TopCount & #40 です。MDX と #41 です。](../mdx/topcount-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [FirstSibling & #40 です。MDX と #41 です。](../mdx/firstsibling-mdx.md)  
+ [TopCount &#40;です。MDX と #41 です。](../mdx/topcount-mdx.md)   
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [FirstSibling &#40;です。MDX と #41 です。](../mdx/firstsibling-mdx.md)  
   
   
-

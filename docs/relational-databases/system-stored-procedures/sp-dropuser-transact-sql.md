@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cea8bee162f25ad22448007026d90ce0835c568e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 242950773bb0eabbd8b4170a05fd228311604bdf
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/21/2017
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)代わりにします。  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +57,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  使用して**sp_helpuser**現在のデータベースから削除できるユーザー名の一覧を表示します。  
   
- データベース ユーザーを削除すると、そのユーザーの別名も削除されます。 ユーザーが、ユーザー名と同じ空のスキーマを所有している場合、そのスキーマは削除されます。 ユーザーがデータベース内にその他のセキュリティ保護可能なリソースを所有している場合、ユーザーは削除されません。 まず、オブジェクトの所有権を別のプリンシパルに譲渡する必要があります。 詳細については、次を参照してください。 [ALTER AUTHORIZATION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-authorization-transact-sql.md). データベース ユーザーを削除すると、そのユーザーに関連付けられている権限が自動的に削除されます。ユーザーは、メンバーとなっているデータベース ロールから削除されます。  
+ データベース ユーザーを削除すると、そのユーザーの別名も削除されます。 ユーザーが、ユーザー名と同じ空のスキーマを所有している場合、そのスキーマは削除されます。 ユーザーがデータベース内にその他のセキュリティ保護可能なリソースを所有している場合、ユーザーは削除されません。 まず、オブジェクトの所有権を別のプリンシパルに譲渡する必要があります。 詳細については、次を参照してください。 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). データベース ユーザーを削除すると、そのユーザーに関連付けられている権限が自動的に削除されます。ユーザーは、メンバーとなっているデータベース ロールから削除されます。  
   
  **sp_dropuser**データベースの所有者を削除するのには使用できません (**dbo**) **INFORMATION_SCHEMA**ユーザー、または**ゲスト**からユーザーを**マスター**または**tempdb**データベース。 システム以外のデータベース、`EXEC sp_dropuser 'guest'`ユーザーの CONNECT 権限を取り消す**ゲスト**です。 ユーザー自身は残ります。  
   

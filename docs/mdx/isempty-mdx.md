@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ISEMPTY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IsEmpty function
+f1_keywords: ISEMPTY
+dev_langs: kbMDX
+helpviewer_keywords: IsEmpty function
 ms.assetid: b4a50996-61d1-4e23-8003-7d530195ea72
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: c012af7c0df0ccc2507fb41097b9bcf58b97739c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 09475a39c4f83044b0f169f99c894801392cba7e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +70,6 @@ IsEmpty(Value_Expression)
   
 ## <a name="see-also"></a>参照  
  [空の値の扱い](../mdx/working-with-empty-values.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

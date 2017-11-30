@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b6a0b15ff483647a3c102d481d8300ff460ce8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   変換にマップされているデータベース ユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワードを持つ包含データベース ユーザーへのログイン。 包含データベースでは、データベースがインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの依存関係を削除するには、このプロシージャを使用します。 **sp_migrate_user_to_contained** 、元のユーザーを区切る[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン パスワードや既定の言語などの設定は、包含データベースに対して個別に管理できるようにします。 **sp_migrate_user_to_contained**の別のインスタンスに包含データベースを移動する前に使用することができます、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]現在への依存関係を排除する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス ログインします。  
   
  **注**この手順は、包含データベースでのみ使用します。 詳細については、「 [包含データベース](../../relational-databases/databases/contained-databases.md)」を参照してください。  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
 ## <a name="syntax"></a>構文  
   

@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LAG
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Lag function
+f1_keywords: LAG
+dev_langs: kbMDX
+helpviewer_keywords: Lag function
 ms.assetid: 08c704ea-35d8-44ee-abe5-93bd24b99906
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 22d3e6c8abe087c6af7bbcca29ebb2ee9d8bedc0
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eedeae82c5b7566f0c59a6876fc6743c61794de0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +42,7 @@ Member_Expression.Lag(Index)
  *メンバー式*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
- *インデックス*  
+ *Index*  
  メンバー位置を後退させる数を指定する有効な数値式です。  
   
 ## <a name="remarks"></a>解説  
@@ -79,7 +74,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

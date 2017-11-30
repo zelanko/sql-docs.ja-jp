@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ISANCESTOR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IsAncestor function
+f1_keywords: ISANCESTOR
+dev_langs: kbMDX
+helpviewer_keywords: IsAncestor function
 ms.assetid: 49d2fcdf-8d9a-4c79-bd00-4910ea149141
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1674a5edccc74db8561a62e550e0e4102e26d7af
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb2d6dcfb4e5d0992a522c060947d942a5b48a53
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +63,6 @@ IsAncestor(Member_Expression1, Member_Expression2)
   
 ## <a name="see-also"></a>参照  
  [先祖と #40 です。MDX と #41 です。](../mdx/ancestor-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

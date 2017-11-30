@@ -8,29 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '*'
-dev_langs:
-- kbMDX
+f1_keywords: '*'
+dev_langs: kbMDX
 helpviewer_keywords:
 - '* (crossjoin operator)'
 - crossjoin operator (*)
 ms.assetid: e00cb260-0189-4c4e-b3d2-088f4421337b
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 030faf30d7038379697b095edfa2a6bddfb22fbd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c6ee7ba4c5b3bce471bd0fa1bc11cad448bbff63
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>クロス結合の MDX 演算子リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +48,7 @@ Set_Expression * Set_Expression
  指定されている両方のパラメーターのクロス積を含むセットです。  
   
 ## <a name="remarks"></a>解説  
-  **\* (クロス積)**演算子は機能的に等価、 [Crossjoin](../mdx/crossjoin-mdx.md)関数。  
+ **\* (クロス積)**演算子は機能的に等価、 [Crossjoin](../mdx/crossjoin-mdx.md)関数。  
   
 ## <a name="examples"></a>使用例  
  この演算子の使用例を以下に示します。  
@@ -71,7 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

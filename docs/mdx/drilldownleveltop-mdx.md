@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVELTOP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevelTop function
+f1_keywords: DRILLDOWNLEVELTOP
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownLevelTop function
 ms.assetid: b3b45dd6-2ade-4dd7-83dd-849231e2e517
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f42880ec233ea2a92fd33d86193e751391f5ef12
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d094ec3e2897bef5dfed1d98eddf82e115d84df5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +43,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *Count*  
+ *カウント*  
  返す組の数を指定する有効な数値式です。  
   
  *Level_Expression*  
@@ -67,7 +62,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
   
  **DrilldownLevelTop**関数がに似ていますが、 [DrilldownLevel](../mdx/drilldownlevel-mdx.md)関数が、指定されたレベルでは、各メンバーのすべての子ではなく、 **DrilldownLevelTop**関数は、子メンバーの最上位の数を返します。  
   
- XMLA プロパティの mdpropmdxdrillfunctions にクエリを使用すると、サーバーがドリル関数以外が提供するサポートのレベルを確認するには参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  
+ XMLA プロパティの mdpropmdxdrillfunctions にクエリを使用すると、サーバーがドリル関数以外が提供するサポートのレベルを確認するには参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  
   
 ## <a name="examples"></a>使用例  
  次の例では、既定のメジャーに基づいて Product Category レベルの子を最上位のものから 3 つ返します。 Adventure Works サンプル キューブでは、Accessories の最上位の 3 つの子は、Bike Racks、Bike Stands、Bottles and Cages です。 Management Studio の MDX クエリ ウィンドウで、[Products]、[Product Categories]、[Members]、[All Products]、[Accessories] にナビゲートして完全なリストを参照できます。 Count 引数を大きくして、返されるメンバーを増やすことができます。  
@@ -99,8 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [DrilldownLevel & #40 です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [DrilldownLevel &#40;です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

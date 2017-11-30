@@ -8,30 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLTHROUGH
-dev_langs:
-- kbMDX
+f1_keywords: DRILLTHROUGH
+dev_langs: kbMDX
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
 - data retrieval [MDX]
 ms.assetid: dfa22755-0ed4-4bba-9c31-7ade26d9ebdb
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5746ff65d9ad6ce9aae64f01ff7a9f7ad97ec7d7
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6beadd42ec1f41ccec1ce8b0df999897b50568f5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作のドリル スルー
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -115,7 +111,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX データ操作ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX データ操作ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   
-

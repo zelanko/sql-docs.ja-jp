@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CALCULATIONPASSVALUE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CalculationPassValue function
+f1_keywords: CALCULATIONPASSVALUE
+dev_langs: kbMDX
+helpviewer_keywords: CalculationPassValue function
 ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 2fd5ad1791d15353fd6c357e30d2430c593f9521
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2eb9e6cf8f043427238c150b03ce2c58defb1904
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,9 +71,8 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 >  管理者のみが使用できる、 **CalculationPassValue** MDX スクリプト内の関数。 管理者権限を持たないロールのコンテキストでこの関数を含んだ MDX スクリプトを実行すると、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
- [CalculationCurrentPass & #40 です。MDX と #41 です。](../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40;です。MDX と #41 です。](../mdx/calculationcurrentpass-mdx.md)   
  [Iif 関数と #40 です。MDX と #41 です。](../mdx/iif-mdx.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

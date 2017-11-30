@@ -8,29 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- FREEZE
-dev_langs:
-- kbMDX
+f1_keywords: FREEZE
+dev_langs: kbMDX
 helpviewer_keywords:
 - FREEZE statement
 - locking cell values [MDX]
 ms.assetid: 59f1e860-6f37-41af-97d6-7708bdaac933
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b447ef6b4c4699e652b6093c5d0a10e44ecb4d41
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ff9fab5df513cea71db43f5ca26f08ccae93d553
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-scripting---freeze"></a>MDX スクリプティングの固定
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +69,6 @@ B = 3
  A は 2 に、B は 3 に等しくなりました。  
   
 ## <a name="see-also"></a>参照  
- [MDX スクリプト ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX スクリプト ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)  
   
   
-

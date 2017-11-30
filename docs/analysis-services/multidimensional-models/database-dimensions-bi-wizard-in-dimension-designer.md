@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>データベース ディメンションのディメンション デザイナーでの BI ウィザード
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business telligence Wizard or Dimension Designer. ビジネス インテリジェンス ウィザードは、ソリューション エクスプローラーまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のキューブ デザイナーから起動できます。 ディメンション デザイナーには、SQL Server Management Studio および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、カスタム ロールアップ演算子とカスタム メンバー式を作成し、ビジネス インテリジェンス ウィザードまたはディメンション デザイナーを使用して、書き戻し用のディメンションを構成します。 ビジネス インテリジェンス ウィザードは、ソリューション エクスプローラーまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のキューブ デザイナーから起動できます。 ディメンション デザイナーには、SQL Server Management Studio および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>ビジネス インテリジェンス ウィザードを起動するには  
   

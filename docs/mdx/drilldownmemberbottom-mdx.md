@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNMEMBERBOTTOM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownMemberBottom function
+f1_keywords: DRILLDOWNMEMBERBOTTOM
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownMemberBottom function
 ms.assetid: 603927ba-68f6-4e7a-b17f-44cad33bdfb0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a0b8ce3ba24d95b276143629d11051f93c65f18c
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d66f9aeb97a5219f85a33acfedb710f980b63401
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,13 +45,13 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *Count*  
+ *カウント*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
- *階層*  
+ *Hierarchy*  
  階層を返す有効な多次元式 (MDX) 式です。  
   
  *再帰*  
@@ -76,10 +71,9 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  **DrilldownMemberBottom**関数がに似ていますが、 [DrilldownMember](../mdx/drilldownmember-mdx.md)関数が 2 番目のセットに存在するも、最初のセット内の各メンバーのすべての子ではなく、 **DrilldownMemberBottom**関数は、各メンバーの子メンバーの最下位の数を返します。  
   
- XMLA プロパティの mdpropmdxdrillfunctions にクエリを使用すると、サーバーがドリル関数以外が提供するサポートのレベルを確認するには参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  
+ XMLA プロパティの mdpropmdxdrillfunctions にクエリを使用すると、サーバーがドリル関数以外が提供するサポートのレベルを確認するには参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

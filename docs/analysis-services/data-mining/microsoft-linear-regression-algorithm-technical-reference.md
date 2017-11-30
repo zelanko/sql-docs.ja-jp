@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |予測可能な属性|Continuous、Cyclical、Ordered|  
   
 > [!NOTE]  
->  コンテンツの種類**Cyclical** および **Ordered** content types are supported, but the algorithm treats them as discrete values および does not perform special processing.  
+>  コンテンツの種類**Cyclical** および **Ordered** はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。らを不連続の値として扱い、特別な処理は行いません。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

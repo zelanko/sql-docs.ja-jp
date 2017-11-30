@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>データ マイニング構造に対する処理権限の設定  
  データ マイニング構造を処理するための権限を付与するロールを作成できます。 これには、すべてのマイニング モデルの処理が含まれます。  
   
- マイニング モデルおよびマイニング構造の参照に使用される**[ドリルスルー]** 権限と **[定義の読み取り]** permissions used for browsing a mining model 権限と structure are atomic 権限と can be added to the same role, or separated out into a different role.  
+ マイニング モデルおよびマイニング構造の参照に使用される **[ドリルスルー]** 権限と **[定義の読み取り]** 権限はアトミックであり、同じロールに追加したり、別のロールに分離したりできます。  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   

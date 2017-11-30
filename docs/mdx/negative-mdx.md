@@ -8,29 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '-'
-dev_langs:
-- kbMDX
+f1_keywords: '-'
+dev_langs: kbMDX
 helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: 7fbe83ed-aaa5-41f6-a17c-bfc2e1bffa77
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8df57f5e20afe37fc4c1ca6da2f9645d49664184
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c29a7ea1abb1d2ef4932f49480fe5cfb927a8532
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="--negative-mdx"></a>- (負号) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +66,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

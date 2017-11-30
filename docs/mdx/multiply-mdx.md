@@ -8,29 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '*'
-dev_langs:
-- kbMDX
+f1_keywords: '*'
+dev_langs: kbMDX
 helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: 073fd098-65bd-4a30-81dd-d233d007490d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1aaf822a3f1f7c99c873175ad4fec38bca81f4c3
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d47373a1b24eda4084218daaee731f6ebd16860a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="-multiply-mdx"></a>* (乗算) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +51,6 @@ Numeric_Expression * Numeric_Expression
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式が NULL 値と評価される場合は、NULL 値が返されます。  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

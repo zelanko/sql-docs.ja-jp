@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LASTPERIODS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LastPeriods function
+f1_keywords: LASTPERIODS
+dev_langs: kbMDX
+helpviewer_keywords: LastPeriods function
 ms.assetid: a15df7a1-b261-48ed-aacc-d2804db8dbf7
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7b5f43547cdf6a48a35e2a433dcc7a82cdabe054
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc24f14f734c697946226974a8d51761a6d8182e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +39,7 @@ LastPeriods(Index [ ,Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *インデックス*  
+ *Index*  
  期間の数を指定する有効な数値式です。  
   
  *メンバー式*  
@@ -82,7 +77,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   
-

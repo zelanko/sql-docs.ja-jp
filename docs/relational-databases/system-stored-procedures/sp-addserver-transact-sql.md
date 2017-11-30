@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b6b77613f01605d693d9e2c3961c3278f8d26b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ローカル インスタンスの名前を定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ときにホストしているコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が使用してこの名前を変更すると、 **sp_addserver**のインスタンスを通知するために、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]新しいコンピューター名のです。 このプロシージャは、コンピューターでホストされている、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のすべてのインスタンスで実行する必要があります。 インスタンス名、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は変更できません。 名前付きインスタンスのインスタンス名を変更するには、指定した名前で新しいインスタンスをインストールし、古いインスタンスからデータベース ファイルをデタッチし、新しいインスタンスにデータベースをアタッチして古いインスタンスをドロップします。 または、クライアント コンピューター上でクライアント別名を作成して、サーバー コンピューター上のインスタンス名を変更せずに、接続を別のサーバーとインスタンス名か **サーバー:ポート** の組み合せにリダイレクトできます。  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

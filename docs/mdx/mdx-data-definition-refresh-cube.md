@@ -8,8 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - REFRESH CUBE
 - REFRESH_CUBE
 - REFRESH
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - cubes [Analysis Services], cache
 - refreshing cache
 - REFRESH CUBE statement
 - cache [Analysis Services]
 ms.assetid: b8c087fb-5d17-4b13-b7cf-9929e9aab35c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 387b16e4d3570655b75bd548d6c2b5cd9e631d1b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce57b2384e8cf28dae218dec5f09b756b8cd61c6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX データ定義の更新キューブ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +59,6 @@ REFRESH CUBECube_Name
 >  サーバーに保存されている名前付きセットは更新されません。  
   
 ## <a name="see-also"></a>参照  
- [MDX データ定義ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-
