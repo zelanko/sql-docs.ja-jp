@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- XOR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- XOR operator
+f1_keywords: XOR
+dev_langs: kbMDX
+helpviewer_keywords: XOR operator
 ms.assetid: 17280f36-df0e-477e-9342-e8129ed5cc3c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e2c87b1438d55f6b47ee03dc074c5c66e81be888
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b3cc1c76865fe61cd819649e3a8e92031d17b444
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,13 +54,12 @@ Expression1 XOR Expression2
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**false**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
-|**false**|**false**|**false**|  
+|**true**|**true**|**オプション**|  
+|**true**|**オプション**|**true**|  
+|**オプション**|**true**|**true**|  
+|**オプション**|**オプション**|**オプション**|  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

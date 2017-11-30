@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  CLR 統合マネージ データベース オブジェクトにはいくつかの種類があります。 これらのオブジェクトについての概要については、次を参照してください。[共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)です。 これらのオブジェクトが実行されるたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を作成、 **AppDomain**が読み込むでき、必要なコードを実行します。 分離レベル、 **AppDomain**は 1 つ**AppDomain**所有者データベースごとにします。 つまり、ユーザーが所有するすべての CLR オブジェクトは、同じ実行常に**AppDomain**ごとのデータベース (場合、ユーザーが登録する CLR データベース オブジェクトで異なるデータベース、CLR データベース オブジェクトが異なるアプリケーション ドメインで実行されます)。 **AppDomain**コード実行の終了後は破棄されません。 代わりに、以降の実行に備えて、メモリ内にキャッシュされます。 これにより、パフォーマンスが向上します。  
   
  詳細については、次を参照してください。[アプリケーション ドメイン](http://go.microsoft.com/fwlink/p/?LinkId=299658)です。  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299659)まで)。|  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  

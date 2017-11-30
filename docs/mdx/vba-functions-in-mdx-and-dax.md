@@ -8,22 +8,20 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: e56f0c499f16242d3dc6332ee62824c3542d9dd1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 08/02/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|サポートされていません||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|サポートされていません||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|サポートされていません||  
-|[フィルター](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|サポートされていません|**\*\*警告\* \***  MDX が同じ名前の別の関数を実装する以外の場合は、FILTER (Set_Expression, Logical_Expression) 関数には、指定された引数から、検索条件に基づいて、指定されたセットをフィルター処理を実行した結果セットが返されます。<br /><br /> **\*\*警告\* \***  DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) を別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返す関数|  
+|[Assert](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|サポートされていません|**\*\*警告\* \***  MDX が同じ名前の別の関数を実装する以外の場合は、FILTER (Set_Expression, Logical_Expression) 関数には、指定された引数から、検索条件に基づいて、指定されたセットをフィルター処理を実行した結果セットが返されます。<br /><br /> **\*\*警告\* \***  DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) を別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返す関数|  
 |[修正プログラム](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX のみ||  
 |[書式設定 (Visual Basic for Applications)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|サポートされていません||  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/02/2017
 |[1 年](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
   
   
-

@@ -14,12 +14,11 @@ ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.workload: On Demand
+ms.openlocfilehash: aa5b8ecf8b9801874d0af342d268073a09e4812c
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 用のアプリケーションの開発を開始する方法
 
@@ -84,4 +83,3 @@ Linux のネイティブな新しいコマンド ライン ツールを使用す
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
 - [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-ubuntu.md)
-

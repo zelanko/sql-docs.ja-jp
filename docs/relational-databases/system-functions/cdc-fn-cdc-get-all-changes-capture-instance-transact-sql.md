@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523d6a9be5164ad77b32b9c012aefa7b1038217d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 111fab345e7679745e72ebe874dabcca3bed62fb
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/17/2017
   指定されたログ シーケンス番号 (LSN) の範囲内で、ソース テーブルに適用された各変更につき 1 行を返します。 該当する期間中、1 つのソース行に複数の変更が加えられた場合、返される結果セットには、それぞれの変更が格納されます。 返された変更データおよび 4 つのメタデータ列によって、他のデータ ソースにその変更を適用するために必要な情報を得ることができます。 結果セットとして返される行およびメタデータ列の内容は、行のフィルター選択オプションによって制御されます。 行のフィルター選択オプションに 'all' を指定した場合、それぞれの変更について、対応する 1 行が返されます。 'all update old' オプションを指定した場合、更新操作は、更新前と更新後のキャプチャ対象列の値を格納する 2 つの行で表されます。  
   
  この列挙関数は、ソース テーブルに対して変更データ キャプチャを有効にした時点で作成されます。 関数の名前は派生し、形式を使用して**cdc.fn_cdc_get_all_changes_***capture_instance*場所*capture_instance*キャプチャ用に指定された値は、ソース テーブルが変更データ キャプチャを有効になっているときにインスタンス。  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

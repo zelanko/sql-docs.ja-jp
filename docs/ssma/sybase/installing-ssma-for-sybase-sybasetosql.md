@@ -1,7 +1,7 @@
 ---
 title: "SSMA の SAP ASE (SybaseToSQL) のインストール |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,27 +17,27 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41931c08813cb4836b799b97f2fba0fbbc645a8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 282dacb356df5a7956e9f30852193b54f37961e7
+ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>SSMA の SAP ASE (SybaseToSQL) のインストール
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) の SAP ASE から SAP Adaptive Server Enterprise (ASE) への移行を実行に使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。 移行されたデータベースのデータの移行と ASE システム関数の使用をサポートする拡張機能パックも含まれています。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) の SAP Adaptive Server Enterprise (ASE) を SAP ASE からの移行の実行に使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースです。 移行されたデータベースのデータの移行と ASE システム関数の使用をサポートする拡張機能パックも含まれています。  
   
-元となるは、移行手順を実行するコンピューター上には、クライアント アプリケーションをインストールします。 実行しているコンピューター上の拡張機能パック ファイルをインストールする必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移行されたデータベースをホストします。  
+移行手順を実行するコンピューターにクライアント アプリケーションをインストールします。 実行しているコンピューターに拡張機能パック ファイルのインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でホストされるようには、データベースを移行します。  
   
-## <a name="upgrading-ssma-for-sybase"></a>アップグレードの SSMA for Sybase  
-SAP ASE SSMA の以降のバージョンにアップグレードする場合は、まず、クライアントとサーバーの拡張機能パックをアンインストールして、新しいバージョンをインストールします。  
+## <a name="upgrading-ssma-for-sap-ase"></a>SAP ASE for SSMA をアップグレードします。  
+SAP ASE for SSMA の以降のバージョンにアップグレードする場合は、クライアントとサーバーの拡張機能パックをアンインストールする必要があります最初。 新しいバージョンをインストールします。  
   
-SAP ASE の SSMA の以前のバージョンからプロジェクトを開く場合 SSMA は、プロジェクトを新しいバージョンに変換するように求めます。 クリックする必要があります**はい**SSMA の新しいバージョンでプロジェクトを使用します。  
+SAP ASE の SSMA の以前のバージョンからプロジェクトを開く場合 SSMA は、プロジェクトを新しいバージョンに変換するように求めます。 をクリックして**はい**SSMA の新しいバージョンでプロジェクトを使用します。  
   
 ## <a name="contents"></a>目次  
   
-|トピック|Description|  
+|[アーティクル]|Description|  
 |---------|---------------|  
-|[SSMA の SAP ASE クライアント &#40; のインストールSybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|SSMA クライアントをインストールするための手順と情報を提供します。|  
+|[SAP ASE クライアント &#40; を SSMA をインストールします。SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|SSMA for SAP ASE クライアントをインストールするための手順と情報を提供します。|  
 |[SQL Server &#40; SSMA コンポーネントをインストールします。SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|インスタンスで拡張機能パックをインストールするための手順と情報を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
 |[SAP ASE コンポーネント &#40; に対して SSMA を削除します。SybaseToSQL &#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|プログラムと拡張機能パックのクライアントをアンインストールするための手順を説明します。|  
   

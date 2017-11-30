@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f00190c24d06f888767343270f77dfdeea8ee7b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6bb1977fb034f2fd2c682b12b4466bd7914009dd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/21/2017
   使用して追加されたデータベースのマスター _ キーのパスワードごとに行を返します、 **sp_control_dbmasterkey_password**ストアド プロシージャです。 マスター キーの保護に使用されるパスワードは、資格情報ストアに格納されています。 資格情報名は、##DBMKEY_<database_family_guid>_<random_password_guid>## の形式で表されます。 パスワードは、資格情報シークレットとして格納されています。 使用して追加されたパスワードごと**sp_control_dbmasterkey_password**、内の行がある**sys.credentials**です。  
   
  このビューの各行を示しています、 **credential_id**と**family_guid**これのマスター _ キーがその資格情報に関連付けられているパスワードで保護されたデータベースのです。 参加**sys.credentials**上、 **credential_id**など有用なフィールドを返す、 **create_date**と資格情報の名前。  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
