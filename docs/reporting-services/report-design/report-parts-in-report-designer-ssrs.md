@@ -1,5 +1,5 @@
 ---
-title: "レポート デザイナー (SSRS) でのレポート パーツ |Microsoft ドキュメント"
+title: "レポート デザイナーでのレポート パーツ (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44d4d2ae5bf33c8a35c54659bd89a504e2bb58fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>レポート デザイナーでのレポート パーツ (SSRS)
 
   レポート デザイナーで、プロジェクトのテーブル、グラフ、および他のページ分割されたレポート アイテムを作成した後、それらを " *レポート パーツ* " として、レポート サーバーまたはレポート サーバーと統合されている SharePoint サイトにパブリッシュできます。これにより、自分や他のユーザーが、それらのレポート パーツを別のレポートで再利用できるようになります。  
   
- 通常、レポート パーツはレポート デザイナーおよびレポート ビルダーで同じように機能します。 基本的な機能の詳細については、「[レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
+ 通常、レポート パーツはレポート デザイナーおよびレポート ビルダーで同じように機能します。 基本的な機能の詳細については、「[レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
  ただし、レポート デザイナーでのレポート パーツの機能の仕方には、大きく異なる点があります。 主な違いはワークフローです。 レポート ビルダーでは、コラボレーションによる作成が可能です。つまり、あるユーザーがレポート パーツを作成してパブリッシュすると、 別のユーザーがそのパーツを再利用して変更し、再パブリッシュすることができます。 レポート デザイナーでは、パブリッシュは一方向です。つまり、あるユーザーがレポート デザイナーからレポート パーツをパブリッシュすることができ、別のユーザーはそれを再利用することができます。 しかし、既存のレポート パーツを、レポート デザイナーでレポートに再利用することはできません。 このトピックでは、レポート パーツの概要について説明した後、これらの違いについて詳述します。  
   
@@ -82,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  レポートを配置します。  
   
- レポートを配置すると、レポート パーツは SharePoint サイトまたはレポート サーバーにパブリッシュされ、他のユーザーが再利用できるようになります。 レポート パーツをパブリッシュするには、が必要に接続し、十分なアクセス許可、レポート サーバーでレポートを配置するときです。  
+ レポートを配置すると、レポート パーツは SharePoint サイトまたはレポート サーバーにパブリッシュされ、他のユーザーが再利用できるようになります。 レポート パーツをパブリッシュするには、レポートを配置する際にレポート サーバーに接続でき、そのレポート サーバーに対する十分なアクセス許可を持っている必要があります。  
   
   
 ##  <a name="SearchReuseComponents"></a> レポート パーツの再利用  
@@ -101,5 +98,4 @@ ms.lasthandoff: 08/09/2017
 
 [レポート パーツの管理](../../reporting-services/report-design/managing-report-parts.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

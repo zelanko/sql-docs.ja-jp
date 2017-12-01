@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services の認証 |Microsoft ドキュメント"
+title: "Reporting Services での認証 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a01267851f882bdafcfced0cee200ff3af01cdcf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6926d7787a715ab9183763939ca78ed192d0e251
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services での認証
   認証とは、ユーザーの本人性を立証するプロセスです。 ユーザー認証にはさまざまな方法がありますが、 最も一般的なのはユーザー パスワードを使用する方法です。 たとえば、フォーム認証を実装する場合は、ユーザーに対して資格情報の提示を要求し (通常は、ログイン名とパスワードを要求するインターフェイスを使用)、データベース テーブルや構成ファイルなどのデータ ストアと照合して、そのユーザーが本人かどうかを検証します。 資格情報の有効性を確認できない場合は、認証プロセスが失敗し、そのユーザーは匿名ユーザーであると見なされます。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/12/2017
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services でのカスタム認証  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、統合セキュリティを使用するか、またはユーザーの資格情報を明示的に受信して検証することによって、Windows オペレーティング システムがユーザー認証を実施します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、カスタム認証を開発して追加の認証方法をサポートできます。 そのためには、セキュリティ拡張機能インターフェイス <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> を使用します。 レポート サーバーであらゆる拡張機能を配置および使用できるように、すべての拡張機能が <xref:Microsoft.ReportingServices.Interfaces.IExtension> ベース インターフェイスから継承されます。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> および <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> は、<xref:Microsoft.ReportingServices.Interfaces> 名前空間のメンバーです。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、レポート サーバーに対して認証を行うための主要な手段として、<xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッドがあります。 Reporting Services Web サービスのこのメンバーを使用して、検証するユーザーの資格情報をレポート サーバーに渡すことができます。 基になるセキュリティ拡張機能を実装して**IAuthenticationExtension2.LogonUser**カスタム認証コードが含まれています。 フォーム認証サンプルでは、 **LogonUser**データベースの指定された資格情報とカスタム ユーザー ストアに対して認証チェックを実行します。 実装の例**LogonUser**次に示します。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、レポート サーバーに対して認証を行うための主要な手段として、<xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッドがあります。 Reporting Services Web サービスのこのメンバーを使用して、検証するユーザーの資格情報をレポート サーバーに渡すことができます。 基になるセキュリティ拡張機能は、カスタム認証コードを含む **IAuthenticationExtension2.LogonUser** を実装します。 フォーム認証のサンプルでは、**LogonUser** が指定された資格情報とデータベースのカスタム ユーザー ストアを比較する認証チェックを実行します。 **LogonUser** の実装例は、次のようになります。  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -103,7 +102,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 ```  
   
 ## <a name="authentication-flow"></a>認証フロー  
- Reporting Services Web サービスは、web ポータルとレポート サーバーでフォーム認証を有効にするカスタム認証拡張機能を提供します。  
+ Reporting Services Web サービスには、Web ポータルとレポート サーバーによるフォーム認証を可能にするカスタム認証拡張機能が用意されています。  
   
  Reporting Services Web サービスの <xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッドを使用して、認証する資格情報をレポート サーバーに送信します。 Web サービスは HTTP ヘッダーを使用して、検証されたログオン要求の認証チケット (クッキー) をサーバーからクライアントに渡します。  
   
@@ -115,7 +114,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  クライアント アプリケーションは、ユーザーを認証するために Web サービス メソッド <xref:ReportService2010.ReportingService2010.LogonUser%2A> を呼び出します。  
   
-2.  Web サービスへの呼び出しによって、 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 、セキュリティ拡張機能のメソッドを実装するクラスでは具体的には、 **IAuthenticationExtension2**です。  
+2.  Web サービスは、セキュリティ拡張機能の <xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッド、つまり **IAuthenticationExtension2** を実装するクラスを呼び出します。  
   
 3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> の実装によって、ユーザー ストアまたはセキュリティ機関のユーザー名とパスワードが検証されます。  
   

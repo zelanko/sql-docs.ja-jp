@@ -1,5 +1,5 @@
 ---
-title: "展開または折りたたみアクション アイテムに追加 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dcd1af4aee2c0267f1443d87d80be1e3cc2ad8b3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 24cdcaa5d1596b743f370aead53457358d20490a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)
   レポート アイテムの展開と折りたたみや、グループと関連付けられているテーブルやマトリックスの行と列の展開と折りたたみを、ユーザーが対話形式で行うようにできます。 アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。 表示の設定は HTML レポート ビューアーで行い、 *ドリルダウン* アクションと呼ばれることがあります。  
@@ -37,13 +36,13 @@ ms.lasthandoff: 08/09/2017
   
 1.  レポート デザイン ビューで、テーブルまたはマトリックスをクリックして選択します。 グループ化ペインに行グループと列グループが表示されます。  
   
-     ![ウィンドウをグループ化](../../reporting-services/report-design/media/groupingpane.png "ウィンドウをグループ化")  
+     ![グループ化ペイン](../../reporting-services/report-design/media/groupingpane.png "グループ化ペイン")  
   
      グループ化ペインが表示されない場合は、 **[表示]** メニューをクリックしてから、 **[グループ化]**をクリックします。  
   
 2.  [グループ化] ペインのタイトル バー内を右クリックし、 **[詳細設定]**をクリックします。 [グループ化] ペインのモードが切り替わり、行と列の基になる表示構造がデザイン画面に表示されます。  
   
-     ![[詳細設定モード] メニューとウィンドウをグループ化](../../reporting-services/report-design/media/groupingpane-advancedmode.png "[詳細設定モード] メニューでグループ化ペイン")  
+     ![[詳細設定モード] メニューのグループ化ペイン](../../reporting-services/report-design/media/groupingpane-advancedmode.png "[詳細設定モード] メニューのグループ化ペイン")  
   
 3.  適切なグループ ペインで、関連する行または列を非表示にする行グループまたは列グループの名前をクリックします。 グループが選択されると、[プロパティ] ペインに **[Tablix メンバー]** プロパティが表示されます。  
   
@@ -56,24 +55,24 @@ ms.lasthandoff: 08/09/2017
   
     -   レポート アイテムを非表示にする場合は、 **[True]** を選択します。  
   
-    -   選択**\<式 >**を開くには、**式** ダイアログ ボックスを表示を指定する実行時に評価される式を作成します。  
+    -   **[式]** ダイアログ ボックスを開いて実行時に評価する式を作成し、表示/非表示を指定するには、**[\<式>]** を選択します。  
   
 5.  **[切り替えアイテム]**で、ドロップダウン ボックスから、切り替えイメージを追加するテキスト ボックスの名前を選択します。  
   
      次の図で、色の行グループは、ユーザーが関連する行を展開したり折りたたんだりできるように構成されています。  
   
-     ![展開する行グループを構成する](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "展開する行グループを構成します。")  
+     ![展開する行グループを構成する](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "展開する行グループを構成する")  
   
     > [!NOTE]  
     >  切り替えイメージが付いたテキスト ボックスを、関連する行または列を非表示にする行グループまたは列グループにすることはできません。 非表示にするアイテムと同じグループまたは先祖グループに存在している必要があります。 たとえば、子グループに関連付けられている行の表示を切り替えるには、親グループに関連付けられている行のテキスト ボックスを選択する必要があります。  
   
 6.  切り替えをテストするには、レポートを実行し、切り替えイメージが付いたテキスト ボックスをクリックします。 レポート表示が更新されて、表示/非表示が切り替えられた行グループと列グループが表示されます。  
   
-     ![展開可能な行グループを含むレポートを実行している](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "展開可能な行グループを含むレポートを実行します。")  
+     ![展開可能な行グループを含むレポートを実行する](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "展開可能な行グループを含むレポートを実行する")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>レポート アイテムに展開/折りたたみアクションを追加するには  
   
-1.  レポート デザイン ビューで表示または非表示、およびをクリックするレポート アイテムを右クリックして*\<レポート アイテム >* **プロパティ**です。 *\<レポート アイテム >* **プロパティ**レポート アイテムのダイアログ ボックスが開きます。  
+1.  レポート デザイン ビューで、表示または非表示にするレポート アイテムを右クリックして、*[\<レポート アイテム>* **プロパティ]** をクリックします。 レポート アイテムの *[\<レポート アイテム>* **プロパティ]** ダイアログ ボックスが開きます。  
   
 2.  **[表示]**をクリックします。  
   
@@ -92,18 +91,17 @@ ms.lasthandoff: 08/09/2017
   
      次の図で、テーブルはユーザーが展開したり折りたたんだりできるように構成されています。 このテーブルの表示は、[製品テーブル] テキスト ボックスで切り替えられます。  
   
-     ![展開するレポートのテーブルを構成する](../../reporting-services/report-design/media/expandcollapse-reporttable.png "展開対象のレポートのテーブルを構成します。")  
+     ![展開するレポート テーブルを構成する](../../reporting-services/report-design/media/expandcollapse-reporttable.png "展開するレポート テーブルを構成する")  
   
     > [!NOTE]  
     >  選択するテキスト ボックスは、このレポート アイテムの現在のスコープまたはコンテナー スコープ (レポート本文を含む、レポート本文までのスコープ) に存在する必要があります。 たとえば、グラフの表示を切り替えるには、レポート本文や四角形など、グラフと同じコンテナー スコープにあるテキスト ボックスを選択します。 テキスト ボックスは、同じまたは上位のコンテナー階層に含まれている必要があります。  
   
 5.  切り替えをテストするには、レポートを実行し、切り替えイメージが付いたテキスト ボックスをクリックします。 レポート表示が更新されて、表示/非表示が切り替えられたレポート アイテムが表示されます。  
   
-     ![可変の拡張のテーブルを含むレポートを実行している](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "可変の拡張のテーブルを含むレポートを実行します。")  
+     ![展開されたテーブルを含むレポートの実行](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "展開されたテーブルを含むレポートの実行")  
   
 ## <a name="see-also"></a>参照  
  [ドリルダウン アクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [項目 &#40; を非表示にします。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [アイテムを非表示にする (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

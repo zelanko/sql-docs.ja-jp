@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバー データベースを別のコンピューター (SSRS ネイティブ モード) に移動 |Microsoft ドキュメント"
+title: "別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90dc9bb5624c19c282d34782909fb5e168b4a695
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
 
   インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されているレポート サーバー データベースは、別のコンピューター上のインスタンスに移動できます。 reportserver と reportservertempdb データベースは、一緒に移動またはコピーする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の使用環境には、両方のデータベースが必要です。reportservertempdb データベースは、移動する reportserver プライマリ データベースに名前を関連付ける必要があります。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード。  
   
  データベースの移動は、レポート サーバー アイテムに現在定義されているスケジュールされた操作には影響しません。  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 >  このトピックの手順をお勧めできるのは、既存環境に対して行う変更が、レポート サーバー データベースの再配置のみの場合です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストール全体を移行する場合 (データベースの移動と、データベースを使用するレポート サーバー Windows サービスの ID の変更を行う場合)、接続を再構成して、暗号化キーを再設定する必要があります。  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>レポート サーバー データベースのデタッチとアタッチ  
- レポート サーバーをオフラインにすると、データベースをデタッチして、使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを移動できます。 この方法では、権限がデータベースに保持されます。 SQL Server データベースを使用している場合は、別の SQL Server インスタンスに移動する必要があります。 データを移動した後、レポート サーバーがそのレポート サーバー データベースに接続されるように再構成する必要があります。 スケールアウト配置を実行している場合は、各レポート サーバーについて、レポート サーバー データベースの接続を再構成する必要があります。  
+ レポート サーバーをオフラインにすると、データベースをデタッチして、使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを移動できます。 この方法では、権限がデータベースに保持されます。 SQL Server データベースを使用している場合は、SQL Server の別のインスタンスにそのデータベースを移動する必要があります。 データを移動した後、レポート サーバーがそのレポート サーバー データベースに接続されるように再構成する必要があります。 スケールアウト配置を実行している場合は、各レポート サーバーについて、レポート サーバー データベースの接続を再構成する必要があります。  
   
  次の手順に従ってデータベースを移動します。  
   
@@ -228,12 +226,11 @@ GO
 
 [RSExecRole の作成](../../reporting-services/security/create-the-rsexecrole.md)   
 [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
-[レポート サーバー データベース接続を構成します。](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[自動実行アカウントを構成します。](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[自動実行アカウントの構成](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [rsconfig ユーティリティ](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
-[構成し、暗号化キーの管理](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[暗号化キーの構成と管理](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [レポート サーバー データベース](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

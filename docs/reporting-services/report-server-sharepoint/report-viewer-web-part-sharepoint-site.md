@@ -1,5 +1,5 @@
 ---
-title: "レポート ビューアー web パーツを SharePoint サイトで |Microsoft ドキュメント"
+title: "SharePoint サイトのレポート ビューアー Web パーツ | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,47 +14,45 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: dfb4ace4c673bf32bc9ecba6bed58c1d379221e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-viewer-web-part-on-a-sharepoint-site"></a>レポート ビューアー web パーツを SharePoint サイトで
+# <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint サイトのレポート ビューアー Web パーツ
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-レポート ビューアー web パーツは、カスタム web パーツです。 Web パーツを使用して、表示、移動、印刷、および、SharePoint サイト内のレポート サーバー上のレポートをエクスポートすることができます。 レポート ビューアー web パーツは、Microsoft SQL Server Reporting Services レポート サーバーによって処理されるレポート定義 (.rdl) ファイルに関連付けられます。 
+レポート ビューアー Web パーツはカスタム Web パーツです。 Web パーツを使うと、SharePoint サイト内のレポート サーバーにあるレポートの表示、ナビゲーション、印刷、エクスポートを行うことができます。 レポート ビューアー Web パーツは、Microsoft SQL Server Reporting Services レポート サーバーによって処理されるレポート定義 (.rdl) ファイルに関連付けられています。 
 
-最新のレポート ビューアー web パーツは、Power BI のレポート サーバーに配置されたサービスの改ページ調整されたレポートでこともできます。 Web パーツは、Power BI レポートでは機能しません。
+最新のレポート ビューアー Web パーツは、Power BI Report Server に展開されたページ分割されたレポートを処理することもできます。 Web パーツは、Power BI レポートでは機能しません。
 
-## <a name="why-the-report-viewer-web-part-is-re-introduced"></a>レポート ビューアー web パーツは再取得理由
+## <a name="why-the-report-viewer-web-part-is-re-introduced"></a>レポート ビューアー Web パーツが再度導入された理由
 
-レポート ビューアー web パーツが使用可能な SharePoint 製品用 Reporting Services アドインの一部として。 Web パーツは、SharePoint 統合モードでレポート サーバーを特定しました。 SharePoint 統合モードは、SQL Server 2016 より後に推奨されなくなりました。
+レポート ビューアー Web パーツは、SharePoint 製品用の Reporting Services アドインの一部として利用できました。 Web パーツは、SharePoint 統合モードのレポート サーバーに固有のものでした。 SQL Server 2016 の後で、SharePoint 統合モードは使用されなくなりました。
 
-Reporting Services のインストール モードを 1 つだけがある SQL Server 2017 から始めて、:**ネイティブ モード**です。 ページ ビューアー web パーツを使用して、使用するすべてのレポート型を埋め込むことができます、 *rs: 埋め込む = true* URL パラメーター。 SharePoint ページにレポートを埋め込むには、顧客と、更新されたレポート ビューアー web パーツによって要求された統合ストーリーの改ページ調整されたレポートには、このシナリオを有効にします。
+SQL Server 2017 以降では、Reporting Services のインストール モードは**ネイティブ モード**だけです。 ページ ビューアー Web パーツを使うすべてのレポートの種類は、*rs:Embed=true* URL パラメーターを使って埋め込むことができます。 SharePoint ページへのレポートの埋め込みはユーザーから要望のあった統合方法であり、更新されたレポート ビューアー Web パーツはページ分割されたレポートでこのシナリオを可能にします。
 
-ページ ビューアー web パーツは、SharePoint ページに改ページ調整されたレポートを埋め込むサフィックス、中に、更新されたレポート ビューアー web パーツは、追加の機能を提供します。
+ページ分割されたレポートを SharePoint ページに埋め込むにはページ ビューアー Web パーツで十分ですが、更新されたレポート ビューアー Web パーツはそれ以外の機能も提供します。
 
 * 特定のツール バー ボタンの表示/非表示
-* レポート パラメーターの値を上書き
-* フィルター web パーツをレポート パラメーターに接続します。
+* レポートのパラメーター値の上書き
+* レポート パラメーターへのフィルター Web パーツの接続
 
-## <a name="download-the-report-viewer-web-part-solution-package"></a>レポート ビューアー web パーツのソリューション パッケージをダウンロードします。
+## <a name="download-the-report-viewer-web-part-solution-package"></a>レポート ビューアー Web パーツのソリューション パッケージのダウンロード
 
-レポート ビューアー web パーツは、Microsoft ダウンロード センターで使用可能なです。
+レポート ビューアー Web パーツは、Microsoft ダウンロード センターから入手できます。
 
-[レポート ビューアー web パーツのソリューション パッケージをダウンロードします。](https://www.microsoft.com/download/details.aspx?id=55949)
+[レポート ビューアー Web パーツのソリューション パッケージのダウンロード](https://www.microsoft.com/download/details.aspx?id=55949)
 
-## <a name="considerations-and-limitations"></a>考慮事項と制約
+## <a name="considerations-and-limitations"></a>注意点と制限事項
 
-表示される項目は、更新されたレポート ビューアー web パーツに固有です。
+以下の項目は、更新されたレポート ビューアー Web パーツに固有のものです。
 
-* Web パーツでのみ使用できます*クラシック*SharePoint ページ。
-* のみの改ページ調整された (RDL) レポートは、レポート ビューアー web パーツ内に埋め込むためサポートされています。 使用することができますを Power BI のレポートまたはモバイル レポートを埋め込むには検索する場合、 *rs: 埋め込む = true* URL パラメーター。
+* Web パーツは、"*クラシック*" SharePoint ページでのみ使うことができます。
+* レポート ビューアー Web パーツでの埋め込みでサポートされているのは、ページ分割された (RDL) レポートだけです。 Power BI レポートまたはモバイル レポートを埋め込む場合は、*rs:Embed=true* URL パラメーターを使うことができます。
 
 ## <a name="next-steps"></a>次の手順
 
-更新されたレポート ビューアー web パーツで開始するを参照してください。 [SharePoint サイト上のレポート ビューアー web パーツを展開](deploy-report-viewer-web-part.md)です。
-
+更新されたレポート ビューアー Web パーツを使い始めるには、「[Deploy the Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md)」(SharePoint サイトにレポート ビューアー Web パーツを展開する) を参照してください。

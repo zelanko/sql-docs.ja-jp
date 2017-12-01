@@ -1,5 +1,5 @@
 ---
-title: "ReportViewer 2016 コントロールの概要 |Microsoft ドキュメント"
+title: "ReportViewer 2016 Cortana の概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -12,42 +12,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: dff598efce33f778359c2b6fb4c3a0184f2b88f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Reporting Services の ReportViewer コントロールを使用して - 開始の統合
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>ReportViewer コントロールを使用した Reporting Services の統合 - 概要
 
-開発者が ASP.NET web サイト、および Windows フォーム アプリを Reporting Services 2016 の ReportViewer コントロールで改ページ調整されたレポートを埋め込むことができる方法について説明します。 コントロールを新しいプロジェクトに追加または既存のプロジェクトを更新することができます。
+開発者が Reporting Services 2016 ReportViewer コントロールを使用して ASP.NET Web サイトと Windows フォーム アプリにページ分割されたレポートを埋め込む方法について説明します。 このコントロールは、新しいプロジェクトに追加するか、既存のプロジェクトを更新して追加することができます。
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>新しい web プロジェクトへの ReportViewer コントロールの追加
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>新しい Web プロジェクトに ReportViewer コントロールを追加する
 
-1. 新しい**空の ASP.NET Web サイト**か、既存の ASP.NET プロジェクトを開きます。
+1. 新しい **[ASP.NET 空の Web サイト]** を作成するか、既存の ASP.NET プロジェクトを開きます。
 
-    ![ssRS---ASPNET-プロジェクトの新規作成](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. 使用して、ReportViewer 2016 コントロールの nuget パッケージのインストール、 **Nuget パッケージ マネージャー コンソール**です。
+2. **NuGet パッケージ マネージャー コンソール**から ReportViewer 2016 コントロール NuGet パッケージをインストールします。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
-3. プロジェクトに新しい .aspx ページを追加し、ページ内で使用するための ReportViewer コントロール アセンブリを登録します。
+3. 新しい .aspx パッケージをプロジェクトに追加し、ページ内で使用できるように ReportViewer コントロール アセンブリを登録します。
 
     ```
     <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
-4. 追加、 **ScriptManagerControl**ページにします。
+4. ページに **ScriptManagerControl** を追加します。
 
-5. ReportViewer コントロールをページに追加します。 次のスニペットは、リモートのレポート サーバーでホストされているレポートを参照する更新できます。
+5. ページに ReportViewer コントロールを追加します。 リモート レポート サーバーでホストされているレポートを参照するように次のスニペットを更新することができます。
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/13/2017
     </rsweb:ReportViewer>
     ```
     
-最後のページは、次のようになります。
+最終的なページは次のようになります。
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
@@ -81,11 +80,11 @@ ms.lasthandoff: 09/13/2017
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>ReportViewer コントロールを使用する既存のプロジェクトの更新
+## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>ReportViewer コントロールを使用するように既存のプロジェクトを更新する
 
-既存のプロジェクトで ReportViewer 2016 コントロールの使用、Nuget 経由でコントロールを追加、およびバージョンへのアセンブリ参照を更新する*14.0.0.0*です。 これにより、プロジェクトの web.config および ReportViewer コントロールを参照するすべての .aspx ページの更新が含まれます。
+既存のプロジェクトで ReportViewer 2016 コントロールを利用するには、NuGet を使用してコントロールを追加し、アセンブリの参照をバージョン *14.0.0.0* に更新します。 これで、プロジェクトの web.config と、ReportViewer コントロールを参照するすべての .aspx ページの更新が含まれるようになります。
 
-### <a name="sample-webconfig-changes"></a>サンプルの web.config の変更
+### <a name="sample-webconfig-changes"></a>サンプル web.config の変更
 
 ```
 <?xml version="1.0"?>
@@ -132,7 +131,7 @@ ms.lasthandoff: 09/13/2017
 </configuration>
 ```
 
-### <a name="sample-aspx"></a>サンプルの .aspx
+### <a name="sample-aspx"></a>サンプル .aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -143,18 +142,18 @@ ms.lasthandoff: 09/13/2017
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>新しい Windows フォーム プロジェクトへの ReportViewer コントロールの追加
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>新しい Windows フォーム プロジェクトに ReportViewer コントロールを追加する
 
-1. 新しい**Windows フォーム アプリケーション**か、既存のプロジェクトを開きます。
+1. 新しい **Windows フォーム アプリケーション**を作成するか、既存のプロジェクトを開きます。
 
-    ![ssRS---winforms-プロジェクトの新規作成](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. 使用して、ReportViewer 2016 コントロールの nuget パッケージのインストール、 **Nuget パッケージ マネージャー コンソール**です。
+2. **NuGet パッケージ マネージャー コンソール**から ReportViewer 2016 コントロール NuGet パッケージをインストールします。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. コードから新しいコントロールを追加または[コントロールをツールボックスに追加](##adding-control-to-visual-studio-toolbar)です。
+3. コードから新しいコントロールを追加するか、[コントロールをツールボックスに追加](##adding-control-to-visual-studio-toolbar)します。
 
     ```
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -178,13 +177,13 @@ ms.lasthandoff: 09/13/2017
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>レポート ビューアー 2016 コントロールを 100% の高さを設定する方法
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>ReportViewer 2016 コントロールで 100% の高さを設定する方法
 
-新しいレポート ビューアー 2016 コントロールは、HTML5 標準モードのページが最適化されていて、すべての最新ブラウザーでも動作します。 以前は、古い RVC コントロールでは、100% の height プロパティを設定するときに機能した場合でも、指定された高さ先祖のいずれも必要があります。 この動作は、HTML5 で変更されました。 新しい RVC コントロールでこのプロパティを設定すると、親要素に定義済みの高さがある場合にのみは正しく動作、つまり値ではなく auto、または RVC のすべての先祖 100% の高さすぎます。
+新しい ReportViewer 2016 コントロールは、HTML5 標準モードのページに合わせて最適化されており、すべての最新ブラウザー上で動作します。 これまで、以前のバージョンの RVC コントロールでは、高さのプロパティを 100% に設定すると、親要素に高さが指定されていない場合でも機能していました。 この動作は HTML5 で変更されました。 新しい RVC コントロールでこのプロパティを設定すると、親要素に定義済みの高さがある場合 (つまり、自動の値ではない場合)、または RVC のすべての親要素も 100% の高さの場合にのみ、正しく機能するようになります。
 
-これを行う 2 つの例を以下に示します。
+この処理を実行する 2 つの例を紹介します。
 
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>すべての親の高さの要素を 100% に設定して
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>すべての親要素の高さを 100% に設定する
 
 ```
 <!DOCTYPE html>
@@ -210,9 +209,9 @@ ms.lasthandoff: 09/13/2017
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Reportviewer コントロールの親のスタイルの高さの属性を設定して
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>ReportViewer コントロールの親要素に style の height 属性を設定する
 
-ビューポートの割合の長さの詳細については、次を参照してください。[ビューポート割合長さ](https://www.w3.org/TR/css3-values/#viewport-relative-lengths)です。
+ビューポートの割合の長さについては、「[Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths)」(ビューポートの割合の長さ) を参照してください。
 
 ```
 <!DOCTYPE html>
@@ -233,55 +232,54 @@ ms.lasthandoff: 09/13/2017
 
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Visual Studio ツールバーにコントロールを追加します。
+## <a name="adding-control-to-visual-studio-toolbar"></a>Visual Studio ツール バーにコントロールを追加する
 
-レポート ビューアー コントロールは、NuGet パッケージとして付属しているようになりました。 このため、既定では、Visual Studio ツールボックスに表示するレポート ビューアー コントロールは表示されません。 ツールボックスにコントロールを追加するには、次の操作します。
+ReportViewer コントロールは NuGet パッケージに含まれるようになりました。 そのため、既定の Visual Studio ツールボックスに ReportViewer コントロールは表示されません。 コントロールをツールボックスに追加するには、次の手順を実行します。
 
-1. WinForms または WebForms 前述のいずれかの NuGet パッケージをインストールします。
+1. 前述のように、WinForms または WebForms 用の NuGet パッケージをインストールします。
 
-2. ツールボックスに表示されている ReportViewer コントロールを削除します。 これは、コントロール 12.x のバージョンにします。
+2. ツールボックスに表示されている ReportViewer コントロールを削除します。 これはバージョン 12.x のコントロールです。
 
-    ![ssRS の削除-古い-rvcontrol-ツールボックス](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 右クリックで任意の場所、ツールボックスにし、**アイテムの選択.**.
+3. ツールボックス内のいずれかの場所を右クリックし、**[アイテムの追加]** を選択します。
 
-    ![ssRS のツールボックスでのアイテムの選択](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
-4. **の .NET Framework コンポーネント****参照**です。
+4. **[.NET Framework コンポーネント]** の **[参照]** を選択します。
 
-    ![ssRS ツールボックス参照](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
-5. 選択、 **Microsoft.ReportViewer.WinForms.dll**または**Microsoft.ReportViewer.WebForms.dll** NuGet パッケージをインストールするからです。
+5. インストールされた NuGet パッケージから **Microsoft.ReportViewer.WinForms.dll** または **Microsoft.ReportViewer.WebForms.dll** を選択します。
 
     > [!NOTE] 
-    > NuGet パッケージは、プロジェクトのソリューション ディレクトリにインストールされます。 Dll へのパスは、次のようになります:`{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40`または`{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`です。
+    > NuGet パッケージは、プロジェクトのソリューション ディレクトリにインストールされます。 dll のパスは、`{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` または `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40` のようになります。
 
-6. 新しいコントロールは、ツールボックス内で表示する必要があります。 行うことができますし、ツールボックス内の別のタブにする場合。
+6. ツールボックス内に新しいコントロールが表示されます。 必要に応じて、ツールボックス内の別のタブに移動することができます。
 
-    ![ssRS ツールボックス-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>注意点
+### <a name="things-to-be-aware-of"></a>注意事項
 
-- これにより、現在のプロジェクト内のインストールされている NuGet パッケージへの参照が追加されます。 ツールボックス内の項目は、他のプロジェクトに保持されます。 新しいソリューション/プロジェクトの NuGet パッケージをインストールするときに、ツールボックス項目が、以前のバージョンを参照する可能性があります。 
+- この手順で、インストールされている NuGet パッケージへの参照が現在のプロジェクトに追加されます。 このツールボックスの項目は、他のプロジェクトにも表示されます。 新しいソリューション/プロジェクトに NuGet パッケージをインストールすると、ツールボックスの項目は以前のバージョンを参照する可能性があります。 
 
-- アセンブリが使用できないなった場合でも、コントロールはツールボックスに残ります。 そのプロジェクトが削除された Visual Studio は、ツールボックスからコントロールを追加する場合に、エラーをスローします。 このエラーを修正、ツールボックスからコントロールを削除し、上記の手順を使用して再度追加します。
+- そのアセンブリを使用できなくなっても、コントロールはツールボックスに残ります。 プロジェクトを削除した場合、ツールボックスからこのコントロールを追加しようとすると、Visual Studio からエラーがスローされます。 このエラーを修正するには、ツールボックスからコントロールを削除し、前述の手順を使用して追加し直してください。
 
 
 ## <a name="common-issues"></a>一般的な問題
     
-- 最新のブラウザーで使用するのには、2016 の ReportViewer コントロールは設計されています。 ブラウザー IE 互換モードで web ページを表示する場合、コントロールが機能しない可能性があります。 イントラネットのサイトは、互換性モードのイントラネットのページを表示するように促す設定を上書きするメタ タグを必要があります。
+- ReportViewer 2016 コントロールは、最新のブラウザーで使用するように設計されています。 IE 互換モードで Web ページを表示するブラウザーの場合、コントロールが機能しない可能性があります。 イントラネット サイトの場合、状況によっては、互換モードでイントラネット ページを表示するように促す設定をメタ タグで上書きする必要があります。
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>フィードバックを提供します。
+## <a name="providing-feedback"></a>フィードバックの送信
 
-チームが上のコントロールで発生する問題について通知、 [Reporting Services MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)時に電子メールまたは[ RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com)です。
+このコントロールで問題が発生した場合は、[Reporting Services MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)か、電子メール ([RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com)) でチームにお知らせください。
 
 ## <a name="see-also"></a>参照
 
-[2016 ReportingViewer コントロール内のデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
+[2016 ReportViewer コントロールのデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 その他の質問 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
-
 

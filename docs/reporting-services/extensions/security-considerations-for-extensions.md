@@ -1,5 +1,5 @@
 ---
-title: "セキュリティ拡張機能に関する考慮事項 |Microsoft ドキュメント"
+title: "拡張機能のセキュリティに関する考慮事項 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,31 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 002356fd21ed4124c9bf49d915081bf0902d71f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-considerations-for-extensions"></a>拡張機能のセキュリティに関する考慮事項
   共通言語ランタイム (CLR) をターゲットとするすべてのアプリケーションは、CLR セキュリティ システムと対話する必要があります。 このようなアプリケーションを実行すると、CLR によってアプリケーションが自動的に評価され、権限のセットが付与されます。 アプリケーションに付与された権限に応じて、実行が継続されるかセキュリティ例外が生成されます。 特定のレポート サーバーのセキュリティ ポリシー構成ファイルのローカル セキュリティ設定とポリシーによって、アセンブリが受け取るコード権限が定義されます。  
   
  権限を要求する前に、拡張コードが使用するリソースと保護された操作を認識すると共に、そのリソースと操作を保護する権限について知っておく必要があります。 拡張機能コンポーネントによって呼び出されるクラス ライブラリ メソッドがアクセスするリソースを継続的に追跡することも必要です。 詳細については、『[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 開発者ガイド』の「アクセス許可の要求」を参照してください。  
   
- レポート サーバーに配置される拡張機能を実行する必要があります、完全信頼として、拡張機能が与えられるコード グループの一部である必要があることを意味、 **FullTrust**権限セットです。 これは、特定のレポートに対してユーザーが承認されているかどうかに応じて、CLR を通して使用できる特定のサーバー リソースと操作に、拡張機能がアクセス権を持つことができることも意味します。 コード グループと拡張機能の詳細については、次を参照してください。 [Reporting Services でのコード アクセス セキュリティ](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)です。  
+ レポート サーバーに配置される拡張機能は、完全に信頼されて実行する必要があります。つまり、拡張機能は **FullTrust** アクセス許可セットを付与されたコード グループの一部である必要があります。 これは、特定のレポートに対してユーザーが承認されているかどうかに応じて、CLR を通して使用できる特定のサーバー リソースと操作に、拡張機能がアクセス権を持つことができることも意味します。 コード グループと拡張機能の詳細については、「[Reporting Services のコード アクセス セキュリティ](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、その拡張機能のすべてに [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] セキュリティを適用します。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
 -   特権ユーザーのみが、セキュリティ ポリシー ファイルを編集して拡張機能のコード アクセス セキュリティを有効にする権限を持ちます。  
   
- コード アクセス セキュリティの詳細については[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[セキュリティで保護された開発 & #40 です。Reporting Services &#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)」を参照してください。  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] セキュリティの詳細については、『[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 開発者ガイド』の「.NET Framework セキュリティ」を参照してください。  
   
@@ -55,8 +53,7 @@ ms.lasthandoff: 08/12/2017
  レポート サーバーで拡張機能を最初にメモリに読み込むときに、サービス アカウントの資格情報が使用されます。一部の拡張機能アセンブリでは、システム リソースへのアクセス、構成ファイルの読み込み、およびその他の依存するアセンブリの読み込みに特定の権限が必要であるためです。 ただし、アセンブリが読み込まれ、初期化された後は、拡張機能アセンブリのすべての呼び出しに、現在ログオンしているユーザー アカウントの資格情報が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 拡張機能](../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services の拡張機能](../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services 拡張機能ライブラリ](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

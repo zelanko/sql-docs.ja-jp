@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services のインストール (SharePoint モード) の移行 |Microsoft ドキュメント"
+title: "Reporting Services の移行 (SharePoint モード) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 75bce56e88ef80a33d13e188ad0ecbf3e8b453ec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 11c9a5f84630fc2f0804422e1e7191f5da8bd454
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 -   [コンテンツ データベースを移動する (SharePoint 2013)](http://technet.microsoft.com/library/cc262792.aspx)
   
 ##  <a name="bkmk_prior_versions"></a> SQL Server 2012 よりも前のバージョンの Reporting Services SharePoint モードからの移行  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャは、サービス アプリケーション データベース スキーマを含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で変更されました。 移行する場合は、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]より前のバージョンからの SharePoint モード[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、最初に SharePoint と SQL Server 2016 Reporting Services SharePoint モードをインストールして、新しい SharePoint 環境を作成します。 詳細については、「 [Reporting Services の SharePoint モードのインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャは、サービス アプリケーション データベース スキーマを含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で変更されました。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンから [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]SharePoint モードに移行する場合は、最初に、SharePoint と SQL Server 2016 Reporting Services SharePoint モードをインストールして、新しい SharePoint 環境を作成してください。 詳細については、「 [Reporting Services の SharePoint モードのインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
   
  新しい SharePoint 環境が実行されていると、コンテンツ データベースを含むデータベース レベルで、コンテンツのみの移行またはすべてのコンテンツの移行を選択できます。  
   
@@ -63,18 +61,18 @@ ms.lasthandoff: 08/17/2017
 -   **Reporting Services 移行ツール:** このツールを使用すると、ネイティブ モードのサーバーにあるレポート アイテムを SharePoint モードのサーバーにコピーできます。 詳細については、「 [Reporting Services 移行ツール](http://www.microsoft.com/download/details.aspx?id=29560) 」 (http://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
   
 ###  <a name="bkmk_full_migration"></a> すべてのコンテンツの移行  
- **すべてのコンテンツの移行:** SharePoint コンテンツ データベースを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースと共に新しいファームに移行する場合は、このトピックで説明しているバックアップと復元の一連のオプションを実行します。 場合によっては、バックアップ時に使用したツールとは異なるツールを復元時に使用する必要があります。 使用する例[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の以前のバージョンからキーのバックアップの暗号化に Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint サーバーの全体管理または PowerShell を使用して、SQL Server 2016 Reporting Services SharePoint モードのインストールを暗号化キーを復元する必要しますが、あります。  
+ **すべてのコンテンツの移行:** SharePoint コンテンツ データベースを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースと共に新しいファームに移行する場合は、このトピックで説明しているバックアップと復元の一連のオプションを実行します。 場合によっては、バックアップ時に使用したツールとは異なるツールを復元時に使用する必要があります。 たとえば、前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の暗号化キーをバックアップする場合には [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用できますが、SQL Server 2016 Reporting Services SharePoint モードに暗号化キーを復元する場合には SharePoint サーバーの全体管理または PowerShell を使用する必要があります。  
   
 ####  <a name="bkmk_databases"></a> 移行の完了時に存在するデータベース  
  次の表に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint を正常に移行した後に存在する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連の SQL Server データベースを示します。  
   
 |データベース|名前の例||  
 |--------------|------------------|-|  
-|カタログ データベース|[サービス アプリケーションの GUID] ReportingService_ **(\*)**|ユーザーが移行。|  
-|一時データベース|[サービス アプリケーションの GUID] ReportingService_ TempDB **(\*)**|ユーザーが移行。|  
+|カタログ データベース|ReportingService_[service application GUID] **(\*)**|ユーザーが移行。|  
+|一時データベース|ReportingService_[service application GUID]TempDB **(\*)**|ユーザーが移行。|  
 |警告データベース|ReportingService_[service application GUID]_Alerting|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成時に作成。|  
   
- **(\*)**の表に示す例の名前が SSRS によって使用される、新しい SSRS サービス アプリケーションを作成するときに、名前付け規則に従います。 別のサーバーから移行する場合、カタログ データベースと一時データベースの名前は元のインストールと同じになります。  
+ **(\*)** 表に示した名前の例は、新しい SSRS サービス アプリケーションを作成する際に SSRS によって使用される名前付け規則に従っています。 別のサーバーから移行する場合、カタログ データベースと一時データベースの名前は元のインストールと同じになります。  
   
 ####  <a name="bkmk_backup_operations"></a> バックアップ操作  
  ここでは、移行に必要な情報の種類と、バックアップの実行に使用するツールやプロセスについて説明します。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 08/17/2017
 ||オブジェクト|方法|注|  
 |-|-------------|------------|-----------|  
 |**1**|SharePoint コンテンツ データベースを新しいファームに復元する。|SharePoint の "データベース アタッチ アップグレード" の手法。|基本的な手順:<br /><br /> 1) データベースを新しいサーバーに復元します。<br /><br /> 2) URL を指定して、コンテンツ データベースを Web アプリケーションにアタッチします。<br /><br /> 3) Get-SPWebapplication を実行して、すべての Web アプリケーションと URL を一覧表示します。<br /><br /> <br /><br /> 「 [アップグレード戦略を決定する (SharePoint Server 2010)」(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)の「データベース接続アップグレード」と、「 [データベースを接続して SharePoint Server 2010 へアップグレードする」(http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)を参照してください。|  
-|**2**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースである SQL Server データベースを復元する (ReportServer)。|SQL データベースのバックアップと復元。<br /><br /> **または**<br /><br /> SQL Server データベースのデタッチとアタッチ。|データベースを使用すると、初めて[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は SQL Server 2016 の環境で動作するように、必要に応じてデータベース スキーマを更新します。|  
+|**2**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースである SQL Server データベースを復元する (ReportServer)。|SQL データベースのバックアップと復元。<br /><br /> **または**<br /><br /> SQL Server データベースのデタッチとアタッチ。|データベースを最初に使用するときに、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってデータベース スキーマが必要に応じて更新され、データベース スキーマが SQL Server 2016 環境で正常に動作できるようになります。|  
 |**3**|新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成する。|新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成する。|新しいサービス アプリケーションを作成するときに、コピーしたレポート サーバー データベースを使用するように構成します。<br /><br /> SharePoint サーバーの全体管理の使用に関する詳細については、「 [SharePoint モードでの最初のレポート サーバーのインストール](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)」の「手順 3: Reporting Services サービス アプリケーションを作成する」を参照してください。<br /><br /> PowerShell の使用例については、 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)の「PowerShell を使用して Reporting Services サービス アプリケーションを作成するには」を参照してください。|  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを復元する。|単純なファイル コピー。|このファイルの既定の場所の例: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
 |||||  
@@ -136,7 +134,6 @@ ms.lasthandoff: 08/17/2017
 ## <a name="next-steps"></a>次の手順
 
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Reporting Services インストールを移行します。](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+[Reporting Services のインストールを移行する](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

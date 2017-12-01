@@ -1,5 +1,5 @@
 ---
-title: "実行状態の識別 |Microsoft ドキュメント"
+title: "実行状態の識別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 83cdd4165f745bd6f2e42e65c8638328c1d41bd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="identifying-execution-state"></a>実行状態の識別
   Hypertext Transfer Protocol (HTTP) はコネクションレスおよびステートレス プロトコルです。つまり、同じクライアントから異なる要求が来ているかどうかは自動的に検出されません。さらに、ページまたはサイトを表示している 1 つのブラウザーが現在アクティブであるかどうかも、自動的には示されません。 セッションが論理接続を作成し、HTTP を介したサーバーとクライアント間の状態を保持します。 特定のセッションに関連するユーザー固有情報は、セッション状態と呼ばれます。  
   
  セッション管理には、HTTP 要求を同じセッションから生成された他の以前の要求と相関させることが含まれます。 セッション管理を使用しないと、HTTP プロトコルがコネクションレスでステートレスな性質であるため、このような要求がレポート サーバー Web サービスと関係なく表示されます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] におけるようなセッション状態の全体的な概念はありません。 ただし、レポートを実行するときに、レポート サーバーが維持メソッド間で状態の呼び出しの形式で、**実行**です。 実行によって、レポート サーバーからレポートを読み込む、レポートの資格情報とパラメーターを設定する、レポートを表示するなど、ユーザーが複数の方法でレポートと対話することができます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] におけるようなセッション状態の全体的な概念はありません。 ただし、レポートを実行する場合に、レポート サーバーは**実行**の形式でメソッド呼び出し間で状態を保持します。 実行によって、レポート サーバーからレポートを読み込む、レポートの資格情報とパラメーターを設定する、レポートを表示するなど、ユーザーが複数の方法でレポートと対話することができます。  
   
  レポート サーバーと通信中は、クライアントが実行を使用して、レポートの表示、ユーザーによるレポートの他のページへのナビゲーション、およびレポートのセクションの表示と非表示を管理します。 クライアント アプリケーションが実行しているレポートごとに、固有の実行が存在します。  
   
@@ -67,8 +65,7 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>参照  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [テクニカル リファレンス & #40 です。SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [SOAP ヘッダーをサービス レポートを使用します。](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [テクニカル リファレンス (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [Reporting Services SOAP ヘッダーの使用](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

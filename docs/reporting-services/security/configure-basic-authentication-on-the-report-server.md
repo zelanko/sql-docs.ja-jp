@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバーで基本認証を構成 |Microsoft ドキュメント"
+title: "レポート サーバーで基本認証を構成する | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  
@@ -43,9 +42,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-     ファイルはある*\<ドライブ >:*\Program Files\Microsoft SQL Server\MSRS13 です。MSSQLSERVER\Reporting services \reportserver にあります。  
+     このファイルは、*drive>:\<:*\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer にあります。  
   
-2.  検索\<**認証**>。  
+2.  \<**Authentication**> を検索します。  
   
 3.  次に示す XML 構造の中でニーズに最も合うものをコピーします。 最初の XML 構造には、次のセクションで説明するすべての要素を指定するためのプレースホルダーが含まれています。  
   
@@ -70,13 +69,13 @@ ms.lasthandoff: 08/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  既存のエントリを貼り付けます\<**認証**>。  
+4.  これを \<**Authentication**> の既存のエントリ上に貼り付けます。  
   
      複数の種類の認証を使用している場合は、 **RSWindowsBasic** 要素のみを追加し、 **RSWindowsNegotiate**、 **RSWindowsNTLM**、 **RSWindowsKerberos**の各エントリは削除しないようにします。  
   
      **Custom** は他の認証の種類と併用できないので注意してください。  
   
-5.  空の値を置き換えます\<**レルム**> または\<**例えば**> 環境内で有効な値を使用します。  
+5.  \<**Realm**> または \<**DefaultDomain**> の空の値を、現在の環境で有効な値に置き換えます。  
   
 6.  ファイルを保存します。  
   
@@ -98,4 +97,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
-

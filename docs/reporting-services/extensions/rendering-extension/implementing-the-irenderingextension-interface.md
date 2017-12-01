@@ -1,5 +1,5 @@
 ---
-title: "IRenderingExtension インターフェイスを実装する |Microsoft ドキュメント"
+title: "IRenderingExtension インターフェイスの実装 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 60eac755180faaba012c7fbd14001fcb66a37975
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 230c2e5ad4ffb61eb6d3b4d94db4e376b1f04d66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension インターフェイスの実装
   表示拡張機能では、実際のデータと組み合わされるレポート定義から出力結果を取得し、その結果データを使用可能な形式で表示します。 組み合わされたデータの変換と書式設定は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> を実装する共通言語ランタイム (CLR) クラスを使用して実行されます。 これにより、オブジェクト モデルは、ビューアーやプリンターなどの出力先で使用できる出力形式に変換されます。  
@@ -44,20 +42,20 @@ ms.lasthandoff: 08/12/2017
 ## <a name="render-method"></a>Render メソッド  
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> メソッドには、次のオブジェクトを表す引数が含まれます。  
   
--   *レポート*をレンダリングします。 このオブジェクトには、レポートのプロパティ、データ、およびレイアウト情報が含まれます。 レポートは、レポート オブジェクト モデル ツリーのルートです。  
+-   *report*: 表示するレポート。 このオブジェクトには、レポートのプロパティ、データ、およびレイアウト情報が含まれます。 レポートは、レポート オブジェクト モデル ツリーのルートです。  
   
--   *ServerParameters*存在する場合、文字列辞書オブジェクト、およびレポート サーバーのパラメーターが含まれています。  
+-   *ServerParameters*: 文字列辞書オブジェクト、およびレポート サーバーのパラメーター (存在する場合) が含まれます。  
   
--   *DeviceInfo*デバイス設定を含むパラメーター。 詳細については、次を参照してください。[表示拡張機能にデバイス情報設定を渡す](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)です。  
+-   *deviceInfo*: デバイス設定を含むパラメーター。 詳細については、「[表示拡張機能にデバイス情報設定を渡す](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)」を参照してください。  
   
--   *ClientCapabilities*パラメーターが含まれている<xref:System.Collections.Specialized.NameValueCollection>を表示するには、クライアントに関する情報を持つディクショナリ オブジェクトです。  
+-   *clientCapabilities* パラメーター: 表示先クライアントに関する情報を格納している <xref:System.Collections.Specialized.NameValueCollection> 辞書オブジェクトが含まれます。  
   
--   *RenderProperties*表示結果に関する情報を格納します。  
+-   *RenderProperties*: 表示結果に関する情報が含まれます。  
   
--   *CreateAndRegisterStream*に表示するためにストリームを取得するために呼び出すデリゲート関数。  
+-   *createAndRegisterStream*: 表示するストリームを取得するために呼び出すデリゲート関数。  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo パラメーター  
- *DeviceInfo*パラメーターには、表示パラメーターが含まれています。、パラメーターをレポートしません。 表示パラメーターは表示拡張機能に渡されます。 *DeviceInfo*値に変換、<xref:System.Collections.Specialized.NameValueCollection>レポート サーバーでのオブジェクト。 項目を*deviceInfo*パラメーターは大文字と小文字の値として扱われます。 URL による表示要求が行われる場合にアクセスするフォームの URL パラメーター`rc:key=value`キーと値のペアに変換されます、 *deviceInfo*ディクショナリ オブジェクトです。 ブラウザー検出コードは、次のアイテムも用意されています。、 *clientCapabilities*ディクショナリ: ある EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、種類、および AcceptLanguage です。 いずれかの名前と値のペア、 *deviceInfo*表示拡張機能によって認識されないパラメーターは無視されます。 次のコード サンプルは、アイコンを取得する <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを示します。  
+ *deviceInfo* パラメーターには、レポート パラメーターではなく、表示パラメーターが含まれます。 表示パラメーターは表示拡張機能に渡されます。 *deviceInfo* 値は、レポート サーバーによって <xref:System.Collections.Specialized.NameValueCollection> オブジェクトに変換されます。 *deviceInfo* パラメーターのアイテムは、大文字と小文字を区別しない値として扱われます。 URL アクセスによる表示要求が行われると、形式 `rc:key=value` の URL パラメーターが *deviceInfo* 辞書オブジェクトのキーと値のペアに変換されます。 ブラウザー検出コードによって、*clientCapabilities* 辞書のアイテムである EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type、および AcceptLanguage も指定されます。 *deviceInfo* パラメーターに表示拡張機能が認識しない名前と値のペアがある場合は、すべて無視されます。 次のコード サンプルは、アイコンを取得する <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを示します。  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -80,11 +78,10 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> メソッドは、レポート内の特定のストリームを表示します。 最初の <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 呼び出しですべてのストリームが作成されますが、ストリームは最初はクライアントに返されません。 このメソッドは、HTML 表示における画像などのセカンダリ ストリームや、画像 (EMF) などの複数ページ表示拡張機能の追加ページに使用します。  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource メソッド  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドは、レポート全体を表示せずに情報を取得します。 レポートに情報は必要だが、レポート自体を表示する必要がない場合があります。 たとえば、アイコンの表示拡張機能に関連付けられている場合は、使用、 *deviceInfo*パラメーターの 1 つのタグを含んでいる**\<アイコン >**です。 このような場合に、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを使用できます。  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドは、レポート全体を表示せずに情報を取得します。 レポートに情報は必要だが、レポート自体を表示する必要がない場合があります。 たとえば、表示拡張機能に関連付けられたアイコンが必要な場合、**\<Icon>** タグ 1 つを含む *deviceInfo* パラメーターを使用します。 このような場合に、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを使用できます。  
   
 ## <a name="see-also"></a>参照  
- [表示拡張機能を実装します。](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [表示拡張機能の実装](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [表示拡張機能の概要](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
   
   
-

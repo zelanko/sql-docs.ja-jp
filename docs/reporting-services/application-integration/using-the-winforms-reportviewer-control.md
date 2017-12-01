@@ -1,5 +1,5 @@
 ---
-title: "WinForms ReportViewer コントロールの使用 |Microsoft ドキュメント"
+title: "WinForms ReportViewer コントロールの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,56 +10,53 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WinForms ReportViewer コントロールを使用して Windows アプリケーションでレポートを表示します。  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Windows アプリケーションに ReportViewer コントロールを追加するには  
   
-1.  いずれかを使用して新しい Windows アプリケーションの作成[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]です。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] を使用して、新しい Windows アプリケーションを作成します。  
   
-     \-または、  
+     \- または -  
   
      既存の Windows アプリケーション プロジェクトを開いて新しいフォームを追加します。  
   
-2.  ReportViewer コントロールの検索、**ツールボックス**です。 場合、**ツールボックス**は、非表示にアクセスできるから、**ビュー**メニューを選択して**ツールボックス**です。  
+2.  **ツールボックス**で ReportViewer コントロールを探します。 **ツールボックス**が表示されていない場合は、**[表示]** メニューの **[ツールボックス]** をクリックするとアクセスできます。  
   
-     ![ReportViewer コントロールの選択](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "を選択すると ReportViewer コントロール")  
+     ![ReportViewer コントロールを選択する](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "ReportViewer コントロールを選択する")  
   
 3.  ReportViewer コントロールを Windows フォームのデザイン画面にドラッグします。  
   
-     ReportViewer1 という名前の ReportViewer コントロールは、フォームに追加されます。  
+     reportViewer1 という名前の ReportViewer コントロールがフォームに追加されます。  
   
- コントロールをフォームに追加した後、 **ReportViewer タスク**スマート タグが表示され、レポートを選択するように求められます。  
+ コントロールがフォームに追加されると、**[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。  
   
- 表示するレポートがレポート サーバーに展開されている場合、 **\<サーバー レポート >**オプションを**レポートの選択**ドロップダウン リスト。 後に、 **\<サーバー レポート >**オプションが選択されている場合、2 つのプロパティが表示されます:**レポート サーバーの Url**と**レポート パス**です。 **レポート サーバーの Url**レポート サーバーのアドレスは、および**レポート パス**表示するレポートを完全なパスです。  
+ 表示するレポートがレポート サーバーに配置されている場合は、**[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、**[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、**[レポートのパス]** は表示するレポートへの完全なパスです。  
   
- ![サーバー レポートを選択して](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "サーバー レポートの選択")  
+ ![サーバー レポートの選択](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "サーバー レポートの選択")  
   
- レポートをする場合のローカル モードでレポートを表示するいずれかを選択、**新しいレポートをデザイン**オプションを起動して、レポート デザイナーまたはレポートが既に既存のプロジェクトの一部を選択します。  
+ レポートをローカル モードで表示する場合は、**[新しいレポートのデザイン]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。  
   
  ![ローカル レポートの選択](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "ローカル レポートの選択")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>リモート処理モードでのレポートの表示  
  次の例では、WinForms ReportViewer コントロールを使用して、レポート サーバーに配置されているレポートを表示する方法を示します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル レポート プロジェクトに含まれている Sales Order Detail レポートを使用します。  
  
-**(C#)**
+**C#**
 ```csharp  
 public partial class Form1 : Form  
 {  
@@ -157,34 +154,34 @@ End Class
   
 1.  レポートを追加する Windows プロジェクトを開きます。  
   
-2.  **プロジェクト**メニューの **既存項目の追加**です。  
+2.  **[プロジェクト]** メニューの **[既存項目の追加]** を選択します。  
   
 3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples プロジェクトをインストールした場所を参照します。  
   
-     ダウンロード サンプルのレポートには、 [AdventureWorks 2012 レポート サンプル](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     レポート サンプルをダウンロードするには、「[AdventureWorks 2012 Report Samples](http://go.microsoft.com/fwlink/?LinkId=404153)」 (AdventureWorks 2012 のレポート サンプル) を参照してください  
   
-4.  Sales Order Detail.rdl ファイルを選択し、クリックして、**追加**ボタンをクリックします。  
+4.  Sales Order Detail.rdl ファイルを選択して **[追加]** ボタンをクリックします。  
   
      Sales Order Detail.rdl ファイルが、プロジェクトの一部になります。  
   
      ![Sales Order Detail レポート](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail レポート")  
   
-5.  ソリューション エクスプ ローラーで、Sales Order Detail.rdl ファイルを右クリックし **の名前を変更**です。 レポートの名前を変更**Sales Order Detail.rdlc** ENTER キーを押します。  
+5.  ソリューション エクスプローラーで Sales Order Detail.rdl ファイルを右クリックし、**[名前の変更]** を選択します。 レポートの名前を **Sales Order Detail.rdlc** に変更し、Enter キーを押します。  
   
-     ソリューション エクスプ ローラーが表示されない場合からを開くことができます、**ビュー**メニューを選択して**ソリューション エクスプ ローラー**です。  
+     ソリューション エクスプローラーが表示されていない場合は、**[表示]** メニューの **[ソリューション エクスプローラー]** を選択して開くことができます。  
   
     > [!NOTE]  
-    >  ファイル拡張子を rdl から rdlc に名前を変更するのレポート デザイナーを使用してレポートを編集する[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]です。  
+    >  ファイルの拡張子を rdl から rdlc に変更することによって、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] のレポート デザイナーでレポートを編集できるようになります。  
   
-6.  レポートの名前を変更したら、ファイルを選択して [プロパティ] ウィンドウに置きます。 変更、**出力ディレクトリにコピー**プロパティを**新しい場合はコピー**です。  
+6.  レポートの名前を変更したら、ファイルを選択して [プロパティ] ウィンドウに置きます。 **[出力ディレクトリにコピー]** プロパティを **[新しい場合はコピーする]** に変更します。  
   
-     ![出力へのコピーの設定を構成する](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "出力へのコピーの構成設定")  
+     ![出力にコピーの設定を構成する](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "出力にコピーの設定を構成する")  
   
-     場合、**プロパティ**ウィンドウが表示されないから開くことができます、**ビュー**メニューを選択して**プロパティ ウィンドウ**します。  
+     **[プロパティ]** ウィンドウが表示されていない場合は、**[表示]** メニューから **[プロパティ ウィンドウ]** を選択して開くことができます。  
   
  次のコード例では、販売注文データのデータセットが作成され、Sales Order Detail レポートがローカル モードで表示されます。  
 
-**(C#)**
+**C#**
 ```csharp  
 public partial class Form1 : Form  
 {  
@@ -512,7 +509,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>参照  
- [ReportViewer コントロールを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [ReportViewer コントロールを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   
-

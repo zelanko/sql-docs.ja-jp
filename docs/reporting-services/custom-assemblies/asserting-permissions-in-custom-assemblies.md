@@ -1,5 +1,5 @@
 ---
-title: "カスタム アセンブリのアクセス許可のアサート |Microsoft ドキュメント"
+title: "カスタム アセンブリでのアクセス許可のアサート | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - secure calls [Reporting Services]
 - custom assemblies [Reporting Services], permissions
@@ -21,30 +20,30 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: dc3e6e84c3f0a70a3c794b5cfd803e228e5dcce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: e98c186e950b5f4186aea4057fb63c0f27eaf1b3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>カスタム アセンブリでの権限のアサート
-  既定では、カスタム アセンブリ コードの実行が、限られた**実行**権限セットです。 ただし、場合によっては、(ファイルやレジストリなど) セキュリティ システムで保護されたリソースを安全に呼び出すカスタム アセンブリを実装する必要が生じる場合もあります。 そのためには、次の操作を実行する必要があります。  
+  既定では、カスタム アセンブリ コードは、限定された **Execution** アクセス許可セットに基づいて実行されます。 ただし、場合によっては、(ファイルやレジストリなど) セキュリティ システムで保護されたリソースを安全に呼び出すカスタム アセンブリを実装する必要が生じる場合もあります。 そのためには、次の操作を実行する必要があります。  
   
-1.  セキュリティで保護された呼び出しを行うために、コードに必要な正しい権限を識別します。 このメソッドの一部である場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]ライブラリ、この情報は、メソッドのドキュメントに含める必要があります。  
+1.  セキュリティで保護された呼び出しを行うために、コードに必要な正しい権限を識別します。 このメソッドが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ライブラリの一部である場合、この情報をメソッド ドキュメントに含める必要があります。  
   
-2.  カスタム アセンブリに必要な権限を与えるために、レポート サーバー ポリシーの構成ファイルを変更します。 セキュリティ ポリシーの構成ファイルの詳細については、次を参照してください。[を使用して Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)です。  
+2.  カスタム アセンブリに必要な権限を与えるために、レポート サーバー ポリシーの構成ファイルを変更します。 セキュリティ ポリシー構成ファイルの詳細については、「[Reporting Services セキュリティ ポリシー ファイルの使用](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。  
   
-3.  セキュリティで保護された呼び出しを行うメソッドの一部として、必要な権限をアサートします。 これは、レポート サーバーによって呼び出されるカスタム アセンブリ コードがレポート式のホスト アセンブリと実行の一部であるために必要**実行**既定のアクセスを許可します。 **実行**アクセス許可セットにより、コードを実行するには保護されたリソースを使用しないようにします。  
+3.  セキュリティで保護された呼び出しを行うメソッドの一部として、必要な権限をアサートします。 レポート サーバーによって呼び出されるカスタム アセンブリ コードは、レポート式のホスト アセンブリの一部であり、既定では **Execution** アクセス許可で実行するため、このアサートが必要です。 **Execution** アクセス許可セットでコードを実行できますが、保護されたリソースを使用することはできません。  
   
-4.  使用してカスタム アセンブリをマーク**AllowPartiallyTrustedCallersAttribute**厳密な名前で署名されている場合。 これは、カスタム アセンブリは、レポート式のホスト アセンブリを既定が許可されていないの一部であるレポート式から呼び出されるために必要な**FullTrust**;「部分的に信頼された」呼び出し元であるためです。 詳細については、次を参照してください。[付きカスタム アセンブリ](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md)です。  
+4.  カスタム アセンブリが厳密な名前で署名されている場合、カスタム アセンブリを **AllowPartiallyTrustedCallersAttribute** でマークします。 カスタム アセンブリは、レポート式のホスト アセンブリの一部であるレポート式から呼び出され、既定では、**FullTrust** が与えられていない、つまり、"部分的な信頼関係のある" 呼び出し元であるため、このマークが必要です。 詳細については、「[複雑な名前を持つカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md)」を参照してください。  
   
 ## <a name="implementing-a-secure-call"></a>セキュリティで保護された呼び出しの実装  
- ポリシーの構成ファイルを変更して、アセンブリに特定の権限を与えます。 たとえば、通貨換算を処理するためにカスタム アセンブリを書き込んだ場合、現在の通貨換算レートをファイルから読み取らなければならない場合があります。 換算レート情報を取得する、追加のセキュリティ アクセス許可を追加する必要は**FileIOPermission**アセンブリの権限セットにします。 ポリシーの構成ファイルで次の追加エントリを作成できます。  
+ ポリシーの構成ファイルを変更して、アセンブリに特定の権限を与えます。 たとえば、通貨換算を処理するためにカスタム アセンブリを書き込んだ場合、現在の通貨換算レートをファイルから読み取らなければならない場合があります。 換算レート情報を取得するには、追加セキュリティ アクセス許可 **FileIOPermission** をアセンブリのアクセス許可セットに追加する必要があります。 ポリシーの構成ファイルで次の追加エントリを作成できます。  
   
 ```  
 <PermissionSet class="NamedPermissionSet"  

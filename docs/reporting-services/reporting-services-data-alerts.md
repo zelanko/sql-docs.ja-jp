@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services のデータ警告 |Microsoft ドキュメント"
+title: Reporting Services Data Alerts | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f2be4b604e088329f719195976903f6dcb516246
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
 
@@ -29,12 +28,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services のデータ警告は、データ ドリブンの警告ソリューションですが興味深いか、使用して、適切なタイミングで重要なレポート データに通知することができます。 データ警告を使用することで、情報を探し出す必要がなくなり、情報が自動的に通知されるようになります。
+SQL Server Reporting Services の "データ警告" は、関心のある、または重要なレポート データを適切なタイミングで把握できるよう補助する、データ駆動型の警告ソリューションです。 データ警告を使用することで、情報を探し出す必要がなくなり、情報が自動的に通知されるようになります。
 
 データ警告メッセージは電子メールで送信されます。 情報の重要性に応じて、メッセージの送信頻度を選択したり、結果が変更された場合にのみメッセージが送信されるようにすることができます。 複数の電子メール受信者を指定して、この方法で他のユーザーに通知し、効率性とコラボレーションを強化することができます。
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
 ##  <a name="AlertingWF"></a> データ警告のアーキテクチャとワークフロー
 
@@ -88,7 +87,7 @@ SQL Server Reporting Services のデータ警告は、データ ドリブンの�
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>データ警告定義と警告メタデータの保存  
  SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] をインストールすると、SQL Server 警告データベースが自動的に作成されます。  
   
- データ警告定義と警告メタデータは、警告データベースに保存されます。 既定では、この名前は ReportingServices\<GUID > _Alerting です。  
+ データ警告定義と警告メタデータは、警告データベースに保存されます。 このデータベースの既定の名前は ReportingServices\<GUID>_Alerting です。  
   
  データ警告定義を保存すると、警告定義のための SQL Server エージェント ジョブが自動的に作成されます。 このジョブには、ジョブ スケジュールが含まれます。 このスケジュールは、警告定義で定義した定期的なパターンに基づくものです。 ジョブを実行すると、データ警告定義の処理が開始されます。  
   
@@ -127,7 +126,7 @@ SQL Server Reporting Services のデータ警告は、データ ドリブンの�
   
  このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「 [SQL Server エージェントの構成](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) 」および「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
- SharePoint サーバーの全体管理の **[サブスクリプションと警告の準備]** ページでは、SQL Server エージェントが実行されているかどうかを確認し、SQL Server エージェントへのアクセス権を付与するために実行するカスタムの [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを作成およびダウンロードできます。 また、PowerShell を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成することもできます。 詳細については、「 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
+ SharePoint サーバーの全体管理の **[サブスクリプションと警告の準備]** ページでは、SQL Server エージェントが実行されているかどうかを確認し、SQL Server エージェントへのアクセス権を付与するために実行するカスタムの [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを作成およびダウンロードできます。 また、PowerShell を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成することもできます。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
 ##  <a name="ConfigAlert"></a> データ警告の構成  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールする場合は必ず、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能 (データ警告を含む) の設定が、レポート サーバー構成ファイル (rsreportserver.config) と SharePoint 構成データベースの間で分散されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインストールおよび構成の 1 つの手順としてサービス アプリケーションを作成すると、SharePoint 構成データベースが自動的に作成されます。 詳細については、「 [RsReportServer.config 構成ファイル](../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」および「 [Reporting Services 構成ファイル](../reporting-services/report-server/reporting-services-configuration-files.md)」を参照してください。  
@@ -295,7 +294,7 @@ SQL Server Reporting Services のデータ警告は、データ ドリブンの�
   
      サイト上のすべてのデータ警告の管理に関する詳細については、「 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md) 」および「 [データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)」を参照してください。  
   
--   **サブスクリプションとデータ警告の準備** では、Reporting Services がデータ警告に SQL Server エージェントを使用できるかどうかを確認したり、SQL Server エージェントへのアクセス権を付与するためのスクリプトをダウンロードすることができます。 詳細については、「 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
+-   **サブスクリプションとデータ警告の準備** では、Reporting Services がデータ警告に SQL Server エージェントを使用できるかどうかを確認したり、SQL Server エージェントへのアクセス権を付与するためのスクリプトをダウンロードすることができます。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
 ##  <a name="Globalization"></a> データ警告のグローバリゼーション  
  アラビア語やヘブライ語などの特定のスクリプトは、右から左に記述されます。 データ警告では、左から右に記述するスクリプトだけでなく、右から左のスクリプトもサポートされています。 データ警告は、カルチャを検出し、ユーザー インターフェイスの外観と動作、ならびにデータ警告メッセージのレイアウトを必要に応じて変更します。 カルチャは、ユーザーのコンピューター上で稼動しているオペレーティング システムの地域設定から取得されます。 カルチャは、データ警告定義を更新して再保存するたびに更新されます。  
@@ -326,7 +325,6 @@ SQL Server Reporting Services のデータ警告は、データ ドリブンの�
 
 [データ警告デザイナー](../reporting-services/data-alert-designer.md)   
 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[データ警告の SharePoint ユーザーのマネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+[SharePoint ユーザー用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

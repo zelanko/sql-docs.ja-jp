@@ -1,5 +1,5 @@
 ---
-title: "データ警告デザイナーでデータ アラートを作成 |Microsoft ドキュメント"
+title: "データ警告デザイナーでのデータ警告の作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>データ警告デザイナーでのデータ警告の作成
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 08/17/2017
 データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)」を参照してください。
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
 
-## <a name="create-a-data-alert-definition"></a>データ警告定義を作成します。
+## <a name="create-a-data-alert-definition"></a>データ警告定義の作成
  
 1.  データ警告定義の作成対象となるレポートを含んだ SharePoint ライブラリを探します。  
   
@@ -60,9 +59,9 @@ ms.lasthandoff: 08/17/2017
   
 4.  必要に応じて、 **[レポート データ名]** ボックスの一覧から異なるデータ フィードを選択します。  
   
-     レポートからデータ フィードが生成されない場合、そのレポートに対して警告定義を作成することはできません。 各データ フィードの内容は、レポートのレイアウトによって決まります。 詳細については、「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。  
+     レポートからデータ フィードが生成されない場合、そのレポートに対して警告定義を作成することはできません。 各データ フィードの内容は、レポートのレイアウトによって決まります。 詳細については、「[複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。  
   
-5.  必要に応じて、**[警告名]** ボックスに表示される既定の名前を、よりわかりやすい名前に変更します。  
+5.  必要に応じて、 **[警告名]** ボックスに表示される既定の名前を、よりわかりやすい名前に変更します。  
   
      レポートの名前が、警告定義の既定の名前として使用されます。 警告定義名は必ずしも一意である必要はありませんが、後でデータ警告マネージャーで警告の一覧を表示したときに区別しづらくなる可能性はあります。 警告定義には、一意でわかりやすい名前を使用することをお勧めします。  
   
@@ -119,11 +118,11 @@ ms.lasthandoff: 08/17/2017
   
      警告定義の作成者の電子メール アドレスが利用できる場合は、 **[受信者]** ボックスに追加されます。  
   
-20. 必要に応じて、**[件名]** ボックスで、警告メッセージの件名行を更新します。  
+20. 必要に応じて、 **[件名]** ボックスで、警告メッセージの件名行を更新します。  
   
-     既定の件名は**データ アラート\<データ警告名 >**です。  
+     既定の件名は、**"\<データ警告名> に関するデータの警告"** です。  
   
-21. 必要に応じて、**[説明]** ボックスに警告メッセージの説明を入力します。  
+21. 必要に応じて、 **[説明]** ボックスに警告メッセージの説明を入力します。  
   
 22. **[保存]**をクリックします。  
 
@@ -131,7 +130,6 @@ ms.lasthandoff: 08/17/2017
 
 [データ警告デザイナー](../reporting-services/data-alert-designer.md)   
 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)  
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

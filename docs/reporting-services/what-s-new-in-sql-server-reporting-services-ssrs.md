@@ -1,5 +1,5 @@
 ---
-title: "新機能 Reporting Services (SSRS) |Microsoft ドキュメント"
+title: "Reporting Services (SSRS) の新機能 | Microsoft Docs"
 ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
@@ -13,27 +13,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
-ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 65eb6720677fbb4e6f95086aefc162dc23563206
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server の新機能について学習[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。 ここでは、主な機能領域を扱います。新しいアイテムがリリースされた場合は更新します。
+SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の新機能について説明します。 ここでは、主な機能領域を扱います。新しいアイテムがリリースされた場合は更新します。
 
-  新機能 SQL Server の他の領域については、次を参照してください。[の SQL Server 2017 新](../sql-server/what-s-new-in-sql-server-2017.md)または[SQL Server 2016 の新](../sql-server/what-s-new-in-sql-server-2016.md)です。
+  SQL Server の他の領域の新機能については、「[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)」、または「[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。
 
  **ダウンロード** ![download](../analysis-services/media/download.png "download")
 
-- SQL Server 2017 Reporting Services をダウンロードするには、  **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)**です。
+- SQL Server 2017 Reporting Services をダウンロードするには、「**[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)**」に移動します。
 
-現在のリリース ノートについては、次を参照してください。 [SQL Server 2017 年 1 リリース ノート](../sql-server/sql-server-2017-release-notes.md)または[Power BI のレポート サーバーのリリース ノート](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)です。 Power BI のレポート サーバーについては、次を参照してください。 [Power BI のレポート サーバーの概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)です。
+最新のリリース ノートについては、「[SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)」または「[Power BI Report Server のリリース ノート](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)」を参照してください。 Power BI のレポート サーバーについては、「[Power BI Report Server の概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)」を参照してください。
 
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 
@@ -43,26 +41,26 @@ SQL Server の新機能について学習[!INCLUDE[ssRSnoversion](../includes/ss
 
 ![レポート サーバー内のコメント](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
 
-詳細については、次を参照してください。[のレポート サーバーでレポートにコメントを追加](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)です。
+詳細については、「[レポート サーバーのレポートにコメントを追加する](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)」を参照してください。
 
-### <a name="dax-queries-in-reporting-tools"></a>レポート作成ツールで DAX クエリ
+### <a name="dax-queries-in-reporting-tools"></a>レポート ツールの DAX クエリ
 
 レポート ビルダーと SQL Server Data Tools の最新リリースでは、クエリ デザイナーで必要なフィールドをドラッグ アンド ドロップすることで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリを作成できます。 [Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
 
 ### <a name="rest-api-support"></a>REST API のサポート
 
-最新のアプリケーションとカスタマイズの開発を有効にするには、SQL Server Reporting Services は今すぐ完全 OpenAPI 対応 rest ベースの API をサポートします。 完全 API 仕様およびマニュアル今すぐにあります[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)です。
+最新のアプリケーションとカスタマイズを開発できるようにするため、SQL Server Reporting Services は OpenAPI に完全に対応する RESTful API をサポートするようになりました。 API の完全な仕様とドキュメントは、[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) で入手できます。
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>DAX では、今すぐレポート ビルダーおよび SQL Server Data Tools のデザイナー サポートをクエリします。
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>レポート ビルダーおよび SQL Server Data Tools での DAX に対するクエリ デザイナーのサポート
 
-レポート ビルダーと SQL Server Data Tools – リリース候補、最新のリリースでは、サポートされている SQL Server Analysis Services 表形式のデータ モデルに対するネイティブの DAX クエリを作成できます。 両方のツールで、クエリ デザイナーを使用するにはドラッグ アンド ドロップして、DAX クエリを自分で記述する代わりに生成されるフィールドです。  
+レポート ビルダーと SQL Server Data Tools (リリース候補) の最新リリースで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリが作成できるようになりました。 両方のツールでクエリ デザイナーを使用して、必要なフィールドをドラッグ アンド ドロップしたり、DAX クエリを自分で記述する代わりに自動生成させることができます。  
  
-参照してください、 [Reporting Services ブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)です。
+詳細については、[Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
 
-* ダウンロード[SQL Server 2016 レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=734968)です。
-* ダウンロード[SQL Server Data Tools - リリース候補](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)です。
+* [Microsoft SQL Server 2016 レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=734968)のダウンロード
+* [SQL Server Data Tools - リリース候補](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)のダウンロード
 
-> **注**: ビルドされた SQL Server 2016 + で SSAS 表形式のデータ ソースで DAX のクエリ デザイナーを使用することができますのみです。
+> **注**: DAX のクエリ デザイナーは、SQL Server 2016+ に組み込まれた SSAS 表形式のデータ ソースでのみ使用できます。
  
 ## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
   
@@ -112,7 +110,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
  
 詳細については、以下をご覧ください。  
   
--   [SharePoint と Reporting Services サーバーおよびアドインでは、&#40; のサポートされる組み合わせSQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [SharePoint 製品用 Reporting Services アドインの検索場所](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -129,15 +127,15 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
 
 **最新のページ分割されたレポート:** グラフ、ゲージ、マップ、その他のデータ ビジュアル化のための最新スタイルで改ページ調整されたレポートを美しくデザインします。
   
-**ツリー マップとサンバースト グラフ:**ツリー マップでレポートを強化![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")およびサンバースト![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")グラフ、階層データを表示する優れた方法です。 詳細については、「 [Reporting Services のツリー マップとサンバースト グラフ](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)」を参照してください。  
+**ツリー マップとサンバースト グラフ:** ツリーマップ ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") とサンバースト グラフ ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") を使用してレポートを強化できます。これらは、階層データを表示する優れた方法です。 詳細については、「 [Reporting Services のツリー マップとサンバースト グラフ](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)」を参照してください。  
 
 **レポートの埋め込み:** iframe を URL パラメーターと共に使用して、モバイル レポートやページ分割されたレポートを他の Web ページやアプリケーションに埋め込むことができるようになりました。  
 
-**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択できます。   ![注](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")で更新を管理[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サブスクリプション、アイテムをピン留めすると後、サブスクリプションを編集して別の更新スケジュールを構成します。  
+**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択できます。   ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- 詳細については、次を参照してください。 [Power BI のレポート サーバーの統合 &#40;です。構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と[Power BI ダッシュ ボードにピン留め Reporting Services のアイテム](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)です。  
+ 詳細については、「[Power BI Report Server の統合 &#40;構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)」および「[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。  
  
  **PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
   
@@ -178,7 +176,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 **カスタム パラメーター ペイン:** ペインをカスタマイズできるようになりました。 レポート ビルダーのデザイン サーフェイスを使用して、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。   詳細については、「[レポートのパラメーター ペインをカスタマイズする &#40;レポート ビルダー&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)」を参照してください。  
   
- ![レポート データ ペインで、パラメーター ペインのパラメーター リスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "レポート データ ペインで、パラメーター ペインのパラメーター リスト")  
+ ![レポート データ ペインとパラメーター ペインのパラメーター リスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "レポート データ ペインとパラメーター ペインのパラメーター リスト")  
 
   
 **High DPI のサポート:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] では、高 DPI (インチあたりのドット数) スケーリングと高 DPI デバイスをサポートします。  高 DPI の詳細については、次の記事をご覧ください。  
@@ -199,4 +197,3 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Power BI レポート サーバー](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

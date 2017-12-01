@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services SharePoint モードの PowerShell コマンドレット |Microsoft ドキュメント"
+title: "Reporting Services SharePoint モード用の PowerShell コマンドレット | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,33 +14,32 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5ab2078266bb130e80b0919c2a4f19e8cf45a671
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be7fe550a03d527e3189adf029f183bbb3af517b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードの PowerShell コマンドレット
+# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server 2016 Reporting Services SharePoint モードをインストールするときに、PowerShell コマンドレットは、SharePoint モードでレポート サーバーをサポートするためにインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
+SQL Server 2016 Reporting Services SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
   
--   Reporting Services SharePoint のインストールでは、サービスとプロキシを共有します。  
+-   Reporting Services SharePoint 共有サービスおよびプロキシのインストール。  
   
--   プロビジョニングと Reporting Services の管理アプリケーションおよび関連付けられたプロキシ サービスを提供します。  
+-   Reporting Services サービス アプリケーションおよび関連付けられたプロキシのプロビジョニングと管理。  
   
--   Reporting Services の機能、例の拡張機能、暗号化キーを管理します。  
+-   Reporting Services 機能 (拡張機能や暗号化キーなど) の管理。  
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
 ## <a name="cmdlet-summary"></a>コマンドレットの概要
 
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション「データベース」への参照はすべての Reporting Services サービス アプリケーションによって作成および使用のデータベースを参照してください。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、Reporting Services サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -49,7 +48,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
  次のいずれかの問題が発生しています。  
   
--   Reporting Services SharePoint モードがインストールされていないと、Reporting Services のコマンドレットがインストールされていないためです。  
+-   Reporting Services SharePoint モードがインストールされていないため、Reporting Services コマンドレットがインストールされていません。  
   
 -   SharePoint 管理シェルでなく、Windows PowerShell または Windows PowerShell ISE で PowerShell コマンドを実行しました。 SharePoint 管理シェルを使用するか、次のコマンドで SharePoint スナップインを Windows PowerShell ウィンドウに追加します。  
   
@@ -59,7 +58,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
  詳細については、「 [Windows PowerShell を使用して SharePoint 2013 を管理する](http://technet.microsoft.com/library/ee806878.aspx)) を使用することもできます。  
   
-### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開き、コマンドレットを実行します。
+### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行する
   
 1.  **[スタート]** ボタンをクリックします。  
   
@@ -73,14 +72,14 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
 ##  <a name="shared-service-and-proxy-cmdlets"></a>共有サービスとプロキシ コマンドレット
 
- 次の表には、Reporting Services SharePoint 共有サービス用の PowerShell コマンドレットが含まれています。  
+ 次の表に、Reporting Services SharePoint 共有サービス用の PowerShell コマンドレットを示します。  
   
 |コマンドレット|Description|  
 |------------|-----------------|  
-|Install-SPRSService|インストールおよび登録するか、Reporting Services 共有サービスをアンインストールします。 これは、SQL Server Reporting Services の SharePoint モードでインストールされているコンピューター上でのみ実行できます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> -Reporting Services サービスは、ファームにインストールされます。<br /><br /> -Reporting Services サービス インスタンスは、現在のコンピューターにインストールされます。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br /><br /> -Reporting Services サービスが現在のコンピューターからアンインストールされます。<br /><br /> -Reporting Services サービスがファームからアンインストールされます。<br /><br /> <br /><br /> Reporting Services サービスがインストールされて、ファーム内の他のコンピューターが存在する場合、ファームで実行されている Reporting Services サービス アプリケーションは引き続き、警告メッセージが表示されます。|  
+|Install-SPRSService|Reporting Services 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server Reporting Services がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> - Reporting Services サービスがファームにインストールされます。<br /><br /> - Reporting Services サービス インスタンスが現在のコンピューターにインストールされます。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br /><br /> - Reporting Services サービスが現在のコンピューターからアンインストールされます。<br /><br /> - Reporting Services サービスがファームからアンインストールされます。<br /><br /> <br /><br /> Reporting Services サービスがインストールされているファーム内に他のコンピューターが存在する場合や Reporting Services サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
 |Install-SPRSServiceProxy|SharePoint ファーム内で Reporting Services サービス プロキシをインストールして登録するか、アンインストールします。|  
 |Get-SPRSProxyUrl|Reporting Services サービスにアクセスするための URL を取得します。|  
-|Get-SPRSServiceApplicationServers|Reporting Services 共有サービスのインストールを含む、ローカル SharePoint ファーム内のすべてのサーバーを取得します。 このコマンドレットは、Reporting Services のアップグレード、どのサーバーが共有サービスを実行し、したがってにアップグレードする必要がありますを決定するのに役立ちます。|  
+|Get-SPRSServiceApplicationServers|Reporting Services 共有サービスのインストールを含む、ローカル SharePoint ファーム内のすべてのサーバーを取得します。 このコマンドレットは、どのサーバーで共有サービスを実行していてアップグレードする必要があるかを調べる目的に適しており、Reporting Services のアップグレードに役立ちます。|  
   
 ## <a name="service-application-and-proxy-cmdlets"></a>サービス アプリケーションとプロキシ コマンドレット
 
@@ -88,23 +87,23 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
 |コマンドレット|Description|  
 |------------|-----------------|  
-|Get-SPRSServiceApplication|1 つまたは複数の Reporting Services サービス アプリケーション オブジェクトを取得します。|  
+|Get-SPRSServiceApplication|1 つ以上の Reporting Services サービス アプリケーション オブジェクトを取得します。|  
 |New-SPRSServiceApplication|新しい Reporting Services サービス アプリケーションと、それに関連付けられたデータベースを作成します。<br /><br /> LogonType パラメーター: レポート サーバーが、レポート サーバー データベースへのアクセスに SSRS Application Pool アカウントと SQL Server ログインのどちらを使用するかを指定します。 以下の値が有効です。<br /><br /> 0 Windows 認証<br /><br /> 1 SQL Server<br /><br /> 2 アプリケーション プール アカウント (既定)|  
 |Remove-SPRSServiceApplication|指定した Reporting Services サービス アプリケーションを削除します。 これを実行すると、関連付けられたデータベースも削除されます。|  
 |Set-SPRSServiceApplication|既存の Reporting Services サービス アプリケーションのプロパティを編集します。|  
 |New-SPRSServiceApplicationProxy|新しい Reporting Services サービス アプリケーション プロキシを作成します。|  
 |Get-SPRSServiceApplicationProxy|1 つ以上の Reporting Services サービス アプリケーション プロキシを取得します。|  
-|Dismount-SPRSDatabase|Reporting Services サービス アプリケーション用のサービス アプリケーション データベースのマウントを解除します。|  
+|Dismount-SPRSDatabase|Reporting Services サービス アプリケーションのサービス アプリケーション データベースをマウント解除します。|  
 |Remove-SPRSDatabase|Reporting Services サービス アプリケーション用のサービス アプリケーション データベースを削除します。|  
-|Set-SPRSDatabase|Reporting Services サービス アプリケーションに関連付けられているデータベースのプロパティを設定します。|  
-|Mount-SPRSDatabase|Reporting Services サービス アプリケーションのデータベースをマウントします。|  
-|New-SPRSDatabase|指定した Reporting Services サービス アプリケーション用に新しいサービス アプリケーション データベースを作成します。|  
-|Get-SPRSDatabaseCreationScript|Reporting Services サービス アプリケーションの画面にデータベース作成スクリプトを出力します。 その後、SQL Server Management Studio でスクリプトを実行できます。|  
+|Set-SPRSDatabase|Reporting Services サービス アプリケーションに関連付けられたデータベースのプロパティを設定します。|  
+|Mount-SPRSDatabase|Reporting Services サービス アプリケーション用のデータベースをマウントします。|  
+|New-SPRSDatabase|指定した Reporting Services サービス アプリケーション用の新しいサービス アプリケーション データベースを作成します。|  
+|Get-SPRSDatabaseCreationScript|Reporting Services サービス アプリケーション用に、データベース作成スクリプトを画面に出力します。 その後、SQL Server Management Studio でスクリプトを実行できます。|  
 |Get-SPRSDatabase|1 つ以上の Reporting Services サービス アプリケーション データベースを取得します。 Set-SPRSDatabase コマンドレットを使用して `querytimeout`などのプロパティを変更できるように、コマンドを使用してサービス アプリケーション データベースの ID を取得します。 このトピックの例「 [Reporting Service アプリケーション データベースのプロパティの取得と設定](#bkmk_example_db_properties)」を参照してください。|  
-|Get-SPRSDatabaseRightsScript|Reporting Services サービス アプリケーションの画面に、データベース権限スクリプトを出力します。 これを実行すると、対象のユーザーとデータベースの入力を求めるプロンプトが表示され、権限を変更するための Transact-SQL が返されます。 その後、SQL Server Management Studio でこのスクリプトを実行できます。|  
-|Get-SPRSDatabaseUpgradeScript|データベース アップグレード スクリプトを画面に出力します。 スクリプトは、Reporting Services サービス アプリケーション データベースを現在の Reporting Services インストールのデータベースのバージョンにアップグレードされます。|  
+|Get-SPRSDatabaseRightsScript|Reporting Services サービス アプリケーション用に、データベース権限スクリプトを画面に出力します。 これを実行すると、対象のユーザーとデータベースの入力を求めるプロンプトが表示され、権限を変更するための Transact-SQL が返されます。 その後、SQL Server Management Studio でこのスクリプトを実行できます。|  
+|Get-SPRSDatabaseUpgradeScript|データベース アップグレード スクリプトを画面に出力します。 このスクリプトは、Reporting Services サービス アプリケーション データベースを、現在の Reporting Services インストールのデータベース バージョンにアップグレードします。|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services カスタム runctionality コマンドレット
+## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services カスタム機能コマンドレット
   
 |コマンドレット|Description|  
 |------------|-----------------|  
@@ -120,7 +119,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
 ## <a name="basic-samples"></a>基本的なサンプル
 
- 名前に 'SPRS' を含んでいるコマンドレットの一覧を返します。 Reporting Services のコマンドレットの完全な一覧になります。  
+ 名前に 'SPRS' を含んでいるコマンドレットの一覧を返します。 これは Reporting Services コマンドレットの完全な一覧になります。  
   
 ```  
 Get-command –noun *SPRS*  
@@ -142,7 +141,7 @@ Install-SPRSService
 Install-SPRSServiceProxy  
 ```  
   
- Reporting Services サービスを開始します。  
+ Reporting Services サービスの開始  
   
 ```  
 get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
@@ -166,7 +165,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  作成したプロキシを既定のプロキシ グループに追加する。  
   
-3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 スクリプトには、サイトが前提としています`http://sitename`既に存在します。  
+3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 このスクリプトは、サイト `http://sitename` が既に存在することを前提としています。  
   
 ```  
 # Create service application and service application proxy  
@@ -220,7 +219,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server 
 get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
-### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>取得し、レポート サービス アプリケーション データベースのプロパティを設定
+### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>Reporting Service アプリケーション データベースのプロパティの取得と設定
 
  次の例では、set コマンドに指定するデータベースの GUID (ID) を確認できるように、最初にデータベースとプロパティの一覧を返します。 プロパティの一覧については、「 `Get-SPRSDatabase | format-list`」を参照してください。  
   
@@ -254,7 +253,7 @@ Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, q
   
 ### <a name="list-reporting-services-data-extensions"></a>Reporting Services データ拡張機能の一覧表示
 
- 次の例では、各 Reporting Services サービス アプリケーションをループし、それぞれの現在のデータ拡張機能の一覧を示します。  
+ 次の例では、各 Reporting Services サービス アプリケーションの間をループし、それぞれの現在のデータ拡張機能を一覧表示します。  
   
 ```  
 $apps = Get-SPRSServiceApplication  
@@ -291,13 +290,12 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
 ### <a name="change-and-list-reporting-services-subscription-owners"></a>Reporting Services サブスクリプション所有者の変更と一覧表示
 
- 参照してください[変更、Reporting Services サブスクリプション所有者の一覧し、サブスクリプションを実行する PowerShell を使用して](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)です。  
+ 「[PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
   
 ## <a name="next-steps"></a>次の手順
 
-[PowerShell を使用して、変更、Reporting Services サブスクリプション所有者の一覧し、サブスクリプションを実行するには](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[チェックリスト: PowerShell for SharePoint の Power Pivot をことを確認するには](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[SQL Server PowerShell のヘルプを表示](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[SQL Server PowerShell のヘルプの参照](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

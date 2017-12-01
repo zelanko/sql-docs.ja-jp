@@ -1,11 +1,10 @@
 ---
 title: "SQL Server の最大容量仕様 | Microsoft Docs"
-ms.date: 03/09/2017
+ms.date: 11/6/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c56b0a570f295896e76c5d0b3441042543445178
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 
@@ -81,12 +79,12 @@ ms.lasthandoff: 08/11/2017
 |データベースごとのファイル数||32,767||  
 |ファイル サイズ (データ)||16 テラバイト||  
 |ファイル サイズ (ログ)||2 テラバイト||  
-|データベースごとのメモリ最適化データに対応するデータ ファイル||4.096||  
+|データベースごとのメモリ最適化データに対応するデータ ファイル||[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] では 4,096。 それより後のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、このような厳密な制限はありません。||  
 |メモリ最適化データに対応するデータ ファイルごとのデルタ ファイル||1||  
 |テーブルごとの外部キー テーブル参照数||発信 = 253。 着信 = 10,000。|制限については、「 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。|  
 |識別子長 (文字数)||128||  
 |コンピューターごとのインスタンス数||スタンドアロン サーバー上に 50 個のインスタンス。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、クラスター インストールのストレージ オプションとして共有クラスター ディスクを使用する場合、フェールオーバー クラスター上に 25 個のインスタンスがサポートされます。クラスター インストールのストレージ オプションとして SMB ファイル共有を選択する場合は、フェールオーバー クラスター上に 50 個のインスタンスがサポートされます。||  
-|メモリ最適化テーブルごとのインデックス||8||  
+|メモリ最適化テーブルごとのインデックス||[!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] 以降および [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)] では 999<br/>[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] および [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)] では 8||  
 |SQL ステートメントが含まれた文字列の長さ (バッチ サイズ)||65,536 * ネットワーク パケット サイズ|ネットワーク パケット サイズとは、アプリケーションとリレーショナル [!INCLUDE[ssDE](../includes/ssde-md.md)]の間の通信に使用される表形式データ ストリーム (TDS) パケットのサイズです。 既定のパケット サイズは 4 KB であり、network packet size 構成オプションによって制御されます。|  
 |接続ごとのロック数||サーバーごとの最大ロック数||  
 |のインスタンスごとのロック数 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||メモリのみによって制限されます。|これは静的ロック割り当てに対する値です。 動的ロックの場合は、メモリのみによって制限されます。|  
@@ -159,4 +157,3 @@ ms.lasthandoff: 08/11/2017
  [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

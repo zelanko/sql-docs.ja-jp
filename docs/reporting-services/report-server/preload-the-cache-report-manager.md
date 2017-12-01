@@ -1,5 +1,5 @@
 ---
-title: "事前にキャッシュ (レポート マネージャー) |Microsoft ドキュメント"
+title: "キャッシュの事前読み込み (レポート マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce5bc7b1e8016eecf227c24e4751c3dee812474d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
   共有データセットのキャッシュ更新計画を作成することによって、共有データセットのキャッシュを事前に読み込むことができます。  
@@ -109,7 +108,7 @@ ms.lasthandoff: 08/09/2017
      カスタム スケジュールを作成する場合は、 **[このサブスクリプション用に作成されたスケジュールで実行します]** をクリックし、 **[次へ]**をクリックします。 スケジュールを構成し、 **[完了]**をクリックします。  
   
     > [!NOTE]  
-    >  サブスクライバーが最新のレポートを受け取るには、構成するスケジュールが、サブスクライバーに対して定義したレポート配信スケジュールと一致する必要があります。 詳細については、次を参照してください。[レポート マネージャー & #40 です。SSRS ネイティブ モード &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  サブスクライバーが最新のレポートを受け取るには、構成するスケジュールが、サブスクライバーに対して定義したレポート配信スケジュールと一致する必要があります。 詳細については、「[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)」を参照してください。  
   
 14. 以下のように、レポートの実行オプションを構成します。 レポート ページで、 **[プロパティ]** タブをクリックします。  
   
@@ -119,18 +118,17 @@ ms.lasthandoff: 08/09/2017
   
 17. 次の 2 つのキャッシュ オプションのいずれかを選択し、以下のように有効期限を構成します。  
   
-    -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるようにするには、**レポートの一時コピーをキャッシュします。レポートのコピーの有効期限 (分) の数です。** レポートの有効期限を分単位で入力します。  
+    -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるようにするには、**レポートの一時コピーをキャッシュします。レポートのコピーの有効期限は数分後に切れます** をクリックします。 レポートの有効期限を分単位で入力します。  
   
-    -   スケジュールに期限切れにキャッシュされたコピーを作成するには、をクリックして**レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの期限が切れます。** **[構成]**をクリックするか、共有スケジュールを選択して、レポートの有効期限をスケジュールします。  
+    -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるようにするには、**[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]**をクリックするか、共有スケジュールを選択して、レポートの有効期限をスケジュールします。  
   
 18. **[適用]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [パフォーマンス、スナップショット、キャッシュ (&) #40 です。Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [パフォーマンス、スナップショット、キャッシュ &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポートのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

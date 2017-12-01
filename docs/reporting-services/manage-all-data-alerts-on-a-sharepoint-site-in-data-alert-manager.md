@@ -1,5 +1,5 @@
 ---
-title: "データ警告マネージャーで SharePoint サイト上のすべてのデータ警告の管理 |Microsoft ドキュメント"
+title: "データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: c8d04c7c8406b1a1653be71b6e76110e4479fedb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/17/2017
 
 SharePoint 警告管理者は、サイト ユーザーによって作成されたデータ警告の一覧と、警告に関する情報を表示できます。 また、警告管理者は警告を削除することもできます。 次の図に、警告管理者がデータ警告マネージャー内で使用できる機能を示します。
 
- ![Sharepoint サイト管理者用の警告マネージャー](../reporting-services/media/rs-alertmanagersite.gif "Sharepoint サイト管理者用の警告マネージャー")
+ ![SharePoint サイト管理者用の警告マネージャー](../reporting-services/media/rs-alertmanagersite.gif "SharePoint サイト管理者用の警告マネージャー")
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
 
-## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>サイト ユーザーによって作成された警告の一覧を表示します。  
+## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>サイト ユーザーが作成した警告の一覧を表示する  
   
 1.  データ警告定義が保存されている SharePoint サイトに移動します。  
   
@@ -53,7 +52,7 @@ SharePoint 警告管理者は、サイト ユーザーによって作成され�
   
      テーブルに、名前、レポート名、データ警告の作成者の名前、データ警告が送信された回数、データ警告定義が最後に変更された時刻、およびデータ警告の状態が一覧表示されます。 データ警告の生成や送信ができない場合は、エラーに関する情報が状態列に含まれているので、これを利用して問題のトラブルシューティングを行います。  
   
-## <a name="delete-an-alert-definition"></a>警告の定義を削除します。  
+## <a name="delete-an-alert-definition"></a>警告の定義を削除する  
   
 -   削除するデータ警告を右クリックして、 **[削除]**をクリックします。  
   
@@ -63,7 +62,6 @@ SharePoint 警告管理者は、サイト ユーザーによって作成され�
 ## <a name="see-also"></a>参照
 
 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)  
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

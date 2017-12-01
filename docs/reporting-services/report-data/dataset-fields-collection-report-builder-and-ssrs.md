@@ -1,5 +1,5 @@
 ---
-title: "データセット フィールド コレクション (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "データセット フィールド コレクション (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>データセット フィールド コレクション (レポート ビルダーおよび SSRS)
   データセット フィールドは、データ接続のデータを表します。 フィールドは数値データまたは非数値データを表すことができます。 売上高、売上合計、顧客名、データベース識別子、URL、画像、空間データ、電子メール アドレスなどがその例です。 デザイン画面では、フィールドがテキスト ボックス、テーブル、グラフなどのレポート アイテムの式として表示されます。  
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]などの多次元クエリをサポートするデータ ソースは、フィールドのフィールド プロパティをサポートします。 フィールド プロパティは、クエリの結果セットに表示されますが、 **レポート データ** ペインには表示されません。 これらは、レポートで使用することが可能です。 フィールドのプロパティを参照するには、フィールドをレポートにドラッグし、既定のプロパティの **Value** を、目的のプロパティのフィールド名に変更します。 たとえば、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブでは、キューブ セルの値の書式を定義できます。 書式設定された値は、フィールド プロパティ **FormattedValue**を使用することにより使用できます。 値を使用してテキスト ボックスの書式プロパティを設定するのではなく、値を直接使用するには、フィールドをテキスト ボックスにドラッグして、既定式 `=Fields!FieldName.Value` を `=Fields!FieldName.FormattedValue`に変更します。  
   
 > [!NOTE]  
->  すべての **Field** プロパティをすべてのデータ ソースに使用できるわけではありません。 **Value** と **IsMissing** プロパティは、すべてのデータ ソースで定義されます。 その他の定義済みプロパティ (多次元データ ソースの **Key**、 **UniqueName**、 **ParentUniqueName** など) は、データ ソースがそれらのプロパティを提供している場合にのみサポートされます。 一部のデータ プロバイダーでは、カスタム プロパティがサポートされます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ ソースを参照してください[Analysis Services データベース &#40; の拡張フィールド プロパティSSRS &#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  すべての **Field** プロパティをすべてのデータ ソースに使用できるわけではありません。 **Value** と **IsMissing** プロパティは、すべてのデータ ソースで定義されます。 その他の定義済みプロパティ (多次元データ ソースの **Key**、 **UniqueName**、 **ParentUniqueName** など) は、データ ソースがそれらのプロパティを提供している場合にのみサポートされます。 一部のデータ プロバイダーでは、カスタム プロパティがサポートされます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースの場合は、「[Analysis Services Database データベースに対する拡張フィールド プロパティ&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
   
 ##  <a name="Defaults"></a> フィールドの既定式について  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
  Tablix データ領域では、既定のフィールド式は、フィールドを追加するテキスト ボックスの行およびグループ メンバーシップに依存します。 テーブルの詳細行のテキスト ボックスに追加した場合、フィールド Sales のフィールド式は、 `[Sales]`です。 同じフィールドをグループ ヘッダー内のテキスト ボックスに追加した場合、グループ ヘッダーには詳細値ではなくグループの集計値が表示されるので、既定の式は `(Sum[Sales])`です。 レポートの実行時に、レポート プロセッサによって各式が評価され、レポート内の結果が置き換えられます。  
   
- 式の詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
+ 式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="DataTypes"></a> フィールド データ型  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [レポート パーツとレポート ビルダーでデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポート埋め込みデータセットおよび共有データセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

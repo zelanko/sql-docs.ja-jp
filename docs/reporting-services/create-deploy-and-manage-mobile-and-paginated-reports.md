@@ -1,6 +1,6 @@
 ---
-title: "Reporting Services (SSRS) |Microsoft ドキュメント"
-description: "ツールとモバイル レポートや改ページ調整された Reporting Services レポートと内部設置型の Power BI レポートのサービスについて説明します。"
+title: Reporting Services (SSRS) | Microsoft Docs
+description: "オンプレミスのモバイル レポートやページ分割された Reporting Services レポートや Power BI レポートに使用するツールやサービスについて説明します。"
 ms.custom: 
 ms.date: 07/01/2017
 ms.prod: sql-server-2016
@@ -18,30 +18,28 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94d3e2266c6539cc75b0ac5a51c47f6b6c20b0b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-作成、展開、およびモバイル レポートや改ページ調整された Reporting Services レポートとすぐに使用できるツールと SQL Server Reporting Services (SSRS) と Power BI を提供するサービスの範囲とオンプレミスで Power BI レポートを管理します。
+SQL Server Reporting Services (SSRS) と Power BI のすぐに使えるさまざまなツールやサービスで、オンプレミスのモバイル レポートやページ分割された Reporting Services レポートや Power BI レポートを作成、配置、管理します。
 
-![SQL Server Reporting Services まとめて](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 統合")
+![SQL Server Reporting Services 一式](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 一式")
 
-## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>作成、展開、およびモバイル レポートや改ページ調整されたレポートの管理
+## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>モバイル レポートやページ分割されたレポートを作成、配置、管理する
 
 SQL Server Reporting Services は、レポートを作成、パブリッシュ、管理し、Web ブラウザー、モバイル デバイス、受信トレイ内のメールなどで表示できるようにさまざまな方法で適切なユーザーに提供するための、ユーザーのオンプレミスに配置されるソリューションです。
 
@@ -49,12 +47,12 @@ SQL Server 2016 の Reporting Services では、更新された製品スイー�
 
 * 更新されたツールと新しい作成機能で現代風のレポートを作成できる、新しくなった**"従来の" ページ分割されたレポート** 。
 * さまざまなデバイスと持ち方に適応できる対応性の高いレイアウトの**新しいモバイル レポート** 。
-* 最新のブラウザーで表示できる**新しい Web ポータル** 。 新しいポータルを整理し、モバイル改ページ調整された Reporting Services レポートと Kpi を表示することができ、Power BI Desktop レポートします。 ポータル上で Excel ブックを保存することもできます。
+* 最新のブラウザーで表示できる**新しい Web ポータル** 。 新しいポータルで、モバイルやページ分割された Reporting Services レポートや KPI に加えて、Power BI Desktop レポートを整理および表示することができます。 ポータルで Excel ブックを保存することもできます。
 
 以降ではそれぞれについて詳しく説明します。
 
 > [!NOTE]
-> Power BI のレポート サーバーを検索してください。 参照してください[Power BI のレポート サーバーの概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)です。
+> Power BI Report Server が見つからない場合は、 「[Power BI Report Server の概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)」を参照してください。
 
 ### <a name="whats-new-in-reporting-services"></a>Reporting Services の新機能
 
@@ -70,7 +68,7 @@ SQL Server 2016 の Reporting Services では、更新された製品スイー�
 
 Reporting Services は "従来の" ページ分割されたドキュメント スタイルのレポートと関連付けられており、データ、テーブルの行、レポートのページをより多く提供できます。 PDF ファイルや Word ファイルのような印刷用に最適化された固定レイアウトで完全なピクセルのドキュメントの生成に最適です。
 
-その中核となる BI ワークロードは最新のものになっています。 更新された新機能とモダン外見のレポートを作成できますが、これを使用して[レポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)またはレポート デザイナーで[SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)です。
+その中核となる BI ワークロードは最新のものになっています。 [レポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)または [SQL Server Data Tools (SSDT) のレポート デザイナー](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)を使って、更新された新しい機能でモダンな外観のレポートを作成できます。
 
 * 既定のスタイルとカラー パレットはすべて更新されており、既定の設定で最新のミニマリズム スタイルのレポートを作成できます。
 * 更新された [パラメーター] ウィンドウでは、必要に応じてパラメーターを調整できます。
@@ -91,17 +89,17 @@ Reporting Services は "従来の" ページ分割されたドキュメント �
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-ネイティブ モードの Reporting Services のエンド ユーザーの入り口は、最新のブラウザーで表示できる最新の Web ポータルです。 は、新しいポータルと Power BI Desktop のレポートは、すべての Reporting Services モバイル レポートや改ページ調整されたレポートと Kpi を表示できます。 詳細について[Reporting Services での Power BI レポート](../reporting-services/power-bi-reports-in-reporting-services.md)です。  
+ネイティブ モードの Reporting Services のエンド ユーザーの入り口は、最新のブラウザーで表示できる最新の Web ポータルです。 新しいポータルから Reporting Services のモバイルやページ分割されたレポート、KPI に加えて、Power BI Desktop レポートのすべてにアクセスできます。 詳細については、「[Reporting Services の Power BI レポート](../reporting-services/power-bi-reports-in-reporting-services.md)」を参照してください。  
 
 独自のカスタム ブランドを Web ポータルに適用することができます。 また、Web ポータルでは KPI の権限を作成できます。 KPI を使うと、レポートを開かなくても、主要なビジネス指標をブラウザーで簡単に見ることができます。 
 
 新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 単一ページで標準ベースの HTML5 アプリであり、Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari などのすべての主要な最新ブラウザーが最適化されています。
 
-Web ポータル上のコンテンツは型で構成されています: Reporting Services モバイル レポートや改ページ調整されたレポートと Kpi、および Power BI Desktop レポート、Excel ブック、共有データセット、および共有データ ソース、レポートの基盤として使用します。 それらを安全に管理ここでは、従来のフォルダー階層と格納できます。 お気に入りのタグを付けることができ、管理者はコンテンツを管理できます。
+Web ポータルのコンテンツは、Reporting Services のモバイルやページ分割されたレポート、KPI に加えて、レポートの構成要素として使用される Power BI Desktop レポート、Excel ブック、共有データセット、共有データ ソースなどの種類別に整理されます。 従来のフォルダー階層で、ここから安全に保存および管理することができます。 お気に入りのタグを付けることができ、管理者はコンテンツを管理できます。
 
 また、レポート処理のスケジュール設定、オンデマンドでのレポート アクセス、新しい Web ポータルでパブリッシュされたレポートのサブスクライブも、引き続き可能です。
 
-詳細について、 [Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)です。
+詳細については、「[Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>Reporting Services の SharePoint 統合モード
 
@@ -120,7 +118,6 @@ SharePoint 統合モードで Reporting Services にレポートをパブリッ�
 * [Reporting Services のインストール](../reporting-services/install-windows/install-reporting-services.md)  
 * [レポート ビルダーをインストールする](../reporting-services/install-windows/install-report-builder.md)   
 * [SQL Server Data Tools (SSDT) のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Reporting Services の power BI のレポート](../reporting-services/power-bi-reports-in-reporting-services.md)
+* [Reporting Services の Power BI レポート](../reporting-services/power-bi-reports-in-reporting-services.md)
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

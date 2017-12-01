@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Reporting Services レポート ビューアー web パーツを SharePoint ページに追加 |Microsoft ドキュメント"
+title: "SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する | Microsoft Docs"
 ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
 ms.date: 09/26/2017
 ms.prod: sql-server-2016
@@ -14,73 +14,70 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: e60dfd8a296c84701dfc30588aba49220c130d9f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー web パーツを SharePoint ページに追加します。
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-レポート ビューアー web パーツを SharePoint ページに追加することで、SQL Server Reporting Services または Power BI のレポート サーバーからレポートを表示します。
+レポート ビューアー Web パーツを SharePoint ページに追加する方法で、SQL Server Reporting Services または Power BI Report Server からレポートを表示します。
 
-![ビューアー web パーツを SharePoint ページにレポートします。](media/sharepoint-report-viewer-web-part-on-page.png)
+![SharePoint ページのレポート ビューアー Web パーツ](media/sharepoint-report-viewer-web-part-on-page.png)
 
 ## <a name="prerequisites"></a>前提条件
 
-* レポートが正常に読み込むようにするため、Claims to Windows Token Service (C2WTS) Kerberos 用に構成する必要がありますの制約付き委任します。 C2WTS の構成方法の詳細については、次を参照してください。 [Claims to Windows Token Service (c2wts) と Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)です。
+* レポートを正常に読み込むには、Kerberos 制約付き委任に対して Claims to Windows Token Service (C2WTS) を構成する必要があります。 C2WTS の構成方法については、「[Claims to Windows Token Service (C2WTS) と Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)」を参照してください。
 
-* SharePoint ファームにレポート ビューアー web パーツを展開する必要があります。 レポート ビューアー web パーツ ソリューション プロジェクトを展開する方法については、次を参照してください。 [SharePoint サイト上のレポート ビューアー web パーツを展開](deploy-report-viewer-web-part.md)です。
+* レポート ビューアー Web パーツは SharePoint ファームに展開する必要があります。 レポート ビューアー Web パーツ ソリューション プロジェクトを展開する方法については、「[Deploy the Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md)」 (SharePoint サイトでレポート ビューアー Web パーツを展開する) を参照してください。
 
-* Web パーツを web ページを追加するには、サイト レベルでページのカスタマイズの追加とアクセス許可があります。 既定のセキュリティ設定を使用する場合、この権限はフル コントロール レベルの権限を持つ **所有者** グループのメンバーに与えられます。
+* Web パーツを Web ページに追加するには、サイト レベルでの "ページの追加とカスタマイズ" アクセス許可が必要です。 既定のセキュリティ設定を使用する場合、この権限はフル コントロール レベルの権限を持つ **所有者** グループのメンバーに与えられます。
 
-## <a name="add-web-part"></a>Web パーツを追加します。
+## <a name="add-web-part"></a>Web パーツを追加する
 
-1. SharePoint サイトで次のように選択します。、**歯車の形の**クリックし、左上にあるアイコン**ページを追加する**です。
+1. SharePoint サイトで、左上にある**歯車**アイコンを選び、**[ページの追加]** を選びます。
 
-    ![Sharepoint サイトに、歯車アイコンからページを追加します。](media/sharepoint-add-a-page.png)
+    ![歯車アイコンから SharePoint サイトにページを追加します。](media/sharepoint-add-a-page.png)
 
-2. ページの名前と選択**作成**です。
+2. ページに名前を付け、**[作成]** を選びます。
 
-3. ページ デザイナー内でを選択、**挿入**をリボンにタブです。 選択し、 **web パーツ**内で、**パーツ**セクションです。
+3. ページ デザイナー内で、リボンにある **[挿入]** タブを選びます。 **[パーツ]** セクション内で **[Web パーツ]** を選びます。
 
-    ![Office のリボンから web パーツを挿入します。](media/sharepoint-insert-web-part.png)
+    ![Office リボンから Web パーツを挿入します。](media/sharepoint-insert-web-part.png)
 
-4. **カテゴリ** ** SQL Server Reporting Services (ネイティブ モード)。 **パーツ** **レポート ビューアー**です。 選択し、**追加**です。
+4. **[カテゴリ] で** [SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 **[追加]** を選びます。
 
-    ![レポート ビューアー web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
+    ![レポート ビューアー Web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 
-    最初は、エラーで表示可能性があります。 エラーは、既定のレポート サーバーの URL 設定されているため*http://localhost*その場所で使用できない可能性があります。
+    最初はエラーが表示されることがあります。 このエラーは、既定のレポート サーバー URL が *http://localhost* に設定されているが、その場所で利用できない可能性があることによります。
 
-## <a name="configure-the-report-viewer-web-part"></a>レポート ビューアー web パーツを構成します。
+## <a name="configure-the-report-viewer-web-part"></a>レポート ビューアー Web パーツを構成する
 
-特定のレポート ポイントで次のように web パーツを構成します。
+特定のレポートを指すように Web パーツを構成するには、次のように操作します。
 
-1. SharePoint ページを編集するには、web パーツの右上隅で、下矢印を選択し、選択**web パーツの編集**です。
+1. SharePoint ページを編集するとき、Web パーツの右上にある下方向矢印を選び、**[Web パーツの編集]** を選びます。
 
-    ![Web パーツ ドロップダウンから web ページを編集します。](media/sharepoint-edit-web-part.png)
+    ![Web パーツ ドロップダウンから Web ページを編集します。](media/sharepoint-edit-web-part.png)
 
-2. 入力、**レポート サーバーの URL**レポートをホストしているレポート サーバーにします。 これは、ような*http://myrsserver/reportserver*です。
+2. レポートをホストするレポート サーバーの **[レポート サーバー URL]** を入力します。 *http://myrsserver/reportserver* のような URL になります。
 
-3. Web パーツ内で、表示するレポートの名前とパスを入力します。 これは、ような*AdventureWorks Sample Reports/company Sales*です。 この例では、レポートで*Company Sales*というフォルダーには、 *AdventureWorks Sample Reports*です。
+3. Web パーツ内に表示するレポートのパスと名前を入力します。 これは */AdventureWorks Sample Reports/Company Sales* のようになります。 このレイでは、「*AdventureWorks Sample Reports*」という名前のフォルダーに「*Company Sales*」というレポートが入っています。
 
-4. レポートは、レポート サーバーの URL とレポートの名前を指定するパラメーターを必要とする場合は、選択**パラメーターの読み込み**内で、**パラメーター**セクションです。
+4. レポートにパラメーターが必要な場合、レポート サーバー URL とレポートの名前を入力した後、**[パラメーター]** セクション内で **[パラメーターの読み込み]** を選びます。
 
-5. 選択**Ok** web パーツの構成に変更を保存します。
+5. **[OK]** を選び、Web パーツ構成の変更を保存します。
 
-6. 選択**保存**、SharePoint ページに変更を保存する、Office のリボン内です。
+6. Office リボン内の **[保存]** を選び、SharePoint ページの変更を保存します。
 
-![ビューアー web パーツを SharePoint ページにレポートします。](media/sharepoint-report-viewer-web-part-on-page.png)
+![SharePoint ページのレポート ビューアー Web パーツ](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="considerations-and-limitations"></a>考慮事項と制約
+## <a name="considerations-and-limitations"></a>注意点と制限事項
 
-* レポート ビューアー web パーツは、SharePoint 内のページを最新では使用できません。
-* Power BI レポートは、レポート ビューアー web パーツでは使用できません。
-* レポート ビューアー web パーツのページに追加するが表示されない場合は、必ず確保[、レポート ビューアー web パーツを展開](deploy-report-viewer-web-part.md)です。
+* レポート ビューアー Web パーツは、SharePoint 内の最新式ページでは使用できません。
+* Power BI レポートと Report Viewer Web パーツは併用できません。
+* ページに追加するレポート ビューアー Web パーツが表示されない場合、[レポート ビューアー Web パーツが展開されている](deploy-report-viewer-web-part.md)ことを確認します。
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

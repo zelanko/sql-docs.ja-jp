@@ -1,34 +1,31 @@
 ---
-title: "SQL Server Mobile Report Publisher でモバイル レポートを作成 |Microsoft ドキュメント"
-description: "さまざまなデータの視覚エフェクトで、内部設置型データに接続して、モバイル デバイスのモバイル レポートを Reporting Services について学習します。"
-ms.custom:
-- SQL2016_New_Updated
+title: "SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する | Microsoft Docs"
+description: "オンプレミス データに接続するモバイル デバイス用の Reporting Services モバイル レポートについて説明します。これらレポートには多様なデータ視覚エフェクトが用意されています。"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3214b23fb77338df8594268fe51f0e10fb6a71b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する
 多様なデータ視覚エフェクトが含まれる [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートについて学びます。これらのレポートはモバイル デバイス用に最適化されており、オンプレミス データに接続します。 
 
 >[!NOTE]
->  SQL Server 2016 にダッシュ ボードおよび Kpi など Datazen サーバーのコンテンツを移行する必要がある[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]サーバーですか? [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)を使ってみてください。 
+>  Datazen Server のコンテンツ (ダッシュボードや KPI など) を SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] サーバーに移行する必要がありますか。 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)を使ってみてください。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 
 * モバイル レポートは、オンプレミスの SQL Server Analysis Services データを含むさまざまなデータ ソースに接続できます。 
 * 調整可能なグリッド行とグリッド列と柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応するモバイル レポートをレイアウトできます。 
-* これらのモバイル レポートを Reporting Services サーバーに保存しを表示し、ブラウザーや Ipad、Iphone、Android 端末およびタブレット、および Windows 10 デバイスで Power BI モバイル アプリでこれらと対話します。
+* その後、これらのモバイル レポートを Reporting Services サーバーに保存しておき、iPad、iPhone、Android フォンおよびタブレットと、Windows 10 デバイスのブラウザーまたは Power BI モバイル アプリで表示と操作を実行できます。
   
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  モバイル レポートの作成  
   
@@ -54,8 +51,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI モバイル アプリでの SSRS モバイル レポート
 
--  ビュー [iOS モバイル アプリで Reporting Services モバイル レポートと Kpi](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
--  ビュー [Android デバイス用 Power BI アプリで Reporting Services モバイル レポートと Kpi](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  [iOS モバイル アプリで Reporting Services のモバイル レポートと KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) を表示する
+-  [Android デバイス用の Power BI アプリで Reporting Services のモバイル レポートと KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports) を表示する
 -  [Windows 10 デバイス用の Power BI アプリで Reporting Services のモバイル レポートと KPI を表示する](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
 ## <a name="see-also"></a>参照  
@@ -67,5 +64,4 @@ ms.lasthandoff: 08/09/2017
 
   
   
-
 

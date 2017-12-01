@@ -1,45 +1,43 @@
 ---
-title: "Claims to Windows Token Service (c2wts) と Reporting Services |Microsoft ドキュメント"
+title: "Claims to Windows Token Service (C2WTS) と Reporting Services | Microsoft Docs"
 ms.custom: The Claims to Windows Token Service (C2WTS) is used by SharePoint and needs to be configured for Kerberos constrained delegation to work with SQL Server Reporting Services properly.
 ms.date: 09/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/15/2017
-
+ms.openlocfilehash: 7c5c7adfdfc1774da8f8b2a9d89e712f4902e4d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-内でネイティブ モードのレポートを表示する場合に SharePoint Claims to Windows Token Service (C2WTS) が必要、 [SQL Server Reporting Services レポート ビューアー web パーツ](../report-server-sharepoint/deploy-report-viewer-web-part.md)です。
+[SQL Server Reporting Services レポート ビューアー Web パーツ](../report-server-sharepoint/deploy-report-viewer-web-part.md)内でネイティブ モード レポートを表示するには、SharePoint Claims to Windows Token Service (C2WTS) が必要です。
 
-C2WTS が SharePoint ファームの外部にあるデータ ソースに対して Windows 認証を使用する場合にも SQL Server Reporting Services SharePoint モードで必要です。 C2WTS は、データ ソースが共有サービスと同じコンピューター上にある場合でも必要です。 ただし、このシナリオでは、制約付き委任は必要ありません。
+SQL Server Reporting Services SharePoint モードで SharePoint ファームの外部にあるデータ ソースに対して Windows 認証を使用する場合にも、C2WTS が必要です。 C2WTS は、データ ソースが共有サービスと同じコンピューター上にある場合でも必要です。 ただし、このシナリオでは、制約付き委任は必要ありません。
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
 
-## <a name="report-viewer-web-part-configuration"></a>レポート ビューアー web パーツの構成
+## <a name="report-viewer-web-part-configuration"></a>レポート ビューアー Web パーツの構成
 
-SharePoint サイト内の SQL Server Reporting Services ネイティブ モードのレポートを埋め込むには、レポート ビューアー web パーツを使用できます。 この web パーツは SharePoint 2013 と SharePoint 2016 で使用可能です。 SharePoint 2013 と SharePoint 2016 の両方の要求の認証を使用します。 SQL Server Reporting Services (ネイティブ モード) は、既定では、Windows 認証を使用します。 その結果、C2WTS では、正しく表示するためにレポート用に正しく構成する必要があります。
+レポート ビューアー Web パーツを使用すると、SharePoint サイト内に SQL Server Reporting Services ネイティブ モード レポートを埋め込むことができます。 この Web パーツは、SharePoint 2013 と SharePoint 2016 に使用できます。 SharePoint 2013 と SharePoint 2016 のどちらも、要求認証を利用します。 SQL Server Reporting Services (ネイティブ モード) は既定で Windows 認証を使用します。 そのため、レポートが正しく表示されるには、C2WTS を適切に構成する必要があります。
 
-## <a name="sharepoint-mode-integaration"></a>SharePoint モードの integaration
+## <a name="sharepoint-mode-integaration"></a>SharePoint モードの統合
 
-**このセクションでは、SQL Server 2016 Reporting Services および以前にのみ適用されます。**
+**このセクションは、SQL Server 2016 Reporting Services 以前にのみ適用されます。**
 
-SharePoint Claims to Windows Token Service (C2WTS) は、SharePoint ファームの外部にあるデータ ソースに対して Windows 認証を使用する場合は、SQL Server Reporting Services SharePoint モードで必要です。 これは、間の通信、web フロント エンド (WFE) と Reporting Services 共有サービスは、必ず要求認証のため、ユーザーは Windows 認証を使用してデータ ソースにアクセスする場合でも当てはまります。
+SharePoint ファームの外部にあるデータ ソースに対して Windows 認証を使用する場合、SQL Server Reporting Services SharePoint モードでは SharePoint Claims to Windows Token Service (C2WTS) が必要です。 これは、Web フロントエンド (WFE) と Reporting Services 共有サービス間の通信が常に要求認証になるため、ユーザーが Windows 認証を使用してデータ ソースにアクセスする場合にも当てはまります。
 
 ## <a name="steps-needed-to-configure-c2wts"></a>C2WTS の構成に必要な手順
 
@@ -47,39 +45,39 @@ C2WTS によって作成されたトークンは、制約付き委任 (特定の
 
 Kerberos の制約付き委任を使用する環境では、SharePoint Server サービスと外部データ ソースが同じ Windows ドメインに属している必要があります。 Claims to Windows Token Service (c2WTS) に依存する任意のサービスでは、Kerberos の **制約付き** 委任を使用して、c2WTS が Kerberos プロトコル遷移を使用して要求を Windows 資格情報に変換できるようにする必要があります。 これらの要件は、すべての SharePoint 共有サービスに共通です。 詳細については、「 [SharePoint 2013 で Kerberos 認証を計画する](http://technet.microsoft.com/library/ee806870.aspx)」を参照してください。  
 
-1. C2WTS サービス アカウントを構成します。 各サーバーが C2WTS を使用することで、ローカルの Administrators グループにサービス アカウントを追加します。
+1. C2WTS サービス アカウントを構成します。 C2WTS を使用する各サーバーのローカルの Administrators グループにサービス アカウントを追加します。
 
-    **レポート ビューアー web パーツ**、Web フロント エンド (WFE) サーバーになります。 **SharePoint 統合モード**、Reporting Services サービスが実行されているアプリケーション サーバーになります。
+    **レポート ビューアー Web パーツ**の場合は Web Front End (WFE) サーバーです。 **SharePoint 統合モード**の場合は、Reporting Services サービスが実行されているアプリケーション サーバーです。
 
 2. C2WTS サービス アカウントの委任を構成します。
 
-    アカウントには、制約付き委任プロトコル遷移および (つまり SQL Server データベース エンジン、SQL Server Analysis Services) との通信に必要なサービスに委任する権限を持つ必要があります。 委任を構成するには、Active Directory ユーザーとコンピューター スナップインを使用できるし、ドメイン管理者である必要があります。
+    アカウントには、プロトコル遷移を使用した制限付き委任に加え、通信に必要なサービス (SQL Server Database Engine、SQL Server Analysis Services など) に委任するアクセス許可も必要です。 委任を構成するには、Active Directory ユーザーとコンピューターのスナップインを使用できます。また、ドメイン管理者である必要があります。
 
     > [!IMPORTANT]
-    > どのような設定を構成する C2WTS サービス アカウントの委任 タブで、使用されているメインのサービス アカウントと一致する必要があります。 **レポート ビューアー web パーツ**、SharePoint web アプリケーションのサービス アカウントになります。 **SharePoint 統合モード**、Reporting Services サービス アカウントになります。
+    > C2WTS サービス アカウントにどのような設定を構成するとしても、[委任] タブで、使用されているメイン サービス アカウントと同じにする必要があります。 **レポート ビューアー Web パーツ**の場合は、SharePoint Web アプリケーションのサービス アカウントです。 **SharePoint 統合モード**の場合は、Reporting Services サービス アカウントです。
     >
-    > たとえば、SQL サービスに委任する C2WTS サービス アカウントを許可する場合は、SharePoint 統合モードの Reporting Services サービス アカウントで同じ操作を実行する必要があります。
+    > たとえば、C2WTS サービス アカウントを SQL Service に委任できるようにした場合、SharePoint 統合モードの Reporting Services サービス アカウントでも同様にする必要があります。
 
     * 各サービス アカウントを右クリックして、プロパティ ダイアログを開きます。 ダイアログで **[委任]** タブをクリックします。
 
-        [委任] タブでは、オブジェクトがサービス プリンシパル名 (SPN) に割り当てられている表示のみです。 C2WTS は必要ありませんが、C2WTS アカウントに SPN ただし、SPN せず、**委任** タブは表示されません。 制約付き委任を構成する別の方法として、 **ADSIEdit**などのユーティリティを使用するという方法もあります。
+        委任タブは、オブジェクトにサービス プリンシパル名 (SPN) が割り当てられている場合にのみ表示されます。 C2WTS では、C2WTS アカウントに SPN は必要ありませんが、SPN がない場合は、 **[委任]** タブは表示されません。 制約付き委任を構成する別の方法として、 **ADSIEdit**などのユーティリティを使用するという方法もあります。
 
     * 委任タブで重要な構成オプションは、次のとおりです。
 
-        * 選択**このユーザーに指定されたサービスのみ委任に対して信頼**
-        * 選択**任意の認証プロトコルを使用します。**
+        * **[指定されたサービスへの委任でのみこのユーザーを信頼する]** を選択する
+        * **[任意の認証プロトコルを使う]** を選択する
 
     * **[追加]** を選択して、委任するサービスを追加します。
 
-    * 選択**ユーザーまたはコンピューターしています.*** し、サービスをホストしているアカウントを入力します。 たとえば、SQL Server がという名前のアカウントで実行されている*sqlservice*、入力`sqlservice`です。 
+    * **[ユーザーまたはコンピューター]*** を選択し、サービスをホストするアカウントを入力します。 たとえば、SQL Server が *sqlservice* というアカウントで実行されている場合は、`sqlservice` と入力します。 
 
     * サービス一覧を選択します。 そのアカウントで使用できる SPN が表示されます。 そのアカウントのサービス一覧が表示されない場合は、サービスがないか、別のアカウントのサービスの可能性があります。 SPN の調整には、SetSPN ユーティリティを使用できます。
 
     * [OK] を選択してダイアログを閉じます。
 
-3. C2WTS の構成*AllowedCallers*です。
+3. C2WTS *AllowedCallers* を構成します。
 
-    必要です「呼び出し元」の id を明示的に C2WTS の構成ファイルに記載されて**C2WTShost.exe.config**です。C2WTS は、そのように構成されていない限り、システム内のすべての認証ユーザーからの要求を受け入れません。 ここでは、"呼び出し元' は、WSS_WPG Windows グループです。 C2WTShost.exe.confi ファイルは、次の場所に保存されます。
+    C2WTS では、"呼び出し元" の ID が構成ファイル **C2WTShost.exe.config** で明示されている必要があります。C2WTS は、そのように構成されていない限り、システム内のすべての認証ユーザーからの要求を受け入れません。 この場合、"呼び出し元" は WSS_WPG Windows グループです。 C2WTShost.exe.confi ファイルは次の場所に保存されます。
 
     C2WTS サービスについて、SharePoint サーバーの全体管理内でサービス アカウントを変更すると、そのアカウントが WSS_WPG グループに追加されます。
 
@@ -102,7 +100,6 @@ Kerberos の制約付き委任を使用する環境では、SharePoint Server �
     </configuration>
     ```
 
-4. 使用して、SharePoint サーバーの全体管理の Windows トークン サービスに対するクレームを開始、**管理サーバーのサービスの**ページ。 このサービスは、アクションを実行するサーバーで起動する必要があります。 たとえば、WFE とだけを実行して、SQL Server Reporting Services 共有サービスを持つアプリケーション サーバーである別のサーバーは、アプリケーション サーバーで C2WTS を起動する必要があります。 サーバーがある場合。 C2WTS は、レポート ビューアー web パーツを実行している場合に、WFE サーバーにのみ必要です。
+4. **[サーバーのサービスの管理]** ページの SharePoint サーバーの全体管理から Claims to Windows Token Service を起動します。 このサービスは、アクションを実行するサーバーで起動する必要があります。 たとえば、WFE サーバーと SQL Server Reporting Services 共有サービスを実行しているアプリケーション サーバーを持っている場合は、アプリケーション サーバーで C2WTS を起動するだけでかまいません。 レポート ビューアー Web パーツを実行している場合、C2WTS は WFE サーバー上でのみ必要です。
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

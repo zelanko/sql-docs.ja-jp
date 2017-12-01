@@ -1,5 +1,5 @@
 ---
-title: "検索と表示 (レポート ビルダーおよび SSRS) ブラウザーでのレポート |Microsoft ドキュメント"
+title: "ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   Web ブラウザーが対応していれば、レポート サーバーに直接接続してレポートを表示できます。 レポートにはそれぞれ、レポート サーバー上の URL アドレスが割り当てられています。 レポートの Web アドレスを入力すると、レポートを Web アプリケーションとは無関係にブラウザー ウィンドウで開くことができます。 レポートは HTML 形式で表示され、レポート内でページ間の移動やデータ値の検索を行うことができるようにレポート ツール バーが含まれています。 URL でパラメーターを設定すると、ツール バーを非表示にしたりレポートの出力形式を選択したりできます。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  レポートの Web アドレスがわからない場合は、レポート サーバーの Web アドレスを開いてから、レポート サーバーのフォルダー階層を参照して、表示するレポートを選択することができます。 次の図は、ブラウザー ウィンドウに表示されたフォルダー階層を表しています。  
   
- ![ブラウザーに表示されたフォルダー](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![ブラウザーに表示されたフォルダー](../../reporting-services/report-builder/media/rs-browserfolder.GIF "ブラウザーに表示されたフォルダー")  
 ブラウザーに表示されたフォルダー  
   
 > [!NOTE]  
@@ -48,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
 -   他の識別情報が何も付加されていないリンクは、レポートまたはモデルを表します。  
   
--   タグ\<ds > 共有データ ソースを示します。  
+-   \<ds> タグは、共有データ ソースであることを表します。  
   
--   タグ\<dir > フォルダー アイテムを示します。  
+-   \<dir> タグは、フォルダー アイテムであることを表します。  
   
 -   ファイル名拡張子は、リソースを表します。 ファイル名拡張子によって、リソースの MIME の種類が識別されます。 たとえば、.jpg は JPEG 形式の画像であることを表します。  
   
@@ -64,4 +63,3 @@ ms.lasthandoff: 08/09/2017
  URL の構築方法など、URL を介してレポートにアクセスする方法の詳細については、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
   
   
-

@@ -1,33 +1,30 @@
 ---
-title: "スナップショット (web ポータル) の操作 |Microsoft ドキュメント"
+title: "スナップショットの操作 (Web ポータル) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7498112d3822d18976ea6482c6014ce7bc69435f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-スナップショットを選択して、レポートの作成を指定できます、**省略記号 (...)** 、レポートの選択**管理**を選択して**キャッシュ**または**履歴スナップショット**です。  
+レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])**、**[管理]** と選択し、**[キャッシュ]** または **[履歴スナップショット]**を選択します。  
   
 > [!NOTE]
 > SQL Server エージェント サービスを開始する必要があります。  
@@ -81,8 +78,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
-[改ページ調整されたレポートの使用](working-with-paginated-reports-web-portal.md)  
-[共有データセットを操作します。](../reporting-services/work-with-shared-datasets-web-portal.md)
+[ページ分割されたレポートの使用](working-with-paginated-reports-web-portal.md)  
+[共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

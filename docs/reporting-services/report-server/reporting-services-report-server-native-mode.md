@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services レポート サーバー (ネイティブ モード) |Microsoft ドキュメント"
+title: "Reporting Services レポート サーバー (ネイティブ モード) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 704f732494ca5afbe20a1e2c58d09b4ba00be432
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理はレポート、モデル、フォルダー、リソース、および共有データ ソースの管理を指します。 これらのすべてのアイテムは、プロパティおよびセキュリティの設定をとおして、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。  
   
 > [!NOTE]  
->  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーが実行される環境を管理する方法の詳細については、次を参照してください[レポート サーバー &#40; の構成と管理。Reporting Services SharePoint モード &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーを実行する環境の管理方法については、「[レポート サーバーの構成と管理 &#40;Reporting Services SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」を参照してください。  
   
  コンテンツ管理には、次のタスクが含まれます。  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート処理のスケジュールを設定し、要求時に実行できるレポート処理とキャッシュから読み込まれるレポート処理を指定することにより、サーバーに対するレポート処理の要求を分散させます。  
   
- 管理タスクを実行するための権限は、 **システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 これらの定義済みロールの詳細については、次を参照してください。[ロールとアクセス許可 & #40 です。Reporting Services &#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ 管理タスクを実行するための権限は、 **システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 詳細については、「[ロールとアクセス許可 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
  レポート サーバーのコンテンツを管理するためのツールには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーがあります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 レポート マネージャーでは、レポート サーバーのアイテムや操作に対するアクセス権を付与できます。また、レポートをはじめとする各種のコンテンツ、さらに、すべての共有アイテムとレポート配信機能を表示および使用できます。  
   
@@ -117,4 +116,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services インストール時の問題解決](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   
-

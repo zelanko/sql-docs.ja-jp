@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Reporting Services のインストール |Microsoft ドキュメント"
+title: "SQL Server Reporting Services のインストール | Microsoft Docs"
 ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
@@ -13,89 +13,88 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
-ms.openlocfilehash: 5ce83ff18d6908441a3eaaf05599068ec5876308
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 2ab73e59ffc05a18f8a1a36ac66ba59ed726fdef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services のインストールには、レポート アイテムの格納、レポートの表示、およびサブスクリプションおよびその他のレポート サービスの処理中のサーバー コンポーネントが含まれます。  Power BI のレポート サーバーをインストールする方法を説明します。
+SQL Server Reporting Services をインストールするには、レポート アイテムの格納、レポートの表示、およびサブスクリプションや他のレポート サービスの処理を行うためのサーバー コンポーネントが必要です。  Power BI Report Server のインストール方法について説明します。
 
-SQL Server 2017 Reporting Services をダウンロードするには、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)です。
+SQL Server 2017 Reporting Services をダウンロードするには、「[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)」に移動します。
 
 > [!NOTE]
-> Power BI のレポート サーバーを検索してください。 参照してください[Power BI のレポート サーバーのインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)です。
+> Power BI Report Server が見つからない場合は、 「[Power BI Report Server のインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)」を参照してください。
 
 ## <a name="before-you-begin"></a>アンインストールの準備
 
-Reporting Services をインストールする前に、確認、 [SQL Server をインストールするためのハードウェアおよびソフトウェア要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)です。
+Reporting Services をインストールする前に、「[Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」 (SQL Server のインストールに必要なハードウェアおよびソフトウェア) を確認してください。
 
-## <a name="install-your-report-server"></a>レポート サーバーをインストールします。
+## <a name="install-your-report-server"></a>レポート サーバーのインストール
 
-レポート サーバーをインストールするは簡単です。 ファイルのインストールをいくつかの手順のみがあります。
+レポート サーバーのインストールは簡単です。 わずかな手順でファイルをインストールできます。
 
 > [!NOTE]
-> SQL Server データベース エンジンのサーバーのインストール時に使用する必要はありません。 1 つのインストール後に Reporting Services を構成する必要があります。
+> インストール時に利用可能な SQL Server データベース エンジン サーバーは必要ありません。 インストール後、Reporting Services を構成するときに必要になります。
 
 1. SQLServerReportingServices.exe の場所を検索し、インストーラーを起動します。
 
-2. 選択**Reporting Services のインストール**です。
+2. **[Reporting Services のインストール]** を選択します。
 
     ![Reporting Services のインストール](media/install-reporting-services/report-server-install.png)
 
-3. クリックしてインストールするエディションを選択**次**です。
+3. インストールするエディションを選択して、**[次へ]** を選択します。
 
-    ![エディションを選択します。](media/install-reporting-services/report-server-install-edition.png)
+    ![エディションの選択](media/install-reporting-services/report-server-install-edition.png)
 
-    下へドロップから評価版または Developer のいずれかのエディションを選択できます。
+    ドロップダウンから [Evaluation] または [Developer] のいずれかのエディションを選択できます。
 
-    ![評価版または developer エディション](media/install-reporting-services/report-server-install-edition-select.png)
+    ![Evaluation エディションまたは Developer エディション](media/install-reporting-services/report-server-install-edition-select.png)
 
-    それ以外の場合、プロダクト キーを入力することができます。
+    それ以外の場合は、プロダクト キーを入力できます。
 
-4. 読み取りと、ライセンス条項と条件に同意し、**次**です。
+4. ライセンス条項および条件を読んで同意し、**[次へ]** をクリックします。
 
-5. データベース エンジンがレポート サーバー データベースの格納に使用できる必要があります。 選択**次**のみ、レポート サーバーをインストールします。
+5. レポート サーバー データベースを格納するには、データベース エンジンを利用可能にする必要があります。 **[次へ]** を選択して、レポート サーバーのみをインストールします。
 
-    ![データベースのインストールは必要ありません。](media/install-reporting-services/report-server-install-db-engine.png)
+    ![インストールにデータベースは必要ありません](media/install-reporting-services/report-server-install-db-engine.png)
 
-6. レポート サーバーのインストール場所を指定します。 選択**インストール**を続行します。
+6. レポート サーバーをインストールする場所を指定します。 **[インストール]** を選択して次に進みます。
 
-    ![インストール パスを指定します。](media/install-reporting-services/report-server-install-file-path.png)
+    ![インストール パスの指定](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
-    > 既定のパスは、C:\Program files \microsoft SQL Server Reporting Services です。
+    > 既定のパスは、C:\Program Files\Microsoft SQL Server Reporting Services です。
 
-7. 正常にセットアップした後、選択**レポート サーバーの構成**を Reporting Services 構成マネージャーを起動します。
+7. 正常にセットアップした後、**[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
 
-    ![レポート サーバーを構成します。](media/install-reporting-services/report-server-install-configure.png)
+    ![レポート サーバーの構成](media/install-reporting-services/report-server-install-configure.png)
 
-## <a name="configuration-your-report-server"></a>構成、レポート サーバー
+## <a name="configuration-your-report-server"></a>レポート サーバーの構成
 
-選択した後**レポート サーバーの構成**、セットアップでするが表示されます**レポート サーバーの Configuration Manager**です。 詳細については、次を参照してください。[レポート サーバーの Configuration Manager](reporting-services-configuration-manager-native-mode.md)です。
+セットアップで **[レポート サーバーの構成]** を選択したら、**レポート サーバー Configuration Manager** が表示されます。 詳細については、[Report Server 構成マネージャー](reporting-services-configuration-manager-native-mode.md)に関するページを参照してください。
 
-する必要があります[レポート サーバー データベースの作成](ssrs-report-server-create-a-report-server-database.md)Reporting Services の初期構成を完了します。 この手順を完了するには、SQL Server データベース サーバーが必要です。
+Reporting Services の初期構成を完了するには、[レポート サーバー データベースを作成する](ssrs-report-server-create-a-report-server-database.md)必要があります。 この手順を完了するには、SQL Server データベース サーバーが必要です。
 
-### <a name="creating-a-database-on-a-different-server"></a>別のサーバーにデータベースを作成します。
+### <a name="creating-a-database-on-a-different-server"></a>別のサーバーでデータベースを作成する
 
-別のコンピューター上のデータベース サーバーでレポート サーバー データベースを作成する場合は、データベース サーバーで認識されている資格情報をレポート サーバーのサービス アカウントを変更する必要があります。
+別のマシン上のデータベース サーバーにレポート サーバー データベースを作成している場合は、レポート サーバーのサービス アカウントを、データベース サーバーで認識されている資格情報に変更する必要があります。
 
-既定では、レポート サーバーは、仮想サービス アカウントを使用します。 別のサーバーにデータベースを作成しようとする場合は、[接続の権利] 手順で適用する次のエラーがあります。
+既定では、レポート サーバーは仮想サービス アカウントを使用します。 別のサーバー上でデータベースを作成しようとすると、接続権限を適用する手順で次のエラーが表示される可能性があります。
 
 `System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group '(null)' not found. Check the name again.`
 
-エラーを回避するには、ネットワーク サービス アカウントまたはドメイン アカウントをサービス アカウントを変更できます。 ネットワーク サービスにサービス アカウントを変更するには、レポート サーバーのマシン アカウントのコンテキストでの権限が適用されます。
+エラーを回避するには、サービス アカウントをネットワーク サービスまたはドメイン アカウントのいずれかに変更できます。 サービス アカウントをネットワーク サービスに変更すると、レポート サーバー用のマシン アカウントのコンテキストでの権限が適用されます。
 
-詳細については、次を参照してください。 [、レポート サーバー サービス アカウントを構成する](configure-the-report-server-service-account-ssrs-configuration-manager.md)です。
+詳細については、[レポート サーバー サービス アカウントの構成](configure-the-report-server-service-account-ssrs-configuration-manager.md)に関するページを参照してください。
 
 ## <a name="windows-service"></a>Windows サービス
 
-Windows サービスは、インストールの一部として作成されます。 として表示される**SQL Server Reporting Services**です。 サービス名は**SQLServerReportingServices**です。
+Windows サービスは、インストールの一部として作成されます。 これは、**SQL Server Reporting Services** として表示されます。 サービス名は **SQLServerReportingServices** です。
 
 ## <a name="default-url-reservations"></a>既定の URL 予約
 
@@ -103,40 +102,39 @@ URL 予約は、プレフィックス、ホスト名、ポート、および仮�
 
 |要素|説明|
 |----------|-----------------|
-|プレフィックス|既定のプレフィックスは HTTP です。 以前に Secure Sockets Layer (SSL) 証明書をインストールした場合、セットアップは、HTTPS プレフィックスを使用して URL 予約を作成しようとします。|
-|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、コンピューターに対して解決されるあらゆるホスト名の指定のポートに対するすべての HTTP 要求を受け入れることを指定を含む`http://<computername>/reportserver`、 `http://localhost/reportserver`、または`http://<IPAddress>/reportserver.`|
-|ポート|既定のポートは 80 です。 ポート 80 以外の任意のポートを使用する場合は、明示的に追加したり、URL をブラウザーのウィンドウで web ポータルを開くときにする必要があります。|
-|仮想ディレクトリ|既定では、仮想ディレクトリは、web ポータルのレポート サーバー Web サービスとレポートに関する ReportServer の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 Web ポータルで、既定の仮想ディレクトリは**レポート**です。|
+|プレフィックス|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|
+|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`http://<computername>/reportserver`、`http://localhost/reportserver`、`http://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|
+|ポート|既定のポートは 80 です。 ポート 80 以外のポートを使用する場合は、Web ポータルをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があります。|
+|仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer の形式で作成され、Web ポータルの場合は Reports の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 Web ポータルの既定の仮想ディレクトリは、**reports** です。|
 
 完全な URL 文字列の例を次に示します。
 
-- `http://+:80/reportserver`、レポート サーバーへのアクセスを提供します。
+- `http://+:80/reportserver` は、レポート サーバーへのアクセスを提供します。
 
-- `http://+:80/reports`、web ポータルへのアクセスを提供します。
+- `http://+:80/reports` は、Web ポータルへのアクセスを提供します。
 
 ## <a name="firewall"></a>ファイアウォール
 
-リモート コンピューターからレポート サーバーにアクセスする、場合は、存在ファイアウォールがある場合は、すべてのファイアウォール ルールを構成したことを確認します。
+リモート マシンからレポート サーバーにアクセスしている場合、ファイアウォールが存在するのであれば、ファイアウォールの規則を構成していることを確認してください。
 
-Web サービス URL と Web ポータルの URL 用に構成した TCP ポートを開く必要があります。 既定では、これらは TCP ポート 80 で構成されます。
+Web サービス URL および Web ポータル URL 用に構成されている TCP ポートを開く必要があります。 既定では、これらは TCP ポート 80 で構成されます。
 
 ## <a name="additional-configuration"></a>その他の構成
 
-- Power BI ダッシュ ボードにレポート アイテムをピン留めできるよう、Power BI サービスの統合を構成するを参照してください。 [Power BI サービスとの統合](power-bi-report-server-integration-configuration-manager.md)です。
+- Power BI ダッシュボードにレポート アイテムをピン留めできるように、Power BI サービスとの統合を構成するには、[Power BI サービスとの統合](power-bi-report-server-integration-configuration-manager.md)に関するページを参照してください。
 
-- サブスクリプションの処理用の電子メールを構成するのを参照してください。[電子メール設定](e-mail-settings-reporting-services-native-mode-configuration-manager.md)と[電子メールの配信、レポート サーバーに](../subscriptions/e-mail-delivery-in-reporting-services.md)です。
+- サブスクリプション処理の電子メールを構成するには、「[電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)](e-mail-settings-reporting-services-native-mode-configuration-manager.md)」および[レポート サーバーの電子メール配信](../subscriptions/e-mail-delivery-in-reporting-services.md)に関するページを参照してください。
 
-- 表示およびレポートを管理するリモート コンピューター上でアクセスできるように、web ポータルを構成するを参照してください[レポート サーバー アクセスに対してファイアウォールを構成する](../report-server/configure-a-firewall-for-report-server-access.md)と[リモート管理用にレポート サーバーを構成する](../report-server/configure-a-report-server-for-remote-administration.md)。.
+- レポートを表示および管理するためにレポート コンピューター上でアクセスできるように、Web ポータルを構成するには、「[Configure a firewall for report server access](../report-server/configure-a-firewall-for-report-server-access.md)」 (レポート サーバー アクセスに対するファイアウォールの構成) および「[リモート管理用のレポート サーバーの構成](../report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。
 
 ## <a name="related-information"></a>関連情報
 
-SQL Server 2016 Reporting Services ネイティブ モードをインストールする方法については、次を参照してください。 [Install Reporting Services ネイティブ モード レポート サーバー](install-reporting-services-native-mode-report-server.md)です。 SharePoint 統合モードで SQL Server 2016 Reporting Services をインストールする方法については、次を参照してください。[最初のレポート サーバーを SharePoint モードでインストール](install-the-first-report-server-in-sharepoint-mode.md)です。
+SQL Server 2016 Reporting Services ネイティブ モードをインストールする方法については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](install-reporting-services-native-mode-report-server.md)」を参照してください。 SharePoint 統合モードで SQL Server 2016 Reporting Services をインストールする方法については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-レポート サーバーのインストールされている場合とは、レポートを作成し、レポート サーバーに展開を開始します。 レポート ビルダーを開始する方法については、次を参照してください。 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)です。
+インストールされたレポート サーバーを使用して、レポートの作成を開始し、自分のレポート サーバーに配置します。 レポート ビルダーの使用を開始する方法については、「[レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。
 
-SQL Server Data Tools を使用してレポートを作成する[SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)です。
+SQL Server Data Tools を使用してレポートを作成するには、[SQL Server Data Tools をダウンロードします](http://go.microsoft.com/fwlink/?LinkID=616714)。
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

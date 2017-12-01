@@ -1,32 +1,30 @@
 ---
-title: "レポート サーバー サービス アカウント (SSRS 構成マネージャー) の構成 |Microsoft ドキュメント"
+title: "レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e68467845079107509d7cf259b06b8f5c52dbb06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート サーバー Web サービス、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]、およびスケジュールされたレポート処理とサブスクリプションの配信に使用されるバックグラウンド処理アプリケーションを含んだ単一のサービスとして実装されます。 このトピックでは、サービス アカウントを最初に構成する方法と、Reporting Services 構成ツールを使用してアカウントやパスワードを変更する方法について説明します。  
   
 ## <a name="initial-configuration"></a>初期構成  
- レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは **Virtual Service Account**などのビルトイン アカウントで実行できます。 既定のアカウントはありません。インストール ウィザードの [ **Service Accounts** ] ページで指定するアカウントが、レポート サーバー サービスの初期アカウントになります。  
+ レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは **Virtual Service Account**などのビルトイン アカウントで実行できます。 既定のアカウントはありません。インストール ウィザードの **[Service Accounts]** ページで指定するアカウントが、レポート サーバー サービスの初期アカウントになります。  
   
 > [!IMPORTANT]  
 >  レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] は異なる [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、同一のレポート サーバー プロセス ID の単一のサービス アーキテクチャで実行されます。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート サーバー データベースをホストするために使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスのログイン権限を自動的に更新します。 新しいアカウントは **RSExecRole**に追加されます。  
   
-     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、次を参照してください。[管理、レポート サーバー データベース & #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) SQL Server オンライン ブック。  
+     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、SQL Server オンラインブックの「[レポート サーバー データベースの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)」を参照してください。  
   
      新しいサービス アカウントにデータベース権限が与えられるのは、そのサービス アカウントを最初に使用するようにレポート サーバー データベース接続を構成した場合に限られます。 ドメイン ユーザー アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用するようにレポート サーバー データベース接続を構成した場合は、サービス アカウントを更新しても接続情報には影響しません。  
   
@@ -114,5 +112,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 構成マネージャー & #40 です。ネイティブ モード &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

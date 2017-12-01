@@ -1,5 +1,5 @@
 ---
-title: "検索、表示、およびレポート (レポート ビルダーおよび SSRS) の管理 |Microsoft ドキュメント"
+title: "レポートの検索、表示、管理 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e1d41386fc5cea7f7356e5d2d39fe9ea9082d608
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
@@ -72,21 +72,21 @@ ms.lasthandoff: 08/09/2017
   
 -   サーバーでレポートを整理するフォルダーの新規作成  
   
- これらの作業のいくつかはレポート サーバーの管理者が行う場合があります。 レポート サーバーで実行されるタスクの詳細については、次を参照してください。 [Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ これらの作業のいくつかはレポート サーバーの管理者が行う場合があります。 レポート サーバーで行う作業の詳細については、「[Reporting Services Report Server (Native Mode)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」をご覧ください。  
   
  レポート マネージャーには通常、フォルダー、レポート、データ ソース、およびレポート モデルと、[個人用レポート] フォルダーが含まれています。 [個人用レポート] は、所有しているレポートを保存したり操作したりできる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 [個人用レポート] 内にフォルダーを作成して、レポートをさらに細かく分類できます。 詳細については、「 [個人用レポートの使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  レポート マネージャーではレポートが Reporting Services HTML ビューアーに表示されます。 HTML ビューアーは、レポートを HTML で表示するためのフレームワークを提供し、レポートのツール バー、パラメーター セクション、資格情報セクション、ドキュメント マップなどが含まれています。 レポート ツール バーには、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、データ フィードの機能があります。 URL を指定してレポートにアクセスした場合、[レポート] ツール バーはブラウザー ウィンドウのレポートの最上部に表示されます。 印刷機能はオプションで、管理者がオンにする必要があります。 この機能が使用可能なときは、プリンターのアイコンがレポート ツール バーに表示されます。 次の図は、[レポート マネージャー] ウィンドウのレポート ツール バーです。レポート ツール バーの機能が強調されています。  
   
- ![レポート マネージャーのレポート ツールバー](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "レポート マネージャーのレポート ツールバー")  
+ ![レポート マネージャーのレポート ツール バー](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "レポート マネージャーのレポート ツール バー")  
 [レポート マネージャー] ウィンドウ  
   
  ![レポート ツールバー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツールバー")  
 レポート ツール バー  
   
- レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、次を参照してください。[レポートのエクスポート & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)と[別のファイルの種類 &#40; としてレポートをエクスポートレポート ビルダーおよび SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、「[レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」および「[別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)」を参照してください。  
   
- レポートを選択して実行するには、レポート マネージャーを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の詳細な手順については、次を参照してください。[を開いたり、閉じたり、レポートと #40 です。レポート マネージャー &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ レポートを選択して実行するには、レポート マネージャーを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の手順を追った説明については、「[レポートを開閉する (レポート マネージャー)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)」をご覧ください。  
   
  レポートを実行した後、そのレポートを更新すると新しいデータを表示できます。  
   
@@ -107,12 +107,12 @@ ms.lasthandoff: 08/09/2017
   
  アプリケーション ページにアクセスするには、SharePoint ライブラリに既に追加したレポートまたは他のレポート サーバー アイテムのドロップダウン メニューから、アイテム固有のアクションを選択します。 アイテムと権限に応じて、レポート ビルダーでレポートを作成したり、モデルを生成したり、モデル アイテムのセキュリティを設定することもできます。  
   
- Reporting Services と SharePoint テクノロジの詳細については、次を参照してください[レポート サーバー &#40; の構成と管理。Reporting Services SharePoint モード &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com の「します。  
+ Reporting Services および SharePoint テクノロジの詳細については、msdn.microsoft.com で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)の「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」をご覧ください。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトでのレポート サーバー アイテムの場所  
  プロパティを設定するには、まずアイテムを探し出せることが必要です。 レポート サーバー アイテムは、常にライブラリまたはライブラリ内のフォルダーに格納されています。  
   
- SharePoint サイトにアクセスすると、[参照] ページと [ライブラリ ツール] タブが表示されます。 [参照] ページには、ライブラリと、選択したライブラリのコンテンツが表示されます。 レポート、レポート モデル、およびライブラリ内のその他のアイテムの表示、フォルダーの探索、アイテムを格納するサイトの検索が可能です。  
+ SharePoint サイトにアクセスすると、[参照] ページと [ライブラリ ツール] タブが表示されます。[参照] ページには、ライブラリと、選択したライブラリのコンテンツが表示されます。 レポート、レポート モデル、およびライブラリ内のその他のアイテムの表示、フォルダーの探索、アイテムを格納するサイトの検索が可能です。  
   
  SharePoint サイト上のアイテムの中でレポート サーバー アイテムを見分けるには、見た目の異なるアイコンを使用するか、アイテムの種類の上にマウス ポインターを合わせ、表示されるファイル拡張子を確認します。 次の図は、 **レポート** ライブラリ内のフォルダー、レポート モデル、およびレポート定義を示しています。  
   
@@ -161,6 +161,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [レポートの保存 (レポート ビルダー)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [インストールおよびレポート ビルダーをアンインストールします。](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [レポート ビルダーのインストールとアンインストール](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

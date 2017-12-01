@@ -1,5 +1,5 @@
 ---
-title: "データ フィードの生成 (レポート ビルダーおよび SSRS) レポートから |Microsoft ドキュメント"
+title: "複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e11ab920d6af6f09aa911f237ecf3a7c234b016
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、改ページ調整されたレポートから利用できるデータ フィードおよびレポート内のデータ領域からのデータ フィードを一覧表示する Atom サービス ドキュメントを生成します。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Power Pivot や Power BI で行うこともできますし、生成されたデータ フィードを Atom 表示拡張機能を使用することができます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、改ページ調整されたレポートから利用できるデータ フィードおよびレポート内のデータ領域からのデータ フィードを一覧表示する Atom サービス ドキュメントを生成します。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Atom 表示拡張機能を使用して、Power Pivot または Power BI で使用できるデータ フィードを生成できます。  
   
  Atom サービス ドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 データ領域の種類およびデータ領域に表示されるデータによっては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、1 つのデータ領域から複数のデータ フィードを生成することがあります。 たとえば、マトリックスまたはグラフでは、複数のデータ フィードを提供できます。 Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、各データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容にアクセスできます。  
   
@@ -85,13 +83,13 @@ ms.lasthandoff: 08/09/2017
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>データ セクション  
- データ フィードのデータ セクションは、1 つを含む\<**エントリ**> Atom 表示拡張機能によって生成されたフラットな行セットの行ごとの要素。  
+ データ フィードのデータ セクションには、Atom 表示拡張機能によって生成されたフラット化された行セット内の行ごとに 1 つの \<**entry**> 要素が含まれています。  
   
  次の図に、グループと合計を使用するレポートを示します。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 次の XML に示します、 \<**エントリ**> からそのレポート データ フィードの要素。 注意して、 \<**エントリ**> 要素には、売上およびグループの注文の合計と売上および注文のすべてのグループの合計が含まれています。 \<**エントリ**> 要素には、レポートのすべての値が含まれています。  
+ 次の XML は、データ フィード内のレポートの \<**entry**> 要素を示しています。 \<**entry**> 要素には、グループの売上および注文の合計と、すべてのグループの売上および注文の合計が含まれています。 \<**entry**> 要素には、レポート上のすべての値が含まれます。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -120,11 +118,11 @@ ms.lasthandoff: 08/09/2017
   
  一般に、入れ子になったデータ領域のデータ行は幅が広くなります。入れ子になったテーブルおよびマトリックスにグループや合計が含まれる場合は特にそうです。 期待どおりのデータが生成されるかどうかを確認するには、レポートをデータ フィードにエクスポートした後でデータ フィードを表示すると便利です。  
   
- Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示した、サンプルの Atom サービス ドキュメントには、URL が含まれています。`http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`です。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
+ Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示すサンプルの Atom サービス ドキュメントには、URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1` が含まれています。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
   
  レポート アイテムの名前には、直感的でなく覚えにくい、レポート アイテムのレポート定義言語 (RDL) 要素の名前が既定で使用されます。 たとえば、レポートに配置された最初のマトリックスの既定の名前は Tablix 1 となります。 データ フィードでは、これらの名前が使用されます。  
   
- データ領域の DataElementName プロパティを使用してわかりやすい名前を付けることで、データ フィードの操作を容易にすることができます。 DataElementName の値を指定する場合、データ フィードのサブ要素\< **d**> が使用するが、既定のデータ領域の名前ではなく、します。 たとえば、データ領域の既定の名前が Tablix1 と DataElementName SalesByTerritoryYear を設定する場合、 \< **d**> SalesByTerritoryYear を使用して、データ フィードです。 上で説明したマトリックス レポートのようにデータ領域に 2 つのデータ フィードがある場合、データ フィードで使用される名前は、SalesByTerritoryYear _Territory と SalesByTerritoryYear _Year となります。  
+ データ領域の DataElementName プロパティを使用してわかりやすい名前を付けることで、データ フィードの操作を容易にすることができます。 DataElementName の値を設定した場合、データ フィードのサブ要素 \<**d**> でこの値が既定のデータ領域名の代わりに使用されます。 たとえば、データ領域の既定の名前が Tablix1 である場合、DataElementName に SalesByTerritoryYear を設定すると、データ フィードの \<**d**> では SalesByTerritoryYear が使用されます。 上で説明したマトリックス レポートのようにデータ領域に 2 つのデータ フィードがある場合、データ フィードで使用される名前は、SalesByTerritoryYear _Territory と SalesByTerritoryYear _Year となります。  
   
  レポート上に表示されたデータとデータ フィード内のデータを比較した場合、いくつかの相違があります。 通常、レポートに表示される数値データや日時データは書式設定されていますが、データ フィードには書式設定されていないデータが含まれます。  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   ピア データ領域は、一般的なデータ領域または動的な先祖を共有する、データ領域または動的グループです。 ピア データがフラットなツリーの分岐で識別されます。  
   
- 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)を返します。  
+ 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="AtomRendering"></a> Atom 表示ルール  
@@ -195,8 +193,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>次の手順
 
-[CSV ファイルにエクスポートします。](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[CSV ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [レポートのエクスポート](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

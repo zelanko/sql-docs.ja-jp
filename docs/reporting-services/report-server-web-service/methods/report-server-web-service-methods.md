@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバー Web サービスのメソッド |Microsoft ドキュメント"
+title: "レポート サーバー Web サービスのメソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, methods
 - Web service [Reporting Services], methods
@@ -20,23 +19,22 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 89804c5a980a3fed4869dca8de1603d42e7b481a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-web-service-methods"></a>レポート サーバー Web サービスのメソッド
-  レポート サーバー Web サービスには、コンポーネントの機能に基づいた、複数のカテゴリのメソッドが含まれています。 これらのメソッドは、Web サービスのいくつかのエンドポイントを介して (レポート管理用に 3 つ、レポート実行用に 1 つ)、<xref:ReportService2010.ReportingService2010> クラスおよび <xref:ReportExecution2005.ReportExecutionService> クラスのメンバーとして提供されます。 含まれる wsdl.exe など、プロキシ クラス ツールを使ってこれらのクラスを生成することができます、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK。 レポート サーバー Web サービスの詳細については、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]を参照してください[Web サービスと、.NET Framework を使用してアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)です。  
+  レポート サーバー Web サービスには、コンポーネントの機能に基づいた、複数のカテゴリのメソッドが含まれています。 これらのメソッドは、Web サービスのいくつかのエンドポイントを介して (レポート管理用に 3 つ、レポート実行用に 1 つ)、<xref:ReportService2010.ReportingService2010> クラスおよび <xref:ReportExecution2005.ReportExecutionService> クラスのメンバーとして提供されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK に含まれる wsdl.exe などのプロキシ クラス ツールを使用して、これらのクラスを生成できます。 Report Server Web サービスと [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の詳細については、「[Web サービスと、.NET Framework を使用してのアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)」を参照してください。  
   
 ## <a name="endpoints-and-methods"></a>エンドポイントおよびメソッド  
- 次の表に、レポート サーバー Web サービスのエンドポイントと、<xref:ReportService2010.ReportingService2010> エンドポイントにより提供されるメソッドのカテゴリを示します。 他のエンドポイントで使用できる方法については、次を参照してください。[テクニカル リファレンス & #40 です。SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md).  
+ 次の表に、レポート サーバー Web サービスのエンドポイントと、<xref:ReportService2010.ReportingService2010> エンドポイントにより提供されるメソッドのカテゴリを示します。 他のエンドポイントで利用可能なメソッドの詳細については、「[テクニカル リファレンス (SSRS)](../../../reporting-services/technical-reference-ssrs.md)」を参照してください。  
   
 |トピック|Description|  
 |-----------|-----------------|  
@@ -53,10 +51,9 @@ ms.lasthandoff: 08/12/2017
 |[リンク レポートのメソッド](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|リンク レポートを作成および管理するためのメソッドについて説明します。|  
   
 ## <a name="see-also"></a>参照  
- [SOAP API にアクセスします。](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Web サービスと、.NET Framework を使用してアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [SOAP API へのアクセス](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
+ [Web サービスと .NET Framework を使用してのアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [レポート サーバー Web サービス](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [テクニカル リファレンス & #40 です。SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [テクニカル リファレンス (SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

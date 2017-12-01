@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 80f962efa995f8f6a5d422f8b470826acddbab58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 このページを使用して、レポート サーバーのシステム プロパティを設定します。 システム プロパティを設定する方法はいくつかあります。 このツールにはグラフィカル ユーザー インターフェイスが用意されているので、コードを記述しなくてもプロパティを設定できます。
 
-このページを開くには、SQL Server Management Studio を起動、レポート サーバー インスタンスに接続、レポート サーバーの名前を右クリックし、選択**プロパティ**です。 選択**詳細**をこのページを開きます。
+このページを開くには、SQL Server Management Studio を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 **[詳細設定]** を選択するとこのページが開きます。
 
 ## <a name="options"></a>オプション
 
@@ -80,9 +77,9 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 
 |値|Description|
 |---------|---------|
-|**SQL**|レポート サーバー データベースに格納されているときに、スナップショットは圧縮されます。 これは現在の動作です。|
+|**SQL**|スナップショットは、レポート サーバー データベースへの格納時に圧縮されます。 これは現在の動作です。|
 |**なし**|スナップショットは圧縮されません。|
-|**すべて**|レポート サーバー データベースまたはファイル システムを含む、すべての記憶域オプションのスナップショットが圧縮されます。|
+|**すべて**|すべてのストレージ オプションのスナップショットが圧縮されます。このオプションには、レポート サーバー データベースやファイル システムが含まれます。|
 
 **SystemReportTimeout**  
 レポート サーバー名前空間で管理されているすべてのレポートの既定のレポート処理タイムアウト値 (秒単位)。 この値はレポート レベルでオーバーライドできます。 このプロパティを設定すると、レポート サーバーは指定された時間が経過した後、レポートの処理を停止しようとします。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値に **-1**を設定すると、名前空間内のレポートが処理中にタイムアウトしません。 既定値は **1800**です。  
@@ -95,8 +92,8 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 
 |値|Description|
 |---------|---------|
-|**True**|Windows 統合セキュリティが有効になっているとします。|
-|**False**|Windows 統合セキュリティが無効です。 Windows 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。|
+|**True**|Windows 統合セキュリティが有効になります。|
+|**False**|Windows 統合セキュリティは無効になります。 Windows 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。|
 
 **EnableLoadReportDefinition**  
 ユーザーがレポート ビルダーのレポートからアドホック レポートを実行できるかどうかを指定するには、このオプションを選択します。 このオプションをオンにすると、レポート サーバーの **EnableLoadReportDefinition** プロパティが設定されます。  
@@ -117,31 +114,34 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 **EditSessionTimeout**  
 レポート編集セッションがタイムアウトするまでの秒数を指定します。既定値は 7200 秒 (2 時間) です。  
 
-**EnableCustomVisuals** ***(Power BI のレポート サーバーのみ)***  
-PowerBI カスタム ビジュアルの表示を有効に PowerBI ReportServer ください。 値は、True を false の場合です。  既定値は True です。  
+**EnableCustomVisuals** ***(Power BI Report Server のみ)***  
+PowerBI ReportServer で PowerBI カスタム ビジュアルの表示を有効にします。 値は True、False です。  既定値は True です。  
 
-**EnablePowerBIReportExportData** ***(Power BI のレポート サーバーのみ)***  
-Power Bi ビジュアルのデータのエクスポートを有効に PowerBI ReportServer ください。 値は、True を false の場合です。  既定値は True です。  
+**EnablePowerBIReportExportData** ***(Power BI Report Server のみ)***  
+PowerBI ReportServer で PowerBI ビジュアルからのデータのエクスポートを有効にします。 値は True、False です。  既定値は True です。  
+
+**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server のみ)***  
+AS モデルが埋め込まれた PowerBI レポートでのスケジュールされた更新のデータ更新のタイムアウト (分)。 既定値は 120 分です。
 
 **EnableTestConnectionDetailedErrors**  
 ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージが送信されるようにするかどうかを指定します。 既定値は **true**です。 このオプションを **false**に設定した場合は、一般的なエラー メッセージだけが送信されます。
 
 **AccessControlAllowCredentials**  
-'資格情報' フラグが設定されている場合に、クライアント要求に応答を公開することができるかどうかを示す true に設定します。 既定値は **false**です。
+'credentials' フラグが true に設定されている場合に、クライアント要求への応答を公開できるかどうかを示します。 既定値は **false**です。
 
-**AccessControlAllowHeaders**クライアント要求を行うときに、サーバーを許可するヘッダーのコンマ区切りリスト。 このプロパティは、空の文字列にすることができますを指定する * すべてのヘッダーを許可します。
+**AccessControlAllowHeaders** クライアントが要求したときに、サーバーが許可するヘッダーのコンマ区切りリスト。 このプロパティは、空の文字列にすることができます。* を指定すると、すべてのヘッダーが許可されます。
 
-**AccessControlAllowMethods**クライアント要求を行うときに、サーバーを許可する HTTP メソッドのコンマ区切りリスト。 既定値は、(GET、PUT、POST、PATCH、DELETE) を指定する * すべてのメソッドを許可します。
+**AccessControlAllowMethods** クライアントが要求したときに、サーバーが許可する HTTP メソッドのコンマ区切りリスト。 既定値は GET、PUT、POST、PATCH、DELETE です。* を指定すると、すべてのメソッドが許可されます。
 
-**AccessControlAllowOrigin**クライアント要求を行うときに、サーバーを許可するオリジンのコンマ区切りリスト。 既定値は空白を指定するすべての要求を防ぐことが * 資格情報が設定されていませんときに、すべてのオリジンを許可されます。オリジンの明示的なリストを指定する必要がありますの資格情報が指定した場合。
+**AccessControlAllowOrigin** クライアントが要求したときに、サーバーが許可する要求元のコンマ区切りリスト。 既定値は空白で、すべての要求を防ぎます。* を指定すると、資格情報が設定されていない場合にすべての要求元が許可されます。資格情報が指定されている場合は、要求元の明示的なリストを指定する必要があります。
 
-**AccessControlExposeHeaders**サーバーがクライアントに公開されるヘッダーのコンマ区切りリスト。 既定値は空白です。
+**AccessControlExposeHeaders** サーバーがクライアントに公開するヘッダーのコンマ区切りリスト。 既定値は空白です。
 
-**AccessControlMaxAge**プレフライト要求の結果をキャッシュする秒数を指定します。 既定値は 600 (10 分) です。
+**AccessControlMaxAge** プリフライト要求の結果をキャッシュできる秒数を指定します。 既定値は 600 (10 分) です。
 
 ## <a name="see-also"></a>参照
 
-[レポート サーバーのプロパティの設定 & #40 です。Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+[レポート サーバーのプロパティを設定する (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
 [Reporting Services のプロパティ](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
 [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
@@ -149,5 +149,4 @@ Power Bi ビジュアルのデータのエクスポートを有効に PowerBI Re
 [配置タスクおよび管理タスクのスクリプト作成](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

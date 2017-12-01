@@ -1,5 +1,5 @@
 ---
-title: "カスタム セキュリティ拡張機能をインストールする方法 |Microsoft ドキュメント"
+title: "カスタム セキュリティ拡張機能をインストールする方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/10/2017
 ms.prod: sql-server-2016
@@ -11,38 +11,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
-ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c3a035503b98ba0dec235b9d7f402947b35d1fe5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="how-to-install-custom-security-extensions"></a>カスタム セキュリティ拡張機能をインストールする方法
 
 [!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services 2016 には、新しい Odata Api をホストしもモバイル レポートと KPI などの新しいレポート ワークロードをホストするために新しい web ポータルが導入されました。 この新しいポータルは新しいテクノロジに依存しています、別のプロセスで実行して、使い慣れた ReportingServicesService から分離します。 このプロセスは、ホストされる ASP.NET アプリケーションではないおよび、ような既存のカスタム セキュリティ拡張機能から前提条件を改行します。 さらに、カスタム セキュリティ拡張機能の現在のインターフェイスを許可しないすべての外部に渡されるコンテキスト、既知のグローバル ASP.NET オブジェクトを検査する唯一の選択肢を持つ実装者のままこの必須インターフェイスには、いくつか変更します。
+Reporting Services 2016 では新しい Web ポータルが導入されました。このポータルは、新しい Odata API をホストし、また、モバイル レポートや KPI などの新しいレポート ワークロードをホストするためのものです。 この新しいポータルは新しいテクノロジに依存しており、別のプロセスで実行することで使い慣れた ReportingServicesService からは分離されます。 このプロセスでは、アプリケーションを ASP.NET でホストしないため、既存のカスタム セキュリティ拡張機能の前提条件には従いません。 さらに、カスタム セキュリティ拡張機能の現在のインターフェイスではどの外部コンテキストも渡すことができず、実装者は既知のグローバル ASP.NET オブジェクトを検査するしかありません。そのため、インターフェイスの一部を変更する必要がありました。
 
-## <a name="what-changed"></a>何が変更されたか。
+## <a name="what-changed"></a>変更内容
 
-新しいインターフェイスが導入されたを実装できる認証に関連する意思決定を行う拡張機能で使用される一般的なプロパティを提供する、IRSRequestContext を提供します。
+導入された新しいインターフェイスを実装することで、認証に関する決定を行う場合に拡張機能で使用されるより一般的なプロパティを提供する IRSRequestContext を提供できます。
 
-以前のバージョンでは、レポート マネージャーは、フロント エンドがおよび、独自のカスタム ログイン ページを使用して構成できます。 Reporting Services 2016 で reportserver によってホストされている 1 つだけのページがサポートされ、両方のアプリケーションを認証する必要があります。
+以前のバージョンでは、レポート マネージャーはフロント エンドだったため、独自のカスタム ログイン ページで構成できました。 Reporting Services 2016 では、reportserver でホストされる 1 ページのみがサポートされ、両方のアプリケーションに対して認証を行う必要があります。
 
 ## <a name="implementation"></a>実装
 
-以前のバージョンでは、拡張機能が ASP.NET オブジェクトすぐに使用できることが一般的な前提としてに頼る。 ASP.NET では、新しいポータルが実行されないため、拡張機能可能性がありますオブジェクトが NULL で問題に達しています。
+以前のバージョンでは、拡張機能は、ASP.NET オブジェクトをすぐに使用できるという一般的な前提条件に依存できました。 ASP.NET では新しいポータルが実行されないため、拡張機能ではオブジェクトが NULL になるという問題が発生する可能性があります。
 
-最も一般的な例は、ヘッダーとクッキーなどの要求情報を読み取る HttpContext.Current にアクセスします。 拡張機能を同じ決定を行うを許可するために要求情報を提供し、ポータルからの認証時に呼び出される拡張機能で新しいメソッドが導入されました。 
+最も一般的な例は、ヘッダーや Cookie などの要求情報を読み取るための HttpContext.Current へのアクセスです。 拡張機能で同じ決定を行えるように、新しいメソッドを拡張機能に導入しました。このメソッドは要求情報を提供し、ポータルからの認証時に呼び出されます。 
 
-拡張機能が実装するために、<xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>これを活用するためにインターフェイスです。 拡張機能が両方のバージョンを実装する必要があります<xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo%2A>メソッドは、reportserver コンテキストと web ホスト プロセスで使用されるその他によって呼び出されます。 以下のサンプルは、reportserver によって解決 id が使用されているものをここでは、ポータルの単純な実装のいずれかを示しています。
+これを活用するには、拡張機能で <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> インターフェイスを実装する必要があります。 拡張機能では両方のバージョンの <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo%2A> メソッド (reportserver コンテキストとその他の Web ホスト プロセスで使用されるコンテキストによって呼び出される) を実装する必要があります。 以下のサンプルは、reportserver で解決される ID が使用されるポータルの単純な実装の 1 つを示しています。
 
 ``` 
 public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIdentity, out IntPtr userId)
@@ -58,23 +56,23 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 }
 ```
 
-## <a name="deployment-and-configuration"></a>展開と構成
+## <a name="deployment-and-configuration"></a>配置と構成
 
-カスタム セキュリティ拡張機能に必要な基本的な構成では、以前のリリースと同じです。 Web.config および rsreportserver.config の変更が必要な: 詳細については、次を参照してください。[を構成するカスタムまたはフォーム認証は、レポート サーバー上](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)です。
+カスタム セキュリティ拡張機能に必要な基本構成は、以前のリリースと同じです。 web.config および rsreportserver.config の変更が必要です。詳細については、「[レポート サーバーでカスタム認証またはフォーム認証を構成する](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)」を参照してください。
 
-レポート マネージャーの別の web.config はなくなりますが、ポータルは、reportserver エンドポイントと同じ設定を継承します。
+レポート マネージャーの個別の web.config はなくなりましたが、ポータルでは reportserver エンドポイントと同じ設定が継承されます。
 
 ## <a name="machine-keys"></a>コンピューター キー
 
-認証 cookie の復号化を必要となるフォーム認証の場合は、両方のプロセスを同じマシン キーと復号化アルゴリズムを使用して構成する必要があります。 これは、以前は、スケール アウト環境で動作するセットアップ Reporting Services があったが、今すぐ要件もの単一のコンピューターに展開するユーザーになじみのステップをでした。
+認証 Cookie の復号化を必要とするフォーム認証の場合、両方のプロセスを同じコンピューター キーと復号化アルゴリズムで構成する必要があります。 これは、以前 Reporting Services をスケールアウト環境で動作するようにセットアップしたユーザーには馴染みのある手順でしたが、単一コンピューターに配置する場合でも必要になりました。
 
-展開の特定のキーの検証を使用する必要があります、インターネット インフォメーション サービス マネージャー (IIS) のようなキーを生成するツールがいくつかあります。 その他のツールは、インターネットで確認できます。
+配置では特定の検証キーを使用する必要があります。インターネット インフォメーション サービス マネージャー (IIS) のような、キーを生成するためのツールはいくつかあります。 その他のツールはインターネットで見つけることができます。
 
 ### <a name="sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services 2017 以降
 
 **\ReportServer\rsReportServer.config**
 
-追加`<configuration>`です。
+`<configuration>` の下に追加します。
 
 ```
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
@@ -84,7 +82,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 **\ReportServer\web.config**
 
-追加`<system.web>`です。
+`<system.web>` の下に追加します。
     
 ```
     <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
@@ -92,7 +90,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 **\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe.config**
 
-追加`<configuration>`です。
+`<configuration>` の下に追加します。
 
 ```
     <system.web>
@@ -102,19 +100,19 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ### <a name="power-bi-report-server"></a>Power BI レポート サーバー
 
-これは、2017 年 6 月 (ビルド 14.0.600.301) リリースで使用できます。
+これは、2017 年 6 月 (ビルド 14.0.600.301) リリースの時点で使用可能な内容です。
 
 **\ReportServer\rsReportServer.config**
 
-追加`<configuration>`です。
+`<configuration>` の下に追加します。
 
 ```
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
 
-## <a name="configure-passthrough-cookies"></a>パススルー cookie を構成します。
+## <a name="configure-passthrough-cookies"></a>パススルー Cookie を構成する
 
-新しいポータルと、reportserver は、いくつかの操作 (レポート マネージャーの以前のバージョンに似ています) の内部の soap Api を使用して通信します。 ポータルからサーバーに渡される追加のクッキーが必要な場合は、PassThroughCookies プロパティを引き続き使用できます。 詳細については、次を参照してください。[カスタム認証クッキーを Web ポータルを構成する](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)です。
+新しいポータルと reportserver は、いくつかの操作で内部 SOAP API を使用して通信を行います (以前のバージョンのレポート マネージャーに似ています)。 ポータルからサーバーに追加の Cookies を渡す必要がある場合は、PassThroughCookies プロパティを引き続き使用できます。 詳細については、「[カスタム認証クッキーを送信するように Web ポータルを構成する](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)」を参照してください。
 
 ```
 <UI>
@@ -128,8 +126,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="next-steps"></a>次の手順
 
-[レポート サーバーでカスタム認証またはフォーム認証を構成します。](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-[カスタム認証クッキーを渡すためのレポート マネージャーを構成します。](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
+[レポート サーバーでカスタム認証またはフォーム認証を構成する](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+[カスタム認証クッキーを送信するようにレポート マネージャーを構成する](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

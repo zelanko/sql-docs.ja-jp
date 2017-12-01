@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services での承認 |Microsoft ドキュメント"
+title: "Reporting Services での承認 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- authorization [Reporting Services]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: bd7ecdc8e792fe11810affa362ff681bfdf267f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services での承認
-  承認は、レポート サーバー データベースの特定のリソースに対して要求された種類のアクセスに、ID を付与するかどうかを判断する処理です。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、ロールベースの承認アーキテクチャを使用します。つまり、そのアプリケーションでユーザーに割り当てられているロールに基づいて、各リソースにユーザー アクセス権を付与します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能には、レポート サーバーでユーザーが認証された後、そのユーザーにアクセス権を付与するための承認コンポーネントが実装されています。 SOAP API および URL アクセスを使用して、ユーザーがシステムまたはレポート サーバー アイテムに対して操作を実行しようとすると、承認が呼び出されます。 これは、操作を行うセキュリティ拡張機能インターフェイス**IAuthorizationExtension2**です。 既に説明したように、すべての拡張機能がから継承**IExtension**を展開するすべての拡張機能の基本インターフェイスです。 **IExtension**と**IAuthorizationExtension2**のメンバーである、 **Microsoft.ReportingServices.Interfaces**名前空間。  
+  承認は、レポート サーバー データベースの特定のリソースに対して要求された種類のアクセスに、ID を付与するかどうかを判断する処理です。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、ロールベースの承認アーキテクチャを使用します。つまり、そのアプリケーションでユーザーに割り当てられているロールに基づいて、各リソースにユーザー アクセス権を付与します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能には、レポート サーバーでユーザーが認証された後、そのユーザーにアクセス権を付与するための承認コンポーネントが実装されています。 SOAP API および URL アクセスを使用して、ユーザーがシステムまたはレポート サーバー アイテムに対して操作を実行しようとすると、承認が呼び出されます。 これは、セキュリティ拡張機能インターフェイス **IAuthorizationExtension2** を使用して実現されます。 前に説明したように、すべての拡張機能は、配置した拡張機能の基本インターフェイスである **IExtension** から継承されます。 **IExtension** と **IAuthorizationExtension2** は、**Microsoft.ReportingServices.Interfaces** 名前空間のメンバーです。  
   
 ## <a name="checking-access"></a>アクセスのチェック  
  承認でカスタム セキュリティの実装に不可欠なのはアクセス チェックです。これは、<xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> メソッドに実装されています。 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> は、ユーザーがレポート サーバーに対する操作を試行するたびに呼び出されます。 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> メソッドは、操作の種類ごとにオーバーロードされます。 フォルダー操作の場合、アクセス チェックの例は次のようになります。  
@@ -61,7 +59,7 @@ public bool CheckAccess(
 }  
 ```  
   
- レポート サーバーが <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> メソッドを呼び出すときに、ログオンしているユーザーの名前、ユーザー トークン、アイテムのセキュリティ記述子、および要求された操作を渡します。 ユーザー名と、要求を完了し、返す適切なアクセス許可のセキュリティ記述子をチェックするここ**true**アクセスが許可されることを示すまたは**false**アクセスが拒否されたことを示すです。  
+ レポート サーバーが <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> メソッドを呼び出すときに、ログオンしているユーザーの名前、ユーザー トークン、アイテムのセキュリティ記述子、および要求された操作を渡します。 ユーザー名のセキュリティ記述子をチェックし、要求を実行する適切なアクセス許可を持っているか確認します。次に、アクセスが許可されたことを通知するには **true** を、アクセスが拒否されたことを通知するには **false** を返します。  
   
 ## <a name="security-descriptors"></a>セキュリティ記述子  
  レポート サーバー データベースのアイテムに対して承認ポリシーを設定する場合は、レポート マネージャーなどのクライアント アプリケーションがユーザー情報をアイテムのセキュリティ ポリシーと一緒にセキュリティ拡張機能に送信します。 このセキュリティ ポリシーとユーザー情報をまとめてセキュリティ記述子と呼びます。 セキュリティ記述子には、レポート サーバー データベースのアイテムに関する次の情報が含まれます。  
@@ -77,7 +75,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>承認フロー  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の承認は、サーバーで動作するように構成されているセキュリティ拡張機能によって制御されます。 承認はロールベースであり、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] セキュリティ アーキテクチャによって指定された権限と操作に限定されます。 次の図は、レポート サーバー データベースのアイテムを操作するユーザーを承認するプロセスを示しています。  
   
- ![Reporting Services のセキュリティ承認フロー](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services のセキュリティ承認フロー")  
+ ![Reporting Services のセキュリティ認証フロー](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services のセキュリティ承認フロー")  
   
  この図のように、承認は次の順序で実行されます。  
   

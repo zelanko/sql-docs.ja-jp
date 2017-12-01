@@ -1,5 +1,5 @@
 ---
-title: "データ警告デザイナー |Microsoft ドキュメント"
+title: "データ警告デザイナー | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 データ警告の定義は、データ警告デザイナーで作成および編集します。 警告定義は、メタデータのコレクションです (関心のあるレポート データ、データ警告インスタンスの作成とデータ警告メッセージの送信のためにレポート データが満たさなければならないルール、警告メッセージの受信者など)。  
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
  警告の定義を作成するには、さまざまな関連タスクを実行します。  
   
@@ -146,9 +146,9 @@ ms.lasthandoff: 08/09/2017
   
 -   文字列データ型の比較: **である**、 **ではない**、および **含む**  
   
- ルールを作成する際には、 **[値入力モード]** または **[フィールドの選択モード]**を選択して、値とフィールドのどちらを比較に使用するかを指定します。 **[値入力モード]**を選択した場合は、比較する値のリストを指定します。 複数の OR 句を含む比較は、[!INCLUDE[tsql](../includes/tsql-md.md)] の IN 論理比較 (一致項目に対してテストする値のリスト) と非常によく似ています。 詳細については、「[IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md)」を参照してください。  
+ ルールを作成する際には、 **[値入力モード]** または **[フィールドの選択モード]**を選択して、値とフィールドのどちらを比較に使用するかを指定します。 **[値入力モード]**を選択した場合は、比較する値のリストを指定します。 複数の OR 句を含む比較は、 [!INCLUDE[tsql](../includes/tsql-md.md)]の IN 論理比較 (一致項目に対してテストする値のリスト) と非常によく似ています。 詳細については、「[IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md)」を参照してください。  
   
- **[フィールドの選択モード]** を選択した場合、比較は 2 つのフィールド間で行ごとに行われます。 2 つのフィールドは互換性のあるデータ型 (2 つの数値フィールドなど) である必要があります。互換性がない場合、比較は無効になります。 **[フィールドの選択モード]**を選択すると、フィールドのリストが自動的に表示されます。  
+ **[フィールドの選択モード]**を選択した場合、比較は 2 つのフィールド間で行ごとに行われます。 2 つのフィールドは互換性のあるデータ型 (2 つの数値フィールドなど) である必要があります。互換性がない場合、比較は無効になります。 **[フィールドの選択モード]**を選択すると、フィールドのリストが自動的に表示されます。  
   
  ルールを伴わないデータ警告も有効です。 このタイプの警告は、非常に有用な場合があります。 たとえば、レポート データ フィードにデータがある場合のみ通知されるというシナリオがあるとします。 データ フィードは出席者の情報を格納しますが、フィードは出席者がキャンセルするまで空です。 このシナリオでは、最初のキャンセルで警告の通知が開始されます。  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="email-settings"></a>電子メールの設定  
  電子メールでデータ警告メッセージを受信する受信者の電子メール アドレスは、 **[受信者]** オプションで指定します。 Microsoft Office Outlook の電子メール メッセージと同じように、複数の電子メール アドレスはセミコロンで区切ります。 配布グループを受信者として指定することもできます。これにより、受信者の一覧をより簡単かつ効率的に管理できます。 警告定義の作成時に、作成者の電子メール アドレスを SharePoint が取得できた場合は、そのアドレスが受信者リストに自動的に追加されますが、それ以外の場合は自分自身を受信者として明示的に追加する必要があります。  
   
- 既定の電子メールの件名は**データ アラート\<警告名 >**です。 件名は必要に応じて変更できます。  
+ 電子メールの既定の件名は、"**\<警告名> に関するデータの警告**" です。 件名は必要に応じて変更できます。  
   
  **[説明]** オプションで、データ警告メッセージに含める説明を入力することもできます。 説明は、似たようなデータ警告がある場合などに、警告メッセージをすばやく区別したり、内容をすばやく理解するのに役立ちます。 レポート データが指定のルールに合致した場合に送信される警告メッセージに加えて、エラーが発生した際には、すべての受信者に警告メッセージが送信されます。 詳細については、「 [Data Alert Messages](../reporting-services/data-alert-messages.md)」を参照してください。  
   
@@ -205,7 +205,7 @@ ms.lasthandoff: 08/09/2017
   
  データ警告定義を編集するには、データ警告マネージャーで目的の定義を右クリックし、 **[編集]**をクリックします。 次の図は、データ警告マネージャーでの、データ警告のショートカット メニューを示しています。  
   
- ![データ警告デザイナーを編集 をクリックして開く](../reporting-services/media/rs-alertmanageriwopendesigner.gif "編集 をクリックしてデータ警告デザイナーを開く")  
+ ![[編集] をクリックしてデータ警告デザイナーを開く](../reporting-services/media/rs-alertmanageriwopendesigner.gif "[編集] をクリックしてデータ警告デザイナーを開く")  
   
  詳細については、「 [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)」を参照してください。  
   
@@ -213,13 +213,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="HowTo"></a> 関連タスク  
  このセクションでは、警告を作成および編集する手順について説明します。  
   
--   [警告デザイナーでデータ警告を編集します。](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
 ## <a name="see-also"></a>参照
 
-[Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)   
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)   
 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

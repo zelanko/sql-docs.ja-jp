@@ -1,30 +1,61 @@
 ---
 title: "SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 64583be5bd94e71a52b894c5babd3d29107c56dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+
+## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT for Visual Studio 2017 (15.4.0 プレビュー)
+ビルド番号: 14.0.16134.0
+  
+### <a name="whats-new"></a>新機能
+
+このリリースでは、Visual Studio 2017 (15.4 以降) での SQL Server データベース、Analysis Services、Reporting Services、および Integration Services の各プロジェクトに対するスタンドアロン Web インストーラーが提供されています。
+
+### <a name="installer"></a>インストーラー
+
+- ユーザーは、VS2017 インスタンス用の新しい SSDT をインストールするときに、ニックネームを設定できるようになります。
+- VS インスタンスが選ばれていない場合、インストーラーの機能選択ボックスが表示されなくなります。
+- お客様のフィードバックに基づいて、インストーラーの一部のメッセージが修正されます。
+- インストーラーがアップグレードに対応していない問題が修正されます。
+
+
+### <a name="ssis"></a>SSIS
+
+- Azure 機能パックがインストールされているときに Import/Export ウィザードがデータ ソースを一覧表示できない問題が修正されます。
+- SSIS Analysis Services プロセス タスクを編集すると接続切り替え中に例外がスローされる問題が修正されます。
+- __$command_id 列を追加する SQL の修正を適用した後、CDC コンポーネントが壊れる問題が修正されます。
+- 使用していない SQL Server を対象にしたときに、サード パーティのパッケージを編集および実行できない問題を修正しました。
+- DTSWizard.exe をダブルクリックして [フラット ファイル ソース] を選んだときに、フラット ファイル ソース構成ダイアログ ボックスが正しく表示されない問題が修正されます。
+- SQL Server 2017 を対象にした場合に Azure Feature Pack のタスク/コンポーネントを含むパッケージが実行できない問題が修正されます。
+
+
+**既知の問題**
+
+- インストーラーはローカライズされていません。
+- *ExecuteOutOfProcess* が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 for Visual Studio 2015
 ビルド番号: 14.0.61709.290
@@ -550,4 +581,3 @@ SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SS
 [Analysis Services の新機能](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
-

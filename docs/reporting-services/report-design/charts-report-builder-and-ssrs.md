@@ -1,5 +1,5 @@
 ---
-title: "グラフ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -21,49 +21,49 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ca57a00afd7256fce9c620099277a9894cbf59a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
-読者の皆様にグラフ データ領域の使用について、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]改ページ調整されたレポートは、大量の集計されたデータの概要を理解します。  
+[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを読むユーザーが、大量の集計データを一目で理解できるよう、グラフ データ領域の使用について説明します。  
 
-詳細時間慎重に準備して、グラフを作成する前に、データを理解することが容易になります迅速かつ効率的にグラフをデザインします。 使用するには、どのグラフの選択については、次を参照してください。[グラフの種類](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)をグラフでの試みをすぐに開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)です。  
+グラフを作成する前に、時間をかけ丁寧にデータを理解する準備をすればするほど、グラフを簡単かつ効率的に容易に設計することができます。 どのグラフを使用するか選択する場合、「[グラフの種類](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。グラフをすぐに試してみたい場合、「[レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)」の棒、列、スパークライン、円グラフのチュートリアルを参照してください。  
   
  次の図は、グラフで使用されるさまざまな要素を示しています。  
   
  ![グラフ要素の図](../../reporting-services/report-design/media/rs-chartelementsc.gif "グラフ要素の図")  
   
- グラフとしてレポートから個別にパブリッシュできます*レポート パーツ*です。 詳細については、次を参照してください。[レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)です。
+ グラフは、*レポート パーツ*としてレポートとは別にパブリッシュできます。 詳細については、「[レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。
   
  
 ##  <a name="DesigningChart"></a> グラフのデザイン  
- グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 デザイン画面でグラフをクリックすると、カテゴリ グループ、系列グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。 レポートに共有データセットまたは埋め込みデータセットが含まれている場合、データセットのフィールドがレポート データ ペインに表示されます。 データセットからフィールドをグラフ データ ペインの適切な領域にドラッグします。 既定では、フィールドがグラフのいずれかの領域に追加されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 系列グループを使用して系列を動的に生成することもできます。 グラフは[行列のような編成](#SimilarMatrix)です。  
+ グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 デザイン画面でグラフをクリックすると、カテゴリ グループ、系列グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。 レポートに共有データセットまたは埋め込みデータセットが含まれている場合、データセットのフィールドがレポート データ ペインに表示されます。 データセットからフィールドをグラフ データ ペインの適切な領域にドラッグします。 既定では、フィールドがグラフのいずれかの領域に追加されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 系列グループを使用して系列を動的に生成することもできます。 グラフは[マトリックスのように](#SimilarMatrix)まとめられます。  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  デザイン時のグラフ内のデータは、レポートが処理されるときのグラフ内のデータとは異なります。 デザイン時のデータは、実際のデータではありません。 デザイン時に作成されるデータは、グラフの概要を把握してグラフを設計するために追加された生成データです。  
   
-##  <a name="SimilarMatrix"></a>グラフをマトリックスなどの方法  
+##  <a name="SimilarMatrix"></a> マトリックスとグラフの類似点  
  グラフがどのように動作するかについての考え方の 1 つは、グラフをマトリックスと比較することです。  
   
- ![選択したツールボックスから追加されたマトリックスの新規作成](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "選択ツールボックスから追加されたマトリックスの新規作成")  
+ ![ツールボックスから追加された新しいマトリックス、選択](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
   
  概念的には、グラフとマトリックスの組織は次のように同じです。  
   
--   マトリックスの列グループは、グラフのカテゴリ グループ 領域に似ています。  
+-   マトリックスの [列] グループは、グラフの [カテゴリ グループ] 領域と似ています。  
   
--   マトリックスの行グループは、グラフの系列グループ 領域に似ています。  
+-   マトリックスの [行] グループは、グラフの [系列グループ] 領域と似ています。  
   
--   マトリックス内のデータ領域は、グラフの [値] 領域に似ています。  
+-   マトリックスの [データ] 領域は、グラフの [値] 領域と似ています。  
   
  
 ##  <a name="AddingData"></a> グラフへのデータの追加  
@@ -96,11 +96,11 @@ ms.lasthandoff: 08/09/2017
   
  グラフ上のデータを整理するには、いくつかの方法があります。  
   
--   円グラフを使用している場合は、複数の小さいスライスを "その他" という 1 つのスライスにまとめます。 こうすると、円グラフのスライスの数が少なくなります。 詳細については、「[円グラフの小さいスライスをまとめる &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)」を参照してください。  
+-   円グラフを使用している場合は、複数の小さいスライスを "その他" という 1 つのスライスにまとめます。 こうすると、円グラフのスライスの数が少なくなります。 詳細については、「 [円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)」(グラフ (レポート ビルダーおよび SSRS)) を参照してください。  
   
 -   データ ポイントの数が多い場合は、データ ポイント ラベルを使用しないでください。 データ ポイント ラベルが最も効果的なのは、グラフ上のポイントが少数の場合です。  
   
--   不要なデータや無関係なデータをフィルター処理します。 これにより、グラフに表示する主要なデータを強調することができます。 グラフ内のデータ ポイントをフィルター処理するには、カテゴリ グループまたは系列グループに対するフィルターを設定します。 既定では、組み込み関数 Sum を使って、同じグループに属する値が系列内の個々のデータ ポイントとして集計されます。 系列の集計関数を変更する場合は、フィルター式の集計関数を変更する必要もあります。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
+-   不要なデータや無関係なデータをフィルター処理します。 これにより、グラフに表示する主要なデータを強調することができます。 グラフ内のデータ ポイントをフィルター処理するには、カテゴリ グループまたは系列グループに対するフィルターを設定します。 既定では、組み込み関数 Sum を使って、同じグループに属する値が系列内の個々のデータ ポイントとして集計されます。 系列の集計関数を変更する場合は、フィルター式の集計関数を変更する必要もあります。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
 -   テーブルやマトリックスのテンプレートに比率データを表示する場合は、横棒グラフではなく線形ゲージの使用を検討してください。 セル内にある 1 つの値を表示するには、ゲージの方が適しています。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
    
@@ -144,10 +144,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンクと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [入れ子になったデータ領域と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [チュートリアル: レポート &#40; への縦棒グラフを追加します。レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [チュートリアル: レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [チュートリアル: レポート &#40; への横棒グラフの追加します。レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

@@ -1,27 +1,25 @@
 ---
-title: "レッスン 6: 追加のグループ化と集計 (Reporting Services) |Microsoft ドキュメント"
+title: "レッスン 6: グループと合計の追加 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 742ebc4024e30ca7f18020ef6d4ffc29e3a3c635
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 このチュートリアルのレッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにグループ化と合計を追加して、データを整理して要約します。  
@@ -33,13 +31,13 @@ ms.lasthandoff: 08/09/2017
   
 2.  **行グループ** ペインが表示されていない場合は、デザイン画面を右クリックして **[表示]** をクリックし、 **[グループ化]**をクリックします。  
   
-3.  **レポート データ** ペインから **行グループ** ペインに **[ Date ]** フィールドをドラッグします。 **(詳細)**行の上に配置します。
+3.  **レポート データ** ペインから **行グループ** ペインに **[Date]** フィールドをドラッグします。 **(詳細)**行の上に配置します。
   
     グループを示す角かっこが行ハンドルに表示されます。 テーブルにも 2 つの日付列が表示されます (点線の両側に 1 つずつ)。  
   
-    ![追加日グループ](../reporting-services/media/rs-basictablegroups1design.png "日付グループが追加されました")  
+    ![日付グループの追加](../reporting-services/media/rs-basictablegroups1design.png "日付グループの追加")  
   
-4.  **レポート データ** ペインから **行グループ** ペインに **[ Order ]** フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
+4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  二重線の **右側** にある元の **日付** 列と **注文** 列を削除します。 これにより、この個別のレコード値が削除されるので、グループ値のみが表示されます。 2 つの列の列ハンドルを選択し、右クリックして **[列の削除]**をクリックします。  
   
-    ![削除する列の選択](../reporting-services/media/rs-basictablegroupsdeletecols.gif "を削除する列の選択")  
+    ![削除する列を選択する](../reporting-services/media/rs-basictablegroupsdeletecols.gif "削除する列を選択する")  
   
 6.  新しい日付列の書式を設定するには、 `[Date]` フィールド式が入力されているセルを右クリックし、 **[テキスト ボックスのプロパティ]**をクリックします。  
   
@@ -78,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  **[書式]** メニューの **[背景色]**をクリックし、 **[淡い灰色]**をクリックして、 **[OK]**をクリックします。  
   
-    ![[デザイン] ビュー: 注文合計がある基本的なテーブル](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "[デザイン] ビュー: 注文合計がある基本的なテーブル")  
+    ![デザイン ビュー: 注文合計がある基本的なテーブル](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "デザイン ビュー: 注文合計がある基本的なテーブル")  
   
 ## <a name="bkmk_adddailytotal"></a>レポートに毎日の合計を追加するには  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  **[書式]** メニューの **[背景色]**をクリックし、 **[薄い青]**をクリックして、 **[OK]**をクリックします。  
   
-    ![[デザイン] ビュー: 基本的なテーブルの総計](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "[デザイン] ビュー: 基本的なテーブルの総計")  
+    ![デザイン ビュー: 基本的なテーブルの総計](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー: 基本的なテーブルの総計")  
   
 5.  **[プレビュー]**をクリックします。  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 08/09/2017
     > ========== ビルド: 正常終了または最新の状態 1、失敗 0、スキップ 0 ==========  
     > ========== 配置: 1 正常終了、0 失敗、0 スキップ ==========  
   
-    次のようなメッセージが表示されている場合は、レポート さーばーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
+    次のようなメッセージが表示されている場合は、レポート サーバーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
   
     > "ユーザー 'XXXXXXXX\\&lt;ユーザー名&gt;' には、この操作を行うのに必要な権限が許可されていません。"  
   
@@ -159,12 +157,11 @@ ms.lasthandoff: 08/09/2017
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-* * 作成が正常に完了しましたする基本的なテーブル レポート tutorial.* *  
+**これで、「基本的なテーブル レポートの作成」チュートリアルを終了します。**  
   
 ## <a name="see-also"></a>参照  
 [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

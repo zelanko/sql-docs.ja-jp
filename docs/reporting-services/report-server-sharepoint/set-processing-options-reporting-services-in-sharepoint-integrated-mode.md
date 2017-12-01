@@ -1,5 +1,5 @@
 ---
-title: "処理オプション (SharePoint 統合モードで Reporting Services) を設定 |Microsoft ドキュメント"
+title: "処理オプションの設定 (Reporting Services の SharePoint 統合モード) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,20 +14,19 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 645e4258f9185f748af496aa37aff13af08ce2a7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be09d11f5a9fcdddc49a092c37be720dad0581c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプション (SharePoint 統合モードで Reporting Services) を設定します。
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  データ処理のタイミングを決定する Reporting Services レポートの処理オプションを設定することができます。 また、レポート処理のタイムアウト値や、現在のレポートでレポート履歴を有効にするかどうかを決定するオプションも設定できます。  
+  Reporting Services レポートの処理オプションを設定することにより、データ処理のタイミングを決定することができます。 また、レポート処理のタイムアウト値や、現在のレポートでレポート履歴を有効にするかどうかを決定するオプションも設定できます。  
   
 -   レポートが予定外に (たとえば、スケジュールされたバックアップ中に) 実行されないように、レポートをレポート スナップショットとして実行することができます。 レポート スナップショットは、通常はスケジュールに従って作成され、その後更新されます。これによって、正確な時間でレポートとデータ処理を行うことができます。 レポートが実行に長時間かかるクエリに基づいている場合や、クエリに使用されているデータのデータ ソースが、ある一定時間の間アクセスを避けたいものである場合は、レポートをスナップショットとして実行してください。  
   
@@ -35,12 +34,12 @@ ms.lasthandoff: 10/06/2017
   
 -   レポート履歴は、以前実行したレポートの一連のコピーです。 レポート履歴を使用すると、長期にわたりレポートの記録を管理できます。 秘密情報または個人データを含むレポートは、レポート履歴の対象ではありません。 このため、レポート履歴に含めることができるのは、レポートを実行するすべてのユーザーが使用できる資格情報 (格納された資格情報、または自動的にレポートを実行するために使用する資格情報のいずれか) でデータ ソースへのクエリを行うレポートのみです。  
 
-    Reporting Services 統合と SharePoint のチェック アウトおよびチェックイン使用して Reporting Services のコンテンツ タイプに更新プログラムを保存するように SharePoint のコンテンツ管理機能。 これには、レポート スナップショットの作成が含まれます。 したがって、ドキュメント ライブラリでのバージョン管理を有効にしている場合は、新しいレポート履歴スナップショットが作成されたときに、レポート バージョンが更新されます。 この動作は、スナップショットの更新による副作用です。 スナップショットが更新されると、レポートの LastExecution プロパティが変更され、それによってレポートのバージョンが変更されます。  
+    Reporting Services の統合では、SharePoint のコンテンツのチェックアウトおよびチェックイン管理機能を使用して、Reporting Services のコンテンツの種類への更新を保存します。 これには、レポート スナップショットの作成が含まれます。 したがって、ドキュメント ライブラリでのバージョン管理を有効にしている場合は、新しいレポート履歴スナップショットが作成されたときに、レポート バージョンが更新されます。 この動作は、スナップショットの更新による副作用です。 スナップショットが更新されると、レポートの LastExecution プロパティが変更され、それによってレポートのバージョンが変更されます。  
 
 -   タイムアウト値を指定して、システム リソースの使用に制限を設定できます。  
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
 ## <a name="set-data-refresh-options"></a>データ更新オプションの設定
   
@@ -103,4 +102,3 @@ ms.lasthandoff: 10/06/2017
  [レポートおよび共有データセット処理のタイムアウト値の設定](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

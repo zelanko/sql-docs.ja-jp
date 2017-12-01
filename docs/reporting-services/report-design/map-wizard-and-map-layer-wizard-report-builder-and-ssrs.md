@@ -1,5 +1,5 @@
 ---
-title: "マップ ウィザードおよびマップ レイヤー ウィザード (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+title: "マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: ef6a44a6fedf7815e6a7ad5304cf8ee840a52894
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -121,12 +121,12 @@ ms.lasthandoff: 08/09/2017
  マップ ギャラリーには、レポート作成環境のマップ ギャラリー フォルダー内にあるレポートで使用されているマップが含まれます。 ギャラリーのマップを使用することで、マップを簡単にレポートに追加できます。 ギャラリーにあらかじめ定義されているマップは、マップ プロバイダーによって提供されます。  
   
 > [!NOTE]  
->  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
+>  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で提供される TIGER/Line シェープファイルのデータを使用します。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
  マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「 [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)をクリックします。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 ファイルのセットが通常含まれています、 *\<ファイル名 >*、空間データと、サポート ファイルを含む .shp ファイル*\<ファイル名 >*.dbf です。  
+ ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 通常、ファイルのセットには、空間データが格納されている *\<filename>*.shp ファイルと、サポート ファイルの *\<filename>*.dbf が含まれます。  
   
  シェープファイルを空間データ ソースとして指定し、このファイルがローカル コンピューター上にある場合は、空間データが自動的にレポートに埋め込まれます。 ESRI ファイルの空間データを動的に使用するには、次の操作を行う必要があります。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間クエリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースの SQLGeometry データ型または SQLGeography データ型のデータを指定するデータセット クエリです。  
   
 > [!NOTE]  
->  ウィザードでデータ ソースを定義するときに [クエリのデザイン] ページに表示されるクエリ デザイナーは、接続先のデータ ソースの種類によって異なります。 詳細については、次を参照してください。[クエリ デザイナーと #40 です。レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  ウィザードでデータ ソースを定義するときに [クエリのデザイン] ページに表示されるクエリ デザイナーは、接続先のデータ ソースの種類によって異なります。 詳細については、「[クエリ デザイナー (レポート ビルダー)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」を参照してください。  
   
  クエリ デザイナーでクエリを実行すると、空間データをテキストとして含む列が結果セットに表示されます。 たとえば、ある行には、単独のポイントである空間データが含まれ、次の行には、ポイントのセットを定義する空間データが含まれます。 それぞれの行が 1 つのマップ要素となります。 それぞれのマップ要素の表示は、分割不可能な単位として変更することができます。  
   
@@ -252,11 +252,11 @@ ms.lasthandoff: 08/09/2017
   
 -   **ポイント :** 色ルール、サイズ ルール、およびマーカーの種類ルールを指定できます。  
   
- レポート プロセッサは、ユーザーによって設定されたルールを適用し、凡例に表示するアイテムの一覧を自動的に決定します。 既定では、すべてのレイヤーのすべてのルールの結果が最初の凡例に表示されます。 これらのオプションは、ウィザードを完了した後も変更できます。 詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
+ レポート プロセッサは、ユーザーによって設定されたルールを適用し、凡例に表示するアイテムの一覧を自動的に決定します。 既定では、すべてのレイヤーのすべてのルールの結果が最初の凡例に表示されます。 これらのオプションは、ウィザードを完了した後も変更できます。 詳細については、「 [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [マップ レポート &#40; を計画します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
- [マップ &#40;です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   

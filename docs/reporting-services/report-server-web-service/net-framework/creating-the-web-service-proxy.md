@@ -1,5 +1,5 @@
 ---
-title: "Web サービス プロキシの作成 |Microsoft ドキュメント"
+title: "Web サービス プロキシの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, proxies
 - proxies [Reporting Services]
@@ -19,27 +18,26 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 1c39d81ec9a1d2cd24f01b9dccfed13e8560a770
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3f80f446e3d68059d2337d6fa64e9e99022e24f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-web-service-proxy"></a>Web サービス プロキシの作成
   クライアントと Web サービスは、SOAP メッセージを使用して通信できます。SOAP メッセージは、入力パラメーターと出力パラメーターを XML としてカプセル化します。 プロキシ クラスは、パラメーターを XML 要素にマップした後、ネットワークを介して SOAP メッセージを送信します。 この方法では、プロキシ クラスによって、SOAP レベルで Web サービスと通信する必要がなくなり、SOAP および Web サービスのプロキシをサポートするあらゆる開発環境で Web サービスを呼び出すことができます。  
   
- プロキシ クラスを使用して開発プロジェクトに追加する方法を次の 2 つが、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: WSDL ツールで、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]、および Web 参照を追加して[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]です。 ここでは、これらの方法について詳しく説明します。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使用して開発プロジェクトにプロキシ クラスを追加する方法は、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の WSDL ツールを使用すること、および [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] で Web 参照を追加することの 2 種類です。 ここでは、これらの方法について詳しく説明します。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>WSDL ツールを使用したプロキシの追加  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK には、Web サービス記述言語ツール (Wsdl.exe) が含まれています。これにより、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開発環境で使用する Web サービス プロキシを生成できます。 Web サービスをサポートする言語でクライアント プロキシを作成する最も一般的な方法 (現在は c# と[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) は WSDL ツールを使用します。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK には、Web サービス記述言語ツール (Wsdl.exe) が含まれています。これにより、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開発環境で使用する Web サービス プロキシを生成できます。 Web サービスをサポートする言語 (現在は C# と [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) でクライアント プロキシを作成する場合に最も一般的な方法は、WSDL ツールを使用することです。  
   
- **Wsdl.exe を使用して、プロジェクトにプロキシ クラスを追加するには**  
+ **Wsdl.exe を使用してプロキシ クラスをプロジェクトに追加するには**  
   
 1.  コマンド プロンプトから、Wsdl.exe を使用してプロキシ クラスを作成します。最低限レポート サーバー Web サービスへの URL を指定します。  
   
@@ -76,15 +74,15 @@ ReportingService2010 service = new ReportingService2010();
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Visual Studio で Web 参照を使用するプロキシの追加  
  Web 参照によって、プロジェクトで 1 つ以上の Web サービスを使用できます。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] では、ユーザーが次の簡単な手順に従うことによって、Web サービスの参照をプロジェクトに追加できます。  
   
- **プロジェクトに Web 参照を追加するには**  
+ **Web 参照をプロジェクトに追加するには**  
   
-1.  **ソリューション エクスプ ローラー**、Web サービスを使用するプロジェクトを選択します。  
+1.  **ソリューション エクスプローラー**で、Web サービスを使用するプロジェクトを選択します。  
   
-2.  **プロジェクト** メニューのをクリックして**Web 参照の追加**です。  
+2.  **[プロジェクト]** メニューの **[Web 参照の追加]** をクリックします。  
   
-     **Web 参照の追加** ダイアログ ボックスが表示されます。  
+     **[Web 参照の追加]** ダイアログ ボックスが開きます。  
   
-3.  **URL**フィールドに、レポート サーバー Web サービスへの完全なパスを入力します。  
+3.  **[URL]** フィールドに、レポート サーバー Web サービスへの完全なパスを入力します。  
   
      レポート サーバー Web サービスのレポート実行エンドポイントの単純な URL は、次のようになります。  
   
@@ -92,24 +90,24 @@ ReportingService2010 service = new ReportingService2010();
     http://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
-     URL には、レポート サーバー Web サービスを配置するドメイン、Web サービスを格納するフォルダー名、および Web サービスの検出ファイル名が含まれます。 各種 URL 要素の詳細については、次を参照してください。 [SOAP API にアクセスする](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)です。  
+     URL には、レポート サーバー Web サービスを配置するドメイン、Web サービスを格納するフォルダー名、および Web サービスの検出ファイル名が含まれます。 各種 URL 要素の完全な説明については、「[SOAP API へのアクセス](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)」を参照してください。  
   
      Web サービスによって提供されるメソッドとプロパティの説明が、左側のブラウザー ペインに表示されます。  
   
     > [!NOTE]  
-    >  レポート サーバー Web サービスに関連付けられているアイテムに関する詳細については、次を参照してください。[レポート サーバー Web サービス メソッド](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)です。  
+    >  レポート サーバー Web サービスに関連付けられたアイテムの詳細については、「[レポート サーバー Web サービス メソッド](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)」を参照してください。  
   
 4.  プロジェクトでレポート サーバー Web サービスを使用できること、およびレポート サーバーにアクセスするための適切な権限を持っていることを確認します。  
   
-5.  **Web 参照名**フィールドに、使用する名前を入力して、レポート サーバー Web サービスをプログラムでアクセスするコードでします。  
+5.  **[Web 参照名]** フィールドに、プログラムによってレポート サーバー Web サービスにアクセスする場合にコードで使用する名前を入力します。  
   
-6.  選択、**参照の追加**クリックすると、アプリケーション、Web サービスに参照を作成します。  
+6.  **[参照の追加]** を選択し、アプリケーションで Web サービスへの参照を作成します。  
   
-     新しい参照は、**ソリューション エクスプ ローラー**アクティブ プロジェクトの [Web 参照] ノードの下に指定した名前、 **Web 参照名**フィールドです。  
+     アクティブなプロジェクトの [Web 参照] ノードの下にある **[ソリューション エクスプローラー]** に、新しい参照が **[Web 参照名]** フィールドに指定した名前で表示されます。  
   
-7.  **ソリューション エクスプ ローラー**プロジェクト内のアイテムに使用できる Web 参照クラスの名前空間をメモに Web 参照フォルダーを展開します。  
+7.  **[ソリューション エクスプローラー]** で、[Web 参照] フォルダーを展開し、プロジェクトのアイテムで使用できる Web 参照クラスの名前空間をメモします。  
   
-     プロジェクトに Web 参照を追加すると、関連付けられたファイルがの Web 参照フォルダー内のフォルダーに表示されます。**ソリューション エクスプ ローラー**です。  
+     Web 参照をプロジェクトに追加した後、関連付けられたファイルが **[ソリューション エクスプローラー]** の [Web 参照] フォルダー内にあるフォルダーに表示されます。  
   
  Web 参照を追加した後に、次の構文を使用してプロキシ クラスのインスタンスを作成します。  
   
@@ -126,7 +124,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 追加することも、**を使用して**(**インポート**で[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) ディレクティブをレポート サーバー Web サービス参照にします。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。 このためには、次のコードをファイルに追加します。  
+ **using** ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] では **Import**) ディレクティブをレポート サーバー Web サービス参照に追加することもできます。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。 このためには、次のコードをファイルに追加します。  
   
 ```vb  
 Import myNamespace.myReferenceName  
@@ -138,8 +136,7 @@ using myNamespace.myReferenceName;
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー Web サービス](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Web サービスと、.NET Framework を使用してアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [テクニカル リファレンス & #40 です。SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Web サービスと .NET Framework を使用してのアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [テクニカル リファレンス (SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

@@ -1,44 +1,43 @@
 ---
 title: "SQL Server 2017 リリース ノート | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/30/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
-caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: fe3554aa067ef7e7fd0c1ffa2e8ac3adc5aaaa07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
-このトピックでは、SQL Server 2017 での制限事項と問題について説明します。 関連情報については、次を参照してください。
+ここでは、SQL Server 2017 での制限事項と問題について説明します。 関連情報については、次を参照してください。
 - [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
-- [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
+- [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
+- [SQL Server 2017 の累積的な更新プログラム](http://aka.ms/sql2017cu): 最新の累積的な更新プログラム (CU) のリリースに関する情報
 
 **SQL Server をお試しください。**
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 のダウンロード](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Virtual Machine の作成](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017 で Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Virtual Machine の作成](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017 で Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 一般提供リリース (2017 年 10 月)
 ### <a name="database-engine"></a>データベース エンジン
 
 - **問題およびユーザーへの影響:** アップグレード後、既存の FILESTREAM のネットワーク共有が使用できなくなる場合がある。
 
-- **回避策:** 最初にコンピューターを再起動し、FILESTREAM のネットワーク共有が利用可能かどうかを確認します。 それでも共有が使用できない場合は、次の操作を行います。
+- **回避策:** 最初にコンピューターを再起動し、FILESTREAM のネットワーク共有が利用可能かどうかを確認します。 それでも共有が使用できない場合は、次の手順のようにします。
 
     1. SQL Server 構成マネージャーで SQL Server インスタンスを右クリックして、**[プロパティ]** をクリックします。 
-    2. **[FILESTREAM]** タブの **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** のチェックを外して、**[適用]** をクリックします。
+    2. **[FILESTREAM]** タブで、**[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をオフにして、**[適用]** をクリックします。
     3. もう一度、元の共有名で **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をチェックして、**[適用]** をクリックします。
 
 ### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
@@ -50,7 +49,10 @@ ms.lasthandoff: 10/02/2017
   - MDS チーム ブログの[エンティティ レベルでのアクセス許可適用時のエラー](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)に関する投稿に記されているスクリプトを実行します
 
 ### <a name="analysis-services"></a>Analysis Services
-- **問題およびユーザーへの影響:** 1400 の互換性レベルの表形式モデルで Get Data を使用すると、Amazon Redshift、IBM Netezza、Impala などの一部のデータ ソースのデータ コネクタがまだ使用できない。
+- **問題およびユーザーへの影響:** 次のソースのデータ コネクタは、1400 互換性レベルの表形式モデルではまだ使用できません。
+  - Amazon Redshift
+  - IBM Netezza
+  - Impala
 - **回避策:** ありません。   
 
 - **問題およびユーザーへの影響:** パースペクティブを含む 1400 の互換性レベルの直接クエリ モデルが、メタデータのクエリまたは検索時に失敗する場合がある。
@@ -60,10 +62,9 @@ ms.lasthandoff: 10/02/2017
 - **問題およびユーザーへの影響:** *DReplay* の実行が "Error DReplay Unexpected error occurred!"\(DReplay エラー 予期しないエラーが発生しました)\ のメッセージにより失敗する。
 - **回避策:** ありません。
 
-
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 リリース候補 (RC2、2017 年 8 月)
-このリリースに対する、Windows 上の SQL Server のリリース ノートはありません。 [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)に関する記事をご覧ください。
+Windows 上の SQL Server については、このリリースに関するリリース ノートはありません。 [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)に関する記事をご覧ください。
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
-- **問題およびユーザーへの影響:** SQL Server Reporting Services と Power BI レポート サーバーの両方が同じコンピューター上にあり、いずれかをアンインストールすると、残ったレポート サーバーにレポート サーバーの構成マネージャーで接続できなくなります。
+- **問題およびユーザーへの影響:** SQL Server Reporting Services と Power BI Report Server の両方が同じコンピューター上にあり、いずれかをアンインストールすると、残ったレポート サーバーにレポート サーバーの構成マネージャーで接続できません。
 - **回避策:** この問題を回避するには、どちらかのサーバーをアンインストールした後、次の操作を行う必要があります。
 
     1. 管理者モードでコマンド プロンプトを起動します。
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **問題およびユーザーへの影響:** *TSqlLanguageService.msi* の 2016 バージョンが (SQL セットアップにより、またはスタンドアロンの再頒布可能コンポーネントとして) インストールされているコンピューターにインストールした後、v13.* (SQL 2016) バージョンの *Microsoft.SqlServer.Management.SqlParser.dll* および *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* が削除されます。 これらのアセンブリの 2016 バージョンに依存しているすべてのアプリケーションは機能を停止し、次のようなエラーが発生します。"*エラー: ファイルまたはアセンブリ 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'、またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。*"
+- **問題およびユーザーへの影響:** *TSqlLanguageService.msi* の 2016 バージョンが (SQL セットアップにより、またはスタンドアロンの再頒布可能コンポーネントとして) インストールされているコンピューターにインストールした後、v13.* (SQL 2016) バージョンの *Microsoft.SqlServer.Management.SqlParser.dll* および *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* が削除されます。 これらのアセンブリの 2016 バージョンに依存しているすべてのアプリケーションは動作を停止し、次のようなエラーを生成します。"*エラー: ファイルまたはアセンブリ 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'、またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。*"
 
    さらに、2016 バージョンの TSqlLanguageService.msi をインストールしようとすると、次のようなメッセージで失敗します。"*Microsoft SQL Server 2016 T-SQL 言語サービスのインストールに失敗しました。この製品の新しいバージョンが既にこのコンピューターにインストールされています。*"
 
@@ -132,7 +133,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="always-on-availability-groups"></a>Always On 可用性グループ
 
-- **問題およびユーザーへの影響:** SQL Server のメジャー バージョンがプライマリ レプリカをホストしているインスタンスより小さい場合、可用性グループのセカンダリ レプリカをホストする SQL Server インスタンスがクラッシュします。 可用性グループをホストするすべてのサポートされている SQL Server のバージョンから SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0 へのアップグレードに影響を与えます。 これは、次の手順で発生します。 
+- **問題およびユーザーへの影響:** SQL Server のメジャー バージョンがプライマリ レプリカをホストしているインスタンスより小さい場合、可用性グループのセカンダリ レプリカをホストする SQL Server インスタンスがクラッシュします。 可用性グループをホストするすべてのサポートされている SQL Server のバージョンから SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0 へのアップグレードに影響を与えます。 この問題は、次の条件で発生します。 
 
 > 1. ユーザーが[ベスト プラクティス](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)に従ってセカンダリ レプリカをホストする SQL Server インスタンスをアップグレードします。
 > 2. アップグレード後、フェールオーバーが発生し、可用性グループ内のすべてのセカンダリ レプリカのアップグレードが完了する前に、新しくアップグレードされたセカンダリがプライマリになります。 古いプライマリは、プライマリよりも古いバージョンのセカンダリになります。
@@ -144,16 +145,11 @@ ms.lasthandoff: 10/02/2017
 
    セカンダリ レプリカをホストしていた SQL Server のインスタンスが回復します。
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) ヘルプの参照 
-- [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="more-information"></a>詳細情報
 - [SQL Server Reporting Services リリース ノート](../reporting-services/reporting-services-release-notes.md)での制限事項と問題について説明します。
 - [Machine Learning サービスの既知の問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-

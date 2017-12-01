@@ -1,13 +1,11 @@
 ---
-title: "Stretch Database データベースとテーブル - Stretch Database Advisor | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/14/2016
+title: "Data Migration Assistant で Stretch Database 向きのデータベースとテーブルを識別する | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
+ms.date: 10/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,51 +14,51 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d945060845495143f209f53e6bbb2bc2e224f4f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 59608301d353d99eb710a956389fd9f8d8948dfe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="stretch-database-databases-and-tables---stretch-database-advisor"></a>Stretch Database データベースとテーブル - Stretch Database Advisor
+# <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant で Stretch Database 向きのデータベースとテーブルを識別する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch Database の候補となるデータベースとテーブルを特定するには、SQL Server 2016 Upgrade Advisor をダウンロードし、Stretch Database Advisor を実行します。 Stretch Database Advisor はブロックの問題も特定します。  
+  Stretch Database の候補になるデータベースとテーブル、および潜在的なブロッキングの問題を識別するには、Microsoft Data Migration Assistant をダウンロードして実行します。
   
-## <a name="download-and-install-upgrade-advisor"></a>アップグレード アドバイザーのダウンロードおよびインストール  
- アップグレード アドバイザーを [ここ](https://www.microsoft.com/en-us/download/details.aspx?id=53595)からダウンロードし、インストールします。 このツールは、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] インストール メディアには含まれていません。  
+## <a name="get-data-migration-assistant"></a>Data Migration Assistant を入手する
+ Data Migration Assistant を [ここ](https://www.microsoft.com/download/details.aspx?id=53595)からダウンロードしてインストールします。 このツールは、SQL Server のインストール メディアには含まれていません。  
   
-## <a name="run-the-stretch-database-advisor"></a>Stretch Database Advisor の実行  
+## <a name="run-data-migration-assistant"></a>Data Migration Assistant を実行する  
   
-1.  アップグレード アドバイザーを実行します。  
-  
-2.  **[シナリオ]**を選択してから、 **[STRETCH DATABASE ADVISOR の実行]**を選択します。  
-  
-3.  **[Stretch Database Advisor の実行]** ブレードで、 **[分析するデータベースの選択]**をクリックします。  
-  
-4.  **[データベースの選択]** ブレードで、サーバー名と認証情報を入力または選択します。 **[接続]**をクリックします。
+1.  Microsoft Data Migration Assistant を実行します。  
 
-5.  選択したサーバー上のデータベースが一覧表示されます。 分析するデータベースを選択してください。 **[選択]**をクリックします。  
-  
-6.  **[Stretch Database Advisor の実行]** ブレードで、 **[実行]**をクリックします。  分析が実行されます。  
-  
+2.  **[評価]** タイプの新しいプロジェクトを作成し、名前を指定します。
+
+3.  **[Source server type]\(ソース サーバーの種類\)** と **[対象サーバーの種類]** の両方で、**[SQL Server]** を選びます。
+
+4.  **[作成]**を選択します。 
+
+5. **[オプション]** ページ (ステップ 1) で、**[New features recommendation]\(新しい機能の推奨事項\)** を選びます。 必要に応じて、**[Compatibility issues]\(互換性の問題\)** をオフにします。
+
+6.  **[Select sources]\(ソースの選択\)** ページ (ステップ 2) で、サーバーに接続し、データベースを選んで、**[追加]** を選びます。
+
+7.  **[Start Assessment]\(評価の開始\)** を選びます。
+
 ## <a name="review-the-results"></a>結果の確認  
   
-1.  分析が完了したら、 **[Analyzed databases (データベースの分析)]** ブレードで、分析したデータベースのいずれかを選択し、 **[分析結果]** ブレードを表示します。  
-  
-     **[分析結果]** ブレードには、既定の推奨基準に適合する、選択されたデータベースの推奨テーブルが一覧表示されます。 
-  
-2.  **[分析結果]** ブレード上のテーブルの一覧で、推奨テーブルのいずれかを選択し、 **[テーブル結果]** ブレードを表示します。  
-  
-     ブロック問題がある場合は、 **[テーブル結果]** ブレードに、選択されたテーブルのブロック問題が一覧表示されます。 Stretch Database Advisor によって検出されるブロック問題については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。  
-  
-3.  **[テーブル結果]** ブレード上のブロック問題の一覧で、問題のいずれかを選択すると、選択した問題の詳細情報が表示され、軽減手順が提案されます。 選択したテーブルを Stretch Database 用に構成する場合は、推奨される軽減手順を実行します。  
+1.  分析が終了したら、**[Review results]\(結果のレビュー\)** ページ (ステップ 3) で **[機能に関する推奨事項]** オプションを選び、**[ストレージ]** タブを選びます。
+
+2.  Stretch Database に関する推奨事項を確認します。 各推奨事項には、Stretch Database が適している可能性のあるテーブルの一覧と、潜在的なブロッキングの問題が表示されます。
+
+## <a name="historical-note"></a>これまでの経緯
+Stretch Database Advisor は、以前は SQL Server 2016 アップグレード アドバイザーのコンポーネントでした。 その時点では、別のアクションとして Stretch Database Advisor を選んで実行する必要がありました。
+
+アップグレード アドバイザーの代わりとなる拡張版の Data Migration Assistant のリリースを機に、Stretch Database Advisor の機能はこの新しいツールに組み込まれます。 Stretch Database に関する推奨事項を取得するために、オプションを選ぶ必要はありません。 Data Migration Assistant で Assessment を実行すると、Stretch Database に関する結果が、**[機能に関する推奨事項]** の **[ストレージ]** タブに表示されます。
   
 ## <a name="next-step"></a>次の手順  
  Stretch Database を有効にします。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 07/29/2017
  [テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
-

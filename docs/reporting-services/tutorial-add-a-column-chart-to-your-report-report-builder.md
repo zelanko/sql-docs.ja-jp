@@ -1,28 +1,25 @@
 ---
-title: "チュートリアル: レポート (レポート ビルダー) への縦棒グラフの追加 |Microsoft ドキュメント"
+title: "チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b1768cbe53155ec37c5f6dd690542b90e22a59cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成します。レポートには、カテゴリでグループ化された一連の縦棒として連続を表示する棒グラフを含めます。 
@@ -37,9 +34,9 @@ ms.lasthandoff: 08/09/2017
   
 ![レポート-ビルダー-列のグラフのチュートリアル](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
-このチュートリアルの推定所要時間: 15 分。  
+このチュートリアルの推定所要時間: 15 分  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -67,9 +64,9 @@ ms.lasthandoff: 08/09/2017
 5.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、 **[次へ]**をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
   
     > [!NOTE]  
-    > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
+    > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
-6.  **[クエリのデザイン]** ページで、**[テキストとして編集]** をクリックします。  
+6.  **[クエリのデザイン]** ページで、 **[テキストとして編集]**をクリックします。  
   
 7.  次のクエリをクエリ ペインに貼り付けます。  
   
@@ -130,7 +127,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  横軸を右クリックし、**[横軸のプロパティ]** をクリックします。  
   
-3.  **[数値]** タブの **[カテゴリ]** で **[日付]** を選択します。  
+3.  **[数値]** タブの **[カテゴリ]**で **[日付]**を選択します。  
   
 5.  **[型]** ボックスで **[2000 年 1 月 31 日]**を選択します。  
   
@@ -144,7 +141,7 @@ ms.lasthandoff: 08/09/2017
   
 ラベルを回転して間隔を指定することによってラベル表示をカスタマイズできます。  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.横軸の軸ラベルを回転させます。  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.横軸の軸ラベルを回転させる  
   
 1.  レポート デザイン ビューに切り替えます。  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  横軸を右クリックし、**[横軸のプロパティ]** をクリックします。  
   
-5.  **[ラベル]** タブの **[軸ラベル自動調整のオプションを変更します]** で **[自動調整を無効にする]** を選択します。  
+5.  **[ラベル]** タブの **[軸ラベル自動調整のオプションを変更します]**で **[自動調整を無効にする]**を選択します。  
   
 7.  **[ラベルの回転角度]**で **[-90]**を選択します。  
   
@@ -175,7 +172,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  グラフの凡例を右クリックし、**[凡例のプロパティ]** をクリックします。  
   
-3.  **[レイアウトと位置]** で、異なる位置を選択します。 たとえば、中央下を選択します。  
+3.  **[レイアウトと位置]**で、異なる位置を選択します。 たとえば、中央下を選択します。  
   
     凡例をグラフの上または下に配置すると、凡例のレイアウトが縦方向から横方向に変更されます。 **[レイアウト]** ボックスの一覧で異なるレイアウトを選択できます。  
   
@@ -206,7 +203,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  縦軸を右クリックし、**[縦軸のプロパティ]** をクリックします。  
   
-6.  **[数値]** タブの **[カテゴリ]** ボックスでは **[通貨]** が既に選択されており、**[小数点以下桁数]** は **[0]** (ゼロ) になっています。  
+6.  **[数値]** タブの **[カテゴリ]** ボックスでは **[通貨]** が既に選択されており、 **[小数点以下桁数]** は **[0]** (ゼロ) になっています。  
   
 7.  **[値の表示単位]**を確認します。 **[千]** が既に選択されています。  
   
@@ -216,7 +213,7 @@ ms.lasthandoff: 08/09/2017
 
 10. 縦軸のタイトルを右クリックし、**[軸のタイトルのプロパティ]** をクリックします。  
   
-10. **[タイトルのテキスト]** フィールドのテキストを「**Sales Total (in Thousands)**」に置き換えます。 タイトルの表示形式に関連した各種オプションを指定することもできます。  
+10. **[タイトルのテキスト]** フィールドのテキストを「 **Sales Total (in Thousands)**」に置き換えます。 タイトルの表示形式に関連した各種オプションを指定することもできます。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -286,7 +283,7 @@ x 軸では一部のラベルのみが表示されています。 このセク�
   
 5.  **[January to December 2015]** を選択し、**[ホーム]** タブの **[フォント]** セクションでフォント サイズを **[10]** に設定します。  
   
-6.  (省略可) 2 行のテキストに合わせて、**[タイトル]** テキスト ボックスの高さを高くする必要が生じる場合もあります。 下端の中央をクリックするとき、両方向矢印のところでプルダウンします。 場合によっては、タイトルが重ならないようにグラフの上部をドラッグする必要があります。  
+6.  (省略可) 2 行のテキストに合わせて、 **[タイトル]** テキスト ボックスの高さを高くする必要が生じる場合もあります。 下端の中央をクリックするとき、両方向矢印のところでプルダウンします。 場合によっては、タイトルが重ならないようにグラフの上部をドラッグする必要があります。  
   
     このタイトルは、レポートの最上部に表示されます。 ページ ヘッダーが定義されていないとき、レポート本文の最上部にあるアイテムがレポート ヘッダーに相当します。  
   
@@ -313,5 +310,4 @@ x 軸では一部のラベルのみが表示されています。 このセク�
 -    [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

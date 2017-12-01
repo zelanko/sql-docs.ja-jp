@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: 作成、オフライン クイック グラフ レポート (レポート ビルダー) |Microsoft ドキュメント"
+title: "チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,49 +15,47 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df0786cc4863f40a881f7061267eaed8345aca1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
 
   このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]の改ページ調整されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを少し変更します。 
   
 このチュートリアルは 2 つの異なる方法で実行できます。 どちらの方法でも、次の図に示すような円グラフが作成されます。  
   
- ![レポート ビルダー クイック円グラフ](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "クイック円グラフをレポート ビルダー")  
+ ![レポート ビルダー クイック円グラフ](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "レポート ビルダー クイック円グラフ")  
   
 ## <a name="prerequisites"></a>前提条件  
- XML データを使用するかどうかまたは[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ、レポート ビルダーにアクセスする必要があります。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、ネイティブ モードまたは SharePoint 統合モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から起動するか、Microsoft ダウンロード センターから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をダウンロードできます。 詳細については、「 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。  
+ XML データを使用するか [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用するかにかかわらず、レポート ビルダーにアクセスできることが必要です。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、ネイティブ モードまたは SharePoint 統合モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から起動するか、Microsoft ダウンロード センターから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をダウンロードできます。 詳細については、「 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。  
   
 ##  <a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
   
 -   [XML データを使用して円グラフを作成する](#CreatePieChartXML)  
   
--   [データを含む TRANSACT-SQL クエリを使用して円グラフを作成します。](#CreatePieQueryData)  
+-   [データを含む SQL クエリを使用して円グラフを作成する](#CreatePieQueryData)  
   
 ### <a name="using-xml-data-for-this-tutorial"></a>このチュートリアルでの XML データの使用  
- このトピックからコピーしてウィザードに貼り付けた XML データを使用できます。 接続する必要はありません、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバーのネイティブ モードまたは SharePoint 統合モード、および SQL Server のインスタンスにアクセスする必要はありません。  
+ このトピックからコピーしてウィザードに貼り付けた XML データを使用できます。 ネイティブ モードまたは SharePoint 統合モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに接続している必要はありません。また、SQL Server のインスタンスへのアクセスも不要です。  
   
  [XML データを使用して円グラフを作成する](#CreatePieChartXML)  
   
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>このチュートリアル用のデータを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する  
- データを含むクエリをこのトピックからコピーし、ウィザードに貼り付けることができます。 資格情報および SQL Server のインスタンスの名前を任意のデータベースに読み取り専用アクセスのための十分な必要があります。 チュートリアルのデータセット クエリは、リテラル データを使用しますが、レポート データセットに必要なメタデータを返す SQL Server のインスタンスでクエリを処理する必要があります。  
+ データを含むクエリをこのトピックからコピーし、ウィザードに貼り付けることができます。 SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 チュートリアルのデータセット クエリでは、リテラル データを使用します。ただし、クエリは、レポート データセットに必要なメタデータを返すように、SQL Server のインスタンスで処理される必要があります。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する利点は、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] の他のすべてのチュートリアルで同じ方法が使用されているため、他のチュートリアルを実行するときに既に手順がわかっていることです。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの場合、他にもいくつか必要な前提条件があります。 詳細については、「[チュートリアルの前提条件 &#40;レポート ビルダー&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
- [データを含む TRANSACT-SQL クエリを使用して円グラフを作成します。](#CreatePieQueryData)  
+ [データを含む SQL クエリを使用して円グラフを作成する](#CreatePieQueryData)  
   
 ##  <a name="CreatePieChartXML"></a> XML データを使用して円グラフを作成する  
   
@@ -65,9 +63,9 @@ ms.lasthandoff: 08/09/2017
   
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
-     ![レポート ビルダーを開始](../../reporting-services/media/rb-getstarted.png "レポート ビルダーを開始")  
+     ![レポート ビルダーの作業の開始](../../reporting-services/media/rb-getstarted.png "レポート ビルダーの作業の開始")  
   
-     場合、**作業の開始** ダイアログ ボックスが表示されないをクリックして**ファイル** >**新規**です。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。  
+     **[作業の開始]** ダイアログ ボックスが表示されない場合は、**[ファイル]** >**[新規]** の順にクリックします。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
@@ -114,25 +112,25 @@ ms.lasthandoff: 08/09/2017
     </Query>  
     ```  
   
-11. (省略可能)クリックして、**実行**ボタン (**!**)、グラフの基になるデータを表示します。  
+11. (省略可) **[実行]** ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
   
-     ![レポート ビルダー クエリをデザイン](../../reporting-services/report-builder/media/rb-designquery.png "レポート ビルダー クエリをデザイン")  
+     ![レポート ビルダーのデザイン クエリ](../../reporting-services/report-builder/media/rb-designquery.png "レポート ビルダーのデザイン クエリ")  
   
 12. **[次へ]**をクリックします。  
   
 13. **[グラフの種類の選択]** ページで **[円]**をクリックし、 **[次へ]**をクリックします。  
   
-14. **グラフのフィールドの配置** ページをダブルクリックして、 **Sales**フィールドで、**利用可能なフィールド**ボックス。  
+14. **[グラフのフィールドの配置]** ページの **[使用できるフィールド]** ボックスで、**[Sales]** フィールドをダブルクリックします。  
   
      このフィールドは数値なので、 **[値]** ボックスに自動的に移動します。  
   
-     ![レポート ビルダー ウィザード フィールドの配置](../../reporting-services/report-builder/media/rb-wizarrangefields.png "レポート ビルダー ウィザード フィールドの配置")  
+     ![レポート ビルダー ウィザードのフィールドの配置](../../reporting-services/report-builder/media/rb-wizarrangefields.png "レポート ビルダー ウィザードのフィールドの配置")  
   
-15. ドラッグ、 **FullName**フィールドを**利用可能なフィールド**ボックスを**カテゴリ**ボックス (またはそれをダブルクリックして; に移動、**カテゴリ**ボックス)、をクリックし、 **[次へ]**です。  
+15. **[FullName]** フィールドを **[使用できるフィールド]** ボックスから **[カテゴリ]** ボックスにドラッグし (または、ダブルクリックすると **[カテゴリ]** ボックスに移動します)、**[次へ]** をクリックします。  
   
      [プレビュー] ページには、主要なデータの新しい円グラフが表示されます。 凡例には販売員の名前ではなく Full Name 1、Full Name 2 などが示されており、円のスライスのサイズは正確ではありません。 これは、レポートがどのように表示されるか概要を見るためだけのものです。  
   
-     ![レポート ビルダーは、プレビューを新しいグラフ](../../reporting-services/report-builder/media/rb-newchartpreview.png "レポート ビルダーの新しいグラフのプレビュー")  
+     ![レポート ビルダーの新しいグラフのプレビュー](../../reporting-services/report-builder/media/rb-newchartpreview.png "レポート ビルダーの新しいグラフのプレビュー")  
   
 16. **[完了]**をクリックします。  
   
@@ -142,7 +140,7 @@ ms.lasthandoff: 08/09/2017
   
 17. 実際の円グラフを表示するには、リボンの **[ホーム]** タブで **[実行]** をクリックします。  
   
-     ![レポート ビルダーが実行を新しいグラフ](../../reporting-services/report-builder/media/rb-newchartrun.png "レポート ビルダーの新しいグラフの実行")  
+     ![レポート ビルダーの新しいグラフの実行](../../reporting-services/report-builder/media/rb-newchartrun.png "レポート ビルダーの新しいグラフの実行")  
   
 18. 円グラフの変更を続けるには、この記事の「 [ウィザードの実行後](#AfterWizard) 」に進んでください。  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 08/09/2017
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  場合、**作業の開始** ダイアログ ボックスが表示されないをクリックして**ファイル** >**新規**です。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。  
+    >  **[作業の開始]** ダイアログ ボックスが表示されない場合は、**[ファイル]** >**[新規]** の順にクリックします。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
@@ -184,11 +182,11 @@ ms.lasthandoff: 08/09/2017
   
 10. **[グラフの種類の選択]** ページで **[円]**をクリックし、 **[次へ]**をクリックします。  
   
-11. **グラフのフィールドの配置** ページをダブルクリックして、 **Sales**フィールドで、**利用可能なフィールド**ボックス。  
+11. **[グラフのフィールドの配置]** ページの **[使用できるフィールド]** ボックスで、**[Sales]** フィールドをダブルクリックします。  
   
      このフィールドは数値なので、 **[値]** ボックスに自動的に移動します。  
   
-12. ドラッグ、 **FullName**フィールドを**利用可能なフィールド**ボックスを**カテゴリ**ボックス (またはそれをダブルクリックして; に移動、**カテゴリ**ボックス)、をクリックし、 **[次へ]**です。  
+12. **[FullName]** フィールドを **[使用できるフィールド]** ボックスから **[カテゴリ]** ボックスにドラッグし (または、ダブルクリックすると **[カテゴリ]** ボックスに移動します)、**[次へ]** をクリックします。  
   
 13. **[完了]**をクリックします。  
   
@@ -208,17 +206,17 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="add-a-report-title"></a>レポート タイトルの追加  
 1. グラフ上部の **[グラフのタイトル]** というテキストを選択し、「 **Sales Pie Chart**」などのタイトルを入力します。  
-2. プロパティ ペインで選択したタイトルの変更**色**に**黒**と**FontSize**に**12 pt**です。
+2. タイトルを選択して、[プロパティ] ペインで、**[色]** を **[黒]** に、**[フォントサイズ]** を **[12 ポイント]**に変更します。
   
 ## <a name="add-percentages"></a>パーセンテージの追加  
  
-1.  円グラフを右クリックし **データ ラベルを表示**です。 円グラフの各スライス内にデータ ラベルが表示されます。  
+1.  円グラフを右クリックし、**[データ ラベルの表示]** をクリックします。 円グラフの各スライス内にデータ ラベルが表示されます。  
   
-2.  ラベルを右クリックし **系列ラベルのプロパティ**です。 **[系列ラベルのプロパティ]** ダイアログ ボックスが表示されます。  
+2.  ラベルを右クリックし、**[系列ラベルのプロパティ]** を選択します。 **[系列ラベルのプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  **データ ラベル**ボックスに、入力**#PERCENT {P0}**です。  
+3.  **[ラベル データ]** ボックスに「**PERCENT{P0}**」と入力します。  
   
-     **{P0}** を指定すると、小数点以下を含まないパーセンテージが表示されます。 だけ入力すると**#PERCENT**、含む小数点以下 2 桁の数値になります。 **#PERCENT**キーワードを計算または関数を実行するその他の多くではありません。 します。  
+     **{P0}** を指定すると、小数点以下を含まないパーセンテージが表示されます。 「**#PERCENT**」とだけ入力すると、小数点以下 2 桁を含む数値になります。 **#PERCENT** は計算または関数を実行するキーワードで、他にも多数あります。  
      
 4. **[はい]** をクリックして、 **[UseValueAsLabel]** を **False**に設定することを確認します。
 
@@ -231,7 +229,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="WhatsNext"></a> 次の課題  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための *接続文字列*が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
   
- その他のチュートリアルを進めるには、任意のデータベースに読み取り専用アクセスのための十分な資格情報および SQL Server のインスタンスの名前が必要です。 これもシステム管理者が設定できます。  
+ 他のチュートリアルを実行するには、SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 これもシステム管理者が設定できます。  
   
  最後に、レポートをレポート サーバーまたはレポート サーバーと統合されている SharePoint サイトに保存するには、URL と権限が必要です。 作成したレポートは自分のコンピューターから直接実行できますが、レポート サーバーまたは SharePoint サイトから実行するとレポートの機能が増えます。 自分のレポートまたはその他のレポートをパブリッシュ元のレポート サーバーまたは SharePoint サイトから実行する権限が必要です。 アクセス権を取得するには、システム管理者に問い合わせてください。  
   
@@ -242,5 +240,4 @@ ms.lasthandoff: 08/09/2017
 [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

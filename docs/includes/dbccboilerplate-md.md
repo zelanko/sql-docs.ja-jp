@@ -8,9 +8,9 @@
 
 DBCC CHECKDB の実行 クリーン バックアップがない場合には、REPAIR 句を付けずに DBCC CHECKDB を実行して破損の程度を調べます。 DBCC CHECKDB によって使用が推奨される REPAIR 句が表示されたら、 適切な REPAIR 句を付けて DBCC CHECKDB を実行し、破損を修復します。
 
-> **alert tag is not supported!!!!**
-> **tr tag is not supported!!!!**
-> **tr tag is not supported!!!!**
+> **アラート タグはサポートされていません!!!** 
+>  **tr タグはサポートされていません!!!** 
+>  **tr タグはサポートされていません!!!**
 
 いずれかの REPAIR 句を付けて DBCC CHECKDB を実行しても問題が解決しない場合は、購入元にお問い合わせください。
 

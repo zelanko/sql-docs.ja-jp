@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services SharePoint サービス アプリケーションの管理 |Microsoft ドキュメント"
+title: "Reporting Services SharePoint サービス アプリケーションの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,25 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションを管理します。
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションの管理
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アプリケーションは、SharePoint サーバーの全体管理から管理します。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理で管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
 
 > [!NOTE]
-> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
-## <a name="open-service-application-properties-page"></a>開いているサービス アプリケーションのプロパティ ページ
+## <a name="open-service-application-properties-page"></a>サービス アプリケーションのプロパティ ページを開く
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションのプロパティ ページを開くには、次の手順を実行します。  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  サービス アプリケーション プロパティの詳細については、「 [3: Reporting Services サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」を参照してください。  
   
-## <a name="open-service-application-management-pages"></a>開いているサービス アプリケーションの管理ページ
+## <a name="open-service-application-management-pages"></a>サービス アプリケーションの管理ページを開く
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを開くには、次の手順を実行します。  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 10/06/2017
   
 3.  別の方法として、サービス アプリケーションの名前の近くか、または **[種類]** 列をクリックして列全体を選択し、SharePoint リボンで **[管理]** をクリックする方法もあります。  
   
-## <a name="system-settings-page"></a>システム設定 ページ
+## <a name="system-settings-page"></a>[システム設定] ページ
 
  システム設定ページでは、各種タイムアウトなど、サービス アプリケーションの動作やユーザー エクスペリエンスを構成できます。
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 10/06/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-### <a name="security-settings"></a>セキュリティの設定
+### <a name="security-settings"></a>セキュリティ設定
   
 |設定|コメント|  
 |-------------|--------------|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 10/06/2017
 |設定|コメント|  
 |-------------|--------------|  
 |レポート ビルダーのダウンロードを有効にする|既定値は TRUE です。<br /><br /> レポート ビルダー アプリケーションのダウンロード ボタンをクライアントに表示するかどうかを指定します。|  
-|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 クリックすると、レポート ビルダー 3.0 を起動する-アプリケーションは、次の値を入力してください: http://\<コンピューター名 >/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application です。|  
+|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
 |クライアントの印刷を有効にする|既定値は TRUE です。<br /><br /> ユーザーがクライアント側のコントロール (印刷オプションを提供します) をダウンロードできるかどうかを指定します。|  
 |セッション タイムアウトの編集|既定値は 7200 秒です。|  
 |セッション キャッシュ制限の編集|既定値は 5 です。|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  レポート サブスクリプションおよびデータ ドリブン サブスクリプションによって作成されたジョブなど、実行中のジョブを表示および削除できます。 ページはサブスクリプションの管理には使用されるのではなく、サブスクリプションによってトリガーされるジョブです。 たとえば、1 時間に 1 回実行するようにスケジュールされているサブスクリプションは、 **[ジョブの管理]** ページに 1 時間に 1 回表示されるジョブを生成します。  
   
- ![実行中のジョブを管理](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "実行中のジョブの管理")  
+ ![実行中のジョブの管理](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "実行中のジョブの管理")  
   
 ## <a name="key-management"></a>キー管理
  次の表は、キー管理ページをまとめたものです。  
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  アカウントを指定します。  
   
  **アカウント**  
- Windows のドメイン ユーザー アカウントを入力します。 この形式を使用: *\<ドメイン >\\< ユーザー アカウント\>*です。  
+ Windows のドメイン ユーザー アカウントを入力します。 *\<ドメイン>\\<ユーザー アカウント\>* の形式を使用します。  
   
  **Password**  
  パスワードを入力します。  
@@ -175,7 +174,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **[送信者アドレス]**  
  生成される電子メールの送信者フィールドに使用する電子メール アドレスを指定します。 SMTP サーバーからメールを送信する権限のあるユーザー アカウントを指定する必要があります。  
 
-## <a name="provision-subscriptions-and-alerts"></a>サブスクリプションと警告準備
+## <a name="provision-subscriptions-and-alerts"></a>サブスクリプションと警告の準備
 
  このページは、SQL Server エージェントが実行中かどうかを確認したり、レポート サービスが SQL Server エージェントを使用するためのアクセス権を準備するために使用します。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプション、スケジュール、およびデータ警告に必要です。 [SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
 
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  プロキシのチェック ボックスをオンにして、 **[OK]**をクリックします。  
   
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

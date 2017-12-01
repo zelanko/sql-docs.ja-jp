@@ -1,5 +1,5 @@
 ---
-title: "グラフ (レポート ビルダーおよび SSRS) の軸ラベルを書式設定 |Microsoft ドキュメント"
+title: "グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -25,20 +25,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7cc9e4800d6fd00cd0934bc2c1eeac04f7a68fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>軸の種類  
  グラフには、値軸とカテゴリ軸という 2 本の主軸があります。  
   
- ![グラフのカテゴリと値の軸](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "グラフのカテゴリと値の軸")  
+ ![グラフのカテゴリ軸と値軸](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "グラフのカテゴリ軸と値軸")  
   
  データセットのフィールドをグラフ上にドラッグすると、グラフでは、そのフィールドがカテゴリ軸と値軸のどちらに属するかが決定されます。  
   
@@ -106,14 +104,14 @@ ms.lasthandoff: 08/09/2017
  グラフでは、グラフのサイズに関係なく、約 5 個の軸ラベルの間隔が計算されます。 幅の広いグラフや高さのあるグラフでは、軸上にラベルが 5 個しかない場合、各ラベル間の空白部分が大きくなる場合があります。 このような場合、軸に対して各データ ポイントの値を特定することが難しくなります。 幅の広いグラフや高さのあるグラフでこの状況を回避するには、軸の可変間隔を設定できます。 グラフでは、対応する軸に応じ、グラフの幅または高さに基づいて、軸に表示されるラベルの最適な数が計算されます。 詳細については、「 [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="sorting-axis-values"></a>軸の値の並べ替え  
- カテゴリは、結果セットに出現する順序で X 軸に表示されます。 グループの順序を変更するには、SORT コマンドをクエリに追加するか、式を使用してデータセットを並べ替えます。 グラフ データ領域は、その他のすべてのデータ領域と同じように並べ替えることができます。 データを並べ替える方法の詳細については、次を参照してください[データ領域 &#40; のデータを並べ替える。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ カテゴリは、結果セットに出現する順序で X 軸に表示されます。 グループの順序を変更するには、SORT コマンドをクエリに追加するか、式を使用してデータセットを並べ替えます。 グラフ データ領域は、その他のすべてのデータ領域と同じように並べ替えることができます。 データを並べ替える方法の詳細については、「[データ領域内のデータの並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)」をご覧ください。  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>カテゴリ軸でのスカラー値の指定  
  既定では、グラフに表示されるのは、有効な値が含まれているデータセット内のデータ ポイントに対する軸ラベルだけです。 たとえば、カテゴリ軸に 1、2、6 という値を設定した場合、グラフには 1、2、6 というカテゴリのみが表示されます。 カテゴリ値のスケールを保つために、グラフでスカラー軸が使用されるように指定できます。 この場合は、データセットに 3 ～ 5 の値が含まれていなくても、グラフの X 軸に 1 ～ 6 のラベルが表示されます。  
   
  スカラー軸を設定するには、次の 2 つの方法があります。  
   
--   **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、次を参照してください。[軸のプロパティ ダイアログ ボックス、軸のオプション & #40 です。レポート ビルダーおよび SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、「[[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)」をご覧ください。  
   
 -   **[系列のプロパティ]** ダイアログ ボックスの **[カテゴリ フィールド]** オプションで、フィールドを選択するか、式を入力します。 グラフでは、指定したカテゴリ フィールドのすべての値に対して軸の間隔が追加されます。  
   
@@ -133,8 +131,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>参照  
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [グラフ &#40; 上のデータ ポイントの書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-
