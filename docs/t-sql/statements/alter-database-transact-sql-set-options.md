@@ -2,7 +2,7 @@
 title: "ALTER DATABASE の SET オプション (TRANSACT-SQL) |Microsoft ドキュメント"
 description: "自動調整、暗号化、SQL Server と Azure SQL データベース内のクエリ ストアなどのデータベース オプションを設定する方法の詳細についてください。"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,17 +26,19 @@ helpviewer_keywords:
 - checksums [SQL Server]
 - automatic tuning
 - SQL plan regression correction
+- auto_create_statistics
+- auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: "159"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b460ca1e3f662ea59c0b7bcd4b1fc0e0e059e236
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 データベース ミラーリングは、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルを`SET`オプションが、別のトピックに記載されている、長くなるためです。 詳細については、次を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、 [ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)、および[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  使用して、現在のセッションの多くのデータベースの set オプションを構成することができます[SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)と接続するときに多くの場合、アプリケーションで構成します。 セッション レベルの set オプションの上書き、 **ALTER DATABASE SET**値。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。  
+> 使用して、現在のセッションの多くのデータベースの set オプションを構成することができます[SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)と接続するときに多くの場合、アプリケーションで構成します。 セッション レベルの set オプションの上書き、 **ALTER DATABASE SET**値。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -276,8 +278,7 @@ SET
  **\<auto_option >:: =**  
   
  自動オプションを制御します。  
-  
- AUTO_CLOSE {ON |OFF}  
+ <a name="auto_close"></a>AUTO_CLOSE {ON |オフ}  
  ON  
  最後のユーザーが終了した後、データベースは正常にシャットダウンされ、そのリソースは解放されます。  
   
@@ -300,8 +301,8 @@ SET
 >  データベースをミラー化するには、AUTO_CLOSE を OFF に設定する必要があります。  
   
  データベースを AUTOCLOSE = ON に設定すると、データベースの自動シャットダウンを開始する操作によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降では、プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
-  
- AUTO_CREATE_STATISTICS {ON |OFF}  
+ 
+ <a name="auto_create_statistics"></a>AUTO_CREATE_STATISTICS {ON |オフ}  
  ON  
  クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーが必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの統計は、クエリ オプティマイザーがクエリをコンパイルするときに作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。  
   
@@ -319,7 +320,7 @@ SET
   
  **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
- AUTO_SHRINK { ON | OFF }  
+ <a name="auto_shrink"></a>AUTO_SHRINK {ON |オフ}  
  ON  
  データベース ファイルを定期的な圧縮処理の対象とします。  
   
@@ -335,9 +336,9 @@ SET
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_shrink_on 列、または DATABASEPROPERTYEX 関数の IsAutoShrink プロパティを調べてください。  
   
 > [!NOTE]  
->  AUTO_SHRINK オプションは、包含データベースでは使用できません。  
+> AUTO_SHRINK オプションは、包含データベースでは使用できません。  
   
- AUTO_UPDATE_STATISTICS {ON |OFF}  
+ <a name="auto_update_statistics"></a>AUTO_UPDATE_STATISTICS {ON |オフ}  
  ON  
  クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。  
   
@@ -356,7 +357,7 @@ SET
   
  詳細については、「を使用して、データベース全体の統計オプション」セクションを参照してください[統計](../../relational-databases/statistics/statistics.md)です。  
   
- AUTO_UPDATE_STATISTICS_ASYNC {ON |OFF}  
+ <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC {ON |オフ}  
  ON  
  AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。  
   
@@ -373,7 +374,7 @@ SET
   
  同期または非同期の統計の更新プログラムを使用する場合について説明の詳細についてを参照してください「データベース全体の統計オプションの使用」で[統計](../../relational-databases/statistics/statistics.md)です。  
   
- **\<automatic_tuning_option >:: =**  
+ <a name="auto_tuning"></a> **\<automatic_tuning_option >:: =**  
  **適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
 
  有効または無効に`FORCE_LAST_GOOD_PLAN`[自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)オプション。  
@@ -387,7 +388,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  変更の追跡のオプションを制御します。 変更の追跡の有効化、オプションの設定、オプションの変更、および変更の追跡の無効化が可能です。 例については、後の「例」のセクションをご覧ください。  
   
@@ -425,7 +426,7 @@ SET
  データベースは包含データベースです。 レプリケーション、変更データ キャプチャ、または変更の追跡が有効になっているデータベースの包含状態を PARTIAL に設定すると失敗します。 エラー チェックは、エラーを 1 つ検出すると停止します。 包含データベースの詳細については、「 [Contained Databases](../../relational-databases/databases/contained-databases.md)」をご覧ください。  
   
 > [!NOTE]  
->  含有を構成できない[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。 コンテインメントが明示的に指定されていませんが、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]包含機能が含まれているようにデータベース ユーザーを使用できます。  
+> 含有を構成できない[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。 コンテインメントが明示的に指定されていませんが、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]包含機能が含まれているようにデータベース ユーザーを使用できます。  
   
  **\<cursor_option >:: =**  
   
@@ -443,7 +444,7 @@ SET
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_cursor_close_on_commit_on 列、または DATABASEPROPERTYEX 関数の IsCloseCursorsOnCommitEnabled プロパティを調べてください。  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  カーソルのスコープを LOCAL と GLOBAL のどちらにするかを制御します。  
   
@@ -459,13 +460,13 @@ SET
   
  **\<database_mirroring >**  
   
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  引数の説明を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option >:: =**  
   
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  Date_correlation_optimization オプションを制御します。  
   
@@ -493,7 +494,7 @@ SET
   
  **\<db_state_option >:: =**  
   
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  データベースの状態を制御します。  
   
@@ -507,7 +508,7 @@ SET
  データベースは READ_ONLY に設定され、ログ記録が無効になり、アクセスが sysadmin 固定サーバー ロールのメンバーに制限されます。 EMERGENCY は、主にトラブルシューティングの目的で使用されます。 たとえば、破損したログ ファイルが原因で問題ありとマークされたデータベースを EMERGENCY 状態に設定できます。 これにより、システム管理者はデータベースに読み取り専用でアクセスできるようになります。 sysadmin 固定サーバー ロールのメンバーのみが、データベースを EMERGENCY 状態に設定できます。  
   
 > [!NOTE]  
->  **アクセス許可:**にデータベースを offline または emergency 状態に変更する、サブジェクト データベースに対する ALTER DATABASE 権限が必要です。 データベースを OFFLINE から ONLINE にするには、サーバー レベルの ALTER ANY DATABASE 権限が必要です。  
+> **アクセス許可:**にデータベースを offline または emergency 状態に変更する、サブジェクト データベースに対する ALTER DATABASE 権限が必要です。 データベースを OFFLINE から ONLINE にするには、サーバー レベルの ALTER ANY DATABASE 権限が必要です。  
   
  このオプションの状態を確認するには、state および state_desc 列決定できます、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビュー、またはの Status プロパティ、 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)関数。 詳細については、「 [データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
   
@@ -529,14 +530,14 @@ SET
  この状態を変更するには、データベースに対する排他的アクセスが必要になります。 詳細については、SINGLE_USER 句をご覧ください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]連合データベースは、セット {READ_ONLY |READ_WRITE} は無効です。  
+> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]連合データベースは、セット {READ_ONLY |READ_WRITE} は無効です。  
   
  **\<db_user_access_option >:: =**  
   
  データベースへのユーザー アクセスを制御します。  
   
  SINGLE_USER  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  一度に 1 人のユーザーだけがデータベースにアクセスできます。 SINGLE_USER が指定されており、他のユーザーがデータベースに接続している場合には、指定したデータベースからすべてのユーザーが接続解除するまで、ALTER DATABASE ステートメントはブロックされます。 この動作をオーバーライドするには、WITH を参照してください。\<終了 > 句。  
   
@@ -575,7 +576,7 @@ MULTI_USER
   
  **\<external_access_option >:: =**  
   
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  別のデータベースのオブジェクトなど、外部リソースからデータベースにアクセスできるかどうかを制御します。  
   
@@ -587,7 +588,7 @@ MULTI_USER
  データベースは、複数データベースの組み合わせ所有権に参加できません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは、cross db ownership chaining サーバー オプションが 0 (OFF) の場合に、この設定が認識されます。 cross db ownership chaining が 1 (ON) の場合は、このオプションの値にかかわらず、すべてのユーザー データベースが複数データベースの組み合わせ所有権に参加できます。 このオプションを使用して設定[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)です。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは、cross db ownership chaining サーバー オプションが 0 (OFF) の場合に、この設定が認識されます。 cross db ownership chaining が 1 (ON) の場合は、このオプションの値にかかわらず、すべてのユーザー データベースが複数データベースの組み合わせ所有権に参加できます。 このオプションを使用して設定[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)です。  
   
  このオプションを設定する、データベースに対する CONTROL SERVER 権限が必要です。  
   
@@ -659,7 +660,7 @@ MULTI_USER
   
  **\<HADR_options >:: =**  
   
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  参照してください[ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
@@ -692,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。  
   
  ON |オフ |[すべて] をオフに  
  コントロールは、このデータベースにクエリ ストアが有効になっている場合とそのコントロールが、クエリのストアの内容を削除します。  
@@ -762,7 +763,7 @@ OPERATION_MODE
  最小のログ領域を使用する、単純なバックアップ方法が実行されます。 ログ領域は、サーバー障害の復旧での使用が終わると自動的に再利用できるようになります。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  単純復旧モデルは、他の 2 つのモデルよりも管理が簡単ですが、データ ファイルが破損した場合にデータが失われる危険性が高くなります。 前回のデータベースのバックアップ作成や差分バックアップ作成の後に行った変更はすべて失われるため、手作業で入力し直す必要があります。  
+> 単純復旧モデルは、他の 2 つのモデルよりも管理が簡単ですが、データ ファイルが破損した場合にデータが失われる危険性が高くなります。 前回のデータベースのバックアップ作成や差分バックアップ作成の後に行った変更はすべて失われるため、手作業で入力し直す必要があります。  
   
  既定の復旧モデルの復旧モデルによって決定されます、**モデル**データベース。 詳細については、適切な復旧モデルを選択すると、次を参照してください。[復旧モデル &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -776,9 +777,9 @@ OPERATION_MODE
  不完全なページを検出することはできません、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。  
   
 > [!IMPORTANT]  
->  構文構造 TORN_PAGE_DETECTION ON | OFF は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業ではこの構文構造の使用を避け、現在この構文構造を使用しているアプリケーションは修正するようにしてください。 代わりに、PAGE_VERIFY オプションを使用してください。  
+> 構文構造 TORN_PAGE_DETECTION ON | OFF は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業ではこの構文構造の使用を避け、現在この構文構造を使用しているアプリケーションは修正するようにしてください。 代わりに、PAGE_VERIFY オプションを使用してください。  
   
- PAGE_VERIFY {チェックサム |TORN_PAGE_DETECTION |[なし]}  
+<a name="page_verify"></a>PAGE_VERIFY {チェックサム |TORN_PAGE_DETECTION |[なし]}  
  ディスク I/O パスのエラーが原因で破損したデータベース ページを検出します。 ディスク I/O パスのエラーは、データベース破損問題の原因となる可能性があり、一般にはページがディスクに書き込まれている最中に発生した電源障害やディスクのハードウェア障害によって引き起こされます。  
   
  CHECKSUM  
@@ -797,7 +798,7 @@ OPERATION_MODE
 -   ユーザー データベースまたはシステム データベースを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンにアップグレードしても、PAGE_VERIFY 値 (NONE または TORN_PAGE_DETECTION) が保持されます。 CHECKSUM の使用をお勧めします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、PAGE_VERIFY データベース オプションは tempdb データベースについては NONE に設定されており、変更できません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]の新規インストールに対する以降のバージョンで tempdb データベースの既定値は、チェックサムと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 インストールをアップグレードするときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定値は NONE のままです。 このオプションは変更できます。 tempdb データベースでは CHECKSUM を使用することをお勧めします。  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、PAGE_VERIFY データベース オプションは tempdb データベースについては NONE に設定されており、変更できません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]の新規インストールに対する以降のバージョンで tempdb データベースの既定値は、チェックサムと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 インストールをアップグレードするときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定値は NONE のままです。 このオプションは変更できます。 tempdb データベースでは CHECKSUM を使用することをお勧めします。  
   
 -   TORN_PAGE_DETECTION は、使用するリソースが比較的少なくて済みますが、CHECKSUM による保護の最小限のサブセットしか利用できません。  
   
@@ -809,9 +810,9 @@ OPERATION_MODE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4 回に、チェックサム、破損ページ、またはその他の I/O エラーで失敗したすべての読み取りを再試行します。 いずれかの再試行で読み取りに成功した場合には、エラー ログにメッセージが書き込まれ、その読み取りを起動したコマンドは続行されます。 再試行が失敗した場合には、そのコマンドはエラー メッセージ 824 で失敗します。  
   
- 詳細については、チェックサム、破損ページ、読み取り再試行、エラー メッセージ 823 と 824、およびその他の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]I/O 監査機能を参照してください[Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=47160)です。  
+ エラー メッセージ 823、824 および 825 の詳細については、次を参照してください[SQL Server でのメッセージ 823 エラーのトラブルシューティング方法](http://support.microsoft.com/help/2015755)、 [SQL Server でのメッセージ 824 のトラブルシューティング方法](http://support.microsoft.com/help/2015756)と[メッセージ 825 をトラブルシューティングする方法。&#40; 読み取り再試行&#41;SQL Server で](http://support.microsoft.com/help/2015757)です。
   
- このオプションの現在の設定は、page_verify_option 列を調べることで決定できます、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビュー、またはの IsTornPageDetectionEnabled プロパティを[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)関数。  
+ このオプションの現在の設定を調べることで決定できます、 *page_verify_option*内の列、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューまたは*IsTornPageDetectionEnabled*のプロパティ、 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)関数。  
   
 **\<remote_data_archive_option >:: =**  
   
@@ -1250,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. クエリのストアを有効にします。  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
  次の例では、クエリのストアを有効にして、ストアのクエリ パラメーターを構成します。  
   
@@ -1258,11 +1259,11 @@ SET CHANGE_TRACKING = OFF;
 ALTER DATABASE AdventureWorks2012  
 SET QUERY_STORE = ON   
     (  
-      OPERATION_MODE = READ_ONLY   
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 5 )  
-    , DATA_FLUSH_INTERVAL_SECONDS = 2000   
-    , MAX_STORAGE_SIZE_MB = 10   
-    , INTERVAL_LENGTH_MINUTES = 10   
+      OPERATION_MODE = READ_WRITE   
+    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )  
+    , DATA_FLUSH_INTERVAL_SECONDS = 900   
+    , MAX_STORAGE_SIZE_MB = 1024   
+    , INTERVAL_LENGTH_MINUTES = 60   
     );  
 ```  
   
@@ -1278,6 +1279,6 @@ SET QUERY_STORE = ON
  [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
+ [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   

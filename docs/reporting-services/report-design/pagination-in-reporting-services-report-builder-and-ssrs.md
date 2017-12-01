@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services (レポート ビルダーおよび SSRS) の改ページ |Microsoft ドキュメント"
+title: "Reporting Services の改ページ (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ad24564f035952b3bf4834162e1039370efb3f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
   ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポート作成に使用するレンダラーに最適化された、ユーザーにとって見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]における改ページの制御規則を理解しておく必要があります。  
@@ -49,16 +48,16 @@ ms.lasthandoff: 08/09/2017
 ### <a name="margins"></a>余白  
  余白は、物理ページの寸法の端を基準とし、指定された余白設定に達するまで内側に向かって描画されます。 余白領域にはみ出たレポート アイテムはクリッピングされ、重なり合う領域はレンダリングされません。 ページの水平方向または垂直方向の幅がゼロになるような余白サイズを指定した場合は、余白設定が既定でゼロに設定されます。 余白は、 **[レポートのプロパティ]** ペインまたは **[ページ設定]** ダイアログ ボックスを使用して指定できるほか、 **[プロパティ]** ペインで TopMargin、BottomMargin、LeftMargin、RightMargin の各プロパティを変更することによって指定できます。 レポートで定義されている余白サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の余白サイズを指定することにより上書きできます。  
   
- 余白、列の間隔、およびページ ヘッダーとページ フッターの領域を割り当てた後に残っている物理ページ領域を "使用可能なページ領域" **といいます。 余白は、レポートをハード改ページ レンダラー形式でレンダリングまたは印刷した場合にのみ適用されます。 次の画像は、物理ページの余白および使用可能なページ領域を示しています。  
+ 余白、列の間隔、およびページ ヘッダーとページ フッターの領域を割り当てた後に残っている物理ページ領域を *"使用可能なページ領域"*といいます。 余白は、レポートをハード改ページ レンダラー形式でレンダリングまたは印刷した場合にのみ適用されます。 次の画像は、物理ページの余白および使用可能なページ領域を示しています。  
   
- ![余白と使用可能領域のある物理ページ。](../../reporting-services/report-design/media/rspagemargins.gif "物理ページの余白と使用可能な領域を使用します。")  
+ ![余白と使用可能領域のある物理ページ](../../reporting-services/report-design/media/rspagemargins.gif "余白と使用可能領域のある物理ページ")  
   
 ### <a name="newsletter-style-columns"></a>ニュースレター形式のカラム  
  新聞の囲み記事に見られるように、レポートを複数のカラム (列) に分割できます。カラムは、同じ物理ページ上にレンダリングされる論理的なページとして扱われます。 カラムは左から右、上から下に配置され、カラムとカラムは空白の領域で仕切られます。 レポートを複数のカラムに分割した場合、各物理ページが垂直方向のカラムとして分割され、それぞれのカラムが論理的なページと見なされます。 たとえば、物理ページ上に 2 つのカラムがあるとします。 レポートのコンテンツはまず 1 列目に流し込まれ、次に 2 列目に流し込まれます。 レポートが最初の 2 つのカラムに収まりきらない場合は、次のページの 1 列目から順にコンテンツが流し込まれます。 カラムは、すべてのレポート アイテムがレンダリングされるまで、常に左から右、上から下に流し込まれます。 水平方向または垂直方向の幅がゼロになるようなカラム サイズを指定した場合は、カラムの間隔が既定でゼロに設定されます。  
   
  カラムは、 **[レポートのプロパティ]** ペインまたは **[ページ設定]** ダイアログ ボックスを使用して指定できるほか、 **[プロパティ]** ペインで TopMargin、BottomMargin、LeftMargin、RightMargin の各プロパティを変更することによって指定できます。 定義されていない余白サイズを使用したい場合は、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の余白サイズを指定できます。 カラムは、レポートを PDF 形式か画像形式でレンダリングまたは印刷した場合にのみ適用されます。 次の画像は、カラムを含んだページの使用可能なページ領域を示しています。  
   
- ![説明されている列のある物理ページ。](../../reporting-services/report-design/media/rspagecolumns.gif "説明されている列のある物理ページ。")  
+ ![説明されている列のある物理ページ](../../reporting-services/report-design/media/rspagecolumns.gif "説明されている列のある物理ページ")  
   
 ## <a name="page-breaks-and-page-names"></a>改ページとページ名  
  レポートにページ名が含まれていると、レポートが読みやすくなり、レポートのデータを容易に監査できます。 Reporting Services は、レポートとレポート内の Tablix データ領域 (テーブル、マトリックス、および一覧)、グループ、四角形のプロパティを提供して改ページを制御し、ページ番号のリセットや、改ページでの新しいレポート ページ名の提供を行います。 これらの機能により、レポートがレンダリングされる形式に関係なくレポートの質が向上されます。これらの機能は特に、Excel ブックにレポートをエクスポートする際に役立ちます。  
@@ -92,4 +91,3 @@ ms.lasthandoff: 08/09/2017
  [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

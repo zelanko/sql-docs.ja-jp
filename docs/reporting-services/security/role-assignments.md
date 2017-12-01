@@ -1,5 +1,5 @@
 ---
-title: "ロールの割り当て |Microsoft ドキュメント"
+title: "ロールの割り当て | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - groups [Reporting Services]
 - security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d848092b028ce827c1c2c56c5216f6ba3b1f4c45
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="role-assignments"></a>ロールの割り当て
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、”ロール” の割り当てにより、格納されているアイテムおよびレポート サーバー自体にアクセスできるかどうかが決まります。** ロールの割り当ては以下の要素で構成されています。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、”ロール” の割り当てにより、格納されているアイテムおよびレポート サーバー自体にアクセスできるかどうかが決まります。 ** ロールの割り当ては以下の要素で構成されています。  
   
 -   アクセスを制御するセキュリティ保護可能なアイテム。 セキュリティ保護可能なアイテムの例として、フォルダー、レポート、リソースがあります。  
   
@@ -67,11 +66,10 @@ ms.lasthandoff: 08/09/2017
  既定のセキュリティを提供する定義済みのロールの割り当ての詳細については、「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [作成、削除、または、Role &#40; を変更Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [レポート サーバー &#40; をユーザー アクセスを許可します。レポート マネージャー &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [変更または削除するロールの割り当てと #40 です。レポート マネージャー &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [SharePoint サイト &#40; レポート サーバー アイテムに対する権限を設定します。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

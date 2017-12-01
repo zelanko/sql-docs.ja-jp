@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a7147621db09dfc1c29077f82cc3eadb39b3c5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,6 @@ ms.lasthandoff: 11/17/2017
  このビューは、送信待ちメッセージの数と、それらのメール キューでの待機時間を確認する場合に使用できます。 通常、数**未送信**メッセージは少なくなります。 通常の運用中にベンチマーク テストを行って、その運用に適切な、メッセージ キュー内のメッセージの数を判断してください。  
   
  データベース メールで処理されるすべてのメッセージを表示する[sysmail_allitems (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). 状態が失敗したメッセージのみを表示する[sysmail_faileditems (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 送信されたメッセージのみを表示する[sysmail_sentitems (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  

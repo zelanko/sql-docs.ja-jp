@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Active
+ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 構成ファイル
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -77,8 +77,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|×|  
 |**CleanupCycleMinutes**|レポート サーバー データベースから古いセッションと期限切れのスナップショットを削除するまでの保持期間を分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は、10 です。 値を 0 に設定すると、データベースによる処理のクリーンアップが無効になります。|N、S|  
 |**MaxActiveReqForOneUser**|ユーザーが同時に処理できる最大レポート数を指定します。 最大数に達すると、それ以降のレポート処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 20 です。<br /><br /> 要求の大半はきわめて迅速に処理されるため、1 人のユーザーが任意の時点で 20 より多くの接続を開くということはまずありません。 ユーザーが 15 より多い処理集中型のレポートを同時に開く場合は、この値を増やす必要があります。<br /><br /> この設定は、SharePoint 統合モードで動作するレポート サーバーでは無視されます。|N、S|  
-|**MaxActiveReqForAnonymous**|できるプロセスで、同時に匿名の要求の最大数を指定します。 制限に達すると、さらに処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 200 です。
-|**DatabaseQueryTimeout**|レポート サーバー データベースへの接続がタイムアウトするまでの期間を秒単位で指定します。 この値は、System.Data.SQLClient.SQLCommand.CommandTimeout プロパティに渡されます。 有効な値の範囲は 0 ～ 2147483647 です。 既定値は 120 です。 値を 0 に設定することはお勧めできません。0 にすると待ち時間が無制限になります。|×|  
+|**MaxActiveReqForAnonymous**|同時に処理できる匿名要求の最大数を指定します。 最大数に達すると、それ以降の処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 200 です。
+|**DatabaseQueryTimeout**|レポート サーバー データベースへの接続がタイムアウトするまでの期間を秒単位で指定します。この値は、System.Data.SQLClient.SQLCommand.CommandTimeout プロパティに渡されます。 有効な値の範囲は 0 ～ 2147483647 です。 既定値は 120 です。 値を 0 に設定することはお勧めできません。0 にすると待ち時間が無制限になります。|×|  
 |**AlertingCleanupCycleMinutes**|既定値は 20 です。<br /><br /> 警告データベースに格納されている一時データのクリーンアップが発生する頻度を指定します。|S|  
 |**AlertingDataCleanupMinutes**|既定値は 360 です。<br /><br /> 警告の定義を作成または編集するために使用するセッション データを警告データベース内で保持する期間を指定します。 既定値は 6 時間です。|S|  
 |**AlertingExecutionLogCleanup**Minutes|既定値は 10080 です。<br /><br /> 警告実行ログの値を保持する期間を指定します。 既定の日数は 7 日です。|S|  
@@ -169,7 +169,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxQueueThreads**|レポート サーバー Windows サービスがサブスクリプションと通知を同時に処理するために使用するスレッド数を指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 0 です。 0 を選択した場合は、レポート サーバーによってスレッドの最大数が決定されます。 整数を指定した場合は、指定した値が、一度に作成できるスレッド数の上限に設定されます。 レポート サーバー Windows サービスがプロセスを実行するためにメモリをどのように管理するかについては、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S|  
 |**UrlRoot**|電子メール サブスクリプションやファイル共有サブスクリプションで配信されたレポート用の URL を構築するために、レポート サーバーの配信拡張機能で使用されます。 パブリッシュされたレポートが置かれているレポート サーバーの有効な URL アドレスを指定する必要があります。 レポート サーバーは、この設定を使って、オフライン アクセスまたは自動アクセスに必要な URL を生成します。 これらの URL は、エクスポートされたレポートで使用されるほか、配信拡張機能が、リンクや電子メールなど、配信メッセージに追加される URL を構築する際に使用されます。 レポート サーバーは、次のようにして、レポート内の URL を決定します。<br /><br /> **[UrlRoot]** が空 (既定値) であり、URL 予約が存在する場合、レポート サーバーは、ListReportServerUrls メソッドによる URL 生成と同様の方法で、自動的に URL を決定します。 ListReportServerUrls メソッドで返される最初の URL が使用されます。 SecureConnectionLevel がゼロ (0) よりも大きい場合は、最初の SSL URL が使用されます。<br /><br /> **[UrlRoot]** が特定の値に設定された場合は、明示的な値が使用されます。<br /><br /> **[UrlRoot]** が空であり、URL 予約が構成されていない場合、レンダリングされたレポートや電子メール リンク内の URL に誤りが生じることになります。|N、S|  
 |**UnattendedExecutionAccount**|レポートを実行するために、レポート サーバーで使用されるユーザー名、パスワード、およびドメインを指定します。 これらの値は暗号化されます。 これらの値を設定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用します。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> SharePoint モードでは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの実行アカウントを設定します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください|×|  
-|**PolicyLevel**|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rssrvrpolicy.config です。 詳細については、「 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|N、S|  
+|**PolicyLevel**|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rssrvrpolicy.config です。詳細については、「 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|N、S|  
 |**IsWebServiceEnabled**|レポート サーバー Web サービスが SOAP および URL アクセス要求に応答するかどうかを指定します。 ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用してサービスを有効または無効にすると、この値が設定されます。|N、S|  
 |**IsReportManagerEnabled**|この設定は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で廃止されました。 Web ポータルは常に有効になります。|×|  
 |**FileShareStorageLocation**|一時スナップショットの格納先となるファイル システム上のフォルダーを 1 つ指定します。 UNC パスとしてフォルダー パスを指定することはできますが、これはお勧めできません。 既定値は空です。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N、S|  
@@ -187,7 +187,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**PageCountMode**|Web ポータルでのみ使用されます。この設定は、レポート サーバーでページ数の値をレポートの表示前に計算するか、表示中に計算するかを指定します。 有効な値は **Estimate** (既定値) および **Actual**です。 ユーザーがレポートを閲覧している間にページ数情報を計算する場合は、 **Estimate** を使用します。 ページ数の初期値は 2 (現在のページの他にもう 1 ページ) で、ユーザーがレポートを読み進める間にページ数が調整されます。 レポートが表示される前にページ数を計算する場合は、 **Actual** を使用します。 **Actual** は旧バージョンとの互換性を維持するために用意されています。 **PageCountMode** を **Actual**に設定した場合、有効なページ数を取得する関係上、レポート全体を処理する必要があるため、レポートが表示されるまでの待ち時間が長くなる点に注意してください。|N、S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config ファイル) (ネイティブ モード)  
- Extensions セクションは、 **** ネイティブ モード レポート サーバーの  rsreportserver.config ファイルでのみ表示されます。 SharePoint モード レポート サーバーの拡張機能の情報は、SharePoint 構成データベースに格納され、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションごとに構成されます。  
+ Extensions セクションは、 **ネイティブ モード レポート サーバーの** rsreportserver.config ファイルでのみ表示されます。 SharePoint モード レポート サーバーの拡張機能の情報は、SharePoint 構成データベースに格納され、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションごとに構成されます。  
   
  **Extensions** は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境に対する以下の拡張モジュールの構成設定を指定します。  
   
@@ -250,7 +250,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SMTPServer**|リモート SMTP サーバーまたは転送サーバーのアドレスを示す文字列値を指定します。 この値は、リモート SMTP サービスに対して必要です。 IP アドレス、企業イントラネット上のコンピューターの UNC 名、または完全修飾ドメイン名を使用できます。|  
 |**SMTPServerPort**|メールを送信するために SMTP サービスで使用されるポートを示す整数値を指定します。 通常、ポート 25 が電子メールの送信に使用されます。|  
 |**SMTPAccountName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook Express のアカウント名を割り当てる文字列値が含まれています。 SMTP サーバーがなんらかの処理にこのアカウントを使用するよう構成されている場合に、この値を設定できます。それ以外の場合は、空のままにしてください。 **From** を使用して、レポートの送信に使用される電子メール アカウントを指定します。|  
-|**SMTPConnectionTimeout**|SMTP サービスを使用した有効なソケット接続に対する、タイムアウトまでの秒単位の待ち時間を示す整数値を指定します。 既定値は 30 秒ですが、 **SendUsing** が 2 に設定されている場合、この値は無視されます。|  
+|**SMTPConnectionTimeout**|SMTP サービスを使用した有効なソケット接続に対する、タイムアウトまでの秒単位の待ち時間を示す整数値を指定します。既定値は 30 秒ですが、 **SendUsing** が 2 に設定されている場合、この値は無視されます。|  
 |**SMTPServerPickupDirectory**|ローカル SMTP サービス用のピックアップ ディレクトリを示す文字列値を指定します。 この値には、完全修飾のローカル フォルダー パス (たとえば、d:\rs-emails) を指定する必要があります。|  
 |**SMTPUseSSL**|ネットワークを介した SMTP メッセージの送信時に SSL (Secure Sockets Layer) を使用するよう設定できる、ブール値を指定します。 既定値は 0 (または False) です。 この設定は、 **SendUsing** 要素が 2 に設定されている場合に使用できます。|  
 |**SendUsing**|メッセージの送信に使用する方法を指定します。 有効な値は、<br /><br /> 1 = ローカル SMTP サービスのピックアップ ディレクトリからメッセージを送信します。<br /><br /> 2 = ネットワークの SMTP サービスからメッセージを送信します。|  
@@ -847,7 +847,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- その他のご不明な点は、 [Reporting Services のフォーラムを再試行してください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+ その他のご不明な点は、 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

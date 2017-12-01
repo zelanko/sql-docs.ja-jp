@@ -1,7 +1,7 @@
 ---
 title: "sys.columns (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/08/2016
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ddf0a9cf5aabd35bd02b11a3b270e8e1c8100cb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: baf6cff936e446dce22a3d6c7fe7431f09272d58
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,8 +76,8 @@ ms.lasthandoff: 11/21/2017
 |rule_object_id|**int**|sys.sp_bindrule を使用して列にバインドするスタンドアロン ルールの ID です。<br /><br /> 0 = スタンドアロン ルールはありません。 列レベルの CHECK 制約を参照してください。 [sys.check_constraints &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = 列はスパース列です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
 |is_column_set|**bit**|1 = 列は列セットです。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
-|generated_always_type|**tinyint**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 列の型を表す数値 (値は常に 0 でシステム テーブルの列)。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Always Encrypted の詳細については、次を参照してください。 [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)です。|  
-|generated_always_type_desc|**nvarchar (60)**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 列の型の説明テキスト (値は常に NOT_APPLICABLE システム テーブルの列)。<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|generated_always_type|**tinyint**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 識別列の値が生成されたときに (システム テーブル内の列の場合は 0 になります)。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 詳細については、次を参照してください。[テンポラル テーブルと #40 です。リレーショナル データベース &#41;](../../relational-databases/tables/temporal-tables.md).|  
+|generated_always_type_desc|**nvarchar (60)**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 説明テキスト`generated_always_type`の値 (常にシステム テーブル内の列に対して NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 暗号化の種類:<br /><br /> 1 = 明確な暗号化<br /><br /> 2 = ランダム化された暗号化|  
 |encryption_type_desc|**nvarchar(64)**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 暗号化の種類の説明。<br /><br /> ランダム化<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 暗号化アルゴリズムの名前です。<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 のみがサポートされているとします。|  

@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Excel (レポート ビルダーおよび SSRS) へエクスポート |Microsoft ドキュメント"
+title: "Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
+# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートが [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 形式 (.xlsx) で表示されます。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
   
  形式は、Office Open XML です。 このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** で、ファイル拡張子は .xlsx です。  
   
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。 詳細については、「 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)」を参照してください。  
   
- 参照してください[レポート &#40; をエクスポートレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) Excel にエクスポートする方法の詳細。  
+ Excel へのエクスポート方法については、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  **String**型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
 -   セル内の最大文字数は 32,767 文字に制限されています。 この制限を超えた場合は、レンダラーによってエラー メッセージが表示されます。  
   
--   行の高さの最大値は 409 ポイントです。 行の内容、行の高さが 409 ポイントを超えた場合、Excel のセルは 409 ポイントまで部分的な量のテキストを示します。 セルの内容の残りの部分では、(最大 32,767 の文字の最大数を Excel の) セル内でまだです。
+-   行の高さの最大値は 409 ポイントです。 行の内容が多すぎて行の高さが 409 ポイントを超えた場合、Excel のセルには最大 409 ポイントまでのテキストの部分が表示されます。 セルの内容の残りの部分は、セル内にまだあります(Excel の最大文字数である 32,767 まで)。
 
--  最大の行の高さが 409 ポイントは、レポート内のセルの定義済みの高さが 409 ポイントよりも大きい場合があるために、Excel は、複数の行にセルの内容を分割します。
+-  行の高さの最大値は 409 ポイントなので、レポートで定義されているセルの高さが 409 ポイントより大きい場合は、セルの内容が複数の行に分割されます。
   
 -   Excel には最大ワークシート数が定義されていませんが、メモリやディスクの空き容量など、外部的な要因によって制限が適用される場合もあります。  
   
@@ -116,15 +116,15 @@ ms.lasthandoff: 08/09/2017
 ### <a name="report-row-groups-and-column-groups"></a>レポートの行グループと列グループ  
  レポートに行グループまたは列グループが含まれている場合、レポートを Excel にエクスポートするときに空のセルが挿入されます。 たとえば、あるレポートで通勤距離別に行をグループ化するとします。 通勤距離にはそれぞれ複数の顧客を含めることができます。 次の図に、このレポートを示します。  
   
- ![Reporting Services web ポータルでレポート](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services web ポータルでのレポート")  
+ ![Reporting Services Web ポータルでのレポート](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services Web ポータルでのレポート")  
   
  このレポートを Excel にエクスポートした場合、通勤距離の列の 1 つのセルにしか通勤距離が表示されません。 値は、レポート内でのテキストの配置 (上、中央、または下) に応じて、最初、中央、または最後のセルに表示されます。 その他のセルは空になります。 顧客名を含む名前列のセルは空になりません。 次の図に、Excel にエクスポートされた後のレポートを示します。 赤色のセル罫線は、強調のために追加されたもので、 灰色のボックスは空のセルです (赤色の線も灰色のボックスもエクスポートされたレポートには含まれません)。  
   
- ![行を含むレポートが excel にエクスポート](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "行を含むレポートが excel にエクスポート")  
+ ![Excel にエクスポートされたレポート、線あり](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Excel にエクスポートされたレポート、線あり")  
   
  このため、行グループまたは列グループが含まれているレポートを Excel にエクスポートしてピボット テーブルで表示する場合は、レポートの変更が必要です。 ワークシートをすべてのセルに値が設定されたフラット テーブルにするには、データが欠落しているセルにグループ値を追加する必要があります。 次の図に、更新したワークシートを示します。  
   
- ![レポートが統合された Excel にエクスポート](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "を Excel にフラット化されたレポートのエクスポート")  
+ ![Excel にエクスポートされたレポート、フラット化あり](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Excel にエクスポートされたレポート、フラット化あり")  
   
  したがって、レポート データを詳しく分析するために Excel にエクスポートするという特定の目的でレポートを作成した場合は、レポートの行や列をグループ化しないことを検討してください。  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート ビルダーが切断モードのときにレポート ビルダーでレポートをプレビューした場合。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。  
   
--   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、次を参照してください。[ローカル モードとします。接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」をご覧ください  
   
  **[Excel 2003]** メニュー オプション レンダラーが表示されるように構成されている場合は、Excel と Excel 2003 の両方のオプションが次の状況で使用可能になります。  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 08/09/2017
   
  グラフ、スパークライン、データ バー、マップ、ゲージ、およびインジケーターは画像としてエクスポートされます。 グラフの値やメンバー ラベルなど、これらのアイテムが表すデータそのものは一緒にエクスポートされず、レポート内のデータ領域の列または行に含まれていない限り、Excel ブックでは使用できません。  
   
- グラフ、スパークライン、データ バー、マップ、ゲージ、およびインジケーターのデータを操作する場合は、レポートを .csv ファイルにエクスポートするか、レポートから Atom 準拠のデータ フィードを生成します。 詳細については、次を参照してください[CSV ファイル &#40; へのエクスポート。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)と[レポート &#40; からのデータ フィードの生成レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ グラフ、スパークライン、データ バー、マップ、ゲージ、およびインジケーターのデータを操作する場合は、レポートを .csv ファイルにエクスポートするか、レポートから Atom 準拠のデータ フィードを生成します。 詳細については、「[CSV ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」および「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="page-sizing"></a>ページのサイズ設定  
  Excel 表示拡張機能では、ページの高さ設定と幅設定を使って、Excel ワークシートで定義する用紙設定が決定されます。 まず、PageHeight プロパティと PageWidth プロパティの設定が、最も一般的ないずれかの用紙サイズと比較されます。  
@@ -200,11 +200,11 @@ ms.lasthandoff: 08/09/2017
  一致するものが見つからなかった場合は、プリンターの既定のページ サイズが使用されます。 用紙方向は、ページの幅が高さよりも小さければ [縦] に、それ以外の場合は [横] に設定されます。  
   
 ##  <a name="WorksheetTabNames"></a> ワークシートのタブ名  
- レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。 ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が "会計年度ごとの売り上げレポート" ****である場合、2 番目のワークシート名は "会計年度ごとの売り上げレポート1" ****、3 番目のワークシート名は "会計年度ごとの売り上げレポート2" ****となります。  
+ レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"**である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"**、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"**となります。  
   
- 改ページによって生じたすべてのレポート ページに新しいページ名がある場合は、各ワークシートには関連するページ名が付けられます。 ただし、これらのページ名が一意でない場合があります。 ページ名が一意でない場合、ワークシートには最初に説明したページ名と同じ方法で名前が付けられます。 たとえば、2 つのグループのページ名が "東北部の売り上げ" ****である場合、1 つのワークシートに "東北部の売り上げ" ****という名前が付けられ、もう一方のワークシートには "東北部の売り上げ1" ****という名前が付けられます。  
+ 改ページによって生じたすべてのレポート ページに新しいページ名がある場合は、各ワークシートには関連するページ名が付けられます。 ただし、これらのページ名が一意でない場合があります。 ページ名が一意でない場合、ワークシートには最初に説明したページ名と同じ方法で名前が付けられます。 たとえば、2 つのグループのページ名が **"東北部の売り上げ"**である場合、1 つのワークシートに **"東北部の売り上げ"**という名前が付けられ、もう一方のワークシートには **"東北部の売り上げ1"**という名前が付けられます。  
   
- レポートに、最初のページ名も改ページに関連付けられたページ名もない場合、ワークシートのタブには、"シート1" ****、"シート2" ****と順番に続く既定の名前が使用されます。  
+ レポートに、最初のページ名も改ページに関連付けられたページ名もない場合、ワークシートのタブには、**"シート1"**、**"シート2"**と順番に続く既定の名前が使用されます。  
   
  Reporting Services には、ユーザーが指定する方法で Excel にエクスポートできるレポートの作成を支援するために、レポート、データ領域、グループ、および四角形に設定するプロパティが用意されています。 詳細については、「 [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -249,13 +249,13 @@ ms.lasthandoff: 08/09/2017
 -   Excel の制限により、アウトラインの入れ子レベルは最大 7 です。  
   
 ### <a name="document-map"></a>ドキュメント マップ  
- レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、"Document map" ****という名前が付けられます。  
+ レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、**"Document map"**という名前が付けられます。  
   
  ドキュメント マップに表示されるテキストは、レポート アイテムまたはレポート グループの DocumentMapLabel プロパティによって決まります。 ドキュメント マップ ラベルは、先頭列の先頭行を起点とし、レポートにおける出現順に一覧表示されます。 各ドキュメント マップ ラベルのセルは、レポートでの見出しの階層に合わせてインデントされます。 それぞれのインデント レベルは、ラベルを後続の列に配置することによって表現されます。 Excel でサポートされるアウトラインの入れ子レベルは、最大 256 です。  
   
  ドキュメント マップのアウトラインは、折りたたみ可能な Excel アウトラインとしてレンダリングされます。 アウトライン構造は、ドキュメント マップの入れ子構造と一致します。 アウトラインの展開と折りたたみは、第 2 レベルからとなります。  
   
- マップのルート ノードは、レポート名、 \< *reportname*> .rdl が、これは対話型です。 ドキュメント マップ リンクのフォントは Arial (10 ポイント) です。  
+ マップのルート ノードはレポート名 \<*reportname*>.rdl で、これを対話的に操作することはできません。 ドキュメント マップ リンクのフォントは Arial (10 ポイント) です。  
   
 ### <a name="drillthrough-links"></a>ドリルスルー リンク  
  テキスト ボックス内にあるドリルスルー リンクは、テキストが表示されるセルに Excel ハイパーリンクとしてレンダリングされます。 画像やグラフのドリルスルー リンクは、Excel ハイパーリンクとして、画像上にレンダリングされます。 クリックすると、クライアントの既定のブラウザーが起動し、対象となる HTML が表示されます。  
@@ -273,11 +273,10 @@ ms.lasthandoff: 08/09/2017
  レポートを複数の形式で表示する必要があるにもかかわらず、必要なすべての形式で目的どおりに表示されるレポート レイアウトを作成することができない場合は、組み込みの RenderFormat グローバルの値を使用して、レポートの外観を実行時に条件に応じて変更するようにしてください。 この方法により、使用するレンダラーに応じてレポート アイテムの表示/非表示を切り替えて、それぞれの形式で最適な結果を得ることができます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services &#40; の改ページレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [対話機能のさまざまなレポート表示拡張機能と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

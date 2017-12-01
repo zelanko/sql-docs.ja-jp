@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9168e7a06ce377c6c1d47456197f8e513b2b58fb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   宣言されていないパラメーターに関するメタデータを含む結果セットを返す、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 使用されている各パラメーターの検討、  **@tsql** バッチで宣言されていないが、  **@params**です。 これらの各パラメーターに対して 1 行のデータを含む結果セットが返されます。そのパラメーターについて推論される型の情報も含まれます。 このプロシージャには空の結果セットが返されます、  **@tsql** 入力バッチで宣言されている以外のパラメーターを持たない **@params**です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](http://msdn.microsoft.com/library/bb500435.aspx)まで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
 ## <a name="syntax"></a>構文  
   

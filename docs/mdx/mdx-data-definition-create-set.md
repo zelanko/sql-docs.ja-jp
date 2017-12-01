@@ -8,8 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,23 +16,21 @@ f1_keywords:
 - CREATE SET
 - CREATE_SET
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - named sets [MDX]
 - CREATE SET statement
 ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 46ad325e1ca6e983b3ecfa550c6f7192bb17242f
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12462e2b5a81c34e53332fa9749d698fecca36a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX データ定義の設定の作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +68,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
   
  CREATE SET ステートメントで作成する名前付きセットは、セッションが終了するまで使用できます。つまり、そのセッションの複数のクエリで再利用できるということです。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバーと #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- 1 つのクエリだけで使用する名前付きセットを定義することも可能です。 そのようなセットを定義する場合は、SELECT ステートメントで WITH 句を使用します。 詳細については、WITH 句は、次を参照してください。 [Creating Query-Scoped 名前付きセット & #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ 1 つのクエリだけで使用する名前付きセットを定義することも可能です。 そのようなセットを定義する場合は、SELECT ステートメントで WITH 句を使用します。 詳細については、WITH 句は、次を参照してください。 [Creating Query-Scoped 名前付きセット &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  *Set_Expression*句は MDX 構文をサポートするすべての関数を含めることができます。 SESSION 句を指定しない CREATE SET ステートメントで作成したセットは、セッション スコープになります。 クエリ スコープによるセットを作成するには、WITH 句を使用してください。  
   
@@ -81,7 +78,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  ユーザー定義セットには、以下のいずれかのスコープを設定できます。  
   
  クエリ スコープ  
- セットの表示設定と有効期間は、クエリに限定されます。 そのようなセットは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 名前付きセット & #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ セットの表示設定と有効期間は、クエリに限定されます。 そのようなセットは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 名前付きセット &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  セッション スコープ  
  セットの表示設定と有効期間は、セットが作成されたセッションに限定されます (セットに対して DROP SET ステートメントが実行された場合、有効期間はセッションよりも短くなります)。CREATE SET ステートメントで作成するセットは、セッション スコープです。 クエリ スコープによるセットを作成するには、WITH 句を使用してください。  
@@ -120,8 +117,7 @@ SELECT [Core Products] ON 0
 |DISPLAY_FOLDER|セットを表示するためにクライアント アプリケーションが使用する、表示フォルダーのパスを識別する文字列です。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 ツールおよびクライアントによって提供される[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、円記号 (\\) は、レベルの区切り記号。 定義されたセットで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  
   
 ## <a name="see-also"></a>参照  
- [DROP SET ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-drop-set.md)   
- [MDX データ定義ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP SET ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-set.md)   
+ [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

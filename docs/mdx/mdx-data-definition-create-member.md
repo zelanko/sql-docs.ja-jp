@@ -8,8 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,23 +16,21 @@ f1_keywords:
 - CREATE MEMBER
 - Member
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - CREATE MEMBER statement
 - calculated members [MDX]
 ms.assetid: 49379217-be2c-4139-a206-1168078b9b76
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 44a329213b7bbe39167e8f0c6b85e473d2d58411
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f3a183648dca9be0962559d15e2e5619480d930
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX データ定義のメンバーを作成します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -140,9 +137,8 @@ WHERE ProfitRatio
 |ASSOCIATED_MEASURE_GROUP|このメンバーが関連付けられているメジャー グループの名前です。|  
   
 ## <a name="see-also"></a>参照  
- [DROP MEMBER ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-drop-member.md)   
- [UPDATE MEMBER ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-update-member.md)   
- [MDX データ定義ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP MEMBER ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-member.md)   
+ [UPDATE MEMBER ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-update-member.md)   
+ [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

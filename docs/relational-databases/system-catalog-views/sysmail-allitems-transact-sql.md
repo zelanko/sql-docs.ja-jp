@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0abb8eb792b85eed60df52f70a2c13c2e3f920d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba8deb3b11b01cf9f53e02024815150fa4441b6d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/17/2017
   データベース メールで処理されたメッセージごとに 1 行のデータを格納します。 このビューは、すべてのメッセージの状態を確認するときに使用できます。  
   
  状態が失敗したメッセージのみを表示する[sysmail_faileditems (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 未送信のメッセージだけを表示する[sysmail_unsentitems (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). 送信されたメッセージのみを表示する[sysmail_sentitems (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  

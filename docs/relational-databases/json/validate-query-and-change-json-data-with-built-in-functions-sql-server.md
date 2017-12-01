@@ -1,33 +1,33 @@
 ---
 title: "組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-json
+ms.suite: sql
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, built-in functions
 - functions (JSON)
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e3a398f0ab3fec7da5ef914fe1a94f949bc71942
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: d8c99e842ceaa2351c98583238cbba28e2a152c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 JSON の組み込みのサポートには、次の組み込み関数が含まれています。このトピックでは、これらの関数について簡単に説明します。  
   
@@ -120,7 +120,7 @@ ORDER BY LastName
 |**$.c**|hi|NULL またはエラー|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>AdventureWorks サンプル データベースを使用して JSON_VALUE と JSON_QUERY をテストする  
-このトピックで説明した組み込み関数をテストするには、JSON データが含まれている AdventureWorks サンプル データベースを使用して次の例を実行します。 AdventureWorks サンプル データベースを入手するには、 [こちらをクリック](http://www.microsoft.com/en-us/download/details.aspx?id=49502)してください。  
+このトピックで説明した組み込み関数をテストするには、AdventureWorks サンプル データベースを使用して次の例を実行します。 AdventureWorks の入手先と、スクリプトを実行してテストするための JSON データの追加方法について詳しくは、「[組み込みの JSON サポートを試用する](json-data-sql-server.md#test-drive-built-in-json-support)」をご覧ください。
   
 次の例では、`SalesOrder_json` テーブルの `Info` 列に JSON テキストが含まれています。  
   
@@ -181,4 +181,3 @@ SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')
  [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)  
   
   
-

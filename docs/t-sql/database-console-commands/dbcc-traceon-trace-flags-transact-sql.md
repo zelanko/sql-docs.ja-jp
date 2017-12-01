@@ -1,7 +1,7 @@
 ---
 title: "トレース フラグ (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44c2252590b6fdb9ffdbe895830eb49328c28e6a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,7 @@ ms.lasthandoff: 11/17/2017
 |**692**|一括読み込みデータ ヒープまたはクラスター化インデックスの中に高速な挿入を無効にします。 開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、高速な挿入が既定のデータベースが新しいページに挿入されるレコードの挿入のパフォーマンスを最適化するために単純なまたは一括ログに記録された復旧モデルの場合、最小ログ記録を活用することで有効にします。 高速な挿入では、各一括読み込みのバッチは、挿入のパフォーマンスを最適化するために使用可能な空き領域を持つ既存のエクステントの割り当ての参照をバイパスして、新しいエクステントを取得します。<br /><br /> 高速な挿入で一括はサイズがエクステントが完全にいっぱいにバッチごとの大きなバッチ サイズを使用することをお勧めためオブジェクトによって消費されている未使用の領域を増加する可能性が小さいバッチが読み込まれます。 バッチ サイズを増やすと実行できない場合、このトレース フラグはパフォーマンスは低下予約されている未使用の領域を減らすのに役立ちます。 <br /><br />**注:**にこのトレース フラグが適用されます[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM と高いビルドします。<br /><br />**スコープ**: グローバルまたはセッション|
 |**715**|一括読み込み操作に、非クラスター化インデックスのヒープ テーブル ロックを有効にしません。 このトレース フラグを有効にすると、一括読み込み操作は、一括テーブルにデータをコピーするときに、一括更新 (BU) ロックを取得します。 一括更新 (BU) ロックは、データを一括読み込みに同時に、同じテーブルをテーブルにアクセスするデータの一括読み込みではない他のプロセス間に複数のスレッドを許可します。<br /><br />動作は、ユーザーに明示的に指定されている場合 TABLOCK ヒント一括読み込みの場合は、実行中に似ています、または特定のテーブルのロックと、sp_tableoption の表に、一括読み込みでは有効になっています。 ただし、このトレース フラグを有効にすると、この動作は既定のクエリまたはデータベースの変更を加えずになります。<br /><br />**スコープ:**グローバルまたはセッション|
 |**834**|バッファー プールに大きなページ割り当ては Microsoft Windows を使用します。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/3210239)です。<br /><br />**注:**の列ストア インデックス機能を使用している場合[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、オンにするトレース フラグ 834 勧めしません。<br /><br />**スコープ**: グローバルのみ|
+|**845**|標準の Sku でロックされたページを有効に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサービス アカウントはときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory 特権が有効になっているが、ページのロック。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/970070)とのドキュメント ページ[サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)です。<br /><br />**注:**で始まる[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Standard Sku は、既定ではこの動作が有効になり、トレース フラグ 845 を使用しないでください。<br /><br />**スコープ**: グローバルのみ|
 |**902**|累積更新プログラムまたは Service Pack をインストールするときに、データベース アップグレード スクリプトの実行をバイパスします。 スクリプト アップグレード モード中にエラーが発生した場合は、ガイダンスについてはさらに Microsoft SQL のカスタマー サービスおよびサポート (CSS) にお問い合わせくださいすることをお勧めします。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2163980)です。<br /><br />**警告:**このトレース フラグがスクリプト アップグレード モード中に障害が発生した更新プログラムのトラブルシューティングの目的し、して、実稼働環境で継続的に実行することはできません。 データベースのアップグレード スクリプトの累積的な更新プログラムおよびサービス パックの完全なインストールが正常に実行する必要があります。 そうしないで予期しない問題が発生することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。<br /><br />**スコープ**: グローバルのみ|
 |**1117**|グループ内のファイルが自動拡張のしきい値を満たさない場合に、ファイル グループ内のすべてのファイルが拡大されます。<br /><br />**注:**で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ALTER DATABASE の AUTOGROW_SINGLE_FILE および AUTOGROW_ALL_FILES オプションによってこの動作を制御し、トレース フラグ 1117 が影響を与えません。 詳細については、次を参照してください[ALTER DATABASE の File および Filegroup オプション &#40;。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**スコープ:**グローバルのみ|
 |**1118**|サーバー上のほとんどの単一ページの割り当てが解除され、SGAM ページでの競合が減少します。 既定では、新しいオブジェクトの作成時に、最初の 8 ページが異なるエクステント (混合エクステント) から割り当てられます。 後でページを追加する必要が生じる場合、それらのページは同じエクステント (単一エクステント) から割り当てられます。 SGAM ページはこれらの混合エクステントを追跡するのに使用されます。これは、混合ページの割り当てが多く発生した場合に、それらの混合エクステントが即座にボトルネックとなる可能性があるためです。 新しいオブジェクトを作成する際、このトレース フラグにより 8 ページすべてが同じエクステントから割り当てられるため、SGAM ページをスキャンする必要性が最小限に抑えられます。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/328551)です。<br /><br />**注:**で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ALTER DATABASE の SET MIXED_PAGE_ALLOCATION オプションによってこの動作を制御し、トレース フラグ 1118 は影響を与えません。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。<br /><br />**スコープ:**グローバルのみ|  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |**2312**|クエリ オプティマイザーの基数の推定モデルを設定することができます、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]バージョンでは、データベースの互換性レベルによって決まります。 詳細については、次を参照してください。 [Microsoft サポート記事](http://support.microsoft.com/kb/2801413)です。<br /><br />以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、クエリ レベルでは、これを実現する追加使用ヒント 'FORCE_DEFAULT_CARDINALITY_ESTIMATION'[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)このトレース フラグを使用する代わりにします。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ| 
 |**2335**|により[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリの最適化中に、固定量のメモリがあると仮定します。 メモリに制限なく[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリを実行する許可を付与します。 用に構成されたメモリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ キャッシュ、クエリの実行、およびその他のコンシューマーによって使用されます。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2413549)です。<br /><br />**注:**を実稼働環境に展開する前に、このオプションを十分にテストすることを確認してください。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ|
 |**2340**|により[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プランを生成するときに入れ子になったループ結合を最適化するために並べ替え操作 (バッチ ソート) を使用しないようにします。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2009160)です。<br /><br />以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、クエリ レベルでは、これを実現する追加使用ヒント 'DISABLE_OPTIMIZED_NESTED_LOOP'[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)このトレース フラグを使用する代わりにします。<br /><br />**注:**を実稼働環境に展開する前に、このオプションを十分にテストすることを確認してください。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ|
-|**2371**|動的な自動更新の統計情報のしきい値を固定の自動更新の統計情報のしきい値を変更します。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2754171)です。<br /><br />**注:**で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]エンジンによってこの動作を制御し、トレース フラグ 2371 が影響を与えません。<br /><br />**スコープ**: グローバルのみ|
+|**2371**|動的な自動更新の統計情報のしきい値を固定の自動更新の統計情報のしきい値を変更します。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2754171)です。<br /><br />**注:**で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]下で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)130 の場合、この動作は、エンジンによって制御し、トレース フラグ 2371 が影響を与えません。<br /><br />**スコープ**: グローバルのみ|
 |**2389**|有効にするには、キー (ヒストグラム修正) の昇順の統計をクイック自動的に生成します。 トレース フラグ 2389 を設定すると、先頭の統計列が昇順としてマークされている場合は、クエリのコンパイル時に、ヒストグラムの基数を推定するために使用が調整されます。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2801413)です。<br /><br />**注:**を実稼働環境に展開する前に、このオプションを十分にテストすることを確認してください。<br /><br />**注:**以上バージョン 120 の CE にこのトレース フラグは適用されません。 トレース フラグ 4139 を代わりに使用します。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ|
 |**2390**|有効にするには、昇順または不明なキー (ヒストグラム修正) の統計をクイック自動的に生成します。 トレース フラグ 2390 を設定すると、先頭の統計列が昇順または"不明"としてマークされている場合は、クエリのコンパイル時に、ヒストグラムの基数を推定するために使用が調整されます。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2801413)です。<br /><br />**注:**を実稼働環境に展開する前に、このオプションを十分にテストすることを確認してください。<br /><br />**注:**以上バージョン 120 の CE にこのトレース フラグは適用されません。 トレース フラグ 4139 を代わりに使用します。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ|
 |**2453**|行のための十分な数が変更されたときに再コンパイルをトリガーする、テーブル変数を使用できます。 詳細については、これを参照して[Microsoft サポート記事](http://support.microsoft.com/kb/2952444)です。<br /><br />**注:**を実稼働環境に展開する前に、このオプションを十分にテストすることを確認してください。<br /><br />**スコープ**: グローバルまたはセッションまたはクエリ|

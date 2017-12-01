@@ -1,28 +1,25 @@
 ---
-title: "チュートリアル: マトリックス レポート (レポート ビルダー) の作成 |Microsoft ドキュメント"
+title: "チュートリアル: マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
 このチュートリアルでは、入れ子になった行および列グループ内のサンプル売上データのマトリックスを使用して、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成する方法について説明します。 
@@ -161,19 +158,19 @@ ms.lasthandoff: 08/09/2017
   
 1.  **[デザイン]** をクリックしてデザイン ビューに切り替えます。  
   
-2.  Ctrl キーを押しながら、`[Sum(Sales)]` が格納されている 9 つのセルを選択します。  
+2.  Ctrl&lt;/localizedText&gt; キーを押しながら、 `[Sum(Sales)]`が格納されている 9 つのセルを選択します。  
   
-3.  On the **Home** tab > **Number** > **Currency**. 書式設定された通貨を表示するようにセルが変化します。  
+3.  **[ホーム]** タブで、**[数値]** > **[通貨]** の順に選択します。 書式設定された通貨を表示するようにセルが変化します。  
   
-    地域設定が英語 (米国) の場合、既定のサンプル テキストは [**$12,345.00**] です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。  
+    地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
-4.  `[SalesDate]` が格納されたセルをクリックします。  
+4.  `[SalesDate]`が格納されたセルをクリックします。  
   
 5.  **[数値]** グループの **[日付]** を選択します。  
   
-    セルに、日付の例として **[2000/1/31]** と表示されます。 日付の例が表示されない場合は、 **[数値]** グループの **[プレースホルダーのスタイル]** をクリックし、 **[サンプルの値]**をクリックします。  
+    セルに、日付の例として **[2000/1/31]**と表示されます。 日付の例が表示されない場合は、 **[数値]** グループの **[プレースホルダーのスタイル]** をクリックし、 **[サンプルの値]**をクリックします。  
   
 6.  **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -204,13 +201,13 @@ ms.lasthandoff: 08/09/2017
     =WeekdayName(DatePart("w",Fields!SalesDate.Value))  
     ```  
   
-    この式により、販売日から曜日が抽出されます。 詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
+    この式により、販売日から曜日が抽出されます。 詳細については、「[式 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
-6.  Subcategory 列グループで Total を格納しているセルを右クリックして、**[コピー]** をクリックします。  
+6.  Subcategory 列グループで Total を格納しているセルを右クリックして、 **[コピー]**をクリックします。  
   
 7.  手順 5. で作成した式が格納されているセルの直下のセルを右クリックして、 **[貼り付け]**をクリックします。  
   
-8.  Ctrl キーを押します。  
+8.  Ctrl&lt;/localizedText&gt; キーを押します。  
   
 9. Subcategory グループで Sales 列ヘッダーとその下の 3 つのセルをクリックして右クリックし、 **[コピー]**をクリックします。  
   
@@ -267,9 +264,9 @@ ms.lasthandoff: 08/09/2017
   
 4.  選択したセルを右クリックし、 **[セルの結合]**をクリックします。  
   
-5.  新たに結合されたセルを右クリックして、**[テキスト ボックスのプロパティ]** をクリックします。  
+5.  新たに結合されたセルを右クリックして、 **[テキスト ボックスのプロパティ]**をクリックします。  
   
-6.  On the **Border** tab > **Presets** > **None**.
+6.  **[罫線]** タブで、**[プリセット]** > **[なし]** の順に選択します。
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -284,7 +281,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-2.  レポート本文の一番上にある **"クリックしてタイトルを追加"** という文字列が含まれているテキスト ボックスを選択し、Delete キーを押します。  
+2.  レポート本文の一番上にある **"クリックしてタイトルを追加"**という文字列が含まれているテキスト ボックスを選択し、Delete キーを押します。  
   
 3.  **[挿入]** タブで、**[ヘッダー]** > **[ヘッダーの追加]** の順に選択します。  
   
@@ -292,7 +289,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  **[挿入]** タブの **[テキスト ボックス]**をクリックし、テキスト ボックスをレポート ヘッダーの内側にドラッグします。 テキスト ボックスのサイズをおおよそ横 6 インチ、縦 3/4 インチにして、レポート ヘッダーの左側に配置します。  
   
-5.  テキスト ボックスに「**Territory、Subcategory、および Day ごとの売上**」と入力します。  
+5.  テキスト ボックスに「 **Territory、Subcategory、および Day ごとの売上**」と入力します。  
   
 6.  入力したテキストを選択し、**[ホーム]** タブで次のように **[フォント]** を選択します。
     * **サイズ: 24 pt**
@@ -352,9 +349,9 @@ ms.lasthandoff: 08/09/2017
   
     [プロパティ] ペインが表示されていない場合は、リボンの **[表示]** タブの **[プロパティ]**チェック ボックスをオンにします。  
   
-4.  CanGrow プロパティが **True** に設定されていることを確認します。  
+4.  CanGrow プロパティが **True**に設定されていることを確認します。  
   
-5.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]**** **をクリックして、テキストをセルの中央に配置します。  
+5.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]****** をクリックして、テキストをセルの中央に配置します。  
  
 6. Territory 列の幅を 1/2 インチに変更して、列タイトルを削除します。  
 6.  **[実行]** をクリックして、レポートをプレビューします。  
@@ -372,5 +369,4 @@ ms.lasthandoff: 08/09/2017
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

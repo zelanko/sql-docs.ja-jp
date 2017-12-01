@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ca1b1533698248e7b9cd03d773d97bbd702a8f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 61a5e94d0e57bdaaac63181c9257defdfd87d8eb
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/21/2017
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)代わりにします。  
-  
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,10 +71,10 @@ sp_addtype [ @typename = ] type,
  選択したデータ型の長さを示す、負以外の整数を指定します。  
   
  *P*  
- 小数点の左側と右側に格納できる 10 進数の最大合計桁数を示す、負以外の整数を指定します。 詳細については、次を参照してください[decimal および numeric 型 &#40;。TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ 小数点の左側と右側に格納できる 10 進数の最大合計桁数を示す、負以外の整数を指定します。 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  *s*  
- 小数点の右側に格納できる 10 進数の最大桁数を示す、負以外の整数を指定します。有効桁数以下であることが必要です。 詳細については、次を参照してください[decimal および numeric 型 &#40;。TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ 小数点の右側に格納できる 10 進数の最大桁数を示す、負以外の整数を指定します。有効桁数以下であることが必要です。 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  [  **@nulltype =** ] **'***null_type***'**  
  別名データ型で NULL 値をどのように処理するかを指定します。 *null_type*は**varchar (**8**)**、既定値は NULL、および ('NULL'、'NOT NULL' または 'NONULL') 単一引用符で囲む必要があります。 場合*null_type*によって明示的に定義されていない**sp_addtype**、現在の既定の null 値に設定されています。 既定の NULL 値の許容属性を確認するには、GETANSINULL システム関数を使用します。 この設定は、SET ステートメントまたは ALTER DATABASE を使用して変更できます。 NULL 値の許容属性は、明示的に定義してください。 場合 **@phystype** は**ビット**、および **@nulltype** が指定されていない、既定値は NULL です。  

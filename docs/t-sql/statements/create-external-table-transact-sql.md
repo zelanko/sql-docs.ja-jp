@@ -1,7 +1,7 @@
 ---
 title: "外部テーブル (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  列の定義には、外部ファイル内のデータを一致データ型と列の数を含む必要があります。 不一致がある場合、実際のデータを照会するときに、ファイルの行が拒否されます。  
   
- 外部データ ソース内のファイルを参照する外部のテーブルでは、列と型の定義は、外部ファイルの正確なスキーマにマップする必要があります。 Hadoop/ハイブに格納されているデータを参照するデータの種類を定義する場合は、SQL、および Hive のデータ型の間では、次のマッピングを使用し、そこから選択するときに、SQL のデータ型に型をキャストします。 型には、特にそれ以外の場合に記されていない、ハイブのすべてのバージョンが含まれます。  
-  
+ 外部データ ソース内のファイルを参照する外部のテーブルでは、列と型の定義は、外部ファイルの正確なスキーマにマップする必要があります。 Hadoop/ハイブに格納されているデータを参照するデータの種類を定義する場合は、SQL、および Hive のデータ型の間では、次のマッピングを使用し、そこから選択するときに、SQL のデータ型に型をキャストします。 型には、特にそれ以外の場合に記されていない、ハイブのすべてのバージョンが含まれます。
+
+> [!NOTE]  
+>  SQL Server は、ハイブをサポートしていません_無限大_の変換はすべてのデータ値。 PolyBase はデータ型変換エラーで失敗します。
+
+
 |SQL データ型|.NET データ型|データ型を hive します。|Hadoop と Java のデータ型|コメント|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|符号なし数値の場合のみです。|  

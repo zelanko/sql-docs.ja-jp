@@ -1,5 +1,5 @@
 ---
-title: "リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |Microsoft ドキュメント"
+title: "リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,30 +10,28 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10012"
+f1_keywords: "10012"
 helpviewer_keywords:
 - query designers
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 41bc0c560e8cb96d22262ca5911e85e25c591fe8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート データセットの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] からレポート データセットに取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
   
 > [!NOTE]  
->  レポート ビルダーでは、データ ソースの種類が Oracle、OLE DB、ODBC、および Teradata の場合にクエリを指定するには、テキスト ベースのクエリ デザイナーを使用する必要があります。 詳細については、次を参照してください。[テキスト ベースのクエリ デザイナーのユーザー インターフェイスと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+>  レポート ビルダーでは、データ ソースの種類が Oracle、OLE DB、ODBC、および Teradata の場合にクエリを指定するには、テキスト ベースのクエリ デザイナーを使用する必要があります。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  ユーザーは、クエリを作成して実行する際にデータ ソースにアクセスします。 したがって、データ ソースに対する最小限の権限 (読み取り専用権限など) を付与する必要があります。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  グラフィカル クエリ デザイナーは、3 つの領域に分割されています。 クエリでテーブル/ビューとストアド プロシージャ/テーブル値関数のどちらを使用するかに応じて、クエリ デザイナーのレイアウトは変わります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]ストアド プロシージャまたはテーブル値関数はサポートしません。  
+>  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] は、クエリ内でのストアド プロシージャまたはテーブル値関数をサポートしていません。  
   
  次の図は、テーブルまたはビューを使用した場合のグラフィカル クエリ デザイナーです。  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  次の図は、ストアド プロシージャまたはテーブル値関数を使用した場合のグラフィカル クエリ デザイナーです。  
   
- ![グラフィカル クエリ デザイナーでのストアド プロシージャ](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーでのストアド プロシージャ")  
+ ![グラフィカル クエリ デザイナーのストアド プロシージャ](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーのストアド プロシージャ")  
   
  次の表に各ペインの機能を示します。  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **フィールドの編集** : テーブル間のリレーションシップの追加や変更を行う **[関連フィールドの編集]** ダイアログ ボックスが開きます。 結合する左右のテーブルのフィールドを選択します。 左テーブルおよび右テーブルの複数のフィールドを結合すると、リレーションシップ内で複数の結合条件を指定できます。 左右のテーブルを結合する 2 つのフィールドは同じ名前でなくてもかまいません。 結合されるフィールドのデータ型は、互換性のあるデータ型である必要があります。  
   
--   **リレーションシップの削除**  : 選択したリレーションシップを削除します**。**  
+-   **リレーションシップの削除**  : 選択したリレーションシップを削除します。****  
   
 -   **[上へ移動]** および **[下へ移動]** : **[リレーションシップ]** ボックスの一覧内のリレーションシップを上下に移動します。 クエリ内のリレーションシップの配置順によっては、クエリ結果に影響が出る場合があります。 リレーションシップがクエリに追加される順序は、 **[リレーションシップ]** ボックスの一覧内でリレーションシップが表示される順序と同じです。  
   
@@ -200,10 +198,9 @@ ms.lasthandoff: 08/09/2017
  データベース ビュー ペインでテーブルおよび列またはストアド プロシージャおよびビューを選択すると、クエリ デザイナーによって基になる主キーと外部キーのリレーションシップがデータベース スキーマから取得されます。 クエリ デザイナーでは、これらのリレーションシップを分析することによって 2 つのテーブル間のリレーションシップが検出され、クエリに結合が追加されます。 その後、グループと集計の追加、リレーションシップの追加または変更、フィルターの追加を行うことでクエリを変更できます。 データの取得元である列、テーブル間の結合、グループまたは集計を示すクエリ テキストを表示するには、 **[テキストとして編集]**をクリックします。  
   
 ## <a name="text-based-query-designer"></a>テキストベースのクエリ デザイナー  
- クエリを詳細に渡って制御するには、テキスト ベースのクエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]**をクリックします。 テキスト ベースのクエリ デザイナーでクエリを編集すると、リレーショナル クエリ デザイナーは使用できなくなります。 その後、クエリは常にテキスト ベースのクエリ デザイナーで開かれるようになります。 詳細については、次を参照してください。[テキスト ベースのクエリ デザイナーのユーザー インターフェイスと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ クエリを詳細に渡って制御するには、テキスト ベースのクエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]**をクリックします。 テキスト ベースのクエリ デザイナーでクエリを編集すると、リレーショナル クエリ デザイナーは使用できなくなります。 その後、クエリは常にテキスト ベースのクエリ デザイナーで開かれるようになります。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [クエリ デザイナーと #40 です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [クエリ デザイナー &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する |Microsoft ドキュメント"
+title: "SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a872862355624b84fe792cfccc892f26bf9e3433
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  あらかじめ定義された権限レベルを使用する場合、フル コントロール、デザイン、投稿、読み取り、および制限付きアクセスには既に上記の権限が含まれているので、必要な操作はありません。 ただし、カスタム権限レベルを使用したり、特定のユーザーまたはグループに割り当てた権限を編集したりする場合は、権限を手動で追加する必要があります。  
   
- "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 "参照操作におけるエラー : "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました” パブリッシュ操作における、エラー:"ユーザーに与えられるアクセス許可 '\<ドメイン >\\< ユーザー\>' 不十分なため、この操作を実行します"。  
+ "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 "参照操作におけるエラー : "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました” パブリッシュ操作におけるエラー: "ユーザー ‘\<domain>\\<user\>' には、この操作を行うのに必要なアクセス許可が与えられていません。"  
   
 ##  <a name="permissionReports"></a> レポートの表示と管理の権限  
  レポート定義の権限は、レポートが含まれているライブラリのリスト権限によって定義されますが、個々のレポートに対して権限を設定してアクセスを制限することもできます。 次の表に、作業の一覧と、それぞれの作業をサポートする権限を示します。  
@@ -138,10 +137,9 @@ ms.lasthandoff: 08/09/2017
 >  レポート モデルを編集するための権限はありません。 レポート モデルを生成または削除することはできますが、SharePoint サイト内から編集することはできません。 レポート モデルを編集するには、SharePoint で設定した権限の影響を受けないクライアント作成ツールのモデル デザイナーが必要です。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイト上のレポート サーバー アイテムに対する権限の許可](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [To SharePoint Groups and Permissions Reporting Services の役割とタスクを比較します。](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint サイト上のレポート サーバー アイテムに対する権限の許可](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [レポート サーバー アイテムに対して Windows SharePoint Services での組み込みのセキュリティを使用します。](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   
-

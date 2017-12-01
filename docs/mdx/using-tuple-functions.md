@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- tuple functions
+dev_langs: kbMDX
+helpviewer_keywords: tuple functions
 ms.assetid: fe41e3e5-a675-4169-a966-b42c18e8d741
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6131dbf1be847ca738b896fee36f56cd438f4715
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b92f048f50f26d6ba5c98e28193a44a68e3ceb39
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-tuple-functions"></a>組関数の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +32,7 @@ ms.lasthandoff: 08/02/2017
   
  組関数は、メンバー関数や集合関数と同様に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用される多次元構造を操作するために不可欠です。  
   
- MDX では、次の 3 つの組関数がある[現在 & #40 です。MDX と #41 です。](../mdx/current-mdx.md)、[項目 & #40 です。組と #41 です。& #40 です。MDX と #41 です。](../mdx/item-tuple-mdx.md)と[StrToTuple (& a) #40 です。MDX と #41 です。](../mdx/strtotuple-mdx.md). 次のクエリの例では、各組関数の使用方法を示します。  
+ MDX では、次の 3 つの組関数がある[現在 &#40;です。MDX と #41 です。](../mdx/current-mdx.md)、[項目 &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/item-tuple-mdx.md)と[StrToTuple (& a) #40 です。MDX と #41 です。](../mdx/strtotuple-mdx.md). 次のクエリの例では、各組関数の使用方法を示します。  
   
  `WITH`  
   
@@ -66,4 +62,3 @@ ms.lasthandoff: 08/02/2017
  [集合関数の使用](../mdx/using-set-functions.md)  
   
   
-

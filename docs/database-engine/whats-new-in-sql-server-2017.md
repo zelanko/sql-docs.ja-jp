@@ -1,29 +1,30 @@
 ---
 title: "データベース エンジンの新機能 - SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eddd1edd812d9224e151960788f8f510f809fb27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>データベース エンジンの新機能 - SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 このトピックでは、[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] の [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)]で導入された強化機能について説明します。 各項目の詳細については、リンクをクリックしてください。
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/12/2017
     - ネイティブ コンパイル モジュールの`CROSS APPLY` 演算子。   
 - 新しい文字列関数 [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md)、[TRANSLATE](../t-sql/functions/translate-transact-sql.md)、および[TRIM](../t-sql/functions/trim-transact-sql.md) が追加されました。   
 - [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) 関数で `WITHIN GROUP` 句がサポートされました。
-- 2 つの新しい日本語の照合順序ファミリ (Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140) が追加されました。また、日本語の照合順序用に、照合順序オプション Variation-selector-sensitive (_VSS) が追加されました。 詳細については、「[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。   
+- 2 つの新しい日本語の照合順序ファミリ (Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140) が追加され、これらの新しい日本語の照合順序用に、照合順序オプション Variation-selector-sensitive (_VSS) が追加されました。 また、すべての新しい照合順序では、_SC オプションを指定する必要がなく、自動的に補助文字をサポートします。 詳細については、「[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。   
 - 新しい一括アクセス オプション ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) と [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) を使用すると、[EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) の新しい `BLOB_STORAGE` オプションで、CSV 形式で指定したファイルまたは Azure BLOB 記憶域に格納されているファイルから直接データにアクセスできます。
 - データベース **COMPATIBILITY_LEVEL** 140 が追加されました。   このレベルで実行しているお客様には、最新の言語機能とクエリ オプティマイザー動作が与えられます。 これには、Microsoft 製品の各リリース前バージョンの変更が含まれています。
 - 増分統計更新の方法が改善され、しきい値が計算されます (140 互換モード必須)。
@@ -86,5 +87,4 @@ ms.lasthandoff: 10/12/2017
 - 新しい権限: `DATABASE SCOPED CREDENTIAL` クラスがセキュリティ保護可能となり、 `CONTROL`、 `ALTER`、 `REFERENCES`、 `TAKE OWNERSHIP`、および `VIEW DEFINITION` の各権限がサポートされるようになりました。 SQL Database に限られていた `ADMINISTER DATABASE BULK OPERATIONS` が `sys.fn_builtin_permissions` で表示されるようになりました。   
 - [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) DMV が追加され、Windows と Linux の両方のオペレーティング システム情報を提供します。   
 - データベース ロールが R サービスで作成され、パッケージに関連付けられているアクセス許可を管理します。 詳細については、[SQL Server の R パッケージ管理](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)に関するページを参照してください。
-
 

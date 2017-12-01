@@ -4,34 +4,34 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-online-index-operations-work"></a>オンライン インデックス操作の動作原理
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、オンライン インデックスの操作中に存在する構造を定義し、これらの構造に関連した利用方法について説明します。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
      ソースとは、元のテーブルまたはクラスター化インデックス データです。 既存のインデックスとは、ソース構造に関連付けられた任意の非クラスター化インデックスです。 たとえば、オンライン インデックス操作によって、関連付けられた 4 つの非クラスター化インデックスを含むクラスター化インデックスが再構築される場合、ソースは既存のクラスター化インデックスで、既存のインデックスは非クラスター化インデックスです。  
   
-     同時実行ユーザーは、選択、挿入、更新、および削除の各操作に、既存のインデックスを使用できます。 既存のインデックスを使用する操作には、トリガーや参照整合性制約による、一括挿入や暗黙の更新が含まれます (一括挿入は、サポートされますが、お勧めしません)。 クエリや検索では、すべての既存のインデックスを使用できます。 つまり、クエリ オプティマイザーでは既存のインデックスが選択され、必要に応じて、それをインデックス ヒントに指定できます。  
+     同時実行ユーザーは、選択、挿入、更新、削除の各操作に、既存のインデックスを使用できます。 既存のインデックスを使用する操作には、トリガーや参照整合性制約による、一括挿入や暗黙の更新が含まれます (一括挿入は、サポートされますが、お勧めしません)。 クエリや検索では、すべての既存のインデックスを使用できます。 つまり、クエリ オプティマイザーでは既存のインデックスが選択され、必要に応じて、それをインデックス ヒントに指定できます。  
   
 -   **移行先**  
   
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/22/2017
   
 |フェーズ|ソースでの処理|ソースのロック|  
 |-----------|---------------------|------------------|  
-|準備<br /><br /> 非常に短いフェーズ|新しい空のインデックス構造を作成するための、システム メタデータの準備。<br /><br /> テーブルのスナップショットが定義されます。 つまり、トランザクションレベルの読み取りの一貫性を提供するために、行のバージョン管理が使用されます。<br /><br /> ごく短期間、ソース上での同時実行ユーザーの書き込み操作がブロックされます。<br /><br /> 複数の非クラスター化インデックスの作成を除き、同時実行 DDL 操作は許可されません。|テーブルで S (共有) *<br /><br /> IS (インテント共有)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|準備<br /><br /> 短いフェーズ|新しい空のインデックス構造を作成するための、システム メタデータの準備。<br /><br /> テーブルのスナップショットが定義されます。 つまり、トランザクションレベルの読み取りの一貫性を提供するために、行のバージョン管理が使用されます。<br /><br /> 短期間、ソース上での同時実行ユーザーの書き込み操作がブロックされます。<br /><br /> 複数の非クラスター化インデックスの作成を除き、同時実行 DDL 操作は許可されません。|テーブルで S (共有) *<br /><br /> IS (インテント共有)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
 |ビルド<br /><br /> メイン フェーズ|一括読み込み操作で、データのスキャン、並べ替え、マージが行われ、ターゲットに挿入されます。<br /><br /> 同時実行ユーザーの選択、挿入、更新、削除の各操作は、既存のインデックスと新しく構築されるインデックスの両方に適用されます。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|最終工程<br /><br /> 非常に短いフェーズ|コミットされていないすべての更新トランザクションは、このフェーズが始まる前に完了している必要があります。 取得したロックによっては、このフェーズが完了するまでのごく短期間、新しいユーザーによる読み取りトランザクションや書き込みトランザクションはすべてブロックされます。<br /><br /> ソースをターゲットに置き換えるために、システム メタデータが更新されます。<br /><br /> 必要に応じて、ソースが削除されます。 たとえば、クラスター化インデックスを再構築したり、削除した後などにはソースが削除されます。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 非クラスター化インデックスを作成する場合、テーブルで S。\*<br /><br /> ソース構造 (インデックスやテーブル) が削除される場合、SCH-M (スキーマ変更)。\*|  
+|最終工程<br /><br /> 短いフェーズ|コミットされていないすべての更新トランザクションは、このフェーズが始まる前に完了している必要があります。 取得したロックによっては、このフェーズが完了するまでの短期間、新しいユーザーによる読み取りトランザクションや書き込みトランザクションはすべてブロックされます。<br /><br /> ソースをターゲットに置き換えるために、システム メタデータが更新されます。<br /><br /> 必要に応じて、ソースが削除されます。 たとえば、クラスター化インデックスを再構築したり、削除した後などにはソースが削除されます。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 非クラスター化インデックスを作成する場合、テーブルで S。\*<br /><br /> ソース構造 (インデックスやテーブル) が削除される場合、SCH-M (スキーマ変更)。\*|  
   
  \* インデックス操作は、テーブルに S ロックまたは SCH-M ロックを取得する前に、コミットされていない更新トランザクションが完了するまで待機します。  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

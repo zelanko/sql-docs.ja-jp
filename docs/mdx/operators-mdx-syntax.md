@@ -8,29 +8,26 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f7d13bdd9c8d5abd19e6b64d92e45bcd688feeef
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="operators-mdx-syntax"></a>演算子 (MDX 構文)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 |AND、OR、NOT、XOR などの条件が真かどうか調べます。|[ビット処理演算子](../mdx/bitwise-operators.md)|  
 |値を他の値または式と比較します。|[比較演算子](../mdx/comparison-operators.md)|  
 |2 つの文字列を永続的または一時的に 1 つの文字列に結合します。|[連結演算子](../mdx/concatenation-operators.md)|  
-|2 つのセット式を永続的または一時的に 1 つのセットに結合します。|[集合演算子](../mdx/set-operators.md)|  
+|2 つのセット式を永続的または一時的に 1 つのセットに結合します。|[セット演算子](../mdx/set-operators.md)|  
 |1 つのオペランドに対して 1 つの演算を行います。|[単項演算子](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
@@ -94,7 +91,7 @@ ms.lasthandoff: 08/02/2017
   
 -   または  
   
- MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md).  
+ MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>結果の決定  
  単純な式を結合して複雑な式を作成する場合、演算子に関する規則とデータ型の優先順位に関する規則の組み合わせによって、結果の値のデータ型が決まります。  
@@ -115,8 +112,7 @@ ms.lasthandoff: 08/02/2017
 |組|スカラー|\<タプル > .value|  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)   
- [MDX 構文の要素 & #40 です。MDX と #41 です。](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX 構文の要素 &#40;です。MDX と #41 です。](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-
