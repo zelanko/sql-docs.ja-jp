@@ -1,12 +1,11 @@
 ---
-title: "Reporting Services 構成マネージャー (ネイティブ モード) |Microsoft ドキュメント"
+title: "Reporting Services 構成マネージャー (ネイティブ モード) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: e693575acb5c2eef31231a434dc25ee90b3ade36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -54,7 +51,7 @@ ms.lasthandoff: 09/21/2017
   
 -   レポート サーバーの電子メールの構成。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、簡易メール転送プロトコル (SMTP) を使用してレポートまたはレポート処理通知を電子メールボックスに配信する、レポート サーバーの電子メール配信拡張機能を備えています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、電子メール配信に使用する、ネットワーク上の SMTP サーバーまたはゲートウェイを指定できます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーには、レポート サーバー コンテンツの管理、拡張機能の有効化、サーバーに対するアクセス権の付与を支援する機能はありません。 完全な展開では、使用することも必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]追加機能を有効にするにまたは既定値、およびサーバーにアクセスを許可する web ポータルを変更します。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーには、レポート サーバー コンテンツの管理、拡張機能の有効化、サーバーに対するアクセス権の付与を支援する機能はありません。 これには完全な配置が必要であり、拡張機能の有効化や既定値の変更には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用し、サーバーへのユーザー アクセス権の付与には Web ポータルを使用します。
 
 ##  <a name="bkmk_requirements"></a> 必要条件
 
@@ -70,13 +67,13 @@ ms.lasthandoff: 09/21/2017
 
 - リモートのレポート サーバー インスタンスに接続して構成するには、リモートの WMI (Windows Management Instrumentation) 呼び出しを有効にして Windows ファイアウォールを通過できるようにしておく必要があります。 詳細については、 [オンライン ブックの「](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) リモート管理用のレポート サーバーの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。
 
-Reporting Services 構成マネージャーは、SQL Server Reporting Services をインストールするときに自動的にインストールします。
+Reporting Services 構成マネージャーは、SQL Server Reporting Services をインストールするときに自動的にインストールされます。
 
 ##  <a name="bkmk_start_configuration_manager"></a> Reporting Services 構成マネージャーを起動するには
 
 1.  使用している Microsoft Windows のバージョンに合わせて次の手順を使用します。
 
-    - Windows のスタート画面から「**レポート**選択**Reporting Services 構成マネージャー**検索結果からです。
+    - Windows のスタート画面から「**Reporting** 」と入力し、検索結果から "**Reporting Services 構成マネージャー**" を選択します。
 
     - **[スタート]**を選択し、 **[すべてのプログラム]**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[構成ツール]**の順にポイントします。
 
@@ -98,9 +95,8 @@ Reporting Services 構成マネージャーは、SQL Server Reporting Services �
 
 [Web ポータル](../../reporting-services/web-portal-ssrs-native-mode.md)   
 [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
-[レポート サーバー データベース接続を構成します。](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)   
-[構成およびレポート サーバーを管理します。](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
+[レポート サーバーを構成および管理する](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
-

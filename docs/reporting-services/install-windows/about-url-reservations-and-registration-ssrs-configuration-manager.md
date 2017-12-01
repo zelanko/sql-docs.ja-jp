@@ -1,12 +1,11 @@
 ---
-title: "URL 予約と登録 (SSRS 構成マネージャー) について |Microsoft ドキュメント"
+title: "URL の予約と登録について (SSRS 構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
-ms.contentlocale: ja-jp
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
   Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバーでアプリケーションを構成する際には、レポート サーバー Web サービスとレポート マネージャーの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  
@@ -66,7 +64,7 @@ ms.lasthandoff: 11/07/2017
 |HTTP.SYS の URL 予約|[URL]|説明|  
 |---------------------------------|---------|-----------------|  
 |`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL 予約を要求時にレポート サーバーに`http://<computername>/reportserver`または`http://localhost/reportserver`は失敗します。|  
+|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL 予約を指定すると、`http://<computername>/reportserver` または `http://localhost/reportserver` でのレポート サーバーへの要求は失敗します。|  
   
 ##  <a name="DefaultURLs"></a> 既定の URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールすると、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]の URL が自動的に予約されます。 これらの既定値は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL 予約を定義するときにも使用できます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールした場合や、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を名前付きインスタンスとしてインストールした場合は、既定の URL にインスタンス名が含まれます。  
@@ -105,9 +103,9 @@ ms.lasthandoff: 11/07/2017
  既定のセキュリティが **RSWindowsNegotiate**であるため、匿名アクセスは無効になっています。 イントラネット アクセスの場合、レポート サーバーの URL ではネットワーク コンピューターの名前が使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインターネット接続用に構成する場合は、別の設定を使用する必要があります。 認証の詳細については、 [オンライン ブックで「](../../reporting-services/security/authentication-with-the-report-server.md) レポート サーバーでの認証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ##  <a name="URLlocalAdmin"></a> ローカル管理用の URL  
- 使用することができます`http://localhost/reportserver`または`http://localhost/reports`URL 予約に対して強いか弱いワイルドカードを指定した場合。  
+ URL 予約に強いワイルドカードまたは弱いワイルドカードを指定した場合、`http://localhost/reportserver` または `http://localhost/reports` を使用できます。  
   
- `http://localhost` URL として解釈されます`http://127.0.0.1`です。 URL 予約をコンピューター名や 1 つの IP アドレスに設定した場合は、ローカル コンピューターの 127.0.0.1 に対して追加の予約を作成しないと localhost を使用できません。 同様に、localhost や 127.0.0.1 がコンピューターで無効になっている場合も、その URL を使用できません。  
+ `http://localhost` URL は、`http://127.0.0.1` として解釈されます。 URL 予約をコンピューター名や 1 つの IP アドレスに設定した場合は、ローカル コンピューターの 127.0.0.1 に対して追加の予約を作成しないと localhost を使用できません。 同様に、localhost や 127.0.0.1 がコンピューターで無効になっている場合も、その URL を使用できません。  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 以降には、誤ってプログラムが高度な特権で実行されるリスクを最小限に抑える新しいセキュリティ機能が含まれています。 これらのオペレーティング システムでローカル管理を有効にするには、追加の手順が必要です。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
   
@@ -116,4 +114,3 @@ ms.lasthandoff: 11/07/2017
  [URL 予約構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
-
