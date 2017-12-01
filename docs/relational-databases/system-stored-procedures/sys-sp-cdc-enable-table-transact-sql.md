@@ -77,7 +77,7 @@ sys.sp_cdc_enable_table
   
  名前がソース スキーマ名の形式でソース テーブル名から派生した指定しない場合、 *schemaname_sourcename*です。 *capture_instance* 100 文字を超えることはできませんし、データベース内で一意である必要があります。 指定されるか、派生*capture_instance*文字列の右側にある空白は切り捨てられます。  
   
- ソース テーブルには、最大 2 つのキャプチャ インスタンスを割り当てることができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ ソース テーブルには、最大 2 つのキャプチャ インスタンスを割り当てることができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
  差分変更クエリのサポートをこのキャプチャ インスタンスで有効にするかどうかを示します。 *supports_net_changes*は**ビット**、既定値は、テーブルに主キーまたはテーブルに一意のインデックスを使用して識別された場合は 1、@index_nameパラメーター。 それ以外の場合、既定値は 0 になります。  

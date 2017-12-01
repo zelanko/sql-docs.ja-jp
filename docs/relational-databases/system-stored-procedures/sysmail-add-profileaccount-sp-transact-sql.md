@@ -31,7 +31,7 @@ ms.lasthandoff: 11/27/2017
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メール プロファイルにデータベース メール アカウントを追加します。 実行**sysmail_add_profileaccount_sp**データベース アカウントの作成後[sysmail_add_account_sp (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)でデータベース プロファイルを作成および[sysmail_add_profile_sp &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
+  データベース メール プロファイルにデータベース メール アカウントを追加します。 実行**sysmail_add_profileaccount_sp**データベース アカウントの作成後[sysmail_add_account_sp (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)でデータベース プロファイルを作成および[sysmail_add_profile_sp &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +66,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="remarks"></a>解説  
  プロファイルとアカウントの両方が既に存在している必要があります。 両方またはいずれかが存在しないと、このストアド プロシージャはエラーを返します。  
   
- このストアド プロシージャでは、指定したプロファイルに既に関連付けられているアカウントのシーケンス番号は変更されないことに注意してください。 アカウントのシーケンス番号の更新の詳細については、次を参照してください。 [sysmail_update_profileaccount_sp (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  
+ このストアド プロシージャでは、指定したプロファイルに既に関連付けられているアカウントのシーケンス番号は変更されないことに注意してください。 アカウントのシーケンス番号の更新の詳細については、次を参照してください。 [sysmail_update_profileaccount_sp (& a) #40 です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)。  
   
  シーケンス番号によって、データベース メールではプロファイル内のアカウントがどの順番で使用されるかが決まります。 新しい電子メール メッセージの場合、データベース メールでは、一番小さなシーケンス番号の付いたアカウントから処理が開始されます。 そのアカウントが失敗すると、データベース メールでは、このアカウントよりも大きいシーケンス番号を持つアカウントに処理が移ります。このように、データベース メールによってメッセージが正常に送信されるか、一番大きなシーケンス番号のアカウントが失敗するまで順に処理されます。 最も番号が大きいアカウントで失敗した場合、 *sysmail_configure_sp* の **AccountRetryDelay**パラメーターで構成した時間、メールの送信が一時停止されます。その後、最も番号が小さいアカウントからメールの送信プロセスが再開されます。 *sysmail_configure_sp* の **AccountRetryAttempts**パラメーターは、指定されたプロファイルの各アカウントを使用して外部メール プロセスが電子メール メッセージを送信する回数を構成します。  
   

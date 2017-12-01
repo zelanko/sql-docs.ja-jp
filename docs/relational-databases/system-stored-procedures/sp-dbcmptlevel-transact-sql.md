@@ -72,7 +72,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  場合*名前*なしで指定された*バージョン*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]指定されたデータベースの現在の互換性レベルを表示するメッセージが返されます。  
   
 ## <a name="remarks"></a>解説  
- 互換性レベルの説明を参照してください。 [ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ 互換性レベルの説明を参照してください。 [ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 ## <a name="permissions"></a>Permissions  
  データベースの所有者のメンバーのみ、 **sysadmin**固定サーバー ロール、および**db_owner**固定データベース ロール (現在のデータベースを変更している) 場合は、このプロシージャを実行できます。  

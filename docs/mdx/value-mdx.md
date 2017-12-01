@@ -43,7 +43,7 @@ Member_Expression[.Value]
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>解説  
- **値**関数を文字列として指定されたメンバーの値を返します。 **値**メンバーの値は、メンバーの既定のプロパティであり、他の値が指定されていない場合、メンバーに関して返される値は、ために、引数は省略可能です。 メンバーのプロパティの詳細については、次を参照してください。[固有メンバー プロパティ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ **値**関数を文字列として指定されたメンバーの値を返します。 **値**メンバーの値は、メンバーの既定のプロパティであり、他の値が指定されていない場合、メンバーに関して返される値は、ために、引数は省略可能です。 メンバーのプロパティの詳細については、次を参照してください。[固有メンバー プロパティ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ &#40;です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
   
 ## <a name="examples"></a>使用例  
  次の例では、明示的にメンバーの名前を返すだけでなく、メンバーの値も返します。  

@@ -57,7 +57,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_grantdbaccess**呼び出しユーザーの作成、追加のオプションがサポートされます。 データベース ユーザーを作成する方法の詳細については、次を参照してください。 [CREATE USER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-user-transact-sql.md). データベースからデータベース ユーザーを削除するには、使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)です。  
+ **sp_grantdbaccess**呼び出しユーザーの作成、追加のオプションがサポートされます。 データベース ユーザーを作成する方法の詳細については、次を参照してください。 [CREATE USER &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/statements/create-user-transact-sql.md)。 データベースからデータベース ユーザーを削除するには、使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)です。  
   
  **sp_grantdbaccess**ユーザー定義のトランザクション内で実行することはできません。  
   

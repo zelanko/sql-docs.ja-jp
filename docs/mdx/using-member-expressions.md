@@ -71,7 +71,7 @@ Dimension_Name
  MDX 関数には、メンバーを返すものが多数存在します。 一覧については、次を参照してください。 [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  メンバー名およびメンバー キーの詳細については、次を参照してください[メンバー、組、およびセット &#40; の操作。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  メンバー名およびメンバー キーの詳細については、次を参照してください[メンバー、組、およびセット &#40; の操作。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
   
 ## <a name="see-also"></a>参照  
  [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)  

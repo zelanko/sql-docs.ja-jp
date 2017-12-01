@@ -44,7 +44,7 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>引数  
  **@cookie**  
- アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie がによって作成された[sp_setapprole &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)**です。  
+ アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie がによって作成された[sp_setapprole &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary (8000)**です。  
   
 > [!NOTE]  
 >  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)**を返します。 アプリケーションが継続して予約する必要があります**varbinary (8000)**アプリケーションのサイズの増加、将来のリリースでクッキーの戻り値が正しく動作を継続できるようにします。  

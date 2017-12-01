@@ -47,7 +47,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="arguments"></a>引数  
  [  **@traceid=** ] *trace_id*  
- 変更するトレースの ID を指定します。 *trace_id*は**int**、既定値はありません。 ユーザーが使用してこの*trace_id*識別、変更、およびトレースを制御する値。 取得する方法について、 *trace_id*を参照してください[sys.fn_trace_getinfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+ 変更するトレースの ID を指定します。 *trace_id*は**int**、既定値はありません。 ユーザーが使用してこの*trace_id*識別、変更、およびトレースを制御する値。 取得する方法について、 *trace_id*を参照してください[sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
  [  **@status=** ]*ステータス*  
  トレースに実装する操作を指定します。 *ステータス*は**int**、既定値はありません。  

@@ -91,7 +91,7 @@ ms.lasthandoff: 11/27/2017
   
 -   または  
   
- MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md).  
+ MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス &#40;です。MDX と #41 です;](../mdx/mdx-operator-reference-mdx.md)。  
   
 ### <a name="determining-results"></a>結果の決定  
  単純な式を結合して複雑な式を作成する場合、演算子に関する規則とデータ型の優先順位に関する規則の組み合わせによって、結果の値のデータ型が決まります。  

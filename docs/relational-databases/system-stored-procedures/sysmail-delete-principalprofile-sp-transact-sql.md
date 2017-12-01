@@ -62,7 +62,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ## <a name="remarks"></a>解説  
  パブリック プロファイルをプライベート プロファイルにするには、するには指定**'public'**のプリンシパル名または**0**プリンシパルの id。  
   
- ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合は慎重に行ってください。 既定のプロファイルを使用できない場合、 **sp_send_dbmail**を引数としてプロファイルの名前が必要です。 これにより、既定のプロファイルを削除することがありますとへの呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合は慎重に行ってください。 既定のプロファイルを使用できない場合、 **sp_send_dbmail**を引数としてプロファイルの名前が必要です。 これにより、既定のプロファイルを削除することがありますとへの呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
  ストアド プロシージャ**sysmail_delete_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   

@@ -69,7 +69,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  サブキューブのコンテキストで作成されたセッション オブジェクトは、サブキューブが削除された時点で削除されます。  
   
- サブキューブの詳細については、次を参照してください[MDX &#40; でのサブキューブの作成。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ サブキューブの詳細については、次を参照してください[MDX &#40; でのサブキューブの作成。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)。  
   
 ## <a name="example"></a>例  
  次の例では、見かけのキューブ空間を Canada に存在するメンバーに制限したサブキューブを作成しています。 次を使用して、**メンバー**すべてのメンバーを返す、国のレベルが、Geography ユーザー定義階層の Canada という国のみを返す関数。  

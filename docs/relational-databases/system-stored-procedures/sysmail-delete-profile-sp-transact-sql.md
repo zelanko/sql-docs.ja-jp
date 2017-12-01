@@ -58,7 +58,7 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="remarks"></a>解説  
  プロファイルを削除しても、そのプロファイルで使用されているアカウントは削除されません。  
   
- このストアド プロシージャでは、プロファイルにアクセスできるかどうかに関係なく、プロファイルを削除できます。 ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合に注意を使用して、 **msdb**データベース。 既定のプロファイルを使用できない場合、 **sp_send_dbmail**を引数としてプロファイルの名前が必要です。 これにより、既定のプロファイルを削除することがありますとへの呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ このストアド プロシージャでは、プロファイルにアクセスできるかどうかに関係なく、プロファイルを削除できます。 ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合に注意を使用して、 **msdb**データベース。 既定のプロファイルを使用できない場合、 **sp_send_dbmail**を引数としてプロファイルの名前が必要です。 これにより、既定のプロファイルを削除することがありますとへの呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。  
   
  ストアド プロシージャ**sysmail_delete_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   

@@ -47,7 +47,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>パラメーター  
  *table_id*  
- フルテキスト インデックスが設定されたテーブルのオブジェクト ID。 無効なを指定する場合は*table_id*エラーが返されます。 テーブルのオブジェクト ID を取得する方法の詳細については、次を参照してください。 [OBJECT_ID (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/object-id-transact-sql.md).  
+ フルテキスト インデックスが設定されたテーブルのオブジェクト ID。 無効なを指定する場合は*table_id*エラーが返されます。 テーブルのオブジェクト ID を取得する方法の詳細については、次を参照してください。 [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
   
  *docid*  
  キー値に対応する内部ドキュメント識別子 (DocId)。 *docid* 値が無効な場合、結果は返されません。  
@@ -78,7 +78,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |パラメーター リスト|効果|  
 |--------------------------|----------------------|  
-|*table_id*|のみ呼び出されると、 *table_id*パラメーター、sp_fulltext_keymappings で、各キーに対応する DocId とは、指定したベース テーブルからすべてのフルテキスト キー (Key) 値が返されます。 これには削除保留中のキーが含まれます。<br /><br /> この機能は、さまざまな問題をトラブルシューティングする場合に便利です。 特に、選択したフルテキスト キーが整数データ型でないときに、フルテキスト インデックス コンテンツを確認する場合に役立ちます。 結果を含む sp_fulltext_keymappings の結果を結合では、この**sys.dm_fts_index_keywords_by_document**です。 詳細については、次を参照してください。 [sys.dm_fts_index_keywords_by_document &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> ただし、通常は、可能であれば特定のフルテキスト キーまたは DocId を指定するパラメーターを指定して sp_fulltext_keymappings を実行することをお勧めします。 これは、キー マップ全体を返すよりもはるかに効率的です。特に、キー マップ全体を返すとパフォーマンスが大幅に低下する可能性がある、非常に大きなテーブルの場合に有効です。|  
+|*table_id*|のみ呼び出されると、 *table_id*パラメーター、sp_fulltext_keymappings で、各キーに対応する DocId とは、指定したベース テーブルからすべてのフルテキスト キー (Key) 値が返されます。 これには削除保留中のキーが含まれます。<br /><br /> この機能は、さまざまな問題をトラブルシューティングする場合に便利です。 特に、選択したフルテキスト キーが整数データ型でないときに、フルテキスト インデックス コンテンツを確認する場合に役立ちます。 結果を含む sp_fulltext_keymappings の結果を結合では、この**sys.dm_fts_index_keywords_by_document**です。 詳細については、次を参照してください。 [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> ただし、通常は、可能であれば特定のフルテキスト キーまたは DocId を指定するパラメーターを指定して sp_fulltext_keymappings を実行することをお勧めします。 これは、キー マップ全体を返すよりもはるかに効率的です。特に、キー マップ全体を返すとパフォーマンスが大幅に低下する可能性がある、非常に大きなテーブルの場合に有効です。|  
 |*table_id*、 *docid*|だけの場合、 *table_id*と*docid*指定すると、 *docid* null 以外であるし、指定されたテーブルで有効な DocId を指定する必要があります。 この機能は、カスタム フルテキスト キーを、特定のフルテキスト インデックスの DocId に対応するベース テーブルから切り離す場合に役立ちます。|  
 |*table_id*、NULL、*キー*|3 つのパラメーターが存在する場合は、2 番目のパラメーターが NULL の場合と*キー* null 以外であるし、指定したテーブルから有効なフルテキスト キー値を指定する必要があります。 この機能は、特定のフルテキスト キーに対応する DocId をベース テーブルから切り離す場合に役立ちます。|  
   
@@ -93,7 +93,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>使用例  
   
 > [!NOTE]  
->  この例は、セクションの使用、`Production.ProductReview`のテーブル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]サンプル データベース。 提示された例を実行することによってこのインデックスを作成することができます、`ProductReview`テーブルに[CREATE FULLTEXT INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  この例は、セクションの使用、`Production.ProductReview`のテーブル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]サンプル データベース。 提示された例を実行することによってこのインデックスを作成することができます、`ProductReview`テーブルに[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. すべてのキーと DocId 値を取得する  
  次の例では、 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)ローカル変数を作成するステートメント`@table_id`との ID を割り当て、`ProductReview`その値としてのテーブルです。 例では実行**sp_fulltext_keymappings**指定`@table_id`の*table_id*パラメーター。  

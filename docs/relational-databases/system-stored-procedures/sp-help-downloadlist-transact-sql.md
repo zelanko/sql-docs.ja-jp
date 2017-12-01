@@ -75,7 +75,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**UPDATE**|ジョブだけを更新する操作、 **sysjobs**ジョブ ステップ、スケジュールではない、ジョブの情報です。 によって自動的に呼び出される**sp_update_job**です。|  
   
  [  **@object_type=** ] **'***object_type***'**  
- 指定したジョブのオブジェクトの種類を指定します。 *object_type*は**varchar (64)**、既定値は NULL です。 *object_type*ジョブまたはサーバーのいずれかを指定できます。 詳細については、有効な*object_type*値を参照してください[sp_add_category (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+ 指定したジョブのオブジェクトの種類を指定します。 *object_type*は**varchar (64)**、既定値は NULL です。 *object_type*ジョブまたはサーバーのいずれかを指定できます。 詳細については、有効な*object_type*値を参照してください[sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
  [  **@object_name=** ] **'***object_name***'**  
  オブジェクトの名前。 *object_name*は**sysname**、既定値は NULL です。 場合*object_type*ジョブ、 *object_name*ジョブ名です。 場合*object_type*サーバー、 *object_name*サーバーの名前を指定します。  

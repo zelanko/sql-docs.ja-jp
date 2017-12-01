@@ -66,9 +66,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>解説  
  名前付きセットとは、再利用のために作成するディメンション メンバーのセット (またはセットを定義する式) です。 たとえば、売上高上位 10 ストアのセットで構成されるディメンション メンバーのセットを名前付きセットとして定義するとします。 静的には、やなどの関数によって、このセットを定義できます[TopCount](../mdx/topcount-mdx.md)です。 そのようにして作成した名前付きセットは、上位 10 ストアのセットが必要な場所で再利用できます。  
   
- CREATE SET ステートメントで作成する名前付きセットは、セッションが終了するまで使用できます。つまり、そのセッションの複数のクエリで再利用できるということです。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバーと #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ CREATE SET ステートメントで作成する名前付きセットは、セッションが終了するまで使用できます。つまり、そのセッションの複数のクエリで再利用できるということです。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバーと #40 です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
   
- 1 つのクエリだけで使用する名前付きセットを定義することも可能です。 そのようなセットを定義する場合は、SELECT ステートメントで WITH 句を使用します。 詳細については、WITH 句は、次を参照してください。 [Creating Query-Scoped 名前付きセット &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ 1 つのクエリだけで使用する名前付きセットを定義することも可能です。 そのようなセットを定義する場合は、SELECT ステートメントで WITH 句を使用します。 詳細については、WITH 句は、次を参照してください。 [Creating Query-Scoped 名前付きセット &#40;です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)。  
   
  *Set_Expression*句は MDX 構文をサポートするすべての関数を含めることができます。 SESSION 句を指定しない CREATE SET ステートメントで作成したセットは、セッション スコープになります。 クエリ スコープによるセットを作成するには、WITH 句を使用してください。  
   
@@ -78,7 +78,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  ユーザー定義セットには、以下のいずれかのスコープを設定できます。  
   
  クエリ スコープ  
- セットの表示設定と有効期間は、クエリに限定されます。 そのようなセットは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 名前付きセット &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ セットの表示設定と有効期間は、クエリに限定されます。 そのようなセットは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 名前付きセット &#40;です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)。  
   
  セッション スコープ  
  セットの表示設定と有効期間は、セットが作成されたセッションに限定されます (セットに対して DROP SET ステートメントが実行された場合、有効期間はセッションよりも短くなります)。CREATE SET ステートメントで作成するセットは、セッション スコープです。 クエリ スコープによるセットを作成するには、WITH 句を使用してください。  

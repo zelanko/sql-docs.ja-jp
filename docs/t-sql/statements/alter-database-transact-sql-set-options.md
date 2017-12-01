@@ -53,7 +53,7 @@ ms.lasthandoff: 11/28/2017
   
 -   [ALTER DATABASE &#40;です。並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
-データベース ミラーリングは、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルを`SET`オプションが、別のトピックに記載されている、長くなるためです。 詳細については、次を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、 [ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)、および[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+データベース ミラーリングは、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルを`SET`オプションが、別のトピックに記載されている、長くなるためです。 詳細については、次を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、 [ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)、および[ALTER DATABASE 互換性レベル &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 > 使用して、現在のセッションの多くのデータベースの set オプションを構成することができます[SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)と接続するときに多くの場合、アプリケーションで構成します。 セッション レベルの set オプションの上書き、 **ALTER DATABASE SET**値。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。  
@@ -454,7 +454,7 @@ SET
  GLOBAL  
  GLOBAL を指定すると、カーソルが作成時に LOCAL として定義されていない場合、カーソルのスコープはその接続に対してグローバルになります。 カーソル名は、その接続によって実行されるストアド プロシージャやバッチの中で参照できます。  
   
- 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳細については、次を参照してください。 [DECLARE CURSOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳細については、次を参照してください。 [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_local_cursor_default 列、または DATABASEPROPERTYEX 関数の IsLocalCursorsDefault プロパティを調べてください。  
   
@@ -462,7 +462,7 @@ SET
   
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
- 引数の説明を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
+ 引数の説明を参照してください。[ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option >:: =**  
   
@@ -622,7 +622,7 @@ MULTI_USER
  DEFAULT_LANGUAGE  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 新しく作成するすべてのログインの既定の言語を指定します。 ローカル ID (LCID)、言語の名前、または言語のエイリアスを提供することで言語を指定することができます。 使用可能な言語の名前と別名の一覧は、次を参照してください。 [sys.syslanguages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。  
+ 新しく作成するすべてのログインの既定の言語を指定します。 ローカル ID (LCID)、言語の名前、または言語のエイリアスを提供することで言語を指定することができます。 使用可能な言語の名前と別名の一覧は、次を参照してください。 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。  
   
  NESTED_TRIGGERS  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -662,7 +662,7 @@ MULTI_USER
   
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
- 参照してください[ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
+ 参照してください[ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
  **\<mixed_page_allocation_option >:: =**  
   
@@ -806,7 +806,7 @@ OPERATION_MODE
   
 -   CHECKSUM は、TORN_PAGE_DETECTION と共存できません。 両方のオプションを同時に有効化することはできません。  
   
- 破損ページまたはチェックサム エラーが検出された場合には、データを復元することで復旧できます。障害がインデックス ページだけに限られていれば、インデックスを再構築することで復旧できる可能性があります。 チェックサム エラーが発生した場合、影響を受けるデータベース ページの種類を判別するには、DBCC CHECKDB を実行します。 復元オプションの詳細については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md). データを復元すれば、データ破損の問題は解決しますが、エラーが継続的に発生することを防ぐには、ディスク ハードウェア障害などの根本的な原因を、直ちに診断して修正しておく必要があります。  
+ 破損ページまたはチェックサム エラーが検出された場合には、データを復元することで復旧できます。障害がインデックス ページだけに限られていれば、インデックスを再構築することで復旧できる可能性があります。 チェックサム エラーが発生した場合、影響を受けるデータベース ページの種類を判別するには、DBCC CHECKDB を実行します。 復元オプションの詳細については、次を参照してください。 [RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). データを復元すれば、データ破損の問題は解決しますが、エラーが継続的に発生することを防ぐには、ディスク ハードウェア障害などの根本的な原因を、直ちに診断して修正しておく必要があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4 回に、チェックサム、破損ページ、またはその他の I/O エラーで失敗したすべての読み取りを再試行します。 いずれかの再試行で読み取りに成功した場合には、エラー ログにメッセージが書き込まれ、その読み取りを起動したコマンドは続行されます。 再試行が失敗した場合には、そのコマンドはエラー メッセージ 824 で失敗します。  
   
@@ -829,7 +829,7 @@ REMOTE_DATA_ARCHIVE = {ON (サーバー = \<< >、{資格情報 = \<db_scoped_cr
  Azure サーバーのアドレスを指定します。 含める、`.database.windows.net`名の部分です。 たとえば、 `MyStretchDatabaseServer.database.windows.net`のようにします。  
   
 資格情報 = \<db_scoped_credential_name >  
- データベース スコープの資格情報を指定のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、Azure サーバーに接続します。 このコマンドを実行する前に、資格情報が存在することを確認します。 詳細については、次を参照してください。 [CREATE DATABASE SCOPED CREDENTIAL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
+ データベース スコープの資格情報を指定のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、Azure サーバーに接続します。 このコマンドを実行する前に、資格情報が存在することを確認します。 詳細については、次を参照してください。 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
 FEDERATED_SERVICE_ACCOUNT = ON |オフ  
  オンプレミスの SQL Server のフェデレーション サービス アカウントを使用するには、次の条件をすべて満たす場合に、リモート Azure サーバーと通信します。  
@@ -952,7 +952,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |オフ
  OFF  
  既定値は NOT NULL になります。  
   
- SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定よりも優先されます。 ODBC および OLE DB クライアントは既定では、セッションの ANSI_NULL_DEFAULT をオンに設定する接続レベルの SET ステートメントを発行のインスタンスに接続するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。 [ANSI_NULL_DFLT_ON の設定 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
+ SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定よりも優先されます。 ODBC および OLE DB クライアントは既定では、セッションの ANSI_NULL_DEFAULT をオンに設定する接続レベルの SET ステートメントを発行のインスタンスに接続するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
   
  ANSI 互換性を確保するために、データベース オプション ANSI_NULL_DEFAULT を ON に設定すると、データベースの既定値が NULL に変更されます。  
   

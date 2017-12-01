@@ -38,7 +38,7 @@ ms.lasthandoff: 11/27/2017
   データベース内のビュー、ルール、既定値、トリガー、CHECK 制約、DEFAULT 制約、およびストアド プロシージャごとに 1 つのエントリを保持します。 **テキスト**列には、元の SQL 定義ステートメントが含まれています。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに sys.sql モジュールを使用することをお勧めします。 詳細については、次を参照してください。 [sys.sql_modules &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに sys.sql モジュールを使用することをお勧めします。 詳細については、次を参照してください。 [sys.sql_modules &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

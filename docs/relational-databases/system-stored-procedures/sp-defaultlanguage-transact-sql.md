@@ -57,7 +57,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_defaultlanguage**は追加のオプションをサポートする ALTER LOGIN を呼び出します。 その他のログインの既定値を変更する方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-login-transact-sql.md).  
+ **sp_defaultlanguage**は追加のオプションをサポートする ALTER LOGIN を呼び出します。 その他のログインの既定値を変更する方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
  現在のセッションの言語を変更するには、SET LANGUAGE ステートメントを使用します。 使用して、@@LANGUAGE現在の言語設定を表示する関数。  
   

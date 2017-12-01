@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   テーブルで vardecimal ストレージ形式が有効になっている場合に、行の平均サイズの削減量を見積もります。 この数値を使用して、テーブル サイズ全体の削減量を見積もることができます。 行サイズの平均削減量を計算するには、統計サンプリングが使用されます。このため、結果はあくまでも見積もりとして扱ってください。 vardecimal ストレージ形式を有効にした後、まれに行サイズが増加する場合があります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、行の圧縮とページの圧縮を使用してください。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 テーブルとパーティション インデックスのサイズに圧縮効果を参照してください。 [sp_estimate_data_compression_savings &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、行の圧縮とページの圧縮を使用してください。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 テーブルとパーティション インデックスのサイズに圧縮効果を参照してください。 [sp_estimate_data_compression_savings &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

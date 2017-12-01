@@ -65,7 +65,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_keys**|統計の基準となるキー。 返します**nvarchar (2078)** null にすることはできません。|  
   
 ## <a name="remarks"></a>解説  
- 特定のインデックスまたは統計に関する詳細な統計情報を表示するには、DBCC SHOW_STATISTICS を使用します。 詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)と[sp_helpindex (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
+ 特定のインデックスまたは統計に関する詳細な統計情報を表示するには、DBCC SHOW_STATISTICS を使用します。 詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)と[sp_helpindex (& a) #40 です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  ロール **public** のメンバーシップが必要です。  

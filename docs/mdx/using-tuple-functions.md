@@ -32,7 +32,7 @@ ms.lasthandoff: 11/27/2017
   
  組関数は、メンバー関数や集合関数と同様に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用される多次元構造を操作するために不可欠です。  
   
- MDX では、次の 3 つの組関数がある[現在 &#40;です。MDX と #41 です。](../mdx/current-mdx.md)、[項目 &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/item-tuple-mdx.md)と[StrToTuple (& a) #40 です。MDX と #41 です。](../mdx/strtotuple-mdx.md). 次のクエリの例では、各組関数の使用方法を示します。  
+ MDX では、次の 3 つの組関数がある[現在 &#40;です。MDX と #41 です。](../mdx/current-mdx.md)、[項目 &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/item-tuple-mdx.md)と[StrToTuple (& a) #40 です。MDX と #41 です;](../mdx/strtotuple-mdx.md)。 次のクエリの例では、各組関数の使用方法を示します。  
   
  `WITH`  
   

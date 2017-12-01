@@ -35,7 +35,7 @@ ms.lasthandoff: 11/27/2017
   
  統計コレクションを有効にすると、パフォーマンスが低下します。 1 つまたは少数のネイティブ コンパイル ストアド プロシージャのみをトラブルシューティングする必要がある場合は、それらのネイティブ コンパイル ストアド プロシージャに対してのみ統計コレクションを有効にすることができます。  
   
- すべてのネイティブ コンパイル ストアド プロシージャのプロシージャ レベルで統計コレクションを有効にするを参照してください。 [sys.sp_xtp_control_proc_exec_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
+ すべてのネイティブ コンパイル ストアド プロシージャのプロシージャ レベルで統計コレクションを有効にするを参照してください。 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>構文  
   

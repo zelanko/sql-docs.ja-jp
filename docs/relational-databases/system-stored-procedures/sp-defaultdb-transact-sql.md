@@ -56,7 +56,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_defaultdb** ALTER LOGIN を呼び出します。 このステートメントでは追加オプションがサポートされます。 既定のデータベースを変更する方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-login-transact-sql.md).  
+ **sp_defaultdb** ALTER LOGIN を呼び出します。 このステートメントでは追加オプションがサポートされます。 既定のデータベースを変更する方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
  **sp_defaultdb**ユーザー定義のトランザクション内で実行することはできません。  
   

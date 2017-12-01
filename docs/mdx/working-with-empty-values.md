@@ -125,7 +125,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 詳細については、次を参照してください。 [NonEmpty &#40;です。MDX と #41 です。](../mdx/nonempty-mdx.md).  
+ 詳細については、次を参照してください。 [NonEmpty &#40;です。MDX と #41 です;](../mdx/nonempty-mdx.md)。  
   
 ## <a name="empty-values-and-comparison-operators"></a>空の値と比較演算子  
  データに空の値がある場合、論理演算子と比較演算子は、TRUE または FALSE ではなく EMPTY を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 次の表は、空の値の比較を採用した場合の結果を示しています。  

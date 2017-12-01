@@ -85,7 +85,7 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- 詳細については、次を参照してください。 [sp_xp_cmdshell_proxy_account (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ 詳細については、次を参照してください。 [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  悪意のあるユーザーが場合がありますを使用して、特権の昇格を試行するため**xp_cmdshell**、 **xp_cmdshell**は既定で無効になります。 使用して**sp_configure**または**ポリシー ベースの管理**有効にします。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  

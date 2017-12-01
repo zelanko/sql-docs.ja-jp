@@ -70,7 +70,7 @@ ms.lasthandoff: 11/27/2017
   
  このセットは 3 つの組で構成されており、それぞれの組には、Product ディメンションの Product Categories 階層のメンバーと Date ディメンションの Calendar 階層のメンバーへの、2 つの明示的な参照が含まれています。  
   
- セットを返す関数の例については、次を参照してください[メンバー、組、およびセット &#40; の操作。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ セットを返す関数の例については、次を参照してください[メンバー、組、およびセット &#40; の操作。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
   
 ## <a name="see-also"></a>参照  
  [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)  

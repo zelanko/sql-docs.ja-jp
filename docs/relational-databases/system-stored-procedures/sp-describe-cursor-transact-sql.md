@@ -86,10 +86,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |同時実行 (concurrency)|**tinyint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**tinyint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**tinyint**|0 = 閉じた状態<br /><br /> 1 = 開いた状態|  
-|cursor_rows|**decimal(10,0)**|条件を満たすの結果セットを行数します。 詳細については、次を参照してください。 [@@CURSOR_ROWS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|このカーソル上での最後のフェッチのステータスです。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = フェッチが成功しました。<br /><br /> -1 = フェッチが失敗したか、またはカーソルの境界を越えています。<br /><br /> -2 = 要求された行がありません。<br /><br /> -9 = カーソル上でフェッチは行われていません。|  
+|cursor_rows|**decimal(10,0)**|条件を満たすの結果セットを行数します。 詳細については、次を参照してください。 [@@CURSOR_ROWS &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
+|fetch_status|**smallint**|このカーソル上での最後のフェッチのステータスです。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/functions/fetch-status-transact-sql.md)。<br /><br /> 0 = フェッチが成功しました。<br /><br /> -1 = フェッチが失敗したか、またはカーソルの境界を越えています。<br /><br /> -2 = 要求された行がありません。<br /><br /> -9 = カーソル上でフェッチは行われていません。|  
 |column_count|**smallint**|カーソル結果セット内の列の数。|  
-|row_count|**decimal(10,0)**|カーソルの最後の操作によって影響を受ける行の数。 詳細については、次を参照してください。 [@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**decimal(10,0)**|カーソルの最後の操作によって影響を受ける行の数。 詳細については、次を参照してください。 [@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/functions/rowcount-transact-sql.md)。|  
 |last_operation|**tinyint**|カーソル上で実行された最後の操作です。<br /><br /> 0 = カーソル上で操作は実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE <br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーの有効範囲内でのカーソルの一意な値です。|  
   

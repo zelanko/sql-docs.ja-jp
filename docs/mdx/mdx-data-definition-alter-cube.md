@@ -135,7 +135,7 @@ CELL CALCULATION Calculation_Name
  WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH DESCENDANTS 句を使用した場合、ディメンション テーブル内にあるすべての子孫および対応する行が削除されます。  
   
 > [!NOTE]  
->  計算されるメンバー、名前付きセット、アクション、およびセル計算の削除については、次を参照してください。 [MEMBER ステートメントの削除 &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-member.md)、 [DROP SET ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-set.md)、 [DROP ACTION ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-action.md)、および[DROP CELL CALCULATION ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  計算されるメンバー、名前付きセット、アクション、およびセル計算の削除については、次を参照してください。 [MEMBER ステートメントの削除 &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-member.md)、 [DROP SET ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-set.md)、 [DROP ACTION ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-action.md)、および[DROP CELL CALCULATION ステートメント &#40;です。MDX と #41 です;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="updating-the-default-dimension-member"></a>既定のディメンション メンバーの更新  
  この句では、キューブの既定のメンバーを更新します。この句は、MDX 計算スクリプトで既定のメンバーを定義するために使用されます。 データベース ディメンション、キューブ ディメンション、またはユーザー ログインの既定のメンバーを指定できます。 既定のメンバーは、セッション中に変更することもできます。  
@@ -179,7 +179,7 @@ CELL CALCULATION Calculation_Name
  計算されるメンバー プロパティの値を定義する有効な MDX スカラー式です。  
   
 ## <a name="creating-a-cell-calculation"></a>セル計算の作成  
- ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、次を参照してください。 [CELL CALCULATION ステートメントの削除 &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、次を参照してください。 [CELL CALCULATION ステートメントの削除 &#40;です。MDX と #41 です;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="see-also"></a>参照  
  [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  

@@ -70,11 +70,11 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="remarks"></a>解説  
  固定サーバー ロールは、サーバー レベルで定義され、特定のサーバーレベルの管理操作を実行する権限が与えられます。 固定サーバー ロールは、追加、削除、または変更することはできません。  
   
- 追加するサーバーの役割から削除されたメンバーを参照してくださいまたは[ALTER SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ 追加するサーバーの役割から削除されたメンバーを参照してくださいまたは[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
  すべてのログインは、public のメンバーです。 sp_helpsrvrole が public ロールを認識していないため、内部的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリック ロールとして実装しません。  
   
- sp_helpsrvrole には、引数としてユーザー定義サーバー ロールはなりません。 ユーザー定義サーバー ロールを一覧するには、例を参照してください。 [ALTER SERVER ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrole には、引数としてユーザー定義サーバー ロールはなりません。 ユーザー定義サーバー ロールを一覧するには、例を参照してください。 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  public ロールのメンバーシップが必要です。  

@@ -35,7 +35,7 @@ ms.lasthandoff: 11/27/2017
   
  sp_createstats は、クエリの実行時間が重要であるためにクエリ オプティマイザーによって 1 列ずつの統計が生成されるのを待てないアプリケーション (ベンチマークなど) で使用できます。 ほとんどの場合、必要はありません。 sp_createstats を使用するにはクエリ オプティマイザーでは、クエリを向上させるために必要に応じて 1 列の統計が生成されるプランの場合に、 **AUTO_CREATE_STATISTICS**オプションがオンにします。  
   
- 統計の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。 単一列の統計情報の生成の詳細については、次を参照してください。、 **AUTO_CREATE_STATISTICS**オプション[ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ 統計の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。 単一列の統計情報の生成の詳細については、次を参照してください。、 **AUTO_CREATE_STATISTICS**オプション[ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

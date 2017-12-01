@@ -64,7 +64,7 @@ sp_password [ [ @old = ] 'old_password' , ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_password** ALTER LOGIN を呼び出します。 このステートメントでは追加オプションがサポートされます。 パスワードを変更する方法については、次を参照してください。 [ALTER LOGIN &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-login-transact-sql.md).  
+ **sp_password** ALTER LOGIN を呼び出します。 このステートメントでは追加オプションがサポートされます。 パスワードを変更する方法については、次を参照してください。 [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  **sp_password**ユーザー定義のトランザクション内で実行することはできません。  
   

@@ -29,7 +29,7 @@ ms.lasthandoff: 11/27/2017
 # <a name="root-mdx"></a>Root (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  構成される組を返します、**すべて**キューブ、ディメンション、または組の現在のスコープ内の各属性階層のメンバーです。 スコープの詳細については、次を参照してください。 [SCOPE ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-scripting-scope.md).  
+  構成される組を返します、**すべて**キューブ、ディメンション、または組の現在のスコープ内の各属性階層のメンバーです。 スコープの詳細については、次を参照してください。 [SCOPE ステートメント &#40;です。MDX と #41 です;](../mdx/mdx-scripting-scope.md)。  
   
 > [!NOTE]  
 >  属性階層がない場合、**すべて**メンバー、組には、その階層の既定のメンバーが含まれています。  

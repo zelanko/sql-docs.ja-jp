@@ -63,7 +63,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>解説  
  いずれか*collection_set_id*または*名前*必要があります値を持つ、どちらも NULL をすることはできません。  
   
- この手順は、コレクションを開始し、アップロード ジョブを指定されたコレクション セットおよびコレクション セットがある場合に、コレクション エージェント ジョブをすぐに開始されます、  **@collection_mode** 非キャッシュ (1) に設定します。 詳細については、「 [sp_syscollector_create_collection_set (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ この手順は、コレクションを開始し、アップロード ジョブを指定されたコレクション セットおよびコレクション セットがある場合に、コレクション エージェント ジョブをすぐに開始されます、  **@collection_mode** 非キャッシュ (1) に設定します。 詳細については、「 [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set は、スケジュールを持たないコレクション セットの実行にも使用できます。  
   

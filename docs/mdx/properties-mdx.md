@@ -46,7 +46,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  メンバー プロパティの名前を表す有効な文字列式です。  
   
 ## <a name="remarks"></a>解説  
- **プロパティ**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバー プロパティがする固有メンバー プロパティのいずれかのように**名前**、 **ID**、**キー**、または**キャプション**、またはユーザー定義メンバー プロパティを指定できます。 詳細については、次を参照してください。[固有メンバー プロパティ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ **プロパティ**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバー プロパティがする固有メンバー プロパティのいずれかのように**名前**、 **ID**、**キー**、または**キャプション**、またはユーザー定義メンバー プロパティを指定できます。 詳細については、次を参照してください。[固有メンバー プロパティ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ &#40;です。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
   
  既定では、強制的に文字列型の値が返されます。 場合**型指定された**を指定すると、戻り値が厳密に型指定します。  
   

@@ -35,12 +35,12 @@ ms.lasthandoff: 11/27/2017
 
   現在のハッシュ インデックスとハッシュ インデックス プロパティを表示します。 ハッシュ インデックスでのみサポートされます[、インメモリ OLTP &#40;、インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)です。  
   
- Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**です。 Sys.hash_indexes ビュー内の他の列に関する詳細については、次を参照してください。 [sys.indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**です。 Sys.hash_indexes ビュー内の他の列に関する詳細については、次を参照してください。 [sys.indexes &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列 >**||列を継承[sys.indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
-|**bucket_count**|**int**|ハッシュ インデックスのハッシュ バケットの数。<br /><br /> 値を設定するためのガイドラインなど、bucket_count の値の詳細については、次を参照してください。 [CREATE TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-table-transact-sql.md).|  
+|**\<継承された列 >**||列を継承[sys.indexes &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。|  
+|**bucket_count**|**int**|ハッシュ インデックスのハッシュ バケットの数。<br /><br /> 値を設定するためのガイドラインなど、bucket_count の値の詳細については、次を参照してください。 [CREATE TABLE &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/statements/create-table-transact-sql.md)。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]」をご覧ください。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

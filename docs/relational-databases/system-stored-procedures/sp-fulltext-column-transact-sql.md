@@ -68,7 +68,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**ドロップ**|削除*column_name*の*qualified_table_name*テーブルの非アクティブなフルテキスト インデックスからです。|  
   
  [  **@language=** ] **'***language_term***'**  
- 列に格納されているデータの言語を指定します。 含まれる言語の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[sys.fulltext_languages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ 列に格納されているデータの言語を指定します。 含まれる言語の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[sys.fulltext_languages &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  複数の言語のデータ、またはサポートされていない言語のデータが列に含まれる場合は、"ニュートラル言語" を使用します。 既定値は構成オプション 'default full-text language' で指定されます。  

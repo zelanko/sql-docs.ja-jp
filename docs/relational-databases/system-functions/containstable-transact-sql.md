@@ -146,12 +146,12 @@ CONTAINSTABLE
  だけを *n* 降順で最高順位の一致が返されます。 整数値、場合にのみ適用されます *n*を指定します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*最も重要なヒットだけを再度呼び出すことによってクエリ パフォーマンスを向上することができます。  
   
  <contains_search_condition>  
- 内で検索するテキストを示す*column_name*と一致するための条件。 検索条件については、次を参照してください。 [CONTAINS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/contains-transact-sql.md).  
+ 内で検索するテキストを示す*column_name*と一致するための条件。 検索条件については、次を参照してください。 [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
 ## <a name="remarks"></a>解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
- 返されるテーブルがという名前の列を持つ**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値を持つことが保証されます、一意である列で返される値、**キー**列で指定した選択条件に一致する行のフルテキスト キー値は、検索が含まれています条件です。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意のキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられている列の ID を取得するには使用**sys.fulltext_indexes**です。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ 返されるテーブルがという名前の列を持つ**キー**フルテキスト キー値を格納しています。 各フルテキスト インデックス付きテーブルがあり、値を持つことが保証されます、一意である列で返される値、**キー**列で指定した選択条件に一致する行のフルテキスト キー値は、検索が含まれています条件です。 **TableFulltextKeyColumn** OBJECTPROPERTYEX 関数から取得したプロパティは、この一意のキー列の id を提供します。 フルテキスト インデックスのフルテキスト キーに関連付けられている列の ID を取得するには使用**sys.fulltext_indexes**です。 詳細については、次を参照してください。 [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  元のテーブルから目的の行を取得するには、CONTAINSTABLE 行との結合を指定してください。 CONTAINSTABLE を使用する場合、通常は次の形式で FROM 句を SELECT ステートメントに指定します。  
   

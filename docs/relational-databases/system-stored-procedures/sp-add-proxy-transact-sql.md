@@ -86,7 +86,7 @@ sp_add_proxy
  メンバー、 **sysadmin**固定セキュリティ ロールは、任意のプロキシを使用するジョブ ステップを作成できます。 ストアド プロシージャを使用して[sp_grant_login_to_proxy (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)をプロキシに他のログイン アクセスを付与します。  
   
 ## <a name="examples"></a>使用例  
- この例は、資格情報のプロキシを作成`CatalogApplicationCredential`です。 このコードは、資格情報が既に存在していることを前提としています。 資格情報の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-credential-transact-sql.md).  
+ この例は、資格情報のプロキシを作成`CatalogApplicationCredential`です。 このコードは、資格情報が既に存在していることを前提としています。 資格情報の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/statements/create-credential-transact-sql.md)。  
   
 ```  
 USE msdb ;  

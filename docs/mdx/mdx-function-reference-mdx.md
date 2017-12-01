@@ -135,17 +135,17 @@ ms.lasthandoff: 11/27/2017
 |[予測 (& a) #40 です。MDX と #41 です。](../mdx/predict-mdx.md)|データ マイニング モデルに対して評価される数値式の値を返します。|  
 |[ランクと #40 です。MDX と #41 です。](../mdx/rank-mdx.md)|指定したセット内の指定した組の 1 から始まる順位付けを返します。|  
 |[RollupChildren &#40;です。MDX と #41 です。](../mdx/rollupchildren-mdx.md)|指定された単項演算子を使用して、指定されたメンバーの子メンバーの値をロール アップして生成した値を返します。|  
-|[Stddev &#40;です。MDX と #41 です。](../mdx/stddev-mdx.md)|別名[Stdev &#40;です。MDX と #41 です。](../mdx/stdev-mdx.md).|  
-|[StddevP &#40;です。MDX と #41 です。](../mdx/stddevp-mdx.md)|別名[StdevP &#40;です。MDX と #41 です。](../mdx/stdevp-mdx.md).|  
+|[Stddev &#40;MDX&#41;](../mdx/stddev-mdx.md)|別名[Stdev &#40;MDX&#41;](../mdx/stdev-mdx.md).|  
+|[StddevP &#40;MDX&#41;](../mdx/stddevp-mdx.md)|別名[StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md).|  
 |[Stdev &#40;です。MDX と #41 です。](../mdx/stdev-mdx.md)|バイアスをかけない母集団の公式を使用して、セットに対して評価される数値式のサンプル標準偏差を返します。|  
-|[StdevP &#40;です。MDX と #41 です。](../mdx/stdevp-mdx.md)|バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母標準偏差を返します。|  
-|[StrToValue &#40;です。MDX と #41 です。](../mdx/strtovalue-mdx.md)|MDX 形式の文字列によって指定されている値を返します。|  
-|[合計 &#40;です。MDX と #41 です。](../mdx/sum-mdx.md)|セットに対して評価される数値式の合計を返します。|  
-|[値 &#40;です。MDX と #41 です。](../mdx/value-mdx.md)|メジャーの値を返します。|  
-|[Var &#40;です。MDX と #41 です。](../mdx/var-mdx.md)|バイアスをかけない母集団の公式を使用して、セットに対して評価される数値式のサンプル分散を返します。|  
-|[分散 &#40;です。MDX と #41 です。](../mdx/variance-mdx.md)|別名[Var &#40;です。MDX と #41 です。](../mdx/var-mdx.md).|  
-|[VarianceP &#40;です。MDX と #41 です。](../mdx/variancep-mdx.md)|別名[VarP &#40;です。MDX と #41 です。](../mdx/varp-mdx.md).|  
-|[Varp 関数 &#40;です。MDX と #41 です。](../mdx/varp-mdx.md)|バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母分散を返します。|  
+|[StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md)|バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母標準偏差を返します。|  
+|[StrToValue &#40;MDX&#41;](../mdx/strtovalue-mdx.md)|MDX 形式の文字列によって指定されている値を返します。|  
+|[Sum &#40;MDX&#41;](../mdx/sum-mdx.md)|セットに対して評価される数値式の合計を返します。|  
+|[値 &#40;MDX&#41;](../mdx/value-mdx.md)|メジャーの値を返します。|  
+|[Var &#40;MDX&#41;](../mdx/var-mdx.md)|バイアスをかけない母集団の公式を使用して、セットに対して評価される数値式のサンプル分散を返します。|  
+|[分散 &#40;MDX&#41;](../mdx/variance-mdx.md)|別名[Var &#40;MDX&#41;](../mdx/var-mdx.md).|  
+|[VarianceP &#40;MDX&#41;](../mdx/variancep-mdx.md)|別名[VarP &#40;MDX&#41;](../mdx/varp-mdx.md).|  
+|[Varp &#40;MDX&#41;](../mdx/varp-mdx.md)|バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母分散を返します。|  
   
 ## <a name="set-functions"></a>集合関数  
   
