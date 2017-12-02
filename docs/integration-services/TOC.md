@@ -177,7 +177,7 @@
 ## ブログをフォロー
 ### [SSIS チーム ブログ](https://blogs.msdn.microsoft.com/ssis/)
 ## ヘルプの参照
-### [MSDN の SSIS フォーラム](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [MSDN の SSIS フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow の SSIS](http://stackoverflow.com/questions/tagged/ssis)  
 ## フィードバックの送信
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
