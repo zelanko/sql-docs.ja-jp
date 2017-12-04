@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0e71ab1057f1147ce34d049494aa313967daa114
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="json-data-sql-server"></a>JSON データ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-JSON は、最新の Web アプリケーションとモバイル アプリケーションでデータを交換するために使用される、一般的なテキスト形式のデータ形式です。 また、JSON はログ ファイル内の非構造化データや Microsoft Azure DocumentDB のような NoSQL データベースを格納するためも使用されます。 REST Web サービスの多くは結果を JSON テキスト形式で返し、データを JSON 形式で受け取ります。 たとえば、Azure Search、Azure Storage、Azure DocumentDb などの Azure のほとんどのサービスには、JSON を返すか使用する REST エンドポイントがあります。 JSON は、AJAX 呼び出しを使用して Web ページおよび Web サーバー間でデータをやり取りするための主な形式でもあります。  
+JSON は、最新の Web アプリケーションとモバイル アプリケーションでデータを交換するために使用される、一般的なテキスト形式のデータ形式です。 また、JSON はログ ファイル内の非構造化データや Microsoft Azure Cosmos DB のような NoSQL データベースを格納するためも使用されます。 REST Web サービスの多くは結果を JSON テキスト形式で返し、データを JSON 形式で受け取ります。 たとえば、Azure Search、Azure Storage、Azure Cosmos DB などの Azure のほとんどのサービスには、JSON を返すか使用する REST エンドポイントがあります。 JSON は、AJAX 呼び出しを使用して Web ページおよび Web サーバー間でデータをやり取りするための主な形式でもあります。  
   
  JSON テキストの例を次に示します。  
   
@@ -176,7 +176,7 @@ FOR JSON PATH
  
 JSON テキストは通常、varchar 列または nvarchar 列に格納されており、プレーン テキストとしてインデックスが作成されます。 テキストをサポートするすべての SQL Server の機能またはコンポーネントは JSON をサポートします。そのため、JSON とその他の SQL Server 機能間の対話には、ほとんど制約がありません。 JSON はメモリ内テーブルやテンポラル テーブルに格納できるほか、行レベルのセキュリティの述語を JSON テキストに適用することなどができます。
 
-純粋な JSON ワークロードがあり、JSON ドキュメントの処理のためにカスタマイズされたクエリ言語を使用する場合は、Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/)の使用をお勧めします。  
+純粋な JSON ワークロードがあり、JSON ドキュメントの処理のためにカスタマイズされたクエリ言語を使用する場合は、Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/) の使用をお勧めします。  
   
  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で組み込みの JSON サポートの使用方法を示すユース ケースを紹介します。  
   
