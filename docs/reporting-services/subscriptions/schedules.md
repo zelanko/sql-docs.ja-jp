@@ -95,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 |ユーザー定義サブスクリプションでのレポート固有スケジュールの作成、変更、または削除|個別のサブスクリプションを管理|閲覧者、レポート ビルダー、個人用レポート、コンテンツ マネージャー|閲覧者、メンバー|  
 |その他すべてのスケジュール設定された操作用のレポート固有スケジュールの作成、変更、または削除|レポート履歴の管理、すべてのサブスクリプションの管理、レポートの管理|コンテンツ マネージャー|所有者|  
   
- ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のセキュリティの詳細については、「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 」、および「 [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)」を参照してください。 SharePoint モードについては、「 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」を参照してください。  
+ ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のセキュリティの詳細については、「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 」、および「 [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)」を参照してください。 SharePoint モードについては、「 [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」を参照してください。  
   
 ##  <a name="bkmk_how_scheduling_works"></a> スケジュール処理および配信処理のしくみ  
  スケジュールおよび配信のプロセッサは、次の機能を提供します。  

@@ -2,10 +2,13 @@
 title: "Microsoft SQL データベースでのアダプティブ クエリの処理 | Microsoft Docs | Microsoft Docs"
 description: "SQL Server (2017 以降) および Azure SQL Database のクエリ パフォーマンスを向上させるためのアダプティブ クエリ処理の機能です。"
 ms.custom: 
-ms.date: 10/13/2017
-ms.prod: sql-server-2017
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,17 +18,14 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/28/2017
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 この記事では、SQL Server および Azure SQL Database のクエリ パフォーマンスを向上させるために使うことができるアダプティブ クエリ処理の機能について説明します。
 - バッチ モード メモリ許可フィードバック。
@@ -71,7 +71,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 最適化のためには、クエリ プランによってパラメーター値を変えることが必要な場合もあります。 この種のクエリは "パラメーター依存" と定義されます。 パラメーター依存プランでは、メモリ要件が不安定な場合、メモリ許可フィードバック自体がクエリで無効になります。  クエリが数回繰り返し実行された後でプランは無効になり、このことは *memory_grant_feedback_loop_disabled* XEvent で監視できます。
 
 ### <a name="memory-grant-feedback-caching"></a>メモリ許可フィードバックのキャッシュ
-フィードバックは、1 回の実行に対してキャッシュされるプランに格納できます。 ただし、メモリ許可フィードバックの調整によってメリットがあるのは、そのステートメントを連続して実行する場合です。 この機能は、ステートメントの反復実行に適用されます。 メモリ許可フィードバックが変更するのはキャッシュされたプランのみです。 現在、変更はクエリ Ssore ではキャプチャされません。
+フィードバックは、1 回の実行に対してキャッシュされるプランに格納できます。 ただし、メモリ許可フィードバックの調整によってメリットがあるのは、そのステートメントを連続して実行する場合です。 この機能は、ステートメントの反復実行に適用されます。 メモリ許可フィードバックが変更するのはキャッシュされたプランのみです。 現在、変更はクエリ ストアではキャプチャされません。
 プランがキャッシュから削除された場合、フィードバックは保持されません。 フェールオーバーが発生した場合もフィードバックは失われます。 OPTION(RECOMPILE) を使うステートメントでは、新しいプランが作成されますが、プランはキャッシュされません。 キャッシュされないため、メモリ許可フィードバックは生成されず、そのコンパイルおよび実行に対して格納されません。  ただし、OPTION(RECOMPILE) を "*使わない*" 同等のステートメント (つまり、クエリ ハッシュが同じ) がキャッシュされて再実行された場合、連続するステートメントでメモリ許可フィードバックのメリットがある場合があります。
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>メモリ許可フィードバック アクティビティの追跡
@@ -183,7 +183,7 @@ MSTVF の固定の基数の推定は、SQL Server 2014 および SQL Server 2016
 1. また、MSTVF テーブル スキャンからフローする実際の行数に基づいて多くのメモリを許可しているので、ディスク書き込み警告は表示されなくなっています。
 
 ### <a name="interleaved-execution-eligible-statements"></a>インターリーブ実行に適したステートメント
-インターリーブ実行内のステートメントを参照する MSTVF は、現在は読み取り専用でなければならず、データ変更操作の一部であってはなりません。 また、MSTVF は、CROSS APPLY の内部で使われている場合は、インターリーブ実行できません。
+インターリーブ実行内のステートメントを参照する MSTVF は、現在は読み取り専用でなければならず、データ変更操作の一部であってはなりません。 また、MSTVF は、ランタイム定数を使用していない場合は、インターリーブ実行には適しません。
 
 ### <a name="interleaved-execution-benefits"></a>インターリーブ実行の利点
 一般に、推定行数と実際の行数の非対称が大きいほど、ダウンストリーム プラン操作の数との組み合わせで、パフォーマンスへの影響が大きくなります。
@@ -231,5 +231,4 @@ OPTION(RECOMPILE) を使うステートメントは、インターリーブ実�
 [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)
 
 [アダプティブ クエリ処理のデモンストレーション](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

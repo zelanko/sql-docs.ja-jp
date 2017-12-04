@@ -135,7 +135,7 @@ ms.lasthandoff: 11/09/2017
 |履歴の設定|<xref:ReportService2010.ReportingService2010.GetItemHistoryOptions%2A>|<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|  
 |アイテム ポリシー|<xref:ReportService2010.ReportingService2010.GetPolicies%2A>|<xref:ReportService2010.ReportingService2010.SetPolicies%2A>|  
   
- 詳しくは、「 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」をご覧ください。  
+ 詳しくは、「 [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」をご覧ください。  
   
 ##  <a name="bkmk_how_to_use_the_script"></a> スクリプトの使用方法  
   
@@ -361,7 +361,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  **–t** フラグを指定してスクリプトをもう一度実行すると、次のようなメッセージが表示されます。  
   
--   System.Exception: Could not connect to server: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401: Unauthorized**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
+-   System.Exception: Could not connect to server: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401: Unauthorized**.   System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage メッセージ、WebResponse 応答、Stream responseStream, Boolean asyncCall) System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (文字列であります。methodName、オブジェクトのパラメーター) (文字列 url 文字列のユーザー名、文字列パスワード Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService で Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() で、文字列ドメイン、Int32 タイムアウト) で Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---内部例外スタック トレースの終わり--  
   
 ## <a name="see-also"></a>参照  
  [RS.exe ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

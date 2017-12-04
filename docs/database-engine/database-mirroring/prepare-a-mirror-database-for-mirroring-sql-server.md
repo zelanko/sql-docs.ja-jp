@@ -1,12 +1,14 @@
 ---
 title: "ミラーリングのためのミラー データベースの準備 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 869a784fe82f1a142fd2a9792bd79784b5fe3959
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>ミラーリングのためのミラー データベースの準備 (SQL Server)
-  データベース ミラーリング セッションを開始する前に、データベース所有者またはシステム管理者は、ミラー データベースを作成し、ミラーリング用に準備しておく必要があります。 新しいミラー データベースを作成するには、少なくとも、プリンシパル データベースの完全バックアップとそれ以降のログ バックアップを作成し、その両方をミラー サーバーのインスタンスに (WITH NORECOVERY を使用して) 復元する必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリング セッションを開始する前に、データベース所有者またはシステム管理者は、ミラー データベースを作成し、ミラーリング用に準備しておく必要があります。 新しいミラー データベースを作成するには、少なくとも、プリンシパル データベースの完全バックアップとそれ以降のログ バックアップを作成し、その両方をミラー サーバーのインスタンスに (WITH NORECOVERY を使用して) 復元する必要があります。  
   
  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でミラー データベースを準備する方法について説明します。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 -   プリンシパル サーバー インスタンスとミラー サーバー インスタンスは、同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている必要があります。 ミラー サーバーで SQL Server の新しいバージョンを実行することはできますが、この構成は慎重に計画されたアップグレード プロセスにおいてのみ推奨されます。 そのような構成では、自動フェールオーバーが発生したときに SQL Server の古いバージョンにデータを移動できず、データの移動が自動的に保留される可能性があります。 詳細については、「 [ミラー化されたインスタンスのアップグレード](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)」を参照してください。  
   
--   プリンシパル サーバー インスタンスとミラー サーバー インスタンスは、同じエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている必要があります。 データベース ミラーリングの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサポートについては、 「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+-   プリンシパル サーバー インスタンスとミラー サーバー インスタンスは、同じエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている必要があります。 データベース ミラーリングの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のサポートについては、「[SQL Server 2017 の各エディションとサポートされている機能](~/sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。  
   
 -   このデータベースは、完全復旧モデルを使用する必要があります。  
   
@@ -276,5 +277,4 @@ ms.lasthandoff: 08/02/2017
  [RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
-
 

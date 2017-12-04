@@ -2,11 +2,13 @@
 title: FileTables (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d8d5ce9a3a0ab49fb62fd434fe523ecfa937c6ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
-  FileTable 機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているファイル データに対して Windows ファイル名前空間のサポートと Windows アプリケーションとの互換性を提供します。 FileTable により、アプリケーションは、ストレージとデータ管理コンポーネントを統合し、非構造化データおよびメタデータに対する統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (フルテキスト検索、セマンティック検索など) を提供できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]FileTable 機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているファイル データに対して Windows ファイル名前空間のサポートと Windows アプリケーションとの互換性を提供します。 FileTable により、アプリケーションは、ストレージとデータ管理コンポーネントを統合し、非構造化データおよびメタデータに対する統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (フルテキスト検索、セマンティック検索など) を提供できます。  
   
  つまり、ファイルおよびドキュメントを FileTable と呼ばれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特殊なテーブルに保存しておき、ファイル システムに格納されているかのように、Windows アプリケーションからこれらのファイルおよびドキュメントにアクセスできるということです。このとき、クライアント アプリケーションに変更を加える必要はありません。  
   
@@ -63,9 +64,9 @@ ms.lasthandoff: 06/22/2017
   
 -   各行には次のアイテムが含まれます。 FileTable のスキーマの詳細については、「 [FileTable スキーマ](../../relational-databases/blob/filetable-schema.md)」を参照してください。  
   
-    -   ストリーム データ用の**file_stream** 列、および **stream_id** (GUID) 識別子 ( **file_stream** 列はディレクトリでは NULL です)。  
+    -   ストリーム データ用の **file_stream** 列、および **stream_id** (GUID) 識別子  ( **file_stream** 列はディレクトリでは NULL です)。  
   
-    -   ファイルおよびディレクトリの階層を表し、それを維持する **path_locator** 列と **parent_path_locator** 列。  
+    -   現在のアイテム (ファイルまたはディレクトリ) 、およびディレクトリ階層を表して保持するための、**path_locator** 列と **parent_path_locator** 列の両方。  
   
     -   ファイル I/O API で便利な、作成日や更新日などの 10 のファイル属性。  
   
@@ -138,4 +139,3 @@ ms.lasthandoff: 06/22/2017
  FileTable 機能をサポートするために追加または変更された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの一覧を示します。  
   
   
-
