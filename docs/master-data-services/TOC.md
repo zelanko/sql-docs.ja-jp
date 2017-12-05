@@ -2,7 +2,7 @@
 
 # 概要
 ## [マスター データ サービス (MDS) の新機能](what-s-new-in-master-data-services-mds.md)  
-## [新規および最近の更新記事](new-updated-master-data-services.md)
+## [新規および更新のアーティクル](new-updated-master-data-services.md)
 ## [SQL Server マスター データ サービスについて](learn-sql-server-master-data-services.md)  
 ## [SQL Server サンプル: モデルの配置パッケージ (マスター データ サービス)](sql-server-samples-model-deployment-packages-mds.md)  
 ## [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](master-data-services-and-data-quality-services-features-support.md)  

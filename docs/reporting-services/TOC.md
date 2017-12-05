@@ -2,7 +2,7 @@
 
 # 概要
 ## [Reporting Services の新機能](what-s-new-in-sql-server-reporting-services-ssrs.md) 
-## [新規および最近の更新記事](new-updated-reporting-services.md)
+## [新規および更新のアーティクル](new-updated-reporting-services.md)
 ## [ログの変更](change-log-sql-server-reporting-services.md)
 ## [Reporting Services の概念 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services の機能とタスク](reporting-services-features-and-tasks-ssrs.md)   
