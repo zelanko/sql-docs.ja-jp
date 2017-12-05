@@ -1,6 +1,7 @@
 # [Data Migration Assistant の概要](dma-overview.md)
 
 # [Data Migration Assistant の新機能](dma-whatsnew.md)
+# [新規および更新のアーティクル](new-updated-dma.md)
 # [SQL Server の移行の評価](dma-assesssqlonprem.md)
 # [評価レポートの統合](dma-consolidatereports.md)
 # [統合評価のための Power BI レポート](dma-powerbiassesreport.md)

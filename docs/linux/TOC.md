@@ -3,7 +3,7 @@
 # 概要
 ## [リリース ノート](sql-server-linux-release-notes.md)
 ## [このリリースの新機能](sql-server-linux-whats-new.md)
-## [新規および最近の更新記事](new-updated-linux.md)
+## [新規および更新のアーティクル](new-updated-linux.md)
 ## [エディションとサポートされる機能](sql-server-linux-editions-and-components-2017.md)
 
 # クイック スタート

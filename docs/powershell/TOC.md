@@ -1,5 +1,5 @@
 # [概要](database-engine-powershell-reference.md)  
-# [新規および最近の更新記事](new-updated-powershell.md)
+# [新規および更新のアーティクル](new-updated-powershell.md)
 # [Invoke-PolicyEvaluation コマンドレット](invoke-policyevaluation-cmdlet.md)  
 # [Invoke-Sqlcmd コマンドレット](invoke-sqlcmd-cmdlet.md)  
 # [クエリ式と Uniform Resource Name](query-expressions-and-uniform-resource-names.md)  

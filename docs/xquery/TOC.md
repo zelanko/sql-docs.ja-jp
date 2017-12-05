@@ -1,5 +1,5 @@
 # [概要](xquery-language-reference-sql-server.md)  
-# [新規および最近の更新記事](new-updated-xquery.md)
+# [新規および更新のアーティクル](new-updated-xquery.md)
 # [モジュールとプロローグ - XQuery プロローグ](modules-and-prologs-xquery-prolog.md)  
 
 # [XQuery の基礎](xquery-basics.md)  

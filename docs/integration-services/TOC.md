@@ -3,7 +3,7 @@
 # 概要
 ## [SQL Server 2016 の Integration Services の新機能](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [SQL Server 2017 の Integration Services の新機能](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [新規および最近の更新記事](new-updated-integration-services.md)
+## [新規および更新のアーティクル](new-updated-integration-services.md)
 ## [SQL Server の各エディションがサポートする Integration Services の機能](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services の旧バージョンとの互換性](integration-services-backward-compatibility.md)
 

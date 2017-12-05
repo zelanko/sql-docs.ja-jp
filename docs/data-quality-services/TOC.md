@@ -1,5 +1,5 @@
 # [概要](data-quality-services.md)  
-# [新規および最近の更新記事](new-updated-data-quality-services.md)
+# [新規および更新のアーティクル](new-updated-data-quality-services.md)
 
 # 概念と機能
 ## [Data Quality Services の概要](introduction-to-data-quality-services.md)  

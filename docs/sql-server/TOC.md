@@ -15,7 +15,7 @@
 #### [管理](partner-management-sql-server.md)
 #### [開発](partner-dev-sql-server.md)
 
-# [SQL Server の記事を最近更新](sql-server-new-updated-sql-docs-pr.md)
+# [新規および更新のアーティクル](new-updated-sql-server.md)
 
 # リリース ノート
 

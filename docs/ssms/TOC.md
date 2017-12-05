@@ -4,7 +4,7 @@
 # 新機能
 ## [SSMS の変更ログと以前のリリース](sql-server-management-studio-changelog-ssms.md)
 ## [リリース ノート](download-sql-server-management-studio-ssms.md#release-notes)
-## [新規および最近の更新記事](new-updated-ssms.md)
+## [新規および更新のアーティクル](new-updated-ssms.md)
 
 # [SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)
 

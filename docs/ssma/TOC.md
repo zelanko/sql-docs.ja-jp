@@ -1,5 +1,5 @@
 # [SQL Server Migration Assistant](sql-server-migration-assistant.md)
-# [新規および最近の更新記事](new-updated-ssma.md)
+# [新規および更新のアーティクル](new-updated-ssma.md)
 
 # [Access +](../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)
 # [DB2 +](../ssma/db2/installing-ssma-for-db2-db2tosql.md)

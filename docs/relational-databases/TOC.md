@@ -1,5 +1,5 @@
 # [概要](database-features.md)
-# [新規および最近の更新記事](new-updated-relational-databases.md)
+# [新規および更新のアーティクル](new-updated-relational-databases.md)
 
 # [SQL Server ガイド](sql-server-guides.md)
 ## Always On 可用性グループのトラブルシューティングと監視のガイド

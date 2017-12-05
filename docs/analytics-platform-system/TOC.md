@@ -1,5 +1,6 @@
 # このリリースについて
 ## [新機能](whats-new-analytics-platform-system.md)
+## [新規および更新のアーティクル](new-updated-analytics-platform-system.md)
 
 # Architecture
 ## [並列データ ウェアハウスの概要](parallel-data-warehouse-overview.md)

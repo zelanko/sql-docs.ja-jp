@@ -3,7 +3,7 @@
 # 概要
 ## [SQL Server Analysis Services 2016 の新機能](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017 の新機能](what-s-new-in-sql-server-analysis-services-2017.md) 
-## [新規および最近の更新記事](new-updated-analysis-services.md)
+## [新規および更新のアーティクル](new-updated-analysis-services.md)
 ## [ツールとアプリケーション](tools-and-applications-used-in-analysis-services.md)   
 ## [テーブル ソリューションと多次元ソリューションの比較](comparing-tabular-and-multidimensional-solutions-ssas.md)  
 ## [SQL Server 2016 の各エディションがサポートする Analysis Services の機能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   

@@ -1,5 +1,5 @@
 # [概要](analysis-services-language-reference.md)  
-# [新規および最近の更新記事](new-updated-mdx.md)
+# [新規および更新のアーティクル](new-updated-mdx.md)
 
 # [多次元式 (MDX) リファレンス](multidimensional-expressions-mdx-reference.md)  
 ## [MDX 構文の要素](mdx-syntax-elements-mdx.md)  

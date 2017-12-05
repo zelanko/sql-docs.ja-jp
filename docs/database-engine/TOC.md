@@ -11,7 +11,7 @@
 ## [SQL Server 2016 で廃止された機能](discontinued-database-engine-functionality-in-sql-server-2016.md)  
 ## [SQL Server 2017 における重大な変更](breaking-changes-to-database-engine-features-in-sql-server-2017.md)  
 ## [SQL Server 2016 における重大な変更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-## [新規および最近の更新記事](new-updated-database-engine.md)
+## [新規および更新のアーティクル](new-updated-database-engine.md)
 
 # [インストール](../database-engine/install-windows/installation-for-sql-server-2016.md)
 # [構成](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
