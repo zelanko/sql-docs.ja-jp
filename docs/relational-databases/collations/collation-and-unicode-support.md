@@ -1,12 +1,14 @@
 ---
 title: "照合順序と Unicode のサポート | Microsoft Docs"
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,20 +29,19 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 **char** や **varchar** などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)」を参照してください。    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、アクセントの区別のプロパティをデータで利用できるようになります。 **char** や **varchar** などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)」を参照してください。    
     
  サーバー、データベース、列、または式の照合順序を選択すると、データベースのさまざまな操作の結果に影響を与える特定の特性がデータに割り当てられます。 たとえば、ORDER BY を使用してクエリを構築する場合、結果セットの並べ替え順序は、データベースに適用される照合順序、またはクエリの式レベルで COLLATE 句に指定される照合順序に依存します。    
     
@@ -133,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  また、サーバー上のデータに異なる照合順序を使用してみることもできます。 クライアントのコード ページにマップする照合順序を選択します。    
     
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で提供される UTF-16 照合順序を使用するには、Unicode 文字の並べ替えと検索の機能を向上させるために、補助文字の `_SC` 照合順序 (Windows 照合順序のみ) の 1 つを選択します。    
+ 一部の Unicode 文字の検索と並べ替えの機能を向上させるために [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で提供される UTF-16 照合順序を使うには (Windows 照合順序のみ)、補助文字 (_SC) の照合順序の 1 つ、またはバージョン 140 の照合順序の 1 つを選ぶことができます。    
     
  Unicode または非 Unicode データ型の使用に関連する問題点を評価するには、使用環境におけるパフォーマンスの違いを測定するためのシナリオをテストする必要があります。 組織内のシステムで使用する照合順序を標準化し、可能であれば Unicode サーバーおよびクライアントを配置するようにしてください。    
     
@@ -155,35 +156,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> 補助文字    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Unicode データの格納用に、 **nchar** 、 **nvarchar** などのデータ型が用意されています。 これらのデータ型は、 *UTF-16*と呼ばれる形式でテキストをエンコードします。 Unicode コンソーシアムは、各文字に一意のコード ポイント (0x0000 から 0x10FFFF の範囲の値) を割り当てています。 最もよく使用される一連の文字にはメモリとディスク上で 16 ビット ワードに収まるコード ポイント値がありますが、コード ポイント値が 0xFFFF を超える文字は、連続した 2 つの 16 ビット ワードを必要とします。 これらの文字は *補助文字*と呼ばれ、2 つの連続する 16 ビット ワードは *サロゲート ペア*と呼ばれます。    
     
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、新しい補助文字 (_SC) の照合順序が、**nchar**、**nvarchar**、および **sql_variant** の各データ型で使用できます。 たとえば、 `Latin1_General_100_CI_AS_SC`や、日本語の照合順序を使用する場合は `Japanese_Bushu_Kakusu_100_CI_AS_SC`を使用できます。    
+
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、すべての新しい照合順序が補助文字を自動的にサポートします。
+
  補助文字を使用する場合は、以下の点に注意してください。    
     
 -   補助文字は、90 以上の照合順序バージョンで、並べ替えと比較の操作に使用できます。    
     
--   すべての _100 レベルの照合順序で、補助文字の言語的な並べ替えがサポートされています。    
+-   すべてのバージョン 100 の照合順序で、補助文字の言語的な並べ替えがサポートされています。    
     
 -   補助文字は、データベース オブジェクトの名前など、メタデータ内で使用することはできません。    
     
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]では、新しい補助文字 (SC) の照合順序が、**nchar**、**nvarchar**、および **sql_variant** の各データ型で使用できます。 たとえば、 `Latin1_General_100_CI_AS_SC`や、日本語の照合順序を使用する場合は `Japanese_Bushu_Kakusu_100_CI_AS_SC`を使用できます。    
-  > [!NOTE]    
-  >  補助文字 (\_SC) を含む照合順序を使用しているデータベースでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションを有効にすることはできません。 これは、レプリケーション用に作成されるシステム テーブルとストアド プロシージャの一部が、補助文字をサポートしていないレガシ **ntext** データ型を使用しているからです。  
+-   補助文字 (\_SC) を含む照合順序を使用しているデータベースでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションを有効にすることはできません。 これは、レプリケーション用に作成されるシステム テーブルとストアド プロシージャの一部が、補助文字をサポートしていないレガシ **ntext** データ型を使用しているからです。  
     
-     SC フラグは、以下に適用できます。    
+-   SC フラグは、以下に適用できます。    
     
-    -   バージョン 90 の Windows 照合順序    
+    -   バージョン 90 照合順序    
     
-    -   バージョン 100 の Windows 照合順序    
+    -   バージョン 100 照合順序    
     
-     SC フラグは、以下には適用できません。    
+-   SC フラグは、以下には適用できません。    
     
     -   バージョン 80 バージョンなしの Windows 照合順序    
     
     -   BIN または BIN2 バイナリ照合順序    
     
-    -   SQL* 照合順序    
+    -   SQL\* 照合順序    
     
- 次の表では、一部の文字列関数と文字列演算子で、補助文字が SC 照合順序ありで使用される場合と SC 照合順序なしで使用される場合の動作を比較しています。    
+    -   バージョン 140 照合順序 (これらは、補助文字を既にサポートしているので、SC フラグを必要としません)    
     
-|文字列関数または演算子|SC の照合順序あり|SC の照合順序なし|    
+ 次の表では、一部の文字列関数と文字列演算子で、補助文字が SC 照合順序ありで使用される場合と、補助文字対応 (SCA) 照合順序なしで使用される場合の動作を比較しています。    
+    
+|文字列関数または演算子|補助文字対応 (SCA) 照合順序あり|SCA 照合順序なし|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|UTF-16 サロゲート ペアは、1 つのコード ポイントとしてカウントされます。|UTF-16 サロゲート ペアは、2 つのコード ポイントとしてカウントされます。|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|これらの関数は、各サロゲート ペアを 1 つのコード ポイントとして処理し、期待どおりに動作します。|これらの関数では、サロゲート ペアが分割され、予期しない結果が生じることがあります。|    
@@ -205,13 +210,15 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 
 ##  <a name="Japanese_Collations"></a> [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] に追加された日本語照合順序
  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、各種オプションの順列 (_CS、_AS、_KS、_WS、_VSS など) で、2 つの新しい日本語照合順序がサポートされています。 
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、各種オプションの順列 (\_CS、\_AS、\_KS、\_WS、\_SS など) で、2 つの新しい日本語照合順序がサポートされています。 
 
 これらの照合順序を一覧表示するには、SQL Server データベース エンジンに対してクエリを実行します。
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
+
+すべての新しい照合順序には補助文字の組み込みサポートがあるので、どの新しい照合順序にも SC フラグはありません (または必要ありません)。
 
 これらの照合順序はデータベース エンジン インデックス、メモリ最適化テーブル、列ストア インデックス、ネイティブ コンパイル モジュールでサポートされています。
     
@@ -239,5 +246,4 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

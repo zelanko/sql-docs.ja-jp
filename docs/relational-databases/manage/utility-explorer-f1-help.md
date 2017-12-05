@@ -2,11 +2,13 @@
 title: "ユーティリティ エクスプローラーの F1 ヘルプ | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4b004cbaba4cab6d83680ce0d7b827366c3e8a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
-  次のセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの機能と関連する操作について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの機能と関連する操作について説明します。  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードにデータを表示するには、ユーティリティ エクスプローラーのツリーで最上位ノード "Utility<UCP 名>\\(ComputerName\UCP)" を選択します。 ダッシュボードには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージ インスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのすべてのデータ層アプリケーションに関する概要データと詳細データが表示されます。 ダッシュボードのデータを更新するには、ユーティリティ エクスプローラーのツリーで最上位ノードを右クリックし、 **[更新]**をクリックします。  
@@ -269,7 +270,7 @@ ms.lasthandoff: 08/03/2017
   
  正常性状態アイコンにより、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの状態が使用率カテゴリごとに示されます。  
   
--   緑のチェック - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスの数。 リソースは適正使用です。  
+-   緑のチェック - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスの数。 リソースは適正使用です。  
   
 -   緑の下向き矢印 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - リソースは過小使用です。  
   
@@ -518,4 +519,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server ユーティリティのトラブルシューティング](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

@@ -2,9 +2,12 @@
 title: "SQL Server チュートリアル | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e7eec3322fecf2df16624ce63f0188c526108d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には、新しいテクノロジと機能の学習に役立つチュートリアルが用意されています。 通常、以前のバージョンのチュートリアルを新しいバージョンで使用できます。 チュートリアルで新しい機能を扱っている場合は、そのチュートリアルを完了するための最低限のバージョンが示されています。  
      
 -   チュートリアルでいずれかの [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使われている場合は、最新のバージョンを CodePlex からダウンロードして使う必要があります。 詳しくは、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。    

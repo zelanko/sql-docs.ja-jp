@@ -2,30 +2,30 @@
 title: "空間インデックスの概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.suite: sql
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- spatial indexes [SQL Server]
+helpviewer_keywords: spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bcfa4dfbf2af7d1cd124ed16fef13eeed89bfcb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d312b518c0dd48cbdf2a536ee02391ba77ba447f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、空間データと空間インデックスがサポートされています。 *空間インデックス* は拡張インデックスの一種で、空間列にインデックスを設定することができます。 空間列とは、空間データ型 ( **geometry** や **geography**など) のデータを含むテーブル列です。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、空間データと空間インデックスがサポートされています。 *空間インデックス* は拡張インデックスの一種で、空間列にインデックスを設定することができます。 空間列とは、空間データ型 ( **geometry** や **geography**など) のデータを含むテーブル列です。  
   
 > [!IMPORTANT]  
 >  空間インデックスに影響を及ぼす機能を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー『 [New Spatial Features in SQL Server 2012 (SQL Server 2012 の新しい空間機能)](http://go.microsoft.com/fwlink/?LinkId=226407)』をダウンロードしてご覧ください。  
@@ -104,10 +104,10 @@ ms.lasthandoff: 06/22/2017
   
  たとえば先ほどの、八角形がレベル 1 グリッドのセル 15 に完全に収まっている図では、 セル 15 がテセレーションされて、八角形がレベル 2 の 9 つのセルに分解されています。 この例では、オブジェクトごとのセル数の制限が 9 以上と想定されています。 オブジェクトごとのセル数の制限が 8 以下の場合は、セル 15 はテセレーションされず、セル 15 のみがオブジェクトに対してカウントされます。  
   
- 既定では、オブジェクトごとのセル数の制限は 16 です。この値は、ほとんどの空間インデックスで、スペースと精度のバランスが取れた値になります。 ただし、[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでサポートされている CELLS_PER_OBJECT**=***n* 句を使用すると、オブジェクトごとのセル数の制限を 1 から 8,192 の範囲で指定できます。  
+ 既定では、オブジェクトごとのセル数の制限は 16 です。この値は、ほとんどの空間インデックスで、スペースと精度のバランスが取れた値になります。 ただし、[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでサポートされている CELLS_PER_OBJECT**=***n* 句を使用すると、オブジェクトごとのセル数の制限を 1 から 8192 の範囲で指定できます。  
   
 > [!NOTE]  
->  空間インデックスの **cells_per_object** の設定は、[sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) カタログ ビューで確認できます。  
+>  空間インデックスの **cells_per_object** の設定は、 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) カタログ ビューで確認できます。  
   
 #### <a name="deepest-cell-rule"></a>最下位のセルのルール  
  最下位のセルのルールでは、下位レベルのセルはすべてその上のセルに属しているという事実が利用されています。レベル 4 のセルはレベル 3 のセルに、レベル 3 のセルはレベル 2 のセルに、レベル 2 のセルはレベル 1 のセルにそれぞれ属しています。 たとえば、セル 1.1.1.1 に属しているオブジェクトは、セル 1.1.1、セル 1.1、およびセル 1 にも属しています。 こうしたセルの階層関係の情報はクエリ プロセッサに組み込まれているため、 インデックスに記録するのは最下位レベルのセルだけで済みます。これにより、インデックスに格納する情報を最小限に抑えられます。  
@@ -250,4 +250,3 @@ ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
-

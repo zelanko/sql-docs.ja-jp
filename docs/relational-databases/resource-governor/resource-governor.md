@@ -2,31 +2,32 @@
 title: "リソース ガバナー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b1d9225d46e1331a4dfc62ef20fcd91a6e0f52ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 リソース ガバナーを使用すると、受信するアプリケーション要求で使用可能な CPU、物理 IO、およびメモリの量に制限を指定できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 リソース ガバナーを使用すると、受信するアプリケーション要求で使用可能な CPU、物理 IO、およびメモリの量に制限を指定できます。  
   
 ## <a name="benefits-of-resource-governor"></a>リソース ガバナーの利点  
  リソース ガバナーでは、受け取った要求に応じてリソース消費を制限することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとリソースを管理することができます。 リソース ガバナーでは、同程度のサイズの複数のクエリや要求を 1 つのエンティティとして扱う場合、それらをワークロードと呼んでいます。 これは必須ではありませんが、ワークロードのリソースの使用パターンが統一化されていると、リソース ガバナーから得られる利点も増えます。 リソース制限は、実行中のワークロードへの影響を最小限に抑えながらリアルタイムで再構成できます。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
  リソース ガバナーのコンテキストでは、上記の概念をコンポーネントとして扱うことができます。 次の図は、これらのコンポーネントと、データベース エンジン環境でのその相互関係を示しています。 処理の観点から見たフローを簡単に示すと次のようになります。  
   
--   セッション (セッション 1/ *n*) に着信接続が存在します。  
+-   セッション (セッション 1/*n*) に着信接続が存在します。  
   
 -   セッションが分類されます (分類)。  
   
@@ -98,4 +99,3 @@ ms.lasthandoff: 06/22/2017
  [データベース エンジンのインスタンス &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   
-

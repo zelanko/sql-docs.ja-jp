@@ -2,30 +2,30 @@
 title: "名前のある列 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- names [SQL Server], columns with
+helpviewer_keywords: names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7153d16bd547d5fc596037c17e31f69eaf0881fe
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
-ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columns-with-a-name"></a>名前のある列
-  行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
   
 -   列名がアット マーク (@) で始まる場合  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/08/2017
 -   名前の異なる列がある場合  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名がアット マーク (@) で始まる場合  
- 列名で始まる場合、アット マーク (@)、スラッシュ (/) の属性が含まれていないと、`row`を対応する列の値を持つ要素を作成します。 たとえば、次のクエリは 2 列 (@PmId, Name) の行セットを返します。 結果の XML で、 **PmId**属性は、対応する追加`row`要素と ProductModelID の値を割り当てます。  
+ 列名がアット マーク (@) で始まり、スラッシュ (/) を含んでいない場合は、対応する列値を持つ `row` 要素の属性が作成されます。 たとえば、次のクエリは 2 列 (@PmId, Name) の行セットを返します。 結果の XML では、対応する `row` 要素に **PmId** 属性が追加され、ProductModelID の値が割り当てられます。  
   
 ```  
   
@@ -71,9 +71,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名がアット マーク (@) で始まらない場合  
- 列名が起動しない場合、アット マーク (@)、XPath ノード テストのいずれかにない場合、スラッシュ (/)、行要素のサブ要素である XML 要素が含まれていない`row`既定では、作成します。  
+ 列名がアット マーク (@) で始まらず、XPath の任意のノード テストでもなく、スラッシュ (/) も含んでいない場合、行要素 (既定では `row`) のサブ要素になる XML 要素が作成されます。  
   
- 次のクエリでは列名 result が指定されています。 したがって、`result`子要素を追加、`row`要素。  
+ 次のクエリでは列名 result が指定されています。 したがって、`row` 要素には `result` 子要素が追加されます。  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +88,7 @@ for xml PATH
 </row>  
 ```  
   
- 次のクエリでは、**xml** 型の Instructions 列に対して指定した XQuery から返される XML に対応する列の名前として、ManuWorkCenterInformation を指定しています。 したがって、`ManuWorkCenterInformation`の子として要素を追加、`row`要素。  
+ 次のクエリでは、**xml** 型の Instructions 列に対して指定した XQuery から返される XML に対応する列の名前として、ManuWorkCenterInformation を指定しています。 したがって、`row` 要素の子として、`ManuWorkCenterInformation` 要素が追加されます。  
   
 ```  
 SELECT   
@@ -133,7 +133,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- PATH モードでは、列名は XML を作成する際のパスとして使用されます。 従業員の ID 値を格納している列の名前が始まる '\@' です。そのため、属性、 **EmpID**に追加、`row`要素。 それ以外のすべての列の列名には、階層を示すスラッシュ ('/') が含まれています。 結果の XML になります、`EmpName`下の子、`row`要素、および`EmpName`子になります`First`、`Middle`と`Last`子要素です。  
+ PATH モードでは、列名は XML を作成する際のパスとして使用されます。 従業員 ID の値を含む列名は '\@' で始まっているため、**EmpID** 属性が `row` 要素に追加されます。 それ以外のすべての列の列名には、階層を示すスラッシュ ('/') が含まれています。 結果の XML では、`row` 要素の下に `EmpName` 子要素があり、`EmpName` 子要素には `First`、`Middle`、および `Last` 子要素があります。  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +172,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  PATH モードの既定では要素中心の XML が生成されます。 したがって、PATH モードのクエリで ELEMENTS ディレクティブを指定しても効力はありません。 ただし、前のクエリで示したように、ELEMENTS ディレクティブを XSINIL と組み合わせると、NULL 値に対して要素を生成する場合に便利です。  
   
- 次のクエリでは従業員の ID と名前以外に住所を取得します。 住所列の列名のパスにより、`Address`子要素を追加、`row`の子要素としての要素とアドレスの詳細の追加、`Address`要素。  
+ 次のクエリでは従業員の ID と名前以外に住所を取得します。 住所列の列名のパスにより、`row` 要素に `Address` 子要素が追加され、`Address` 要素の子要素として詳しい住所が追加されます。  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +205,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>複数の列に同一のパス プレフィックスがある場合  
- 連続した複数の列に同一のパス プレフィックスがある場合、これらの列は 1 つの名前でグループ化されます。 異なる名前空間プレフィックスが使用されている場合は、同一の名前空間にバインドされていても、パスは異なるものと見なされます。 上記のクエリでは、FirstName、MiddleName、および LastName 列は、同じ EmpName プレフィックスを共有します。そのため、それらの子として追加されます、`EmpName`要素。 これは場合にも作成するときに、`Address`前の例での要素。  
+ 連続した複数の列に同一のパス プレフィックスがある場合、これらの列は 1 つの名前でグループ化されます。 異なる名前空間プレフィックスが使用されている場合は、同一の名前空間にバインドされていても、パスは異なるものと見なされます。 上のクエリでは、FirstName 列、MiddleName 列、および LastName 列は同じ EmpName プレフィックスを共有しているため、これらは `EmpName` 要素の子として追加されます。 このことは、上記の例の `Address` 要素の生成にも該当します。  
   
 ## <a name="one-column-has-a-different-name"></a>名前の異なる列がある場合  
  変更を加えた次のクエリに示すように、異なる名前の列が間にある場合、グループは分割されます。 上のクエリで示した FirstName、MiddleName、および LastName から構成されるグループは、FirstName 列と MiddleName 列の間に住所列を追加すると分割されます。  
@@ -225,7 +225,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- その結果、クエリを 2 つ作成`EmpName`要素。 最初の`EmpName`要素には、`FirstName`の子要素、2 番目`EmpName`要素には、`MiddleName`と`LastName`子要素です。  
+ このクエリの結果、`EmpName` 要素が 2 つ作成されます。 最初の `EmpName` 要素には `FirstName` 子要素が、2 番目の `EmpName` 要素には `MiddleName` 子要素と `LastName` 子要素が含まれます。  
   
  結果を次に示します。  
   
@@ -248,4 +248,3 @@ FOR XML PATH
  [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

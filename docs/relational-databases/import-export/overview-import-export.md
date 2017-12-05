@@ -1,27 +1,28 @@
 ---
 title: "SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする | Microsoft Docs"
 ms.custom: 
-ms.date: 10/17/2017
-ms.prod: sql-server-2016
+ms.date: 10/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする
-さまざまな方法を使って、SQL Server と Azure SQL Database のデータをインポートしておよびエクスポートできます。 Transact-SQL ステートメント、コマンドライン ツール、ウィザードなどの方法があります。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] さまざまな方法を使って、SQL Server と Azure SQL Database のデータをインポートやエクスポートができます。 Transact-SQL ステートメント、コマンドライン ツール、ウィザードなどの方法があります。
 
 また、インポートおよびエクスポートするデータの形式にもさまざまな種類があります。 フラット ファイル、Excel、主要なリレーショナル データベース、さまざまなクラウド サービスなどの形式があります。
 
@@ -35,6 +36,7 @@ BCP コマンドライン ユーティリティを使って、データをイン
 
 ### <a name="use-the-import-flat-file-wizard"></a>フラット ファイルのインポート ウィザードを使用する
 インポート ウィザードやエクスポート ウィザードおよびその他のツールで使用可能な構成オプションが必ずしもすべて必要ではない場合、SQL Server Management Studio (SSMS) の**フラット ファイルのインポート ウィザード**を使用して、テキスト ファイルを SQL Server にインポートできます。 詳細については、次の記事をご覧ください。
+- [SQL のフラット ファイルのインポート ウィザード](import-flat-file-wizard.md)
 - [SQL Server Management Studio 17.3 の新機能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [SSMS 17.3 の新しいフラット ファイルのインポート ウィザードの概要](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -65,4 +67,3 @@ SQL Server インポートおよびエクスポート ウィザードを使っ�
 
 ## <a name="next-steps"></a>次の手順
 インポートまたはエクスポート タスクをどこから始めればよいかわからない場合は、SQL Server インポートおよびエクスポート ウィザードを検討してください。 概要については、「[簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)」をご覧ください。
-

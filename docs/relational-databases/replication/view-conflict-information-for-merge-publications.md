@@ -2,15 +2,16 @@
 title: "マージ パブリケーションの競合情報の表示 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], viewing conflicts
 - sp_helpmergeconflictrows
@@ -18,20 +19,19 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - sp_helpmergearticleconflicts
 ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e4ea6a407b8e79e0263c1d78ad2a192ea7253e06
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5ea35bf25df09f548f4edf619f481a32fe9132c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-conflict-information-for-merge-publications"></a>マージ パブリケーションの競合情報の表示
-  マージ レプリケーションの競合を解決すると、優先されなかった行のデータが競合テーブルに書き込まれます。 この競合データは、レプリケーション ストアド プロシージャを使用してプログラムから表示できます。 詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] マージ レプリケーションの競合を解決すると、優先されなかった行のデータが競合テーブルに書き込まれます。 この競合データは、レプリケーション ストアド プロシージャを使用してプログラムから表示できます。 詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 ### <a name="to-view-conflict-information-and-losing-row-data-for-all-types-of-conflicts"></a>すべての種類の競合に関する競合情報と優先されなかった行のデータを表示するには  
   
@@ -80,7 +80,6 @@ ms.lasthandoff: 06/22/2017
     -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)を実行します。 手順 1. で確認した、競合が発生しているソース テーブルの名前を **@source_object**」を参照してください。 (省略可) 特定のパブリケーションの競合情報が返されるように制限するには、 **@publication** に値を指定します。 これにより、サブスクライバーに格納されている削除競合の情報が返されます。  
   
 ## <a name="see-also"></a>参照  
- [Advanced Merge Replication Conflict Detection and Resolution (マージ レプリケーションの競合検出および解決の詳細)](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [マージ レプリケーションの競合検出および解決の詳細](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   
-

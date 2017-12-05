@@ -2,30 +2,32 @@
 title: "初期スナップショットの作成および適用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 807e2b855264f77959faa4699d761739af3e5137
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6d9be4d647441a82413c908a5207adec8efdf3e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、初期スナップショットを作成および適用する方法について説明します。 パラメーター化されたフィルターを使用するマージ パブリケーションでは、2 つの部分から成るスナップショットが必要です。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、初期スナップショットを作成し適用する方法について説明します。 パラメーター化されたフィルターを使用するマージ パブリケーションでは、2 つの部分から成るスナップショットが必要です。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
  **このトピックの内容**  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  スナップショットを生成するパブリケーションを右クリックして、 **[スナップショットの生成]**をクリックします。  
   
-3.  スナップショット エージェントの状態を表示するには、 **[エージェント]** タブをクリックします。 詳細情報については、グリッドでスナップショット エージェントを右クリックし、 **[詳細表示]**をクリックしてください。  
+3.  スナップショット エージェントの状態を表示するには、 **[エージェント]** タブをクリックします。詳細情報については、グリッドでスナップショット エージェントを右クリックし、 **[詳細表示]**をクリックしてください。  
   
 #### <a name="to-apply-a-snapshot"></a>スナップショットを適用するには  
   
@@ -163,13 +165,13 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  スナップショット エージェントは、パブリッシャーが作成された後でスナップショットを生成します。 レプリケーション管理オブジェクト (RMO) およびレプリケーション エージェント機能への直接的なマネージ コード アクセスを使用して、これらのスナップショットをプログラムで生成できます。 使用するオブジェクトは、レプリケーションの種類によって異なります。 スナップショット エージェントを同期的に開始する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> オブジェクトを使用し、非同期的に開始する場合はエージェント ジョブを使用します。 初期スナップショットの生成後、サブスクリプションを最初に同期するときに、初期スナップショットをサブスクライバーに転送して適用することができます。 既存のスナップショットに最新の有効なデータが含まれていない場合は、エージェントを再実行する必要があります。 詳細については、「[Maintain Publications](../../relational-databases/replication/publish/maintain-publications.md)」(パブリケーションの管理) を参照してください。  
   
 > [!IMPORTANT]  
->  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+>  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>スナップショット エージェント ジョブを非同期的に開始して、スナップショット パブリケーションまたはトランザクション パブリケーションの初期スナップショットを生成するには  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを読み込みます。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
@@ -177,7 +179,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出して、このパブリケーションのスナップショットを生成するエージェント ジョブを開始します。  
   
-6.  (省略可) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> の値が **true** である場合は、スナップショットをサブスクライバーに使用できます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> の値が **true**である場合は、スナップショットをサブスクライバーに使用できます。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>スナップショット エージェント ジョブを同期的に実行して、スナップショット パブリケーションまたはトランザクション パブリケーションの初期スナップショットを生成するには  
   
@@ -191,11 +193,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - ディストリビューターの名前  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - パブリッシャーに接続するときに Windows 認証を使用するには、<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値。パブリッシャーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> の値、および <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A>。 推奨されるのは、Windows 認証です。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - パブリッシャーへの接続時に Windows 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> を指定します。パブリッシャーへの接続時に <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> を指定し、 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に値を指定します。 推奨されるのは、Windows 認証です。  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - ディストリビューターに接続するときに Windows 認証を使用するには、<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値。ディストリビューターに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> の値、および <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A>。 推奨されるのは、Windows 認証です。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - ディストリビューターへの接続時に Windows 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> を指定します。ディストリビューターへの接続時に <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> を指定し、 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に値を指定します。 推奨されるのは、Windows 認証です。  
   
-2.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A> に <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> または <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> を設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> に <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> または <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>を設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> メソッドを呼び出します。  
   
@@ -203,7 +205,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを読み込みます。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
@@ -211,7 +213,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出して、このパブリケーションのスナップショットを生成するエージェント ジョブを開始します。  
   
-6.  (省略可) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> の値が **true** である場合は、スナップショットをサブスクライバーに使用できます。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> の値が **true**である場合は、スナップショットをサブスクライバーに使用できます。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>スナップショット エージェントを同期的に実行して、マージ パブリケーションの初期スナップショットを生成するには  
   
@@ -225,11 +227,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - ディストリビューターの名前  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - パブリッシャーに接続するときに Windows 認証を使用するには、<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値。パブリッシャーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> の値、および <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A>。 推奨されるのは、Windows 認証です。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - パブリッシャーへの接続時に Windows 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> を指定します。パブリッシャーへの接続時に <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> を指定し、 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に値を指定します。 推奨されるのは、Windows 認証です。  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - ディストリビューターに接続するときに Windows 認証を使用する <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値。ディストリビューターに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> の値、および <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A>。 推奨されるのは、Windows 認証です。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - ディストリビューターへの接続時に Windows 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> を指定します。ディストリビューターへの接続時に <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 認証を使用する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> を指定し、 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に値を指定します。 推奨されるのは、Windows 認証です。  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> に <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A> を設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> に <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>を設定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> メソッドを呼び出します。  
   

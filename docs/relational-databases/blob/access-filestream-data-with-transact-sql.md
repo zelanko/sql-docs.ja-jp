@@ -2,29 +2,30 @@
 title: "Transact-SQL による FILESTREAM データへのアクセス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], Transact-SQL
+helpviewer_keywords: FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55caf01faba0be9c5277cbea435b256910e3dfc5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: d2a1d91ebbefe9cb4b505d5678f6239eea0ecfc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL による FILESTREAM データへのアクセス
-  このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT、UPDATE、および DELETE ステートメントを使用して FILESTREAM データを管理する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT、UPDATE、DELETE ステートメントを使用して FILESTREAM データを管理する方法について説明します。  
   
 > [!NOTE]  
 >  このトピックの例を実行するには、「 [FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md) 」および「 [FILESTREAM データを格納するテーブルを作成する方法](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)」に基づいて、FILESTREAM が有効なデータベースとテーブルを作成する必要があります。  
@@ -47,9 +48,9 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[FILESTREAM#FS_InsertData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_3.sql)]  
   
- すべてのデータを `Archive`.`dbo.Records` テーブルから選択すると、次の表に示すような結果になります。 ただし、 `Id` 列に格納される GUID は異なります。  
+ すべてのデータを `Archive.dbo.Records` テーブルから選ぶと、次の表に示すような結果になります。 ただし、 `Id` 列に格納される GUID は異なります。  
   
-|Id|SerialNumber|[再開]|  
+|Id|SerialNumber|グラフ|  
 |--------|------------------|------------|  
 |`C871B90F-D25E-47B3-A560-7CC0CA405DAC`|`1`|`NULL`|  
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[FILESTREAM#FS_DeleteData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_5.sql)]  
   
- すべてのデータを `dbo.Archive` テーブルから選択すると、その行が削除されます。 関連付けられていたファイルは使用できなくなります。  
+ すべてのデータを `Archive.dbo.Records` テーブルから選ぶと、行が削除されて、関連付けられたファイルを使うことができなくなります。  
   
 > [!NOTE]  
 >  基になるファイルは、FILESTREAM ガベージ コレクターによって削除されます。  

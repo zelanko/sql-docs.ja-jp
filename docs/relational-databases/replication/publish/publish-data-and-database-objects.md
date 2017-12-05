@@ -2,11 +2,13 @@
 title: "データとデータベース オブジェクトのパブリッシュ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publish-data-and-database-objects"></a>データとデータベース オブジェクトのパブリッシュ
-  パブリケーションの作成時には、パブリッシュするテーブルやその他のデータベース オブジェクトを選択します。 レプリケーションを使用すると、以下のデータベース オブジェクトをパブリッシュできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] パブリケーションの作成時には、パブリッシュするテーブルやその他のデータベース オブジェクトを選択します。 レプリケーションを使用すると、以下のデータベース オブジェクトをパブリッシュできます。  
   
 |データベース オブジェクト|スナップショット レプリケーションおよびトランザクション レプリケーション|マージ レプリケーション|  
 |---------------------|--------------------------------------------------------|-----------------------|  
@@ -121,7 +123,7 @@ ms.lasthandoff: 06/22/2017
   
  レプリケーションでテーブルをパブリッシュする場合、宣言された参照整合性 (主キー制約、参照に関する制約、一意制約)、インデックス、ユーザー DML トリガー (DDL トリガーはレプリケートできません)、拡張プロパティ、照合順序などの、サブスクライバーにコピーするスキーマ オブジェクトを指定できます。 拡張プロパティは、パブリッシャーとサブスクライバー間で初期同期を実行するときにのみレプリケートされます。 初期同期の完了後に拡張プロパティを追加または変更した場合、その変更はレプリケートされません。  
   
- スキーマ オプションを指定するには、「[スキーマ オプションの指定](../../../relational-databases/replication/publish/specify-schema-options.md)」または「<xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.</xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>」を参照してください。  
+ スキーマ オプションを指定する場合は、「[スキーマ オプションの指定](../../../relational-databases/replication/publish/specify-schema-options.md)」または「<xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>」を参照してください。  
   
 ### <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス  
  レプリケーションでは、パーティション テーブルとパーティション インデックスのパブリッシュがサポートされます。 サポート レベルは、使用するレプリケーションの種類、パブリケーションに指定するオプション、およびパーティション テーブルに関連付けられたアーティクルによって異なります。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。  
@@ -262,4 +264,3 @@ ms.lasthandoff: 06/22/2017
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-
