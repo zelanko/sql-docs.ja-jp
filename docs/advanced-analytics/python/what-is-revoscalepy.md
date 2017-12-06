@@ -2,7 +2,7 @@
 title: "Introducing revoscalepy |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -11,11 +11,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad525f173ad6082f587324b41af768816077e371
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy の概要
 
@@ -89,7 +89,7 @@ CTP 2.0 以降で、SQL Server 2017 には、次の機械学習アルゴリズ�
 |`rx_predict` | トレーニング済みモデルから予測を生成します。|`rx_predict_ex`CTP 2.0 で|
 |`rx_summary` | モデルの概要を生成します。||
 
-Python のバージョンので新しい機械学習アルゴリズムが指定されても[MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+Python のバージョンので新しい機械学習アルゴリズムが指定されても[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | 関数| Description|
 | ------ | ------ |

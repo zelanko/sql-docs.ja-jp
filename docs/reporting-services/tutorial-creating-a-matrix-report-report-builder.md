@@ -2,9 +2,12 @@
 title: "チュートリアル: マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
 このチュートリアルでは、入れ子になった行および列グループ内のサンプル売上データのマトリックスを使用して、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成する方法について説明します。 
@@ -351,7 +354,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  CanGrow プロパティが **True**に設定されていることを確認します。  
   
-5.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]****** をクリックして、テキストをセルの中央に配置します。  
+5.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]** をクリックして、テキストをセルの**中央**に配置します。  
  
 6. Territory 列の幅を 1/2 インチに変更して、列タイトルを削除します。  
 6.  **[実行]** をクリックして、レポートをプレビューします。  

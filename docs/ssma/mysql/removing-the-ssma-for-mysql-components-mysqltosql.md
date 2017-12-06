@@ -1,10 +1,13 @@
 ---
 title: "MySQL コンポーネント (MySQLToSql) に対して、SSMA を削除する |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 688f17b4f133dbbd47e9930e812bf20459f153e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3dc6346130e2e67dc42383827598ca91c1593947
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>MySQL コンポーネント (MySQLToSql) に対して、SSMA を削除します。
 終了したらに mysql データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA コンポーネントをアンインストールする場合があります。 クライアント コンポーネントは、いつでもアンインストールできます。 ただし、拡張機能パックからをアンインストールする場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、次に、SSMA をサポートしなく MySQL からサーバー側のデータ移行のエンジンを使用して、ターゲット データベース (SQL Server または SQL Azure) へのデータの移行。  

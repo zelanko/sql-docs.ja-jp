@@ -2,7 +2,7 @@
 title: "レッスン 1: サンプル データのダウンロード |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59934357ad7f1a8f52a893209d0394760418d386
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 29adfa6c16aa4acd12e846e15bc5f1afd44e5f86
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-1-download-the-sample-data"></a>レッスン 1: サンプル データをダウンロードします。
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/09/2017
 
 1.  Windows PowerShell コマンド コンソールを開きます。
   
-    保存先のディレクトリの作成や、指定した宛先へのファイルの書き込みに管理者特権が必要な場合、**[ 管理者として実行]** オプションを使用します。
+    保存先のディレクトリの作成や、指定した宛先へのファイルの書き込みに管理者特権が必要な場合、**[管理者として実行]** オプションを使用します。
   
 2.  パラメーター *DestDir* の値を任意のローカル ディレクトリに変更し、次の PowerShell コマンドを実行します。  ここで使用した既定値は **TempRSQL**です。
   

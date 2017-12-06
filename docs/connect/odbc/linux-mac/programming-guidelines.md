@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -75,21 +75,36 @@ MacOS および Linux の ODBC ドライバーのこのリリースでは、次�
 
 ## <a name="character-set-support"></a>文字セットのサポート
 
-クライアントのエンコーディングには、次のいずれかを指定できます。
+次の文字セットのいずれかの SQLCHAR データは、ドライバーによってサポートされます。
+
   -  UTF-8
-  -  ISO 8859-1
-  -  ISO 8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO 8859-1/CP1252
+  -  ISO 8859-2/CP1250
   -  ISO 8859-3
   -  ISO 8859-4
   -  ISO 8859-5
   -  ISO 8859-6
   -  ISO 8859-7
-  -  ISO 8859-8
-  -  ISO 8859-9
+  -  ISO 8859-8/CP1255
+  -  ISO 8859-9/CP1254
   -  ISO 8859-13
   -  ISO 8859-15
-  
-SQLCHAR データは、サポートされている文字セットのいずれかにする必要があります。 SQLWCHAR データは UTF 16LE (リトル エンディアン) である必要があります。  
+
+接続時に、ドライバーに読み込まれるプロセスの現在のロケールを検出します。 ドライバーはその SQLCHAR (ナロー文字) のデータのエンコードを使用、上記のサポートされているエンコーディングのいずれかである場合それ以外の場合、既定値は utf-8 です。 すべてのプロセスは既定では、"C"ロケールで開始 (そして、utf-8 を既定値に、ドライバーが発生するため)、使用する場合は、アプリケーションは、上記のエンコーディングのいずれかを使用する必要がある、 **setlocale、_wsetlocale**前に適切なロケールを設定する関数接続です。目的のロケールを明示的に指定またはなどの空の文字列を使用して、`setlocale(LC_ALL, "")`環境のロケール設定を使用します。
+
+SQLWCHAR データは UTF 16LE (リトル エンディアン) である必要があります。
 
 SQLDescribeParameter でサーバーの SQL 型を指定していない場合、ドライバーは SQLBindParameter の *ParameterType* パラメーターに指定された SQL 型を使用します。 SQLBindParameter に SQL_VARCHAR などのナロー文字 SQL 型が指定されている場合、ドライバー、提供されたデータ、クライアント コード ページからに変換既定値[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]コード ページです。 (既定値[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]コード ページは一般に 1252 です)。クライアントのコード ページがサポートされていない場合は、utf-8 に設定されます。 この場合、ドライバー utf-8 データを既定のコード ページとし、変換します。 ただし、データが失われる可能性があります。 コード ページ 1252 で文字を表現できない場合、ドライバーは文字を疑問符 ('?') に変換します。 このデータの損失を回避するには、SQLBindParameter に SQL_NVARCHAR などの Unicode SQL 文字型を指定します。 この場合、ドライバーは、utf-8 エンコードで utf-16 データの損失なしで指定された Unicode データを変換します。
 

@@ -22,16 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec112810e691aceac5085f3ded941564331f74b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  カーソルを開きます。 sp_cursoropen は、カーソルやカーソル オプションに関連付けられている SQL ステートメントを定義し、カーソルを設定します。 sp_cursoropenis の組み合わせに相当する、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントの DECLARE_CURSOR と OPEN です。 このプロシージャは、ID = 2 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
+  カーソルを開きます。 sp_cursoropen は、カーソルやカーソル オプションに関連付けられている SQL ステートメントを定義し、カーソルを設定します。 sp_cursoropen の組み合わせに相当する、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントの DECLARE_CURSOR と OPEN です。 このプロシージャは、ID = 2 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

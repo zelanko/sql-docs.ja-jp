@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>入れ子になったテーブル (Analysis Services - データ マイニング)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データを、ケース テーブル内の一連のケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *入れ子になったテーブル*を使用して、このようなケースを扱うための独自の方法が用意されています。 次の図は、入れ子になったテーブルの概念を示しています。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  たとえば入れ子になったテーブルに、**Product**、**ProductQuantity****ProductPrice** の各列が含まれていて、入れ子になったテーブルのキーとして **Product** を選択した場合に、**ProductQuantity** をマイニング構造に追加して入力として使用することができます。  
   
 ## <a name="filtering-nested-table-data"></a>入れ子になったテーブルのデータのフィルター処理  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データ マイニング モデルのトレーニング用やテスト用のデータに対するフィルターを作成できます。 フィルターを使用すると、モデルの構成に影響を与えたり、ケースのサブセットでモデルをテストしたりできます。 入れ子になったテーブルにフィルターを適用することもできます。 ただし、入れ子になったテーブルで使用できる構文には制限があります。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データ マイニング モデルのトレーニング用やテスト用のデータに対するフィルターを作成できます。 モデルの構成に影響する、またはケースのサブセットでモデルをテストする、フィルターを使用できます。 入れ子になったテーブルにフィルターを適用することもできます。 ただし、入れ子になったテーブルで使用できる構文には制限があります。  
   
  入れ子になったテーブルでは、属性の存在の有無をテストするためによくフィルターが使用されます。 たとえば、フィルターを適用することにより、モデルで使用するケースを、入れ子になったテーブルに指定した値を持つケースのみに制限したり、 特定の品目を購入したことがない顧客のみに制限したりすることができます。  
   

@@ -1,10 +1,13 @@
 ---
 title: "追加して、アクセスを削除してデータベース ファイル (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -36,11 +39,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db0c8970cb9a4cd47da5982d0ecc8c1e81a5ccbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b20565329e899f2f54784533ad9efc977e3ab5af
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>追加して、Access データベース ファイル (AccessToSQL) を削除します。
 アクセス データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure、SSMA プロジェクトに 1 つまたは複数の Access データベースを追加する必要があります。 これらのデータベースは、Access 97 以降にする必要があります。 アクセスの以前のバージョンからのデータベースがある場合は、新しいバージョンにデータベースを変換する必要があります。 これを行うを開き、SSMA を追加する前に、Access 97 またはそれ以降のバージョンでデータベースを保存しています。  
