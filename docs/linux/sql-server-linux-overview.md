@@ -27,7 +27,7 @@ SQL Server 2017 が Linux で実行されます。 ような多くの機能と�
 
 ## <a name="install"></a>Install
 
-、作業を開始するには、次のクイック スタート チュートリアルのいずれかを使用して Linux に SQL Server をインストールします。
+作業を開始するには、次のクイック スタート チュートリアルのいずれかの方法により Linux に SQL Server をインストールします。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
