@@ -1,10 +1,13 @@
 ---
 title: "SharePoint および Reporting Services サーバーのサポートされる組み合わせ | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 3728854cebbbfb07b8540c91accc73cfa17649cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 35357b59e8e597fbbc0de14cccfda1e478a7c358
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint および Reporting Services サーバーのサポートされる組み合わせ
 
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/09/2017
 SharePoint モードでインストールされている SQL Server Reporting Services レポート サーバーには、SharePoint のバージョン、および SharePoint サーバーにインストールする SharePoint 製品の SQL Server Reporting Services アドイン (rsSharePoint.msi) が必要です。 このトピックでは、サポートされる組み合わせの概要を説明します。
 
 > [!NOTE]
-> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
 ## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>SharePoint および Reporting Services コンポーネントのサポートされる組み合わせ
 

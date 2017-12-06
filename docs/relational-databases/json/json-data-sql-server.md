@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="json-data-sql-server"></a>JSON データ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -279,7 +279,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   行区切りの JSON ファイルが Azure Blob Storage または Hadoop ファイル システムに格納されている場合、Polybase を使用して JSON テキストを読み込み、Transact-SQL コードでそれを解析してテーブルに読み込むことができます。  
   
 ## <a name="test-drive-built-in-json-support"></a>組み込みの JSON サポートを試用する  
- **AdventureWorks サンプル データベースを使用して、組み込みの JSON サポートを試用できます。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://www.microsoft.com/en-us/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 SQL Server 2016 のインスタンスにサンプル データベースを復元したら、サンプル ファイルを解凍し、JSON フォルダーから "JSON Sample Queries procedures views and indexes.sql" ファイルを開きます。 このファイルのスクリプトを実行して JSON データとして既存のデータの一部の形式を再度設定し、JSON データに対してサンプル クエリとレポートを実行してから、JSON データにインデックスを付けて JSON をインポートおよびエクスポートします。  
+ **AdventureWorks サンプル データベースを使用して、組み込みの JSON サポートを試用できます。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://www.microsoft.com/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 SQL Server 2016 のインスタンスにサンプル データベースを復元したら、サンプル ファイルを解凍し、JSON フォルダーから "JSON Sample Queries procedures views and indexes.sql" ファイルを開きます。 このファイルのスクリプトを実行して JSON データとして既存のデータの一部の形式を再度設定し、JSON データに対してサンプル クエリとレポートを実行してから、JSON データにインデックスを付けて JSON をインポートおよびエクスポートします。  
   
  ファイルに含まれているスクリプトでは、次のことを実行できます。  
   

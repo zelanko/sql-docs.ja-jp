@@ -2,9 +2,12 @@
 title: "レポート ビルダーのレポート パーツおよびデータセット | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a22f1e59a693551ffb1575ffdeb351c58480b96b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2456f192a8518ed45c548d94e75e7ec0c5ae1ec9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>レポート ビルダーのレポート パーツおよびデータセット
   レポート ビルダーでレポートにデータを含める最も簡単な方法は、レポート パーツ ギャラリーからレポート パーツを追加することです。 レポート パーツには、そのレポート パーツが依存するデータセットが含まれており、 *依存データセット*と呼ばれます。 依存データセットは共有データ ソースに基づいており、埋め込みデータセットまたは共有データセットのどちらかにすることができます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
   
  埋め込みデータセットのデータおよびデータ オプションを変更するには、データセットを作成した場合と同様に、クエリなどのデータセット プロパティを編集します。  
   
- 共有データセットのデータおよびデータ オプションを変更する場合は、十分な権限があるレポート サーバーでのみ共有データセットの定義を変更できます。 また、レポート内の共有データセットのインスタンスについても、フィルターを追加し、計算フィールドを追加し、大文字と小文字の区別などのデータ オプションを変更して、カスタマイズできます。 詳細については、「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+ 共有データセットのデータおよびデータ オプションを変更する場合は、十分な権限があるレポート サーバーでのみ共有データセットの定義を変更できます。 また、レポート内の共有データセットのインスタンスについても、フィルターを追加し、計算フィールドを追加し、大文字と小文字の区別などのデータ オプションを変更して、カスタマイズできます。 詳細については、「[埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
   
  共有データセットの定義を変更する方法、またはレポート内の共有データセットに対する最新のデータ変更内容を表示する方法の詳細については、「[共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」および「[レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   
