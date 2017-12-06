@@ -2,9 +2,12 @@
 title: "Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d8013c5673a63c80f037ffab76064193db21a36
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS)
+# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートが [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 形式 (.xlsx) で表示されます。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
   
  形式は、Office Open XML です。 このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** で、ファイル拡張子は .xlsx です。  
@@ -148,7 +151,7 @@ ms.lasthandoff: 11/09/2017
   
 -   レポート ビルダーが切断モードのときにレポート ビルダーでレポートをプレビューした場合。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。  
   
--   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」をご覧ください  
+-   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  **[Excel 2003]** メニュー オプション レンダラーが表示されるように構成されている場合は、Excel と Excel 2003 の両方のオプションが次の状況で使用可能になります。  
   
@@ -200,9 +203,9 @@ ms.lasthandoff: 11/09/2017
  一致するものが見つからなかった場合は、プリンターの既定のページ サイズが使用されます。 用紙方向は、ページの幅が高さよりも小さければ [縦] に、それ以外の場合は [横] に設定されます。  
   
 ##  <a name="WorksheetTabNames"></a> ワークシートのタブ名  
- レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"**である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"**、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"**となります。  
+ レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"** である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"**、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"** となります。  
   
- 改ページによって生じたすべてのレポート ページに新しいページ名がある場合は、各ワークシートには関連するページ名が付けられます。 ただし、これらのページ名が一意でない場合があります。 ページ名が一意でない場合、ワークシートには最初に説明したページ名と同じ方法で名前が付けられます。 たとえば、2 つのグループのページ名が **"東北部の売り上げ"**である場合、1 つのワークシートに **"東北部の売り上げ"**という名前が付けられ、もう一方のワークシートには **"東北部の売り上げ1"**という名前が付けられます。  
+ 改ページによって生じたすべてのレポート ページに新しいページ名がある場合は、各ワークシートには関連するページ名が付けられます。 ただし、これらのページ名が一意でない場合があります。 ページ名が一意でない場合、ワークシートには最初に説明したページ名と同じ方法で名前が付けられます。 たとえば、2 つのグループのページ名が **"東北部の売り上げ"** である場合、1 つのワークシートに **"東北部の売り上げ"** という名前が付けられ、もう一方のワークシートには **"東北部の売り上げ1"** という名前が付けられます。  
   
  レポートに、最初のページ名も改ページに関連付けられたページ名もない場合、ワークシートのタブには、**"シート1"**、**"シート2"**と順番に続く既定の名前が使用されます。  
   
@@ -249,7 +252,7 @@ ms.lasthandoff: 11/09/2017
 -   Excel の制限により、アウトラインの入れ子レベルは最大 7 です。  
   
 ### <a name="document-map"></a>ドキュメント マップ  
- レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、**"Document map"**という名前が付けられます。  
+ レポートにドキュメント マップ ラベルが存在する場合、そのドキュメント マップがレンダリングされます。 ドキュメント マップは、表紙の Excel ワークシートとして、ブックの最初のタブ位置に挿入され、レンダリングされます。 ワークシートには、**"Document map"** という名前が付けられます。  
   
  ドキュメント マップに表示されるテキストは、レポート アイテムまたはレポート グループの DocumentMapLabel プロパティによって決まります。 ドキュメント マップ ラベルは、先頭列の先頭行を起点とし、レポートにおける出現順に一覧表示されます。 各ドキュメント マップ ラベルのセルは、レポートでの見出しの階層に合わせてインデントされます。 それぞれのインデント レベルは、ラベルを後続の列に配置することによって表現されます。 Excel でサポートされるアウトラインの入れ子レベルは、最大 256 です。  
   
