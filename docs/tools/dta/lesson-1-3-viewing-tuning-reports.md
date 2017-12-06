@@ -2,9 +2,12 @@
 title: "チューニング レポートの表示 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>レッスン 1 ~ 3 - チューニング レポートの表示
-このレッスンの前の実習では、MySession チューニング セッションの結果として生成されたデータベース エンジン チューニング アドバイザーの推奨設定内で、データベース オブジェクトを作成または削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを表示しました。 MySession チューニング セッションは「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成しました。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このレッスンの前の実習で参照する、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトを作成または MySession チューニング セッションの結果として生成されたデータベース エンジン チューニング アドバイザーの推奨事項でデータベース オブジェクトを削除します。 MySession チューニング セッションは「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成しました。  
   
 スクリプトを表示する機能は、チューニング結果の実装に利用できるため非常に便利ですが、データベース エンジン チューニング アドバイザーにはこの他にも便利なレポートが多数用意されています。 これらのレポートは、チューニングするデータベースの既存の物理設計構造、および推奨される構造に関する情報を提供します。 次の実習で説明するように、チューニング レポートを表示するには **[レポート]** タブをクリックします。 この実習では、「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md) 」および「 [チューニング推奨設定の表示](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md)」で作成した MySession および EvaluateMySession チューニング セッションを使用します。  
   

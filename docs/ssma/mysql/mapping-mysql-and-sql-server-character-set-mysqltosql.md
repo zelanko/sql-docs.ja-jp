@@ -1,10 +1,13 @@
 ---
 title: "MySQL および SQL Server の文字のマッピング (MySQLToSQL) を設定 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3845c66ea4407b48e371f8b2ec0ad7b9da7edfa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) を設定する MySQL および SQL Server の文字のマッピング
 MySQL の文字データ型、式およびリテラルの文字セット (文字セット) を指定できます。  
@@ -118,12 +121,12 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
     |cp 1251|Windows (キリル)|CHAR と VARCHAR (既定値)|  
     |cp 1256|Windows アラビア語|CHAR と VARCHAR (既定値)|  
     |cp 1257|Windows バルト言語|CHAR と VARCHAR (既定値)|  
-    |binary|バイナリの擬似文字セット|CHAR と VARCHAR (既定値)|  
+    |[バイナリ]|バイナリの擬似文字セット|CHAR と VARCHAR (既定値)|  
     |geostd8|GEOSTD8 グルジア語|CHAR と VARCHAR (既定値)|  
     |cp932|Windows 日本語の SJIS|NCHAR と NVARCHAR (既定値)|  
     |eucjpms|Windows 日本語の UJIS|NCHAR と NVARCHAR (既定値)|  
   
-2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:**データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。。  
+2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:**データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。  
   
     1.  タイトル、グリッドの最初の列**文字セット名**文字セットの名前が含まれています。  
   

@@ -3,8 +3,11 @@ title: "アトミック化 (XQuery) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6be2574663ce5b8f2cb51161033799543f4ca2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b35d5e55a2d0e913586e7c60d161e4e2e85c6cb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="atomization-xquery"></a>アトミック化 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   アトミック化とは、アイテムの型指定された値を抽出するプロセスです。 このプロセスは、特定の環境では暗黙的に実行されます。 算術演算子や比較演算子などの一部の XQuery 演算子は、このプロセスに依存します。 たとえば、ノードに直接算術演算子を適用する場合、ノードの型指定された値が最初に取得暗黙的に呼び出すことによって、[データ関数](../xquery/data-accessor-functions-data-xquery.md)です。 これにより、アトミック値がオペランドとして算術演算子に渡されます。  
   
@@ -47,7 +50,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 暗黙のアトミック化の別の例として、算術演算子を使用するケースがあります。 **+** 演算子はアトミック値を必要と**data()** LaborHours 属性のアトミック値を取得するが暗黙的に適用します。 クエリがの Instructions 列に対して指定された、 **xml** ProductModel テーブルを入力します。 次のクエリでは、LaborHours 属性を 3 回返します。 このクエリでは、次の点に注意してください。  
+ 暗黙のアトミック化の別の例として、算術演算子を使用するケースがあります。  **+** 演算子はアトミック値を必要と**data()** LaborHours 属性のアトミック値を取得するが暗黙的に適用します。 クエリがの Instructions 列に対して指定された、 **xml** ProductModel テーブルを入力します。 次のクエリでは、LaborHours 属性を 3 回返します。 このクエリでは、次の点に注意してください。  
   
 -   OrignialLaborHours 属性の構築では、(`$WC/@LaborHours`) によって返される単一シーケンスにアトミック化が暗黙的に適用されます。 LaborHours 属性の型指定された値が、OrignialLaborHours に代入されます。  
   

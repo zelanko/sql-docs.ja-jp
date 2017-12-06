@@ -3,8 +3,11 @@ title: "プロジェクトの設定 (変換) (SybaseToSQL) |Microsoft ドキュ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07ba161d9f053e35c80f9c22627a55a4f1cab003
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 860a6758367999edcd264dab12229d4f23bbf7ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を Sybase Adaptive Server Enterprise (ASE) 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の構文。  
@@ -382,7 +385,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
 **NEXT_IDENTITY 関数**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の NEXT_IDENTITY システム関数ではありません。  
   
--   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます。。  
+-   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます。  
   
 -   エラー メッセージを印刷するは、その NEXT_IDENTITY が発生するたびに、**エラーでマーク**です。 SSMA は、関数への参照は変換されませんし、エラー コメントを指定してステートメントをマークします。  
   

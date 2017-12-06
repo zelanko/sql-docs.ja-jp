@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON |オフ}  
  ときに**ON**、統計サンプリング比率が明示的に指定されていない後続の更新プログラムの作成のサンプリングの割合が保持されます。 ときに**OFF**、統計サンプリング率はサンプリング比率が明示的に指定されていない後続の更新で既定のサンプリングをリセットします。 既定値は**OFF**です。 
  
- **適用されます**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。    
+ **適用されます**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) を通じて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (以降で [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1)。    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -176,7 +176,7 @@ CREATE STATISTICS statistics_name
 > [!WARNING]  
 >  このオプションを使用すると、最適ではないクエリ プランが作成されることがあります。 このオプションは慎重に使用してください。特に、資格のあるシステム管理者だけが使用することをお勧めします。  
   
- AUTO_STATISTICS_UPDATE オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md). 無効にして、統計の更新プログラムを再有効化の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。  
+ AUTO_STATISTICS_UPDATE オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 無効にして、統計の更新プログラムを再有効化の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。  
   
  INCREMENTAL = { ON | OFF }  
  ときに**ON**、作成される統計は、パーティションごとの統計はします。 ときに**OFF**、すべてのパーティションの統計が結合されます。 既定値は**OFF**です。  

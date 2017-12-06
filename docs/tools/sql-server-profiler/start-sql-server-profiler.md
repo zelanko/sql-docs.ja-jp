@@ -2,9 +2,12 @@
 title: "SQL Server Profiler の実行 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 7/7/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3ad9d4d4762a085ee63ce142c6998af07b3c018c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f9327a1cdb70be829701fa0710f5833545f8a0d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler の実行
-  実行することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、さまざまな方法でのトレースの収集をサポートするために出力をさまざまなシナリオでします。 開始することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、Windows 10 から**開始**] メニューの [から、**ツール**メニューの[!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニング アドバイザーと複数の場所から[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]実行することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、さまざまな方法でのトレースの収集をサポートするために出力をさまざまなシナリオでします。 開始することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、Windows 10 から**開始**] メニューの [から、**ツール**メニューの[!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニング アドバイザーと複数の場所から[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
   
 初めて起動すると[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]選択**新しいトレース**から、**ファイル**メニューで、アプリケーションが表示されます、**サーバーへの接続**を指定する ダイアログ ボックス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続します。  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 の [スタート] メニューから SQL Server Profiler を起動するには  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
 - Windows 認証モードで、実行するユーザー アカウント[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]のインスタンスに接続する権限が必要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
-- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でトレースを実行するには、ユーザーが ALTER TRACE 権限も持っている必要があります。  
+- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でトレースを実行するには、ユーザーが ALTER TRACE 権限も持っている必要があります。  
 
 ## <a name="next-steps"></a>次の手順  
  [SQL Server Profiler の概要](../../tools/sql-server-profiler/sql-server-profiler.md)   

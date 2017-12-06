@@ -2,9 +2,12 @@
 title: "クライアント プロトコル (SQL Server 構成マネージャー) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56ec6c8b1118916087c21b9514fdc4d311f04790
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ca2e6a4fafa808fd4c32c3033b7c83983f5454f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>クライアント プロトコル (SQL Server 構成マネージャー)
-  このコンピューター上の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントが使用するプロトコルの順序を構成するには、コンソール ペインで **[クライアント プロトコル]** を右クリックして **[プロパティ]**をクリックするか、詳細ペインでプロトコルを右クリックして **[順序]**をクリックします。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]プロトコルが使用する順序を構成する、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このコンピューター上のクライアントを右クリックして**ClientProtocols**をクリックしてコンソール ウィンドウ、**プロパティ**、または右クリックしをクリックして詳細ウィンドウで、プロトコル**順序**です。  
   
  このコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントが使用するクライアント プロトコルのプロパティを構成するには、コンソール ペインで **[クライアント プロトコル]**をクリックし、詳細ペインで目的のプロトコルを右クリックして **[プロパティ]**をクリックします。  
   

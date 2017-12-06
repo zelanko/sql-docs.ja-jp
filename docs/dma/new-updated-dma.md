@@ -1,32 +1,28 @@
 ---
-title: "更新済み - Tools for SQL Server のドキュメント |Microsoft ドキュメント"
-description: "最近変更したドキュメントについては、Tools for Microsoft SQL Server の更新されたコンテンツのスニペットを表示します。"
+title: "更新済み - SQL Server ドキュメントの DMA |Microsoft ドキュメント"
+description: "更新されたコンテンツで最近変更したドキュメントについては、データ移行アシスタント (DMA) 用 Microsoft SQL Server のスニペットを表示します。"
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: 
-ms.component: misc
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
 ms.author: genemi
-ms.workload: tools
-ms.openlocfilehash: f509c3509920c0098e76ed7e86a2ac16cfd09c53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>新規または最近更新された: SQL Server のツール
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>新規または最近更新された: SQL server Migration Assistant (DMA) データ
+
 
 
 ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。
@@ -38,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 
 
 - *更新プログラムの日付範囲:* &nbsp; **2017 年-09-28** &nbsp;対&nbsp; **2017 年-12-02**
-- *サブジェクト領域:* &nbsp; **Tools for SQL Server**です。
+- *サブジェクト領域:* &nbsp; **データ移行アシスタント (DMA) for SQL Server**です。
 
 
 

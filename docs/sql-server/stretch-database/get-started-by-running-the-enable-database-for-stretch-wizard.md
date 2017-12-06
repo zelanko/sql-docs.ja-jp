@@ -2,10 +2,10 @@
 title: "まずはデータベースのストレッチの有効化ウィザードを実行する | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-stretch
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2ccd1b0f7c5b3c15d0871d53690b81465d21063
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -80,26 +80,26 @@ ms.lasthandoff: 11/20/2017
 |**[サイズ (KB)]**|テーブルのサイズを KB で指定します。|  
   
 ## <a name="optionally-provide-a-row-filter"></a>オプションで行フィルターを指定する  
- 移行する行を選択するフィルター機能を指定する場合に、**[ テーブルの選択 ]** ページで次の処理を行います。  
+ 移行する行を選択するフィルター機能を指定する場合に、**[テーブルの選択]** ページで次の処理を行います。  
   
-1.  **[ 拡張するテーブルを選択します。 ]** リスト内のテーブルの行で、**[ テーブル全体 ]** をクリックします。 **[ 拡張する行の選択 ]** ダイアログ ボックスが開きます。  
+1.  **[拡張するテーブルを選択します。]** リスト内のテーブルの行で、**[テーブル全体]** をクリックします。 **[拡張する行の選択]** ダイアログ ボックスが開きます。  
   
      ![日付ベースのフィルター述語を定義](../../sql-server/stretch-database/media/stretch-wizard-2a.png "日付ベースのフィルター述語を定義")  
   
-2.  **[ 拡張する行の選択 ]** ダイアログ ボックスで **[ 行の選択]** を選択します。  
+2.  **[拡張する行の選択]** ダイアログ ボックスで **[行の選択]** を選択します。  
   
-3.  **[ 名前]** フィールドに、フィルター関数の名前を指定します。  
+3.  **[名前]** フィールドに、フィルター関数の名前を指定します。  
   
 4.  **Where** 句には、テーブルから列、演算子を選択し、値を指定します。  
   
-5.  **[ 確認 ]** をクリックして、関数をテストします。 関数によって、テーブルから結果が返される場合、つまり、条件を満たす移行する行がある場合、テストによって **[ 成功]** がレポートされます。  
+5.  **[確認]** をクリックして、関数をテストします。 関数によって、テーブルから結果が返される場合、つまり、条件を満たす移行する行がある場合、テストによって **[成功]** がレポートされます。  
 
 > [!NOTE] 
 > フィルター クエリを表示するテキストボックスは読み取り専用です。 テキストボックスのクエリは編集できません。
   
-6.  終了 をクリックして  **テーブルの選択 ** 画面に戻ります。  
+6.  [終了] をクリックして **[テーブルの選択]** 画面に戻ります。  
 
-フィルター関数は、ウィザードを終了した場合にのみ、SQL Server に作成されます。 それまでは、**[ テーブルの選択 ]** ページに戻って、フィルター関数を変更したり、名前を変更したりすることができます。
+フィルター関数は、ウィザードを終了した場合にのみ、SQL Server に作成されます。 それまでは、**[テーブルの選択]** ページに戻って、フィルター関数を変更したり、名前を変更したりすることができます。
 
 ![フィルター述語を定義した後の [テーブルの選択] ページ](../../sql-server/stretch-database/media/stretch-wizard-2b.png "フィルター述語を定義した後の [テーブルの選択] ページ")
 
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Stretch Database で使用する Azure リージョンを選択します。
     -   新しいサーバーを作成すると、このリージョンに作成されます。  
-    -   選択したリージョンに既にサーバーがある場合、**[ 既存のサーバー]** を選択すると、それらがウィザードにリストされます。
+    -   選択したリージョンに既にサーバーがある場合、**[既存のサーバー]** を選択すると、それらがウィザードにリストされます。
   
      待機時間を最小限に抑えるには、SQL Server が配置されている Azure リージョンを選択してください。 リージョンの詳細については、「 [Azure のリージョン](https://azure.microsoft.com/regions/)」を参照してください。  
   

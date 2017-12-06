@@ -1,10 +1,13 @@
 ---
 title: "移行ウィザード (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea7152bb5022be8f998bf0e2c48a9381ee56536c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3d646e91cbf87e48bbf3e3580f0745edb4ca00ea
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="migration-wizard-accesstosql"></a>移行ウィザード (AccessToSQL)
 移行ウィザードで、1 つまたは複数のデータベースの移行へのアクセスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 ウィザードを使用するがプロジェクトを作成、データベースをプロジェクトに追加されたら、オブジェクトを移行し、接続を選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 また変換、読み込むには、し、アクセスのスキーマとデータを移行します。 Access テーブルをリンクする必要に応じて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のテーブルです。  

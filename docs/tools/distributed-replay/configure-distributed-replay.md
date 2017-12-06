@@ -2,9 +2,12 @@
 title: "Distributed Replay の構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 81f5ad59e6f8201fd89d948fef293fddf01f2870
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0eb4502675fb2bd9e9978b5443882a44f867e39c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-distributed-replay"></a>Distributed Replay の構成
-  Distributed Replay Controller、クライアント、および管理ツールのインストール場所に関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay の構成の詳細は、XML ファイルで指定されます。 このようなファイルには、次のファイルが含まれます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay の構成の詳細は、Distributed Replay controller、クライアント上の XML ファイルで指定された管理ツールがインストールされているとします。 このようなファイルには、次のファイルが含まれます。  
   
 -   [コントローラー構成ファイル](#DReplayController)  
   
@@ -132,7 +135,7 @@ ms.lasthandoff: 11/09/2017
 |接続プールの使用|`<UseConnectionPooling>`|各 Distributed Replay Client で接続プールを有効にするかどうかを指定します。|Yes &#124; No|可能。 既定値は `Yes`です。|  
 |ヘルス モニターの間隔|`<HealthmonInterval>`|ヘルス モニターを実行する頻度 (秒) を示します。<br /><br /> この値は、同期モードでのみ使用されます。|>= 1 の整数<br /><br /> (無効にする場合は`-1` )|不可。 既定値は `60`です。|  
 |クエリのタイムアウト|`<QueryTimeout>`|クエリのタイムアウト時間を秒単位で指定します。 この値は、最初の行が返されるまで有効です。|>= 1 の整数<br /><br /> (無効にする場合は`-1` )|不可。 既定値は `3600`です。|  
-|クライアントごとのスレッド|`<ThreadsPerClient>`|それぞれの再生クライアントで使用する再生スレッドの数を指定します。|`1` ～ `512`の整数値です。|不可。 指定されない場合、Distributed Replay は値として `255`を使用します。|  
+|クライアントごとのスレッド|`<ThreadsPerClient>`|それぞれの再生クライアントで使用する再生スレッドの数を指定します。|`1` ～ `512`の整数値です。|不可。 指定されない場合、Distributed Replay は値として `255` を使用します。|  
   
 ### <a name="outputoptions-element"></a>\<OutputOptions > 要素  
  再生構成ファイルの `<OutputOptions>` 要素によって指定される設定には、次の内容が含まれます。  
