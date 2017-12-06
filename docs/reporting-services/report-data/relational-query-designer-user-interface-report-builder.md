@@ -2,9 +2,12 @@
 title: "リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 41bc0c560e8cb96d22262ca5911e85e25c591fe8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート データセットの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] からレポート データセットに取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -151,7 +154,7 @@ ms.lasthandoff: 11/09/2017
   
 -   **フィールドの編集** : テーブル間のリレーションシップの追加や変更を行う **[関連フィールドの編集]** ダイアログ ボックスが開きます。 結合する左右のテーブルのフィールドを選択します。 左テーブルおよび右テーブルの複数のフィールドを結合すると、リレーションシップ内で複数の結合条件を指定できます。 左右のテーブルを結合する 2 つのフィールドは同じ名前でなくてもかまいません。 結合されるフィールドのデータ型は、互換性のあるデータ型である必要があります。  
   
--   **リレーションシップの削除**  : 選択したリレーションシップを削除します。****  
+-   **リレーションシップの削除**  : 選択したリレーションシップを削除します**。**  
   
 -   **[上へ移動]** および **[下へ移動]** : **[リレーションシップ]** ボックスの一覧内のリレーションシップを上下に移動します。 クエリ内のリレーションシップの配置順によっては、クエリ結果に影響が出る場合があります。 リレーションシップがクエリに追加される順序は、 **[リレーションシップ]** ボックスの一覧内でリレーションシップが表示される順序と同じです。  
   

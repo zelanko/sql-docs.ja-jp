@@ -2,9 +2,12 @@
 title: "レポート ビューアー Web パーツのカスタマイズ | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 57d2bb85c011e8a70255b5dd07080a77da757286
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e1b43b9caff7c01c9e95249a18a2fe5c13bdbf3b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
 
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/09/2017
 |[[戻る] ボタンを表示する]|ツール バーの [戻る] ボタンの表示と非表示を切り替えます。|  
 |[検索コントロールを表示する]|ツール バーの検索コントロールの表示と非表示を切り替えます。 ユーザーは検索コントロールを使用して、表示されたレポート内のテキストを検索できます。 このオプションは、すべての検索コントロールの表示を変更します。|  
 |[ズーム コントロールを表示する]|ツール バーのズーム コントロールの表示と非表示を切り替えます。|  
-|[ATOM フィードのボタンを表示する]|ツール バーの ATOM フィードのボタンの表示と非表示を切り替えます。<br /><br /> ![htmlviewer_datafeed](../../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
+|[ATOM フィードのボタンを表示する]|ツール バーの ATOM フィードのボタンの表示と非表示を切り替えます。<br /><br /> ![HTML ビューアーのデータ フィード](../../reporting-services/media/htmlviewer-datafeed.gif "HTML ビューアーのデータ フィード")|  
 |[ツール バーの位置]|レポート ビューアー内のツール バーの位置を決定します。 有効な値には、 **Top** と **Bottom**が含まれます。|  
 |[プロンプト領域]|有効な値には、 **Displayed**、 **Collapsed**、および **Hidden**が含まれます。 **Displayed** を指定すると、パラメーター化された値が含まれ実行前にユーザー入力を必要とするレポートの場合に、パラメーター領域が表示されます。 すべてのレポート パラメーターが指定されており、パラメーター領域をユーザーに対して表示しない場合には、 **Hidden** を使用します。|  
 |[パラメーター領域の幅]|測定単位と値を選択できます。 既定値は 200 ピクセルです。 このプロパティの唯一の要件は、0 より大きい値を設定することです。|  
