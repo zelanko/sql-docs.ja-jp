@@ -2,9 +2,12 @@
 title: "SQL Server プロファイラーのテンプレート |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 85ae94af96a6908af67f0a334203b0025d26fe94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8426d5f71d74a703270bd27e61730122afa9aa7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler のテンプレート
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、トレースに含めるイベント クラスとデータ列を定義するテンプレートを作成できます。 テンプレートを定義して保存したら、選択したイベント クラスごとにデータを記録するトレースを実行できます。 テンプレートは多くのトレースで使用できますが、テンプレート自体は実行できません。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]をトレースに含めるイベント クラスとデータ列を定義するテンプレートを作成します。 テンプレートを定義して保存したら、選択したイベント クラスごとにデータを記録するトレースを実行できます。 テンプレートは多くのトレースで使用できますが、テンプレート自体は実行できません。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、事前に定義済みのトレース テンプレートが用意されています。これにより、特定のトレースでよく使用するイベント クラスを簡単に構成できるようになります。 たとえば、Standard テンプレートは、ログイン、ログアウト、完了したバッチ、および接続に関する情報を記録するための汎用トレースの作成に役立ちます。 このテンプレートは、変更しないでトレースの実行に使用するか、異なるイベントの構成を持つ新たなテンプレートの基礎として使用できます。  
   

@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f5291dc17a1109a7f734ec302eae9db2fac2a1e9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29da4f824b83a09ed839e469a4788ce42e7d92a4
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 用のサンプル: SQL Server の無人インストール スクリプト
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>前提条件
 
-- Linux 上の SQL Server を実行するには、少なくとも 3.25 GB のメモリを必要とします。
+- Linux 上の SQL Server を実行するには、少なくとも 2 GB のメモリを必要とします。
 - ファイル システムである必要があります**XFS**または**EXT4**です。 その他のファイル システム**BTRFS**、サポートされていません。
 - その他のシステム要件については、次を参照してください。 [Linux に SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
 

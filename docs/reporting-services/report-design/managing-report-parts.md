@@ -2,9 +2,12 @@
 title: "レポート パーツの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   ページネーションのあるレポート内のレポート パーツは、複数のユーザーが複数のレポート内で再利用できます。 ユーザーはサーバー上のレポート パーツを検索し、それらをレポートに追加できます。  また、ユーザーはサーバー上のレポート パーツの更新について通知を受け、レポート パーツの新しいバージョンを再パブリッシュすることもできます。 これらのレポート作成アクションは、Reporting Services のセキュリティ権限によって管理および制御されます。  このトピックでは、既にサーバー上に配置されているレポート パーツのプロパティと動作について説明します。  

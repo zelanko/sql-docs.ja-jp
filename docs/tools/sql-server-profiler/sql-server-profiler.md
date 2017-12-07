@@ -2,9 +2,12 @@
 title: "SQL Server Profiler |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7d17e24ef7a815a77a4a7cfc338a8d87369d7e81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8194b34b1e07abaedabe5c4ee685f645470fce70
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]インターフェイスの作成し、管理をトレースし、分析トレース結果を再生できます。 イベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]インターフェイスの作成し、管理をトレースし、分析トレース結果を再生できます。 イベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
   
 >**重要!!**  
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース キャプチャおよびトレース再生用の [!INCLUDE[ssDE](../../includes/ssde-md.md)] は廃止されます。 これらの機能は SQL Server 2016 で使用 **できます** が、以降のバージョンでは削除される予定です。

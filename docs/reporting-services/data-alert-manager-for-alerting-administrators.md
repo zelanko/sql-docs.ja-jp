@@ -2,9 +2,12 @@
 title: "警告管理者用のデータ警告マネージャー | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9df65141967b8e9e0ab4e1f7115986b19674d341
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b0cc1b6caccb3af095063db94b43a55bad2865a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警告管理者用のデータ警告マネージャー
 
@@ -36,7 +39,7 @@ SQL Server Reporting Services のデータ警告マネージャーを使用し�
 ![SharePoint サイト管理者用の警告マネージャー](../reporting-services/media/rs-alertmanagersite.gif "SharePoint サイト管理者用の警告マネージャー")
 
 > [!NOTE]
-> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
  サイトのデータ警告機能を有効にすると、MyDataAlerts.aspx と SiteDataAlerts.aspx という 2 つの SharePoint ページが作成されて、SharePoint サイトに追加されます。 SiteDataAlerts.aspx は、警告管理者用のデータ警告マネージャーです。 警告管理者は、SharePoint の [サイトの設定] ページからデータ警告マネージャーを開くことができます。 警告管理者がデータ警告マネージャーを開くためには、SharePoint 警告の管理権限が必要です。  
   
@@ -48,7 +51,7 @@ SQL Server Reporting Services のデータ警告マネージャーを使用し�
 >  警告管理者は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告機能にアクセスする権限をインフォメーション ワーカーに付与できます。 必要な権限の詳細については、「 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)」を参照してください。  
   
 ##  <a name="ViewingAlerts"></a> データ警告情報の表示  
- SharePoint に Reporting Services をインストールし、構成すると、SharePoint の [サイトの設定] ページに **[Reporting Services]** のオプションが追加されます。 警告管理者は、Reporting Services 内の **[データ警告の管理]** オプションをクリックして、データ警告マネージャーを開きます。 次の図は、[サイトの設定] ページのどこからデータ警告マネージャーを開くかを示しています。  
+ SharePoint に Reporting Services をインストールし、構成すると、SharePoint の [サイト設定] ページに **[Reporting Services]** のオプションが追加されます。 警告管理者は、Reporting Services 内の **[データ警告の管理]** オプションをクリックして、データ警告マネージャーを開きます。 次の図は、[サイトの設定] ページのどこからデータ警告マネージャーを開くかを示しています。  
   
  ![[サイトの設定] ページの Reporting Services セクション](../reporting-services/media/rs-sitesettings.gif "[サイトの設定] ページの Reporting Services セクション")  
   

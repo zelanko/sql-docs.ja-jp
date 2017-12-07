@@ -2,9 +2,12 @@
 title: "SQL Server のプロパティ ([ログオン] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bcc86e62683e85d7da88686953a17d743e19b3b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9449025621c2269b4a810f1a0dfdaaae7850471e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-properties-log-on-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ)
-  **[SQL Server のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが使用するアカウントの指定、アカウントのパスワードの変更、およびそのサービスの開始、停止を行います。 アカウントのパスワードを変更すると、その変更はすぐに有効になります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、**ログオン**のタブ、 **SQL Server のプロパティ** ダイアログ ボックスで使用されるアカウントを指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス、アカウントのパスワードを変更して、サービス開始または停止します。 アカウントのパスワードを変更すると、その変更はすぐに有効になります。  
   
 > [!NOTE]  
 >  クラスター化されたインスタンス上のサービスで使用するアカウント名を変更する場合、新しいアカウントは、そのサービスのセットアップ時に指定したドメイン グループに属している必要があります。または、そのグループにメンバーを追加する権限が与えられている必要があります。 グループのメンバーシップを変更する権限がない場合は、ドメイン管理者に問い合わせてください。  

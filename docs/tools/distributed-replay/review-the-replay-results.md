@@ -2,9 +2,12 @@
 title: "再生結果の確認 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能が分散再生を完了した後は、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、**replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]後に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能には、分散再生が完了すると、各クライアントの再生アクティビティをキャプチャし、各クライアントに結果トレース ファイルに保存することができます。 このアクティビティをキャプチャするには、 **replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
   
  結果トレース ファイルの保存場所は、各クライアントにあるクライアント構成ファイル `<ResultDirectory>` 内の `DReplayClient.xml` XML 要素で指定されます。 クライアント結果ディレクトリ内のトレース ファイルは、再生を実行するたびに上書きされます。  
   

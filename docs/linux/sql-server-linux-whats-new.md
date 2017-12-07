@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: cdc32cffd67c794f5ec2d04ac7410892475f4f7f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.openlocfilehash: 3e4a3e19fd9d03d3f6e4dd4a68a5a15b922f348d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 の新機能します。
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 11/29/2017
 この記事では、Linux で実行されている SQL Server 2017 の主要な機能と使用可能なサービスについて説明します。
 
 > [!NOTE]
-> この記事でこれらの機能だけでなく累積的更新プログラムは、GA リリース後に一定の間隔で解放されます。 これらの累積的な更新プログラムは、多くの機能強化と修正を提供します。 最新の CU リリースについては、次を参照してください。 [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)です。 パッケージのダウンロードと既知の問題は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)です。
+> この記事でこれらの機能だけでなく累積的更新プログラムは、GA リリース後に一定の間隔で解放されます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、次を参照してください。 [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)です。 パッケージのダウンロードと既知の問題は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)です。
 
 ## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
 

@@ -2,9 +2,12 @@
 title: "Reporting Services でサポートされるデータ ソース (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -26,11 +29,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ba615acb50ae46324d9315feb97ef10502cbac2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 96b080d0244783a3af13c8bbe4a7f1587cb10f18
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -237,7 +240,7 @@ ms.lasthandoff: 11/09/2017
 Oracle クライアント ツールをインストールするには、次のようにします。
  
 1.  [Oracle のダウンロード サイト](http://www.oracle.com/us/products/tools/index-090165.html)に移動します
-2.  Windows用 ODAC 12c リリース 4 (12.1.0.2.4) をダウンロードします (サーバー用の 64 ビット、ツール用の 32 ビット)
+2.  Windows 用 ODAC 12c リリース 4 (12.1.0.2.4) をダウンロードします (サーバー用の 64 ビット、ツール用の 32 ビット)。
 3.  Data Provider for .NET 4 をインストールします
   
  この拡張機能では、名前付きパラメーターがサポートされます。 Oracle Version 11g 以降の場合、複数値パラメーターがサポートされます。 位置に依存する無名パラメーターを使用するには、OLE DB データ処理拡張機能と [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle データ プロバイダーを組み合わせて使用します。 Oracle をデータ ソースとして構成する方法の詳細については、「 [Reporting Services を使用して Oracle データ ソースの構成およびアクセスを行う方法](http://support.microsoft.com/kb/834305)」を参照してください。 追加の権限の構成の詳細については、 [サポート技術情報の「](http://support.microsoft.com/kb/870668) NETWORK SERVICE セキュリティ プリンシパルに権限を追加する方法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  

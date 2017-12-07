@@ -2,9 +2,12 @@
 title: "トレース (SQL Server Profiler) の再生に関する注意事項 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a1bc2185f1df8daa5823bbffa1106e7676996f59
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 60fa1b34d95a427d802bd355dcb66c3794d4ea79
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>トレースの再生に関する注意点 (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、次の種類のトレースを再生できません。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]次の種類のトレースを再生することはできません。  
   
 -   トランザクション レプリケーションや他のトランザクションのログ利用状況を含むトレース。 このようなイベントはスキップされます。 他の種類のレプリケーションではトランザクション ログが記録されないので、そのようなレプリケーションは影響を受けません。  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/09/2017
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [SQL Server イベント クラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_getbindtoken &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
- [sp_bindsession &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [READTEXT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/readtext-transact-sql.md)   
  [WRITETEXT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/writetext-transact-sql.md)   

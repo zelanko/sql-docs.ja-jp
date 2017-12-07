@@ -1,10 +1,13 @@
 ---
 title: "プロジェクトの設定 (型のマッピング) (MySQLToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00caaddad937894b416e3289a7d4e96b152ac41b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 プロジェクトの種類のマッピング設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -60,7 +63,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**MySQL のデータ型**|**SQL Server データ型**|  
 |bigint|bigint|  
 |bigint [*..255]|bigint|  
-|binary|バイナリ [1]|  
+|[バイナリ]|バイナリ [1]|  
 |バイナリ [0..1]|バイナリ [1]|  
 |バイナリ [2..255]|バイナリ [*]|  
 |bit|バイナリ [1]|  

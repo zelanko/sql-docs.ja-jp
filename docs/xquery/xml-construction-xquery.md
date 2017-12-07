@@ -3,8 +3,11 @@ title: "XML の構築 (XQuery) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -25,14 +28,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9852c010a2b8929cb572da3abb4951ca7e06ed8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery で使用できます、**直接**と**計算**をクエリ内での XML 構造を構築するコンス トラクターです。  
   
@@ -584,7 +587,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>計算コンストラクターの使用  
- のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 このコンストラクターを使用する場合は、構築するノードの種類を特定するキーワードを指定します。 サポートされているキーワードは次の 3 つのみです。  
+ . このコンストラクターを使用する場合は、構築するノードの種類を特定するキーワードを指定します。 サポートされているキーワードは次の 3 つのみです。  
   
 -   element  
   

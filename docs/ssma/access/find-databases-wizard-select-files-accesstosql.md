@@ -1,10 +1,13 @@
 ---
 title: "データベースのウィザード (ファイル) を検索 (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9f9283dddd98208c1eb25990fa228e2287793615
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 98f799138330399da6b4f96bbf10574b3878763d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>データベースのウィザード (ファイル) を検索 (AccessToSQL)
 ファイルの選択 ウィザードのページ、検索データベースは、検索中に検出されたファイルを示します。 SSMA に追加するファイルを選択するには、ファイル名を含む行を選択します。 ファイルの選択が完了したらをクリックして**次**選択の確認 ページを表示します。  

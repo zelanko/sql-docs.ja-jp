@@ -1,10 +1,13 @@
 ---
 title: "Oracle スキーマの変換 (OracleToSQL) に評価 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1489e4002532d09c0085c64f3aea139f21aab2c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 27faa50ad384ec9061252e056d90976687f7e3d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Oracle スキーマの変換 (OracleToSQL) の評価
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、ほど複雑か、移行されるとどれ時間だけを決定する必要があります、移行になります。 SSMA は、正常に変換されるオブジェクトの割合が表示される評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  

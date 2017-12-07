@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
-ms.translationtype: HT
+ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/29/2017
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a name="how-to-install-cumulative-updates"></a>累積的更新プログラムをインストールする方法
+## <a id="cuinstall"></a>累積的更新プログラムをインストールする方法
 
 構成した場合、累積的な更新リポジトリ、新規インストールを実行するときに SQL Server パッケージの最新の累積的な更新が発生します。 累積的な更新プログラムのリポジトリは、Linux 上の SQL Server のすべてのパッケージのインストールのアーティクルの既定値です。 リポジトリの構成の詳細については、次を参照してください。[リポジトリのソース](sql-server-linux-setup.md#repositories)です。
 

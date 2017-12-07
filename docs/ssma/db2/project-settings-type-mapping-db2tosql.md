@@ -1,10 +1,13 @@
 ---
 title: "プロジェクトの設定 (型のマッピング) (DB2ToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 267d3e30f61539da24ed22d54c4355945da21999
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 783f169bdc63c8da9d91a321592f9e9fa8788e78
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>プロジェクトの設定 (型のマッピング) (DB2ToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に DB2 データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
@@ -217,7 +220,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |Float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|int|int|  
+|Int|int|  
 |Integer|int|  
 |整数 [*..\*]|数値 [*] [0]|  
 |Long|varchar(max)|  

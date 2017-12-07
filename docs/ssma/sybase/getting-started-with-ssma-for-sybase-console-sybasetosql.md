@@ -3,8 +3,11 @@ title: "Sybase コンソール (SybaseToSQL) for SSMA の概要 |Microsoft ド�
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4929815714162459d17dfea3d7129a13b79558e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d2c78871f1fdd0da18877741a198b2e11f1fbb5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase コンソール (SybaseToSQL) for SSMA の概要
 このセクションを起動して、SSMA for Sybase コンソール アプリケーションの使用を開始するための手順について説明します。 記載されている表記規則ウィンドウで使用される、一般的な SSMA コンソール出力。  

@@ -2,9 +2,12 @@
 title: "レポートのパラメーター ペインをカスタマイズする (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7e31a23d41c011787960cc662c11f763bab7291b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c214ec5fccd3c94d3c910d3d2d887b556ba6884
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)
+# <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   レポート ビルダーでパラメーターを使用して改ページ調整されたレポートを作成するときに、パラメーター ペインをカスタマイズできます。 レポート デザイン ビューで、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。  
   
  ペイン内で新しい列や行にパラメーターをドラッグすると、 **レポート データ** ペインのパラメーターの順序が変わります。 **レポート データ** ペインでパラメーターの順序を変更すると、ペインでのパラメーターの位置が変わります。 パラメーターの順序が重要である理由については、「[レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。  

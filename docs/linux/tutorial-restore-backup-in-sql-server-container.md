@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
 
@@ -36,12 +36,9 @@ ms.lasthandoff: 11/20/2017
 ## <a name="prerequisites"></a>前提条件
 
 * Docker エンジン 1.8 + 任意の Linux ディストリビューションまたは Docker は Mac/windows のサポート。 詳細については、次を参照してください。[インストール Docker](https://docs.docker.com/engine/installation/)です。
-* 4 GB のディスク領域の最小値
-* 4 GB の RAM の最小値
+* 2 GB のディスク領域の最小値
+* 2 GB の RAM の最小値
 * [Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
-
-> [!IMPORTANT]
-> Mac 用 Docker と Docker for Windows での既定値は Moby VM 用に 2 GB は、4 GB に変更する必要があります。 Mac で Windows を実行している場合を使用して、メモリ設定を増やす、 [Docker クイック スタート手順](quickstart-install-connect-docker.md)です。
 
 ## <a name="pull-and-run-the-container-image"></a>プルし、コンテナー イメージを実行
 

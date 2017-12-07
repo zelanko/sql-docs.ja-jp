@@ -2,9 +2,12 @@
 title: "チュートリアル: データベース エンジン チューニング アドバイザー |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07bd2070758bd17ac110d91179da621198373146
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 91ada122d3cdad5d3b40b1809c063b821c898bcb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>チュートリアル:データベース エンジン チューニング アドバイザー
-データベース エンジン チューニング アドバイザーのチュートリアルへようこそ。 データベース エンジン チューニング アドバイザーは、指定されたデータベースでクエリがどのように処理されるのかを調査し、インデックス、インデックス付きビュー、パーティション分割などのデータベース構造を更新することによって、クエリ処理のパフォーマンスを強化するようユーザーに提案します。  
+# <a name="tutorial-database-engine-tuning-advisor"></a>チュートリアル : データベース エンジン チューニング アドバイザー
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]データベース エンジン チューニング アドバイザーのチュートリアルへようこそ。 データベース エンジン チューニング アドバイザーは、指定されたデータベースでクエリがどのように処理されるのかを調査し、インデックス、インデックス付きビュー、パーティション分割などのデータベース構造を更新することによって、クエリ処理のパフォーマンスを強化するようユーザーに提案します。  
   
 データベース エンジン チューニング アドバイザーには、グラフィカル ユーザー インターフェイス (GUI) および **dta** コマンド プロンプト ユーティリティの 2 つのユーザー インターフェイスがあります。 GUI では、チューニング セッションの結果をすばやく簡単に表示できます。一方、 **dta** ユーティリティでは、データベース エンジン チューニング アドバイザーの機能をスクリプトへ簡単に組み込み、チューニングを自動化することができます。 また、XML 入力の取り込みが可能なので、より詳細にチューニング処理を制御できます。  
   

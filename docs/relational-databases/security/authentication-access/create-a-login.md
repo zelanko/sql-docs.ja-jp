@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af636e20cc2da22adf0607529f29959c1a005c9d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  セキュリティ プリンシパルとして、ログインには権限を許可することができます。 ログインのスコープは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]全体です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。 ログインには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス全体をスコープとして持つ権限 ( **CREATE ENDPOINT** 権限など) を許可することができます。  
   
-> **注:** ログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するとき、その ID がマスター データベースで検証されます。 包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r と [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベース ユーザーを使用する場合、ログインは必要ありません。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+> **注:** ログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するとき、その ID がマスター データベースで検証されます。 包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベース ユーザーを使用する場合、ログインは必要ありません。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
 ##  <a name="Security"></a> Security  
 

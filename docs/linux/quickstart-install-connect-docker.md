@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker を使用した SQL Server 2017 コンテナー イメージを実行します。
 
@@ -35,31 +35,9 @@ ms.lasthandoff: 11/20/2017
 ## <a id="requirements"></a> 前提条件
 
 - Docker エンジン 1.8 + 任意の Linux ディストリビューションまたは Docker は Mac/windows のサポート。 詳細については、次を参照してください。[インストール Docker](https://docs.docker.com/engine/installation/)です。
-- 4 GB のディスク領域の最小値
-- 4 GB の RAM の最小値
+- 2 GB のディスク領域の最小値
+- 2 GB の RAM の最小値
 - [Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
-
-> [!IMPORTANT]
-> Mac 用 Docker と Docker for Windows での既定値は Moby VM 用に 2 GB は、4 GB に変更する必要があります。 Mac または Windows で実行している場合は、次の手順を使用して、メモリを増やします。
-
-### <a name="increase-docker-memory-to-4-gb-mac"></a>4 GB (Mac) に Docker メモリを増やす
-
-次の手順では、4 GB に Mac 用 Docker 用メモリを増やします。
-
-1. 最上位のステータス バーに Docker ロゴをクリックします。
-1. 選択**設定**です。
-1. メモリ インジケーターを 4 GB 以上に移動します。
-1. クリックして、**再起動**画面のボタンをクリックします。
-
-### <a name="increase-docker-memory-to-4-gb-windows"></a>4 GB (Windows) に Docker メモリを増やす
-
-次の手順では、Docker for Windows が 4 GB のメモリを増やします。
-
-1. タスク バーから Docker アイコンを右クリックします。
-1. をクリックして**設定**その] メニューの [します。
-1. クリックして、**高度な**タブです。
-1. メモリ インジケーターを 4 GB 以上に移動します。
-1. クリックして、**適用**ボタンをクリックします。
 
 ## <a name="pull-and-run-the-container-image"></a>プルし、コンテナー イメージを実行
 

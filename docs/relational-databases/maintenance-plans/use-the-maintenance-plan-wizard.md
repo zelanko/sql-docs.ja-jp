@@ -1,9 +1,13 @@
 ---
 title: "メンテナンス プラン ウィザードの使用 | Microsoft Docs"
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +41,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 64d2ad2fb4f75d69244ffad6e76c3cef6274309d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 21c05a6f8d841bc32cbcebd0830042c8b17c2421
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードの使用
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
     
  
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
@@ -158,7 +162,7 @@ ms.lasthandoff: 11/09/2017
   
  -  **[すべてのデータベース]**  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を除くすべての **[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]**でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。  
+**tempdb** を除くすべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
   
 **システム データベース**  
   

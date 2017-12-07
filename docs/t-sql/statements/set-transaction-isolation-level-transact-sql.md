@@ -1,7 +1,7 @@
 ---
 title: "TRANSACTION ISOLATION LEVEL (TRANSACT-SQL) を設定 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32948fdc6c6c24de0331be45678dc89561de69de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cde588fed7aad439e90c97de99ba89633a1df2c5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,29 +44,27 @@ ms.lasthandoff: 11/21/2017
   ロックおよび行のバージョン管理動作を制御[!INCLUDE[tsql](../../includes/tsql-md.md)]への接続によって実行されたステートメント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>構文
+
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-## <a name="syntax"></a>構文  
+SET TRANSACTION ISOLATION LEVEL
+    { READ UNCOMMITTED
+    | READ COMMITTED
+    | REPEATABLE READ
+    | SNAPSHOT
+    | SERIALIZABLE
+    }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET TRANSACTION ISOLATION LEVEL  
-    { READ UNCOMMITTED  
-    | READ COMMITTED  
-    | REPEATABLE READ  
-    | SNAPSHOT  
-    | SERIALIZABLE  
-    }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED  
-[ ; ]  
-```  
-  
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+```
+
 ## <a name="arguments"></a>引数  
  READ UNCOMMITTED  
  他のトランザクションで変更されたが、まだコミットされていない行を、ステートメントで読み取れるように指定します。  

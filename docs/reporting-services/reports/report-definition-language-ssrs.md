@@ -2,9 +2,12 @@
 title: "レポート定義言語 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: bdd500541261f3bf9ce5435113aca70f6c93758d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  

@@ -2,9 +2,12 @@
 title: "Reporting Services モバイル レポートへのナビゲーターの追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d483e2dcafeb45beb00e32cfed7cf04ab41ca689
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへのナビゲーターの追加
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]では、時間または選択したものによって視覚エフェクトのデータをフィルター処理するには、 *ナビゲーター* を追加します。 
 
 ナビゲーターは、Power BI や Excel のピボットテーブルのスライサーに似ていますが、ナビゲーター固有の特徴もいくつかあります。

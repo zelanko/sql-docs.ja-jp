@@ -2,9 +2,12 @@
 title: "osql ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: osql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
-  **osql** ユーティリティを使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを入力できます。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**ユーティリティを使用すると、入力[!INCLUDE[tsql](../includes/tsql-md.md)]ステートメント、システム プロシージャ、およびスクリプト ファイル。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
   
 > [!IMPORTANT]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の将来のバージョンで削除される予定です。 新しい開発作業では、この機能を使用しないでください。また、現在この機能を使用しているアプリケーションの変更を計画してください。 代わりに **sqlcmd** を使用します。 詳細については、「 [sqlcmd Utility](../tools/sqlcmd-utility.md)」を参照してください。  
@@ -192,7 +195,7 @@ osql -E -q "select name, object_id from %table%"
  また、このオプションは DOS ERRORLEVEL の既定値を -1 に設定します。  
   
 > [!NOTE]  
->  **-n** 、 **-O**と**-d**オプションはサポートされなく**osql**です。  
+>   **-n** 、 **-O**と**-d**オプションはサポートされなく**osql**です。  
   
 ## <a name="remarks"></a>解説  
  **osql** ユーティリティは、ここに記載された、大文字と小文字では異なる機能を持つオプションを使用して、オペレーティング システムから直接起動されます。 起動されると、 **osql**は SQL ステートメントを受け取り、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対話的に送ります。 結果はフォーマットされ、画面に表示されます (**stdout**)。 **osql**を終了するには、QUIT または EXIT を使用します。  

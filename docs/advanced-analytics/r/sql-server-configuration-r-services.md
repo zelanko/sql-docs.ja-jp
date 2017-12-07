@@ -2,7 +2,7 @@
 title: "SQL Server の構成 (R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
 
@@ -70,7 +70,7 @@ Windows オペレーティング システムでは、クラッシュ ダンプ�
 
 ページ ファイルが格納されるディスクの速度も、パフォーマンスに影響する可能性があります。 ページ ファイルを SSD に格納したり、複数の SSD 間で複数のページ ファイルを使用すると、パフォーマンスを改善できる可能性があります。
 
-ページファイルのサイズ変更方法の詳細については、次を参照してください。 [64 ビット バージョンの Windows の適切なページ ファイル サイズを調べる方法](https://support.microsoft.com/en-us/kb/2860880)です。
+ページファイルのサイズ変更方法の詳細については、次を参照してください。 [64 ビット バージョンの Windows の適切なページ ファイル サイズを調べる方法](https://support.microsoft.com/kb/2860880)です。
 
 ## <a name="optimizations-at-instance-or-database-level"></a>インスタンスまたはデータベース レベルでの最適化
 
@@ -167,7 +167,7 @@ FROM sys.dm_os_memory_clerks
 
 **その他のリソース:**
 
-+ [SQL Server でソフト NUMA](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server でソフト NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Cpu へのソフト NUMA ノードにマップする方法
 

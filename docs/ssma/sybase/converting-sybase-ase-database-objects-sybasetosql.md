@@ -1,10 +1,13 @@
 ---
 title: "Sybase ASE データベース オブジェクト (SybaseToSQL) を変換する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 12/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,25 +21,25 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c26c897ef9b4ffe1a05a47ab722770681a3737a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 67806cc9609d6fb0c6fae16c3f73161d91259f7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="converting-sybase-ase-database-objects-sybasetosql"></a>Sybase ASE データベース オブジェクト (SybaseToSQL) を変換します。
-Sybase Adaptive Server Enterprise (ASE) に接続すると後に、接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Sybase Adaptive Server Enterprise (ASE) 使用するデータベース オブジェクトに変換するには SQL Azure、およびプロジェクトの設定とデータのマッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースのオブジェクト。  
+# <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベース オブジェクト (SybaseToSQL) を変換します。
+SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SAP Adaptive Server Enterprise (ASE) 使用するデータベース オブジェクトに変換するには Azure SQL およびプロジェクトの設定とデータのマッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースオブジェクト。  
   
 ## <a name="the-conversion-process"></a>変換プロセス  
-データベース オブジェクトを変換する ASE からオブジェクト定義を受け取り、同様に変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに、情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラー。  
+データベース オブジェクトを変換する ASE からオブジェクト定義を受け取り、同様に変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクト、および SSMA メタデータにこの情報を読み込みます。 インスタンスに、情報は読み込まれません[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL です。 使用して、オブジェクトとそのプロパティを表示することができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL メタデータ エクスプ ローラー。
   
-変換中には、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 ASE データベースまたは必要な変換の結果を得るため、変換プロセスを変更するのにかどうかを確認するのにには、出力とエラー情報を使用します。  
+SSMA は、変換中にメッセージを出力ウィンドウとエラー メッセージを出力するを出力、**エラー一覧**ウィンドウです。 ASE データベースまたは必要な変換の結果を得るため、変換プロセスを変更するのにかどうかを確認するのにには、出力とエラー情報を使用します。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
 オブジェクトを変換する前に、プロジェクトの変換オプションを確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA で、関数およびグローバル変数がどのように変換されるかを設定できます。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。変換&#41;&#40;です。SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
 ## <a name="converting-ase-database-objects"></a>ASE データベース オブジェクトを変換します。  
-ASE データベース オブジェクトに変換するには、最初に、変換するオブジェクトを選択し、SSMA が変換を実行します。 変換中に出力メッセージを表示する、**ビュー**メニューの **出力**です。  
+ASE データベース オブジェクトを変換するには、まず、変換するオブジェクトを選択し、SSMA が変換を実行します。 変換中に出力メッセージを表示する、**ビュー**メニューの **出力**です。  
   
 **ASE オブジェクトを SQL Server または SQL Azure の構文に変換するには**  
   
@@ -54,12 +57,12 @@ ASE データベース オブジェクトに変換するには、最初に、変
   
     -   変換または個々 のオブジェクトを省略、カテゴリ フォルダーを展開し、選択するか、オブジェクトの横にあるチェック ボックスをオフにします。  
   
-3.  選択したすべてのオブジェクトを変換するを右クリックして**データベース**選択**スキーマの変換**です。  
+3.  選択したすべてのオブジェクトを変換するを右クリックして**データベース**、し、**変換スキーマ**です。  
   
     オブジェクトまたはその親フォルダーを右クリックしを選択して、個々 のオブジェクトまたはオブジェクトのカテゴリを変換することができますも**変換スキーマ**です。  
   
 > [!NOTE]  
-> いくつかの Sybase システム関数は完全に一致しない動作では、同等の SQL Server システム関数です。 Sybase ASE 動作をエミュレートするためには、SSMA は、's2ss' と呼ばれるスキーマで変換後の SQL Server データベースにユーザー定義関数を生成します。 これらのエミュレートされた関数とはいくつかの SQL Server のシステム関数が、プロジェクトの設定によって置き換えられます。 SSMA では、次のユーザー定義関数を作成します。  
+> 一部の SAP ASE システム関数では完全に一致しない動作では、同等の SQL Server システム関数です。 SAP ASE 動作をエミュレートするためには、SSMA は、's2ss' と呼ばれるスキーマで変換後の SQL Server データベースにユーザー定義関数を生成します。 これらのエミュレートされた関数とはいくつかの SQL Server のシステム関数が、プロジェクトの設定によって置き換えられます。 SSMA では、次のユーザー定義関数を作成します。  
   
 ||||  
 |-|-|-|  
@@ -70,8 +73,8 @@ ASE データベース オブジェクトに変換するには、最初に、変
 |**ulowsurr**|**to_unichar**|**ssma_current_time**|  
 |**uhighsurr**|||  
   
-## <a name="objects-not-supported-in-sql-azure"></a>SQL Azure でサポートされていないオブジェクト  
-通常の SQL Server への変換時 Sybase の次の T-SQL キーワードを SSMA によって使用されますが、SQL Azure の T-SQL 構文では、これらのキーワードはサポートされていません。  
+## <a name="objects-not-supported-in-azure-sql"></a>Azure SQL でサポートされていないオブジェクト  
+SQL Server をオンプレミスでへの変換時の SAP ASE、次の T-SQL キーワードを SSMA によって使用されますが、SQL Azure の T-SQL 構文では、これらのキーワードはサポートされていません。  
   
 ||||  
 |-|-|-|  
@@ -82,7 +85,7 @@ ASE データベース オブジェクトに変換するには、最初に、変
 |WRITETEXT|||  
   
 ## <a name="viewing-conversion-problems"></a>変換の問題を表示します。  
-一部の ASE オブジェクトに変換できません可能性があります。 集計変換レポートを表示して、変換の成功率を指定できます。  
+一部の SAP ASE オブジェクトに変換できません可能性があります。 集計変換レポートを表示して、変換の成功率を指定できます。  
   
 **概要レポートを表示するには**  
   
@@ -110,27 +113,27 @@ ASE データベース オブジェクトに変換するには、最初に、変
   
 5.  赤いエラー アイコンがあるオブジェクトを選択します。  
   
-6.  右側のウィンドウでをクリックして、**レポート**タブです。  
+6.  右側のペインで、**レポート**タブです。  
   
 7.  上部にある、**レポート**タブは、ドロップダウン リスト。 一覧に表示される場合**統計**、選択を変更するに**ソース**です。  
   
     SSMA は、ソース コードとコードのすぐ上のいくつかのボタンに表示されます。  
   
-8.  クリックして、**次の問題**ボタンをクリックします。 これは、右向き矢印の付いた赤いエラー アイコンです。  
+8.  選択**次の問題**、右向き矢印の付いた赤いエラー アイコン。  
   
-    ASE の SSMA では、現在のオブジェクト内で見つかった最初の問題のあるソース コードを強調表示されます。  
+    SAP ASE の SSMA では、現在のオブジェクト内で見つかった最初の問題のあるソース コードを強調表示されます。  
   
 変換できなかった項目ごとのオブジェクトで実行するかを決定する必要があります。  
   
 -   プロシージャやトリガーのソース コードを編集することができます、 **SQL**タブです。  
   
--   ASE オブジェクトを削除するか、問題のあるコードの修正を変更することができます。 SSMA に、更新されたコードを読み込むするには、メタデータを更新する必要があります。 詳細については、次を参照してください[Sybase ASE &#40; に接続する。SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+-   削除するか、問題のあるコードを変更するには、SAP ASE オブジェクトを変更することができます。 SSMA に、更新されたコードを読み込む、メタデータを更新する必要があります。 詳細については、次を参照してください[SAP ASE &#40; に接続する。SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure メタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、アイテムの横のチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure と ASE からデータを移行します。  
+-   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL メタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、アイテムの横のチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Azure SQL や SAP ASE からデータを移行します。  
   
-## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [SQL Server に変換されたデータベース オブジェクトの読み込み/SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)です。  
+## <a name="next-steps"></a>次の手順  
+移行プロセスの次の手順は[SQL Server に変換されたデータベース オブジェクトの読み込み/SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB &#40; への Sybase ASE データベースの移行SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SAP ASE データベースを移行するには、SQL Server - Azure SQL データベース &#40;です。SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

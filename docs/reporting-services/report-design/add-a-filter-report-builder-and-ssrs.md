@@ -2,9 +2,12 @@
 title: "フィルターの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b6692664b434161cce324e0e81f45f30361b30fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fdf9b718e48d41440cd2b4e72097e95ebc8cc42e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>フィルターの追加 (レポート ビルダーおよび SSRS)
   計算や表示の対象として特定の値だけを含めたり除外したりするには、データセット、データ領域、またはグループにフィルターを追加します。 実行時には、フィルターが最初にデータセットに適用され、次にデータ領域に適用された後、グループに (グループ階層の上から順に) 適用されます。 テーブル、マトリックス、または一覧では、行グループ、列グループ、および隣接するグループに対するフィルターが別々に適用されます。 グラフでは、カテゴリ グループと系列グループに対するフィルターが別々に適用されます。  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
 8.  **[値]** ボックスで、 **[式]**の値を評価するフィルター用の式または値を入力します。  
   
-     フィルター式の例については、「[フィルター式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+     フィルター式の例については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/09/2017
   
 9. **[値]** ボックスで、 **[式]**の値を評価するフィルター用の式または値を入力します。  
   
-     フィルター式の例については、「[フィルター式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+     フィルター式の例については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -103,7 +106,7 @@ ms.lasthandoff: 11/09/2017
   
 9. **[値]** ボックスで、 **[式]**の値を評価するフィルター用の式または値を入力します。  
   
-     フィルター式の例については、「[フィルター式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+     フィルター式の例については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -127,7 +130,7 @@ ms.lasthandoff: 11/09/2017
   
 9. **[値]** ボックスで、 **[式]**の値を評価するフィルター用の式または値を入力します。  
   
-     フィルター式の例については、「[フィルター式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+     フィルター式の例については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

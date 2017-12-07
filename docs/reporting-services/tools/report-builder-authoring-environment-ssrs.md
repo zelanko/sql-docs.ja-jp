@@ -2,9 +2,12 @@
 title: "レポート ビルダーの作成環境 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5a5817be0d4f9645d52b27673ed31213bd258d37
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4265d5ba1e75e5436e84efd1ecff6a9af75053e4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>レポート ビルダーの作成環境 (SSRS)
   レポート ビルダー [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、Visual Studio 以外で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページネーションのあるレポートを作成するためのスタンドアロンの作成環境です。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  

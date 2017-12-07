@@ -2,9 +2,12 @@
 title: "SQL Native Client 11.0 の構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8ae731300f9e8ca6064db17cfce5311c77c71b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f5f68510e6a36c34d0c4735b66cdb550c22bfc1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 の構成
-  ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの **[SQL Server Native Client の構成]** ダイアログ ボックスの F1 ヘルプ トピックについて紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client はクライアント コンピューターへの接続を使用するネットワーク ライブラリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このセクションには F1 ヘルプ トピックが含まれています、 **SQL Server Native Client の構成**ダイアログ[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client はクライアント コンピューターへの接続を使用するネットワーク ライブラリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の構成] ダイアログ ボックスの設定は、クライアント プログラムを実行するコンピューターで使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューター上で構成された設定は、サーバー上で実行するクライアント プログラムだけに影響します。  
   

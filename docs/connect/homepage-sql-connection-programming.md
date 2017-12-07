@@ -2,7 +2,7 @@
 title: "SQL クライアントのプログラミングのホームページ |Microsoft ドキュメント"
 description: "注釈付きへのリンクのダウンロードとドキュメントの言語と SQL Server または Azure SQL Database に接続するためのオペレーティング システムのさまざまな組み合わせをハブ ページ。"
 author: MightyPen
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -14,11 +14,11 @@ ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
-ms.openlocfilehash: dbbb2e06521b364de7d8de1b32869380fbc2772a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>クライアントの Microsoft SQL Server へのプログラミングのホームページ
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/18/2017
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp;[ ![C# ロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework では、.NET Framework の][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java ロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js ロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP ロゴ][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Node.js ロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大きなプラス][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP ロゴ][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp;[ ![Python ロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby ロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -184,7 +184,7 @@ SQL Server 用の Node.js 接続ドライバーは、JavaScript で実装され�
 
 ## <a name="odbc-for-c"></a>C++ 用の ODBC 
 
-![ODBC のロゴ][image-ref-350-odbc]
+![ODBC のロゴ][image-ref-350-odbc] ![cpp 大きなプラス][image-ref-322-cpp]
 
 、1990 年代に開発されたオープン データベース コネクティビティ (ODBC) と .NET Framework が日付より前です。 ODBC は、任意の特定のデータベース システムから独立しており、別のオペレーティング システムに設計されています。
 
@@ -364,7 +364,6 @@ Ruby を使用して、SQL Server と対話することができます。 Ruby�
 
 <!-- Image references. -->
 
-[image-ref-310-ado-net]: ./media/homepage-sql-connection-drivers/gm-ado-net-an51.png
 [image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61f.png
 [image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10c.png
 [image-ref-333-ef]: ./media/homepage-sql-connection-drivers/gm-entity-framework-ef20d.png

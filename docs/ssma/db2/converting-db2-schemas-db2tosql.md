@@ -1,10 +1,13 @@
 ---
 title: "変換する DB2 スキーマ (DB2ToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9704f41686d4859e2b6ba10fbf1ef86ea7a5b23b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3b5519b19a5ae8098016e7d9bf0daa25c8678cdd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 接続されている DB2 に接続すると後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 データベース オブジェクトに変換するにはプロジェクトの設定とデータのマッピング オプションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトです。  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
 |CREATE TABLE|**SSMA は、次の例外が CREATE TABLE を割り当てます。**<br /><br />多次元のクラスタ リング (MDC) テーブル<br /><br />範囲-クラスター化テーブル (RCT)<br /><br />パーティション テーブル<br /><br />デタッチされたテーブル<br /><br />データのキャプチャ句<br /><br />非表示に IMPLICITLY オプション<br /><br />揮発性のオプション|  
 |CREATE VIEW|SSMA は、' WITH ローカル CHECK OPTION' をビューの作成をマップしますが、その他のオプションは、SQL server のセマンティクスにマップされていません|  
 |CREATE INDEX|**SSMA は、次の例外がインデックスの作成を割り当てます。**<br /><br />XML インデックス<br /><br />オーバー ラップせず BUSINESS_TIME オプション<br /><br />パーティション分割された句<br /><br />オプションの指定のみ<br /><br />オプションの拡張を使用します。<br /><br />MINPCTUSED オプション<br /><br />ページ分割オプション|  
-|トリガー|**SSMA は、次のトリガーのセマンティクスを割り当てます。**<br /><br />AFTER/各の行のトリガーを<br /><br />各ステートメントがトリガー/FOR 後<br /><br />前に/FOR EACH ROW との代わりに各の行のトリガーの場合は/|  
+|トリガーの|**SSMA は、次のトリガーのセマンティクスを割り当てます。**<br /><br />AFTER/各の行のトリガーを<br /><br />各ステートメントがトリガー/FOR 後<br /><br />前に/FOR EACH ROW との代わりに各の行のトリガーの場合は/|  
 |シーケンス|マップされます。|  
 |SELECT ステートメント|**SSMA マップは、次の例外を選択します。**<br /><br />部分的にマップされると、– データの変更テーブル参照句が最終的なテーブルはサポートされていません<br /><br />テーブル参照の句-部分的にマップされている、専用のテーブルの参照、外部テーブル参照、analyze_table 式が、コレクション派生テーブル、xmltable 式は、SQL server のセマンティクスにマップされていません<br /><br />期間仕様句: マップされていません。<br /><br />続行ハンドラー句: マップされていません。<br /><br />型指定された関連付け句: マップされていません。<br /><br />同時実行のアクセスの解像度句: マップされていません。|  
 |VALUES ステートメント|マップされます。|  

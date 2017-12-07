@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a3264d10535196e245ca9f5e0e59366667cf3fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ea8b666dead9d4a23255fe9eecda64258a9f8a
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ FOR JSON AUTO
     -   小さな結果セットには 1 つの行が含まれます。
     -   大きな結果セットでは、長い JSON 文字列が複数行に分割されます。
         -   出力設定が**結果をグリッドに表示**の場合、SQL Server Management Studio (SSMS) は既定で結果を単一行に連結します。 SSMS のステータス バーに、実際の行数が表示されます。
-        -   他のクライアント アプリケーションでは、複数の行の内容を連結することによって長い結果を単一の有効な JSON 文字列に結合し直すにはコードが必要になることがあります。 C# アプリケーションでのこのコードの例については、「[C# クライアント アプリで FOR JSON 出力を使用する](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)」をご覧ください。
+        -   他のクライアント アプリケーションでは、複数の行の内容を連結することによって長い結果を単一の有効な JSON 文字列に結合し直すにはコードが必要になることがあります。 C# アプリケーションでのこのコードの例については、「[C# クライアント アプリで FOR JSON 出力を使用する](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)」をご覧ください。
   
      ![FOR JSON 出力の例](../../relational-databases/json/media/forjson-example2.png)  
   

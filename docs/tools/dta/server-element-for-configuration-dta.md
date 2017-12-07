@@ -2,9 +2,12 @@
 title: "Server 要素 (DTA) の構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a09d30108c727fb7a51d2d62bc86a1795658a35b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 98d5e308830cf8ba07553b4abb3c1ffa1de37d84
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="server-element-for-configuration-dta"></a>Configuration の Server 要素 (DTA)
-  データベース エンジン チューニング アドバイザーで仮想的な構成 ( **Configuration** 要素で指定する構成) を評価する対象のサーバーの識別情報が含まれます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]データベース エンジン チューニング アドバイザーを仮定の構成を評価するサーバーの識別情報が含まれています (によって指定された、**構成**要素)。  
   
 ## <a name="syntax"></a>構文  
   

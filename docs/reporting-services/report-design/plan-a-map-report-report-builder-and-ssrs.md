@@ -2,9 +2,12 @@
 title: "マップ レポートの計画 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 138021b238290bf881bd1bd6291c11db958f1653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b6581db08d67cef66d9ea4134493b3c83a4b0d80
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>マップ レポートの計画 (レポート ビルダーおよび SSRS)
 優れたレポートは、具体的な行動や洞察につながる情報をもたらします。 地理的背景上に売上合計や人口統計などの分析データを表現するには、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加します。 マップには、複数のレイヤーを含めることができます。各レイヤーには、特定の種類の空間データ (場所を表すポイント、ルートを表す線、または領域を表す多角形) によって定義されたマップ要素が表示されます。 各レイヤー上でマップ要素に分析データを関連付けることができます。  

@@ -2,9 +2,12 @@
 title: "Reporting Services のインストール状態の検証 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/03/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 156fe09f98f0afd9a091821e6f810fdcca6bd31a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3bc0a3f5b33e73a14fd7d4c78a412d6dd36c89f3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services のインストール状態の検証
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブまたは SharePoint の 2 つのモードのうちのいずれかのモードでインストールできます。 インストールの確認に必要な手順は、レポート サーバーのモードによって変わります。  

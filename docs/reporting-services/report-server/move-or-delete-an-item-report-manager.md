@@ -2,9 +2,12 @@
 title: "アイテムの移動または削除 (レポート マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f6b2c78c1794c54fe116d745ef0561cd93a6339c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 271e373832a4573463d7ee864fbfc61ff75bbf25
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
   レポート サーバーにパブリッシュしたレポートやレポート関連アイテムは、フォルダーに格納されます。 アイテムは異なるフォルダーに移動でき、それらのアイテムへの参照はレポート サーバーによって自動的に保持されます。 アイテムを削除する前に、そのアイテムに依存しているアイテムが他に存在しないか確認してください。  
@@ -79,6 +82,6 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>参照  
  [[コンテンツ] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

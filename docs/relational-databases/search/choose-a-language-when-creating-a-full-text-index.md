@@ -2,7 +2,7 @@
 title: "フルテキスト インデックス作成時の言語の選択 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-search
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82edddf024831f41ce82ce8ec5d3f212513d89f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>フルテキスト インデックス作成時の言語の選択
   フルテキスト インデックスを作成する際には、列レベルの言語をインデックス列に対して指定する必要があります。 指定した言語の [ワード ブレーカーとステマー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) が、列のフルテキスト クエリで使用されます。 フルテキスト インデックスの作成時に列の言語を選択する際には、注意点が 2 つあります。 これらの注意点は、テキストをトークン化する方法と、Full-Text Engine によるインデックス作成の方法にかかわるものです。  

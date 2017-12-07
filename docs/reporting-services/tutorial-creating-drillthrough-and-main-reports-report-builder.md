@@ -2,9 +2,12 @@
 title: "チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b42806861fb551463894775d2bf3619ab10bd034
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 85b1c63c9b6ab18018b9d31143ab53503ad64ae1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 

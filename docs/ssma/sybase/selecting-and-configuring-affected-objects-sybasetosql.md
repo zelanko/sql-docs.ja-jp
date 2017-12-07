@@ -3,8 +3,11 @@ title: "影響を受けたオブジェクト (SybaseToSQL) の選択と構成 |M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97bb6a73aa744a6471a48ba16fc3ee9b52dea67e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 016fc9d6f7250756a098cd4b1876ca74ed67e3cc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けたオブジェクト (SybaseToSQL) の選択と構成
 このページでは、テーブルを選択して、SSMA、前の手順で選択されたオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズすることができます。  
@@ -32,7 +35,7 @@ Sybase オブジェクト ツリーで、ウィンドウの左側にある、テ
   
 SSMA テスターは、これらのオブジェクトのいずれかを確認できない場合、は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトを比較することはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
-## <a name="table"></a>テーブル  
+## <a name="table"></a>Table  
 あるテーブル タブには、選択されたテーブルのグリッド ビューが含まれています。 グリッドには、選択したテーブルについては、次の情報が含まれています。  
   
 -   列名  
@@ -54,10 +57,10 @@ SSMA テスターは、これらのオブジェクトのいずれかを確認で
 ## <a name="sql"></a>Sql  
 [SQL] タブには、"Create table"が含まれています。 選択されたテーブルの SQL です。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>データ  
 [データ] タブでは、選択されたテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更されました。  

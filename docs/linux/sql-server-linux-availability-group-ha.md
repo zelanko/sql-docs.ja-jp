@@ -5,7 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループの構成の高可用性とデータの保護
 
@@ -161,7 +161,7 @@ SQL Server 2017 CTP 1.4 追加`sequence_number`に`sys.availability_groups`レ�
 
 既定の動作をオーバーライドして、可用性グループ リソースも設定することもできます`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`自動的にします。
 
-次のスクリプト セット`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`という名前の可用性グループに対して、0 に`<**ag1**>`です。 置換を実行する前に`<**ag1**>`可用性グループの名前に置き換えます。
+次のスクリプト セット`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`という名前の可用性グループに対して、0 に`<**ag1**>`です。 実行する前に、`<**ag1**>` を実際の可用性グループの名前に置き換えます。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

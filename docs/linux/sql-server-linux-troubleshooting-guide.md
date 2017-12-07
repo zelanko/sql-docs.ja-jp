@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
@@ -149,7 +149,7 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
    ```
   
 > [!WARNING]  
->  SQL Server を Linux 上の将来の起動に関する問題を防ぐために、"mssql"ユーザーを起動します。 "Sudo-u mssql/opt/mssql/bin/sqlservr [スタートアップのオプション]"の例 
+>  スタートアップに関する将来の問題を防ぐため、Linux 上の SQL Server は "mssql" ユーザーで起動してください。 たとえば、"sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" などとします。 
 
 別のユーザーと、SQL Server を開始している誤って場合、systemd で SQL Server を開始する前に 'mssql' ユーザーに SQL Server データベース ファイルの所有権を変更する必要があります。 たとえば、'mssql' ユーザーに/var/opt/mssql 下にあるすべてのデータベース ファイルの所有権を変更するに次のコマンドを実行します。
 

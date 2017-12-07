@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: f8d20c5b5b687a6d9d94cd97605f294cead27215
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server に追加の R パッケージをインストールします。
 
@@ -158,8 +158,9 @@ SQL Server R services の以前のバージョンを使用している場合は�
 
     ```R
     packageList <- c("e1071")
-
-3. Define a connection string to the instance and database where package management is enabled, and use the connection string to create a SQL Server compute context.
+    ```
+    
+3. インスタンスと、パッケージの管理が有効になるデータベースに接続文字列を定義し、SQL Server のコンピューティング コンテキストを作成する接続文字列を使用します。
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)

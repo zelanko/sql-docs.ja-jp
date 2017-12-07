@@ -1,10 +1,13 @@
 ---
 title: "Power BI ダッシュボードへの Reporting Services のアイテムのピン留め | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 13af28f9c90f848c77a1709bbac115a0e70943b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI ダッシュボードへの Reporting Services のアイテムのピン留め
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] では、レポート ビューアー ツール バーから [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードに新しいタイルとしてピン留めできます。   ピン留めするには、管理者がレポート サーバーを Azure Active Directory および [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合しておく必要があります。  
@@ -112,7 +115,7 @@ ms.lasthandoff: 11/09/2017
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードで**ピン留めされたアイテムに古いデータが表示され**、一定期間更新されなかった:   ユーザーの資格情報トークンの有効期限が切れているので、もう一度サインインする必要があります。  Azure と [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのユーザーの資格情報登録の有効期間は 90 日間です。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]**をクリックします。 詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)と統合しておく必要があります。  
+-   [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードで**ピン留めされたアイテムに古いデータが表示され**、一定期間更新されなかった:   ユーザーの資格情報トークンの有効期限が切れているので、もう一度サインインする必要があります。  Azure と [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのユーザーの資格情報登録の有効期間は 90 日間です。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]**をクリックします。 詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)」を参照してください。  
   
 -   [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードで**ピン留めされたアイテムに古いデータが表示され**、一度も更新されていない:   問題は、保存された資格情報を使用するようにレポートが構成されていないことです。 レポート アイテムのピン留め操作により、タイルの更新スケジュールを管理する [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが作成されるため、レポートでは保存された資格情報を使用する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 **[個人用サブスクリプション]** ページを確認すると、次のようなエラー メッセージが表示されます。  
   

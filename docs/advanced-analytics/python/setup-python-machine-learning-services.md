@@ -2,7 +2,7 @@
 title: "Python の Machine Learning のサービスのセットアップと構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e3142bcf06fa2ed88ead730d0cc127cf41cfde56
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc9cfe7bf885c99ccfe487e10e001ff36f68ee86
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python Machine Learning Services (In-database) を設定します。
 
@@ -188,9 +188,9 @@ ms.lasthandoff: 11/09/2017
 2. **ログイン - 新規**ダイアログ ボックスで、**検索**です。
 3. 選択**オブジェクトの種類**を選択して**グループ**です。 他のすべてをクリアします。
 4. **を選択するオブジェクト名を入力**、型*SQLRUserGroup*を選択して**名前の確認**です。
-5. インスタンスのスタート パッド サービスに関連付けられているローカル グループの名前が、" *インスタンス名\SQLRUserGroup*" などに解決されます。 **[ OK]** を選択します。
+5. インスタンスのスタート パッド サービスに関連付けられているローカル グループの名前が、" *インスタンス名\SQLRUserGroup*" などに解決されます。 **[OK]** を選択します。
 6. 既定では、グループが割り当てられている、**パブリック**ロール、データベース エンジンに接続するアクセス許可を持つとします。
-7. **[ OK]** を選択します。
+7. **[OK]** を選択します。
 
 > [!NOTE]
 > 使用する場合、 **SQL ログイン**スクリプトを実行して、SQL Server のコンピューティング コンテキストで、この余分な手順は必要ありません。

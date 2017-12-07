@@ -2,9 +2,12 @@
 title: "sqlmaint ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sqlmaint
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87b232709f63a1a4041a057cb5a6c275bc9835b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
-  **sqlmaint** ユーティリティは、1 つまたは複数のデータベース上で、指定された一連のメンテナンス操作を実行します。 **sqlmaint** を使用して、DBCC チェックの実行、データベースとデータベース トランザクション ログのバックアップ、統計の更新、およびインデックスの再構築を行います。 すべてのデータベース メンテナンス操作では、指定されたテキスト ファイル、HTML ファイル、または電子メール アカウントに送信できるレポートが生成されます。 **sqlmaint** は、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。 コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プランを実行するには、 [dtexec](../integration-services/packages/dtexec-utility.md)ユーティリティを使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**ユーティリティには、指定された 1 つまたは複数のデータベースでメンテナンス操作のセットを実行します。 **sqlmaint** を使用して、DBCC チェックの実行、データベースとデータベース トランザクション ログのバックアップ、統計の更新、およびインデックスの再構築を行います。 すべてのデータベース メンテナンス操作では、指定されたテキスト ファイル、HTML ファイル、または電子メール アカウントに送信できるレポートが生成されます。 **sqlmaint** は、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。 コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プランを実行するには、 [dtexec](../integration-services/packages/dtexec-utility.md)ユーティリティを使用します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)]代わりに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プラン機能を使用してください。 メンテナンス プランの詳細については、「 [メンテナンス プラン](../relational-databases/maintenance-plans/maintenance-plans.md)」を参照してください。  

@@ -4,26 +4,22 @@ description: "更新されたコンテンツで最近変更したドキュメン
 services: na
 documentationcenter: 
 author: MightyPen
-manager: kfile
+manager: jhubbard
 editor: 
-ms.service: 
-ms.component: misc
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.workload: analysis-services
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 53124d807c0573263041389e1c879f4da10c06e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6de674b8fb63908964538339410a66db6918a16a
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>新規または最近更新された: SQL Server 用に Analysis Services
 
@@ -37,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 9 月 11 日**&nbsp;から &nbsp; **2017 年 9 月 27 日**
+- *更新プログラムの日付範囲:* &nbsp; **2017 年-09-28** &nbsp;対&nbsp; **2017 年-12-02**
 - *サブジェクト領域:* &nbsp; **for SQL Server Analysis Services**です。
 
 
@@ -50,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-***今回は新しい記事はありません。***
+1. [ネイティブ クエリを使用したデータのインポート](tabular-models/ssas-import-query.md)
 
 
 
@@ -76,65 +72,13 @@ ms.lasthandoff: 11/17/2017
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [どのような &#39; s SQL Server 2017 Analysis Services の新機能](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-what39s-new-in-sql-server-2017-analysis-serviceswhat-s-new-in-sql-server-analysis-services-2017md"></a>1.&nbsp;[何 &#39; s SQL Server 2017 Analysis Services の新機能](what-s-new-in-sql-server-analysis-services-2017.md)
-
-*最終更新日: 2017 年-09-22* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 143.  ms.author= "owend".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c8d75883f07e6e32859728d09139920eb9bf65c5 d206e83413d15a6e6116120e4a98dda9c8ce81d8  (PR=3278  ,  Filename=what-s-new-in-sql-server-analysis-services-2017.md  ,  Dirpath=docs\analysis-services\  ,  MergeCommitSha40=656e62f36446db4ef5b232129130a0253d2aebdf) -->
-
-
-
-**オブジェクト レベルのセキュリティ**
-
-このリリースには [オブジェクト レベルのセキュリティ--.. が導入されています/analysis-services/tabular-models/object-level-security.md) テーブルと列にします。 テーブルおよび列のデータへのアクセスを制限、だけでなく機密性の高いテーブルおよび列名を保護することができます。 これで、悪意のあるユーザーがテーブルの存在を検出できなくなります。
-
-JSON ベースのメタデータを表形式モデル スクリプト言語 (TMSL)、または表形式オブジェクト モデル (TOM) を使用して、オブジェクト レベルのセキュリティを設定する必要があります。
-
-たとえば、次のコードを使用して、 **TablePermission** クラスの **MetadataPermission** プロパティを **None**に設定すると、サンプル Adventure Works テーブル モデルの Product テーブルをセキュリティで保護できます。
-
-```
-//Find the Users role in Adventure Works and secure the Product table
-ModelRole role = db.Model.Roles.Find("Users");
-Table productTable = db.Model.Tables.Find("Product");
-if (role != null && productTable != null)
-{
-    TablePermission tablePermission;
-    if (role.TablePermissions.Contains(productTable.Name))
-    {
-        tablePermission = role.TablePermissions[productTable.Name];
-    }
-    else
-    {
-        tablePermission = new TablePermission();
-        role.TablePermissions.Add(tablePermission);
-        tablePermission.Table = productTable;
-    }
-    tablePermission.MetadataPermission = MetadataPermission.None;
-}
-db.Update(UpdateOptions.ExpandFull);
-```
-
-**動的管理ビュー (Dmv)**
-
-[Dmv--../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) ローカル サーバーの操作とサーバーの正常性に関する情報を返す SQL Server Profiler でクエリします。
-このリリースには、機能強化が含まれています。[動的管理ビュー](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) の 1400 1200 互換性レベルは、表形式モデル。
-
+***この期間にこの分野に関して更新された記事はありません。***
 
 
 
@@ -146,36 +90,40 @@ db.Update(UpdateOptions.ExpandFull);
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新規 + 更新 (0 + 1): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (0 + 1): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新規 + 更新 (4 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (17 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (3 + 0): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (1 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新しい + 更新 (3 + 14): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (1 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (87 + 0): **sql 分析プラットフォーム システム**docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新しい + 更新 (5 + 4): **SQL への接続**docs](../connect/new-updated-connect.md)
+- [新しい + 更新 (0 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
+- [新しい + 更新 (2 + 2): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [新しい + 更新 (10 + 9): **SQL の Linux** docs](../linux/new-updated-linux.md)
+- [新しい + 更新 (2 + 4):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [新しい + 更新 (4 + 2): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [新しい + 更新 (0 + 1): **SQL 用のサンプル**docs](../sample/new-updated-sample.md)
+- [新しい + 更新 (21 + 0): **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新しい + 更新 (5 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新しい + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新しい + 更新 (0 + 2): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
+- [新しい + 更新 (0 0 以降):**データ移行アシスタント (DMA) sql** docs](../dma/new-updated-dma.md)
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
-- [新規 + 更新 (0 + 0): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 

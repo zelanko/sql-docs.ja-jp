@@ -2,9 +2,12 @@
 title: "SQL Server Profiler の実行に必要なアクセス許可 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f7fd787af4d874b8c0d6d7fc23aa58227f4c58e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ad771af23debc0bb70cf0a2ce8870ba18aac1bc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server Profiler の実行に必要な権限
-  既定では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の実行には、トレースの作成に使用した Transact-SQL ストアド プロシージャと同じユーザー権限が必要です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を実行するには、ユーザーに ALTER TRACE アクセス権を許可する必要があります。 詳細については、「[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]既定を実行している[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]トレースを作成するために使用した TRANSACT-SQL ストアド プロシージャと同じユーザー権限が必要です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を実行するには、ユーザーに ALTER TRACE アクセス権を許可する必要があります。 詳細については、「[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  SHOWPLAN 権限、ALTER TRACE 権限、または VIEW SERVER STATE 権限を持つユーザーは、プラン表示出力にキャプチャされたクエリを表示できます。 これらのクエリには、パスワードなどの機密情報が含まれている場合があります。 したがって、これらの権限は、機密情報を表示することが認められているユーザー (たとえば db_owner 固定データベース ロールのメンバーや sysadmin 固定サーバー ロールのメンバー) のみに付与することをお勧めします。 また、プラン表示ファイルまたはプラン表示関連のイベントを含むトレース ファイルのみを保存すること、保存先は NTFS ファイル システムが使用されている場所とすること、および機密情報を表示する権限を持つユーザーのみにアクセスを制限することをお勧めします。  

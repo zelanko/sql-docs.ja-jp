@@ -6,14 +6,16 @@ ms.author: annashres
 manager: jhubbard
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 0bc304b50930f8c8de5d244ea0b606add5f24d2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017 をクラウドで実行します。
 
@@ -25,7 +27,7 @@ ms.lasthandoff: 11/09/2017
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
-1.  少なくとも 3.25 GB の marketplace からのメモリが Linux AMI を作成します。 
+1.  Linux AMI を作成するには、少なくとも 2 gb のマーケットプ レースからメモリ 
     * [RHEL 7.3 以降](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="digital-ocean"></a>デジタル オーシャン
 1. ログイン、[コントロール パネルの [](https://cloud.digitalocean.com/login)ドロップレットの作成] をクリック
-1. Ubuntu 16.04 ドロップレット少なくとも 3.25 gb のメモリを選択します。
+1. 少なくとも 2 GB のメモリと Ubuntu 16.04 ドロップレットを選択します。
 1. 接続とドロップレット ssh
 1. 以下の[Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md)
 1. リモート接続を構成します。
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/09/2017
     * SQL Server がリッスンする (既定の TCP ポートは 1433) ポートでトラフィックを許可する受信規則を追加します。
     
 ## <a name="google-cloud-platform"></a>Google Cloud Platform
-1.  Linux イメージ 3.25 GB 以上のクラウド ランチャーからメモリを作成します。 
+1.  Linux イメージには、少なくとも 2 GB のクラウド ランチャーからメモリを作成します。 
     * [RHEL 7.3 以降](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)

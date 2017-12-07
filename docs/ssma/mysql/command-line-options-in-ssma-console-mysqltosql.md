@@ -1,10 +1,13 @@
 ---
 title: "SSMA コンソール (MySQLToSQL) でのコマンド ライン オプション |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba887baa7ee43776f1d01688ec1ec29537a4ba4f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e7ccde141a639de663ee33a7643fb89b72699680
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA コンソール (MySQLToSQL) でのコマンド ライン オプション
 Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -99,7 +102,7 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
 このコマンドはコンソールにするか、xml ファイルを xml 形式でコマンドの出力メッセージを出力するために使用されます。  
   
-2 つのオプション使用できるが、xmloutput viz。.。  
+2 つのオプション使用できるが、xmloutput viz。  
   
 -   Xmloutput スイッチの後にファイル パスが指定した場合は、ファイルに出力がリダイレクトされます。  
   

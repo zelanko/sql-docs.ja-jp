@@ -1,10 +1,13 @@
 ---
 title: "Claims to Windows Token Service (C2WTS) と Reporting Services | Microsoft Docs"
-ms.custom: The Claims to Windows Token Service (C2WTS) is used by SharePoint and needs to be configured for Kerberos constrained delegation to work with SQL Server Reporting Services properly.
+ms.custom: 
 ms.date: 09/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7c5c7adfdfc1774da8f8b2a9d89e712f4902e4d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 26cd4774a97365950e28bc1011d3a0203886659f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 11/09/2017
 SQL Server Reporting Services SharePoint モードで SharePoint ファームの外部にあるデータ ソースに対して Windows 認証を使用する場合にも、C2WTS が必要です。 C2WTS は、データ ソースが共有サービスと同じコンピューター上にある場合でも必要です。 ただし、このシナリオでは、制約付き委任は必要ありません。
 
 > [!NOTE]
-> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できなくなりました。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
 ## <a name="report-viewer-web-part-configuration"></a>レポート ビューアー Web パーツの構成
 

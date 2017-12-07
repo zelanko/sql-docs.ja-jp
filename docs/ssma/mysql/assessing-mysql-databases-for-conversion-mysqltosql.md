@@ -1,10 +1,13 @@
 ---
 title: "MySQL データベースを評価する変換 (MySQLToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58df45157252c3fc54fe54d91edce69cbcb0bd28
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0884696760fac2e7aedf5cdd7b8c53fae88674b4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>変換 (MySQLToSQL) の MySQL データベースを評価します。
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure 移行が複雑な方法で、どれ時間だけを決定する必要があります、移行になります。 SSMA は、正常に変換されるオブジェクトの割合が表示される評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  

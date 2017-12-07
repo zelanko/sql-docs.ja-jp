@@ -2,7 +2,7 @@
 title: "リアルタイムのスコアリングまたは SQL Server のネイティブのスコア付けを実行する方法 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 5e643bf8d0bc630d33808cf531f3bc4d20e3cc9c
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>リアルタイムのスコアリングまたは SQL Server のネイティブのスコア付けを実行する方法
 
@@ -218,7 +218,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>手順 3. 呼び出し sp_rxPredict
 
-Sp を呼び出す\_rxPredict とすると、他のストアド プロシージャです。 現在のリリースでは、ストアド プロシージャは 2 つのパラメーターを受け取ります:  _@model_ バイナリ形式でモデルおよび _@inputData_  、スコアリングに使用するデータの有効な SQL クエリとして定義されている。.
+Sp を呼び出す\_rxPredict とすると、他のストアド プロシージャです。 現在のリリースでは、ストアド プロシージャは 2 つのパラメーターを受け取ります:  _@model_ バイナリ形式でモデルおよび _@inputData_  、スコアリングに使用するデータの有効な SQL クエリとして定義されている.
 
 バイナリ形式、PREDICT 関数によって使用される同じであるために、前の例から、モデルおよびデータ テーブルを使用できます。
 

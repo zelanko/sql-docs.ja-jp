@@ -2,9 +2,12 @@
 title: "SQL ツール、および SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/15/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ad2c6a833d064d7e70da281e1fdc36ae9c235e1
-ms.sourcegitcommit: c31ab3a0c47644560fd125decee4f8630da5ebdb
+ms.openlocfilehash: ba7958a1b5b9398dec3cb07630ee84b72970d2ae
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL ツールとユーティリティの SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
 
@@ -70,9 +73,9 @@ ms.lasthandoff: 11/15/2017
 |[SqlLocalDB ユーティリティ](../tools/sqllocaldb-utility.md)|プログラムの開発者を対象とした [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の実行モードです。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\|  
 |[sqlmaint ユーティリティ](../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。|\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\Binn|  
 |[sqlps ユーティリティ](../tools/sqlps-utility.md)|PowerShell コマンドおよびスクリプトを実行します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みと登録を行います。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr アプリケーション](../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr アプリケーション](../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから[!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\Binn|  
 |[Ssms ユーティリティ](../tools/sql-server-management-studio/ssms-utility.md)|コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動します。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
-|[tablediff ユーティリティ](../tools/tablediff-utility.md)|2 つのテーブルのデータを比較し、非収束について調査します。これは、レプリケーション トポロジのトラブルシューティングを行う場合に便利です。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM (COM)|  
+|[tablediff ユーティリティ](../tools/tablediff-utility.md)|2 つのテーブルのデータを比較し、非収束について調査します。これは、レプリケーション トポロジのトラブルシューティングを行う場合に便利です。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
 
 ## <a name="sql-command-prompt-utilities-syntax-conventions"></a>SQL コマンド プロンプト ユーティリティの構文規則  
   
