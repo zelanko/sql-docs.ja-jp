@@ -19,6 +19,7 @@ ms.openlocfilehash: b598357bb8ebe17ad15fb10e1d74c21c169c1da8
 ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
+
 ms.lasthandoff: 12/01/2017
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
@@ -27,7 +28,7 @@ SQL Server 2017 が Linux で実行されます。 ような多くの機能と�
 
 ## <a name="install"></a>Install
 
-、作業を開始するには、次のクイック スタート チュートリアルのいずれかを使用して Linux に SQL Server をインストールします。
+作業を開始するには、次のクイック スタート チュートリアルのいずれかの方法により Linux に SQL Server をインストールします。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
@@ -61,3 +62,4 @@ SQL Server を使い慣れている場合は、確認、[リリース ノート]
 - [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 技術的な質問
 - [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): バグ、および要求機能の報告
 - [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server の説明
+
