@@ -32,7 +32,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="prerequisites"></a>前提条件
 
-Ubuntu 16.04 コンピューターに**少なくとも 2 GB**メモリを搭載する必要があります。(CU2 より前 : 3.25 GB / CU2 以降 2 GB)
+Ubuntu 16.04 コンピューターに**少なくとも 2 GB**メモリを搭載する必要があります。
 
 Ubuntu を自分のコンピューターにインストールするには [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server) に移動してください。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)を参照してください。
 
