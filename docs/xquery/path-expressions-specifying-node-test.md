@@ -3,8 +3,11 @@ title: "パス式のステップでノード テストの指定 |Microsoft ド�
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5ed6a12906a5855d2d78580f9c4a2c26ad16a8f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 87ad8f138eee79e84b9cc1056959ebf93a2c3aaa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="path-expressions---specifying-node-test"></a>パス式でノード テストの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   パス式の軸ステップには、次のコンポーネントが含まれてます。  
   
@@ -94,7 +97,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>ノード テストとしてのノード型  
  要素ノード以外のノード型を照会するには、ノード型テストを使用します。 次の表に示すように、使用できるノード型テストは 4 つあります。  
   
-|ノード型|返します。|例|  
+|ノード型|戻り値|例|  
 |---------------|-------------|-------------|  
 |`comment()`|コメント ノードの場合に True を返します。|`following::comment()`コンテキスト ノードの後に表示されるすべてのコメント ノードを選択します。|  
 |`node()`|ノードの種類に関係なく True を返します。|`preceding::node()`コンテキスト ノードの前に表示されるすべてのノードを選択します。|  
