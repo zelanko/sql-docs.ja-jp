@@ -2,12 +2,12 @@
 title: "Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは *パーセプトロン* で構成される *多層パーセプトロン*ネットワーク ( *バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラル ネットワークを使用して、*多層パーセプトロン*とも呼ばれる、ネットワーク、*バックプロパゲーション デルタ ルール ネットワーク*を最大 3 つの層のニューロン、構成、または*パーセプトロン*です。 これらの層は、入力層、オプションの非表示層、および出力層です。  
   
  多層パーセプトロン ニューラル ネットワークの詳細については、このマニュアルでは扱いません。 このトピックでは、入力値および出力値を正規化するために使用する方法や属性の基数を減らすために使用する機能選択方法など、アルゴリズムの基本的な実装について説明します。 このトピックでは、アルゴリズムの動作をカスタマイズするために使用できるパラメーターおよびその他の設定について説明します。モデルのクエリに関する追加情報へのリンクも示します。  
   

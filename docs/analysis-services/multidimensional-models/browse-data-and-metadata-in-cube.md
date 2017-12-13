@@ -2,12 +2,12 @@
 title: "データとキューブ内のメタデータを参照 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>キューブ内のデータおよびメタデータの参照
-  キューブ デザイナーの **[ブラウザー]** タブを使用すると、キューブ データを参照できます。 このビューでは、キューブ構造を検証し、データベース オブジェクトのデータ、計算、書式設定、およびセキュリティを確認できます。 レポート ツールや他のクライアント アプリケーションで、キューブがユーザーにどのように表示されるかを迅速に検証できます。 キューブのデータを参照すると、異なるディメンションを表示し、メンバーをドリル ダウンし、ディメンションをスライスできます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用して、**ブラウザー**キューブ データの参照をキューブ デザイナーのタブです。 このビューでは、キューブ構造を検証し、データベース オブジェクトのデータ、計算、書式設定、およびセキュリティを確認できます。 レポート ツールや他のクライアント アプリケーションで、キューブがユーザーにどのように表示されるかを迅速に検証できます。 キューブのデータを参照すると、異なるディメンションを表示し、メンバーをドリル ダウンし、ディメンションをスライスできます。  
   
  キューブを参照するには、その前にキューブを処理し、再接続する必要があります。 キューブの処理後、キューブ デザイナーの **[ブラウザー]** タブが開きます。 ツール バーの [再接続] ボタンをクリックし、接続を更新します。  
   

@@ -2,12 +2,12 @@
 title: "データ ソース オブジェクト (Analysis Services) に対するアクセス許可を与える |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c774f7711a32eb512c28914146b05f2db52f4b2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a08c7f67120126f836552af70bf97e0b6cda366
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>データ ソース オブジェクトに対する権限の付与 (Analysis Services)
-  通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの基になるデータ ソースへのアクセスを必要とすることはほとんどありません。 ユーザーは通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内部のデータを要求するクエリを発行するだけです。 ただし、データ マイニングのコンテキストでは、マイニング モデルに基づいた予測の実行など、マイニング モデルの登録済みデータをユーザーが入力したデータに結合しなければならない場合があります。 ユーザーが入力したデータが含まれているデータ ソースに接続するには、[OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 句または [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 句を含んでいるデータ マイニング拡張機能 (DMX) クエリを使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ほとんどのユーザーの通常、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の基になるデータ ソースへのアクセスは必要ありません、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト。 ユーザーは通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内部のデータを要求するクエリを発行するだけです。 ただし、データ マイニングのコンテキストでは、マイニング モデルに基づいた予測の実行など、マイニング モデルの登録済みデータをユーザーが入力したデータに結合しなければならない場合があります。 ユーザーが入力したデータが含まれているデータ ソースに接続するには、[OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 句または [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 句を含んでいるデータ マイニング拡張機能 (DMX) クエリを使用します。  
   
  データ ソースに接続する DMX クエリを実行するには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のデータ ソース オブジェクトに対するアクセス権が必要です。 既定では、サーバー管理者またはデータベース管理者のみが、データ ソース オブジェクトにアクセスできます。 つまり、ユーザーは管理者から権限を付与されている場合を除いてデータ ソース オブジェクトにアクセスできません。  
   

@@ -2,12 +2,12 @@
 title: "データベースの Analysis Services については、整合性チェック (DBCC) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 用 database Consistency Checker (DBCC)
-  DBCC には、Analysis Services インスタンスの多次元および表形式データベース向けに、オンデマンドのデータベース検証機能が用意されています。 SQL Server Management Studio (SSMS) の MDX または XMLA クエリ ウィンドウで DBCC を実行し、SSMS の SQL Server Profiler または xEvent セッションで DBCC 出力をトレースできます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC は、Analysis Services インスタンス上の多次元および表形式データベースのオンデマンドのデータベースの検証を提供します。 SQL Server Management Studio (SSMS) の MDX または XMLA クエリ ウィンドウで DBCC を実行し、SSMS の SQL Server Profiler または xEvent セッションで DBCC 出力をトレースできます。  
 このコマンドはオブジェクト定義を受け取り、空の結果セットを返します。オブジェクトが破損している場合は詳細なエラー情報を返します。   この記事では、コマンドの実行方法、結果の解釈方法、発生した問題に対処する方法について説明します。  
   
  表形式データベースの場合、DBCC で実行する整合性チェックは、データベースの再読み込み、同期、復元のたびに自動実行される組み込みの検証と同等です。  対照的に、多次元データベースの整合性チェックは、オンデマンドで DBCC を実行した場合にのみ実行されます。  

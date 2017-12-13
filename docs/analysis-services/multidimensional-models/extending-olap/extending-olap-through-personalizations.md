@@ -2,12 +2,12 @@
 title: "パーソナル化による OLAP の拡張 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3cf33f788c6e208919d9d86a2ac74de9938bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e41858ee929aa38bc043939378f45d35eac755dd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="extending-olap-through-personalizations"></a>パーソナル化による OLAP の拡張
-  Analysis Services は、多次元式 (MDX) およびデータ マイニング拡張機能 (DMX) 言語で使用する多くの組み込み関数を提供します。 これらの関数は、標準的な統計計算から階層に含まれるメンバーのスキャンまで、さまざまな処理に対応できるように設計されています。 ただしと同様に、他の複雑で強力な製品は常にこのような製品のさらに機能を拡張する必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services は、多次元式 (MDX) およびデータ マイニング拡張機能 (DMX) 言語で使用する多くの組み込み関数を提供します。 これらの関数は、標準的な統計計算から階層に含まれるメンバーのスキャンまで、さまざまな処理に対応できるように設計されています。 ただしと同様に、他の複雑で強力な製品は常にこのような製品のさらに機能を拡張する必要があります。  
   
  そのため、Analysis Services は、標準機能だけでは満たすことのできないビジネス ニーズを補うために、サービスのインスタンスにアセンブリやパーソナル化された拡張機能を追加できるようになっています。  
   

@@ -2,12 +2,12 @@
 title: "多次元モデル (Analysis Services) での翻訳 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97c2f9950f050c1e737eebfd0f684ad8cd1e5850
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 07e038b7f959df1a7b3f53c5a1de6360b47a2b4b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多次元モデルの翻訳 (Analysis Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳を定義すると、該当する **オブジェクトに関連付けられた** Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが作成されます。この Translation オブジェクトには、関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティに対応する、指定した言語の明示的なリテラル値が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]翻訳を定義する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の適切なデザイナーを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]翻訳するオブジェクト。 翻訳を定義すると、該当する **オブジェクトに関連付けられた** Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが作成されます。この Translation オブジェクトには、関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティに対応する、指定した言語の明示的なリテラル値が含まれています。  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>多言語データ モデルの要素  
  多言語ソリューションで使用するデータ モデルには、単にラベル (フィールド名と説明) を翻訳する以上の処置が必要になります。 また、さまざまな言語スクリプトで表記したデータ値を提供する必要もあります。 多言語ソリューションを実現するには、個々の属性に外部データベース内の列をバインドし、データを取得する必要があります。  

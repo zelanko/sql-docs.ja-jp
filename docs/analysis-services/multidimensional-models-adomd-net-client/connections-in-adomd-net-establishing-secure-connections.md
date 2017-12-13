@@ -2,12 +2,12 @@
 title: "ADOMD.NET でのセキュリティで保護された接続を確立する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4545dc84372ae73ba90ac0c90a8586e92afe8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 192686dd747d307163e4530c55459e2c2d814cc4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET のセキュリティで保護された接続を確立します。
-  接続に使用されるセキュリティ手段がの値に依存 ADOMD.NET で接続を使用するときに、 **ProtectionLevel**を呼び出すときに使用する接続文字列のプロパティ、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>メソッド、の<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]接続に使用されるセキュリティ手段がの値に依存 ADOMD.NET で接続を使用するときに、 **ProtectionLevel**を呼び出すときに使用する接続文字列のプロパティ、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>メソッド、の<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  **ProtectionLevel**プロパティは、次の 4 つのレベルのセキュリティを提供しています。 認証されていない、認証、署名済み、および暗号化します。 これらの各セキュリティ レベルについて、次の表で説明します。  
   

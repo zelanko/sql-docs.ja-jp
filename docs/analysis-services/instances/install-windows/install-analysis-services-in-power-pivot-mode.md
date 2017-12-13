@@ -2,12 +2,12 @@
 title: "Power Pivot モードで Analysis Services のインストール |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 - setup-install
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0215c2ebdd4a98607dcb60418e468fbe02f6663f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
-  このトピックでは、SharePoint 配置の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーのシングル サーバー インストールを行う手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックの手順でインストールの手順を 1 台のサーバーの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]内のサーバー [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の配置モードです。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
   
 ||  
 |-|  
@@ -111,9 +111,9 @@ ms.lasthandoff: 11/17/2017
   
 10. **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]**を選択します。  
   
-     **[ 次へ]** を選択します。  
+     **[次へ]** を選択します。  
   
-11. [機能の選択] ページで、 **[Analysis Services]**を選択します。 このオプションを使用すると、3 つの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードのいずれかをインストールできます。 モードは後の手順で選択します。 **[ 次へ]** を選択します。  
+11. [機能の選択] ページで、 **[Analysis Services]**を選択します。 このオプションを使用すると、3 つの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードのいずれかをインストールできます。 モードは後の手順で選択します。 **[次へ]** を選択します。  
   
 12. **[インスタンスの構成]** ページで、 **[名前付きインスタンス]** を選択し、インスタンス名に **[POWERPIVOT]** を入力して、 **[次へ]**をクリックします。  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/17/2017
   
 14. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]をインストールする場合は、 **[データベース エンジンの構成]** ページが表示されます。 [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の構成] で、 **[現在のユーザーの追加]** を選択して、データベース エンジン インスタンスに対する管理者権限をユーザー アカウントに付与します。  
   
-     **[ 次へ]** を選択します。  
+     **[次へ]** を選択します。  
   
 15. **[Analysis Services の構成]** ページの **[サーバー モード]** で、 **[PowerPivot モード]**を選択します。  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/17/2017
     -   > [!NOTE]  
         >  Analysis Services サーバー インスタンスにアクセスする必要があるすべてのサービス アプリケーションに、Analysis Services 管理権限が必要です。 たとえば、Excel Services、Power View、Performance Point Services のサービス アカウントを追加します。 また、サーバーの全体管理をホストする Web アプリケーションの ID として使用される SharePoint ファーム アカウントも追加します。  
   
-     **[ 次へ]** を選択します。  
+     **[次へ]** を選択します。  
   
 17. **[エラー レポート]** ページで、 **[次へ]**を選択します。  
   
@@ -310,7 +310,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Excel Services のデータ モデルの設定を管理する (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15))  
   
- ![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") [ご意見および連絡先情報は、Microsoft SQL Server に関するフィードバックの送信ページ](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) からお送りください。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2013 への Power Pivot の移行](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

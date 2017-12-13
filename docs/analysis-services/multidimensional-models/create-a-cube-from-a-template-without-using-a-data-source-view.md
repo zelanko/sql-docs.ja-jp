@@ -2,12 +2,12 @@
 title: "データ ソース ビューを使用せずにテンプレートからキューブを作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>データ ソース ビューを使用しないテンプレートからのキューブの作成
-  キューブ ウィザードの最初のページで **[データ ソースを使用せずにキューブを構築する]** を選択すると、データ ソース ビューを使用せずにキューブを作成できます。 後で、スキーマ生成ウィザードを使用して、キューブ (および場合によっては他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト) の構造に基づいて、データ ソース ビューのリレーショナル スキーマを作成できます。 スキーマ生成の詳細については、「[スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]選択**キューブを構築するデータ ソースを使用せず**データ ソース ビューを使用せずにキューブを作成するキューブ ウィザードの最初のページにします。 後で、スキーマ生成ウィザードを使用して、キューブ (および場合によっては他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト) の構造に基づいて、データ ソース ビューのリレーショナル スキーマを作成できます。 スキーマ生成の詳細については、「[スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)」を参照してください。  
   
 ## <a name="selecting-the-build-method"></a>構築方法の選択  
  キューブ ウィザードの **[構築方法の選択]** ページで、 **[データ ソースを使用せずにキューブを構築する]**をクリックします。 既存のキューブ テンプレートを使用してキューブを構築するには、 **[キューブ テンプレートを使用する]** チェック ボックスをオンにします。 」を参照してください。 テンプレートを使用しない場合は、手動でオプションを設定する必要があります。  

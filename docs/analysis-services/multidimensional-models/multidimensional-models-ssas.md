@@ -2,12 +2,12 @@
 title: "多次元モデル (SSAS) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a6a2986bd06354ccb1443424ce2aaa31715a72
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c03d39261ff288832dbbeedc5e2a5cc90175d735
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-modeling-ssas"></a>多次元モデリング (SSAS)
-  Analysis Services 多次元ソリューションは、複数のディメンションにわたるビジネス データの分析にキューブ構造を使用します。 多次元モードは Analysis Services の既定のサーバー モードです。 OLAP データ用のクエリおよび計算エンジンが含まれており、パフォーマンスとスケーラブルなデータ要件のバランスをとるために MOLAP、ROLAP、および HOLAP ストレージ モードをサポートしています。 Analysis Services OLAP エンジンは、業界最高レベルの OLAP サーバーであり、さまざまな BI ツールに対応しています。 ほとんどの Analysis Services 配置は、従来の OLAP サーバーとしてインストールされます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 多次元ソリューションでは、複数のディメンションにわたるビジネス データを分析にキューブ構造を使用します。 多次元モードは Analysis Services の既定のサーバー モードです。 OLAP データ用のクエリおよび計算エンジンが含まれており、パフォーマンスとスケーラブルなデータ要件のバランスをとるために MOLAP、ROLAP、および HOLAP ストレージ モードをサポートしています。 Analysis Services OLAP エンジンは、業界最高レベルの OLAP サーバーであり、さまざまな BI ツールに対応しています。 ほとんどの Analysis Services 配置は、従来の OLAP サーバーとしてインストールされます。  
   
 ## <a name="benefits-of-using-multidimensional-solutions"></a>多次元ソリューションを使用する利点  
  Analysis Services 多次元モデルを構築する主な理由は、ビジネス データに対するアドホック クエリのパフォーマンスを高めるためです。 多次元モデルは、注釈を設定して複雑なクエリ構築をサポートするように拡張できるキューブおよびディメンションで構成されます。 BI 開発者は、高速な応答時間をサポートし、ビジネス レポートを作成するための 1 つのデータ ソースを提供するキューブを作成します。 組織のあらゆるレベルでビジネス インテリジェンスの重要性が増す中、分析データの単一のソースを持つことにより、相違点は完全には除去されないものの最小限に抑えることができます。  

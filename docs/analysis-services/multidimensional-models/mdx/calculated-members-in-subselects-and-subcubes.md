@@ -2,12 +2,12 @@
 title: "計算されるメンバーはサブセレクトとサブキューブで |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー
-  計算メンバーは実行時に式から値が計算されるディメンション メンバーで、クエリのキューブ空間をより正確に定義するためにサブセレクトとサブキューブで使用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]計算されるメンバーは、値を持つが、実行時に式から計算され、サブセレクトで使用できるディメンション メンバーをより正確にキューブ定義とサブキューブのクエリのです。  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>サブ空間で計算メンバーを有効にする  
  **サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROPMSMDSUBQUERIES**プロパティ[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)サブセレクトの動作や計算されるメンバーまたは計算されるセットの許容期間を定義またはサブキューブです。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  

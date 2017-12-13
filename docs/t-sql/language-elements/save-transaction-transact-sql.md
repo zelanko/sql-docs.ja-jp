@@ -31,11 +31,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c6489bd5ca7b8b82b7211bc77414335e6e62bd7
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>引数  
  *savepoint_name*  
- セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 *では無視*は常に大文字と小文字、場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大文字小文字は区別されません。  
+ セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 *savepoint_name*は常に大文字と小文字、場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大文字小文字は区別されません。  
   
  @*savepoint_variable*  
  有効なセーブポイント名を含むユーザー定義の変数名を指定します。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。 この変数には 32 文字を超える文字列も渡されますが、使用されるのは最初の 32 文字だけです。  

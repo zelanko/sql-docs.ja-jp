@@ -2,12 +2,12 @@
 title: "コメント、図形、Excel Services によってサポートされていないその他のオブジェクト |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d7ceef898de9e82c46a2d058f8c35d9b2d1ef7ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7be7712be44114606ec89f89683defeee8e3bd31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>コメント、図形、Excel Services によってサポートされていないその他のオブジェクト
-  このエラーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] フィールドの一覧から [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックにスライサーを追加すると発生します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]スライサーを追加すると、このエラーが発生、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブックから、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]フィールドの一覧です。  
   
 ## <a name="details"></a>詳細  
   

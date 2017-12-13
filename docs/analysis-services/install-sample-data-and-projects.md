@@ -2,12 +2,12 @@
 title: "サンプル データとプロジェクトのインストール |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0e675845383c3e54c8477a8e0866231ac302cd1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-sample-data-and-projects"></a>サンプル データとプロジェクトをインストールします。 
-このトピックに示す手順とリンクを使用して、Analysis Services チュートリアルで使用するすべてのデータとプロジェクト ファイルをインストールします。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]すべての Analysis Services のチュートリアルで使用されるデータとプロジェクト ファイルをインストールするのに手順とここで指定されたリンクを使用します。  
   
 ## <a name="step-1-install-sql-server-software"></a>手順 1: SQL Server ソフトウェアのインストール  
 このチュートリアルのレッスンでは、次のソフトウェアをインストール済みであることを前提としています。 次のソフトウェアはすべて、SQL Server のインストール メディアを使用してインストールされます。 配置を簡単にするために、すべての機能を 1 台のコンピューターにインストールできます。 これらの機能をインストールするには、SQL Server セットアップを実行して [機能の選択] ページから機能を選択します。 詳細については、「 [インストール ウィザードからの SQL Server 2016 のインストール &#40;セットアップ &#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」を参照してください。  

@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  インデックスの名前。 インデックス名は、テーブルまたはビュー内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名の規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。  
   
- *列*  
+ *column*  
  インデックスの基準となる 1 列または複数列を指定します。 指定した列を組み合わせた値で複合インデックスを作成するには、2 つ以上の列名を指定します。 後のかっこ内の優先度の並べ替え順序での複合インデックスに含まれる列を一覧する*table_or_view_name*です。  
   
  1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 16 列とより前に、のバージョンの 900 バイトに制限は[!INCLUDE[ssSDS](../../includes/sssds-md.md)]V12 および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  パーティションごとの統計がサポートされていない場合、このオプションは無視され、警告が生成されます。 次の種類の統計では、増分統計がサポートされていません。  
   
 -   ベース テーブルにパーティションで固定されていないインデックスを使用して作成された統計。  
-  
 -   Always On の読み取り可能なセカンダリ データベースに対して作成された統計。  
-  
 -   読み取り専用のデータベースに対して作成された統計。  
-  
 -   フィルター選択されたインデックスに対して作成された統計。  
-  
 -   ビューに対して作成された統計。  
-  
 -   内部テーブルに対して作成された統計。  
-  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
  DROP_EXISTING = {ON |**OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  インデックスは、グローバル一時テーブル上のインデックスを含めてオンラインで作成できます。ただし次のインデックスは例外です。  
   
 -   XML インデックス  
-  
 -   ローカル一時テーブル上のインデックス。  
-  
 -   ビュー上の最初の一意のクラスター化インデックス。  
-  
 -   無効なクラスター化インデックス。  
-  
 -   基になるテーブルに LOB データ型が含まれている場合、クラスター化インデックス:**イメージ**、 **ntext**、**テキスト**、および空間型です。  
-  
 -   **varchar (max)**と**varbinary (max)**列がインデックスの一部にすることはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) し、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]テーブルが含まれている場合、 **varchar (max)**または**varbinary (max)**列、他の列を含むクラスター化インデックスを指定できます構築または再構築を使用して、**オンライン**オプション。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]許可しない、**オンライン**オプション、ベース テーブルが含まれている**varchar (max)**または**varbinary (max)**列です。  
   
  詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
- 上書き、 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)インデックス操作の実行中の構成オプション。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
+ 上書き、**並列処理の次数の最大**インデックス操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
  *max_degree_of_parallelism*を指定できます。  
   

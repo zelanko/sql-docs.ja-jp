@@ -2,12 +2,12 @@
 title: "レッスン 5: リレーションシップの作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1ebfc0ec46e750196a23a2b24a93ccc7ebd16114
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 53cfcc73f8bca771607425ac69eff021b8e6a00c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-create-relationships"></a>レッスン 4: リレーションシップを作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  間の実線をクリックして、 **DimCustomer**テーブルおよび**DimGeography**テーブル。 これら 2 つのテーブル間の実線は、そのリレーションシップがアクティブであることを示します。つまり、そのリレーションシップは DAX 数式の計算時に既定で使用されます。  
   
-    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**これで、ボックス内にそれぞれ表示両方のテーブルです。 これは、これらがリレーションシップに使用される列であるということを示しています。 リレーションシップのプロパティが、**[ プロパティ ]** ウィンドウに表示されます。  
+    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**これで、ボックス内にそれぞれ表示両方のテーブルです。 これは、これらがリレーションシップに使用される列であるということを示しています。 リレーションシップのプロパティが、**[プロパティ]** ウィンドウに表示されます。  
   
     > [!TIP]  
     > だけでなく、モデル デザイナーを使用して、ダイアグラム ビューで、表形式ですべてのテーブル間のリレーションシップを表示するのにリレーションシップの管理 ダイアログ ボックスを使用することができます。 右クリック**リレーションシップ**をクリックして、表形式モデル エクスプ ローラー**リレーションシップの管理**です。 リレーションシップの管理 ダイアログ ボックスでは、データのインポート時に自動的に作成されたリレーションシップを示します。  

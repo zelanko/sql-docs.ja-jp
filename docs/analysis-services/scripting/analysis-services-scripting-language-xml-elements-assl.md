@@ -2,12 +2,12 @@
 title: "Analysis Services スクリプト言語の XML 要素 (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8f9da21d5e3584a41ac9285be6c6541baf3de999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2415205d4898e4c16d9a6b5d004f3ff75082ead9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services スクリプト言語の XML 要素 (ASSL)
-  Analysis Services スクリプト言語 (ASSL) のスキーマには XML 要素のみが含まれますが、開発者にとって、これらの要素は次の概念に対応します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services スクリプト言語 (ASSL) スキーマには、開発者の観点からの XML 要素のみが含まれていますが、これらの要素は、次の概念に対応します。  
   
 -   などのオブジェクト**データベース**、**キューブ**、および**ディメンション**のインスタンスに含まれるオブジェクトの階層内のオブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

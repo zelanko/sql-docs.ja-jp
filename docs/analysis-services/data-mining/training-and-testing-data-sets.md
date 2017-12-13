@@ -2,12 +2,12 @@
 title: "トレーニング セットとテスト データ セット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="training-and-testing-data-sets"></a>トレーニング データ セットとテスト データ セット
-  トレーニング セットとテスト セットにデータを分割することは、データ マイニング モデルの評価における重要な部分です。 通常、データセットをトレーニング セットとテスト セットに分割すると、ほとんどのデータはトレーニングに使用され、テストに使用されるデータは少量になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではデータのサンプルがランダムに抽出されるため、テスト セットとトレーニング セットが同様になるように分割されます。 トレーニングとテストに類似データを使用すると、データの差異による影響を最小限に抑えることができ、モデルの特性をよりよく理解できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]トレーニング セットとテスト セットにデータを分割することは、データ マイニング モデルの評価における重要な部分です。 通常、データセットをトレーニング セットとテスト セットに分割すると、ほとんどのデータはトレーニングに使用され、テストに使用されるデータは少量になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではデータのサンプルがランダムに抽出されるため、テスト セットとトレーニング セットが同様になるように分割されます。 トレーニングとテストに類似データを使用すると、データの差異による影響を最小限に抑えることができ、モデルの特性をよりよく理解できます。  
   
  トレーニング セットを使用してモデルが処理された後、テスト セットに対する予測を実行してモデルをテストします。 テスト セット内のデータには予測対象の属性の既知の値が既に含まれているため、モデルの推測が正しいかどうかを簡単に判断できます。  
   

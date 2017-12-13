@@ -2,12 +2,12 @@
 title: "Power Pivot 管理ダッシュ ボードと使用状況データ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ed8cfaefb6bf4af33f5acb804fa61f49503416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0d275e7cbe68ddd7dca965d50d05d1777711b48e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードとは、SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理ダッシュ ボードが定義済みのレポートのコレクションで、SQL Server を管理するのに役立つ、SharePoint サーバーの全体管理の web パーツ[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint の配置。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
   
   
 ##  <a name="prereq"></a> 前提条件  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  テキスト エディターで .odc ファイルを開きます。  
   
-6.  **\<Odc:ConnectionString >**要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =**です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
+6.   **\<Odc:ConnectionString >**要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =**です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
   
 7.  このファイルを保存します。 残りの手順は、使用している [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] と Excel のバージョンによって異なります。  
   

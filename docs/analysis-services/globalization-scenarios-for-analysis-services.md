@@ -2,12 +2,12 @@
 title: "Analysis Services のグローバリゼーションのシナリオ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c18f5e2ab55d1cae1f57ad67d157fc3f109949b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81fd021deaed75731aa79f48a5a3ef8669e4c18a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services のグローバリゼーションのシナリオ
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、表形式データ モデルと多次元データ モデルの両方について、多言語データおよびメタデータを格納して操作できます。 データは Unicode (UTF-16) で格納され、Unicode エンコードの文字セットを使用します。 データ モデルに ANSI データを読み込むと、文字は Unicode の等価なコード ポイントを使用して格納されます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多言語データおよび両方のテーブルと多次元データ モデルのメタデータを格納して操作します。 データは Unicode (UTF-16) で格納され、Unicode エンコードの文字セットを使用します。 データ モデルに ANSI データを読み込むと、文字は Unicode の等価なコード ポイントを使用して格納されます。  
   
  Unicode をサポートしているということは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が、Windows のクライアント/サーバー オペレーティング システムによってサポートされている任意の言語でデータを格納できることを意味します。Windows コンピューターで使用されるどの文字セットでも読み取り、書き込み、並べ替え、およびデータ比較が可能です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データを使用する BI クライアント アプリケーションは、その言語でモデル内にデータが存在すれば、ユーザーの選択した任意の言語でデータを表現できます。  
   

@@ -2,12 +2,12 @@
 title: "接続とセッションを ADOMD.NET での操作 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 061a51539b40630874e36096cc59557ac375c671
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2a384fc1f08cd6a60132d7d99cf3072973e3add8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>ADOMD.NET で接続とセッションの操作での接続
-  XML for Analysis (XMLA) では、分析データにアクセスする際のステートフルな操作をセッションがサポートします。 セッションは、分析データ ソースに対して実行するコマンドおよびトランザクションのスコープとコンテキストを決定します。 セッションを管理するために使用する XMLA 要素は[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)、[セッション](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)、および[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Xml for Analysis (XMLA) では、セッションは、分析データにアクセス中に、ステートフルな操作のサポートを提供します。 セッションは、分析データ ソースに対して実行するコマンドおよびトランザクションのスコープとコンテキストを決定します。 セッションを管理するために使用する XMLA 要素は[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)、[セッション](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)、および[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)です。  
   
  ADOMD.NET はこれらの XMLA セッション要素を使用して、セッションを開始し、クエリの実行やデータの取得を行い、セッションを閉じます。  
   
