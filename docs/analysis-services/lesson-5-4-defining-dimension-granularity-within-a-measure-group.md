@@ -2,12 +2,12 @@
 title: "メジャー グループ内のディメンションの粒度を定義する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fbdacd6a82296b08d0f395502df71f0a9e65eb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>レッスン 5-4-メジャー グループ内のディメンションの粒度の定義
-ファクト データは、利用目的ごとに異なる粒度でディメンションを作成しなければならない場合があります。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]さまざまな目的で、ユーザーに異なる粒度または特異性におけるディメンションのファクト データがします。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
   
 メジャー グループでディメンションを使用する場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既定では、ディメンションのキー属性に基づいてディメンションの詳細度が決定されます。 たとえば、あるメジャー グループに時間のディメンションが存在し、その時間ディメンションの既定の詳細度が日単位である場合は、メジャー グループ内のそのディメンションの既定の詳細度が日単位になります。 このチュートリアルで使用する **Internet Sales** (インターネット売上) や **Reseller Sales** (販売店売上) メジャー グループなどのように、既定の詳細度が適切である場合は数多くあります。 しかし、販売量や予算などのメジャー グループに存在するディメンションには、月単位、または四半期単位の詳細度がより適切です。  
   

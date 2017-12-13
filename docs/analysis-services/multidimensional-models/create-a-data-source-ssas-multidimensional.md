@@ -2,12 +2,12 @@
 title: "データ ソース (SSAS 多次元) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8fbcb252ca94f94eef82cbb2b19a3c15dcf7a38f
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多次元モデルでは、データ ソース オブジェクトを表す元となる処理 (またはインポートする)、データ ソースへの接続データ。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
   
  このトピックのセクションは次のとおりです。  
   

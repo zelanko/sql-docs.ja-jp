@@ -2,12 +2,12 @@
 title: "ディメンションおよびパーティションの文字列ストレージの構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b593a2de59682d400c72d5242b078b3b7f2fadb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>ディメンションおよびパーティションの文字列ストレージの構成
-  文字列ストレージは、ディメンション属性またはパーティションの非常に大きな文字列 (文字列ストアの 4 GB のファイル サイズ制限を超えるもの) に対応するように再構成できます。 このサイズの文字列ストアがディメンションまたはパーティションに含まれている場合、ディメンション レベルまたはパーティション レベルで **[StringStoresCompatibilityLevel]** プロパティを変更することによって、ファイル サイズの制約を回避できます。これは、ローカル オブジェクトとリンクされている (ローカルまたはリモート) オブジェクトの両方に適用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]文字列に合わせて記憶域ディメンション属性または文字列ストアの 4 GB のファイル サイズ制限を超えるパーティションに非常に大きな文字列を再構成することができます。 このサイズの文字列ストアがディメンションまたはパーティションに含まれている場合、ディメンション レベルまたはパーティション レベルで **[StringStoresCompatibilityLevel]** プロパティを変更することによって、ファイル サイズの制約を回避できます。これは、ローカル オブジェクトとリンクされている (ローカルまたはリモート) オブジェクトの両方に適用されます。  
   
  文字列ストレージは、追加容量が必要なそれらのオブジェクトに対してのみ増やすことができます。 多くの多次元モデルでは、文字列データはディメンションに関連付けられています。 ただし、文字列の上に個別のカウント メジャーが含まれているパーティションも、この設定の影響を受けます。 この設定は文字列のためであるため、数値データは影響を受けません。  
   

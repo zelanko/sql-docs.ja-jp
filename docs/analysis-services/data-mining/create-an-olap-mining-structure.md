@@ -2,12 +2,12 @@
 title: "OLAP マイニング構造の作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 011c1527e135a7326d54b0268d9e2fcb070fb6e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-olap-mining-structure"></a>OLAP マイニング構造の作成
-  OLAP キューブまたはその他の多次元データ ストアに基づいてデータ マイニング モデルを作成することには、多くの利点があります。 OLAP ソリューションには、適切に整理、クリーンアップ、および書式設定された大量のデータが既に含まれています。ただし、データが複雑なため、アドホック探索でユーザーが有意なパターンを見つけることは困難です。 データ マイニングは、新しい相関関係を発見し、実用的な洞察力を得るための手段を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]これには、OLAP キューブまたはその他の多次元データ ストアに基づいてデータ マイニング モデルを作成する多くの利点があります。 OLAP ソリューションには、適切に整理、クリーンアップ、および書式設定された大量のデータが既に含まれています。ただし、データが複雑なため、アドホック探索でユーザーが有意なパターンを見つけることは困難です。 データ マイニングは、新しい相関関係を発見し、実用的な洞察力を得るための手段を提供します。  
   
  このトピックでは、既存の多次元ソリューションのディメンションおよび関連メジャーに基づいて OLAP マイニング構造を作成する方法について説明します。  
   

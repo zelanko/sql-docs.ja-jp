@@ -2,12 +2,12 @@
 title: "セルセットを使用してデータを取得する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ed3598bd03977ae56eb159afd01955e109275e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3252672f1188bd72ab51c6ad3aa44ddb2b281b90
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-cellset"></a>セルセットを使用したデータの取得
-  分析データを取得する際、対話性と柔軟性に最も優れている方法が <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトです。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは階層データおよびメタデータのインメモリ キャッシュであり、これらのデータの元の次元を保持します。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは、接続された状態でも、接続されていない状態でもスキャンすることができます。 非接続状態でもアクセス可能なことから、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用すれば、データやメタデータを任意の順序で表示することができ、データ取得の最も包括的なオブジェクト モデルといえます。 一方で、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトはオーバーヘッドが非常に大きく、最も低速な ADOMD.NET データ取得オブジェクト モデルでもあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]分析データを取得するときに、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>オブジェクトは、最も対話性と柔軟性を提供します。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは階層データおよびメタデータのインメモリ キャッシュであり、これらのデータの元の次元を保持します。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは、接続された状態でも、接続されていない状態でもスキャンすることができます。 非接続状態でもアクセス可能なことから、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用すれば、データやメタデータを任意の順序で表示することができ、データ取得の最も包括的なオブジェクト モデルといえます。 一方で、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトはオーバーヘッドが非常に大きく、最も低速な ADOMD.NET データ取得オブジェクト モデルでもあります。  
   
 ## <a name="retrieving-data-in-a-connected-state"></a>接続状態でのデータの取得  
  <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用してデータを取得するには、次の手順を実行します。  

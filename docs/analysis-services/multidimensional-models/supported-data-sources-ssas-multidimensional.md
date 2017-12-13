@@ -2,12 +2,12 @@
 title: "サポートされているデータ ソース (SSAS - 多次元) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69f1519d6b3c03294469707a7e1485955f864a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 774c6a7a3de377c9bfa6073b26e8ce45d7b3477e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>サポートされるデータ ソース (SSAS - 多次元)
-  このトピックでは、多次元モデルで使用できるデータ ソースの種類について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、多次元モデルで使用できるデータ ソースの種類について説明します。  
   
 ##  <a name="bkmk_supported_ds"></a> サポートされるデータ ソース  
  次の表のデータ ソースからデータを取得できます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 プロバイダーは、他のアプリケーションと共にコンピューターに既にインストールされている場合もあれば、プロバイダーをダウンロードしてインストールしなくてはならない場合もあります。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|  
 |ソース|バージョン|ファイルの種類|プロバイダー*|  
 |Access データベース|Microsoft Access 2010、2013、2016|.accdb または .mdb|Microsoft Jet 4.0 OLE DB Provider|  
-|SQL Server リレーショナル データベース*|Microsoft SQL Server 2008、2008 R2、2012、2014、2016、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 、Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 注: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)を参照してください。<br /><br /> 注: Analytics Platform System (APS) は以前は SQL Server Parallel Dataware House (PDW) と呼ばれていました。 当初、Analysis Services から PDW に接続するには、特別なデータ プロバイダーが必要でした。 このプロバイダーは、SQL Server 2012 で変更されました。 SQL Server 2012 以降、PDW/APS への接続には、SQL Server Native Client が使用されます。 APS の詳細については、Web サイト「 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)」を参照してください。|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 11.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server リレーショナル データベース*|Microsoft SQL Server 2008、2008 R2、2012、2014、2016、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 注: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)を参照してください。<br /><br /> 注: Analytics Platform System (APS) として SQL Server 並列データ ウェアハウス (PDW) を呼んでいました。 当初、Analysis Services から PDW に接続するには、特別なデータ プロバイダーが必要でした。 このプロバイダーは、SQL Server 2012 で変更されました。 SQL Server 2012 以降、PDW/APS への接続には、SQL Server Native Client が使用されます。 APS の詳細については、Web サイト「 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)」を参照してください。|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 11.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle リレーショナル データベース|Oracle 9i、10g、11g、12g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata リレーショナル データベース|Teradata V2R6、V12|(該当なし)|TDOLEDB OLE DB プロバイダー<br /><br /> .Net Data Provider for Teradata|  
 |Informix リレーショナル データベース|V11.10|(該当なし)|Informix OLE DB プロバイダー|  

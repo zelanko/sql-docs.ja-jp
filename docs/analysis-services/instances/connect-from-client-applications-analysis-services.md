@@ -2,12 +2,12 @@
 title: "クライアント アプリケーション (Analysis Services) からの接続 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
-  Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services に慣れていない場合、このトピックの情報を使用して、既存のインスタンスに接続する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]一般的なツールとアプリケーションを使用します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
   
 -   [SQL Server Management Studio (SSMS) による接続](#bkmk_SSMS)  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Analysis Services インスタンスで **SQL Server Profiler** を開始し、新しいトレースを開始します。  
   
-2.  イベントの選択 で、Security Audit セクションの  **Audit Login ** および ** Audit Logout ** のチェック ボックスがオンになっていることを確認します。  
+2.  [イベントの選択] で、[Security Audit] セクションの **[Audit Login]** および **[Audit Logout]** のチェック ボックスがオンになっていることを確認します。  
   
 3.  リモート クライアント コンピューターから、アプリケーション サービス (SharePoint、Reporting Services など) を介して Analysis Services に接続します。 Audit Login イベントに、Analysis Services に接続しているユーザーの ID が表示されます。  
   

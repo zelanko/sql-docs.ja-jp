@@ -2,12 +2,12 @@
 title: "分析データ ソースからメタデータを取得する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c432c699cd0a924b0624d98b0e7f97323718f3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>分析データ ソースからのメタデータの取得
-  分析データを取得して操作するアプリケーションにとって、メタデータは重要です。 リレーショナル データ ソースからデータを取得する場合、データセットが入れ子になっていても、それらのデータの次元を予測することができます。 通常、リレーショナル データベースから取得する結果セットは 2 次元またはスカラー構造です。 一方、分析データ ソースから取得したデータは次元がさまざまであり、多層構造になっている場合もあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]メタデータは、分析データを取得して操作するアプリケーションに重要です。 リレーショナル データ ソースからデータを取得する場合、データセットが入れ子になっていても、それらのデータの次元を予測することができます。 通常、リレーショナル データベースから取得する結果セットは 2 次元またはスカラー構造です。 一方、分析データ ソースから取得したデータは次元がさまざまであり、多層構造になっている場合もあります。  
   
  分析データ ソースからメタデータを取得する際の複雑さに対応するため、ADOMD.NET には次の 2 つのメタデータ取得形式が用意されています。  
   

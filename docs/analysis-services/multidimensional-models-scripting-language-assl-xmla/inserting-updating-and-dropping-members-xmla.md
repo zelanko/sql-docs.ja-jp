@@ -2,12 +2,12 @@
 title: "挿入、更新、およびメンバー (XMLA) の削除 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d98ad262e92a1da61c6ac3dda67aaac871dabd1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e7a4600dc6a3a0a9b32db40d0d9111907510768
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>メンバーの挿入、更新、および削除 (XMLA)
-  使用することができます、[挿入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)、[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)、および[ドロップ](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)コマンド XML for Analysis (XMLA) それぞれを挿入するには、更新、またはメンバーを書き込み許可ディメンションから削除します。 書き込み許可ディメンションの詳細については、次を参照してください。 [Write-Enabled ディメンション](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用することができます、[挿入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)、[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)、および[ドロップ](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)コマンド XML for Analysis (XMLA) それぞれを挿入するには、更新、またはメンバーを書き込み許可ディメンションから削除します。 書き込み許可ディメンションの詳細については、次を参照してください。 [Write-Enabled ディメンション](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)です。  
   
 ## <a name="inserting-new-members"></a>新しいメンバーの挿入  
  **挿入**コマンドは、書き込み許可ディメンション内の指定した属性に新しいメンバーを挿入します。  

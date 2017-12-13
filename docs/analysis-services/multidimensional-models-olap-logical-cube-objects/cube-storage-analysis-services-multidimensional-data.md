@@ -2,12 +2,12 @@
 title: "キューブのストレージ (Analysis Services - 多次元データ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>キューブのストレージ (Analysis Services - 多次元データ)
-  ストレージには、キューブのメタデータのみが含まれている場合も、ファクト テーブルのすべてのソース データだけでなく、メジャー グループに関連付けられたディメンションによって定義されている集計も含まれている場合もあります。 格納されているデータ量は、選択したストレージ モードおよび集計の数によって異なります。 格納されているデータの量は、クエリのパフォーマンスに直接影響を与えます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]キューブ データおよび集計の格納に必要な領域を最小限に抑えるためのいくつかの手法を使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]記憶域は、キューブ メタデータのみを含めることがあります。 またはすべてのメジャー グループに関連付けられたディメンションによって定義された集計と同様に、ファクト テーブルからソース データを含めることができます。 格納されているデータ量は、選択したストレージ モードおよび集計の数によって異なります。 格納されているデータの量は、クエリのパフォーマンスに直接影響を与えます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]キューブ データおよび集計の格納に必要な領域を最小限に抑えるためのいくつかの手法を使用します。  
   
 -   ストレージ オプションを使用すると、キューブ データに最適なストレージ モードとストレージの場所を選択できる。  
   

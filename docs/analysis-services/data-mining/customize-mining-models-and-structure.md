@@ -2,12 +2,12 @@
 title: "マイニング モデルおよび構造体をカスタマイズする |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee11262f468b4163ec90927964798a00a48e728c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e01f6a837f649ec088bc0a42e3c1da7d22d9a3e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="customize-mining-models-and-structure"></a>マイニング モデルとマイニング構造のカスタマイズ
-  現在のビジネス ニーズに合ったアルゴリズムを選択した後、マイニング モデルを次の方法でカスタマイズできます。モデルをカスタマイズすると、より良い結果を得られる場合があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ビジネス ニーズに合ったアルゴリズムを選択した後は、結果を向上させるには、次の方法でマイニング モデルをカスタマイズできます。  
   
 -   モデルで使用するデータ列、または列の使用法や、コンテンツの種類、分離メソッドを変更する。  
   

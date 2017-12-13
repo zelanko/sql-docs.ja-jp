@@ -2,12 +2,12 @@
 title: "欠損値 (Analysis Services - データ マイニング) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>不足値 (Analysis Services - データ マイニング)
-  *不足値* の適切な処理は効果的なモデル化の重要な部分です。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]処理*欠損値*効果的なモデル化の重要な部分を正しくです。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>データ マイニングにおける不足値の定義  
  不足値は、さまざまな状況を表します。 たとえば、フィールドが該当しなかった、イベントが発生しなかった、データを使用できなかった、 データの入力者が正しい値を知らなかった、入力者がフィールドにデータが入力されていなくてもかまわないと考えた、などです。  

@@ -2,12 +2,12 @@
 title: "IIS 8.0 で Analysis Services への HTTP アクセスの構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 02c1e956d40ed9a4b69e0606f5a273ecab814e83
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2926b71ccc00d178c9a60aa5c8fc9856e6c8a81
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスの構成します。
-  この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
   
 -   クライアント アクセスが、有効にできるポートに制限があるインターネット接続またはエクストラネット接続を経由して接続する。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **[アプリケーション開発]** |  **[ISAPI 拡張機能]**  
   
- これらのコンポーネントを確認または追加するには、**[サーバー マネージャー]**  |  **[管理]**  |  **[役割と機能の追加]** を使用します。 **[ サーバー ロール]** が表示されるまで、ウィザードを進みます。 **[Web サーバー (IIS)]** が表示されるまで下へスクロールします。  
+ これらのコンポーネントを確認または追加するには、**[サーバー マネージャー]**  |  **[管理]**  |  **[役割と機能の追加]** を使用します。 **[サーバー ロール]** が表示されるまで、ウィザードを進みます。 **[Web サーバー (IIS)]** が表示されるまで下へスクロールします。  
   
 1.  **[Web サーバー]**  |  **[セキュリティ]** を開き、認証方法を選択します。  
   
@@ -148,21 +148,21 @@ ms.lasthandoff: 11/17/2017
   
      ![スクリーン ショットのアプリケーション プールの追加 ダイアログ](../../analysis-services/instances/media/ssas-httpaccess.PNG "スクリーン ショットのアプリケーション プールの追加 ダイアログ")  
   
-3.  既定では、IIS はセキュリティ ID として **ApplicationPoolIdentity** を使用してアプリケーション プールを作成します (これは、Analysis Services への HTTP アクセスの有効な選択肢です)。 ID を変更しなければならない特別な理由があれば、 **[OLAP]**を右クリックし **[詳細設定]**を選択します。 **[ ApplicationPoolIdentity]** を選択します。 このプロパティの **[変更]** をクリックして、ビルトイン アカウントを目的のカスタム アカウントに置き換えます。  
+3.  既定では、IIS はセキュリティ ID として **ApplicationPoolIdentity** を使用してアプリケーション プールを作成します (これは、Analysis Services への HTTP アクセスの有効な選択肢です)。 ID を変更しなければならない特別な理由があれば、 **[OLAP]**を右クリックし **[詳細設定]**を選択します。 **[ApplicationPoolIdentity]** を選択します。 このプロパティの **[変更]** をクリックして、ビルトイン アカウントを目的のカスタム アカウントに置き換えます。  
   
      ![高度な設定のスクリーン ショット] プロパティ ページ](../../analysis-services/instances/media/ssas-httpaccess-advsettings.PNG "プロパティ ページの [詳細設定のスクリーン ショット")  
   
-4.  既定では、64 ビット オペレーティング システムの IIS では、 **[32 ビット アプリケーションの有効化]** プロパティは **false**に設定されています。 Analysis Services の 64 ビット インストールから msmdpump.dll をコピーした場合、64 ビット IIS サーバーの MSMDPUMP 拡張機能の設定はこの設定で合っています。 MSMDPUMP バイナリを 32 ビット インストールからコピーした場合は、このプロパティを **true**に設定します。 **[ 詳細設定 ]** でこのプロパティをチェックして、設定が適切かどうか確認します。  
+4.  既定では、64 ビット オペレーティング システムの IIS では、 **[32 ビット アプリケーションの有効化]** プロパティは **false**に設定されています。 Analysis Services の 64 ビット インストールから msmdpump.dll をコピーした場合、64 ビット IIS サーバーの MSMDPUMP 拡張機能の設定はこの設定で合っています。 MSMDPUMP バイナリを 32 ビット インストールからコピーした場合は、このプロパティを **true**に設定します。 **[詳細設定]** でこのプロパティをチェックして、設定が適切かどうか確認します。  
   
 #### <a name="create-an-application"></a>アプリケーションの作成  
   
-1.  IIS マネージャで、**[ サイト]** を開き、**[ 既定の Web サイト]** を開きます。 **Olap**という名前のフォルダーが表示されます。 これは \inetpub\wwwroot の下に作成した OLAP フォルダーへの参照です。  
+1.  IIS マネージャで、**[サイト]** を開き、**[既定の Web サイト]** を開きます。 **Olap**という名前のフォルダーが表示されます。 これは \inetpub\wwwroot の下に作成した OLAP フォルダーへの参照です。  
   
      ![アプリにする前に、OLAP フォルダーが変換](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "アプリに変換する前に、OLAP フォルダー")  
   
 2.  フォルダーを右クリックし、 **[アプリケーションに変換]**を選択します。  
   
-3.  [アプリケーションの追加] でエイリアスの **OLAP** を入力します。 **[ 選択 ]** をクリックして、OLAP アプリケーション プールを選択します。 C:\inetpub\wwwroot\OLAP に物理パスを設定する必要があります。  
+3.  [アプリケーションの追加] でエイリアスの **OLAP** を入力します。 **[選択]** をクリックして、OLAP アプリケーション プールを選択します。 C:\inetpub\wwwroot\OLAP に物理パスを設定する必要があります。  
   
      ![アプリケーションへの変換の設定を](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "アプリケーションへの変換の設定")  
   

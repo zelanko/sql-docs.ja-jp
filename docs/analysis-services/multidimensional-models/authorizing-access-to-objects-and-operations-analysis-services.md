@@ -2,12 +2,12 @@
 title: "オブジェクトと操作 (Analysis Services) へのアクセスの承認 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cff9bdcefc19729ed8f29a1fe8f04267e03ddf4a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>オブジェクトと操作へのアクセスの承認 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]管理者以外のユーザーのキューブ、ディメンション、および内でマイニング モデルへのアクセス、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースが 1 つまたは複数のデータベース ロールのメンバーシップを通じて許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ユーザーまたはグループが属している各データベース ロールに関連付けられている権限を組み合わせて、特定の Windows ユーザーまたはグループに有効な権限を判断します。 その結果、1 つのデータベース ロールでディメンション、メジャー、または属性を表示するためのユーザーまたはグループ権限を付与していなくても、別のデータベース ロールでそのユーザーまたはグループ権限を付与している場合、そのユーザーまたはグループにはオブジェクトを表示する権限が与えられます。  
   

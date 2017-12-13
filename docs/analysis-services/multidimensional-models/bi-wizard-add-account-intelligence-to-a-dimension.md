@@ -2,12 +2,12 @@
 title: "ディメンションに勘定科目インテリジェンスを追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d91930309e865b84f4d6e763a46026879bdc47c5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションに勘定科目インテリジェンスを追加します。
-  勘定科目インテリジェンス拡張機能をキューブまたはディメンションに追加して、収益や費用などの標準の勘定科目の分類を勘定科目属性のメンバーに割り当てます。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分類を使用することによって、一定の期間にわたって勘定科目を集計できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブまたはディメンションに勘定科目属性のメンバーに、収入や支出など、標準の勘定科目の分類を割り当てるには、アカウントのインテリジェンス拡張機能を追加します。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分類を使用することによって、一定の期間にわたって勘定科目を集計できます。  
   
 > [!NOTE]  
 >  勘定科目インテリジェンスは、既存のデータ ソースに基づくディメンションにのみ使用できます。 データ ソースを使用せずに作成されたディメンションに対しては、勘定科目インテリジェンスを追加する前に、スキーマ生成ウィザードを使用してデータ ソース ビューを作成する必要があります。  

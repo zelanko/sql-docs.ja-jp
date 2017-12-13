@@ -2,12 +2,12 @@
 title: "計算されるメンバーを作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
-  キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]カスタマイズされたメジャーまたはディメンション メンバー、キューブ データ、算術演算子、数字、および関数を組み合わせることによって、計算されるメンバーを呼び出すを作成することができます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
   
  計算されるメンバーの定義は格納されますが、その値はメモリにしか存在しません。 上記の例では、Euro の値はエンド ユーザーに表示されますが、キューブ データとしては格納されません。  
   

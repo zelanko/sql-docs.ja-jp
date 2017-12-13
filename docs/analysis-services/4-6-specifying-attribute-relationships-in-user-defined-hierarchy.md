@@ -2,12 +2,12 @@
 title: "ユーザー定義階層内の属性リレーションシップの 4 6 指定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>ユーザー定義階層内の属性リレーションシップの 4、6 を指定します。
-このチュートリアルで既に学習したように、ユーザー階層に属性階層を配置し、キューブ内を移動するためのパスを作ることができます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このチュートリアルで既に学習したように、キューブ内のユーザーのナビゲーション パスを提供するユーザー階層内のレベルに属性階層を整理できます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
   
 一般階層で、各層を構成する属性間に属性リレーションシップが定義されている場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、1 つの階層の集計結果を使用して、その階層に関連付けられている別の階層の結果を取得することができます。 属性間にリレーションシップを定義していない場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってキー属性からすべての非キー属性が集計されます。 そのため、基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理パフォーマンスが向上します。 詳細については、「 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md) 」および「 [属性リレーションシップ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   

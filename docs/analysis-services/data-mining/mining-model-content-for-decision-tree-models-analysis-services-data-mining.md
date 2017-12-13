@@ -2,12 +2,12 @@
 title: "デシジョン ツリー モデルのマイニング モデル コンテンツ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックの説明を使用するモデルに固有のマイニング モデル コンテンツ、[!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムです。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
   
 ##  <a name="bkmk_Top"></a> デシジョン ツリー モデルの構造について  
  デシジョン ツリー モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、選択した予測可能な属性を表す独立したツリーがあります。 たとえば、顧客が購入を行うかどうかを予測するためのデシジョン ツリー モデルを設定し、性別と収入の入力を指定した場合、モデルでは購入の属性に対して 1 つのツリーが作成され、その中に性別と収入に関連する条件で分割される多数の分岐が含まれます。  

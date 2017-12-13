@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8aa36adac3f7be50105a387dc3d39fca208eaba8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>パフォーマンスのベスト プラクティスと Linux 上の SQL Server 2017 の構成ガイドライン
 
@@ -55,7 +55,6 @@ ms.lasthandoff: 12/01/2017
 SQL Server のインストールのパフォーマンスを最高のエクスペリエンスに次の Linux オペレーティング システム構成設定を使用してください。
 
 ### <a name="kernel-settings-for-high-performance"></a>高パフォーマンスのカーネル設定
-
 これらは、推奨される Linux オペレーティング システムの設定を [高] に関連するパフォーマンスと、SQL Server インストールのスループット。 これらの設定を構成するプロセスの Linux オペレーティング システムのドキュメントを参照してください。
 
 
@@ -92,7 +91,7 @@ sysctl -w kernel.numa_balancing=0
 既定の設定の**vm.max_map_count** (これは 65536) できない可能性があります、SQL Server インストールに必要な大きさです。 256 K にする (上限) この値を変更します。
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>最後にアクセスされる日付/時刻ファイル システム上の SQL Server データ ファイルとログ ファイルを無効にします。

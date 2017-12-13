@@ -2,12 +2,12 @@
 title: "For SharePoint のインストール verify a Power Pivot |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f3ff72bc10a222ddd5d5ed8ee8a7748fcaa2d47
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Power Pivot for SharePoint インストールの確認
-  SharePoint ファームにインストールした [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint インスタンスは、SharePoint サーバーの全体管理から管理されます。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックが必要になります。 テスト時には、既に [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint を SharePoint ファームにインストールするインスタンスは、SharePoint サーバーの全体管理によって管理されます。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックが必要になります。 テスト時には、既に [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
   
 ||  
 |-|  

@@ -2,12 +2,12 @@
 title: "言語および照合順序 (Analysis Services) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムが提供する言語と照合順序をサポートします。 **Language** プロパティと **Collation** プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]言語と照合順序によって提供されるサポート[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows オペレーティング システムです。 **Language** プロパティと **Collation** プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
   
  多次元モデルの場合 (のみ)、データベースまたはキューブでこれらのプロパティを設定できます。キューブ内のオブジェクト用に作成した翻訳に設定することもできます。 表形式モデルでは、言語および照合順序はホスト オペレーティング システムから継承されます。  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Management Studio で、サーバー名を右クリックして、 **[プロパティ]** | **[言語/照合順序]**と選択します。  
   
-2.  並べ替えオプションを選択します。 **[ バイナリ ]** または **[ バイナリ 2]** のいずれかを選択するには、まず **[ アクセントの区別]** のチェック ボックスをオフにします。  
+2.  並べ替えオプションを選択します。 **[バイナリ]** または **[バイナリ 2]** のいずれかを選択するには、まず **[アクセントの区別]** のチェック ボックスをオフにします。  
   
      照合順序と言語は完全に独立した設定であることに注意してください。 いずれかを変更すると、その他の値はフィルター処理されず、一般的な組み合わせが表示されます。  
   

@@ -2,12 +2,12 @@
 title: "Kerberos の制約付き委任用に Analysis Services の構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e56d6d5643afee56cf5d30a548a90ebd5ff7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos の制約付き委任のための Analysis Services の構成
-  Kerberos 認証用に Analysis Services を構成する際は、通常、データを照会するときに Analysis Services でユーザー ID の権限を借用すること、Analysis Services でユーザー ID を下位レベル サービスに委任すること、またはその両方を実現することが重要になります。 これらのシナリオで求められる構成要件はそれぞれ異なります。 どちらのシナリオでも、構成が正しく行われたことを確認するための検証が必要になります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ほとんどの場合、結果は次の一方または両方を実現するため興味のある Kerberos 認証用に Analysis Services を構成する場合: データのクエリを実行するときにユーザー id の権限を借用句または having Analysis Services が下位レベル サービスにユーザー id を委任します。 これらのシナリオで求められる構成要件はそれぞれ異なります。 どちらのシナリオでも、構成が正しく行われたことを確認するための検証が必要になります。  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Kerberos に関する接続性の問題のトラブルシューティングに役立つ診断ツールです。 Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](http://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  

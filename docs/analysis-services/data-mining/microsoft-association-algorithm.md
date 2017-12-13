@@ -2,12 +2,12 @@
 title: "Microsoft アソシエーション アルゴリズム |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,14 +39,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft アソシエーション アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、推奨エンジンで通常使用されているアルゴリズムです。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション アルゴリズムは推奨エンジンの多くの場合、使用されるアルゴリズム。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。   
   
  アソシエーション モデルは、個々のケースの識別子とケース内のアイテムの識別子を含んでいるデータセットに基づいて作成されています。 ケース内のアイテムのグループは、 *アイテムセット*と呼ばれます。 アソシエーション モデルは、一連のアイテムセットと、ケース内でアイテムをグループ化する方法を示すルールで構成されています。 アルゴリズムによって識別されるルールは、顧客の買い物かごに既に存在する製品に基づいて、顧客の将来の購入を予測するために使用できます。 次の図は、アイテムセットの一連のルールを示しています。  
   

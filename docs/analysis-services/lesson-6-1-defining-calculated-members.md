@@ -2,12 +2,12 @@
 title: "計算されるメンバーを定義する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>レッスン 6-1-を定義する計算されるメンバー
-計算されるメンバーとは、キューブ データ、算術演算子、数値、関数を組み合わせて定義した、ディメンション グループまたはメジャー グループのメンバーです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]計算されるメンバーがディメンションのメンバーまたはキューブ データ、算術演算子、数字、および関数の組み合わせに基づいて定義されているメジャー グループです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
   
 計算されるメンバーを作成するには、キューブ デザイナーの **[計算]** タブで **[新しい計算されるメンバー]** コマンドを使用します。 計算されるメンバーは、メジャー ディメンションなどの任意のディメンション内に作成できます。 **[計算プロパティ]** ダイアログ ボックスを使用して、計算されるメンバーを表示フォルダー内に配置することもできます。 詳しくは、「 [計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)」、「 [多次元モデルの計算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)」、および「 [計算されるメンバーの作成](../analysis-services/multidimensional-models/create-calculated-members.md)」を参照してください。  
   

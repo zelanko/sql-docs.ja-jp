@@ -2,12 +2,12 @@
 title: "パーティション (Analysis Services - 多次元データ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eeeec758905021bfb1b352fb325810f096e3292d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dab66f2e60e602f163f3c0986719655b6f89f3a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>パーティション (Analysis Services - 多次元データ)
-  パーティションは、メジャー グループ データの一部を入れるコンテナーです。 パーティションは、MDX クエリからは見えません。メジャー グループに定義されたパーティションの数にかかわらず、すべてのクエリでメジャー グループの内容全体が反映されます。 パーティションのデータの内容は、パーティションのクエリ バインドと、スライス式によって定義されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]パーティションは、メジャー グループ データの一部のコンテナーです。 パーティションは、MDX クエリからは見えません。メジャー グループに定義されたパーティションの数にかかわらず、すべてのクエリでメジャー グループの内容全体が反映されます。 パーティションのデータの内容は、パーティションのクエリ バインドと、スライス式によって定義されます。  
   
  簡単な <xref:Microsoft.AnalysisServices.Partition> オブジェクトは、基本情報、スライス定義、集計デザインなどで構成されます。 基本情報には、パーティションの名前、ストレージ モード、処理モードなどが含まれます。 スライス定義は、組またはセットを指定する MDX 式です。 スライス定義には、StrToSet MDX 関数と同様の制限があります。 CONSTRAINED パラメーターを指定したスライス定義では、ディメンション、階層、レベルとメンバーの名前、キー、一意の名前やキューブ内のその他の名前付きオブジェクトを使用できますが、MDX 関数は使用できません。 集計デザインは、複数のパーティションで共有できる集計定義のコレクションです。 親キューブの集計デザインが既定値となります。  
   

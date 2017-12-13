@@ -2,12 +2,12 @@
 title: "Microsoft アソシエーション アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、よく知られている Apriori アルゴリズムの直接的な実装です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション ルール アルゴリズムはよく知られている Apriori アルゴリズムの実装は簡単です。  
   
  アソシエーションの分析には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムの両方を使用できますが、それぞれのアルゴリズムで異なるルールが検出される場合があります。 デシジョン ツリー モデルでは、情報利得に基づく分割によってルールが導き出されるのに対し、アソシエーション モデルでは、ルールは完全に信頼度に基づいています。 したがって、アソシエーション モデルの場合、強力なルール (信頼度が高いルール) は新しい情報を提供するわけではないため、興味深いものになるとは限りません。  
   

@@ -2,12 +2,12 @@
 title: "タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  すべてのマイニング モデルは同じ構造を使用してコンテンツを格納します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]すべてのマイニング モデルでは、同じ構造を使用して、コンテンツを保存します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
   
  すべてのモデルの種類に適用される一般的なマイニング モデル コンテンツの説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   

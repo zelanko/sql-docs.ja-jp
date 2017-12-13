@@ -2,12 +2,12 @@
 title: "FORMAT_STRING の内容 (MDX) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX のセルのプロパティ - FORMAT_STRING の内容
-  **FORMAT_STRING** セル プロパティは、 **VALUE** セル プロパティを書式設定して、 **FORMATTED_VALUE** セル プロパティの値を作成します。 **FORMAT_STRING** セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、 **FORMATTED_VALUE** セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING**セルの書式設定、**値**セル プロパティの値を作成する、 **FORMATTED_VALUE**セル プロパティです。 **FORMAT_STRING** セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、 **FORMATTED_VALUE** セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  
   
 ## <a name="string-values"></a>文字列の値  
  文字列のフォーマット式には、1 つのセクション、またはセミコロン (;) で区切った 2 つのセクションを含めることができます。  
