@@ -25,25 +25,25 @@ ms.lasthandoff: 12/01/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このクイック スタート チュートリアルではまず Red Hat Enterprise Linux (RHEL) 7.3 以降に SQL Server 2017 をインストールします。 **sqlcmd**を使って接続し、 最初のデータベースを作成し、クエリを実行します。
+このクイック スタート チュートリアルではまず Red Hat Enterprise Linux (RHEL) 7.3 以降に SQL Server 2017 をインストールします。その後 **sqlcmd** を使って接続し、 最初のデータベースを作成し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-RHEL 7.3 または 7.4 マシンで**少なくとも 2 GB**メモリ必要です。
+RHEL 7.3 または 7.4 マシンで**少なくとも 2 GB** のメモリが必要です。
 
-自分のコンピューター上に Red Hat Enterprise Linux をインストールする場合は[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)を参照してください。 Azure で RHEL 仮想マシンを作成することもできます。 [Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)を参照し、`az vm create`を実行する際に`--image RHEL`を利用してください。
+自分のコンピューター上に Red Hat Enterprise Linux をインストールする場合は[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)を参照してください。 Azure で RHEL 仮想マシンを作成することもできます。 [Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)を参照し、`az vm create`を呼び出す際に`--image RHEL`を利用してください。
 
-その他のシステム要件については、[SQL Server on Linuxのシステム要件](sql-server-linux-setup.md#system)です。
+その他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)を参照してください。
 
 ## <a id="install"></a>SQL Server をインストールします。
 
 RHEL で SQL Server を構成するためには、ターミナルで次のコマンドを実行して**mssql サーバー**パッケージをインストールします。
 
 > [!IMPORTANT]
-> 既に CTP または SQL Server 2017 年  の RC リリースをインストールしている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、[プレビュー リポジトリからリポジトリを GA リポジトリに変更](sql-server-linux-change-repo.md)を参照してください。
+> 既に SQL Server 2017 の CTP または RC リリースをインストールしている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、「[プレビュー リポジトリからリポジトリを GA リポジトリに変更](sql-server-linux-change-repo.md)」を参照してください。
 
 1. Microsoft SQL Server の Red Hat リポジトリの構成ファイルをダウンロードします。
 
@@ -60,13 +60,13 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
    sudo yum install -y mssql-server
    ```
 
-1. パッケージのインストールが完了した後、**mssql-conf setup**を実行しプロンプトに従ってSAユーザーのパスワードを設定しエディションを選択します。
+1. パッケージのインストールが完了した後、**mssql-conf setup** を実行し、プロンプトに従って SA パスワードを設定し、エディションを選択します。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションが自由に使えるライセンスです: Evaluation、Developer、およびExpress。
+   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションのライセンスはフリーです: Evaluation、Developer、およびExpress。
 
    > [!NOTE]
    > SA アカウントのパスワードは十分に強力なもの(大文字と小文字のアルファベット、十進数の数字および／もしくは英数字以外の記号を含む、8文字以上の文字列)を指定するようにしてください。
@@ -77,7 +77,7 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
    systemctl status mssql-server
    ```
    
-1. リモート接続を許可するのには、RHEL 上のファイアウォールで SQL Server のポートを開きます。 SQL Server の既定ポートは、TCP 1433 です。 ファイアウォールとして**FirewallD**を使用している場合、次のコマンドを使用することができます。
+1. リモート接続を許可するには、RHEL 上のファイアウォールで SQL Server のポートを開きます。 SQL Server の既定ポートは、TCP 1433 です。 ファイアウォールとして **FirewallD** を使用している場合、次のコマンドを使用することができます。
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -102,7 +102,7 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. 次のコマンドを実行して**mssql ツール**をunixODBC 開発者パッケージとともににインストールします。
+1. 次のコマンドを実行して **mssql-tools** を unixODBC 開発者パッケージとともにインストールします。
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
