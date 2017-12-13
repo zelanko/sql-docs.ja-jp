@@ -2,12 +2,12 @@
 title: "サービス プロジェクトの分析を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2ec11e3b9dc622f254a42f82e24eadc88808400
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>レッスン 1-1-Analysis Services プロジェクトの作成
-この実習では、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Analysis Services Tutorial **という名前の**プロジェクトを新規に作成します。このプロジェクトの作成には、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト テンプレートを使用します。 *プロジェクト* とは、関連するオブジェクトのコレクションです。 プロジェクトはソリューションに追加され、各ソリューションは 1 つ以上のプロジェクトで構成されます。 詳しくは、「 [Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]使用する次の実習で[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]新しい[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]という名前のプロジェクト**Analysis Services Tutorial**に基づいて、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト テンプレート。 *プロジェクト* とは、関連するオブジェクトのコレクションです。 プロジェクトはソリューションに追加され、各ソリューションは 1 つ以上のプロジェクトで構成されます。 詳しくは、「 [Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)」を参照してください。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Analysis Services プロジェクトを作成するには  
   

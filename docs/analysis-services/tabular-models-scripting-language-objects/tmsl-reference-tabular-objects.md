@@ -2,12 +2,12 @@
 title: "オブジェクトの定義に表形式モデル スクリプト言語 (TMSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 031c472ad444e809126eb897755777f970032b51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcf8b3c47b7663e467ad421a3732f8663320f055
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tmsl-reference---tabular-objects"></a>参照の TMSL - 表形式オブジェクト
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  アプリケーションを作成、使用、または表形式データベースを管理または表形式モードで SQL Sever 2016 Analysis Services インスタンスに接続するには、コマンドと JSON 形式でのオブジェクト表現の Tabular Model Scripting Language (TMSL) を使用できます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]アプリケーションを作成、使用、または表形式データベースを管理または表形式モードで SQL Sever 2016 Analysis Services インスタンスに接続するには、コマンドと JSON 形式でのオブジェクト表現の Tabular Model Scripting Language (TMSL) を使用できます。  
   
  この記事では、SQL Server Management Studio、SQL Server Data Tools (SSDT) および AMO PowerShell によって生成されるスクリプトに使用する TMSL スキーマの主要なオブジェクトを説明します。  
   

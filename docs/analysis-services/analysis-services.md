@@ -1,12 +1,12 @@
 ---
 title: "Analysis Services |Microsoft ドキュメント"
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services とは
-  Analysis Services は、意思決定支援とビジネスの分析、Reporting Services レポート、ビジネス レポートおよび Power BI では、Excel などのクライアント アプリケーションの分析データを提供およびその他のデータの視覚化ツールで使用される分析データ エンジンです。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services は、意思決定支援とビジネスの分析、Reporting Services レポート、ビジネス レポートおよび Power BI では、Excel などのクライアント アプリケーションの分析データを提供およびその他のデータの視覚化ツールで使用される分析データ エンジンです。  
   
  一般的なワークフローには、多次元形式または表形式データ モデル、内部設置型 SQL Server Analysis Services または Azure Analysis Services サーバー インスタンスにデータベースとしてモデルを展開する、定期的なデータの処理を設定する、割り当ての作成が含まれています。エンドユーザーによってデータ アクセスを許可する権限です。 準備完了である場合は、セマンティック データ モデルをデータ ソースとして Analysis Services をサポートする任意のクライアント アプリケーションによってアクセスできます。  
  

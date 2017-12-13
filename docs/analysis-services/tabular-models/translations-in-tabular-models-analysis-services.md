@@ -2,12 +2,12 @@
 title: "表形式モデル (Analysis Services) での翻訳 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表形式モデルでの翻訳 (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]表形式モデルに対する翻訳文字列のサポートを追加します。 モデル内の単一オブジェクトには、名前または説明の複数の翻訳を含めることができます。これにより、モデル定義内で複数の言語バージョンをサポートできるようになります。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]表形式モデルに対する翻訳文字列のサポートを追加します。 モデル内の単一オブジェクトには、名前または説明の複数の翻訳を含めることができます。これにより、モデル定義内で複数の言語バージョンをサポートできるようになります。  
   
  翻訳された文字列は、Excel のピボットテーブル リストなどのクライアント ツールに表示される、オブジェクト メタデータ (テーブルと列の名前と説明) のみに使用されます。  翻訳された文字列を使用するには、クライアント接続でカルチャを指定します。 **Excel で分析** 機能では、ドロップダウン リストから言語を選択することができます。 その他のツールでは、接続文字列にカルチャを指定する必要がある場合があります。  
   

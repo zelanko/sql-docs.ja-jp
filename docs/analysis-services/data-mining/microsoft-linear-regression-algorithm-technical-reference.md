@@ -2,12 +2,12 @@
 title: "Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された Microsoft デシジョン ツリー アルゴリズムの特別なバージョンです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>線形回帰アルゴリズムの実装  
  Microsoft デシジョン ツリー アルゴリズムは、線形回帰、分類、またはアソシエーション分析など多くのタスクで使用できます。 線形回帰のためにこのアルゴリズムを実装するには、ツリーの拡張を制限するようにアルゴリズムのパラメーターを制御し、モデル内のすべてのデータを単一のノード内に保持します。 つまり、線形回帰はデシジョン ツリーに基づいていますが、ツリーに含まれるのは単一のルートのみで、分岐は含まれません。すべてのデータがルート ノード内に存在します。  

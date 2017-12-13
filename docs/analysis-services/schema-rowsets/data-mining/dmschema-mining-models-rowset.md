@@ -2,12 +2,12 @@
 title: "DMSCHEMA_MINING_MODELS 行セット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae35f0d1de25ed1551b4368009c4be28e2ea3ea5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 275be85ca3a85147767166ac49cd1d1ee288cf5e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 行セット
-  現在のカタログ内のデータ マイニング モデルを列挙します。 **DMSCHEMA_MINING_MODELS**行セットには、モデル名、処理日、および各マイニング モデルに関連付けられたマイニング アルゴリズムなどの情報が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]現在のカタログ内のデータ マイニング モデルを列挙します。 **DMSCHEMA_MINING_MODELS**行セットには、モデル名、処理日、および各マイニング モデルに関連付けられたマイニング アルゴリズムなどの情報が含まれています。  
   
  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 **DMSCHEMA_MINING_MODELS**スキーマ行セットはよく似ています、 [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)スキーマ行セットと同じ方法で使用することができます。  
   

@@ -2,12 +2,12 @@
 title: "Power View レポート (SSAS テーブル) のテーブル動作プロパティの構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - レポートのテーブル動作プロパティを構成します。
-  テーブル モデルを [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]のデータ モデルとして使用している場合は、詳細行をより細かなレベルで公開するテーブル動作プロパティを設定できます。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびグラフのレイアウトを使用して、識別情報 (名前、写真 ID、ロゴ イメージなど) の適切な既定位置を設定できます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]データ モデルとして表形式モデルを使用しているかどうかは[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]詳細行より細かなレベルで公開するテーブル動作プロパティを設定することができます。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびグラフのレイアウトを使用して、識別情報 (名前、写真 ID、ロゴ イメージなど) の適切な既定位置を設定できます。  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、使用している表示形式に照らしてレポート フィールドの一覧に配置した列を評価することでレポート設計時にアイテムを自動的にグループ化するという点で、他のレポート アプリケーションと異なります。 ほとんどの場合、既定のグループ化によって最適な結果が生成されます。 ただし、一部のテーブル (主に、詳細データを含むテーブル) では、既定のグループ化動作によって、グループ化するべきでない行がグループ化されることがあります。 このようなテーブルの場合は、グループの評価方法を変更するプロパティを設定できます。  
   

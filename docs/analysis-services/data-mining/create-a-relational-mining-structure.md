@@ -2,12 +2,12 @@
 title: "リレーショナル マイニング構造を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>リレーショナル マイニング構造の作成
-  ほとんどのデータ マイニング モデルは、リレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ほとんどのデータ マイニング モデルはリレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
   
  リレーショナル マイニング構造では、さまざまなソースからデータを取得できます。 生データは、データ ソース ビューの一部として定義可能であれば、テーブル、ファイル、またはリレーショナル データベース システムに格納できます。 たとえば、データが Excel、SQL Server データ ウェアハウス データベース、または SQL Server レポート データベースにある場合、あるいは OLE DB プロバイダーまたは ODBC プロバイダー経由でアクセスする外部ソースにある場合は、リレーショナル マイニング構造を使用する必要があります。  
   

@@ -2,12 +2,12 @@
 title: "ディスク領域使用率 (Power Pivot for SharePoint) の構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>ディスクの使用領域の構成 (Power Pivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースをキャッシュします。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置ではキャッシュに、ホスト コンピューターのディスク領域を使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]のデータベースを再読み込みを高速化します。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
   
  このトピックでは、ディスク領域の使用量を制限する方法について説明します。  
   

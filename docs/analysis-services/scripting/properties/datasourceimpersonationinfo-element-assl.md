@@ -2,12 +2,12 @@
 title: "DataSourceImpersonationInfo 要素 (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 14f4c354ca972ca35e8a36451c7286402c3e35a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: da7fd3c8a9182e3bdaa177bda24663a4c2944e88
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasourceimpersonationinfo-element-assl"></a>DataSourceImpersonationInfo 要素 (ASSL)
-  データ ソースに接続するときに、権限借用の動作を決定するための情報が含まれています、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データ ソースに接続するときに、権限借用の動作を決定するための情報が含まれています、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

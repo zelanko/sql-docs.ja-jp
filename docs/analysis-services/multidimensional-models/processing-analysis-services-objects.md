@@ -2,12 +2,12 @@
 title: "処理の Analysis Services オブジェクト |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14559d9f5b7581c406df31aee9782019a580bc31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services オブジェクトの処理
-  処理は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの種類 ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、キューブ、ディメンション、メジャー グループ、パーティション、データ マイニング構造、およびデータ マイニング モデル) に影響します。 オブジェクトごとに、オブジェクトの処理レベルを指定するか、または [既定の処理] オプションを指定して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が自動的に最適な処理レベルを選択するようにできます。 各オブジェクトに適用できる異なるレベルの処理の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]処理に影響[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトの種類:[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース、キューブ、ディメンション、メジャー グループ、パーティション、およびデータ マイニング構造およびモデル。 オブジェクトごとに、オブジェクトの処理レベルを指定するか、または [既定の処理] オプションを指定して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が自動的に最適な処理レベルを選択するようにできます。 各オブジェクトに適用できる異なるレベルの処理の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)」を参照してください。  
   
  処理によって悪影響が発生しないようにするために、処理動作の結果を確認する必要があります。 たとえば、ディメンションを完全に処理すると、そのディメンションに依存するすべてのパーティションが自動的に未処理の状態に設定されます。 これにより、影響を受けるキューブは、依存するパーティションが処理されるまで、クエリに使用できなくなります。  
   

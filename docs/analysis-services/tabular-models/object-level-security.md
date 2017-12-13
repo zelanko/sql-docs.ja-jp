@@ -2,12 +2,12 @@
 title: "表形式モデル オブジェクト レベルのセキュリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc44742d56d744e9d0d4c1f1697d0bcd4e40488c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d86f5ce95ce359f5955e974f7f57012721c3dcb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-level-security"></a>オブジェクト レベルのセキュリティ
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-データ モデルのセキュリティを効果的に実装するための開始[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)および行レベル フィルターのデータ モデル オブジェクトとデータに対するユーザーのアクセス許可を定義します。 以降 1400 の表形式モデルでは、定義することも、テーブル レベルのセキュリティおよび列レベルのセキュリティを含むオブジェクト レベルのセキュリティ、[ロール オブジェクト](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)です。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]データ モデルのセキュリティを効果的に実装するための開始[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)および行レベル フィルターのデータ モデル オブジェクトとデータに対するユーザーのアクセス許可を定義します。 以降 1400 の表形式モデルでは、定義することも、テーブル レベルのセキュリティおよび列レベルのセキュリティを含むオブジェクト レベルのセキュリティ、[ロール オブジェクト](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)です。
 
 ## <a name="table-level-security"></a>テーブルレベルのセキュリティ
 

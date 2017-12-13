@@ -2,12 +2,12 @@
 title: "Microsoft ニューラル ネットワーク アルゴリズム |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft ニューラル ネットワーク アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、Machine Learning の一般的で適応性のあるニューラル ネットワーク アーキテクチャの実装です。  このアルゴリズムでは、入力属性の考えられる各状態が、予測可能属性の考えられる各状態に対してテストし、トレーニング データに基づいて各組み合わせの確率を計算することによって動作します。 これらの確率は、分類や回帰のタスクで使用することも、入力属性に基づいて結果を予測するために使用することもできます。 ニューラル ネットワークは、アソシエーション分析にも使用できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラル ネットワーク アルゴリズムは、機械学習の人気があり、適応性のニューラル ネットワーク アーキテクチャの実装です。  このアルゴリズムでは、入力属性の考えられる各状態が、予測可能属性の考えられる各状態に対してテストし、トレーニング データに基づいて各組み合わせの確率を計算することによって動作します。 これらの確率は、分類や回帰のタスクで使用することも、入力属性に基づいて結果を予測するために使用することもできます。 ニューラル ネットワークは、アソシエーション分析にも使用できます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用してマイニング モデルを作成する場合、複数の出力を含めることができ、アルゴリズムによって複数のネットワークが作成されます。 1 つのマイニング モデルに含まれるネットワークの数は、入力列の状態 (または属性値) の数、およびマイニング モデルが使用する予測可能列の数とそれらの列の状態の数によって異なります。  
   

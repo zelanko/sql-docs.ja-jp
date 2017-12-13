@@ -2,12 +2,12 @@
 title: "多次元モデルではパーティション |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>多次元モデル内のパーティション
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 *パーティション* は、メジャー グループに読み込まれるファクト データの物理ストレージを提供します。 各メジャー グループに対して 1 つのパーティションが自動的に作成されますが、さらにデータを分割する追加のパーティションを作成するのが一般的です。そうすることで、処理効率が上がり、クエリ パフォーマンスが向上します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、*パーティション*メジャー グループに読み込まれるファクト データの物理的なストレージを提供します。 各メジャー グループに対して 1 つのパーティションが自動的に作成されますが、さらにデータを分割する追加のパーティションを作成するのが一般的です。そうすることで、処理効率が上がり、クエリ パフォーマンスが向上します。  
   
  処理効率が上がるのは、1 つ以上のサーバーでパーティションを個別に処理することも並列処理することもできるためです。 クエリの実行速度が向上するのは、各パーティションを、結果として応答時間が短縮されるストレージ モードと集計の最適化を使用するように構成できるためです。 たとえば、新しいデータが含まれるパーティションに MOLAP ストレージを選択すると、通常は ROLAP よりも高速になります。 同様に、日付でパーティション分割する場合、新しいデータが含まれるパーティションは、アクセス頻度の低い古いデータが含まれるパーティションよりもさらに最適化されます。 パーティションごとにストレージと集計デザインが異なると、その後のマージ操作に悪影響を及ぼします。 個々のパーティションを最適化する前に、マージがパーティション管理の戦略に必要な要素であるかどうかを必ず検討してください。  
   

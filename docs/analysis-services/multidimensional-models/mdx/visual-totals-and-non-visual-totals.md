@@ -2,12 +2,12 @@
 title: "表示部分の合計と非表示部分の合計 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 822e1f7e496b3c6fb74fff558b37b244e2b41512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f966f4108f3ad029b6c069216cd7713f3b4ac7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>表示部分の合計と非表示部分の合計
-  表示部分の合計とは、列または行の最後に表示される合計で、列または行内に表示されるすべてのアイテムを加算したものです。 これは、ほとんどのテーブルが表示されるときの既定の動作です。 ただし、非表示の行を含む行全体の合計を維持しながら、テーブル内の特定の列のみを表示する場合もあります。 これらは、合計が表示部分と非表示部分の両方の値から取得されることから **非表示部分の合計**と呼ばれます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]表示部分の合計は、すべての列または行に表示される項目を追加、列または行の最後の合計です。 これは、ほとんどのテーブルが表示されるときの既定の動作です。 ただし、非表示の行を含む行全体の合計を維持しながら、テーブル内の特定の列のみを表示する場合もあります。 これらは、合計が表示部分と非表示部分の両方の値から取得されることから **非表示部分の合計**と呼ばれます。  
   
  次のシナリオは、非表示部分の合計の動作を示します。 最初のステップで表示部分の合計の既定の動作を示します。  
   

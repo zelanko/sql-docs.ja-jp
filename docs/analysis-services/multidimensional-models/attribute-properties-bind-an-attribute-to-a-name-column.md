@@ -2,12 +2,12 @@
 title: "名前列に属性をバインド |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2866844f0004bc37c7bead147a88dbf009199495
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 819c027aa1adfbfae7d6057e988b1d93327233f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>属性のプロパティ - 名前列に属性をバインド
-  この手順では、ディメンション デザイナーの **[属性]** ペインと、 **[オブジェクトのバインド]** ダイアログ ボックスを使用して、手動で名前列に属性をバインドする方法について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]この手順を使用して手動で名前列に属性をバインドする方法について説明、**属性**ペインを使用して、ディメンション デザイナーで、**オブジェクトのバインド** ダイアログ ボックス。  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>名前列に属性をバインドするには  
   

@@ -2,12 +2,12 @@
 title: "集計関数を使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>集計関数の使用
-  メジャーをスライスするためにディメンションを使用する場合、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は **Sum**になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]メジャーをスライスするディメンションを使用すると、ときに、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は **Sum**になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
   
  Analysis Services において作成するすべてのメジャーは、対応する集計関数によりその動作が決まります。 定義済みの集計の種類には、**Sum****Min****Max****Count****Distinct Count**、およびその他複数の特化した関数があります。 または、複雑な数式やカスタムの数式に基づいて集計を必要とする場合は、構築済みの集計関数を代わりに使用して、MDX の計算を作成できます。 たとえば、割合の値のためのメジャーを定義する場合、計算されるメジャーを使用して MDX でそれを実行します。 「[CREATE MEMBER ステートメント &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md)」を参照してください。  
   

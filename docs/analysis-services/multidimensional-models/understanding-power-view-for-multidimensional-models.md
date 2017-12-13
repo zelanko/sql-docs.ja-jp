@@ -2,12 +2,12 @@
 title: "多次元モデルの Power View を理解する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35ac97b27348e930bdf69a7aaf0d15c3f2728de6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f12f3aaada759d91c77d56bb4fc199d2b038eab4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
-  ここでは、SQL Server の多次元モデル機能の Power View について説明し、組織に多次元モデルの Power View を実装する BI プロフェッショナルと管理者向けの重要な情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]この記事では、Power View、SQL Server での多次元モデル機能について説明し、BI プロフェッショナルと管理者が組織に多次元モデルの Power View を実装する向けの重要な情報を提供します。  
   
  多次元モデルには、業界最高レベルの OLAP データ モデリング、ストレージ、および分析ソリューションが用意されています。 Microsoft SQL Server の多次元モデルでは、Microsoft Power View を使用したアドホック データ分析、探索、およびビジュアル化がサポートされます。  
   

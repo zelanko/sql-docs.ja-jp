@@ -2,12 +2,12 @@
 title: "双方向クロス フィルター - テーブル モデルの Analysis Services |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>双方向クロス フィルター - テーブル モデルの Analysis Services
-  SQL Server 2016 では、表形式モデルで *双方向のクロス フィルター* を有効にするための組み込みアプローチが新たに導入されています。これにより、テーブル リレーションシップ間でフィルター コンテキストを伝達するために DAX 式を手動で作成する必要がなくなります。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新しい SQL Server 2016 では、組み込みのアプローチを有効にする*双方向クロス フィルター*テーブル モデルでテーブル リレーションシップ間でフィルター コンテキストを反映するために DAX 式を手動で作成必要があります。  
   
  この概念を構成要素に分解して説明します。 *クロス フィルタリング* は、関連テーブルの値に基づいてテーブルのフィルター コンテキストを設定する機能です。 *双方向* は、テーブル リレーションシップのもう一方の側の 2 つ目の関連テーブルにフィルター コンテキストを伝達することを意味します。 名前が示すように、一方向ではなく、双方向のリレーションシップでスライスすることができます。  内部的には、双方向のフィルタリングではフィルター コンテキストが展開され、データのスーパーセットが照会されます。  
   

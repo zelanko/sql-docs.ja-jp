@@ -2,12 +2,12 @@
 title: "DAX プロパティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a48b3f89da00437cec8781e1ea35b6ea87f0c300
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8a94cb71ab8625a2a546e62f5dc828b605aeaa2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-properties"></a>DAX のプロパティ
-   msmdsrv.ini の DAX セクションには、DAX クエリの結果セットで返される行数の上限など、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の特定のクエリの動作を制御する設定が含まれています。 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Msmdsrv.ini の DAX セクションで特定のクエリの動作を制御するために使用する設定が含まれています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、DAX クエリの結果セットで返される行の数の上限などです。 
   
   巨大な行セットについては、DirectQuery モデルで返される行数など、既定の 100 万行では不十分である場合があります。 上限の調整が必要であるかどうかは、"The result set of a query to external data source has exceeded the maximum allowed size of '1000000' rows (外部データ ソースへのクエリの結果セットが許可されている最大サイズである '1000000' 行を超えています)" というエラーが発生することでわかります。
  

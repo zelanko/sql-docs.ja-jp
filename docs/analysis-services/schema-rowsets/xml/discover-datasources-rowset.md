@@ -2,12 +2,12 @@
 title: "DISCOVER_DATASOURCES 行セット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 88fede87c305afd15819a9379999806ec39eeb49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行セット
-  サーバーまたは Web サービスで使用できる XML for Analysis (XMLA) プロバイダー データ ソースの一覧を返します。 パブリッシュされたデータ ソースは、アプリケーション Web サーバーの URL から返されます。 クライアントは、この一覧内のいずれかのデータ ソースに接続できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) プロバイダー データ ソースは、サーバーまたは Web サービスで使用できるの一覧を返します。 パブリッシュされたデータ ソースは、アプリケーション Web サーバーの URL から返されます。 クライアントは、この一覧内のいずれかのデータ ソースに接続できます。  
   
  呼び出す場合は、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドを**DISCOVER_DATASOURCES**の列挙値に、 [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)要素、 **Discover**メソッドを返します、 **DISCOVER_DATASOURCES**行セット。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||パブリッシャーによって入力されるデータ ソースの説明。<br /><br /> 返す可能性があります**NULL**です。|  
 |**[URL]**|**DBTYPE_WSTR**|可|そのデータ ソースに対して XML for Analysis (XMLA) メソッドを呼び出す場所を示す一意のパス。<br /><br /> 返す可能性があります**NULL**です。|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||データ ソースに接続するために必要な追加情報が含まれている文字列。<br /><br /> 返す可能性があります**NULL**です。|  
-|**ProviderName**|**DBTYPE_WSTR**|可|データ ソースのプロバイダーの名前。<br /><br /> 例:`"MSOLAP"`<br /><br /> 返す可能性があります**NULL**です。|  
+|**ProviderName**|**DBTYPE_WSTR**|可|データ ソースのプロバイダーの名前。<br /><br /> 例: `"MSOLAP"`<br /><br /> 返す可能性があります**NULL**です。|  
 |**プロバイダーの種類**|**DBTYPE_WSTR**|可|プロバイダーによってサポートされているデータ型。 この配列には、次の 1 つまたは複数の型を含めることができます。<br /><br /> **MDP**: 多次元データ プロバイダー。<br /><br /> **TDP**: 表形式のデータ プロバイダー。<br /><br /> **DMP**: データ マイニング プロバイダー (を実装して、OLE db for Data Mining 仕様)。|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|可|データ ソースで使用するセキュリティ モードの種類の指定。 値は次のいずれかです。<br /><br /> **認証されていない**: 送信するユーザー ID またはパスワードを持たない。<br /><br /> **認証**: データ ソースへの接続に必要な情報では、ユーザー ID とパスワードを含める必要があります。<br /><br /> **統合型**: データ ソースによって提供される統合セキュリティなどの承認を決定する、基になるセキュリティを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)]インターネット インフォメーション サービス (IIS)。|  
   

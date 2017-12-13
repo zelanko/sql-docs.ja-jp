@@ -2,12 +2,12 @@
 title: "EntityType 要素 (CSDLBI) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5b62cad891d4d02120b3325d57e327e299ef1be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 303f09187528dd7fa2c897fea5fd86ec6d7f23d9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 要素 (CSDLBI)
-  **EntityType**要素は複合型であり、顧客やデータ モデル内の注文などの高レベルのエンティティの構造体を表します。 **Bi: EntityType**要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**EntityType**要素は複合型であり、顧客やデータ モデル内の注文などの高レベルのエンティティの構造体を表します。 **Bi: EntityType**要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)です。  
   
  EntityType 要素は、データ モデルに含まれる各エンティティに対して指定される必要があります。 EntityType のサブ要素では、テーブルの列とメジャーが記述されます。 テーブル間のリレーションシップが含まれている、 **EntityContainer**です。  
   

@@ -2,12 +2,12 @@
 title: "ディメンション (Analysis Services) に対するアクセス許可を与える |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccf0f7d014bfd85f3368633058984089005101ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>ディメンションに対する権限の付与 (Analysis Services)
-  ディメンション セキュリティは、ディメンション データではなくディメンション オブジェクトに対する権限を設定するために使用します。 通常、ディメンションに対する権限を設定する場合は、処理操作へのアクセスを許可または拒否することが主な目的です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ディメンション セキュリティを使用すると、そのデータではなく、ディメンション オブジェクトに対する権限を設定します。 通常、ディメンションに対する権限を設定する場合は、処理操作へのアクセスを許可または拒否することが主な目的です。  
   
  ただし、処理操作ではなく、ディメンションまたはディメンションに含まれる属性および階層へのデータ アクセスを制御することが目的である場合があります。 たとえば、地域の販売部門がある会社で、部門外の人が販売実績情報にアクセスできないようにする場合があります。 異なる構成要素のディメンション データ部分へのアクセスを許可または拒否するには、ディメンション属性およびディメンション メンバーに対する権限を設定します。 ただし、個々のディメンション オブジェクト自体へのアクセスは拒否できず、そのデータへのアクセスのみを拒否できます。 当面の目的が個々の属性階層へのアクセス権などディメンション メンバーへのアクセスを許可または拒否することである場合は、「 [ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 」で詳細を確認してください。  
   

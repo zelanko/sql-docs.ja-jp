@@ -2,12 +2,12 @@
 title: "処理オプションと設定 (Analysis Services) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>処理オプションと設定 (Analysis Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でオブジェクトを処理する場合、処理オプションを選択することにより、各オブジェクトに対して行われる処理の種類を制御できます。 処理の種類はオブジェクトごとに異なるほか、オブジェクトに対する変更内容 (オブジェクトが前回処理されたことによって発生した変更) によっても異なります。 処理方法を自動的に選択する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすると、オブジェクトを完全処理状態に最短時間で戻す方法が使用されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]内のオブジェクトを処理すると[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、各オブジェクトに対して行われる処理の種類を制御する処理オプションを選択することができます。 処理の種類はオブジェクトごとに異なるほか、オブジェクトに対する変更内容 (オブジェクトが前回処理されたことによって発生した変更) によっても異なります。 処理方法を自動的に選択する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすると、オブジェクトを完全処理状態に最短時間で戻す方法が使用されます。  
   
  処理オプションを設定することにより、処理されるオブジェクト、およびオブジェクトの処理方法を制御できます。 このような設定のいくつかは、主にバッチ処理ジョブで使用されます。 バッチ処理の詳細については、「[バッチ処理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
   

@@ -2,12 +2,12 @@
 title: "変更テーブル、列、または行のフィルターのマッピング (SSAS テーブル) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a88238ef377de669f3100852272c9cdbee8987c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 055b4415c1b7c60a1f22047d8e7ac95c7bc0e8cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)
-  このトピックでは、 **の** [テーブルのプロパティの編集] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ダイアログ ボックスを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックを使用して、テーブル、列、または行フィルターのマッピングを変更する方法について説明、**テーブル プロパティの編集** ダイアログ ボックスで[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]です。  
   
  **[テーブルのプロパティの編集]** ダイアログ ボックスのオプションは、最初にデータをインポートしたときに一覧からテーブルを選択したか SQL クエリを使用したかによって異なります。 最初にデータをインポートするときに一覧から選択した場合は、 **[テーブルのプロパティの編集]** ダイアログ ボックスにテーブルのプレビュー モードが表示されます。 このモードでは、ソース テーブルの最初の 50 行に制限されたサブセットのみが表示されます。 最初にデータをインポートするときに SQL ステートメントを使用した場合は、 **[テーブルのプロパティの編集]** ダイアログ ボックスには SQL ステートメントのみが表示されます。 SQL クエリ ステートメントを使用すると、フィルターをデザインするか、SQL ステートメントを手動で編集することによって、行のサブセットを取得することもできます。  
   

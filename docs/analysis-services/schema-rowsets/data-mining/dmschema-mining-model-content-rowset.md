@@ -2,12 +2,12 @@
 title: "DMSCHEMA_MINING_MODEL_CONTENT 行セット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 110863a69d45ece85023e5dd3bbd8a554631ed43
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0bd29ab1dcd96412710e9d79255119489253bde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 行セット
-  クライアント アプリケーションでデータ マニング モデルのコンテンツを参照できるようにします。 クライアント アプリケーションは、このトピックの最後に説明する特殊なツリー操作制限を使用して、マイニング モデルのコンテンツに移動できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]により、クライアント アプリケーションは、データ マイニング モデルのコンテンツを参照します。 クライアント アプリケーションは、このトピックの最後に説明する特殊なツリー操作制限を使用して、マイニング モデルのコンテンツに移動できます。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DMSCHEMA_MINING_MODEL_CONTENT**行セットには、次の列が含まれています。  

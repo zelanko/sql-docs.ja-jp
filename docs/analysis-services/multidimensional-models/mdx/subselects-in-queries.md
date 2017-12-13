@@ -2,12 +2,12 @@
 title: "クエリのサブセレクト |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
-  サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サブセレクト式から外部の外側の SELECT が評価されているキューブの空間を制限するために使用する入れ子になった SELECT 式です。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
   
 ## <a name="subselects-by-example"></a>サブセレクトの例  
  表示させたい結果を生成するために、サブセレクトがどのように機能するかを示す例を見てみましょう。 上位 10 製品の数年間の販売動向を示す表を生成するように要求されたとします。  

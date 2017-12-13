@@ -2,12 +2,12 @@
 title: "ADO MD から ADOMD.NET への移行 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4b442d18188a5ba57066d6c9f3b2f1c2bdd18f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a67be24e9b9b9abeb2fb3c09d11e60cc4c18597c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>ADO MD から ADOMD.NET への移行
-  ADOMD.NET ライブラリは、ActiveX Data Objects (ADO) ライブラリを機能拡張した ActiveX Data Objects Multidimensional (ADO MD) ライブラリに似ています。このライブラリは、COM (Component Object Model) ベースのクライアント アプリケーションで多次元データへアクセスするときに使用されます。 ADO MD を使用すると、C++ や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic などのアンマネージ言語から多次元データへ簡単にアクセスできます。 ADOMD.NET では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] C# や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET などのマネージ言語から、分析データ (多次元データとデータ マイニングの両方) へ簡単にアクセスできます。 また、ADOMD.NET は、高度な機能を備えたメタデータ オブジェクト モデルでもあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET ライブラリは、ActiveX Data Objects Multidimensional (ADO MD) ライブラリ、コンポーネント オブジェクト モデル (COM) ベースのクライアント アプリケーションで多次元データにアクセスするために使用する ActiveX データ オブジェクト (ADO) ライブラリの拡張機能に似ています。 ADO MD を使用すると、C++ や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic などのアンマネージ言語から多次元データへ簡単にアクセスできます。 ADOMD.NET では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] C# や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET などのマネージ言語から、分析データ (多次元データとデータ マイニングの両方) へ簡単にアクセスできます。 また、ADOMD.NET は、高度な機能を備えたメタデータ オブジェクト モデルでもあります。  
   
  既存のクライアント アプリケーションを ADO MD から ADOMD.NET へ移行するのは容易ですが、移行時には、次の重要な相違点に注意してください。  
   

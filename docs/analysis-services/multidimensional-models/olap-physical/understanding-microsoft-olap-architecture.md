@@ -2,12 +2,12 @@
 title: "Microsoft OLAP アーキテクチャについて |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77fae4f9fd4b057a5388029b1544aa72842d91ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c0158fb2175ff279e1a405b580c6add273a72b1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
-  以下のトピックを参照して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多次元データベースを十分に理解し、ビジネス インテリジェンス ソリューションに多次元データベースを実装する計画を立てます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]理解するのにはこれらのトピックを使用して[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]プランの多次元データベースと多次元データベース、ビジネス インテリジェンス ソリューションを実装する方法です。  
   
  ![小さいファイル フォルダー アイコン](../../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン")**論理アーキテクチャ**  
  [サーバー オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  

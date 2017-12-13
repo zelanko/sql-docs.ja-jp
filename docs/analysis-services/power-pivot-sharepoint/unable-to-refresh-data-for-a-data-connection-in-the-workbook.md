@@ -2,12 +2,12 @@
 title: "ブック内のデータ接続のデータを更新できません |。Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 67932080ad5ec8edc79232387a7b72df8627c076
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 35eeb61383298c6345147e3ea1db3f4f8c7e915b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>ブック内のデータ接続に関するデータを更新できません
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックで、Excel Services は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]含む Excel ブック[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]への接続要求を送信する場合、データを Excel Services がこのエラーを返します、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サーバーと、要求は失敗します。  
   
 ## <a name="details"></a>詳細  
   

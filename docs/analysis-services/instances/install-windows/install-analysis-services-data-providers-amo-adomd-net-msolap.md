@@ -2,12 +2,12 @@
 title: "Analysis Services データ プロバイダー (AMO、ADOMD.NET、MSOLAP) のインストール |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 63ce2b423f04ef4199bbb32b5349c26c25fe2199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7cd7f4a950335557e3fb65d3d504f79af0801de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>Analysis Services データ プロバイダー (AMO、ADOMD.NET、MSOLAP) をインストールする
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、ADOMD.Net、AMO、MSOLAP から成る Analysis Services データ プロバイダーのバージョンの更新です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ADOMD.Net、AMO、MSOLAP から成る Analysis Services データ プロバイダーのバージョンの更新プログラムがします。  
   
  ほとんどのクエリ ベースのデータ アクセス シナリオでは、クライアント システムに既にインストールされている古いバージョンのデータ プロバイダーを使用して、SQL Server 2016 Analysis Services インスタンスのテーブル モデルおよび多次元モデルにアクセスすることができます。これには、SQL Server 2016 独自の機能を使用する表形式のモデルも含まれます。 一般的に、Excel、Reporting Services、Tableau などの、クエリを生成するクライアント アプリケーションが Analysis Services モデルにアクセスする場合に最新のデータ プロバイダーが必要とされることはありません。  
   

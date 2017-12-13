@@ -2,12 +2,12 @@
 title: "Power Pivot の可用性と災害復旧 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa0bd590b7eeea51fa12627488215067cb46ecf6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot の可用性と災害復旧
-  可用性と災害復旧計画[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]主に、SharePoint ファーム、さまざまなコンポーネントで許容されるダウンタイムの量と、ツールと SharePoint の可用性の実装のベスト プラクティスの設計に依存します。 このトピックでは、さまざまなテクノロジについて要約し、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置に関して可用性とディザスター リカバリーを計画するときに考慮する必要のあるトポロジ図の例を示します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]可用性と災害復旧計画[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]主に、SharePoint ファーム、さまざまなコンポーネントで許容されるダウンタイムの量と、ツールと SharePoint の可用性の実装のベスト プラクティスの設計に依存します。 このトピックでは、さまざまなテクノロジについて要約し、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置に関して可用性とディザスター リカバリーを計画するときに考慮する必要のあるトポロジ図の例を示します。  
   
 ||  
 |-|  

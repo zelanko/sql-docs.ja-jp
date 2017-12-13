@@ -2,12 +2,12 @@
 title: "多次元モデルのプログラミング |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 25171096f715c5fc9aee4f9c4346a70508fa8f7d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-programming"></a>多次元モデルのプログラミング
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、Analysis Services インスタンスおよびそれによって提供される多次元データベースに対してプログラミングを行うために使用できる複数の API が提供されています。 ここでは、Analysis Services 多次元ソリューションを使用してカスタム アプリケーションを作成する際に使用できる方法について説明します。 この情報を使って、特定のプロジェクトの要件に最も適したプログラミング インターフェイスを選ぶことができます。 Analysis Services 開発プロジェクトは、Windows プラットフォームまたは HTTP アクセスをサポートする他のプラットフォーム上で実行されるマネージ コードまたは非マネージ コードをベースにすることができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]いくつかの Api は、使用できることを Analysis Services インスタンスと多次元データベースに対してプログラミングを使用できるようにします。 ここでは、Analysis Services 多次元ソリューションを使用してカスタム アプリケーションを作成する際に使用できる方法について説明します。 この情報を使って、特定のプロジェクトの要件に最も適したプログラミング インターフェイスを選ぶことができます。 Analysis Services 開発プロジェクトは、Windows プラットフォームまたは HTTP アクセスをサポートする他のプラットフォーム上で実行されるマネージ コードまたは非マネージ コードをベースにすることができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Microsoft OLAP アーキテクチャについて](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  

@@ -2,12 +2,12 @@
 title: "キューブ、パーティション、およびディメンションの処理のエラーの構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>キューブ、パーティション、およびディメンションの処理のエラーの構成
-  処理中にデータ整合性エラーが発生した場合、キューブ、パーティション、またはディメンション オブジェクトのエラー構成プロパティによって、サーバーの応答が決定します。 通常、キー列の重複キー、見つからないキー、および NULL 値がこのようなエラーをトリガーします。エラーの原因となるレコードはデータベースに追加されず、次の動作を指定するプロパティを設定することができます。 既定では、処理が停止します。 ただし、キューブの開発中に、不完全でもインポートされたデータのキューブの動作をテストできるように、エラーが発生した場合に処理を続行する必要がある場合もあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブ、パーティション、またはディメンション オブジェクトのエラー構成プロパティは、サーバーでの処理中にデータ整合性エラーが発生したときの応答方法を決定します。 通常、キー列の重複キー、見つからないキー、および NULL 値がこのようなエラーをトリガーします。エラーの原因となるレコードはデータベースに追加されず、次の動作を指定するプロパティを設定することができます。 既定では、処理が停止します。 ただし、キューブの開発中に、不完全でもインポートされたデータのキューブの動作をテストできるように、エラーが発生した場合に処理を続行する必要がある場合もあります。  
   
  このトピックのセクションは次のとおりです。  
   

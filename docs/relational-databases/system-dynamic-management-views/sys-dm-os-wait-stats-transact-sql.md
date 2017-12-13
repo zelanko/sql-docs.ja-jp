@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b171317170d9144edb71dfb29b36940ce6d7ee31
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,12 +282,12 @@ GO
 |FT_RESTART_CRAWL |一時的なエラーから復旧するために、正常と認識されている最後の時点からフルテキスト クロールを再開する必要があるときに発生します。 この待機が発生した場合、その設定を現在処理中のワーカー タスクは、現在のステップを完了するか終了することを許可されます。| 
 |FULLTEXT GATHERER |フルテキスト操作の同期中に発生します。| 
 |GDMA_GET_RESOURCE_OWNER |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |GHOSTCLEANUPSYNCMGR |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|GLOBAL_QUERY_CANCEL |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|GLOBAL_QUERY_CANCEL |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |GLOBAL_QUERY_CLOSE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|GLOBAL_QUERY_CONSUMER |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|GLOBAL_QUERY_PRODUCER |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|GLOBAL_QUERY_CONSUMER |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|GLOBAL_QUERY_PRODUCER |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |GLOBAL_TRAN_CREATE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |GLOBAL_TRAN_UCS_SESSION |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |GUARDIAN |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
@@ -346,9 +346,9 @@ GO
 |HADR_TDS_LISTENER_SYNC |内部の Alwayson システムまたは WSFC クラスターは、リスナーの開始または停止したことを要求します。 この要求の処理は常に非同期で行われ、冗長な要求を削除するメカニズムがあります。 また、構成の変更が原因でこのプロセスが中断される場合があります。 このリスナー同期メカニズムに関連したすべての待機は、この待機の種類を使用します。 内部使用のみ、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |開始や停止 anavailability グループ リスナーを必要とする常に TRANSACT-SQL ステートメントの最後に使用されます。 開始/停止操作が非同期的に実行、ため、リスナーの状況が既知になるまで、この待機の種類を使用してユーザー スレッドをブロックします、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_TIMER_TASK |タイマー タスク オブジェクトのロックを待機しています。またこれは、実行される作業の間の実際の待機に使用されます。 たとえば、1 回の実行後に、10 秒ごとに実行されるタスクの Always On 可用性グループは、タスクのスケジュールを変更する約 10 秒を待機し、待機はここで含まれます、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_TRANSPORT_DBRLIST |トランスポート層のデータベース レプリカの一覧に対するアクセスを待機しています。 アクセスを許可するスピンロックのために使用します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_TRANSPORT_FLOW_CONTROL |未処理の未確認 Alwayson メッセージ数が、アウト時に待機しているフロー制御のしきい値。 これは、可用性レプリカ - 的に (データベースへのデータベース単位) ではありません、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -471,9 +471,9 @@ GO
 |MD_AGENT_YIELD |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |MD_LAZYCACHE_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |MEMORY_ALLOCATION_EXT |SQL Server の内部のメモリ プールまたはオペレーティング システムのいずれかからメモリを割り当てているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|MEMORY_GRANT_UPDATE |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|MEMORY_GRANT_UPDATE |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |METADATA_LAZYCACHE_RWLOCK |TBD <br /> **適用されます**:[!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]のみです。 |  
-|MIGRATIONBUFFER |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|MIGRATIONBUFFER |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |MISCELLANEOUS |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |MISCELLANEOUS |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |MSQL_DQ |タスクが分散クエリ操作の終了を待機しているときに発生します。 これは、複数のアクティブな結果セット (MARS) アプリケーションにデッドロックの可能性があるかどうかを検出するために使用されます。 分散クエリ呼び出しが終了すると、待機は終了します。| 
@@ -733,12 +733,12 @@ GO
 |PWAIT_MD_RELATION_CACHE |テーブルまたはインデックスに関するメタデータの内部同期中に発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_MD_SERVER_CACHE |リンク サーバー上のメタデータの内部同期中に発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_MD_UPGRADE_CONFIG |サーバー全体の構成をアップグレードする際に内部同期中に発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_QRY_BPMEMORY |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|PWAIT_SBS_FILE_OPERATION |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|PWAIT_SBS_FILE_OPERATION |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -752,7 +752,7 @@ GO
 |QDS_DB_DISK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QDS_DYN_VECTOR |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QDS_EXCLUSIVE_ACCESS |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|QDS_HOST_INIT |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|QDS_HOST_INIT |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QDS_LOADDB |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QDS_QDS_CAPTURE_INIT |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -777,12 +777,12 @@ GO
 |QUERY_OPTIMIZER_PRINT_MUTEX |クエリ オプティマイザー診断の出力作成の同期中に発生します。 この待機の種類は、マイクロソフト製品サポートの指示、診断設定を有効になっている場合にのみ発生します。| 
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QUERY_TRACEOUT |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|RBIO_WAIT_VLF |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|RBIO_WAIT_VLF |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |RECOVER_CHANGEDB |ウォーム スタンバイ データベース内で、データベースの状態の同期中に発生します。| 
 |RECOVERY_MGR_LOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |REDO_THREAD_SYNC |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|REMOTE_BLOCK_IO |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|REMOTE_BLOCK_IO |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -812,12 +812,12 @@ GO
 |SATELLITE_CARGO |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SATELLITE_SERVICE_SETUP |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SATELLITE_TASK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|SBS_DISPATCH |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|SBS_RECEIVE_TRANSPORT |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|SBS_TRANSPORT |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|SBS_DISPATCH |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|SBS_RECEIVE_TRANSPORT |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|SBS_TRANSPORT |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SEC_DROP_TEMP_KEY |一時セキュリティ キーを削除しようとして失敗した後、再試行するまでの間に発生します。| 
-|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SECURITY_DBE_STATE_MUTEX |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SECURITY_KEYRING_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -852,7 +852,7 @@ GO
 |SNI_HTTP_WAITFOR_0_DISCON |未処理の HTTP 接続の終了を待っている間に、SQL Server のシャット ダウン中に発生します。| 
 |SNI_LISTENER_ACCESS |NUMA (non-uniform memory access) ノードが状態の変化を更新するのを待機している間に発生します。 状態の変化へのアクセスはシリアル化されます。| 
 |SNI_TASK_COMPLETION |NUMA ノード状態の変化中にすべてのタスクが終了するのを待機しているときに発生します。| 
-|SNI_WRITE_ASYNC |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|SNI_WRITE_ASYNC |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |SOAP_READ |HTTP ネットワークの読み取り完了を待機しているときに発生します。| 
 |SOAP_WRITE |HTTP ネットワークの書き込み完了を待機しているときに発生します。| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -903,7 +903,7 @@ GO
 |TDS_INIT |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |TDS_PROXY_CONTAINER |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |TEMPOBJ |一時オブジェクトの削除が同期されるときに発生します。 この待機が発生するのはまれで、タスクが temp テーブルに対して削除操作を行うための排他アクセスを要求した場合にのみ発生します。| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |TERMINATE_LISTENER |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |THREADPOOL |タスクがワーカーの実行を待機しているときに発生します。 ワーカー数の最大設定値が低すぎるか、バッチ実行時間が長すぎるため、他のバッチ用にワーカー数が削減されている可能性があります。| 
 |TIMEPRIV_TIMEPERIOD |拡張イベント タイマーの内部初期化中に発生します。| 
@@ -933,13 +933,13 @@ GO
 |WAIT_FOR_RESULTS |クエリ通知が行われるのを待機しているときに発生します。| 
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|WAIT_XLOGREAD_SIGNAL |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|WAIT_XLOGREAD_SIGNAL |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_CKPT_CLOSE |チェックポイントを完了するを待機しているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_CKPT_ENABLED |チェックポイント処理が [無効] の待機中のチェックポイントを有効にするときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_CKPT_STATE_LOCK |チェックポイントの状態の確認を同期するときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **適用先**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **適用対象**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。| 
 |WAIT_XTP_GUEST |データベース メモリ アロケーターが低いメモリ通知の受信を停止する必要があるときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_HOST_WAIT |待機がデータベース エンジンによってトリガーされ、ホストによって実装されるときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -947,7 +947,7 @@ GO
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |オフライン チェックポイントがスキャンする新しいログ レコードを待機しているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_PROCEDURE_ENTRY |Drop procedure が完了するには、そのプロシージャの現在のすべての実行を待機しているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_RECOVERY |データベースの復旧がメモリ最適化オブジェクトが終了するの復旧を待機しているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_TASK_SHUTDOWN |完了する、インメモリ OLTP のスレッドを待機しているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |WAIT_XTP_TRAN_DEPENDENCY |トランザクション依存関係を待機しているときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -996,10 +996,10 @@ GO
 |XE_TIMER_TASK_DONE |TBD| 
 |XIO_CREDENTIAL_MGR_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |XIO_CREDENTIAL_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|XIO_EDS_MGR_RWLOCK |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|XIO_EDS_RWLOCK |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **適用されます**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]現在からします。| 
+|XIO_EDS_MGR_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|XIO_EDS_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |XTP_HOST_DB_COLLECTION |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |XTP_HOST_LOG_ACTIVITY |TBD <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
@@ -1010,7 +1010,7 @@ GO
 |XTPPROC_PARTITIONED_STACK_CREATE |特定のプロシージャ (行う必要があります単一スレッド) ストアド プロシージャのキャッシュ構造 NUMA ノードごとの割り当てをネイティブ コンパイルされたときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|
 
   
- 次の Xevent は、パーティションに関連する**スイッチ**とオンライン インデックス再構築します。 構文については、次を参照してください。 [ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-index-transact-sql.md).  
+ 次の Xevent は、パーティションに関連する**スイッチ**とオンライン インデックス再構築します。 構文については、次を参照してください。 [ALTER TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-index-transact-sql.md)  
   
 -   lock_request_priority_state  
   
@@ -1018,7 +1018,7 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
     

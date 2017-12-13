@@ -2,12 +2,12 @@
 title: "マイニング モデルおよびデータ マイニング ビューアーを選択 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 712e8e501d3f1a8a37b2627d2356ff542af8bd08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>マイニング モデルとデータ マイニング ビューアーの選択
-  マイニング モデルは、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにあるいずれかのビューアーを使用して調べることができます。 簡単にモデルを切り替えることや使用するビューアーを変更することができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ビューアーのいずれかを使用して、マイニング モデルを調べることができます、**マイニング モデル ビューアー**データ マイニング デザイナーのタブです。 簡単にモデルを切り替えることや使用するビューアーを変更することができます。  
   
 -   **のデータ マイニング デザイナーの** [マイニング モデル ビューアー] **タブにある** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ボックスには、現在のマイニング構造にあるマイニング モデルすべての一覧が含まれています。  
   

@@ -2,12 +2,12 @@
 title: "アカウントの要素 (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: efe72ade8623910c34a1aff1d5439ee707c27f7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 87a3e97ae62a4eb4dd28cef1c29ac9e0efd2147d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="account-element-assl"></a>Account 要素 (ASSL)
-  内の勘定科目の種類に関する詳細を含む、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]内の勘定科目の種類に関する詳細を含む、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

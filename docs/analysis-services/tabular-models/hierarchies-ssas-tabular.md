@@ -2,12 +2,12 @@
 title: "階層 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchies"></a>階層
-  表形式モデルにおける階層は、1 つのテーブルの 2 つ以上の列間の関係を定義するメタデータです。 階層は、あるレポート クライアント フィールドの一覧の他の列とは分けて表示できるため、クライアントのユーザーは簡単に移動し、レポートに含めることができます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデルでの階層とは、テーブル内の 2 つ以上の列間のリレーションシップを定義するメタデータです。 階層は、あるレポート クライアント フィールドの一覧の他の列とは分けて表示できるため、クライアントのユーザーは簡単に移動し、レポートに含めることができます。  
   
 ##  <a name="bkmk_benefits"></a> 利点  
  テーブルには明確な規則性のない特殊な列名を持つ数十または数百の列が含まれる場合があります。 そのため、レポート クライアント フィールドの一覧での表示が無秩序になり、ユーザーがレポート内のデータを見つけたりレポートにデータを含めたりするのが難しくなることがあります。 階層では、複雑なデータ構造を単純で直感的な形式で表示できます。  

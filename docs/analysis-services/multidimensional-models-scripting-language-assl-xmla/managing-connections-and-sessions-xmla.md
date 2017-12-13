@@ -2,12 +2,12 @@
 title: "接続およびセッション (XMLA) の管理 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52392cf2a1af25e0f67634286e371fb2bef408f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
-  *状態保持*id とメソッドの呼び出しの間のクライアントのコンテキスト、サーバーを保持する状態します。 *状態を保持しない*をサーバーが保存されていません id およびクライアントのコンテキストをメソッド呼び出しの完了後に、条件は、します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*ステートフル性*id とメソッドの呼び出しの間のクライアントのコンテキスト、サーバーを保持する状態します。 *状態を保持しない*をサーバーが保存されていません id およびクライアントのコンテキストをメソッド呼び出しの完了後に、条件は、します。  
   
  XML for Analysis (XMLA) をサポートしている状態を保持する場合は、*セッション*一連のステートメントをまとめて実行するための使用が許可されます。 そのような一連のステートメントの例としては、後続のクエリで使用するための計算されるメンバーの作成があります。  
   

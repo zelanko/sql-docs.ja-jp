@@ -2,12 +2,12 @@
 title: "付与 (Analysis Services) のディメンション データへのカスタム アクセス |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
-  キューブに対する読み取りアクセスを有効にすると、ディメンション メンバー (キューブで使用されるすべてのメジャーを含むメジャー ディメンションのメジャーを含む) へのアクセスを明示的に許可または拒否する追加の権限を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブに対する読み取りアクセス権を有効にした後は、明示的に許可またはディメンション メンバー (すべてのキューブで使用するメジャーを含む、Measures ディメンション内に含まれるメジャーを含む) へのアクセスを拒否する追加のアクセス許可を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
   
  ![ピボット テーブルとディメンション メンバーなし](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "ピボット テーブルとディメンション メンバーなし")  
   

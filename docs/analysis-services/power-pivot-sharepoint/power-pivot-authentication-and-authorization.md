@@ -2,12 +2,12 @@
 title: "Power Pivot の認証と承認 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot の認証および承認
-  SharePoint 2010 ファーム内で実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連のすべての操作はファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のコンテンツや操作にまで及ぶことになります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint、SharePoint 2010 ファーム内で実行される配置が SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連のすべての操作はファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のコンテンツや操作にまで及ぶことになります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
   
  セルフサービス型のデータ分析には Excel Services との統合が必要となるため、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーをセキュリティで保護する場合、Excel Services のセキュリティについても理解している必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データへのデータ接続があるピボットテーブルに対してユーザーがクエリを実行すると、データ接続要求が Excel Services からファームの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに転送され、データが読み込まれます。 サーバー間のこの連携では、両方のサーバーのセキュリティ設定を構成する方法を理解している必要があります。  
   

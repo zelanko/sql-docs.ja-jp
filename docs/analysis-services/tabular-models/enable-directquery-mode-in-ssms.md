@@ -2,12 +2,12 @@
 title: "SSMS での DirectQuery モードを有効にする |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS での DirectQuery モードの有効化
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  既にデプロイされている表形式モデルのデータ アクセス プロパティは、DirectQuery モードを有効にすることで変更できます。このときクエリは、メモリ内にあるキャッシュ データではく、バックエンドのリレーショナル データ ソースに対して実行されます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]DirectQuery モードでは、ここでクエリ バックエンドのリレーショナル データ ソースに対して実行ではなくキャッシュに存在するメモリ内のデータを有効にすると、既に配置されている表形式モデルのデータ アクセス プロパティを変更できます。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、DirectQuery の構成はモデルの互換性レベルにより異なります。 すべての互換性レベルで動作する手順を下記で説明します。  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[モデル]**  >  **[既定のモード]** の順にクリックします。  
   
-2.  モードを **[ DirectQuery]** に設定します。  
+2.  モードを **[DirectQuery]** に設定します。  
   
     |||  
     |-|-|  
@@ -80,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]**の順にクリックします。  
   
-2.  モードを **[ DirectQuery]** に設定します。  
+2.  モードを **[DirectQuery]** に設定します。  
   
      既定のモードのプロパティは、次のように構成されています。  
   
@@ -111,9 +108,9 @@ ms.lasthandoff: 11/17/2017
   
      DirectQuery モデルの場合は、データベースに定義されている接続は 1つのみです、また、データ ソースはリレーショナルで、サポートされているデータベース型にする必要があります。 手順については、「 [サポートされているデータ ソース &amp;#40;SSAS テーブル&amp;#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)」(DirectQuery モード &#40;SSAS テーブル&#41;) に記載されています。  
   
-2.  **[接続文字列 ]** がサーバー、データベース名、および DirectQuery 操作で使用する認証方法を指定します。 SQL Server 認証を使用している場合は、こちらでデータベース ログインを指定できます。  
+2.  **[接続文字列]** がサーバー、データベース名、および DirectQuery 操作で使用する認証方法を指定します。 SQL Server 認証を使用している場合は、こちらでデータベース ログインを指定できます。  
   
-3.  **[権限借用情報 ]** は、Windows の認証に使用されます。 DirectQuery モードの表形式モデルで有効なオプションは次のとおりです。  
+3.  **[権限借用情報]** は、Windows の認証に使用されます。 DirectQuery モードの表形式モデルで有効なオプションは次のとおりです。  
   
     -   **サービス アカウントの使用**。 Analysis Services サービス アカウントがリレーショナル データベースの読み取りアクセス許可を所有している場合、このオプションを選べます。  
   

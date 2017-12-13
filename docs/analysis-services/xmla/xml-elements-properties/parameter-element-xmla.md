@@ -2,12 +2,12 @@
 title: "Parameter 要素 (XMLA) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9eeead961dda269f0491d8627c75664a27aea5ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 999d825ac5e0edc0ee205533670552aafbede151
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parameter-element-xmla"></a>Parameter 要素 (XMLA)
-  によって使用されるパラメーターの値と名前が含まれています、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]によって使用されるパラメーターの値と名前が含まれています、 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドです。  
   
 ## <a name="syntax"></a>構文  
   

@@ -2,12 +2,12 @@
 title: "DISCOVER_CALC_DEPENDENCY 行セット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9eca892f8ddf9e85e05d33b81023a3602c861734
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 行セット
-  計算間の依存関係、およびこれらの計算で参照されるているオブジェクトについてレポートします。 クライアント アプリケーションでは、複雑な式に伴う問題についてレポートする場合や、関連するオブジェクトが削除または変更されたときに警告を生成する場合に、この情報を使用できます。 また、この行セットを使用して、メジャーまたは計算列で使用される DAX 式を抽出することもできます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]これらの計算で参照されるオブジェクトおよび計算間の依存関係をレポートします。 クライアント アプリケーションでは、複雑な式に伴う問題についてレポートする場合や、関連するオブジェクトが削除または変更されたときに警告を生成する場合に、この情報を使用できます。 また、この行セットを使用して、メジャーまたは計算列で使用される DAX 式を抽出することもできます。  
   
  **適用対象:** テーブル モデル  
   

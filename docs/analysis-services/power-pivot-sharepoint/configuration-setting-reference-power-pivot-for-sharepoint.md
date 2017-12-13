@@ -2,12 +2,12 @@
 title: "構成設定のリファレンス (Power Pivot for SharePoint) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>構成設定のリファレンス (Power Pivot for SharePoint)
-  このトピックでは、SharePoint ファームの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションで使用される構成設定に関するリファレンス ドキュメントを提供します。 PowerShell スクリプトを使用してサーバーを構成している場合や、特定の設定に関する情報を必要としている場合は、このトピックの詳細な説明を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックで使用される構成設定のリファレンス ドキュメントを紹介する[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint ファーム内のアプリケーションのサービスを提供します。 PowerShell スクリプトを使用してサーバーを構成している場合や、特定の設定に関する情報を必要としている場合は、このトピックの詳細な説明を参照してください。  
   
  構成設定は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションごとに設定します。 ファーム内で、同じ物理サービス インスタンスの独立した複数の論理インスタンスを構成する手段として、複数のサービス アプリケーションを作成できます。 構成設定は、構成するサービス アプリケーションごとに作成される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] アプリケーション データベースに格納されます。  
   

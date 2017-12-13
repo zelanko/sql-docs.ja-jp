@@ -2,12 +2,12 @@
 title: "AMO セキュリティ オブジェクトをプログラミング |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b81d5b81df182309384c5d647a4251688bb1489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8733a0255c22701009baf79892d7ff6f83b9c87
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-security-objects"></a>AMO セキュリティ オブジェクトのプログラミング
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、セキュリティ オブジェクトをプログラミングまたは AMO セキュリティ オブジェクトを使用するアプリケーションを実行しているサーバーの管理者グループまたは Database Administrator グループのメンバーであることが必要です。 サーバー管理者およびデータベース管理者は、アクセス レベルがによって提供される[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、セキュリティ オブジェクトをプログラミングまたは AMO セキュリティ オブジェクトを使用するアプリケーションを実行しているサーバーの管理者グループまたは Database Administrator グループのメンバーであることが必要です。 サーバー管理者およびデータベース管理者は、アクセス レベルがによって提供される[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、オブジェクトに割り当てられたロールと権限の組み合わせを使用してオブジェクトへのユーザー アクセスが行われます。 詳細については、次を参照してください。 [AMO セキュリティ クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)です。  
   

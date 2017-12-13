@@ -2,12 +2,12 @@
 title: "Power Pivot ギャラリーの削除 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b297cef8904e71629d644171082ba93efb28b8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d5c41c13232807dd492d7297a67d9061f8f1bc8b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-power-pivot-gallery"></a>Power Pivot ギャラリーの削除
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを削除すると、ギャラリーのアイテムもすべて削除されます。削除されるアイテムには、スケジュール設定されたデータ更新が構成されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータ更新履歴が含まれます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]削除すると、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ギャラリーのすべてのデータ更新履歴を含め、そのアイテムの削除も[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]定期データ更新用に構成されているブック。  
   
 > [!NOTE]  
 >  このトピックでは、SharePoint ライブラリを削除する手順について説明します。 ライブラリ内の個々のドキュメントを削除する方法については、「 [Power Pivot ギャラリーを使用する](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)」をご覧ください。  

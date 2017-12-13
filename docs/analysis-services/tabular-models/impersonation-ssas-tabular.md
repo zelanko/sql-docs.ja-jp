@@ -2,12 +2,12 @@
 title: "Analysis Services 表形式モデルでの偽装 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonation"></a>権限借用 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  このトピックは、表形式モデルの作成者ログオン資格情報の使用方法の Analysis Services によってデータ ソースに接続するときに (更新) のデータをインポートおよび処理について理解を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックは、表形式モデルの作成者ログオン資格情報の使用方法の Analysis Services によってデータ ソースに接続するときに (更新) のデータをインポートおよび処理について理解を提供します。  
 
 ##  <a name="bkmk_conf_imp_info"></a>権限借用の構成  
  モデルが存在する場所、およびどのようなコンテキストでは、権限借用情報を構成する方法を決定します。 新しいモデル プロジェクトを作成するときに権限借用が構成されている SQL Server Data Tools (SSDT) でデータをインポートするデータ ソースに接続するとします。 モデルを展開した後は、SQL Server Management Studio (SSMS) を使用して、モデルのデータベース接続文字列プロパティで権限借用が構成できます。 Azure Analysis services 表形式モデルの SSMS を使用することができます、または**として表示: スクリプト**JSON で Model.bim ファイルを編集するブラウザー ベースのデザイナーのモード。

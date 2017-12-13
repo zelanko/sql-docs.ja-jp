@@ -2,12 +2,12 @@
 title: "選択し、モデルのテスト データをマップ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]精度チャートを作成する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データをモデルのテストに使用して、データ モデルにマップするを選択する必要があります。  
   
  既定では、予約データ セットをマイニング構造の構築時に作成した場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではマイニング モデルのテスト データが使用されます。 予約テスト セットを作成すると、列名とデータ型は常にモデルと一致し、データの分布が類似することを合理的に想定できるため、同じマイニング構造に基づくモデルを最も簡単にテストできます。 また、デザイナーでは入力列とモデル列間のリレーションシップが自動的に作成されます。  
   

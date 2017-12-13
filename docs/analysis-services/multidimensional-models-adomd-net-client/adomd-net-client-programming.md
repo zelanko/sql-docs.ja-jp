@@ -2,12 +2,12 @@
 title: "ADOMD.NET クライアント プログラミング |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6ed705a9cd5f4084dcf6e09b619431479a23826
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET クライアント プログラミング
-  ADOMD.NET クライアント コンポーネントが内に存在、 **Microsoft.AnalysisServices.AdomdClient**名前空間 (microsoft.analysisservices.adomdclient.dll)。 これらのクライアント コンポーネントによりクライアントの機能と分析データ ストアから簡単にクエリ データおよびメタデータへの中間層アプリケーションなど[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET クライアント コンポーネントが内に存在、 **Microsoft.AnalysisServices.AdomdClient**名前空間 (microsoft.analysisservices.adomdclient.dll)。 これらのクライアント コンポーネントによりクライアントの機能と分析データ ストアから簡単にクエリ データおよびメタデータへの中間層アプリケーションなど[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。  
   
 ## <a name="using-the-adomdnet-client-objects"></a>ADOMD.NET クライアント オブジェクトの使用  
  分析データ ソースに対してクエリを実行する場合、必ず実行しなければならない共通タスクがいくつかあります。 次の表に、ADOMD.NET クライアント オブジェクトを使用してそのようなクエリを実行する際の共通タスクを示します。  

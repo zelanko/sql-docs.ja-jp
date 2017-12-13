@@ -2,12 +2,12 @@
 title: "マイニング モデル ビューアーのタスクと操作方法 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae59c83e386be1eb222a24cd3ef7a9c9b070444f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>マイニング モデル ビューアーのタスクと操作方法
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーには、マイニング モデルの探索に使用できるいくつかのツールが含まれています。 次のトピックでは、デザイナーの **[マイニング モデル ビューアー]** タブを使用して特定のタスクを実行する手順について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング デザイナーで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]マイニング モデルを探索に使用できるいくつかのツールが含まれています。 次のトピックでは、デザイナーの **[マイニング モデル ビューアー]** タブを使用して特定のタスクを実行する手順について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

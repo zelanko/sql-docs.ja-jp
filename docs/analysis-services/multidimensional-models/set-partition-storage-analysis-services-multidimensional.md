@@ -2,12 +2,12 @@
 title: "パーティション ストレージ (Analysis Services - 多次元) の設定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4610c996aa58fc71090c5a724447cfe733ede5d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82b81fb4ee7b4c9df136b519922807fdf94cfa77
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、ストレージ モードおよびキャッシュ オプションの標準ストレージ構成がいくつか用意されています。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]とキャッシュ オプションのストレージ モードにいくつかの標準的なストレージ構成を提供します。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
   
  パーティションのストレージは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のキューブの [パーティション] タブ、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のパーティション プロパティ ページで指定できます。  
   

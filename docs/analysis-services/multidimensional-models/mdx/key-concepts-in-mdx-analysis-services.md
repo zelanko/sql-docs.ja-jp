@@ -2,12 +2,12 @@
 title: "重要な概念 (Analysis Services) の MDX の |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6f9969a793d33ba203ba1f93d87b1a235a896f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX の主な概念 (Analysis Services)
-  多次元式 (MDX) を使用して多次元データを照会したり、キューブ内で MDX 式を作成したりするには、多次元の概念と用語を理解しておく必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多次元式 (MDX) を使用すると、多次元データのクエリまたはキューブ内で MDX 式を作成して、前に、多次元の概念と用語を理解するのに役立ちます。  
   
  既にご存じのデータ要約の例を足掛かりにして、それと MDX の関連性を確認することをお勧めします。 ここでは、Excel でピボットテーブルを作成し、それに Analysis Services サンプル キューブからのデータを設定します。  
   

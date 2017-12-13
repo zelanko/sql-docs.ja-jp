@@ -2,12 +2,12 @@
 title: "データ マイニングのチュートリアル (Analysis Services) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>データ マイニングのチュートリアル (Analysis Services)
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、ウィザードと、統合された視覚エフェクトを使用してデータ マイニング ソリューションを簡単に作成できます。 特に機械学習に慣れていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すれば、データ マイニング モデルの設計、トレーニング、および調査を簡単に行うことができます。 モデル内のデータは、キューブ、リレーショナル データベース、または [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によってサポートされるその他の任意のソースに格納できます。 モデルを作成した後は、モデルにアクセスし、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] や ASP.NET などの複数のクライアントを使用して予測を作成することで、運用環境に展開することができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ウィザードと統合された視覚エフェクトを使用してデータ マイニング ソリューションを作成できるようになります。 特に機械学習に慣れていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すれば、データ マイニング モデルの設計、トレーニング、および調査を簡単に行うことができます。 モデル内のデータは、キューブ、リレーショナル データベース、または [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によってサポートされるその他の任意のソースに格納できます。 モデルを作成した後は、モデルにアクセスし、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] や ASP.NET などの複数のクライアントを使用して予測を作成することで、運用環境に展開することができます。  
   
 > [!NOTE]  
 >ここで説明しているチュートリアルは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]用に更新されていません。 SQL Server 2014 用に作成されたチュートリアルを使用できます。 機能的には、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のデータ マイニング機能に変更はありません。 手順は同じです。  
