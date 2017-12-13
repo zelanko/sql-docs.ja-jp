@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>外部のファイルの形式 (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Parquet  
   
- 外部テーブルを作成するを参照してください。 [CREATE EXTERNAL TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-table-transact-sql.md).  
+ 外部テーブルを作成するを参照してください。 [CREATE EXTERNAL TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-external-table-transact-sql.md)  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER = '0x7E0x7E'--2 tildas (例: ~ ~)
   
  DATE_FORMAT = *datetime_format*  
- 区切られたテキスト ファイルに記述するすべての日付と時刻のデータのカスタム書式を指定します。 ソース ファイルには、datefime の既定の形式が使用されている場合は、このオプションは必要はありません。 1 つだけのカスタム日付/時刻形式は、ファイルあたり許可します。 ファイルごとの複数のカスタム日付/時刻形式を指定することはできません。 ただし、それぞれが、外部テーブルの定義のそれぞれのデータ型の既定の形式である場合は、複数の datetime 形式を使用できます。
+ 区切られたテキスト ファイルに記述するすべての日付と時刻のデータのカスタム書式を指定します。 ソース ファイルには、datetime の既定の形式が使用されている場合は、このオプションは必要はありません。 1 つだけのカスタム日付/時刻形式は、ファイルあたり許可します。 ファイルごとの複数のカスタム日付/時刻形式を指定することはできません。 ただし、それぞれが、外部テーブルの定義のそれぞれのデータ型の既定の形式である場合は、複数の datetime 形式を使用できます。
  
  
 PolyBase では、データをインポートするため、カスタムの日付の書式のみ使用します。 外部ファイルにデータを書き込むためのカスタム書式指定は使用しません。

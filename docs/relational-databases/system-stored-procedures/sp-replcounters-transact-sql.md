@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3383f50142e04966a24515adcf08efbc4c5c60bc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: HT
+ms.openlocfilehash: 64ce16cd3b23c1c0bf0526619f90c7028ff80df6
+ms.sourcegitcommit: 0431de135547f5aff48d6cad57090717f27bc063
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_replcounters
 |**レプリケーション率トランザクション/秒**|**float**|ディストリビューション データベースに配信された 1 秒あたりの平均トランザクション数。|  
 |**レプリケーションの待機時間**|**float**|配信されるまでにトランザクションがログに格納されていた平均秒数。|  
 |**Replbeginlsn**|**binary(10)**|ログにおける、現在の切り捨てポイントのログ シーケンス番号 (LSN)。|  
-|**Replendlsn**|**binary(10)**|ディストリビューション データベースへの配信を待機する、次のコミット レコードの LSN。|  
+|**Replnextlsn**|**binary(10)**|ディストリビューション データベースへの配信を待機する、次のコミット レコードの LSN。|  
   
 ## <a name="remarks"></a>解説  
  **sp_replcounters**トランザクション レプリケーションで使用します。  

@@ -1,7 +1,7 @@
 ---
 title: "SET NUMERIC_ROUNDABORT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a78c81a9990b2a9c895776c5f51fe9046b2eb5d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a4f5a5369321999a980835a502a730bfe383aefd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,20 +41,13 @@ ms.lasthandoff: 11/21/2017
   式の丸め処理で精度が低下するときに作成されるエラー レポートのレベルを指定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>構文  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET NUMERIC_ROUNDABORT { ON | OFF }   
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET NUMERIC_ROUNDABORT ON;  
-```  
+
+## <a name="syntax"></a>構文
+
+```
+
+SET NUMERIC_ROUNDABORT { ON | OFF }
+```
   
 ## <a name="remarks"></a>解説  
  SET NUMERIC_ROUNDABORT が ON の場合には、式の精度が低下するとエラーが生成されます。 OFF の場合には、精度が低下してもエラー メッセージは生成されず、結果を格納する列または変数の精度に合わせて結果が丸められます。  
@@ -63,16 +56,16 @@ SET NUMERIC_ROUNDABORT ON;
   
  SET NUMERIC_ROUNDABORT が ON の場合には、生成されるエラーの重大度は SET ARITHABORT によって決定されます。 次の表は、精度が低下するときにこの 2 つの設定がどのように影響するかを示しています。  
   
-|設定|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|  
-|-------------|--------------------------------|---------------------------------|  
+|設定|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
+|-------------|--------------------------------|---------------------------------|
 |SET ARITHABORT ON|エラーが生成されます。結果セットは返されません。|エラーや警告は返されません。結果は丸められます。|  
 |SET ARITHABORT OFF|警告が返されます。式は NULL を返します。|エラーや警告は返されません。結果は丸められます。|  
+
+ SET NUMERIC_ROUNDABORT は、解析時ではなく実行時に設定されます。
+
+ 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET NUMERIC_ROUNDABORT を OFF に設定する必要があります。 SET NUMERIC_ROUNDABORT が ON の場合、作成、計算列やインデックス付きビューのインデックスとテーブルに対する UPDATE、INSERT、および DELETE のステートメントは失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)
   
- SET NUMERIC_ROUNDABORT は、解析時ではなく実行時に設定されます。  
-  
- 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET NUMERIC_ROUNDABORT を OFF に設定する必要があります。 SET NUMERIC_ROUNDABORT が ON の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE の各ステートメントは失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
-  
- この設定の現在の設定を表示するには、次のクエリを実行します。  
+ この設定の現在の設定を表示するには、次のクエリを実行します。
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  

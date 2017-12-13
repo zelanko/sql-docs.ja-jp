@@ -3,8 +3,11 @@ title: "パス式 (XQuery) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef1984885b5b35d93fa680d677321287d6daf33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a611a904ab2c969060e6d756a20bcf635ce2100
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="path-expressions-xquery"></a>パス式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery パス式は、ドキュメント内の要素、属性、テキストなど、ノードの位置を特定します。 パス式の結果は常に、結果シーケンス内でノードが重複することなく、ドキュメント順で生成されます。 パスの指定には、省略された構文と省略しない構文のいずれも使用することができます。 以下の説明では、主に省略しない構文を取り上げます。 省略された構文についてはこのトピックの最後で説明します。  
   
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/09/2017
 id(/a/b)  
 ```  
   
- Id 関数」を参照の詳細については[id 関数 &#40;です。XQuery と #41 です。](../xquery/functions-on-sequences-id.md).  
+ Id 関数」を参照の詳細については[id 関数 &#40;です。XQuery と #41 です。](../xquery/functions-on-sequences-id.md)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [パス式のステップで軸を指定します。](../xquery/path-expressions-specifying-axis.md)  

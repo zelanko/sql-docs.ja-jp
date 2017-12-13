@@ -3,8 +3,11 @@ title: "注文に関連する XQueries |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4aaddc6a3809a65300784786ece895695266d43c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 553e7168b0a977eb1c7d1f24e1c50c8fb8876247
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   リレーショナル データベースにはシーケンスの概念はありません。 たとえば、"データベースから最初の顧客を取得する" などの要求を行うことはできません。 ただし、XML ドキュメントのクエリを実行し、最初に取得\<顧客 > 要素。 その後は、常に、同じ顧客が取得されます。  
   
@@ -62,7 +65,7 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   かっこ内の式は、評価結果に置き換えられます。 詳細については、次を参照してください。 [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md).  
+-   かっこ内の式は、評価結果に置き換えられます。 詳細については、次を参照してください。 [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md)  
   
 -   **@\***2 番目のワーク センターの場所のすべての属性を取得します。  
   

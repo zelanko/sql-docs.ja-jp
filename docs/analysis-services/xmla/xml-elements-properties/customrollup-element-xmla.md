@@ -2,12 +2,12 @@
 title: "CustomRollup 要素 (XMLA) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 53859edbf1eb9549dde722d66c294b5e4dff1a91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0a0a4811ee7655cb247c86fd4d4cd65754432585
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="customrollup-element-xmla"></a>CustomRollup 要素 (XMLA)
-  親によって表される属性メンバーのカスタム ロールアップ式を含む[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親によって表される属性メンバーのカスタム ロールアップ式を含む[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>解説  
  **[Customrollup]**要素には、親によって定義される属性メンバーのロールアップ動作を定義する多次元式 (MDX) 式が含まれています。**属性**要素。  
   
- MDX 式の詳細については、次を参照してください。[式 &#40;です。MDX と #41 です。](../../../mdx/expressions-mdx.md).  
+ MDX 式の詳細については、次を参照してください。[式 & #40 です。MDX と #41 です。](../../../mdx/expressions-mdx.md)  
   
 ## <a name="see-also"></a>参照  
- [要素 &#40; を挿入します。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [要素 & #40; を挿入します。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Update 要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

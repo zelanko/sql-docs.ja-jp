@@ -2,7 +2,7 @@
 title: "R で OLAP キューブからデータを使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.prod: sql-non-specified
-ms.date: 11/29/2017
+ms.date: 12/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,22 +15,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 60e95f4c101a4afe2a8161ba40df7b27bd85f602
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 21bb48b26b7bf8e755ba85a16fb25676bbff4363
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R での OLAP キューブからデータの使用
 
-**OlapR**パッケージは、R パッケージ、Microsoft Machine Learning のサーバーと SQL Server を使用するため、によってを可能にする OLAP キューブからデータを取得する MDX クエリを実行します。 このパッケージにリンク サーバーを作成またはフラット化された行セットをクリーンアップする必要はありません。直接 R. で OLAP データを使用することができます。
+**OlapR**パッケージは、R パッケージ、Microsoft Machine Learning のサーバーと SQL Server を使用するため、によってを可能にする OLAP キューブからデータを取得する MDX クエリを実行します。 このパッケージにリンク サーバーを作成またはフラット化された行セットをクリーンアップする必要はありません。R. から直接 OLAP データを取得することができます。
 
 この記事では、OLAP および MDX の概要を持つ可能性がある多次元キューブ データベースに新しい R ユーザーと共に、API について説明します。
 
 > [!IMPORTANT]
-> Analysis Services のインスタンスは、従来の多次元キューブまたは表形式モデルでは、いずれかをサポートできますが、インスタンスが両方の種類のモデルをサポートできません。 そのため、Analysis Services データベースに対してクエリを作成する前に、多次元モデルが含まれていることを確認します。
-> 
-> 表形式モデルは、MDX を使用して照会できますが、 **olapR**パッケージが表形式モデルのインスタンスへの接続をサポートしていません。 良いオプションが有効にするのには表形式モードからデータを取得する必要がある場合[DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular)モデル、および SQL Server でリンク サーバーとして使用できますのインスタンスを作成します。 
+> Analysis Services のインスタンスは、従来の多次元キューブまたは表形式モデルでは、いずれかをサポートできますが、インスタンスが両方の種類のモデルをサポートできません。 そのため、キューブに対して MDX クエリを構築しようとすると、前に、Analysis Services インスタンスに多次元モデルが含まれていることを確認します。
 
 ## <a name="what-is-an-olap-cube"></a>OLAP キューブとは何ですか。
 
@@ -70,9 +68,9 @@ MDX クエリの構築を開始するときに役に立つ場合があります�
 
     MDX は複雑になることができますので、このメソッドを使用してすべての MDX クエリを作成できます。 ただし、この API は、N ディメンションでスライス、ダイス、ドリルダウン、rollup、およびピボットを含む、最も一般的で便利な操作の大半をサポートします。
 
-+ **整形式の MDX をコピー アンド ペーストします。** 手動で作成し、任意の MDX クエリに貼り付けます。 このオプションは、再利用する既存の MDX クエリがある場合、またはビルドするクエリが複雑すぎるため、最適な**olapR**を処理します。 
++ **整形式の MDX をコピー アンド ペーストします。** 手動で作成し、任意の MDX クエリに貼り付けます。 このオプションは、再利用する既存の MDX クエリがある場合、またはビルドするクエリが複雑すぎるため、最適な**olapR**を処理します。
 
-    SSMS や Excel などの任意のクライアント ユーティリティを使用して、MDX をビルドし、MDX クエリを定義する文字列を保存します。 この MDX 文字列に渡す引数として指定する、 *SSAS クエリ ハンドラー*で、 **olapR**パッケージです。 この関数は、指定した Analysis Services サーバーにクエリを送信し、r、もちろん、キューブをクエリする権限があると仮定した場合の結果を渡します。
+    SSMS や Excel などの任意のクライアント ユーティリティを使用して、MDX のビルド後に、クエリ文字列を保存します。 この MDX 文字列に渡す引数として指定、 *SSAS クエリ ハンドラー*で、 **olapR**パッケージです。 プロバイダーは、指定した Analysis Services サーバーにクエリを送信し、R. に戻る、結果を渡します 
 
 MDX をビルドする方法の例では、クエリまたは既存の MDX クエリの実行を参照してください[R を使用する MDX クエリを作成する方法](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)です。
 
@@ -80,40 +78,50 @@ MDX をビルドする方法の例では、クエリまたは既存の MDX ク�
 
 このセクションの内容に関するいくつかの既知の問題およびよく寄せられる質問を表示、 **olapR**パッケージです。
 
-### <a name="tabular-models-are-not-supported"></a>表形式モデルがサポートされていません
+### <a name="tabular-model-support"></a>表形式モデルのサポート
 
-表形式モデルを含む Analysis Services のインスタンスに接続する場合、`explore`関数の戻り値の TRUE の場合の成功をレポートします。 ただし、表形式モデル オブジェクトは、互換性のある型ではありません、ため、探索できません。
+表形式モデルを含む Analysis Services のインスタンスに接続する場合、`explore`関数の戻り値の TRUE の場合の成功をレポートします。 ただし、表形式モデル オブジェクトは、多次元オブジェクトと異なると、多次元データベースの構造は、表形式モデルの場合と異なります。
 
-さらに、(を外部ツールを使用)、表形式モデルに対する有効な MDX クエリをデザインし、この API に貼り付けて、クエリ、クエリは、NULL の結果を返し、エラーを報告しません。
+DAX (データ分析式) には、通常、表形式モデルで使用する言語が、既に MDX に慣れている場合、表形式モデルに対する有効な MDX クエリをデザインできます。 OlapR コンス トラクターを使用して、表形式モデルに対する有効な MDX クエリを作成することはできません。
 
-R で使用するためのテーブル モデルからデータを抽出する必要がある場合は、これらのオプションを考慮してください。
+ただし、MDX クエリは、表形式モデルからデータを取得する非効率的な方法です。 R で使用するため、表形式モデルからデータを取得する必要がある場合は、これらのメソッドを検討します。
 
 + モデルで DirectQuery を有効にして、SQL Server でリンク サーバーとして、サーバーを追加します。 
 + 表形式モデルがリレーショナル データ マートでビルドされていた場合は、ソースから直接データを取得します。
 
 ### <a name="how-to-determine-whether-an-instance-contains-tabular-or-multidimensional-models"></a>インスタンスが表形式または多次元のモデルを含むかどうかを確認する方法
 
-表形式モデルの基本的な違いがあると、多次元モデルに影響を与える方法データを保管および処理します。 など、テーブル モデルでは、メモリに格納され、非常に高速計算を実行する列ストア インデックスを活用します。 多次元モデルでデータがディスクに格納されていると集計を事前に定義し MDX クエリを使用して取得します。
-
-このため、1 つの Analysis Services インスタンスは、モデルの種類を 1 つだけを含めることができます。 2 つの種類のモデルを識別する方法の詳細については、次の記事を参照してください。
-
-+ [多次元と表形式モデルの比較](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+複数のモデルを含めることができますが、1 つの Analysis Services インスタンスは、モデルの 1 つだけの型を含めることができます。 表形式モデルとデータを保管および処理する方法を制御する多次元モデルの基本的な違いがあることです。 など、テーブル モデルでは、メモリに格納され、非常に高速計算を実行する列ストア インデックスを活用します。 多次元モデルでデータがディスクに格納されていると集計を事前に定義し MDX クエリを使用して取得します。
 
 SQL Server Management Studio などのクライアントを使用して Analysis Services に接続する場合がわかりますがひとめでデータベースのアイコンを見れば、どのモデルの種類がサポートされています。
 
-また、サーバーのプロパティを表示することができます。 **サーバー モード**プロパティは、2 つの値をサポートしています:_多次元_または_テーブル_です。
+表示し、モデルの種類のインスタンスをサポートしているサーバーのプロパティを照会できます。 **サーバー モード**プロパティは、2 つの値をサポートしています:_多次元_または_テーブル_です。
 
-サーバー プロパティを使用してサーバーの種類を確認する方法の詳細については、次を参照してください[OLE DB for OLAP スキーマ行セット。](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
+概要について、次の 2 つの種類のモデルは、次の記事を参照してください。
+
++ [多次元と表形式モデルの比較](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+
+サーバーのプロパティを照会する方法については、次の記事を参照してください。
+
++ [OLE DB for OLAP Schema 行セット](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
 
 ### <a name="writeback-is-not-supported"></a>書き戻しはサポートされていません
 
 キューブにカスタムの R 演算の結果を書き戻すことはできません。
 
-一般に、キューブが書き戻しの有効な場合でも、限られた操作のみがサポートされてし、追加の構成が必要な可能性があります。 これらの操作には、MDX を使用することをお勧めします。
+一般に、キューブが書き戻しの有効な場合でも、限られた操作のみがサポートされてし、追加の構成が必要な可能性があります。 このような操作には、MDX を使用することをお勧めします。
 
 + [書き込み許可ディメンション](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
 + [書き込み許可パーティション](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
 + [セル データへのカスタム アクセス権を設定します。](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
+
+### <a name="long-running-mdx-queries-block-cube-processing"></a>MDX クエリの実行時間の長いブロック キューブの処理
+
+ただし、 **olapR**パッケージのみ読み取り操作を実行、実行時間の長いの MDX クエリは、キューブが処理されていることを防ぐロックを作成できます。 データの量を返す必要があるとわかるように、MDX クエリを事前にテスト常にします。
+
+ロックされているキューブに接続しようとする場合、SQL Server データ ウェアハウスに到達できないエラーが表示する可能性があります。 推奨される解決策は、サーバーまたはインスタンス名、およびなどの確認、リモート接続を有効化ただし、前回の開いている接続の可能性を考慮します。
+
+SSAS の管理者を防ぐことができますロックの問題を特定することによって、開いているセッションを終了します。 Timeout プロパティは、すべての実行時間の長いクエリの終了を強制するサーバー レベルの MDX クエリにも適用できます。
 
 ## <a name="resources"></a>リソース
 

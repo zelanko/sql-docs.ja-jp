@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_DEFAULTS (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a06170bd4a52708c5a3a88cfc12fe56204a6ddc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 53cf9bcaa8ca044ea53becea4d1bf0bb701f62f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -38,21 +38,21 @@ ms.lasthandoff: 11/21/2017
   一部の ISO 標準動作を集合的に指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定のグループを制御します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>構文  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_DEFAULTS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_DEFAULTS ON;  
-```  
-  
+
+## <a name="syntax"></a>構文
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_DEFAULTS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_DEFAULTS ON
+```
+
 ## <a name="remarks"></a>解説  
  SET ANSI_DEFAULTS は、クライアントで変更できない、サーバー側の設定です。 クライアントは自身の設定を管理します。 既定では、クライアントの設定はサーバー設定と対照的です。 サーバー設定は、ユーザーが変更するものではありません。 ユーザーがクライアントの動作を変更するには、SQL_COPT_SS_PRESERVE_CURSORS を使用します。 詳細については、次を参照してください。 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)です。  
   
@@ -67,7 +67,7 @@ SET ANSI_DEFAULTS ON;
   
  また、ユーザーの作業セッション時や、トリガーまたはストアド プロシージャの実行時は、これらの ISO 標準 SET オプションは、クエリ処理環境を定義します。 ただし、これらの SET オプションには ISO 標準に準拠するために必要なオプションがすべて含まれているわけではありません。  
   
- 計算列およびインデックス付きビューにおいてインデックスを操作する場合は、4 つの既定オプション (ANSI_NULLS、ANSI_PADDING、ANSI_WARNINGS、および QUOTED_IDENTIFIER) を ON に設定する必要があります。 これは、計算列とインデックス付きビューにおいてインデックスを作成および変更するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 4 つのオプションです。 その他の SET オプションは、ARITHABORT (ON)、CONCAT_NULL_YIELDS_NULL (ON)、および NUMERIC_ROUNDABORT (OFF) です。 計算列でインデックス付きビューとインデックスで必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列およびインデックス付きビューにおいてインデックスを操作する場合は、4 つの既定オプション (ANSI_NULLS、ANSI_PADDING、ANSI_WARNINGS、および QUOTED_IDENTIFIER) を ON に設定する必要があります。 これは、計算列とインデックス付きビューにおいてインデックスを作成および変更するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 4 つのオプションです。 その他の SET オプションは、ARITHABORT (ON)、CONCAT_NULL_YIELDS_NULL (ON)、および NUMERIC_ROUNDABORT (OFF) です。 計算列でインデックス付きビューとインデックスで必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するときに、ON に ANSI_DEFAULTS を自動的に設定します。 次に、このドライバーとプロバイダーは、CURSOR_CLOSE_ON_COMMIT と IMPLICIT_TRANSACTIONS を OFF に設定します。 ODBC データ ソース、ODBC 接続属性、またはに接続する前に、アプリケーションで設定されている OLE DB 接続プロパティでは、SET CURSOR_CLOSE_ON_COMMIT と SET IMPLICIT_TRANSACTIONS OFF 設定を構成することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 DB-Library アプリケーションからの接続に対しては、SET ANSI_DEFAULTS は既定で OFF に設定されています。  
   

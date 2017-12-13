@@ -2,12 +2,12 @@
 title: "Mode 要素 (XMLA) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e2047c923e6c205990c58602e1694f645ef97c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4435e7cf6957eba3ddc6ab0828a5026f59f56a92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mode-element-xmla"></a>Mode 要素 (XMLA)
-  親によって使用されるモードを示す[ロック](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)要素を指定したオブジェクトのロックを作成するとき。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親によって使用されるモードを示す[ロック](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)要素を指定したオブジェクトのロックを作成するとき。  
   
 ## <a name="syntax"></a>構文  
   

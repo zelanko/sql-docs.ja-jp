@@ -3,8 +3,11 @@ title: "名前空間 uri の QName の (XQuery) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34a8b738a8c4b38951ff73f4437e3327a3d6a852
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 11e9a535a3cd2e8af3f6db1533b0cb35312905db
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Qname の名前空間 uri から QName に関連する関数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   指定された QName の名前空間 uri を表す文字列を返します*$arg*です。 結果には、空のシーケンスがある場合は*$arg*空のシーケンスします。  
   
@@ -44,7 +47,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. QName からの名前空間 URI の取得  
- 作業用サンプルについては、次を参照してください。 [QName のローカル名 &#40;です。XQuery と #41 です。](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
+ 作業用サンプルについては、次を参照してください。 [QName のローカル名 &#40;です。XQuery と #41 です。](../xquery/functions-related-to-qnames-local-name-from-qname.md)  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
