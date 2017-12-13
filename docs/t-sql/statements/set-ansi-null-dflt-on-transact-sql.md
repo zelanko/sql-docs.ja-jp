@@ -1,7 +1,7 @@
 ---
 title: "セット ANSI_NULL_DFLT_ON (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -30,33 +30,33 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7554117baca628a135a23561bdfe36c1254926b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 82532accfe14729a0e3ccbfa7bd3f1b55d2aaa01
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  新しい列の既定の null 値をオーバーライドするセッションの動作を変更してときに、 **ANSI null default**オプションを使用しないデータベースが**false**です。 値の設定の詳細については**ANSI null default**を参照してください[ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+  新しい列の既定の null 値をオーバーライドするセッションの動作を変更してときに、 **ANSI null default**オプションを使用しないデータベースが**false**です。 値の設定の詳細については**ANSI null default**を参照してください[ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md)  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>構文  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET ANSI_NULL_DFLT_ON {ON | OFF}  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULL_DFLT_ON ON;  
-```  
-  
+
+## <a name="syntax"></a>構文
+
+```
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ANSI_NULL_DFLT_ON {ON | OFF}
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULL_DFLT_ON ON
+```
+
 ## <a name="remarks"></a>解説  
  この設定は、新しい列に対する NULL 値の許容にのみ影響を与えます。また、この影響が生じるのは、CREATE TABLE および ALTER TABLE ステートメントで、列に対して NULL 値の許容が設定されていない場合です。 SET ANSI_NULL_DFLT_ON が ON の場合、ALTER TABLE ステートメントと CREATE TABLE ステートメントを使用して作成した新しい列では、明示的に指定しない限り NULL 値が許容されます。 NULL または NOT NULL を明示的に指定して作成した列に対して、SET ANSI_NULL_DFLT_ON は影響しません。  
   

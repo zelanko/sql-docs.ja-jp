@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_PADDING (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d73104a4e49c81fd153bd70b4b223aba5d86c407
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 532df95a03b15d545c682d30b3b4d68e10ea5913
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,20 +42,20 @@ ms.lasthandoff: 11/21/2017
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文
   
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_PADDING { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_PADDING ON;  
-```  
-  
+```
+-- Syntax for SQL Server
+
+SET ANSI_PADDING { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_PADDING ON
+```
+
 ## <a name="remarks"></a>解説  
  定義された列**char**、 **varchar**、**バイナリ**、および**varbinary**データ型が、定義されたサイズに設定します。  
   
@@ -74,7 +74,7 @@ SET ANSI_PADDING ON;
 > [!NOTE]  
 >  埋められる場合は、 **char**列は空白で埋められますと**バイナリ**列が 0 で埋められます。 切り捨てられる場合、 **char**列がある末尾の空白をトリミング、および**バイナリ**列がある末尾の 0 が切り捨てられます。  
   
- 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ANSI_PADDING を ON に設定する必要があります。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+ 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ANSI_PADDING を ON に設定する必要があります。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)  
   
  既定では、SET ANSI_PADDING は ON に設定されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を ON に接続するときに ANSI_PADDING を自動的に設定します。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義でき、接続前にアプリケーションで設定される OLE DB 接続プロパティでも定義できます。 DB-Library アプリケーションからの接続に対しては、既定では SET ANSI_PADDING は OFF に設定されています。  
   

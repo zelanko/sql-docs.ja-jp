@@ -17,24 +17,24 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4ee223a3c27ee35a823917f9d1aefcd8fb86e80e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 235240ef5b49e0fb08ac86e215e98907dd42880a
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>OlapR を使用して MDX クエリを作成する方法
 
-[OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)パッケージは、SQL Server Analysis Services でホストされている多次元のモデルに対してクエリをサポートしています。 MDX を使用して既存のキューブに対してクエリを作成することができます、ディメンションとキューブの他のオブジェクトを探索し、データを取得する既存の MDX クエリに貼り付けます。
+[OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)パッケージは、SQL Server Analysis Services でホストされているキューブに対して MDX クエリをサポートしています。 既存のキューブに対してクエリを作成することができます、ディメンションとキューブの他のオブジェクトを探索し、データを取得する既存の MDX クエリに貼り付けます。
 
-この記事では、olapR パッケージの 2 つの主な使用法について説明します。
+この記事の 2 つの主な用途の説明、 **olapR**パッケージ。
 
-+ [OlapR パッケージで提供されるコンス トラクターを使用して、R から、クエリを作成します。](#buildMDX)
++ [OlapR パッケージで提供されるコンス トラクターを使用して、R からの MDX クエリを構築します。](#buildMDX)
 + [OlapR および OLAP プロバイダーを使用して、既存の有効な MDX クエリを実行します。](#executeMDX)
 
 次の操作はサポートされていません。
 
-+ 表形式モデルに対するクエリ
++ 表形式モデルに対する DAX クエリ
 + 新規の OLAP オブジェクトの作成
 + メジャーまたは値の計算を含むパーティションへの書き戻し
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/01/2017
 
 4. 以下のヘルパー関数を使って、MDX クエリに含めるディメンションとメジャーについての詳細を提供します。
 
-     + `cube()` : SSAS データベースの名前を指定します。
+     + `cube()` : SSAS データベースの名前を指定します。 名前付きインスタンスに接続する場合は、コンピューター名とインスタンス名を提供します。 
      + `columns()`使用するメジャーの名前を指定、 **ON 列**引数。
      + `rows()`使用するメジャーの名前を指定、 **ON 行**引数。
      + `slicers()` : スライサーとして使うフィールドまたはメンバーを指定します。 スライサーとは、すべての MDX クエリ データに適用されるフィルターのようなものです。
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/01/2017
          
          クエリが比較的単純な場合は、 `columns`、 `rows`などの関数を使ってクエリを作成できます。 ただし、 `axis()` 関数を使って 0 以外のインデックス値を指定し、多くの修飾子を持つ MDX クエリを作成したり、修飾子として余分なディメンションを追加したりすることもできます。
 
-5. 結果の形に応じて、ハンドルおよび完成した MDX クエリを `executeMD` または `execute2D`関数に渡します。
+5. 結果の形状に応じて、次の関数のいずれかに、ハンドルと、完成した MDX クエリを渡します。 
 
   + `executeMD` : 多次元配列を返します
   + `execute2D` : 2 次元 (表形式) のデータ フレームを返します
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/01/2017
 
 そのプロジェクトが広く利用可能で、Analysis Services に簡単に復元するバックアップ ファイルを含め、複数のバージョンであるために、次の例は、AdventureWorks データ マートおよびキューブのプロジェクトに基づきます。 既存のキューブをお持ちでない場合は、これらのオプションのいずれかのサンプル キューブを取得します。
 
-+ 次のレッスン 4 まで Analysinotes Services のチュートリアルでこれらの例で使用されるキューブの作成: [OLAP キューブを作成します。](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ 次のレッスン 4 まで Analysis Services のチュートリアルでこれらの例で使用される、キューブの作成: [OLAP キューブを作成します。](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 + バックアップとして既存のキューブをダウンロードして、Analysis Services のインスタンスに復元します。 たとえば、このサイトで、zip 形式で完全に処理されたキューブ: [Adventure Works 多次元モデル SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)です。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、次を参照してください。[バックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)、または[Restore-asdatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)です。
 
@@ -98,7 +98,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + 列では、コンマ区切りの文字列の要素として複数のメジャーを指定できます。
 + 行軸では、"Product Line" ディメンションのすべての可能な値 (すべての MEMBERS) を使います。 
-+ このクエリは、すべての国からのインターネット販売の _ロールアップ_ サマリーを含む 3 列のテーブルを返します。
++ このクエリは 3 つの列を含むテーブルを返します、_ロールアップ_すべての国からのインターネット販売の概要です。
 + WHERE 句を指定します、_スライサー軸_です。 この例では、スライサーのメンバーを使用して、 **SalesTerritory**オーストラリアからの売り上げ高のみを計算で使用できるように、クエリのフィルターを適用するにはディメンションです。
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>olapR で提供される関数を使ってこのクエリを作成するには
@@ -115,6 +115,12 @@ slicers(qry) <- c("[Sales Territory].[Sales Territory Country].[Australia]")
 
 result1 <- executeMD(ocs, qry)
 
+```
+
+名前付きインスタンスの場合は、必ず R. の制御文字と見なすことが任意の文字をエスケープするには たとえば、次の接続文字列は、OLAP01、ContosoHQ をという名前のサーバー上のインスタンスを参照します。
+
+```R
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>事前定義された MDX 文字列としてこのクエリを実行するには
@@ -156,7 +162,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| [結果]  |  
+| [結果]  |
 | ----|
 | _Analysis Services Tutorial_|
 |_Internet Sales_|
@@ -174,7 +180,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| [結果]  |  
+| [結果]  |
 | ----|
 | _Customer_|
 |_Date_|
@@ -183,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>指定したディメンションと階層のすべてのメンバーを取得するには
 
-ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。
+ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。 戻り値の結果が付いている項目に **->** 前のメンバーの子を表します。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -191,7 +197,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| [結果]  |  
+| [結果]  |
 | ----|
 | _Accessories_|
 |_Bikes_|
@@ -200,8 +206,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 |-> Assembly Components|
 
-
-戻り値の結果が付いているで項目 **->** 前のメンバーの子を表します。
 
 ## <a name="see-also"></a>参照
 

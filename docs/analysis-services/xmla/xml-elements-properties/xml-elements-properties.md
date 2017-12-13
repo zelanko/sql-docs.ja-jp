@@ -2,12 +2,12 @@
 title: "プロパティ (XMLA) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ad143a8832224d0b8964aec3c10d504bf4ff5de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 94ff2b30d64c0d3039910c57adf8327781e38c75
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-elements---properties"></a>プロパティの XML 要素
-  XML for Analysis (XMLA) プロトコルでは、XMLA ヘッダー、メソッド、オブジェクト、コマンド、およびデータ型のプロパティ情報やプロパティ値を表すために、XML 要素を使用します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA) プロトコルでは、XML 要素を使用して、プロパティの情報と XMLA ヘッダー、メソッド、オブジェクト、コマンド、およびデータ型の値を表します。  
   
 ## <a name="topic-list"></a>トピックの一覧  
  以下のトピックは、[!INCLUDE[ssAS](../../../includes/ssas-md.md)] によって実装されている XMLA 要素について説明しています。  

@@ -2,12 +2,12 @@
 title: "作成し、管理、リモート パーティション (Analysis Services) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbcff2fe14716ebb2af74430538573706f8c2475
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>リモート パーティションの作成と管理 (Analysis Services)
-  メジャー グループをパーティション分割する場合は、パーティションのストレージとして [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスでセカンダリ データベースを構成できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]リモート コンピューターのセカンダリ データベースを構成するには、メジャー グループをパーティション分割するとき[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]パーティションのストレージとしてインスタンス。  
   
  キューブ (master データベースと呼ばれます) のリモート パーティションは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンス上の専用の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース (セカンダリ データベースと呼ばれます) に格納されています。  
   

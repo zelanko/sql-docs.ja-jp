@@ -17,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba7958a1b5b9398dec3cb07630ee84b72970d2ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7662fe90dc6f90c4437f200086e4d96b486a20b
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL ツールとユーティリティの SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>クエリを実行し、データベースの管理ツール  
@@ -37,7 +36,12 @@ ms.lasthandoff: 12/05/2017
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server、Azure SQL データベース、および Azure SQL Data Warehouse の強力な開発環境に Visual Studio を有効にします。 **SSDT は、Windows で実行**です。|
 | [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio のコードをインストールすると、インストール、 [mssql 拡張子](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)Microsoft SQL Server、Azure SQL データベース、および SQL Data Warehouse を開発するためです。 **Visual Studio のコードは、Windows、macOS、および Linux で実行**です。|
 
+## <a name="which-tool-should-i-choose"></a>どのツールを選択する必要がありますか。
 
+- SQL Server インスタンスまたはデータベースで、Windows、Linux または Mac 上の軽量なエディターで管理しますか? 選択します。[[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- SQL Server インスタンスまたは完全な GUI サポートと Windows 上のデータベースを管理しますか? 選択[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- 作成またはコンパイル時の検証を含む、データベースのコードを保守する、Windows 上でのリファクタリングおよびデザイナー サポートしますか。 選択[SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- Windows、Linux または Mac で軽量なエディターで T-SQL スクリプトを記述しますか。 選択[Visual Studio Code](https://code.visualstudio.com/)と[mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>その他のツール
 
@@ -73,9 +77,9 @@ ms.lasthandoff: 12/05/2017
 |[SqlLocalDB ユーティリティ](../tools/sqllocaldb-utility.md)|プログラムの開発者を対象とした [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の実行モードです。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\|  
 |[sqlmaint ユーティリティ](../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。|\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\Binn|  
 |[sqlps ユーティリティ](../tools/sqlps-utility.md)|PowerShell コマンドおよびスクリプトを実行します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みと登録を行います。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr アプリケーション](../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから[!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr アプリケーション](../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\Binn|  
 |[Ssms ユーティリティ](../tools/sql-server-management-studio/ssms-utility.md)|コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動します。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
-|[tablediff ユーティリティ](../tools/tablediff-utility.md)|2 つのテーブルのデータを比較し、非収束について調査します。これは、レプリケーション トポロジのトラブルシューティングを行う場合に便利です。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
+|[tablediff ユーティリティ](../tools/tablediff-utility.md)|2 つのテーブルのデータを比較し、非収束について調査します。これは、レプリケーション トポロジのトラブルシューティングを行う場合に便利です。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM (COM)|  
 
 ## <a name="sql-command-prompt-utilities-syntax-conventions"></a>SQL コマンド プロンプト ユーティリティの構文規則  
   

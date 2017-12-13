@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server Integration Services のインストール |Microsoft ドキュメント"
-description: "このトピックでは、Linux に SQL Server Integration Services (SSIS) をインストールする方法について説明します。"
+description: "この記事では、Linux に SQL Server Integration Services (SSIS) をインストールする方法について説明します。"
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 851d8dc5121eb12b7d754a95db73494adcc632b4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
 
@@ -117,21 +117,11 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>SSIS を削除します。
 削除する`mssql-server-is`、次のコマンドを実行することができます。
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
-
-
-
-
-## <a name="run-a-package"></a>パッケージを実行します。
-SSIS パッケージを Linux コンピューターにコピーします。 次のコマンドを使用して、パッケージを実行します。
-
-```bash
-dtexec /F <package name> /DE <protection password>
-```
-
-
 
 ## <a name="next-steps"></a>次の手順
 
-Linux 上の SSIS を使用して、抽出、変換、およびデータの読み込みする方法の詳細については、次を参照してください。[抽出、変換、および SQL Server on Linux と SSIS のデータを読み込む](sql-server-linux-migrate-ssis.md)します。
+Linux で SSIS パッケージを実行するには、「[抽出変換、および SQL Server on Linux と SSIS データの読み込み](sql-server-linux-migrate-ssis.md)です。
+
+を Linux 上の SSIS の追加の設定を構成するのには、を参照してください。 [ssis conf Linux で SQL Server Integration Services を構成する](sql-server-linux-configure-ssis.md)です。

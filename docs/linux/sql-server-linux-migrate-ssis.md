@@ -15,17 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>抽出、変換、および SSIS Linux でのデータを読み込む
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このトピックでは、Linux 上の SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 SSIS は、複数のソースと形式からデータを抽出することで複雑なデータ統合の問題を解決し、データをクレンジング データ変換および読み込み、複数の送信先にします。 
+この記事では、Linux 上の SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 SSIS は、複数のソースと形式からデータを抽出することで複雑なデータ統合の問題を解決し、データをクレンジング データ変換および読み込み、複数の送信先にします。 
 
 Linux で実行されている SSIS パッケージは、Windows、オンプレミスまたはクラウドでは、Linux では、または Docker で実行されている Microsoft SQL Server に接続できます。 Azure SQL Database、Azure SQL Data Warehouse、ODBC データ ソース、フラット ファイル、および ADO.NET ソース、XML ファイル、および OData サービスを含む他のデータ ソースに接続することもできます。
 
@@ -47,17 +47,17 @@ Linux コンピューターで、SSIS パッケージを実行するには、次
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>その他の一般的な SSIS タスク
+## <a name="design-packages"></a>パッケージの設計
 
--   **パッケージをデザイン**です。
+**ODBC データ ソースに接続**です。 Linux CTP 2.1 の更新以降、SSIS で SSIS パッケージは、Linux の ODBC 接続を使用できます。 この機能は、SQL Server および MySQL の ODBC ドライバーでテスト済みですはまた、ODBC 仕様に従うすべての Unicode ODBC ドライバーを使用する必要があります。 、デザイン時に、ODBC データに接続する DSN または接続文字列を指定できますWindows 認証を使用することもできます。 詳細については、次を参照してください。、 [Linux 上のブログの投稿 announcing ODBC サポート](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)です。
 
-    -   **ODBC データ ソースに接続**です。 Linux CTP 2.1 の更新以降、SSIS で SSIS パッケージは、Linux の ODBC 接続を使用できます。 この機能は、SQL Server および MySQL の ODBC ドライバーでテスト済みですはまた、ODBC 仕様に従うすべての Unicode ODBC ドライバーを使用する必要があります。 、デザイン時に、ODBC データに接続する DSN または接続文字列を指定できますWindows 認証を使用することもできます。 詳細については、次を参照してください。、 [Linux 上のブログの投稿 announcing ODBC サポート](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)です。
+**パス**です。 SSIS パッケージ内の Windows スタイル パスを提供します。 Linux 上の SSIS では、Linux スタイルのパスをサポートしていませんが、実行時に、Windows 形式のパスを Linux スタイル パスにマップします。 次に、たとえば、Linux 上の SSIS マップ Windows 形式のパス`C:\test`Linux スタイルのパスに`/test`です。
 
-    -   **パス**です。 SSIS パッケージ内の Windows スタイル パスを提供します。 Linux 上の SSIS では、Linux スタイルのパスをサポートしていませんが、実行時に、Windows 形式のパスを Linux スタイル パスにマップします。 次に、たとえば、Linux 上の SSIS マップ Windows 形式のパス`C:\test`Linux スタイルのパスに`/test`です。
+## <a name="deploy-packages"></a>パッケージを展開します。
+パッケージは、このリリースでは、Linux 上のファイル システムにのみ保存できます。 SSIS カタログ データベースと、レガシ SSIS サービスでは、パッケージの配置とストレージの Linux で使用できません。
 
--   **パッケージを配置**です。 パッケージは、このリリースでは、Linux 上のファイル システムにのみ保存できます。 SSIS カタログ データベースと、レガシ SSIS サービスでは、パッケージの配置とストレージの Linux で使用できません。
-
--   **パッケージのスケジュール**です。 スケジューリング ツールなど、Linux システムを使用する`cron`パッケージをスケジュールします。 このリリースでは、パッケージの実行をスケジュールするのに Linux で SQL エージェントを使用することはできません。 詳細については、次を参照してください。 [cron を Linux 上のスケジュールの SSIS パッケージ](sql-server-linux-schedule-ssis-packages.md)です。
+## <a name="schedule-packages"></a>パッケージのスケジュール
+スケジューリング ツールなど、Linux システムを使用する`cron`パッケージをスケジュールします。 このリリースでは、パッケージの実行をスケジュールするのに Linux で SQL エージェントを使用することはできません。 詳細については、次を参照してください。 [cron を Linux 上のスケジュールの SSIS パッケージ](sql-server-linux-schedule-ssis-packages.md)です。
 
 ## <a name="limitations-and-known-issues"></a>制限事項と既知の問題
 

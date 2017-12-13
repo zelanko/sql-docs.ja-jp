@@ -1,7 +1,7 @@
 ---
 title: "(TRANSACT-SQL) を持つ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,16 +26,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f8ca5c21dfaf767009218b220d26520f178eb3a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf99ee7aece979c973d2d162062ac2bae7aac296
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="select---having-transact-sql"></a>選択 - こと (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  グループまたは集計の検索条件を指定します。 HAVING は、SELECT ステートメントと共にのみ使用できます。 通常、HAVING は GROUP BY 句で使用されます。 GROUP BY 句を使用しない場合、HAVING は WHERE 句と同様に動作します。  
+  グループまたは集計の検索条件を指定します。 HAVING は、SELECT ステートメントと共にのみ使用できます。 通常、HAVING は GROUP BY 句と共に使用します。 GROUP BY を使用しない場合は、暗黙的な集計された、1 つのグループです。   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
-\<search_condition > を満たすために、グループまたは集計の検索条件を指定します。  
+\<search_condition > を満たすには、グループまたは集計の 1 つまたは複数の述語を指定します。 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md)  
   
  **テキスト**、**イメージ**、および**ntext**データ型は HAVING 句では使用できません。  
   

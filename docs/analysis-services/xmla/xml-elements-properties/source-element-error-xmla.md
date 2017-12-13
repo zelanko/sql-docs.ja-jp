@@ -2,12 +2,12 @@
 title: "Source 要素 (Error) (XMLA) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e490bddcdb62b6311195b3144e5b98a9961ecad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d462830f097bd3f7992715cd44c4c05437a65e84
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="source-element-error-xmla"></a>Source 要素 (Error) (XMLA)
-  親要素 [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) を生成したコンポーネントの名前を含みます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親を生成したコンポーネントの名前を含む[エラー](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

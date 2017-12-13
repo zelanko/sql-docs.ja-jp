@@ -1,7 +1,7 @@
 ---
 title: "[SET ANSI_NULLS] (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 19f61f2ba3274bb854f60073408cbceea9f4def7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a6ef51bb13ae7372175a390a3d8c5509550a3ad1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,30 +42,30 @@ ms.lasthandoff: 11/21/2017
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で = (等号) 比較演算子と <> (不等号) 比較演算子を NULL 値に対して使用した場合の ISO 準拠動作を指定します。  
   
 > [!IMPORTANT]  
->  将来のバージョンで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ANSI_NULLS が常になり、オプションを OFF に明示的に設定するアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
+>  将来のバージョンで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ANSI_NULLS になり、オプションを OFF に明示的に設定するアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>構文  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_NULLS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULLS ON;  
-```  
-  
+
+## <a name="syntax"></a>構文
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_NULLS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULLS ON
+```
+
 ## <a name="remarks"></a>解説  
  SET ANSI_NULLS が ON、WHERE を使用する SELECT ステートメントの場合*column_name* = **NULL**内の null 値がある場合でもゼロ行を返します*column_name*です。 WHERE を使用する SELECT ステートメント*column_name* <> **NULL**で null 以外の値がある場合でもゼロ行を返します*column_name*です。  
   
  SET ANSI_NULLS が OFF の場合は、= (等号) 比較演算および <> (不等号) 比較演算の実行結果に、ISO 標準が適用されません。 WHERE を使用する SELECT ステートメント*column_name* = **NULL**に null 値を持つ行が返されます*column_name*です。 WHERE を使用する SELECT ステートメント*column_name* <> **NULL**を列に null 以外の値を持つ行を返します。 WHERE を使用する SELECT ステートメントも、 *column_name* <> *XYZ_value*れていないすべての行を返します*XYZ_value*が NULL でないとします。  
   
- SET ANSI_NULLS が ON に設定されていると、NULL 値に対するすべての比較は UNKNOWN に評価されます。 SET ANSI_NULLS が OFF に設定されていて、データ値が NULL の場合は、NULL 値に対するすべてのデータ比較は TRUE に評価されます。 SET ANSI_NULLS が指定されていない場合は、現在のデータベースの ANSI_NULLS オプションの設定が適用されます。 ANSI_NULLS データベース オプションの詳細については、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+ SET ANSI_NULLS が ON に設定されていると、NULL 値に対するすべての比較は UNKNOWN に評価されます。 SET ANSI_NULLS が OFF に設定されていて、データ値が NULL の場合は、NULL 値に対するすべてのデータ比較は TRUE に評価されます。 SET ANSI_NULLS が指定されていない場合は、現在のデータベースの ANSI_NULLS オプションの設定が適用されます。 ANSI_NULLS データベース オプションの詳細については、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md)  
   
  比較のオペランドの 1 つが NULL またはリテラル NULL のいずれかの変数であるとき、SET ANSI_NULLS が ON の場合のみ比較に影響します。 比較の両側が列または複合式の場合は、この設定は比較に影響しません。  
   
@@ -73,7 +73,7 @@ SET ANSI_NULLS ON;
   
  分散クエリを実行する際には、SET ANSI_NULLS を ON に設定してください。  
   
- 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ANSI_NULLS を ON に設定する必要があります。 SET ANSI_NULLS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から、目的の値に違反しているすべての SET オプションを一覧表示したエラーが返されます。 また、実行すると、SELECT ステートメントでは、SET ANSI_NULLS を OFF 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は計算列やビュー上のインデックス値を無視し、テーブルまたはビューには、そのようなインデックスが存在しなかった場合、select 操作を解決します。  
+ 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ANSI_NULLS を ON に設定する必要があります。 SET ANSI_NULLS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必要な値に違反しているすべての SET オプションの一覧を示すエラーを返します。 また、実行すると、SELECT ステートメントでは、SET ANSI_NULLS を OFF 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]計算列やビュー上のインデックス値を無視し、テーブルまたはビューには、そのようなインデックスが存在しなかった場合、select 操作を解決します。  
   
 > [!NOTE]  
 >  ANSI_NULLS は、計算列およびインデックス付きビューにおいてインデックスを操作するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 1 つです。 オプションの ANSI_PADDING、ANSI_WARNINGS、ARITHABORT、QUOTED_IDENTIFIER、および CONCAT_NULL_YIELDS_NULL も ON に設定する必要があります。また、NUMERIC_ROUNDABORT は OFF に設定する必要があります。  
@@ -84,7 +84,7 @@ SET ANSI_NULLS ON;
   
  SET ANSI_NULLS は、解析時ではなく実行時に設定されます。  
   
- この設定の現在の設定を表示するには、次のクエリを実行します。  
+ この設定の現在の設定を表示するには、次のクエリを実行します。
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  

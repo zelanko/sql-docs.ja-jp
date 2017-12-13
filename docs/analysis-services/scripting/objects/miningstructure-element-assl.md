@@ -2,12 +2,12 @@
 title: "MiningStructure 要素 (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3aed46d59cc828600651c0c23bbd97d8eeafb3f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c4cb1229f7769942f4961d2495c5fa4f5b561c7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="miningstructure-element-assl"></a>MiningStructure 要素 (ASSL)
-  マイニング モデルのセットの構造を定義します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]一連のマイニング モデルの構造を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -84,18 +84,18 @@ ms.lasthandoff: 11/17/2017
  マイニング構造は列およびバインドを定義します。 マイニング構造を定義すると、その構造を使用して多数のマイニング モデルを定義できます。 マイニング構造とその構造に格納されている各マイニング モデルは個別に処理できます。  
   
 > [!NOTE]  
->  提示のプロパティ、 **HoldoutMaxCases**、 **HoldoutMaxPercent**、 **HoldoutSeed**、および**HoldoutActualSize**で導入されました。[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. これらのプロパティを使用すると、マイニング構造で、その構造に関連するすべてのマイニング モデルのテスト セットとして機能するパーティションを定義できます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、これらのプロパティはサポートされません。 したがって、これらのプロパティを [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] のインスタンスで使用すると、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でエラーが返されます。  
+>  提示のプロパティ、 **HoldoutMaxCases**、 **HoldoutMaxPercent**、 **HoldoutSeed**、および**HoldoutActualSize**で導入されました。[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] これらのプロパティを使用すると、マイニング構造で、その構造に関連するすべてのマイニング モデルのテスト セットとして機能するパーティションを定義できます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では、これらのプロパティはサポートされません。 したがって、これらのプロパティを [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] のインスタンスで使用すると、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でエラーが返されます。  
   
 ## <a name="drillthrough-to-structure-columns"></a>構造列へのドリルスルー  
- [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]に新しい権限要素が追加されて、 [MiningStructurePermissions 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)コレクション。 追加する場合**AllowDrillthrough**両方へのアクセス許可、 [MiningStructurePermissions](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)と[MiningModelPermission](../../../analysis-services/scripting/objects/miningmodelpermission-element-assl.md)コレクション、ドリルスルーが有効になっているから、マイニング モデル、構造には、このような方法を持つロールのメンバーが**AllowDrillthrough**モデルに対するアクセス許可が、データ マイニング モデルをクエリおよびモデルに含まれていない構造列を返すことができます。  
+ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]に新しい権限要素が追加されて、 [MiningStructurePermissions 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)コレクション。 追加する場合**AllowDrillthrough**両方へのアクセス許可、 [MiningStructurePermissions](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)と[MiningModelPermission](../../../analysis-services/scripting/objects/miningmodelpermission-element-assl.md)コレクション、ドリルスルーが有効になっているから、マイニング モデル、構造には、このような方法を持つロールのメンバーが**AllowDrillthrough**モデルに対するアクセス許可が、データ マイニング モデルをクエリおよびモデルに含まれていない構造列を返すことができます。  
   
- したがって、機密データまたは個人情報を保護する必要がありますを構築、機密情報をマスクし、付与、するデータ ソース ビュー **AllowDrillthrough**必要な場合にのみ、マイニング構造に対する権限。 詳細については、次を参照してください。 [AllowDrillThrough 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md).  
+ したがって、機密データまたは個人情報を保護する必要がありますを構築、機密情報をマスクし、付与、するデータ ソース ビュー **AllowDrillthrough**必要な場合にのみ、マイニング構造に対する権限。 詳細については、次を参照してください。 [AllowDrillThrough 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md).  
   
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.MiningStructure>します。  
   
 ## <a name="see-also"></a>参照  
- [MiningModel 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)   
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)   
- [選択 &#40;DMX&#41;](../../../dmx/select-dmx.md)  
+ [MiningModel 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)   
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)   
+ [選択 (&) #40";"DMX"&"#41;](../../../dmx/select-dmx.md)  
   
   

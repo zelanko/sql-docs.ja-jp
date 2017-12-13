@@ -4,7 +4,7 @@ description: "このトピックでは、リリース ノートが含まれて�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 11/28/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -148,7 +148,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 
 ### <a name="known-issues"></a>既知の問題
 
-次のセクションでは、Linux 上の SQL Server 2017 全般公開 (GA) リリースの既知の問題を記述します。
+以降のセクションでは、Linux 上の SQL Server 2017 の一般公開 (GA) リリースの既知の問題を記述します。
 
 #### <a name="general"></a>全般
 
@@ -178,7 +178,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 
 - SQL Server on Windows でバックアップされたデータベースを復元するときに行う必要があります、 **WITH MOVE** TRANSACT-SQL ステートメントの句。
 
-- Linux で実行されている SQL Server では、Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションはサポートされていません。 分散トランザクションがサポートされている SQL Server を SQL Server。
+- Linux で実行されている SQL Server では、Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションはサポートされていません。 DTC が含まれる場合を除き、リンク サーバーがサポートされる SQL Server を SQL Server。 詳細については、次を参照してください。 [Linux で実行されている SQL Server では、Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションはサポートされません](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)です。
 
 - 特定のアルゴリズム (暗号スイート) トランスポート層セキュリティ (TLS) は、Linux に SQL Server では正しく機能しません。 これは、結果、SQL Server に接続するときに問題と同様に高可用性グループ レプリカ間の接続を確立する接続が失敗します。
 

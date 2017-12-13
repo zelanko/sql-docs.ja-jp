@@ -2,8 +2,8 @@
 title: "Red Hat Enterprise Linux 上の SQL Server の無人インストール |Microsoft ドキュメント"
 description: "SQL Server スクリプトのサンプル - Red Hat Enterprise Linux 上の無人インストール"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 用のサンプル: SQL Server を無人インストール スクリプト
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/01/2017
 サンプル スクリプトをファイルに保存し、それをカスタマイズする、スクリプトで変数の値を置き換えます。 設定できますスクリプト変数のいずれかの環境変数として、スクリプト ファイルから削除する限り、します。
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

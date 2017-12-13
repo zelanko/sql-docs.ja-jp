@@ -15,15 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 7859f555672077ee77d46fa05789f6757943cafe
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Ssis conf で Linux 上の SQL Server Integration Services を構成します。
 
-実行する、 `ssis-conf` Red Hat Enterprise Linux および Ubuntu 用 SQL Server Integration Services (SSIS) をインストールすると、構成スクリプト。 このユーティリティを使用するには、次のプロパティを構成します。
+実行する、 `ssis-conf` Red Hat Enterprise Linux および Ubuntu 用 SQL Server Integration Services (SSIS) をインストールすると、構成スクリプト。 SSIS のインストールに関する詳細については、次を参照してください。[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)です。
+
+使用することも、`ssis-conf`ユーティリティは次のプロパティを構成します。
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
