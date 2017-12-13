@@ -2,12 +2,12 @@
 title: "MembersWithData 要素 (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38c0606c151d2b3da8b0719c66bfe2b41fbe31e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d7bda746e07dd77b2d530b57091d3b303f06fdcd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="memberswithdata-element-assl"></a>MembersWithData 要素 (ASSL)
-  親属性内の非リーフ メンバーのデータ メンバーを表示するかどうかを指定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]親属性の非リーフ メンバーのデータ メンバーを表示するかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   

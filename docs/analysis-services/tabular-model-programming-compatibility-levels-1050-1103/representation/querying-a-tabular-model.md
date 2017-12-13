@@ -2,12 +2,12 @@
 title: "表形式モデルの照会 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querying-a-tabular-model"></a>テーブル モデルのクエリ
-  テーブル モデルのクエリを実行することは、テーブル データベースからデータを取得することを意味します。この目的を達成する方法は 2 つあります。DAX 内の表形式クエリを使用する方法と、MDX を使用して、キューブから取得するような形でデータを取得する方法です。 ただし、テーブル モデルの基になるモードによっては、DAX 表形式クエリしか使用できない場合があります。DirectQuery モードでは、DAX 表形式クエリを使用する必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]開発者は表形式モデルのクエリ、表形式データベースからデータを取得することを意味します。この目標を達成する 2 つのオプションがある:、DAX でテーブルのクエリを使用または MDX およびキューブからデータを飛び出してきた取得に使用します。 ただし、テーブル モデルの基になるモードによっては、DAX 表形式クエリしか使用できない場合があります。DirectQuery モードでは、DAX 表形式クエリを使用する必要があります。  
   
 ## <a name="querying-with-adomdnet"></a>ADOMD.NET を使用したクエリ  
  ADOMD.Net を使用してテーブル モデルをクエリする方法は単純で柔軟性に優れています。DAX から MDX ステートメントまたは表形式クエリ式をサーバーに送信して、結果を受信します。  

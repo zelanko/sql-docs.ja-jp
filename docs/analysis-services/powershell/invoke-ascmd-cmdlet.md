@@ -2,12 +2,12 @@
 title: "Invoke-ascmd コマンドレット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6e5d1fba56fd4cee4c736a583d8af2fe8ec6f986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5ead98887f8773a1bdb26d1b7f6a2f2cb5447bc6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd コマンドレット
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  データベース管理者は、XMLA スクリプト、多次元式 (MDX)、データ マイニング拡張機能 (DMX) ステートメント、または表形式モデル スクリプト言語 (TMSL) スクリプトを実行できます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]データベース管理者は、XMLA スクリプト、多次元式 (MDX)、データ マイニング拡張機能 (DMX) ステートメント、または Tabular Model Scripting Language (TMSL) スクリプトを実行できます。  
   
  TMSL は、SQL Server 2016 Analysis Services インスタンス上の表形式サーバー モードでのみサポートされます。  
   

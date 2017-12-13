@@ -2,12 +2,12 @@
 title: "DISCOVER_PERFORMANCE_COUNTERS 行セット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e9584786347e107e166dfcb4c6a51b2057d0b9cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9f714154d46d527fff4719b0bf787febc8a8f3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 行セット
-  1 つ以上のパフォーマンス カウンターの値を返します。 使用率の推移に関する情報を返すカウンターはサポートされていません (1 秒あたりのディスク読み取り数および CPU 使用率など)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]1 つまたは複数のパフォーマンス カウンターの値を返します。 使用率の推移に関する情報を返すカウンターはサポートされていません (1 秒あたりのディスク読み取り数および CPU 使用率など)。  
   
  **適用されます:**表形式モデル、多次元モデル  
   

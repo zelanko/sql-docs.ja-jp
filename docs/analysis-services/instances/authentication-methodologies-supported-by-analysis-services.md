@@ -2,12 +2,12 @@
 title: "Analysis Services でサポートされる認証方法 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 86e65d3db90f2cf30f8fe4ae7288819ac4745e54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5fd280c748fd887e3582a95c7f023dbc659b604a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services でサポートされる認証方法
-  クライアント アプリケーションから Analysis Services インスタンスへの接続には Windows 認証 (統合) が必要です。 次の手法のいずれかを使用して Windows ユーザー ID を指定できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services インスタンスへのクライアント アプリケーションからの接続では、Windows 認証 (統合) が必要です。 次の手法のいずれかを使用して Windows ユーザー ID を指定できます。  
   
 -   NTLM  
   

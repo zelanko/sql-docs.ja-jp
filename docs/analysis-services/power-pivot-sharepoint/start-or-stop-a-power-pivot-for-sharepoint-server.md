@@ -2,12 +2,12 @@
 title: "開始または SharePoint サーバーに対して Stop a Power Pivot |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a262f8ac21748942f36a74773eab898ee321ae57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cceb9ce47e059750e1d4cb8dc3fe3b1d45444f82
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスと [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスは、同じローカル アプリケーション サーバー上で同時に動作し、SharePoint ファーム内での連携要求とデータ処理をサポートします。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスおよび[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスは、SharePoint ファームでの連携要求とデータ処理をサポートするために同じローカル アプリケーション サーバーに同時に動作します。  
   
  このトピックには、次のセクションが含まれます。  
   

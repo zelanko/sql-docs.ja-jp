@@ -2,12 +2,12 @@
 title: "クロス検証の式 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 041206471791fe8be8b06e407854f96fc021eedd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-formulas"></a>クロス検証の式
-  生成したクロス検証レポートには、マイニング モデルの種類 (つまり、モデルの作成に使用したアルゴリズム)、予測可能な属性のデータ型、および予測可能な属性の値に応じて、モデルごとの精度のメジャーが含まれます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]クロス検証レポートを生成するときに含まれているマイニング モデル (モデルの作成に使用されたアルゴリズム) の種類、予測可能属性および予測可能な属性のデータ型に応じて、各モデルの精度のメジャー存在する場合は、値です。  
   
  このセクションでは、クロス検証レポートで使用されるメジャーを示し、計算の方法について説明します。  
   

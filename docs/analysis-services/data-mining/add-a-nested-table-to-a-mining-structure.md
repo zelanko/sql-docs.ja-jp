@@ -2,12 +2,12 @@
 title: "マイニング構造に入れ子になったテーブルを追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95bac11034fd091d9390a618568a6b58e6067dcf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779df394f1ce179c07292723200a7405d4648ec8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>マイニング構造への入れ子になったテーブルの追加
-  データ マイニング ウィザードによって作成されたマイニング構造に入れ子になったテーブルを追加するには、データ マイニング デザイナーを使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング デザイナーを使用すると、データ マイニング ウィザードで作成した後、マイニング構造に入れ子になったテーブルを追加します。  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>入れ子になったテーブルをマイニング構造に追加するには  
   

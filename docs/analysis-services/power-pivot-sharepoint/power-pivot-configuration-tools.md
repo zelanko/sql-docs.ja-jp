@@ -2,12 +2,12 @@
 title: "Power Pivot Configuration Tools |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 093e9a77dccdf8b01383152601ceadcdff816db9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 51bfbb7fa3cbfad5c8415fcda1fab0e54643ec62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot の構成ツール
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の構成ツールを使用すると、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を構成、修復、または削除できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]構成、修復、または削除、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]で、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]構成ツール。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップ ウィザードでは、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールはインストールされません。 構成ツールは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の今後のリリースでダウンロードできるようになる予定です。  
   

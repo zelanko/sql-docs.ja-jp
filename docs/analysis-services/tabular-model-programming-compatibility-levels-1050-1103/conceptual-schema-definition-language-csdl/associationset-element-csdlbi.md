@@ -2,12 +2,12 @@
 title: "AssociationSet 要素 (CSDLBI) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae30edd006aa425ddd4f574ceb67f0534674f93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 要素 (CSDLBI)
-  **AssociationSet** 要素は関連付けを定義する複合型です。 CSDLBI データ モデルでは、関連付けは 2 つのテーブル間のリレーションシップを表します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet**要素は複合型であり、関連付けを定義します。 CSDLBI データ モデルでは、関連付けは 2 つのテーブル間のリレーションシップを表します。  
   
  **AssociationSet** は、モデル内の一意なリレーションシップに対して個々に指定する必要があります。 **AssociationSet** では **Association** 要素を使用してエンドポイントを定義します。 **AssociationSet** 要素は、データ モデル内のリレーションシップとその使用状況に関するメタデータを定義します。  
   

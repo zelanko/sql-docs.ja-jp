@@ -2,12 +2,12 @@
 title: "シーケンス コマンド (TMSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fe2e7416c4c86b926f30295b6fe2f75a334751f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41e12acf7e785ecb65629ff89a5cfbaf7875f07d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-command-tmsl"></a>Sequence コマンド (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  使用して、**シーケンス**バッチ モードで Analysis Services のインスタンスで、連続する一連の操作を実行するコマンド。  コマンド全体とすべてのコンポーネントが成功するトランザクションの順序で完了する必要があります。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使用して、**シーケンス**バッチ モードで Analysis Services のインスタンスで、連続する一連の操作を実行するコマンド。  コマンド全体とすべてのコンポーネントが成功するトランザクションの順序で完了する必要があります。  
   
  次のコマンドを実行することができます、順番を除く、**更新**複数のオブジェクトを同時に処理を並列で実行されるコマンドです。  
   
@@ -118,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
  SSMS からは、このコマンドの既製のスクリプトを生成することはできません。 代わりに、例を使用して開始したり、独自に作成できます。  
   
- [ \[MS-t SSAS\]: SQL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855)ドキュメントには、JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 が含まれています。. 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語 &#40;です。TMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
+ [ \[MS-t SSAS\]: SQL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855)ドキュメントには、JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 が含まれています. 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語 &#40;です。TMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
   
 ## <a name="see-also"></a>参照  
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

@@ -2,12 +2,12 @@
 title: "予測関数をモデルに適用する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>モデルへの予測関数の適用
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングで予測クエリを作成するには、クエリの基になるマイニング モデルを選択する必要があります。 現在のプロジェクトに存在するマイニング モデルを選択できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]予測クエリを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ マイニング クエリの基になるマイニング モデル最初に選択する必要があります。 現在のプロジェクトに存在するマイニング モデルを選択できます。  
   
  モデルを選択した後は、クエリに " *予測関数* " を追加します。 予測関数を使用して予測を取得する以外に、予測値の確率や、予測の生成に使用された情報など、関連する統計情報を返す予測関数を追加することもできます。  
   

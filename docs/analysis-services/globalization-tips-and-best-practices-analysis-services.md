@@ -2,12 +2,12 @@
 title: "グローバリゼーションのヒントとベスト プラクティス (Analysis Services) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4c7d23f5c48505bb91db780ee2aaf742c7c1e22
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 596601d9cc3ddc0ef4b799d7beb1c6e9b6f1af1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
-  [!INCLUDE[applies](../includes/applies-md.md)] 多次元のみ  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)]多次元のみ  
   
  以下のヒントとガイドラインは、ビジネス インテリジェンス ソリューションの移植性を増すのに役立つと同時に、言語と照合順序の設定に直接関連するエラーを回避できます。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 -   オブジェクト エクスプローラーで、 **[接続]** | **[Analysis Services]** | **[オプション]**の順に移動し、 **[追加の接続パラメーター]** タブをクリックします。  
   
--   `Local Identifier=1036` と入力し、**[ 接続]** をクリックします。  
+-   `Local Identifier=1036` と入力し、**[接続]** をクリックします。  
   
 -   Adventure Works データベースに対して、MDX クエリを実行します。 クエリ結果は、フランス語翻訳になるはずです。  
   

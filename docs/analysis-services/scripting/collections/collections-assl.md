@@ -2,12 +2,12 @@
 title: "コレクション (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68be246ab77c93a910a4d37b40808a42adecb8ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be1fe8952758379ec471b22e60c2c643f87013c4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="collections-assl"></a>コレクション (ASSL)
-  このリファレンス セクションでは、Analysis Services スクリプト言語 (ASSL) スキーマでコレクションの役割を果たす各要素の構文と使い方について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このリファレンス セクションには、Analysis Services スクリプト言語 (ASSL) スキーマのコレクションとして機能する各要素の構文と使用状況の情報が含まれています。  
   
  ASSL スキーマには、開発者の観点からの XML 要素のみが含まれていますが、このセクションで説明する要素などに対応して、オブジェクトのコレクション、**ディメンション**と**キューブ**コレクション。  
   

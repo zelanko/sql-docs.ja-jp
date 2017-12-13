@@ -2,12 +2,12 @@
 title: "Microsoft クラスタ リング アルゴリズム |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb57075143154d8e317350625b6ac602dc241597
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムとは、データセット内のケースを反復処理して類似した特性を持つクラスターにグループ化する " *セグメンテーション* " または " *クラスタリング* " アルゴリズムです。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]クラスタ リング アルゴリズムは、*セグメンテーション*または*クラスタ リング*類似した特性を持つクラスターにグループ化するデータセット内のケースを反復処理するアルゴリズム。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
   
  クラスタリング モデルでは、一般レベルの観察では論理的に推論できないデータセット内の関係が識別されます。 たとえば、自転車で通勤している従業員は、一般的に勤め先から遠くないところに住んでいることは、だれでも容易に想像できます。 しかし、このアルゴリズムでは、それほど明確でない自転車通勤者に関する他の特性を見つけることができます。 次の図では、クラスター A は勤め先に車で通勤する従業員に関するデータを表し、クラスター B は勤め先に自転車で通勤する従業員に関するデータを表しています。  
   

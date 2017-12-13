@@ -2,12 +2,12 @@
 title: "操作 (Analysis Services - 多次元データ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8880e5f1dd0f2d2163fecbf33d08fb5162c7ddc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>アクション (Analysis Services - 多次元データ)
-  アクションにはさまざまな種類があり、適切に作成する必要があります。 アクションの種類は次のとおりです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]アクションがさまざまな種類のありが適切に作成する必要があることができます。 アクションの種類は次のとおりです。  
   
 -   ドリルスルー アクション。このアクションが発生したキューブで選択されているセル内のデータを表す行セットを返します。  
   

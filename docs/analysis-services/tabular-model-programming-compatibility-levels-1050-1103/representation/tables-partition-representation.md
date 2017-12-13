@@ -2,12 +2,12 @@
 title: "パーティション表現 (テーブル) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a1478d3a38081dffefef764ffe15c4cd13b09b0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4fa1b2fea26b7b1d7d4efd08afd5f32e0e9eeae7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---partition-representation"></a>テーブルなパーティション表現
-  運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。それぞれのサブセットがテーブルのパーティションです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]テーブルを分割する運用上の目的で、異なる行のサブセットにその結合させるフォーム テーブルそれぞれのサブセットは、テーブルのパーティションです。  
   
 ## <a name="partition-representation"></a>パーティション表現  
  AMO オブジェクトの場合、パーティション表現は <xref:Microsoft.AnalysisServices.Partition> と一対一マッピングのリレーションシップにあり、その他の主要 AMO オブジェクトを必要としません。  

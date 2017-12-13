@@ -2,12 +2,12 @@
 title: "表形式モデル データベース (SSAS テーブル) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d77d1cc5f03ac2d6894cefa6458f9096b47b3a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4edf416f8966bf15fa9767c23b445cee280f3f22
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>配置済みテーブル モデル データベースを管理します。
-  テーブル モデル データベースは、Analysis Services のテーブル モデル プロジェクト テンプレートを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成する Analysis Services データベースであり、テーブルおよびリレーションシップがデータを表すための主な構造です。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデル データベースは、Analysis Services データベースで作成した[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Analysis Services 表形式モデル プロジェクト テンプレートを使用して、テーブルとリレーションシップがデータを表すため、主な構造です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データベース、テーブル、またはパーティションの処理 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)  

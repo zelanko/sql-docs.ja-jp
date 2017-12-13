@@ -2,12 +2,12 @@
 title: "レッスン 2: 定義して、キューブの展開 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c09c3c4ce31c969b4ec6096a19e53cd2b225de04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1daca588189dfd90ba4d1a238f17d7b3aa5757e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>レッスン 2 : キューブの定義と配置
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトでデータ ソース ビューを定義すると、最初の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブをいつでも定義できるようになります。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]データ ソース ビューを定義した後、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]初期を定義する準備ができたら、プロジェクト[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]キューブ。  
   
 キューブ ウィザードでは、キューブとそのディメンションを一度に定義できます。 1 つ以上のディメンションを定義してから、キューブ ウィザードを使用して、そのディメンションを使用するキューブを定義することもできます。 複雑なソリューションを設計する場合は、通常、ディメンションの定義から始めます。 詳細については、 [「多次元モデル内のディメンション」](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) または [「多次元モデルのキューブ」](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)を参照してください。  
   

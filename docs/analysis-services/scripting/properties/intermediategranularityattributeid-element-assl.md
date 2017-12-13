@@ -2,12 +2,12 @@
 title: "IntermediateGranularityAttributeID 要素 (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: abc20aa4225846d039346f56b762875efcc5cfae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0c30785a5f0c46894dd65c1d28cd7cd3f67cd7e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="intermediategranularityattributeid-element-assl"></a>IntermediateGranularityAttributeID 要素 (ASSL)
-  参照ディメンションを中間ディメンションに関連付けるために使用される中間キューブ ディメンションにおける粒度属性の識別子 (ID) を格納します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]参照ディメンションを中間ディメンションに関連付けるために使用される中間キューブ ディメンションにおける粒度属性の識別子 (ID) が含まれています。  
   
 ## <a name="syntax"></a>構文  
   

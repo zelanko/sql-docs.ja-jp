@@ -2,12 +2,12 @@
 title: "テーブル モデル (SSAS) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1d770b114a708301f884de76d7c6a4cc39227195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 569cd3ff914f7b758fb1cfaf1a8c631e8c3d9c4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-modeling-ssas"></a>テーブル モデリング (SSAS)
-  表形式モデルは、インメモリ モードまたは DirectQuery モードで実行される Analysis Services データベースで、バックエンド リレーショナル データ ソースから直接取得したデータにアクセスします。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表形式モデルは、Analysis Services データベースをメモリ内または DirectQuery モードでは、バックエンド リレーショナル データ ソースからデータを直接へのアクセスを実行します。  
   
  既定のモードはインメモリ モードです。 インメモリ分析エンジンは、最新の圧縮アルゴリズムおよびマルチスレッド クエリ プロセッサを使用し、Microsoft Excel、Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]などのレポート クライアント アプリケーションにより、表形式のモデル オブジェクトおよびデータへの高速アクセスを実現します。  
   

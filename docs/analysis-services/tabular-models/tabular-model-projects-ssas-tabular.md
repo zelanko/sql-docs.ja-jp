@@ -2,12 +2,12 @@
 title: "テーブル モデル プロジェクト (SSAS テーブル) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d6422eb1648f33f699525edbc944f3bc0b4c5519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>テーブル モデル プロジェクト (SSAS テーブル)
-  新しいテーブル モデルを作成するには、まず [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で新しいテーブル モデル プロジェクトを作成する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]をインストールすると、テーブル モデル プロジェクト作成のために 3 つのビジネス インテリジェンス プロジェクト テンプレートが提供されます。 各プロジェクト テンプレートは、モデルの作成を開始するためのフレームワークを提供します。 このセクションのトピックでは、プロジェクト テンプレートを使用して、新しいテーブル モデル プロジェクトを作成する方法を説明します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新しい表形式モデルを作成するで新しいテーブル モデル プロジェクトを作成する必要がありますまず[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]をインストールすると、テーブル モデル プロジェクト作成のために 3 つのビジネス インテリジェンス プロジェクト テンプレートが提供されます。 各プロジェクト テンプレートは、モデルの作成を開始するためのフレームワークを提供します。 このセクションのトピックでは、プロジェクト テンプレートを使用して、新しいテーブル モデル プロジェクトを作成する方法を説明します。  
   
 ## <a name="related-tasks"></a>関連タスク  
   

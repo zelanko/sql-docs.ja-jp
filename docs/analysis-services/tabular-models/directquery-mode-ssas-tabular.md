@@ -2,12 +2,12 @@
 title: "DirectQuery モード |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,17 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9bd8eb8e3bd0f313fec3e2d0228fb04e08cb6199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="directquery-mode"></a>DirectQuery モード
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  このトピックについて説明*DirectQuery モード*の Analysis Services 表形式モデル 1200 以降の互換性レベルです。 DirectQuery モードは、SSDT で設計しているモデル、または既に展開されているテーブル モデルで有効にすることができます。DirectQuery モードには SSMS で変更できます。 DirectQuery モードを選択する前に、利点と欠点の両方を理解しておく必要があります。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックについて説明*DirectQuery モード*の Analysis Services 表形式モデル 1200 以降の互換性レベルです。 DirectQuery モードは、SSDT で設計しているモデル、または既に展開されているテーブル モデルで有効にすることができます。DirectQuery モードには SSMS で変更できます。 DirectQuery モードを選択する前に、利点と欠点の両方を理解しておく必要があります。
   
 ##  <a name="bkmk_Benefits"></a> 利点
  既定では、テーブル モデルでは、インメモリ キャッシュを使用してデータを格納およびデータにクエリを実行します。 テーブル モデルでメモリ内のデータをクエリすると、複雑なクエリでも非常に高速に実行できます。 ただし、キャッシュされたデータの使用にはいくつかの制限があります。 たとえば、大規模なデータ セットでは使用可能なメモリを超えることがあり、定期的な処理スケジュールで実現できない場合はデータ更新要件が困難になる可能性があります。  

@@ -2,12 +2,12 @@
 title: "クエリ スコープのセル計算 (MDX) を作成する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d6b38d88d6a9bf5ba180a9023a962199633a6a4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6348f5728c937b5f41531566de6df853cfbb210f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>クエリ スコープのセル計算の MDX セル計算
-  計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の **WITH** キーワードを使用します。 **WITH** キーワードの構文は、以下のとおりです。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用する、 **WITH**キーワードで多次元式 (MDX) クエリのコンテキスト内で計算されるセルを記述します。 **WITH** キーワードの構文は、以下のとおりです。  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  

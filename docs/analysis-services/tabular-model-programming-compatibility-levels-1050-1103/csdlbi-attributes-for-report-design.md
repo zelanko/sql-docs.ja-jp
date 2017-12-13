@@ -2,12 +2,12 @@
 title: "レポート デザインの CSDLBI 属性 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>レポート デザインの CSDLBI 属性
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  このセクションでは、テーブル モデリングについての CSDL に対する拡張機能の、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クエリ デザインに影響のある属性について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このセクションでは、表形式のモデル化に影響する CSDL に、拡張機能内の属性をについて説明します[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]クエリ デザインします。  
   
 ## <a name="model-attributes"></a>モデル属性  
  これらの属性が、CSDL のサブ要素で定義されている[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)要素。  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**配置**|Enum|表形式の表示でフィールドの値を配置する方法を示す値。 指定できる値は**既定**、 **Center**、**左**、**右**です。 省略した場合は、フィールドのデータ型に基づいて既定の配置が決定されます。|  
 |**FormatString**|テキスト|フィールドの値の既定での書式設定方法を示す .NET 形式の文字列。 省略した場合は、次の形式と見なされます。<br /><br /> -Datetime フィールド: 地域の短い日付または"d"<br /><br /> -集計関数を浮動小数点フィールドと、既定値である整数フィールド: 地域の数値または"n"<br /><br /> -集計関数を既定値はありません整数: 地域の 10 進数または"d"<br /><br /> 他のすべての型のフィールドについては、書式指定文字列は適用されません。|  
 |**単位**|テキスト|単位を表現するためにフィールド値に適用される記号。 省略した場合、単位は不明と見なされます。|  
-|**幅**|Integer|表形式の表示でフィールドの値を表示するために確保する必要のある望ましい幅 (文字数)。 省略した場合は、フィールドのデータ型に基づいて既定の幅が決定されます。|  
+|**Width**|Integer|表形式の表示でフィールドの値を表示するために確保する必要のある望ましい幅 (文字数)。 省略した場合は、フィールドのデータ型に基づいて既定の幅が決定されます。|  
 |**SortDirection**|Enum|フィールドの値が通常並べ替え方法を示す値。 指定できる値は**既定**、**昇順**、**降順**です。 省略した場合は、フィールドのデータ型に基づいて既定の並べ替え方向が決定されます。|  
 |**IsRightToLeft**|ブール値|右から左に読む必要のあるテキストがフィールドに含まれるかどうかを示します。 省略した場合は、モデルの設定と見なされます。|  
 |**OrderBy**|MemberRef|このフィールドの値の並べ替え順序が定義されているモデル内の別のフィールドの参照。 2 つのフィールドの値は 1:1 で対応している必要があります。そうでない場合、並べ替えの動作は定義されません。 省略した場合、フィールドはそれ自体の値に基づいて並べ替えられます。|  

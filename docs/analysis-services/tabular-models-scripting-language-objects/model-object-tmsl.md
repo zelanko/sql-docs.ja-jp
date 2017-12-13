@@ -2,12 +2,12 @@
 title: "モデル オブジェクト (TMSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e2ba45e7f346fc597e579ce7dd7d7d0369fd94de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-object-tmsl"></a>モデル オブジェクト (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  表形式モデルを定義します。 データベース、および任意のコマンドで指定できる 1 つだけデータベースごとに 1 つのモデルがあります。 データベース オブジェクトは、親オブジェクトです。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表形式モデルを定義します。 データベース、および任意のコマンドで指定できる 1 つだけデータベースごとに 1 つのモデルがあります。 データベース オブジェクトは、親オブジェクトです。  
   
  モデルの定義は、1 つのトピックの全体の構文を再現するには大きすぎます。 このため、部分的な構文の主要な部分を強調表示下にある、子オブジェクトへのリンク。  
   

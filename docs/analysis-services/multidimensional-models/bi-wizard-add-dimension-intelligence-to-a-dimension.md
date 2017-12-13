@@ -2,12 +2,12 @@
 title: "ディメンションにディメンション インテリジェンスの追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4109707f30b6569c9d67bf6259e61958ff1a6251
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションにディメンション インテリジェンスを追加します。
-  ディメンションに標準のビジネスの種類を指定するには、ディメンション インテリジェンス拡張機能をキューブまたはディメンションに追加します。 この拡張機能により、ディメンション属性に対応する型も指定されます。 クライアント アプリケーションでは、指定された種類をデータの分析時に使用できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブまたはディメンションにディメンションの標準のビジネス タイプを指定するには、ディメンション インテリジェンス拡張機能を追加します。 この拡張機能により、ディメンション属性に対応する型も指定されます。 クライアント アプリケーションでは、指定された種類をデータの分析時に使用できます。  
   
  ディメンション インテリジェンスを追加するには、ビジネス インテリジェンス ウィザードを使用して、 **[拡張機能の選択]** ページの **[ディメンション インテリジェンスの定義]** オプションを選択します。 次に、ウィザードに従って、ディメンション インテリジェンスの適用先となるディメンションを選択し、選択したディメンションの属性を識別します。  
   

@@ -2,12 +2,12 @@
 title: "OlapDataSource データ型 (ASSL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 76fc7776501a5ac84d00fe1d50a5c8e220ba5429
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2757d17355c8e35144c50b8ae6d552ce5b304665
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="olapdatasource-data-type-assl"></a>OlapDataSource データ型 (ASSL)
-  マルチ ディメンションを表す派生データ型を定義[データソース](../../../analysis-services/scripting/objects/datasource-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]マルチ ディメンションを表す派生データ型を定義[データソース](../../../analysis-services/scripting/objects/datasource-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   

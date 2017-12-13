@@ -2,12 +2,12 @@
 title: "既存の Analysis Services 表形式サーバーおよびデータベースへの接続 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>既存の Analysis Services 表形式サーバーおよびデータベースへの接続します。
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-SQL Server 2016 では、Analysis Services 管理オブジェクト (AMO) には、サーバー接続を設定するために使用できるいくつかの名前空間が含まれています。 この記事より高い互換性レベル、またはモデルおよび 1200 で作成されたデータベースの Microsoft.AnalysisServices.Tabular 名前空間を使用してサーバー接続を確立する方法について説明します。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]SQL Server 2016 では、Analysis Services 管理オブジェクト (AMO) には、サーバー接続を設定するために使用できるいくつかの名前空間が含まれています。 この記事より高い互換性レベル、またはモデルおよび 1200 で作成されたデータベースの Microsoft.AnalysisServices.Tabular 名前空間を使用してサーバー接続を確立する方法について説明します。 
 
 Analysis Services サーバーに接続する場合、コードはサーバー オブジェクトをインスタンス化し、それで Connect メソッドを呼び出す必要があります。 接続されると、サーバー オブジェクトのプロパティには、現在の Analysis Services インスタンスの設定が反映されます。 
 

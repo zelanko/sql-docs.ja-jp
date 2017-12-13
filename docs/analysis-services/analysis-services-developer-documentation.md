@@ -2,12 +2,12 @@
 title: "Analysis Services の開発者向けドキュメント |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services の開発者向けドキュメント
-Analysis Services ではほとんどすべてのオブジェクトとワークロードは、プログラミング、および多くの場合からを選択する 1 つ以上の方法もあります。  マネージ コードの記述、スクリプト、または場合は、ソリューションの要件は、.NET framework を使用できないわけでは、XMLA および MSOLAP などのオープン スタンダードを使用して、オプションが含まれます。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services ではほとんどすべてのオブジェクトとワークロードは、プログラミング、および多くの場合からを選択する 1 つ以上の方法もあります。  マネージ コードの記述、スクリプト、または場合は、ソリューションの要件は、.NET framework を使用できないわけでは、XMLA および MSOLAP などのオープン スタンダードを使用して、オプションが含まれます。
 
 ## <a name="what-you-can-accomplish-in-code"></a>コードで行うことができます。
 一般的なプログラミング シナリオには、サーバーとデータベースの配置、管理、モデルとデータベースの作成、およびカスタム アプリケーションと Analysis Services データを使用するレポートのデータにアクセスが含まれます。 固定のアーキテクチャとオブジェクトの定義の階層、データ定義、処理、およびクエリのワークロードにまたがる周知の操作は、これらすべてのシナリオに一般的なのです。

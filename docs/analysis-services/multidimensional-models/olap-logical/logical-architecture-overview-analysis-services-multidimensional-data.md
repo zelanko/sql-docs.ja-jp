@@ -2,12 +2,12 @@
 title: "論理アーキテクチャの概要 (Analysis Services - 多次元データ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
-  Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートします。 **SharePoint 統合モード**としてインストールされた Analysis Services のインスタンスを指す[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の読み込みと Excel のクエリを実行するために使用 for SharePoint、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブック内のデータ モデル。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を決定するサーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートします。 **SharePoint 統合モード**としてインストールされた Analysis Services のインスタンスを指す[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の読み込みと Excel のクエリを実行するために使用 for SharePoint、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブック内のデータ モデル。  
   
  このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、次を参照してください。[テーブル モデリング (&) #40 です。SSAS &#41;](../../../analysis-services/tabular-models/tabular-models-ssas.md)と[テーブル ソリューションと多次元ソリューション &#40; を比較します。SSAS &#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

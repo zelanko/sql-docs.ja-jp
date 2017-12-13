@@ -2,12 +2,12 @@
 title: "レッスン 7: 主要業績評価指標 (Kpi) の定義 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9c700456926c466776c1a7049efc65ece929449
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03ae0a4bfe3c764cc0d541f99714be872029e867
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>レッスン 7 : 主要業績評価指標 (KPI) の定義
-このレッスンでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトで主要業績評価指標 (KPI) を定義する方法を学習します。 KPI は、ビジネスを測定するサーバー側の計算を定義するためのフレームワークを提供します。また、KPI を使用すれば、結果の情報を表示する方法を標準化できます。 KPI は、データ アクセス API や [!INCLUDE[msCoName](../includes/msconame-md.md)] ツール、またはサード パーティのツールを使用して、レポート、ポータル、およびダッシュボードに表示できます。 KPI は、通常のメジャーおよび他の多次元式 (MDX) に関するメタデータ ラッパーです。 詳細については、「 [多次元モデルの主要業績評価指標 &#40;KPI&#41;](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このレッスンで学習する主要業績評価指標 (Kpi) を定義する、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト。 KPI は、ビジネスを測定するサーバー側の計算を定義するためのフレームワークを提供します。また、KPI を使用すれば、結果の情報を表示する方法を標準化できます。 KPI は、データ アクセス API や [!INCLUDE[msCoName](../includes/msconame-md.md)] ツール、またはサード パーティのツールを使用して、レポート、ポータル、およびダッシュボードに表示できます。 KPI は、通常のメジャーおよび他の多次元式 (MDX) に関するメタデータ ラッパーです。 詳細については、「 [多次元モデルの主要業績評価指標 &#40;KPI&#41;](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)」を参照してください。  
   
 > [!NOTE]  
 > このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](http://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  

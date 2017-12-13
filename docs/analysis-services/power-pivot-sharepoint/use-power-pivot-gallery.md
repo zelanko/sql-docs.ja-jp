@@ -2,12 +2,12 @@
 title: "Power Pivot ギャラリーを使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>Power Pivot ギャラリーを使用する
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、特殊な SharePoint ドキュメント ライブラリです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ギャラリーは、パブリッシュされた Excel ブックの豊富なプレビューとドキュメント管理機能を提供する特殊な SharePoint ドキュメント ライブラリと Reporting Services レポートが含まれている[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データ。  
   
 > [!NOTE]  
 >  サーバーの設定によっては、特定のドキュメントのプレビュー領域に警告またはエラー メッセージが表示されることがあります。 Excel ブックが開くたびにデータを自動更新するように設定されている場合は、メッセージが表示されることがあります。 データ更新に関する警告エラー メッセージを表示するように Excel Services が構成されている場合は、データ更新警告メッセージがプレビュー画像として表示されます。 ファーム管理者またはサービス管理者は、実際のワークシートのプレビューが表示されるように構成設定を変更できます。 詳細については、「 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  

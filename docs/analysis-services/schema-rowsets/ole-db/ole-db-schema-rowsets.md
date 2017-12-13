@@ -2,12 +2,12 @@
 title: "OLE DB スキーマ行セット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB スキーマ行セット
-  次の OLE DB スキーマ行セットは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーによってサポートされています。 使用して、 **DISCOVER_ENUMERATORS**を含む行セット、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サポートされている次の OLE DB スキーマ行セット、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーです。 使用して、 **DISCOVER_ENUMERATORS**を含む行セット、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認します。  
   
  これらの行セットの詳細情報は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Web サイトの MSDN® ライブラリの OLE DB プログラマ向けリファレンスで「スキーマ行セット」のトピックを検索することによっても参照できます。  
   

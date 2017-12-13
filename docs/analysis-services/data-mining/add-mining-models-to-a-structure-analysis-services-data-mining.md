@@ -2,12 +2,12 @@
 title: "構造にマイニング モデルを追加 (Analysis Services - データ マイニング) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>マイニング モデルを構造に追加する (Analysis Services - データ マイニング)
-  1 つのマイニング構造で複数のマイニング モデルをサポートできるようになっています。 そのため、ウィザードの完了後、構造を開いて新しいマイニング モデルを追加できます。 作成した各モデルで、別のアルゴリズムの使用、パラメーターの変更、または別のデータのサブセットを使用するためのフィルターの適用が可能です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング構造は複数のマイニング モデルをサポートするためのものです。 そのため、ウィザードの完了後、構造を開いて新しいマイニング モデルを追加できます。 作成した各モデルで、別のアルゴリズムの使用、パラメーターの変更、または別のデータのサブセットを使用するためのフィルターの適用が可能です。  
   
 ## <a name="adding-new-mining-models"></a>新しいマイニング モデルの追加  
  データ マイニング ウィザードを使用して新しいマイニング モデルを作成する場合、既定では、まずマイニング構造を作成する必要があります。 次に、ウィザードにより、構造に初期マイニング モデルを追加するためのオプションが示されます。 ただし、モデルをすぐに作成する必要はありません。 構造のみを作成する場合は、予測可能な属性として使用する列や、具体的なモデルにおけるデータの使用方法について、決定する必要がありません。 将来使用するために一般的なデータ構造のみを設定しておくと、後で [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md) を使用して、構造に基づく新しいマイニング モデルを追加できます。  

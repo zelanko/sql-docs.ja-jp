@@ -2,12 +2,12 @@
 title: "Working with Schema Rowsets in ADOMD.NET |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Working with Schema Rowsets のメタデータを取得します。
-  ADOMD.NET オブジェクト モデルで使用可能なメタデータよりも多くのメタデータが必要な場合のために、ADOMD.NET には、XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP、および OLE DB for Data Mining のすべてのスキーマ行セットを取得する機能が用意されています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET オブジェクト モデルで使用可能な量より多くのメタデータを必要があるときに、ADOMD.NET は、Analysis (XMLA)、OLE DB、OLE DB for OLAP、および OLE DB 用データ マイニング スキーマ行セットの XML の全範囲を取得する機能を使用します。  
   
  **XML for Analysis メタデータ**  
  XML for Analysis スキーマ行セットでは、サーバーに関する詳細情報を取得できます。 取得できる情報には、サーバーで使用可能なデータ ソース、プロバイダーによって予約されているキーワード、プロバイダーがサポートしているリテラルなどがあります。 XML for Analysis スキーマ行セットを使用して、プロバイダーがサポートするすべてのスキーマ行セットを検出することもできます。  

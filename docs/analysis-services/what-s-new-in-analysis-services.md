@@ -2,12 +2,12 @@
 title: "Analysis Services の新機能 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services の新機能
-各種 SQL Server 2016 Analysis Services パフォーマンスの向上、簡単にソリューションの作成、データベースの自動管理を提供する新しい機能強化、双方向クロス フィルター処理、強化された関係並列パーティションの処理、およびいっそうです。 このリリースのほとんどの拡張機能の核となるのは、表形式モデル データベースの新しい互換性レベル 1200 です。     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]各種 SQL Server 2016 Analysis Services パフォーマンスの向上、簡単にソリューションの作成、データベースの自動管理を提供する新しい機能強化、双方向クロス フィルター処理、強化された関係並列パーティションの処理、およびいっそうです。 このリリースのほとんどの拡張機能の核となるのは、表形式モデル データベースの新しい互換性レベル 1200 です。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 2016 SQL PASS Conference で発表されたように、Azure のサービスとしてクラウドで Analysis Services を使用できるようになりました。 **Azure Analysis Services**表形式モデル 1200 以降の互換性レベルをサポートしています。 DirectQuery、パーティション、行レベルのセキュリティ、双方向のリレーションシップ、および翻訳がすべてサポートされます。 詳細を確認し、無料版をお試しになる場合は、「 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)」を参照してください。 

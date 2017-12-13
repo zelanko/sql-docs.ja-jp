@@ -2,12 +2,12 @@
 title: "分析管理オブジェクト (AMO) を使用した開発 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbcf54edc79a1e8254ad6210d327f4a83973f1fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41a8625ba173af8ce47cc52a9dac9ca21aa01b41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="developing-with-analysis-management-objects-amo"></a>分析管理オブジェクト (AMO) による開発
-分析管理オブジェクト (AMO) は、アプリケーションを実行中のインスタンスを管理できるようにするプログラムでアクセスされるオブジェクトの完全なライブラリ[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理オブジェクト (AMO) は、アプリケーションを実行中のインスタンスを管理できるようにするプログラムでアクセスされるオブジェクトの完全なライブラリ[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。
 
 ここでは、AMO の概念について説明します。AMO の主要オブジェクトに焦点を絞り、それらをいつどのように使用するか、それらが互いにどのように関係しているかについて解説します。 特定のオブジェクトまたはクラスの詳細についてを参照してください。
 

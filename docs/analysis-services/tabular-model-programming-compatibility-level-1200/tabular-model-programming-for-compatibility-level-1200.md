@@ -2,12 +2,12 @@
 title: "互換性レベル 1200 の表形式モデルのプログラミング |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2a2b814f4944c0e135c345d8f78970a1d08c8918
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>表形式モデル プログラミングの互換性レベル 1200 以降
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-以降の互換性レベル 1200 では、表形式のメタデータは表形式モデル オブジェクトの記述子と履歴の多次元メタデータを置き換えて、モデルのコンス トラクターの記述に使用されます。 テーブル、列、およびリレーションシップのメタデータは、テーブル、列、およびリレーションシップではなく (ディメンションおよび属性) と同等の多次元です。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]以降の互換性レベル 1200 では、表形式のメタデータは表形式モデル オブジェクトの記述子と履歴の多次元メタデータを置き換えて、モデルのコンス トラクターの記述に使用されます。 テーブル、列、およびリレーションシップのメタデータは、テーブル、列、およびリレーションシップではなく (ディメンションおよび属性) と同等の多次元です。  
   
 モデルを作成する新しい互換性レベル 1200 以上 Microsoft.AnalysisServices.Tabular Api、SQL Server Data Tools (SSDT) の最新バージョンを使用して、または変更することによって、 **CompatibilityLevel**既存の表形式の(また、SSDT で処理する) をアップグレードするモデル。 これにより新しいバージョンのサーバー、ツール、およびプログラミング インターフェイスをモデルをバインドします。   
   

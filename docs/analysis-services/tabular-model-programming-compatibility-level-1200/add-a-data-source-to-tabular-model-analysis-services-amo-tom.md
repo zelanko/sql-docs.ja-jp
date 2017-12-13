@@ -2,12 +2,12 @@
 title: "表形式モデル (Analysis Services AMO-TOM) にデータ ソースを追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8f6397f70727173345a41e92704a4277de32ddd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8aac5145c520ac61fda5689a4ba40b882bb554da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>表形式モデル (Analysis Services AMO-TOM) にデータ ソースを追加します。
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-**データソース**Microsoft.AnalysisServices.Tabular 名前空間のクラスは、データ更新操作中に種類を指定する表形式モデルのデータ ソースを抽象化し、インポートされたデータの場所。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**データソース**Microsoft.AnalysisServices.Tabular 名前空間のクラスは、データ更新操作中に種類を指定する表形式モデルのデータ ソースを抽象化し、インポートされたデータの場所。 
 
 派生したクラスのオブジェクトをインスタンス化して、表形式モデルにデータ ソースを追加することができます**データソース**に追加し、 **DataSources**モデル オブジェクトのコレクション。 サーバーに変更をコミットするには、いずれかを呼び出す**Model.SaveChanges()**または**Database.Update(UpdateOptions.ExpandFull)**です。 
 

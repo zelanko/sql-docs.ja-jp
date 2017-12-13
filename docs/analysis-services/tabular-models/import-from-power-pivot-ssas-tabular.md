@@ -2,12 +2,12 @@
 title: "Power Pivot (SSAS テーブル) からのインポート |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66ca9811b808ac3ef6b282479972482e78a083e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>Power Pivot からのインポート (SSAS テーブル)
-  このトピックでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] からのインポート プロジェクト テンプレートを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ブックからメタデータとデータをインポートし、新しいテーブル モデル プロジェクトを作成する方法を説明します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]ここからのデータとメタデータをインポートすることによって、新しい表形式モデル プロジェクトを作成する方法について説明、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]からのインポートを使用してブック[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]プロジェクト テンプレートを[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Excel ファイルの Power Pivot から新しいテーブル モデルを作成する  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからのインポートにより新しいテーブル モデル プロジェクトを作成すると、ブックの構造を定義するメタデータを使用して、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]にテーブル モデル プロジェクトの構造が作成および定義されます。 テーブル、列、メジャー、リレーションシップなどのオブジェクトは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックにあるとおりにテーブル モデル プロジェクトで保持および表示されます。 .xlsx ブック ファイルに対する変更は行われません。  

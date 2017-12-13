@@ -2,12 +2,12 @@
 title: "レッスン 8: 主要業績評価指標の作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c9a041f0effd496d4d339d5389525cb3b530020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: df35d056c69bc1acd7322965afaebcf359c9cba6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>レッスン 7: 主要業績評価指標を作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -56,14 +56,14 @@ ms.lasthandoff: 11/17/2017
   
 7.  左 (下) のスライダー フィールドに「 **1**」と入力し、右 (上) のスライダー フィールドに「 **1.07**」と入力します。  
   
-8.  **[ アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択します。
+8.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択します。
   
     ![として-表形式の lesson7 の kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > 展開可能なことを確認**説明**使用可能なアイコン スタイルの下のラベル。 これを使用して、クライアント アプリケーションでより特定できるようにする各種の KPI 要素に対する説明を入力します。  
   
-9. **[ OK ]** をクリックして KPI の作成を完了します。  
+9. **[OK]** をクリックして KPI の作成を完了します。  
   
     メジャー グリッドで、アイコンが横に表示、 **InternetCurrentQuarterSalesPerformance**メジャーです。 このアイコンは、そのメジャーが KPI のベース値として機能することを示します。  
   
@@ -81,9 +81,9 @@ ms.lasthandoff: 11/17/2017
   
 4.  主要業績評価指標 (KPI) ダイアログ ボックスで**ターゲット**選択**絶対値**、し、入力**1.25**です。   
   
-5.  **[ ステータスのしきい値の定義]** で、左 (下) のスライダー フィールドをスライドして「 **0.8**」と表示させ、右 (上) のスライダー フィールドをスライドして「 **1.03**」と表示させます。  
+5.  **[ステータスのしきい値の定義]** で、左 (下) のスライダー フィールドをスライドして「 **0.8**」と表示させ、右 (上) のスライダー フィールドをスライドして「 **1.03**」と表示させます。  
   
-6.  **[ アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、**[ OK]** をクリックします。  
+6.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、**[OK]** をクリックします。  
   
 ## <a name="whats-next"></a>次の操作
 次のレッスンに移動:[レッスン 8: パースペクティブの作成](../analysis-services/lesson-8-create-perspectives.md)です。

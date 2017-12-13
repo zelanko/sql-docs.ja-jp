@@ -2,12 +2,12 @@
 title: "ディメンションを定義する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2680567f182012a93348f4a118a0844298cb6107
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 125908516823730701e0502398d4c8346d093edb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>レッスン 2-1-ディメンションを定義します。
-この実習では、ディメンション ウィザードを使用して Date ディメンションを構築します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]次の実習では、日付ディメンションを作成するのにディメンション ウィザードを使用します。  
   
 > [!NOTE]  
 > このレッスンを学習するには、レッスン 1 のすべての手順を完了している必要があります。  

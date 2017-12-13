@@ -2,12 +2,12 @@
 title: "バッチ処理 (Analysis Services) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d9ed1a3c1c832a1ceb34d96f0df44030da2e33cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34082c3567e1050be6e72992387435ec9ef0c22b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="batch-processing-analysis-services"></a>バッチ処理 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、Batch コマンドを使用して、1 つの要求で複数の処理コマンドをサーバーに送信することができます。 バッチ処理では、どのオブジェクトがどの順序で処理されるのかを制御できます。 また、バッチは、一連のスタンドアロン ジョブとして実行するか、1 つのプロセスが失敗したときにバッチ全体をロールバックするトランザクションとして実行することもできます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、1 つの要求でサーバーに複数の処理コマンドを送信するバッチ コマンドを使用することができます。 バッチ処理では、どのオブジェクトがどの順序で処理されるのかを制御できます。 また、バッチは、一連のスタンドアロン ジョブとして実行するか、1 つのプロセスが失敗したときにバッチ全体をロールバックするトランザクションとして実行することもできます。  
   
  バッチ処理では、変更をコミットするのに必要な時間をまとめることで短縮し、データの可用性を最大にします。 ディメンションを完全に処理すると、そのディメンションを使用するパーティションには未処理のマークが付きます。 その結果、未処理のパーティションを含むキューブは参照できなくなります。 この問題は、バッチ処理ジョブを使用し、影響を受けるパーティションと共にディメンションを処理することで対処できます。 バッチ処理ジョブをトランザクションとして実行すると、すべての処理が完了するまで、そのトランザクションに含まれるすべてのオブジェクトをクエリ用に使用できます。 トランザクションが変更をコミットするときに、影響を受けるオブジェクトはロックされるため、オブジェクトは一時的に使用できなくなります。ただし、変更をコミットするために必要な全体の時間は、オブジェクトを個々に処理した場合よりも短縮されます。  
   

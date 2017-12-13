@@ -2,12 +2,12 @@
 title: "レベルの要素 (CSDLBI) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8430e055cb366420af51d8045381da1aacf78e3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 63a271429d0d71516760e81ba0c085f903d90511
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="level-element-csdlbi"></a>Level 要素 (CSDLBI)
-  Level 要素は、階層内の単一のレベルを定義する複合型です  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Level 要素は、階層内の 1 つのレベルを定義する複合型です。  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、Level 要素を定義する要素と属性を示します。  

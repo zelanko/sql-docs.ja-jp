@@ -1,12 +1,12 @@
 ---
 title: "テーブル モデル デザイナー |Microsoft ドキュメント"
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>テーブル モデル デザイナー (SSAS)
-テーブル モデル デザイナーは、Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の一部であり、プロフェッショナルなテーブル モデル ソリューションの開発のために特化したプロジェクトの種類のテンプレートが付属しています。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデル デザイナーの一部である[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、プロフェッショナルなテーブル モデル ソリューションを開発するには、具体的には追加のプロジェクトの種類のテンプレートにします。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。    
   
 ##  <a name="bkmk_benefits"></a> 利点  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルを作成するための新しいプロジェクト テンプレートが、使用可能なプロジェクトの種類に追加されます。 いずれかのテンプレートを使用して新しいテーブル モデル プロジェクトを作成した後は、テーブル モデル デザイナー ツール、およびウィザードを使用して、モデル作成を開始できます。  

@@ -2,12 +2,12 @@
 title: "Analysis Services の機能とタスク |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82a302c5d7ef97038ae7d15e8478a9551189e416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72bf28a40f2314ec696eae6ce8b758010a0ad78e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services の機能とタスク
-  Analysis Services に関する基本ドキュメントは、インストールしたモードで使用できるツール、タスク、および機能に関する情報だけを参照できるように、モデルの種類およびサーバーのモード別に分類されています。 複数のモードに関連するサーバー管理タスクは、インスタンス管理にあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Analysis Services の基本的なドキュメントはモデルの種類とサーバーのモードで整理されるので、ツール、タスク、およびインストールしたモードで使用できる機能に集中できます。 複数のモードに関連するサーバー管理タスクは、インスタンス管理にあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [テーブル ソリューションと多次元ソリューションの比較 &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  

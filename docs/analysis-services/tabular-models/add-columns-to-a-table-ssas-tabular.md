@@ -2,12 +2,12 @@
 title: "テーブル (SSAS テーブル) に列を追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>列のテーブルへの追加 (SSAS テーブル)
-  このトピックでは、既存のテーブルに列を追加する方法について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックでは、既存のテーブルに列を追加する方法について説明します。  
   
 ## <a name="add-columns-from-the-data-source"></a>データ ソースからの列の追加  
  テーブルのインポート ウィザードを使用してデータ ソース テーブルからデータをインポートすると、ソース テーブル内のすべての列を含むテーブルがモデルに新しく作成されます。ただし、[プレビュー] 機能および [フィルター] 機能を使用して特定の列を除外した場合は、このテーブルには選択したフィルター処理済みのデータのみが含まれます。 また、インポートする特定の列のみを指定する SQL クエリを作成することもできます。 ただし、モデル テーブルに追加したいその他の列がソース テーブルにあることが後で判明する場合や DAX 式で算定された値を含む計算列を追加する必要がある場合があります。  

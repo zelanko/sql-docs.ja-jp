@@ -2,12 +2,12 @@
 title: "Power Pivot の正常性ルールの構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>Power Pivot の正常性ルールの構成
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint には、サーバーの可用性と構成に関する問題を監視および解決するのに役立つ SharePoint 正常性ルールが含まれています。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]SharePoint が含まれていますする際に役立つ SharePoint 正常性ルールを監視およびサーバー可用性と構成に関する問題を解決します。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
   
  正常性ルールは、最終的にサービスが中断される可能性があるサーバーの問題を早期に検出します。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint には、ユーザーに影響を与える前に問題を特定して解決するのに役立つさまざまなルールが用意されています。 これらのルールの多くは、配置固有の特性に合うようにカスタマイズできます。 たとえば、ディスク領域に関する警告に対処する時間がより多く必要な場合は、警告が早めに発生するように、使用可能なディスク領域の割合を 5% から 10% に引き上げることができます。  
   
