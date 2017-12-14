@@ -1,6 +1,6 @@
 ---
 title: "クラウド内の SQL Server 2017 の概要 |Microsoft ドキュメント"
-description: "このクイック スタート チュートリアルでは、任意のクラウド内の Linux 上で SQL Server 2017 を実行する方法を示します。"
+description: "このクイック スタート チュートリアルでは、任意のクラウド内の Linux 上の SQL Server 2017 を実行する方法を示します。"
 author: annashres
 ms.author: annashres
 manager: jhubbard
@@ -21,7 +21,7 @@ ms.lasthandoff: 12/01/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このクイック スタート チュートリアルでは、任意のクラウドの Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server 2017 をインストールします。 [Azure ポータルでの SQL Server の Linux 仮想マシンをプロビジョニング](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) に移動して Azure で Linux の SQL Server を実行します。
+このクイック スタート チュートリアルでは、任意のクラウドの Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server 2017 をインストールします。Azure で Linux の SQL Server を実行する場合は、「[Azure Portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)」に移動してください。
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
@@ -38,13 +38,13 @@ ms.lasthandoff: 12/01/2017
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  リモート接続を構成します。 
     * [Amazon EC2 コンソール]( https://console.aws.amazon.com/ec2/) を開きます。
-    * ナビゲーション ウィンドウで、**セキュリティ グループ** を次のように選択します。
+    * ナビゲーション ウィンドウで、**セキュリティ グループ**を選択します。 
     * **受信、編集、規則の追加** を選択します。
     * SQL Server がリッスンするポートでトラフィックを許可する受信規則を追加します。(既定の TCP ポートは 1433)
 
     
 ## <a name="digital-ocean"></a>Digital Ocean
-1. [コントロール パネル](https://cloud.digitalocean.com/login) のドロップレットの作成をクリックしログインします。
+1. [コントロール パネル](https://cloud.digitalocean.com/login)にログインし、ドロップレットの作成をクリックします。 
 1. 少なくとも 2 GB のメモリの Ubuntu 16.04 のドロップレットを選択します。
 1. ドロップレットに ssh で接続します。
 1. [Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md) を参照します。
