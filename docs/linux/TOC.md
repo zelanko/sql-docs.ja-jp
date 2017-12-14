@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_ペースメーカー クラスターの配置](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_可用性グループの作成と構成](sql-server-linux-create-availability-group.md)
 
 # 概念
 ## Install
@@ -51,6 +53,7 @@
 ### [PowerShell を使用した管理](sql-server-linux-manage-powershell.md)
 ### [ログ配布の使用](sql-server-linux-use-log-shipping.md)
 ### [データベース メールと電子メール アラートの使用](sql-server-linux-db-mail-sql-agent.md)
+### [可用性の複数サブネットの構成](sql-server-linux-configure-multiple-subnet.md)
 
 ## [移行](sql-server-linux-migrate-overview.md)
 ### [Windows から BACPAC のエクスポートとインポート](sql-server-linux-migrate-ssms.md)
@@ -63,19 +66,20 @@
 ### [SSIS パッケージのスケジュール設定](sql-server-linux-schedule-ssis-packages.md)
 
 ## [ビジネス継続性の構成](sql-server-linux-business-continuity-dr.md)
+### [可用性の基礎](sql-server-linux-ha-basics.md)
 ### [バックアップと復元](sql-server-linux-backup-and-restore-database.md)
 #### [仮想デバイス インターフェイス - Linux](sql-server-linux-backup-vdi-specification.md)
 ### [フェールオーバー クラスター インスタンス](sql-server-linux-shared-disk-cluster-concepts.md)
-#### [Red Hat Enterprise Linux]()
+#### [Red Hat Enterprise Linux (RHEL)]()
 ##### [構成 (HA アドオン)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [操作 (HA アドオン)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-#### [SUSE Linux Enterprise Server]()
+#### [SUSE Linux Enterprise Server (SLES)]()
 ##### [構成 (HA アドオン)](sql-server-linux-shared-disk-cluster-sles-configure.md)
 ### [可用性グループ](sql-server-linux-availability-group-overview.md)
 #### [高可用性のための作成](sql-server-linux-availability-group-ha.md)
 ##### [AG の構成](sql-server-linux-availability-group-configure-ha.md)
 ##### [RHEL での構成](sql-server-linux-availability-group-cluster-rhel.md)
-##### [SUSE での構成](sql-server-linux-availability-group-cluster-sles.md)
+##### [SLES での構成](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Ubuntu での構成](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
 #### [読み取りスケールのみ用に作成する]()
@@ -91,8 +95,8 @@
 
 # サンプル
 ## 無人インストール
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Red Hat Enterprise Linux (RHEL)](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server (SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # リソース
