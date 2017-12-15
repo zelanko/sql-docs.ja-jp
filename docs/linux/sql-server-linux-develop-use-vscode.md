@@ -1,6 +1,6 @@
 ---
 title: "For SQL Server、Visual Studio Code mssql 拡張機能を使用して |Microsoft ドキュメント"
-description: "このチュートリアルでは、VS Code の mssql 拡張機能を使用する方法を示します。 この拡張機能を使用すると、編集し、VS Code で TRANSACT-SQL スクリプトを実行できます。"
+description: "このチュートリアルでは、VS Code の mssql 拡張機能を使用する方法を示します。 この拡張機能を使用すると、VS Code で Transact-SQL スクリプトを編集し、実行できます。"
 author: erickangMSFT
 ms.author: erickang
 manager: jhubbard
@@ -21,20 +21,20 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/01/2017
 ---
-# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code を使用して作成し、SQL Server の TRANSACT-SQL スクリプトを実行
+# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code を使用して SQL Server の Transact-SQL スクリプトを作成し、実行する
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このトピックの内容を使用する方法を示しています、 **mssql** 拡張機能は Visual Studio Code (VS Code) を SQL Server データベースを開発するための拡張機能です。
+このトピックでは、Visual Studio Code (VS Code) 用の **mssql** 拡張機能を使用して SQL Server データベースを開発する方法について説明します。
 
-Visual Studio Code は、Linux、macOS、および拡張機能をサポートする Windows のグラフィカルなコード エディターです。 [**mssql** VS Code 拡張機能]、SQL Server transact-sql (T-SQL)、クエリに接続し、結果を表示することができます。
+Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカルなコード エディターで、拡張機能をサポートします。[VS Code 用の **mssql** 拡張機能]により、SQL Server に接続し、 Transact-SQL (T-SQL) でクエリを行い、結果を表示することができます。
 
 ## <a name="install-vs-code"></a>VS Code をインストールします。
 1. VS Code をまだインストールしていない場合[をダウンロードしてインストール VS Code]コンピューターにします。
 
 2. VS Code を開始します。
 
-## <a name="install-the-mssql-extension"></a>mssql 拡張機能をインストールします。
+## <a name="install-the-mssql-extension"></a>Mssql 拡張機能をインストールします。
 次の手順では、mssql 拡張機能をインストールする方法について説明します。 
 
 1. キーを押して**CTRL + SHIFT + P** (または**F1**) VS コードでコマンド パレットを開きます。 
@@ -47,12 +47,12 @@ Visual Studio Code は、Linux、macOS、および拡張機能をサポートす
    
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
 
-3. **mssql**拡張機能は、最大 1 分間でインストールされます。 正常にインストールされていることを示すプロンプトを待ちます。
+3. **mssql**拡張機能は、最大 1 分間でインストールされます。 正常にインストールされたことを示すプロンプトを待ちます。
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > MacOS、OpenSSL をインストールする必要があります。 これは、mssql 拡張機能で使用されている.Net Core の前提条件になります。 以下の**前提条件をインストール**の手順を[.Net Core のインストラクション]です。 または、macOS ターミナルで、次のコマンドを実行することでできます。
+   > MacOS の場合、OpenSSL をインストールする必要があります。 これは、mssql 拡張機能で使用されている.Net Core の前提条件です。[.Net Core のインストラクション]にある**前提条件のインストール**手順に従ってください。 または、macOS ターミナルで次のコマンドを実行することもできます。
    >
    >   ```bash
    >   brew update
