@@ -3,8 +3,11 @@ title: "[オブジェクトの依存関係] | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 184e5862361d61e00bd56a639ae4c2687f29e3a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f1d1605a4f702061dc9dcd5be2ee5c673866bed6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
-一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係] ([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係] ([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  
   
 現在のオブジェクトの **[オブジェクトの依存関係] ([詳細設定] ページ)** には、オブジェクトに依存する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベース オブジェクトおよび [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] オブジェクトが一覧表示されます。 それらのオブジェクトは、別のサーバーに格納されている場合もあります。  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトが依存するオブジェクトの一覧が表示されます。  
   
 **依存関係**  
-**** *<selected object>* をクリックした場合は、選択されているオブジェクトに依存するオブジェクトの階層ビューが表示されます。 [*<selected object>* **が依存する****オブジェクト**] をクリックすると、選択されているオブジェクトが依存するオブジェクトの階層ビューが表示されます。  
+[*<selected object>* **に依存するオブジェクト]** をクリックした場合は、選択されているオブジェクトに依存するオブジェクトの階層ビューが表示されます。 [*<selected object>* **が依存する****オブジェクト**] をクリックすると、選択されているオブジェクトが依存するオブジェクトの階層ビューが表示されます。  
   
 **名前**  
 上記の **[依存関係]** ツリー ビューで選択されたオブジェクトの名前が表示されます。  

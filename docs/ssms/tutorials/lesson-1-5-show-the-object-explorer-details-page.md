@@ -2,9 +2,12 @@
 title: "[オブジェクト エクスプローラーの詳細] ページの表示 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,13 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cd84b6f12a797177d11bda12c4998eec4473ff41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9dcd0a63047fdb9a5bb1398b996b3aac85ca4c97
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-5---show-the-object-explorer-details-page"></a>レッスン 1-5 - [オブジェクト エクスプローラーの詳細] ページの表示
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーで選択した各オブジェクトのレポートを表示できます。 [オブジェクト エクスプローラーの詳細] ページと呼ばれるこのレポートは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]により作成され、ドキュメント ウィンドウに表示されます。  
   
 ## <a name="showing-the-object-explorer-details-page"></a>[オブジェクト エクスプローラーの詳細] ページの表示  
@@ -32,7 +36,7 @@ ms.lasthandoff: 11/09/2017
   
 -   または、F7 キーを押すことによって、いつでも **[オブジェクト エクスプローラーの詳細]** ページを表示できます。  
   
-オブジェクト エクスプローラーの各レベルで、オブジェクトに関してユーザーが最も必要としそうな情報が **[オブジェクト エクスプローラーの詳細]** ページに表示されます。 オブジェクトの一覧は、大きい場合、**オブジェクト エクスプ ローラーの詳細**ページが情報の処理に長い時間がかかります。  
+オブジェクト エクスプローラーの各レベルで、オブジェクトに関してユーザーが最も必要としそうな情報が **[オブジェクト エクスプローラーの詳細]** ページに表示されます。 オブジェクトのリストが大きい場合は、**オブジェクトエクスプローラの詳細**ページが処理に時間がかかることがあります。  
   
 **[オブジェクト エクスプローラーの詳細]** ページには、2 つのペインがあります。 ページの上部にある **[一覧]** ペインには、オブジェクト エクスプローラーで選択したノードに存在するオブジェクトの一覧が表示されます。 **[一覧]** ペインの下にある **[詳細]** ペインには、オブジェクトの種類ごとに必要と思われる情報が表示されます。 多数の項目を削除する場合、 **一覧** ビューを使用すると、複数の項目を簡単に選択することができます。  
   
