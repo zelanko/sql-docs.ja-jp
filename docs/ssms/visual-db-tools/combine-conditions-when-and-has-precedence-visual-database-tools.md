@@ -3,8 +3,11 @@ title: "AND が優先する場合の条件を結合する (Visual Database Tools
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a84b1997c18d5e23554dbb9f85e2c6baad4e9b58
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 375048e54f6cf1b95650a4f21deac8137ece5242
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
-AND で条件を結合するには、クエリに対して列を 2 回 (各条件について 1 回ずつ) 追加します。 OR で条件を結合するには、[フィルター] 列で最初の条件を指定し、次の条件を **[または...]** 列で指定します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] AND で条件を結合するには、クエリに対して列を 2 回 (各条件について 1 回ずつ) 追加します。 OR で条件を結合するには、[フィルター] 列で最初の条件を指定し、次の条件を **[または...]** 列で指定します。  
   
 たとえば、初級レベルの仕事に従事している勤続 5 年以上の従業員、または入社日に関係なく中級レベルの仕事に従事している従業員を検索するとします。 このクエリには、3 つの条件が必要であり、その中の 2 つの条件を AND で結合する必要があります。  
   

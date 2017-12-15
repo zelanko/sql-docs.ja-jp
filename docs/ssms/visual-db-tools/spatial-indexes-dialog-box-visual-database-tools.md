@@ -3,8 +3,11 @@ title: "[空間インデックス] ダイアログ ボックス (Visual Database
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a3e6df8d3ffcae88b1a89c5c4551d0a8a5b8b8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
-**[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、 **[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、**[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
   
 空間インデックスの作成の制限については、「 [空間インデックスの概要](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)」を参照してください。  
   

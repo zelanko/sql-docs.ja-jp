@@ -3,8 +3,11 @@ title: "パラメーターを使用したクエリ (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3deb83bf9fdaafd3598080e5889999b2630aaf22
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7a74efc549ad7e04191e518ba17b1a88c230d8cf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>パラメーターを使用したクエリ (Visual Database Tools)
-多くの場合、アプリケーションで何度も使用でき、実行のたびに入力値を変えることができるクエリを作成すると便利です。 このセクションでは、汎用的なパラメーター クエリを作成する方法について説明します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 多くの場合、アプリケーションで何度も使用でき、実行のたびに入力値を変えることができるクエリを作成すると便利です。 このセクションでは、汎用的なパラメーター クエリを作成する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [パラメーター クエリ (Visual Database Tools)](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  

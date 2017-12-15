@@ -3,8 +3,11 @@ title: "[オブジェクトの選択] (オブジェクト エクスプローラ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="select-objects-object-explorer"></a>[オブジェクトの選択]\(オブジェクト エクスプローラー)
-**[オブジェクトの選択]** ダイアログ ボックスを使用すると、オブジェクトを別のダイアログ ボックスの一覧に追加できます。 ダイアログ ボックスを開いた方法に応じて、ダイアログ ボックスのタイトルおよび使用できるオプションが異なります。 利用可能なオプションだけが表示されます。たとえば、新しいオブジェクトの所有者を選択する場合は、利用可能なログインだけが表示されます。  
+# <a name="select-objects-object-explorer"></a>[オブジェクトの選択] (オブジェクト エクスプローラー)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[オブジェクトの選択]** ダイアログ ボックスを使用すると、オブジェクトを別のダイアログ ボックスの一覧に追加できます。 ダイアログ ボックスを開いた方法に応じて、ダイアログ ボックスのタイトルおよび使用できるオプションが異なります。 利用可能なオプションだけが表示されます。たとえば、新しいオブジェクトの所有者を選択する場合は、利用可能なログインだけが表示されます。  
   
 ## <a name="options"></a>オプション  
 **[以下のオブジェクトの種類を選択]**  

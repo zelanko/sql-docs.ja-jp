@@ -3,8 +3,11 @@ title: "[プロパティ] ウィンドウ (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f31c5197f6b4767c91c85b042caf418c4c2b2ad7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="properties-window-management-studio"></a>[プロパティ] ウィンドウ (Management Studio)
-このウィンドウを使用して、選択した要素のプロパティを表示します。 また、[プロパティ] ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 [プロパティ] ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このウィンドウを使用して、選択した要素のプロパティを表示します。 また、[プロパティ] ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 [プロパティ] ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  
   
 [プロパティ] ウィンドウには、さまざまな種類の編集フィールドが表示されます。表示されるフィールドは、特定のプロパティで必要となる内容に応じて異なります。 淡色で表示されているプロパティは変更できません。  
   

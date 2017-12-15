@@ -3,8 +3,11 @@ title: "クエリの削除 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b3c61f8905a7625ccedc00153bf02eca62287b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 168fe3c2e6e9de016b99a318165457bab8ba83c4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-queries-visual-database-tools"></a>クエリの削除 (Visual Database Tools)
-クエリを削除することにより、プロジェクトからそのクエリを除外し、ファイル システムから完全に削除できます。 次に示す手順で削除されたクエリは、ごみ箱に保存されないため、復元できません。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリを削除することにより、プロジェクトからそのクエリを除外し、ファイル システムから完全に削除できます。 次に示す手順で削除されたクエリは、ごみ箱に保存されないため、復元できません。  
   
 ### <a name="to-permanently-delete-a-query"></a>クエリを完全に削除するには  
   

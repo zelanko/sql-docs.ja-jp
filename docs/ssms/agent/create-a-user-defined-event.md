@@ -3,8 +3,11 @@ title: "ユーザー定義イベントの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8298bbe39bcaeada19b2a5b50b87a1f14a8a5f89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 571d6eefa997650d588972d9c5b48750ff1905c1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-user-defined-event"></a>ユーザー定義イベントの作成
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]によって定義済みのイベント以外のイベントを監視するには、ユーザー定義イベントを作成します。 また、各ユーザー定義イベントに対して重大度レベルを割り当てることもできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によって定義済みのイベント以外のイベントを監視するには、ユーザー定義イベントを作成します。 また、各ユーザー定義イベントに対して重大度レベルを割り当てることもできます。  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]を使用中に、各ユーザー定義イベント メッセージに対して **[Windows アプリケーション イベント ログに書き込む]** オプションを選択して、そのメッセージがログに書き込まれるように設定できます。 既定では、ユーザー定義メッセージが生成された場合でも、その重大度が 19 より低い場合は [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows アプリケーション ログに送られません。 したがって、重大度が 19 より低いユーザー定義メッセージは、SQL Server エージェントの警告をトリガーしません。  

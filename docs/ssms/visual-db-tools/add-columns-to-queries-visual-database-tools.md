@@ -3,8 +3,11 @@ title: "クエリへの列の追加 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef0cb558d600efdbf0e47e8c45cdd5f49c50274e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3ac56031605bb2d0b1a8122ebb480116ae5f708c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>クエリへの列の追加 (Visual Database Tools)
-クエリで列を使用するには、クエリに列を追加する必要があります。 列の追加は、クエリ出力に列を追加する場合、列を並べ替える場合、列の内容を検索する場合、または列の内容を集計する場合に行います。 クエリで使用する列のうち、クエリを実行したときに結果ペインに含める列を指定できます。 詳細については、「 [クエリ結果からの列の削除 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリで列を使用するには、クエリに列を追加する必要があります。 列の追加は、クエリ出力に列を追加する場合、列を並べ替える場合、列の内容を検索する場合、または列の内容を集計する場合に行います。 クエリで使用する列のうち、クエリを実行したときに結果ペインに含める列を指定できます。 詳細については、「 [クエリ結果からの列の削除 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)」を参照してください。  
   
 > [!NOTE]  
 > 列のデータ型をクエリおよびビュー デザイナーに表示するには、 **ダイアグラム ペイン** でテーブルまたはテーブル値オブジェクトを選択して、プロパティ ウィンドウの [列一覧] をクリックします。 次に省略記号 ( **[...]** ) をクリックすると、 **[列一覧]** ダイアログ ボックスが開きます。  

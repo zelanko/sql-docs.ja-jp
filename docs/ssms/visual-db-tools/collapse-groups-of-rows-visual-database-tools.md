@@ -3,8 +3,11 @@ title: "行グループの集約 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11ab34e9c5651be1dc771d71a738f49bb230262a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6afdaa463c3a7e1ac427af43156343e7ab7dcee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>行グループの集約 (Visual Database Tools)
-基になるデータの行グループ全体に結果の各行が対応するようなクエリ結果を作成することができます。 行を集約するときは、次の点に注意してください。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 基になるデータの行グループ全体に結果の各行が対応するようなクエリ結果を作成することができます。 行を集約するときは、次の点に注意してください。  
   
 -   **重複する行を除外する** クエリによっては、同じ行が複数出現する結果セットが作成されます。 たとえば、著者の居住地の市町村名と州名を各行に含む結果セットを作成するとします。この場合、複数の著者が住む市町村があると、同じ行が複数作成されます。 結果の SQL ステートメントは次のようになります。  
   

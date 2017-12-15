@@ -3,8 +3,11 @@ title: "メニューとショートカット キーのカスタマイズ | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
-キーボード アクセス キーを使用すると、Alt キーを押しながら*<single letter>*を押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] キーボード アクセス キーを使用すると、Alt キーを押しながら *<single letter>* キーを押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
   
 Ctrl キーを使用したストアド プロシージャのキーボード ショートカット キーは、 **[ツール]** メニューから開く **[オプション]**/**[キーボード]** ダイアログ ボックスを使用します。  
   

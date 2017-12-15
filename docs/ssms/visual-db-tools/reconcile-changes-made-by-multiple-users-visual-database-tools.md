@@ -3,8 +3,11 @@ title: "複数のユーザーによる変更の調整 (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00eeab1dbe74e77189136b200b4f1ddfe50e218b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>複数のユーザーによる変更の調整 (Visual Database Tools)
-マルチユーザー環境では、同一のオブジェクトに複数のユーザーが同時に変更を加える場合があります。 この現象は、テーブル デザイナーまたはデータベース ダイアグラム デザイナーでオブジェクトの構造を操作しているときに発生する可能性があります。また、クエリおよびビュー デザイナーの結果ペインに返された結果の値に、他のユーザーが変更を加えている場合もあります。 こうした現象により、解決を必要とする競合が発生する可能性があります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] マルチユーザー環境では、同一のオブジェクトに複数のユーザーが同時に変更を加える場合があります。 この現象は、テーブル デザイナーまたはデータベース ダイアグラム デザイナーでオブジェクトの構造を操作しているときに発生する可能性があります。また、クエリおよびビュー デザイナーの結果ペインに返された結果の値に、他のユーザーが変更を加えている場合もあります。 こうした現象により、解決を必要とする競合が発生する可能性があります。  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>テーブル デザイナーまたはデータベース ダイアグラム デザイナーでの競合  
 たとえば、テーブル デザイナーでテーブルを操作しているときに、他のユーザーが同じテーブルまたは関連するテーブルを削除したり、名前を変更したりする可能性があります。 テーブルを保存しようとすると、 [[データベースの変更を確認] ダイアログ ボックス (Visual Database Tools)](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) によって、テーブルを前回開いた後でデータベースが更新されたことが通知されます。  

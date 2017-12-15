@@ -3,8 +3,11 @@ title: "手動でのテーブルの結合 (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b73ed044ca4610040bfb31e6108ebd2b51a47c67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f9fe3b4dd3fc65924ef308ca5ce817c9a008fc1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動でのテーブルの結合 (Visual Database Tools)
-[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)では、クエリに複数のテーブルを追加すると、共通データ、またはテーブルの関連付けに関するデータベース内に格納されている情報に基づいて、テーブルが結合されます。 詳しくは、「[テーブルの自動結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)」をご覧ください。 ただし、クエリおよびビュー デザイナーでテーブルが自動的に結合されなかった場合、またはテーブル間の結合条件を追加作成する場合は、テーブルを手動で結合できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)では、クエリに複数のテーブルを追加すると、共通データ、またはテーブルの関連付けに関するデータベース内に格納されている情報に基づいて、テーブルが結合されます。 詳しくは、「[テーブルの自動結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)」をご覧ください。 ただし、クエリおよびビュー デザイナーでテーブルが自動的に結合されなかった場合、またはテーブル間の結合条件を追加作成する場合は、テーブルを手動で結合できます。  
   
 結合は、同じ情報を含む列だけでなく、任意の 2 つの列の比較に基づいて作成できます。 たとえば、データベースに `titles` および `roysched`という 2 つのテーブルがある場合、 `ytd_sales` テーブルの `titles` 列の値と、 `lorange` テーブルの `hirange` 列および `roysched` 列の値とを比較できます。 この結合を作成すると、本年度の売り上げが印税の支払いの上限と下限の範囲内にある書名を検索できます。  
   

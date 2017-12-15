@@ -3,8 +3,11 @@ title: "結果ペイン (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d363fd63a32e338558e67ca86d5ed155e48a72c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 72c6d376b55df42961420aacb9d768324196c21f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="results-pane-visual-database-tools"></a>結果ペイン (Visual Database Tools)
-結果ペインには、最後に実行された選択クエリの結果が表示されます。 他の種類のクエリ結果は、メッセージ ボックスに表示されます。結果ペインを表示するには、クエリまたはビューを表示または作成するか、テーブルのデータを返します。 結果ペインが既定で表示されない場合は、 **[クエリ デザイナー]** メニューの **[ペイン]**をポイントし、 **[結果]**をクリックします。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 結果ペインには、最後に実行された選択クエリの結果が表示されます。 他の種類のクエリ結果は、メッセージ ボックスに表示されます。結果ペインを表示するには、クエリまたはビューを表示または作成するか、テーブルのデータを返します。 結果ペインが既定で表示されない場合は、 **[クエリ デザイナー]** メニューの **[ペイン]**をポイントし、 **[結果]**をクリックします。  
   
 ## <a name="what-you-can-do-in-the-results-pane"></a>結果ペインで可能な操作  
   

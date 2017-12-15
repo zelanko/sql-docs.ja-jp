@@ -3,8 +3,11 @@ title: "抽出条件ペインで検索条件を組み合わせる場合の規則
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b40c9f61780760655373d160e3c6c9ee52545d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7b0d8e0ec4d73c564b9cd9db14fac961c310f48
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>抽出条件ペインで検索条件を組み合わせる場合の規則 (Visual Database Tools)
-クエリを作成する際には、任意の数の AND および OR 演算子で結合して任意の数の検索条件を含めることができます。 AND 句と OR 句を組み合わせたクエリは複雑になる場合があるため、そのようなクエリを実行したときにどのように解釈されるのか、およびそのようなクエリが[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)と [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)でどのように表現されるのかについて理解しておくと役に立ちます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリを作成する際には、任意の数の AND および OR 演算子で結合して任意の数の検索条件を含めることができます。 AND 句と OR 句を組み合わせたクエリは複雑になる場合があるため、そのようなクエリを実行したときにどのように解釈されるのか、およびそのようなクエリが[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)と [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)でどのように表現されるのかについて理解しておくと役に立ちます。  
   
 > [!NOTE]  
 > AND 演算子または OR 演算子を 1 つだけ含む検索条件の詳細については、「[1 つの列に対して複数の検索条件を指定する (Visual Database Tools)](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md)」および「[複数の列に対して複数の検索条件を指定する (Visual Database Tools)](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md)」を参照してください。  

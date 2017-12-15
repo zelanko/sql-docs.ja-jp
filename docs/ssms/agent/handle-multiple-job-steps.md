@@ -3,8 +3,11 @@ title: "複数のジョブ ステップの処理 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8dbdbaa5f10ef2903793628e0b8b4adbd57b575c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27cad9f2ede077dc8cc227c9639bf3b979b5995f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="handle-multiple-job-steps"></a>複数のジョブ ステップの処理
-ジョブに複数のジョブ ステップがある場合、ジョブ ステップを実行する順序を指定する必要があります。 この順序指定を *フロー制御**と呼びます。* いつでも新しいジョブ ステップを追加して、フローを再構成できます。変更が有効になるのは、次にジョブを実行するときです。 次の図は、データベース バックアップ ジョブのフロー制御を示しています。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ジョブに複数のジョブ ステップがある場合、ジョブ ステップを実行する順序を指定する必要があります。 この順序指定を *フロー制御**と呼びます。* いつでも新しいジョブ ステップを追加して、フローを再構成できます。変更が有効になるのは、次にジョブを実行するときです。 次の図は、データベース バックアップ ジョブのフロー制御を示しています。  
   
 ![SQL Server エージェントのジョブ ステップのフロー制御](../../ssms/agent/media/dbflow01.gif "SQL Server エージェントのジョブ ステップのフロー制御")  
   

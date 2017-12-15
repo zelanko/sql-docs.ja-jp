@@ -3,8 +3,11 @@ title: "SQL Server エージェント サービスの SQL Server 接続の設定
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae121d1c655caadfb447d2714601c0f24ea71c1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5caa2ebe88fd2de52a239693e5a5b517f2e8ae46
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>SQL Server エージェント サービスの SQL Server 接続の設定 (SQL Server Management Studio)
-このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] で [!INCLUDE[ssDE](../../includes/ssde_md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] エージェントと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]間の接続を設定する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスでは、Windows 認証を使用して、SQL Server のローカル インスタンスに接続できます。  
+# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントと [!INCLUDE[ssDE](../../includes/ssde_md.md)] 間の接続を設定する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスでは、Windows 認証を使用して、SQL Server のローカル インスタンスに接続できます。  
   
 **このトピックの内容**  
   

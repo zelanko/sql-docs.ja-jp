@@ -3,8 +3,11 @@ title: "[オブジェクトの参照](オブジェクト エクスプローラ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e6e65cd3b8a6f9120f2e20872eacb8fd40f2b7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f995e8f75cd25b006c89480bd1f5efece9e08d9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="browse-for-objects-object-explorer"></a>[オブジェクトの参照] \(オブジェクト エクスプローラー)
-選択されている種類のオブジェクトを表示します。 対応するチェック ボックスをオンにすると、この一覧から 1 つまたは複数のオブジェクトを選択できます。 **[オブジェクトの参照]** ボックスには、アクションに対して適切であり、ユーザーが表示する権限を持っている項目のみが表示されます。  
+# <a name="browse-for-objects-object-explorer"></a>[オブジェクトの参照] (オブジェクト エクスプローラー)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 選択されている種類のオブジェクトを表示します。 対応するチェック ボックスをオンにすると、この一覧から 1 つまたは複数のオブジェクトを選択できます。 **[オブジェクトの参照]** ボックスには、アクションに対して適切であり、ユーザーが表示する権限を持っている項目のみが表示されます。  
   
 ## <a name="options"></a>オプション  
 **チェック ボックス**  

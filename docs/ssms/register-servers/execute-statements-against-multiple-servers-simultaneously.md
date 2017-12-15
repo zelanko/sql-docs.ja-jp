@@ -2,9 +2,12 @@
 title: "複数のサーバーに対するステートメントの同時実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee6fb349a9b2582d59a176af52b5eb4b71d79a37
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 691287e95ad38efdd6affe1ce7bb922d8e46380f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>複数のサーバーに対するステートメントの同時実行
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で複数のサーバーに対してクエリを同時に実行する方法について説明します。これを行うには、ローカル サーバー グループ、または 1 つの中央管理サーバーと 1 つ以上のサーバー グループ、およびグループ内の 1 つ以上の登録済みサーバーを作成し、このグループ全体に対してクエリを実行します。 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で複数のサーバーに対してクエリを同時に実行する方法について説明します。これを行うには、ローカル サーバー グループ、または 1 つの中央管理サーバーと 1 つ以上のサーバー グループ、およびグループ内の 1 つ以上の登録済みサーバーを作成し、このグループ全体に対してクエリを実行します。 
   
 クエリから返された結果は、結合して 1 つの結果ペインに表示するか、別々の結果ペインに表示することができます。 結果セットには、サーバー名を表示する列と、各サーバーに対するクエリで使用されたログインを表示する列を追加できます。 中央管理サーバーおよび従属サーバーは、Windows 認証を使用しないと登録できません。 ローカル サーバー グループ内のサーバーは、Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録できます。  
   

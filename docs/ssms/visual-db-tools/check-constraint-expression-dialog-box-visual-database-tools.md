@@ -3,8 +3,11 @@ title: "[制約式の確認] ダイアログ ボックス (Visual Database Tools
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 295948ceb25e7176bc821b01b78d586f7a07b152
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2c1d1ecee5caafc8b4b4c0557fcbe15daf1552cf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>[制約式の確認] ダイアログ ボックス (Visual Database Tools)
-テーブルまたは列に CHECK 制約を適用する場合は、SQL 式を含める必要があります。 CHECK 制約式をボックスに入力します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] テーブルまたは列に CHECK 制約を適用する場合は、SQL 式を含める必要があります。 CHECK 制約式をボックスに入力します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
 式  

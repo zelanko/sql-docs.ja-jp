@@ -3,8 +3,11 @@ title: "[ファイルを開く] ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
-ディスクから既存のファイルを開くには、 **[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
   
 このダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[開く]** をクリックし、 **[ファイル]**をクリックします。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスなどの他の要素のファイルを開く場合にも表示されます。 **[ファイル]** メニューの **[開く]**を選択し、 **[プロジェクト/ソリューション]** を選択して、同様の **[プロジェクトを開く]** ダイアログ ボックスを開きます。  
   

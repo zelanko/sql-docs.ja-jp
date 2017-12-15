@@ -3,8 +3,11 @@ title: "[ジョブ ステップのプロパティ] - [新しいジョブ ステ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6821abbd0c69929350a95c004033e730e6ff769
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="job-step-properties---new-job-step-general-page"></a>[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] \([全般] ページ)
-このページでは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
+# <a name="job-step-properties---new-job-step-general-page"></a>[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
 このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを展開します。次に **[ジョブ]**を右クリックし、 **[新しいジョブ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]**をクリックします。  
   

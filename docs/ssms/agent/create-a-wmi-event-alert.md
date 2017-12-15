@@ -3,8 +3,11 @@ title: "WMI イベント警告の作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21397fcc5e279ed78d81b6d3cafecca80b4e87f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5d95c99f5252dc6c87329ca4d9d003eba748b11c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="create-a-wmi-event-alert"></a>WMI イベント警告の作成
-このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] を使用して、WMI Provider for Server Events によって監視されている特定の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] イベントが発生したときに通知される [!INCLUDE[tsql](../../includes/tsql_md.md)]エージェントの警告を作成する方法について説明します。  
+# <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して、WMI Provider for Server Events によって監視されている特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] イベントが発生したときに通知される [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告を作成する方法について説明します。  
   
 WMI Provider を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] イベントを監視する方法の詳細については、「 [WMI Provider for Server Events のクラスとプロパティ](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)」を参照してください。 WMI イベント警告の通知を受信するために必要な権限の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)」を参照してください。 WQL の詳細については、「 [WMI Provider for Server Events と WQL の使用](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)」を参照してください。  
   

@@ -3,8 +3,11 @@ title: "ジョブ ステップでのトークンの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a4cef9cc3d5a72bba4b818c89acfe6e15878ebff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを使用すると、 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql_md.md)] エージェントにより実行時にトークンが置き換えられます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを使用すると、[!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql_md.md)] エージェントにより実行時にトークンが置き換えられます。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 以降では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ ステップ トークンの構文が変更されています。 その結果、エスケープ マクロには、ジョブ ステップで使用するすべてのトークンを含める必要があります。すべてのトークンが含まれていないと、ジョブ ステップは失敗します。 エスケープ マクロの使用およびトークンを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ ステップの更新については、「トークンの使用について」、「[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのトークンとマクロ」、および「マクロを使用するジョブ ステップの更新」を参照してください。 さらに、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] エージェントのジョブ ステップ トークンの呼び出しに角かっこを使用していた [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の構文 (たとえば、"`[DATE]`") も変更されました。 つまり、トークン名はかっこで囲み、トークン構文の先頭にはドル記号 (`$`) を付けることが必要になりました。 例:  

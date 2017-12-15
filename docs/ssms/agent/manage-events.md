@@ -3,8 +3,11 @@ title: "イベントの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef565c7b6ad04d504ac7b861e8610664d0d916a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 816b06ef6e3e55147f3e9681fdc50065124461f7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-events"></a>イベントの管理
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
   
 1 台のサーバーが別のサーバー グループのイベントを受信する場合、イベントを受信するサーバーは *警告管理サーバー*と呼ばれます。 マルチサーバー環境では、マスター サーバーを警告管理サーバーとして指定します。  
   

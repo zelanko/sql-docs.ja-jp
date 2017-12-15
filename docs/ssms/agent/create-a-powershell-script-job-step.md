@@ -3,8 +3,11 @@ title: "PowerShell スクリプト ジョブ ステップの作成 | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dcdd1204f955169f8678947b31e70bd056fc4c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b060615659e87b68c2f918ec97e104d095a0cb8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="create-a-powershell-script-job-step"></a>PowerShell スクリプト ジョブ ステップの作成
-このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] で PowerShell スクリプトを実行する [!INCLUDE[tsql](../../includes/tsql_md.md)]エージェント ジョブ ステップを作成して定義する方法について説明します。  
+# <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で PowerShell スクリプトを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップを作成して定義する方法について説明します。  
   
 **このトピックの内容**  
   

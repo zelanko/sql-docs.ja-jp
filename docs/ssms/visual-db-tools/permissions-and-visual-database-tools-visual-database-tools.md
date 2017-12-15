@@ -3,8 +3,11 @@ title: "アクセス許可と Visual Database Tools (Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 232491b14f93a24416f1d5704b5d627ca6d1358b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ceb8a15b4f480c2f2a075928787d86803f567187
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>アクセス許可と Visual Database Tools (Visual Database Tools)
-ユーザーがデータ ソース オブジェクトにアクセスできるようにするアクセス許可は、Visual Database Tools ではなくデータ ソースで与えられます。 データ ソース オブジェクトに対して与えられるアクセス許可は、適用されているセキュリティ ポリシーによって制御されます。 特定のデータベース オブジェクトに対するアクセス許可がない場合は、データベース管理者に連絡してください。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ユーザーがデータ ソース オブジェクトにアクセスできるようにするアクセス許可は、Visual Database Tools ではなくデータ ソースで与えられます。 データ ソース オブジェクトに対して与えられるアクセス許可は、適用されているセキュリティ ポリシーによって制御されます。 特定のデータベース オブジェクトに対するアクセス許可がない場合は、データベース管理者に連絡してください。  
   
 データベースのアクセス許可によりデータベース構造の表示はできても変更はできない場合は、変更スクリプトを使用することで、変更情報をデータベースに送信することなくデザインできます。  
   

@@ -3,8 +3,11 @@ title: "ジョブの利用状況の監視 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ddc5235281231c8d1aa08a22e7f55fe4131480d5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="monitor-job-activity"></a>ジョブの利用状況の監視
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブの利用状況モニターを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブの利用状況モニターを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
   
 ## <a name="sql-server-agent-sessions"></a>SQL Server エージェント セッション  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントでは、サービスが開始されるたびに新しいセッションが作成されます。 新しいセッションが作成されると、すべての既存の定義済みジョブが、 **msdb** データベースの **sysjobactivity** テーブルに設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを再起動したときには、ジョブの前回の利用状況がこのテーブルに保持されています。 各セッションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの通常のジョブの利用状況が、開始から終了まで記録されます。 これらのセッションに関する情報は、 **msdb** データベースの **syssessions** テーブルに格納されます。  

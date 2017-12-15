@@ -3,8 +3,11 @@ title: "エンタープライズ全体におけるジョブの管理 | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 242f598ca67cb84733563aa18daf2c446c1e5b3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f51d16b9d05f28aae7ac70d837224d33c400c604
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>エンタープライズ全体におけるジョブの管理
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]を使用せずにマルチサーバー ジョブ定義を変更した場合は、対象サーバーが更新済みジョブを再びダウンロードできるように、その変更をダウンロード一覧に通知する必要があります。 対象サーバーが最新のジョブ定義を確実に持つように、マルチサーバー ジョブを更新した後で INSERT 命令を次のように通知します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用せずにマルチサーバー ジョブ定義を変更した場合は、対象サーバーが更新済みジョブを再びダウンロードできるように、その変更をダウンロード一覧に通知する必要があります。 対象サーバーが最新のジョブ定義を確実に持つように、マルチサーバー ジョブを更新した後で INSERT 命令を次のように通知します。  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  

@@ -3,8 +3,11 @@ title: "Microsoft Azure ストレージへの接続 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbb66aa6f65eb0e1c8b0de50de11a9cc3e090bc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2b3f4019ad5eadcdd792586598c3cf93a4b0d1ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage への接続
-**[Microsoft Azure Storage 接続]** ダイアログを使用して、ストレージ アカウントを指定したり、Microsoft Azure への接続を検証します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[Microsoft Azure Storage 接続]** ダイアログを使用して、ストレージ アカウントを指定したり、Microsoft Azure への接続を検証したりします。  
   
 ## <a name="options"></a>オプション  
 Microsoft Azure のアカウントに関する次の情報を指定し、 **[次へ]** をクリックして続行します。  

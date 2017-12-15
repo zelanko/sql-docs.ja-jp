@@ -3,8 +3,11 @@ title: "Management Studio におけるカスタム レポート | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]では、 [!INCLUDE[msCoName](../../includes/msconame_md.md)]で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]から実行できるようになりました。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] では、[!INCLUDE[msCoName](../../includes/msconame_md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]から実行できるようになりました。  
   
 ## <a name="implementation"></a>実装  
 カスタム レポートはレポート定義言語 (RDL) を使用して作成し、レポート定義 (.rdl) ファイルとして保存します。 RDL には、レポートのデータ取得情報とレイアウト情報が XML 形式で含まれています。 RDL はオープン スキーマです。 開発者は、属性や要素を追加して RDL を拡張することができます。 レポートは、任意の有効な [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントをレポート内で実行できます。  

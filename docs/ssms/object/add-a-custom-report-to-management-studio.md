@@ -3,8 +3,11 @@ title: "Management Studio へのカスタム レポートの追加 | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46f60b50eee6f24c9f9cd20571a9954c9630560
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99bdd9671b2cea32f88b3904b3d67f698c50d085
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio へのカスタム レポートの追加
-ここでは、簡単な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] レポートを作成し、.rdl ファイルとして保存した後、そのファイルを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] にカスタム レポートとして追加する方法について説明します。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] では、さまざまな高度なレポートを作成できます。 このトピックを使用してレポートを作成するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] がコンピューターにインストールされている必要があります。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] を使用してカスタム レポートを実行する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] に [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]をインストールする必要はありません。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ここでは、簡単な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] レポートを作成し、.rdl ファイルとして保存した後、そのファイルを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] にカスタム レポートとして追加する方法について説明します。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] では、さまざまな高度なレポートを作成できます。 このトピックを使用してレポートを作成するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] がコンピューターにインストールされている必要があります。 [!INCLUDE[ssRS](../../includes/ssrs_md.md)] を使用してカスタム レポートを実行する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] に [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]をインストールする必要はありません。  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>簡単なレポートを作成し、.rdl ファイルとして保存するには  

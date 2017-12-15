@@ -3,8 +3,11 @@ title: "テーブル以外のアイテムを使用したクエリの作成 | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca9ab6532c1a83be15b1b9a80c0e96ef051fac27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10e634170ad1d21ec5094032dbe0b63395b40eb8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>テーブル以外のアイテムを使用したクエリの作成 (Visual Database Tools)
-検索クエリを作成するときは常に、必要な列、必要な行、およびクエリ プロセッサが基になるデータを検索する場所を明示します。 通常、この基になるデータは 1 つのテーブル、または相互に結合された複数のテーブルで構成されています。 ただし、基になるデータは、テーブル以外のソースを使用してもかまいません。 実際、ビュー、クエリ、シノニム、またはテーブルを返すユーザー定義関数のデータを使用できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 検索クエリを作成するときは常に、必要な列、必要な行、およびクエリ プロセッサが基になるデータを検索する場所を明示します。 通常、この基になるデータは 1 つのテーブル、または相互に結合された複数のテーブルで構成されています。 ただし、基になるデータは、テーブル以外のソースを使用してもかまいません。 実際、ビュー、クエリ、シノニム、またはテーブルを返すユーザー定義関数のデータを使用できます。  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>テーブルに代わるビューの使用  
 ビューから行を選択できます。 たとえば、"ExpensiveBooks" という名前のビューを含むデータベースがあり、このビューの各行には価格が $19.99 を超える書籍の書名が格納されているものとします。 ビューの定義は次のようになります。  

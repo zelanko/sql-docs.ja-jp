@@ -6,23 +6,27 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: ssms
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
+ms.date: 12/02/2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
-ms.openlocfilehash: 15d706d713a813af8831c191aca85781a9c98472
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b156ff82b18ab7ffb75ca79b57f324244f759bf5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新規または最近の更新: SQL Server の SQL Server Management Studio (SSMS)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 
 ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。
@@ -33,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 9 月 11 日**&nbsp;から &nbsp; **2017 年 9 月 27 日**
+- *更新日の範囲:* &nbsp; **2017 年 9 月 28 日**&nbsp;から &nbsp; **2017 年 12 月 2 日**
 - *対象領域:* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -72,7 +76,7 @@ ms.lasthandoff: 11/09/2017
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [SQL Server PowerShell モジュールのダウンロード](#TitleNum_1)
+1. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_1)
 
 
 
@@ -83,39 +87,39 @@ ms.lasthandoff: 11/09/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-sql-server-powershell-moduledownload-sql-server-ps-modulemd"></a>1.&nbsp; [SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)
+### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1.&nbsp; [SQL Server Management Studio - 変更ログ (SSMS)](sql-server-management-studio-changelog-ssms.md)
 
-*更新日: 2017 年 9 月 26 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新日: 2017 年 10 月 9 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 37.  ms.author= "sstein".  -->
+<!-- Source markdown line 23.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3953870af5dca04eb3753e88a34fae69d365d6eb 10085b77284e957e34e5302975e5bc9cfd23fd0c  (PR=105  ,  Filename=download-sql-server-ps-module.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=ed34b77d3f23e46c7736ef96c775990261290870) -->
+<!-- git diff --ignore-all-space --unified=0 f483a7e0ba53cff80d3f2d33c9196906d27a7a61 c125f43f0a45e70ce180e62edecc68bdcffd5086  (PR=3441  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=29122bdf543e82c1f429cf401b5fe1d8383515fc) -->
 
 
 
-管理者として実行していて、コンピューターのすべてのユーザーに対するモジュールをインストールする場合
+**[SSMS 17.3--download-sql-server-management-studio-ssms.md)**
 
-> Install-Module -Name SqlServer -AllowClobber
+一般公開 | ビルド番号: 14.0.17199.0
 
-管理者として実行できない、または現在のユーザーに対してのみインストールする場合
+**機能強化**
 
-> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
 
-SqlServer モジュールの更新バージョンがある場合、Update-Module コマンドを使用してバージョンを更新できます
-
-> Update-Module -Name SqlServer
-
-使用可能なマシンにインストールされているモジュールのバージョンを表示する場合
-
-> Get-Module SqlServer -ListAvailable
-
-インポートに使用できるスクリプトで特定のバージョンのモジュールを使用する場合
-
-> Import-Module SqlServer -Version 21.0.17178
-
+- インテリジェントなフレームワークを使用して、CSV ファイルのインポート エクスペリエンスを効率化するための新しい "フラット ファイルのインポート" ウィザードが追加されました。これは最小限のユーザーの介入または特殊なドメインの知識で使用できます。 詳細については、[SQL のフラット ファイルのインポート ウィザード--../relational-databases/import-export/import-flat-file-wizard.md)に関するページを参照してください。
+- オブジェクト エクスプローラーに "XEvent プロファイラー" ノードが追加されました。 詳細については、[SSMS XEvent Profiler の使用--../relational-databases/extended-events/use-the-ssms-xe-profiler.md)に関するページを参照してください。
+- パフォーマンス ダッシュボードでの待機の履歴レポートの待機のフィルター処理と分類を更新しました。
+- "Predict" 関数の構文チェックを追加しました。
+- 外部ライブラリ管理のクエリの構文チェックを追加しました。
+- 外部ライブラリ管理の SMO サポートを追加しました。
+- [登録済みサーバー] ウィンドウに [PowerShell の起動] のサポートを追加しました (新しい SQL PowerShell モジュールが必要)。
+- Always On: 可用性グループに[読み取り専用ルーティングのサポート--../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)を追加しました。
+- [Active Directory - MFA で汎用のサポート] ログインの出力ウィンドウにトレースの詳細を送信するオプションを追加しました (既定ではオフになっているため、[ツール] > [オプション] > [Azure サービス] > [Azure クラウド] > [ADAL 出力ウィンドウのトレース レベル] の下にあるユーザー設定で有効にする必要があります)。
+- クエリ ストア:
+  - クエリ ストア UI は、QDS が何らかのデータを記録している限り、QDS がオフになっている場合でもアクセスできます。
+  - クエリ ストア UI で、既存レポートのすべての待機の分類法が公開されるようになりました。 これにより、顧客が上位の待機中のクエリのシナリオのロック解除などができるようになります。
+- [スクリプト パラメーター ヘッダーを含める] がオプションになりました (既定で無効になっており、[ツール] > [オプション] > [SQL Server オブジェクト エクスプローラー] > [スクリプト] > [スクリプト パラメーター ヘッダーを含める] の下のユーザー設定で有効にすることができます) - [Connect アイテム 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)。
 
 
 
@@ -128,36 +132,40 @@ SqlServer モジュールの更新バージョンがある場合、Update-Module
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新規 + 更新 (0 + 1): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (0 + 1): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新規 + 更新 (4 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (17 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (3 + 0): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (1 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (3 + 14): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (1 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (87 + 0): **SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新規 + 更新 (5 + 4): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (0 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (2 + 2): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (10 + 9): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (2 + 4): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (4 + 2): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (21 + 0): **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新規 + 更新 (5 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (0 + 2): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
+- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
-- [新規 + 更新 (0 + 0): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 

@@ -3,8 +3,11 @@ title: "[インデックス/キー] ダイアログ ボックス (Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bdb8d410d76c06b79884f9c2674221c5a46b4cbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a246ec54d0b0cd439bbdbd8f81acb6ad3be7d9c4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>[インデックス/キー] ダイアログ ボックス (Visual Database Tools)
-このダイアログ ボックスを使用すると、インデックス、主キー、および一意キーを作成したり、変更したりできます。 このダイアログ ボックスにアクセスするには、インデックスまたはキーを持つテーブルのテーブル定義を開いて、テーブル定義グリッドを右クリックし、 **[インデックス/キー]**をクリックします。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、インデックス、主キー、および一意キーを作成したり、変更したりできます。 このダイアログ ボックスにアクセスするには、インデックスまたはキーを持つテーブルのテーブル定義を開いて、テーブル定義グリッドを右クリックし、 **[インデックス/キー]**をクリックします。  
   
 > [!NOTE]  
 > テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  

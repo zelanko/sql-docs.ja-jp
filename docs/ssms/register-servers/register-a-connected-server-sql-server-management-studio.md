@@ -2,9 +2,12 @@
 title: "接続済みのサーバーの登録 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 520992cd863dcd5fcdc9b265ef168cd171b8aa27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>接続済みのサーバーの登録 (SQL Server Management Studio)
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用して、接続されたサーバーを登録する方法について説明します。 サーバーを登録することによって、頻繁にアクセスするサーバーの接続情報を保存しておくことができます。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。  メニューから **[表示]**\\**[登録済みサーバー]** に移動して、SSMS で登録済みサーバーを表示することができます。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用して、接続されたサーバーを登録する方法について説明します。 サーバーを登録することによって、頻繁にアクセスするサーバーの接続情報を保存しておくことができます。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。  メニューから **[表示]**\\**[登録済みサーバー]** に移動して、SSMS で登録済みサーバーを表示することができます。
   
  **このトピックの内容**  
   

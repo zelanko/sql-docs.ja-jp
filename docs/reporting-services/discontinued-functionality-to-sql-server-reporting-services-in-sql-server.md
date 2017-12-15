@@ -1,9 +1,13 @@
 ---
 title: "SQL Server 2016 で廃止された SQL Server Reporting Services の機能 | Microsoft Docs"
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,13 +22,13 @@ ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe01a4073387eadc7d4a07bb993bdfb7263c3fe4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fec8386b7fea6d2655ddf3dd06e1ee4a8a4e6afd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 で廃止された SQL Server Reporting Services の機能
 
@@ -40,6 +44,7 @@ ms.lasthandoff: 11/09/2017
 |-|-|
 |Web ポータルを介したレポート モデルのアップロード|SOAP API を介して引き続き実行できます。|
 |Web ポータルを介したレポート モデルの管理|SOAP API を介して引き続き実行できます。|
+|HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズする|[Web ポータルをブランド化](branding-the-web-portal.md)することもできます。|
 
 ## <a name="next-steps"></a>次の手順
 

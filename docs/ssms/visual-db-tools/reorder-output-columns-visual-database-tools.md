@@ -3,8 +3,11 @@ title: "列の出力順の変更 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d8dd69fc1b112e9dc3261d0b52c2ad740de3a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 770e918f8f61679a69dd474975672652124fd2d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>列の出力順の変更 (Visual Database Tools)
-選択クエリにデータ列を追加する順序によって、結果での列の表示順序が決まります。 最初にクエリに追加した列は結果の左端に表示され、次に追加した列はその右隣に表示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 選択クエリにデータ列を追加する順序によって、結果での列の表示順序が決まります。 最初にクエリに追加した列は結果の左端に表示され、次に追加した列はその右隣に表示されます。  
   
 また、更新クエリや挿入クエリを作成する場合、追加した列の順序は、データの処理順序に反映されます。  
   
