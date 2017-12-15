@@ -2,9 +2,12 @@
 title: "新しい登録済みサーバーの作成 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8b4f08d99f573511750b56c3b8bc0f684b29f7b1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1802866292b1a8529e7ac2a415e6c2f64f5cc505
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>新しい登録済みサーバーの作成 (SQL Server Management Studio)
-  このトピックでは、サーバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、サーバーを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
   
  登録済みサーバーには、次の 2 種類があります。  
   

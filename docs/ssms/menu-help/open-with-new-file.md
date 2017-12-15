@@ -3,8 +3,11 @@ title: "[ファイルを開くアプリケーションの選択]([新しいフ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce714ce9042b3c827e1916ec3b6664ca06e278e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] \([新しいファイル])
-1 つ以上のエディターでドキュメントを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]**をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]**をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]**をクリックします。  
+# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 1 つ以上のエディターでドキュメントを開くには、**[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]**をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]**をクリックします。  
   
 ## <a name="options"></a>オプション  
 **[このファイルを開くのに使用するプログラムを選択してください]**  

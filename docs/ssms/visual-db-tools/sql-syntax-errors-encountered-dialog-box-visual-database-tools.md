@@ -3,8 +3,11 @@ title: "[SQL 構文エラーが発生] ダイアログ ボックス (Visual Data
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b39dcefcef74a5d652b7e4acb5195b68b0ebad05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b59d9f9ce4768a5cabb6c763b99a029f7720e7c9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>[SQL 構文エラーが発生] ダイアログ ボックス (Visual Database Tools)
-このダイアログ ボックスは、デザイナーが SQL ペインの SQL ステートメントを解析できないことを通知します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスは、デザイナーが SQL ペインの SQL ステートメントを解析できないことを通知します。  
   
 SQL ペインで SQL ステートメントを入力または編集してから、別のペインに切り替えるか、クエリを検査するか、クエリを実行しようとしたときに、次の条件のいずれかが当てはまる場合に表示されます。  
   

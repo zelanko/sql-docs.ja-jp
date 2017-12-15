@@ -2,9 +2,12 @@
 title: "SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a872862355624b84fe792cfccc892f26bf9e3433
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 14e26b4d8f398fcfc8d648f757e782e0afda2101
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
@@ -138,7 +141,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>参照  
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [SQL Server Reporting Services と SharePoint グループの役割とタスクの比較とアクセス許可](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   

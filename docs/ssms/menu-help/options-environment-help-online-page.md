@@ -3,8 +3,11 @@ title: "[オプション] ([環境]/[ヘルプ]/[オンライン] ページ) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="options-environment---help---online-page"></a>[オプション] \([環境]/[ヘルプ]/[オンライン] ページ)
-**[オプション]** ダイアログ ボックスを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 検索に使用するヘルプ ソース (F1 ヘルプなど) を指定できます。 **[ツール]** メニューの **[オプション]**をクリックし、 **[環境]** フォルダーを展開して、 **[ヘルプ]**、 **[オンライン]**の順にクリックします。 **[オンライン]** ページが一覧に表示されない場合は、 **[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにしてください。  
+# <a name="options-environment---help---online-page"></a>[オプション] ([環境]/[ヘルプ]/[オンライン] ページ)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 検索に使用するヘルプ ソース (F1 ヘルプなど) を指定できます。 **[ツール]** メニューの **[オプション]**をクリックし、 **[環境]** フォルダーを展開して、 **[ヘルプ]**、 **[オンライン]**の順にクリックします。 **[オンライン]** ページが一覧に表示されない場合は、 **[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにしてください。  
   
 **[ヘルプ コンテンツを読み込むとき]**  
 F1 ヘルプで使用するヘルプ ソースの順序を設定し、使用するヘルプ ソースを指定します。  

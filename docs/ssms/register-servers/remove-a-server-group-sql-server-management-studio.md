@@ -2,9 +2,12 @@
 title: "サーバー グループの削除 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0cb0a74caa92ed03822c8115096e8030e1e7b7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f605faa9711e014f94325bb86414ee849f2f7ad6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>サーバー グループの削除 (SQL Server Management Studio)
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーからサーバー グループを削除する方法について説明します。 サーバー グループはいつでも削除できます。 サーバー グループが空でない場合は、削除するサーバー グループ内のサーバーまたはサーバー グループもすべて削除されます。 残しておくサーバーまたはサーバー グループがあれば、サーバー グループを削除する前に、別のサーバー グループに移動します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、登録済みサーバーからサーバー グループを削除する方法について説明します。 サーバー グループはいつでも削除できます。 サーバー グループが空でない場合は、削除するサーバー グループ内のサーバーまたはサーバー グループもすべて削除されます。 残しておくサーバーまたはサーバー グループがあれば、サーバー グループを削除する前に、別のサーバー グループに移動します。  
   
 ##  <a name="SSMSProcedure"></a>  
   

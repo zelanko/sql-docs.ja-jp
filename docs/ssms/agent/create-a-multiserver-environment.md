@@ -3,8 +3,11 @@ title: "マルチサーバー環境の作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 502763ce7527a31ade9e35cffeaad67e6fae9590
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 364a16b8cc7f25fba918fc51c06652781ba7c17e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
-マルチサーバー管理では、マスター サーバー (MSX) 1 台と、対象サーバー (TSX) 1 台以上を設定する必要があります。 すべての対象サーバーで処理されるジョブは、まずマスター サーバーで定義されてから対象サーバーにダウンロードされます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] マルチサーバー管理では、マスター サーバー (MSX) 1 台と、対象サーバー (TSX) 1 台以上を設定する必要があります。 すべての対象サーバーで処理されるジョブは、まずマスター サーバーで定義されてから対象サーバーにダウンロードされます。  
   
 既定では、マスター サーバーと対象サーバーの間の接続では、完全な SSL (Secure Sockets Layer) 暗号化と証明書の検証が有効になります。 詳しくは、「 [対象サーバーでの暗号化オプションの設定](../../ssms/agent/set-encryption-options-on-target-servers.md)」をご覧ください。  
   

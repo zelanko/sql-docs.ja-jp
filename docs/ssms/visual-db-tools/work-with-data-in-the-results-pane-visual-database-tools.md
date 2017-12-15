@@ -3,8 +3,11 @@ title: "結果ペインのデータの操作 (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7b1a7f29bcba95aeb1af83746df29a5bee8ebff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7493784bc506c454ab0c230d549d0accae58c7c4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
-クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
   
 次に、問題を回避し、結果セットに対して効果的に操作を行うために役立つ情報を示します。  
   

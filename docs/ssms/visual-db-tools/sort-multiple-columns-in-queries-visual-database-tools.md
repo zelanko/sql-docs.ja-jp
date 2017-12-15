@@ -3,8 +3,11 @@ title: "クエリ内の複数の列の並べ替え (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 494dc4cc98ee96001c756250a229dd525eb4f0b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c683c3359b46dd5732f3ea504198c20e183a7946
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>クエリ内の複数の列の並べ替え (Visual Database Tools)
-データを並べ替える列の使用順序指定には、 **[並べ替え順序]** 列を [抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)上で使用します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データを並べ替える列の使用順序指定には、**[並べ替え順序]** 列を[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)上で使用します。  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>複数の列でクエリ結果を並べ替えるには  
   

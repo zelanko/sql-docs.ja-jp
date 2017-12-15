@@ -3,8 +3,11 @@ title: "[SQL コメント] ダイアログ ボックス (Visual Database Tools) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e332ba1e60805d7cbffe3fa446a78b0d180a6a14
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 039f84ddff175ae8e2830b7e38ee4fc28b54a307
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>[SQL コメント] ダイアログ ボックス (Visual Database Tools)
-[SQL コメント] ダイアログ ボックスには、クエリに関する詳細な説明を記入するための編集可能な領域が用意されています。 このダイアログ ボックスにアクセスするには、クエリおよびビュー デザイナーでクエリまたはビューを開き、 **[プロパティ]** ウィンドウの **[SQL コメント]**を選択して、プロパティ フィールドの右側にある省略記号 (**[...]**) をクリックします。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [SQL コメント] ダイアログ ボックスには、クエリに関する詳細な説明を記入するための編集可能な領域が用意されています。 このダイアログ ボックスにアクセスするには、クエリおよびビュー デザイナーでクエリまたはビューを開き、 **[プロパティ]** ウィンドウの **[SQL コメント]**を選択して、プロパティ フィールドの右側にある省略記号 (**[...]**) をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [クエリのプロパティの表示 (Visual Database Tools)](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  

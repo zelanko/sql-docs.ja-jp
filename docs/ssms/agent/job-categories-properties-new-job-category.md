@@ -3,8 +3,11 @@ title: "ジョブ カテゴリのプロパティ - [新しいジョブ カテゴ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b26f1ff05b93b81aed61a7ee0ea0aa7beece47fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 622a0451534174884d44259a329702cabaff2528
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="job-categories-properties---new-job-category"></a>ジョブ カテゴリのプロパティ - [新しいジョブ カテゴリ]
-1 つのジョブ カテゴリまたはすべてのジョブ カテゴリのジョブを一覧表示し、新しいジョブ カテゴリを追加できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 1 つのジョブ カテゴリまたはすべてのジョブ カテゴリのジョブを一覧表示し、新しいジョブ カテゴリを追加できます。  
   
 ## <a name="options"></a>オプション  
 **名前**  

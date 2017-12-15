@@ -3,8 +3,11 @@ title: "Visual Database Tools のデザイナー | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0dd9803b8a53023baa09ec8d05e075a642105388
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools のデザイナー
-Visual Database Tools は、データ ソースの処理に使用できるデザイン ツールの組み合わせです。 デザイン ツールを使用して、クエリの作成、データベース構造のデザインまたは変更、データの更新を実行できます。 ツールには、データベース ダイアグラム デザイナー、テーブル デザイナー、クエリおよびビュー デザイナーがあります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools は、データ ソースの処理に使用できるデザイン ツールの組み合わせです。 デザイン ツールを使用して、クエリの作成、データベース構造のデザインまたは変更、データの更新を実行できます。 ツールには、データベース ダイアグラム デザイナー、テーブル デザイナー、クエリおよびビュー デザイナーがあります。  
   
 ## <a name="properties-window"></a>[プロパティ] ウィンドウ  
 プロパティ ウィンドウは、Visual Database Tools に固有ではありませんが、このウィンドウを使用してさまざまな変更を実行できます。 プロパティ ウィンドウには、現在選択されている項目 (テーブルなど) のプロパティが表示され、そのプロパティ名や列の照合順序などのすべてのプロパティを編集できます。 プロパティ ウィンドウに表示できても、変更するには別のツールが必要になるプロパティもあります。  

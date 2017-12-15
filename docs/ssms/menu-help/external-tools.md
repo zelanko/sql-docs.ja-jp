@@ -3,8 +3,11 @@ title: "[外部ツール] | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07746b7c20e8bed6bb71abb3c62adb6354f921dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d0e5946c785c27dc3a3f5718de2220e50aba4b82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="external-tools"></a>[外部ツール]
-このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
 ## <a name="options"></a>オプション  
 **[メニューの内容]**  

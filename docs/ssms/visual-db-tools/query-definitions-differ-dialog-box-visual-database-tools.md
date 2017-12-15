@@ -3,8 +3,11 @@ title: "[クエリの定義が異なります] ダイアログ ボックス (Vis
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7ddf380e1e740f1704ac89ef59b93f7f939fe90
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8f350cc4cc985ca672cfc571f98b9adb04db935a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>[クエリの定義が異なります] ダイアログ ボックス (Visual Database Tools)
-このダイアログ ボックスは、クエリがダイアグラム ペインおよび抽出条件ペインでグラフィカルに表示できず、SQL ペインでしか編集できないことを通知します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスは、クエリがダイアグラム ペインおよび抽出条件ペインでグラフィカルに表示できず、SQL ペインでしか編集できないことを通知します。  
   
 SQL ペインで SQL ステートメントを入力または編集してから、別のペインに移動するか、クエリを検査するか、またはクエリを実行しようとしたときに、次の条件のいずれかが当てはまる場合に表示されます。  
   

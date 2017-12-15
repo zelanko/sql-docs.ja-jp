@@ -3,8 +3,11 @@ title: "オブジェクト エクスプローラー | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 41d97e078b7d7faa4cd15e35a2f3de6b438d09c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 05c1ba2d0a8d223ee1d4713613b23d9d07df8241
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="object-explorer"></a>オブジェクト エクスプローラー
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] には、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]のインスタンス内のオブジェクトを管理するための機能が備わっています。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] には、[!INCLUDE[ssDE](../../includes/ssde_md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] のインスタンス内のオブジェクトを管理するための機能が備わっています。  
   
 ## <a name="benefits-of-object-explorer"></a>オブジェクト エクスプローラーの利点  
 オブジェクト エクスプローラーは、SQL Server の各インスタンスのオブジェクトを表示し、管理するための階層形式のユーザー インターフェイスを備えています。 [オブジェクト エクスプローラーの詳細] ペインには、インスタンス オブジェクトの表形式のビューと、特定のオブジェクトを検索する機能が用意されています。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  

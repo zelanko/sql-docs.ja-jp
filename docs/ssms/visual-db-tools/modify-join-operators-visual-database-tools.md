@@ -3,8 +3,11 @@ title: "結合演算子の変更 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebec4a0b9106152a8a7914263a70a7ddf0399679
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 62763186119afe111ee2a191a577db19178be896
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>結合演算子の変更 (Visual Database Tools)
-[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) の既定では、等号を使用してテーブルが結合されます (等結合)。等結合では、2 つの結合列の値が一致します。 必要に応じて、結合列の値の比較に使用する演算子を変更できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)の既定では、等号を使用してテーブルが結合されます (等結合)。等結合では、2 つの結合列の値が一致します。 必要に応じて、結合列の値の比較に使用する演算子を変更できます。  
   
 ### <a name="to-modify-join-operators"></a>結合演算子を変更するには  
   

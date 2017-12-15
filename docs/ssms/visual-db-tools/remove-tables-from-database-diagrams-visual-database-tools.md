@@ -3,8 +3,11 @@ title: "データベース ダイアグラムからのテーブルの削除 (Vis
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 376a4251ebf017f657da06551f51d88acf4581aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 37d59a52e7845e464175870d6c725fb2e1f5a539
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>データベース ダイアグラムからのテーブルの削除 (Visual Database Tools)
-データベース ダイアグラムからは、テーブルを削除できます。 データベース ダイアグラムからテーブルを削除しても、データベースは変更されません。 削除したテーブルと、他のテーブルとのリレーションシップは、データベースに残ります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース ダイアグラムからは、テーブルを削除できます。 データベース ダイアグラムからテーブルを削除しても、データベースは変更されません。 削除したテーブルと、他のテーブルとのリレーションシップは、データベースに残ります。  
   
 ### <a name="to-remove-a-table-from-a-database-diagram"></a>データベース ダイアグラムからテーブルを削除するには  
   

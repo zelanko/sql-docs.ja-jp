@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d6049d82cb551c1614f4ea9f76528e53cd29942c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   データベース サイズが大きくなると、データベースの完全バックアップにかかる時間は長くなり、必要な記憶領域も増加します。 大規模なデータベースでは、[データベースの差分バックアップ]\(../../relational-databases/backup-restore/differential-backups-sql-server.md) を使用してデータベースの完全バックアップを補完することを検討してください。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
+-   データベース サイズが大きくなると、データベースの完全バックアップにかかる時間は長くなり、必要な記憶領域も増加します。 大規模なデータベースでは、一連の[データベースの差分バックアップ](../../relational-databases/backup-restore/differential-backups-sql-server.md)を使用してデータベースの完全バックアップを補完することを検討してください。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
 -   データベースの完全バックアップのサイズは、 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) システム ストアド プロシージャを使用して推計します。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="back-up-a-database"></a>データベースをバックアップする  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で適切な **オブジェクト エクスプローラー**のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で適切な **[!INCLUDE[ssDEnoversion](../Token/ssDEnoversion_md.md)]**のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開し、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   

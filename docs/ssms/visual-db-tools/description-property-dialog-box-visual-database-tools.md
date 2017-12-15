@@ -3,8 +3,11 @@ title: "[説明のプロパティ] ダイアログ ボックス (Visual Database
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f510bf391246c15bc9364d4c8c6605b655b7af55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6e5bbb82ada8e0169f6f1629b38038cab2dc3042
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>[説明のプロパティ] ダイアログ ボックス (Visual Database Tools)
-**[説明のプロパティ]** ダイアログ ボックスには編集可能な領域が用意されており、ユーザーは、テーブル、列、外部キー制約などのデータベース オブジェクトの詳細な説明を記述できます。 このダイアログ ボックスを表示するには、テーブルやビューなどのオブジェクトがデザイナーで選択されている場合はオブジェクトのプロパティ ウィンドウ、インデックス、CHECK 制約などのオブジェクトの場合はダイアログ ボックス、テーブル列の場合はテーブル デザイナーの **[列のプロパティ]** タブを使用します。 説明は、オブジェクトの拡張プロパティとして保存されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[説明のプロパティ]** ダイアログ ボックスには編集可能な領域が用意されており、ユーザーは、テーブル、列、外部キー制約などのデータベース オブジェクトの詳細な説明を記述できます。 このダイアログ ボックスを表示するには、テーブルやビューなどのオブジェクトがデザイナーで選択されている場合はオブジェクトのプロパティ ウィンドウ、インデックス、CHECK 制約などのオブジェクトの場合はダイアログ ボックス、テーブル列の場合はテーブル デザイナーの **[列のプロパティ]** タブを使用します。 説明は、オブジェクトの拡張プロパティとして保存されます。  
   
 ## <a name="see-also"></a>参照  
 [テーブルのプロパティを表示する方法 (Visual Database Tools)](http://msdn.microsoft.com/en-us/1865fb7c-f480-4100-9007-df5364cd002a)  

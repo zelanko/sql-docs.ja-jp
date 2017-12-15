@@ -2,9 +2,12 @@
 title: "SharePoint サイト上のレポート サーバー アイテムに対するアクセス許可の設定 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d2a0d2bd034d778a189e152573d385e1fed072b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fee98875fa2724a660844db868b591283c832f3d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>SharePoint サイト上のレポート サーバー アイテムに対する権限の設定
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>参照  
  [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [SQL Server Reporting Services と SharePoint グループの役割とタスクの比較とアクセス許可](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

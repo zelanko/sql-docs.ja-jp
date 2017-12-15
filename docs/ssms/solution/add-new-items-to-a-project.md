@@ -3,8 +3,11 @@ title: "プロジェクトへの新規項目の追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f92737c597dcfd5badc9581ff72447baee55d605
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5e140de71669754086fb1883afeb4d5b662c9fcd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-new-items-to-a-project"></a>プロジェクトへの新規項目の追加
-プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 新しい項目にできるのは、クエリまたは接続です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] スクリプト プロジェクトおよび Analysis Services スクリプト プロジェクトという 2 種類のプロジェクトがあります。 プロジェクトの種類によって、プロジェクトに追加できるアイテムが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql_md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 新しい項目にできるのは、クエリまたは接続です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] スクリプト プロジェクトおよび Analysis Services スクリプト プロジェクトという 2 種類のプロジェクトがあります。 プロジェクトの種類によって、プロジェクトに追加できるアイテムが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql_md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。  
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] では、プロジェクト内にフォルダーを作成することはできません。 作業を整理するには、ソリューション内に複数のプロジェクトを作成してください。  
   

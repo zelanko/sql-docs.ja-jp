@@ -3,8 +3,11 @@ title: "SQL Server エージェント サービスのアカウントの選択 | 
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c4caa940800f07f91adbb6472b1221c6aa35234e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
-サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスのアカウントを選択します。構成マネージャーでは、次のオプションから選択できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] サービス開始アカウントにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows アカウントとそのネットワーク アクセス許可が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスのアカウントを選択します。構成マネージャーでは、次のオプションから選択できます。  
   
 -   **[ビルトイン アカウント]**。 次のビルトイン Windows サービス アカウントの一覧から選択できます。  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>制限事項 1 : マルチサーバー管理での非管理者アカウントの使用  
 対象サーバーをマスター サーバーに参加させると、"参加操作に失敗しました" というエラー メッセージが表示されることがあります。  
   
-このエラーを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスの両方を再起動します。 詳細については、「 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)」を参照してください。  
+このエラーを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスの両方を再起動します。 詳細については、「 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)」を参照してください。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>制限事項 2 : マルチサーバー管理でのローカル システム アカウントの使用  
 マルチサーバー管理は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスがローカル システム アカウントで実行されるとき、同じコンピューターにマスター サーバーと対象サーバーの両方が存在する場合にのみサポートされます。 この構成を使用している場合に、対象サーバーをマスター サーバーに参加させると、次のメッセージが返されます。  
@@ -115,13 +118,13 @@ ms.lasthandoff: 11/09/2017
   
 **SQL Server エージェントのメール プロファイルを指定するには**  
   
--   [データベース メールを使用するように SQL Server エージェント メールを構成する方法 (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [データベース メールを使用するように SQL Server エージェント メールを構成する方法 (SQL Server Management Studio)](http://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーを使用して、オペレーティング システムを起動するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを開始する必要があることを指定します。  
   
 ## <a name="see-also"></a>参照  
-[Windows サービス アカウントの設定](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
-[サービスの管理方法に関するトピック (SQL Server 構成マネージャー)](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[Windows サービス アカウントの設定](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
+[サービスの管理方法に関するトピック (SQL Server 構成マネージャー)](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
   

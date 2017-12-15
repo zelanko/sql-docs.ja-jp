@@ -3,8 +3,11 @@ title: "マルチユーザー環境 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 751293d6a9993d8d68650857e62e0e589850f3bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b698bbf209cc7f30c6b5c13b90104e1cadd752be
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>マルチユーザー環境 (Visual Database Tools)
-マルチユーザー環境とは、複数のユーザーが同じデータベースに同時に接続し、変更を行うことができる環境です。 その結果、複数のユーザーが同時に同じデータベース オブジェクトに対する作業を行う場合があります。 したがって、マルチユーザー環境では、あるユーザーが使用しているデータベースが、自身が変更を行っている最中に他のユーザーが行った変更による影響を受ける可能性があります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] マルチユーザー環境とは、複数のユーザーが同じデータベースに同時に接続し、変更を行うことができる環境です。 その結果、複数のユーザーが同時に同じデータベース オブジェクトに対する作業を行う場合があります。 したがって、マルチユーザー環境では、あるユーザーが使用しているデータベースが、自身が変更を行っている最中に他のユーザーが行った変更による影響を受ける可能性があります。  
   
 マルチユーザー環境のデータベースで作業するときの重要な問題はアクセス許可です。 データベースに対してユーザーが持っているアクセス許可により、ユーザーがそのデータベースについて行うことができる作業の範囲が決まります。 たとえば、データベースのオブジェクトを変更するには、データベースに対する適切な書き込みアクセス許可が必要です。 データベースでのアクセス許可の詳細については、使用しているデータベースのドキュメントを参照してください。 詳しくは、「[アクセス許可と Visual Database Tools (Visual Database Tools)](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md)」をご覧ください。  
   

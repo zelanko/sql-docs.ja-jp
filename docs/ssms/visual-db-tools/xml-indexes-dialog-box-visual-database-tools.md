@@ -3,8 +3,11 @@ title: "[XML インデックス] ダイアログ ボックス (Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52f966e4e4ea42595fa93c83b608a18ae5a0b863
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f1d2fc393ebd15e3c76dd17912e0e9f29c7a369a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
-**[XML インデックス]** ダイアログ ボックスを使用すると、 **[インデックス/キー]** ダイアログ ボックスではできない、データ型が XML の列に対するインデックスの作成を行うことができます。 各 XML 列に複数の XML インデックスを作成できますが、最初に作成したインデックス (プライマリ インデックス) が他のインデックス (セカンダリ インデックス) の基になります。 プライマリ XML インデックスを削除すると、セカンダリ インデックスも削除されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[XML インデックス]** ダイアログ ボックスを使用すると、**[インデックス/キー]** ダイアログ ボックスではできない、データ型が XML の列に対するインデックスの作成を行うことができます。 各 XML 列に複数の XML インデックスを作成できますが、最初に作成したインデックス (プライマリ インデックス) が他のインデックス (セカンダリ インデックス) の基になります。 プライマリ XML インデックスを削除すると、セカンダリ インデックスも削除されます。  
   
 ## <a name="options"></a>オプション  
 **[選択された XML インデックス]**  

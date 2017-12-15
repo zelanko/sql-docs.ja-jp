@@ -3,8 +3,11 @@ title: "同一クエリ内で HAVING 句および WHERE 句を使用する | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44b656aff64222d86d80fd7ef68a08267c15ffe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4bfd62f245d9f2c46324fc437483fb379a2faa7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)
-場合によっては、HAVING を使用してグループ全体に条件を適用する前に、WHERE 句を使用してグループから個別の行を除外する必要があります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 場合によっては、HAVING を使用してグループ全体に条件を適用する前に、WHERE 句を使用してグループから個別の行を除外する必要があります。  
   
 HAVING 句は WHERE 句に似ていますが、適用先はグループ全体だけであり、グループを示す結果セット内の行だけが対象になります。一方、WHERE 句は個々の行に適用されます。 1 つのクエリに WHERE 句と HAVING 句の両方を含めることができます。 そのような場合は、次の処理を行います。  
   

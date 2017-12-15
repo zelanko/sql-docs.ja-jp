@@ -3,8 +3,11 @@ title: "SQL Server Management Studio のユーザー サポート | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b6a3108ec508a859dd6b097425f27475a85c026f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] の [ヘルプ] メニューでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] の [ヘルプ] メニューでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  
   
 ## <a name="the-help-interface"></a>[ヘルプ] のインターフェイス  
 **[目次]** と **[キーワード]** の機能やインターフェイスは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] のユーザーには既におなじみです。 他のオプションは次のとおりです。  

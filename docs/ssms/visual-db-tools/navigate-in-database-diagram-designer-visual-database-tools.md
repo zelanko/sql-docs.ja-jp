@@ -3,8 +3,11 @@ title: "データベース ダイアグラム デザイナー内でのナビゲ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c07ed4430746956d41af750140d24066c49217f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2745dbdedeac792e45e9d7c9cc59fb95f7bca7b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナー内でのナビゲーション (Visual Database Tools)
-データベース ダイアグラム デザイナーでの作業には、キーボードとマウスが使用できます。 データベース ダイアグラム デザイナーで使用する特定の方法については、次の表を参照してください。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース ダイアグラム デザイナーでの作業には、キーボードとマウスが使用できます。 データベース ダイアグラム デザイナーで使用する特定の方法については、次の表を参照してください。  
   
 |**変換先**|**ショートカット キー**|  
 |----------|-------------|  

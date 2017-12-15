@@ -3,8 +3,11 @@ title: "SQL Server または Azure SQL Database への接続 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fbf96ce171fbcbe2eeb54729fc9f543011bcf07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c9f1f7bc813e3b22007c9a7ef58ce373e57fbe0c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server または Azure SQL Database への接続
-
-サーバーとデータベースで作業するには、まず、サーバーに接続する必要があります。 同時に複数のサーバーに接続することができます。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] サーバーとデータベースで作業するには、まず、サーバーに接続する必要があります。 同時に複数のサーバーに接続することができます。
 
 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) では、複数の種類の接続をサポートしています。 この記事では、SQL Server と Azure SQL Database への接続 (Azure SQL 論理サーバーへの接続) の詳細について説明します。 他の接続オプションについては、このページの下部に示す[リンク](#see-also)を参照してください。
   

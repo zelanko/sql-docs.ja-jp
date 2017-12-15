@@ -3,8 +3,11 @@ title: "演算子 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 465ec6d532e4ee46a7c4158475b2890eccf1b0be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0580a64735d39032c56ea052233e78049e7fabd2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="operators"></a>演算子
-オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
   
 ## <a name="operator-attributes-and-concepts"></a>オペレーターの属性と概念  
 オペレーターの主な属性は次のとおりです。  

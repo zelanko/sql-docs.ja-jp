@@ -3,8 +3,11 @@ title: "行を含めるまたは除外する (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a989f2ed661ecf6528b1ede1993522d3014255f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe150d5eb288d26fec9f75028b2066896c82bd31
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>行を含めるまたは除外する (Visual Database Tools)
-選択クエリによって返される行の数を制限するには、検索条件またはフィルター条件を作成します。 SQL では、ステートメントの WHERE 句、または集計クエリの作成中に HAVING 句で検索条件が表示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 選択クエリによって返される行の数を制限するには、検索条件またはフィルター条件を作成します。 SQL では、ステートメントの WHERE 句、または集計クエリの作成中に HAVING 句で検索条件が表示されます。  
   
 > [!NOTE]  
 > 検索条件を使用して、更新クエリ、結果の挿入クエリ、値の挿入クエリ、削除クエリ、およびテーブルの作成クエリの対象となる行を表すこともできます。  

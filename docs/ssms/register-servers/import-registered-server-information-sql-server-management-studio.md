@@ -2,9 +2,12 @@
 title: "登録済みサーバー情報のインポート (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7790da7a7c032699923cf83f7cfe453ef516d16f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 587534b225f8b789a4a3b395b2af1bd0795b9653
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で保存されている登録済みサーバー情報をインポートする方法について説明します。 登録済みサーバー ファイルをエクスポートした後にインポートすることで、[登録済みサーバー] の同じサーバーを使用して、複数のコンピューターを簡単に構成できます。 この方法は、複数の場所に配置されているコンピューターから多数のサーバーを管理する場合や、経験の浅いユーザーのために基本的な接続設定を構成する場合に便利です。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で保存されている登録済みサーバー情報をインポートする方法について説明します。 登録済みサーバー ファイルをエクスポートした後にインポートすることで、[登録済みサーバー] の同じサーバーを使用して、複数のコンピューターを簡単に構成できます。 この方法は、複数の場所に配置されているコンピューターから多数のサーバーを管理する場合や、経験の浅いユーザーのために基本的な接続設定を構成する場合に便利です。  
   
 > [!NOTE]  
 >  登録済みサーバーの情報を、以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートすることはできません。  

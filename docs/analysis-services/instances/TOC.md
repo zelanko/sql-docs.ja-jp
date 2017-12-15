@@ -15,7 +15,7 @@
 ## [Kerberos 認証](configure-analysis-services-for-kerberos-constrained-delegation.md)  
 ## [SPN 登録](spn-registration-for-an-analysis-services-instance.md)  
 ## [HTTP アクセス](configure-http-access-to-analysis-services-on-iis-8-0.md)  
-## [データ プロバイダー](data-providers-used-for-analysis-services-connections.md)  
+## [クライアント ライブラリ (データ プロバイダー)](data-providers-used-for-analysis-services-connections.md)  
 ## [ユーザーとセッションの切断](disconnect-users-and-sessions-on-analysis-services-server.md)  
 # [Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md)  
 ## [SQL Server Profiler](use-sql-server-profiler-to-monitor-analysis-services.md)  

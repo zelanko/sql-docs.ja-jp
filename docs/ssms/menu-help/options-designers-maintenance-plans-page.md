@@ -3,8 +3,11 @@ title: "[オプション]([デザイナー] - [メンテナンス プラン] ペ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87e5c7771dfa5bdb1f49633b08625de0302b69d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be7de4f323b1f4351ad851c04222e0513d73a93c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="options-designers---maintenance-plans-page"></a>[オプション] \([デザイナー] - [メンテナンス プラン] ページ)
-**[オプション]** ダイアログ ボックスを使用すると、デザイン画面に新しい図形を追加したときのデザイナーの既定の動作を指定できます。 **[ツール]** メニューの **[オプション]**をクリックします。次に **[デザイナー]**を展開し、 **[メンテナンス プラン]**を選択します。  
+# <a name="options-designers---maintenance-plans-page"></a>[オプション] ([デザイナー] - [メンテナンス プラン] ページ)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[オプション]** ダイアログ ボックスを使用すると、デザイン画面に新しい図形を追加したときのデザイナーの既定の動作を指定できます。 **[ツール]** メニューの **[オプション]**をクリックします。次に **[デザイナー]**を展開し、 **[メンテナンス プラン]**を選択します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
 **[選択した図形に新しい図形を既定で接続する]**  
