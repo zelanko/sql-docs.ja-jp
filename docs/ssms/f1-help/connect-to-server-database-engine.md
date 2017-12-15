@@ -1,10 +1,13 @@
 ---
 title: "[サーバーへの接続] (データベース エンジン) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 179e84b113980d4dfc1a45a29ff00ef88958a574
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6c964843ed176e0a175606ef92c8146d20a37b47
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="connect-to-server-database-engine"></a>[サーバーへの接続] \(データベース エンジン)
-このダイアログを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]**をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、 `mycomputer\myinstance`のようにします。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
+# <a name="connect-to-server-database-engine"></a>[サーバーへの接続] (データベース エンジン)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]**をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、 `mycomputer\myinstance`のようにします。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続する機能に影響する要因は多数あります。 ヘルプのための次のリソースが見つかりません。  
 - [チュートリアル レッスン 1: データベース エンジンへの接続](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
@@ -56,7 +59,7 @@ SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.
   > 指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] にログイン アカウントが設定されていない場合、認証は失敗し、エラー メッセージが返されます。 可能であれば、Windows 認証または Active Directory - パスワード認証を使用します。  
 
   > **Active Directory - Active Directory - MFA で汎用のサポート**  
-[Active Directory - MFA で汎用] は、Azure Multi-Factor Authentication (MFA) をサポートする対話型ワークフローです。 Azure MFA を使えば、簡単なサインイン プロセスというユーザーの要求を満たしながら、データとアプリケーションへのアクセスを保護できます。 電話、テキスト メッセージ、スマート カードと PIN、モバイル アプリ通知などの簡単な検証オプションで強力な認証を提供し、ユーザーが好みの方法を選択できるようにします。 ユーザー アカウントが MFA 用に構成されている場合の対話型認証ワークフローでは、ポップアップ ダイアログ ボックスやスマート カードなどを使用する追加のユーザー対話が必要です。ユーザー アカウントが MFA 用に構成されている場合、ユーザーは Azure ユニバーサル認証を選択して接続する必要があります。 ユーザー アカウントに MFA が必要ない場合は、ユーザーは他の 2 つの Azure Active Directory 認証オプションを使用できます。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。 必要に応じて、ログインを認証するドメインを変更することができます。そのためには、**[オプション]** をクリックし、**[接続プロパティ]** タブを選択し、**[AD ドメイン名またはテナント ID]**ボックス に入力します。  
+[Active Directory - MFA で汎用] は、Azure Multi-Factor Authentication (MFA) をサポートする対話型ワークフローです。 Azure MFA を使えば、簡単なサインイン プロセスというユーザーの要求を満たしながら、データとアプリケーションへのアクセスを保護できます。 電話、テキスト メッセージ、スマート カードと PIN、モバイル アプリ通知などの簡単な検証オプションで強力な認証を提供し、ユーザーが好みの方法を選択できるようにします。 ユーザー アカウントが MFA 用に構成されている場合の対話型認証ワークフローでは、ポップアップ ダイアログ ボックスやスマート カードなどを使用する追加のユーザー対話が必要です。ユーザー アカウントが MFA 用に構成されている場合、ユーザーは Azure ユニバーサル認証を選択して接続する必要があります。 ユーザー アカウントに MFA が必要ない場合は、ユーザーは他の 2 つの Azure Active Directory 認証オプションを使用できます。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。 必要に応じて、ログインを認証するドメインを変更することができます。そのためには、[**オプション**] をクリックし、[**接続プロパティ**] タブを選択し、[**AD ドメイン名またはテナント ID**ボックス] に入力します。  
 
   > **Active Directory - パスワード**  
 Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] に接続するメカニズムです。  Azure とフェデレーションされていないドメインから資格情報を使用して Windows にログインしている場合、あるいは初期ドメインまたはクライアント ドメインに基づく Azure AD を使用する Azure AD 認証を使用している場合は、[!INCLUDE[ssSDS](../../includes/sssds_md.md)] への接続にこの方法を使用します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。  
@@ -65,7 +68,7 @@ Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を�
 Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して [!INCLUDE[ssSDS](../../includes/sssds_md.md)] に接続します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。  
   
 **ユーザー名**  
-接続に使用する Windows ユーザー名です。 このオプションは、 **Active Directory パスワード認証**を使用した接続が指定されている場合にのみ使用できます。 **[Windows 認証]** または **[Active Directory - 統合]** 認証を選択した場合は、読み取り専用となります。  
+接続に使用する Windows ユーザー名です。 このオプションは、 **Active Directory パスワード認証**を使用した接続が指定されている場合にのみ使用できます。 [**Windows 認証**] または [**Active Directory - 統合**] 認証を選択した場合は、読み取り専用となります。  
   
 **Login**  
 接続に使用するログインを入力します。 このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証または Active Directory パスワード認証を使用した接続が指定されている場合にのみ使用できます。  
@@ -77,5 +80,5 @@ Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を�
 クリックしてサーバーに接続します。  
   
 **[オプション]**  
-クリックして、**[接続プロパティ]** タブ、および **[追加の接続パラメーター]** タブを表示します。  
+クリックして、[**接続プロパティ**] タブ、および [**追加の接続パラメーター**] タブを表示します。  
   
