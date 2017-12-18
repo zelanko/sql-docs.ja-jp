@@ -22,15 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5bcd54dcbbf171b74855f5d48a7af113dd12ee43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c54f2e961abc3ec9bbbc3b19214e78d58208104
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを起動する
 
- > 以前のバージョンの SQL Server に関するコンテンツについては、「[SQL Server インポートおよびエクスポート ウィザードを実行する](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx)」をご覧ください。
+ > 以前のバージョンの SQL Server に関するコンテンツについては、「[SQL Server インポートおよびエクスポート ウィザードを実行する](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx)」をご覧ください。
 
 このトピックで説明されているいずれかの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動して、サポートされているデータ ソースからデータをインポートおよびサポートされているデータ ソースにデータをエクスポートします。
 

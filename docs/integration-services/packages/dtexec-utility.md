@@ -1,5 +1,5 @@
 ---
-title: "dtexec ユーティリティ |Microsoft ドキュメント"
+title: "dtexec ユーティリティ | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: b83e544cb070ab07d943965a5a11f305e7c70a2d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
   **dtexec** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの構成と実行に使用します。 **dtexec** ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 また **dtexec** ユーティリティでは、さまざまな変換元 ( [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー、.ispac プロジェクト ファイル、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システム) からパッケージを読み込むことができます。  
@@ -63,29 +61,29 @@ ms.lasthandoff: 09/27/2017
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- **dtexec** を使用して .ispac プロジェクト ファイルからパッケージを実行する場合の関連オプションは、/Proj[ect] と /Pack[age] です。これらは、プロジェクトのパスとパッケージのストリーム名を指定するために使用されます。 **から** Integration Services プロジェクト変換ウィザード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を実行してプロジェクトをプロジェクト配置モデルに変換する場合、ウィザードは .ispac プロジェクト ファイルを生成します。 詳細については、次を参照してください。[展開 Integration Services (SSIS) プロジェクトとパッケージ](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)です。  
+ **dtexec** を使用して .ispac プロジェクト ファイルからパッケージを実行する場合の関連オプションは、/Proj[ect] と /Pack[age] です。これらは、プロジェクトのパスとパッケージのストリーム名を指定するために使用されます。 **から** Integration Services プロジェクト変換ウィザード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を実行してプロジェクトをプロジェクト配置モデルに変換する場合、ウィザードは .ispac プロジェクト ファイルを生成します。 詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
  **dtexec** とサードパーティのスケジューリング ツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージのスケジュールを設定できます。  
   
 ##  <a name="bit"></a> 64 ビット コンピューターでのインストールに関する注意点  
  64 ビット コンピューターには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の **dtexec** ユーティリティ (dtexec.exe) がインストールされます。 特定のパッケージを 32 ビット モードで実行する必要がある場合は、32 ビット版の **dtexec** ユーティリティをインストールする必要があります。 32 ビット版の **dtexec** ユーティリティをインストールするには、セットアップ中に [クライアント ツール] または [ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ] を選択する必要があります。  
   
- 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは*\<ドライブ >*: \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn、64 ビットのディレクトリ パスは*\<ドライブ >*: \Program Files\Microsoft SQL server \110\dts\binn です)。  
+ 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
   
 > **注:** SQL Server エージェントを使用してユーティリティを実行する場合は、SQL Server エージェントによって 64 ビット バージョンのユーティリティが自動的に使用されます。 SQL Server エージェントでは、PATH 環境変数ではなくレジストリを使用してユーティリティの適切な実行可能ファイルが特定されます。  
   
  コマンド プロンプトで 64 ビット バージョンのユーティリティが実行されるようにするには、次のいずれかの操作を実行します。  
   
--   コマンド プロンプト ウィンドウを開いて、64 ビット バージョンのユーティリティを含むディレクトリへの変更 (*\<ドライブ >*: \Program Files\Microsoft SQL server \110\dts\binn)、およびその場所からユーティリティを実行します。  
+-   コマンド プロンプト ウィンドウを開いて、64 ビット バージョンのユーティリティが格納されたディレクトリ (*\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) に移動し、その場所からユーティリティを実行します。  
   
--   コマンド プロンプトで、完全なパスを入力してユーティリティを実行します (*\<ドライブ >*: \Program Files\Microsoft SQL server \110\dts\binn) に 64 ビット バージョンのユーティリティ。  
+-   コマンド プロンプトで、64 ビット バージョンのユーティリティの完全なパス (*\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) を入力してユーティリティを実行します。  
   
--   64 ビットのパスを配置することによって、PATH 環境変数内のパスの順序を永続的に変更 (*\<ドライブ >*: \Program Files\Microsoft SQL server \110\dts\binn) 32 ビットのパスの前に (*\<ドライブ >*: \Files (x86) \Microsoft SQL Server\110\DTS\Binn をプログラム) を変数にします。  
+-   PATH 環境変数で、64 ビットのパス (*\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) を 32 ビットのパス (*\<ドライブ>*:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) より前に配置してパスの順序を永続的に変更します。  
   
 ##  <a name="side"></a> サイド バイ サイド インストールを使用しているコンピューターに関する注意点  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] を、 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] または [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] がインストールされているコンピューターにインストールすると、複数のバージョンの **dtexec** ユーティリティがインストールされます。  
   
- 完全なパスを入力してユーティリティを実行するコマンド プロンプトで、ユーティリティの正しいバージョンが実行されるようにする (*\<ドライブ >*: \Program Files\Microsoft SQL Server\\< バージョン\>\DTS\Binn)。  
+ 正しいバージョンのユーティリティを実行していることを確認するには、コマンド プロンプトで完全なパス (*\<ドライブ>*:\Program Files\Microsoft SQL Server\\<バージョン\>\DTS\Binn) を入力してユーティリティを実行します。  
   
 ##  <a name="phases"></a> 実行のフェーズ  
  このユーティリティの実行には、4 つのフェーズがあります。 それらのフェーズを次に示します。  
@@ -221,7 +219,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** オプションの例については、「 **解説** 」を参照してください。  
   
---   **/D [ts]** *package_path*: (省略可能)。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
+--   **/D[ts]** *package_path*: (省略可能)。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -237,7 +235,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** *エラー コード*: 既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]フォルダーで、デバッグ ダンプ ファイルを格納*\<ドライブ >*: \Program Files\Microsoft SQL server \110\shared\errordumps です。  
+     **/Dump** *error code*: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<ドライブ>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
   
     > **注:** デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。 たとえば、デバッグ ファイルを Microsoft サポート サービスに送信する前には、機密性の高い情報をすべて削除することをお勧めします。  
   
@@ -249,7 +247,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (省略可能) パッケージの実行中にエラーが発生した場合に、デバッグ ダンプ ファイル (.mdmp および .tmp) を作成します。  
   
-     既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]フォルダーで、デバッグ ダンプ ファイルを格納*\<ドライブ >*: \Program Files\Microsoft SQL server \110\shared\errordumps フォルダーです。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<ドライブ>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
   
     > **注:** デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。 たとえば、デバッグ ファイルを Microsoft サポート サービスに送信する前には、機密性の高い情報をすべて削除することをお勧めします。  
   
@@ -266,7 +264,7 @@ dtexec /option [value] [/option [value]]...
      **/Env[Reference]** オプションは、 **/ISServer** オプションおよび **/Server** オプションと共に使用します。  
   
      このパラメーターは SQL Server エージェントによって使用されます。  
-  --   **/F [ile]** *filespec*: (省略可能)。 ファイル システムに保存されているパッケージを読み込みます。 ファイル システムに保存されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+  --   **/F[ile]** *filespec*: (省略可能)。 ファイル システムに保存されているパッケージを読み込みます。 ファイル システムに保存されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
   *filespec* 引数には、パッケージのパスとファイル名を指定します。 汎用名前付け規則 (UNC) 形式のパス、またはローカル パスのどちらかでパスを指定できます。 *filespec* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *filespec* 引数を引用符で囲む必要があります。  
   
@@ -416,7 +414,7 @@ dtexec /option [value] [/option [value]]...
   
      **/Ser[ver]** オプションが指定されている場合、 **/ISServer** オプションは必須です。  
   
---   **/SQ [L]** *package_path*: に格納されているパッケージを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**msdb**データベース。 **msdb** データベースに格納されているパッケージは、パッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。   
+--   **/SQ[L]** *package_path*:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **msdb** データベースに格納されているパッケージを読み込みます。 **msdb** データベースに格納されているパッケージは、パッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。   
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -640,4 +638,3 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  www.mattmasson.com のブログ エントリ「 [終了コード、DTEXEC、および SSIS カタログ](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)」  
   
   
-
