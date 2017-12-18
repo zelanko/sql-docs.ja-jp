@@ -1,5 +1,5 @@
 ---
-title: "実行時のメソッドのデータ フロー コンポーネント |Microsoft ドキュメント"
+title: "データ フロー コンポーネントの実行時のメソッド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f978a101e721ee1b96caa59e7633988777d30dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントの実行時のメソッド
   実行時に、データ フロー タスクは、コンポーネントの順序の確認、実行プランの準備、および作業プランを実行するワーカー スレッドのプールの管理を行います。 タスクは、データの行を変換元から読み込み、変換を使用して処理し、変換先に保存します。  
   
-## <a name="sequence-of-method-execution"></a>一連のメソッドの実行  
+## <a name="sequence-of-method-execution"></a>メソッドの実行順序  
  データ フロー コンポーネントの実行中に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 基本クラス内のメソッドのサブセットが呼び出されます。 呼び出されるメソッドとその順序は常に同じです。ただし、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドは例外です。 これら 2 つのメソッドは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> オブジェクトの存在と構成に基づいて呼び出されます。  
   
  次の一覧では、コンポーネントの実行中に呼び出される順にメソッドを示します。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> は、常に <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> の前に呼び出されます。  
@@ -167,10 +164,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- 出力バッファーに行を追加するコンポーネントの開発に関する詳細については、次を参照してください。[カスタム変換元コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)と[非同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)です。  
+ 出力バッファーに行を追加するコンポーネントの開発の詳細については、「[カスタム変換元コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)」および「[非同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)」を参照してください。  
   
 ### <a name="receiving-rows"></a>行の受信  
- コンポーネントは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> オブジェクト内の上流コンポーネントから行を受け取ります。 データ フロー タスクでは、上流コンポーネントがデータ フローに追加する行が含まれる <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> オブジェクトが、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドに渡されるパラメーターとして用意されています。 この入力バッファーを使用して、バッファー内の行および列を検証して変更することはできますが、行を追加したり削除することはできません。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドは、渡されるバッファーがなくなるまで繰り返し呼び出されます。 呼び出されると、最後に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>プロパティは**true**です。 バッファーを次の行に進める <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> メソッドを使用することにより、バッファー内の行のコレクションを反復処理できます。 このメソッドが戻る**false**バッファーがコレクション内の最後の行にある場合。 データの最後の行が処理された後にさらに操作を実行する必要がある場合を除き、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティを確認する必要はありません。  
+ コンポーネントは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> オブジェクト内の上流コンポーネントから行を受け取ります。 データ フロー タスクでは、上流コンポーネントがデータ フローに追加する行が含まれる <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> オブジェクトが、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドに渡されるパラメーターとして用意されています。 この入力バッファーを使用して、バッファー内の行および列を検証して変更することはできますが、行を追加したり削除することはできません。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドは、渡されるバッファーがなくなるまで繰り返し呼び出されます。 このメソッドが最後に呼び出されたとき、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティは **true** になります。 バッファーを次の行に進める <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> メソッドを使用することにより、バッファー内の行のコレクションを反復処理できます。 バッファーがコレクション内の最後の行にある場合、このメソッドは **false** を返します。 データの最後の行が処理された後にさらに操作を実行する必要がある場合を除き、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティを確認する必要はありません。  
   
  次のテキストは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> メソッドと <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> プロパティを使用する正しいパターンを示しています。  
   
@@ -216,10 +213,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- 入力バッファー内の行を受け取るコンポーネントの開発の詳細については、次を参照してください。[カスタム変換先コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)と[同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)です。  
+ 入力バッファー内の行を受け取るコンポーネントの開発の詳細については、「[カスタム変換先コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)」および「[同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー コンポーネントのデザイン時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

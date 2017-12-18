@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) のイベント ハンドラー |Microsoft ドキュメント"
+title: "Integration Services (SSIS) のイベント ハンドラー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
   実行可能ファイル (パッケージ、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、およびタスク ホスト コンテナー) は実行時にイベントを発生させます。 たとえば、エラーが発生すると、OnError イベントが発生します。 これらのイベントに対してカスタム イベント ハンドラーを作成し、パッケージ機能を拡張すると、実行時のパッケージを容易に管理できます。 イベント ハンドラーは、次のタスクを実行できます。  
@@ -105,7 +103,7 @@ ms.lasthandoff: 09/26/2017
   
  **[イベント ハンドラー]** タブには、 **[接続マネージャー]** 領域も含まれ、イベント ハンドラーがサーバーおよびデータ ソースに接続するために使用する、接続マネージャーの作成および変更を行うことができます。 詳細については、「 [接続マネージャーを作成する](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>イベント ハンドラー タブで、イベント ハンドラーを追加します。  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>[イベント ハンドラー] タブでイベント ハンドラーを追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -113,7 +111,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  **[イベント ハンドラー]** タブをクリックします。  
   
-     ![イベント ハンドラーを持つデザイン画面のスクリーン ショット](../integration-services/media/eventhandlers.gif "イベント ハンドラーを持つデザイン画面のスクリーン ショット")  
+     ![イベント ハンドラーが表示されたデザイン画面のスクリーンショット](../integration-services/media/eventhandlers.gif "イベント ハンドラーが表示されたデザイン画面のスクリーンショット")  
   
      イベント ハンドラー内で制御フローとデータ フローを作成する手順は、パッケージ内で制御フローとデータ フローを作成する手順と同様です。 詳細については、「 [制御フロー](../integration-services/control-flow/control-flow.md) 」と「 [データ フロー](../integration-services/data-flow/data-flow.md)」を参照してください。  
   
@@ -129,7 +127,7 @@ ms.lasthandoff: 09/26/2017
   
 9. **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックし、新しいパッケージを保存します。  
 
-## <a name="set-the-properties-of-an-event-handler"></a>イベント ハンドラーのプロパティを設定します。  
+## <a name="set-the-properties-of-an-event-handler"></a>イベント ハンドラーのプロパティを設定する  
  プロパティを設定するには、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウで行うか、またはプログラムによって設定します。  
   
  これらのプロパティを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
@@ -140,4 +138,3 @@ ms.lasthandoff: 09/26/2017
  パッケージにイベント ハンドラーを追加する方法については、「 [パッケージにイベント ハンドラーを追加する](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)」を参照してください。  
   
   
-

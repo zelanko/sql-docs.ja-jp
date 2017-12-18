@@ -1,5 +1,5 @@
 ---
-title: "コーディングおよびスクリプト タスクのデバッグ |Microsoft ドキュメント"
+title: "スクリプト タスクのコーディングおよびデバッグ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -26,50 +23,49 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
+caps.latest.revision: "81"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
-  タスクのスクリプトを構成した後、**スクリプト タスク エディター**、スクリプト タスク開発環境で、カスタム コードを記述します。  
+  **[スクリプト タスク エディター]** でスクリプト タスクを構成したら、スクリプト タスク開発環境でカスタム コードを記述します。  
   
 ## <a name="script-task-development-environment"></a>スクリプト タスク開発環境  
- スクリプト タスクを使用して[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) スクリプト自体の開発環境として。  
+ スクリプト タスクは、スクリプト自体の開発環境として、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用します。  
   
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語の設定を指定する、 **[scriptlanguage]**プロパティに、**スクリプト タスク エディター**です。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト タスク内のコードからその機能を呼び出すことができます。  
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**スクリプト タスク エディター**で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト タスク内のコードからその機能を呼び出すことができます。  
   
  スクリプト タスクで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト タスクを使用してもパッケージの配置には影響しません。  
   
 > [!NOTE]  
 >  パッケージをデザインしてスクリプトをデバッグする際、スクリプト コードは一時的にプロジェクト ファイルに書き込まれます。 機密情報をファイルに保存することはセキュリティ上危険であるため、パスワードなどの重要な情報はスクリプト コードに書き込まないことをお勧めします。  
   
- 既定では、 **Option Strict** IDE では無効です。  
+ 既定では、**[Option Strict]** が IDE で無効になっています。  
   
 ## <a name="script-task-project-structure"></a>スクリプト タスク プロジェクトの構造  
  スクリプト タスクに格納されているスクリプトを作成または変更する場合、VSTA は空の新しいプロジェクトを開くか、または既存のプロジェクトを再度開きます。 この VSTA プロジェクトを作成しても、パッケージの配置に影響はありません。このプロジェクトはパッケージ ファイル内部に保存され、スクリプト タスクは追加ファイルを作成しないためです。  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>スクリプト タスク プロジェクトのプロジェクト アイテムおよびクラス  
- 既定では、VSTA プロジェクト エクスプ ローラー ウィンドウに表示されるスクリプト タスク プロジェクトに 1 つの項目が含まれています**ScriptMain**です。 **ScriptMain**項目、さらもという名前の単一のクラスを含む**ScriptMain**です。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。  
+ VSTA の [プロジェクト エクスプローラー] ウィンドウに表示されるスクリプト タスク プロジェクトには、既定で **ScriptMain** という単一のアイテムが格納されます。 **ScriptMain** アイテムには、同じく **ScriptMain** という名前の単一のクラスが格納されます。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。  
   
--   スクリプト タスクを構成するとき、[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]プログラミング言語、 **ScriptMain**クラスにパブリック サブルーチン**Main**です。 **ScriptMain.Main**サブルーチンは、スクリプト タスクを実行するときにランタイムによって呼び出されるメソッド。  
+-   スクリプト タスクが [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] プログラミング言語用に構成されている場合は、**ScriptMain** クラスにパブリック サブルーチン **Main** が含まれます。 **ScriptMain.Main** サブルーチンは、ユーザーのスクリプト タスクを実行するときにランタイムが呼び出すメソッドです。  
   
-     既定では、コード内にのみ、 **Main**行である、新しいスクリプトのサブルーチン`Dts.TaskResult = ScriptResults.Success`です。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。 **Dts.TaskResult**プロパティは、後ほど[スクリプト タスクから結果を返す](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)です。  
+     既定では、新しいスクリプトの **Main** サブルーチン内にあるコードは、行 `Dts.TaskResult = ScriptResults.Success` のみです。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。 **Dts.TaskResult** プロパティは、「[スクリプト タスクから結果を返す](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)」で説明されています。  
   
--   スクリプト タスクが構成されている場合、Visual c# のプログラミング言語、 **ScriptMain**クラス、パブリック メソッドを持つ、 **Main**です。 このメソッドは、スクリプト タスク実行時に呼び出されます。  
+-   スクリプト タスクが Visual C# プログラミング言語用に構成されている場合は、**ScriptMain** クラスにパブリック メソッド **Main** が含まれます。 このメソッドは、スクリプト タスク実行時に呼び出されます。  
   
-     既定では、 **Main**メソッドには、行が含まれています。`Dts.TaskResult = (int)ScriptResults.Success`です。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。  
+     既定では、**Main** メソッドに `Dts.TaskResult = (int)ScriptResults.Success` という行が含まれます。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。  
   
- **ScriptMain**項目が以外のクラスを含めることができます、 **ScriptMain**クラスです。 クラスは、そのクラスが含まれているスクリプト タスクでのみ使用できます。  
+ **ScriptMain** アイテムには、**ScriptMain** クラス以外のクラスを格納できます。 クラスは、そのクラスが含まれているスクリプト タスクでのみ使用できます。  
   
- 既定では、 **ScriptMain**プロジェクト項目には、次の自動生成されたコードが含まれています。 コード テンプレートでも、スクリプト タスクの概要、および、変数、イベント、接続など、SSIS オブジェクトを取得および操作する方法に関する追加情報を提供します。  
+ 既定では、**ScriptMain** プロジェクト アイテムには、次のコードが自動生成されます。 コード テンプレートでも、スクリプト タスクの概要、および、変数、イベント、接続など、SSIS オブジェクトを取得および操作する方法に関する追加情報を提供します。  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Task  
@@ -207,34 +203,34 @@ To open Help, press F1.
 ```  
   
 ### <a name="additional-project-items-in-the-script-task-project"></a>スクリプト タスク プロジェクトのその他のプロジェクト アイテム  
- スクリプト タスク プロジェクトは、既定値以外のアイテムを含めることができます**ScriptMain**項目。 プロジェクトには、クラス、モジュール、およびコード ファイルを追加できます。 また、フォルダーを使用してアイテムのグループを整理できます。 追加したすべてのアイテムは、パッケージ内部に保存されます。  
+ スクリプト タスク プロジェクトには、既定の **ScriptMain** アイテム以外のアイテムを格納できます。 プロジェクトには、クラス、モジュール、およびコード ファイルを追加できます。 また、フォルダーを使用してアイテムのグループを整理できます。 追加したすべてのアイテムは、パッケージ内部に保存されます。  
   
 ### <a name="references-in-the-script-task-project"></a>スクリプト タスク プロジェクトの参照  
- マネージ アセンブリへの参照を追加するには、スクリプト タスクでプロジェクトを右クリックして**プロジェクト エクスプ ローラー**、クリックして**参照の追加**です。 詳細については、次を参照してください。[スクリプト ソリューションでその他のアセンブリを参照している](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)です。  
+ 参照をマネージ アセンブリに追加するには、**プロジェクト エクスプローラー**でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
   
 > [!NOTE]  
->  プロジェクト参照を表示するには、VSTA IDE 内で**クラス ビュー**または**プロジェクト エクスプ ローラー**です。 これらのウィンドウからのいずれかを開く、**ビュー**メニュー。 新しい参照を追加することができます、**プロジェクト** メニューから**プロジェクト エクスプ ローラー**、またはから**クラス ビュー**です。  
+>  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、**[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>スクリプト タスク内でのパッケージとの対話  
- スクリプト タスクを使用して、グローバル**Dts**インスタンスであるオブジェクトの<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>クラス、およびそのメンバーを格納しているパッケージとの対話、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]ランタイム。  
+ スクリプト タスクは、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのインスタンスであるグローバル オブジェクト **Dts**、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。  
   
- 次の表に、プリンシパルのパブリック メンバーの<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>はグローバルで、スクリプト タスク コードに公開するクラス**Dts**オブジェクト。 このセクションのトピックでは、これらのメンバーを使用する方法についてさらに詳しく説明します。  
+ 次の表は、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのプリンシパルのパブリック メンバーの一覧です。このクラスは、グローバル オブジェクト **Dts** を介してスクリプト タスクのコードに公開されます。 このセクションのトピックでは、これらのメンバーを使用する方法についてさらに詳しく説明します。  
   
 |メンバー|用途|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|パッケージで定義されている接続マネージャーへのアクセスを提供します。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|スクリプト タスクでエラー、警告、および情報メッセージを発生させるためのイベント インターフェイスを提供します。|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|1 つのオブジェクトをランタイムに返す簡単な方法を示します (に加え、 **TaskResult**) ワークフローの分岐を使用できます。|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|**TaskResult** のほか、ワークフローの分岐にも使用できる単一のオブジェクトをランタイムに返す簡単な方法を提供します。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|タスクの進行状況や結果などの情報を、有効なログ プロバイダーに記録します。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|タスクの成功または失敗をレポートします。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|タスクのコンテナーを実行しているトランザクションが存在する場合、それを提供します。|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|含まれる変数にアクセスできるように、 **ReadOnlyVariables**と**ReadWriteVariables**タスク、スクリプト内で使用するためのプロパティです。|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|スクリプトで使用するため、**ReadOnlyVariables** および **ReadWriteVariables** タスク プロパティの一覧に含まれる変数へのアクセスを提供します。|  
   
  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスには、使用しない可能性のあるパブリック メンバーも含まれています。  
   
 |メンバー|Description|  
 |------------|-----------------|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|変数にアクセスするには、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティの方が便利です。 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A> も使用できますが、読み書きする変数をロックおよびロック解除するためのメソッドを明示的に呼び出す必要があります。 スクリプト タスクは、使用する場合のロック セマンティクスを処理、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>プロパティです。|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|変数にアクセスするには、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティの方が便利です。 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A> も使用できますが、読み書きする変数をロックおよびロック解除するためのメソッドを明示的に呼び出す必要があります。 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを使用すると、スクリプト タスクにより自動的にロック セマンティクスが処理されます。|  
   
 ## <a name="debugging-the-script-task"></a>スクリプト タスクのデバッグ  
  スクリプト タスクのコードをデバッグするには、コードに少なくとも 1 つのブレークポイントを設定し、VSTA IDE を閉じて [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 パッケージが実行されてスクリプト タスクが開始されると、VSTA IDE が再度開き、読み取り専用モードでコードが表示されます。 実行によりブレークポイントに到達したら、変数の値の検証や、残りのコードのステップ スルーができます。  
@@ -246,18 +242,17 @@ To open Help, press F1.
 >  スクリプト タスクをデバッグするには、パッケージを実行する必要があります。 個別のタスクのみを実行する場合、スクリプト タスク コードのブレークポイントは無視されます。  
   
 > [!NOTE]  
->  パッケージ実行タスクから実行されている子パッケージの一部としてスクリプト タスクを実行する場合は、スクリプト タスクをデバッグできません。 このような状況では、子パッケージにスクリプト タスクで設定したブレークポイントが無視されます。 子パッケージを単独で実行することにより、通常どおりパッケージをデバッグできます。  
+>  パッケージ実行タスクから実行されている子パッケージの一部としてスクリプト タスクを実行する場合は、スクリプト タスクをデバッグできません。 このような場合は、子パッケージのスクリプト タスク内で設定したブレークポイントは無視されます。 子パッケージを単独で実行することにより、通常どおりパッケージをデバッグできます。  
   
 > [!NOTE]  
 >  複数のスクリプト タスクが含まれるパッケージをデバッグする場合、デバッガーによってデバッグされるスクリプト タスクは 1 つです。 Foreach ループまたは For ループ コンテナーの場合と同様に、デバッガーが完了した場合、システムは別のスクリプト タスクをデバッグできます。  
   
 ## <a name="external-resources"></a>外部リソース  
   
--   ブログ エントリ「 [VSTA のセットアップと構成に関する問題の SSIS 2008 および R2 インストール](http://go.microsoft.com/fwlink/?LinkId=215661)、blogs.msdn.com です。  
+-   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。  
   
 ## <a name="see-also"></a>参照  
- [スクリプティング ソリューションの他のアセンブリを参照します。](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
- [スクリプト タスク エディターで、スクリプト タスクを構成します。](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
+ [スクリプト タスク エディターでのスクリプト タスクの構成](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
-

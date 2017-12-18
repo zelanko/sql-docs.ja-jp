@@ -2,9 +2,12 @@
 title: "SQL Server の証明書と非対称キー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1175f8ea6b93440437b23c6322fe2eb8a89332c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eadfb0677c17e0c40d1b32ca01998c8079fcd238
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
-  公開キー暗号化 (PKI) は、メッセージを秘匿する方法の 1 つです。この方法では、ユーザーが *公開* キーと *秘密* キーを作成します。 秘密キーは秘匿されますが、公開キーは他のユーザーに配布できます。 2 つのキーは数学的に相関していますが、公開キーを使用して秘密キーを簡単に導出することはできません。 公開キーはデータの暗号化に使用され、秘密キーはデータの暗号化解除に使用されます。 公開キーを使用して暗号化されたメッセージは、正しい秘密キーを使用しないと暗号化解除できません。 2 つの異なるキーが存在するので、これらのキーは *非対称*です。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 公開キー暗号化 (PKI) は、メッセージを秘匿する方法の 1 つです。この方法では、ユーザーが "*公開*" キーと "*秘密*" キーを作成します。 秘密キーは秘匿されますが、公開キーは他のユーザーに配布できます。 2 つのキーは数学的に相関していますが、公開キーを使用して秘密キーを簡単に導出することはできません。 公開キーはデータの暗号化に使用され、秘密キーはデータの暗号化解除に使用されます。 公開キーを使用して暗号化されたメッセージは、正しい秘密キーを使用しないと暗号化解除できません。 2 つの異なるキーが存在するので、これらのキーは *非対称*です。  
   
  証明書と非対称キーは、どちらも非対称暗号化を使用するための手段です。 証明書は、有効期限や発行者などの詳細情報を格納できることから、非対称キーのコンテナーとしてよく使用されます。 この 2 つのメカニズムに暗号化アルゴリズムの違いはなく、同じキー長が指定された場合の強度にも違いはありません。 一般に、データベース内の他の種類の暗号化キーを暗号化する場合や、コード モジュールに署名する場合は、証明書を使用します。  
   

@@ -1,5 +1,5 @@
 ---
-title: "スクリプト コンポーネントを含むソースの作成 |Microsoft ドキュメント"
+title: "スクリプト コンポーネントによる変換元の作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,143 +8,139 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script component [Integration Services], source components
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4944c3d5752da21fed90f16a38a33b4fad41515
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 397039d98c68bc6828473099091a70b8777f350d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-source-with-the-script-component"></a>スクリプト コンポーネントによる変換元の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内で変換元コンポーネントを使用すると、データ ソースからデータを読み込み、下流にある変換や変換先に渡すことができます。 通常、データ ソースへの接続には、既存の接続マネージャーを使用します。  
   
- スクリプト コンポーネントの概要については、次を参照してください。[スクリプト コンポーネントによるデータ フローの拡張](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)です。  
+ スクリプト コンポーネントの概要については、「[スクリプト コンポーネントによるデータ フローの拡張](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
- スクリプト コンポーネントおよびそれによって生成されるインフラストラクチャ コードを活用すれば、カスタム データ フロー コンポーネントを開発するための手順を大幅に簡略化できます。 スクリプト コンポーネントの動作のしくみを理解するため、カスタム データ フロー コンポーネントの開発手順を理解しておくと役立つ場合があります。 セクションを参照して[カスタム データ フロー コンポーネントを開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)、トピックでは特に[カスタム変換元コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)です。  
+ スクリプト コンポーネントおよびそれによって生成されるインフラストラクチャ コードを活用すれば、カスタム データ フロー コンポーネントを開発するための手順を大幅に簡略化できます。 スクリプト コンポーネントの動作のしくみを理解するため、カスタム データ フロー コンポーネントの開発手順を理解しておくと役立つ場合があります。 「[カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)」セクション、特に「[カスタム変換元コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)」トピックを参照してください。  
   
 ## <a name="getting-started-with-a-source-component"></a>変換元コンポーネントの概要  
- [データ フロー] ペインにスクリプト コンポーネントを追加すると[!INCLUDE[ssIS](../../includes/ssis-md.md)]デザイナー、**スクリプト コンポーネントの種類の選択** ダイアログ ボックスが開き、変換元、変換先、または変換のスクリプトを選択するように求められます。 このダイアログ ボックスで選択**ソース**です。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [データ フロー] ペインにスクリプト コンポーネントを追加すると、**[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスが開き、[変換元]、[変換先]、[変換] スクリプトのいずれかを選択するように求められます。 このダイアログ ボックスで、**[変換元]** を選択します。  
   
 ## <a name="configuring-a-source-component-in-metadata-design-mode"></a>メタデータ デザイン モードでの変換元コンポーネントの構成  
- 使用して、コンポーネントの構成を選択したら、変換元コンポーネントを作成した後、**スクリプト変換エディター**です。 詳細については、次を参照してください。[スクリプト コンポーネント エディターで、スクリプト コンポーネントを構成する](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)です。  
+ 変換元コンポーネントの作成を選択したら、**[スクリプト変換エディター]** を使用して、コンポーネントを構成します。 詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。  
   
- データ フロー変換元コンポーネントに入力はありませんが、1 つ以上の出力を設定できます。 使用してメタデータ デザイン モードで完了する必要のある手順のいずれかのコンポーネントは、出力の構成、**スクリプト変換エディター**カスタム スクリプトを記述する前に、します。  
+ データ フロー変換元コンポーネントに入力はありませんが、1 つ以上の出力を設定できます。 コンポーネントの出力の設定は、メタデータ デザイン モードでカスタム スクリプトを記述する前に完了する必要のある手順の 1 つです。これを行うには、**[スクリプト変換エディター]** を使用します。  
   
- 設定して、スクリプト言語を指定することも、 **[scriptlanguage]**プロパティを**スクリプト**のページ、**スクリプト変換エディター**です。  
+ **[スクリプト変換エディター]** の **[スクリプト]** ページにある **[ScriptLanguage]** プロパティを設定して、スクリプト言語を指定することもできます。  
   
 > [!NOTE]  
->  スクリプト コンポーネントとスクリプト タスクの既定のスクリプト言語を設定するには、使用、**スクリプト言語** オプションを選択、**全般**のページ、**オプション** ダイアログ ボックス。 詳細については、「 [General Page](~/integration-services/control-flow/script-task-editor-general-page.md)」を参照してください。  
+>  スクリプト コンポーネントとスクリプト タスクの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](~/integration-services/control-flow/script-task-editor-general-page.md)」を参照してください。  
   
 ### <a name="adding-connection-managers"></a>接続マネージャーの追加  
- 通常、変換元コンポーネントは既存の接続マネージャーを使用してデータ ソースに接続し、データをデータ フローに読み込みます。 **接続マネージャー**のページ、**スクリプト変換エディター**、 をクリックして**追加**適切な接続マネージャーを追加します。  
+ 通常、変換元コンポーネントは既存の接続マネージャーを使用してデータ ソースに接続し、データをデータ フローに読み込みます。 **[スクリプト変換エディター]** の **[接続マネージャー]** ページで **[追加]** をクリックして、適切な接続マネージャーを追加します。  
   
- ただし、接続マネージャーは、カプセル化して、特定の種類のデータ ソースに接続するために必要とする情報を格納する便利な単位のみです。 データの読み込みや保存、場合によってはデータ ソースとの接続や切断を行うためには、独自のカスタム コードを記述する必要もあります。  
+ ただし、接続マネージャーは、便宜上、特定の種類のデータ ソースに接続するために必要な情報をカプセル化して格納するユニットにすぎません。 データの読み込みや保存、場合によってはデータ ソースとの接続や切断を行うためには、独自のカスタム コードを記述する必要もあります。  
   
- スクリプト コンポーネントによる接続マネージャーを使用する方法に関する一般情報は、次を参照してください。[スクリプト コンポーネントでデータ ソースに接続する](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)です。  
+ スクリプト コンポーネントで接続マネージャーを使用する方法の一般情報については、「[スクリプト コンポーネントでのデータ ソースへの接続](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)」を参照してください。  
   
- 詳細については、**接続マネージャー**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター & #40 です。接続マネージャー ページ &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ **[スクリプト変換エディター]** の **[接続マネージャー]** ページの詳細については、「[スクリプト変換エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)」を参照してください。  
   
 ### <a name="configuring-outputs-and-output-columns"></a>出力および出力列の設定  
- 変換元コンポーネントに入力はありませんが、1 つ以上の出力を設定できます。 **入力と出力**のページ、**スクリプト変換エディター**は既定では、1 つの出力が作成されましたが、出力列が作成されていません。 エディターのこのページで、必要に応じて以下の項目を設定します。  
+ 変換元コンポーネントに入力はありませんが、1 つ以上の出力を設定できます。 **[スクリプト変換エディター]** の **[入力および出力]** ページには、既定で 1 つの出力が作成されていますが、出力列は作成されていません。 エディターのこのページで、必要に応じて以下の項目を設定します。  
   
--   各出力に対する出力列は、手動で追加して設定する必要があります。 各出力に対する出力列 フォルダーを選択し、使用、**列の追加**と**列の削除**変換元コンポーネントの各出力に対する出力列を管理するボタンです。 後でスクリプト内で出力列を参照する際には、ここで割り当てた名前、および自動生成されたコードによって作成された、型指定されたアクセサー プロパティを使用します。  
+-   各出力に対する出力列は、手動で追加して設定する必要があります。 各出力に対する [出力列] フォルダーを選択し、**[列の追加]** および **[列の削除]** ボタンを使用して、変換元コンポーネントの各出力に対する出力列を管理します。 後でスクリプト内で出力列を参照する際には、ここで割り当てた名前、および自動生成されたコードによって作成された、型指定されたアクセサー プロパティを使用します。  
   
--   予期しない値を含む行に対するシミュレートされたエラー出力など、1 つ以上の出力を追加して作成できます。 使用して、**出力の追加**と**出力の削除**ボタン変換元コンポーネントの出力を管理します。 すべての入力行は使用可能なすべての出力に送られますの同一の 0 以外の値も指定しない限り、 **ExclusionGroup**同じを共有する出力の 1 つのみに各行をダイレクトする出力のプロパティ**ExclusionGroup**値。 識別する特定の整数値が選択されている、 **ExclusionGroup**大きな違いはありません。  
+-   予期しない値を含む行に対するシミュレートされたエラー出力など、1 つ以上の出力を追加して作成できます。 **[出力の追加]** および **[出力の削除]** ボタンを使用して、変換元コンポーネントの出力を管理します。 すべての入力行は使用可能なすべての出力に送られます。ただし、出力の **ExclusionGroup** プロパティに 0 以外の同じ値を指定すると、各行を、同じ **ExclusionGroup** の値を共有する出力のうちいずれか 1 つにのみ送ることもできます。 **ExclusionGroup** を識別するために選択された整数値に、特別な意味はありません。  
   
     > [!NOTE]  
-    >  0 以外を使用することもできます。 **ExclusionGroup**すべての行を出力したくない場合に、1 つの出力を持つプロパティ値。 この場合、ただし、明示的に呼び出す必要があります、 **DirectRowTo\<outputbuffer >**行ごとに、出力に送信するメソッド。  
+    >  すべての行を出力しない場合は、0 以外の **ExclusionGroup** プロパティ値を単一の出力で使用することもできます。 ただし、この場合は、出力に送信する各行について、**DirectRowTo\<outputbuffer>** メソッドを明示的に呼び出す必要があります。  
   
 -   出力にはわかりやすい名前を付けておくことができます。 後で出力を参照する際には、スクリプト内での名前、および自動生成されたコードによって作成された、型指定されたアクセサー プロパティを使用します。  
   
--   複数の同じ出力に通常**ExclusionGroup**列は出力が同じです。 ただし、シミュレートされたエラー出力を作成している場合、エラー情報を格納するために列を追加します。 データ フロー エンジンの方法については、エラー行を処理するを参照してください。[データ フロー コンポーネントでエラー出力を使用して](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)です。 ただし、スクリプト コンポーネントでは、独自のコードを記述して、追加した列に該当するエラー情報を格納する必要があります。 詳細については、次を参照してください。[スクリプト コンポーネントのエラー出力のシミュレート](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)です。  
+-   通常、同じ **ExclusionGroup** 内の複数の出力には、同じ出力列が含まれます。 ただし、シミュレートされたエラー出力を作成するには、エラー情報を格納するために列の追加が必要になる場合があります。 データ フロー エンジンがエラー行を処理する方法については、「[データ フロー コンポーネントでのエラー出力の使用](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)」を参照してください。 ただし、スクリプト コンポーネントでは、独自のコードを記述して、追加した列に該当するエラー情報を格納する必要があります。 詳細については、「[スクリプト コンポーネントに対するエラー出力のシミュレート](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)」を参照してください。  
   
- 詳細については、**入力と出力**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター (&) #40 です。 入力し、呼び出し力 ページ &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)です。  
+ **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。  
   
 ### <a name="adding-variables"></a>変数の追加  
- 既存の変数の値をスクリプトで使用する場合は、それらを追加できます、 **ReadOnlyVariables**と**ReadWriteVariables**プロパティのフィールド、**スクリプト**のページ、**スクリプト変換エディター**です。  
+ 値をスクリプト内で使用する既存の変数がある場合は、**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
   
- プロパティ フィールドに複数の変数を入力する場合は、変数名をコンマで区切ります。 省略記号ボタンをクリックして、複数の変数を入力することもできます (**.**) ボタンを**ReadOnlyVariables**と**ReadWriteVariables**プロパティ フィールドと変数を選択すると、**変数を選択** ダイアログ ボックス.  
+ プロパティ フィールドに複数の変数を入力する場合は、変数名をコンマで区切ります。 また、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックして **[変数の選択]** ダイアログ ボックスで変数を選択することで、複数の変数を入力することもできます。  
   
- スクリプト コンポーネントで変数を使用する方法に関する一般情報は、次を参照してください。[スクリプト コンポーネントで変数を使用して](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)です。  
+ スクリプト コンポーネントで変数を使用する方法の一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
- 詳細については、**スクリプト**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター & #40 です。[スクリプト] ページ &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>コード デザイン モードでの変換元コンポーネントのスクリプト作成  
- コンポーネントのメタデータを構成した後で開く、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE、カスタム スクリプトを記述します。 VSTA を開くにはクリックして**スクリプトの編集**上、**スクリプト**のページ、**スクリプト変換エディター**です。 いずれかを使用して、スクリプトを記述できます[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic または[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C# の場合、選択したスクリプト言語に応じて、 **[scriptlanguage]**プロパティです。  
+ コンポーネントのメタデータを構成したら、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開き、カスタム スクリプトのコードを作成します。 VSTA を開くには、**[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックします。 **[ScriptLanguage]** プロパティで選択したスクリプト言語に応じて [!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のいずれかを使用し、独自のスクリプトを記述できます。  
   
- スクリプト コンポーネントを使用して作成されたコンポーネントのすべての種類に適用される重要な情報について、次を参照してください。[コーディングおよびスクリプト コンポーネントのデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)です。  
+ スクリプト コンポーネントを使用して作成されたすべての種類のコンポーネントに適用される重要な情報については、「[スクリプト コンポーネントのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」を参照してください。  
   
 ### <a name="understanding-the-auto-generated-code"></a>自動生成されたコードについて  
- 作成と編集可能な変換元コンポーネントを構成した後で VSTA IDE を開くときに**ScriptMain**クラスがコード エディターで表示されます。 カスタム コードを記述する、 **ScriptMain**クラスです。  
+ 変換元コンポーネントを作成して構成した後で VSTA IDE を開くと、コード エディターには編集可能な **ScriptMain** クラスが表示されます。 この **ScriptMain** クラスにカスタム コードを記述します。  
   
- **ScriptMain**クラスにはスタブが含まれています、 **CreateNewOutputRows**メソッドです。 **CreateNewOutputRows**変換元コンポーネントで最も重要なメソッドです。  
+ **ScriptMain** クラスには、**CreateNewOutputRows** メソッドのスタブが含まれています。 **CreateNewOutputRows** は、変換元コンポーネントの最重要メソッドです。  
   
- 開く場合、**プロジェクト エクスプ ローラー** VSTA のウィンドウで、スクリプト コンポーネントが、読み取り専用生成も確認できます**BufferWrapper**と**ComponentWrapper**プロジェクト項目。 **ScriptMain**クラスから継承**UserComponent**クラス内で、 **ComponentWrapper**プロジェクト項目です。  
+ VSTA の **[プロジェクト エクスプローラー]** ウィンドウを開くと、スクリプト コンポーネントにより、**BufferWrapper** および **ComponentWrapper** というプロジェクト アイテムが、読み取り専用の状態で自動生成されていることもわかります。 **ScriptMain** クラスは、**ComponentWrapper** プロジェクト アイテム内の **UserComponent** クラスから継承されます。  
   
- データ フロー エンジンを起動、実行時に、 **PrimeOutput**メソッドで、 **UserComponent**クラスが優先、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A>のメソッド、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>クラスの親です。 **PrimeOutput**メソッドがさらに次のメソッドを呼び出します。  
+ 実行時には、データ フロー エンジンが **UserComponent** クラスの **PrimeOutput** メソッドを呼び出します。これにより、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 親クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A> メソッドがオーバーライドされます。 次に、**PrimeOutput** メソッドは以下のメソッドを呼び出します。  
   
-1.  **CreateNewOutputRows**メソッドのオーバーライドを**ScriptMain**最初に空は、バッファーに行を追加、データ ソースからの出力。  
+1.  **CreateNewOutputRows** メソッド。これを **ScriptMain** でオーバーライドして、最初は空である出力バッファーに、データ ソースの行を追加します。  
   
-2.  **FinishOutputs**メソッドで、既定では空です。 このメソッドでオーバーライド**ScriptMain**出力を完了するために必要な処理を実行します。  
+2.  **FinishOutputs** メソッド。既定では空です。 このメソッドを **ScriptMain** でオーバーライドして、出力を完了するために必要な処理を実行します。  
   
-3.  プライベート**MarkOutputsAsFinished**メソッドの呼び出し、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A>のメソッド、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>をデータ フロー エンジンに出力が完了したことを示すクラスの親です。 呼び出していない**SetEndOfRowset**独自のコードで明示的にします。  
+3.  **MarkOutputsAsFinished** プライベート メソッド。これは、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 親クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> メソッドを呼び出し、出力が完了したことをデータ フロー エンジンに示します。 独自のコードで明示的に **SetEndOfRowset** を呼び出す必要はありません。  
   
 ### <a name="writing-your-custom-code"></a>カスタム コードの記述  
- カスタム変換元コンポーネントの作成を終了する可能性があるスクリプトで使用できる次の方法で作成、 **ScriptMain**クラスです。  
+ カスタム変換元コンポーネントの作成を終了するには、必要に応じて **ScriptMain** クラスで使用できる次のメソッドにスクリプトを記述する場合があります。  
   
-1.  上書き、 **AcquireConnections**外部データ ソースに接続する方法です。 接続マネージャーから、接続オブジェクトまたは必要な接続情報を抽出します。  
+1.  外部データ ソースに接続する場合は、**AcquireConnections** メソッドをオーバーライドします。 接続マネージャーから、接続オブジェクトまたは必要な接続情報を抽出します。  
   
-2.  上書き、 **PreExecute**メソッド データを読み込む場合は、同時にすべてのソース データを読み込むことができます。 たとえば、実行することができます、 **SqlCommand**に対して、[!INCLUDE[vstecado](../../includes/vstecado-md.md)]への接続、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースし、同時にすべてのソース データを読み込み、 **SqlDataReader**です。 内の行をループするようにデータを読み込むことができます (たとえば、テキスト ファイルを読み取るときに) 時に、ソース データの 1 つの行を読み込む必要がある場合、 **CreateNewOutputRows**です。  
+2.  変換元データをすべて同時に読み込める場合は、**PreExecute** メソッドをオーバーライドしてデータを読み込みます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続に対して **SqlCommand** を実行し、すべての変換元データを同時に **SqlDataReader** に読み込むことができます。 変換元データを 1 行ずつ読み込む必要がある場合 (たとえば、テキスト ファイルを読み取る場合)、は、**CreateNewOutputRows** で行をループする際にデータを読み込むことができます。  
   
-3.  使用して、オーバーライドされた**CreateNewOutputRows**メソッドが空の出力バッファーに新しい行を追加して、新しい出力行の各列の値を入力します。 使用して、 **AddRow**空の新しい行を追加し、各列の値を設定するには、各出力バッファーのメソッドです。 通常は、外部ソースから読み込まれた列から値をコピーします。  
+3.  オーバーライドされた **CreateNewOutputRows** メソッドを使用して、空の出力バッファーに新しい行を追加し、新しい出力行に各列の値を入力します。 各出力バッファーの **AddRow** メソッドを使用して空の新しい行を追加し、各列の値を設定します。 通常は、外部ソースから読み込まれた列から値をコピーします。  
   
-4.  上書き、 **PostExecute**メソッドが、データの処理を完了します。 たとえば、閉じ、 **SqlDataReader**データを読み込むために使用することです。  
+4.  **PostExecute** メソッドをオーバーライドして、データの処理を終了します。 たとえば、データを読み込むために使用した **SqlDataReader** を閉じることができます。  
   
-5.  上書き、 **ReleaseConnections**必要な場合、外部データ ソースから切断するメソッド。  
+5.  **ReleaseConnections** メソッドを必要に応じてオーバーライドして、外部データ ソースとの接続を切断します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、カスタム コードで必要な**ScriptMain**変換元コンポーネントを作成するクラス。  
+ 次の例では、変換元コンポーネントを作成するために、**ScriptMain** クラスで必要なカスタム コードを示します。  
   
 > [!NOTE]  
->  これらの例を使用して、 **Person.Address**テーブルに、 **AdventureWorks**サンプル データベースと、最初と 4 番目の列を渡す、 **intAddressID**と**nvarchar (30) 市区町村**をデータ フローの列です。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。  
+>  これらの例では、**AdventureWorks** サンプル データベースの **Person.Address** テーブルを使用して、その第 1 列および第 4 列、つまり、**intAddressID** 列および **nvarchar(30)City** 列をデータ フローにそのまま渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。  
   
 ### <a name="adonet-source-example"></a>ADO.NET ソースの例  
- この例では、既存の変換元コンポーネント[!INCLUDE[vstecado](../../includes/vstecado-md.md)]からデータを読み込む接続マネージャー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ フローにテーブルです。  
+ この例では、既存の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルからデータを読み込み、データ フローに送る変換元コンポーネントを示します。  
   
  このサンプル コードを実行する場合は、パッケージやコンポーネントを次のように構成する必要があります。  
   
-1.  作成、[!INCLUDE[vstecado](../../includes/vstecado-md.md)]を使用する接続マネージャー、 **SqlClient**プロバイダーに接続する、 **AdventureWorks**データベース。  
+1.  **SqlClient** プロバイダーを使用する [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを作成して、**AdventureWorks** データベースに接続します。  
   
 2.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換元として構成します。  
   
-3.  開く、**スクリプト変換エディター**です。 **入力と出力** ページで、既定のわかりやすい名前を持つように出力の名前を変更**MyAddressOutput**、追加し、2 つの出力列の構成**AddressID**と**市区町村**です。  
+3.  **[スクリプト変換エディター]** を開きます。 **[入力および出力]** ページで、既定の出力を **MyAddressOutput** などのわかりやすい名前に変更し、**AddressID** と **City** という 2 つの出力列を追加して構成します。  
   
     > [!NOTE]  
-    >  データ型を変更してください、**市区町村**DT_WSTR に列を出力します。  
+    >  **City** 出力列のデータ型は必ず DT_WSTR に変更してください。  
   
-4.  **接続マネージャー**  ページで追加または作成、[!INCLUDE[vstecado](../../includes/vstecado-md.md)]接続マネージャーの名前を指定ようと**MyADONETConnection**です。  
+4.  **[接続マネージャー]** ページで、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを追加または作成し、**MyADONETConnection** などの名前を付けます。  
   
-5.  **スクリプト**] ページで [**スクリプトの編集**と次のスクリプトを入力します。 スクリプト開発環境を閉じると、**スクリプト変換エディター**です。  
+5.  **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
-6.  作成し、変換先コンポーネントを構成するように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、または変換先コンポーネントのサンプルに示されている[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)、予想される、 **AddressID**と**市区町村**列です。 変換元のコンポーネントを変換先に接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。コピー先のテーブルを作成するには、次を実行して[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを**AdventureWorks**データベース。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、**AddressID** および **City** 列が予期される変換先コンポーネントを作成して構成します。 変換元のコンポーネントを変換先に接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。**AdventureWorks** データベースで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行して、変換先テーブルを作成できます。  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -265,19 +261,19 @@ ms.lasthandoff: 09/26/2017
   
  このサンプル コードを実行する場合は、パッケージやコンポーネントを次のように構成する必要があります。  
   
-1.  使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をエクスポートするには、インポートおよびエクスポート ウィザード、 **Person.Address**からテーブル、 **AdventureWorks**をコンマで区切られたフラット ファイルのサンプル データベース。 この例では、ファイル名を ExportedAddresses.txt とします。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用して、**AdventureWorks** サンプル データベースから、**Person.Address** テーブルをコンマ区切りフラット ファイルにエクスポートします。 この例では、ファイル名を ExportedAddresses.txt とします。  
   
 2.  エクスポートされたデータ ファイルに接続するフラット ファイル接続マネージャーを作成します。  
   
 3.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換元として構成します。  
   
-4.  開く、**スクリプト変換エディター**です。 **入力と出力** ページで、既定のわかりやすい名前を持つように出力の名前を変更**MyAddressOutput**です。 追加して、2 つの出力列を構成する**AddressID**と**市区町村**です。  
+4.  **[スクリプト変換エディター]** を開きます。 **[入力および出力]** ページで、既定の出力を **MyAddressOutput** などのわかりやすい名前に変更します。 **AddressID** と **City** という 2 つの出力列を追加して構成します。  
   
-5.  **接続マネージャー**ページで追加またはフラット ファイル接続マネージャーなどのわかりやすい名前を使用して作成**MyFlatFileSrcConnectionManager**です。  
+5.  **[接続マネージャー]** ページで、**MyFlatFileSrcConnectionManager** などのわかりやすい名前を使用して、フラット ファイル接続マネージャーを追加または作成します。  
   
-6.  **スクリプト**] ページで [**スクリプトの編集**と次のスクリプトを入力します。 スクリプト開発環境を閉じると、**スクリプト変換エディター**です。  
+6.  **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
-7.  作成し、変換先コンポーネントを構成するように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、または変換先コンポーネントのサンプルに示されている[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)です。 変換元のコンポーネントを変換先に接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。コピー先のテーブルを作成するには、次を実行して[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを**AdventureWorks**データベース。  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、変換先コンポーネントを作成して構成します。 変換元のコンポーネントを変換先に接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。**AdventureWorks** データベースで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行して、変換先テーブルを作成できます。  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -401,4 +397,3 @@ ms.lasthandoff: 09/26/2017
  [カスタム変換元コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   
   
-

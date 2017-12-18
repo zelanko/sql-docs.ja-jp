@@ -2,9 +2,12 @@
 title: "サーバー監査およびサーバー監査の仕様を作成する方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f51079c6e5d4cbc1da3dd83bb2b4ddb54ffce27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 51e001eaa01f8001060b6963614234a6efee6837
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  **このトピックの内容**  
   

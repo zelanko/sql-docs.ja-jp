@@ -1,29 +1,27 @@
 ---
 title: "SQL Server でのインメモリ OLTP 機能の採用計画 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/08/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8cfb42dd7bfa261ba364b427075280631d386b9
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -261,126 +259,15 @@ LOB および行外列の詳細については、次の情報を参照してく�
 ## <a name="e-limitations-of-native-procs"></a>E. ネイティブ プロシージャの制限事項
 
 
-Transact-SQL の特定の要素は、ネイティブ コンパイル ストアド プロシージャではサポートされていません。
+Transact-SQL の特定の要素は、ネイティブ コンパイル T-SQL モジュール (ストアド プロシージャを含む) ではサポートされていません。 サポートされている機能の詳細については、次の記事を参照してください。
 
-ネイティブ プロシージャに Transact-SQL スクリプトを移行する際の考慮事項については、次の情報を参照してください。
+- [ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
+
+サポートされていない機能を使用している Transact-SQL モジュールをネイティブ コンパイル モジュールに移行する際の考慮事項については、次の記事を参照してください。
 
 - [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
-
-### <a name="e1-no-case-in-a-native-proc"></a>E.1 ネイティブ プロシージャでは CASE を使用できない
-
-ネイティブ プロシージャ内で Transact-SQL の CASE 式を使用することはできません。 次の回避策を適用できます。
-
-- [ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
-
-
-### <a name="e2-no-merge-in-a-native-proc"></a>E.2 ネイティブ プロシージャでは MERGE を使用できない
-
-
-Transact-SQL [MERGE ステートメント](../../t-sql/statements/merge-transact-sql.md) には、通常、 *upsert* 機能と呼ばれるものと類似点があります。 ネイティブ プロシージャで MERGE ステートメントを使用することはできません。 ただし、SELECT、UPDATE、INSERT ステートメントの組み合わせを使用することで、MERGE と同じ機能を実行できます。 コード例については、次の情報を参照してください。
-
-- [ネイティブ コンパイル ストアド プロシージャに MERGE 機能を実装する](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
-
-
-
-### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 ネイティブ プロシージャの UPDATE や DELETE ステートメントでは結合できない
-
-ネイティブ プロシージャの Transact-SQL ステートメントでアクセスできるのはメモリ最適化テーブルのみです。 UPDATE と DELETE ステートメントでは、どのテーブルも結合できません。 ネイティブ プロシージャで試そうとしても失敗し、次のことを説明する Msg 12319 などのメッセージが表示されます。
-
-- UPDATE ステートメントで FROM 句を使用することはできません。
-- DELETE ステートメントでテーブル ソースを指定することはできません。
-
-どの種類のサブクエリでも回避できません。 ただし、メモリ最適化テーブル変数を使用すれば、複数のステートメントに対する結合結果を得ることができます。 2 つのコード サンプルを以下に示します。
-
-- DELETE...JOIN... ネイティブ プロシージャで実行したいところですが、これは実行できません。
-- 結合の削除を実行する回避策の Transact-SQL ステートメント セット。
-
-
-*シナリオ:* TabProjectEmployee テーブルには、ProjectId および EmployeeId という 2 つの列の一意のキーがあります。 各行は、アクティブ プロジェクトへの従業員の割り当てを示します。 従業員が退職した場合、その従業員を TabProjectEmployee テーブルから削除する必要があります。
-
-
-#### <a name="invalid-t-sql-deletejoin"></a>無効な T-SQL、DELETE...JOIN
-
-
-ネイティブ プロシージャでは、次のような DELETE...JOIN を使用することはできません。
-
-
-```tsql
-DELETE pe
-    FROM
-             TabProjectEmployee   AS pe
-        JOIN TabEmployee          AS e
-
-            ON pe.EmployeeId = e.EmployeeId
-    WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-```
-
-
-#### <a name="valid-work-around-manual-deletejoin"></a>有効な回避策、手動による delete...join
-
-回避策のコード サンプルを次のように 2 つに分けて説明します。
-
-1. CREATE TYPE は、実際のテーブル変数で型が最初に使用される数日前に、一度実行されます。
-
-2. ビジネス プロシージャでは作成された型が使用されます。 作成されたテーブル型のテーブル変数を宣言することによって開始されます。
-
-
-```tsql
-
-CREATE TYPE dbo.type_TableVar_EmployeeId
-    AS TABLE  
-    (
-        EmployeeId   bigint   NOT NULL
-    );
-```
-
-
-次に、テーブル型の作成を使用します。
-
-
-```tsql
-DECLARE @MyTableVarMo  dbo.type_TableVar_EmployeeId  
-
-INSERT INTO @MyTableVarMo (EmployeeId)
-    SELECT
-            e.EmployeeId
-        FROM
-                 TabProjectEmployee  AS pe
-            JOIN TabEmployee         AS e  ON e.EmployeeId = pe.EmployeeId
-        WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-
-DECLARE @EmployeeId   bigint;
-
-WHILE (1=1)
-BEGIN
-    SET @EmployeeId = NULL;
-
-    SELECT TOP 1 @EmployeeId = v.EmployeeId
-        FROM @MyTableVarMo  AS v;
-
-    IF (NULL = @Employeed) BREAK;
-    
-    DELETE TabProjectEmployee
-        WHERE EmployeeId = @EmployeeId;
-
-    DELETE @MyTableVarMo
-        WHERE EmployeeId = @EmployeeId;
-END;
-```
-
-
-### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 ネイティブ プロシージャのクエリ プランに関する制限事項
-
-
-一部の種類のクエリ プランはネイティブ プロシージャでは使用できません。 詳細については、次の情報を参照してください。
-
-- [メモリ最適化テーブルのクエリ処理のガイド](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
-
+Transact-SQL の特定の要素に対する制限事項に加えて、ネイティブ コンパイル T-SQL モジュールでサポートされているクエリ操作に対する制限事項もあります。 このような制限事項があるために、ネイティブ コンパイル ストアド プロシージャは大きなデータ セットを処理する分析クエリに適していません。
 
 #### <a name="no-parallel-processing-in-a-native-proc"></a>ネイティブ プロシージャでは並列処理を使用できない
 
@@ -421,6 +308,5 @@ SQL Server 2016 の場合
 ## <a name="related-links"></a>関連リンク
 
 - [インメモリ OLTP (インメモリ最適化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
 
 

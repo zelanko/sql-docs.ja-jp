@@ -1,5 +1,5 @@
 ---
-title: "SQL Server エージェントを使用して、リモート サーバー上のパッケージの負荷分散 |Microsoft ドキュメント"
+title: "リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散
   実行する必要のあるパッケージが数多くある場合、使用可能な他のサーバーでパッケージを実行すると便利です。 すべてのパッケージを 1 つの親パッケージで管理している場合に、他のサーバーを使用してパッケージを実行するこの方法を、負荷分散といいます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の負荷分散は、手動による方法であり、パッケージの所有者が構築する必要があります。 負荷分散は、サーバーで自動的には実行されません。 また、リモート サーバーで実行するパッケージは、他のパッケージ内の個別のタスクではなく、完全なパッケージである必要があります。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>負荷分散の図  
  次の図は、サーバー上の親パッケージを示します。 親パッケージには、SQL Server エージェント ジョブの実行タスクが複数含まれています。 親パッケージ内の各タスクは、リモート サーバー上の SQL Server エージェントを呼び出します。 これらのリモート サーバーには、そのサーバー上のパッケージを呼び出すステップを含む SQL Server エージェント ジョブがあります。  
   
- ![SSIS 負荷分散アーキテクチャの概要](../../integration-services/packages/media/loadbalancingoverview.gif "概要の SSIS 負荷分散アーキテクチャ")  
+ ![SSIS 負荷分散アーキテクチャの概要](../../integration-services/packages/media/loadbalancingoverview.gif "SSIS 負荷分散アーキテクチャの概要")  
   
  このアーキテクチャで負荷分散に必要な手順は、新しい概念ではありません。 負荷分散は、既存の概念と一般的な SSIS オブジェクトを新しい方法で使用して実現されています。  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>SQL Server エージェント ジョブと子パッケージのデバッグ  
  次のいずれかの方法を使用して、SQL Server エージェント ジョブとその子パッケージをテストできます。  
   
--   クリックして、SSIS デザイナーで、各子パッケージを実行している**デバッグ** / **デバッグなしで開始**です。  
+-   **[デバッグ]** メニューの  / **[デバッグなしで開始]** をクリックして、SSIS デザイナーで各子パッケージを実行します。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリモート コンピューター上の個別の SQL Server エージェント ジョブを実行し、パッケージが実行されていることを確認します。  
   
@@ -125,17 +123,16 @@ ms.lasthandoff: 08/03/2017
 >  **sp_start_job N'package_name'** の Transact-SQL ステートメントを含む SQL 実行タスクを使用できます。 詳細については、「[sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)」をご覧ください。  
   
 ### <a name="debugging-environment"></a>デバッグ環境  
- 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec**を使用できます。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
+ 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec**を使用できます。 詳しくは、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」をご覧ください。  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>リモート サーバー上の負荷分散パッケージのログ記録
   すべての子パッケージで同じログ プロバイダーを使用し、これらの出力先を同じにすれば、さまざまなサーバーで実行されているすべての子パッケージに関するログの管理が容易になります。 すべての子パッケージに共通するログ ファイルを作成する方法の 1 つとして、イベントのログが SQL Server ログ プロバイダーに記録されるように子パッケージを構成することができます。 すべてのパッケージが、同じデータベース、同じサーバー、同じサーバー インスタンスを使用するように構成できます。  
   
  管理者は、1 台のサーバーにログオンするだけで、すべての子パッケージに関するログ ファイルを確認できます。  
   
- パッケージでのログ記録を有効にする方法については、次を参照してください。 [Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)です。  
+ パッケージでログ記録を有効にする方法については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
 
 ## <a name="related-tasks"></a>関連タスク  
  [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

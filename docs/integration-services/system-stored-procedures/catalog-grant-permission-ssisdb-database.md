@@ -1,5 +1,5 @@
 ---
-title: "catalog.grant_permission (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.grant_permission (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  セキュリティ保護可能なオブジェクトに対する権限を許可、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのセキュリティ保護可能なオブジェクトに対するアクセス許可を許可します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,17 +41,17 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @object_type =] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類を含めるフォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、および操作 (`4`)。*Object_type*は**smallint***です。*  
+ [ @object_type = ] *object_type*  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint** *です。*  
   
- [ @object_id =] *object_id*  
- セキュリティ保護可能なオブジェクトの一意識別子 (ID)。 *Object_id*は**bigint**です。  
+ [ @object_id = ] *object_id*  
+ セキュリティ保護可能なオブジェクトの一意識別子 (ID)。 *object_id* は **bigint** です。  
   
- [ @principal_id =] *principal_id*  
- 権限を許可するプリンシパルの ID。 *Principal_id*は**int**です。  
+ [ @principal_id = ] *principal_id*  
+ 権限を許可するプリンシパルの ID。 *principal_id* は **int** です。  
   
- [ @permission_type =] *permission_type*  
- 許可されるプリンシパルの種類。 *Permission_type*は**smallint**です。  
+ [ @permission_type = ] *permission_type*  
+ 許可されるプリンシパルの種類。 *permission_type* は **smallint** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を返します。  
@@ -76,11 +74,11 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   オブジェクトに対する ASSIGN_PERMISSIONS 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
 
-この手順は、SQL Server で認証されたログインで呼び出すことができません。 あるは、sa ログインから呼び出すことはできません。
+この手順は、SQL Server で認証されたログインで呼び出すことはできません。 sa ログインから呼び出すことはできません。
   
 ## <a name="remarks"></a>解説  
  このストアド プロシージャを使用すると、次の表に記載されている権限の種類を許可できます。  
@@ -101,4 +99,3 @@ catalog.grant_permission [ @object_type = ] object_type
  関連するエラーとメッセージについては、「リターン コードの値」を参照してください。  
   
   
-

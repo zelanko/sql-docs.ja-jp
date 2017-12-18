@@ -1,5 +1,5 @@
 ---
-title: "データ フロー コンポーネントでエラー出力を使用して |Microsoft ドキュメント"
+title: "データ フロー コンポーネントでのエラー出力の使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,25 +26,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6dae159609b8bdd57375c9a9e2abd0fbd8ee0ca1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>データ フロー コンポーネントでのエラー出力の使用
   エラー出力と呼ばれる特殊な <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> オブジェクトをコンポーネントに追加すると、コンポーネントは、実行中に処理できない行をリダイレクトできます。 コンポーネントで発生する可能性のある問題は、通常、エラーまたは切り捨てに分類され、各コンポーネントに固有です。 エラー出力を提供するコンポーネントを使用すると、エラー行を結果セットからフィルター選択したり、問題が発生したときにコンポーネントを失敗させたり、エラーを無視して処理を続行するなど、エラー条件を柔軟に処理できます。  
   
- 実装して、コンポーネントでエラー出力をサポートを設定する必要あります最初、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A>するコンポーネントのプロパティ**true**です。 持つコンポーネントに出力を追加する必要がありますし、その<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>プロパティに設定**true**です。 最後に、エラーまたは切り捨てが発生したときに、行をエラー出力にリダイレクトするためのコードを、そのコンポーネントに格納する必要があります。 このトピックでは、これら 3 つの手順、および同期型のエラー出力と非同期型のエラー出力の違いについて説明します。  
+ コンポーネントにエラー出力を実装してサポートするには、まず、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> プロパティを **true** に設定する必要があります。 次に、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> プロパティを **true** に設定した出力を、コンポーネントに追加する必要があります。 最後に、エラーまたは切り捨てが発生したときに、行をエラー出力にリダイレクトするためのコードを、そのコンポーネントに格納する必要があります。 このトピックでは、これら 3 つの手順、および同期型のエラー出力と非同期型のエラー出力の違いについて説明します。  
   
 ## <a name="creating-an-error-output"></a>エラー出力の作成  
- 呼び出して、エラー出力を作成した、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A>のメソッド、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>、し、設定、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>プロパティに新しい出力の**true**です。 出力が非同期型の場合、出力に対して他の処理を行うことはできません。 出力が同期型で、同じ入力に対して同期する別の出力が存在する場合、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> プロパティも設定する必要があります。 両方のプロパティの値は、同じ入力に対して同期する別の出力の値と同じである必要があります。 これらのプロパティの値が 0 でない値に設定されていない場合、入力で提供された行は、その入力に対して同期する両方の出力に送信されます。  
+ エラー出力を作成するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> メソッドを呼び出し、新しい出力の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> プロパティを **true** に設定します。 出力が非同期型の場合、出力に対して他の処理を行うことはできません。 出力が同期型で、同じ入力に対して同期する別の出力が存在する場合、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> プロパティも設定する必要があります。 両方のプロパティの値は、同じ入力に対して同期する別の出力の値と同じである必要があります。 これらのプロパティの値が 0 でない値に設定されていない場合、入力で提供された行は、その入力に対して同期する両方の出力に送信されます。  
   
  コンポーネントの実行中にエラーまたは切り捨てが発生すると、エラーが発生した入力または出力、あるいは入力列または出力列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> プロパティの設定に基づいて、処理が続行されます。 これらのプロパティの値は、既定で <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed> に設定する必要があります。 コンポーネントのエラー出力が下流コンポーネントに接続されている場合、そのコンポーネントのユーザーがこのプロパティを設定することで、コンポーネントによるエラーまたは切り捨ての処理方法をユーザーが制御できます。  
   
@@ -283,7 +280,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>非同期出力での行のリダイレクト  
- 非同期出力型のコンポーネントでは、同期エラー出力で行うように行を出力に送信するのではなく、出力 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> に行を明示的に追加することによって、行をエラー出力に送信します。 非同期エラー出力を使用するコンポーネントを実装するには、下流コンポーネントに提供されるエラー出力に列を追加し、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドの実行中にコンポーネントに提供される出力バッファーをキャッシュして、エラー出力に送信する必要があります。 非同期出力型コンポーネントの実装の詳細については、トピックで詳しく説明[非同期出力のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)です。 列がエラー出力に明示的に追加されない場合、出力バッファーに追加されるバッファー行には、2 つのエラー列のみが格納されます。  
+ 非同期出力型のコンポーネントでは、同期エラー出力で行うように行を出力に送信するのではなく、出力 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> に行を明示的に追加することによって、行をエラー出力に送信します。 非同期エラー出力を使用するコンポーネントを実装するには、下流コンポーネントに提供されるエラー出力に列を追加し、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドの実行中にコンポーネントに提供される出力バッファーをキャッシュして、エラー出力に送信する必要があります。 非同期出力型のコンポーネントの実装の詳細については、「[非同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)」のトピックで詳しく説明します。 列がエラー出力に明示的に追加されない場合、出力バッファーに追加されるバッファー行には、2 つのエラー列のみが格納されます。  
   
  非同期エラー出力に行を送信するには、エラー出力バッファーに行を追加する必要があります。 場合によっては、既にエラー出力以外の出力バッファーに行が追加されていることがあります。その場合は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A> メソッドを使用してこの行を削除する必要があります。 次に出力バッファー列の値を設定し、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A> メソッドを呼び出して、コンポーネント固有のエラー コードとエラー列の値を指定します。  
   
@@ -442,7 +439,6 @@ End Sub
   
 ## <a name="see-also"></a>参照  
  [データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)   
- [エラー出力を使用します。](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [データ フロー コンポーネントでのエラー出力の使用](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   
   
-

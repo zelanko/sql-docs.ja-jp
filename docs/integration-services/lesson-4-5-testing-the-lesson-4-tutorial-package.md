@@ -1,5 +1,5 @@
 ---
-title: "手順 5: レッスン 4 のチュートリアル パッケージのテスト |Microsoft ドキュメント"
+title: "手順 5: レッスン 4 のチュートリアル パッケージのテスト | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68e4545ee2eae96664007a8dc69c9953c0351107
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>レッスン 4、5、レッスン 4 のチュートリアル パッケージのテスト
+# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>レッスン 4-5 - レッスン 4 のチュートリアル パッケージのテスト
 壊れているファイル Currency_BAD.txt を実行すると、CurrencyKey 参照変換の照合結果の生成に失敗します。 ただし、CurrencyKey 参照変換のエラー出力は、失敗した行を新しい [Failed Rows] 変換先へリダイレクトするように構成されています。したがって、コンポーネント自体は失敗せず、パッケージは正常に実行されます。 エラーがある行はすべて、ErrorOutput.txt に書き込まれます。  
   
 この実習では、パッケージを実行して、変更したエラー出力構成をテストします。 パッケージが正常に実行されたら、ErrorOutput.txt ファイルの内容を確認します。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 09/26/2017
   
 **制御フロー**  
   
-![パッケージ内のフローを制御](../integration-services/media/task4lesson2control.gif "パッケージ内のフロー制御")  
+![パッケージ内の制御フロー](../integration-services/media/task4lesson2control.gif "パッケージ内の制御フロー")  
   
 **データ フロー**  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

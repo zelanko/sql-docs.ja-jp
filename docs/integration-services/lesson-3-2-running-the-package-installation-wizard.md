@@ -1,5 +1,5 @@
 ---
-title: "手順 2: パッケージ インストール ウィザードを実行している |Microsoft ドキュメント"
+title: "手順 2: パッケージ インストール ウィザードの実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2-パッケージ インストール ウィザードの実行
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2 - パッケージ インストール ウィザードの実行
 この実習では、パッケージ インストール ウィザードを実行して、Deployment Tutorial プロジェクトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにパッケージを配置します。 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルにインストールできるのはパッケージだけです。配置バンドルに含まれるサポート ファイルは、ファイル システムに配置されます。  
   
 パッケージ インストール ウィザードを使用すると、手順に従ってパッケージのインストールと構成を行うことができます。 配置先のコンピューター (配置バンドルをコピーするコンピューター) の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにパッケージをインストールします。 また、C:\DeploymentTutorialInstall フォルダーも作成します。このフォルダーには、パッケージ以外のファイルがインストールされます。  
@@ -113,4 +110,3 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>参照  
 [Integration Services サービス (SSIS サービス)](../integration-services/service/integration-services-service-ssis-service.md)  
-

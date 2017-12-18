@@ -1,5 +1,5 @@
 ---
-title: "制御フロー パッケージ パーツを使用してパッケージ全体の制御フローを再利用 |Microsoft ドキュメント"
+title: "制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25de11d7825c2e52b8247d44ee790d21c0457468
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する
   よく使用される制御フロー タスクまたはコンテナーをスタンドアロン パーツ ファイル (".dtsxp"ファイル) に保存し、それを、制御フロー パッケージ パーツを使用して 1 つまたは複数のパッケージで複数回、再利用します。 この再利用性により SSIS パッケージの設計および管理が容易になります。  
@@ -36,18 +34,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="create-a-new-control-flow-package-part"></a>新しい制御フロー パッケージ パーツを作成する  
  新しい制御フロー パッケージ パーツを作成するには、ソリューション エクスプ ローラーで **[パッケージ パーツ]** フォルダーを展開します。 **[制御フロー]** を右クリックし、 **[新しい制御フロー パッケージ パーツ]**を選択します。  
   
- ![新しい制御フロー テンプレートを作成する](../integration-services/media/control-flow-templates-create-new.png "新しい制御フロー テンプレートを作成します。")  
+ ![新しい制御フロー テンプレートを作成する](../integration-services/media/control-flow-templates-create-new.png "新しい制御フロー テンプレートを作成する")  
   
  **[パッケージ パーツ |制御フロー]** フォルダーの下に拡張子 ".dtsxp" を持つ新しいパーツ ファイルが作成されます。 同時に、同じ名前の新しい項目が SSIS ツールボックスに追加されます (ツールボックスの項目は、パーツを含むプロジェクトを Visual Studio で開いた状態でのみ表示されます)。  
   
- ![コントロールにツールボックス フロー テンプレート](../integration-services/media/control-flow-templates-in-toolbox.png "コントロール ツールボックスにフロー テンプレート")  
+ ![ツールボックスの制御フロー テンプレート](../integration-services/media/control-flow-templates-in-toolbox.png "ツールボックスの制御フロー テンプレート")  
   
 ## <a name="design-a-control-flow-package-part"></a>制御フロー パッケージ パーツを設計する  
  パッケージ パーツ エディターを開くには、ソリューション エクスプ ローラーでパーツ ファイルをダブルクリックします。 パーツの設計は、パッケージの場合と同様に行うことができます。  
   
- ![制御フロー テンプレートのデザインの手順 1.](../integration-services/media/control-flow-template-design-step-1.png "制御フロー テンプレートのデザインの手順 1")  
+ ![制御フロー テンプレート設計のステップ 1](../integration-services/media/control-flow-template-design-step-1.png "制御フロー テンプレート設計のステップ 1")  
   
- ![制御フロー テンプレートのデザインのステップ 2](../integration-services/media/control-flow-template-design-step-2.png "制御フロー テンプレートのデザインのステップ 2")  
+ ![制御フロー テンプレート設計のステップ 2](../integration-services/media/control-flow-template-design-step-2.png "制御フロー テンプレート設計のステップ 2")  
   
  制御フロー パッケージ パーツには、次の制限があります。  
   
@@ -65,9 +63,9 @@ ms.lasthandoff: 08/03/2017
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>制御フロー パッケージ パーツをドラッグ アンド ドロップする  
  プロジェクト内のパーツを再利用するには、他のタスクやコンテナーと同様にツールボックスからパーツ項目をドラッグ アンド ドロップするだけです。 複数回パーツをパッケージにドラッグ アンド ドロップすることで、パッケージ内の複数の場所でロジックを再利用できます。 現在のプロジェクトの一部であるパーツを再利用するには、この方法を使用します。  
   
- ![パッケージ制御フロー テンプレートに追加](../integration-services/media/control-flow-templates-add-to-package.png "パッケージ制御フロー テンプレートに追加")  
+ ![パッケージに制御フロー テンプレートを追加する](../integration-services/media/control-flow-templates-add-to-package.png "パッケージに制御フロー テンプレートを追加する")  
   
- ![複数の制御フロー テンプレートを使用してパッケージ](../integration-services/media/control-flow-templates-in-package.png "パッケージを複数の制御フロー テンプレート")  
+ ![複数の制御フロー テンプレートが含まれるパッケージ](../integration-services/media/control-flow-templates-in-package.png "複数の制御フロー テンプレートが含まれるパッケージ")  
   
  パッケージを保存すると、パッケージ内にパーツのインスタンスが存在するかどうかが SSIS デザイナーによって確認されます。  
   
@@ -75,16 +73,16 @@ ms.lasthandoff: 08/03/2017
   
 -   パッケージでパーツが使用されない場合、以前にパッケージ用に生成された dtsx.designer ファイル (すなわち、パッケージと同じ名前を持つ dtsx.designer ファイル) はデザイナーによって削除されます。  
   
- ![制御フロー テンプレートでソリューション エクスプ ローラー](../integration-services/media/control-flow-templates-in-solution-explorer.png "制御フロー テンプレートでソリューション エクスプ ローラー")  
+ ![制御フロー テンプレートが表示されたソリューション エクスプローラー](../integration-services/media/control-flow-templates-in-solution-explorer.png "制御フロー テンプレートが表示されたソリューション エクスプローラー")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>既存の制御フロー パッケージ パーツのコピーまたは既存のパーツへの参照を追加する  
  ファイル システム内の既存のパーツのコピーをパッケージに追加するには、ソリューション エクスプ ローラーで **[パッケージ パーツ]** フォルダーを展開します。 **[制御フロー]** を右クリックし、 **[既存の制御フロー パッケージ パーツを追加]**を選択します。  
   
- ![メニューから新しい制御フロー テンプレートを追加](../integration-services/media/control-flow-templates-add-from-menu.png "メニューから新しい制御フロー テンプレートを追加")  
+ ![メニューから新しい制御フロー テンプレートを追加する](../integration-services/media/control-flow-templates-add-from-menu.png "メニューから新しい制御フロー テンプレートを追加する")  
   
- ![追加の既存のテンプレートのコピー ダイアログ ボックス](../integration-services/media/control-flow-templates-add-copy-dialog.png "既存のテンプレートのコピーを追加 ダイアログ ボックス")  
+ ![既存テンプレートのコピーの追加ダイアログ ボックス](../integration-services/media/control-flow-templates-add-copy-dialog.png "既存テンプレートのコピーの追加ダイアログ ボックス")  
   
- **Options**  
+ **および**  
   
  **パッケージ パーツのパス**  
  パーツ ファイルのパスを入力するか、参照ボタン (…) をクリックして、コピーまたは参照するパーツ ファイル指定します。  
@@ -106,7 +104,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[パッケージ パーツの構成]** ダイアログ ボックスの **[プロパティ]**  タブを使用してパーツのプロパティを指定します。  
   
- ![テンプレートの構成 ダイアログ ボックスのプロパティ タブ](../integration-services/media/template-configuration-properties-tab.png "テンプレートの構成 ダイアログ ボックスのプロパティ タブ")  
+ ![テンプレートの構成ダイアログ ボックスの [プロパティ] タブ](../integration-services/media/template-configuration-properties-tab.png "テンプレートの構成ダイアログ ボックスの [プロパティ] タブ")  
   
  左側のウィンドウのツリー ビュー階層に、パーツ インスタンスの構成可能なプロパティがすべて一覧表示されます。  
   
@@ -125,7 +123,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-managers-tab"></a>[接続マネージャー] タブ  
  パーツ インスタンス用の接続マネージャーのプロパティを指定するには、 **[パッケージ パーツの構成]** ダイアログ ボックスの **[接続マネージャー]**  タブを使用します。  
   
- ![テンプレートの構成] ダイアログ ボックスの [接続マネージャー] タブ](../integration-services/media/template-configuration-connection-managers-tab.png "テンプレートの構成] ダイアログ ボックスの [接続マネージャー] タブ")  
+ ![テンプレートの構成 ダイアログ ボックスの [接続マネージャー] タブ](../integration-services/media/template-configuration-connection-managers-tab.png "テンプレートの構成 ダイアログ ボックスの [接続マネージャー] タブ")  
   
  左側のウィンドウのテーブルに、制御フロー パーツで定義されているすべての接続マネージャーが一覧表示されます。 構成する接続マネージャーを選択します。  
   
@@ -159,4 +157,3 @@ ms.lasthandoff: 08/03/2017
  ![制御フロー テンプレート ファイルとフロー](../integration-services/media/control-flow-templates-intro.png "制御フロー テンプレート ファイルとフロー")  
   
   
-

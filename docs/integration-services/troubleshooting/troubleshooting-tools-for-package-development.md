@@ -1,12 +1,14 @@
 ---
-title: "パッケージの開発のトラブルシューティング ツール |Microsoft ドキュメント"
+title: "パッケージ開発のトラブルシューティング ツール | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: c4c51f83c7e691f9c77c4d035e7dd80ead4f4a94
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1588c3806523f28a30b0d8eb6a190acba148d773
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開発する際にトラブルシューティングを実行できる機能とツールが用意されています。  
@@ -60,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **デバッグ ウィンドウを使用する**。 ブレークポイントが設定されたパッケージを実行すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデバッグ ウィンドウから、変数の値および状態メッセージにアクセスできるようになります。  
   
--   **[進行状況] タブでの情報のレビュー**。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内のパッケージを実行するときに、制御フローに関する追加情報が表示されます。 [進行状況] タブにはタスクとコンテナーが実行順に表示され、パッケージ自体を含め、タスクやコンテナーごとに開始時刻、終了時刻、警告、エラー メッセージが表示されます。  
+-   **[進行状況] タブでの情報のレビュー**。[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内のパッケージを実行するときに、制御フローに関する追加情報が表示されます。 [進行状況] タブにはタスクとコンテナーが実行順に表示され、パッケージ自体を含め、タスクやコンテナーごとに開始時刻、終了時刻、警告、エラー メッセージが表示されます。  
   
  これらの機能の詳細については、「 [制御フローのデバッグ](../../integration-services/troubleshooting/debugging-control-flow.md)」を参照してください。  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **処理された行数をキャプチャする**。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでパッケージを実行すると、パスを通過した行数がデータ フロー デザイナーに表示されます。 データがパスを通過する間、この数値は定期的に更新されます。 また、データ フローに行数変換を追加して、最終的な行数を変数に取り込むこともできます。 詳細については、「 [Row Count Transformation](../../integration-services/data-flow/transformations/row-count-transformation.md)」を参照してください。  
   
--   **[進行状況] タブでの情報のレビュー**。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内のパッケージを実行するときに、データ フローに関する追加情報が表示されます。 [進行状況] タブには、データ フロー コンポーネントが実行順に表示されます。また、パッケージの各フェーズの進行状況 (パーセント値) や変換先に書き込まれた行数を確認できます。  
+-   **[進行状況] タブでの情報のレビュー**。[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内のパッケージを実行するときに、データ フローに関する追加情報が表示されます。 [進行状況] タブには、データ フロー コンポーネントが実行順に表示されます。また、パッケージの各フェーズの進行状況 (パーセント値) や変換先に書き込まれた行数を確認できます。  
   
  これらの機能の詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   

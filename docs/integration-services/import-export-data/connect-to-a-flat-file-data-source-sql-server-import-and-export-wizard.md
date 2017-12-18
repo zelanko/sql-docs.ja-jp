@@ -1,5 +1,5 @@
 ---
-title: "フラット ファイル データ ソース (SQL Server インポートおよびエクスポート ウィザード) への接続 |Microsoft ドキュメント"
+title: "フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,78 +8,76 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>フラット ファイル データ ソース (SQL Server インポートおよびエクスポート ウィザード) への接続します。
-このトピックに接続する方法、**フラット ファイル**(テキスト ファイル) のデータ ソースから、**データ ソースを選択**または**変換先の選択**の SQL Server インポートおよびエクスポート ページウィザード。 フラット ファイル、に関しては、これら 2 つのページ、ウィザードは、このトピックについて説明し、フラット ファイル変換先、フラット ファイル ソースとは別に別々 の一連のオプションを提示します。
+# <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **フラット ファイル (テキスト ファイル)** データ ソースに接続する方法を説明します。 フラット ファイルの場合、ウィザードのこの 2 つのページでは、それぞれ異なるオプション セットが提供されています。そのため、このトピックでは、フラット ファイル ソースとフラット ファイル変換先を別々に説明します。
 
-## <a name="an-alternative-for-simple-text-import"></a>代替の単純なテキスト ファイルのインポート
-テキスト ファイルを SQL Server にインポートする必要がある場合、インポートおよびエクスポート ウィザードで使用可能なすべての構成オプションの必要はありませんは、使用を検討して、**フラット ファイルのインポート ウィザード**SQL Server Management Studio (SSMS)。 詳細については、次の記事をご覧ください。
+## <a name="an-alternative-for-simple-text-import"></a>テキストのインポートを簡単にするための別の方法
+テキスト ファイルを SQL Server にインポートする必要はあるが、インポート ウィザードやエクスポート ウィザードで使用可能な構成オプションが必ずしもすべて必要ではない場合は、SQL Server Management Studio (SSMS) の**フラット ファイルのインポート ウィザード**の使用をお勧めします。 詳細については、次の記事をご覧ください。
 - [SQL Server Management Studio 17.3 の新機能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [SSMS 17.3 の新しいフラット ファイルのインポート ウィザードの概要](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
-## <a name="connect-to-a-flat-file-source"></a>フラット ファイル ソースへの接続します。
+## <a name="connect-to-a-flat-file-source"></a>フラット ファイル ソースへの接続
  
- フラット ファイル データ ソースのオプションの 4 つのページがあります。 これは、多数のページです。 各ページで、多くの時間を費やす必要はありません。 考慮すべきタスクを次に示します。
+ フラット ファイル データ ソース用のオプションに関するページは 4 ページあります。 このようにページ数が多くなっています。 しかし、各ページで多くの時間を費やす必要はありません。 検討すべきタスクを次に示します。
  
 ページ|推奨  |型  
 ----|---------|---------
-**全般**|オプションを更新するかどうかを確認、**形式**セクションです。|推奨    
-**[列]**|列と行の区切り記号 (区切られたファイル) をチェックまたは (固定幅ファイル) の列をマークすることを確認してください。|推奨
-**[詳細設定]**|必要に応じて、データ型と既定では、列に割り当てられているその他のプロパティを確認してください。|省略可
-**プレビュー**|必要に応じて、指定した設定を使用して、データのサンプルをプレビューします。|省略可
+**全般**|必ず **[形式]** セクションのオプションを更新する。|推奨    
+**[列]**|列と行の区切り記号の確認 (区切りファイルの場合)、または列のマーク付け (固定幅ファイルの場合) を必ず行う。|推奨
+**[詳細設定]**|必要に応じて、既定で列に割り当てられているデータ型とその他のプロパティを確認する。|省略可
+**プレビュー**|必要に応じて、指定した設定を使用して、データのサンプルをプレビューする。|省略可
 
 ## <a name="general-page-source"></a>[全般] ページ (ソース)
  **[全般]** ページでは、ファイルを選択し、**[フォーマット]** セクションで設定を確認できます。
  
  ![フラット ファイル接続の [全般] ページ](../../integration-services/import-export-data/media/flat-file-connection-general.png)  
 
-### <a name="options-to-specify-general-page"></a>指定するオプション (**全般** ページ)
+### <a name="options-to-specify-general-page"></a>指定するオプション (**[全般]** ページ)
 
  **ファイル名**  
- フラット ファイルのパスとファイル名を入力します。  
+ フラット ファイルのパスと名前を入力します。  
   
  **参照**  
- フラット ファイルを指定します。  
+ フラット ファイルの場所を特定します。  
   
  **ロケール**  
- 並べ替えおよび日付と時刻の形式の言語に固有の情報を提供するロケールを指定します。  
+ ロケールを指定して、順序付けおよび日時の形式に関する言語固有の情報を提供します。  
   
  **Unicode**  
- ファイルが Unicode を使用するかどうかを指定します。 Unicode を使用する場合は、コード ページを指定することはできません。  
+ ファイルで Unicode を使用するかどうかを指定します。 Unicode を使用する場合は、コード ページを指定できません。  
   
  **コード ページ**  
  非 Unicode テキストのコード ページを指定します。  
   
  **形式**  
- ファイルが区切り形式、固定幅、または幅合わせしない形式を使用するかどうかを選択します。  
+ 区切り記号形式、固定幅形式、または幅合わせしない形式をファイルで使用するかどうかを選択します。  
   
 |値|Description|  
 |-----------|-----------------|  
-|[区切り記号]|列は、区切り記号で区切られます。 区切り記号を指定する、**列**ページ。|  
+|[区切り記号]|列は区切り記号で区切られます。 **[列]** ページに区切り記号を指定します。|  
 |[固定幅]|列は固定幅を持ちます。|  
 |[幅合わせしない]|幅合わせしないファイルとは、最後の列以外のすべての列が固定幅を持つファイルです。最後の列は、行区切り記号で区切られます。|  
   
  **テキスト修飾子**  
- ファイルによって使用されている場合は、テキスト修飾子を指定します。 たとえば、テキスト フィールドを引用符で囲むことを指定できます。 (このプロパティのみに適用区切りのファイル)。 
+ ファイルで使用するテキスト修飾子を必要に応じて指定します。 たとえば、テキスト フィールドを引用符で囲むことを指定できます。 (このプロパティは、区切りファイルにのみ適用されます。) 
   
 > [!NOTE]
-> テキスト修飾子を選択した後ことはできませんを再度選択する、 **None**オプション。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
+> テキスト修飾子を選択した後で、**[なし]** オプションを再度選択することはできません。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
   
  **[ヘッダー行区切り記号]**  
  ヘッダー行の区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
@@ -96,17 +94,17 @@ ms.lasthandoff: 10/18/2017
 |**[縦棒 {&#124;}]**|ヘッダー行は、縦棒で区切られます。|  
   
  **[スキップするヘッダー行数]**  
- 存在する場合は、ファイルの先頭からスキップする行の数を指定します。  
+ 必要に応じて、ファイルの先頭でスキップする行の数を指定します。  
   
  **[先頭データ行を列名として使用する]**  
- (任意のスキップした行) の後の最初の行が列の名前を含むかどうかを指定します。
+ 最初の行 (スキップされた行の後の) に列名を含めるかどうかを指定します。
 
-## <a name="columns-page---format--delimited-source"></a>列 ページの形式 (ソース) を区切り記号を =
- **[列]** ページでは、ウィザードによって識別された列と区切り記号の一覧を確認できます。 次のスクリーン ショットは、選択したときにページを示しています**Delimited**フラット ファイル形式として。
+## <a name="columns-page---format--delimited-source"></a>[列] ページ - 形式 = 区切り記号 (ソース)
+ **[列]** ページでは、ウィザードによって識別された列と区切り記号の一覧を確認できます。 次のスクリーン ショットは、フラット ファイル形式として **[区切り記号]** を選択したときに表示されるページです。
  
-![フラット ファイル、区切り形式、[列] ページ](../../integration-services/import-export-data/media/flat-file-delimited-columns-page.jpg)
+![フラット ファイル、区切り記号、[列] ページ](../../integration-services/import-export-data/media/flat-file-delimited-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--delimited"></a>指定するオプション (**列**ページ - 形式区切り記号の =)
+### <a name="options-to-specify-columns-page---format--delimited"></a>指定するオプション (**[列]** ページ - 形式 = 区切り記号)
 
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
@@ -145,12 +143,12 @@ ms.lasthandoff: 10/18/2017
  **[列のリセット]**  
  元の列を復元します。  
 
-## <a name="columns-page---format--fixed-width-source"></a>列 ページの形式 (ソース) の固定幅を =
-**[列]** ページでは、ウィザードによって識別された列と区切り記号の一覧を確認できます。 次のスクリーン ショットは、選択したときにページを示しています**固定幅**フラット ファイル形式として。
+## <a name="columns-page---format--fixed-width-source"></a>[列] ページ - 形式 = 固定幅 (ソース)
+**[列]** ページでは、ウィザードによって識別された列と区切り記号の一覧を確認できます。 次のスクリーン ショットは、フラット ファイル形式として **[固定幅]** を選択したときに表示されるページです。
   
-![フラット ファイル、固定幅、列 ページ](../../integration-services/import-export-data/media/flat-file-fixed-width-columns-page.jpg)
+![フラット ファイル、固定幅、[列] ページ](../../integration-services/import-export-data/media/flat-file-fixed-width-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--fixed-width"></a>指定するオプション (**列**ページ - 形式 = 固定幅)
+### <a name="options-to-specify-columns-page---format--fixed-width"></a>指定するオプション (**[列]** ページ - 形式 = 固定幅)
 
  **フォント**  
  プレビュー データの表示に使用するフォントを選択します。  
@@ -164,15 +162,15 @@ ms.lasthandoff: 10/18/2017
  **[列のリセット]**  
  元の列を復元します。  
   
-## <a name="columns-page---format--ragged-right-source"></a>列 ページ - 形式合わせ (ソース) を =
-**[列]** ページでは、ウィザードによって識別された列と区切り記号の一覧を確認できます。 次のスクリーン ショットは、選択したときにページを示しています**合わせ**フラット ファイル形式として。
+## <a name="columns-page---format--ragged-right-source"></a>[列] ページ - 形式 = 幅合わせしない (ソース)
+**[列]** ページでは、ウィザードによって識別された列と区切り記号の一覧を確認できます。 次のスクリーン ショットは、フラット ファイル形式として **[幅合わせしない]** を選択したときに表示されるページです。
 
 > [!NOTE]
 > 幅合わせしないファイルとは、最後の列以外のすべての列が固定幅を持つファイルです。最後の列は、行区切り記号で区切られます。  
  
-![フラット ファイル、幅合わせしない、列 ページ](../../integration-services/import-export-data/media/flat-file-ragged-right-columns-page.jpg)
+![フラット ファイル、幅合わせしない、[列] ページ](../../integration-services/import-export-data/media/flat-file-ragged-right-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--ragged-right"></a>指定するオプション (**列**ページ - 形式合わせを =)
+### <a name="options-to-specify-columns-page---format--ragged-right"></a>指定するオプション (**[列]** ページ - 形式 = 幅合わせしない)
    
  **フォント**  
  プレビュー データの表示に使用するフォントを選択します。  
@@ -197,24 +195,24 @@ ms.lasthandoff: 10/18/2017
  **[列のリセット]**  
  元の列を復元します。  
 
-## <a name="advanced-page-source"></a>[詳細] ページ (ソース)
-**[詳細設定]** ページには、データ ソース内の各列に関する詳細情報が表示されます (データの型とサイズを含む)。 次のスクリーン ショット、**詳細**区切りフラット ファイルの最初の列のページです。
+## <a name="advanced-page-source"></a>[詳細設定] ページ (ソース)
+**[詳細設定]** ページには、データ ソース内の各列に関する詳細情報が表示されます (データの型とサイズを含む)。 次のスクリーン ショットは、区切りフラット ファイル内の最初の列に対する **[詳細設定]** ページです。
 
-![フラット ファイル、区切り形式、[詳細] ページ](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
+![フラット ファイル、区切り形式、[詳細設定] ページ](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
 
-スクリーン ショット、わかるように、 **id**番号を含む列が最初に文字列のデータ型を持ちます。
+スクリーン ショットでは、数値を含む **[id]** 列で、最初にくるのが文字列のデータ型であることに注目してください。
 
-### <a name="options-to-specify-advanced-page"></a>指定するオプション (**詳細** ページ)
+### <a name="options-to-specify-advanced-page"></a>指定するオプション (**[詳細設定]** ページ)
 
  **[各列のプロパティを構成します。]**  
- 左側のペインで列を選択すると、そのプロパティが右側のペインに表示されます。 列のプロパティの詳細については、次の表を参照してください。 プロパティを一覧表示の一部は、特定のデータ型の列および特定のフラット ファイル形式に対してのみ構成できます。  
+ 左側のペインで列を選択すると、そのプロパティが右側のペインに表示されます。 列プロパティの説明については、次の表を参照してください。 一覧されたプロパティの中には、特定のフラット ファイル形式に対してのみ構成可能なもの、および特定のデータ型の列に対してのみ構成可能なものがあります。  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
-|**名前**|わかりやすい列名を指定します。 名前を入力していない場合[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]形式列 0、1 列目などの名前を自動的に作成します。|
+|**名前**|わかりやすい列名を指定します。 名前を入力しないと、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、列 0、列 1 などの形式で自動的に名前が作成されます。|
 |**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}**。 列は、復帰と改行の組み合わせで区切られます。<br /><br /> **{CR}**。 列は、復帰で区切られます。<br /><br /> **{LF}**。 列は、改行で区切られます。<br /><br /> **セミコロン {;}**。 列は、セミコロンで区切られます。<br /><br /> **コロン {:}**。 列は、コロンで区切られます。<br /><br /> **コンマ {,}**。 列は、コンマで区切られます。<br /><br /> **タブ {t}**。 列は、タブで区切られます。<br /><br /> **縦棒 {&#124;}**。 列は、縦棒で区切られます。|
 |**[列の型]**|列が区切り形式、固定幅形式、幅合わせしない形式のうちどれであるかを示します。 このプロパティは読み取り専用です。 幅合わせしない形式のファイルとは、最後の列を除くすべての列が固定幅のファイルです。 最後の列は、行区切り記号で区切られます。|  
-|**[入力列の幅]**|バイトの数として格納される値を指定します。Unicode ファイルのこの値は、文字の数です。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|
+|**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、この値は文字数となります。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。|
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。|
 |**DataType**|使用できるデータ型を一覧から選択します。<br/>詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|
@@ -238,23 +236,23 @@ ms.lasthandoff: 10/18/2017
  
 **[型の推測]** をクリックすると、**[列の型の推測]** ダイアログ ボックスが表示されます。 
 
-![フラット ファイル接続の種類 ダイアログ ボックスを提案します。](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![フラット ファイル接続の [型の推測] ダイアログ ボックス](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
-オプションを選択した後、 **[列の型**] ダイアログ ボックスをクリック**OK**ウィザードの一部の列のデータ型を変更する可能性があります。
+**[列の型の推測]** ダイアログ ボックスでオプションを選択した後、**[OK]** をクリックすると、列のデータ型がウィザードによって一部変更される場合があります。
 
-次のスクリーン ショットことを示していますをクリックした後**型の推測**、ウィザードが認識されている、 **id**データ ソース内の列が数値とテキスト文字列ではなく、実際にし、のデータ型が変更されました。文字列から整数への列です。
+次のスクリーン ショットでは、**[型の推測]** をクリックした後で、データ ソースの **id** 列が実際にはテキスト文字列ではなく、数値であることがウィザードによって認識され、列のデータ型が文字列から整数に変更されています。
 
 ![フラット ファイル接続の詳細設定の変更後](../../integration-services/import-export-data/media/flat-file-connection-advanced-after.png)
 
-詳細については、次を参照してください。[提案列の種類 ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)です。
+詳細については、「[[列の型の推測] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。
 
 ## <a name="preview-page-source"></a>[プレビュー] ページ (ソース)
 
 **[プレビュー]** ページでは、列とサンプル データの一覧を見て、内容が目的どおりであることを確認できます。
 
-![フラット ファイル、ページのプレビュー](../../integration-services/import-export-data/media/flat-file-preview-page.jpg)
+![フラット ファイル、[プレビュー] ページ](../../integration-services/import-export-data/media/flat-file-preview-page.jpg)
 
-### <a name="options-to-specify-preview-page"></a>指定するオプション (**プレビュー**  ページ)
+### <a name="options-to-specify-preview-page"></a>指定するオプション (**[プレビュー]** ページ)
 
  **[スキップするデータ行数]**  
  フラット ファイルの冒頭でスキップする行数を指定します。  
@@ -267,45 +265,44 @@ ms.lasthandoff: 10/18/2017
  
 **[プレビュー]** ページの詳細については、Integration Services リファレンス ページ「[[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)」を参照してください。
 
-## <a name="connect-to-a-flat-file-destination"></a>フラット ファイル変換先への接続します。
-フラット ファイル変換先は、オプションの 1 つのページのみの次のスクリーン ショットに示すように。 参照して、ファイルを選択し、設定を確認、**形式**セクションです。
+## <a name="connect-to-a-flat-file-destination"></a>フラット ファイル変換先に接続する
+フラット ファイル変換先の場合は、次のスクリーン ショットに示すように、オプションに関するページは 1 ページのみとなります。 ファイルを参照して選択し、**[形式]** セクションで設定を確認します。
 
-![フラット ファイル変換先への接続します。](../../integration-services/import-export-data/media/connect-to-flat-file-destination.jpg)
+![フラット ファイル変換先に接続する](../../integration-services/import-export-data/media/connect-to-flat-file-destination.jpg)
 
-### <a name="options-to-specify-choose-a-destination-page"></a>指定するオプション (**先選択** ページ)
+### <a name="options-to-specify-choose-a-destination-page"></a>指定するオプション (**[変換先]** ページ)
 
  **ファイル名**  
- フラット ファイルのパスとファイル名を入力します。  
+ フラット ファイルのパスと名前を入力します。  
   
  **参照**  
- フラット ファイルを指定します。  
+ フラット ファイルの場所を特定します。  
   
  **ロケール**  
- 並べ替えおよび日付と時刻の形式の言語に固有の情報を提供するロケールを指定します。  
+ ロケールを指定して、順序付けおよび日時の形式に関する言語固有の情報を提供します。  
   
  **Unicode**  
- ファイルが Unicode を使用するかどうかを指定します。 Unicode を使用する場合は、コード ページを指定することはできません。  
+ ファイルで Unicode を使用するかどうかを指定します。 Unicode を使用する場合は、コード ページを指定できません。  
   
  **コード ページ**  
  非 Unicode テキストのコード ページを指定します。  
   
  **形式**  
- ファイルが区切り形式、固定幅、または幅合わせしない形式を使用するかどうかを選択します。  
+ 区切り記号形式、固定幅形式、または幅合わせしない形式をファイルで使用するかどうかを選択します。  
   
 |値|Description|  
 |-----------|-----------------|  
-|[区切り記号]|列は、区切り記号で区切られます。 区切り記号を指定する、**列**ページ。|  
+|[区切り記号]|列は区切り記号で区切られます。 **[列]** ページに区切り記号を指定します。|  
 |[固定幅]|列は固定幅を持ちます。|  
 |[幅合わせしない]|幅合わせしないファイルとは、最後の列以外のすべての列が固定幅を持つファイルです。最後の列は、行区切り記号で区切られます。|  
   
  **テキスト修飾子**  
- ファイルによって使用されている場合は、テキスト修飾子を指定します。 たとえば、テキスト フィールドを引用符で囲むことを指定できます。 (このプロパティのみに適用区切りのファイル)。 
+ ファイルで使用するテキスト修飾子を必要に応じて指定します。 たとえば、テキスト フィールドを引用符で囲むことを指定できます。 (このプロパティは、区切りファイルにのみ適用されます。) 
   
 > [!NOTE] 
-> テキスト修飾子を選択すると、後にすることはできませんを選択し直して、 **None**オプション。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
+> テキスト修飾子を選択した後で、**[なし]** オプションを再度選択することはできません。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
 
 ## <a name="see-also"></a>参照
-[データ ソースを選択します。](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[変換先を選択します。](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

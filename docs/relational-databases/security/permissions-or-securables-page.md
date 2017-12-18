@@ -2,9 +2,12 @@
 title: "[権限] ページまたは [セキュリティ保護可能なリソース] ページ | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>[権限] ページまたは [セキュリティ保護可能なリソース] ページ
-  **[権限]** ページまたは **[セキュリティ保護可能なリソース]** ページを使用すると、セキュリティ保護可能なリソースに対する権限を表示または設定できます。 このページは、さまざまな場面で開くことができます。 このページの内容は、ページを開くときの状況やページに含まれているアイテムによって多少異なる場合があります。 ページの先頭にあるグリッドは、ページを開いたときに設定されます。それ以外では、空になる場合があります。 アイテムを上のグリッドに追加するには、 **[検索]**をクリックします。 上のグリッドでアイテムを選択した後、 **[明示的]** タブで適切な権限を設定します。集計された権限を表示するには、**[有効]** タブを使用します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[権限]** ページまたは **[セキュリティ保護可能なリソース]** ページを使用すると、セキュリティ保護可能なリソースに対するアクセス許可を表示または設定できます。 このページは、さまざまな場面で開くことができます。 このページの内容は、ページを開くときの状況やページに含まれているアイテムによって多少異なる場合があります。 ページの先頭にあるグリッドは、ページを開いたときに設定されます。それ以外では、空になる場合があります。 アイテムを上のグリッドに追加するには、 **[検索]**をクリックします。 上のグリッドでアイテムを選択した後、 **[明示的]** タブで適切な権限を設定します。集計された権限を表示するには、**[有効]** タブを使用します。  
   
  セキュリティ保護可能なリソースとプリンシパルの有効な組み合わせの詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」に記載されている、セキュリティ保護可能なリソース別の構文に関するリンク先を参照してください。 詳細については、「[セキュリティ保護可能](../../relational-databases/security/securables.md)」を参照してください。  
   

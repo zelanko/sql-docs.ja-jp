@@ -1,5 +1,5 @@
 ---
-title: "パッケージ オブジェクトの表示 |Microsoft ドキュメント"
+title: "パッケージ オブジェクトを表示する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="view-package-objects"></a>パッケージ オブジェクトを表示する
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、 **[パッケージ エクスプローラー]** タブで、パッケージをエクスプローラー表示できます。 この表示には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アーキテクチャのコンテナー階層が反映されます。 パッケージ コンテナーはこの階層の最上層にあり、パッケージを展開すると、そのパッケージ内にある接続、実行可能ファイル、イベント ハンドラー、ログ プロバイダー、優先順位制約、および変数が表示されます。  
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/26/2017
   
  次の図は、簡単なパッケージのツリー ビューを示しています。  
   
- ![[パッケージ エクスプ ローラー] タブのスクリーン ショット](../integration-services/media/packageexplorer.gif "パッケージ エクスプ ローラー タブのスクリーン ショット")  
+ ![[パッケージ エクスプローラー] タブのスクリーンショット](../integration-services/media/packageexplorer.gif "[パッケージ エクスプローラー] タブのスクリーンショット")  
   
-## <a name="view-the-package-structure-and-content"></a>パッケージの構造とコンテンツを表示します。  
+## <a name="view-the-package-structure-and-content"></a>パッケージの構造と内容を表示する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージ エクスプローラー **で表示するパッケージが含まれている**プロジェクトを開きます。  
   
@@ -57,11 +55,11 @@ ms.lasthandoff: 09/26/2017
   
 4.  パッケージの構造に基づき、次の任意のレベルのフォルダーを展開します。  
   
-## <a name="view-the-properties-of-a-package-object"></a>パッケージ オブジェクトのプロパティを表示します。
+## <a name="view-the-properties-of-a-package-object"></a>パッケージ オブジェクトのプロパティを表示する
   
 -   オブジェクトを右クリックして **[プロパティ]** をクリックし、 **[プロパティ]** ウィンドウを開きます。  
   
-## <a name="delete-an-object-in-a-package"></a>パッケージ内のオブジェクトを削除します。  
+## <a name="delete-an-object-in-a-package"></a>パッケージのオブジェクトを削除する  
   
 -   オブジェクトを右クリックし、 **[削除]**をクリックします。 
  
@@ -70,8 +68,7 @@ ms.lasthandoff: 09/26/2017
  [Integration Services コンテナー](../integration-services/control-flow/integration-services-containers.md)   
  [優先順位制約](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services & #40 です。SSIS &#41;イベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services & #40 です。SSIS &#41;ログ記録](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS&#41; のログ記録](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

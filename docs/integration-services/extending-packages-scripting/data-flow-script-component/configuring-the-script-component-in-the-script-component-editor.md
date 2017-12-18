@@ -1,5 +1,5 @@
 ---
-title: "スクリプト コンポーネント エディターでスクリプト コンポーネントの構成 |Microsoft ドキュメント"
+title: "スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,46 +8,42 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SSIS Script component
 - Script Component Editor
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8488fcc7d402430f66b9b9018b31956a5a1d8383
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ede9923efe50fa8accb4aab6b0455bf2823dfb75
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
-  スクリプト コンポーネントでカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類を選択する必要があります: 変換元、変換、または変換先-し、コンポーネントのメタデータおよびプロパティを構成、**スクリプト変換エディター**です。  
+  スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、**[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
   
 ## <a name="selecting-the-type-of-component-to-create"></a>作成するコンポーネントの種類の選択  
- [データ フロー] ペインにスクリプト コンポーネントを追加すると[!INCLUDE[ssIS](../../../includes/ssis-md.md)]デザイナー、**スクリプト コンポーネントの種類の選択** ダイアログ ボックスが表示されます。 コンポーネントをあらかじめ、変換元、変換、または変換先として構成しておきます。 この初期選択を行うと後、は、内のコンポーネントの構成を続行することができます、**スクリプト変換エディター**です。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの [データ フロー] ペインにスクリプト コンポーネントを追加すると、**[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスが表示されます。 コンポーネントをあらかじめ、変換元、変換、または変換先として構成しておきます。 最初にこれを選択したら、引き続き **[スクリプト変換エディター]** でスクリプト コンポーネントを構成できます。  
   
- スクリプト コンポーネントの既定のスクリプト言語を設定するには、使用、**スクリプト言語** オプションを選択、**全般**のページ、**オプション** ダイアログ ボックス。 詳細については、「 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)」を参照してください。  
+ スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)」を参照してください。  
   
 ## <a name="understanding-the-two-design-time-modes"></a>デザイン時の 2 つのモードについて  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。  
   
- 開くと、**スクリプト変換エディター**、コンポーネント メタデータ デザイン モードに入るとします。 このモードでは、入力列の選択、および出力と出力列の追加または構成を行うことができますが、コードは記述できません。 このコンポーネントのメタデータを構成した後で、コード デザイン モードに切り替えてスクリプトを記述できます。  
+ **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。 このモードでは、入力列の選択、および出力と出力列の追加または構成を行うことができますが、コードは記述できません。 このコンポーネントのメタデータを構成した後で、コード デザイン モードに切り替えてスクリプトを記述できます。  
   
- 切り替えるとコード デザイン モード をクリックして**スクリプトの編集**、スクリプト コンポーネントは、追加の変更を防ぐためにメタデータがロックされ、入力と出力のメタデータから基本コードを自動的に生成します。 コードの自動生成が完了すると、カスタム コードを入力できるようになります。 作成したコードは自動生成された基本クラスを使用し、すべて厳密に型指定されたオブジェクトとして、入力行の処理、バッファーおよびバッファー内の列へのアクセス、およびパッケージからの接続マネージャーと変数の取得を行います。  
+ **[スクリプトの編集]** をクリックしてコード デザイン モードに切り替えると、スクリプト コンポーネントではメタデータがロックされ、追加の変更ができなくなり、入力と出力のメタデータから基本コードが自動的に生成されます。 コードの自動生成が完了すると、カスタム コードを入力できるようになります。 作成したコードは自動生成された基本クラスを使用し、すべて厳密に型指定されたオブジェクトとして、入力行の処理、バッファーおよびバッファー内の列へのアクセス、およびパッケージからの接続マネージャーと変数の取得を行います。  
   
  コード デザイン モードでカスタム コードを入力したら、モードを切り替えてメタデータ デザイン モードに戻すことができます。 これによって入力したコードが削除されることはありませんが、次にメタデータを変更すると、基本クラスが再生成されます。 その後、カスタム コードが参照するオブジェクトが存在しないか、または変更されたために、コンポーネントの検証に失敗する可能性があります。 その場合、再生成された基本クラスに対してコードが正常にコンパイルされるように、コードを手動で修正する必要があります。  
   
@@ -57,19 +53,19 @@ ms.lasthandoff: 08/03/2017
  カスタム エディターで構成する必要のあるプロパティは、スクリプト コンポーネントの使用法に応じて異なります。 スクリプト コンポーネントは、変換元、変換、または変換先として構成できます。 コンポーネントの使用方法に応じて、入力または出力のどちらか、またはその両方がサポートされます。 記述するカスタム コードでは、入力および出力の行と列が処理されます。  
   
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力列] ページ  
- **入力列**のページ、**スクリプト変換エディター**変換および変換先、のではなくソースが表示されます。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。  
+ 変換および変換先では、**[スクリプト変換エディター]** の **[入力列]** ページが表示されます。変換元では表示されません。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。  
   
- このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、整数値を選択する場合**CustomerID**列と文字列**CustomerName**という名前の入力からの列**CustomerInput**、BufferWrapper プロジェクト アイテムが含まれます、 **CustomerInput**から派生したクラス<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>、および**CustomerInput**クラスが名前付き整数のプロパティを公開**CustomerID**およびという名前の文字列プロパティ**CustomerName**です。 この規則により、次のような型チェック付きのコードが記述できます。  
+ このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、**CustomerInput** という名前の入力から整数型の **CustomerID** 列と文字列型の **CustomerName** 列を選択した場合、BufferWrapper プロジェクト アイテムには <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から派生した **CustomerInput** クラスが格納されます。**CustomerInput** クラスからは、**CustomerID** という名前の整数型プロパティと、**CustomerName** という名前の文字列型プロパティが公開されます。 この規則により、次のような型チェック付きのコードが記述できます。  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
 Dim currentCustomerName as String = CustomerInput.CustomerName  
 ```  
   
- 特定の種類のデータ フロー コンポーネントの入力列を構成する方法の詳細については、下にある、該当する例を参照してください。[スクリプト コンポーネントの種類を特定の開発](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)です。  
+ 特定の種類のデータ フロー コンポーネントの入力列を構成する方法の詳細については、「[特定の種類のスクリプト コンポーネントの開発](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」で、該当する例を参照してください。  
   
 ### <a name="inputs-and-outputs-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力および出力] ページ  
- **入力呼び出し力**のページ、**スクリプト変換エディター**元、変換、および変換先が表示されます。 このページでは、カスタム スクリプトで使用する入力、出力、および出力列を追加、削除、および構成します。ただし、次のような制限があります。  
+ 変換元、変換、および変換先では、**[スクリプト変換エディター]** の **[入力および出力]** ページが表示されます。 このページでは、カスタム スクリプトで使用する入力、出力、および出力列を追加、削除、および構成します。ただし、次のような制限があります。  
   
 -   スクリプト コンポーネントを変換元として使用する場合、入力はありませんが複数の出力がサポートされます。  
   
@@ -77,43 +73,43 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   スクリプト コンポーネントを変換先として使用する場合、1 つの入力がサポートされますが出力はありません。  
   
- このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 という名前の出力を作成する場合など**CustomerOutput**、BufferWrapper プロジェクト アイテムが含まれます、 **CustomerOutput**から派生したクラス<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>、および**CustomerOutput**クラスが作成された各出力列の型指定されたアクセサー プロパティを格納します。  
+ このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 たとえば、**CustomerOutput** という名前の出力を作成した場合、BufferWrapper プロジェクト アイテムには、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から派生した **CustomerOutput** クラスが含まれます。**CustomerOutput** クラスには、作成された各出力列用の型指定されたアクセサー プロパティが含まれます。  
   
- のみで出力列を構成することができます、**入力呼び出し力**ページ。 変換および変換先の入力列を選択できます、**入力列**ページ。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは読み取り専用または読み取り/書き込みの各列に対して選択した使用法の種類に応じて、**入力列**ページ。  
+ 出力列は、**[入力および出力]** ページでのみ構成できます。 変換および変換先の入力列は、**[入力列]** ページで選択できます。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは、**[入力列]** ページで各列に選択した使用法の種類に応じて、読み取り専用または読み取り/書き込みのプロパティになります。  
   
- 特定のデータ型の入力と出力を構成する方法については、フロー コンポーネントで、該当する例を参照してください。[スクリプト コンポーネントの種類を特定の開発](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)です。  
+ 特定の種類のデータ フロー コンポーネントの入力および出力を構成する方法の詳細については、「[特定の種類のスクリプト コンポーネントの開発](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」で、該当する例を参照してください。  
   
 > [!NOTE]  
->  エラー行の自動処理のスクリプト コンポーネントでエラー出力として出力を直接構成することはできませんが、別の出力を作成するか、可能な場合はスクリプトを使用してこの出力に行を送信することによって、エラー出力の機能を再現することができます。 詳細については、次を参照してください。[スクリプト コンポーネントのエラー出力のシミュレート](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)です。  
+>  エラー行の自動処理のスクリプト コンポーネントでエラー出力として出力を直接構成することはできませんが、別の出力を作成するか、可能な場合はスクリプトを使用してこの出力に行を送信することによって、エラー出力の機能を再現することができます。 詳細については、「[スクリプト コンポーネントに対するエラー出力のシミュレート](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)」を参照してください。  
   
 #### <a name="exclusiongroup-and-synchronousinputid-properties-of-outputs"></a>出力の ExclusionGroup プロパティおよび SynchronousInputID プロパティ  
- **ExclusionGroup**プロパティでは、0 以外の値をコードがフィルターまたは分岐を実行し、同じ 0 以外を共有する出力のいずれかに各行を導く、同期出力型の変換でのみ**ExclusionGroup**値。 たとえば変換は、行を既定の出力またはエラー出力のどちらかに送信できます。 このシナリオに追加の出力を作成するときに確認の値を設定する、 **SynchronousInputID**プロパティと一致する整数を**ID**コンポーネントの入力のです。  
+ **ExclusionGroup** プロパティは、同期出力型の変換でのみ、0 以外の値になります。この場合、コードはフィルターまたは分岐を実行し、各行を、**ExclusionGroup** の 0 以外の同じ値を共有する出力の 1 つに送ります。 たとえば変換は、行を既定の出力またはエラー出力のどちらかに送信できます。 この場合に追加の出力を作成するには、**SynchronousInputID** プロパティの値が、コンポーネントの入力の **ID** と一致する整数に設定されていることを確認します。  
   
- **SynchronousInputID**プロパティでは、0 以外の値を同期出力型の変換でのみです。 このプロパティの値が 0 の場合、出力が非同期型であることを示します。 このプロパティには、ここで行に渡されるを介して選択されている出力または出力、新しい行を追加することがなく、同期出力の**ID**コンポーネントの入力のです。  
+ **SynchronousInputID** プロパティは、同期出力型の変換でのみ、0 以外の値になります。 このプロパティの値が 0 の場合、出力が非同期型であることを示します。 同期出力では、新しい行を追加せず、選択した出力に行が渡されます。このプロパティには、コンポーネントの入力の **ID** が含まれている必要があります。  
   
 > [!NOTE]  
->  ときに、**スクリプト変換エディター**最初の出力では、エディターのセットを作成、 **SynchronousInputID**する出力のプロパティ、 **ID**コンポーネントの入力のです。 ただし、エディターは、後の出力を作成するときに、エディター設定、 **SynchronousInputID**をゼロにそれらの出力のプロパティです。  
+>  **[スクリプト変換エディター]** による最初の出力作成時には、出力の **SynchronousInputID** プロパティが、コンポーネントの入力の **ID** に設定されます。 しかし、その後の出力時には、出力の **SynchronousInputID** プロパティが 0 に設定されます。  
 >   
->  同期出力型コンポーネントを作成する場合、各出力があります、 **SynchronousInputID**プロパティに設定、 **ID**コンポーネントの入力のです。 したがって、それぞれの出力、エディターが最初の出力があります後が作成されるその**SynchronousInputID**値が 0 から変更された、 **ID**コンポーネントの入力のです。  
+>  同期出力型コンポーネントを作成する場合、各出力の **SynchronousInputID** プロパティを、コンポーネントの入力の **ID** に設定する必要があります。 このため、最初の出力後は、エディターで出力を作成するたびに、**SynchronousInputID** 値を 0 からコンポーネントの入力の **ID** に変更する必要があります。  
 >   
->  各出力する必要がありますが、非同期出力型コンポーネントを作成する場合、 **SynchronousInputID**プロパティを 0 に設定します。 したがって、最初の出力が必要、 **SynchronousInputID**から値が変更された、 **ID**をゼロにコンポーネントの入力のです。  
+>  非同期出力型コンポーネントを作成する場合、各出力の **SynchronousInputID** プロパティを 0 に設定する必要があります。 このため、最初の出力時は、**SynchronousInputID** 値をコンポーネントの入力の **ID** から 0 に変更する必要があります。  
   
- スクリプト コンポーネント内の 2 つの同期出力型のいずれかに行を指示することの例は、次を参照してください。[スクリプト コンポーネントによる同期変換を作成する](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)です。  
+ スクリプト コンポーネントで 2 つの同期出力のうちのいずれかに行を送信する例については、「[スクリプト コンポーネントによる同期変換の作成](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」を参照してください。  
   
 ### <a name="object-names-in-generated-script"></a>生成されたスクリプトのオブジェクト名  
- スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前が、Unicode カテゴリに属していない文字を含めるかどうか**UppercaseLetter**、 **LowercaseLetter**、 **TitlecaseLetter**、 **ModifierLetter**、**数字**、または**DecimalDigitLetter**、生成された名前では無効な文字が削除されます。 たとえば、スペースは削除される、そのため 2 つの入力列の名前を持つ**FirstName**と [**名**] 列の名前を持つものとして解釈されます両方**FirstName**、予期しない結果にします。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
+ スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前に、Unicode カテゴリの **UppercaseLetter**、**LowercaseLetter**、**TitlecaseLetter**、**ModifierLetter**、**OtherLetter**、または **DecimalDigitLetter** に属していない文字が含まれている場合、使用できない文字は生成された名前から削除されます。 たとえば、スペースは削除されるため、**FirstName** と **[First Name]** という名前の 2 つの入力列は、どちらも列名 **FirstName** を持つと解釈され、予期しない結果が生じます。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
   
 ### <a name="script-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [スクリプト] ページ  
- **スクリプト**のページ、**スクリプト タスク エディター**、一意の名前と、スクリプト タスクの説明を割り当てます。 また、次のプロパティの値を割り当てることができます。  
+ **[スクリプト変換エディター]** の **[スクリプト]** ページでは、スクリプト タスクに一意の名前および説明を割り当てます。 また、次のプロパティの値を割り当てることができます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] およびそれ以降のバージョンでは、すべてのスクリプトがプリコンパイル済みです。 以前のバージョンで指定したスクリプトを設定してプリコンパイルするかどうか、**プリコンパイル**タスクのプロパティです。  
+>  [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] およびそれ以降のバージョンでは、すべてのスクリプトがプリコンパイル済みです。 以前のバージョンでは、タスクの **Precompile** プロパティを設定することによって、スクリプトをプリコンパイルするかどうかを指定していました。  
   
 #### <a name="validateexternalmetadata-property"></a>ValidateExternalMetadata プロパティ  
- ブール値、 **ValidateExternalMetadata**プロパティは、このコンポーネントが、デザイン時に外部データ ソースに対する検証を実行するかどうか、または実行時まで検証を延期するかどうかを指定します。 既定では、このプロパティの値は**True**; デザイン時および実行時の両方に、外部メタデータの検証は、します。 するには、このプロパティの値を設定することがあります**False**ときに、外部データ ソースが利用できないデザイン時: たとえば、ときに、パッケージ ソースをダウンロードまたは実行時にのみ、変換先を作成します。  
+ **ValidateExternalMetadata** プロパティのブール値は、コンポーネントがデザイン時に外部データ ソースに対する検証を実行するかどうか、または実行時まで検証を延期するかどうかを指定します。 既定では、このプロパティの値は **True** です。つまり、外部メタデータはデザイン時と実行時の両方で検証されます。 外部データ ソースをデザイン時に使用しない場合、たとえば、パッケージの実行時にのみ外部データ ソースをダウンロードしたり、変換先を作成したりする場合には、このプロパティの値を **False** に設定できます。  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables プロパティおよび ReadWriteVariables プロパティ  
- 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト コンポーネントのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 変数には、自動生成された基本クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> プロパティを介して、コード内でアクセスします。 詳細については、次を参照してください。[スクリプト コンポーネントで変数を使用して](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)です。  
+ 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト コンポーネントのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 変数には、自動生成された基本クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> プロパティを介して、コード内でアクセスします。 詳しくは、「[スクリプト コンポーネントでの変数の使用](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」をご覧ください。  
   
 > [!NOTE]  
 >  変数名の大文字と小文字は区別されます。  
@@ -122,22 +118,21 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  スクリプト コンポーネントのプログラミング言語として、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を選択できます。  
   
 #### <a name="edit-script-button"></a>[スクリプトの編集] ボタン  
- **スクリプトの編集**ボタンが開き、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE は、カスタム スクリプトを記述します。 詳細については、次を参照してください。[コーディングおよびスクリプト コンポーネントのデバッグ](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)です。  
+ **[スクリプトの編集]** ボタンをクリックすると [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE が開き、カスタム スクリプトを記述できます。 詳しくは、「[スクリプト コンポーネントのコーディングおよびデバッグ](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」をご覧ください。  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [接続マネージャー] ページ  
- **接続マネージャー**のページ、**スクリプト変換エディター**、追加して、カスタム スクリプトで使用する接続マネージャーを削除します。 通常、変換元または変換先コンポーネントを作成する場合は、接続マネージャーを参照する必要があります。  
+ **[スクリプト変換エディター]** の **[接続マネージャー]** ページでは、カスタム スクリプトで使用する接続マネージャーを追加および削除します。 通常、変換元または変換先コンポーネントを作成する場合は、接続マネージャーを参照する必要があります。  
   
- コードで生成されるプロジェクトはこのメタデータに基づいて、 **ComponentWrapper**プロジェクト項目が含まれています、**接続**をそれぞれ選択されている接続マネージャーの型指定されたアクセサー プロパティを持つコレクション クラスです。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、という名前の接続マネージャーを追加した場合`MyADONETConnection`上、**接続マネージャー**ページ エディターのことができます参照を取得する接続マネージャーに、スクリプトで次のコードを使用しています。  
+ このメタデータに基づいて生成されるコード プロジェクトの **ComponentWrapper** プロジェクト アイテムには、選択した各接続マネージャー用の型指定されたアクセサー プロパティを格納する **Connections** コレクション クラスが含まれます。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、エディターの **[接続マネージャー]** ページに `MyADONETConnection` という名前の接続マネージャーを追加した場合、次のコードを使用して、スクリプト内のその接続マネージャーへの参照を取得できます。  
   
 ```vb  
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _  
     Me.Connections.MyADONETConnection  
 ```  
   
- 詳細については、次を参照してください。[スクリプト コンポーネントでデータ ソースに接続する](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)です。  
+ 詳しくは、「[スクリプト コンポーネントでのデータ ソースへの接続](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [コーディングおよびスクリプト コンポーネントのデバッグ](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
+ [スクリプト コンポーネントのコーディングおよびデバッグ](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   
-

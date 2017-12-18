@@ -1,5 +1,5 @@
 ---
-title: "同期出力型のカスタム変換コンポーネントの開発 |Microsoft ドキュメント"
+title: "同期出力型のカスタム変換コンポーネントの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,20 +24,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5c6999fbcc1dccdf7a79802bdc9a2d49630f908e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>同期出力型のカスタム変換コンポーネントの開発
-  同期出力型の変換コンポーネントは、上流コンポーネントから行を受け取り、これらの行の列の値を読み取ったり変更したりして、下流コンポーネントに渡します。 このコンポーネントは、上流コンポーネントから提供される列から派生する、別の出力列も定義しますが、データ フローに行を追加することはありません。 同期および非同期のコンポーネント間の違いの詳細については、次を参照してください。[について同期および非同期変換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)です。  
+  同期出力型の変換コンポーネントは、上流コンポーネントから行を受け取り、これらの行の列の値を読み取ったり変更したりして、下流コンポーネントに渡します。 このコンポーネントは、上流コンポーネントから提供される列から派生する、別の出力列も定義しますが、データ フローに行を追加することはありません。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  
   
  この種類のコンポーネントは、データがコンポーネントに提供されたときにインラインで変更され、処理する前にコンポーネントがすべての行を確認する必要がないタスクに適しています。 通常、同期出力型の変換では、外部データ ソースへの接続、外部メタデータ列の管理、および出力バッファーへの行の追加は行われないため、このコンポーネントを開発するのは最も簡単です。  
   
@@ -117,17 +114,17 @@ End Class
 ### <a name="creating-and-configuring-output-columns"></a>出力列の作成と設定  
  同期出力型の変換コンポーネントでは、バッファーに行は追加されません。ただし、コンポーネントの出力に出力列を追加することはできます。 通常、コンポーネントが出力列を追加すると、新しい出力列の値は、実行時に上流コンポーネントから渡される 1 つ以上の列に含まれるデータから取得されます。  
   
- 出力列が作成されたら、データ型のプロパティを設定する必要があります。 出力列のデータ型のプロパティを設定するには特別な処理が必要で、その処理は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.SetDataTypeProperties%2A> メソッドを呼び出して実行します。 このメソッドが必要な<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Length%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Precision%2A>と<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.CodePage%2A>プロパティは個別に読み取り専用、それぞれ他の設定に依存しているためです。 このメソッドを使用すると、プロパティの値を確実に矛盾なく設定でき、データ フロー タスクにより、正しく設定されていることが検証されます。  
+ 出力列が作成されたら、データ型のプロパティを設定する必要があります。 出力列のデータ型のプロパティを設定するには特別な処理が必要で、その処理は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.SetDataTypeProperties%2A> メソッドを呼び出して実行します。 このメソッドが必要になるのは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Length%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Precision%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.CodePage%2A> のプロパティがそれぞれ互いの設定に依存しているため、個別に読み取り専用であるからです。 このメソッドを使用すると、プロパティの値を確実に矛盾なく設定でき、データ フロー タスクにより、正しく設定されていることが検証されます。  
   
  列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> により、他のプロパティに設定される値が決定されます。 次の表は、各 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> の依存するプロパティの要件を示しています。 ここに示されていないデータ型の場合、依存するプロパティは 0 に設定されます。  
   
 |DataType|長さ|Scale|有効桁数|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
-|DT_DECIMAL|0|0 より大きく 28 以下です。|0|0|  
+|DT_DECIMAL|0|0 より大きく 28 以下|0|0|  
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|0 より大きく 28 以下で、有効桁数の値未満|1 以上 38 以下|0|  
 |DT_BYTES|0 より大きい|0|0|0|  
-|DT_STR|0 より大きく、8000 未満です。|0|0|0 以外の有効なコード ページ|  
+|DT_STR|0 より大きく 8000 未満|0|0|0 以外の有効なコード ページ|  
 |DT_WSTR|0 より大きく 4000 未満|0|0|0|  
   
  データ型プロパティの制約は出力列のデータ型に基づくため、マネージ型を処理する場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の正しいデータ型を選択する必要があります。 基本クラスには、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>、および <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> の 3 つのヘルパー メソッドがあり、これを使用すると、マネージ コンポーネントの開発者は、マネージ型に対応する [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデータ型を適切に選択できます。 これらのメソッドは、マネージ データ型と [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデータ型を相互に変換します。  
@@ -194,7 +191,7 @@ End Sub
 ### <a name="processing-rows"></a>行の処理  
  コンポーネントは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> メソッドで、行および列を含む <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> オブジェクトを受け取ります。 このメソッドではバッファー内の行が繰り返され、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> が読み取られて変更されている間に列が識別されます。 このメソッドは、上流コンポーネントから行が渡されなくなるまで、データ フロー タスクによって繰り返し呼び出されます。  
   
- バッファー内の個々 の列を読み取ったり、書き込んだり、配列インデクサー アクセス メソッドを使用するかのいずれかを使用して、**取得**または**設定**メソッドです。 **取得**と**設定**メソッドは効率的であり、バッファー内の列のデータ型がわかっている場合に使用する必要があります。  
+ バッファー内の列は、配列のインデクサーにアクセスする方法を使用するか、**Get** または **Set** メソッドのいずれかを使用することにより、個別に読み取りまたは書き込みが行われます。 バッファー内の列のデータ型がわかっている場合には、**Get** および **Set** メソッドの方が効率的であり、こちらを使用するようお勧めします。  
   
  次のコード例では、受信行を処理する <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドを実装します。  
   
@@ -333,8 +330,7 @@ End Namespace
   
 ## <a name="see-also"></a>参照  
  [非同期出力型のカスタム変換コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
- [同期および非同期変換を理解します。](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
+ [同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [スクリプト コンポーネントによる同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

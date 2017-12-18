@@ -1,5 +1,5 @@
 ---
-title: ".NET コード (c#) で、SSIS プロジェクトを配置 |Microsoft ドキュメント"
+title: ".NET コード (C#) を使用して SSIS プロジェクトを配置する | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,67 +8,65 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: c83ad5be88951b92c59a7517ed2676ff30692d02
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 7891a781a5874653eb7d4864529630d4d2a03442
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET アプリでの c# コードで、SSIS プロジェクトを配置します。
-このクイック スタート チュートリアルでは、データベース サーバーに接続し、SSIS プロジェクトを配置する c# コードを記述する方法を示します。
+# <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET アプリで C# コードを使用して SSIS プロジェクトを配置する
+このクイック スタート チュートリアルでは、データベース サーバーに接続し、SSIS プロジェクトを配置する C# コードの記述方法を示します。
 
-(C#) アプリを作成するには、Visual Studio、Visual Studio コード、または任意の別のツールを使用することができます。
+C# アプリを作成するには、Visual Studio、Visual Studio Code、または他の任意のツールを使用できます。
 
 ## <a name="prerequisites"></a>前提条件
 
-開始する前に Visual Studio があるか、Visual Studio のコードがインストールされていることを確認します。 Visual Studio または無料の Visual Studio Code の無料の Community edition をダウンロード[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)です。
+開始する前に Visual Studio または Visual Studio Code がインストールされていることを確認します。 Visual Studio の無償の Community エディション、または無償の Visual Studio Code を「[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)」からダウンロードします。
 
 > [!NOTE]
-> Azure SQL データベース サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内での Azure SQL データベース サーバーに接続しようとしている場合、このポートが正常に接続するための企業ファイアウォールで開いていなければなりません。
+> Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>SQL データベースに展開する場合は、接続情報を取得します。 
+## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>SQL Database に展開する場合は、接続情報を取得する 
 
-Azure SQL Database に、パッケージを展開している場合は、SSIS カタログ データベース (SSISDB) に接続する必要があります。 接続情報を取得します。 次の手順の完全修飾サーバー名とログイン情報を必要とします。
+パッケージが Azure SQL Database に展開される場合は、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 選択**SQL データベース**、左側メニューをクリックして、SSISDB データベースから、 **SQL データベース**ページ。 
-3. **概要**データベースのページで、完全修飾サーバー名を確認します。 呼び出すこと、**をコピーする をクリックします。**オプション、サーバー名をポイントします。 
-4. Azure SQL データベース サーバーのログイン情報を忘れた場合は、サーバーの管理者名を表示する SQL データベース サーバー ページに移動します。 必要な場合は、パスワードをリセットすることができます。
-5. をクリックして**データベース接続文字列の表示**です。
-6. 完全な確認**ADO.NET**接続文字列。 サンプル コードを使用して、`SqlConnectionStringBuilder`を提供する個々 のパラメーター値を持つ場合は、この接続文字列を再作成します。
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] をクリックします。 
+3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを呼び出すには、サーバー名にマウス ポインターを移動します。 
+4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
+5. **[データベース接続文字列の表示]** をクリックします。
+6. 完全な **ADO.NET** 接続文字列を確認します。 サンプル コードは、`SqlConnectionStringBuilder` を使用して、指定した個別のパラメーター値でこの接続文字列を再作成します。
 
-## <a name="create-a-new-visual-studio-project"></a>新しい Visual Studio プロジェクトを作成します。
+## <a name="create-a-new-visual-studio-project"></a>新しい Visual Studio プロジェクトの作成
 
-1. Visual Studio で、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。 
-2. **新しいプロジェクト**ダイアログ ボックスで、展開と**Visual c#**です。
-3. 選択**コンソール アプリ**入力と*deploy_ssis_project*プロジェクト名のです。
-4. をクリックして**OK**を作成し、Visual Studio で新しいプロジェクトを開きます。
+1. Visual Studio で、**[ファイル]**、**[新規]**、**[プロジェクト]** の順に選択します。 
+2. **[新しいプロジェクト]** ダイアログで、**[Visual C#]** を展開します。
+3. **[コンソール アプリ]** を選択し、プロジェクト名に *deploy_ssis_project* を入力します。
+4. **[OK]** をクリックして Visual Studio で新しいプロジェクトを開きます。
 
-## <a name="add-references"></a>参照を追加します。
-1. ソリューション エクスプ ローラーで右クリックし、**参照**フォルダーと選択**参照の追加**です。 **参照マネージャー**  ダイアログ ボックスが表示されます。
-2. **参照マネージャー**  ダイアログ ボックスで、展開**アセンブリ**選択と**拡張**です。
-3. 次の 2 つの参照を追加するを選択します。
+## <a name="add-references"></a>参照の追加
+1. ソリューション エクスプローラーで、**[参照]** フォルダーを右クリックし、**[参照の追加]** を選択します。 **[参照マネージャー]** ダイアログ ボックスが表示されます。
+2. **[参照マネージャー]** ダイアログ ボックスで、**[アセンブリ]** を展開して **[拡張機能]** を選択します。
+3. 次の 2 つの参照を選択して追加します。
     -   Microsoft.SqlServer.Management.Sdk.Sfc
     -   Microsoft.SqlServer.Smo
-4. クリックして、**参照**への参照を追加するにはボタン**Microsoft.SqlServer.Management.IntegrationServices**です。 (このアセンブリはグローバル アセンブリ キャッシュ (GAC) にのみインストールされます)。**を参照するファイルの選択** ダイアログ ボックスが表示されます。
-5. **を参照するファイルの選択** ダイアログ ボックスで、アセンブリを含む GAC フォルダーに移動します。 このフォルダーは、通常`C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91`です。
-6. フォルダーでアセンブリ (.dll ファイル) を選択し**追加**です。
-7. をクリックして**OK**を閉じる、**参照マネージャー**  ダイアログ ボックスし、次の 3 つの参照を追加します。 参照があることを確認するには、確認、**参照**ソリューション エクスプ ローラーの一覧です。
+4. **[参照]** ボタンをクリックして、参照を **Microsoft.SqlServer.Management.IntegrationServices** に追加します  (このアセンブリはグローバル アセンブリ キャッシュ (GAC) にのみインストールされます)。**[参照するファイルの選択]** ダイアログ ボックスが表示されます。
+5. **[参照するファイルの選択]** ダイアログ ボックスで、アセンブリを含む GAC フォルダーに移動します。 通常このフォルダーは `C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91` です。
+6. フォルダー内のアセンブリ (.dll ファイル) を選択し、**[追加]** をクリックします。
+7. **[OK]** をクリックして **[参照マネージャー]** ダイアログ ボックスを閉じ、3 つの参照を追加します。 参照があることを確認するには、ソリューション エクスプローラーで **[参照]** リストを確認します。
 
-## <a name="add-the-c-code"></a>C# のコードを追加します。 
-1. 開いている**Program.cs**です。
+## <a name="add-the-c-code"></a>C# コードを追加する 
+1. **Program.cs** を開きます。
 
-2. 内容を置き換える**Program.cs**を次のコード。 サーバー、データベース、ユーザー、およびパスワードの適切な値を追加します。
+2. **Program.cs** のコンテンツを次のコードに置き換えます。 サーバー、データベース、ユーザー、およびパスワードの適切な値を追加します。
 
 > [!NOTE]
-> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するのには、置換、`Integrated Security=SSPI;`引数と`User ID=<user name>;Password=<password>;`です。
+> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。
 
 ```csharp
 using Microsoft.SqlServer.Management.IntegrationServices;
@@ -115,23 +113,22 @@ namespace deploy_ssis_project
 }
 ```
 
-## <a name="run-the-code"></a>コードを実行します。
+## <a name="run-the-code"></a>コードを実行する
 
-1. 実行するには、アプリケーション キーを押して**f5 キーを押して**です。
-2. SSMS では、プロジェクトが配置されていることを確認します。
+1. アプリケーションを実行するには **F5** キーを押します。
+2. SSMS で、プロジェクトが配置されていることを確認します。
 
 ## <a name="next-steps"></a>次の手順
-- パッケージを配置するには、その他の方法を検討してください。
-    - [SSMS で SSIS パッケージを展開します。](./ssis-quickstart-deploy-ssms.md)
-    - [SSIS パッケージにより、TRANSACT-SQL (SSMS) での展開します。](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Transact SQL (VS Code) を使用した SSIS パッケージを展開します。](ssis-quickstart-deploy-tsql-vscode.md)
-    - [コマンド プロンプトから、SSIS パッケージを展開します。](./ssis-quickstart-deploy-cmdline.md)
-    - [PowerShell を使用した SSIS パッケージを展開します。](ssis-quickstart-deploy-powershell.md)
-- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事を参照してください。
-    - [SSMS での SSIS パッケージを実行します。](./ssis-quickstart-run-ssms.md)
-    - [TRANSACT-SQL (SSMS) で、SSIS パッケージを実行します。](./ssis-quickstart-run-tsql-ssms.md)
-    - [Transact SQL (VS Code) を使用した SSIS パッケージを実行します。](ssis-quickstart-run-tsql-vscode.md)
-    - [コマンド プロンプトから、SSIS パッケージを実行します。](./ssis-quickstart-run-cmdline.md)
-    - [PowerShell での SSIS パッケージを実行します。](ssis-quickstart-run-powershell.md)
-    - [C# を使用して、SSIS パッケージを実行します。](./ssis-quickstart-run-dotnet.md) 
-
+- パッケージを配置する他の方法を検討します。
+    - [SSMS を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-ssms.md)
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Transact-SQL (VS Code) を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-tsql-vscode.md)
+    - [コマンド プロンプトから SSIS パッケージを配置する](./ssis-quickstart-deploy-cmdline.md)
+    - [PowerShell を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-powershell.md)
+- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事をご覧ください。
+    - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)
+    - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
+    - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
+    - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 

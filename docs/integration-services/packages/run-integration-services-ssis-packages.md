@@ -1,12 +1,14 @@
 ---
-title: "実行の Integration Services (SSIS) パッケージの |Microsoft ドキュメント"
+title: "Integration Services (SSIS) パッケージの実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,21 +23,21 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f9c69107d378b8a49c02cfebd04d09e76f5c6e8a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージの実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行するには、それらのパッケージの格納場所に応じていくつかのツールのうちの 1 つを使用できます。 次の表にツールを示します。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにパッケージを格納するには、プロジェクト配置モデルを使用してプロジェクトをサーバーに配置します。 詳細については、次を参照してください。[展開 Integration Services (SSIS) プロジェクトとパッケージ](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)です。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにパッケージを格納するには、プロジェクト配置モデルを使用してプロジェクトをサーバーに配置します。 詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
  SSIS パッケージ ストア、msdb データベース、またはファイル システムにパッケージを格納するには、パッケージ配置モデルを使用します。 詳細については、「[レガシー パッケージの配置 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
@@ -45,9 +47,9 @@ ms.lasthandoff: 08/03/2017
 |**SQL Server Management Studio (Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳細については、「 [[パッケージの実行] ダイアログ ボックス](#execute_package_dialog)」を参照してください。|可|いいえ<br /><br /> ただし、これらの場所からサーバーにパッケージをインポートできます。|いいえ<br /><br /> ただし、ファイル システムからサーバーにパッケージをインポートできます。|
 |**SQL Server Management Studio (Scale Out Master として有効になっている Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳しくは、「[Integration Services (SSIS) Scale Out でパッケージを実行する](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)」をご覧ください。|可|いいえ|いいえ|
 |**SQL Server Management Studio (SSIS パッケージ ストアを管理する Integration Services サービスに接続している場合)**|いいえ|可|いいえ<br /><br /> ただし、ファイル システムから [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアにパッケージをインポートできます。|  
-|**dtexec**<br /><br /> 詳しくは、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」をご覧ください。|可|[ユーザー アカウント制御]|可|  
-|**dtexecui**<br /><br /> 詳細については、「[パッケージ実行ユーティリティ &#40;DtExecUI&#41; の UI リファレンス](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)」を参照してください。|いいえ|[ユーザー アカウント制御]|可|  
-|**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。|可|[ユーザー アカウント制御]|可|  
+|**dtexec**<br /><br /> 詳しくは、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」をご覧ください。|可|可|可|  
+|**dtexecui**<br /><br /> 詳細については、「[パッケージ実行ユーティリティ &#40;DtExecUI&#41; の UI リファレンス](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)」を参照してください。|いいえ|はい|可|  
+|**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。|可|可|可|  
 |**組み込みのストアド プロシージャ**<br /><br /> 詳細については、「[catalog.start_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)」を参照してください。|可|いいえ|いいえ|  
 |**API (** <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|可|いいえ|いいえ|  
 |**API (** <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|可|可|  
@@ -60,7 +62,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="run-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でのパッケージの実行
   一般に、パッケージの開発、デバッグ、およびテストの段階では、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーからパッケージを実行すると、パッケージは常に即座に実行されます。  
   
- パッケージの実行中は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブにパッケージの実行の進行状況が表示されます。 パッケージおよびそのタスクおよびコンテナーの開始時間と終了時間に加え、パッケージ内で失敗したタスクまたはコンテナーに関する情報が表示されます。 パッケージの実行が完了した後は、 **[実行結果]** タブで実行時情報を確認できます。 詳細については、 [「制御フローのデバッグ」](../../integration-services/troubleshooting/debugging-control-flow.md)の「進行状況レポート」を参照してください。  
+ パッケージの実行中は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブにパッケージの実行の進行状況が表示されます。パッケージおよびそのタスクおよびコンテナーの開始時間と終了時間に加え、パッケージ内で失敗したタスクまたはコンテナーに関する情報が表示されます。 パッケージの実行が完了した後は、 **[実行結果]** タブで実行時情報を確認できます。詳細については、[「制御フローのデバッグ」](../../integration-services/troubleshooting/debugging-control-flow.md) の「進行状況レポート」を参照してください。  
   
  **デザイン時配置**。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージを実行すると、そのパッケージが構築されフォルダーに配置されます。 パッケージを実行する前に、パッケージを配置するフォルダーを指定できます。 フォルダーを指定しない場合、既定で **bin** フォルダーが使用されます。 こうした配置方法は、デザイン時配置と呼ばれます。  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  ソリューション エクスプローラーで、実行するパッケージが含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト フォルダーを右クリックし、 **[プロパティ]**をクリックします。  
   
-2.  **\<プロジェクト名 > プロパティ ページ**ダイアログ ボックスで、をクリックして**ビルド**です。  
+2.  [**\<プロジェクト名> プロパティ ページ**] ダイアログ ボックスで、**[ビルド]** をクリックします。  
   
 3.  OutputPath プロパティの値を更新して、デザイン時配置用に使用するフォルダーを指定し、 **[OK]**をクリックします。  
 
@@ -171,4 +173,3 @@ ms.lasthandoff: 08/03/2017
 [SQL Server インポートおよびエクスポート ウィザードを起動する](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   
-

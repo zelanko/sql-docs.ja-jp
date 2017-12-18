@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) パッケージの |Microsoft ドキュメント"
+title: "Integration Services (SSIS) パッケージ | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
   パッケージは、接続、制御フロー要素、データ フロー要素、イベント ハンドラー、変数、パラメーター、および構成の組み合わせとして構成されています。パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に用意されているグラフィカル デザイン ツールを使用して作成するか、プログラムによって構築します。  完成したパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、またはファイル システムに保存します。または、ssISnoversion プロジェクトを [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバーに配置することができます。 パッケージとは、取得、実行、および保存の対象となる作業単位のことです。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
  次の図は、1 つの制御フローを含む簡単なパッケージを示しています。この制御フローには 1 つのデータ フロー タスクが含まれ、そのタスクの中に 1 つのデータ フローが含まれます。  
   
- ![パッケージ制御フローとデータ フローを](../integration-services/media/ssis-package.gif "パッケージ制御フローとデータ フロー")  
+ ![制御フローとデータ フローを含むパッケージ](../integration-services/media/ssis-package.gif "制御フローとデータ フローを含むパッケージ")  
   
  基本パッケージを作成したら、ログ記録や変数などの拡張機能を追加して、パッケージの機能を拡張できます。 詳細については、パッケージ機能を拡張するオブジェクトに関するセクションを参照してください。  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/03/2017
   
  **データの抽出元と抽出先 (データ フロー)。** データ フローは、データの抽出や読み込みの実行元と実行先、データの変更や拡張を行う変換、および実行元、変換、実行先にリンクするパスで構成されます。 データ フローをパッケージに追加するには、データ フロー タスクを事前にパッケージ制御フローに含める必要があります。 データ フロー タスクは [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ内の実行可能ファイルで、データ フローの作成、順序付け、および実行を行います。 パッケージ内の各データ フロー タスクに対し、データ フロー エンジンのインスタンスが個別に開きます。 詳細については、「 [データ フロー タスク](../integration-services/control-flow/data-flow-task.md) 」と「 [データ フロー](../integration-services/data-flow/data-flow.md)」を参照してください。  
   
- **接続マネージャー (接続)。** パッケージには通常、1 つ以上の接続マネージャーが含まれます。 接続マネージャーは、パッケージとデータ ソース間のリンクであり、パッケージ内のタスク、変換、およびイベント ハンドラーによって使用されるデータにアクセスするための接続文字列が定義されています。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テキストや XML ファイル、リレーショナル データベース、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータベースやプロジェクトなどのデータ ソースに対する接続の種類が用意されています。 詳細については、「[Integration Services &#40;SSIS&#41; の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
+ **接続マネージャー (接続)。** パッケージには通常、1 つ以上の接続マネージャーが含まれます。 接続マネージャーは、パッケージとデータ ソース間のリンクであり、パッケージ内のタスク、変換、およびイベント ハンドラーによって使用されるデータにアクセスするための接続文字列が定義されています。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テキストや XML ファイル、リレーショナル データベース、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータベースやプロジェクトなどのデータ ソースに対する接続の種類が用意されています。 詳細については、「[Integration Services (SSIS) の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 ## <a name="objects-that-extend-package-functionality"></a>パッケージ機能を拡張するオブジェクト  
  パッケージには、イベント ハンドラー、構成、ログ記録、変数など、拡張機能を提供したり既存の機能を拡張するためのオブジェクトを追加できます。  
@@ -98,7 +96,7 @@ ms.lasthandoff: 08/03/2017
 |**PackageEnd**|パッケージが完了したことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |**Diagnostic**|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。|  
   
-## <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定します。  
+## <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定する  
  プロパティを設定するには、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウで行うか、またはプログラムによって設定します。  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を使用してこれらのプロパティを設定する方法については、「 [パッケージのプロパティを設定する](../integration-services/set-package-properties.md)」を参照してください。  
@@ -115,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>関連タスク  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを作成するための [!INCLUDE[ssIS](../includes/ssis-md.md)] オブジェクト モデルのほかに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] デザイナーと [!INCLUDE[ssIS](../includes/ssis-md.md)] インポートおよびエクスポート ウィザードの、2 つのグラフィック ツールが含まれています。 詳細については、以下のトピックを参照してください。  
   
--   [SQL Server インポートおよびエクスポート ウィザードでデータ インポートおよびエクスポート](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [SQL Server Data Tools でパッケージを作成します。](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   参照してください[パッケージをプログラムによって構築](../integration-services/building-packages-programmatically/building-packages-programmatically.md)開発者ガイドです。 
+-   開発者ガイドの「[プログラムによるパッケージの作成](../integration-services/building-packages-programmatically/building-packages-programmatically.md)」を参照してください。 
   
   
-

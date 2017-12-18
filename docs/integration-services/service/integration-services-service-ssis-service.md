@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS サービス) |Microsoft ドキュメント"
+title: "Integration Services サービス (SSIS サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,22 +24,21 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9c2a1063b982ab1f3b8203f76adc59e945da12b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
   このセクションのトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 Integration Service パッケージの作成、保存、および実行には、このサービスは不要です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] との互換性を維持するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスをサポートしています。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、プロジェクト配置モデルを使用して **サーバーに配置したプロジェクトの** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベースにオブジェクト、設定、および業務データを格納します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベース エンジンのインスタンスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーは、データベースをホストします。 データベースの詳細については、「 [SSIS カタログ](../../integration-services/service/ssis-catalog.md)」を参照してください。 プロジェクトの配置の詳細については、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバーを参照してください[展開 Integration Services (SSIS) プロジェクトとパッケージ](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)です。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、プロジェクト配置モデルを使用して **サーバーに配置したプロジェクトの** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベースにオブジェクト、設定、および業務データを格納します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベース エンジンのインスタンスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーは、データベースをホストします。 データベースの詳細については、「 [SSIS カタログ](../../integration-services/service/ssis-catalog.md)」を参照してください。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「[Integration Services (SSIS) のプロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
 ## <a name="management-capabilities"></a>管理機能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でのみ使用できます。  
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/27/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの設計と実行だけを行う場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは必要ありません。 ただし、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してパッケージを一覧表示し、監視する場合はサービスが必要です。  
 
-## <a name="manage-the-service"></a>サービスを管理します。
+## <a name="manage-the-service"></a>サービスの管理
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントのインストール時に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスもインストールされます。 既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。 ただし、サービスを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の格納されたパッケージおよび実行中のパッケージを管理するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする必要があります。  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/27/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは Windows のイベント ログに書き込みを行います。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサービス イベントを表示できます。 Windows イベント ビューアーを使用してサービス イベントを表示することもできます。  
   
-## <a name="set-the-properties-of-the-service"></a>サービスのプロパティを設定します。
+## <a name="set-the-properties-of-the-service"></a>サービスのプロパティの設定
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパッケージを管理および監視します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を初めてインストールするときに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。  
   
@@ -146,7 +144,7 @@ ms.lasthandoff: 09/27/2017
   
 7.  **[ファイル]** メニューの **[終了]** をクリックして **[サービス]** スナップインを終了します。  
 
-## <a name="grant-permissions-to-the-service"></a>サービスにアクセス許可の付与
+## <a name="grant-permissions-to-the-service"></a>サービスへのアクセス許可の付与
   以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすると、既定で Users グループの全ユーザーが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできました。 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールした場合、ユーザーは [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできません。 このサービスは既定で保護されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後に、管理者はサービスに対するアクセスを許可する必要があります。  
   
 ### <a name="to-grant-access-to-the-integration-services-service"></a>Integration Services サービスへのアクセスを許可するには  
@@ -167,7 +165,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを再開します。  
 
-## <a name="configure-the-service"></a>サービスを構成します。
+## <a name="configure-the-service"></a>サービスの構成
  
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールすると、セットアップ プロセスによって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルが作成およびインストールされます。 この構成ファイルには、次の設定が含まれます。  
   
@@ -175,7 +173,7 @@ ms.lasthandoff: 09/27/2017
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト エクスプローラー内の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に表示するルート フォルダーは、[MSDB] および [ファイル システム] フォルダーです。  
   
--   ファイル システム内のパッケージを[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスは管理 %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages にあります。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するファイル システム内のパッケージは、%ProgramFiles%\Microsoft SQL Server\130\DTS\Packages にあります。  
   
  この構成ファイルは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するパッケージを含む msdb データベースも指定します。 既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と同時にインストールされる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが同時にインストールされない場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカルの既定インスタンスの msdb データベース内にあるパッケージを管理するように構成されます。  
   
@@ -209,7 +207,7 @@ ms.lasthandoff: 09/27/2017
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>構成ファイルを変更します。  
+### <a name="modify-the-configuration-file"></a>構成ファイルの変更  
  構成ファイルを変更することによって、サービスが停止した場合にパッケージを継続して実行できるようにしたり、オブジェクト エクスプローラー内に別のルート フォルダーを表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するファイル システム内に別のフォルダーまたは追加のフォルダーを指定することができます。 たとえば、 **SqlServerFolder**型の別のルート フォルダーを作成して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の追加インスタンスの msdb データベースでパッケージを管理できます。  
   
 > [!NOTE]  
@@ -254,15 +252,15 @@ ms.lasthandoff: 09/27/2017
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file-location"></a>構成ファイルの場所を変更します。  
- レジストリ キー **hkey_local_machine \software\microsoft\microsoft SQL Server\130\SSIS\ServiceConfigFile**するファイル、構成の名前と場所を指定[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスで使用します。 レジストリ キーの既定値は**C:\Program files \microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**です。 レジストリ キーの値を更新すると、構成ファイルに別の名前と場所を使用することができます。 注意してください、パスのバージョン番号 (120 SQL Server で[!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]、130 の[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]など) は SQL Server のバージョンによって異なります。
+### <a name="modify-the-configuration-file-location"></a>構成ファイルの場所の変更  
+ レジストリ キー **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用する構成ファイルの場所と名前を指定します。 レジストリ キーの既定値は、**C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml** です。 レジストリ キーの値を更新すると、構成ファイルに別の名前と場所を使用することができます。 パスのバージョン番号 (SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は 120、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合は 130 など) は、SQL Server のバージョンによって異なるので注意してください。
   
 > [!CAUTION]  
 >  レジストリの編集を誤ると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レジストリの誤った編集により発生した問題に関しては、一切責任を負わないものとします。 レジストリを編集する前に、重要なデータをすべてバックアップしてください。 レジストリのバックアップ、復元、および編集の方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [Microsoft Windows レジストリの説明](http://support.microsoft.com/kb/256986)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、サービスの開始時に構成ファイルを読み込みます。 レジストリ エントリを変更した場合、サービスを再起動する必要があります。  
 
-## <a name="connect-to-the-local-service"></a>ローカル サービスへの接続します。
+## <a name="connect-to-the-local-service"></a>ローカル サービスへの接続
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスに接続する前に、管理者からこのサービスに対するアクセス権を付与してもらう必要があります。 
   
 ### <a name="to-connect-to-the-integration-services-service"></a>Integration Services サービスに接続するには  
@@ -277,7 +275,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  **[接続]**をクリックします。  
 
-## <a name="connect-to-a-remote-ssis-server"></a>リモートの SSIS サーバーに接続します。
+## <a name="connect-to-a-remote-ssis-server"></a>リモート SSIS サーバーへの接続
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または他の管理アプリケーションからリモート サーバー上の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のインスタンスに接続するには、アプリケーションのユーザーがそのサーバーに対して特定の権限を持っている必要があります。  
   
@@ -296,7 +294,7 @@ ms.lasthandoff: 09/27/2017
   
 3.  **[サーバーの種類]** ボックスの一覧で **[Integration Services]** を選択します。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ボックスに **** サーバーの名前を入力します。  
+4.  **[サーバー名]** ボックスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの名前を入力します。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、そのインスタンスに固有のものではありません。 このサービスに接続するには、Integration Services サービスが実行されているコンピューターの名前を使用します。  
@@ -359,26 +357,26 @@ ms.lasthandoff: 09/27/2017
 
 詳細については、「 [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)」(SSIS パッケージで機能するクロス ドメイン Kerberos の取得) を参照してください。
  
-## <a name="configure-the-firewall"></a>ファイアウォールを構成します。
+## <a name="configure-the-firewall"></a>ファイアウォールの構成
   
- Windows ファイアウォール システムでは、ネットワーク接続経由でコンピューター リソースへの不正アクセスを防ぐのに役立ちます。 このファイアウォールを経由して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアクセスするには、アクセスを有効にするようにファイアウォールを構成する必要があります。  
+ Windows ファイアウォール システムは、ネットワーク接続経由でコンピューター リソースに不正なアクセスが行われるのを防ぐのに役立ちます。 このファイアウォールを経由して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアクセスするには、アクセスを有効にするようにファイアウォールを構成する必要があります。  
   
 > [!IMPORTANT]  
 >  リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォール経由で DCOM プロトコルがどのように動作するかについては、MSDN ライブラリの「[ファイアウォール経由での分散 COM の使用](http://go.microsoft.com/fwlink/?LinkId=12490)」を参照してください。  
   
- 多くのファイアウォール システムが市販されています。 Windows ファイアウォール以外のファイアウォールを実行している場合は、使用しているシステムに固有の情報は、ファイアウォールのマニュアルを参照してください。  
+ 多くのファイアウォール システムが市販されています。 Windows ファイアウォール以外のファイアウォールを実行している場合、使用しているシステム固有の情報については、そのファイアウォールのマニュアルを参照してください。  
   
  ファイアウォールでアプリケーション レベルのフィルター処理がサポートされている場合は、Windows によって提供されるユーザー インターフェイスを使用して、プログラムやサービスなどの例外を指定し、ファイアウォールを通過することを許可できます。 それ以外の場合は、限定された TCP ポートのセットを使用するように DCOM を構成する必要があります。 上記の Microsoft Web サイト リンクには、使用する TCP ポートを指定する方法が紹介されています。  
   
  Integration Services サービスでは、ポート 135 を使用します。このポートは変更できません。 サービス コントロール マネージャー (SCM) のアクセスのためには、TCP ポート 135 を開く必要があります。 SCM は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの起動と停止、実行中のサービスに対する制御要求の転送などのタスクを実行します。  
   
- 次のセクションの情報は、Windows ファイアウォールに固有です。 Windows ファイアウォール システムを構成するには、コマンド プロンプトでコマンドを実行して、または、Windows ファイアウォール ダイアログ ボックスでプロパティを設定します。  
+ 以下のセクションに記載されている情報は、Windows ファイアウォールに固有の情報です。 Windows ファイアウォール システムを構成する方法には、コマンド プロンプトでコマンドを実行する方法と、[Windows ファイアウォール] ダイアログ ボックスでプロパティを設定する方法があります。  
   
  Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
   
-### <a name="configuring-a-windows-firewall"></a>Windows ファイアウォールを構成します。  
+### <a name="configuring-a-windows-firewall"></a>Windows ファイアウォールの構成  
  次のコマンドを使用すると、TCP ポート 135 を開き、MsDtsSrvr.exe を例外リストに追加し、ファイアウォールのブロックを解除するスコープを指定できます。  
   
 #### <a name="to-configure-a-windows-firewall-using-the-command-prompt-window"></a>コマンド プロンプト ウィンドウを使用して Windows ファイアウォールを構成するには  
@@ -400,7 +398,7 @@ ms.lasthandoff: 09/27/2017
   
  次の手順では、Windows のユーザー インターフェイスを使用して、TCP ポート 135 を開き、MsDtsSrvr.exe を例外リストに追加して、ファイアウォールのブロックを解除するスコープを指定する方法について説明します。  
   
-#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Windows ファイアウォール ダイアログ ボックスを使用してファイアウォールを構成するには  
+#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>[Windows ファイアウォール] ダイアログ ボックスを使用してファイアウォールを構成するには  
   
 1.  コントロール パネルの **[Windows ファイアウォール]**をダブルクリックします。  
   
@@ -424,5 +422,4 @@ ms.lasthandoff: 09/27/2017
 9. **[OK]** をクリックして **[Windows ファイアウォール]**ダイアログ ボックスを閉じます。  
   
     > [!NOTE]  
-    >  この手順を使用するには、Windows ファイアウォールを構成するには、 **Windows ファイアウォール**コントロール パネル内の項目。 **[Windows ファイアウォール]** では、現在のネットワークの場所のプロファイルに対してのみファイアウォールを構成できます。 ただし、構成することできますも、Windows ファイアウォールを使用して、 **netsh**コマンド ライン ツールまたは[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソール (MMC) スナップインでセキュリティが強化された Windows ファイアウォールの名前します。 これらのツールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
-
+    >  Windows ファイアウォールを構成するために、この手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 **[Windows ファイアウォール]** では、現在のネットワークの場所のプロファイルに対してのみファイアウォールを構成できます。 ただし、Windows ファイアウォールは、 **netsh** コマンド ライン ツール、またはセキュリティが強化された Windows ファイアウォールの [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) スナップインを使用して構成することもできます。 これらのツールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  

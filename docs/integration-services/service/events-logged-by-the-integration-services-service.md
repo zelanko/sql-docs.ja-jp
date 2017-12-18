@@ -1,5 +1,5 @@
 ---
-title: "Integration Services サービスによって記録されたイベント |Microsoft ドキュメント"
+title: "Integration Services サービスによってログに記録されるイベント | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、各種のメッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、サービスの起動時、サービスの停止時、および特定の問題の発生時にログに記録されます。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの概要については、「[Integration Services サービス &#40;SSIS サービス&#41;](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。  
   
-## <a name="service-status-messages"></a>サービスのステータス メッセージ
+## <a name="service-status-messages"></a>サービスの状態メッセージ
  インストールで [ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ] を選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがインストールおよび起動され、スタートアップの種類が自動に設定されます。  
   
 |イベント ID|シンボル名|テキスト|注|  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  
 ## <a name="related-tasks"></a>関連タスク  
  ログ エントリを表示する方法については、「 [Integration Services パッケージによってログに記録されるイベント](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

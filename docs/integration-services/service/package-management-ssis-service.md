@@ -1,5 +1,5 @@
 ---
-title: "パッケージの管理 (SSIS サービス) |Microsoft ドキュメント"
+title: "パッケージの管理 (SSIS サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,31 +29,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
-  パッケージの管理には、監視、管理、インポート、およびパッケージのエクスポートが含まれています。  
+  パッケージの管理には、パッケージの監視、管理、インポートおよびエクスポートが含まれます。  
  
  ## <a name="package-store"></a>パッケージ ストア  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージにアクセスするためには、2 つの最上位フォルダーを提供します。 
- - **パッケージの実行** 
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、パッケージにアクセスするための次の 2 つの最上位フォルダーが提供されます。 
+ - **[実行中のパッケージ]** 
  - **[格納されたパッケージ]**
 
  **[実行中のパッケージ]** フォルダーには、サーバーで現在実行中のパッケージが一覧表示されます。 **[格納されたパッケージ]** フォルダーには、パッケージ ストアに保存されたパッケージが一覧表示されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するパッケージは、これらのパッケージのみです。 パッケージ ストアは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで一覧されている msdb データベースとファイル システム フォルダーのいずれかまたは両方で構成することができます。 この構成ファイルは、管理する msdb とファイル システム フォルダーを指定します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理していないパッケージは、ファイル システム内の他の場所に保存することもできます。  
   
- Msdb に保存するパッケージは sysssispackages をという名前のテーブルに格納されます。 Msdb にパッケージを保存するときは、論理フォルダーにグループ化できます。 論理フォルダーを使用すると、目的、別のパッケージを整理したり sysssispackages テーブルにパッケージをフィルター処理することができます。 論理フォルダーの新規作成[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。 既定では、msdb に追加する論理フォルダーは自動的にパッケージ ストアに含まれます。  
+ msdb に保存するパッケージは、sysssispackages というテーブルに格納されます。 パッケージを msdb に保存するときに、論理フォルダーにグループ化できます。 論理フォルダーを使用すると、パッケージを目的別に整理したり、sysssispackages テーブルでパッケージをフィルター処理したりするのに役立ちます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で新しい論理フォルダーを作成します。 既定では、msdb に追加する論理フォルダーは自動的にパッケージ ストアに含まれます。  
   
- 作成した論理フォルダーは、msdb に sysssispackagefolders テーブル内の行として表されます。 sysssispackagefolders の folderid 列と parentfolderid 列は、フォルダー階層を定義します。 Msdb 内のルート論理フォルダーは、parentfolderid 列で null 値を持つ sysssispackagefolders で行です。 詳細については、次を参照してください。 [sysssispackages & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/sysssispackages-transact-sql.md)と[sysssispackagefolders (TRANSACT-SQL (& a))](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)です。  
+ 作成する論理フォルダーは、msdb 内の sysssispackagefolders テーブルの行として表されます。 sysssispackagefolders の folderid 列と parentfolderid 列は、フォルダー階層を定義します。 msdb のルート論理フォルダーは、parentfolderid 列が NULL 値である sysssispackagefolders の行です。 詳細については、「[sysssispackages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md)」および「[sysssispackagefolders (Transact-SQL)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)」を参照してください。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開いて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理する msdb フォルダーが、[格納されたパッケージ] フォルダー内に一覧表示されます。 構成ファイルでルート ファイル システム フォルダーを指定している場合は、[格納されたパッケージ] フォルダーにファイル システムのルート フォルダーとすべてのサブフォルダーに保存されているパッケージも一覧表示されます。  
   
@@ -66,12 +64,12 @@ ms.lasthandoff: 08/03/2017
   
  パッケージ ストア内のパッケージの一覧を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続する必要があります。  
   
-## <a name="monitor-running-packages"></a>パッケージを実行するモニター  
- **実行中のパッケージ**フォルダーには、現在実行中のパッケージが一覧表示されます。 **の** [概要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ページに現在のパッケージ情報を表示するには、 **[実行中のパッケージ]** フォルダーをクリックします。 実行中のパッケージの実行時間などの情報が **[概要]** ページに一覧表示されます。 必要に応じて、フォルダーを更新して、最新の情報を表示します。  
+## <a name="monitor-running-packages"></a>実行中のパッケージの監視  
+ **[実行中のパッケージ]** フォルダーには、現在実行中のパッケージが一覧表示されます。 **の** [概要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ページに現在のパッケージ情報を表示するには、 **[実行中のパッケージ]** フォルダーをクリックします。 実行中のパッケージの実行時間などの情報が **[概要]** ページに一覧表示されます。 必要に応じて、フォルダーを更新して、最新の情報を表示します。  
   
  実行中の単一のパッケージに関する情報を **[概要]** ページに表示するには、該当するパッケージをクリックします。 **[概要]** ページには、パッケージのバージョンや説明などの情報が表示されます。  
   
-実行中のパッケージを停止、**実行中のパッケージ**パッケージを右クリックし、をクリックしてフォルダー**停止**です。  
+**[実行中のパッケージ]** フォルダーで実行中のパッケージを停止する場合は、パッケージを右クリックしてから **[停止]** をクリックします。  
   
 ## <a name="view-packages-in-ssms"></a>SSMS でのパッケージの表示
     
@@ -86,7 +84,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続できない場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されていない可能性があります。 このサービスの状態を調べるには、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。 左ペインで、 **[SQL Server のサービス]**をクリックします。 右ペインで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを見つけます。 サービスがまだ実行されていない場合は開始します。  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]開きます。 既定では、Management Studio の左下隅にオブジェクト エクスプローラーが開きます。 オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が開きます。 既定では、Management Studio の左下隅にオブジェクト エクスプローラーが開きます。 オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>Integration Services サービスが管理するパッケージを表示するには  
   
@@ -96,9 +94,9 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="import-and-export-packages"></a>パッケージのインポートとエクスポート
  
- パッケージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースの sysssispackages テーブルまたはファイル システムに保存できます。  
+ パッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースの sysssispackages テーブルまたはファイル システムに保存できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスによって監視および管理される論理ストレージであるパッケージ ストアには、msdb データベースと、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルに指定されているファイル システム フォルダーの両方を格納できます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスによって監視および管理される論理ストレージであるパッケージ ストアには、msdb データベースと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルに指定されているファイル システム フォルダーの両方を格納できます。  
   
  パッケージは、次の種類のストレージ間でインポートおよびエクスポートできます。  
   
@@ -108,23 +106,23 @@ ms.lasthandoff: 08/03/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベース。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージをインポートおよびエクスポートする機能を提供し、これによって、ストレージ形式とパッケージの場所を変更します。 インポートおよびエクスポート機能を使用すると、ファイル システム、パッケージ ストア、または msdb データベースにパッケージを追加したり、いずれかの保存形式から別の保存形式にパッケージをコピーしたりできます。 たとえば、msdb に保存されているパッケージをファイル システムにコピーしたり、その逆の操作を行うことができます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、パッケージをインポートおよびエクスポートできます。これは、パッケージの保存形式と位置が変わることを意味します。 インポートおよびエクスポート機能を使用すると、ファイル システム、パッケージ ストア、または msdb データベースにパッケージを追加したり、いずれかの保存形式から別の保存形式にパッケージをコピーしたりできます。 たとえば、msdb に保存されているパッケージをファイル システムにコピーしたり、その逆の操作を行うことができます。  
   
- **dtutil** コマンド プロンプト ユーティリティ (dtutil.exe) を使用してパッケージを別の形式にコピーすることもできます。 詳細については、「[dtutil ユーティリティ](../../integration-services/dtutil-utility.md)」を参照してください。  
+ **dtutil** コマンド プロンプト ユーティリティ (dtutil.exe) を使用してパッケージを別の形式にコピーすることもできます。 詳細については、「 [dtutil ユーティリティ](../../integration-services/dtutil-utility.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、次の場所からインポートしたり、次の場所にエクスポートしたりできます。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージを異なるストレージ形式および場所にエクスポートできます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージを異なるストレージ形式および場所にエクスポートできます。  
   
- ただし、異なるバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 間でパッケージをインポートおよびエクスポートするには、いくつかの制限があります。  
+ ただし、異なるバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]間でパッケージをインポートおよびエクスポートするには、いくつかの制限があります。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスからパッケージをインポートできますが、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスにパッケージをエクスポートすることはできません。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]のインスタンスでは、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスからパッケージをインポートできますが、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスにパッケージをエクスポートすることはできません。  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスとの間で、パッケージをインポートすることも、エクスポートすることもできません。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスでは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]のインスタンスとの間で、パッケージをインポートすることも、エクスポートすることもできません。  
   
- 次の手順では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してパッケージをインポートまたはエクスポートする方法について説明します。  
+ 次の手順では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してパッケージをインポートまたはエクスポートする方法について説明します。  
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してパッケージをインポートするには  
   
@@ -132,11 +130,11 @@ ms.lasthandoff: 08/03/2017
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]**をクリックします。  
   
-    -   **サーバー名**ボックスでサーバー名を指定するかをクリックして**\<参照... >**を使用するサーバーを探します。  
+    -   **[サーバー名]** ボックスでサーバー名を入力するか、**[\<参照...>]** をクリックして使用するサーバーを見つけます。  
   
-3.  オブジェクト エクスプローラーが開いていない場合は、**[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
+3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。  
   
 4.  オブジェクト エクスプローラーで、 **[格納されたパッケージ]** フォルダーを展開します。  
   
@@ -144,7 +142,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  フォルダーを右クリックし、 **[パッケージのインポート]**をクリックして、 次のいずれかの操作を行います。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからインポートするには、**[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスからインポートするには、 **[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
          参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[OK]**をクリックします。  
   
@@ -152,7 +150,7 @@ ms.lasthandoff: 08/03/2017
   
          参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[開く]**をクリックします。  
   
-    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからインポートするには、**[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
+    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからインポートするには、 **[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
   
          参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[OK]**をクリックします。  
   
@@ -168,11 +166,11 @@ ms.lasthandoff: 08/03/2017
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]**をクリックします。  
   
-    -   **サーバー名**ボックスでサーバー名を指定するかをクリックして**\<参照... >**を使用するサーバーを探します。  
+    -   **[サーバー名]** ボックスでサーバー名を入力するか、**[\<参照...>]** をクリックして使用するサーバーを見つけます。  
   
-3.  オブジェクト エクスプローラーが開いていない場合は、**[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
+3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。  
   
 4.  オブジェクト エクスプローラーで、 **[格納されたパッケージ]** フォルダーを展開します。  
   
@@ -180,7 +178,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  パッケージを右クリックして **[エクスポート]**をクリックし、次のいずれかの操作を行います。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにエクスポートするには、**[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにエクスポートするには、 **[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
          参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを探します。 必要に応じて、パッケージの既定の名前を更新し、 **[OK]**をクリックします。  
   
@@ -188,7 +186,7 @@ ms.lasthandoff: 08/03/2017
   
          参照ボタン ( **[...]** ) をクリックし、パッケージのエクスポート先のフォルダーを探します。次に、パッケージ ファイルの名前を入力して **[保存]**をクリックします。  
   
-    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアにエクスポートするには、**[SSIS パッケージ ストア]** をクリックしてサーバーを指定します。  
+    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアにエクスポートするには、 **[SSIS パッケージ ストア]** をクリックしてサーバーを指定します。  
   
          参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを選択します。 必要に応じて、パッケージの新しい名前を **[パッケージ名]** テキスト ボックスに入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -197,7 +195,7 @@ ms.lasthandoff: 08/03/2017
 8.  **[OK]** をクリックすると、エクスポートが完了します。  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>[パッケージのインポート] ダイアログ ボックスの UI リファレンス
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[パッケージのインポート]** ダイアログ ボックスを使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
+  **の** [パッケージのインポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
   
 ### <a name="options"></a>オプション  
  **[パッケージの場所]**  
@@ -205,14 +203,14 @@ ms.lasthandoff: 08/03/2017
   
  **SQL Server**  
   
- **ファイル システム**  
+ **[ファイル システム]**  
   
- **SSIS パッケージ ストア**  
+ **[SSIS パッケージ ストア]**  
   
- **サーバー**  
+ **[サーバー]**  
  サーバー名を入力するか、サーバーを一覧から選択します。  
   
- **認証**  
+ **[認証]**  
  Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択します。 このオプションは、格納場所が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合のみ使用できます。  
   
 > [!IMPORTANT]  
@@ -224,7 +222,7 @@ ms.lasthandoff: 08/03/2017
  **ユーザー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
- **パスワード**  
+ **[パスワード]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  
@@ -237,22 +235,22 @@ ms.lasthandoff: 08/03/2017
  参照ボタン **[...]** をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[パッケージのエクスポート]** ダイアログ ボックスを使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを別の場所にエクスポートしたり、必要に応じてパッケージの保護レベルを変更したりできます。  
+  **の** [パッケージのエクスポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを別の場所にエクスポートしたり、必要に応じてパッケージの保護レベルを変更したりできます。  
   
 ### <a name="options"></a>オプション  
- **パッケージの場所**  
+ **[パッケージの場所]**  
  パッケージをエクスポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
   
  **SQL Server**  
   
- **ファイル システム**  
+ **[ファイル システム]**  
   
- **SSIS パッケージ ストア**  
+ **[SSIS パッケージ ストア]**  
   
- **サーバー**  
+ **[サーバー]**  
  サーバー名を入力するか、サーバーを一覧から選択します。  
   
- **認証**  
+ **[認証]**  
  Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択します。 このオプションは、格納場所が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合のみ使用できます。  
   
 > [!IMPORTANT]  
@@ -264,16 +262,16 @@ ms.lasthandoff: 08/03/2017
  **ユーザー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
- **パスワード**  
+ **[パスワード]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
- **パッケージのパス**  
+ **[パッケージのパス]**  
  パッケージのパスを入力するか、 **[…]** をクリックしてパッケージを格納するフォルダーを指定します。  
   
  **保護レベル**  
  **[...]** ボタンを押して、 **[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
 
-## <a name="back-up-and-restore-packages"></a>バックアップおよびパッケージを復元します。
+## <a name="back-up-and-restore-packages"></a>パッケージのバックアップと復元
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、ファイル システムや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データベースの msdb に保存できます。 msdb に保存されたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップおよび復元機能を使用してバックアップおよび復元できます。  
   
@@ -295,4 +293,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services サービス (SSIS サービス)](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

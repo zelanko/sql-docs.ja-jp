@@ -1,5 +1,5 @@
 ---
-title: "Azure での SSIS パッケージの実行がスケジュール |Microsoft ドキュメント"
+title: "Azure で SSIS パッケージの実行をスケジュールする | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,44 +8,42 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールします。
-次のスケジュールのオプションのいずれかを選択して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されたパッケージの実行をスケジュールすることができます。
+# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
+次のスケジュール設定のオプションのいずれかを選択して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されているパッケージの実行をスケジュール設定することができます。
 -   [SQL Server エージェント](#agent)
--   [SQL データベース elastic ジョブ](#elastic)
--   [Azure データ ファクトリ SQL Server ストアド プロシージャ アクティビティ](#sproc)
+-   [SQL Database エラスティック ジョブ](#elastic)
+-   [Azure Data Factory SQL Server ストアド プロシージャ アクティビティ](#sproc)
 
-## <a name="agent"></a>SQL Server エージェントを使用してパッケージのスケジュール
+## <a name="agent"></a> SQL Server エージェントを使用してパッケージのスケジュールを設定する
 
 ### <a name="prerequisite"></a>前提条件
 
-内部設置型 SQL Server エージェントを使用するには、Azure SQL Database サーバーに格納されたパッケージの実行をスケジュールする、前に、リンク サーバーとして SQL データベース サーバーを追加する必要があります。 詳細については、次を参照してください。[リンク サーバーの作成](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)と[リンク サーバー](../../relational-databases/linked-servers/linked-servers-database-engine.md)です。
+オンプレミスの SQL Server エージェントを使用して、Azure SQL Database サーバーに格納されているパッケージの実行をスケジュール設定するには、事前に SQL Database サーバーをリンク サーバーとして追加する必要があります。 詳細については、「[リンク サーバーの作成](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)」と「[リンク サーバー](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。
 
-### <a name="create-a-sql-server-agent-job"></a>SQL Server エージェント ジョブを作成します。
+### <a name="create-a-sql-server-agent-job"></a>SQL Server エージェント ジョブを作成する
 
-内部設置型 SQL Server エージェントを使用してパッケージのスケジュールを SSIS カタログを呼び出すジョブ ステップでジョブを作成するストアド プロシージャ`[catalog].[create_execution]`し`[catalog].[start_execution]`です。 詳細については、次を参照してください。[パッケージの SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)です。
+オンプレミスの SQL Server エージェントを使用してパッケージのスケジュールを設定するには、SSIS カタログ ストアド プロシージャ `[catalog].[create_execution]` と `[catalog].[start_execution]` を順に呼び出すジョブ ステップでジョブを作成します。 詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。
 
-1.  SQL Server Management Studio では、ジョブを作成する内部設置型 SQL Server データベースに接続します。
+1.  SQL Server Management Studio では、ジョブを作成するオンプレミスの SQL Server データベースに接続します。
 
-2.  右クリックし、 **SQL Server エージェント**ノード、**新規**、し、**ジョブ**を開くには、**新しいジョブ** ダイアログ ボックス。
+2.  **SQL Server エージェント** ノードを右クリックし、**[新規]**、**[ジョブ]** の順に選択し、**[新しいジョブ]** ダイアログ ボックスを開きます。
 
-3.  **新しいジョブ**ダイアログ ボックスで、**手順**ページし、[**新規**を開くには、**新しいジョブ ステップ**] ダイアログ ボックス。
+3.  **[新しいジョブ]** ダイアログ ボックスで、**[手順]** ページを選択し、**[新規]** を選択して、**[新しいジョブ ステップ]** ダイアログ ボックスを開きます。
 
-4.  **新しいジョブ ステップ**ダイアログ ボックスで、`SSISDB`として、**データベース。**
+4.  **[新しいジョブ ステップ]** ダイアログ ボックスで、`SSISDB` を**データベース**として選択します。
 
-5.  コマンド フィールドでは、次の例に示すように、スクリプトのような TRANSACT-SQL スクリプトを入力します。
+5.  コマンド フィールドで、次の例に示されたスクリプトのような Transact-SQL スクリプトを入力します。
 
     ```sql
     DECLARE @return_value int, @exe_id bigint 
@@ -60,23 +58,23 @@ ms.lasthandoff: 10/18/2017
     GO
     ```
 
-6.  構成して、ジョブのスケジュール設定を完了します。
+6.  ジョブの構成とスケジュール設定を完了します。
 
-## <a name="elastic"></a>SQL Database の弾力性ジョブを使用してパッケージのスケジュール
+## <a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
 
-SQL データベースでエラスティック ジョブに関する詳細については、次を参照してください。[管理するスケール アウト クラウド データベース](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)です。
+SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
 
 ### <a name="prerequisites"></a>前提条件
 
-弾力性ジョブを使用して、Azure SQL データベース サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュールすることができます、前に、次の作業を行う必要があります。
+エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
 
-1.  インストールし、弾力性データベース ジョブ コンポーネントを構成します。 詳細については、次を参照してください。[弾力性データベースをインストールするジョブの概要](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)です。
+1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
 
-2. ジョブを使用して、SSIS カタログ データベースにコマンドを送信するデータベース スコープ資格情報を作成します。 詳細については、次を参照してください。 [CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)です。
+2. ジョブで SSIS カタログ データベースにコマンドを送信するために使用できるデータベース スコープの資格情報を作成します。 詳細については、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープの資格情報を作成する (Transact-SQL)) を参照してください。
 
-### <a name="create-an-elastic-job"></a>弾力性ジョブを作成します。
+### <a name="create-an-elastic-job"></a>エラスティック ジョブの作成
 
-ジョブを作成するには、次の例に示すように、スクリプトのような TRANSACT-SQL スクリプトを使用します。
+次の例に示されているスクリプトと同じような Transact-SQL スクリプトを使用して、ジョブを作成します。
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -108,25 +106,25 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>Azure データ ファクトリ SQL Server ストアド プロシージャ アクティビティを使用してパッケージのスケジュール
+## <a name="sproc"></a> Azure Data Factory SQL Server ストアド プロシージャ アクティビティを使用してパッケージをスケジュール設定する
 
 > [!IMPORTANT]
-> Azure Data Factory バージョン 1 で次の例で JSON スクリプトを使用してストアド プロシージャ アクティビティ。
+> 次の例では、Azure Data Factory バージョン 1 ストアド プロシージャ アクティビティで JSON スクリプトを使用します。
 
-Azure データ ファクトリ SQL Server ストアド プロシージャ アクティビティを使用してパッケージをスケジュールするには、次の作業を行います。
+Azure Data Factory SQL Server ストアド プロシージャ アクティビティを使用してパッケージをスケジュール設定するには、次の作業を行います。
 
-1.  データ ファクトリを作成します。
+1.  データ ファクトリを作成する。
 
-2.  SSISDB をホストする SQL データベースのリンクされたサービスを作成します。
+2.  SSISDB をホストする SQL Database のリンク サービスを作成する。
 
-3.  ドライブのスケジュール設定を出力データセットを作成します。
+3.  スケジュール設定を駆動する出力データセットを作成する。
 
-4.  SSIS パッケージを実行する SQL Server ストアド プロシージャ アクティビティを使用する Data Factory パイプラインを作成します。
+4.  SSIS パッケージを実行する SQL Server ストアド プロシージャ アクティビティを使用するデータ ファクトリ パイプラインを作成する。
 
-このセクションでは、これらの手順の概要を示します。 データ ファクトリの完全なチュートリアルは、この記事の範囲外です。 詳細については、次を参照してください。 [SQL Server ストアド プロシージャ アクティビティ](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)です。
+このセクションでは、これらの手順の概要を説明します。 データ ファクトリの完全なチュートリアルは、この記事の範囲外です。 詳細については、「[SQL Server ストアド プロシージャ アクティビティ](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)」を参照してください。
 
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>SQL データベースのリンクされたサービスをホストする SSISDB の作成
-リンクされたサービスには、SSISDB に接続するデータ ファクトリことができます。
+### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>SSISDB をホストする SQL Database のリンク サービスを作成する
+リンク サービスは、データ ファクトリを SSISDB に接続することができます。
 
 ```json
 {
@@ -141,8 +139,8 @@ Azure データ ファクトリ SQL Server ストアド プロシージャ ア�
 }
 ```
 
-### <a name="create-an-output-dataset"></a>出力データセットを作成します。
-出力データセットには、スケジューリング情報が含まれています。
+### <a name="create-an-output-dataset"></a>出力データセットを作成する
+出力データセットには、スケジューリング情報が含まれます。
 
 ```json
 {
@@ -160,8 +158,8 @@ Azure データ ファクトリ SQL Server ストアド プロシージャ ア�
     }
 }
 ```
-### <a name="create-a-data-factory-pipeline"></a>Data Factory パイプラインを作成します。
-パイプラインでは、SQL Server ストアド プロシージャ アクティビティを使用して、SSIS パッケージを実行します。
+### <a name="create-a-data-factory-pipeline"></a>データ ファクトリ パイプラインを作成する
+パイプラインは、SQL Server ストアド プロシージャ アクティビティを使用して SSIS パッケージを実行します。
 
 ```json
 {
@@ -191,7 +189,7 @@ Azure データ ファクトリ SQL Server ストアド プロシージャ ア�
 }
 ```
 
-作成して SSIS パッケージの実行を開始するために必要な TRANSACT-SQL コマンドをカプセル化する新しいストアド プロシージャを作成する必要はありません。 スクリプト全体の値として使用できる、`stmt`上記の JSON サンプル内のパラメーターです。 スクリプトの例を次に示します。
+SSIS パッケージの実行を作成および開始するために必要な Transact-SQL コマンドをカプセル化するため、新しいストアド プロシージャを作成する必要はありません。 スクリプト全体を前出の JSON サンプル内の `stmt` パラメーターの値として提供できます。 次にサンプル スクリプトを示します。
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
@@ -227,10 +225,9 @@ END
 GO
 ```
 
-このスクリプトでコードの詳細については、次を参照してください。[ストアド プロシージャを使用して、実行 SSIS パッケージの配置および](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)です。
+このスクリプトのコードの詳細については、「[ストアド プロシージャを使用した SSIS パッケージの配置と実行](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
-SQL Server エージェントに関する詳細については、次を参照してください。[パッケージの SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)です。
+SQL Server エージェントの詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。
 
-SQL データベースでエラスティック ジョブに関する詳細については、次を参照してください。[管理するスケール アウト クラウド データベース](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)です。
-
+SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。

@@ -1,5 +1,5 @@
 ---
-title: "Transact SQL (VS Code) を使用した SSIS パッケージを実行 |Microsoft ドキュメント"
+title: "Transact-SQL (VS Code) を使用して SSIS パッケージを実行する | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,77 +8,75 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a912bf7f7944d4af3d41c5596e67aa77f3214112
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: deb2b7ee8d96fe02383647345aad7bcf4562ad6f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact SQL を使用した Visual Studio のコードから SSIS パッケージを実行します。
-このクイック スタートでは、Visual Studio のコードを使用して、SSIS カタログ データベースに接続し、SSIS カタログに格納されている SSIS パッケージを実行する TRANSACT-SQL ステートメントを使用する方法を示します。
+# <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS パッケージを実行する
+このクイック スタートでは、Visual Studio Code を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
 
-Visual Studio のコードは、Windows、macOS、およびなど、拡張機能をサポートする Linux のコード エディター、 `mssql` Microsoft SQL Server、Azure SQL データベース、または Azure SQL Data Warehouse に接続するための拡張機能です。 VS Code の詳細については、次を参照してください。 [Visual Studio Cod](https://code.visualstudio.com/)です。
+Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure SQL Data Warehouse に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-開始する前に確認の最新バージョンの Visual Studio Code のインストールし、読み込まれたが、`mssql`拡張機能です。 これらのツールをダウンロードするには、次のページを参照してください。
+開始する前に、最新バージョンの Visual Studio Code がインストールされ、`mssql` 拡張機能が読み込まれていることを確認します。 これらのツールをダウンロードするには、次のページを参照してください。
 -   [Visual Studio Code のダウンロード](https://code.visualstudio.com/Download)
 -   [mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
-## <a name="set-language-mode-to-sql-in-vs-code"></a>VS コードでの sql 言語モードに設定します。
+## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code で言語モードを SQL に設定する
 
-有効にする`mssql`セット言語モードに設定されているコマンドと T-SQL は、IntelliSense、 **SQL** Visual Studio のコードにします。
+`mssql` コマンドと T-SQL IntelliSense を有効にするには、Visual Studio Code で言語モードを **SQL** に設定します。
 
-1. Visual Studio のコードを開き、新しいウィンドウを開きます。 
+1. Visual Studio Code を開き、新しいウィンドウを開きます。 
 
-2. をクリックして**プレーン テキスト**ステータス バーの右下隅にします。
+2. ステータス バーの右下隅にある **[プレーン テキスト]** をクリックします。
 
-3. **言語の選択 モード**ドロップダウン メニューが開き、選択または入力する**SQL**、キーを押します**ENTER**言語モードは SQL に設定します。 
+3. 開いた **[言語モードの選択]** ドロップダウン メニューで、**[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
 
-## <a name="connect-to-the-ssis-catalog-database"></a>SSIS カタログ データベースへの接続します。
+## <a name="connect-to-the-ssis-catalog-database"></a>SSIS カタログ データベースに接続する
 
-Visual Studio のコードを使用すると、SSIS カタログへの接続を確立できます。
+Visual Studio Code を使用して、SSIS カタログへの接続を確立します。
 
 > [!IMPORTANT]
-> 続行する前に、サーバー、データベース、および準備のログイン情報があることになっていることを確認します。 接続プロファイル情報の入力を開始した後、Visual Studio のコードから、フォーカスを変更した場合は、接続プロファイルの作成を再起動する必要です。
+> 続行する前に、サーバー、データベース、およびログイン情報が準備されていることを確認します。 接続プロファイル情報の入力を開始した後、Visual Studio Code からフォーカスを変更した場合は、接続プロファイルを作り直す必要があります。
 
-1. VS Code でキーを押して**CTRL + SHIFT + P** (または**F1**) コマンド パレットを開きます。
+1. VS Code で **Ctrl + Shift + P** (または **F1**) キーを押して、コマンド パレットを開きます。
 
-2. 型**sqlcon**とキーを押します**ENTER**です。
+2. 「**sqlcon**」と入力し、**Enter** キーを押します。
 
-3. キーを押して**ENTER**を選択する**接続プロファイルの作成**です。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
+3. **Enter** キーを押して、**[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
 
-4. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してからキーを押します。 **ENTER**を続行します。 
+4. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してから、**Enter** キーを押して続行します。 
 
-   | 設定       | 推奨値 | 詳細 |
+   | 設定       | 提案される値 | 詳細 |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **サーバー名** | 完全修飾サーバー名 | 名前がこの形式では、Azure SQL Database サーバーに接続する場合:`<server_name>.database.windows.net`です。 |
-   | **データベース名** | **SSISDB** | 接続先データベースの名前。 |
+   | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
+   | **データベース名** | **SSISDB** | 接続先となるデータベースの名前。 |
    | **[認証]** | SQL ログイン| このクイック スタートでは、SQL 認証を使用します。 |
-   | **ユーザー名** | サーバーの管理者アカウント | これは、サーバーを作成したときに指定したアカウントです。 |
-   | **パスワード (SQL ログイン)** | サーバーの管理者アカウントのパスワード | これは、サーバーを作成したときに指定したパスワードです。 |
-   | **パスワードを保存しますか。** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
-   | **このプロファイルの名前を入力してください。** | プロファイル名など、 **mySSISServer** | 保存されているプロファイル名には、その後のログインの接続が高速化します。 | 
+   | **ユーザー名** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
+   | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
+   | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
+   | **このプロファイルの名前を入力してください** | **mySSISServer** などのプロファイル名 | プロファイル名が保存されていると、その後のログインの接続が高速化します。 | 
 
-5. キーを押して、 **ESC**プロファイルが作成され、接続されていることを通知する情報メッセージを閉じるにはキー。
+5. **Esc** キーを押して、プロファイルが作成され、接続されていることを通知する情報メッセージを閉じます。
 
 6. ステータス バーで、接続を確認します。
 
-## <a name="run-the-t-sql-code"></a>T-SQL コードを実行します。
-SSIS パッケージを実行する次の TRANSACT-SQL コードを実行します。
+## <a name="run-the-t-sql-code"></a>T-SQL コードを実行する
+SSIS パッケージを実行するには、次の Transact-SQL コードを実行します。
 
-1. **エディター**ウィンドウで、空のクエリ ウィンドウに次のクエリを入力します。 (このコードは、によって生成されたコード、**スクリプト**オプション、**パッケージ実行**SSMS でのダイアログ ボックス)。
+1. **エディター** ウィンドウで、空のクエリ ウィンドウに次のクエリを入力します  (このコードは、SSMS の **[パッケージ実行]** ダイアログ ボックスの **[スクリプト]** オプションによって生成されたコードです)。
 
-2. 内のパラメーター値を更新、`catalog.create_execution`システムのストアド プロシージャです。
+2. システムの `catalog.create_execution` ストアド プロシージャ内のパラメーター値を更新します。
 
-3. キーを押して**CTRL + SHIFT + E**コードを実行してパッケージを実行します。
+3. **Ctrl + Shift + E** キーを押してコードを実行し、パッケージを実行します。
 
 ```sql
 Declare @execution_id bigint
@@ -99,10 +97,9 @@ GO
 ```
 
 ## <a name="next-steps"></a>次の手順
-- パッケージを実行するには、その他の方法を検討してください。
-    - [SSMS での SSIS パッケージを実行します。](./ssis-quickstart-run-ssms.md)
-    - [TRANSACT-SQL (SSMS) で、SSIS パッケージを実行します。](./ssis-quickstart-run-tsql-ssms.md)
-    - [コマンド プロンプトから、SSIS パッケージを実行します。](./ssis-quickstart-run-cmdline.md)
-    - [PowerShell での SSIS パッケージを実行します。](ssis-quickstart-run-powershell.md)
-    - [C# を使用して、SSIS パッケージを実行します。](./ssis-quickstart-run-dotnet.md) 
-
+- パッケージを実行する他の方法を検討します。
+    - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)
+    - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
+    - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 

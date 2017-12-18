@@ -1,76 +1,81 @@
 ---
-title: "Windows 認証でオンプレミス データ ソースへの接続 |Microsoft ドキュメント"
+title: "Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1e3d9736612211038991489a4bd858d1ff89d333
-ms.openlocfilehash: 1b60d877c6c75a77dd16fa8cb1704e10baf36bdb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/19/2017
-
+ms.openlocfilehash: 9235ffd3225e76ee94067519c72e997c451d9893
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-on-premises-data-sources-with-windows-authentication"></a>Windows 認証でオンプレミス データ ソースへの接続します。
-この記事では、内部設置型のデータ ソースへの接続に Windows 認証を使用してパッケージを実行する Azure SQL データベースで、SSIS カタログを構成する方法について説明します。
+# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する
+この記事では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、オンプレミスのデータ ソースと Azure ファイル共有に接続する方法について説明します。
 
-この記事の手順を実行した場合に指定したドメインの資格情報は、変更するか、資格情報を削除するまで、SQL データベース インスタンスのすべてのパッケージの実行に適用されます。
+この記事の手順を実行する際に指定するドメインの資格情報は、資格情報を変更または削除するまで、SQL Database インスタンスのすべてのパッケージの実行に適用されます。
 
-## <a name="prerequisite"></a>前提条件
-Windows 認証のドメインの資格情報を設定する前に確認するかどうか、ドメインに参加しているコンピューターに接続できる、内部設置型のデータ ソースで`runas`モード。
+## <a name="connect-to-on-premises-data-sources"></a>オンプレミスのデータ ソースへの接続
 
-### <a name="connecting-to-sql-server"></a>SQL Server に接続します。
-内部設置型 SQL Server に接続することができるかどうかを確認するには、次の作業を行います。
+### <a name="prerequisite"></a>前提条件
+Windows 認証のドメインの資格情報を設定する前に、ドメインに参加していないコンピューターが `runas` モードでオンプレミスのデータ ソースに接続できるかどうかを確認します。
 
-1.  このテストを実行するには、ドメインに参加しているコンピューターを検索します。
+#### <a name="connecting-to-sql-server"></a>SQL Server への接続
+オンプレミスの SQL Server に接続できるかどうかを確認するには、次のことを行います。
 
-2.  ドメインに参加しているコンピューターで、SQL Server Management Studio (SSMS) を使用する場合、ドメイン資格情報で開始するには、次のコマンドを実行します。
+1.  このテストを実行するには、ドメインに参加していないコンピューターを見つけます。
+
+2.  ドメインに参加していないコンピューターで、次のコマンドを実行し、使用したいドメイン資格情報を使用して SQL Server Management Studio (SSMS) を起動します。
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> SSMS.exe
     ```
 
-3.  Ssms で使用する内部設置型 SQL Server に接続することができるかどうかを確認します。
+3.  SSMS から、使用するオンプレミスの SQL Server に接続できるかどうかを確認します。
 
-### <a name="connecting-to-a-file-share"></a>ファイル共有への接続
-内部設置型ファイル共有に接続できるかどうかを確認するには、次の作業を行います。
+#### <a name="connecting-to-a-file-share"></a>ファイル共有への接続
+オンプレミスのファイル共有に接続できるかどうかを確認するには、次のことを行います。
 
-1.  このテストを実行するには、ドメインに参加しているコンピューターを検索します。
+1.  このテストを実行するには、ドメインに参加していないコンピューターを見つけます。
 
-2.  ドメインに参加しているコンピューターで、次のコマンドを実行します。 このコマンドは、ディレクトリの一覧を取得することによって、ドメインの資格情報を使用すると、ファイル共有への接続をテスト コマンド prommpt を開きます。
+2.  ドメインに参加していないコンピューターで、次のコマンドを実行します。 このコマンドは、使用したいドメイン資格情報を使用してコマンド プロンプト ウィンドウを開き、ディレクトリの一覧を取得することによって、ファイル共有への接続をテストします。
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> cmd.exe
     dir \\fileshare
     ```
 
-3.  ディレクトリの一覧が返されるかどうかを確認して、内部設置型ファイルを使用する共有します。
+3.  使用したいオンプレミスのファイルシェアに対して、ディレクトリの一覧が返されるかどうかを確認します。
 
-## <a name="provide-domain-credentials"></a>ドメインの資格情報を提供します。
-パッケージが Windows 認証を使用して、内部設置型のデータ ソースに接続するのに便利なドメイン資格情報を提供するには、次の作業を行います。
+### <a name="provide-domain-credentials"></a>ドメイン資格情報の提供
+パッケージが Windows 認証を使用して、オンプレミスのデータ ソースに接続できるようにするドメイン資格情報を提供するには、次のことを行います。
 
-1.  SQL Server Management Studio (SSMS) または別のツールでは、接続 SQL データベースをホストする、SSIS カタログ データベース (SSISDB)。 詳細については、次を参照してください。 [Azure 上の SSISDB カタログ データベースへの接続](ssis-azure-connect-to-catalog-database.md)です。
+1.  SQL Server Management Studio (SSMS) または別のツールを使用して、SSIS カタログ データベース (SSISDB) をホストする SQL Database に接続します。 詳細については、「[Azure 上の SSISDB カタログ データベースへの接続](ssis-azure-connect-to-catalog-database.md)」を参照してください。
 
-2.  現在のデータベースとして SSISDB とには、クエリ ウィンドウを開きます。
+2.  SSISDB を現在のデータベースとして使用し、クエリ ウィンドウを開きます。
 
 3.  次のストアド プロシージャを実行し、適切なドメイン資格情報を提供します。
 
     ```sql
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
-4.  SSIS パッケージを実行します。 パッケージは、Windows 認証でオンプレミス データ ソースへの接続に指定した資格情報を使用します。
+4.  SSIS パッケージを実行します。 パッケージは、指定した資格情報を使用して、Windows 認証でオンプレミス データ ソースに接続します。
 
-## <a name="view-domain-credentials"></a>ドメインの資格情報の表示
-アクティブなドメイン資格情報を表示するには、次の作業を行います。
+### <a name="view-domain-credentials"></a>ドメイン資格情報の表示
+アクティブなドメイン資格情報を表示するには、次のことを行います。
 
-1.  SQL Server Management Studio (SSMS) または別のツールでは、接続 SQL データベースをホストする、SSIS カタログ データベース (SSISDB)。
+1.  SQL Server Management Studio (SSMS) または別のツールを使用して、SSIS カタログ データベース (SSISDB) をホストする SQL Database に接続します。
 
-2.  現在のデータベースとして SSISDB とには、クエリ ウィンドウを開きます。
+2.  SSISDB を現在のデータベースとして使用し、クエリ ウィンドウを開きます。
 
 3.  次のストアド プロシージャを実行し、出力を調べます。
 
@@ -80,12 +85,12 @@ Windows 認証のドメインの資格情報を設定する前に確認するか
     WHERE property_name = 'EXECUTION_DOMAIN' OR property_name = 'EXECUTION_USER'
     ```
 
-## <a name="clear-domain-credentials"></a>クリア ドメインの資格情報
-オフにし、この記事で説明したように指定した資格情報を削除するには、次の作業を行います。
+### <a name="clear-domain-credentials"></a>ドメイン資格情報のクリア
+この記事の説明に従って指定した資格情報を削除するには、次のことを行います。
 
-1.  SQL Server Management Studio (SSMS) または別のツールでは、接続 SQL データベースをホストする、SSIS カタログ データベース (SSISDB)。
+1.  SQL Server Management Studio (SSMS) または別のツールを使用して、SSIS カタログ データベース (SSISDB) をホストする SQL Database に接続します。
 
-2.  現在のデータベースとして SSISDB とには、クエリ ウィンドウを開きます。
+2.  SSISDB を現在のデータベースとして使用し、クエリ ウィンドウを開きます。
 
 3.  次のストアド プロシージャを実行します。
 
@@ -93,23 +98,30 @@ Windows 認証のドメインの資格情報を設定する前に確認するか
     catalog.set_execution_credential @user='', @domain='', @password=''
     ```
 
-## <a name="connect-to-file-shares"></a>ファイル共有に接続します。
-オンプレミスと Azure の仮想マシンの両方に、Azure SSIS 統合ランタイムと同じ仮想ネットワーク内のファイル共有への接続に Windows 認証を使用することができます。
+## <a name="connect-to-file-shares"></a>ファイル共有への接続
+Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS Integration Runtime と同じ仮想ネットワーク内のファイル共有に接続できます。 Azure Files に関する詳細については、「[Azure ファイル](https://azure.microsoft.com/services/storage/files/)」を参照してください。
 
-Azure の仮想マシン上のファイル共有に接続するには、次の作業を行います。
+Azure の仮想マシン上のファイル共有または Azure ファイル共有に接続するには、次のことを行います。
 
-1.  SQL Server Management Studio (SSMS) または別のツールでは、接続 SQL データベースをホストする、SSIS カタログ データベース (SSISDB)。
+1.  SQL Server Management Studio (SSMS) または別のツールを使用して、SSIS カタログ データベース (SSISDB) をホストする SQL Database に接続します。
 
-2.  現在のデータベースとして SSISDB とには、クエリ ウィンドウを開きます。
+2.  SSISDB を現在のデータベースとして使用し、クエリ ウィンドウを開きます。
 
-3.  次のストアド プロシージャを実行します。
+3.  次のオプションの説明に従って、`catalog.set_execution_credential` ストアド プロシージャを実行します。
+
+    a.  Azure 仮想マシン上のファイル共有に接続するには、次のストアド プロシージャを実行します。
 
     ```sql
     catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
     ```
 
-## <a name="next-steps"></a>次の手順
-- パッケージを展開します。 詳細については、次を参照してください。 [SSIS プロジェクトを SQL Server Management Studio (SSMS) を配置](../ssis-quickstart-deploy-ssms.md)です。
-- パッケージを実行します。 詳細については、次を参照してください。 [、SSIS パッケージを SQL Server Management Studio (SSMS) で実行](../ssis-quickstart-run-ssms.md)です。
-- パッケージのスケジュールを設定します。 詳細については、次を参照してください[スケジュール SSIS パッケージを Azure での実行。](ssis-azure-schedule-packages.md)
+    b.  Azure ファイル共有 (つまり Azure Files 内) に接続するには、次のストアド プロシージャを実行します。
 
+    ```sql
+    catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'
+    ```
+
+## <a name="next-steps"></a>次の手順
+- パッケージを配置します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-deploy-ssms.md)」を参照してください。
+- パッケージを実行します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-run-ssms.md)」を参照してください。
+- パッケージのスケジュールを設定します。 詳細については、「[Azure で SSIS パッケージの実行をスケジュールする](ssis-azure-schedule-packages.md)」を参照してください。

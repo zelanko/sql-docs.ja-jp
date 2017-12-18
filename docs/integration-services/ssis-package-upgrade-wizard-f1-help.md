@@ -1,5 +1,5 @@
 ---
-title: "SSIS パッケージ アップグレード ウィザードの F1 ヘルプ |Microsoft ドキュメント"
+title: "SSIS パッケージ アップグレード ウィザードの F1 ヘルプ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,20 +20,19 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
-  以前のバージョンで作成されたパッケージをアップグレードする SSIS パッケージ アップグレード ウィザードを使用して[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の現在のリリースのパッケージ形式に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]です。  
+  SSIS パッケージ アップグレード ウィザードを使用して、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で作成されたパッケージを、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージ形式にアップグレードします。  
   
  **SSIS パッケージ アップグレード ウィザードを実行するには**  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/26/2017
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、このようこそページをスキップします。  
  
-## <a name="select-source-location-page"></a>ソースの場所の選択ページ
+## <a name="select-source-location-page"></a>[ソースの場所を選択] ページ
  **[ソースの場所を選択]** ページを使用すると、パッケージのアップグレード元を指定できます。  
   
 > [!NOTE]  
@@ -90,19 +88,19 @@ ms.lasthandoff: 09/26/2017
  **Password**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するパスワードを入力します。  
  
-## <a name="select-destination-location-page"></a>移行先の場所の選択ページ
+## <a name="select-destination-location-page"></a>[アップグレード先の場所を選択] ページ
  **[アップグレード先の場所を選択]** ページを使用すると、アップグレードされたパッケージの保存先を指定できます。  
   
 > [!NOTE]  
 >  このページは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードを [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] またはコマンド プロンプトから実行した場合にのみ使用できます。  
  
 ### <a name="static-options"></a>静的オプション  
- **ソースの場所に保存します。**  
+ **[アップグレード元の場所に保存する]**  
  ウィザードの **[ソースの場所を選択]** ページで指定した場所と同じ場所に、アップグレードされたパッケージを保存します。  
   
  元のパッケージがファイル システムに格納されている場合に、ウィザードでそれらのパッケージをバックアップするには、 **[ソースの場所に保存]** オプションを選択します。 詳細については、「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
   
- **新しい変換先の場所を選択します。**  
+ **[新しいアップグレード先の場所を選択]**  
  このページで指定したアップグレード先の場所に、アップグレードされたパッケージを保存します。  
   
  **[パッケージ ソース]**  
@@ -153,56 +151,56 @@ ms.lasthandoff: 09/26/2017
  **[接続文字列を更新して新しいプロバイダー名を使用する]**  
  現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の次のプロバイダーの名前を使用するように、接続文字列を更新します。  
   
--   OLE DB Provider for[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   OLE DB Provider for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードは、接続マネージャーに格納されている接続文字列だけを更新します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の式言語またはスクリプト タスクのコードによって動的に構築される接続文字列は更新しません。  
   
- **アップグレード パッケージを検証します。**  
+ **[アップグレード パッケージの検証]**  
  アップグレード パッケージを検証し、検証に合格したアップグレード パッケージだけを保存します。  
   
  このオプションを選択しない場合、ウィザードでアップグレード パッケージの検証が行われません。 したがって、有効なパッケージかどうかにかかわらず、すべてのアップグレード パッケージが保存されます。 ウィザードの **[アップグレード先の場所を選択]** ページで指定したアップグレード先に、アップグレード パッケージが保存されます。  
   
  検証を行うと、アップグレード プロセスにかかる時間が長くなります。 アップグレードに成功する可能性の高い大規模なパッケージに対しては、このオプションを選択しないことをお勧めします。  
   
- **新しいパッケージ Id を作成します。**  
+ **[新しいパッケージ ID を作成する]**  
  アップグレード パッケージの新しいパッケージ ID を作成します。  
   
- **パッケージのアップグレードが失敗したときに、アップグレード プロセスを続行します。**  
+ **[パッケージのアップグレードに失敗してもアップグレード処理を続行する]**  
  あるパッケージをアップグレードできなかった場合に、残りのパッケージのアップグレードを [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードで続行します。  
   
- **パッケージ名の競合**  
+ **[パッケージ名の競合]**  
  同じ名前のパッケージをウィザードで処理する方法を指定します。 このオプションには、次の表に示す値があります。  
   
- **既存のパッケージ ファイルを上書き**  
+ **[既存のパッケージ ファイルを上書き]**  
  既存のパッケージを同じ名前のアップグレード パッケージで置き換えます。  
   
- **アップグレード パッケージ名に数値サフィックスを追加します。**  
+ **[アップグレード パッケージ名に数値サフィックスを追加]**  
  アップグレード パッケージの名前に数値サフィックスを追加します。  
   
- **パッケージをアップグレードしません。**  
+ **[パッケージをアップグレードしない]**  
  そのパッケージのアップグレードを停止し、ウィザードの完了時にエラーを表示します。  
   
  ウィザードの **[アップグレード先の場所を選択]** ページで **[ソースの場所に保存]** オプションを選択した場合は、これらのオプションを使用できません。  
   
- **構成を無視します。**  
+ **[構成を無視する]**  
  パッケージのアップグレード中にパッケージ構成を読み込みません。 このオプションを選択すると、パッケージのアップグレードに必要な時間が短縮されます。  
   
- **元のパッケージをバックアップ**  
+ **[元のパッケージをバックアップする]**  
  ウィザードで、元のパッケージを **SSISBackupFolder** フォルダーにバックアップします。 元のパッケージとアップグレード済みパッケージが格納されるフォルダーに、 **SSISBackupFolder** サブフォルダーが作成されます。  
   
 > [!NOTE]  
 >  このオプションを使用できるのは、元のパッケージとアップグレード済みパッケージをファイル システム内の同一フォルダーに格納するように指定した場合だけです。  
 
-## <a name="select-packages-page"></a>[パッケージ] ページを選択します。
+## <a name="select-packages-page"></a>[パッケージの選択] ページ
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  
   
 ### <a name="options"></a>オプション  
- **既存のパッケージ名**  
+ **[既存のパッケージ名]**  
  アップグレードする 1 つ以上のパッケージを選択します。  
   
- **アップグレード パッケージ名**  
+ **[アップグレード パッケージ名]**  
  アップグレード先パッケージ名を指定するか、ウィザードによって提供される既定の名前を使用します。  
   
 > [!NOTE]  
@@ -214,18 +212,18 @@ ms.lasthandoff: 09/26/2017
  **[選択項目に適用]**  
  選択したアップグレード パッケージの復号化に、指定したパスワードを適用します。  
  
-## <a name="complete-the-wizard-page"></a>ウィザードのページを完了します。
+## <a name="complete-the-wizard-page"></a>[ウィザードの完了] ページ
   **[ウィザードの完了]** ページでは、選択したパッケージ アップグレード オプションを確認できます。 このページは、このセッションのウィザードのオプションを前に戻って変更できる、最後のウィザード ページです。  
   
 ### <a name="options"></a>オプション  
  **オプションの概要**  
  ウィザードで選択したアップグレード オプションを確認します。 いずれかのオプションを変更するには、 **[戻る]** をクリックして前のウィザード ページに戻ります。
  
-## <a name="upgrading-the-packages-page"></a>[パッケージ] ページをアップグレードします。
+## <a name="upgrading-the-packages-page"></a>[パッケージをアップグレードしています] ページ
   **[パッケージをアップグレードしています]** ページでは、パッケージのアップグレードの進行状況を表示したり、アップグレード プロセスを中断したりできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードでは、選択したパッケージが 1 つずつアップグレードされます。  
   
 ### <a name="options"></a>オプション  
- **メッセージ ペイン**  
+ **[メッセージ] ペイン**  
  アップグレード プロセス中に、進行状況メッセージと概要情報が表示されます。  
   
  **操作**  
@@ -251,12 +249,12 @@ ms.lasthandoff: 09/26/2017
   
 -   レポートを電子メール メッセージとして送信します。  
 
-## <a name="view-upgraded-packages"></a>アップグレードされたパッケージを表示します。
-### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>SQL Server データベースまたはパッケージ ストアに保存されたアップグレードされたパッケージを表示します。
+## <a name="view-upgraded-packages"></a>アップグレードしたパッケージを表示する
+### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>SQL Server データベースまたはパッケージ ストアに保存されたアップグレード済みパッケージを表示する
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]のオブジェクト エクスプローラーで [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のローカル インスタンスに接続し、 **[格納されたパッケージ]** ノードを展開すると、アップグレードされたパッケージが表示されます。  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>SQL Server Data Tools からアップグレードしたアップグレードされたパッケージを表示します。  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>SQL Server Data Tools からアップグレードされたパッケージを表示する  
   
 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプロジェクトを開き、 **[SSIS パッケージ]** ノードを展開すると、アップグレードされたパッケージが表示されます。  
   
@@ -264,4 +262,3 @@ ms.lasthandoff: 09/26/2017
  [Integration Services パッケージのアップグレード](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

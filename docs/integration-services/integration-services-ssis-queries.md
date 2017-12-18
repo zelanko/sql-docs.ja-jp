@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) のクエリ |Microsoft ドキュメント"
+title: "Integration Services (SSIS) のクエリ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,38 +8,35 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.querybuilder.f1
+f1_keywords: sql13.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
   SQL 実行タスク、OLE DB ソース、OLE DB 変換先、および参照変換では、SQL クエリを使用できます。 SQL 実行タスクでは、SQL ステートメントによってデータベース オブジェクトとデータを作成、更新、および削除したり、ストアド プロシージャを実行したり、SELECT ステートメントを実行したりすることができます。 OLE DB ソースと参照変換の場合、通常 SQL ステートメントは SELECT ステートメントまたは EXEC ステートメントです。 EXEC ステートメントで最もよく実行するのは、結果セットを返すストアド プロシージャです。  
   
  クエリを解析して、有効かどうかを確認できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]への接続を使用するクエリを解析すると、クエリは解析後に実行されて、実行結果 (成功または失敗) が解析結果に割り当てられます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以外のデータへの接続をクエリで使用する場合、ステートメントは解析されるだけです。  
   
-次の方法では、SQL ステートメントを指定できます。
+SQL ステートメントは次の方法で提供できます。
 1.   デザイナーで直接入力します。
-2.   ファイルへの接続には、ステートメントが含まれているを指定します。
+2.   ステートメントが含まれているファイルへの接続を指定します。
 3.   ステートメントを含む変数を指定します。  
   
 ## <a name="direct-input-sql"></a>直接入力 SQL  
@@ -90,7 +87,7 @@ ms.lasthandoff: 09/26/2017
   
  Transact-SQL 言語およびその構文の詳細については、「[Transact-SQL リファレンス (データベース エンジン)](../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
   
- クエリで変数を使用して、入力パラメーターへの値の指定、出力パラメーターの値の取得、およびリターン コードの格納を行うこともできます。 パッケージで使用するクエリで変数の使用の詳細については、次を参照してください。 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)、 [OLE DB ソース](../integration-services/data-flow/ole-db-source.md)、および[Integration Services & #40 です。SSIS &#41;クエリ](../integration-services/integration-services-ssis-queries.md)です。 SQL 実行タスクでの変数の使用の詳細については、「 [SQL 実行タスクのパラメーターとリターン コード](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 」および「 [SQL 実行タスクにおける結果セット](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)」を参照してください。  
+ クエリで変数を使用して、入力パラメーターへの値の指定、出力パラメーターの値の取得、およびリターン コードの格納を行うこともできます。 パッケージで使用するクエリでの変数の使用の詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」、「[OLE DB ソース](../integration-services/data-flow/ole-db-source.md)」、および「[Integration Services (SSIS) のクエリ](../integration-services/integration-services-ssis-queries.md)」を参照してください。 SQL 実行タスクでの変数の使用の詳細については、「 [SQL 実行タスクのパラメーターとリターン コード](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 」および「 [SQL 実行タスクにおける結果セット](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)」を参照してください。  
   
  参照変換およびあいまい参照変換でも、パラメーターとリターン コードに変数を使用できます。 OLE DB ソースに関する情報は、これら 2 つの変換にも適用されます。  
   
@@ -100,19 +97,19 @@ ms.lasthandoff: 09/26/2017
   
 |値|Description|  
 |-----------|-----------------|  
-|**ダイアグラム ペインの表示/非表示**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。|  
-|**[グリッド] ペインの表示/非表示**|**[グリッド]** ペインの表示と非表示を切り替えます。|  
-|**SQL ペインの表示/非表示**|**[SQL]** ペインの表示と非表示を切り替えます。|  
-|**結果ウィンドウの表示/非表示**|**[結果]** ペインの表示と非表示を切り替えます。|  
-|**実行します。**|クエリを実行します。 結果は結果ペインに表示されます。|  
-|**SQL を確認します。**|SQL ステートメントが有効であることを確認します。|  
-|**昇順で並べ替え**|[グリッド] ペインで選択した列の出力行を昇順で並べ替えます。|  
-|**降順で並べ替え**|[グリッド] ペインで選択した列の出力行を降順で並べ替えます。|  
-|**フィルターを削除します。**|[グリッド] ペインの列名を選択してから、 **[フィルターの削除]** をクリックして列の並べ替え条件を削除します。|  
-|**Group By の使用**|クエリに GROUP BY 機能を追加します。|  
-|**テーブルを追加します。**|新しいテーブルをクエリに追加します。|  
+|**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。|  
+|**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。|  
+|**[SQL ペインの表示/非表示]**|**[SQL]** ペインの表示と非表示を切り替えます。|  
+|**[結果ペインの表示/非表示]**|**[結果]** ペインの表示と非表示を切り替えます。|  
+|**[実行]**|クエリを実行します。 結果は結果ペインに表示されます。|  
+|**[SQL の確認]**|SQL ステートメントが有効であることを確認します。|  
+|**[昇順で並べ替え]**|[グリッド] ペインで選択した列の出力行を昇順で並べ替えます。|  
+|**[降順で並べ替え]**|[グリッド] ペインで選択した列の出力行を降順で並べ替えます。|  
+|**[フィルターの削除]**|[グリッド] ペインの列名を選択してから、 **[フィルターの削除]** をクリックして列の並べ替え条件を削除します。|  
+|**[Group By の使用]**|クエリに GROUP BY 機能を追加します。|  
+|**[テーブルの追加]**|新しいテーブルをクエリに追加します。|  
   
- **クエリの定義**  
+ **[クエリ定義]**  
  クエリ定義は、クエリの定義およびテストを行うツール バーおよびペインを提供します。  
   
 |ペイン|Description|  
@@ -123,4 +120,3 @@ ms.lasthandoff: 09/26/2017
 |**[結果]** ペイン|ツール バーの **[実行]** をクリックしたときに、クエリの結果が表示されます。| 
 
   
-

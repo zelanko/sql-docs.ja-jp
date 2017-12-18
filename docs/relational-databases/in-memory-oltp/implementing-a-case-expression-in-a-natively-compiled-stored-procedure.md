@@ -1,34 +1,34 @@
 ---
 title: "ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する | Microsoft Docs"
 ms.custom: 
-ms.date: 04/24/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 350e9a3e8605aedec6791d135d08127a14d72c8a
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  CASE 式は、ネイティブ コンパイル ストアド プロシージャでサポートされています。 次の例では、クエリで CASE 式を使用する方法を示します。 ネイティブ コンパイル モジュールでの CASE 式について説明されている回避策は必要なくなりました。
+**適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server
+
+CASE 式は、ネイティブ コンパイル T-SQL モジュールでサポートされています。 次の例では、クエリで CASE 式を使用する方法を示します。 
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.
@@ -47,12 +47,11 @@ GO
   
 EXEC dbo.usp_SOHOnlineOrderResult  
 GO  
-```  
+``` 
 
+**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 以降の SQL Server
 
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
-
-  CASE 式は、ネイティブ コンパイル ストアド プロシージャではサポート *されていません* 。 次のサンプルは、ネイティブ コンパイル ストアド プロシージャに CASE 式の機能を実装する方法を示しています。  
+  CASE 式は、ネイティブ コンパイル T-SQL モジュールでサポートされて*いません*。 次のサンプルは、ネイティブ コンパイル ストアド プロシージャに CASE 式の機能を実装する方法を示しています。  
   
  コード サンプルでは、テーブル変数を使用して、単一の結果セットを作成します。 この方法は、データ行の追加コピーを作成する必要があるため、限られた行数を処理する場合にのみ推奨されます。  
   
@@ -112,4 +111,3 @@ GO
  [インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
-

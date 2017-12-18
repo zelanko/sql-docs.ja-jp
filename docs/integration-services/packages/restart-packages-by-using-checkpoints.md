@@ -1,5 +1,5 @@
 ---
-title: "チェックポイントを使用してパッケージを再開 |Microsoft ドキュメント"
+title: "チェックポイントを使用してパッケージを再開する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c12ab9b92aa37b0e60f699fbec07e13c97cdbddc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
@@ -123,4 +121,3 @@ ms.lasthandoff: 08/03/2017
 -   social.technet.microsoft.com の技術資料「 [フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](http://go.microsoft.com/fwlink/?LinkId=200407)」  
   
 -   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」  
-

@@ -1,5 +1,5 @@
 ---
-title: "プログラムによる接続マネージャーの操作 |Microsoft ドキュメント"
+title: "プログラムによる接続マネージャーの操作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,44 +8,40 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- connection managers [Integration Services], programming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9093b9eadce231aea248cd04c2b57dc5dd5e1a76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5c61113cc241b20a30ac31ac6e89d82251c0dd69
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-connection-managers-programmatically"></a>プログラムによる接続マネージャーの操作
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、関連付けられている接続マネージャー クラスの AcquireConnection メソッドがマネージ コード内の接続マネージャーを使用している場合は最も頻繁に呼び出すメソッド。 マネージ コードを記述するときに、manager 接続の機能を使用して、AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージ コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、関連付けられた接続マネージャー クラスの AcquireConnection メソッドは、マネージ コードで接続マネージャーを操作する場合に呼び出すことの多いメソッドです。 マネージ コードを記述する場合、接続マネージャーの機能を使用するには AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージ コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
   
- AcquireConnection メソッドを正常に呼び出すには、次の質問に対する回答を認識する必要が。  
+ AcquireConnection メソッドを正常に呼び出すには、次の点を理解しておく必要があります。  
   
--   **AcquireConnection メソッドからマネージ オブジェクトを返す接続マネージャー**  
+-   **AcquireConnection メソッドからマネージ オブジェクトを返す接続マネージャーはどれか**  
   
-     多くの接続マネージャーは、マネージ コードからアンマネージ COM オブジェクト (System.__ComObject) およびこれらのオブジェクトを使用することはできません簡単に返します。 このような接続マネージャーには、使用頻度の高い OLE DB 接続マネージャーも含まれます。  
+     多くの接続マネージャーはアンマネージ COM オブジェクト (System.__ComObject) を返します。このオブジェクトをマネージ コードから使用するのは簡単ではありません。 このような接続マネージャーには、使用頻度の高い OLE DB 接続マネージャーも含まれます。  
   
--   **マネージ オブジェクトを返す接続マネージャーで、どのようなオブジェクトは AcquireConnection メソッドを返す**  
+-   **マネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドによって返されるオブジェクトは何か**  
   
-     戻り値を適切な型をキャストするには、AcquireConnection メソッドが返すオブジェクトの種類を知っている必要があります。 たとえば、AcquireConnection メソッドの[!INCLUDE[vstecado](../includes/vstecado-md.md)]SqlClient プロバイダーを使用すると、接続マネージャーが開いている SqlConnection オブジェクトを返します。 ただし、ファイル接続マネージャーの AcquireConnection メソッドには、文字列だけを返します。  
+     戻り値を適切な型にキャストするには、AcquireConnection メソッドによって返されるオブジェクトの型を把握しておく必要があります。 たとえば、SqlClient プロバイダーを使用する場合、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーの AcquireConnection メソッドは、開かれている SqlConnection オブジェクトを返します。 これに対し、ファイル接続マネージャーの AcquireConnection メソッドは、文字列のみを返します。  
   
  このトピックでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に付属の接続マネージャーについて、上記の点を説明します。  
   
 ## <a name="connection-managers-that-do-not-return-a-managed-object"></a>マネージ オブジェクトを返さない接続マネージャー  
- 次の表は、AcquireConnection メソッドからネイティブ COM オブジェクト (System.__ComObject) を返す接続マネージャーを一覧表示します。 これらのアンマネージ オブジェクトは、マネージ コードから簡単には使用できません。  
+ 次の表に、AcquireConnection メソッドからネイティブ COM オブジェクト (System.__ComObject) を返す接続マネージャーを示します。 これらのアンマネージ オブジェクトは、マネージ コードから簡単には使用できません。  
   
 |接続マネージャーの種類|接続マネージャー名|  
 |-----------------------------|-----------------------------|  
@@ -57,10 +53,10 @@ ms.lasthandoff: 09/26/2017
 |ODBC|ODBC 接続マネージャー|  
 |OLEDB|OLE DB 接続マネージャー|  
   
- 通常、使用することができます、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] ADO、Excel、ODBC、または OLE DB データ ソースに接続するマネージ コードからの接続マネージャーです。  
+ 通常は、マネージ コードから [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーを使用すると、ADO、Excel、ODBC、または OLE DB の各データ ソースに接続できます。  
   
 ## <a name="return-values-from-the-acquireconnection-method"></a>AcquireConnection メソッドからの戻り値  
- 次の表は、AcquireConnection メソッドからマネージ オブジェクトを返す接続マネージャーを一覧表示します。 これらのマネージ オブジェクトは、マネージ コードから簡単に使用できます。  
+ 次の表に、AcquireConnection メソッドからマネージ オブジェクトを返す接続マネージャーを示します。 これらのマネージ オブジェクトは、マネージ コードから簡単に使用できます。  
   
 |接続マネージャーの種類|接続マネージャー名|戻り値の型|追加情報|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
@@ -76,9 +72,8 @@ ms.lasthandoff: 09/26/2017
 |SQLMOBILE|SQL Server Compact 接続マネージャー|**System.Data.SqlServerCe.SqlCeConnection**||  
   
 ## <a name="see-also"></a>参照  
- [スクリプト タスク内のデータ ソースに接続します。](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [スクリプト コンポーネントでデータ ソースに接続します。](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+ [スクリプト タスクでのデータ ソースへの接続](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [スクリプト コンポーネントでのデータ ソースへの接続](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [カスタム タスクでのデータ ソースへの接続](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   
-

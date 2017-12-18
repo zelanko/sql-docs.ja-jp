@@ -1,11 +1,11 @@
 ---
-title: TDE - Bring Your Own Key - Azure SQL | Microsoft Docs
-description: "SQL Database および Data Warehouse に対する Azure Key Vault での Transparent Data Encryption の Bring Your Own Key サポートの概要です。 機能の利点、しくみ、考慮事項、および推奨事項について説明します。"
+title: TDE - Bring Your Own Key (BYOK) - Azure SQL | Microsoft Docs
+description: "SQL Database および Data Warehouse に対する Azure Key Vault での Transparent Data Encryption (TDE) の Bring Your Own Key (BYOK) サポート。 BYOK を使用した TDE の概要、利点、しくみ、考慮事項、推奨事項。"
 keywords: 
 services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -14,26 +14,25 @@ ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
-ms.date: 08/07/2017
-ms.author: rebeccaz
-ms.openlocfilehash: 35e51899bda60ccb5b176de0a3d7fabcc86faad7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.date: 11/15/2017
+ms.author: aliceku
+ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[Transparent Data Encryption (TDE)](transparent-data-encryption.md) のための Bring Your Own Key (BYOK) サポートを利用すると、TDE 暗号化キーを管理できるようになり、キーにアクセスできるユーザーと時期を制限することができます。 Azure のクラウド ベースの外部キー管理システムである [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) は、TDE により BYOK のサポートが統合された最初のキー管理サービスです。 BYOK がサポートされていると、データベース暗号化キーは Key Vault に格納されている非対称キーによって保護されます。 非対称キーはサーバー レベルで設定され、そのサーバーに存在するすべてのデータベースによって継承されます。 
 
-[Transparent Data Encryption (TDE)](transparent-data-encryption.md) のための Bring Your Own Key (BYOK) サポートを利用すると、TDE 暗号化キーをユーザーが制御できるようになり、いつ誰がキーにアクセスできるかを制御できます。 Azure のクラウド ベースの外部キー管理システムである [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) は、TDE により BYOK のサポートが統合された最初のキー管理サービスです。 BYOK がサポートされていると、データベース暗号化キーは Key Vault に格納されている非対称キーによって保護されます。 非対称キーはサーバー レベルで設定され、そのサーバーに存在するすべてのデータベースによって継承されます。 
-
-BYOK のサポートにより、ユーザーは、キーのローテーション、キー コンテナーのアクセス許可、キーの削除、すべての暗号化キーの監査/レポートの有効化など、キー管理タスクを制御できるようになります。 Key Vault は、キーの集中管理機能を提供し、厳重に監視されたハードウェア セキュリティ モジュール (HSM) を利用して、キーとデータの管理の分離を促進することにより規制のコンプライアンス対応を実現します。 
+BYOK のサポートにより、ユーザーは、キーのローテーション、キー コンテナーのアクセス許可、キーの削除、すべての暗号化キーの監査/レポートの有効化など、キー管理タスクを制御できるようになります。 Key Vault は、キーの集中管理機能を提供し、厳重に監視されたハードウェア セキュリティ モジュール (HSM) を利用して、キー管理とデータ管理の間で役割の分離を可能にすることにより規制のコンプライアンス対応を実現します。 
 
 TDE と BYOK には、次のような利点があります。
 - TDE プロテクターの自己管理による透明性の向上ときめ細かい制御   
 - Key Vault でホストすることによる TDE 暗号化キー (および、他の Azure サービスで使われている他のキーとシークレット) の集中管理
-- 組織内のキー管理とデータ管理の分離による役割の分離のサポート
+- 組織内のキー管理ロールとデータ管理ロールの分離による役割の分離のサポート
 - Key Vault は Microsoft が暗号化キーを参照または抽出しないように設計されているので、クライアントからの信頼の向上 
 - キー ローテーションのサポート
 
@@ -56,9 +55,9 @@ BYOK による TDE を使うと、新しいキー管理タスクが発生する�
 ### <a name="key-management-responsibilities"></a>キー管理の責任
 
 アプリケーションのリソースの暗号化キー管理を引き受けることは、重要な責任です。 Key Vault を利用して BYOK による TDE を使うときは、以下のキー管理タスクが想定されます。
-- **キーのローテーション**: TDE プロテクターは、社内の規制やコンプライアンスの要件に従って、ローテーションする必要があります。 キーのローテーションは、TDE プロテクターの Key Vault を通して行うことができます。  
+- **キーのローテーション**: TDE プロテクターは、社内のポリシーやコンプライアンスの要件に従って、ローテーションする必要があります。 キーのローテーションは、TDE プロテクターの Key Vault を通して行うことができます。  
 - **Key Vault のアクセス許可**: Key Vault 内のアクセス許可は、Key Vault とサーバー レベルでプロビジョニングされます。 Key Vault に対するサーバーのアクセス許可は、Key Vault のアクセス ポリシーを使っていつでも取り消すことができます。
-- **キーの削除**: 安全性強化とコンプライアンス対応のため、Key Vault と SQL Server からキーを削除することができます。
+- **キーの削除**: 安全性強化とコンプライアンス要件への対応のため、Key Vault と SQL Server からキーを削除することができます。
 - **すべての暗号化キーの監査/レポート**: Key Vault が提供するログは、他のセキュリティ情報ツールやイベント管理 (SIEM) ツールに簡単に取り込むことができます。 Operations Management Suite (OMS) の [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) は、既に統合されているサービスの 1 つの例です。
 
 ### <a name="pricing-considerations"></a>料金に関する考慮事項 
@@ -72,11 +71,11 @@ BYOK サポートによる TDE は、Azure SQL Database および Data Warehouse
 
 ### <a name="loss-of-access-to-keys"></a>キーへのアクセスの喪失
 
-サーバーが TDE プロテクターにアクセスできなくなると (Key Vault のアクセス許可の削除またはキーの削除によって)、**サーバーにある暗号化されたデータベースへのすべての接続がブロックされ、これらのデータベースはオフラインになり、24 時間以内に削除されます**。 使うことができなくなったキーで暗号化された古いバックアップにはアクセスできなくなります。 キーが侵害された可能性がある特別なケースでは (サービスまたはユーザーがキーに不正アクセスしたなど)、「[Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)」(PowerShell を使用して Transparent Data Encryption (TDE) プロテクターを削除する) のガイドラインに従ってキーを削除するのが最善の方法です。 最大 10 分間のデータが失われる可能性を防ぐため、アクティブな TDE プロテクターを削除する前に、データベースを削除する必要があります。  
+サーバーが TDE プロテクターへのアクセス権を失うと (Key Vault のアクセス許可の削除またはキーの削除によって)、**サーバーにある暗号化されたデータベースへのすべての接続がブロックされ、これらのデータベースはオフラインになり、24 時間以内に削除されます**。 使うことができなくなったキーで暗号化された古いバックアップにはアクセスできなくなりました。 キーが侵害された可能性がある場合 (サービスまたはユーザーがキーに不正アクセスしたなど)、「[PowerShell を使用して Transparent Data Encryption (TDE) プロテクターを削除する](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)」のガイドラインに従ってキーを削除するのが最善の方法です。 最大 10 分間のデータが失われる可能性を防ぐため、アクティブな TDE プロテクターを削除する前に、データベースを削除する必要があります。  
 
 ### <a name="expired-keys"></a>有効期限が切れたキー
 
-TDE プロテクターの可用性はデータベースの可用性に直接影響を与えるため、有効期限のあるキーは SQL server に追加できません。 キーがサーバーの TDE プロテクターとして既に使われていて、Azure Key Vault で有効期限が後から追加された場合、**キーの有効期限が切れると、暗号化されたデータベースは TDE プロテクターにアクセスできなくなり、24 時間以内に削除されます**。
+TDE プロテクターの可用性はデータベースの可用性に直接影響を与えるため、有効期限のあるキーは SQL server に追加できません。 キーがサーバーの TDE プロテクターとして既に使われていて、このキーに Azure Key Vault で有効期限が後から設定された場合、**キーの有効期限が切れると、暗号化されたデータベースは TDE プロテクターへのアクセス権を失い、24 時間以内に削除されます**。
 
 ### <a name="deleted-server-identities"></a>削除されたサーバーの ID 
 
@@ -92,7 +91,7 @@ SQL Database または Data Warehouse に固有の TDE プロテクターはサ�
 
 ### <a name="high-availability-and-disaster-recovery"></a>高可用性とディザスター リカバリー
   
-Key Vault を使うサーバー用の geo レプリケーションの構成には次の 2 つの方法があります。 
+Key Vault を使用してサーバー用の geo レプリケーションを構成する方法には、次の 2 とおりがあります。 
 
 - **個別の Key Vault**: 各サーバーが個別の Key Vault にアクセスします (理想的には、それぞれ独自の Azure リージョン内)。 これは、暗号化されて geo レプリケートされたデータベース用の TDE プロテクターの独自のコピーが各サーバーにあるので、推奨される構成です。 いずれかのサーバーの Azure リージョンがオフラインになった場合でも、他のサーバーは geo レプリケートされたデータベースに引き続きアクセスできます。   
 
@@ -154,5 +153,5 @@ SQL Database のバックアップの復旧については、「[データベー
 ## <a name="next-steps"></a>次の手順
 
 - TDE の Bring Your Own Key サポートの概要については、「[PowerShell: Enable Transparent Data Encryption using your own key from Azure Key Vault](transparent-data-encryption-byok-azure-sql-configure.md)」(PowerShell: Azure Key Vault から独自のキーを使用して Transparent Data Encryption を有効にする) を参照してください。
-- セキュリティ要件に準拠するようにサーバーの TDE プロテクターをローテーションする方法については、「[Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md)」(PowerShell を使用して Transparent Data Encryption プロテクターをローテーションする) を参照してください
-- セキュリティ リスクが発生した場合、侵害された可能性のある TDE プロテクターを削除する方法については、「[Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)」(PowerShell を使用して Transparent Data Encryption (TDE) プロテクターを削除する) を参照してください 
+- セキュリティ ポリシーに準拠するようにサーバーの TDE プロテクターをローテーションする方法については、「[PowerShell を使用して Transparent Data Encryption (TDE) プロテクターをローテーションする](transparent-data-encryption-byok-azure-sql-key-rotation.md)」を参照してください。
+- セキュリティ インシデントが発生した場合、侵害された可能性のある TDE プロテクターを削除する方法については、「[PowerShell を使用して Transparent Data Encryption (TDE) プロテクターを削除する](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)」を参照してください。 

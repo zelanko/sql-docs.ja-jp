@@ -1,5 +1,5 @@
 ---
-title: "Integration Services のトランザクション |Microsoft ドキュメント"
+title: "Integration Services のトランザクション | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-transactions"></a>Integration Services のトランザクション
   パッケージではトランザクションを使用して、タスクがアトミック単位で実行するデータベース処理をバインドし、この処理によってデータの整合性を保ちます。 すべての種類の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンテナー (パッケージ、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスクをカプセル化するタスク ホスト) でトランザクションを使用するように設定できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、トランザクションを設定するオプションとして、 **NotSupported**、 **Supported**、および **Required**の 3 つが用意されています。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
  次の手順では、これらの 2 つのオプションを構成する方法について説明します。  
   
-### <a name="configure-a-package-to-use-a-single-transaction"></a>1 つのトランザクションを使用するパッケージを構成します。  
+### <a name="configure-a-package-to-use-a-single-transaction"></a>1 つのトランザクションを使用するようにパッケージを構成する  
  このオプションでは、パッケージ自体が 1 つのトランザクションを開始します。 このトランザクションを開始するようにパッケージを構成するには、パッケージの TransactionOption プロパティを **[必須]**に設定します。  
   
  次に、この 1 つのトランザクションに特定のタスクやコンテナーを参加させます。 トランザクションにタスクまたはコンテナーを参加させるには、該当するタスクまたはコンテナーの TransactionOption プロパティを **[Supported (サポートあり)]**に設定します。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  トランザクションに登録する各タスクおよびコンテナーに対して、手順 6. と 7. を繰り返します。  
   
-### <a name="configure-a-package-to-use-multiple-transactions"></a>複数のトランザクションを使用するパッケージを構成します。  
+### <a name="configure-a-package-to-use-multiple-transactions"></a>複数のトランザクションを使用するようにパッケージを構成する  
  このオプションでは、パッケージでトランザクションがサポートされますが、パッケージ自体はトランザクションを開始しません。 トランザクションをサポートするようにパッケージを構成するには、パッケージの TransactionOption プロパティを **[Supported (サポートあり)]**に設定します。  
   
  次に、トランザクションを開始するかトランザクションに参加するように、パッケージ内の目的のタスクおよびコンテナーを構成します。 トランザクションを開始するようにタスクまたはコンテナーを構成するには、該当するタスクまたはコンテナーの TransactionOption プロパティを **[必須]**に設定します。   
@@ -137,7 +135,7 @@ ms.lasthandoff: 09/26/2017
   
  子パッケージ自身がトランザクションに参加していなければ、子パッケージのコンテナーやタスクは親パッケージのトランザクションに参加できません。  
   
-### <a name="example-of-inherited-transactions"></a>トランザクションの継承の例  
+### <a name="example-of-inherited-transactions"></a>トランザクションの継承フローの例  
  次の図には、3 個のパッケージがあり、すべてトランザクションを使用します。 各パッケージには、複数のタスクが含まれています。 トランザクションの動作がわかりやすいように、パッケージ実行タスクは 1 つだけ示されています。 パッケージ A がパッケージ B および C を実行します。次に、パッケージ B がパッケージ D および E を実行し、パッケージ C がパッケージ F を実行します。  
   
  パッケージとタスクのトランザクション属性は次のとおりです。  
@@ -148,7 +146,7 @@ ms.lasthandoff: 09/26/2017
   
 -   パッケージ E、およびパッケージ実行タスク C、パッケージ実行タスク E の**TransactionOption** は **NotSupported** に設定されています。  
   
- ![トランザクションの継承フロー](../integration-services/media/mw-dts-executepack.gif "トランザクションの継承フロー")  
+ ![トランザクションの継承のフロー](../integration-services/media/mw-dts-executepack.gif "トランザクションの継承のフロー")  
   
  パッケージ B、D、および F のみが親パッケージのトランザクションを継承できます。  
   
@@ -170,4 +168,3 @@ ms.lasthandoff: 09/26/2017
  [複数のトランザクション](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

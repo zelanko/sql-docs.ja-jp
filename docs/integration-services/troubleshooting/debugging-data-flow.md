@@ -1,5 +1,5 @@
 ---
-title: "データ フローのデバッグ |Microsoft ドキュメント"
+title: "データ フローのデバッグ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1780b770f45bd53f8f0735c092f2859593f9fa5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
@@ -116,7 +114,7 @@ order by source_component_name desc
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>データ フロー コンポーネントでエラー出力を構成する
-  多くのデータ フロー コンポーネントがエラー出力をサポートしており、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでエラー出力を構成する方法は、コンポーネントに応じて異なります。 エラー出力の構成以外に、エラー出力の列を構成することもできます。 これには、コンポーネントによって追加される **[ErrorCode]** 列や **[ErrorColumn]** 列の構成が含まれます。  
+  多くのデータ フロー コンポーネントがエラー出力をサポートしており、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでエラー出力を構成する方法は、コンポーネントに応じて異なります。 エラー出力の構成以外に、エラー出力の列を構成することもできます。 これには、コンポーネントによって追加される **[ErrorCode]** 列や **[ErrorColumn]** 列の構成が含まれます。  
   
 ### <a name="configuring-an-error-output"></a>エラー出力の構成  
  エラー出力を構成する場合、2 つのオプションがあります。  
@@ -174,9 +172,9 @@ order by source_component_name desc
   
 3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
   
-4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、**[詳細エディターの表示]** をクリックします。  
+4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]**をクリックします。  
   
-5.  をクリックして、**入力と出力プロパティ** タブでを展開し、 **\<コンポーネント名 > のエラー出力**順に展開**出力列**です。  
+5.  **[入力プロパティと出力プロパティ]** タブをクリックして、**[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
   
 6.  列をクリックして、プロパティを更新します。  
   
@@ -253,7 +251,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap ストアド プロシージャの dataflow_path_id_string パラメーターは、データ タップを追加するデータ フロー パスの IdentificationString プロパティに対応しています。 dataflow_path_id_string を取得するには、データ フロー パス (データ フローのタスク間の矢印) をクリックし、[プロパティ] ウィンドウで **IdentificationString** プロパティの値を確認します。  
   
- 出力ファイルが格納されているスクリプトを実行するときに\<Program Files > \Microsoft SQL Server\110\DTS\DataDumps です。 その名前のファイルが既に存在する場合、新しいファイルはサフィックス付きで (例: output[1].txt) 作成されます。  
+ スクリプトを実行すると、出力ファイルは \<Program Files>\Microsoft の SQL Server\110\DTS\DataDumps に格納されます。 その名前のファイルが既に存在する場合、新しいファイルはサフィックス付きで (例: output[1].txt) 作成されます。  
   
  既に説明したように、add_data_tap ストアド プロシージャを使用する代わりに、 [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)ストアド プロシージャを使用することもできます。 このストアド プロシージャは、task_package_path の代わりにデータ フロー タスクの ID をパラメーターとして取得します。 Visual Studio プロパティ ウィンドウからデータ フロー タスクの ID を取得できます。  
   
@@ -283,4 +281,3 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "サーバー監査とデータベース監査の仕様を作成する方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0aece9fc0e2ff656a3c5468494e6b75faa78af4b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4d306c125bec9e96e82ff8629d27d82bd571bce6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサーバー監査とデータベース監査の仕様を作成する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] でサーバー監査とデータベース監査の仕様を作成する方法について説明します。  
   
  *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 " *データベース レベルの監査の仕様* " オブジェクトも、監査に属しています。 各監査では、SQL Server データベースごとに 1 つのデータベース監査の仕様を作成できます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   

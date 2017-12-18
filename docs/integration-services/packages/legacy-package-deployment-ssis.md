@@ -1,5 +1,5 @@
 ---
-title: "従来のパッケージの配置 (SSIS) |Microsoft ドキュメント"
+title: "レガシー パッケージの配置 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,17 +33,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
@@ -153,7 +151,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>レジストリ エントリ  
  レジストリ エントリを使用して構成を格納する場合は、既存のキーを使用するか、HKEY_CURRENT_USER で新しいキーを作成できます。 使用するレジストリ キーには、 **Value**という名前の値が必要です。 この値には、DWORD または文字列を指定できます。  
   
- 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は\<レジストリ キー >。 HKEY_CURRENT_USER のルートではないレジストリ キーを使用する場合は、形式を使用して\<key \registry key のレジストリ キー\\… > キーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する場合は、「 **SSISPackages\MyPackage**」と入力します。  
+ 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は \<registry key> です。 HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する場合は、「 **SSISPackages\MyPackage**」と入力します。  
   
 #### <a name="sql-server"></a>SQL Server  
  構成の種類として **[SQL Server]** を選択した場合は、構成を格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続を指定します。 構成は、既存のテーブルに保存することも、指定したデータベース内に新しいテーブルを作成して保存することもできます。  
@@ -364,7 +362,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |値|Description|  
 |-----------|-----------------|  
-|**レジストリ エントリ**|構成情報を格納するレジストリ キーを入力します。 形式は\<レジストリ キー >。<br /><br /> Value という名前の値を持つレジストリ キーが、あらかじめ HKEY_CURRENT_USER に存在していることが必要です。 この値には、DWORD または文字列を指定できます。<br /><br /> HKEY_CURRENT_USER のルートにキーがレジストリを使用する場合は、形式を使用して\<key \registry key のレジストリ キー\\… > キーを識別します。|  
+|**レジストリ エントリ**|構成情報を格納するレジストリ キーを入力します。 形式は \<registry key> です。<br /><br /> Value という名前の値を持つレジストリ キーが、あらかじめ HKEY_CURRENT_USER に存在していることが必要です。 この値には、DWORD または文字列を指定できます。<br /><br /> HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
@@ -431,7 +429,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **完了**  
  構成を作成して **[パッケージ構成ウィザード]**を終了します。  
 
-## <a name="child"></a>子パッケージで変数やパラメーターの値を使用します。
+## <a name="child"></a> 子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  
   
 > [!NOTE]  
@@ -492,7 +490,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|プロジェクトのビルド時にパッケージ配置ユーティリティを作成するかどうかを指定する値。 配置ユーティリティを作成するには、このプロパティが **True** である必要があります。|  
 |DeploymentOutputPath|配置ユーティリティの場所。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトから見た相対的な位置。|  
   
- 作成する場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プロジェクト、マニフェスト ファイルでは、\<プロジェクト名 >。&Gt;.ssisdeploymentmanifest.xml が作成され、プロジェクトのパッケージおよびプロジェクトの bin \deployment フォルダーまたは DeploymentOutputPath プロパティで指定された場所にパッケージの依存関係のコピーと共に、追加します。 マニフェスト ファイルには、プロジェクトに含まれるパッケージ、パッケージの構成、およびその他のファイルの一覧が記述されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをビルドすると、\<プロジェクト名>.SSISDeploymentManifest.xml というマニフェスト ファイルが作成され、プロジェクトのパッケージのコピーおよびパッケージの依存関係と共に、プロジェクトの bin\Deployment フォルダーまたは DeploymentOutputPath プロパティで指定された場所に格納されます。 マニフェスト ファイルには、プロジェクトに含まれるパッケージ、パッケージの構成、およびその他のファイルの一覧が記述されます。  
   
  配置フォルダーの内容は、プロジェクトをビルドするたびに更新されます。 つまり、このフォルダーに保存されているフォルダーのうち、ビルド プロセスで再度このフォルダーにコピーされなかったファイルはすべて、削除されます。 たとえば、配置フォルダーに保存されたパッケージ構成ファイルは削除されます。  
   
@@ -502,7 +500,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  プロジェクトを右クリックして、 **[プロパティ]**をクリックします。  
   
-3.  **\<プロジェクト名 > プロパティ ページ**ダイアログ ボックスで、をクリックして**配置ユーティリティ**です。  
+3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、**[配置ユーティリティ]** をクリックします。  
   
 4.  パッケージの配置時にパッケージの構成を更新するには、 **[AllowConfigurationChanges]** を **True**に設定します。  
   
@@ -521,7 +519,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  配置フォルダーのパスは、配置ユーティリティを作成した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの DeploymentOutputPath プロパティで指定されます。 既定のパスは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを基準とする bin\Deployment です。 詳細については、「 [配置ユーティリティを作成する](../../integration-services/packages/create-a-deployment-utility.md)」を参照してください。  
   
- パッケージ インストール ウィザードを使用してパッケージをインストールします。 ウィザードを起動し、配置フォルダーをサーバーにコピーしてから、配置ユーティリティ ファイルをダブルクリックします。 このファイルの名前は\<プロジェクト名 >。SSISDeploymentManifest、し、展開先コンピューターに配置フォルダーで確認できます。  
+ パッケージ インストール ウィザードを使用してパッケージをインストールします。 ウィザードを起動し、配置フォルダーをサーバーにコピーしてから、配置ユーティリティ ファイルをダブルクリックします。 このファイルは、\<プロジェクト名>.SSISDeploymentManifest という名前で、インストール先のコンピューターの配置フォルダーにあります。  
   
 > [!NOTE]  
 >  配置するパッケージのバージョンによっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の異なるバージョンがサイド バイ サイドでインストールされている場合にエラーが発生する可能性があります。 このエラーが発生するのは、.SSISDeploymentManifest ファイル名拡張子が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のすべてのバージョンで同じであるためです。 このファイルをダブルクリックすると、最後にインストールしたバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインストーラー (dtsinstall.exe) が呼び出されますが、配置ユーティリティ ファイルとはバージョンが異なる場合があります。 この問題を回避するには、コマンド ラインから正しいバージョンの dtsinstall.exe を実行し、配置ユーティリティ ファイルのパスを指定します。  
@@ -544,7 +542,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  インストール先のコンピューターの配置フォルダーを開きます。  
   
-2.  マニフェスト ファイルをダブルクリックして\<プロジェクト名 >。SSISDeploymentManifest、パッケージ インストール ウィザードを起動します。  
+2.  \<プロジェクト名>.SSISDeploymentManifest という名前のマニフェスト ファイルをダブルクリックしてパッケージ インストール ウィザードを起動します。  
   
 3.  **[SSIS パッケージの配置]** ページで、 **[SQL Server に配置]** オプションを選択します。  
   
@@ -705,5 +703,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **完了**  
  **[完了]**をクリックすると、ウィザードが終了します。  
-
 

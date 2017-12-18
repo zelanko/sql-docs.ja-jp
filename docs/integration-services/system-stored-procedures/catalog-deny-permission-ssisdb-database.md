@@ -1,5 +1,5 @@
 ---
-title: "catalog.deny_permission (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.deny_permission (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +38,17 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @object_type =] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類を含めるフォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、および操作 (`4`)。*Object_type*は**smallint***です。*  
+ [ @object_type = ] *object_type*  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint** *です。*  
   
- [ @object_id =] *object_id*  
- 一意識別子 (ID) またはセキュリティ保護可能なオブジェクトの主キー。 *Object_id*は**bigint**です。  
+ [ @object_id = ] *object_id*  
+ セキュリティ保護可能なオブジェクトの一意の識別子 (ID) または主キーを指定します。 *object_id* は **bigint** です。  
   
- [ @principal_id =] *principal_id*  
- 拒否されるプリンシパルの ID。 *Principal_id*は**int**です。  
+ [ @principal_id = ] *principal_id*  
+ 拒否されるプリンシパルの ID。 *principal_id* は **int** です。  
   
- [ @permission_type =] *permission_type*  
- 拒否される権限の種類。 *Permission_type*は**smallint**です。  
+ [ @permission_type = ] *permission_type*  
+ 拒否される権限の種類。 *permission_type* は **smallint** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を返します。  
@@ -73,9 +71,9 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   オブジェクトに対する MANAGE_PERMISSIONS 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="remarks"></a>解説  
  このストアド プロシージャを使用すると、次の表に記載されている権限の種類を拒否できます。  
@@ -95,9 +93,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
   
--   Permission_type が指定されている場合、プロシージャを指定したオブジェクトの指定したプリンシパルに明示的に割り当てられている、指定した権限を拒否します。 このようなインスタンスがない場合でも、プロシージャまだ、成功コード値を返します (`0`)。  
+-   Permission_type が指定されている場合、プロシージャを指定したオブジェクトの指定したプリンシパルに明示的に割り当てられている、指定した権限を拒否します。 このようなインスタンスがない場合、プロシージャは成功コード値 (`0`) を返します。  
   
 -   Permission_type を省略すると、プロシージャは、指定したオブジェクトの指定したプリンシパルのすべての権限を拒否します。  
   
   
-

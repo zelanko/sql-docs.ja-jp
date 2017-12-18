@@ -1,5 +1,5 @@
 ---
-title: "catalog.create_environment_variable (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.create_environment_variable (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: e020fef5d484af024ef822cf6fcc654e547b7b68
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  環境変数を作成、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログで環境変数を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,25 +42,25 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 ## <a name="arguments"></a>引数  
  [@folder_name =] *folder_name*  
- 環境を含むフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
+ 環境を含むフォルダーの名前です。 *folder_name* は **nvarchar(128)** です。  
   
  [@environment_name =] *environment_name*  
- 環境の名前。 *Environment_name*は**nvarchar (128)**です。  
+ 環境の名前。 *environment_name* は **nvarchar (128)** です。  
   
  [@variable_name =] *variable_name*  
- 環境変数の名前。 *Variable_name*は**nvarchar (128)**です。  
+ 環境変数の名前。 *variable_name* は **nvarchar (128)** です。  
   
  [@data_type =] *data_type*  
- 変数のデータ型。 環境変数のデータ型はサポートされている**ブール**、**バイト**、 **DateTime**、**二重**、 **Int16**、 **Int32**、 **Int64**、**単一**、**文字列**、 **UInt32**、および**UInt64**です。 サポートされていない環境変数のデータ型は**Char**、 **DBNull**、**オブジェクト**、および**Sbyte**です。 データ型、 *data_type*パラメーターは**nvarchar (128)**です。  
+ 変数のデータ型。 サポートされている環境変数のデータ型は、**Boolean**、**Byte**、**DateTime**、**Double**、**Int16**、**Int32**、**Int64**、**Single**、**String**、**UInt32**、および **UInt64** です。 サポートされていない環境変数のデータ型は **Char**、**DBNull**、**Object**、および **Sbyte** です。 *data_type* パラメーターのデータ型は **nvarchar(128)** です。  
   
- [@sensitive =]*機密性の高い*  
- 変数がセンシティブ値を含むかどうかを示します。 値を使用して`1`環境変数の値を区別するかの値であることを示す`0`されていないことを示すためにします。 センシティブ値が格納される場合、その値は暗号化されます。 機密性の高いではない値は、プレーン テキストで格納されます。*機密性の高い*は**ビット**です。  
+ [@sensitive =] *sensitive*  
+ 変数がセンシティブ値を含むかどうかを示します。 値 `1` を使用すると、環境変数の値がセンシティブであることを示し、値 `0` を使用するとセンシティブではないことを示します。 センシティブ値が格納される場合、その値は暗号化されます。 センシティブでない値は、プレーンテキストで格納されます。*Sensitive* は **bit** です。  
   
- [@value =]*値*  
- 環境変数の値。 *値*は**sql_variant**です。  
+ [@value =] *value*  
+ 環境変数の値。 *value* は **sql_variant** です。  
   
- [@description =]*の説明*  
- 環境変数の説明。 *値*は**nvarchar (1024)**です。  
+ [@description =] *description*  
+ 環境変数の説明。 *value* は **nvarchar (1024)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -75,9 +73,9 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   環境の READ および MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
@@ -94,23 +92,22 @@ catalog.create_environment_variable [@folder_name =] folder_name
  ストアド プロシージャは変数のデータ型を検証して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでサポートされることを確認します。  
   
 > [!TIP]  
->  使用を検討して、 **Int16**のデータ型の[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ではなく、サポートされていない**Sbyte**データ型。  
+>  サポートされていない **Sbyte** データ型の代わりに、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の **Int16** データ型を使用することを検討してください。  
   
- このストアド プロシージャに渡される値、*値*からパラメーターを変換、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のデータ型、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次の表に従って、データ型。  
+ *value* パラメーターでこのストアド プロシージャに渡された値は、次の表に従って [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に変換されます。  
   
 |Integration Services データ型|SQL Server データ型|  
 |------------------------------------|--------------------------|  
 |**ブール値**|**bit**|  
-|**バイト**|**バイナリ**、 **varbinary**|  
-|**DateTime**|**datetime**、 **datetime2**、 **datetimeoffset**、 **smalldatetime**|  
-|**Double**|正確な numeric: **decimal**、**数値**です。おおよその numeric: **float**、 **real**|  
-|**Int16 型**|**smallint**|  
+|**Byte**|**binary**、**varbinary**|  
+|**DateTime**|**datetime**、**datetime2**、**datetimeoffset**、**smalldatetime**|  
+|**Double**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
+|**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
-|**単一**|正確な numeric: **decimal**、**数値**です。おおよその numeric: **float**、 **real**|  
-|**文字列**|**varchar**、 **nvarchar**、 **char**|  
-|**UInt32**|**int** (**int**が利用可能なマッピングに最も近い**Uint32**)。|  
-|**UInt64**|**bigint** (**int**が利用可能なマッピングに最も近い**Uint64**)。|  
+|**単一**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
+|**文字列**|**varchar**、**nvarchar**、**char**|  
+|**UInt32**|**int** (**int** は、使用可能なマッピングに最も近い **Uint32**)|  
+|**UInt64**|**bigint** (**int** は、使用可能なマッピングに最も近い **Uint64**)|  
   
   
-

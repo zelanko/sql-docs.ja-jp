@@ -1,5 +1,5 @@
 ---
-title: "catalog.add_data_tap |Microsoft ドキュメント"
+title: catalog.add_data_tap | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 20b136348f21d6b688d86039e96c5f16f1fa7d10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,36 +40,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @execution_id =] *execution_id*  
- パッケージを含む実行の実行 ID。 *Execution_id*は、 **bigint**です。  
+ [ @execution_id = ] *execution_id*  
+ パッケージを含む実行の実行 ID。 *execution_id* は **bigint** です。  
   
- [ @task_package_path =] *task_package_path*  
- データ フロー タスクのパッケージ パス。 **PackagePath**データ フロー タスクのプロパティ パスを指定します。 パスの大文字と小文字は区別されます。 内で、パッケージのパスを検索する[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]、データ フロー タスクを右クリックし、をクリックして**プロパティ**です。 **PackagePath**プロパティに表示されて、**プロパティ**ウィンドウです。  
+ [ @task_package_path = ] *task_package_path*  
+ データ フロー タスクのパッケージ パス。 データ フロー タスクの **PackagePath** プロパティはパスを指定します。 パスの大文字と小文字は区別されます。 パッケージ パスを特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でデータ フロー タスクを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[PackagePath]** プロパティが表示されます。  
   
- *Task_package_path*は、 **nvarchar (max)**です。  
+ *task_package_path* は **nvarchar (max)** です。  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 **IdentificationString**パスのプロパティの文字列を指定します。  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 パスの **IdentificationString** プロパティは文字列を指定します。  
   
- 内で識別文字列を検索する[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]クリックして 2 つのデータ フロー コンポーネント間のパスを右クリックして**プロパティ**です。 **IdentificationString**プロパティに表示されて、**プロパティ**ウィンドウです。  
+ 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[IdentificationString]** プロパティが表示されます。  
   
- *Dataflow_path_id_string*は、 **nvarchar (4000)**です。  
+ *dataflow_path_id_string* は **nvarchar (4000)** です。  
   
- [ @data_filename =] *data_filename*  
+ [ @data_filename = ] *data_filename*  
  タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。  
   
- 既定では、ファイルが格納されている、 \<*ドライブ*>: SQL server \Program Files\Microsoft フォルダーです。  
+ 既定では、ファイルが格納されている、\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps フォルダーです。  
   
- *Data_filename*は、 **nvarchar (4000)**です。  
+ *data_filename* は **nvarchar (4000)** です。  
   
- [ @max_rows =] *max_rows*  
- データ タップ中にキャプチャされる行の数。 この値が指定されていない場合は、すべての行がキャプチャされます。 *Max_rows*は、 **int**です。  
+ [ @max_rows = ] *max_rows*  
+ データ タップ中にキャプチャされる行の数。 この値が指定されていない場合は、すべての行がキャプチャされます。 *max_rows* は **int** です。  
   
- [ @data_tap_id =] *data_tap_id*  
- データ タップの ID を返します。 *Data_tap_id*は、 **bigint**です。  
+ [ @data_tap_id = ] *data_tap_id*  
+ データ タップの ID を返します。 *data_tap_id* は **bigint** です。  
   
 ## <a name="example"></a>例  
- 次の例では、データ タップがデータ フロー パスで作成された`'Paths[OLE DB Source.OLE DB Source Output]`で、データ フロー タスク、`\Package\Data Flow Task`です。 タップされたデータが格納されている、`output0.txt`ファイル DataDumps フォルダー (\<*ドライブ*>: SQL server \Program Files\Microsoft)。  
+ 次の例では、データ フロー タスク `\Package\Data Flow Task` において、データ フロー パス `'Paths[OLE DB Source.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DataDumps フォルダー (\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps) の `output0.txt` ファイルに格納されます。  
   
 ```sql
 Declare @execution_id bigint  
@@ -85,7 +83,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>解説  
- データ タップを追加する、実行のインスタンスが作成の状態である必要があります (1 の値、**ステータス**の列、 [catalog.operations & #40 です。SSISDB データベース &#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)ビュー)。 実行を処理すると状態の値が変わります。 呼び出して実行を作成することができます[catalog.create_execution & #40 です。SSISDB データベース &#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ データ タップを追加するには、実行のインスタンスが作成された状態である必要があります ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **[状態]** 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
   
  add_data_tap ストアド プロシージャに関する考慮事項を以下に示します。  
   
@@ -93,7 +91,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   パッケージに同じ名前の複数のデータ フロー タスクが含まれる場合、task_package_path によって、タップされるコンポーネントの出力を含むデータ フロー タスクが一意に識別されます。  
   
--   データ タップを追加すると、パッケージの実行前に検証されません。  
+-   データ タップを追加するとき、パッケージの実行前には検証は行われません。  
   
 -   サイズが大きいデータ ファイルが生成されないように、データ タップ中にキャプチャされる行数を制限することをお勧めします。 ストアド プロシージャが実行されるコンピューターで、データ ファイル用のストレージ領域が不足した場合、パッケージは実行を停止し、エラー メッセージがログに書き込まれます。  
   
@@ -114,9 +112,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   実行のインスタンスの MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  ストアド プロシージャが失敗する原因となる条件を以下に示します。  
@@ -130,10 +128,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>必要条件  
   
 ## <a name="external-resources"></a>外部リソース  
- ブログ エントリ「 [SSIS 2012: データ タップのピーク](http://go.microsoft.com/fwlink/?LinkId=239983)、rafael-salas.com のです。  
+ rafael-salas.com のブログ記事「[SSIS 2012: データ タップのピーク](http://go.microsoft.com/fwlink/?LinkId=239983)」  
   
 ## <a name="see-also"></a>参照  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

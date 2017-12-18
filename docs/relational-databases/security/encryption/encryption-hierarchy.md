@@ -2,9 +2,12 @@
 title: "暗号化階層 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c0b0ad380f67917414067b1ddc90b8e421420cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 873a266bd722f6e5337abe94f615e2e82ea0e278
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="encryption-hierarchy"></a>暗号化階層
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化とキーの階層的な管理インフラストラクチャを使用してデータを暗号化します。 各層では、証明書、非対称キー、および対称キーの組み合わせを使用して、その層の下位にある層を暗号化します。 拡張キー管理 (EKM) モジュールで、非対称キーと対称キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外部に格納できます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化とキーの階層的な管理インフラストラクチャを使用してデータを暗号化します。 各層では、証明書、非対称キー、および対称キーの組み合わせを使用して、その層の下位にある層を暗号化します。 拡張キー管理 (EKM) モジュールで、非対称キーと対称キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外部に格納できます。  
   
  次の図は、暗号化階層のそれぞれの層がその下位にある層を暗号化することを示しており、最も一般的な暗号化構成を示しています。 階層の先頭へのアクセスは、通常、パスワードで保護されます。  
   

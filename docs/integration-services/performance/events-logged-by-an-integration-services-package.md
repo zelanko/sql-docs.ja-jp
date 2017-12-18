@@ -1,5 +1,5 @@
 ---
-title: "Integration Services パッケージによって記録されたイベント |Microsoft ドキュメント"
+title: "Integration Services パッケージによってログに記録されるイベント | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: df4b2e68a9b024ed2911d4b5c1d5bcea8984ae15
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ec69b469565f121853755c6441c0e36e2ef78abe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services パッケージによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、各種のイベント メッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、パッケージの起動時、パッケージの停止時、および特定の問題の発生時にログに記録されます。  
@@ -111,4 +109,3 @@ ms.lasthandoff: 09/27/2017
 8.  **[ログ エントリ]** ダイアログ ボックスで、上矢印および下矢印をクリックして前後のログ エントリを表示し、コピー アイコンをクリックしてログ エントリをコピーします。  
   
 9. テキスト エディターを開いて貼り付けた後、ログ エントリをテキスト ファイルに保存します。
-

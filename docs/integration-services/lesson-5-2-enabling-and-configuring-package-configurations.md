@@ -1,5 +1,5 @@
 ---
-title: "手順 2: を有効にするパッケージと構成 |Microsoft ドキュメント"
+title: "手順 2: パッケージ構成の有効化と構成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>レッスン 5-2 を有効にして、パッケージの構成
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>レッスン 5-2 - パッケージ構成の有効化と構成
 ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの **Directory** プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Directory プロパティにマップする新しいパッケージ レベル変数を作成するには  
@@ -117,4 +114,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 3 : Directory プロパティの構成値の変更](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

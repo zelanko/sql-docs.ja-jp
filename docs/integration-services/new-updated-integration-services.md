@@ -1,6 +1,6 @@
 ---
-title: "SQL Server ドキュメントのための Integration Services の更新済み - |Microsoft ドキュメント"
-description: "更新されたコンテンツで最近変更したドキュメントについては、Microsoft SQL server Integration Services 用のスニペットを表示します。"
+title: "更新済み - SQL Server 用 Integration Services のドキュメント | Microsoft Docs"
+description: "Microsoft SQL Server 用 Integration Services の最近変更されたドキュメントで更新されたコンテンツのスニペットを示します。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -19,14 +19,13 @@ ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.author: genemi
 ms.workload: integration-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3c5da14b7a65f8a3eb1eb253d685a146d813868a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
-
+ms.openlocfilehash: b4f4ec841a9f815ddbe0558154ec8ea692683c11
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新規または最近更新された: SQL server Integration Services
+# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新規または最近更新: SQL Server 用 Integration Services
 
 
 
@@ -38,8 +37,8 @@ ms.lasthandoff: 10/02/2017
 
 
 
-- *更新プログラムの日付範囲:* &nbsp; **2017 年-09-11** &nbsp;対&nbsp; **2017 年-09-27**
-- *サブジェクト領域:* &nbsp; **for SQL Server Integration Services**です。
+- *更新日の範囲:* &nbsp; **2017 年 9 月 11 日**&nbsp;から &nbsp; **2017 年 9 月 27 日**
+- *対象領域:* &nbsp; **SQL Server 用 Integration Services**。
 
 
 
@@ -51,23 +50,23 @@ ms.lasthandoff: 10/02/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [Azure 上の SSISDB カタログ データベースへの接続します。](lift-shift/ssis-azure-connect-to-catalog-database.md)
-2. [Windows 認証でオンプレミス データ ソースへの接続します。](lift-shift/ssis-azure-connect-with-windows-auth.md)
-3. [配置、実行、および Azure で SSIS パッケージの監視](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-4. [クラウドにリフト アンド シフトの SQL Server Integration Services のワークロード](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-5. [Azure で SSIS パッケージの実行をスケジュールします。](lift-shift/ssis-azure-schedule-packages.md)
-6. [ISDeploymentWizard.exe でコマンド プロンプトから、SSIS プロジェクトを配置します。](ssis-quickstart-deploy-cmdline.md)
-7. [.NET アプリでの c# コードで、SSIS プロジェクトを配置します。](ssis-quickstart-deploy-dotnet.md)
-8. [PowerShell を使用した SSIS プロジェクトを配置します。](ssis-quickstart-deploy-powershell.md)
-9. [SSIS プロジェクトを SQL Server Management Studio (SSMS) の展開します。](ssis-quickstart-deploy-ssms.md)
-10. [Transact SQL を使用した SSMS から SSIS プロジェクトを配置します。](ssis-quickstart-deploy-tsql-ssms.md)
-11. [Transact SQL を使用した Visual Studio のコードから、SSIS プロジェクトを配置します。](ssis-quickstart-deploy-tsql-vscode.md)
-12. [DTExec.exe を使用してコマンド プロンプトから、SSIS パッケージを実行します。](ssis-quickstart-run-cmdline.md)
-13. [.NET アプリでの c# コードで、SSIS パッケージを実行します。](ssis-quickstart-run-dotnet.md)
-14. [PowerShell での SSIS パッケージを実行します。](ssis-quickstart-run-powershell.md)
-15. [SQL Server Management Studio (SSMS) で、SSIS パッケージを実行します。](ssis-quickstart-run-ssms.md)
-16. [Transact SQL を使用した SSMS から SSIS パッケージを実行します。](ssis-quickstart-run-tsql-ssms.md)
-17. [Transact SQL を使用した Visual Studio のコードから SSIS パッケージを実行します。](ssis-quickstart-run-tsql-vscode.md)
+1. [Azure 上の SSISDB カタログ データベースへの接続](lift-shift/ssis-azure-connect-to-catalog-database.md)
+2. [Windows 認証でオンプレミス データ ソースに接続する](lift-shift/ssis-azure-connect-with-windows-auth.md)
+3. [Azure で SSIS パッケージを配置、実行、および監視する](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+4. [SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+5. [Azure で SSIS パッケージの実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
+6. [ISDeploymentWizard.exe を使用して、コマンド プロンプトから SSIS プロジェクトを配置する](ssis-quickstart-deploy-cmdline.md)
+7. [.NET アプリで C# コードを使用して SSIS プロジェクトを配置する](ssis-quickstart-deploy-dotnet.md)
+8. [PowerShell を使用して SSIS プロジェクトを配置する](ssis-quickstart-deploy-powershell.md)
+9. [SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](ssis-quickstart-deploy-ssms.md)
+10. [Transact-SQL を使用して SSMS から SSIS プロジェクトを配置する](ssis-quickstart-deploy-tsql-ssms.md)
+11. [Transact-SQL を使用して Visual Studio Code から SSIS プロジェクトを配置する](ssis-quickstart-deploy-tsql-vscode.md)
+12. [DTExec.exe を使用してコマンド プロンプトから SSIS パッケージを実行する](ssis-quickstart-run-cmdline.md)
+13. [.NET アプリで C# コードを使用して SSIS パッケージを実行する](ssis-quickstart-run-dotnet.md)
+14. [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
+15. [SQL Server Management Studio (SSMS) を使用して SSIS パッケージを実行する](ssis-quickstart-run-ssms.md)
+16. [Transact-SQL を使用して SSMS から SSIS パッケージを実行する](ssis-quickstart-run-tsql-ssms.md)
+17. [Transact-SQL を使用して Visual Studio Code から SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
 
 
 
@@ -117,20 +116,20 @@ ms.lasthandoff: 10/02/2017
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新しい + 更新 (0 + 1): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新しい + 更新 (0 + 1): **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
-- [新しい + 更新 (4 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
-- [新しい + 更新 (17 + 0): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [新しい + 更新 (3 + 0): **SQL の Linux** docs](../linux/new-updated-linux.md)
-- [新しい + 更新 (1 + 1):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [新しい + 更新 (2 + 0): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [新しい + 更新 (0 + 1): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (0 + 1): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (0 + 1): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (4 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (17 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 0): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (1 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新しい + 更新 (0 0 以降): **SQL への接続**docs](../connect/new-updated-connect.md)
+- [新規 + 更新 (0 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
@@ -138,11 +137,10 @@ ms.lasthandoff: 10/02/2017
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
-- [新しい + 更新 (0 0 以降): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 0): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
 - [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新しい + 更新 (0 0 以降): **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
-
 
 

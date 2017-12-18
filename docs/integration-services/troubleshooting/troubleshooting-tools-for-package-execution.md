@@ -1,5 +1,5 @@
 ---
-title: "パッケージの実行のトラブルシューティング ツール |Microsoft ドキュメント"
+title: "パッケージ実行のトラブルシューティング ツール| Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」を参照してください。  
   
--   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+-   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>イベント ハンドラーを使用したパッケージ エラーのキャッチおよび処理  
  イベント ハンドラーを使用することにより、パッケージやパッケージ内のオブジェクトで発生する多くのイベントに対応できます。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **関連情報をエラー出力に追加する**。 エラー出力から提供される 2 列の数値識別子だけでなく、エラー メッセージと列名を追加すると、エラー出力の分析が容易になります。 これら 2 つの列を追加する方法の例については、「 [スクリプト コンポーネントによるエラー出力の強化](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)」を参照してください。  
   
--   **または、DiagnosticEx イベントを記録して列名を取得します**。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。  詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
+-   **または、DiagnosticEx イベントを記録して列名を取得します**。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。  詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
      **DiagnosticEx** のメッセージ列の値は XML テキストです。 パッケージ実行のメッセージ テキストを表示するには、[catalog.operation_messages &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ビューのクエリを実行します。 **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **パッケージが読み込まれるときには無効になっているパッケージ要素の DelayValidation プロパティを構成する**。 構成が無効になっているパッケージ要素の **DelayValidation** を **True** に設定できます。これによってパッケージが読み込まれるときの検証エラーを防ぎます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 **DelayValidation** プロパティはパッケージ ベル、またはパッケージに含まれている個別のタスクやコンテナーのレベルで有効にできます。  
   
-     **DelayValidation** プロパティはデータ フロー タスク上で設定できますが、個別のデータ フロー コンポーネントでは設定できません。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを **false**。 ただし、このプロパティの値が **false**の場合、コンポーネントは外部データ ソースのメタデータに変更が加えられても認識しません。 設定すると**true**、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>プロパティが特にパッケージがトランザクションを使用する場合、データベース内のロックによってブロックの問題を避けるために役立ちます。  
+     **DelayValidation** プロパティはデータ フロー タスク上で設定できますが、個別のデータ フロー コンポーネントでは設定できません。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを **false**。 ただし、このプロパティの値が **false**の場合、コンポーネントは外部データ ソースのメタデータに変更が加えられても認識しません。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを **true** に設定すると、特にパッケージでトランザクションを使用している場合、データベース内でのロックに起因するブロッキング問題を回避するのに役立ちます。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>実行時の権限の問題のトラブルシューティング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して配置済みパッケージの実行を試みたときにエラーが発生した場合は、エージェントが使用しているアカウントに必要な権限がない可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブから実行するパッケージのトラブルシューティング方法については、「 [SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出すとき、SSIS パッケージが実行されません。](http://support.microsoft.com/kb/918760)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブからパッケージを実行する方法の詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。  
@@ -118,4 +116,3 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="related-content"></a>関連コンテンツ  
  dougbert.com のブログ記事「 [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)」(エラー出力にエラー列名を追加する)  
-

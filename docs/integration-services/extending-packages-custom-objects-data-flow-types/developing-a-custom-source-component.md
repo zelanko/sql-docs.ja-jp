@@ -1,5 +1,5 @@
 ---
-title: "カスタム変換元コンポーネントの開発 |Microsoft ドキュメント"
+title: "カスタム変換元コンポーネントの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,30 +24,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-source-component"></a>カスタム変換元コンポーネントの開発
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]開発者はカスタム データ ソースに接続し、データ フロー タスクの他のコンポーネントにそれらのソースからデータを提供するソース コンポーネントを記述する機能を使用します。 カスタム変換元を作成できると、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換元のいずれかを使用してアクセスできないデータ ソースに接続する必要がある場合に便利です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用することで、開発者は、データ フロー タスクでカスタム データ ソースに接続して、変換元のデータを他のコンポーネントに提供する変換元コンポーネントを記述できます。 カスタム変換元を作成できると、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換元のいずれかを使用してアクセスできないデータ ソースに接続する必要がある場合に便利です。  
   
  変換元コンポーネントには 1 つ以上の出力がありますが、入力はありません。 デザイン時には、変換元コンポーネントを使用して接続を作成、設定し、外部データ ソースから列メタデータを読み取って、外部データ ソースに基づいて変換元の出力列を設定します。 実行時には、外部データ ソースに接続し、出力バッファーに行を追加します。 データ フロー タスクは、次にデータ行のバッファーを下流コンポーネントに渡します。  
   
- データ フロー コンポーネントの開発の一般的な概要については、次を参照してください。[カスタム データ フロー コンポーネントを開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)です。  
+ データ フロー コンポーネントの開発全般の概要については、「[カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)」を参照してください。  
   
 ## <a name="design-time"></a>デザイン時  
  変換元コンポーネントのデザイン時の機能を実装する作業には、外部データ ソースへの接続の指定、データ ソースを反映する出力列の追加と設定、およびコンポーネントが実行可能かどうかの検証が含まれます。 定義上、変換元コンポーネントには入力がなく、1 つ以上の非同期出力があります。  
   
 ### <a name="creating-the-component"></a>コンポーネントの作成  
- 変換元コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換元コンポーネントで、接続マネージャーに対する要求を示すには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。それは、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することと、接続マネージャーの必要性をデザイナーに通知することです。 ときに、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>が、このコレクションに追加されて、**詳細エディター**が表示されます、**接続プロパティ**タブで、ユーザーを選択するか、パッケージ内の接続を作成できるようにします。  
+ 変換元コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換元コンポーネントで、接続マネージャーに対する要求を示すには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。それは、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することと、接続マネージャーの必要性をデザイナーに通知することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、**[詳細エディター]** に **[接続プロパティ]** タブが表示されます。このタブを使用することで、ユーザーはパッケージ内で接続を選択したり、作成したりすることができます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> に出力と <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> オブジェクトを追加する <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> の実装を示します。  
   
@@ -112,9 +109,9 @@ End Class
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>外部データ ソースへの接続  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> に接続を追加した後、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> メソッドをオーバーライドして、外部データ ソースへの接続を確立します。 このメソッドは、デザイン時と実行時の両方で呼び出されます。 コンポーネントは、実行時の接続で指定された接続マネージャーにし、続いて外部データ ソースに接続を確立する必要があります。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> に接続を追加した後、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> メソッドをオーバーライドして、外部データ ソースへの接続を確立します。 このメソッドは、デザイン時と実行時の両方で呼び出されます。 コンポーネントは、実行時の接続によって指定された接続マネージャーへの接続を確立し、続いて外部データ ソースへの接続を確立する必要があります。  
   
- 接続が確立されると、コンポーネントによって内部的にキャッシュする必要があり、リリースされたときに、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A>メソッドが呼び出されます。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> メソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> メソッドと同様、デザイン時と実行時に呼び出されます。 開発者はこのメソッドをオーバーライドし、コンポーネントが確立した接続を <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> の実行中に解放します。  
+ 接続は、確立後にコンポーネントによって内部でキャッシュされ、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> メソッドの呼び出し時に解放される必要があります。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> メソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> メソッドと同様、デザイン時と実行時に呼び出されます。 開発者はこのメソッドをオーバーライドし、コンポーネントが確立した接続を <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> の実行中に解放します。  
   
  次のコード例では、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> メソッドで ADO.NET 接続へ接続し、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> で接続を閉じるコンポーネントを示します。  
   
@@ -181,14 +178,14 @@ End Sub
   
 |DataType|長さ|Scale|有効桁数|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
-|DT_DECIMAL|0|0 より大きく 28 以下です。|0|0|  
+|DT_DECIMAL|0|0 より大きく 28 以下。|0|0|  
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|0 より大きく 28 以下で、有効桁数の値未満|1 以上 38 以下|0|  
 |DT_BYTES|0 より大きい|0|0|0|  
-|DT_STR|0 より大きく、8000 未満です。|0|0|0 以外の有効なコード ページ|  
+|DT_STR|0 より大きく 8000 より小さい。|0|0|0 以外の有効なコード ページ|  
 |DT_WSTR|0 より大きく 4000 未満|0|0|0|  
   
- データ型プロパティの制約は出力列のデータ型に基づくため、マネージ型を処理する場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)] の正しいデータ型を選択する必要があります。 基本クラスは、次の 3 つのヘルパー メソッドを提供<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>、および<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>を選択するマネージ コンポーネントの開発者を支援するために、[!INCLUDE[ssIS](../../includes/ssis-md.md)]マネージ型を指定したデータ型。 これらのメソッドは、マネージ データ型と [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデータ型を相互に変換します。  
+ データ型プロパティの制約は出力列のデータ型に基づくため、マネージ型を処理する場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)] の正しいデータ型を選択する必要があります。 基本クラスでは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>、および <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> の 3 つのヘルパー メソッドが提供され、これを使用すると、マネージ コンポーネントの開発者は、マネージ型に対応する [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデータ型を適切に選択できます。 これらのメソッドは、マネージ データ型と [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデータ型を相互に変換します。  
   
  次のコード例は、テーブルのスキーマに基づいて、コンポーネントの出力列コレクションを作成します。 基本クラスのヘルパー メソッドを使用して列のデータ型を設定し、そのデータ型に基づいて依存するプロパティを設定します。  
   
@@ -369,9 +366,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>コンポーネントの検証  
- 変換元コンポーネントを検証して、出力列コレクションに定義された列が、外部データ ソースの列と一致することを確認する必要があります。 ただし、接続状態でない場合や、サーバーへの長いラウンド トリップを避けたほうがよい場合など、外部データ ソースに対する出力列の検証が不可能なこともあります。 このような状況でも、出力オブジェクトの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> を使用して、出力の列を検証することができます。 詳細については、次を参照してください。[データ フロー コンポーネントを検証する](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)です。  
+ 変換元コンポーネントを検証して、出力列コレクションに定義された列が、外部データ ソースの列と一致することを確認する必要があります。 ただし、接続状態でない場合や、サーバーへの長いラウンド トリップを避けたほうがよい場合など、外部データ ソースに対する出力列の検証が不可能なこともあります。 このような状況でも、出力オブジェクトの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> を使用して、出力の列を検証することができます。 詳細については、「[データ フロー コンポーネントの検証](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)」を参照してください。  
   
- このコレクションは入力オブジェクトと出力オブジェクトのどちらにも存在し、外部データ ソースの列によって作成できます。 このコレクションを使用するには、出力列を検証するときに[!INCLUDE[ssIS](../../includes/ssis-md.md)]デザイナーがオフラインで、コンポーネントが切断されているとき、または、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>プロパティは**false**です。 コレクションは、出力列の作成と同時に設定しておく必要があります。 外部メタデータ列は初期状態で出力列と一致しているため、コレクションに外部メタデータ列を追加するのは比較的簡単です。 列のデータ型プロパティは、あらかじめ正しく設定されている必要があります。また、プロパティは <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> オブジェクトに直接コピーすることができます。  
+ このコレクションは入力オブジェクトと出力オブジェクトのどちらにも存在し、外部データ ソースの列によって作成できます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーがオフラインである場合、コンポーネントが接続されていない場合、または <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティが **false** の場合に、このコレクションを使用して出力列を検証できます。 コレクションは、出力列の作成と同時に設定しておく必要があります。 外部メタデータ列は初期状態で出力列と一致しているため、コレクションに外部メタデータ列を追加するのは比較的簡単です。 列のデータ型プロパティは、あらかじめ正しく設定されている必要があります。また、プロパティは <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> オブジェクトに直接コピーすることができます。  
   
  次のコード例は、新しく作成された出力列に基づく外部メタデータ列を追加します。 出力列はあらかじめ作成されているものとします。  
   
@@ -416,7 +413,7 @@ Private Sub CreateExternalMetaDataColumn(ByVal output As IDTSOutput100, ByVal ou
 ### <a name="locating-columns-in-the-buffer"></a>バッファー内の列の検索  
  コンポーネントの出力バッファーには、このコンポーネントで定義されている列、および下流コンポーネントの出力に追加されたすべての列が含まれます。 たとえば、変換元コンポーネントの出力に 3 つの列があり、次のコンポーネントでもう 1 つ出力列を追加している場合、変換元コンポーネントによって提供された出力バッファーには 4 つの列が含まれます。  
   
- バッファー行の列の順序は、出力列コレクション内の出力列のインデックスでは定義されません。 バッファー行で出力列を正確に検索するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> メソッドを使用するしか方法がありません。 このメソッドは、指定されたバッファー内の指定された系列 ID を持つ列を検索し、行の位置を返します。 出力列のインデックスは、通常、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> メソッド内で検索され、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> で使用するために保存されます。  
+ バッファー行の列の順序は、出力列コレクション内の出力列のインデックスでは定義されません。 バッファー行で出力列を正確に検索するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> メソッドを使用するしか方法がありません。 このメソッドは、指定されたバッファー内で指定された系列 ID の列を検索し、行内の位置を返します。 出力列のインデックスは、通常、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> メソッド内で検索され、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> で使用するために保存されます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> を呼び出して出力バッファー内の出力列の位置を検索し、内部構造に保存します。 列の名前もこの構造に保存され、このトピックの次のセクションで、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドのコード例で使用されています。  
   
@@ -678,7 +675,6 @@ End Namespace
   
 ## <a name="see-also"></a>参照  
  [カスタム変換先コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [スクリプト コンポーネントによるソースを作成します。](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [スクリプト コンポーネントによる変換元の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

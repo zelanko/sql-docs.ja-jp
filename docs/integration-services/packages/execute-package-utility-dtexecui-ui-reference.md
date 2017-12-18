@@ -1,5 +1,5 @@
 ---
-title: "実行パッケージ ユーティリティ (dtexecui) |Microsoft ドキュメント"
+title: "パッケージ実行ユーティリティ (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,22 +22,20 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords:
-- DTExecUI utility
+helpviewer_keywords: DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="execute-package-utility-dtexecui"></a>実行パッケージ ユーティリティ (dtexecui)
+# <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
   
  **dtexecui.exe** ユーティリティと同じ手順でパッケージを実行します。 このユーティリティは 32 ビット ツールであるため、64 ビット環境では Windows on Win32 (WOW) で実行される 64 ビット環境の **dtexecui.exe** を使用して、パッケージを実行します。 64 ビット コンピューターで dtexecui.exe ユーティリティを使用してコマンドを開発およびテストする場合、実稼働サーバー上でコマンドの配置またはスケジュール設定を行う前に、64 ビット バージョンの **dtexec.exe** を使用してコマンドのテストを 64 ビット モードで行う必要があります。  
@@ -381,4 +378,3 @@ ms.lasthandoff: 08/03/2017
  [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)  
   
   
-
