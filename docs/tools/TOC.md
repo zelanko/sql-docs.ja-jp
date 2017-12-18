@@ -1,6 +1,8 @@
 
 # [SQL Server のツールとユーティリティの概要](../tools/overview-sql-tools.md)
-# [新規および最近の更新記事](new-updated-tools.md)
+# [新規および更新のアーティクル](new-updated-tools.md)
+
+# [SQL Operations Studio (プレビュー)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 

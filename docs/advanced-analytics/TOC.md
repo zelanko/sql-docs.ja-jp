@@ -122,6 +122,7 @@
 
 ### [R のユーザー パッケージ ライブラリによるエラーの回避](r/packages-installed-in-user-libraries.md)
 
+### [データベース ユーザーとしての SQLRUserGroup の追加](r/add-sqlrusergroup-to-database.md)
 
 ## データ探索と予測モデリング
 

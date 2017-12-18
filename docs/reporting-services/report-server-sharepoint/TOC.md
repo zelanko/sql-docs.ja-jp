@@ -18,6 +18,7 @@
 ### [レポート ビューアー Web パーツの Web ページへの追加](add-report-viewer-web-part-to-page.md)
 ### [フィルター Web パーツまたはドキュメント Web パーツの接続](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [レポート ビューアー Web パーツのカスタマイズ](customize-the-report-viewer-web-part.md)  
+### [レポート ビューアー Web パーツに関する SharePoint サイト設定](report-viewer-web-part-sharepoint-site-settings.md)
 # [高可用性](high-availability-reporting-services.md)  
 # [RDL サンドボックスの有効化と無効化](enable-and-disable-rdl-sandboxing.md)  
 # [サブジェクト代替名を使用するように Reporting Services を構成する](configure-reporting-services-to-use-a-subject-alternative-name.md)  

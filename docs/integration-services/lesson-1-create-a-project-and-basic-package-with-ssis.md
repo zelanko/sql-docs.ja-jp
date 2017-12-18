@@ -18,15 +18,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1: SSIS によるプロジェクトと基本パッケージの作成
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1: プロジェクトと基本パッケージの作成](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1: プロジェクトと基本パッケージの作成](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx)」を参照してください。
 
 このレッスンでは、簡単な ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="understanding-the-package-requirements"></a>パッケージ要件について  
 このチュートリアルには、Microsoft SQL Server Data Tools が必要です。  
   
-SQL Server Data Tools のインストールの詳細については、「 [SQL Server Data Tools のダウンロード](http://msdn.microsoft.com/en-us/data/hh297027)」を参照してください。  
+SQL Server Data Tools のインストールの詳細については、「[SQL Server Data Tools のダウンロード](http://msdn.microsoft.com/data/hh297027)」を参照してください。  
   
 パッケージを作成する前に、ソース データの形式と変換先データの形式をよく理解する必要があります。 両方のデータ形式を理解しておけば、ソース データを変換先にマップするための変換を定義できます。  
   
