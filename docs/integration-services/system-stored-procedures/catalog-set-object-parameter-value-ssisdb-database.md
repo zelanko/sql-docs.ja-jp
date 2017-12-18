@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_object_parameter_value (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.set_object_parameter_value (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 8fe142dd0fdf6e896c6930528b563514c3aa2fb8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのパラメーターの値を設定します。 環境変数に値を関連付けるか、またはその他の値が割り当てられていないときに既定で使用されるリテラル値を割り当てます。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのパラメーターの値を設定します。 他の値が割り当てられていない場合は、値を環境変数に関連付けるか、または既定で使用されるリテラル値を割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,25 +42,25 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="arguments"></a>引数  
  [@object_type =] *object_type*  
- パラメーターの型。 値を使用して`20`プロジェクト パラメーターまたは値を示す`30`パッケージ パラメーターを示すためにします。 *Object_type*は**smallInt**です。  
+ パラメーターの型。 値 `20` を使用するとプロジェクトのパラメーターを示し、値 `30` を使用するとパッケージのパラメーターを示します。 *object_type* は **smallInt** です。  
   
  [@folder_name =] *folder_name*  
- パラメーターを含むフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
+ パラメーターを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [@project_name =] *project_name*  
- パラメーターを含むプロジェクトの名前。 *Project_name*は**nvarchar (128)**です。  
+ パラメーターを含むプロジェクトの名前。 *project_name* は **nvarchar (128)** です。  
   
  [@parameter_name =] *parameter_name*  
- パラメーターの名前。 *Parameter_name*は**nvarchar (128)**です。  
+ パラメーターの名前。 *parameter_name* は **nvarchar (128)** です。  
   
- [@parameter_value =]*パラメーター*  
- パラメーターの値。 *パラメーター*は**sql_variant**です。  
+ [@parameter_value =] *parameter_value*  
+ パラメーターの値。 *parameter_value* は **sql_variant** です。  
   
  [@object_name =] *object_name*  
- パッケージの名前です。 パラメーターがパッケージ パラメーターである場合に必要な引数です。 *Object_name*は**nvarchar (260)**です。  
+ パッケージの名前です。 パラメーターがパッケージ パラメーターである場合に必要な引数です。 *object_name* は **nvarchar (260)** です。  
   
  [@value_type =] *value_type*  
- パラメーター値の型。 文字を使用して`V`ことを示す*パラメーター*実行前にその他の値が割り当てられていないときに既定で使用されるリテラル値です。 文字を使用して`R`ことを示す*パラメーター*参照されている値は、環境変数の名前に設定されています。 この引数は省略可能です。文字 `V` が既定で使用されます。 *Value_type*は**char (1)**です。  
+ パラメーター値の型。 文字 `V` を使用すると、*parameter_value* がリテラル値であり、実行前に他の値が割り当てられることのない既定値として使用されることを示します。 文字 `R` を使用すると、*parameter_value* が参照先の値であり、環境変数の名前に設定されたことを示します。 この引数は省略可能です。文字 `V` が既定で使用されます。 *value_type* は **char (1)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -75,9 +73,9 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   プロジェクトの READ および MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  ストアド プロシージャがエラーを発生させる可能性がある条件を以下に示します。  
@@ -94,13 +92,12 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="remarks"></a>解説  
   
--   いない場合*value_type*が指定されているリテラル値*パラメーター*は既定で使用します。 リテラル値を使用すると、 *value_set*で、 [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)に設定されているビュー`1`です。 NULL パラメーター値は許可されません。  
+-   *value_type* が指定されていない場合は、*parameter_value* のリテラル値が既定で使用されます。 リテラル値を使用すると、[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューの *value_set* が `1` に設定されます。 NULL パラメーター値は許可されません。  
   
--   場合*value_type*文字を含む`R`、参照先の値のことを示している*パラメーター*環境変数の名前を示します。  
+-   *value_type* に参照先の値を示す文字 `R` が指定されている場合、*parameter_value* は環境変数の名前を参照します。  
   
--   値`20`に使用できる*object_type*プロジェクト パラメーターを示すためです。 この場合、値の*object_name*必要に応じて、かつ指定した値ではありません*object_name*は無視されます。 この値は、ユーザーがプロジェクトのパラメーターを設定するときに使用されます。  
+-   値 `20` は、プロジェクト パラメーターを示すため *object_type* で使用される場合があります。 この場合、*object_name* の値は不要で、*object_name* に指定された値は無視されます。 この値は、ユーザーがプロジェクトのパラメーターを設定するときに使用されます。  
   
--   値`30`に使用できる*object_type*パッケージ パラメーターを示すためです。 この場合、値の*object_name*は、対応するパッケージを表すために使用します。 場合*object_name*が指定されていない、ストアド プロシージャは、エラーが返され、終了します。  
+-   値 `30` は、プロジェクト パラメーターを示すため *object_type* で使用される場合があります。 この場合は、対応するパッケージを示すため、*object_name* の値が使用されます。 *object_name* が指定されていない場合、このストアド プロシージャはエラーを返し、終了します。  
   
   
-

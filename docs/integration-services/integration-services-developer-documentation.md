@@ -1,5 +1,5 @@
 ---
-title: "Integration Services の開発者向けドキュメント |Microsoft ドキュメント"
+title: "Integration Services の開発者向けのドキュメント | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,19 +21,18 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-developer-documentation"></a>Integration Services 開発者向けドキュメント
+# <a name="integration-services-developer-documentation"></a>Integration Services の開発者向けのドキュメント
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の開発者として、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプログラミングでは、次の 2 つの基本的な方法を採用できます。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
   
 -   開発者独自のアプリケーションから、プログラムでパッケージを作成、構成、および実行することができます。  
   
- 組み込みのコンポーネントと考えることが場合[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、要件を満たしていないの機能を拡張することができます[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]独自の拡張機能をコーディングしています。 この方法をとる場合、以下のように 2 つの選択肢があります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で組み込みコンポーネントが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の機能を拡張できます。 この方法をとる場合、以下のように 2 つの選択肢があります。  
   
 -   単一のパッケージで臨時に使用する場合は、スクリプト タスクでコードを記述してカスタム タスクを作成するか、またはスクリプト コンポーネントでコードを記述してカスタム データ フロー コンポーネントを作成し、変換元、変換、あるいは変換先として設定することができます。 これらの強力なラッパーによってインフラストラクチャ コードが自動的に記述されるため、開発者はカスタム機能の開発に集中できます。ただし、他の場所で簡単に再利用することはできません。  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/26/2017
  同期出力と非同期出力の重要な相違点、およびデータ フローでこれらの出力を使用するコンポーネントについて説明します。  
   
  [プログラムによる接続マネージャーの操作](../integration-services/working-with-connection-managers-programmatically.md)  
- マネージ コードから使用できる接続マネージャーとの接続マネージャーが、コードを呼び出すときに返される値の一覧、 **AcquireConnection**メソッドです。  
+ マネージ コードで使用できる接続マネージャーと、コードが **AcquireConnection** メソッドを呼び出した場合に接続マネージャーが返す値の一覧を表示します。  
   
  [スクリプトによるパッケージの拡張](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  スクリプト タスクを使用した制御フローの拡張方法、またはスクリプト コンポーネントを使用したデータ フローの拡張方法について説明します。  
@@ -92,10 +89,9 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="external-resources"></a>外部リソース  
   
--   CodePlex サンプル「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkID=131204)、www.codeplex.com/MSFTISProdSamples 上  
+-   CodePlex のサンプルは、「[Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204)」(Integration Services 製品のサンプル) (www.codeplex.com/MSFTISProdSamples) から入手できます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

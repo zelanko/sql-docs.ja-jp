@@ -1,5 +1,5 @@
 ---
-title: "プログラムによるローカル パッケージの実行の読み込みと |Microsoft ドキュメント"
+title: "プログラムによるローカル パッケージの読み込みと実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Integration Services packages, running
 - events [Integration Services], capturing
@@ -25,28 +22,27 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>プログラムによるローカル パッケージの読み込みと実行
-  実行することができます[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]必要に応じて、パッケージに記載されているメソッドを使用して、あらかじめ指定した時刻[実行中のパッケージ](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)です。 また、数行のコードを記述するだけで、Windows フォーム アプリケーション、コンソール アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスなどのカスタム アプリケーションから、パッケージを実行することもできます。  
+  「[パッケージの実行](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)」で説明されている方法を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを必要に応じて実行したり、事前に定義した時刻に実行したりすることができます。 また、数行のコードを記述するだけで、Windows フォーム アプリケーション、コンソール アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスなどのカスタム アプリケーションから、パッケージを実行することもできます。  
   
- このトピックの内容について説明します。  
+ このトピックの内容:  
   
 -   プログラムによるパッケージの読み込み  
   
 -   プログラムによるパッケージの実行  
   
- 参照を必要なすべての読み込みし、パッケージの実行にこのトピックで使用される方法、 **Microsoft.SqlServer.ManagedDTS**アセンブリ。 参照を追加すると、新しいプロジェクトで、インポート、<xref:Microsoft.SqlServer.Dts.Runtime>を持つ名前空間、**を使用して**または**Imports**ステートメントです。  
+ このトピックでパッケージを読み込み、実行するために使用するすべてのメソッドには、**Microsoft.SqlServer.ManagedDTS** アセンブリへの参照が必要です。 この参照を新しいプロジェクトに追加した後、**using** ステートメントまたは **Imports** ステートメントを使用して <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
   
 ## <a name="loading-a-package-programmatically"></a>プログラムによるパッケージの読み込み  
  プログラムによってローカル コンピューターでパッケージを読み込むには、パッケージがローカルまたはリモートのどちらに保存されているかに関係なく、次のいずれかの方法を使用できます。  
@@ -67,16 +63,16 @@ ms.lasthandoff: 08/03/2017
   
 1.  Visual Studio 開発環境を起動し、任意の開発言語で、新しいアプリケーションを作成します。 この例ではコンソール アプリケーションを使用しますが、Windows フォーム アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスからパッケージを実行することもできます。  
   
-2.  **プロジェクト** メニューのをクリックして**参照の追加**への参照を追加および**Microsoft.SqlServer.ManagedDTS.dll**です。 **[OK]**をクリックします。  
+2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックし、**Microsoft.SqlServer.ManagedDTS.dll** への参照を追加します。 **[OK]**をクリックします。  
   
-3.  Visual Basic を使用して**Imports**ステートメント、または c#**を使用して**インポートするステートメント、 **Microsoft.SqlServer.Dts.Runtime**名前空間。  
+3.  Visual Basic の **Imports** ステートメント、または C# の **using** ステートメントを使用して、**Microsoft.SqlServer.Dts.Runtime** 名前空間をインポートします。  
   
 4.  メイン ルーチンに次のコードを追加します。 完成したコンソール アプリケーションは、たとえば次の例のようになります。  
   
     > [!NOTE]  
     >  このサンプル コードは、<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> メソッドを使用してファイル システムからパッケージを読み込む方法を示していますが、 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> メソッドを呼び出して MSDB データベースからパッケージを読み込んだり、<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> メソッドを呼び出して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ストアからパッケージを読み込むこともできます。  
   
-5.  プロジェクトを実行します。 サンプル コードと共にインストールされている CalculatedColumns サンプル パッケージの実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルです。 パッケージの実行結果がコンソール ウィンドウに表示されます。  
+5.  プロジェクトを実行します。 このサンプル コードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサンプルと共にインストールされている CalculatedColumns サンプル パッケージを実行します。 パッケージの実行結果がコンソール ウィンドウに表示されます。  
   
 ### <a name="sample-code"></a>サンプル コード  
   
@@ -144,7 +140,7 @@ namespace RunFromClientAppCS
   
 2.  メイン ルーチンに次のコードを追加します。 完成したコンソール アプリケーションは、たとえば次の例のようになります。  
   
-3.  プロジェクトを実行します。 サンプル コードと共にインストールされている CalculatedColumns サンプル パッケージの実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルです。 パッケージ実行結果は、発生したエラーと共にコンソール ウィンドウに表示されます。  
+3.  プロジェクトを実行します。 このサンプル コードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサンプルと共にインストールされている CalculatedColumns サンプル パッケージを実行します。 パッケージ実行結果は、発生したエラーと共にコンソール ウィンドウに表示されます。  
   
 ### <a name="sample-code"></a>サンプル コード  
   
@@ -234,9 +230,8 @@ namespace RunFromClientAppWithEventsCS
 ```  
   
 ## <a name="see-also"></a>参照  
- [ローカルおよびリモート実行の相違点を理解します。](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [読み込みと、プログラムによるリモート パッケージの実行](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
+ [ローカル実行とリモート実行の相違点について](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [プログラムによるリモート パッケージの読み込みと実行](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [ローカル パッケージの出力の読み込み](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

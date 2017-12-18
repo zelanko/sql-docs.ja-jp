@@ -1,5 +1,5 @@
 ---
-title: "非同期出力型のカスタム変換コンポーネントの開発 |Microsoft ドキュメント"
+title: "非同期出力型のカスタム変換コンポーネントの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,28 +26,27 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: de3e9e37d125e8c098fc4fd3fe8036b3c634f228
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fbd542b091316f11c17af387e0a8f735704f5e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>非同期出力型のカスタム変換コンポーネントの開発
-  非同期出力型変換コンポーネントは、変換が入力行をすべて受け取るまで行を出力できないようにする場合や、変換が入力として受信した各行に対して必ずしも 1 つずつ出力行を生成しない場合に使用します。 たとえば、集計変換では、行をすべて読み込むまではすべての行の合計を計算できません。 これに対し、同期出力型コンポーネントは、データが渡されるたびに各データ行を変更する場合に使用します。 各行のデータを順に変更したり、1 つまたは複数の列を新規作成して、各列にすべての入力行ごとの値を設定したりできます。 同期および非同期のコンポーネント間の違いの詳細については、次を参照してください。[について同期および非同期変換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)です。  
+  非同期出力型変換コンポーネントは、変換が入力行をすべて受け取るまで行を出力できないようにする場合や、変換が入力として受信した各行に対して必ずしも 1 つずつ出力行を生成しない場合に使用します。 たとえば、集計変換では、行をすべて読み込むまではすべての行の合計を計算できません。 これに対し、同期出力型コンポーネントは、データが渡されるたびに各データ行を変更する場合に使用します。 各行のデータを順に変更したり、1 つまたは複数の列を新規作成して、各列にすべての入力行ごとの値を設定したりできます。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  
   
  非同期出力型変換コンポーネントは、変換先コンポーネントと変換元コンポーネントの、両方の機能を果たすという特徴があります。 この種のコンポーネントは、上流コンポーネントから行を受け取り、下流コンポーネントで使用される行を追加します。 これらの操作を両方とも行うデータ フロー コンポーネントは、他にはありません。  
   
  上流コンポーネントの列が同期出力型コンポーネントで使用可能な場合、自動的に、その下流にあるコンポーネントでも使用可能となります。 したがって、同期出力型コンポーネントでは、出力列を定義しなくても次のコンポーネントに行や列を渡すことができます。 これに対し、非同期出力型コンポーネントでは、下流コンポーネントに行を渡すために出力列を定義する必要があります。 したがって、非同期出力型コンポーネントの方が、デザイン時や実行時に必要な処理が多いため、開発者はより多くのコードを実装する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]非同期出力型のいくつかの変換が含まれています。 たとえば並べ替え変換では、並べ替えを行う前に行がすべて必要であるため、非同期出力を使用して変換を実行しています。 行をすべて受け取ったら並べ替えを実行し、出力に行を追加します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には非同期出力型の変換がいくつか組み込まれています。 たとえば並べ替え変換では、並べ替えを行う前に行がすべて必要であるため、非同期出力を使用して変換を実行しています。 行をすべて受け取ったら並べ替えを実行し、出力に行を追加します。  
   
- ここでは、非同期出力型の変換を開発する方法の詳細について説明します。 ソース コンポーネントの開発の詳細については、次を参照してください。[カスタム変換元コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)です。  
+ ここでは、非同期出力型の変換を開発する方法の詳細について説明します。 変換元コンポーネントの開発の詳細については、「[カスタム変換元コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)」を参照してください。  
   
 ## <a name="design-time"></a>デザイン時  
   
@@ -330,8 +327,7 @@ End Namespace
   
 ## <a name="see-also"></a>参照  
  [同期出力型のカスタム変換コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
- [同期および非同期変換を理解します。](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
+ [同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

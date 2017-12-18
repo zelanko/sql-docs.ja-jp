@@ -1,5 +1,5 @@
 ---
-title: "パッケージの保存 |Microsoft ドキュメント"
+title: "パッケージを保存する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.savecopyas.f1
+f1_keywords: sql13.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b29636580a8e8e87229ce591863547a91cd05a8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="save-packages"></a>パッケージを保存する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを構築し、XML ファイル (.dtsx ファイル) としてファイル システムに保存します。 パッケージ XML ファイルのコピーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベースまたはパッケージ ストアに保存することもできます。 パッケージ ストアとは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システムの場所にあるフォルダーのことです。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/26/2017
     >  パッケージが保存されたファイルのパスと名前は、[プロパティ] ウィンドウで確認できます。  
 
 ## <a name="save-a-copy-of-a-package"></a>パッケージのコピーを保存する
-  このセクションでは、ファイル システムに、パッケージ ストア、またはには、パッケージのコピーを保存する方法を説明、 **msdb**データベース[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。 パッケージのコピーを保存する場所を指定するとき、パッケージの名前を更新することもできます。  
+  このセクションでは、パッケージのコピーをファイル システム、パッケージ ストア、または [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **msdb** データベースに保存する方法について説明します。 パッケージのコピーを保存する場所を指定するとき、パッケージの名前を更新することもできます。  
   
  パッケージ ストアには、 **msdb** データベースとファイル システム内のフォルダーの両方、 **msdb**のみ、またはファイル システム内のフォルダーのみを含めることができます。 **msdb**では、パッケージは **sysssispackages** テーブルに保存されます。 このテーブルには、パッケージが属する論理フォルダーを識別する **folderid** 列があります。 論理フォルダーは、 **msdb** に保存されるパッケージをグループ化するための便利な方法を提供します。これは、ファイル システムのフォルダーが、ファイル システムに保存されるパッケージをグループ化する方法を提供するのと同じです。 **msdb** 内の **sysssispackagefolders** テーブルの行は、フォルダーを定義します。  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  ソリューション エクスプローラーで、コピーを保存するパッケージをダブルクリックします。  
   
-2.  **ファイル** メニューのをクリックして**のコピーを保存\<パッケージ ファイル > として**です。  
+2.  **[ファイル]** メニューの **[\<パッケージ ファイル> のコピーに名前を付けて保存]** をクリックします。  
   
 3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、**[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 使用できるオプションは以下のとおりです。  
     -   SQL Server
@@ -93,8 +90,8 @@ ms.lasthandoff: 09/26/2017
   
 9. **[OK]**をクリックします。  
 
-## <a name="save-a-package-as-a-package-template"></a>パッケージをパッケージ テンプレートとして保存します。
- このセクションでは、指定およびで新しい Integration Services パッケージを作成するときに、テンプレートとしてカスタム パッケージを使用する方法を説明[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]です。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに新しいパッケージを追加する場合に、既定で、新しいパッケージを作成するパッケージ テンプレートを使用します。 この既定のテンプレートを置き換えることはできませんが、新しいテンプレートを追加することはできます。  
+## <a name="save-a-package-as-a-package-template"></a>パッケージをパッケージ テンプレートとして保存する
+ このセクションでは、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で新しい Integration Services パッケージを作成するときに、カスタム パッケージをテンプレートとして指定および使用する方法について説明します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに新しいパッケージを追加する場合に、既定で、新しいパッケージを作成するパッケージ テンプレートを使用します。 この既定のテンプレートを置き換えることはできませんが、新しいテンプレートを追加することはできます。  
   
  テンプレートとして、複数のパッケージを指定できます。 カスタム パッケージをテンプレートとして実装するには、そのパッケージをあらかじめ作成しておく必要があります。  
   
@@ -114,9 +111,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、**[新しい項目]** をクリックします。  
   
-3.  **新しい項目の追加 -\<プロジェクト名 >**  ダイアログ ボックスで、パッケージをテンプレートとして使用する をクリックします。  
+3.  **[新しい項目の追加 - \<プロジェクト名>]** ダイアログ ボックスで、テンプレートとして使うパッケージをクリックします。  
   
      テンプレートの一覧には、"新しい SSIS パッケージ" という名前の既定のパッケージ テンプレートがあります。 パッケージ テンプレートとして使用できるテンプレートは、パッケージ アイコンで示されます。  
   
 4.  **[追加]**をクリックします。  
-

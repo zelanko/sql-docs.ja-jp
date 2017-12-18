@@ -1,5 +1,5 @@
 ---
-title: "catalog.cleanup_server_execution_keys |Microsoft ドキュメント"
+title: catalog.cleanup_server_execution_keys | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 172925d5a63aa831881b6a6325f0dbcbccd4dd56
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f1540c3396879dc12a5af6e321ec009700d7c658
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +36,18 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @cleanup_flag =] *cleanup_flag*  
- 実行レベル (1) またはプロジェクト レベル (2) 証明書と対称キーがドロップされるかどうかを示します。  
+ [ @cleanup_flag = ] *cleanup_flag*  
+ 実行レベル (1) 証明書またはプロジェクト レベル (2) 証明書と対称キーが削除されるかどうかを示します。  
   
- PER_EXECUTION (1) を SERVER_OPERATION_ENCRYPTION_LEVEL が設定されている場合にのみ、実行レベル (1) を使用します。  
+ 実行レベル (1) は、SERVER_OPERATION_ENCRYPTION_LEVEL が PER_EXECUTION (1) に設定されている場合にのみ使用します。  
   
- SERVER_OPERATION_ENCRYPTION_LEVEL が PER_PROJECT (2) に設定されている場合にのみ、プロジェクト レベル (2) を使用します。 証明書と対称キーは、削除された、および操作ログが消去されてプロジェクトに対してのみ削除されます。  
+ プロジェクト レベル (2) SERVER_OPERATION_ENCRYPTION_LEVEL が PER_PROJECT (2) に設定されている場合にのみ使用します。 削除されたプロジェクトと、操作ログが消去されているプロジェクトに対してのみ証明書と対称キーが削除されます。  
   
- [ @delete_batch_size =] *delete_batch_size*  
- キーおよび削除する証明書の数。 既定値は 1000 です。  
+ [ @delete_batch_size = ] *delete_batch_size*  
+ 削除するキーと証明書の数。 既定値は 1000 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功と失敗の 1 は 0 です。  
+ 成功の場合は 0、失敗の場合は 1 です。  
   
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
@@ -57,41 +55,41 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="permissions"></a>Permissions  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
--   読み取り権限と実行、プロジェクトと、該当する場合、参照先の環境に対する読み取りアクセス許可。  
+-   プロジェクトの READ および EXECUTE アクセス許可と、該当する場合は、参照先の環境での READ アクセス許可。  
   
--   メンバーシップ、 **ssis_admin**データベース ロール。  
+-   **ssis_admin** データベース ロールのメンバーシップ。  
   
--   メンバーシップを**sysadmin**サーバーの役割です。  
+-   **sysadmin** サーバー ロールのメンバーシップ。  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
- このストアド プロシージャでは、次のシナリオでエラーが発生します。  
+ このストアド プロシージャは、次のシナリオでエラーが発生します。  
   
--   SSISDB データベースに 1 つまたは複数のアクティブな操作があります。  
+-   SSISDB データベースに 1 つ以上のアクティブな操作がある。  
   
--   SSISDB データベースがシングル ユーザー モードではないです。  
+-   SSISDB データベースがシングル ユーザー モードではない。  
   
 ## <a name="remarks"></a>解説  
- SQL Server 2012 Service Pack 2 を SERVER_OPERATION_ENCRYPTION_LEVEL プロパティの追加、 **internal.catalog_properties**テーブル。 このプロパティでは、2 つの値には。  
+ SQL Server 2012 Service Pack 2 により、SERVER_OPERATION_ENCRYPTION_LEVEL プロパティが **internal.catalog_properties** テーブルに追加されました。 このプロパティには、次の 2 つの有効値があります。  
   
--   **PER_EXECUTION (1)** – 証明書と対称キーが機密性の高い実行パラメーターを保護するために使用して、実行ログは、実行のたびに作成されます。 これが既定値です。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、失敗したメンテナンス ジョブなど) に発生する可能性があります。 ただし、この設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
+-   **PER_EXECUTION (1)**: 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 これが既定値です。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
   
--   **PER_PROJECT (2)** – 証明書と機微なパラメーターを保護するために使用する対称キーは、プロジェクトごとに作成されます。 これにより、PER_EXECUTION レベルより優れたパフォーマンス、キーと証明書が生成 1 回実行するたびにではなく、プロジェクトのため。  
+-   **PER_PROJECT (2)**: 実行のたびに証明書と対称キーが作成されます。これらは機密性の高いパラメーターを保護するために使用されます。 これは、キーと証明書が実行ごとではなく、プロジェクトに対して 1 回生成されるため、PER_EXECUTION レベルより優れたパフォーマンスを提供します。  
   
- 実行する必要がある、 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)ストアド プロシージャを SERVER_OPERATION_ENCRYPTION_LEVEL を変更するには、1 ~ 2 (または) 1 を 2 からにします。 ストアド プロシージャを実行して、前に、次の作業を行います。  
+ SERVER_OPERATION_ENCRYPTION_LEVEL を 1 から 2 (または) 2 から 1 に変更するには、事前に [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) ストアド プロシージャを実行する必要があります。 このストアド プロシージャを実行する前に、次の操作を行う必要があります。  
   
-1.  OPERATION_CLEANUP_ENABLED プロパティの値が TRUE に設定されていることを確認してください、 [catalog.catalog_properties & #40 です。SSISDB データベース &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)テーブル。  
+1.  [catalog.catalog_properties &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) テーブルで OPERATION_CLEANUP_ENABLED プロパティの値が TRUE に設定されていることを確認します。  
   
-2.  Integration Services データベース (SSISDB) をシングル ユーザー モードに設定します。 SQL Server Management Studio で SSISDB 用のデータベースのプロパティ ダイアログ ボックスを起動、オプション タブに切り替えますおよびアクセスの制限プロパティをシングル ユーザー モード (SINGLE_USER) に設定します。 Cleanup_server_log を実行した後は、ストアド プロシージャでは、元の値にプロパティ値を設定します。  
+2.  Integration Services データベース (SSISDB) をシングル ユーザー モードに設定します。 SQL Server Management Studio で SSISDB の [データベース プロパティ] ダイアログ ボックスを開き、[オプション] タブに切り替え、[アクセスの制限] プロパティをシングル ユーザー モード (SINGLE_USER) に設定します。 cleanup_server_log ストアド プロシージャを実行すると、プロパティ値が元の値に設定されます。  
   
-3.  ストアド プロシージャを実行[catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)です。  
+3.  ストアド プロシージャ [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) を実行します。  
   
-4.  ここで、さあ、SERVER_OPERATION_ENCRYPTION_LEVEL プロパティの値を変更、 [catalog.catalog_properties & #40 です。SSISDB データベース &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)テーブル。  
+4.  次に、[catalog.catalog_properties &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) テーブルで SERVER_OPERATION_ENCRYPTION_LEVEL プロパティの値を変更します。  
   
-5.  ストアド プロシージャを実行[catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) SSISDB データベースから証明書のキーをクリーンアップします。 SSISDB データベースから証明書とキーを削除するため、オフピーク時間中に定期的に実行する必要があります、長い時間がかかる場合があります。  
+5.  ストアド プロシージャ [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) を実行し、SSISDB データベースから証明書とキーをクリーンアップします。 SSISDB データベースからの証明書とキーの削除は、長時間かかる場合があるため、オフピークの時間帯に定期的に実行する必要があります。  
   
-     スコープまたはレベル (プロジェクトとの比較の実行) および削除するキーの数を指定することができます。 削除の既定のバッチ サイズは 1000 です。 2、レベルを設定するときに、関連するプロジェクトが削除されている場合にのみ、キーと証明書が削除されました。  
+     スコープまたはレベル (実行とプロジェクトの比較) および削除するキーの数を指定できます。 既定のバッチ サイズは 1000 です。 レベルを 2 に設定すると、関連するプロジェクトが削除されている場合にのみ、キーと証明書が削除されます。  
   
- 詳細については、次のサポート技術情報の記事を参照してください。 [SQL Server 2012 で修正: パフォーマンスの問題として、展開 SSISDB を使用すると保存します。](http://support.microsoft.com/kb/2972285)  
+ 詳細については、次のサポート技術情報の記事をご覧ください。 [修正: SQL Server 2012 で、SSISDB を展開ストアとして使用すると、パフォーマンスの問題が発生する](http://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>例  
  次の例では、cleanup_server_execution_keys ストアド プロシージャを呼び出します。  
@@ -112,4 +110,3 @@ GO
 ```  
   
   
-

@@ -1,131 +1,133 @@
 ---
-title: "Services (SSIS) のスケール アウトの SQL Server の統合のトラブルシューティング |Microsoft ドキュメント"
+title: "SQL Server Integration Services (SSIS) Scale Out のトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 41bb853dd08591596f6f5baa918e174d0c26a6b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 56d61bc6ba76514ba2291243002a7423ec8e265c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="troubleshooting-scale-out"></a>スケール アウトのトラブルシューティング
+# <a name="troubleshooting-scale-out"></a>Scale Out のトラブルシューティング
 
-SSIS のスケール アウト SSISDB、スケール アウト マスター サービスとスケール アウト Worker サービスの間で communtication が含まれます。 場合によっては、通信は、構成の誤り、アクセス許可がないその他の理由により解除されます。 このドキュメントでは、スケール アウト構成のトラブルシューティングを行うことができます。
+SSIS Scale Out には、SSISDB、Scale Out Master サービス、および Scale Out Worker サービス間の通信が含まれます。 この通信は、構成の誤り、アクセス許可がない、およびその他の理由により切断される場合があります。 このドキュメントは、Scale Out 構成のトラブルシューティングを支援します。
 
-発生する現象を調査するために、問題が解決されるまで、1 つずつ次の手順に従います。
+発生した現象を調査するため、問題が解決されるまで、以下の手順を 1 つずつ実行してください。
 
 ### <a name="symptoms"></a>**現象** 
-スケール アウト マスターが SSISDB に接続できません。 
+Scale Out Master が SSISDB に接続できない。 
 
-マスター プロパティは、スケール アウト マネージャーで表示できません。
+Scale Out Manager にマスター プロパティが表示できない。
 
-マスター プロパティは、[SSISDB] が入力されていません。[カタログ] です。[master_properties]
+[SSISDB].[catalog].[master_properties] にマスター プロパティが入力されない。
 
 ### <a name="solution"></a>**解決方法**
-手順 1: スケール アウトが有効かどうを確認します。
+手順 1: Scale Out が有効になっているかどうかを確認します。
 
-右クリック**SSISDB** SSMS のオブジェクト エクスプ ローラー ノード**スケール アウト機能が有効になっている**です。
+SSMS のオブジェクト エクスプローラーで **[SSISDB]** ノードを右クリックして、**[Scale Out 機能が有効です]** を確認します。
 
-![有効なスケール アウトには](media\isenabled.PNG)
+![Scale Out が有効になっているか](media\isenabled.PNG)
 
-プロパティの値が False の場合 [SSISDB] のストアド プロシージャを呼び出すことによってスケールを有効にします。[カタログ] です。[enable_scaleout] です。
+プロパティの値が False の場合、ストアド プロシージャ [SSISDB].[catalog].[enable_scaleout] を呼び出すことによって、Scale Out を有効にします。
 
-手順 2: スケール アウト マスター構成ファイルで指定された Sql Server 名が正しいかどうかを確認し、スケール アウト マスター サービスを再起動します。
+手順 2: Scale Out Master 構成ファイルで指定された SQL Server 名が正しいかどうかを確認し、Scale Out Master サービスを再起動します。
 
 ### <a name="symptoms"></a>**現象** 
-スケール アウト ワーカーは、スケール アウト マスターに接続できません。
+Scale Out Worker が Scale Out Master に接続できない
 
-スケール アウト ワーカーは、スケール アウト マネージャーに追加した後は表示されません。
+Scale Out Worker が、Scale Out Manager に追加した後に表示されなくなる
 
-スケール アウト ワーカーは、[SSISDB] には表示されません。[カタログ] です。[worker_agents]
+Scale Out Worker が、[SSISDB].[catalog].[worker_agents] に表示されない
 
-スケール アウト Worker サービスが実行されている、スケール アウト ワーカーがオフラインの間
+Scale Out Worker のオフライン中に、Scale Out Worker サービスが実行されている
 
 ### <a name="solutions"></a>**ソリューション** 
-スケール アウト ワーカー サービスのログのエラー メッセージを確認して\<ドライバー\>: \Users\\*[worker サービスを実行しているアカウント]*\AppData\Local\SSIS\Cluster\Agent です。
+\<ドライブ\>:\Users\\*[account running worker service]*\AppData\Local\SSIS\Cluster\Agent にある Scale Out Worker サービスのログでエラー メッセージを確認します。
 
-**場合** 
+**ケース** 
 
-System.ServiceModel.EndpointNotFoundException: https:// でリッスンしているエンドポイントがありません*[コンピューター名]: [Port]*/ClusterManagement/メッセージを受け入れることができます。
+System.ServiceModel.EndpointNotFoundException: メッセージを受信できる https://*[MachineName]:[Port]*/ClusterManagement/ でリッスンしているエンドポイントがありませんでした。
 
-手順 1: スケール アウト マスター サービス構成ファイルで指定されたポート番号が正しいかどうかを確認し、スケール アウト マスター サービスを再起動します。 
+手順 1: Scale Out Master のサービス構成ファイルで指定されたポート番号が正しいかどうかを確認し、Scale Out Master サービスを再起動します。 
 
-手順 2: スケール アウト ワーカー サーバーのサービス構成で指定されたマスター エンドポイントが正しいかどうかを確認し、スケール アウト Worker サービスを再起動します。
+手順 2: Scale Out Worker サービスの構成で指定されたマスター エンドポイントが正しいかどうかを確認し、Scale Out Worker サービスを再起動します。
 
-手順 3: では、ファイアウォール ポートがスケール アウト マスター ノード上で開いているかどうかを確認します。
+手順 3: Scale Out Master ノードでファイアウォール ポートが開いているかどうかを確認します。
 
-手順 4: スケール アウト マスター ノードとスケール アウト ワーカー ノード間の接続の問題を解決します。
+手順 4: Scale Out Master ノードと Scale Out Worker ノード間のその他の接続の問題を解決します。
 
-**場合**
+**ケース**
 
-System.ServiceModel.Security.SecurityNegotiationException: 証明機関と SSL/TLS のセキュリティで保護されたチャネルに対する信頼関係を確立できませんでした '*[マシン名]: [Port]*' です。 System.Net.WebException--->: 基になる接続が閉じられました: SSL/TLS セキュリティで保護されたチャネルに対する信頼関係を確立できませんでした。 System.Security.Authentication.AuthenticationException--->: リモート証明書が検証プロシージャに対して無効です。
+System.ServiceModel.Security.SecurityNegotiationException: 機関 '*[Machine Name]:[Port]*' との SSL/TLS のセキュリティで保護されているチャネルに対する信頼関係を確立できませんでした。 ---> System.Net.WebException: 基になる接続が閉じられました: SSL/TLS のセキュリティで保護されているチャネルに対する信頼関係を確立できませんでした。 ---> System.Security.Authentication.AuthenticationException: 検証プロシージャによると、リモート証明書は無効です。
 
-手順 1: インストール スケール アウト マスター スケール アウト ワーカー ノード上のローカル マシンのルート証明書ストアに証明書しない場合まだインストールされていないし、スケール アウト Worker サービスを再起動します。
+手順 1: Scale Out Master 証明書を Scale Out Worker ノード上のローカル コンピューターのルート証明書ストアにインストールして (まだインストールしていない場合)、Scale Out Worker サービスを再起動します。
 
-手順 2: は、マスター エンドポイント内のホスト名が Cn のスケール アウト マスター証明書に含まれているかどうかを確認します。 ない場合は、スケール アウト ワーカーの構成ファイル内のマスター エンドポイントをリセットし、スケール アウト Worker サービスを再起動します。 
+手順 2: マスター エンドポイント内のホスト名が Scale Out Master 証明書の CN に含まれているかどうかを確認します。 含まれていない場合は、Scale Out Worker の構成ファイル内のマスター エンドポイントをリセットし、Scale Out Worker サービスを再起動します。 
 
 > [!Note]
-> DNS の設定のためのマスター エンドポイントのホスト名を変更することはできない場合、は、スケール アウト マスター証明書の変更が必要です。 参照してください[SSIS スケール アウトでの証明書を扱う](deal-with-certificates-in-ssis-scale-out.md)です。
+> DNS の設定が原因でマスター エンドポイントのホスト名を変更できない場合は、Scale Out Master 証明書を変更する必要があります。 「[Deal with certificates in SSIS Scale Out](deal-with-certificates-in-ssis-scale-out.md)」 (SSIS Scale Out における証明書の処理) を参照してください。
 
-手順 3: スケール アウト マスター証明書の拇印がマスターにスケール アウト ワーカー サーバーの構成で指定された拇印に一致するかどうかを確認します。 
+手順 3: Scale Out Worker の構成で指定されたマスター サムプリントが Scale Out Worker 証明書のサムプリントと一致するかどうかを確認します。 
 
-**場合**
+**ケース**
 
-System.ServiceModel.Security.SecurityNegotiationException: は権限を持つ SSL/TLS のセキュリティで保護されたチャネルを確立できませんでした '*[マシン名]: [Port]*' です。 System.Net.WebException--->: 要求が中止されました: SSL/TLS セキュリティで保護されたチャネルを作成できませんでした。
+System.ServiceModel.Security.SecurityNegotiationException: オーソリティ '*[Machine Name]:[Port]*' と、セキュリティで保護された SSL/TLS のチャネルを確立できませんでした。 ---> System.Net.WebException: 要求は中止されました: SSL/TLS のセキュリティで保護されているチャネルを作成できませんでした。
 
-手順 1: スケール アウト Worker サービスを実行するアカウントが次のコマンドでスケール アウト ワーカーの証明書へのアクセスがかどうかを確認します。
+手順 1: 次のコマンドを使用して、Scale Out Worker サービスを実行するアカウントが、Scale Out Worker 証明書へのアクセス権を持っているかどうかを確認します。
 
 ```dos
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-アカウントがアクセスできない場合は、以下のコマンドを許可し、スケール アウト Worker サービスを再起動します。
+アカウントにアクセス権がない場合は、次のコマンドでアクセス権を付与して、Scale Out Worker サービスを再起動します。
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
 ```
 
-**場合**
+**ケース**
 
-System.ServiceModel.Security.MessageSecurityException: クライアントの認証方式 'Anonymous' の HTTP 要求が禁止されています。 System.Net.WebException--->: リモート サーバーがエラーを返しました: (403) 許可されていません。
+System.ServiceModel.Security.MessageSecurityException: この HTTP 要求は、クライアントの認証方式 'Anonymous' で許可されませんでした。 ---> System.Net.WebException: リモート サーバーがエラーを返しました: 403 許可されていません。
 
-手順 1: スケール アウト ワーカーにインストール スケール アウト マスター ノード上のローカル マシンのルート証明書ストアに証明書のない場合まだインストールされていないし、スケール アウト Worker サービスを再起動します。
+手順 1: Scale Out Worker 証明書を Scale Out Master ノード上のローカル コンピューターのルート証明書ストアにインストールして (まだインストールしていない場合)、Scale Out Worker サービスを再起動します。
 
-手順 2: スケール アウト マスター ノード上のローカル マシンのルート証明書ストアに不要な証明書をクリーンアップします。
+手順 2: Scale Out Master ノード上のローカル コンピューターのルート証明書ストア内の不要な証明書をクリーンアップします。
 
-手順 3: スケール アウト マスター ノードの下のレジストリ エントリを追加することで、TLS/SSL のハンドシェイク プロセス中に信頼されたルート証明機関の一覧を送信できなくに Schannel を構成します。
+手順 3: Scale Out Master ノードに次のレジストリ エントリを追加することで、TLS/SSL のハンドシェイク プロセス中に信頼されたルート証明機関の一覧を送信しないように、Schannel を構成します。
 
-Hkey_local_machine \system\currentcontrolset\control\securityproviders\schannel
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 値の名前: SendTrustedIssuerList 
 
-値の種類: REG_DWORD 
+値の型: REG_DWORD 
 
-データの値: 0 (False)
+値のデータ: 0 (False)
 
-**場合**
+**ケース**
 
-System.ServiceModel.CommunicationException: https:// への HTTP 要求を発行中にエラーが発生しました*[マシン名]: [Port]*ClusterManagement/です。 HTTP でサーバー証明書が正しく構成されていないという事実が原因が考えられます。HTTPS の場合も、SYS. これは、クライアントとサーバー間でセキュリティ バインドの不整合により原因でした。 
+System.ServiceModel.CommunicationException: https://*[Machine Name]:[Port]*/ClusterManagement/ に対する HTTP 要求の発行中にエラーが発生しました。 これは、HTTPS ケースの HTTP.SYS でサーバー証明書が正しく構成されていないという事実が原因と考えられます。 またはクライアントとサーバーの間でセキュリティ バインドが整合していないことも原因になり得ます。 
 
-手順 1: は、次のコマンドのマスター ノードに、スケール アウト マスター証明書が正しくバインド マスター エンドポイントのポートにかどうかを確認します。 スケール アウト マスター証明書の拇印で表示される証明書のハッシュが一致するかどうかを確認してください。
+手順 1: Scale Out Master 証明書が、次のコマンドを使用してマスター ノード上のマスター エンドポイントのポートに正しくバインドされているかどうかを確認します。 表示される証明書ハッシュが Scale Out Master 証明書のサムプリントと一致しているかどうかを確認します。
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-バインディングが正しくない場合は、次のコマンドでリセットし、スケール アウト Worker サービスを再起動します。
+バインドが正しくない場合は、次のコマンドを使ってリセットし、Scale Out Worker サービスを再起動します。
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
@@ -133,33 +135,42 @@ netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate
 ```
 
 ### <a name="symptoms"></a>**現象**
-スケール アウトでの実行を開始しません。
+Scale Out Manager で Scale Out Worker を Scale Out Master に接続したときに、"マシン上で証明書ストアを開けません" のエラー メッセージが出て検証が失敗した。
 
 ### <a name="solution"></a>**解決方法**
 
-[SSISDB] で、パッケージを実行時に選択したマシンの状態を確認してください。[カタログ] です。[worker_agents] です。 少なくとも 1 つのワーカーには、オンラインで有効なをする必要があります。
+手順 1: 管理者として Scale Out Manager を実行します。 SSMS で開く場合は、SSMS を管理者として実行する必要があります。
 
-### <a name="symptoms"></a>**現象** 
-パッケージが正常に動作しますが、記録されたメッセージはありません。
-
-### <a name="solution"></a>**解決方法**
-
-SQL Server 認証が許可されたかどうかは Sql Server から SSISDB をホストしていることを確認します。
-
-> [!Note]  
-> スケール アウト ログのアカウントを変更した場合は、次を参照してください。[スケール アウトのログ記録のアカウントの変更](change-logdb-account.md)ログに使用する接続文字列を確認してください。
+手順 2: マシンでリモート レジストリ サービスを起動します (実行されていない場合)。
 
 ### <a name="symptoms"></a>**現象**
-パッケージ実行のレポート内のエラー メッセージでは不十分なトラブルシューティングします。
+Scale Out で実行が開始されない。
 
 ### <a name="solution"></a>**解決方法**
-TasksRootFolder WorkerSettings.config で構成されている複数の実行ログを確認できます。 既定では\<ドライバー\>: \Users\\*[アカウント]*\AppData\Local\SSIS\ScaleOut\Tasks です。 *[アカウント]*は既定値は SSISScaleOutWorker140 スケール アウト Worker サービスを実行しているアカウントです。
 
-使用して、パッケージ実行のログを検索する*[実行 id]*、取得する次の T-SQL コマンドを実行、 *[タスク id]*です。 いう名前のサブフォルダーを検索し、 *[タスク id]* TasksRootFolder <sup> 。1<sup>
+[SSISDB].[catalog].[worker_agents] でパッケージを実行するために選択したマシンの状態を確認してください。 少なくとも 1 つのワーカーがオンラインで有効になっている必要があります。
+
+### <a name="symptoms"></a>**現象** 
+パッケージは正常に実行されているが、メッセージがログに記録されない。
+
+### <a name="solution"></a>**解決方法**
+
+SSISDB をホストしている SQL Server により SQL Server 認証が許可されているかどうかを確認します。
+
+> [!Note]  
+> Scale Out ログのアカウントを変更した場合は、「[Scale Out ログのアカウントの変更](change-logdb-account.md)」を参照し、ログ記録に使用する接続文字列を確認します。
+
+### <a name="symptoms"></a>**現象**
+パッケージ実行レポート内のエラー メッセージが、トラブルシューティングには不十分。
+
+### <a name="solution"></a>**解決方法**
+WorkerSettings.config で構成されている TasksRootFolder の下には、さらに多くの実行ログがあります。既定では \<ドライブ\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks です。 *[account]*は、既定値が SSISScaleOutWorker140 の Scale Out Worker サービスを実行しているアカウントです。
+
+*[execution id]* を持つパッケージ実行のログを見つけるには、次の T-SQL コマンドを実行し、*[task id]* を取得します。 次に、TasksRootFolder の下で *[task id]* という名前のサブフォルダーを見つけます。<sup>1<sup>
 
 ```sql
 SELECT [TaskId]
 FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executions 
 WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id
 ```
-<sup>1</sup>このクエリは、スケール アウト ワーカーのログ記録/診断シナリオが今後強化されるときに変更する目的のみおよびオープンをトラブルシューティングします。 
+<sup>1</sup> このクエリは、トラブルシューティング目的のみで、Scale Out Worker のログ記録/診断シナリオが今後強化されるときに変更される可能性があります。 

@@ -1,16 +1,17 @@
 ---
-title: "制御フローのデバッグ |Microsoft ドキュメント"
+title: "制御フローのデバッグ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.setbreakpoints.f1
+f1_keywords: sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、デバッグ ウィンドウが用意されています。  
   
 ## <a name="breakpoints"></a>ブレークポイント  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 **[ブレークポイントの設定]** ダイアログ ボックスが用意されています。このダイアログ ボックスから、ブレークの条件を有効にし、パッケージの実行が中断するまでのブレークポイントの到達回数を指定することにより、ブレークポイントを設定できます。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。 パッケージ レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 **[ブレークポイントの設定]** ダイアログ ボックスが用意されています。このダイアログ ボックスから、ブレークの条件を有効にし、パッケージの実行が中断するまでのブレークポイントの到達回数を指定することにより、ブレークポイントを設定できます。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。パッケージ レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
   
  ブレークポイントにヒットすると、ブレークポイントのアイコンが変化し、ブレークポイントの発生元を識別できます。 ブレークポイントは、パッケージの実行時に追加、削除、および変更できます。  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 08/03/2017
   
  次の図は、 **[進行状況]** タブを示しています。  
   
- ![SSIS デザイナーの進行状況 タブ](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS デザイナーの進行状況 タブ")  
+ ![SSIS デザイナーの [進行状況] タブ](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS デザイナーの [進行状況] タブ")  
   
 ## <a name="debug-windows"></a>デバッグ ウィンドウ  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。  
@@ -133,9 +134,9 @@ ms.lasthandoff: 08/03/2017
   
     -   パッケージ制御フローにブレークポイントを設定するには、 **[制御フロー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、 **[ブレークポイントの編集]**をクリックします。  
   
-    -   イベント ハンドラーにブレークポイントを設定するには、**[イベント ハンドラー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、**[ブレークポイントの編集]** をクリックします。  
+    -   イベント ハンドラーにブレークポイントを設定するには、 **[イベント ハンドラー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、 **[ブレークポイントの編集]**をクリックします。  
   
-4.  **ブレークポイントの設定\<コンテナー名 >**  ダイアログ ボックスで、有効にするブレークポイントを選択します。  
+4.  **[ブレークポイントの設定 - \<コンテナー名>]** ダイアログ ボックスで、有効にするブレークポイントを選択します。  
   
 5.  必要に応じて、各ブレークポイントのヒット カウントの種類とヒット カウント数を変更します。  
   
@@ -167,4 +168,3 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
-

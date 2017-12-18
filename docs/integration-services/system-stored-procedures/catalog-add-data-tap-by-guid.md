@@ -1,5 +1,5 @@
 ---
-title: "catalog.add_data_tap_by_guid |Microsoft ドキュメント"
+title: catalog.add_data_tap_by_guid | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9bd4ecb4a6a419f1965a349d46d16d764dd83708
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: efb6c297b776cd6246f0c6226160afba9302bcdb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,30 +40,30 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @execution_id =] *execution_id*  
- パッケージを含む実行の実行 ID。 *Execution_id*は、 **bigint**です。  
+ [ @execution_id = ] *execution_id*  
+ パッケージを含む実行の実行 ID。 *execution_id* は **bigint** です。  
   
- [ @dataflow_task_guid =] *dataflow_task_guid*  
- タップするデータ フロー パスを含むパッケージ内のデータ タスク フローの ID。 *Dataflow_task_guid*は、**uniqueidentifier**です。  
+ [ @dataflow_task_guid = ] *dataflow_task_guid*  
+ タップするデータ フロー パスを含むパッケージ内のデータ タスク フローの ID。 *dataflow_task_guid* は **uniqueidentifier** です。  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 **IdentificationString**パスのプロパティの文字列を指定します。  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 パスの **IdentificationString** プロパティは文字列を指定します。  
   
- 内で識別文字列を検索する[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]クリックして 2 つのデータ フロー コンポーネント間のパスを右クリックして**プロパティ**です。 **IdentificationString**プロパティに表示されて、**プロパティ**ウィンドウです。  
+ 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[IdentificationString]** プロパティが表示されます。  
   
- *Dataflow_path_id_string*は、 **nvarchar (4000)**です。  
+ *dataflow_path_id_string* は **nvarchar (4000)** です。  
   
- [ @data_filename =] *data_filename*  
- タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。 データ タップ ファイルは、フォルダーに書き込まれます"*\<SQL Server のインストール フォルダー >*\130\DTS\\"です。 *Data_filename*は、 **nvarchar (4000)**です。  
+ [ @data_filename = ] *data_filename*  
+ タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。 データ タップ ファイルは、"*\<SQL Server のインストール フォルダー>*\130\DTS\\" フォルダーに書き込まれます。 *data_filename* は **nvarchar (4000)** です。  
   
- [ @max_rows =] max_rows  
- データ タップ中にキャプチャされる行の数。 この値が指定されていない場合は、すべての行がキャプチャされます。 Max_rows は、 **int**です。  
+ [ @max_rows = ] max_rows  
+ データ タップ中にキャプチャされる行の数。 この値が指定されていない場合は、すべての行がキャプチャされます。 max_rows は **int** です。  
   
- [ @data_tap_id =] *data_tap_id*  
- データ タップの ID。 *Data_tap_id*は、 **bigint**です。  
+ [ @data_tap_id = ] *data_tap_id*  
+ データ タップの ID。 *data_tap_id* は **bigint** です。  
   
 ## <a name="example"></a>例  
- 次の例では、データ タップがデータ フロー パスで作成された`Paths[SRC DimDCVentor.OLE DB Source Output]`で、データ フロー タスク`{D978A2E4-E05D-4374-9B05-50178A8817E8}`です。 タップされたデータは、DCVendorOutput.csv ファイルに格納されます。  
+ 次の例では、データ フロー タスク `{D978A2E4-E05D-4374-9B05-50178A8817E8}` において、データ フロー パス `Paths[SRC DimDCVentor.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DCVendorOutput.csv ファイルに格納されます。  
   
 ```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
@@ -75,7 +73,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 ```  
   
 ## <a name="remarks"></a>解説  
- データ タップを追加する、実行のインスタンスが作成の状態である必要があります (1 の値、**ステータス**の列、 [catalog.operations & #40 です。SSISDB データベース &#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)ビュー)。 実行を処理すると状態の値が変わります。 呼び出して実行を作成することができます[catalog.create_execution & #40 です。SSISDB データベース &#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ データ タップを追加するには、実行のインスタンスが作成された状態である必要があります ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **[状態]** 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
   
  add_data_tap_by_guid ストアド プロシージャに関する考慮事項を以下に示します。  
   
@@ -100,9 +98,9 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 -   実行のインスタンスの MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  ストアド プロシージャが失敗する原因となる条件を以下に示します。  
@@ -119,4 +117,3 @@ exec catalog.add_data_tap_by_guid   @execution_id,
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
   
   
-

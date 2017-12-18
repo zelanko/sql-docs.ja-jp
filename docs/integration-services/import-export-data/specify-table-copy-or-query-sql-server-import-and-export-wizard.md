@@ -1,5 +1,5 @@
 ---
-title: "テーブルのコピーまたはクエリ (SQL Server インポートおよびエクスポート ウィザード) を指定して |Microsoft ドキュメント"
+title: "テーブルのコピーまたはクエリの指定 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.specifytablecopyorquery.f1
+f1_keywords: sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 59820083a0a092fc6704bebd491f1bfc0827732d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4ba4c750ecf556cdaae6fdbdfb08b6991316e544
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
+# <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] (SQL Server インポートおよびエクスポート ウィザード)
   データの出力先とデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[テーブルのコピーまたはクエリの指定]**が表示されます。 このページで、次のいずれかのオプションを選択します。
--   **1 つ以上のテーブルまたはビューからデータをコピーする**が表示されます。 テーブルまたは一覧からテーブルを選択するには。
--   **転送するデータを指定するためのクエリを記述する**が表示されます。 入力するか、SQL クエリのテキストを貼り付けるします。
+-   **1 つ以上のテーブルまたはビューからデータをコピーする**が表示されます。 一覧からテーブル (複数可) を選択します。
+-   **転送するデータを指定するためのクエリを記述する**が表示されます。 SQL クエリのテキストを入力するか貼り付けます。
     
 > [!TIP]
 > 複数のデータベース、またはテーブルとビュー以外のデータベース オブジェクトをコピーする必要がある場合は、インポートおよびエクスポート ウィザードではなく、データベース コピー ウィザードを使用します。 詳細については、「 [データベース コピー ウィザードの使用](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。     
@@ -38,11 +35,11 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>[テーブルのコピーまたはクエリの指定] ページのスクリーン ショット    
  次のスクリーン ショットでは、ウィザードの **[テーブルのコピーまたはクエリの指定]** ページを示します。    
     
- ![インポートおよびエクスポート ウィザードのテーブルのコピーまたはクエリ ページ](../../integration-services/import-export-data/media/table-copy-or-query.png "テーブル コピーまたはクエリのインポートおよびエクスポート ウィザードの選択 ページ")    
+ ![インポートおよびエクスポート ウィザードの [テーブルのコピーまたはクエリの指定] ページ](../../integration-services/import-export-data/media/table-copy-or-query.png "インポートおよびエクスポート ウィザードの [テーブルのコピーまたはクエリの指定] ページ")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>テーブル全体をコピーするかクエリを記述するかを指定する 
  **1 つ以上のテーブルまたはビューからデータをコピーする**    
- フィルター処理または並べ替えなしのソースからデータをコピーする場合は、このオプションを選択します。   
+ レコードのフィルター選択や並べ替えを実行せず、コピー元からデータをコピーする場合に、このオプションを選択します。   
 
 **[1 つ以上のテーブルまたはビューからデータをコピーする]**を選択すると、1 つのテーブルまたはビューから 1 つのコピー先のテーブルに、または複数のテーブルまたはビューから複数のコピー先のテーブルにコピーできます。
 
@@ -58,10 +55,10 @@ ms.lasthandoff: 09/26/2017
 ## <a name="why-isnt-the-copy-option-available"></a>[コピー] オプションはどうして利用できないのですか?    
  ウィザードで **データ プロバイダーを使用してデータ ソースに接続する場合、** [1 つ以上のテーブルまたはビューからデータをコピーする] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] オプションを使用できないことがあります。 データ ソースからテーブルおよびビューの一覧を要求するために必要なデータ プロバイダーに関する十分な情報がウィザードにない場合に、このような問題が起こります。 
  
-使用することもできます、**クエリを記述する**をエクスポートするテーブルの名前がわかっている限り、通常、SQL クエリを記述しない場合でも、オプションです。 **ソース クエリを指定する**した後に表示されるダイアログ ボックスをクリックして**[次へ]**、としてクエリを入力して`SELECT * FROM <name of table>`です。 テーブルの名前にスペースや特殊文字が含まれる場合は、角かっこの名を囲む`SELECT * FROM [<name of table>]`です。
+通常、SQL クエリを記述しない場合でも、エクスポートするテーブルの名前がわかっている限り、**[クエリを記述する]** オプションを使用できます。 **[次へ]** をクリックした後に表示される **[基になるクエリの指定]** ダイアログ ボックスで、`SELECT * FROM <name of table>` としてクエリを入力します。 テーブルの名前にスペースや特殊文字が含まれる場合は、角かっこで名を囲みます。`SELECT * FROM [<name of table>]`
 
 ### <a name="more-info"></a>詳細
- **[1 つ以上のテーブルまたはビューからデータをコピーする]** オプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 (既定では、このファイルは\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors)。このファイルの各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。    
+ **[1 つ以上のテーブルまたはビューからデータをコピーする]** オプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 (既定では、このファイルは、\<*ドライブ*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors に格納されています)。このファイルの各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。    
     
  既定では、ProviderDescriptors.xml ファイルには、次の一覧のプロバイダーの ProviderDescription セクションのみが含まれています。    
     
@@ -88,6 +85,5 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>参照
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

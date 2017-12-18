@@ -1,5 +1,5 @@
 ---
-title: "スクリプト コンポーネントによる形式標準以外のテキスト ファイルの解析 |Microsoft ドキュメント"
+title: "スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,48 +8,45 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - text file reading [Integration Services]
 - Script component [Integration Services], non-standard text file formats
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c6bf6a70027da7804e2fdca998948d44c9a26097
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 71d6dc8817b80e99fa5aece9fd5c581f22c69c4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
   ソース データが標準以外の形式の場合、複数の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換を連結するより、すべての解析ロジックを単一のスクリプトに統合する方がより便利で、同じ結果が得られる場合があります。  
   
  [例 1: 行区切りのレコードの解析](#example1)  
   
- [例 2: 親と子レコードの分割](#example2)  
+ [例 2: 親レコードと子レコードの分割](#example2)  
   
 > [!NOTE]  
 >  複数のデータ フロー タスクおよび複数のパッケージでより簡単に再利用できるコンポーネントを作成する場合は、このスクリプト コンポーネント サンプルのコードを基にした、カスタム データ フロー コンポーネントの作成を検討してください。 詳細については、「 [カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)」を参照してください。  
   
-##  <a name="example1"></a>例 1: 行区切りのレコードの解析  
+##  <a name="example1"></a> 例 1: 行区切りのレコードの解析  
  この例では、データの各列が個別の行に表示されるテキスト ファイルを取得し、スクリプト コンポーネントを使用して解析し、変換先テーブルに入れる方法を示します。  
   
- データ フローの変換として使用するため、スクリプト コンポーネントを構成する方法の詳細については、次を参照してください。[スクリプト コンポーネントによる同期変換を作成する](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)と[スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)です。  
+ スクリプト コンポーネントをデータ フローで変換として使用するための構成方法の詳細については、「[スクリプト コンポーネントによる同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」および「[スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)」を参照してください。  
   
 #### <a name="to-configure-this-script-component-example"></a>このスクリプト コンポーネントの例を構成するには  
   
-1.  作成し、という名前のテキスト ファイルを保存**rowdelimiteddata.txt**次のソース データを格納しています。  
+1.  次のソース データを含む、**rowdelimiteddata.txt** という名前のテキスト ファイルを作成して保存します。  
   
     ```  
     FirstName: Nancy  
@@ -92,19 +89,19 @@ ms.lasthandoff: 09/26/2017
   
 5.  フラット ファイル接続マネージャーをパッケージに追加し、RowDelimitedData という名前を付け、前の手順で作成した rowdelimiteddata.txt ファイルに接続するように構成します。  
   
-6.  OLE DB 接続マネージャーをパッケージに追加しのインスタンスに接続するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とコピー先のテーブルを作成したデータベースです。  
+6.  OLE DB 接続マネージャーをパッケージに追加し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと、変換先テーブルを作成したデータベースに接続するように構成します。  
   
-7.  パッケージにデータ フロー タスクを追加し、をクリックして、**データ フロー** SSIS デザイナーのタブです。  
+7.  データ フロー タスクをパッケージに追加し、SSIS デザイナーの **[データ フロー]** タブをクリックします。  
   
-8.  フラット ファイル ソースをデータ フローに追加し、RowDelimitedData 接続マネージャーを使用するように構成します。 **列**のページ、**フラット ファイル ソース エディター**、使用できる外部列を 1 つを選択します。  
+8.  フラット ファイル ソースをデータ フローに追加し、RowDelimitedData 接続マネージャーを使用するように構成します。 **[フラット ファイル ソース エディター]** の **[列]** ページで、単一の使用可能な外部列を選択します。  
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントを表示する をダブルクリック、**スクリプト変換エディター**です。  
+10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
   
-11. **入力列**のページ、**スクリプト変換エディター**、単一の使用可能な入力列を選択します。  
+11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. **入力と出力**のページ、**スクリプト変換エディター**出力 0 を選択し、設定、その**SynchronousInputID** [なし] にします。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
+12. **[スクリプト変換エディター]** の **[入力および出力]** ページで、出力 0 を選択し、**SynchronousInputID** を None に設定します。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
   
     -   FirstName  
   
@@ -116,7 +113,7 @@ ms.lasthandoff: 09/26/2017
   
     -   StateProvince  
   
-13. **スクリプト**のページ、**スクリプト変換エディター**をクリックして**スクリプトの編集**に示すようにコードを入力して、 **ScriptMain**のクラス例では、します。 スクリプト開発環境を閉じると、**スクリプト変換エディター**です。  
+13. **[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、例の **ScriptMain** クラスに示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 14. SQL Server 変換先をデータ フローに追加します。 OLE DB 接続マネージャーと RowDelimitedData テーブルを使用するように構成します。 スクリプト コンポーネントの出力をこの変換先に接続します。  
   
@@ -197,17 +194,17 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a>例 2: 親と子レコードの分割  
+##  <a name="example2"></a> 例 2: 親レコードと子レコードの分割  
  この例では、親レコードの前に区切り行があり、親レコードの後に行数不定の子レコード行が続くテキスト ファイルを取得し、スクリプト コンポーネントを使用して解析し、適切に正規化された親変換先テーブルと子変換先テーブルに入れる方法を示します。 この簡単な例は、なんらかの方法で各レコードの先頭と末尾を識別できれば、各親レコードおよび子レコードで複数の行または列を使用するソース ファイルに容易に適用できます。  
   
 > [!CAUTION]  
 >  このサンプルは、デモンストレーションのみを目的としています。 サンプルを複数回実行すると、重複したキーの値が変換先テーブルに挿入されます。  
   
- データ フローの変換として使用するため、スクリプト コンポーネントを構成する方法の詳細については、次を参照してください。[スクリプト コンポーネントによる同期変換を作成する](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)と[スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)です。  
+ スクリプト コンポーネントをデータ フローで変換として使用するための構成方法の詳細については、「[スクリプト コンポーネントによる同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」および「[スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)」を参照してください。  
   
 #### <a name="to-configure-this-script-component-example"></a>このスクリプト コンポーネントの例を構成するには  
   
-1.  作成し、という名前のテキスト ファイルを保存**parentchilddata.txt**次のソース データを格納しています。  
+1.  次のソース データを含む、**parentchilddata.txt** という名前のテキスト ファイルを作成して保存します。  
   
     ```  
     **********  
@@ -228,7 +225,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。  
   
-3.  変換先データベースを選択し、新しいクエリ ウィンドウを開きます。 クエリ ウィンドウで、変換先テーブルを作成する次のスクリプトを実行します。  
+3.  変換先データベースを選択し、新しいクエリ ウィンドウを開きます。 クエリ ウィンドウで、次のスクリプトを実行して変換先テーブルを作成します。  
   
     ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
@@ -253,23 +250,23 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 6.  OLE DB 接続マネージャーをパッケージに追加し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと、変換先テーブルを作成したデータベースに接続するように構成します。  
   
-7.  パッケージにデータ フロー タスクを追加し、をクリックして、**データ フロー** SSIS デザイナーのタブです。  
+7.  データ フロー タスクをパッケージに追加し、SSIS デザイナーの **[データ フロー]** タブをクリックします。  
   
-8.  フラット ファイル ソースをデータ フローに追加し、ParentChildData 接続マネージャーを使用するように構成します。 **列**のページ、**フラット ファイル ソース エディター**、使用できる外部列を 1 つを選択します。  
+8.  フラット ファイル ソースをデータ フローに追加し、ParentChildData 接続マネージャーを使用するように構成します。 **[フラット ファイル ソース エディター]** の **[列]** ページで、単一の使用可能な外部列を選択します。  
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントを表示する をダブルクリック、**スクリプト変換エディター**です。  
+10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
   
-11. **入力列**のページ、**スクリプト変換エディター**、単一の使用可能な入力列を選択します。  
+11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. **入力と出力**のページ、**スクリプト変換エディター**、出力 0 を選択、ParentRecords に名前を変更および設定の**SynchronousInputID** [なし] にします。 2 つの出力列を作成します。  
+12. **[スクリプト変換エディター]** の **[入力および出力]** ページで、出力 0 を選択し、ParentRecords に名前を変更してから、**SynchronousInputID** を None に設定します。 次の 2 つの出力列を作成します。  
   
     -   ParentID (主キー)、4 バイト符号付き整数型 [DT_I4]  
   
     -   ParentRecord、文字列型 [DT_STR]、長さ 32  
   
-13. 2 つ目の出力を作成し、ChildRecords という名前を付けます。 **SynchronousInputID**の新しい出力は既に None に設定します。 次の 3 つの出力列を作成します。  
+13. 2 つ目の出力を作成し、ChildRecords という名前を付けます。 新しい出力の **SynchronousInputID** は既に None に設定されています。 次の 3 つの出力列を作成します。  
   
     -   ChildID (主キー)、4 バイト符号付き整数型 [DT_I4]  
   
@@ -277,7 +274,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord、文字列型 [DT_STR]、長さ 50  
   
-14. **スクリプト**のページ、**スクリプト変換エディター**をクリックして**スクリプトの編集**です。 **ScriptMain**クラス、例に示すようにコードを入力します。 スクリプト開発環境を閉じると、**スクリプト変換エディター**です。  
+14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックします。 **ScriptMain** クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 15. SQL Server 変換先をデータ フローに追加します。 スクリプト コンポーネントの ParentRecords 出力をこの変換先に接続します。OLE DB 接続マネージャーと Parents テーブルを使用するように構成します。  
   
@@ -361,4 +358,3 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
  [スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

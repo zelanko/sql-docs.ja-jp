@@ -1,5 +1,5 @@
 ---
-title: "SSMS で、SSIS プロジェクトを配置 |Microsoft ドキュメント"
+title: "SSMS で SSIS プロジェクトを配置する | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,92 +8,89 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: b9729343ab14563ee6264795d6f098f3c22e91bf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 17670ea5b9cc4f0795a0aa8801a1c9b496ed580b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SSIS プロジェクトを SQL Server Management Studio (SSMS) の展開します。
-このクイック スタートでは、SQL Server Management Studio (SSMS) を使用して、SSIS カタログ データベースに接続し、SSIS プロジェクトを SSIS カタログに配置する Integration Services 配置ウィザードを実行する方法を示します。 
+# <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
+このクイック スタートでは、SQL Server Management Studio (SSMS) を使って、SSIS カタログ データベースに接続した後、Integration Services 配置ウィザードを実行して SSIS カタログに SSIS プロジェクトを配置する方法を説明します。 
 
-SQL Server Management Studio は、SQL データベースに SQL Server から SQL のインフラストラクチャを管理するための統合環境です。 SSMS の詳細については、次を参照してください。 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)です。
+SQL Server Management Studio は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS について詳しくは、「[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)」をご覧ください。
 
 ## <a name="prerequisites"></a>前提条件
 
-開始する前に、SQL Server Management Studio の最新バージョンであることを確認します。 SSMS をダウンロードするを参照してください。[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。
+始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」をご覧ください。
 
-## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースへの接続します。
+## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースに接続する
 
-SSIS カタログへの接続を確立するために SQL Server Management Studio を使用します。 
+SQL Server Management Studio を使って、SSIS カタログへの接続を確立します。 
 
 > [!NOTE]
-> Azure SQL データベース サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内での Azure SQL データベース サーバーに接続しようとしている場合、このポートが正常に接続するための企業ファイアウォールで開いていなければなりません。
+> Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
 
 1. SQL Server Management Studio を開きます。
 
-2. **サーバーへの接続** ダイアログ ボックスで、次の情報を入力します。
+2. **[サーバーへの接続]** ダイアログ ボックスに次の情報を入力します。
 
-   | 設定       | 推奨値 | 詳細 | 
+   | 設定       | 提案される値 | 詳細 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
-   | **サーバー名** | 完全修飾サーバー名 | 名前がこの形式では、Azure SQL Database サーバーに接続する場合:`<server_name>.database.windows.net`です。 |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使用します。 |
-   | **Login** | サーバーの管理者アカウント | これは、サーバーを作成したときに指定したアカウントです。 |
-   | **Password** | サーバーの管理者アカウントのパスワード | これは、サーバーを作成したときに指定したパスワードです。 |
+   | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
+   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使います。 |
+   | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
+   | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
-3. **[接続]**をクリックします。 SSMS では、オブジェクト エクスプ ローラー ウィンドウが開きます。 
+3. **[接続]**をクリックします。 [オブジェクト エクスプローラー] ウィンドウで、SSMS を開きます。 
 
-4. オブジェクト エクスプ ローラーで、 **Integration Services カタログ**順に展開**SSISDB** SSIS カタログ データベースでオブジェクトを表示します。
+4. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
-## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 配置ウィザードを開始します。
-1. オブジェクト エクスプ ローラーでの**Integration Services カタログ**ノードおよび**SSISDB**プロジェクト フォルダーを展開すると、展開します。
+## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 配置ウィザードを開始する
+1. オブジェクト エクスプローラーで、**[Integration Services カタログ]** ノードと **[SSISDB]** を展開した状態で、プロジェクト フォルダーを展開します。
 
-2.  選択、**プロジェクト**ノード。
+2.  **[プロジェクト]** ノードを選びます。
 
-3.  右クリックし、**プロジェクト**ノード**プロジェクトの配置**です。 Integration Services 配置ウィザードを開きます。 または、ファイル システムから、現在のカタログからプロジェクトを配置することができます。
+3.  **[プロジェクト]** ノードを右クリックして、**[プロジェクトの配置]** を選びます。 Integration Services 配置ウィザードが開きます。 現在のカタログから、またはファイル システムから、プロジェクトを配置することができます。
 
-## <a name="deploy-a-project-with-the-wizard"></a>ウィザードを使用してプロジェクトを配置します。
-1. **概要**ページ、ウィザードの概要を確認します。 をクリックして**次**を開くには、**ソースの選択**ページ。
+## <a name="deploy-a-project-with-the-wizard"></a>ウィザードを使用してプロジェクトを配置する
+1. ウィザードの **[概要]** ページで、概要を確認します。 **[次へ]** をクリックして、**[ソースの選択]** ページを開きます。
 
-2. **ソースの選択** ページで、展開する既存の SSIS プロジェクトを選択します。
+2. **[ソースの選択]** ページで、配置する既存の SSIS プロジェクトを選びます。
     -   作成したプロジェクト配置ファイルを配置するには、 **[プロジェクト配置ファイル]** を選択して .ispac ファイルのパスを入力します。
-    -   SSIS カタログに存在するプロジェクトを配置するには選択**Integration Services カタログ**、カタログ内のプロジェクトに、サーバー名とパスを入力します。
+    -   SSIS カタログにあるプロジェクトを配置するには、**[Integration Services カタログ]** を選び、サーバー名とカタログ内のプロジェクトのパスを入力します。
     **[次へ]** をクリックして、 **[配置先の選択]** ページを表示します。
   
-3.  **先の選択** ページで、プロジェクトの対象を選択します。
-    -   完全修飾サーバー名を入力します。 名前がこの形式では、対象サーバーが Azure SQL データベース サーバーの場合:`<server_name>.database.windows.net`です。
-    -   をクリックして**参照**SSISDB では、対象フォルダーを選択します。
-    をクリックして**次**を開くには、**レビュー**ページ。  
+3.  **[配置先の選択]** ページで、プロジェクトの配置先を選びます。
+    -   完全修飾サーバー名を入力します。 対象サーバーが Azure SQL Database サーバーの場合、名前は次の形式になります。`<server_name>.database.windows.net`
+    -   **[参照]** をクリックして、SSISDB でターゲット フォルダーを選びます。
+    **[次へ]** をクリックして **[レビュー]** ページを開きます。  
   
-4.  **確認** ページで選択した設定を確認します。
+4.  **[レビュー]** ページで選択した設定を確認します。
     -   選択内容を変更するには、 **[戻る]**をクリックするか、左ペインでいずれかの手順をクリックします。
     -   **[配置]** をクリックして、配置プロセスを開始します。
   
-5.  展開処理が完了した後、**結果**ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。
-    -   操作に失敗した場合にをクリックして**失敗**で、**結果**エラーの説明を表示する列。
-    -   必要に応じて、をクリックして**レポートを保存しています.**結果を XML ファイルに保存します。
-    -   をクリックして**閉じる**ウィザードを終了します。
+5.  配置プロセスが完了すると、**[結果]** ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。
+    -   アクションが失敗した場合は、**[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。
+    -   必要に応じて、**[レポートの保存]** をクリックして結果を XML ファイルに保存します。
+    -   **[閉じる]** をクリックしてウィザードを終了します。
 
 ## <a name="next-steps"></a>次の手順
-- パッケージを配置するには、その他の方法を検討してください。
-    - [SSIS パッケージにより、TRANSACT-SQL (SSMS) での展開します。](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Transact SQL (VS Code) を使用した SSIS パッケージを展開します。](ssis-quickstart-deploy-tsql-vscode.md)
-    - [コマンド プロンプトから、SSIS パッケージを展開します。](./ssis-quickstart-deploy-cmdline.md)
-    - [PowerShell を使用した SSIS パッケージを展開します。](ssis-quickstart-deploy-powershell.md)
-    - [C# を使用して、SSIS パッケージを展開します。](./ssis-quickstart-deploy-dotnet.md) 
-- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事を参照してください。
-    - [SSMS での SSIS パッケージを実行します。](./ssis-quickstart-run-ssms.md)
-    - [TRANSACT-SQL (SSMS) で、SSIS パッケージを実行します。](./ssis-quickstart-run-tsql-ssms.md)
-    - [Transact SQL (VS Code) を使用した SSIS パッケージを実行します。](ssis-quickstart-run-tsql-vscode.md)
-    - [コマンド プロンプトから、SSIS パッケージを実行します。](./ssis-quickstart-run-cmdline.md)
-    - [PowerShell での SSIS パッケージを実行します。](ssis-quickstart-run-powershell.md)
-    - [C# を使用して、SSIS パッケージを実行します。](./ssis-quickstart-run-dotnet.md) 
-
+- パッケージを配置する他の方法を検討します。
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Transact-SQL (VS Code) を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-tsql-vscode.md)
+    - [コマンド プロンプトから SSIS パッケージを配置する](./ssis-quickstart-deploy-cmdline.md)
+    - [PowerShell を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-powershell.md)
+    - [C# を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-dotnet.md) 
+- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事をご覧ください。
+    - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)
+    - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
+    - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
+    - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 

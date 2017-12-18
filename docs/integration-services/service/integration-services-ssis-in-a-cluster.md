@@ -1,5 +1,5 @@
 ---
-title: "クラスターにおける integration Services (SSIS) |Microsoft ドキュメント"
+title: "クラスターにおける Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,31 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 52fb4e913a48b65544aaca84408f847af74412be
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>クラスターにおける Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をクラスター化することはお勧めしません。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、クラスター化されるサービスまたはクラスター対応サービスではなく、クラスター ノード間のフェールオーバーはサポートしません。 したがって、クラスター環境では、クラスターの各ノードで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールし、スタンドアロン サービスとして起動する必要があります。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはクラスター化されるサービスではありませんが、クラスターの各ノードに個別に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールした後、クラスター リソースとして動作するように手動で構成することができます。  
   
- ただし、クラスター化されたハードウェア環境を構築する目的が高可用性を実現することにある場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成しなくても、この目的を達成できます。  クラスター内の他のノードからクラスター内の任意のノード上でパッケージを管理するには、クラスター内の各ノードで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを変更します。 パッケージが格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の使用可能なすべてのインスタンスを指し示すように、それぞれの構成ファイルを変更します。 この方法を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成したときに発生する可能性のある問題を回避できるうえ、ほとんどの顧客から求められる高可用性を実現できます。 構成ファイルを変更する方法の詳細については、次を参照してください。 [Integration Services サービス & #40 です。SSIS サービス &#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
+ ただし、クラスター化されたハードウェア環境を構築する目的が高可用性を実現することにある場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成しなくても、この目的を達成できます。  クラスター内の他のノードからクラスター内の任意のノード上でパッケージを管理するには、クラスター内の各ノードで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを変更します。 パッケージが格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の使用可能なすべてのインスタンスを指し示すように、それぞれの構成ファイルを変更します。 この方法を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成したときに発生する可能性のある問題を回避できるうえ、ほとんどの顧客から求められる高可用性を実現できます。 構成ファイルの変更方法の詳細については、「[Integration Services サービス &#40;SSIS サービス&#41;](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。  
   
  クラスター環境でサービスをどのように構成するかに関して詳しい情報に基づく決断を行うには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの役割を理解することがきわめて重要です。 詳細については、「[Integration Services サービス (SSIS サービス)](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。  
   
-## <a name="disadvantages"></a>短所
+## <a name="disadvantages"></a>欠点
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成する場合、次のような潜在的な欠点があります。  
   
 -   **フェールオーバーが発生したときに、実行中のパッケージが再起動されません。**
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   クラスター内に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを含む複数の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] リソース グループがある場合、フェールオーバーにより予期しない結果が生じる可能性があります。 次のシナリオについて考えてみます。 グループ 1 は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを含み、ノード A 上で実行されています。グループ 2 は、同様に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを含み、ノード B 上で実行されています。次に、グループ 2 からノード A へのフェールオーバーが発生します。ここで、ノード A 上で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの別のインスタンスを起動しようとした場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは単一インスタンス サービスなので、その試みは失敗します。 ノード A へのフェールオーバーを試行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが同様に失敗するかどうかは、グループ 2 における [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成に依存します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがリソース グループ内の他のサービスに影響を与えるように構成されている場合、フェールオーバーを試行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスは失敗します。なぜなら、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが失敗しているからです。 サービスがリソース グループ内の他のサービスに影響を与えないように構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスはノード A にフェールオーバーできます。リソース グループ内の他のサービスに影響を与えないようにグループ 2 の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが構成されていない限り、フェールオーバーを試行している [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが失敗すると、フェールオーバーを試行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスも失敗する可能性があります。  
 
-## <a name="configure-the-service-as-a-cluster-resource"></a>クラスター リソースとして、サービスを構成します。
+## <a name="configure-the-service-as-a-cluster-resource"></a>サービスをクラスター リソースとして構成する
 このセクションでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成する利点が欠点を上回ると判断したユーザー向けに、必要な構成手順を説明します。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成することをお勧めしません。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成するには、次のタスクを完了する必要があります。  
@@ -139,4 +137,3 @@ ms.lasthandoff: 09/26/2017
 -   これには、 **クラスター アドミニストレーター**で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを選択して右クリックし、ポップアップ メニューの **[オンラインにする]** をクリックします。 これで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがクラスター リソースとしてオンラインになります。  
   
   
-

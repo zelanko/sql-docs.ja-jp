@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Integration services (SSIS) パッケージの実行をスケール アウト |Microsoft ドキュメント"
+title: "SQL Server Integration Services (SSIS) Scale Out でパッケージを実行する | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-f1_keywords:
-- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) スケール アウトでパッケージを実行します。
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
 Integration Services サーバーにパッケージが展開されたら、Scale Out でパッケージを実行できます。
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>実行パッケージでスケール アウト ダイアログでパッケージを実行します。 
+## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>[Scale Out でパッケージを実行] ダイアログを使用してパッケージを実行する 
 
 1. [Execute Package In Scale Out (Scale Out でパッケージを実行)] ダイアログ ボックスを開く
 
@@ -43,7 +39,7 @@ Integration Services サーバーにパッケージが展開されたら、Scale
     **[詳細]** タブで、 **[再試行回数]**という Scale Out オプションを設定します。 パッケージの実行に失敗した場合の再試行回数を設定します。
 
     > [!Note]
-    > **エラー時にダンプ**オプションは、スケール アウト Worker サービスを実行しているアカウントがローカル コンピューターの管理者のみ効果を取得します。
+    > Scale Out Worker サービスを実行しているアカウントがローカル コンピューターの管理者である場合、**[エラー時にダンプする]** オプションのみが有効になります。
 
 3. マシンを選択する
 
@@ -53,7 +49,7 @@ Integration Services サーバーにパッケージが展開されたら、Scale
    > パッケージは、 **[Machine Selection (マシンの選択)]** ページに表示される、Scale Out Worker サービスのユーザー アカウント資格情報で実行されます。 既定のアカウントは NT Service\SSISScaleOutWorker140 です。 自分のラボ アカウントを変更することができます。
 
    >[!WARNING]
-   >同じワーカー上の別のユーザーによってトリガーされるパッケージの実行は、同じアカウントで実行されます。 それらの間のセキュリティ境界はありません。 
+   >パッケージの実行が同じワーカー上の別のユーザーによってトリガーされた場合、同じアカウントで実行されます。 それらの間にセキュリティ境界はありません。 
 
 4. パッケージを実行してレポートを表示する 
 
@@ -109,16 +105,15 @@ Scale Out でパッケージを実行するには、次のアクセス許可の�
   
 -   **sysadmin** サーバー ロールのメンバーシップ  
 
-## <a name="set-default-execution-mode"></a>既定の実行モードに設定します。
-「スケール アウト」既定の実行モードを設定するを右クリックして、 **SSISDB** SSMS のオブジェクト エクスプ ローラー ノード**プロパティ**です。
-**カタログ プロパティ**ダイアログで、セット**サーバー全体の既定の実行モード**に**スケール アウト**です。
+## <a name="set-default-execution-mode"></a>既定の実行モードを設定する
+既定の実行モードを "Scale Out" に設定するには、SSMS のオブジェクト エクスプローラーで **SSISDB** ノードを右クリックし、**[プロパティ]** を選択します。
+**[カタログ プロパティ]** ダイアログで、**[サーバー全体の既定の実行モード]** を **[Scale Out]** に設定します。
 
-この設定後を指定する必要はありません、  **@runinscaleout**  [カタログ] のパラメーターです [。create_execution] です。 実行は、スケール アウトで自動的に実行されます。 
+これを設定したら、[catalog].[create_execution] の **@runinscaleout**パラメーターを指定する必要はありません。 実行は、Scale Out で自動的に実行されます。 
 
-![Exe モード](media\exe-mode.PNG)
+![実行モード](media\exe-mode.PNG)
 
-以外のスケール アウト モードに戻るには、既定の実行モードを切り替えるに設定するだけ**サーバー全体の既定の実行モード**に**サーバー**です。
+既定の実行モードを -Scale Out 以外のモードに戻すには、**[サーバー全体の既定の実行モード]** を **[サーバー]** に設定するだけです。
 
-## <a name="run-package-in-sql-agent-job"></a>SQL エージェント ジョブでパッケージを実行します。
-Sql エージェント ジョブのジョブの 1 つの手順として、SSIS パッケージを実行するを選択できます。 でスケール アウトを、パッケージを実行するには、上記の既定の実行モードを利用できます。 「スケール アウト」には、既定の実行モードを設定、Sql エージェント ジョブ内のパッケージは、スケール アウトで実行されます。
-
+## <a name="run-package-in-sql-agent-job"></a>SQL エージェント ジョブでパッケージを実行する
+SQL エージェント ジョブで、ジョブの 1 つの手順として SSIS パッケージを実行することを選択できます。 Scale Out でパッケージを実行するため、上記の既定の実行モードを利用できます。 既定の実行モードを "Scale Out" に設定すると、SQL エージェント ジョブ内のパッケージが Scale Out で実行されます。

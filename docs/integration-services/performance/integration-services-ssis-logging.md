@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) のログ記録 |Microsoft ドキュメント"
+title: "Integration Services (SSIS) のログ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -141,7 +139,7 @@ ms.lasthandoff: 08/03/2017
 |**OnVariableValueChanged**|変数の値が変更されたときにログ エントリを書き込みます。|  
 |**OnWarning**|警告が発生したときにログ エントリを書き込みます。|  
 |**PipelineComponentTime**|各データ フロー コンポーネントに対する検証および実行の各フェーズのログ エントリを書き込みます。 ログ エントリは、各フェーズの処理時間を示します。|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|診断情報を提供するログ エントリを書き込みます。<br /><br /> たとえば、外部データ プロバイダーを呼び出す前と後にメッセージをログに書き込むことができます。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。<br /><br /> エラーが発生したデータ フロー内の列の列名を調べるには、 **DiagnosticEx** イベントを記録します。 このイベントは、データ フロー列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。 詳細については、「 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。<br /><br /> 注: SQL Server ログ プロバイダーを使用して **DiagnosticEx** イベントを記録する場合、出力が切り捨てられる可能性があります。 SQL Server ログ プロバイダーの **メッセージ** フィールドは、nvarchar (2048) 型です。 出力が切り捨てられないようにするには、 **DiagnosticEx** イベントを記録するときに別のログ プロバイダーを使用してください。|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|診断情報を提供するログ エントリを書き込みます。<br /><br /> たとえば、外部データ プロバイダーを呼び出す前と後にメッセージをログに書き込むことができます。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。<br /><br /> エラーが発生したデータ フロー内の列の列名を調べるには、 **DiagnosticEx** イベントを記録します。 このイベントは、データ フロー列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。<br /><br /> 注: SQL Server ログ プロバイダーを使用して **DiagnosticEx** イベントを記録する場合、出力が切り捨てられる可能性があります。 SQL Server ログ プロバイダーの **メッセージ** フィールドは、nvarchar (2048) 型です。 出力が切り捨てられないようにするには、 **DiagnosticEx** イベントを記録するときに別のログ プロバイダーを使用してください。|  
   
  パッケージおよび多くのタスクには、ログ機能を有効にできるカスタム ログ エントリがあります。 たとえば、メール送信タスクには **SendMailTaskBegin** カスタム ログ エントリがあります。これを使用すると、電子メール メッセージの送信前に、メール送信タスクの実行開始時の情報をログに書き込むことができます。 詳細については、「 [Custom Messages for Logging](#custom_messages)」を参照してください。  
   
@@ -177,7 +175,7 @@ ms.lasthandoff: 08/03/2017
  データ フロー タスクには、パフォーマンスの監視と調整に使用できるカスタム ログ エントリが数多くあります。 たとえば、メモリ リークを起こす可能性のあるコンポーネントを監視したり、特定のコンポーネントの実行所要時間を追跡できます。 カスタム ログ エントリの一覧とサンプルのログ出力については、「 [Data Flow Task](../../integration-services/control-flow/data-flow-task.md)」を参照してください。  
   
 #### <a name="capture-the-names-of-columns-in-which-errors-occur"></a>エラーが発生した列の名前をキャプチャする  
- データ フローのエラー出力を構成した場合、既定でエラーが発生した列の数値識別子のみがエラー出力に含まれます。 詳細については、「 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
+ データ フローのエラー出力を構成した場合、既定でエラーが発生した列の数値識別子のみがエラー出力に含まれます。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
  列の名前を確認するには、ログ記録を有効にして、 **DiagnosticEx** イベントを選択します。 このイベントは、データ フロー列マップをログに書き込みます。 その後、この列マップの識別子から列名を参照できます。 **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。  
   
@@ -232,9 +230,9 @@ ms.lasthandoff: 08/03/2017
   
 2.  次に、 **[SSIS]** メニューの **[ログ記録]**をクリックします。  
   
-3.  **[プロバイダーの種類]** 一覧からログ プロバイダーを選択し、**[追加]** をクリックします。  
+3.  **[プロバイダーの種類]** 一覧からログ プロバイダーを選択し、 **[追加]**をクリックします。  
   
-4.  **構成**列で、接続マネージャーを選択するかクリックして**\<新しい接続 >**新しい接続マネージャーを作成、適切な種類のログ プロバイダーのです。 選択したプロバイダーに応じて、次のいずれかの接続マネージャーを使用します。  
+4.  **[構成]** 列で、接続マネージャーを選択するか、または **[\<新しい接続>]** をクリックしてこのログ プロバイダーに適した種類の接続マネージャーを新しく作成します。 選択したプロバイダーに応じて、次のいずれかの接続マネージャーを使用します。  
   
     -   テキスト ファイル用には、ファイル接続マネージャーを使用します。 詳細については、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」(ファイル接続マネージャー) をご覧ください。  
   
@@ -242,7 +240,7 @@ ms.lasthandoff: 08/03/2017
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用には、OLE DB 接続マネージャーを使用します。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」をご覧ください。  
   
-    -   Windows イベント ログ用には何も指定しません。 [!INCLUDE[ssIS](../../includes/ssis-md.md)]ログが自動的に作成されます。  
+    -   Windows イベント ログ用には何も指定しません。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] によってログが自動的に作成されます。  
   
     -   XML ファイル用には、ファイル接続マネージャーを使用します。  
   
@@ -315,8 +313,8 @@ ms.lasthandoff: 08/03/2017
  **Description**  
  [説明] フィールドは編集可能です。 クリックして、ログの既定の説明を変更します。  
   
- **構成**  
- 一覧で、既存の接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
+ **Configuration**  
+ 既存の接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
  関連項目:「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 」、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」  
   
@@ -420,7 +418,7 @@ ms.lasthandoff: 08/03/2017
 |基本|カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
 |RuntimeLineage|データ フロー内の系列情報を追跡するために必要なデータを収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV や開発者は、この情報を利用して、ユーザー設定の系列マッピング ツールを構築できます。|  
 |パフォーマンス|パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。<br /><br /> **"実行のパフォーマンス"** レポートは、パッケージ データ フロー コンポーネントのアクティブな時間と合計時間を示します。 この情報は、最後のパッケージの実行のログ記録レベルが **[パフォーマンス]** または **[詳細]**に設定されていた場合にのみ表示されます。 詳細については、「 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)」を参照してください。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) ビューは、実行の各フェーズでのデータ フロー コンポーネントの開始時刻と終了時刻を表示します。 これらのコンポーネントの情報は、パッケージの実行のログ記録レベルが **[パフォーマンス]** または **[詳細]**に設定されている場合にのみ、このビューに表示されます。|  
-|[詳細]|カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。<br /><br /> カスタム イベントには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] タスクによってログに記録されるイベントが含まれます。 カスタム イベントの詳細については、「 [Custom Messages for Logging](#custom_messages)」を参照してください。<br /><br /> **DiagnosticEx** イベントは、診断イベントの例です。 パッケージ実行タスクで子パッケージを実行するたびに、このイベントは、子パッケージに渡されたパラメーター値をキャプチャします。<br /><br /> また、 **DiagnosticEx** イベントを使用すると、行レベルのエラーが発生した列名も取得できます。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。  詳細については、「 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> **DiagnosticEx** のメッセージ列の値は XML テキストです。 パッケージ実行のメッセージ テキストを表示するには、[catalog.operation_messages &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ビューのクエリを実行します。 **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。<br /><br /> [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) ビューは、パッケージ実行で、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行を表示します。 ビューにこの情報を取得するには、ログ記録レベルを **[詳細]** に設定する必要があります。|  
+|[詳細]|カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。<br /><br /> カスタム イベントには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] タスクによってログに記録されるイベントが含まれます。 カスタム イベントの詳細については、「 [Custom Messages for Logging](#custom_messages)」を参照してください。<br /><br /> **DiagnosticEx** イベントは、診断イベントの例です。 パッケージ実行タスクで子パッケージを実行するたびに、このイベントは、子パッケージに渡されたパラメーター値をキャプチャします。<br /><br /> また、 **DiagnosticEx** イベントを使用すると、行レベルのエラーが発生した列名も取得できます。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。  詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> **DiagnosticEx** のメッセージ列の値は XML テキストです。 パッケージ実行のメッセージ テキストを表示するには、[catalog.operation_messages &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ビューのクエリを実行します。 **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。<br /><br /> [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) ビューは、パッケージ実行で、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行を表示します。 ビューにこの情報を取得するには、ログ記録レベルを **[詳細]** に設定する必要があります。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>[カスタマイズされたログ記録レベルの管理] ダイアログ ボックスを使用して、カスタマイズされたログ記録レベルを作成して管理する  
  必要な統計情報とイベントのみを収集するカスタマイズされたログ記録レベルを作成できます。 また、必要に応じて、変数値、接続文字列、コンポーネントのプロパティなど、イベントのコンテキストもキャプチャできます。 パッケージを実行するときに、組み込みのログ記録レベルを選択できる場所であればどこでも、カスタマイズされたログ記録レベルを選択できます。  
@@ -687,4 +685,3 @@ SQL Server Integration Services には、パッケージや多くのタスクの
   
 ## <a name="related-content"></a>関連コンテンツ  
  [完全かつ詳細なログ記録用の DTLoggedExec ツール (CodePlex プロジェクト)](http://go.microsoft.com/fwlink/?LinkId=150579)  
-

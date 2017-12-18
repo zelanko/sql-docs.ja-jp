@@ -1,5 +1,5 @@
 ---
-title: "実行していると、プログラムによるパッケージの管理 |Microsoft ドキュメント"
+title: "プログラムによるパッケージの実行と管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="running-and-managing-packages-programmatically"></a>プログラムによるパッケージの実行と管理
   開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 その場合、次に示すいくつかの方法があります。  
@@ -34,18 +31,18 @@ ms.lasthandoff: 09/26/2017
   
 -   既存のパッケージを読み込み、再構成 (異なるデータ ソースなどに対して) してから実行します。  
   
--   新しいパッケージを作成、追加、オブジェクト単位やプロパティ単位のコンポーネントを構成および保存し、および実行します。  
+-   新しいパッケージを作成し、オブジェクト単位やプロパティ単位でコンポーネントを追加および構成し、保存してから実行します。  
   
- ロードし、クライアント アプリケーションからのみ、数行のコードを記述して、既存のパッケージを実行できます。  
+ 数行のコードを記述するだけで、クライアント アプリケーションから既存のパッケージを読み込んで実行することができます。  
   
- ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 高度なプログラミング オプションとして、プログラムで作成、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ 1 行ずつ、トピックの説明に従って[パッケージをプログラムによって構築](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)です。  
+ ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 詳細なプログラミング オプションとして、「[プログラムによるパッケージの作成](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)」トピックの説明に従い、1 行ずつプログラムを指定して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成できます。  
   
  また、保存されているパッケージ、実行中のパッケージ、およびパッケージ ロールを管理するためにプログラムによって実行できる他の管理タスクについても説明します。  
   
-## <a name="running-packages-on-the-integration-services-server"></a>Integration Services サーバーでパッケージを実行します。  
+## <a name="running-packages-on-the-integration-services-server"></a>Integration Services サーバー上のパッケージの実行  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにパッケージを配置するときに、<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間を使用してパッケージをプログラムで実行できます。 Microsoft.SqlServer.Management.IntegrationServices アセンブリは、.NET Framework 3.5 でコンパイルされます。 .NET Framework 4.0 アプリケーションを構築する場合は、プロジェクト ファイルに直接アセンブリ参照を追加する必要がある場合があります。  
   
- 名前空間を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置および管理することもできます。 名前空間とコード スニペットの概要については、ブログ記事を参照してください。 [SSIS カタログ マネージ オブジェクト モデルの](http://go.microsoft.com/fwlink/?LinkId=253122)、blogs.msdn.com です。  
+ 名前空間を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置および管理することもできます。 名前空間とコード スニペットの概要については、blogs.msdn.com のブログ エントリ「[SSIS カタログ マネージ オブジェクト モデルの概要](http://go.microsoft.com/fwlink/?LinkId=253122)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ローカル実行とリモート実行の相違点について](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  [プログラムによるパッケージの実行の管理](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  現在実行中のパッケージの一覧表示、プロパティの分析、および実行中のパッケージの停止方法について説明します。  
   
- [プログラムによるパッケージ ロールの管理 (&) #40 です。SSIS サービス &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [プログラムによるパッケージのロールの管理 (SSIS Service)](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  パッケージまたはフォルダーに割り当てられているロールに関する情報を取得または設定する方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
@@ -81,13 +78,12 @@ ms.lasthandoff: 09/26/2017
  スクリプト タスクを使用した制御フローの拡張方法と、スクリプト コンポーネントを使用したデータ フローの拡張方法について説明します。  
   
  [カスタム オブジェクトを使用したパッケージの拡張](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
- 複数のパッケージにプログラム カスタム タスク、データ フロー コンポーネント、および使用するためには、その他のパッケージ オブジェクトを作成する方法について説明します。  
+ 複数のパッケージで使用するプログラム カスタム タスク、データ フロー コンポーネント、およびその他のパッケージ オブジェクトを作成する方法について説明します。  
   
  [プログラムによるパッケージの作成](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
- 作成、構成、および保存する方法について説明[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージをプログラムでします。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをプログラムで作成、構成、および保存する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

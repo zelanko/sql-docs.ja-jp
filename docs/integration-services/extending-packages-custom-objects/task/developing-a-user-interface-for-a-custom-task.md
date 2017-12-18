@@ -1,5 +1,5 @@
 ---
-title: "カスタム タスクのユーザー インターフェイスの開発 |Microsoft ドキュメント"
+title: "カスタム タスク用ユーザー インターフェイスの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8707a24fda7d84ac260e33884d01279d8cbe5501
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>カスタム タスク用ユーザー インターフェイスの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルを使用すると、カスタム タスクの開発者は、タスク用のユーザー インターフェイスを容易に作成できます。作成後、このユーザー インターフェイスは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に統合して表示することができます。 このユーザー インターフェイスでは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザーに役に立つ情報を提供でき、カスタム タスクのプロパティや設定を正しく構成するための指針とすることができます。  
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
  このセクションでは、ユーザー インターフェイスを開発する際の <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性および <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> インターフェイスの役割について説明し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでタスクを作成、統合、配置、デバッグする方法について詳細に説明します。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)]デザイナーでは、タスクのユーザー インターフェイスを複数のエントリ ポイントが用意されています: ユーザーが選択できる**編集**ショートカット メニューで、タスクをダブルクリックするかクリックして、 **エディターの表示**プロパティ シートの下部にあるリンクします。 これらのエントリ ポイントのいずれかにアクセスすると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク用のユーザー インターフェイスが含まれているアセンブリを探して読み込みます。 タスクのユーザー インターフェイスには、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] で表示されるプロパティ ダイアログ ボックスを作成する役割があります。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーには、タスクのユーザー インターフェイスへの複数のエントリ ポイントがあります。つまり、ショートカット メニューの **[編集]** を選択し、タスクをダブルクリックするか、プロパティ シートの下部にある **[エディターの表示]** リンクをクリックできます。 これらのエントリ ポイントのいずれかにアクセスすると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク用のユーザー インターフェイスが含まれているアセンブリを探して読み込みます。 タスクのユーザー インターフェイスには、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] で表示されるプロパティ ダイアログ ボックスを作成する役割があります。  
   
  タスクとそのユーザー インターフェイスは個別のエンティティです。 ローカライズ、配置、メンテナンスなどの作業を容易にするため、タスクとユーザー インターフェイスは個別のアセンブリに実装する必要があります。 タスク DLL は、ユーザー インターフェイスの読み込み、呼び出しを行わず、これには通常、ユーザー インターフェイスに関するいかなる情報も含まれていません。ただし、タスク内でコード化された <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性値に含まれる情報は例外です。 タスクとユーザー インターフェイスは、この方法によってのみ関連付けられます。  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列挙のいずれかの値に設定します。 たとえば、 `RequiredProductLevel = DTSProductLevel.None`のようにします。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|タスクでテクニカル サポートが必要な場合の連絡先に関する情報。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|タスクに割り当てる型。|  
-|Attribute.TypeId|派生クラスに実装した場合、この属性の一意の識別子を取得します。 詳細については、次を参照してください。 **Attribute.TypeID** 、.NET Framework クラス ライブラリ内のプロパティです。|  
+|Attribute.TypeId|派生クラスに実装した場合、この属性の一意の識別子を取得します。 詳細については、.NET Framework クラス ライブラリの **Attribute.TypeID** プロパティを参照してください。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|アセンブリのタイプ名。[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーがアセンブリを読み込むために使用します。 このプロパティは、タスクのユーザー インターフェイス アセンブリを見つけるために使用します。|  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> を示します。この例でわかるように、この属性はクラス定義よりも前にコード化されています。  
@@ -127,7 +124,7 @@ End Class 'MyTask
   
  デザイナーは <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで表示するウィンドウを要求します。 タスクは、タスクのユーザー インターフェイスを含むウィンドウのインスタンスを作成し、ユーザー インターフェイスをデザイナーに返して表示させます。 通常、オーバーロードされたコンストラクターを介して、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> オブジェクトおよび <xref:Microsoft.SqlServer.Dts.Runtime.Connections> オブジェクトがウィンドウに渡されるため、これを使用してタスクを構成できます。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク ユーザー インターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、タスク用のユーザー インターフェイスを表示します。 タスク ユーザー インターフェイスはこのメソッドから Windows フォームを返し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、このフォームをモーダル ダイアログ ボックスとして表示します。 フォームが閉じられたときに[!INCLUDE[ssIS](../../../includes/ssis-md.md)]デザイナーの値を調べ、 **DialogResult**タスクが変更されたかどうかと、これらの変更を保存するかどうかを判断するフォームのプロパティです。 場合の値、 **DialogResult**プロパティは**OK**、[!INCLUDE[ssIS](../../../includes/ssis-md.md)]デザイナーは、変更を保存するタスクの持続メソッドを呼び出します。 それ以外の場合、変更は破棄されます。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク ユーザー インターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、タスク用のユーザー インターフェイスを表示します。 タスク ユーザー インターフェイスはこのメソッドから Windows フォームを返し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、このフォームをモーダル ダイアログ ボックスとして表示します。 フォームを閉じると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはフォームの **DialogResult** プロパティの値を確認し、タスクが変更されたかどうか、およびその変更を保存する必要があるかどうかを判断します。 **DialogResult** プロパティの値が **OK** の場合、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスクの持続メソッドを呼び出して変更を保存します。それ以外の場合は、変更は破棄されます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> インターフェイスを実装します。ここでは、SampleTaskForm という名前の Windows フォーム クラスが存在するものと想定しています。  
   
@@ -208,9 +205,8 @@ End Class
 ```  
  
 ## <a name="see-also"></a>参照  
- [カスタム タスクを作成します。](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
+ [カスタム タスクの作成](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [カスタム タスクのコーディング](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
- [カスタム タスクのユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [カスタム タスク用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) プロジェクトとソリューション |Microsoft ドキュメント"
+title: "Integration Services (SSIS) プロジェクトとソリューション | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.importprojectwizard.f1
+f1_keywords: sql13.ssis.importprojectwizard.f1
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 246a6df702e323d57d21e9e014aa059db31b300e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) プロジェクトとソリューション
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] パッケージを開発するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が用意されています。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは、プロジェクト内に存在します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成して作業するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../integration-services/install-windows/install-integration-services.md)」を参照してください。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージはプロジェクト内に存在します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成して作業するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../integration-services/install-windows/install-integration-services.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成する場合は、 **[新しいプロジェクト]** ダイアログ ボックスに **[Integration Services プロジェクト]** テンプレートが表示されます。 このプロジェクト テンプレートでは、パッケージを 1 つ含む新しいプロジェクトが作成されます。  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  プロジェクトはソリューション内に保存されます。 最初にソリューションを作成し、次に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトをそのソリューションに追加できます。 既存のソリューションがない場合、最初にプロジェクトを作成したときに [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] は自動的にソリューションを作成します。 1 つのソリューションにさまざまな種類の複数のプロジェクトを含めることができます。  
   
 > [!TIP]  
->  既定で新しいプロジェクトを作成するときに[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]に、ソリューションが表示されていない**ソリューション エクスプ ローラー**ウィンドウです。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]**をクリックします。 **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]**を展開し、 **[全般]**をクリックします。 **[全般]** ページで、 **[常にソリューションを表示]**を選択します。  
+>  既定では、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で新しいプロジェクトを作成すると、そのソリューションは**ソリューション エクスプローラー** ペインに表示されません。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]**をクリックします。 **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]**を展開し、 **[全般]**をクリックします。 **[全般]** ページで、 **[常にソリューションを表示]**を選択します。  
 
 ## <a name="solutions-contain-projects"></a>プロジェクトを格納するソリューション  
  ソリューションとは、エンド ツー エンドのビジネス ソリューションを開発するときに使用するプロジェクトを、グループ化して管理するコンテナーのことです。 ソリューションを使用すると、複数のプロジェクトを 1 単位として処理し、ビジネス ソリューションに役立つ 1 つ以上の関連プロジェクトをまとめることができます。  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="folders-in-integration-services-projects"></a>Integration Services プロジェクトのフォルダー  
  次の図は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] での [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクト内のフォルダーを示しています。  
   
- ![Integration Services プロジェクト内のフォルダー](../integration-services/media/solutionexplorer.gif "Integration Services プロジェクト内のフォルダー")  
+ ![Integration Services プロジェクトのフォルダー](../integration-services/media/solutionexplorer.gif "Integration Services プロジェクトのフォルダー")  
   
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに表示されるフォルダーについて説明します。  
   
@@ -92,7 +89,7 @@ ms.lasthandoff: 09/26/2017
   
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
- ![プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ")  
+ ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
  
 ## <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する  
   
@@ -124,11 +121,11 @@ ms.lasthandoff: 09/26/2017
   
 2.  **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
-     ![プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ")  
+     ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
   
  SQL Server 2016、SQL Server 2014 または SQL Server 2012 を対象とするパッケージを実行、作成、および管理できます。  
 
-## <a name="import-an-existing-project-with-the-import-project-wizard"></a>プロジェクトのインポート ウィザードで既存のプロジェクトをインポートします。
+## <a name="import-an-existing-project-with-the-import-project-wizard"></a>プロジェクトのインポート ウィザードで既存のプロジェクトをインポートする
   
 1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]** > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
   
@@ -160,7 +157,7 @@ ms.lasthandoff: 09/26/2017
   
 12. **[閉じる]** をクリックして **[Integration Services プロジェクトのインポート ウィザード]** ダイアログ ボックスを閉じます。  
 
-## <a name="add-a-project-to-a-solution"></a>プロジェクトをソリューションに追加します。 
+## <a name="add-a-project-to-a-solution"></a>ソリューションにプロジェクトを追加する 
  プロジェクトを追加する場合は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい空のプロジェクトを作成することも、別のソリューション用に既に作成したプロジェクトを追加することもできます。 プロジェクトを既存のソリューションに追加できるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。  
   
 ### <a name="add-a-new-project-to-a-solution"></a>ソリューションへの新しいプロジェクトの追加  
@@ -189,7 +186,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  選択したプロジェクトが、**ソリューション エクスプローラー**のソリューション フォルダーに追加されます。  
   
-## <a name="remove-a-project-from-a-solution"></a>プロジェクトをソリューションから削除します。
+## <a name="remove-a-project-from-a-solution"></a>ソリューションからプロジェクトを削除する
  プロジェクトをソリューションから削除できるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。 ソリューションが表示されていれば、1 つのプロジェクト以外はすべて削除できます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、残りのプロジェクトが 1 つのみになった時点でソリューション フォルダーが表示されなくなるので、最後の 1 つのプロジェクトは削除できません。  
    
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを削除する対象となるソリューションを開きます。  
@@ -198,7 +195,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  **[OK]** をクリックして変更を確認します。  
 
-## <a name="add-an-item-to-a-project"></a>プロジェクトに項目を追加します。  
+## <a name="add-an-item-to-a-project"></a>プロジェクトにアイテムを追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、アイテムを追加する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが含まれているソリューションを開きます。  
   
@@ -211,7 +208,7 @@ ms.lasthandoff: 09/26/2017
 3.  ソリューション エクスプローラーの該当フォルダーに、新しいアイテムが表示されます。  
 
 ## <a name="copy-project-items"></a>プロジェクト アイテムをコピーする  
-内のオブジェクトをコピーすることができます、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクトまたは間[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクト。 他の種類の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクト、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の間でオブジェクトをコピーすることもできます。 プロジェクト間でコピーするには、プロジェクトが同じ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ソリューションに含まれている必要があります。
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト内または [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト間でオブジェクトをコピーすることができます。 他の種類の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクト、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の間でオブジェクトをコピーすることもできます。 プロジェクト間でコピーするには、プロジェクトが同じ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ソリューションに含まれている必要があります。
 
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、作業対象とする [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトまたはソリューションを開きます。  
   
@@ -223,4 +220,3 @@ ms.lasthandoff: 09/26/2017
   
      アイテムが適切なフォルダーに自動的にコピーされます。 パッケージではない [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトにアイテムをコピーする場合は、アイテムが **[その他]** フォルダーにコピーされます。  
      
-

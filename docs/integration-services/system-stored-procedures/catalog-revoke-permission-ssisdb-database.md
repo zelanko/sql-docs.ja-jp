@@ -1,5 +1,5 @@
 ---
-title: "catalog.revoke_permission (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.revoke_permission (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  セキュリティ保護可能なオブジェクトに対する権限を取り消します、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのセキュリティ保護可能なオブジェクトに対するアクセス許可を取り消します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,17 +41,17 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @object_type =] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類を含めるフォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、および操作 (`4`)。*Object_type*は**smallint***です。*  
+ [ @object_type = ] *object_type*  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint** *です。*  
   
- [ @object_id =] *object_id*  
- 一意識別子 (ID) のセキュリティ保護可能なオブジェクトです。 *Object_id*は**bigint**です。  
+ [ @object_id = ] *object_id*  
+ セキュリティ保護可能なオブジェクトの一意識別子 (ID)。 *object_id* は **bigint** です。  
   
- [ @principal_id =] *principal_id*  
- 権限を取り消すプリンシパルの ID。 *Principal_id*は**int**です。  
+ [ @principal_id = ] *principal_id*  
+ 権限を取り消すプリンシパルの ID。 *principal_id* は **int** です。  
   
- [ @permission_type =] *permission_type*  
- 権限の種類。 *Permission_type*は**smallint**です。  
+ [ @permission_type = ] *permission_type*  
+ 権限の種類。 *permission_type* は **smallint** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を返します。  
@@ -79,9 +77,9 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   オブジェクトに対する ASSIGN_PERMISSIONS 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="remarks"></a>解説  
  Permission_type が指定されている場合、ストアド プロシージャは、オブジェクトのプリンシパルに明示的に割り当てられているアクセス許可を削除します。 このようなインスタンスがない場合でも、プロシージャは成功コード値 (`0`) を返します。 Permission_type を省略すると、ストアド プロシージャは、プリンシパル オブジェクトへのすべてのアクセス許可を削除します。  
@@ -104,4 +102,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|プリンシパルがフォルダー内のすべてのオブジェクトに対する権限を管理できるようにします。|フォルダー|  
   
   
-

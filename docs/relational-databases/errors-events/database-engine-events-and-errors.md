@@ -2,9 +2,12 @@
 title: "データベース エンジンのイベントとエラー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d905daa4fb553b7152befcefd97ea0afbdf6cfc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4e5ebba9bfa6cdbf6bf0c6c2416227a30c6605df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="database-engine-events-and-errors"></a>データベース エンジンのイベントとエラー
-  このトピックでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のエラーとイベントについて説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のエラーとイベントについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データベース エンジン エラーについて](../../relational-databases/errors-events/understanding-database-engine-errors.md)  

@@ -1,12 +1,14 @@
 ---
-title: "Integration Services (SSIS) の展開のプロジェクトとパッケージ |Microsoft ドキュメント"
+title: "Integration Services (SSIS) プロジェクトとパッケージの配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +20,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルと従来のパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/27/2017
 従来のパッケージ配置モデルの詳細については、「[レガシー パッケージの配置 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 > [!NOTE]  
->  プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このモデルを使用した場合、プロジェクト全体を配置することなく 1 つまたは複数のパッケージを配置することができませんでした。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] で導入された増分パッケージ配置機能によって、プロジェクト全体を配置することなく、プロジェクトに 1 つ以上のパッケージを配置できます。  
+>  プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このモデルを使用した場合、プロジェクト全体を配置することなく 1 つまたは複数のパッケージを配置することができませんでした。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] で導入された増分パッケージ配置機能によって、プロジェクト全体を配置することなく、プロジェクトに 1 つ以上のパッケージを配置できます。  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>プロジェクト配置モデルと従来のパッケージ配置モデルの比較  
  プロジェクトに対して選択する配置モデルの種類によって、そのプロジェクトに使用できる開発オプションと管理オプションが決まります。 次の表に、プロジェクト配置モデルを使用した場合とパッケージ配置モデルを使用した場合の相違点と共通点を示します。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 09/27/2017
 |パッケージは、個別の Windows プロセスで実行されます。|パッケージは、個別の Windows プロセスで実行されます。|  
 |SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|  
   
- プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このモデルを使用した場合、プロジェクト全体を配置することなく 1 つまたは複数のパッケージを配置することができませんでした。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] で導入された増分パッケージ配置機能によって、プロジェクト全体を配置することなく、プロジェクトに 1 つ以上のパッケージを配置できます。   
+ プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このモデルを使用した場合、プロジェクト全体を配置することなく 1 つまたは複数のパッケージを配置することができませんでした。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] で導入された増分パッケージ配置機能によって、プロジェクト全体を配置することなく、プロジェクトに 1 つ以上のパッケージを配置できます。   
   
 ## <a name="features-of-project-deployment-model"></a>プロジェクト配置モデルの機能  
  次の表に、プロジェクト配置モデル専用に開発されたプロジェクトで使用できる機能を示します。  
@@ -71,25 +72,25 @@ ms.lasthandoff: 09/27/2017
 ## <a name="project-deployment"></a>プロジェクト配置  
  プロジェクト配置モデルの中心にあるのは、プロジェクト配置ファイル (.ispac 拡張子) です。 プロジェクト配置ファイルは、プロジェクト内のパッケージおよびパラメーターに関する重要な情報のみを含む、自己完結型の配置単位です。 プロジェクト配置ファイルは、Integration Services プロジェクト ファイル (.dtproj 拡張子) に含まれるすべての情報を取得するわけではありません。 たとえば、メモの作成に使用する追加のテキスト ファイルは、プロジェクト配置ファイルには保存されないため、カタログには配置されません。  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>SSIS の展開に必要なアクセス許可のプロジェクトとパッケージ
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>SSIS プロジェクトとパッケージを展開するのに必要なアクセス許可
 
-既定値から、SSIS サービス アカウントを変更した場合は、パッケージを正常に展開する前に、既定以外のサービス アカウントに追加の権限を付与する必要があります。 既定以外のサービス アカウントには、必要なアクセス許可が割り当てられていない、次のエラー メッセージを参照してください可能性があります。
+SSIS サービス アカウントを既定値から変更した場合は、パッケージを正常に展開するために、既定以外のサービス アカウントに追加のアクセス許可を付与することが必要な場合があります。 既定以外のサービス アカウントに必要なアクセス許可が割り当てられていない場合、次のエラー メッセージが表示される可能性があります。
 
-*ユーザー定義のルーチンまたは集計"deploy_project_internal"実行中に、.NET Framework エラーが発生しました: System.ComponentModel.Win32Exception: 必要な権限がクライアントで保持されません。*
+*ユーザー定義のルーチンまたは集計 "deploy_project_internal" を実行中に .NET Framework エラーが発生しました: System.ComponentModel.Win32Exception: クライアントは要求された特権を保有していません。*
 
-このエラーは、通常、DCOM のアクセス許可が不足しているの結果です。 このエラーを解決するには、次のオプションを実行します。
+このエラーは、通常、DCOM アクセス許可が不足している場合に発生します。 このエラーを解決するには、次の操作を実行します。
 
-1.  開く、**コンポーネント サービス**コンソール (または Dcomcnfg.exe を実行) します。
-2.  **コンポーネント サービス**コンソールで、**コンポーネント サービス** > **コンピューター** > **マイ コンピューター** > **DCOM Config**です。
-3.  一覧で、検索**Microsoft SQL Server Integration Services xx.0**使用している SQL Server のバージョン。 たとえば、SQL Server 2016 は、バージョン 13 がします。
-4.  右クリックし **プロパティ**です。
-5.  **Microsoft SQL Server Integration Services 13.0 プロパティ**ダイアログ ボックスで、**セキュリティ**タブです。
-6.  アクセス許可のセット、3 つの起動とアクティブ化、アクセス、および構成の選択**カスタマイズ**選択してから、**編集**を開くには、**権限** ダイアログ ボックス。
-7.  **権限** ダイアログ ボックスで、既定以外のサービス アカウントを追加し、付与**許可**と必要なアクセス許可。 通常、アカウントには**ローカル起動**と**ローカル アクティブ化**アクセス許可。
-8.  をクリックして**OK**を 2 回を閉じて、**コンポーネント サービス**コンソールです。
+1.  **[コンポーネント サービス]** コンソールを開きます (または Dcomcnfg.exe を実行します)。
+2.  **[コンポーネント サービス]** コンソールで、**[コンポーネント サービス]** > **[コンピューター]** > **[マイ コンピューター]** > **[DCOM の構成]** を展開します。
+3.  一覧で、使用している SQL Server のバージョンに対応する **Microsoft SQL Server Integration Services xx.0** を探します。 たとえば、SQL Server 2016 がバージョン 13 であるとします。
+4.  右クリックし、**[プロパティ]** を選択します。
+5.  **[Microsoft SQL Server Integration Services 13.0 のプロパティ]** ダイアログ ボックスで、**[セキュリティ]** タブをクリックします。
+6.  3 つのアクセス許可 ("起動とアクティブ化"、"アクセス"、"構成") のそれぞれに対して、**[カスタマイズ]** を選択してから、**[編集]** を選択して **[権限]** ダイアログ ボックスを開きます。
+7.  **[権限]** ダイアログ ボックスで、既定以外のサービス アカウントを追加し、必要に応じて **[許可]** を付与します。 通常、アカウントには **[ローカルからの起動]** と **[ローカルからのアクティブ化]** のアクセス許可が割り当てられています。
+8.  **[OK]** を 2 回クリックし、**[コンポーネント サービス]** コンソールを閉じます。
 
-このセクションで説明するエラーと SSIS のサービス アカウントが必要なアクセス許可についての詳細については、次のブログの投稿を参照してください。  
-[System.ComponentModel.Win32Exception: SSIS プロジェクトを展開するときに、クライアントによっては必要な特権が保持されていません。](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+このセクションで示したエラーと SSIS サービス アカウントで求められるアクセス許可の詳細については、次のブログ投稿を参照してください。  
+[System.ComponentModel.Win32Exception: Deploying SSIS プロジェクトの配置中にクライアントが要求された特権を保有していません](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
   現在のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
@@ -99,11 +100,11 @@ ms.lasthandoff: 09/27/2017
   
  プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するには、次の作業を実行します。  
   
-1.  SSISDB カタログをまだ作成していない場合は、作成します。 詳細については、次を参照してください。 [SSIS カタログ](../../integration-services/service/ssis-catalog.md)です。  
+1.  SSISDB カタログをまだ作成していない場合は、作成します。 詳細については、「[SSIS カタログ](../../integration-services/service/ssis-catalog.md)」を参照してください。  
   
 2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、「 [プロジェクトをプロジェクトの配置モデルに変換するには](#convert)」の手順を参照してください。  
   
-    -   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
+    -   [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 以降でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
   
     -   以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]でプロジェクトを作成した場合、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクト ファイルを開いた後に、プロジェクトをプロジェクト配置モデルに変換します。  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 09/27/2017
 3.  ウィザードを完了します。 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>Integration Services サーバーへのパッケージの配置
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] で導入された増分パッケージ配置機能を使用すると、プロジェクト全体を配置することなく、既存または新規のプロジェクトに 1 つ以上のパッケージを配置できます。  
+  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] で導入された増分パッケージ配置機能を使用すると、プロジェクト全体を配置することなく、既存または新規のプロジェクトに 1 つ以上のパッケージを配置できます。  
   
 ###  <a name="DeployWizard"></a> Integration Services 配置ウィザードを使用してパッケージを配置する  
   
@@ -310,7 +311,7 @@ static void Main()
  このページでは、選択した設定を確認することができます。 選択内容を変更するには、 **[戻る]**をクリックするか、左ペインでいずれかの手順をクリックします。 **[配置]** をクリックして、配置プロセスを開始します。  
   
 #### <a name="results"></a>[結果]  
- 配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 をクリックして**レポートを保存しています.**を XML ファイルまたはをクリックして結果を保存する**閉じる**ウィザードを終了します。
+ 配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 **[レポートの保存]** をクリックして結果を XML ファイルに保存するか、**[閉じる]** をクリックしてウィザードを終了します。
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -422,9 +423,9 @@ static void Main()
   
 1.  [catalog.deploy_project (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) を呼び出して、パッケージを含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置します。  
   
-     バイナリ コンテンツを取得する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のプロジェクト配置ファイル、  *@project_stream* パラメーター、OPENROWSET 関数および一括行セット プロバイダーで SELECT ステートメントを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト配置ファイルのバイナリ コンテンツを取得するには、*@project_stream* パラメーターの場合、SELECT ステートメントと、OPENROWSET 関数および BULK 行セット プロバイダーを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
   
-     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。  *@ProjectBinary* にパラメーターの値を割り当て、  *@project_stream* パラメーター。  
+     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。 *@ProjectBinary* パラメーター値は、*@project_stream* パラメーターに割り当てられます。  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -729,4 +730,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **[レポートの保存]**  
  プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
-

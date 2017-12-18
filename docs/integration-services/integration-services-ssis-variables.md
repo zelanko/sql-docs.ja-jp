@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 変数 |Microsoft ドキュメント"
+title: "Integration Services (SSIS) の変数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  変数名を指定します。  
   
  **名前空間**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]2 つの名前空間を提供**ユーザー**と**システム**です。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 ユーザー定義変数用に追加の名前空間を作成し、 **User** 名前空間の名前を変更することはできますが、 **System** 名前空間の名前を変更したり、変数を **System** 名前空間に追加したり、システム変数を別の名前空間に割り当てたりすることはできません。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、**User** および **System** という 2 つの名前空間が用意されています。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 ユーザー定義変数用に追加の名前空間を作成し、 **User** 名前空間の名前を変更することはできますが、 **System** 名前空間の名前を変更したり、変数を **System** 名前空間に追加したり、システム変数を別の名前空間に割り当てたりすることはできません。  
   
 **RaiseChangedEvent**  
  このプロパティを **True**に設定すると、変数の値が変更された場合に **OnVariableValueChanged** イベントが発生します。  
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/03/2017
   
  **スクリプト タスクおよびスクリプト コンポーネント** 読み取り専用変数および読み取り/書き込み変数の一覧をスクリプト タスクまたはスクリプト コンポーネントに提供し、スクリプト内の読み取り/書き込み変数を更新して、更新された値をスクリプトの内外で使用します。 たとえば、コード `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`では、スクリプト変数 `numberOfCars` が変数 `NumberOfCars`の値によって更新されます。 詳細については、「 [スクリプト タスクでの変数の使用](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)」を参照してください。  
 
-## <a name="add-a-variable"></a>変数を追加します。  
+## <a name="add-a-variable"></a>変数の追加  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、操作する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -199,7 +197,7 @@ ms.lasthandoff: 08/03/2017
  **名前空間**  
  変数の名前空間を指定します。 既定で、ユーザー定義の変数は **User** 名前空間に置かれます。  
   
- **値の型**  
+ **[値の型]**  
  データ型を選択します。  
   
  **値**  
@@ -208,7 +206,7 @@ ms.lasthandoff: 08/03/2017
  **読み取り専用です。**  
  変数を読み取り専用にします。  
    
-## <a name="delete-a-variable"></a>変数を削除します。  
+## <a name="delete-a-variable"></a>変数の削除  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -224,7 +222,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="change-the-scope-of-a-variable"></a>変数のスコープを変更します。  
+## <a name="change-the-scope-of-a-variable"></a>変数のスコープの変更  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -248,9 +246,9 @@ ms.lasthandoff: 08/03/2017
 -   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数 (Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、および IncludeInDebugDump) を構成するためのプロパティが一覧表示されています。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]RaiseChangedEvent プロパティを除き、プロパティを更新できませんシステム変数のセットも用意されています。  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、RaiseChangedEvent プロパティを除き、更新できないプロパティを持つ一連のシステム変数もあります。  
   
-### <a name="set-expressions-on-variables"></a>変数のセット式  
+### <a name="set-expressions-on-variables"></a>変数への式の設定  
   
  **[プロパティ]** ウィンドウを使用してユーザー定義変数に式を設定する場合:  
   
@@ -270,11 +268,11 @@ ms.lasthandoff: 08/03/2017
   
  **[変数]** ウィンドウおよび **[プロパティ]** ウィンドウでは、変数に式を割り当てて、**EvaluateAsExpression** を **True** に設定した場合、変数のデータ型は変更できません。  
   
-### <a name="set-the-namespace-and-name-properties"></a>Namespace および名前プロパティを設定します。
+### <a name="set-the-namespace-and-name-properties"></a>Namespace プロパティと Name プロパティの設定
   
  **Name** プロパティと **Namespace** プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
-### <a name="set-variable-properties-in-the-variables-window"></a>[変数] ウィンドウで変数のプロパティを設定します。   
+### <a name="set-variable-properties-in-the-variables-window"></a>[変数] ウィンドウでの変数プロパティの設定   
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -292,7 +290,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
   
-### <a name="set-variable-properties-in-the-properties-window"></a>[プロパティ] ウィンドウで変数のプロパティを設定します。  
+### <a name="set-variable-properties-in-the-properties-window"></a>[プロパティ] ウィンドウでの変数プロパティの設定  
 
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -308,15 +306,14 @@ ms.lasthandoff: 08/03/2017
   
 7.  **[プロパティ]** ウィンドウで、読み取り/書き込みの変数プロパティを更新します。 ユーザー定義変数の場合は読み取り/読み取りのみのプロパティもあります。  
   
-     プロパティの詳細については、次を参照してください。 [Integration Services &#40;です。SSIS &#41;変数](../integration-services/integration-services-ssis-variables.md)です。  
+     プロパティの詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
 
-## <a name="update-a-variable-dynamically-with-configurations"></a>構成を持つ変数を動的に更新します。  
+## <a name="update-a-variable-dynamically-with-configurations"></a>構成での変数の動的更新  
  変数を動的に更新するために、変数の構成を作成し、パッケージと共に構成を配置して、パッケージの配置時に構成ファイルの変数の値を更新できます。 実行時に、パッケージは更新された変数の値を使用します。 詳細については、「 [パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)」を参照してください。  
 
 ## <a name="related-tasks"></a>関連タスク  
  [子パッケージでの変数およびパラメーターの値の使用](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-
