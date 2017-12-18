@@ -1,12 +1,14 @@
 ---
-title: "変換のカスタム プロパティ |Microsoft ドキュメント"
+title: "変換のカスタム プロパティ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -41,16 +43,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>変換のカスタム プロパティ
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、ほとんどのデータ フロー オブジェクトには共通するプロパティがありますが、それ以外にも、多くのデータ フロー オブジェクトにはオブジェクト固有のカスタム プロパティがあります。 カスタム プロパティにアクセスできるのは実行時のみで、このプロパティに関する説明は、『 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] マネージ プログラミング リファレンス マニュアル』には記載されていません。  
@@ -264,7 +266,7 @@ ms.lasthandoff: 08/03/2017
   
 |プロパティ|データ型|Description|  
 |--------------|---------------|-----------------|  
-|[Delimiters]|文字列|変換が使用するトークン区切り記号。 既定の区切り記号は、次の文字を含める: スペース ()、コンマ (,)、ピリオド (.)、セミコロン (;)、コロン (:)、ハイフン (-)、二重引用符 (")、1 つ二重引用符 (')、アンパサンド (&)、スラッシュ記号 (/)、円記号 (\\)、アット マーク (@)、感嘆符 (!)、疑問符 (?)、かっこ (()、終わりかっこ ()) を開くより小さい (\<)、大なり (>)、開き角かっこ ([)、閉じかっこ (])、左中かっこ ({})、中かっこ (})、パイプ (&#124;) を終了番号記号 (#)、アスタリスク (*)、キャレット (^)、およびパーセント (%)。|  
+|[Delimiters]|文字列|変換が使用するトークン区切り記号。 既定の区切り記号には以下の文字が含まれます。スペース ( )、コンマ (,)、ピリオド (.)、セミコロン (;)、コロン (:)、ハイフン (-)、二重引用符 (")、単一引用符 (')、アンパサンド (&)、スラッシュ (/)、円記号 (\\)、アット マーク (@)、感嘆符 (!)、疑問符 (?)、左かっこ (()、右かっこ ())、小なり (\<)、大なり (>)、左角かっこ ([)、右角かっこ (])、左中かっこ ({)、右中かっこ (})、パイプ文字 (&#124;)、シャープ記号 (#)、アスタリスク (*)、キャレット (^)、およびパーセント (%)。|  
 |Exhaustive|ブール値|各入力レコードを、他のすべての入力レコードと比較するかどうかを指定する値。 値 **True** は、主としてデバッグ目的で設定されます。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **あいまいグループ化変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |MaxMemoryUsage|Integer|変換で使用される最大メモリ容量。 このプロパティの既定値は **0**で、動的なメモリの使用が許可されることを示します。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。<br /><br /> 注: このプロパティは、 **あいまいグループ化変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |MinSimilarity|Double|重複部分を識別するために変換が使用する、類似性のしきい値。0 ～ 1 の間の値で表します。  このプロパティの既定値は 0.8 です。|  
@@ -298,7 +300,7 @@ ms.lasthandoff: 08/03/2017
 |プロパティ|データ型|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|ブール値|あいまい参照のインデックスの構築および以降の参照用に、参照テーブルのコピーを作成するかどうかを指定する値。 このプロパティの既定値は **True**です。|  
-|[Delimiters]|文字列|列の値をトークンにする際に使用される区切り記号。 既定の区切り記号は、次の文字を含める: スペース ()、コンマ (,)、ピリオド (.) セミコロン (;)、コロン (:) ハイフン (-)、二重引用符 (")、1 つ二重引用符 (')、アンパサンド (&)、スラッシュ記号 (/)、円記号 (\\)、アット マーク (@)、感嘆符 (!)、疑問符 (?)、左かっこ (()、終わりかっこ ()) より小さい (\<)、大なり (>)、開き角かっこ ([)、閉じかっこ (])、左中かっこ ({})、中かっこ (})、パイプ (&#124;) を終了します。 シャープ記号 (#)、アスタリスク (*)、キャレット (^)、およびパーセント (%)。|  
+|[Delimiters]|文字列|列の値をトークンにする際に使用される区切り記号。 既定の区切り記号には以下の文字が含まれます。スペース ( )、コンマ (,)、ピリオド (.)、セミコロン (;)、コロン (:)、ハイフン (-)、二重引用符 (")、単一引用符 (')、アンパサンド (&)、スラッシュ (/)、円記号 (\\)、アット マーク (@)、感嘆符 (!)、疑問符 (?)、左かっこ (()、右かっこ ())、小なり (\<)、大なり (>)、左角かっこ ([)、右角かっこ (])、左中かっこ ({)、右中かっこ (})、パイプ文字 (&#124;)。 シャープ記号 (#)、アスタリスク (*)、キャレット (^)、およびパーセント (%)。|  
 |DropExistingMatchIndex|ブール値|MatchIndexOptions の値が ReuseExistingIndex に設定されていない場合に、MatchIndexName で指定された一致インデックスを削除するかどうかを指定する値。 このプロパティの既定値は、 **True**です。|  
 |Exhaustive|ブール値|各入力レコードを、他のすべての入力レコードと比較するかどうかを指定する値。 値 **True** は、主としてデバッグ目的で設定されます。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **あいまい参照変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |MatchIndexName|文字列|一致インデックスの名前。 一致インデックスは、変換が使用するインデックスを作成して保存するテーブルです。 一致インデックスが再使用される場合、MatchIndexName は再使用するインデックスを示します。 MatchIndexName は、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子名である必要があります。 たとえば、名前にスペースが含まれる場合は、角かっこで囲む必要があります。|  
@@ -398,7 +400,7 @@ ms.lasthandoff: 08/03/2017
   
 |プロパティ名|データ型|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。 この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
+|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
 |DefaultCodePage|Integer|コード ページに関する情報をデータ ソースから取得できない場合に使用するコード ページ。|  
 |SqlCommand|文字列|データ フロー内の各行に対して変換が実行する Transact-SQL ステートメント。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
   
@@ -634,6 +636,6 @@ ms.lasthandoff: 08/03/2017
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [パスのプロパティ](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [式を使用して設定できるデータ フローのプロパティ](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [式を使って設定できるデータ フロー プロパティ](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: OData ソースの使用 |Microsoft ドキュメント"
+title: "チュートリアル: OData ソースの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: cbdc4a2e0719e65e378d232c5abcb5404e8342f1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 7f89e0403454aedd4804ae2585a82254ea092674
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorial-using-the-odata-source"></a>チュートリアル: OData ソースの使用
   このチュートリアルでは、サンプルの **Northwind** OData サービス (http://services.odata.org/V3/Northwind/Northwind.svc/) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
   
-## <a name="1-create-an-integration-services-project"></a>1.Integration Services プロジェクトを作成します。  
+## <a name="1-create-an-integration-services-project"></a>1.Integration Services プロジェクトの作成  
   
 1.  **SQL Server Data Tools** または [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を起動します。  
   
@@ -40,29 +38,29 @@ ms.lasthandoff: 08/23/2017
   
 5.  プロジェクトの **[名前]** を入力し、 **[場所]** を選択して、 **[OK]**をクリックします。  
   
-## <a name="2-add-and-configure-an-odata-source"></a>2.追加して、OData ソースを構成します。 
+## <a name="2-add-and-configure-an-odata-source"></a>2.OData ソースの追加と構成 
   
 1.  **[SSIS ツールボックス]** の **[データ フロー タスク]** を、SSIS パッケージの制御フロー デザイン画面にドラッグ アンド ドロップします。  
   
-2.  をクリックして、**データ フロー**  タブまたはをダブルクリック、 **Data Flow Task**をデータ フロー デザイン画面を開きます。  
+2.  **[データ フロー]** タブをクリックするか、**[データ フロー タスク]** をダブルクリックして、[データ フロー] デザイン画面を開きます。  
   
 3.  **[SSIS ツールボックス]** の **[共通]** から **[OData ソース]**をドラッグ アンド ドロップします。
   
-4.  ダブルクリックして、 **OData ソース**を起動するコンポーネント、 **OData ソース エディター**  ダイアログ ボックス。  
+4.  **OData ソース** コンポーネントをダブルクリックして、**[OData ソース エディター]** ダイアログ ボックスを起動します。  
   
 5.  接続に対応する **[新規]** をクリックし、新しい OData 接続マネージャーを追加します。  
   
-6.  **[サービス ドキュメントの場所]**に対応する OData サービスの URL を入力します。 この URL は、サービス ドキュメント、または特定のフィードかエンティティの URL を指定できます。 このチュートリアルでは、サービス ドキュメントに URL を入力: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)です。  
+6.  **[サービス ドキュメントの場所]**に対応する OData サービスの URL を入力します。 この URL には、サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、サービス ドキュメントに対応する URL ([http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)) を入力します。  
   
 7.  OData サービスにアクセスするために、 **[認証]** で **[Windows 認証]** が選択されていることを確認します。 既定では、**[Windows 認証]** が選択されています。  
   
-8.  をクリックして**接続のテスト**、接続をテストし、をクリックする**OK** OData 接続マネージャーのインスタンスの作成を完了します。  
+8.  **[接続テスト]** をクリックして接続をテストし、**[OK]** をクリックして OData 接続マネージャーのインスタンスの作成を完了します。  
   
 9. **[OData ソース エディター]** ダイアログ ボックスの **[リソースのパスでコレクションを使用する]** オプションで **[コレクション]** が選択されていること確認します。  
   
-10. **コレクション**ドロップダウン リストで、**従業員**です。  
+10. **[コレクション]** ドロップダウン リストで、**[Employees]** を選択します。  
   
-11. **[クエリ オプション]**で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、 `$orderby=CompanyName&$top=100`のようにします。 このチュートリアルでは、次のように入力します。`$top=5`です。  
+11. **[クエリ オプション]**で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、 `$orderby=CompanyName&$top=100`のようにします。 このチュートリアルでは、「`$top=5`」と入力します。  
   
 12. **[プレビュー]** をクリックして、データをプレビューします。  
   
@@ -72,9 +70,9 @@ ms.lasthandoff: 08/23/2017
   
 15. **[OK]** をクリックし、 **[OData ソース エディター]** ダイアログ ボックスを閉じます。  
   
-## <a name="3-add-and-configure-a-flat-file-destination"></a>3.追加し、フラット ファイル変換先の構成
+## <a name="3-add-and-configure-a-flat-file-destination"></a>3.フラット ファイル変換先の追加と構成
   
-1.  今度は、**[SSIS ツールボックス]** の **[フラット ファイル変換先]** を、**[OData ソース]** コンポーネントの下にある [データ フロー] デザイン画面にドラッグ アンド ドロップします。  
+1.  今度は、 **[SSIS ツールボックス]** の **[フラット ファイル変換先]** を、 **[OData ソース]** コンポーネントの下にある [データ フロー] デザイン画面にドラッグ アンド ドロップします。  
   
 2.  青い矢印を使用して、 **[OData ソース]** コンポーネントを **[フラット ファイル変換先]** コンポーネントに接続します。  
   
@@ -82,9 +80,9 @@ ms.lasthandoff: 08/23/2017
   
 4.  **[フラット ファイル変換先エディター]** ダイアログ ボックスで **[新規]** をクリックし、新しいフラット ファイル接続マネージャーを作成します。  
   
-5.  **[フラット ファイル形式]** ダイアログ ボックスで、 **[区切り記号]**を選択します。 表示、**フラット ファイル接続マネージャー エディター**  ダイアログ ボックス。  
+5.  **[フラット ファイル形式]** ダイアログ ボックスで、 **[区切り記号]**を選択します。 その後、**[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスが表示されます。  
   
-6.  **フラット ファイル接続マネージャー エディター**  ダイアログ ボックスの**ファイル名**、入力`c:\Employees.txt`です。  
+6.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[ファイル名]**で、「`c:\Employees.txt`」と入力します。  
   
 7.  左側のナビゲーション ウィンドウで、 **[列]**をクリックします。 このページで、データをプレビューできます。  
   
@@ -94,8 +92,7 @@ ms.lasthandoff: 08/23/2017
   
 10. [OK] をクリックして、 **[フラット ファイル変換先エディター]** ダイアログ ボックスを閉じます。  
 
-## <a name="4-run-the-package"></a>4.パッケージを実行します。
-SSIS パッケージを実行します。 Id、名、出力ファイルが作成されフィードの OData から 5 人の従業員の姓を入力することを確認します。
+## <a name="4-run-the-package"></a>4.パッケージの実行
+SSIS パッケージを実行します。 OData フィードから得られた 5 人の従業員の ID、名、姓を使用して出力ファイルが作成されたことを確認します。
   
   
-

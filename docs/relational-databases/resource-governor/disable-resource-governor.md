@@ -1,10 +1,13 @@
 ---
-title: "リソース ガバナーを無効にしたとき | Microsoft Docs"
+title: "Resource Governor を無効にしたとき | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,21 +18,21 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d1f31e0676e056f9b9c22f2984996ccae7be44a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 69ff08716168f02736aa5a4ce8eb340fba637bc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="disable-resource-governor"></a>リソース ガバナーを無効にしたとき
-  リソース ガバナーを無効にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
+# <a name="disable-resource-governor"></a>Resource Governor を無効にしたとき
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Resource Governor を無効にするには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
 -   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
   
--   **リソース ガバナーの無効化に使用するもの:**  [オブジェクト エクスプローラー](#RGOffObjEx)、 [リソース ガバナーのプロパティ](#RGOffProp)、 [Transact-SQL](#RGOffTSQL)  
+-   **Resource Governor の無効化に使用するもの:**  [オブジェクト エクスプローラー](#RGOffObjEx)、[Resource Governor　のプロパティ](#RGOffProp)、 [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
- リソース ガバナーを無効にすると、結果は次のようになります。  
+ Resource Governor を無効にすると、結果は次のようになります。  
   
 -   分類子関数は実行されません。  
   
@@ -41,39 +44,39 @@ ms.lasthandoff: 11/09/2017
   
 -   通常のシステム監視は影響を受けません。  
   
--   構成は変更できますが、リソース ガバナーを有効にするまで変更は反映されません。  
+-   構成は変更できますが、Resource Governor を有効にするまで変更は反映されません。  
   
--   SQL Server の再起動時に、リソース ガバナーはその構成を読み込みません。このとき、既定および内部のワークロード グループとリソース プールのみが存在します。  
+-   SQL Server の再起動時に、Resource Governor はその構成を読み込みません。このとき、既定および内部のワークロード グループとリソース プールのみが存在します。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- ユーザー トランザクション内でリソース ガバナーを無効にする場合、 **ALTER RESOURCE GOVERNOR** ステートメントを使用できません。  
+ ユーザー トランザクション内で Resource Governor を無効にする場合、 **ALTER RESOURCE GOVERNOR** ステートメントを使用できません。  
   
 ###  <a name="Permissions"></a> 権限  
- リソース ガバナーを無効にするには、CONTROL SERVER 権限が必要です。  
+ Resource Governor を無効にするには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="RGOffObjEx"></a> オブジェクト エクスプローラーを使用してリソース ガバナーを無効にする  
- **オブジェクト エクスプローラーを使用してリソース ガバナーを無効にするには**  
+##  <a name="RGOffObjEx"></a> オブジェクト エクスプローラーを使用して Resource Governor を無効にする  
+ **オブジェクト エクスプローラーを使用して Resource Governor を無効にするには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[Resource Governor]**ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]**を右クリックし、 **[無効化]**をクリックします。  
+2.  **[Resource Governor]**を右クリックし、 **[無効化]**をクリックします。  
   
-##  <a name="RGOffProp"></a> リソース ガバナーのプロパティを使用してリソース ガバナーを無効にする  
- **[リソース ガバナーのプロパティ] ページでリソース ガバナーを無効にするには**  
+##  <a name="RGOffProp"></a> Resource Governor のプロパティを使用して Resource Governor を無効にする  
+ **[Resource Governor のプロパティ] ページで Resource Governor を無効にするには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[Resource Governor]** ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]**をクリックすると、 **[リソース ガバナーのプロパティ]** ページが開きます。  
+2.  **[Resource Governor]** を右クリックし、 **[プロパティ]**をクリックすると、 **[Resource Governor のプロパティ]** ページが開きます。  
   
-3.  **[リソース ガバナーの有効化]** チェック ボックスをオフにして、 **[OK]**をクリックします。  
+3.  **[Resource Governor の有効化]** チェック ボックスをオフにして、 **[OK]**をクリックします。  
   
-##  <a name="RGOffTSQL"></a> Transact-SQL を使用してリソース ガバナーを無効にする  
- **Transact-SQL を使用してリソース ガバナーを無効にするには**  
+##  <a name="RGOffTSQL"></a> Transact-SQL を使用して Resource Governor を無効にする  
+ **Transact-SQL を使用して Resource Governor を無効にするには**  
   
 1.  **ALTER RESOURCE GOVERNOR DISABLE** ステートメントを実行します。  
   
 ### <a name="example-transact-sql"></a>例 (Transact-SQL)  
- リソース ガバナーを有効にする例を次に示します。  
+ Resource Governor を有効にする例を次に示します。  
   
 ```  
 ALTER RESOURCE GOVERNOR DISABLE;  
@@ -81,11 +84,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
- [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
- [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
- [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
- [リソース ガバナーの分類子関数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
+ [[Resource Governor]](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor の有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
+ [Resource Governor リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
+ [Resource Governor の分類子関数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

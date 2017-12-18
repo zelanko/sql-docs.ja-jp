@@ -1,35 +1,35 @@
 ---
-title: "Data Streaming Destination |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: Data Streaming Destination | Microsoft Docs
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
+f1_keywords: SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b2a918e3460d23f33f432ea0925d722f9aefde78
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f6b5a6b41776010d957f149a28cd74d51a3b35b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
   **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
   
  下の例のクエリは、SSIS カタログの Power BI フォルダーに SSISPackagePublishing プロジェクトの Package.dtsx パッケージからの出力を返します。 このクエリは [Default Linked Server for Integration Services] という名前のリンク サーバーを利用し、このリンク サーバーは新しい OLE DB Provider for SSIS を利用します。 クエリには、SSIS カタログのフォルダー名、プロジェクト名、パッケージ名が含まれています。 OLE DB Provider for SSIS はクエリに指定されたパッケージを実行し、表形式の結果セットを返します。  
   
-```  
+```sql
 SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Folder=Power BI;Project=SSISPackagePublishing;Package=Package.dtsx')  
   
 ```  
@@ -82,7 +82,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  このタブの上部ペインに、使用可能な入力列がすべて表示されます。 このコンポーネントの出力に含める列を選択します。 選択した列は、下部ペインの一覧に表示されます。 この一覧の **[出力の別名]** フィールドに新しい名前を入力することにより、出力列の名前を変更できます。  
   
 ## <a name="input-output-properties-tab"></a>[入力プロパティと出力プロパティ] タブ  
- [入力列] タブと同様に、このタブの出力列の名前は変更できます。 左側のツリー ビューで、 **[Data Streaming Destination の入力]** 、 **[入力列]**の順に展開します。 入力列の名前をクリックし、右ペインで出力列の名前を変更します。  
+ [入力列] タブと同様に、このタブの出力列の名前は変更できます。左側のツリー ビューで、 **[Data Streaming Destination の入力]** 、 **[入力列]**の順に展開します。 入力列の名前をクリックし、右ペインで出力列の名前を変更します。  
   
 ## <a name="see-also"></a>参照  
  [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](http://go.microsoft.com/fwlink/?LinkID=317367)  

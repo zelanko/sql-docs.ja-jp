@@ -1,5 +1,5 @@
 ---
-title: "catalog.rename_environment (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.rename_environment (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fab134694401fa13f2798fcd5a5ef0787dc14f52
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name =] *folder_name*  
- 環境を含むフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
+ [ @folder_name = ] *folder_name*  
+ 環境を含むフォルダーの名前です。 *folder_name* は **nvarchar(128)** です。  
   
- [ @environment_name =] *environment_name*  
- 環境の元の名前。 *Environment_name*は**nvarchar (128)**です。  
+ [ @environment_name = ] *environment_name*  
+ 環境の元の名前。 *environment_name* は **nvarchar(128)** です。  
   
- [ @new_environment_name =] *new_environment_name*  
- 環境の新しい名前。 *New_environment_name*は**nvarchar (128)**です。  
+ [ @new_environment_name = ] *new_environment_name*  
+ 環境の新しい名前。 *new_environment_name* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -59,9 +57,9 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   環境の MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
@@ -77,4 +75,3 @@ catalog.rename_environment [ @folder_name = ] folder_name
 >  環境参照が有効でない場合、これらの参照を使用する対応するパッケージの検証および実行が失敗します。  
   
   
-

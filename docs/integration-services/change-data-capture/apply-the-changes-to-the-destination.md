@@ -1,5 +1,5 @@
 ---
-title: "転送先に変更を適用 |Microsoft ドキュメント"
+title: "変換先に変更を適用する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],applying changes
+helpviewer_keywords: incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9edb9959d4d72e6f18d8949cfe5b311cf9a0a131
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、3 番目に行う最後のタスクは、変更を変換先に適用することです。 挿入を適用するコンポーネント、更新を適用するコンポーネント、および削除を適用するコンポーネントが必要です。  
@@ -113,4 +110,3 @@ ms.lasthandoff: 08/03/2017
  変更データを取得する Transact-SQL ステートメントで、**cdc.fn_cdc_get_net_changes_<capture_instance>** 関数を呼び出すときに、*row_filter_option* パラメーターの値として *all with merge* を指定できます。 この変更データ キャプチャの関数は、挿入と更新を区別するために必要な追加の処理を実行する必要がない場合、効率が向上します。 *all with merge* パラメーター値を指定すると、変更データの **__$operation** 値は、削除の場合は 1、挿入または更新によって生じた変更の場合は 5 になります。 変更データの取得に使用する Transact-SQL 関数の詳細については、「 [変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)」を参照してください。 *all with merge* パラメーター値を使用して変更を取得したら、削除を適用して、残りの行を一時テーブルまたはステージング テーブルに出力することができます。 その後、下流の SQL 実行タスクで単一の MERGE ステートメントを使用して、すべての挿入または更新をステージング テーブルから変換先に適用できます。  
   
   
-

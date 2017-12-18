@@ -1,5 +1,5 @@
 ---
-title: "スクリプト タスクおよびスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグ |Microsoft ドキュメント"
+title: "スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,35 +8,32 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - breakpoints [Integration Services]
 - scripts [Integration Services], breakpoints
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96815b337311c4ba8d16e10c25891c728e7a0c74
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f16bd3fc90efc5c366660f388c5c719ed70185ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする
   この手順では、スクリプト タスクとスクリプト コンポーネントで使用するスクリプトに、ブレークポイントを設定する方法について説明します。  
   
- スクリプトでは、ブレークポイントを設定した後、**ブレークポイントの設定 -\<オブジェクト名 >**  ダイアログ ボックスに、組み込みブレークポイントと共に、ブレークポイントが一覧表示されます。  
+ スクリプトにブレークポイントを設定すると、**[ブレークポイントの設定 - \<オブジェクト名>]** ダイアログ ボックスに、組み込みブレークポイントと共に、設定したブレークポイントの一覧が表示されるようになります。  
   
 > [!IMPORTANT]  
->  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、次を参照してください。、**スクリプト タスクのデバッグ**」の「[コーディングし、スクリプト タスクのデバッグ](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)と**スクリプト コンポーネントのデバッグ**」の「[コーディングおよびスクリプト コンポーネントのデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)です。  
+>  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、「[スクリプト タスクのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)」の「**スクリプト タスクのデバッグ**」セクションおよび「[スクリプト コンポーネントのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」の「**スクリプト コンポーネントのデバッグ**」セクションを参照してください。  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>スクリプトにブレークポイントを設定するには  
   
@@ -44,13 +41,13 @@ ms.lasthandoff: 08/03/2017
   
 2.  ブレークポイントを設定するスクリプトを含むパッケージをダブルクリックします。  
   
-3.  スクリプト タスクを開くをクリックして、**制御フロー**タブをクリックし、スクリプト タスクをダブルクリックします。  
+3.  スクリプト タスクを開くには、**[制御フロー]** タブをクリックして、スクリプト タスクをダブルクリックします。  
   
-4.  スクリプト コンポーネントを開くをクリックして、**データ フロー**タブをクリックし、スクリプト コンポーネントをダブルクリックします。  
+4.  スクリプト コンポーネントを開くには、**[データ フロー]** タブをクリックして、スクリプト コンポーネントをダブルクリックします。  
   
-5.  をクリックして**スクリプト** をクリックし、**スクリプトの編集**です。  
+5.  **[スクリプト]** をクリックし、**[スクリプトの編集]** をクリックします。  
   
-6.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)、ブレークポイントを設定、その行を右クリックし] をポイントするスクリプトの行を検索する**ブレークポイント**、クリックして**ブレークポイントの挿入**です。  
+6.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) で、ブレークポイントを設定するスクリプト行を探して右クリックします。**[ブレークポイント]** をポイントし、**[ブレークポイントの挿入]** をクリックします。  
   
      ブレークポイントを表すアイコンがコード行に表示されます。  
   
@@ -61,4 +58,3 @@ ms.lasthandoff: 08/03/2017
 9. パッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
   
-

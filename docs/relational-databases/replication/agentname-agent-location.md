@@ -2,9 +2,12 @@
 title: "&lt;AgentName&gt; エージェントの場所 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2a23eef0a5877890b88b6a93b1362d814749158
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f26cfa943a7cf2e3853423bf565c9abad2a4c48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;AgentName&gt; エージェントの場所
-  マージ エージェント (マージ サブスクリプション用) とディストリビューション エージェント (トランザクション サブスクリプションおよびスナップショット サブスクリプション用) は、ディストリビューターまたはサブスクライバーで実行します。 エージェントをディストリビューターで実行するとサブスクリプションはプッシュ サブスクリプションとして参照され、サブスクライバーで実行するとプル サブスクリプションとして参照されます。 プッシュ サブスクリプションとプル サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。 ウィザードの手順で作成されたすべてのサブスクリプションは、選択した種類になります。 両方の種類のサブスクリプションを作成するには、ウィザードを 2 回実行する必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] マージ エージェント (マージ サブスクリプション用) とディストリビューション エージェント (トランザクション サブスクリプションおよびスナップショット サブスクリプション用) は、ディストリビューターまたはサブスクライバーで実行します。 エージェントをディストリビューターで実行するとサブスクリプションはプッシュ サブスクリプションとして参照され、サブスクライバーで実行するとプル サブスクリプションとして参照されます。 プッシュ サブスクリプションとプル サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。 ウィザードの手順で作成されたすべてのサブスクリプションは、選択した種類になります。 両方の種類のサブスクリプションを作成するには、ウィザードを 2 回実行する必要があります。  
   
 > [!NOTE]  
 >  サブスクリプションの種類は、作成後に変更することはできません。  

@@ -1,5 +1,5 @@
 ---
-title: "データのエラー処理 |Microsoft ドキュメント"
+title: "データのエラー処理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.configureerroroutput.f1
+f1_keywords: sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
   データ フロー コンポーネントが変換を列データに適用したり、変換元のデータを抽出したり、変換先にデータを読み込んだりするときに、エラーが発生する場合があります。 エラーが発生する原因の主なものは、予期しないデータ値です。 たとえば、数字ではなく文字列が列に含まれる場合、データ変換は失敗します。また、データは日付データであるが列のデータ型は数値の場合、データベース列への挿入は失敗します。あるいは、列の値が 0 の場合に数学的演算の結果が無効となり、それが原因で式の評価が失敗します。  
@@ -57,11 +54,11 @@ ms.lasthandoff: 09/26/2017
   
  次の図は、エラー出力が含まれる簡単なデータ フローを示しています。  
   
- ![エラー出力を使用したデータ フロー](../../integration-services/data-flow/media/mw-dts-11.gif "データ フローのエラー出力")  
+ ![エラー出力のあるデータ フロー](../../integration-services/data-flow/media/mw-dts-11.gif "エラー出力のあるデータ フロー")  
   
  詳細については、「 [データ フロー](../../integration-services/data-flow/data-flow.md) 」と「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)」を参照してください。  
 
-## <a name="configure-error-output-dialog-box"></a>構成のエラー出力 ダイアログ ボックス
+## <a name="configure-error-output-dialog-box"></a>[エラー出力の構成] ダイアログ ボックス
 **[エラー出力の構成]** ダイアログ ボックスを使用すると、エラー出力をサポートするデータ フロー変換のエラー処理オプションを構成できます。  
   
  エラー出力の操作の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
@@ -154,10 +151,9 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)   
- [変換でデータを変換します。](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [コンポーネントのパスを連結します。](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [変換を使用してデータを変換する](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [パスを使用してコンポーネントを連結する](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   
-

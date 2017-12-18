@@ -2,11 +2,12 @@
 title: "Analysis Services のアップグレード | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +26,14 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
-  Analysis Services インスタンスを同じサーバー モードの SQL Server バージョンにアップグレードすると、「[Analysis Services の新機能](../../analysis-services/what-s-new-in-analysis-services.md)」で説明する、最新リリースで導入された機能を利用できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services インスタンスを同じサーバー モードの SQL Server バージョンにアップグレードすると、「[Analysis Services の新機能](../../analysis-services/what-s-new-in-analysis-services.md)」で説明する、最新リリースで導入された機能を利用できます。  
   
  同じハードウェアで実行されている他のインスタンスとは独立して、各インスタンスをインプレース アップグレードできます。 ほとんどの管理者は、実稼働ワークロードを新しいサーバーに転送する前にアプリケーションをテストするために、新しいバージョンの新しいインスタンスをインストールしますが、 開発サーバーやテスト サーバーでは、インプレース アップグレードの方が便利な場合があります。  
   

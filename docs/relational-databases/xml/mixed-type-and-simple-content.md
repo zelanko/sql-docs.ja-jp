@@ -2,9 +2,12 @@
 title: "混合型と単純コンテンツ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b349d5223ed58b6c96b0e006940bbe11d83e0a1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 13d91aa41dac46b449e1cdb384bd970090d2c215
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mixed-type-and-simple-content"></a>混合型と単純コンテンツ
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、混合型を単純コンテンツに制限することはできません。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、混合型を単純コンテンツに制限することはできません。  
   
 ## <a name="example"></a>例  
  次の XML スキーマ コレクションでは、 `myComplexTypeA` は空にできる複合型です。 つまり、その要素はどちらも、 `minOccurs` が 0 に設定されています。 この複合型を、 `myComplexTypeB` の宣言で行った方法で単純コンテンツに制限することはできません。 したがって、次の XML スキーマ コレクションの作成は失敗します。  

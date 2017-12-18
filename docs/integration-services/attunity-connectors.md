@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Connectors for Oracle and Teradata by Attunity (SSIS) |Microsoft ドキュメント"
+title: Microsoft Connectors for Oracle and Teradata by Attunity (SSIS) | Microsoft Docs
 ms.date: 05/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,38 +17,36 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: fd8b0177227167f6caa3417029bb2acb974fe181
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d7e5ca02e2e4f7ee2e1a2e7044f522048a6fb196
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)
+# <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Microsoft Connectors for Oracle and Teradata by Attunity
 
-SSIS パッケージ内に、または Oracle または Teradata からのデータの読み込み時のパフォーマンスを最適化する by Attunity の Integration Services のコネクタをダウンロードできます。
+SSIS パッケージでの Oracle または Teradata との間でデータを読み込むときのパフォーマンスを最適化する Attunity による Integration Services 用のコネクタをダウンロードできます。
 
-## <a name="download-the-latest-attunity-connectors"></a>最新の Attunity コネクタをダウンロードします。
+## <a name="download-the-latest-attunity-connectors"></a>最新の Attunity コネクタをダウンロードする
 
-ここでのコネクタの最新バージョンを取得するには。  
-[Oracle および Teradata 用の Microsoft Connectors v5.0](https://www.microsoft.com/download/details.aspx?id=55179)
+最新バージョンのコネクタは次の場所から入手できます。  
+[Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)
 
-## <a name="issue---the-attunity-connectors-arent-visible-in-the-ssis-toolbox"></a>問題 - Attunity コネクタは、SSIS ツールボックスに表示されません。
+## <a name="issue---the-attunity-connectors-arent-visible-in-the-ssis-toolbox"></a>問題 - Attunity コネクタが SSIS ツールボックスに表示されない
 
-SSIS ツールボックス Attunity コネクタを表示するには、常にインストールする必要がターゲットの SQL Server Data Tools (SSDT) のバージョンと同じバージョンの SQL Server インストールされていること、コンピューターにコネクタのバージョン。 (するがありますも以前のバージョンのコネクタをインストールします。)この要件は、SSIS プロジェクトとパッケージの対象となる SQL Server のバージョンに依存しないです。
+SSIS ツールボックスに Attunity コネクタを表示するには常に、お使いのコンピューターにインストールされている SQL Server Data Tools (SSDT) と同じバージョンの SQL Server が対象になっているコネクタのバージョンをインストールする必要があります  (以前のバージョンのコネクタもインストールされている場合があります)。この要件は、SSIS プロジェクトとパッケージで対象になっている SQL Server のバージョンとは関係ありません。
 
-たとえば、最新バージョンの SSDT をインストールしている場合がある 17 のバージョンの SSDT ビルド番号が 14 で始まる。 このバージョンの SSDT では、SQL Server 2017 のサポートを追加します。 表示し、Attunity を使用して SSIS でのコネクタ パッケージを development - SQL Server の以前のバージョンを対象となる - もバージョン 5.0 Attunity コネクタの最新バージョンをインストールする必要がある場合でもです。 コネクタのこのバージョンでは、SQL Server 2017 のサポートも追加されます。
+たとえば、最新バージョンの SSDT をインストールしてある場合、SSDT のバージョンは 17 で、ビルド番号は 14 で始まっています。 このバージョンの SSDT では、SQL Server 2017 のサポートさ追加されます。 SSIS パッケージの開発で Attunity コネクタを表示および使用するには、以前のバージョンの SQL Server を対象にする場合であっても、最新バージョンの Attunity コネクタ (バージョン 5.0) をインストールする必要があります。 このバージョンのコネクタも、SQL Server 2017 のサポートを追加します。
 
-Visual Studio での SSDT のインストールされているバージョンを確認**ヘルプ** | **に関する Microsoft クトリ**、または**プログラムと機能**コントロール パネルの します。 次の表から Attunity コネクタの対応するバージョンをインストールします。
+Visual Studio の **[ヘルプ]** | **[Microsoft Visual Studio のバージョン情報]** またはコントロール パネルの **[プログラムと機能]** で、インストールされている SSDT のバージョンを確認します。 その後、次の表から対応するバージョンの Attunity コネクタをインストールします。
 
-|SSDT のバージョン|SSDT のビルド番号|ターゲット SQL Server のバージョン|コネクタの必要なバージョン|
+|SSDT のバージョン|SSDT のビルド番号|対象の SQL Server のバージョン|必要なコネクタのバージョン|
 |---------|---------|---------|---------|
-|17|14 で始まります。|SQL Server 2017|[Oracle および Teradata 用の Microsoft Connectors v5.0](https://www.microsoft.com/download/details.aspx?id=55179)|
-|16|13 で始まります。|SQL Server 2016|[Oracle および Teradata 用の Microsoft Connectors v4.0](https://www.microsoft.com/download/details.aspx?id=52950)|
+|17|14 で始まる値|SQL Server 2017|[Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
+|16|13 で始まる値|SQL Server 2016|[Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
 ||||
 
-## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>最新 SQL Server Data Tools (SSDT) のダウンロードします。
+## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>最新の SQL Server Data Tools (SSDT) をダウンロードする
 
-ここで SSDT の最新バージョンを取得します。  
+最新バージョンの SSDT を次の場所から入手します。  
 [SQL Server Data Tools (SSDT) のダウンロード](..//ssdt/download-sql-server-data-tools-ssdt.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "MONTH (SSIS 式) |Microsoft ドキュメント"
+title: "MONTH (SSIS 式) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2e480bc53181fdf01a64716e1fdb94fe4116716
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c4f5dbe8b6d0dd5c78c9459338ff898880c50cc0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 式)
   ある日付の、月の日付要素を表す整数値を返します。  
@@ -75,12 +73,11 @@ MONTH(GETDATE())
 ```  
   
 ## <a name="see-also"></a>参照  
- [DATEADD & #40 です。SSIS 式 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [Datediff 関数 & #40 です。SSIS 式 &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART & #40 です。SSIS 式 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [日付と #40 です。SSIS 式 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [年と #40 です。SSIS 式 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [関数と #40 です。SSIS 式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART &#40;SSIS 式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [YEAR &#40;SSIS 式&#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "スクリプト タスクによる Active Directory のクエリ |Microsoft ドキュメント"
+title: "スクリプト タスクによる Active Directory へのクエリの実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,34 +8,30 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], Active Directory access
 - SSIS Script task, Active Directory access
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0328b2eeaa94e279a53b45e8e205c1356768e53d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>スクリプト タスクによる Active Directory へのクエリの実行
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージなどの企業データ処理アプリケーションでは、Active Directory に格納されている従業員の階級、役職、またはその他の特性に基づいて、個別にデータを処理する必要性が頻繁に生じます。 Active Directory は、[!INCLUDE[msCoName](../../includes/msconame-md.md)]だけでなく、ユーザーは、コンピューターやプリンターなどの他の組織の資産に関するメタデータの一元的なストアを提供する Windows ディレクトリ サービスです。 **System.DirectoryServices** Microsoft .NET Framework の名前空間では、クラスを提供するための Active Directory に格納されている情報に基づいてデータ処理を直接ワークフローを操作するためです。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージなどの企業データ処理アプリケーションでは、Active Directory に格納されている従業員の階級、役職、またはその他の特性に基づいて、個別にデータを処理する必要性が頻繁に生じます。 Active Directory は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ディレクトリ サービスで、ユーザーに関するメタデータだけでなく、コンピューターやプリンターなどの他の組織資産に関するメタデータも集中して格納します。 Microsoft .NET Framework の **System.DirectoryServices** 名前空間では、Active Directory を使用して作業するためのクラスが用意されており、これを使用すると Active Directory が格納している情報に基づくデータ処理のワークフローを送信できます。  
   
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
@@ -47,13 +43,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  `email`、`name`、および `title` という 3 つの文字列変数を作成します。 `email` 変数の値に企業の有効な電子メール アドレスを入力します。  
   
-2.  **スクリプト**のページ、**スクリプト タスク エディター**、追加、`email`変数を**ReadOnlyVariables**プロパティです。  
+2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、`email` 変数を **ReadOnlyVariables** プロパティに追加します。  
   
-3.  追加、`name`と`title`変数を**ReadWriteVariables**プロパティです。  
+3.  `name` および `title` 変数を **ReadWriteVariables** プロパティに追加します。  
   
-4.  スクリプト プロジェクトに参照を追加、 **System.DirectoryServices**名前空間。  
+4.  このスクリプト プロジェクトでは、参照を **System.DirectoryServices** 名前空間に追加します。  
   
-5.  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 コードを使用して、 **Imports**インポートするステートメント、 **DirectoryServices**名前空間。  
+5.  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 コードで **Imports** ステートメントを使用し、**DirectoryServices** 名前空間をインポートします。  
   
 > [!NOTE]  
 >  このスクリプトを正しく実行するには、組織のネットワーク上で Active Directory が使用され、この例で使用される従業員の情報が格納されている必要があります。  
@@ -118,7 +114,6 @@ public void Main()
   
 ## <a name="external-resources"></a>外部リソース  
   
--   技術記事「 [SSIS での Active Directory 情報の処理](http://go.microsoft.com/fwlink/?LinkId=199588)、social.technet.microsoft.com  
+-   social.technet.microsoft.com の技術記事「[SSIS での Active Directory 情報の処理](http://go.microsoft.com/fwlink/?LinkId=199588)」  
   
   
-

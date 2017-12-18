@@ -2,9 +2,12 @@
 title: "FileTable へのファイルの読み込み | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fb882532e2c368c085b3834a0332e3c716ffd1c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9c1a12ddc536837a805d1d6b9da117e5a2d7087
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
-  FileTable にファイルを読み込むまたは移行する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] FileTable にファイルを読み込むまたは移行する方法について説明します。  
   
 ##  <a name="BasicsLoadNew"></a> FileTable へのファイルの読み込みまたは移行  
  FileTable へのファイルの読み込みや移行の方法は、ファイルが現在格納されている場所によって異なります。  

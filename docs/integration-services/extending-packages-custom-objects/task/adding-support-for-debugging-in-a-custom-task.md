@@ -1,5 +1,5 @@
 ---
-title: "カスタム タスクでのデバッグのサポートの追加 |Microsoft ドキュメント"
+title: "カスタム タスクにおけるデバッグのサポートの追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,33 +24,32 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6e3d95b834bf64cb4dd4201658e0905d3e3ed46
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンでは、ブレークポイントを使用することにより、パッケージ、タスク、およびその他の種類のコンテナーを実行中に中断できます。 ブレークポイントを使用すると、アプリケーションまたはタスクの正しい動作を妨げるエラーを確認し、修正できます。 ブレークポイントのアーキテクチャにより、クライアントは、タスクの処理を中断している間にパッケージ内のオブジェクトのランタイム値を定義された実行地点で評価できます。  
   
  カスタム タスクの開発者はこのアーキテクチャを利用して、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイス、およびその親インターフェイスである <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> を使用することにより、カスタム ブレークポイント ターゲットを作成できます。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスは、ランタイム エンジンと、カスタム ブレークポイント サイトまたはターゲットを作成し管理するためのタスクとの間の対話を定義します。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、ランタイム エンジンによって呼び出され、タスクの実行の中断および再開を通知するメソッドおよびプロパティを提供します。  
   
- ブレークポイント サイトまたはターゲットは、処理を中断できるタスクの実行ポイントです。 使用できるブレークポイント サイトからユーザーを選択、**ブレークポイントの設定** ダイアログ ボックス。 たとえば、Foreach ループ コンテナーでは、既定のブレークポイント オプションだけでなく [ループの各繰り返しの開始点で停止します] オプションを使用できます。  
+ ブレークポイント サイトまたはターゲットは、処理を中断できるタスクの実行ポイントです。 **[ブレークポイントの設定]** ダイアログ ボックスで使用できるブレークポイント サイトを選択します。 たとえば、Foreach ループ コンテナーでは、既定のブレークポイント オプションだけでなく [ループの各繰り返しの開始点で停止します] オプションを使用できます。  
   
- タスクが実行中にブレークポイント ターゲットに達すると、タスクはブレークポイント ターゲットを評価して、そのブレークポイントが有効かどうかを判別します。 有効な場合は、そのブレークポイントで実行を停止することを示します。 ブレークポイントが有効な場合、タスクは、ランタイム エンジンに対して <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> イベントを発生させます。 ランタイム エンジンが呼び出すことによって、イベントに応答、 **Suspend**パッケージで現在実行されている各タスクのメソッドです。 ランタイムが呼び出すと、タスクの実行が再開されます、 **ResumeExecution**中断されたタスクのメソッドです。  
+ タスクが実行中にブレークポイント ターゲットに達すると、タスクはブレークポイント ターゲットを評価して、そのブレークポイントが有効かどうかを判別します。 有効な場合は、そのブレークポイントで実行を停止することを示します。 ブレークポイントが有効な場合、タスクは、ランタイム エンジンに対して <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> イベントを発生させます。 ランタイム エンジンは、現在パッケージ内で実行中の各タスクの **Suspend** メソッドを呼び出して、このイベントに応答します。 中断されたタスクの **ResumeExecution** メソッドをランタイムが呼び出すと、タスクの実行が再開されます。  
   
  ブレークポイントを使用していないタスクでも、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> および <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスを実装する必要があります。 これにより、パッケージ内の他のオブジェクトが <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> イベントを発生させた場合でも、タスクを正しく中断することができます。  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>IDTSBreakpointSite インターフェイスおよび BreakpointManager  
- タスクは、<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> メソッドを呼び出し、整数 ID と説明のための文字列を提供することによって、ブレークポイント ターゲットを作成します。 タスクが、ブレークポイント ターゲットを含むコード内の地点に達すると、タスクは <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> メソッドを使用してブレークポイント ターゲットを評価し、そのブレークポイントが有効かどうかを判別します。 場合**true**、タスクでは、ランタイム エンジンを通知発生させることによって、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>イベント。  
+ タスクは、<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> メソッドを呼び出し、整数 ID と説明のための文字列を提供することによって、ブレークポイント ターゲットを作成します。 タスクが、ブレークポイント ターゲットを含むコード内の地点に達すると、タスクは <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> メソッドを使用してブレークポイント ターゲットを評価し、そのブレークポイントが有効かどうかを判別します。 **true** の場合、タスクは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> イベントを発生させて、ランタイム エンジンに通知します。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスは、タスクの作成中にランタイム エンジンによって呼び出される単一メソッド <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A> を定義します。 メソッドは、パラメーターとして <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> オブジェクトを提供し、このオブジェクトは各タスクでブレークポイントの作成や管理を行うために使用されます。 タスクを格納する必要があります、<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>中に使用するローカル、**検証**と**Execute**メソッドです。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスは、タスクの作成中にランタイム エンジンによって呼び出される単一メソッド <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A> を定義します。 メソッドは、パラメーターとして <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> オブジェクトを提供し、このオブジェクトは各タスクでブレークポイントの作成や管理を行うために使用されます。 タスクは <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> を **Validate** メソッドおよび **Execute** メソッドで使用するため、これをローカルで格納する必要があります。  
   
  次のサンプル コードでは、<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> を使用してブレークポイント ターゲットを作成する方法を示します。 このサンプルでは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> メソッドを呼び出してイベントを起動します。  
   
@@ -97,11 +94,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend インターフェイス  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、タスクの実行が一時停止または再開されるときに、ランタイム エンジンによって呼び出されるメソッドを定義します。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>インターフェイスによって実装、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>インターフェイス、およびその**Suspend**と**ResumeExecution**メソッドは通常、カスタム タスクでオーバーライドします。 ランタイム エンジンが受信すると、 **OnBreakpointHit**タスクからイベントを呼び出す、 **Suspend**を一時停止するタスクを通知する、実行中の各タスクのメソッドです。 ランタイム エンジンが呼び出すクライアントが実行を再開するとき、 **ResumeExecution**中断されているタスクのメソッドです。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、タスクの実行が一時停止または再開されるときに、ランタイム エンジンによって呼び出されるメソッドを定義します。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスによって実装され、この **Suspend** メソッドおよび **ResumeExecution** メソッドは、通常カスタム タスクによってオーバーライドされます。 ランタイム エンジンがタスクから **OnBreakpointHit** イベントを受け取ると、実行中の各タスクの **Suspend** メソッドを呼び出し、タスクに一時停止するよう通知します。 クライアントが実行を再開すると、ランタイム エンジンは中断しているタスクの **ResumeExecution** メソッドを呼び出します。  
   
- タスクの実行が中断および再開されると、タスクの実行スレッドも一時停止および再開されます。 マネージ コードでこれを行うを使用して、 **ManualResetEvent**クラス**System.Threading** .NET Framework の名前空間。  
+ タスクの実行が中断および再開されると、タスクの実行スレッドも一時停止および再開されます。 マネージ コードでは、これは、.NET Framework の **System.Threading** 名前空間の **ManualResetEvent** クラスを使用することにより実現されます。  
   
- 次のコード サンプルは、タスクの実行を中断および再開します。 注意して、 **Execute**メソッドが前のコード サンプルを変更し、ブレークポイントが発生する実行スレッドが一時停止します。  
+ 次のコード サンプルは、タスクの実行を中断および再開します。 **Execute** メソッドは上記のコード サンプルから変更され、ブレークポイントが発生すると実行スレッドが一時停止します。  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -354,4 +351,3 @@ End Sub
  [制御フローのデバッグ](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   
-

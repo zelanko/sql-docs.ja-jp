@@ -1,5 +1,5 @@
 ---
-title: "フラット ファイル変換先 |Microsoft ドキュメント"
+title: "フラット ファイル変換先 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 14de99532df85ad2d65d28bdeeccfcbd8fa3d039
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="related-tasks"></a>関連タスク  
  データ フロー コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」をご覧ください。  
   
-## <a name="flat-file-destination-editor-connection-manager-page"></a>[フラット ファイル変換先エディター]\ ([接続マネージャー] ページ)
+## <a name="flat-file-destination-editor-connection-manager-page"></a>[フラット ファイル変換先エディター] ([接続マネージャー] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先のフラット ファイル接続を選択したり、既存の変換先ファイルに対して上書きまたは追加のどれを実行するかを指定したりできます。 フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号付き固定幅形式、または幅合わせしない形式を使用できます。  
   
 ### <a name="options"></a>オプション  
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/17/2017
  **プレビュー**  
  **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
   
-## <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター]\ ([マッピング] ページ)
+## <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター] ([マッピング] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
 ### <a name="options"></a>オプション  
@@ -95,7 +93,7 @@ ms.lasthandoff: 08/17/2017
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]**ボックスの一覧を使用して、マッピングを変更できます。 選択**\<無視 >**出力から列を除外します。  
+ このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]**ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、**[\<無視>]** を選択します。  
   
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/17/2017
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   
-

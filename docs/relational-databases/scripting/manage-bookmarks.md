@@ -2,9 +2,12 @@
 title: "ブックマークの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
-  コード エディターでの作業中に、 **[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] コード エディターでの作業中に、**[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
   
  ブックマークの作成やブックマーク間の移動は、 **[ブックマーク]** ウィンドウ上部の **[テキスト エディター]** ツール バーにあるボタンをクリックして実行します。 ブックマークの追加および削除や有効化および無効化を行ったり、ブックマークをフォルダーに構成したりできます。 また、 **[ブックマーク]** ウィンドウ ショートカット メニューから、特定のコマンドも利用できます。 ブックマークを追加または削除するには、エディターで目的の行にカーソルを置き、 **[ブックマークの設定/解除]**をクリックします。 ブックマークを有効化するには、 **[ブックマーク]** ウィンドウで対象ブックマークのチェック ボックスをオンにします。ブックマークを無効化する (ただし、削除しない) 場合は、チェック ボックスをオフにします。  
   

@@ -2,9 +2,12 @@
 title: "SQL Server エラー ログの表示 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,31 +23,31 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 177b287f4a107d87ed96acd96bd7a06efe5ecde4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7de82937a4bb622190da96b5668318304f641895
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server エラー ログの表示 (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログには、トラブルシューティングに利用できるユーザー定義のイベントや特定のシステム イベントが含まれています。 
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログには、トラブルシューティングに必要なユーザー定義のイベントや特定のシステム イベントが含まれています。 
+## <a name="view-the-logs"></a>ログの表示
 
-## <a name="how-to-view-the-logs"></a>ログを表示する方法
-
-1.  SSMS で **[オブジェクト エクスプローラー]** を選択します。 オブジェクト エクスプローラーを**開く**キーボード ショートカットは **F8** です。 または、上部メニューで **[表示]**、**[オブジェクト エクスプローラー]** の順にクリックします。
+1. SQL Server Management Studio で **[オブジェクト エクスプローラー]** を選択します。 **オブジェクト エクスプローラー**を開くには、F8 キーを押します。 または、上部メニューで **[表示]**、**[オブジェクト エクスプローラー]** の順に選択します。
     
-    ![Object_explorer](../../relational-databases/performance/media/object-explorer.png) 
+    ![Object_Explorer](../../relational-databases/performance/media/object-explorer.png) 
 
-2.  **[オブジェクト エクスプローラー]**で、SQL Server のインスタンスに接続して、そのインスタンスを展開します。
+2. **[オブジェクト エクスプローラー]**で、SQL Server のインスタンスに接続して、そのインスタンスを展開します。
   
-3.  **[管理]** セクションを探して開きます (表示するアクセス許可が必要です)。
+3. **[管理]** セクションを探して開きます (表示するアクセス許可が必要です)。
 
-4.  **[SQL Server ログ]** を右クリックし、**[表示]** を選択して、**[SQL Server ログの表示]** を選択します。
+4. **[SQL Server ログ]** を右クリックし、**[表示]**、**[SQL Server ログ]** の順に選択します。
 
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
-5.  ログ ファイル ビューアーでログの一覧が表示されます (1 分ほどかかる場合があります)。
+5. **ログ ファイル ビューアー**でログの一覧が表示されます (少し時間がかかることがあります)。
   
-6. [MSSQLTips.com](https://www.mssqltips.com/) の「 [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)」 (SQL Server エラー ログ ファイルの場所を探す) をご覧ください。 役に立つ情報があります。
+  ## <a name="see-also"></a>参照
+  詳細については、[MSSQLTips.com](https://www.mssqltips.com/) の参考になる投稿「[Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)」(SQL Server エラー ログ ファイルの場所を探す) を参照してください。
 

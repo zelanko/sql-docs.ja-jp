@@ -1,5 +1,5 @@
 ---
-title: "ODBC フロー コンポーネント |Microsoft ドキュメント"
+title: "ODBC フロー コンポーネント | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -56,9 +54,9 @@ ms.lasthandoff: 08/03/2017
   
  ODBC 入力元  
   
- [ODBC ソース エディター]\ ([接続マネージャー] ページ)  
+ [ODBC ソース エディター] ([接続マネージャー] ページ)  
   
- [ODBC ソース エディター]\ ([エラー出力] ページ)  
+ [ODBC ソース エディター] ([エラー出力] ページ)  
   
 -   ODBC 入力先は、ODBC でサポートされているデータベースにデータを読み込みます。 入力先を、SSIS によってサポートされている、任意の入力元または変換コンポーネントに接続することはできません。  
   
@@ -66,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  ODBC 入力先  
   
- [ODBC 変換先エディター]\ ([接続マネージャー] ページ)  
+ [ODBC 変換先エディター] ([接続マネージャー] ページ)  
   
  ODBC 変換先エディター ([エラー出力] ページ)  
   
@@ -144,4 +142,3 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
 -   [ODBC 入力先](../../integration-services/data-flow/odbc-destination.md)  
   
  
-

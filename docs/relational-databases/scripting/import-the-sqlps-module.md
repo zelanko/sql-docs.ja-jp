@@ -2,9 +2,12 @@
 title: "SQLPS モジュールのインポート | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cbd6691bf8fab45e58b41ad8e78166dd425ba605
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS モジュールのインポート
-  PowerShell から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理する方法としては、 **sqlps** モジュールを Windows PowerShell 環境にインポートする方法を推奨します。 このモジュールによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスナップインと管理アセンブリが読み込まれ、登録されます。  Windows PowerShell 3.0 以降、モジュールのコマンドレットまたは関数をコマンドで使用すると、モジュールは自動的にインポートされます。 この機能は、PSModulePath 環境変数値に含まれるディレクトリのすべてのモジュールで動作します。  詳細については、「 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)」(PowerShell モジュールのインポート) を参照してください。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] PowerShell から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理する方法としては、**sqlps** モジュールを Windows PowerShell 環境にインポートする方法をお勧めします。 このモジュールによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスナップインと管理アセンブリが読み込まれ、登録されます。  Windows PowerShell 3.0 以降、モジュールのコマンドレットまたは関数をコマンドで使用すると、モジュールは自動的にインポートされます。 この機能は、PSModulePath 環境変数値に含まれるディレクトリのすべてのモジュールで動作します。  詳細については、「 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)」(PowerShell モジュールのインポート) を参照してください。
   
 1.  **はじめに:**  [セキュリティ](#Security)  
   

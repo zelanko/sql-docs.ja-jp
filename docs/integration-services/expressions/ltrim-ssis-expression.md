@@ -1,5 +1,5 @@
 ---
-title: "LTRIM (SSIS 式) |Microsoft ドキュメント"
+title: "LTRIM (SSIS 式) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d68b87ab59dab0a5b7bbd199b58a6259eb28daf9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c045039fffb1a02da5d4f662b2eb3dcf6e4f165b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS 式)
   先頭のスペースを削除した後の文字式を返します。  
@@ -73,9 +71,8 @@ LTRIM(@FirstName)
 ```  
   
 ## <a name="see-also"></a>参照  
- [RTRIM & #40 です。SSIS 式 &#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [トリム & #40 です。SSIS 式 &#41;](../../integration-services/expressions/trim-ssis-expression.md)   
- [関数と #40 です。SSIS 式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [RTRIM &#40;SSIS 式&#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [TRIM &#40;SSIS 式&#41;](../../integration-services/expressions/trim-ssis-expression.md)   
+ [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

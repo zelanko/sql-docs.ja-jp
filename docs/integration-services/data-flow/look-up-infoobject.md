@@ -1,5 +1,5 @@
 ---
-title: "インフォ オブジェクトを検索 |Microsoft ドキュメント"
+title: "[インフォオブジェクトの参照] | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f5a7d1211c5b3451b353a579551931e5e3cf538
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
   SAP Netweaver BW システムで定義されたインフォオブジェクトを参照する場合、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、SAP BW 変換先で関連するオプションに必要な値が設定されます。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/03/2017
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW に関するドキュメントでは、SAP Netweaver BW 環境について理解していることを前提としています。 SAP Netweaver BW の詳細または SAP Netweaver BW オブジェクトやプロセスを構成する方法については、SAP のマニュアルを参照してください。  
   
- **インフォ オブジェクトのダイアログ ボックスを開く**  
+ **[インフォオブジェクトの参照] ダイアログ ボックスを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、SAP BW 変換先が含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -66,19 +64,19 @@ ms.lasthandoff: 08/03/2017
  **時間の特性**  
  時間の特性を表すインフォオブジェクトを参照します。  
   
- **名**  
+ **名前**  
  参照するインフォオブジェクトの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 すべてのインフォオブジェクトを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
  **Description**  
  アスタリスクのワイルドカード文字 (*) と一緒に説明、または部分的な説明を入力します。 説明にかからわずすべてのインフォオブジェクトを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
- **を検索します。**  
+ **[参照]**  
  SAP Netweaver BW システムで定義されている一致するインフォオブジェクトを参照します。  
   
 ## <a name="lookup-results"></a>参照結果  
  [参照] ボタンをクリックすると、SAP Netweaver BW システムのインフォオブジェクトの一覧が、次の列見出しのテーブルに表示されます。  
   
- **インフォ オブジェクトの作成**  
+ **インフォオブジェクト**  
  SAP Netweaver BW システムで定義されたインフォオブジェクトの名前を表示します。  
   
  **テキスト (短い)**  
@@ -87,13 +85,12 @@ ms.lasthandoff: 08/03/2017
  使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、変換先で関連するオプションに必要な値が設定されます。  
   
 ## <a name="see-also"></a>参照  
- [トランザクション データのインフォ キューブを作成します。](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
- [インフォ ソースを作成します。](../../integration-services/data-flow/create-infosource.md)   
- [トランザクション データのインフォ ソースを作成します。](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
- [マスター データのインフォ ソースを作成します。](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [新しいインフォ オブジェクトを作成します。](../../integration-services/data-flow/create-new-infoobject.md)   
+ [[トランザクション データのインフォキューブの作成]](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
+ [[インフォソースの作成]](../../integration-services/data-flow/create-infosource.md)   
+ [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [マスター データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-master-data.md)   
+ [新しいインフォオブジェクトの作成](../../integration-services/data-flow/create-new-infoobject.md)   
  [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

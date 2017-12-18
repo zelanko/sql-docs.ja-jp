@@ -1,5 +1,5 @@
 ---
-title: "キャスト (SSIS 式) |Microsoft ドキュメント"
+title: "Cast (SSIS 式) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4954ea582309732be9b911abc4a272a379a2227
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
   式のあるデータ型を別のデータ型に明示的に変換します。 キャスト演算子は、切り捨て演算子としても機能できます。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="remarks"></a>解説  
  次の図は、有効なキャスト演算を示しています。  
   
- ![データ型の間でキャストを有効および無効](../../integration-services/expressions/media/data-conversion.gif "データ型間の有効および無効のキャスト")  
+ ![データ型間の有効および無効なキャスト](../../integration-services/expressions/media/data-conversion.gif "データ型間の有効および無効なキャスト")  
   
  一部のデータ型にキャストする場合、パラメーターが必要となります。 次の表に、パラメーターが必要なデータ型とそのパラメーターの一覧を示します。  
   
@@ -152,9 +150,8 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 & #40 です。SSIS 式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services & #40 です。SSIS &#41;式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Integration Services 式のデータ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   
-

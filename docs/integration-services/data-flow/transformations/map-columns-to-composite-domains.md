@@ -1,25 +1,27 @@
 ---
-title: "列を複合ドメインにマップ |Microsoft ドキュメント"
+title: "複合ドメインへの列のマップ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a8f24f9808d184229cb85be5ddc88d0102f2ee7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 03b09844ac392f5f86fad88a29899953831ff82b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="map-columns-to-composite-domains"></a>複合ドメインへの列のマップ
   複合ドメインは 2 つ以上の単一ドメインで構成されています。 ドメインに複数の列をマップすることも、区切られた値を含む単一の列をドメインにマップすることもできます。  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  必要に応じて、 **[ソースの別名]**、 **[出力の別名]**、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
   
-6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。 プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
+6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>区切られた値を含む列を複合ドメインにマップするには  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  必要に応じて、 **[ソースの別名]**、 **[出力の別名]**、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
   
-6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。 プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
+6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [DQS クレンジング変換](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  

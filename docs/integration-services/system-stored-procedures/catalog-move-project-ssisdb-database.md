@@ -1,5 +1,5 @@
 ---
-title: "catalog.move_project (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.move_project (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5b091ccea1f733ebbf6e52308d17c7bdb7449cbe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB データベース
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  プロジェクトを内の別の 1 つのフォルダーに移動、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  特定のフォルダーのプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内の別のフォルダーに移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +37,14 @@ catalog.move_project [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @source_folder =] *source_folder*  
- プロジェクトが、移動前に配置されていたソース フォルダーの名前。 *Source_folder*は**nvarchar (128)**です。  
+ [ @source_folder = ] *source_folder*  
+ プロジェクトが、移動前に配置されていたソース フォルダーの名前。 *source_folder* は **nvarchar(128)** です。  
   
- [ @project_name =] *project_name*  
- 移動されるプロジェクトの名前。 *Project_name*は**nvarchar (128)**です。  
+ [ @project_name = ] *project_name*  
+ 移動されるプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
- [ @destination_folder =] *destination_folder*  
- プロジェクトが移動後に配置される移動先フォルダーの名前。 *Destination_folder*は**nvarchar (128)**です。  
+ [ @destination_folder = ] *destination_folder*  
+ プロジェクトが移動後に配置される移動先フォルダーの名前。 *destination_folder* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -59,9 +57,9 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   移動するプロジェクトに対する READ および MODIFY 権限と、移動先フォルダーに対する CREATE_OBJECTS 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  このストアド プロシージャがエラーを発生させる可能性がある条件を以下に示します。  
@@ -81,4 +79,3 @@ catalog.move_project [ @source_folder = ] source_folder
 >  プロジェクトでは、相対または絶対環境参照を使用できます。 相対参照の場合、名前によって環境を参照します。この環境はプロジェクトと同じフォルダーに格納されている必要があります。 絶対参照の場合、名前とフォルダーによって環境を参照します。これらの参照は、プロジェクトとは異なるフォルダーに格納されている環境を参照する場合があります。  
   
   
-

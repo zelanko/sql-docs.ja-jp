@@ -1,5 +1,5 @@
 ---
-title: "catalog.clear_object_parameter_value (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.clear_object_parameter_value (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9c079f4c5ce9809d1624992601213f6d5fafc8e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  既存のパラメーターの値をクリア[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プロジェクトまたはパッケージをサーバーに格納されています。  
+  サーバーに格納されている既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトまたはパッケージのパラメーターの値をクリアします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,20 +39,20 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name =] *folder_name*  
- プロジェクトを含むフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
+ [ @folder_name = ] *folder_name*  
+ プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
- [ @project_name =] *project_name*  
- プロジェクトの名前。 *Project_name*は**nvarchar (128)**です。  
+ [ @project_name = ] *project_name*  
+ プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
- [ @object_type =] *object_type*  
- オブジェクトの種類。 有効な値は、プロジェクトでは `20`、パッケージでは `30` です。 *Object_type*は**smallInt**です。  
+ [ @object_type = ] *object_type*  
+ オブジェクトの種類。 有効な値は、プロジェクトでは `20`、パッケージでは `30` です。 *object_type* は **smallInt** です。  
   
- [オブジェクト名 (_n) @ =]*オブジェクト名 (_n)*  
- パッケージの名前です。 *オブジェクト名 (_n)*は**nvarchar (260)**です。  
+ [ @ object _name = ] *object _name*  
+ パッケージの名前です。 *object _name* は **nvarchar(260)** です。  
   
- [@parameter_名前 =] *parameter_name*  
- パラメーターの名前。 *Parameter _ 名前*は**nvarchar (128)**です。  
+ [ @parameter_ name = ] *parameter_name*  
+ パラメーターの名前。 *parameter_ name* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -67,12 +65,12 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   プロジェクトの READ および MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
- 次に、エラーが発生する clear_object_parameter ストアド プロシージャが可能性がある条件を説明します。  
+ clear_object_parameter ストアド プロシージャがエラーを発生させる可能性がある条件を以下に示します。  
   
 -   無効なオブジェクトの種類が指定されているか、またはオブジェクト名がプロジェクトで見つからない  
   
@@ -80,7 +78,6 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   無効なパラメーター値が指定されている  
   
--   ユーザーには、適切なアクセス許可がありません。  
+-   ユーザーに適切な権限がない  
   
   
-

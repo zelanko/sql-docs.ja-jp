@@ -20,15 +20,14 @@ ms.date: 07/19/2017"
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
+ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 423ce5e7a0f686c6b97abfe20050de22ef785e70
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
-Kerberos によるセキュリティで保護された Hadoop クラスターに対して PolyBase を使用する場合、PolyBase に組み込まれている対話型診断ツールを使用すると、認証の問題のトラブルシューティングに役立ちます。 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Kerberos によるセキュリティで保護された Hadoop クラスターに対して PolyBase を使用する場合、PolyBase に組み込まれている対話型診断ツールを使用すると、認証の問題のトラブルシューティングに役立ちます。 
 
 この記事は、このツールを使用したこのような問題のデバッグ方法を示すガイドとして利用できます。
 
@@ -208,6 +207,5 @@ Active Directory では、[コントロール パネル] > [Active Directory ユ
 [CDH 用に Kerberos を設定するための Cloudera のガイド](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [HDP 用に Kerberos を設定するための Hortonworks のガイド](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [PolyBase のトラブルシューティング](polybase-troubleshooting.md)
-
 
 

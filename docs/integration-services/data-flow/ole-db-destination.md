@@ -1,5 +1,5 @@
 ---
-title: "OLE DB 変換先 |Microsoft ドキュメント"
+title: "OLE DB 変換先 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3ead74161f0527901680d4495e0feb4056c17011
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
   OLE DB 変換先は、データベースのテーブルやビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込みます。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースのテーブルにデータを読み込むことができます。  
@@ -99,9 +97,9 @@ ms.lasthandoff: 08/17/2017
   
 |高速読み込みオプション|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 フォームは、オプションは**KILOBYTES_PER_BATCH** = \<正の整数値**>**です。|  
+|KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 このオプションの形式は、**KILOBYTES_PER_BATCH** = \<正の整数**>** です。|  
 |FIRE_TRIGGERS|挿入テーブルでトリガーを起動するかどうかを指定します。 このオプションの形式は、 **FIRE_TRIGGERS**です。 このオプションが指定されている場合は、トリガーが起動されます。|  
-|ORDER|入力データの並べ替え方法を指定します。 フォームの順序は、オプションは\<列名 > ASC (& a) #124; DESC です。 並べ替える列のリストには任意の数列を指定できます。並べ替え順序の指定は省略することもできます。 並べ替え順序を指定しなかった場合は、データを並べ替えないと見なして挿入操作が実行されます。<br /><br /> 注: ORDER オプションを使用してテーブル上のクラスター化インデックスに従って入力データを並べ替えると、パフォーマンスが向上する可能性があります。|  
+|ORDER|入力データの並べ替え方法を指定します。 このオプションの形式は、ORDER \<列名> ASC&#124;DESC です。 並べ替える列のリストには任意の数列を指定できます。並べ替え順序の指定は省略することもできます。 並べ替え順序を指定しなかった場合は、データを並べ替えないと見なして挿入操作が実行されます。<br /><br /> 注: ORDER オプションを使用してテーブル上のクラスター化インデックスに従って入力データを並べ替えると、パフォーマンスが向上する可能性があります。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードは慣例として通常は大文字で入力しますが、これらのキーワードの大文字小文字は区別されません。  
   
@@ -125,7 +123,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="ole-db-destination-editor-connection-manager-page"></a>[OLE DB 変換先エディター]\ ([接続マネージャー] ページ)
+## <a name="ole-db-destination-editor-connection-manager-page"></a>[OLE DB 変換先エディター] ([接続マネージャー] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の OLE DB 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
 > [!NOTE]  
@@ -159,7 +157,7 @@ ms.lasthandoff: 08/17/2017
  **[データ アクセス モード]** の各設定には、その設定に固有のオプションの動的なセットが表示されます。 次のセクションでは、各 **[データ アクセス モード]** 設定で使用可能な各動的オプションについて説明します。  
   
 #### <a name="data-access-mode--table-or-view"></a>[データ アクセス モード] = [テーブルまたはビュー]  
- **テーブルまたはビューの名前**  
+ **[テーブル名またはビュー名]**  
  データ ソースで使用できるテーブルまたはビューの一覧から、テーブルまたはビューの名前を選択します。  
   
  **[新規作成]**  
@@ -246,7 +244,7 @@ ms.lasthandoff: 08/17/2017
 >  値を **0** にすると、OLE DB 変換先と別のデータ フロー コンポーネントが同じソース テーブルを更新している場合に、実行中のパッケージが応答を停止する可能性があります。 パッケージが停止しないようにするには、 **[挿入コミット サイズの最大値]** オプションを **2147483647**に設定します。  
   
 #### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
- **SQL コマンド テキスト**  
+ **[SQL コマンド テキスト]**  
  SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成するか、 **[参照]**をクリックしてクエリ テキストを含むファイルを指定します。  
   
 > [!NOTE]  
@@ -261,7 +259,7 @@ ms.lasthandoff: 08/17/2017
  **[クエリの解析]**  
  クエリ テキストの構文を検査します。  
   
-## <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター]\ ([マッピング] ページ)
+## <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター] ([マッピング] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
 ### <a name="options"></a>オプション  
@@ -272,22 +270,22 @@ ms.lasthandoff: 08/17/2017
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 選択した入力列を表示します。 マッピングを削除するを選択すると**\<無視 >**出力から列を除外します。  
+ 選択した入力列を表示します。 出力から列を除外するために **\<無視>** を選択することで、マッピングを削除できます。  
   
  **変換先列**  
  マップするかどうかにかかわらず、使用できる変換先列を表示します。  
   
-## <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター]\ ([エラー出力] ページ)
+## <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
 ### <a name="options"></a>オプション  
- **入力/出力**  
+ **[入力または出力]**  
  入力の名前を表示します。  
   
  **列**  
  使用されていません。  
   
- **エラー**  
+ **[エラー]**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
  **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
@@ -298,10 +296,10 @@ ms.lasthandoff: 08/17/2017
  **Description**  
  操作の説明を表示します。  
   
- **この値を選択したセルに設定します。**  
+ **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **適用**  
+ **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
@@ -312,4 +310,3 @@ ms.lasthandoff: 08/17/2017
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   
-

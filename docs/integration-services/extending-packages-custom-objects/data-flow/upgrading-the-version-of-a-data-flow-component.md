@@ -1,5 +1,5 @@
 ---
-title: "データ フロー コンポーネントのバージョンのアップグレード |Microsoft ドキュメント"
+title: "データ フロー コンポーネントのバージョンのアップグレード | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - PerformUpgrade method
 - custom data flow components [Integration Services], upgrading version
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d93362af894bb395123b5b18dc5b8ac60a418a0e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>データ フロー コンポーネントのバージョンのアップグレード
   古いバージョンのコンポーネントで作成されたパッケージには、新しいバージョンのコンポーネントでは使い方が変更されているカスタム プロパティなど、既に有効でないメタデータが含まれている可能性があります。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 基本クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> メソッドをオーバーライドすると、以前に古いパッケージに保存したメタデータを、コンポーネントの現在のプロパティを反映して更新することができます。  
@@ -54,9 +51,9 @@ ms.lasthandoff: 08/03/2017
 -   バージョンのメタデータをコンポーネントの現在のバージョンに設定します。  
   
 > [!NOTE]  
->  データ フロー エンジンに渡しますに独自のバージョン番号、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>メソッドで、 *pipelineVersion*パラメーター。 このパラメーターは、バージョン 1.0 の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では有用ではありませんが、今後のバージョンで役に立つようになります。  
+>  データ フロー エンジンは、自身のバージョン番号を <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> メソッドに *pipelineVersion* パラメーターで渡します。 このパラメーターは、バージョン 1.0 の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では有用ではありませんが、今後のバージョンで役に立つようになります。  
   
- このサンプル コードでは、カスタム プロパティの以前のブール値に直接マップされる 2 つの列挙値のみが使用されています。 使用できるその他の列挙値を選択するには、コンポーネントのカスタム ユーザー インターフェイスを使用するか、詳細エディターを使用するか、プログラミングを行います。 高度なエディターでカスタム プロパティの列挙値を表示する方法については、「カスタム プロパティの作成」を参照してください[データ フロー コンポーネントのデザイン時メソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)です。  
+ このサンプル コードでは、カスタム プロパティの以前のブール値に直接マップされる 2 つの列挙値のみが使用されています。 使用できるその他の列挙値を選択するには、コンポーネントのカスタム ユーザー インターフェイスを使用するか、詳細エディターを使用するか、プログラミングを行います。 詳細エディターでカスタム プロパティの列挙値を表示する方法については、「[データ フロー コンポーネントのデザイン時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)」の「カスタム プロパティの作成」を参照してください。  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -188,4 +185,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

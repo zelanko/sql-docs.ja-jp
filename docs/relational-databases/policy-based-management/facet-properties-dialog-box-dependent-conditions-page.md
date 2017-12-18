@@ -2,9 +2,12 @@
 title: "[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7daef88a8d2df8e72d70ee68f4563e4170ae7540
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ffb37e2cc2a16650d59a20192a174130dba06aff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ
-  このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照している条件の一覧を表示できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照している条件の一覧を表示できます。  
   
 ## <a name="options"></a>オプション  
  **名前**  

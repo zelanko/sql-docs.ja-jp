@@ -1,5 +1,5 @@
 ---
-title: "catalog.stop_operation (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.stop_operation (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 76a41be8ac6066a4f163b5049a758302d43d5219
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bf33675e591fbb16417bc3b251a1a47693b59673
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  検証または実行のインスタンスを停止、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの実行の検証またはインスタンスを停止します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,8 +35,8 @@ catalog.stop_operation [ @operation_id = ] operation_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @operation_id =] *operation_id*  
- 実行の検証またはインスタンスの一意識別子。 *Operation_id*は**bigint**です。  
+ [ @operation_id = ] *operation_id*  
+ 実行の検証またはインスタンスの一意識別子。 *operation_id* は **bigint** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -51,9 +49,9 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   実行の検証またはインスタンスの READ 権限および MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
@@ -65,7 +63,6 @@ catalog.stop_operation [ @operation_id = ] operation_id
 -   操作が既に停止されている  
   
 ## <a name="remarks"></a>解説  
- 一度に 1 つだけのユーザーの操作を停止する必要があります[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。 複数のユーザーは、操作を停止すると、ストアド プロシージャは成功を返します (値`0`) 最初の試行では、後続の試行でエラーが発生します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログで操作を停止できるのは、一度に 1 人のユーザーだけです。 複数のユーザーが操作を停止しようとすると、ストアド プロシージャは最初の試行で成功 (値 `0`) を返しますが、2 回目以降の試行ではエラーが発生します。  
   
   
-

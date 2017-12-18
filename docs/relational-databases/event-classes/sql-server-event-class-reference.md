@@ -2,9 +2,12 @@
 title: "SQL Server イベント クラスの参照 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b3ffd0d188f72e949a520b72562f0b82694970ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a083ff406bf20d23e3453d642229b10210003834
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server イベント クラスの参照
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで発生したイベントを記録できます。 記録されるイベントは、トレース定義におけるイベント クラスのインスタンスです。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、イベント クラスとそのイベント カテゴリが **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブに表示されます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスで発生したイベントを記録できます。 記録されるイベントは、トレース定義におけるイベント クラスのインスタンスです。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、イベント クラスとそのイベント カテゴリが **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブに表示されます。  
   
  次の表は、イベント カテゴリとそのイベント クラスを示しています。  
   

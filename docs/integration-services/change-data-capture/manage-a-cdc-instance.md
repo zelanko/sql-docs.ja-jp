@@ -1,5 +1,5 @@
 ---
-title: "Manage a CDC Instance |Microsoft ドキュメント"
+title: "CDC インスタンスの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- manIns
+f1_keywords: manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: db85e4aee5ede4a62a660c6adc5d87fde6b89bd7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
@@ -78,7 +75,7 @@ ms.lasthandoff: 08/03/2017
     |||  
     |-|-|  
     |![エラー](../../integration-services/change-data-capture/media/error.gif "エラー")|**エラー**: 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**: 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
-    |![わかりました](../../integration-services/change-data-capture/media/okay.gif "わかりました")|**実行中**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
+    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**実行中**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
     |![[停止]](../../integration-services/change-data-capture/media/stop.gif "[停止]")|**停止**: CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
     |![一時停止](../../integration-services/change-data-capture/media/paused.gif "一時停止")|**一時停止**: CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **接続解除**: ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ**: 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー**: ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
   
@@ -111,17 +108,17 @@ ms.lasthandoff: 08/03/2017
     -   **[書き込まれた変更]**: SQL Server 変更テーブルに書き込まれた変更の数です。  
   
  **Oracle**  
- CDC インスタンスと、Oracle データベースに対する CDC インスタンスの接続に関する情報が表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左ペインでインスタンスを右クリックして**プロパティ** をクリックしてまたは**プロパティ**を開くには右側のウィンドウで、\<インスタンス > プロパティ ダイアログ ボックス。  
+ CDC インスタンスと、Oracle データベースに対する CDC インスタンスの接続に関する情報が表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、**[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)」を参照してください。  
   
  **テーブル**  
- CDC インスタンスに含まれるテーブルについての情報を表示します。 列情報も表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左ペインでインスタンスを右クリックして**プロパティ** をクリックしてまたは**プロパティ**を開くには右側のウィンドウで、\<インスタンス > プロパティ ダイアログ ボックス。  
+ CDC インスタンスに含まれるテーブルについての情報を表示します。 列情報も表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、**[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
  **[詳細設定]**  
- CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左ペインでインスタンスを右クリックして**プロパティ** をクリックしてまたは**プロパティ**を開くには右側のウィンドウで、\<インスタンス > プロパティ ダイアログ ボックス。  
+ CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、**[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)」を参照してください。  
   
@@ -129,7 +126,6 @@ ms.lasthandoff: 08/03/2017
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC インスタンスのプロパティを表示する方法](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [新しいインスタンス ウィザードを使用します。](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [新しいインスタンス ウィザードを使用する](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

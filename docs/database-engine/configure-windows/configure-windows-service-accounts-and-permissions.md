@@ -1,10 +1,13 @@
 ---
 title: "Windows サービス アカウントとアクセス許可の構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/24/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -51,17 +54,17 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: "207"
 author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+ms.author: BYHAM
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b93f57717cea30367f212020d73684a3fe55b796
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 665144f239aab08583a1444e48e851965262bf97
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[Windows サービス アカウントとアクセス許可の構成](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx)」を参照してください。
 
 
@@ -76,9 +79,7 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
- 
- 
-  
+
 ##  <a name="Service_Details"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされるサービス  
  インストールするコンポーネントに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって次のサービスがインストールされます。  
   
@@ -96,20 +97,24 @@ ms.lasthandoff: 11/09/2017
   
 -   **フルテキスト検索** - コンテンツに対するフルテキスト インデックスと構造化データおよび半構造化データのプロパティをすばやく作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するドキュメントのフィルター処理および単語区切りを可能にします。  
   
--   **SQL ライター** - ボリューム シャドウ コピー サービス (VSS) フレームワークで動作するアプリケーションのバックアップと復元を可能にします。  
+-   **SQL ライター** - ボリューム シャドウ コピー サービス (VSS) フレームワークで動作するアプリケーションのバックアップと復元を可能にします。
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** - 複数の Distributed Replay クライアント コンピューターにトレース再生オーケストレーションを提供します。  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** - [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに対して同時実行ワークロードをシミュレーションするために Distributed Replay コントローラーと共に動作する、1 つ以上の Distributed Replay クライアント コンピューターです。  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - Microsoft によって提供される外部の実行可能ファイル ( [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]) をホストする信頼されたサービスです。 サテライト プロセスは Launchpad プロセスによって起動できますが、個々のインスタンスの構成に基づいてリソースが制御されます。 Launchpad サービスは独自のユーザー アカウントで実行され、特定の登録済みランタイムの各サテライト プロセスは Launchpad のユーザー アカウントを継承します。 サテライト プロセスは、実行時に要求に応じて作成および破棄されます。  
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - Microsoft によって提供される外部の実行可能ファイル ( [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]) をホストする信頼されたサービスです。 サテライト プロセスは Launchpad プロセスによって起動できますが、個々のインスタンスの構成に基づいてリソースが制御されます。 Launchpad サービスは独自のユーザー アカウントで実行され、特定の登録済みランタイムの各サテライト プロセスは Launchpad のユーザー アカウントを継承します。 サテライト プロセスは、実行時に要求に応じて作成および破棄されます。
+
+    ドメイン コントローラーとしても使われているコンピューターに SQL Server をインストールした場合、Launchpad は使用するアカウントを作成できません。 そのため、ドメイン コントローラーでの R Services (データベース内) または Machine Learning サービス (データベース内) のセットアップは失敗します。
+
   
  - **SQL Server PolyBase エンジン** - 外部データ ソースに対する分散クエリ機能を提供します。
  
  - **SQL Server Polybase Data Movement Service** - SQL Server と外部データ ソースの間、および PolyBase スケールアウト グループ内の SQL ノードの間で、データを移動できるようにします。
   
-##  <a name="Serv_Prop"></a> サービスのプロパティおよび構成  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始して実行するために使用する開始アカウントは、 [ドメイン ユーザー アカウント](#Domain_User)、 [ローカル ユーザー アカウント](#Local_User)、 [マネージ サービス アカウント](#MSA)、 [仮想アカウント](#VA_Desc)、または [ビルトイン システム アカウント](#Local_Service)のいずれでも可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスを開始して実行するには、インストール時に構成された開始アカウントが必要です。  
+##  <a name="Serv_Prop"></a> サービスのプロパティおよび構成
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始して実行するために使用する開始アカウントは、 [ドメイン ユーザー アカウント](#Domain_User)、 [ローカル ユーザー アカウント](#Local_User)、 [マネージ サービス アカウント](#MSA)、 [仮想アカウント](#VA_Desc)、または [ビルトイン システム アカウント](#Local_Service)のいずれでも可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスを開始して実行するには、インストール時に構成された開始アカウントが必要です。
   
  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始するために構成できるアカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで使用される既定値、サービスごとの SID の概念、スタートアップ オプション、およびファイアウォールの構成について説明します。  
   
@@ -121,10 +126,11 @@ ms.lasthandoff: 11/09/2017
   
 -   [ファイアウォール ポート](#Firewall)  
   
-###  <a name="Default_Accts"></a> 既定のサービス アカウント  
- 次の表に、すべてのコンポーネントをインストールするときにセットアップで使用される既定のサービス アカウントを示します。 ここに示されている既定のアカウントは、特に断りがない限り、推奨のアカウントです。  
+###  <a name="Default_Accts"></a> 既定のサービス アカウント
+
+次の表に、すべてのコンポーネントをインストールするときにセットアップで使用される既定のサービス アカウントを示します。 ここに示されている既定のアカウントは、特に断りがない限り、推奨のアカウントです。
   
- **スタンドアロン サーバーまたはドメイン コント ローラー**  
+ **スタンドアロン サーバーまたはドメイン コント ローラー**
   
 |コンポーネント|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 および [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 以降|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
@@ -144,7 +150,7 @@ ms.lasthandoff: 11/09/2017
   
  * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターの外部のリソースが必要になる場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、必要な最小限の特権で構成された、管理されたサービス アカウント (MSA) を使用することをお勧めします。  
   
- **SQL Server フェールオーバー クラスター インスタンス**  
+ **SQL Server フェールオーバー クラスター インスタンス**
   
 |コンポーネント|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
@@ -156,8 +162,8 @@ ms.lasthandoff: 11/09/2017
 |FD ランチャー (フルテキスト検索)|[ローカル サービス](#Local_Service)|[仮想アカウント](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー|[ローカル サービス](#Local_Service)|[ローカル サービス](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[ローカル システム](#Local_System)|[ローカル システム](#Local_System)|  
-  
-####  <a name="Changing_Accounts"></a> アカウント プロパティの変更  
+
+####  <a name="Changing_Accounts"></a> アカウント プロパティの変更
   
 > [!IMPORTANT]  
 >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービスが使用するアカウントやパスワードを変更する場合は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のツール ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーなど) を必ず使用してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、アカウント名の変更だけでなく、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]サービス マスター キーを保護する Windows ローカル セキュリティ ストアの更新など、付加的な構成も行うことができます。 Windows サービス コントロール マネージャーなどの他のツールでもアカウント名を変更できますが、必要なすべての設定を変更することはできません。  
@@ -206,8 +212,9 @@ ms.lasthandoff: 11/09/2017
   
  **セキュリティに関する注意:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 可能な場合は、 [MSA](#MSA) のツール ( [virtual account](#VA_Desc) をご使用ください。 MSA または仮想アカウントを使用できない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス用の共有アカウントの代わりに、特権レベルの低い特定のユーザー アカウントまたはドメイン アカウントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスごとに個別のアカウントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントまたはサービス グループに追加の権限を付与しないでください。 権限は、グループのメンバーシップを通じて付与されるか、サービス SID がサポートされている場合にはサービス SID に直接付与されます。  
   
-###  <a name="Auto_Start"></a> 自動起動  
- ユーザー アカウントに加え、各サービスには 3 種類の起動時の状態があります。これらの状態はユーザーによる制御が可能です。  
+###  <a name="Auto_Start"></a> 自動起動
+
+ユーザー アカウントに加え、各サービスには 3 種類の起動時の状態があります。これらの状態はユーザーによる制御が可能です。
   
 -   **無効** &#xA0;&#xA0;&#xA0;サービスがインストールされていますが、現在は実行されていません。  
   
@@ -217,8 +224,9 @@ ms.lasthandoff: 11/09/2017
   
  起動時の状態は、セットアップ中に選択されます。 名前付きインスタンスをインストールする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが自動的に開始されるように設定する必要があります。  
   
-###  <a name="Configure_services"></a> 無人インストール中のサービスの構成  
- 次の表に、インストール時に構成できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを示します。 自動インストールを行う場合は、構成ファイルまたはコマンド プロンプトでスイッチを使用できます。  
+###  <a name="Configure_services"></a> 無人インストール中のサービスの構成
+
+次の表に、インストール時に構成できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを示します。 自動インストールを行う場合は、構成ファイルまたはコマンド プロンプトでスイッチを使用できます。  
   
 |SQL Server サービス名|自動インストールのスイッチ*|  
 |-----------------------------|---------------------------------------------|  
@@ -229,18 +237,22 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT、ISSVCPASSWORD、ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー|DRU_CTLR、CTLRSVCACCOUNT、CTLRSVCPASSWORD、CTLRSTARTUPTYPE、CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント|DRU_CLT、CLTSVCACCOUNT、CLTSVCPASSWORD、CLTSTARTUPTYPE、CLTCTLRNAME、CLTWORKINGDIR、CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS|
+|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS***|
 |PolyBase エンジン| PBENGSVCACCOUNT、PBENGSVCPASSWORD、PBENGSVCSTARTUPTYPE、PBDMSSVCACCOUNT、PBDMSSVCPASSWORD、PBDMSSVCSTARTUPTYPE、PBSCALEOUT、PBPORTRANGE
   
  * 自動インストールの詳細およびサンプル構文については、「 [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」をご覧ください。  
   
- ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] および [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services のインスタンスで無効になっています。  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] および [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services のインスタンスで無効になっています。
+
+ *** スイッチだけによる Launchpad のアカウントの設定は、現在はサポートされていません。 アカウントおよび他のサービス設定を変更するには、SQL Server 構成マネージャーを使ってください。
+
+###  <a name="Firewall"></a> ファイアウォール ポート
+
+ほとんどの場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、最初にインストールされると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と同じコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのツールによって接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、Windows ファイアウォールでポートが開かれません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が TCP ポートでリッスンするように構成され、Windows ファイアウォールで接続用に適切なポートが開かれるまでは、他のコンピューターから接続できない場合があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
-###  <a name="Firewall"></a> ファイアウォール ポート  
- ほとんどの場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、最初にインストールされると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と同じコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのツールによって接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、Windows ファイアウォールでポートが開かれません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が TCP ポートでリッスンするように構成され、Windows ファイアウォールで接続用に適切なポートが開かれるまでは、他のコンピューターから接続できない場合があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
-  
-##  <a name="Serv_Perm"></a> サービスの権限  
- このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのサービスごとの SID のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで構成される権限について説明します。  
+##  <a name="Serv_Perm"></a> サービスの権限
+
+このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのサービスごとの SID のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで構成される権限について説明します。  
   
 -   [サービスの構成とアクセス制御](#Serv_SID)  
   
@@ -260,27 +272,28 @@ ms.lasthandoff: 11/09/2017
   
 -   [名前付きパイプ](#Pipes)  
   
-###  <a name="Serv_SID"></a> サービスの構成とアクセス制御  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の場合、各サービスに対してサービスごとの SID を使用することができます。これによって、サービスを分離し、多層防御を実現できます。 サービスごとの SID は、サービス名から取得されるので、そのサービスに固有です。 たとえば、[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのサービス SID 名は、**NT Service\MSSQL$***\<InstanceName>* となります。 サービスを分離すると、高い特権のアカウントを使用したり、オブジェクトのセキュリティ保護を弱めたりすることなく、特定のオブジェクトにアクセスできます。 サービス SID を含むアクセス制御エントリを使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスはそのリソースへのアクセスを制限することができます。  
+###  <a name="Serv_SID"></a> サービスの構成とアクセス制御
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の場合、各サービスに対してサービスごとの SID を使用することができます。これによって、サービスを分離し、多層防御を実現できます。 サービスごとの SID は、サービス名から取得されるので、そのサービスに固有です。 たとえば、[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのサービス SID 名は、**NT Service\MSSQL$***\<InstanceName>* となります。 サービスを分離すると、高い特権のアカウントを使用したり、オブジェクトのセキュリティ保護を弱めたりすることなく、特定のオブジェクトにアクセスできます。 サービス SID を含むアクセス制御エントリを使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスはそのリソースへのアクセスを制限することができます。
   
 > [!NOTE]  
->  Windows 7 と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 以降では、サービスごとの SID は、サービスによって使用される仮想アカウントである場合があります。  
+>  Windows 7 と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 以降では、サービスごとの SID は、サービスによって使用される仮想アカウントである場合があります。
   
- ほとんどのコンポーネントでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はサービス アカウントの ACL を直接構成します。したがって、リソース ACL プロセスを繰り返さなくてもサービス アカウントを変更することができます。  
+ ほとんどのコンポーネントでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はサービス アカウントの ACL を直接構成します。したがって、リソース ACL プロセスを繰り返さなくてもサービス アカウントを変更することができます。
   
- [!INCLUDE[ssAS](../../includes/ssas-md.md)]をインストールするときに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスに対してサービスごとの SID が作成されます。 ローカル Windows グループは、 **SQLServerMSASUser$***computer_name***$***instance_name*という形式の名前で作成されます。 サービスごとの SID **NT SERVICE\MSSQLServerOLAPService** には、ローカル Windows グループのメンバーシップが付与され、ローカル Windows グループには、ACL の適切な権限が付与されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスを開始するために使用されるアカウントが変更される場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで一部の Windows 権限 (サービスとしてログオンする権限など) を変更する必要がありますが、サービスごとの SID は変更されていないので、ローカル Windows グループに割り当てられた権限は、更新することなく使用できます。 これにより、アップグレード中に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスの名前を変更できます。  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)]をインストールするときに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスに対してサービスごとの SID が作成されます。 ローカル Windows グループは、 **SQLServerMSASUser$***computer_name***$***instance_name*という形式の名前で作成されます。 サービスごとの SID **NT SERVICE\MSSQLServerOLAPService** には、ローカル Windows グループのメンバーシップが付与され、ローカル Windows グループには、ACL の適切な権限が付与されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスを開始するために使用されるアカウントが変更される場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで一部の Windows 権限 (サービスとしてログオンする権限など) を変更する必要がありますが、サービスごとの SID は変更されていないので、ローカル Windows グループに割り当てられた権限は、更新することなく使用できます。 これにより、アップグレード中に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスの名前を変更できます。
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール中に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、 [!INCLUDE[ssAS](../../includes/ssas-md.md)] のローカル Windows グループと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを作成します。 これらのサービスに対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はローカル Windows グループの ACL を構成します。  
   
- サービス構成に応じて、インストール時またはアップグレード時にサービスまたはサービス SID のサービス アカウントが、サービス グループのメンバーとして追加されます。  
+ サービス構成に応じて、インストール時またはアップグレード時にサービスまたはサービス SID のサービス アカウントが、サービス グループのメンバーとして追加されます。
   
 ###  <a name="Windows"></a> Windows の特権および権限  
- サービスを開始するために割り当てられているアカウントには、サービスを**開始、停止、および一時停止するための権限が必要です**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)」を参照してください。  
+ サービスを開始するために割り当てられているアカウントには、サービスを**開始、停止、および一時停止するための権限が必要です**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムはこれを自動的に割り当てます。  最初にリモート サーバー管理ツール (RSAT) をインストールします。 「 [Windows 7 用のリモート サーバー管理ツール](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)」を参照してください。
   
- 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが使用するサービスごとの SID またはローカル Windows グループに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが要求する権限を示します。  
+ 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが使用するサービスごとの SID またはローカル Windows グループに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが要求する権限を示します。
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで付与される権限|  
-|---------------------------------------|------------------------------------------------------------|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで付与される権限|
+|---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT SERVICE\MSSQLSERVER**。 名前付きインスタンス: **NT SERVICE\MSSQL$**InstanceName)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)<br /><br /> SQL ライターを起動する権限<br /><br /> イベント ログ サービスを読み取る権限<br /><br /> リモート プロシージャ コール サービスを読み取る権限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント:** \*<br /><br /> (すべての権限が、サービスごとの SID に付与されます。 既定のインスタンス: **NT Service\SQLSERVERAGENT**。 名前付きインスタンス: **NT Service\SQLAGENT$***InstanceName*。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br /> **スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br /> **プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (すべての権限が、ローカル Windows グループに付与されます。 既定のインスタンス: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**。 名前付きインスタンス: **SQLServerMSASUser$***ComputerName***$***InstanceName*。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンス: **SQLServerMSASUser$***ComputerName***$***PowerPivot*。)|**サービスとしてログオン** (SeServiceLogonRight)<br /><br /> テーブルのみ:<br /><br /> **[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)<br /><br /> **[プロセスに対してメモリ クォータを調整する]** (SeIncreaseQuotaSizePrivilege)<br /><br /> **メモリ内のページをロックする** (SeLockMemoryPrivilege) – ページングが完全に無効になっている場合にのみ必要です。<br /><br /> フェールオーバー クラスター インストールのみ:<br /><br /> **スケジューリングでの優先度を上げる** (SeIncreaseBasePriorityPrivilege)|  
@@ -388,7 +401,8 @@ ms.lasthandoff: 11/09/2017
  データベース ファイルをユーザー定義の場所に格納する場合は、サービスごとの SID にその場所へのアクセス権を付与する必要があります。 サービスごとの SID にファイル システム権限を付与する方法の詳細については、「 [データベース エンジン アクセスのファイル システム権限の構成](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)」をご覧ください。  
   
 ###  <a name="File_System_Other"></a> 他の Windows ユーザー アカウントまたはグループに付与されるファイル システム権限  
- ビルトイン アカウントや他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントに、いくつかのアクセス制御権限を付与する必要がある場合があります。 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって追加設定される ACL を示しています。  
+
+ビルトイン アカウントや他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントに、いくつかのアクセス制御権限を付与する必要がある場合があります。 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって追加設定される ACL を示しています。  
   
 |要求元コンポーネント|アカウント|リソース|アクセス許可|  
 |--------------------------|-------------|--------------|-----------------|  
@@ -414,7 +428,8 @@ ms.lasthandoff: 11/09/2017
  * これは WMI プロバイダーの名前空間です。  
   
 ###  <a name="Unusual_Locations"></a> 通常と異なるディスクの場所に関連するファイル システム権限  
- tempdb またはユーザー データベースをインストールするとき、インストールの既定のドライブの場所は **systemdrive**(通常はドライブ C) です。  
+
+インストールの場所の既定のドライブは **systemdrive** (通常はドライブ C) です。このセクションでは、tempdb またはユーザー データベースを通常とは異なる場所にインストールするときの追加の考慮事項について説明します。  
   
  **既定以外のドライブ**  
   
@@ -428,7 +443,8 @@ ms.lasthandoff: 11/09/2017
 >  仮想アカウントでは、リモートの場所へアクセスすることはできません。 どの仮想アカウントも、コンピューター アカウントの権限を使用します。 *<domain_name>***\\***<computer_name>***$** の形式でコンピューター アカウントを準備してください。  
   
 ###  <a name="Review_additional_considerations"></a> その他の注意点の確認  
- 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが追加の機能を提供するために必要な権限を示しています。  
+
+次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが追加の機能を提供するために必要な権限を示しています。  
   
 |サービスまたはアプリケーション|機能|必要な権限|  
 |--------------------------|-------------------|-------------------------|  
@@ -458,7 +474,8 @@ ms.lasthandoff: 11/09/2017
 -   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\RS] "InstanceName"="MSRSSQL13"**  
   
 ###  <a name="WMI"></a> WMI  
- Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続できる必要があります。 これをサポートするには、Windows WMI プロバイダーのサービスごとの SID (**NT SERVICE\winmgmt**) が [!INCLUDE[ssDE](../../includes/ssde-md.md)]で準備されている必要があります。  
+
+Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続できる必要があります。 これをサポートするには、Windows WMI プロバイダーのサービスごとの SID (**NT SERVICE\winmgmt**) が [!INCLUDE[ssDE](../../includes/ssde-md.md)]で準備されている必要があります。  
   
  SQL WMI プロバイダーには、以下の権限が必要です。  
   
@@ -473,7 +490,8 @@ ms.lasthandoff: 11/09/2017
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、SQL の WMI 名前空間が作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス SID に読み取り権限が付与されます。  
   
 ###  <a name="Pipes"></a> 名前付きパイプ  
- どのインストールでも、ローカルの名前付きパイプである共有メモリ プロトコルを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップで提供されます  
+
+どのインストールでも、ローカルの名前付きパイプである共有メモリ プロトコルを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップで提供されます  
   
 ##  <a name="Provisioning"></a> プロビジョニング  
  ここでは、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント内でアカウントが準備されるしくみについて説明します。  

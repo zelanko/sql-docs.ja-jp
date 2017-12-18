@@ -1,5 +1,5 @@
 ---
-title: "手順 9: レッスン 1 のチュートリアル パッケージのテスト |Microsoft ドキュメント"
+title: "手順 9: レッスン 1 のチュートリアル パッケージのテスト | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca45e8e1ba02246eb5429bd7bfea125663f69f41
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c8cd5718bca93ff1384a2f2df15dac5c80627414
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>レッスン 1 ~ 9、レッスン 1 のチュートリアル パッケージのテスト
+# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>レッスン 1-9 - レッスン 1 のチュートリアル パッケージのテスト
 このレッスンでは次の作業を行いました。  
   
 -   新しい [!INCLUDE[ssIS](../includes/ssis-md.md)] プロジェクトを作成しました。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/26/2017
   
 **制御フロー**  
   
-![パッケージ内のフローを制御](../integration-services/media/task9lesson1control.gif "パッケージ内のフロー制御")  
+![パッケージ内の制御フロー](../integration-services/media/task9lesson1control.gif "パッケージ内の制御フロー")  
   
 **データ フロー**  
   
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

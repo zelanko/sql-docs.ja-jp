@@ -1,5 +1,5 @@
 ---
-title: "Oracle CDC データベース |Microsoft ドキュメント"
+title: "Oracle CDC データベース | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/03/2017
  CDC データベースが作成され、CDC ソース Oracle テーブルが設定されたら、CDC データベースの所有者は、ミラー テーブルの SELECT 権限を付与したり、SQL Server CDC ゲーティング ロールを定義したりして、変更データにアクセスできるユーザーを制御できます。  
   
 ## <a name="mirror-tables"></a>ミラー テーブル  
- 各キャプチャ対象テーブルに対して\<スキーマ名 >.\<テーブル名 >、Oracle ソース データベースでのような空のテーブルが同じスキーマとテーブルの名前を持つ、CDC データベースに作成します。 スキーマ名が `cdc` (大文字と小文字は区別されません) の Oracle ソース テーブルはキャプチャできません。 `cdc` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スキーマは SQL Server CDC のために予約されているためです。  
+ Oracle ソース データベースの各キャプチャ対象テーブル (\<schema-name>.\<table-name>) に対して、同じスキーマ名とテーブル名を持つ同様の空のテーブルが CDC データベースに作成されます。 スキーマ名が `cdc` (大文字と小文字は区別されません) の Oracle ソース テーブルはキャプチャできません。 `cdc` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スキーマは SQL Server CDC のために予約されているためです。  
   
  ミラー テーブルは空です。データは格納されていません。 ミラー テーブルは、Oracle CDC インスタンスによって使用される標準の SQL Server CDC インフラストラクチャを有効にするために使用されます。 ミラー テーブルに対してデータの挿入や更新が行われないようにするために、UPDATE、DELETE、および INSERT のすべての操作が PUBLIC に対して拒否されます。 これにより、ミラー テーブルを変更できないことが保証されます。  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_Change_Tables_CT"></a> 変更テーブル (_CT)  
  変更テーブルは、ミラー テーブルから作成されます。 変更テーブルには、Oracle データベースからキャプチャされた変更データが含まれます。 テーブルは、次の規則に従って命名されます。  
   
- **[cdc] です。[\<キャプチャ インスタンス > _CT]**  
+ **[cdc].[\<capture-instance>_CT]**  
   
  テーブル `<schema-name>.<table-name>`に対して最初にキャプチャを有効にしたときの既定のキャプチャ インスタンス名は、 `<schema-name>_<table-name>`です。 たとえば、Oracle HR.EMPLOYEES テーブルの既定のキャプチャ インスタンス名は HR_EMPLOYEES で、関連付けられる変更テーブルは [cdc]. [HR_EMPLOYEES_CT] です。  
   
@@ -197,4 +195,3 @@ ms.lasthandoff: 08/03/2017
  [Attunity の Change Data Capture Designer for Oracle](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "レプリケーションの旧バージョンとの互換性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 92770f531048f6697e2904f1399c74f88022be53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4031251e251a40014cdcbf41727876bf85f08efd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-backward-compatibility"></a>レプリケーションの旧バージョンとの互換性
-  旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションのバージョン間における動作の違いについて説明します。 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在する場合は、旧バージョンとの互換性を理解することが重要です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 旧バージョンとの互換性のセクションの各トピックでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションのバージョン間における動作の違いについて説明します。 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在する場合は、旧バージョンとの互換性を理解することが重要です。  
   
  [SQL Server レプリケーションの非推奨機能](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
  旧バージョンとの互換性を維持するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では引き続き使用できるが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のバージョンでは削除される予定のレプリケーション機能  

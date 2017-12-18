@@ -1,5 +1,5 @@
 ---
-title: "構文 (SSIS) |Microsoft ドキュメント"
+title: "構文 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 298c94c7a016e3df8bd89a11281d571f1c5b669d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 89de000e168f3b781c24662cd24928f095aed33a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文は、C 言語および C# 言語が使用する構文と同様です。 式には、識別子 (列および変数)、リテラル、演算子、関数などの要素が含まれます。 このトピックでは、式エバリュエーターの構文がさまざまな式要素を適用する際の、一意の必要条件の概要について説明します。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="identifiers"></a>識別子  
  式には、列および変数の識別子を含めることができます。 列はデータ ソースで生成されるか、またはデータ フローの変換によって作成できます。 式では、系列 ID を使用して列を参照できます。 系列 ID は、パッケージの要素を一意に識別する数値です。 系列 ID を式の内部で参照する場合、系列 ID にポンド (#) プレフィックスを含める必要があります。 たとえば、系列 ID 138 を参照するには、#138 を使用します。  
   
- 式には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] で用意されているシステム変数と、カスタム変数を含めることができます。 変数を式の内部で参照する場合、変数に @ プレフィックスを含める必要があります。 たとえば、`Counter`を使用して変数が参照される@Counterです。 @ 文字は変数名の一部ではなく、式エバリュエーターに対して識別子が変数であることを示すだけのものです。 詳細については、「[識別子 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)」を参照してください。  
+ 式には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] で用意されているシステム変数と、カスタム変数を含めることができます。 変数を式の内部で参照する場合、変数に @ プレフィックスを含める必要があります。 たとえば、`Counter` 変数は、@Counter を使用して参照します。 @ 文字は変数名の一部ではなく、式エバリュエーターに対して識別子が変数であることを示すだけのものです。 詳細については、「[識別子 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)」を参照してください。  
   
 ## <a name="literals"></a>リテラル  
  式には、数値、文字列、およびブール値のリテラルを含めることができます。 文字列リテラルを式で使用するには、引用符で囲む必要があります。 数値リテラルおよびブール値のリテラルには、引用符は付けません。 式言語には、通常エスケープされる文字のエスケープ シーケンスが含まれます。 詳細については、「[リテラル (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)」を参照してください。  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/03/2017
 -   social.technet.microsoft.com の技術記事「 [SSIS 式の例](http://go.microsoft.com/fwlink/?LinkId=220761)」  
   
   
-

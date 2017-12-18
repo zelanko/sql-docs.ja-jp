@@ -2,9 +2,12 @@
 title: "実稼動サーバーのチューニング負荷の軽減 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 860458ebec0954d872b31bceb4443450bf96ad21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0da94113a0d79705e95790584302e6c17e6f9970
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>実稼動サーバーのチューニング負荷の軽減
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、ワークロードの分析とチューニング推奨設定の生成をクエリ オプティマイザーに依存します。 実稼働サーバー上でこの分析を実行すると、サーバーの負荷が増し、チューニング セッション中のサーバーのパフォーマンスが低下することがあります。 実稼働サーバーに加えてテスト サーバーを使用することで、チューニング セッション中のサーバーの負荷への影響を小さくすることができます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、ワークロードの分析とチューニング推奨設定の生成をクエリ オプティマイザーに依存します。 実稼働サーバー上でこの分析を実行すると、サーバーの負荷が増し、チューニング セッション中のサーバーのパフォーマンスが低下することがあります。 実稼働サーバーに加えてテスト サーバーを使用することで、チューニング セッション中のサーバーの負荷への影響を小さくすることができます。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>データベース エンジン チューニング アドバイザーでテスト サーバーを使用する方法  
  これまでは、テスト サーバーを使用するために、実稼働サーバーからテスト サーバーにすべてのデータをコピーし、テスト サーバーをチューニングして、実稼働サーバーに推奨設定を実装する方法を使用してきました。 この処理により、実稼働サーバーのパフォーマンスに影響が及ぶことはありませんが、これは最善の解決策ではありません。 たとえば、大量のデータを実稼働サーバーからテスト サーバーにコピーする場合、非常に時間がかかり、多量のリソースが使用される可能性があります。 また、テスト サーバーのハードウェアが、実稼働サーバーに配置されているハードウェアほど優れていることはめったにありません。 チューニング処理は、クエリ オプティマイザーに依存し、生成される推奨設定は基になるハードウェアに部分的に基づきます。 テスト サーバーと実稼働サーバーのハードウェアが異なる場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの推奨設定の特性が低下します。  

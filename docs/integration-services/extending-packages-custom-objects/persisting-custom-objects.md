@@ -1,5 +1,5 @@
 ---
-title: "カスタム オブジェクトの永続化 |Microsoft ドキュメント"
+title: "カスタム オブジェクトの永続化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom objects [Integration Services], persisting
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b43f65b19f3dd4804ba1f7c18a81b640ed277d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 27b800182751ea40ad827c77ea71c6f2815eecc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="persisting-custom-objects"></a>カスタム オブジェクトの永続化
-  カスタム オブジェクトのプロパティなどの単純なデータ型のみを使用する限り、作成することは、カスタムの永続化を実装する必要はありません**整数**と**文字列**です。 既定の永続性の実装により、オブジェクトのメタデータがすべてのプロパティの値と共に保存されます。  
+  プロパティで **integer** や **string** などの単純なデータ型のみを使用している限り、カスタム オブジェクトのカスタムの永続性を実装する必要はありません。 既定の永続性の実装により、オブジェクトのメタデータがすべてのプロパティの値と共に保存されます。  
   
  ただし、オブジェクトが複合データ型を使用するプロパティを持つ場合や、プロパティ値の読み込み時と保存時にカスタム処理を実行する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> インターフェイスと、このインターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> メソッドを実装することができます。 これらのメソッドで、オブジェクトのプロパティとプロパティの現在の値を含む XML フラグメントを、パッケージの XML 定義から読み込んだり、パッケージの XML 定義に保存したりします。 この XML フラグメントの形式は定義されていません。必要なのは、整形式の XML であるということだけです。  
   
@@ -38,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 >  カスタムの永続性を実装するときは、継承したプロパティと追加したカスタム プロパティを含む、オブジェクトのすべてのプロパティを保存する必要があります。  
   
 ## <a name="example"></a>例  
- Sql Server Custom Connection Manager サンプルでは、その型の 3 つのプロパティに対しては、カスタムの永続性は不要ですが**文字列**、次のコードは、接続マネージャーとそのプロパティを維持するために必要なカスタムのコードの例を示します。 このコードを含むクラスでは、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> インターフェイスを実装する必要があります。  
+ SQL Server Custom Connection Manager サンプルでは、**string** 型の 3 つのプロパティのカスタムの永続性は不要ですが、次のコードでは接続マネージャーとそのプロパティの保存が必要なカスタム コードの例を示します。 このコードを含むクラスでは、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> インターフェイスを実装する必要があります。  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -163,8 +159,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 ```  
  
 ## <a name="see-also"></a>参照  
- [Integration Services 用カスタム オブジェクトの開発](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
+ [Integration Services 用のカスタム オブジェクトの開発](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [カスタム オブジェクトのビルド、配置、デバッグ](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

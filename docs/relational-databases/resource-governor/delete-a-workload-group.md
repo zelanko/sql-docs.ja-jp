@@ -2,9 +2,12 @@
 title: "ワークロード グループの削除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc49607bc518ec521586fab4d18886f7e718d842
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1eff1229f3dd8cbc2b23558a28736cef0487c17f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-a-workload-group"></a>ワークロード グループの削除
-  ワークロード グループまたはリソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ワークロード グループまたはリソース プールを削除にするには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
 -   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
   
--   **ワークロード グループの削除に使用するもの:**  [オブジェクト エクスプローラー](#DelWGObjEx)、 [リソース ガバナーのプロパティ](#DelWGRGProp)、 [Transact-SQL](#DelWGTSQL)  
+-   **ワークロード グループの削除に使用するもの:**  [オブジェクト エクスプローラー](#DelWGObjEx)、[Resource Governor のプロパティ](#DelWGRGProp)、 [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  アクティブなセッションが含まれている場合は、ワークロード グループを削除できません。  
@@ -56,12 +59,12 @@ ms.lasthandoff: 11/09/2017
   
 4.  **[オブジェクトの削除]** ウィンドウの **[削除されるオブジェクト]** ボックスの一覧に、ワークロード グループが表示されます。 ワークロード グループを削除するには、 **[OK]**をクリックします。  
   
-##  <a name="DelWGRGProp"></a> リソース ガバナーのプロパティを使用してワークロード グループを削除する  
- **[リソース ガバナーのプロパティ] ページでワークロード グループを削除にするには**  
+##  <a name="DelWGRGProp"></a> Resource Governor のプロパティを使用してワークロード グループを削除する  
+ **[Resource Governor のプロパティ] ページでワークロード グループを削除にするには**  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを **[リソース プール]**ノードまで展開します。  
   
-2.  削除するワークロード グループを含むリソース プールを右クリックし、 **[プロパティ]**をクリックします。 **[リソース ガバナーのプロパティ]** ページが開きます。  
+2.  削除するワークロード グループを含むリソース プールを右クリックし、 **[プロパティ]**をクリックします。 **[Resource Governor のプロパティ]** ページが開きます。  
   
 3.  **[リソース プールのワークロード グループ]** ウィンドウで、削除するワークロード グループの行をクリックし、行の左側にある右矢印を右クリックして **[削除]**をクリックします。  
   
@@ -95,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [ワークロード グループの作成](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [リソース プールの削除](../../relational-databases/resource-governor/delete-a-resource-pool.md)   

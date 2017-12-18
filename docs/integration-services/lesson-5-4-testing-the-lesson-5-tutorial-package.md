@@ -1,5 +1,5 @@
 ---
-title: "手順 4: レッスン 5 のチュートリアル パッケージのテスト |Microsoft ドキュメント"
+title: "手順 4: レッスン 5 のチュートリアル パッケージのテスト | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd1b78e3c7d1e3d9324987a292220adf03f1100b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f761097d3e2b7bac98c8617a723927d132c9f30b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>レッスン 5-4-レッスン 5 のチュートリアル パッケージのテスト
+# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>レッスン 5-4 - レッスン 5 のチュートリアル パッケージのテスト
 パッケージを実行すると、そのときに更新される変数から **Directory** の値が取得されます。パッケージの作成時に指定した元の名前は使用されません。 この変数の値は、SSISTutorial.dtsConfig ファイルにより生成されます。  
   
 パッケージの実行時に、Directory プロパティが新しい値に更新されているかどうかを確認するには、パッケージを実行してみます。 3 つのサンプル データ ファイルのみが新しいディレクトリにコピーされるため、データ フローは 3 回だけ実行されます。元のフォルダーの 14 ファイルには反復処理は実行されません。  
@@ -37,7 +34,7 @@ ms.lasthandoff: 09/26/2017
   
 **制御フロー**  
   
-![パッケージ内のフローを制御](../integration-services/media/task4lesson2control.gif "パッケージ内のフロー制御")  
+![パッケージ内の制御フロー](../integration-services/media/task4lesson2control.gif "パッケージ内の制御フロー")  
   
 **データ フロー**  
   
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

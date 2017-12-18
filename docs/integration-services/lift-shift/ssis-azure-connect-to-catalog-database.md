@@ -1,5 +1,5 @@
 ---
-title: "Azure 上の SSISDB カタログ データベースへの接続 |Microsoft ドキュメント"
+title: "Azure 上の SSISDB カタログ データベースへの接続 | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,62 +8,59 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure 上の SSISDB カタログ データベースへの接続します。
+# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure 上の SSISDB カタログ データベースへの接続
 
-Azure SQL データベース サーバーでホストされている、SSISDB カタログ データベースに接続する必要があります。 接続情報を取得します。 次の項目を接続する必要があります。
+Azure SQL Database でホストされている SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 接続するには、次の項目が必要です。
 - 完全修飾サーバー名
 - データベース名
 - ログイン情報 
 
 ## <a name="prerequisites"></a>前提条件
-開始する前に 17.2 または SQL Server Management Studio のそれ以降のバージョンであることを確認します。 SSMS の最新バージョンをダウンロードするを参照してください。[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。
+始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
-## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure ポータルからの接続情報を取得します。
+## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal から接続情報を取得する
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. Azure ポータルで、次のように選択します。 **SQL データベース**クリックし、左側のメニューから、`SSISDB`上のデータベース、 **SQL データベース**ページ。 
-3. **概要**のページ、`SSISDB`データベースで、次の図のように、完全修飾サーバー名を確認します。 サーバー名を合わせ、**をコピーする をクリックします。**オプション。
+2. Azure Portal で、左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [`SSISDB` データベース] を選択します。 
+3. `SSISDB` データベースの **[概要]** ページで、次の図のように、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを呼び出すには、サーバー名にマウス ポインターを移動します。
 
-    ![サーバーの接続情報](media/ssis-azure-connect-to-catalog-database/server-name.png) 
+    ![サーバー接続情報](media/ssis-azure-connect-to-catalog-database/server-name.png) 
 
-4. SQL データベース サーバーのログイン情報を忘れてしまった場合は、SQL データベース サーバーのページに移動します。 サーバー管理者を表示するが名前を指定し、必要に応じて、パスワードをリセットします。
+4. SQL Database サーバーのログイン情報を忘れてしまった場合は、[SQL Database サーバー] ページに移動します。 ここでは、サーバー管理者名を表示でき、必要に応じて、パスワードをリセットできます。
 
-## <a name="connect-with-ssms"></a>SSMS と接続します。
+## <a name="connect-with-ssms"></a>SSMS との接続
 1. SQL Server Management Studio を開きます。
 
-2. **サーバーへの接続**です。 **サーバーへの接続** ダイアログ ボックスで、次の情報を入力します。
+2. **サーバーに接続します**。 **[サーバーへの接続]** ダイアログ ボックスに次の情報を入力します。
 
-   | 設定       | 推奨値 | Description | 
+   | 設定       | 提案される値 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
-   | **サーバー名** | 完全修飾サーバー名 | 名前は、この形式でなければなりません: **mysqldbserver.database.windows.net**です。 |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使用します。 |
-   | **Login** | サーバーの管理者アカウント | これは、サーバーを作成したときに指定したアカウントです。 |
-   | **Password** | サーバーの管理者アカウントのパスワード | これは、サーバーを作成したときに指定したパスワードです。 |
+   | **サーバー名** | 完全修飾サーバー名 | 名前は **mysqldbserver.database.windows.net** の形式である必要があります。 |
+   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使います。 |
+   | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
+   | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
-3. **SSISDB データベースに接続**です。 選択**オプション**を展開、**サーバーへの接続** ダイアログ ボックス。 展開済み**サーバーへの接続**ダイアログ ボックスで、**接続プロパティ**タブです。**データベースへの接続**フィールドを選択または入力`SSISDB`です。
+3. **SSISDB データベースに接続します**。 **[オプション]** を選択して、**[サーバーへの接続]** ダイアログ ボックスを展開します。 展開した **[サーバーへの接続]** ダイアログ ボックスで、**[接続プロパティ]** タブを選択します。**[データベースへの接続]** フィールドで、`SSISDB` を選択または入力します。
 
     > [!IMPORTANT]
-    > 選択しない場合`SSISDB`接続するときに表示されないオブジェクト エクスプ ローラーで SSIS カタログ。
+    > 接続時に `SSISDB` を選択しないと、オブジェクト エクスプローラーで SSIS カタログが表示されない場合があります。
 
-4. 選択し、**接続**です。
+4. **[接続]** を選択します。
 
-5. オブジェクト エクスプ ローラーで、 **Integration Services カタログ**順に展開**SSISDB** SSIS カタログ データベースでオブジェクトを表示します。
+5. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
 ## <a name="next-steps"></a>次の手順
-- パッケージを展開します。 詳細については、次を参照してください。 [SSIS プロジェクトを SQL Server Management Studio (SSMS) を配置](../ssis-quickstart-deploy-ssms.md)です。
-- パッケージを実行します。 詳細については、次を参照してください。 [、SSIS パッケージを SQL Server Management Studio (SSMS) で実行](../ssis-quickstart-run-ssms.md)です。
-- パッケージのスケジュールを設定します。 詳細については、次を参照してください[スケジュール SSIS パッケージを Azure での実行。](ssis-azure-schedule-packages.md)
-
+- パッケージを配置します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-deploy-ssms.md)」を参照してください。
+- パッケージを実行します。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-run-ssms.md)」を参照してください。
+- パッケージのスケジュールを設定します。 詳細については、「[Azure で SSIS パッケージの実行をスケジュールする](ssis-azure-schedule-packages.md)」を参照してください。

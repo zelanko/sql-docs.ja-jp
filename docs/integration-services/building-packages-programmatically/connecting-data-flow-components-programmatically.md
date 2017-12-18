@@ -1,5 +1,5 @@
 ---
-title: "プログラムによるデータ フロー コンポーネントの接続 |Microsoft ドキュメント"
+title: "プログラムによるデータ フロー コンポーネントの接続 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,28 +21,27 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 40869328965e049b5981e94655226bc0a78dc37f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c79cd2d2b540bab98b810ae07a1c66a3cff650c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの接続
   データ フロー タスクにコンポーネントを追加したら、コンポーネントを接続して、変換元から変換を経由して変換先に至るデータ フローを表す実行ツリーを作成します。 データ フロー内のコンポーネントを接続するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを使用します。  
   
 ## <a name="creating-a-path"></a>パスの作成  
- 新しいメソッドを呼び出して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A>のプロパティ、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe>インターフェイスを新しいパスを作成し、データ フロー タスク内のパスのコレクションに追加します。 このメソッドは、新しく作成され、切断されている <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを返します。これを使用して 2 つのコンポーネントを接続します。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> プロパティの New メソッドを呼び出して、新しいパスを作成し、データ フロー タスク内のパスのコレクションに追加します。 このメソッドは、新しく作成され、切断されている <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを返します。これを使用して 2 つのコンポーネントを接続します。  
   
  パスを接続し、パスに含まれているコンポーネントが接続されたことを通知するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> メソッドを呼び出します。 このメソッドは、上流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> および下流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> をパラメーターとして受け取ります。 既定では、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> メソッドを呼び出すと、入力を持つコンポーネントに 1 つの入力、および出力を持つコンポーネントに 1 つの出力が作成されます。 次の例では、この既定の変換元の出力および変換先の入力を使用します。  
   
 ## <a name="next-step"></a>次の手順  
- 次の手順を次のトピックについては、下流コンポーネントでは入力列にマップは 2 つのコンポーネント間のパスを確立した後[入力の列をプログラムでを選択すると](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)です。  
+ 2 つのコンポーネント間のパスを確立したら、次に入力列を下流コンポーネントにマップします。この手順については、次の「[プログラムによる入力列の選択](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)」で説明します。  
   
 ## <a name="sample"></a>サンプル  
  次のコード例は、2 つのコンポーネント間でパスを確立する方法を示します。  
@@ -131,7 +128,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>参照  
- [入力列をプログラムで選択します。](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [プログラムによる入力列の選択](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   
-

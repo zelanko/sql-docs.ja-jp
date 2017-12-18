@@ -1,5 +1,5 @@
 ---
-title: "catalog.start_execution (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.start_execution (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +36,16 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
   
 ## <a name="arguments"></a>引数  
  [@execution_id =] *execution_id*  
- 実行のインスタンスの一意の識別子。 *Execution_id*は**bigint**です。
+ 実行のインスタンスの一意の識別子。 *execution_id* は **bigint** です。
  
  [@retry_count =] *retry_count*  
- 実行が失敗した場合の再試行の回数です。 実行がスケール アウトである場合にのみ有効になります。このパラメーターはオプションです。 指定しない場合、その値は 0 に設定します。 *Retry_count*は**int**です。
+ 実行に失敗した場合の再試行回数。 実行が Scale Out である場合にのみ有効になります。このパラメーターはオプションです。 指定しない場合、その値は 0 に設定されます。 *retry_count* は **int** です。
   
 ## <a name="remarks"></a>解説  
- 実行を使用して、パッケージの実行の 1 つのインスタンスの中で、パッケージによって使用されるパラメーター値を指定します。 実行のインスタンスが作成された後、インスタンスが起動する前に、対応するプロジェクトが再配置される場合があります。 ここでは、実行のインスタンスは、期限が切れ、プロジェクトを参照します。 この無効な参照では、ストアド プロシージャは失敗が発生します。  
+ 実行は、パッケージの実行の 1 つのインスタンス中にパッケージによって使用されるパラメーター値を指定するために使用されます。 実行のインスタンスが作成された後、インスタンスが起動する前に、対応するプロジェクトが再配置される場合があります。 この場合、実行のインスタンスは古いプロジェクトを参照します。 この無効な参照により、ストアド プロシージャが失敗します。  
   
 > [!NOTE]  
->  実行を起動できるのは 1 回のみです。 実行のインスタンスを開始するに作成された状態である必要があります (値の`1`で、**ステータス**の列、 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)ビュー)。  
+>  実行を起動できるのは 1 回のみです。 実行のインスタンスを起動するには、それが作成された状態である必要があります ([catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **status** 列の値が `1`)。  
   
 ## <a name="example"></a>例  
  次の例では catalog.create_execution を呼び出して、Child1.dtsx パッケージの実行のインスタンスを作成します。 integration Services Project1 にはパッケージが含まれています。 例では catalog.set_execution_parameter_value を呼び出して、Parameter1、Parameter2、および LOGGING_LEVEL の各パラメーターの値を設定します。 例では catalog.start_execution を呼び出して、実行のインスタンスを起動します。  
@@ -77,9 +75,9 @@ GO
   
 -   実行のインスタンスの READ および MODIFY 権限、プロジェクトの READ および EXECUTE 権限、参照先の環境の READ 権限 (該当する場合)。  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
@@ -97,4 +95,3 @@ GO
 -   実行のインスタンスに関連付けられているプロジェクトのバージョンが古い (実行できるのはプロジェクトの最新バージョンのみ)  
   
   
-

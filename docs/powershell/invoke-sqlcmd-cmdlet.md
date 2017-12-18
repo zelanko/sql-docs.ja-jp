@@ -2,9 +2,12 @@
 title: "Invoke-Sqlcmd コマンドレット | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd コマンドレット
   **Invoke-Sqlcmd** は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットであり、言語 ([!INCLUDE[tsql](../includes/tsql-md.md)] と XQuery) のステートメントと **sqlcmd** ユーティリティでサポートされているコマンドを含んだスクリプトを実行します。  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログイン ID|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証パスワード|-P|-Password|  
 |変数の定義|-v|-Variable|  
-|クエリのタイムアウト間隔|-t|-QueryTimeout|  
+|クエリのタイムアウト間隔 (秒)|-t|-QueryTimeout|  
 |エラー発生時の実行停止|-b|-AbortOnError|  
 |専用管理者接続|-A|-DedicatedAdministratorConnection|  
 |対話型コマンド、スタートアップ スクリプト、および環境変数の無効化|-X|-DisableCommands|  
 |変数の代入の無効化|-X|-DisableVariables|  
 |レポートする最小重大度レベル|-v|-SeverityLevel|  
 |レポートする最小エラー レベル|-m|-ErrorLevel|  
-|ログインのタイムアウト間隔|-l|-ConnectionTimeout|  
+|ログインのタイムアウト間隔 (秒)|-l|-ConnectionTimeout|  
 |ホスト名|-H|-HostName|  
 |パスワードの変更と終了|-Z|-NewPassword|  
 |クエリが含まれている入力ファイル|-i|-InputFile|  

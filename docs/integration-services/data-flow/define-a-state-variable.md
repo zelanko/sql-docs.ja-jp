@@ -1,5 +1,5 @@
 ---
-title: "状態変数の定義 |Microsoft ドキュメント"
+title: "状態変数の定義 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5266703e8a7644a36ebf7eeeaccde1456ce735e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -36,18 +34,18 @@ ms.lasthandoff: 08/03/2017
   
 |コンポーネント|Description|  
 |---------------|-----------------|  
-|**\<状態名 >**|現在の CDC 状態の名前です。|  
+|**\<state-name>**|現在の CDC 状態の名前です。|  
 |**CS**|現在の処理範囲の始点 (Current Start) を示します。|  
-|**\<cs lsn >**|前回の CDC 実行で処理された最後のログ シーケンス番号 (LSN) です。|  
+|**\<cs-lsn>**|前回の CDC 実行で処理された最後のログ シーケンス番号 (LSN) です。|  
 |**CE**|現在の処理範囲の終点 (Current End) を示します。 CDC 状態に CE 要素が存在するかどうかにより、CDC パッケージが現在処理中であるか、または CDC 処理範囲が完全に処理される前に CDC パッケージが失敗したことが示されます。|  
-|**\<ce lsn >**|現在の CDC 実行で処理される最後の LSN です。 処理対象の最後のシーケンス番号は最大値 (0xFFF…) であることが常に想定されます。|  
+|**\<ce-lsn>**|現在の CDC 実行で処理される最後の LSN です。 処理対象の最後のシーケンス番号は最大値 (0xFFF…) であることが常に想定されます。|  
 |**IR**|初期処理範囲を示します。|  
-|**\<ir 開始 >**|初期読み込みが開始した直前の変更の LSN です。|  
-|**\<ir 終了 >**|初期読み込みが終了した直後の変更の LSN です。|  
+|**\<ir-start>**|初期読み込みが開始した直前の変更の LSN です。|  
+|**\<ir-end>**|初期読み込みが終了した直後の変更の LSN です。|  
 |**TS**|CDC 状態の最後の更新のタイムスタンプを示します。|  
-|**\<タイムスタンプ >**|64 ビットの System.DateTime.UtcNow プロパティの 10 進数表記です。|  
+|**\<timestamp>**|64 ビットの System.DateTime.UtcNow プロパティの 10 進数表記です。|  
 |**ER**|直前の操作が失敗した場合に表示され、エラーの原因の簡単な説明が含まれます。 この要素が存在する場合は、常に最後に表示されます。|  
-|**\<短いエラー テキスト >**|エラーの簡単な説明です。|  
+|**\<short-error-text>**|エラーの簡単な説明です。|  
   
  LSN とシーケンス番号はそれぞれ、Binary(10) の LSN 値を表す最大 20 桁の 16 進数文字列としてエンコードされます。  
   
@@ -93,8 +91,7 @@ ms.lasthandoff: 08/03/2017
  [状態の自動保持] を指定して CDC 制御タスクを使用しない場合は、パッケージが最後に実行されたときに変数の値が保存された永続ストレージからその値を読み込み、現在の処理範囲の処理が終了したときに永続ストレージにその値を書き戻す必要があります。  
   
 ## <a name="see-also"></a>参照  
- [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)   
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 制御タスク エディター](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

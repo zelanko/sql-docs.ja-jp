@@ -2,9 +2,12 @@
 title: "ユーザー定義関数の実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8bf738f8ef313edd347fadcabf91a8007c228a7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 637dbc59f1aaad1bf6fbbf5c11c8a92a504ef847
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-user-defined-functions"></a>ユーザー定義関数の実行
-  Transact-SQL を使用してユーザー定義関数を実行する
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Transact-SQL を使用してユーザー定義関数を実行します。
   
 
 > **注:** ユーザー定義関数の詳細については、「  [ユーザー定義関数](user-defined-functions.md) 」および「 [CREATE FUNCTION (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 」を参照してください。 

@@ -1,5 +1,5 @@
 ---
-title: "プログラムによるタスクの追加 |Microsoft ドキュメント"
+title: "プログラムによるタスクの追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
   ランタイム エンジン内の次の種類のオブジェクトに、タスクを追加できます。  
@@ -50,10 +47,10 @@ ms.lasthandoff: 08/03/2017
   
  各コンテナーには、個々の <xref:Microsoft.SqlServer.Dts.Runtime.Executables> オブジェクトを含んでいる <xref:Microsoft.SqlServer.Dts.Runtime.Executable> コレクションがあります。 各実行可能タスクは <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> メソッドを継承して実装します。 これらの 2 つのメソッドはランタイム エンジンによって呼び出され、各 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> を処理します。  
   
- パッケージにタスクを追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables> の既存のコレクションを持つコンテナーが必要です。 ほとんどの場合、コレクションに追加するタスクはパッケージです。 新しいタスクのコンテナーのコレクションに実行可能ファイルを追加するを呼び出す、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>メソッドです。 このメソッドには単一の文字列パラメーターがあり、CLSID、PROGID、STOCK モニカー、または、追加するタスクの <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> が格納されます。  
+ パッケージにタスクを追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables> の既存のコレクションを持つコンテナーが必要です。 ほとんどの場合、コレクションに追加するタスクはパッケージです。 新しいタスクの実行可能ファイルをそのコンテナーのコレクションに追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドを呼び出します。 このメソッドには単一の文字列パラメーターがあり、CLSID、PROGID、STOCK モニカー、または、追加するタスクの <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> が格納されます。  
   
 ## <a name="task-names"></a>タスク名  
- 名前または ID を使用してタスクを指定することができますが、 **STOCK**モニカーの形式で最もよく使用されるパラメーターが、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>メソッドです。 **STOCK** モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
+ 名前または ID でタスクを指定できますが、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドで最もよく使用されるパラメーターは **STOCK** モニカーです。 **STOCK** モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -143,7 +140,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- 次のコード例を作成する方法を示しています、 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 、新しいパッケージからコレクションし、このコレクションを使用して、ファイル システム タスクと一括挿入タスクを追加、 **STOCK**モニカーです。 この例では、Microsoft.SqlServer.FileSystemTask および Microsoft.SqlServer.BulkInsertTask アセンブリへの参照が必要です。  
+ 次のコード例は、新しいパッケージから <xref:Microsoft.SqlServer.Dts.Runtime.Executables> コレクションを作成し、**STOCK** モニカーを使用してファイル システム タスクと一括挿入タスクをコレクションに追加する方法を示しています。 この例では、Microsoft.SqlServer.FileSystemTask および Microsoft.SqlServer.BulkInsertTask アセンブリへの参照が必要です。  
   
 ```csharp  
 using System;  
@@ -325,13 +322,13 @@ End Module
   
 2.  <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.InnerObject%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> をタスク クラスにキャストします。 たとえば、一括挿入タスクが <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask> としてパッケージに追加され、その後 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> にキャストされた後で、このタスクを <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> にキャストするには、`BulkInsertTask myTask = th.InnerObject as BulkInsertTask;` を使用します。  
   
- 使用して、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>タスク固有のクラスにキャストせずに、コード内のクラスには次の利点があります。  
+ タスク固有のクラスにキャストする代わりに <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> クラスをコードで使用する場合、次の利点があります。  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> プロバイダーは、コード内でアセンブリを参照する必要がありません。  
   
 -   コンパイル時にタスクの名前を知る必要がないため、すべてのタスクで動作する汎用ルーチンをコーディングできます。 このような汎用ルーチンには、タスク名を引数として受け取るメソッドが含まれます。このメソッド コードはすべてのタスクで動作します。 これは、テスト コードを記述するのに適したメソッドです。  
   
- キャスト、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>タスク固有のクラスには次の利点があります。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> からタスク固有のクラスにキャストする場合、次の利点があります。  
   
 -   Visual Studio プロジェクトからステートメントの完了が提供されます (IntelliSense)。  
   
@@ -426,4 +423,3 @@ End Module
  [プログラムによるタスクの接続](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

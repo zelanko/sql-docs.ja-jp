@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_worker_agent_property (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.set_worker_agent_property (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 1438d3a2cf200450791c085f501c49329d61154d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-プロパティを設定、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]スケール アウト ワーカーです。
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker のプロパティを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,16 +36,16 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>引数
 [@WorkerAgentId =] *WorkerAgentId*  
-ワーカーのエージェントの ID のスケール アウト ワーカー。 *WorkerAgentId*は**uniqueidentifier**です。
+Scale Out Worker の worker エージェント ID。 *WorkerAgentId* は **uniqueidentifier** です。
 
 [@PropertyName =] *PropertyName*  
-プロパティの名前。 *PropertyName*は**nvarchar (256)**です。
+プロパティの名前。 *PropertyName* は **nvarchar(256)** です。
 
 [@PropertyValue =] *PropertyValue*  
-プロパティの値です。 *PropertyValue*は**nvarchar (max)**です。
+プロパティの値です。 *PropertyValue* は **nvarchar(max)** です。
 
 ## <a name="remarks"></a>解説
-有効なプロパティ名は、 **DisplayName**、**説明**、**タグ**です。
+有効なプロパティ名は、**DisplayName**、**Description**、**Tags** です。
 
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -58,18 +56,17 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 ## <a name="permissions"></a>Permissions  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割
+-   **sysadmin** サーバー ロールのメンバーシップ
 
 ## <a name="errors-and-warnings"></a>エラーおよび警告
   エラーまたは警告が発生する可能性がある条件を以下に示します。  
   
 -   ユーザーに適切な権限がない 
 
--   ワーカー エージェント ID が正しくありません。
+-   worker エージェント ID が正しくない
 
--   プロパティ名が正しくありません。
+-   プロパティ名が無効
 
--   プロパティの値が正しくありません。  
-
+-   プロパティ値が無効  

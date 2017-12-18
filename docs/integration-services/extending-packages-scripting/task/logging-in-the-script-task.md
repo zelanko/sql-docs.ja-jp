@@ -1,5 +1,5 @@
 ---
-title: "スクリプト タスクでログ記録 |Microsoft ドキュメント"
+title: "スクリプト タスクでのログ記録 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SQL Server Integration Services packages, logs
 - SSIS packages, logs
@@ -26,25 +23,24 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3f656f97ab20e1692fdfa3fe6996bfa1d36d5256
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-the-script-task"></a>スクリプト タスクでのログ記録
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのログ記録を使用すると、実行の進行状況、結果、問題点などに関する詳細な情報を、あらかじめ定義されたイベントまたはユーザー定義のメッセージとして記録し、後で分析することができます。 スクリプト タスクで使用できる、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>のメソッド、 **Dts**ユーザー定義データを記録するオブジェクト。 ログ記録が有効になっている場合、 **ScriptTaskLogEntry**のログオン イベントが選択されている、**詳細**のタブ、 **SSIS ログの構成**ダイアログ ボックスで、1 回の呼び出し、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>メソッドは、タスク用に構成されたすべてのログ プロバイダーに、イベント情報を格納します。  
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのログ記録を使用すると、実行の進行状況、結果、問題点などに関する詳細な情報を、あらかじめ定義されたイベントまたはユーザー定義のメッセージとして記録し、後で分析することができます。 スクリプト タスクでユーザー定義のデータをログ記録するには、**Dts** オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> メソッドを使用できます。 ログ記録が有効で、**[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブでログ記録の対象として **[ScriptTaskLogEntry]** イベントが選択されている場合、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> メソッドを 1 回呼び出すと、そのタスク用に設定されたすべてのログ プロバイダーに対し、イベント情報が保存されます。  
   
 > [!NOTE]  
 >  ログ記録はスクリプト タスクから直接実行できますが、ログ記録ではなくイベントを実装することを検討する必要があります。 イベントを使用すると、イベント メッセージのログ記録を有効にできるだけでなく、既定またはユーザー定義のイベント ハンドラーによってイベントに応答することもできます。  
   
- ログ記録の詳細については、次を参照してください。 [Integration Services & #40 です。SSIS &#41;ログ記録](../../../integration-services/performance/integration-services-ssis-logging.md)です。  
+ ログ記録の詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 ## <a name="logging-example"></a>ログ記録の例  
  次の例は、処理された行数を表す値をログに記録する、スクリプト タスクのログ記録を示します。  
@@ -104,10 +100,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>外部リソース  
   
--   ブログ エントリ「 [Integration Services タスクのカスタム イベントをログ記録](http://go.microsoft.com/fwlink/?LinkId=165644)、dougbert.com  
+-   dougbert.com のブログ [「Integration Services タスクのカスタム イベントのログ記録」](http://go.microsoft.com/fwlink/?LinkId=165644)。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services & #40 です。SSIS &#41;ログ記録](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; のログ記録](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

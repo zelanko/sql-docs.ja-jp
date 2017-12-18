@@ -1,5 +1,5 @@
 ---
-title: "制御フロー |Microsoft ドキュメント"
+title: "制御フロー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,26 +16,25 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de01c45d538cd7117b81ea55613aa66be643a2c2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="control-flow"></a>制御フロー
-  パッケージは、制御フローと、オプションで含まれる 1 つ以上のデータ フローから構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 3 つのさまざまな種類の制御フロー要素を提供します。 パッケージ、タスクの機能を提供すると、順序付けされた制御フローを実行可能ファイル、コンテナー、およびタスクを連結する優先順位制約で構造体を提供するコンテナーです。  
+  パッケージは、制御フローと、オプションで含まれる 1 つ以上のデータ フローから構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている制御フロー要素は、パッケージ内の構造を提供するコンテナー、機能を提供するタスク、および優先順位制約の 3 種類です。優先順位制約は、実行ファイル、コンテナー、タスクを連結して正しく順序付けされた制御フローを作成するために使用されます。  
   
  詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」、「 [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)」、および「 [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)」を参照してください。  
   
  次の図は、1 つのコンテナーと 6 つのタスクで構成される制御フローを示しています。 タスクのうち 5 つはパッケージ レベルで定義され、残りの 1 つのタスクはコンテナー レベルで定義されています。 タスクは、コンテナーの内部にあります。  
   
- ![6 つのタスクとコンテナーのフロー制御](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6 つのタスクとコンテナーのフロー制御")  
+ ![6 つのタスクと 1 つのコンテナーを含む制御フロー](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6 つのタスクと 1 つのコンテナーを含む制御フロー")  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアーキテクチャでは入れ子のコンテナーがサポートされており、制御フローには複数のレベルで入れ子になったコンテナーを含めることができます。 たとえば、パッケージには Foreach ループ コンテナーなどのコンテナーを含めることができ、Foreach ループ コンテナーには、さらに別の Foreach ループ コンテナーなどを含めることができます。  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
  次の図は、制御フロー デザイナーに表示された、簡単なパッケージの制御フローを示しています。 この図で表示されている制御フローは、パッケージレベルの 3 つのタスク、および 3 つのタスクが含まれるパッケージレベルの 1 つのコンテナーで構成されています。 タスクとコンテナーは、優先順位制約を使用して連結されます。  
   
- ![パッケージの制御フロー デザイナーのスクリーン ショット](../../integration-services/connection-manager/media/samplecontrolflow.gif "パッケージの制御フロー デザイナーのスクリーン ショット")  
+ ![パッケージの制御フロー デザイナーのスクリーンショット](../../integration-services/connection-manager/media/samplecontrolflow.gif "パッケージの制御フロー デザイナーのスクリーンショット")  
   
  制御フローを作成するには、次の作業を行います。  
   
@@ -67,15 +65,14 @@ ms.lasthandoff: 08/03/2017
   
      多くのタスクではデータ ソースに接続する必要があるため、タスクに必要な接続マネージャーをパッケージに追加する必要があります。 使用する列挙子の型に応じて、Foreach ループ コンテナーにも接続マネージャーが必要となる場合があります。 接続マネージャーは、制御フローをアイテム別に作成するときに追加できます。または、制御フローの作成を開始する前に追加することもできます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]デザイナーには、デザイン画面を管理し、制御フローを自己文書化に使用できる多くのデザイン時機能も含まれています。  
+ また、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、デザイン画面を管理したり、制御フローを自己文書化するための、多数のデザイン時機能も含まれています。  
   
 ## <a name="related-tasks"></a>関連タスク  
   
--   [タスクまたはコンテナーを制御フローに追加または削除](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
--   [グループまたはグループ解除コンポーネント](../../integration-services/group-or-ungroup-components.md)  
+-   [コンポーネントのグループ化とグループの解除](../../integration-services/group-or-ungroup-components.md)  
   
   
-

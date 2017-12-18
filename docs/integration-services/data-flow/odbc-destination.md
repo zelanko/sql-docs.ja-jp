@@ -1,5 +1,5 @@
 ---
-title: "Odbc 入力先 |Microsoft ドキュメント"
+title: "ODBC 入力先 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 変換先エディター &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
 -   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
@@ -86,11 +84,11 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 変換先を使用してデータを読み込む](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [ODBC 変換先を使用したデータ読み込み](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 変換先のカスタム プロパティ](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
-## <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター]\ ([接続マネージャー] ページ)
+## <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター] ([接続マネージャー] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力先の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
  **[ODBC 入力先エディター] の [接続マネージャー] ページを開くには**  
@@ -124,7 +122,7 @@ ms.lasthandoff: 08/17/2017
 #### <a name="preview"></a>プレビュー  
  **[プレビュー]** をクリックすると、選択したテーブルのデータが最大で 200 行表示されます。  
   
-## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\ ([マッピング] ページ)
+## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター] ([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
 ### <a name="options"></a>オプション  
@@ -136,7 +134,7 @@ ms.lasthandoff: 08/17/2017
  使用できる変換先列の一覧です。 使用できる入力列に変換先列をドラッグ アンド ドロップして、列をマップできます。  
   
 #### <a name="input-column"></a>入力列  
- 選択した入力列を表示します。 マッピングを削除するを選択すると**\<無視 >**出力から列を除外します。  
+ 選択した入力列を表示します。 出力から列を除外するために **\<無視>** を選択することで、マッピングを削除できます。  
   
 #### <a name="destination-column"></a>変換先列  
  使用できるすべての変換先列を表示します (マップ済みの列とマップされていない列を両方とも含む)。  
@@ -144,7 +142,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="odbc-destination-editor-error-output-page"></a>ODBC 変換先エディター ([エラー出力] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
   
- **ODBC 変換先エディター エラー出力 ページを開く**  
+ **[ODBC 入力先エディター] の [エラー出力] ページを開くには**  
   
 ### <a name="task-list"></a>タスク一覧  
   
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>[フローのリダイレクト]  
  エラーまたは切り捨てが ODBC 入力先のエラー出力に送られる原因となった行。 詳細については、「ODBC 入力先」を参照してください。  
   
-

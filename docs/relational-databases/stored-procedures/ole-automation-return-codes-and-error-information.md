@@ -2,9 +2,12 @@
 title: "OLE オートメーションのリターン コードとエラー情報 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0db7fd283f74b6235cd771da246006dbba1cdb80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE オートメーションのリターン コードとエラー情報
-  OLE オートメーション システム ストアド プロシージャでは、 **int** のリターン コードが返されます。これは、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800*nnnnn*という 16 進数形式の OLE エラー コードですが、ストアド プロシージャのリターン コードで **int** 値として返された場合、HRESULT の形式は 214*nnnnnnn*になります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] OLE オートメーション システム ストアド プロシージャでは、**int** のリターン コードが返されます。これは、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800*nnnnn*という 16 進数形式の OLE エラー コードですが、ストアド プロシージャのリターン コードで **int** 値として返された場合、HRESULT の形式は 214*nnnnnnn*になります。  
   
  たとえば、sp_OACreate に SQLDMO.Xyzzy などの無効なオブジェクト名を渡すと、このプロシージャでは HRESULT が **int** 値 2147221005 として返されます。これは、16 進数形式では 0x800401f3 です。  
   

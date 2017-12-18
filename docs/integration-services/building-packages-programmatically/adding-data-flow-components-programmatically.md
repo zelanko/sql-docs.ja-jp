@@ -1,5 +1,5 @@
 ---
-title: "プログラムによるデータ フロー コンポーネントの追加 |Microsoft ドキュメント"
+title: "プログラムによるデータ フロー コンポーネントの追加| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cef868a3eef5413777e8bd05101311931df9e191
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
-  データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントに接続する方法については、次を参照してください。[データ フローのコンポーネントをプログラムで接続する](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)です。  
+  データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントの接続方法については、「[プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  
   
-## <a name="adding-a-component"></a>コンポーネントを追加します。  
+## <a name="adding-a-component"></a>コンポーネントの追加  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaDataCollection100.New%2A> コレクションの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.ComponentMetaDataCollection%2A> メソッドを呼び出して新しいコンポーネントを作成し、データ フロー タスクに追加します。 このメソッドは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを返します。 ただしこの時点で、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> には、いずれかのコンポーネントに固有な情報は含まれていません。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティを設定し、コンポーネントの種類を識別します。 データ フロー タスクはこのプロパティの値を使用して、実行時にコンポーネントのインスタンスを作成します。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値には、CLSID、PROGID、またはコンポーネントの <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> プロパティを指定できます。 CLSID は通常、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値として [プロパティ] ウィンドウに表示されます。 このプロパティと使用可能なコンポーネントの他のプロパティを取得する方法の詳細については、次を参照してください。[データ フローのコンポーネントをプログラムによって検出](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)です。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値には、CLSID、PROGID、またはコンポーネントの <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> プロパティを指定できます。 CLSID は通常、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> プロパティの値として [プロパティ] ウィンドウに表示されます。 このプロパティ、および使用できるコンポーネントの他のプロパティの取得については、「[プログラムによるデータ フロー コンポーネントの検出](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)」を参照してください。  
   
 ## <a name="adding-a-managed-component"></a>マネージ コンポーネントの追加  
- CLSID または PROGID を使用して、いずれかのマネージ データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 代わりに使用することができます、 **CreationName**プロパティまたは**AssemblyQualifiedName**プロパティの次の例に示すようにします。  
+ CLSID または PROGID を使用して、いずれかのマネージ データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 代わりに、次のサンプルに示すように、**CreationName** プロパティまたは **AssemblyQualifiedName** プロパティを使用できます。  
   
- 使用する場合、 **AssemblyQualifiedName**プロパティ、しするでの参照を追加する必要があります、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]マネージ コンポーネントを含むアセンブリへのプロジェクトです。 .NET タブでこれらのアセンブリは表示されません、**参照の追加** ダイアログ ボックス。 通常のアセンブリの検索を参照する必要があります、 **C:\Program files \microsoft SQL Server\100\DTS\PipelineComponents**フォルダーです。  
+ **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージ コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
   
  組み込みマネージ データ フロー コンポーネントの要素は次のとおりです。  
   
@@ -55,7 +52,7 @@ ms.lasthandoff: 08/03/2017
   
 -   DataReader 変換先  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 変換先  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 変換先  
   
 -   スクリプト コンポーネント  
   
@@ -145,7 +142,7 @@ End Module
  可能な限り、コンポーネントのメタデータを直接変更するのではなく、必ずデザイン時インスタンスのメソッドを使用して、コンポーネントを変更する必要があります。 メタデータには、接続など、直接設定する必要のあるアイテムがありますが、メタデータを直接変更すると、コンポーネントが変更を監視および検証する機能がバイパスされるため、一般的にはお勧めしません。  
   
 ## <a name="assigning-connections"></a>接続の割り当て  
- OLE DB ソース コンポーネントなどの一部のコンポーネントは外部データに接続する必要があるため、パッケージ内にある既存の <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトをこの目的で使用します。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> コレクションの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティは、コンポーネントが必要とする、実行時の <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトの数を示します。 この数が 0 より大きい場合、コンポーネントには接続が必要です。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> の最初の接続の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティを指定して、パッケージの接続マネージャーをコンポーネントに割り当てます。 実行時の接続コレクション内の接続マネージャーの名前がパッケージから接続 managerreferenced の名前に一致する必要がありますに注意してください。  
+ OLE DB ソース コンポーネントなどの一部のコンポーネントは外部データに接続する必要があるため、パッケージ内にある既存の <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトをこの目的で使用します。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> コレクションの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティは、コンポーネントが必要とする、実行時の <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトの数を示します。 この数が 0 より大きい場合、コンポーネントには接続が必要です。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> の最初の接続の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティを指定して、パッケージの接続マネージャーをコンポーネントに割り当てます。 実行時の接続コレクション内にある接続マネージャーの名前は、パッケージから参照される接続マネージャーの名前と一致する必要があります。  
   
 ## <a name="setting-the-values-of-custom-properties"></a>カスタム プロパティの値の設定  
  コンポーネントのデザイン時インスタンスを作成したら、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> メソッドを呼び出します。 このメソッドは、コンストラクターと同様、新しく作成されたコンポーネントのカスタム プロパティと入力および出力オブジェクトを作成することにより、そのコンポーネントを初期化します。 コンポーネントがリセットされ、メタデータに加えられた以前の変更が失われるため、1 つのコンポーネントで <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> を複数回呼び出さないでください。  
@@ -158,7 +155,7 @@ End Module
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> メソッドを呼び出し、変換元コンポーネントの出力の列を初期化します。 コンポーネントは外部データ ソースに自動的には接続されないので、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> を呼び出す前に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> メソッドを呼び出して、コンポーネントに外部データ ソースへのアクセスを提供し、列のメタデータを設定します。 最後に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> メソッドを呼び出し、接続を解放します。  
   
 ## <a name="next-step"></a>次の手順  
- 追加し、コンポーネントを構成したら、次の手順は、トピックの内容については、コンポーネント間のパスを作成するは[、パスの間で 2 つのコンポーネントを作成する](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)です。  
+ コンポーネントを追加して構成したら、次の手順としてコンポーネント間のパスを作成します。これについては、トピック「[2 つのコンポーネント間のパスの作成](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」で説明します。  
   
 ## <a name="sample"></a>サンプル  
  次のコード例は、OLE DB ソース コンポーネントをデータ フロー タスクに追加し、コンポーネントのデザイン時インスタンスを作成して、コンポーネントのプロパティを構成します。 この例では、アセンブリ Microsoft.SqlServer.DTSRuntimeWrap に対する追加の参照が必要です。  
@@ -296,4 +293,3 @@ End Module
  [プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
-

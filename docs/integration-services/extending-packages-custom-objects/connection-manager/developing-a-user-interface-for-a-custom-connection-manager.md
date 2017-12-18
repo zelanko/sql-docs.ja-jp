@@ -1,5 +1,5 @@
 ---
-title: "カスタム接続マネージャーのユーザー インターフェイスの開発 |Microsoft ドキュメント"
+title: "カスタム接続マネージャー用ユーザー インターフェイスの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>カスタム接続マネージャー用ユーザー インターフェイスの開発
   基本クラスのプロパティとメソッドをオーバーライドしてカスタム機能を提供したら、接続マネージャー用のカスタム ユーザー インターフェイスを作成します。 カスタム ユーザー インターフェイスを作成しない場合、ユーザーは [プロパティ] ウィンドウを使用して接続マネージャーを構成することしかできません。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/03/2017
  1 つのカスタム ユーザー インターフェイスのプロジェクトまたはアセンブリには、通常 2 つのクラスがあります。<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> を実装するクラスと、このクラスによって表示される、ユーザーから情報を収集するための Windows フォームです。  
   
 > [!IMPORTANT]  
->  署名して、カスタム ユーザー インターフェイスを構築し、」の説明に従って、グローバル アセンブリ キャッシュにインストールしたら[カスタム接続マネージャーのコーディング](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)で、このクラスの完全修飾名を指定してください、<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>のプロパティ、<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>です。  
+>  「[カスタム接続マネージャーのコーディング](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)」で説明されているようにカスタム ユーザー インターフェイスに署名してビルドし、グローバル アセンブリ キャッシュにインストールしたら、このクラスの完全修飾名を <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> の <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> プロパティで忘れずに指定してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に組み込まれているタスク、変換元、および変換先の多くは、組み込みの接続マネージャーの特定の種類でのみ機能します。 そのため、これらのサンプルは組み込みのタスクおよびコンポーネントではテストできません。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 >  ユーザーが接続マネージャーのインスタンスを削除したときにクリーンアップを実行する必要がない場合、<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A> メソッドのコードを記述する必要はありません。  
   
 ### <a name="initializing-the-user-interface"></a>ユーザー インターフェイスの初期化  
- <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> メソッドで、デザイナーは設定対象の接続マネージャーへの参照を提供し、ユーザー インターフェイス クラスで接続マネージャーのプロパティを変更できるようにします。 コードを接続 managerfor への参照をキャッシュする必要がある次のコードに示すように、後で使用します。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> メソッドで、デザイナーは設定対象の接続マネージャーへの参照を提供し、ユーザー インターフェイス クラスで接続マネージャーのプロパティを変更できるようにします。 次のコードに示すとおり、作成するコードで接続マネージャーへの参照をキャッシュして、後で使用できるようにする必要があります。  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -170,7 +167,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> インターフェイスのメソッドを実装するユーザー インターフェイス クラスを作成したら、ユーザーが接続マネージャーのプロパティを変更できる Windows フォームを作成する必要があります。  
   
 ### <a name="initializing-the-user-interface-form"></a>ユーザー インターフェイス フォームの初期化  
- 編集用のカスタム フォームを表示するときは、編集対象の接続マネージャーへの参照を渡すことができます。 または、独自に作成して、フォーム クラスにカスタム コンス トラクターを使用して、この参照を渡すことができます**初期化**メソッドは、ここに示すようにします。  
+ 編集用のカスタム フォームを表示するときは、編集対象の接続マネージャーへの参照を渡すことができます。 この参照を渡すには、フォーム クラスのカスタム コンストラクターを使用するか、以下に示すような独自の **Initialize** メソッドを作成します。  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -295,8 +292,7 @@ private void ConfigureControlsFromConnectionManager()
 ```
   
 ## <a name="see-also"></a>参照  
- [カスタム接続マネージャーを作成します。](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
+ [カスタム接続マネージャーの作成](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
  [カスタム接続マネージャーのコーディング](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

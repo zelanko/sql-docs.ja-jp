@@ -2,9 +2,12 @@
 title: "DAC を使用したデータベースの配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9717734b42a35703da2323c6eabac6719203494
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf70035387f68c17913ba152101cf1417f6e8741
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
-  **のインスタンスと** サーバー間、または 2 つの [!INCLUDE[ssDE](../../includes/ssde-md.md)] サーバー間でデータベースを配置するには、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] SQL Azure へのデータベースの配置ウィザード [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]を使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスと [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] サーバー間、または 2 つの [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] サーバー間でデータベースを配置するには、**SQL Azure へのデータベースの配置**ウィザードを使用します。  
   
 ##  <a name="BeforeBegin"></a> はじめに  
  このウィザードでは、データ層アプリケーション (DAC) の BACPAC アーカイブ ファイルを使用して、データおよびデータベース オブジェクトの定義を配置します。 ウィザードでは、ソース データベースからの DAC エクスポート操作と、配置先への DAC インポート操作を実行します。  

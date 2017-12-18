@@ -1,5 +1,5 @@
 ---
-title: "イベントをプログラムで処理 |Microsoft ドキュメント"
+title: "プログラムによるイベントの処理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,27 +27,26 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 7235703f494bd1fb50e696aef537391ba23d1749
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dadff8ac9d513c998dbe8f019e00e4fd84983344
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handling-events-programmatically"></a>プログラムによるイベントの処理
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] のランタイムには、パッケージの検証や実行の処理前、処理中、処理後に発生する一連のイベントがあります。 これらのイベントをキャプチャするには、次の 2 つの方法があります。 最初のメソッドを実装することでは、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>クラスでは、インターフェイスをパラメーターとしてクラスを指定すること、 **Execute**と**検証**パッケージのメソッドです。 もう 1 つは <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成する方法です。このオブジェクトには、タスクやループなど、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> に属するイベントが発生したときに実行される、他の [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクトを含めることができます。 ここでは、この 2 つの方法について説明し、その使用法をコード例で示します。  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] のランタイムには、パッケージの検証や実行の処理前、処理中、処理後に発生する一連のイベントがあります。 これらのイベントをキャプチャするには、次の 2 つの方法があります。 1 つは、あるクラスに <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装し、このクラスをパラメーターとして、パッケージの **Execute** および **Validate** メソッドに渡す方法です。 もう 1 つは <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成する方法です。このオブジェクトには、タスクやループなど、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> に属するイベントが発生したときに実行される、他の [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクトを含めることができます。 ここでは、この 2 つの方法について説明し、その使用法をコード例で示します。  
   
 ## <a name="receiving-idtsevents-callbacks"></a>IDTSEvents コールバックの受信  
- プログラムによってパッケージを構築し、実行する開発者は、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを使用して、検証中や実行中に発生したイベント通知を受信することができます。 実装するクラスを作成することでこれは、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>インターフェイスとのパラメーターとしてこのクラスを提供する、**検証**と**Execute**パッケージのメソッドです。 イベントが発生すると、ランタイム エンジンによってこのクラスのメソッドが呼び出されます。  
+ プログラムによってパッケージを構築し、実行する開発者は、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを使用して、検証中や実行中に発生したイベント通知を受信することができます。 これを行うには、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装するクラスを作成し、このクラスをパラメーターとして、パッケージの **Validate** および **Execute** メソッドに渡します。 イベントが発生すると、ランタイム エンジンによってこのクラスのメソッドが呼び出されます。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> クラスにはあらかじめ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスが実装されています。したがって、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを直接実装する代わりに、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを作成し、応答を受ける特定のイベントをオーバーライドする方法を取ることもできます。 指定するクラスをパラメーターとして、**検証**と**Execute**のメソッド、<xref:Microsoft.SqlServer.Dts.Runtime.Package>イベント コールバックを受信します。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> クラスにはあらかじめ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスが実装されています。したがって、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを直接実装する代わりに、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを作成し、応答を受ける特定のイベントをオーバーライドする方法を取ることもできます。 その後、このクラスをパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.Package> の **Validate** および **Execute** メソッドに渡し、イベントのコールバックを受け取ります。  
   
- 次のコード サンプルは、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを示し、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> メソッドをオーバーライドします。 クラスをパラメーターとして提供し、**検証**と**Execute**パッケージのメソッドです。  
+ 次のコード サンプルは、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを示し、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> メソッドをオーバーライドします。 その後、クラスはパラメーターとして、パッケージの **Validate** および **Execute** メソッドに渡されます。  
   
 ```csharp  
 using System;  
@@ -118,7 +115,7 @@ End Class
 ## <a name="creating-dtseventhandler-objects"></a>DtsEventHandler オブジェクトの作成  
  ランタイム エンジンには、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを介した、堅牢で柔軟性の高いイベント処理/通知システムが含まれています。 このオブジェクトを使用すると、イベント ハンドラー内のワークフロー全体をデザインして、そのイベント ハンドラーが属するイベントが発生したときにのみ、ワークフローを実行させることができます。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> はコンテナー オブジェクトで、親オブジェクト内の対応するイベントが発生すると実行されます。 したがって、コンテナー上で発生したイベントに応答して実行されるワークフローを、他のワークフローとは独立して作成できます。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトは同期型であるため、イベントにアタッチされたイベント ハンドラーが返されるまで、実行は再開されません。  
   
- 次のコードは、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトの作成方法を示しています。 コードは、<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> をパッケージの <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> コレクションに追加し、次にタスクの <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> イベント用の <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> オブジェクトを作成します。 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> がイベント ハンドラーに追加されます。これは、最初の <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> に対する <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> イベントが発生したときに行われます。 この例では、C:\Windows\Temp\DemoFile.txt という名前のファイルをテストに使用することを前提にしています。 サンプルを初めて実行するとき、ファイルが正常にコピーされていれば、イベント ハンドラーは呼び出されません。 2 回目のサンプルを実行する最初の<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>ファイルのコピーに失敗した (ための値<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A>は**false**)、イベント ハンドラーが呼び出されると、2 番目<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>発生したエラーのため、ソース ファイル、およびパッケージ レポートのエラーを削除します。  
+ 次のコードは、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトの作成方法を示しています。 コードは、<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> をパッケージの <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> コレクションに追加し、次にタスクの <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> イベント用の <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> オブジェクトを作成します。 <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> がイベント ハンドラーに追加されます。これは、最初の <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> に対する <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> イベントが発生したときに行われます。 この例では、C:\Windows\Temp\DemoFile.txt という名前のファイルをテストに使用することを前提にしています。 サンプルを初めて実行するとき、ファイルが正常にコピーされていれば、イベント ハンドラーは呼び出されません。 2 回目にサンプルを実行すると、最初の <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> はファイルのコピーに失敗し (<xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> の値が **false** であるため)、イベント ハンドラーが呼び出され、2 番目の <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> によって変換元ファイルが削除され、エラーの発生が原因でパッケージによって失敗が報告されます。  
   
 ## <a name="example"></a>例  
   
@@ -258,8 +255,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>参照  
- [Integration Services & #40 です。SSIS &#41;イベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)   
- [イベント ハンドラーをパッケージに追加します。](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [パッケージにイベント ハンドラーを追加する](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

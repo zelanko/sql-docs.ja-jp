@@ -1,5 +1,5 @@
 ---
-title: "データ ソース (SQL Server インポートおよびエクスポート ウィザード) を選択 |Microsoft ドキュメント"
+title: "[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,29 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.chooseadatasource.f1
+f1_keywords: sql13.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-caps.latest.revision: 124
+caps.latest.revision: "124"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 80d35cb294fd900611c73ca37bba2a66baef0767
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 90577058fc3501239ac1c3ad72c96e9df2bc5f04
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択]\(SQL Server インポートおよびエクスポート ウィザード)
+# <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
   [ようこそ] ページの後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データ ソースを選ぶ]**が表示されます。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。
   
 使用できるデータ ソースの詳細については、「 [どのようなデータ ソースと変換先を使用できるでしょうか。](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
 
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>[データ ソースの選択] ページのスクリーン ショット 
-次のスクリーンショットは、ウィザードの **[データ ソースの選択]** ページの最初の部分を示しています。 ページの残りの部分には、可変個のここで選択したデータ ソースに依存するオプションがあります。
+次のスクリーンショットは、ウィザードの **[データ ソースの選択]** ページの最初の部分を示しています。 ページの残りの部分には、ここで選択したデータ ソースに応じて変わるさまざまなオプションがあります。
 
 ![ソースの選択](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -41,43 +38,42 @@ ms.lasthandoff: 08/28/2017
  **データ ソース**  
 データ ソースを指定するには、ソースに接続することができるデータ プロバイダーを選択します。
 
--   **必要なデータ プロバイダーは通常、その名前から明らかな**プロバイダーの名前通常含まれているためデータ ソースの名前など、*フラット ファイル*ソース、Microsoft *Excel*、Microsoft*アクセス*、.Net Framework Data Provider for *SqlServer*、.Net Framework Data Provider for *Oracle*です。
+-   **必要なデータ プロバイダーは通常、その名前で判断できます**。プロバイダーの名前には通常、データ ソースの名前が含まれているからです。例: *フラット ファイル* ソース、Microsoft *Excel*、Microsoft *Access*、.NET Framework Data Provider for *SqlServer*、.NET Framework Data Provider for *Oracle* など。
 
--   **データ ソースの ODBC ドライバーがあるかどうかは**、選択、.Net Framework Data Provider for ODBC です。 ドライバー固有の情報を入力します。 ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 .Net Framework Data Provider for ODBC は ODBC ドライバーをラップするラッパーとして機能します。 詳細については、次を参照してください。 [ODBC データ ソースへの接続](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)です。
+-   **データ ソースで ODBC ドライバーを使用している場合は**、.NET Framework Data Provider for ODBC を選択します。 ドライバー固有の情報を入力します。 ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 .NET Framework Data Provider for ODBC は ODBC ドライバーのラッパーとして機能します。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
--   **データ ソースに使用できるプロバイダーが複数存在する可能性があります。** 通常、ソースで使用できる任意のプロバイダーを選択できます。 例については、Microsoft に接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SQL Server または SQL Server ODBC ドライバーの .NET Framework データ プロバイダーを使用することができます。 (その他のプロバイダーは、一覧にもまだが現在サポートされていません)。 
+-   **データ ソースに使用できるプロバイダーが複数存在する可能性があります。** 通常、ソースで使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます  (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
 
-## <a name="my-data-source-isnt-in-the-list"></a>データ ソースは、一覧ではありません。
--   **データ プロバイダーをダウンロードする必要があります**Microsoft またはサード パーティからです。 使用できるデータ プロバイダーの一覧、**データソース**一覧には、コンピューターにインストールされているプロバイダーのみが含まれています。 使用できるデータ ソースの詳細については、「 [どのようなデータ ソースと変換先を使用できるでしょうか。](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
+## <a name="my-data-source-isnt-in-the-list"></a>データ ソースがリストにない
+-   Microsoft またはサード パーティから**データ プロバイダーをダウンロードする必要があります**。 **[データ ソース]** のリストに表示される、使用できるデータ プロバイダーのリストに含まれているのは、コンピューターにインストールされているプロバイダーのみです。 使用できるデータ ソースの詳細については、「 [どのようなデータ ソースと変換先を使用できるでしょうか。](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
 
--   **データ ソースの ODBC ドライバーがあるか。** ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 データ ソース、ODBC ドライバーがあれば、選択、.Net Framework Data Provider for ODBC です。 ドライバー固有の情報を入力します。 .Net Framework Data Provider for ODBC は ODBC ドライバーをラップするラッパーとして機能します。 詳細については、次を参照してください。 [ODBC データ ソースへの接続](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)です。
+-   **データ ソースの ODBC ドライバーがありますか。** ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 データ ソースで ODBC ドライバーを使用している場合は、.NET Framework Data Provider for ODBC を選択します。 ドライバー固有の情報を入力します。 .NET Framework Data Provider for ODBC は ODBC ドライバーのラッパーとして機能します。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
--   **64 ビットおよび 32 ビットのプロバイダー。** 64 ビットのウィザードを実行している場合は、データ ソースが表示されません、32 ビット プロバイダーのみがインストールされているため、その逆です。
+-   **64 ビットと 32 ビットのプロバイダー。** 64 ビットのウィザードを実行している場合、32 ビット プロバイダーしかインストールされていないデータ ソースは表示されません。その逆も同様です。
 
 > [!NOTE]
-> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するのには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのインストールのみです。
+> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
 ## <a name="after-you-choose-a-data-source"></a>データ ソースの選択後
-残りの部分のデータ ソースを選択した後、**データ ソースを選択**ページには、可変個のオプションを選択するデータ プロバイダーによって異なります。
+データソースを選択した後、**[データ ソースを選ぶ]** ページ プロパティの残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
 
-一般的に使用されるデータ ソースに接続するには、次のページのいずれかを参照してください。
--   [SQL Server に接続します。](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
--   [Oracle への接続します。](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
--   [フラット ファイル (テキスト ファイル) への接続します。](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
--   [Excel への接続します。](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
--   [アクセスに接続します。](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [ODBC を接続します。](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
--   [Azure Blob ストレージへの接続します。](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
--   [PostgreSQL への接続します。](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
--   [MySQL への接続します。](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
+よく使われるデータ ソースに接続するには、次のいずれかのページをご覧ください。
+-   [SQL Server への接続](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [Oracle への接続](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
+-   [フラット ファイル (テキスト ファイル) への接続](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+-   [Excel への接続](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
+-   [Access への接続](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
+-   [ODBC への接続](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Azure Blob Storage への接続](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [PostgreSQL への接続](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
+-   [MySQL への接続](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
-詳細については、ここに記載されていないデータ ソースに接続する方法は、次を参照してください。[この接続文字列参照には](https://www.connectionstrings.com/)します。 このサード パーティのサイトには、サンプルの接続文字列とデータ プロバイダーの詳細と必要な接続情報が含まれています。
+この一覧にないデータ ソースに接続する方法については、「[The Connection Strings Reference](https://www.connectionstrings.com/)」(接続文字列リファレンス) をご覧ください。 このサード パーティのサイトには、接続文字列のサンプルと、データ プロバイダーおよび必要な接続情報に関する詳細な情報が記載されています。
 
 ## <a name="whats-next"></a>次の操作  
  データ ソースとデータへの接続方法を指定したら、 **[変換先の選択]**ページに進みます。 このページでは、データの変換先およびデータに接続する方法についての情報を指定します。 詳細については、「 [[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)」をご覧ください。
  
 ## <a name="see-also"></a>参照
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

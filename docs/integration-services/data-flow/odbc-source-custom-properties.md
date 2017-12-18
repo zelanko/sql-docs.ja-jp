@@ -1,5 +1,5 @@
 ---
-title: "Odbc 入力元のカスタム プロパティ |Microsoft ドキュメント"
+title: "ODBC 入力元のカスタム プロパティ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c4c5abcb4e12074bc1f0c23d404d0e4c2d69c732
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC 入力元のカスタム プロパティ
   次の表は、ODBC 入力元のカスタム プロパティを示しています。 すべてのプロパティは、SSIS プロパティ式から設定できます。  
@@ -45,8 +43,7 @@ ms.lasthandoff: 08/03/2017
 ||||  
   
 ## <a name="see-also"></a>「  
- [Odbc 入力元](../../integration-services/data-flow/odbc-source.md)   
- [Odbc 入力元エディター & #40 です。接続マネージャー ページ &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+ [ODBC ソース](../../integration-services/data-flow/odbc-source.md)   
+ [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   
-

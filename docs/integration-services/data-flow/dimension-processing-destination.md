@@ -1,5 +1,5 @@
 ---
-title: "ディメンション処理変換先 |Microsoft ドキュメント"
+title: "ディメンション処理変換先 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: b2f91bc4c236d2593bf3779968a0c27e0b9d68c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
   ディメンション処理変換先は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションを読み込んで処理します。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 08/17/2017
   
  データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター]\ ([接続マネージャー] ページ)
+## <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター] ([接続マネージャー] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
   
 ### <a name="options"></a>オプション  
@@ -83,7 +81,7 @@ ms.lasthandoff: 08/17/2017
 |**[完全]**|ディメンションの完全処理を実行します。|  
 |**Update**|ディメンションの更新処理を実行します。|  
   
-## <a name="dimension-processing-destination-editor-mappings-page"></a>[ディメンション処理変換先エディター]\ ([マッピング] ページ)
+## <a name="dimension-processing-destination-editor-mappings-page"></a>[ディメンション処理変換先エディター] ([マッピング] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
 ### <a name="options"></a>オプション  
@@ -99,7 +97,7 @@ ms.lasthandoff: 08/17/2017
  **変換先列**  
  使用できる変換先列を表示し、それぞれがマップされるかどうかを示します。  
   
-## <a name="dimension-processing-destination-editor-advanced-page"></a>[ディメンション処理変換先エディター]\ ([詳細設定] ページ)
+## <a name="dimension-processing-destination-editor-advanced-page"></a>[ディメンション処理変換先エディター] ([詳細設定] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を構成できます。  
   
 ### <a name="options"></a>オプション  
@@ -123,7 +121,7 @@ ms.lasthandoff: 08/17/2017
  **[エラー数]**  
  **[エラー時に停止する]**を選択した場合は、処理を停止するエラーのしきい値を指定します。  
   
- **「エラー時のアクション**  
+ **[エラー時のアクション]**  
  **[エラー時に停止する]**を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
   
 |Value|Description|  
@@ -178,4 +176,3 @@ ms.lasthandoff: 08/17/2017
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

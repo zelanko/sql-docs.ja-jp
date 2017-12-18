@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 変換先 |Microsoft ドキュメント"
+title: "SAP BW 転送先 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e61105936766817678d3806f603c506bad94bd5e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
   SAP BW 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換先コンポーネントです。 SAP BW 変換先は、SAP Netweaver BW Version 7 システムに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのデータを読み込みます。  
@@ -96,34 +94,33 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>SSIS デザイナーを使用して変換先を構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換先のプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SAP BW 変換先エディターと &#40; です。接続マネージャー ページと &#41; です。](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 変換先エディターと &#40; です。「マッピング」 ページと &#41; です。](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 変換先エディター &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 変換先エディターと &#40; です。エラー出力 ページと &#41; です。](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 変換先エディターと &#40; です。「詳細」 ページと &#41; です。](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  SAP BW 変換先を構成するときに、SAP Netweaver BW オブジェクトを参照または作成するためにさまざまなダイアログ ボックスを使用できます。 これらのダイアログ ボックスの詳細については、次のトピックのいずれかを参照してください。  
   
--   [インフォ パッケージを検索します。](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [[インフォパッケージの参照]](../../integration-services/data-flow/look-up-infopackage.md)  
   
--   [新しいインフォ オブジェクトを作成します。](../../integration-services/data-flow/create-new-infoobject.md)  
+-   [新しいインフォオブジェクトの作成](../../integration-services/data-flow/create-new-infoobject.md)  
   
--   [トランザクション データのインフォ キューブを作成します。](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
+-   [トランザクション データのインフォキューブの作成](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [インフォ オブジェクトを検索します。](../../integration-services/data-flow/look-up-infoobject.md)  
+-   [インフォオブジェクトの参照](../../integration-services/data-flow/look-up-infoobject.md)  
   
--   [インフォ ソースを作成します。](../../integration-services/data-flow/create-infosource.md)  
+-   [インフォソースの作成](../../integration-services/data-flow/create-infosource.md)  
   
--   [トランザクション データのインフォ ソースを作成します。](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
+-   [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [マスター データのインフォ ソースを作成します。](../../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [マスター データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
--   [インフォ パッケージを作成します。](../../integration-services/data-flow/create-infopackage.md)  
+-   [インフォパッケージの作成](../../integration-services/data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>参照  
  [Microsoft Connector for SAP BW のコンポーネント](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

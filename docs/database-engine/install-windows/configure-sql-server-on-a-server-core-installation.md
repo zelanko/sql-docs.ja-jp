@@ -2,11 +2,12 @@
 title: "Server Core インストールでの SQL Server の構成 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +19,14 @@ caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 2356991aa91bc1390638d5cb84935068c79f2fd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f55439476e962ab97c2e29a37524854fa52d819b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
-このトピックでは、Server Core インストールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成する方法について詳しく説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、Server Core インストールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成する方法について詳しく説明します。  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Windows Server の Server Core の構成と管理  
 ここでは、Server Core インストールの構成および管理に役立つトピックへのリンクを示します。  
@@ -182,7 +183,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]**をクリックします。  
   
-3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[ 開く ]** フィールドに **sqlps.exe** と入力して、**[ OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
+3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[開く]** フィールドに **sqlps.exe** と入力して、**[OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
   
 4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   

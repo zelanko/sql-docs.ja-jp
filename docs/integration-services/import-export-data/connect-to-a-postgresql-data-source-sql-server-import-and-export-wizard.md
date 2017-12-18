@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL データ ソース (SQL Server インポートおよびエクスポート ウィザード) への接続 |Microsoft ドキュメント"
+title: "PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,70 +8,68 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4c82ae7eedc3e18e7591cf7ab30a507920695247
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 58d8e69ae49c56716d8d0f5393fad329bd924b21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL データ ソース (SQL Server インポートおよびエクスポート ウィザード) への接続します。
-このトピックに接続する方法、 **PostgreSQL**データ ソースから、**データ ソースを選択**または**変換先の選択**SQL Server インポートおよびエクスポート ウィザードのページです。 
+# <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **PostgreSQL** データ ソースに接続する方法を説明します。 
 
 > [!IMPORTANT]
-> PostgreSQL データベースに接続するための前提条件と要件の詳細については、この Microsoft の記事の範囲を超えています。 この記事では、PostgreSQL クライアント ソフトウェアをインストール済みであることと、接続できることを既に正常にターゲット PostgreSQL データベースを前提としています。 詳細については、PostgreSQL データベース管理者または PostgreSQL のドキュメントを参照してください。
+> PostgreSQL データベースに接続するための詳細な要件と前提条件については、この Microsoft の記事では説明しません。 この記事では、PostgreSQL クライアント ソフトウェアをインストール済みであることと、ターゲットの PostgreSQL データベースに正常に接続できることを前提としています。 詳細については、PostgreSQL データベース管理者に問い合わせるか、PostgreSQL のドキュメントを参照してください。
 
-## <a name="get-the-postgresql-odbc-driver"></a>PostgreSQL ODBC ドライバーを入手します。
+## <a name="get-the-postgresql-odbc-driver"></a>PostgreSQL ODBC ドライバーを入手する
 
-### <a name="install-the-odbc-driver-with-stack-builder"></a>スタック ビルダーでの ODBC ドライバーをインストールします。
-PostgreSQL ODBC ドライバー (psqlODBC) PostgreSQL のインストールを追加するスタック ビルダーを実行します。
+### <a name="install-the-odbc-driver-with-stack-builder"></a>Stack Builder で ODBC ドライバーをインストールする
+Stack Builder を実行し、インストール済みの PostgreSQL に PostgreSQL ODBC ドライバー (psqlODBC) を追加します。
 
-![スタック ビルダー PostgreSQL ODBC をインストールします。](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
+![Stack Builder で PostgreSQL ODBC をインストールする](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
-### <a name="or-download-the-latest-odbc-driver"></a>また、最新の ODBC ドライバーのダウンロード
--この FTP サイトから直接 PostgreSQL ODBC ドライバー (psqlODBC) の最新バージョンの Windows インストーラーのダウンロードや、 [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)です。 .Zip ファイルからファイルを抽出し、.msi ファイルを実行します。
+### <a name="or-download-the-latest-odbc-driver"></a>あるいは、最新の ODBC ドライバーをダウンロードする
+あるいは、最新版の PostgreSQL ODBC ドライバー (psqlODBC) の Windows インストーラーを FTP サイト [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/) から直接ダウンロードします。 .zip ファイルからファイルを解凍し、.msi ファイルを実行します。
 
-## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>PostgreSQL PostgreSQL ODBC ドライバー (psqlODBC) に接続します。
-ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 ODBC ドライバーで接続するを選択して開始、 **.NET Framework Data Provider for ODBC**上のデータ ソースとして、**データ ソースを選択**または**先選択**ページ。 このプロバイダーは、ODBC ドライバーをラップするラッパーとして機能します。
+## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>PostgreSQL ODBC ドライバー (psqlODBC) で PostgreSQL に接続する
+ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 ODBC ドライバーを使用して接続するには、最初に **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで **[.NET Framework Data Provider for ODBC]** をデータ ソースとして選択します。 このプロバイダーは、ODBC ドライバーのラッパーとして機能します。
 
-ここで、odbc、.NET Framework Data Provider を選択した後すぐに表示されているジェネリック画面です。
+下の図は、.NET Framework Data Provider for ODBC を選んだ直後に表示される一般的な画面です。
 
-![前に odbc PostgreSQL への接続します。](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![ODBC を使って PostgreSQL に接続する](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-postgresql-odbc-driver"></a>(PostgreSQL ODBC ドライバー) を指定するオプション
+### <a name="options-to-specify-postgresql-odbc-driver"></a>指定するオプション (PostgreSQL ODBC ドライバー)
 
 > [!NOTE]
-> PostgreSQL が、ソースまたは変換先であるかどうか、このデータ プロバイダーと ODBC ドライバーの接続オプションは、同じです。 表示オプションは、両方で同じ、**データ ソースを選択**と**変換先の選択**ウィザードのページです。
+> このデータ プロバイダーと ODBC ドライバーの接続オプションは、PostgreSQL が変換元または変換先の場合でも同じです。 つまり、表示されるオプションは、ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページともに同じです。
 
-PostgreSQL PostgreSQL ODBC ドライバーで接続するには、次の設定とその値を含む接続文字列を編成します。 完全な接続文字列の書式設定の一覧の直後にします。
+PostgreSQL ODBC ドライバーを使用して PostgreSQL に接続するには、次の設定とその値を含む接続文字列をアセンブルします。 完全な接続文字列の形式は、リストのすぐ後に示します。
 
 > [!TIP]
-> 適切である接続文字列をアセンブル ヘルプを取得します。 接続文字列を提供するには、代わりに既存の DSN (データ ソース名) を提供または、新しいものを作成します。 これらのオプションの詳細については、次を参照してください。 [ODBC データ ソースへの接続](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)です。
+> 適切な接続文字列をアセンブルするヘルプを参照してください。 または、接続文字列を提供する代わりに、既存の DSN (データ ソース名) を提供するか、新しく作成します。 これらのオプションの詳細については、「[Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」 (ODBC データ ソースに接続する) を参照してください。
 
-**ドライバー**  
-ODBC ドライバーの - か、名前**PostgreSQL ODBC Driver(UNICODE)**または**PostgreSQL ODBC Driver(ANSI)**です。
+**[ドライバー]**  
+ODBC ドライバーの名前 - **[PostgreSQL ODBC Driver(UNICODE)]** または **[PostgreSQL ODBC Driver(ANSI)]**。
 
 **[サーバー]**  
 PostgreSQL サーバーの名前。 
 
-**ポート**  
-PostgreSQL サーバーへの接続に使用するポート。
+**[ポート]**  
+PostgreSQL サーバーに接続するためのポート。
 
 **データベース**  
 PostgreSQL データベースの名前。
 
-**Uid**と**Pwd**   
-**Uid** (ユーザー id) と**Pwd** (パスワード) に接続します。
+**[Uid]** と **[Pwd]**   
+接続する **Uid** (ユーザー id) と **Pwd** (パスワード)。
 
 ### <a name="connection-string-format"></a>接続文字列の形式
 一般的な接続文字列の形式を次に示します。 
@@ -80,24 +78,23 @@ PostgreSQL データベースの名前。
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
     ```
 
-### <a name="enter-the-connection-string"></a>接続文字列を入力します。
-内の接続文字列を入力、 **ConnectionString**フィールド、または DSN 名を入力、 **Dsn**フィールドに、**データ ソースを選択**または**変換先を選択**ページ。 接続文字列を入力すると後、ウィザードは、文字列を解析し、個々 のプロパティとその値を一覧に表示します。
+### <a name="enter-the-connection-string"></a>接続文字列を入力する
+**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、**[ConnectionString]** フィールドに接続文字列を入力するか、**[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
-次の例では、この接続文字列を使用します。
+次の例では、この接続文字列を使用しています。
 
     ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
     ```
 
-ここで、接続文字列を入力した後に表示される画面です。
+接続文字列を入力した後に表示される画面を次に示します。
 
-![Odbc PostgreSQL への接続します。](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
+![ODBC を使って PostgreSQL に接続する](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
 
-## <a name="other-data-providers-and-more-info"></a>他のデータ プロバイダーと詳細情報
-詳細については、ここに記載されていないデータ プロバイダーと PostgreSQL に接続する方法は、次を参照してください。 [PostgreSQL 接続文字列](https://www.connectionstrings.com/postgresql/)です。 このサード パーティのサイトには、データ プロバイダーとこのページで説明されている接続パラメーターに関する詳細情報も含まれます。
+## <a name="other-data-providers-and-more-info"></a>その他のデータ プロバイダーと詳細情報
+ここに記載されていないデータ プロバイダーを使用して PostgreSQL に接続する方法については、「[PostgreSQL connection strings](https://www.connectionstrings.com/postgresql/)」 (PostgreSQL 接続文字列) を参照してください。 このサード パーティのサイトには、このページで説明したデータ プロバイダーと接続パラメーターに関する詳細情報も含まれています。
 
 ## <a name="see-also"></a>参照
-[データ ソースを選択します。](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[変換先を選択します。](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

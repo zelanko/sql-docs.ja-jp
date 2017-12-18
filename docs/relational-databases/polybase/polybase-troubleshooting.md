@@ -8,31 +8,27 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
-helpviewer_keywords:
-- PolyBase, troubleshooting
+helpviewer_keywords: PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase のトラブルシューティング
-
-  PolyBase のトラブルシューティングを行うには、このトピックに記載されている手法を使用してください。  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase のトラブルシューティングを行うには、このトピックに記載されている手法を使用してください。  
   
 ## <a name="catalog-views"></a>カタログ ビュー  
  PolyBase の操作を管理するには、次に示すカタログ ビューを使用します。  
@@ -145,13 +141,13 @@ ms.lasthandoff: 10/12/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>PolyBase クエリ プランを参照するには  
   
-1.  SSMS で、[ **実際の実行プランを含める** ] \(Ctrl + M) を有効にし、クエリを実行します。  
+1.  SSMS で、**[実際の実行プランを含める]** (Ctrl + M) を有効にし、クエリを実行します。  
   
-2.  [ **実行プラン** ] タブをクリックします。  
+2.  **[実行プラン]** タブをクリックします。  
   
      ![PolyBase クエリ プラン](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase クエリ プラン")  
   
-3.  [ **Remote Query 操作** ] を右クリックし、[ **プロパティ**] を選択します。  
+3.  **[Remote Query 操作]** を右クリックし、**[プロパティ]** を選択します。  
   
 4.  Remote Query の値をコピーし、テキスト エディターに貼り付け、XML リモート クエリ プランを表示します。  例を次に示します。  
   
@@ -248,4 +244,3 @@ PolyBase は現在、Zookeeper や Knox などの Name Node HA サービスと�
 
 ## <a name="see-also"></a>参照
 [PolyBase Kerberos の接続性のトラブルシューティング](polybase-troubleshoot-connectivity.md)
-

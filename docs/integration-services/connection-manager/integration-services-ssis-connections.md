@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) の接続 |Microsoft ドキュメント"
+title: "Integration Services (SSIS) の接続 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
+caps.latest.revision: "92"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: 2f257448e90c82a2cd29e082fe6321401c889e37
-ms.contentlocale: ja-jp
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 11/07/2017
 > [!NOTE]  
 >  パッケージでデータ ソースを使用する場合は、プロジェクトをパッケージ配置モデルに変換する必要があります。  
 >   
->  2 つのモデルおよびプロジェクトをプロジェクト配置モデルに変換する方法の詳細については、次を参照してください。[展開 Integration Services (SSIS) プロジェクトとパッケージ](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)です。
+>  2 つのモデルの詳細とプロジェクト配置モデルへのプロジェクトの変換の詳細については、「[Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」 (Integration Services (SSIS) プロジェクトおよびパッケージの展開) を参照してください。
 
 ### <a name="built-in-connection-managers"></a>組み込みの接続マネージャー  
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている接続マネージャーの種類を一覧にしたものです。  
@@ -117,14 +115,14 @@ ms.lasthandoff: 11/07/2017
   
 |型|Description|トピック|  
 |----------|-----------------|-----------|  
-|ORACLE|Oracle に接続する\<バージョン情報\>サーバー。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
+|ORACLE|Oracle \<バージョン情報\> サーバーに接続します。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
 |SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016)のダウンロード ページを参照してください。|  
-|TERADATA|Teradata に接続\<バージョン情報\>サーバー。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
+|TERADATA|Teradata \<バージョン情報\> サーバーに接続します。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
   
 ### <a name="custom-connection-managers"></a>カスタム接続マネージャー  
  カスタム接続マネージャーを作成することもできます。 詳細については、「 [カスタム接続マネージャーの開発](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)」を参照してください。  
   
-## <a name="create-connection-managers"></a>接続マネージャーを作成します。
+## <a name="create-connection-managers"></a>接続マネージャーを作成する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、さまざまな種類のサーバーやデータ ソースに接続するタスクのニーズに合わせるため、さまざまな接続マネージャーが用意されています。 接続マネージャーは、データを抽出してさまざまな種類のデータ ストアに読み込むデータ フロー コンポーネントや、ログをサーバー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル、またはファイルに書き込むログ プロバイダーによって使用されます。 たとえば、メール送信タスクが含まれるパッケージには、簡易メール転送プロトコル (SMTP) サーバーに接続するタイプの SMTP 接続マネージャーを使用します。 SQL 実行タスクが含まれるパッケージでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する OLE DB 接続マネージャーを使用できます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
  新しいパッケージを作成する際に接続マネージャーを自動的に作成して構成する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用できます。 このウィザードは、接続マネージャーを使用する変換元および変換先の作成と構成を行う場合に役立ちます。 詳細については、「[SQL Server データ ツールでのパッケージの作成](../../integration-services/create-packages-in-sql-server-data-tools.md)」を参照してください。  
@@ -138,7 +136,7 @@ ms.lasthandoff: 11/07/2017
   
  次の図は、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ上にある **[接続マネージャー]** 領域を示しています。  
   
- ![パッケージの制御フロー デザイナーのスクリーン ショット](../../integration-services/connection-manager/media/samplecontrolflow.gif "パッケージの制御フロー デザイナーのスクリーン ショット")    
+ ![パッケージの制御フロー デザイナーのスクリーンショット](../../integration-services/connection-manager/media/samplecontrolflow.gif "パッケージの制御フロー デザイナーのスクリーンショット")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>接続マネージャーの 32 ビット プロバイダーと 64 ビット プロバイダー  
  接続マネージャーが使用する多くのプロバイダーには、32 ビット バージョンと 64 ビット バージョンがあります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデザイン環境は 32 ビット環境であり、パッケージのデザイン時には 32 ビット プロバイダーのみが表示されます。 したがって、接続マネージャーで特定の 64 ビット プロバイダーが使用されるように構成できるのは、同じプロバイダーの 32 ビット バージョンがインストールされている場合のみです。  
@@ -147,14 +145,14 @@ ms.lasthandoff: 11/07/2017
   
   どちらのバージョンのプロバイダーも ID は同じです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムで使用可能な 64 ビット バージョンのプロバイダーを使用するかどうかを指定するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの Run64BitRuntime プロパティを設定します。 Run64BitRuntime プロパティが **true** に設定されると、ランタイムは 64 ビット プロバイダーを探して使用します。Run64BitRuntime が **false** に設定されると、32 ビット プロバイダーを探して使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトで設定できるプロパティの詳細については、「[Integration Services (SSIS) と Studio の環境](https://msdn.microsoft.com/library/ms140028.aspx)」を参照してください。   
 
-## <a name="add-a-connection-manager"></a>接続マネージャーを追加します。
-###  <a name="wizard"></a>パッケージを作成するときに、接続マネージャーを追加します。  
+## <a name="add-a-connection-manager"></a>接続マネージャーを追加する
+###  <a name="wizard"></a> パッケージ作成時に接続マネージャーを追加する  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用します。  
   
      接続マネージャーの作成と構成に加えて、このウィザードでは、接続マネージャーを使用する変換元および変換先の作成と構成を行うこともできます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](../../integration-services/create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
-###  <a name="package"></a>既存のパッケージへの接続マネージャーを追加します。  
+###  <a name="package"></a> 接続マネージャーを既存のパッケージに追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 11/07/2017
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-###  <a name="project"></a>プロジェクト レベルで接続マネージャーを追加します。  
+###  <a name="project"></a> プロジェクト レベルで接続マネージャーを追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -235,26 +233,26 @@ ms.lasthandoff: 11/07/2017
     > [!NOTE]  
     >  **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブでは、接続マネージャーの名前の前に表示されている **(プロジェクト)** を上書きすることはできません。 これは仕様です。  
 
-### <a name="add-ssis-connection-manager-dialog-box"></a>SSIS 接続マネージャー ダイアログ ボックスを追加します。
+### <a name="add-ssis-connection-manager-dialog-box"></a>[SSIS 接続マネージャーの追加] ダイアログ ボックス
 **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを使用すると、パッケージに追加する接続の種類を選択できます。  
   
  接続マネージャーの詳細については、「[Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 #### <a name="options"></a>オプション  
- **接続マネージャーの種類**  
+ **[接続マネージャーの種類]**  
  エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]**をクリックするか、接続の種類をダブルクリックします。  
   
  **[追加]**  
  エディターを使用して、接続の種類に対応する接続プロパティを指定します。  
    
-##  <a name="parameter"></a>接続マネージャーのプロパティのパラメーターを作成します。  
+##  <a name="parameter"></a> 接続マネージャーのプロパティのパラメーターを作成する  
   
 1.  **[接続マネージャー]** 領域で、パラメーターを作成する接続マネージャーを右クリックし、 **[パラメーター化]**をクリックします。  
   
 2.  **[パラメーター化]** ダイアログ ボックスでパラメーター設定を構成します。 詳細については、「 [[パラメーター化] ダイアログ ボックス](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
 
-## <a name="delete-a-connection-manager"></a>接続マネージャーを削除します。 
-###  <a name="DeletePackageLevel"></a>パッケージから接続マネージャーを削除します。  
+## <a name="delete-a-connection-manager"></a>接続マネージャーを削除する 
+###  <a name="DeletePackageLevel"></a> パッケージから接続マネージャーを削除する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -274,9 +272,9 @@ ms.lasthandoff: 11/07/2017
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-###  <a name="DeleteProjectLevel"></a>共有接続マネージャー (プロジェクト レベルの接続マネージャー) を削除します。  
+###  <a name="DeleteProjectLevel"></a> 共有接続マネージャー (プロジェクト レベルの接続マネージャー) を削除する  
   
-1.  プロジェクト レベルの接続マネージャーを削除するには、 **[ソリューション エクスプローラー]** ウィンドウの **[接続マネージャー]** ノードで接続マネージャーを右クリックし、 **[削除]**をクリックします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]次の警告メッセージが表示されます。  
+1.  プロジェクト レベルの接続マネージャーを削除するには、 **[ソリューション エクスプローラー]** ウィンドウの **[接続マネージャー]** ノードで接続マネージャーを右クリックし、 **[削除]**をクリックします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で次のような警告メッセージが表示されます。  
   
     > [!WARNING]  
     >  プロジェクト接続マネージャーを削除すると、その接続マネージャーを使用するパッケージが動作しなくなる場合があります。 この操作を元に戻すことはできません。 接続マネージャーを削除しますか。  
@@ -289,9 +287,9 @@ ms.lasthandoff: 11/07/2017
 ## <a name="set-the-properties-of-a-connection-manager"></a>接続マネージャーのプロパティを設定する
 すべての接続マネージャーは **[プロパティ]** ウィンドウを使用して構成できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]内の接続マネージャーの種類を変更するためのカスタム ダイアログ ボックスも提供[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]です。 ダイアログ ボックスに表示されるオプションは、接続マネージャーの種類によって異なります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のさまざまな種類の接続マネージャーを変更するためのカスタム ダイアログ ボックスも用意されています。 ダイアログ ボックスに表示されるオプションは、接続マネージャーの種類によって異なります。  
   
-### <a name="modify-a-connection-manager-using-the-properties-window"></a>[プロパティ] ウィンドウを使用して接続マネージャーを変更します。  
+### <a name="modify-a-connection-manager-using-the-properties-window"></a>[プロパティ] ウィンドウを使用して接続マネージャーを変更する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -307,7 +305,7 @@ ms.lasthandoff: 11/07/2017
   
 7.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>接続マネージャー ダイアログ ボックスを使用して接続マネージャーを変更します。  
+### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>接続マネージャーのダイアログ ボックスを使用して接続マネージャーを変更する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -352,4 +350,3 @@ ms.lasthandoff: 11/07/2017
 -   support.microsoft.com の技術記事「 [SSIS で Oracle 接続マネージャーを使用すると、"DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" というエラー メッセージが表示される](http://go.microsoft.com/fwlink/?LinkId=233696)」  
   
   
-

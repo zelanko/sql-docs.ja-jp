@@ -1,5 +1,5 @@
 ---
-title: "列エクスポート変換 |Microsoft ドキュメント"
+title: "列エクスポート変換 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 36acf4ee08879bec3ac12600ea7369b1db3803ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
   列エクスポート変換は、データ フローのデータを読み取り、そのデータをファイルに挿入します。 たとえば、データ フローに、各製品の写真などの製品情報が含まれる場合、列エクスポート変換を使用して、その画像をファイルに保存できます。  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/19/2017
   
  プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター]\ ([列] ページ)
+## <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター] ([列] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、ファイルに抽出するデータ フロー内の列を指定できます。 列エクスポート変換でファイルにデータを追加するか、既存のファイルを上書きするかどうかを指定できます。  
   
 ### <a name="options"></a>オプション  
@@ -98,17 +96,17 @@ ms.lasthandoff: 08/19/2017
  **[バイト順マークの書き込み]**  
  バイト順マーク (BOM) をファイルに書き込むかどうかを指定します。 BOM は、データが **DT_NTEXT** または DT_WSTR のデータ型を持つ場合にのみ書き込まれ、既存のデータ ファイルには追加されません。  
   
-## <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター]\ ([エラー出力] ページ)
+## <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター] ([エラー出力] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラーをどのように処理するかを指定できます。  
   
 ### <a name="options"></a>オプション  
- **入力/出力**  
+ **[入力または出力]**  
  出力の名前を表示します。 名前をクリックすると、ビューを展開して列を含めることができます。  
   
  **列**  
  **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページで選択された出力列を表示します。  
   
- **エラー**  
+ **[エラー]**  
  エラーが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
  **切り捨て**  
@@ -117,11 +115,10 @@ ms.lasthandoff: 08/19/2017
  **Description**  
  操作の説明を表示します。  
   
- **この値を選択したセルに設定します。**  
+ **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **適用**  
+ **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
   
-

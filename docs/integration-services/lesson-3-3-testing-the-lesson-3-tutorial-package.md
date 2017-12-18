@@ -1,5 +1,5 @@
 ---
-title: "手順 3: レッスン 3 のチュートリアル パッケージのテスト |Microsoft ドキュメント"
+title: "手順 3: レッスン 3 のチュートリアル パッケージのテスト | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fa344530396b13defc44680a1232a3d6a1c39b42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>レッスン 3-3、レッスン 3 のチュートリアル パッケージのテスト
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>レッスン 3-3 - レッスン 3 のチュートリアル パッケージのテスト
 この実習では、Lesson 3.dtsx パッケージを実行します。 パッケージを実行すると、[ログ イベント] ウィンドウに、ログ ファイルに書き込まれているログ エントリの一覧が表示されます。 パッケージの実行が完了したら、ログ プロバイダーによって生成されたログ ファイルの内容を確認します。  
   
 ## <a name="checking-the-package-layout"></a>パッケージ レイアウトの確認  
@@ -35,7 +32,7 @@ ms.lasthandoff: 09/26/2017
   
 **制御フロー**  
   
-![パッケージ内のフローを制御](../integration-services/media/task4lesson2control.gif "パッケージ内のフロー制御")  
+![パッケージ内の制御フロー](../integration-services/media/task4lesson2control.gif "パッケージ内の制御フロー")  
   
 **データ フロー**  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

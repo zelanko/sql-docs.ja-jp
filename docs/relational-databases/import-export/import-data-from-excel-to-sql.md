@@ -2,9 +2,12 @@
 title: "Excel から SQL にデータをインポートする | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,14 +15,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3541efebe50e19ce56e528dc575084c2c5bb1d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efa9c31464572543c67edde5fa6a740d659d4d48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel から SQL Server または Azure SQL Database にデータをインポートする
-Excel ファイルからSQL Server または Azure SQL Database に、データをインポートする方法はいくつかあります。 この記事では、これらの各オプションの概要と、詳細な手順へのリンクを提供します。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Excel ファイルから SQL Server または Azure SQL Database に、データをインポートする方法はいくつかあります。 この記事では、これらの各オプションの概要と、詳細な手順へのリンクを提供します。
 -   次のいずれかのツールを使用することで、1 つの手順で Excel から SQL にデータをインポートできます。
     -   SQL Server インポートおよびエクスポート ウィザード
     -   SQL Server Integration Services (SSIS)

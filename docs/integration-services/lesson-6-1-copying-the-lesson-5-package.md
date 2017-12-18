@@ -1,5 +1,5 @@
 ---
-title: "手順 1: レッスン 5 のパッケージのコピー |Microsoft ドキュメント"
+title: "手順 1: レッスン 5 のパッケージのコピー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6de5c21ac26411f39ae6d46a1fd1824f73d5c3b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 92e846a42325d0c30388e7524e86a3ad715fa8fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-1---copying-the-lesson-5-package"></a>レッスン 6-1-レッスン 5 のパッケージのコピー
+# <a name="lesson-6-1---copying-the-lesson-5-package"></a>レッスン 6-1 - レッスン 5 のパッケージのコピー
 ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>レッスン 5 のパッケージをコピーするには  
@@ -58,13 +55,13 @@ ms.lasthandoff: 09/26/2017
   
 3.  [既存のパッケージのコピーを追加] ダイアログ ボックスの [パッケージの場所] で、[ファイル システム] をクリックします。  
   
-4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、[ **開く**] をクリックします。  
+4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、**[開く]** をクリックします。  
   
     このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
     1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
-    2.  [ **ダウンロード** ] タブをクリックします。  
+    2.  **[ダウンロード]** タブをクリックします。  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルをクリックします。  
   
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 2: プロジェクトをプロジェクト配置モデルに変換する](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-

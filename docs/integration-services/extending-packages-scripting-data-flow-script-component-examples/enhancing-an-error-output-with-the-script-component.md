@@ -1,5 +1,5 @@
 ---
-title: "スクリプト コンポーネントによるエラー出力の強化 |Microsoft ドキュメント"
+title: "スクリプト コンポーネントによるエラー出力の強化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,42 +8,39 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 3881b57f4089dbb075d019f9bd1a88a96a307b72
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f6058a8d8a12b9004cb42d26753a1fc7cee7181
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>スクリプト コンポーネントによるエラー出力の強化
-  既定では、次の 2 つの余分な列、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ErrorCode および ErrorColumn、エラー出力はエラー番号と、エラーが発生した列の ID を表す数値コードのみを含めます。 これらの数値は、対応するエラーの説明と列の名前がない使用制限の可能性があります。  
+  既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエラー出力の 2 つの追加列 (ErrorCode と ErrorColumn) には、エラー番号を表す数値コードと、エラーが発生した列の ID しか含まれていません。 これらの数値は、対応するエラーの説明と列の名前がないとあまり役に立ちません。  
   
- このトピックでは、スクリプト コンポーネントを使用して、データ フロー内の既存のエラー出力データに、エラーの説明と列名を追加する方法について説明します。 この例では、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを使用して、事前定義された特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードに対応するエラーの説明を追加します。これは、スクリプト コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> プロパティから使用できます。 この例を使用してキャプチャした系列 ID に対応する列名を追加してから、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>同じインターフェイスのメソッドです。  
+ ここでは、スクリプト コンポーネントを使用して、データ フローの既存のエラー出力データにエラーの説明と列名を追加する方法を説明します。 この例では、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを使用して、事前定義された特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードに対応するエラーの説明を追加します。これは、スクリプト コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> プロパティから使用できます。 次いで、この例では、同じインターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドを使用してキャプチャした系列 ID に対応する列名を追加します。  
   
 > [!NOTE]  
 >  複数のデータ フロー タスクおよび複数のパッケージでより簡単に再利用できるコンポーネントを作成する場合は、このスクリプト コンポーネント サンプルのコードを基にした、カスタム データ フロー コンポーネントの作成を検討してください。 詳細については、「 [カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次に示す例では、変換として構成されたスクリプト コンポーネントを使用して、データ フロー内の既存のエラー出力データにエラーの説明と列名を追加します。  
+ 次に示す例では、変換として構成されたスクリプト コンポーネントを使用して、データ フローの既存のエラー出力データにエラー説明と列名を追加します。  
   
- データ フローの変換として使用するため、スクリプト コンポーネントを構成する方法の詳細については、次を参照してください。[スクリプト コンポーネントによる同期変換を作成する](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)と[スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)です。  
+ スクリプト コンポーネントをデータ フローで変換として使用するための構成方法の詳細については、「[スクリプト コンポーネントによる同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」および「[スクリプト コンポーネントによる非同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)」を参照してください。  
   
 #### <a name="to-configure-this-script-component-example"></a>このスクリプト コンポーネントの例を構成するには  
   
@@ -53,23 +50,23 @@ ms.lasthandoff: 08/03/2017
   
 3.  上流コンポーネントからのエラー出力を新しいスクリプト コンポーネントに接続します。  
   
-4.  開く、**スクリプト変換エディター**、および、**スクリプト** ページの**scriptlanguage**プロパティ、スクリプト言語を選択します。  
+4.  **[スクリプト変換エディター]** を開き、**[スクリプト]** ページの **[ScriptLanguage]** プロパティでスクリプト言語を選択します。  
   
-5.  をクリックして**スクリプトの編集**を開くには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を以下に示すサンプル コードを追加します。  
+5.  **[スクリプトの編集]** をクリックして [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開き、以下に示すサンプル コードを追加します。  
   
 6.  VSTA を閉じます。  
   
-7.  スクリプト変換エディターで、**入力列** ページで、ErrorCode および ErrorColumn の列を選択します。  
+7.  スクリプト変換エディターの **[入力列]** ページで、[ErrorCode] 列と [ErrorColumn] 列を選択します。  
   
-8.  **入力と出力** ページで、次の 2 つの新しい列を追加します。  
+8.  **[入力および出力]** ページで、2 つの新しい列を追加します。  
   
-    -   型の新しい出力列の追加**文字列**という**ErrorDescription**です。 長いメッセージをサポートするために、新しい列の既定の長さを 255 に拡張します。  
+    -   **ErrorDescription** という **String** 型の新しい出力列を追加します。 長いメッセージをサポートするために、新しい列の既定の長さを 255 に拡張します。  
   
-    -   型の別の新しい出力列の追加**文字列**という**ColumnName**です。 長い値をサポートするために 255 を新しい列の既定の長さを増やします。  
+    -   **ColumnName** という **String** 型の別の新しい出力列を追加します。 長い値をサポートするために、新しい列の既定の長さを 255 に拡張します。  
   
-9. 閉じる、**スクリプト変換エディターです。**  
+9. **[スクリプト変換エディター]** を閉じます。  
   
-10. 適切な送信先をスクリプト コンポーネントの出力をアタッチします。 アドホック テスト用に最も構成しやすいのは、フラット ファイル変換先です。  
+10. スクリプト コンポーネントの出力を、適切な変換先にアタッチします。 アドホック テスト用に最も構成しやすいのは、フラット ファイル変換先です。  
   
 11. パッケージを実行します。  
   
@@ -112,8 +109,7 @@ public class ScriptMain:
   
 ## <a name="see-also"></a>参照  
  [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)   
- [データ フロー コンポーネントでエラー出力の使用](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
+ [データ フロー コンポーネントでのエラー出力の使用](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [スクリプト コンポーネントによる同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
   
   
-

@@ -2,9 +2,12 @@
 title: "セマンティクス検索の管理および監視 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d3fd6231c0067f6536d9ff2c06b4a62a8bd3bd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b01af634ed2681c49bdb444cd4a468b45be3ab03
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-and-monitor-semantic-search"></a>セマンティクス検索の管理および監視
-  セマンティック インデックス作成プロセスと、インデックスの管理および監視に関連するタスクについて説明します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] セマンティック インデックス作成プロセスと、インデックスの管理および監視に関連するタスクについて説明します。  
   
 ##  <a name="HowToMonitorStatus"></a> セマンティック インデックス作成の状態の確認  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>セマンティック インデックス作成の最初のフェーズは完了していますか?

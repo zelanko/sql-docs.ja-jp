@@ -1,5 +1,5 @@
 ---
-title: "catalog.deploy_project (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.deploy_project (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: b056ec4e0d4f762190154988fe3fa225e447c315
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +39,20 @@ catalog.deploy_project [@folder_name =] folder_name
   
 ## <a name="arguments"></a>引数  
  [@folder_name =] *folder_name*  
- プロジェクトの配置先フォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
+ プロジェクトが配置されるフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [@project_name =] *project_name*  
- フォルダー内の新規または更新されたプロジェクトの名前。 *Project_name*は**nvarchar (128)**です。  
+ フォルダー内の新規または更新されたプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [@projectstream =] *projectstream*  
- バイナリ コンテンツ、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プロジェクト配置ファイル (.ispac 拡張子) です。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト配置ファイル (拡張子は .ispac) のバイナリ コンテンツ。  
   
- ファイルのバイナリ コンテンツを取得するには、SELECT ステートメントと、OPENROWSET 関数および一括行セット プロバイダーを使用できます。 例については、次を参照してください。[展開 Integration Services (SSIS) プロジェクトとパッケージ](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)です。 OPENROWSET の詳細については、次を参照してください。 [OPENROWSET & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/openrowset-transact-sql.md).  
+ ファイルのバイナリ コンテンツを取得するには、SELECT ステートメントと、OPENROWSET 関数および一括行セット プロバイダーを使用できます。 例については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。 OPENROWSET の詳細については、「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
   
- *Projectstream*は**varbinary (max)**  
+ *projectstream* は **varbinary(max)**  
   
  [@operation_id =] *operation_id*  
- 配置操作の一意識別子を返します。 *Operation_id*は**bigint**です。  
+ 配置操作の一意識別子を返します。 *operation_id* は **bigint** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -67,16 +65,16 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   新しいプロジェクトを配置するフォルダーに対する CREATE_OBJECTS 権限、またはプロジェクトを更新するプロジェクトに対する MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  このストアド プロシージャがエラーを発生させる可能性がある条件を以下に示します。  
   
 -   存在しないオブジェクトを参照するパラメーター、既に存在するオブジェクトを作成しようとするパラメーター、または何かの方法で無効になるパラメーター  
   
--   パラメーターの値 *@project_name* 展開ファイルで、プロジェクトの名前と一致しません  
+-   パラメーター *@project_name* の値が、配置ファイルのプロジェクトの名前に一致しない  
   
 -   ユーザーに十分な権限がない  
   
@@ -84,4 +82,3 @@ catalog.deploy_project [@folder_name =] folder_name
  プロジェクトの配置または更新中、ストアド プロシージャは、プロジェクトの個々のパッケージの保護レベルをチェックしません。  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "ワーカーをスケール アウト Manager での SSIS スケール追加 |Microsoft ドキュメント"
+title: "SSIS Scale Out Manager による Scale Out Worker の追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,45 +8,42 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b769236330941a107865a0b133961bce5bf6b85b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ef11448d03bd188aaea425225312af9f681f530c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="add-a-scale-out-worker-with-scale-out-manager"></a>スケール アウト マネージャーによるスケール アウト ワーカーの追加します。
+# <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Scale Out Manager による Scale Out Worker の追加
 
-Integration Services スケールのアウト マネージャーには、既存のスケール アウト環境をスケール アウト ワーカーを追加する複雑さが大幅にされますがします。 
+Integration Services Scale Out Manager を使用すると、既存の Scale Out 環境に Scale Out Worker を追加する作業が非常に簡単になります。 
 
-次の手順によって、スケール アウト トポロジに、スケール アウト ワーカーを追加できます。
+次の手順では、Scale Out トポロジに、Scale Out Worker を追加します。
 
-## <a name="1-install-scale-out-worker"></a>1.スケール アウト Worker をインストールします。
-SQL Server インストール ウィザードの Integration Services とスケール アウト ワーカー、**機能の選択**ページ。 
+## <a name="1-install-scale-out-worker"></a>1.Scale Out Worker をインストールする
+SQL Server のインストール ウィザードの **[機能の選択]** ページで、[統合サービス] と [スケール アウト ワーカー] を選択します。 
 ![Worker 機能の選択](media/feature-select-worker.PNG)
 
-**Integration Services スケール アウトの構成 - ワーカー ノード** ページをクリックするだけをここでの構成をスキップしを使用して、次へ**スケール アウト Manager**インストール後の構成を行う。
+**Integration Services Scale Out Configuration - Worker Node\(Integration Services Scale Out 構成 - ワーカー ノード\)** ページで単純に 次へ をクリックしてここでの構成を省略し、**Scale Out Manager** を使用してインストール後に構成することができます。
 
-インストール ウィザードを完了します。
+インストール ウィザードを最後まで実行します。
 
-## <a name="2-open-firewall-on-scale-out-master-computer"></a>2.スケール アウト マスター コンピューター上のファイアウォールを開く
-スケール アウト マスター インストール (既定では 8391) とポートの SQL Server (1433、既定では)、中に指定されたポートを開いてでは、Windows ファイアウォールを使用してスケール アウト マスター コンピューターにします。
+## <a name="2-open-firewall-on-scale-out-master-computer"></a>2.Scale Out Master コンピューターでファイアウォールを開く
+Scale Out Master コンピューターの Windows ファイアウォールを使用して、Scale Out Master のインストール時に指定したポート (既定では 8391) と SQL Server のポート (既定では 1433) を開きます。
 
-## <a name="3-add-scale-out-worker-with-scale-out-manager"></a>3.スケール アウト Manager でのスケール アウト ワーカーを追加します。
-SQL Server Management Studio を管理者として実行し、スケール アウト master データベースの SQL Server インスタンスに接続します。
+## <a name="3-add-scale-out-worker-with-scale-out-manager"></a>3.Scale Out Manager による Scale Out Worker の追加
+SQL Server Management Studio を管理者として実行し、Scale Out Master の SQL Server インスタンスに接続します。
 
-右クリック**SSISDB**クリックし、オブジェクト エクスプ ローラーで**スケール アウトを管理しています.**. 
+オブジェクト エクスプローラーで **[SSISDB]** を右クリックし、**[スケール アウトの管理]** を選択します。 
 
-![スケール アウトの管理します。](media/manage-scale-out.PNG)
+![スケール アウトの管理](media/manage-scale-out.PNG)
 
-表示されたを**スケール アウト Manager**に切り替える**ワーカー マネージャー**です。 をクリックして「+」ボタンをクリックし、ワーカーの接続 ダイアログの指示に従います。 詳細については、「[スケール アウト Manager](integration-services-ssis-scale-out-manager.md)です。
-
+表示された **[Scale Out Manager]** で、**[ワーカー マネージャー]** に切り替えます。 "+" ボタンをクリックし、[ワーカーの接続] ダイアログの指示に従います。 詳細については、「[Scale Out Master](integration-services-ssis-scale-out-manager.md)」を参照してください。

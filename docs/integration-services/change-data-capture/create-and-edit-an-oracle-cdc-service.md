@@ -1,5 +1,5 @@
 ---
-title: "作成し、Edit an Oracle CDC Service |Microsoft ドキュメント"
+title: "Oracle CDC Service の作成と編集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- createSrv
+f1_keywords: createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service の作成と編集
   新しい Oracle CDC Windows Service の作成と編集は CDC Service 構成コンソールで行います。  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  [新しい Oracle CDC Windows Service] ダイアログ ボックスまたは [CDC Service のプロパティ] ダイアログ ボックスに次の情報を入力します。  
   
-* * サービス名前 * *  
+** サービス名**  
  新しい Oracle CDC Windows Service の名前を入力します。 可能な限り長い名前は使用しないでください。 / 文字および \ 文字はサービス名で使用できません。  
   
 > [!NOTE]  
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
      ローカルまたはドメインの Windows アカウントをサービス アカウントに使用できます。 この場合、アカウントの **[パスワード]** を入力する必要があります。 このアカウントは、ローカル ホストまたはドメイン アカウント用にすることができます。 パスワードが変更されたときは、必ず Windows のコントロール パネルのローカル サービスを使用してパスワードを更新します。  
   
- **サーバー名**: ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続する (たとえば、  **\\ \\< computer_name >\\< instance_name >**)。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
+ **[サーバー名][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 接続先となる対象の**  インスタンスを選択します (例: **\\\\<コンピューター名>\\<インスタンス名>**)。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
  **[認証]**  
  次のいずれかを選択します。  
@@ -99,4 +96,3 @@ ms.lasthandoff: 09/26/2017
  [CDC Service を作成および編集する方法](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

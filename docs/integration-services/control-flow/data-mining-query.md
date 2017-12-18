@@ -1,5 +1,5 @@
 ---
-title: "データ マイニング クエリ |Microsoft ドキュメント"
+title: "データ マイニング クエリ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>データ マイニング クエリ
   デザイン ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 予測クエリは、入力テーブルまたはシングルトン予測クエリに基づいてデザインできます。 クエリを実行して結果を表示するには、結果ビューに切り替えます。 クエリ ビューには、予測クエリ ビルダーによって作成されたデータ マイニング拡張機能 (DMX) のクエリが表示されます。  
@@ -34,11 +31,11 @@ ms.lasthandoff: 08/03/2017
  ビュー切り替えボタン  
  デザイン ペインとクエリ ペインを切り替える場合は、アイコンをクリックします。 既定では、デザイン ペインが開きます。  
   
- デザイン ペインに切り替えるをクリックして、![デザイン アイコン](../../integration-services/control-flow/media/ssis-designicon.gif "デザイン アイコン")アイコン。  
+ デザイン ペインに切り替えるには、![デザイン アイコン](../../integration-services/control-flow/media/ssis-designicon.gif "デザイン アイコン") アイコンをクリックします。  
   
- クエリ ペインに切り替えるをクリックして、 ![SQL アイコン](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL アイコン")アイコン。  
+ クエリ ペインに切り替えるには、![SQL アイコン](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL アイコン") アイコンをクリックします。  
   
- **マイニング モデル**  
+ **[マイニング モデル]**  
  予測の基準として選択されているマイニング モデルを表示します。  
   
  **[モデルの選択]**  
@@ -72,7 +69,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

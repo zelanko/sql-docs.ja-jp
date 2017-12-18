@@ -1,5 +1,5 @@
 ---
-title: "列パターン プロファイル要求オプション (データ プロファイル タスク) |Microsoft ドキュメント"
+title: "[列パターン プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: f51bdacbe57674f10f2dc7ea1c20d1ab64b0c229
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列パターン プロファイル要求]** のオプションを設定できます。 列パターン プロファイルは、文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、\d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **Delimiters** 既定では、区切り記号の一覧には、空白文字、水平タブ文字 (\t)、改行文字 (\n)、および復帰文字 (\r) が含まれます。 追加の区切り記号を指定できますが、既定の区切り記号を削除することはできません。  
   
--   **シンボル**既定では、一連の**シンボル**、次の文字が含まれています:`,.;:-"'~=&/@!?()<>[]{}|#*^%`目盛りとします。 たとえば、記号が "`()-`" の場合、値 "(425) 123-4567" は ["(", "425", ")", "123", "-", "4567", ")"] としてトークン化されます。  
+-   **Symbols** 既定では、**[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` と目盛が含まれます。 たとえば、記号が "`()-`" の場合、値 "(425) 123-4567" は ["(", "425", ")", "123", "-", "4567", ")"] としてトークン化されます。  
   
  1 つの文字を区切り記号と記号の両方に使用することはできません。  
   
@@ -136,7 +133,7 @@ ms.lasthandoff: 10/05/2017
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
  **Symbols**  
- パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す " @ " などがあります。 既定では、一連の**シンボル**、次の文字が含まれています:`,.;:-"'~=&/@!?()<>[]{}|#*^%`です。  
+ パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す "@" などがあります。 既定では、**[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` が含まれます。  
   
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
@@ -152,7 +149,6 @@ ms.lasthandoff: 10/05/2017
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [単一テーブル クイック プロファイル フォーム (&) #40 です。 データ プロファイル タスク"&"#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

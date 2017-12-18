@@ -1,30 +1,28 @@
 ---
-title: "catalog.update_master_address (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.update_master_address (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5e560d6011370b3d56ba13c86608d2be3d0dc6e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b45f8499914ecd87a7073a5373377b85dc8a77f4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-更新プログラム、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]スケール アウト マスター エンドポイント。
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master エンドポイントを更新します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,8 +31,8 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>引数
-[ @MasterAddress =] *masterAddress*  
-スケール アウト マスター エンドポイントです。 *MasterAddress*は**nvarchar**です。  
+[ @MasterAddress = ] *masterAddress*  
+Scale Out Master エンドポイント。 *masterAddress* は **nvarchar** です。  
 
  ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -42,11 +40,10 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 ## <a name="result-sets"></a>結果セット  
  なし  
 
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>Permissions  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
    
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
  
-

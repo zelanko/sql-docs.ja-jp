@@ -1,28 +1,30 @@
 ---
-title: "Integration Services 式のデータ型 |Microsoft ドキュメント"
+title: "式における Integration Services データ型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
@@ -38,13 +40,13 @@ ms.lasthandoff: 08/03/2017
 ## <a name="strings"></a>文字列  
  DT_STR または DT_WSTR のいずれかを、式の戻り値の型として使用できます。 ただし、式の内部でサポートされるのは DT_WSTR のみです。DT_STR 値は DT_WSTR 値に変換されます。 式を作成するときは、これを考慮する必要があります。  
   
--   式の内部では、NULL(DT_STR, ...) ではなく NULL(DT_WSTR, ...) を使用します。 この関数の詳細については、「[NULL &#40;SSIS 式&#41;](../../integration-services/expressions/null-ssis-expression.md)」を参照してください。  
+-   式の内部では、NULL(DT_STR, ...) ではなく NULL(DT_WSTR, ...) を使用します。この関数の詳細については、「[NULL &#40;SSIS 式&#41;](../../integration-services/expressions/null-ssis-expression.md)」を参照してください。  
   
 -   式の内部では、式のルートでのみ、つまり最終的な式の結果を返すときにのみ、CAST 関数を使用して、値を DT_STR 型にキャストできます。 それ以外の場合は、式で DT_WSTR 型を使用します。  
   
  次のスクリーン ショットの式について考えてみましょう。  
   
- ![SSIS 式におけるデータ型を文字列](../../integration-services/expressions/media/stringsinssisexpressions.png "SSIS 式におけるデータ型の文字列")  
+ ![SSIS 式の文字列データ型](../../integration-services/expressions/media/stringsinssisexpressions.png "SSIS 式の文字列データ型")  
   
 1.  最初の式は、NULL(DT_STR, ...) 関数が式のルート レベルにあるため、エラーなしで実行されます。  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  以下の例は、キャストの影響を示しています。  
   
- ![SSIS 式の文字列をキャスト](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 式の文字列のキャスト")  
+ ![SSIS 式のキャスト文字列](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 式のキャスト文字列")  
   
 1.  最初の式は、キャストが式のルート レベルにありません。 式エバリュエーターは、このキャストをインテリジェントに処理し、DT_STR ではなく、DT_WSTR にキャストします。 式は DT_WSTR を返します。  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  次の図は、BINARY 演算での暗黙的な変換の結果のデータ型を示しています。 この表の列と行の交差部分は、左 (変換元) と右 (変換先) の型のオペランドによるバイナリ演算の結果のデータ型です。  
   
- ![暗黙的なデータ型のデータ型の間で変換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "暗黙的なデータ型のデータ型間の変換")  
+ ![データ型間における暗黙的なデータ型の変換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "データ型間における暗黙的なデータ型の変換")  
   
  符号付き整数と符号なし整数の積集合は符号付き整数になり、この値はどちらかの引数よりも大きい場合があります。  
   

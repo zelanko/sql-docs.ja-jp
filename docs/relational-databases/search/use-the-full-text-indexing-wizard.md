@@ -2,9 +2,12 @@
 title: "フルテキスト インデックス作成ウィザードの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98fce836048a343f9eb87b2d987d13a294bce59f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4cfca84ed59bd6922a6667a0b214668836e421ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
-  SSMS のフルテキスト インデックス作成ウィザードを使用すると、フルテキスト インデックスを作成するために作られた一連の手順を実行できます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SSMS のフルテキスト インデックス作成ウィザードを使用すると、フルテキスト インデックスを作成するために作られた一連の手順を実行できます。  
   
 ## <a name="create-a--full-text-index"></a>フルテキスト インデックスを作成する 
 

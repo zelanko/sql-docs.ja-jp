@@ -1,5 +1,5 @@
 ---
-title: "catalog.create_execution_dump |Microsoft ドキュメント"
+title: catalog.create_execution_dump | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b05e1b46845c0a2b5ee47b94dc239d79d4a12a17
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e8fc97f65fb17605393505c428b645994d3fd1da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  実行中のパッケージを一時停止させ、ダンプ ファイルを作成します。 ファイルが格納されている、 *\<ドライブ >*: SQL server \Program Files\Microsoft フォルダーです。  
+  実行中のパッケージを一時停止させ、ダンプ ファイルを作成します。 ファイルは *\<ドライブ>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps フォルダーに格納されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,8 +36,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @execution_id =] *execution_id*  
- 実行中のパッケージの実行 ID です。 *Execution_id*は**bigint**です。  
+ [ @execution_id = ] *execution_id*  
+ 実行中のパッケージの実行 ID です。 *execution_id* は **bigint** です。  
   
 ## <a name="example"></a>例  
  次の例では、実行 ID が 88 の実行中のパッケージにダンプ ファイルの作成を指示しています。  
@@ -57,7 +55,7 @@ EXEC create_execution_dump @execution_id = 88
  なし  
   
 ## <a name="permissions"></a>Permissions  
- このストアド プロシージャには、ユーザーがのメンバーであることが必要です、 **ssis_admin**データベース ロール。  
+ このストアド プロシージャでは、ユーザーが**ssis_admin** データベース ロールのメンバーである必要があります。  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  ストアド プロシージャが失敗する原因となる条件を以下に示します。  
@@ -72,4 +70,3 @@ EXEC create_execution_dump @execution_id = 88
  [パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

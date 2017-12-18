@@ -1,5 +1,5 @@
 ---
-title: "パッケージの接続のトラブルシューティング ツール |Microsoft ドキュメント"
+title: "パッケージ接続のトラブルシューティング ツール | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 11c80c7ecc8fc8598b1079458d83773db6e68f06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>パッケージ接続のトラブルシューティング ツール
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージと、パッケージがデータを抽出して読み込むデータ ソースとの接続のトラブルシューティングを行うための、機能とツールが用意されています。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
     -   OLE DB 接続マネージャー、OLE DB ソース、および OLE DB 変換先  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]接続マネージャーおよび ADO NET ソース  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーおよび ADO NET 変換元  
   
     -   SQL 実行タスク  
   
@@ -77,8 +75,7 @@ ms.lasthandoff: 08/03/2017
     ```  
   
 ## <a name="see-also"></a>参照  
- [パッケージの開発のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [パッケージの実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [パッケージ開発のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

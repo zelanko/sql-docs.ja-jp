@@ -2,9 +2,12 @@
 title: "[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fdfc53f0a3e497e95a4c987531ebdff9d3fcb236
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f83e241a5360b7edcdf6739d4d7bdbc96517cea7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視
-  このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[オブジェクト エクスプローラーの詳細]** ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
   
 > [!NOTE]  
 >  [オブジェクト エクスプローラーの詳細] ペインの使用方法の詳細については、「 [[オブジェクト エクスプローラーの詳細] ペイン](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)」を参照してください。  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  オブジェクト エクスプローラーで、可用性グループを監視する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-3.  **[ AlwaysOn 高可用性 ]** ノードと **[ 可用性グループ ]** ノードを展開します。  
+3.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 4.  **[オブジェクト エクスプローラーの詳細]** ペインに、接続したサーバー インスタンスがそのレプリカをホストしている可用性グループが表示されます。 それぞれの可用性グループについて、 **[サーバー インスタンス (プライマリ)]** 列に、プライマリ レプリカを現在ホストしているサーバー インスタンス名が表示されます。  特定の可用性グループの詳細を表示するには、オブジェクト エクスプ ローラーでそのグループを選択します。  
   

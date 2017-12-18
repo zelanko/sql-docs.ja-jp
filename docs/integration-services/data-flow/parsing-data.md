@@ -1,5 +1,5 @@
 ---
-title: "データの解析 |Microsoft ドキュメント"
+title: "データの解析 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-data"></a>データの解析
   パッケージ内のデータ フローは、異種データ ストア間でデータの抽出や読み込みを行います。データ ストアでは、標準およびカスタムのさまざまなデータ型を使用します。 データ フローでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の変換元は、データの抽出、文字列データの解析、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型へのデータ変換を行います。 次に続く変換で、データを解析して別のデータ型に変換したり、列のコピーを別のデータ型で作成することもあります。 コンポーネントで使用する式で、引数やオペランドを別のデータ型にキャストする場合もあります。 さらに、データがデータ ストアに読み込まれるとき、変換先でデータを解析して、変換先が使用するデータ型に変換する場合もあります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="two-types-of-parsing"></a>2 種類の解析  
+## <a name="two-types-of-parsing"></a>解析の 2 つの種類  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ変換用に、高速解析と標準解析の、2 種類の解析が用意されています。  
   
 -   高速解析は、高速で単純な解析ルーチンのセットで、ロケール固有のデータ型の変換はサポートされません。最も頻繁に使用される日付と時間の形式のみがサポートされます。 
@@ -84,7 +82,7 @@ ms.lasthandoff: 09/26/2017
   
 -   1 つ以上のアラビア数字 (0 ～ 9)。  
 
-## <a name="date-and-time-formats-fast-parse"></a>日付と時刻の形式 (高速解析)
+## <a name="date-and-time-formats-fast-parse"></a>日付および時刻の形式 (高速解析)
 高速解析は、データを解析するための高速で単純なルーチンのセットです。 高速解析では、日付および時刻のデータ型に対し次の形式がサポートされています。  
   
 ### <a name="date-data-type"></a>Date データ型 
@@ -192,7 +190,7 @@ ms.lasthandoff: 09/26/2017
   
  詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="enable-fast-parse"></a>高速解析を有効にします。
+## <a name="enable-fast-parse"></a>高速解析を有効にする
 高速解析を使用するフラット ファイル ソースまたはデータ変換の変換の列ごとに、高速解析プロパティを設定する必要があります。 プロパティを設定するには、フラット ファイル ソースおよびデータ変換の変換の詳細エディターを使用します。  
   
 1.  フラット ファイル ソースまたはデータ変換の変換を右クリックし、 **[詳細エディターの表示]**をクリックします。  
@@ -210,4 +208,3 @@ ms.lasthandoff: 09/26/2017
   
  標準解析は、各言語のデータのデータ型変換をサポートしており、データ形式が高速解析でサポートされていない場合に使用する必要があります。 オートメーション データ型変換 API の詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkId=79427)にある「データ型変換 API」を参照してください。 
  
-

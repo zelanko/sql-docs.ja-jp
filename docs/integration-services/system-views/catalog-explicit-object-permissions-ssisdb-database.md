@@ -1,5 +1,5 @@
 ---
-title: "catalog.explicit_object_permissions (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.explicit_object_permissions (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0923ea0cb6262a3a45530d0c2aa513312e566597
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +30,11 @@ ms.lasthandoff: 09/26/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|object_type|**smallint**|セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類を含めるフォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、および操作 (`4`)。|  
+|object_type|**smallint**|セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、および操作 (`4`) があります。|  
 |object_id|**bigint**|セキュリティ保護可能なオブジェクトの一意の識別子 (ID) または主キーを指定します。|  
 |principal_id|**int**|データベース プリンシパルの ID。|  
 |permission_type|**smallint**|権限の種類。|  
-|is_deny|**bit**|権限が拒否または許可されているかどうかを示します。 値が `1` の場合、権限は拒否されています。 値が`0`、アクセス許可が拒否されていません。|  
+|is_deny|**bit**|権限が拒否または許可されているかどうかを示します。 値が `1` の場合、権限は拒否されています。 値が `0` の場合、権限は拒否されていません。|  
 |grantor_id|**int**|権限を付与したプリンシパルの ID。|  
   
 ## <a name="remarks"></a>解説  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/26/2017
  このビューには、現在のプリンシパルの権限が完全に表示されません。 ユーザーは、プリンシパルが、権限が割り当てられたロールまたはグループのメンバーであるかどうかを確認する必要もあります。  
   
   
-

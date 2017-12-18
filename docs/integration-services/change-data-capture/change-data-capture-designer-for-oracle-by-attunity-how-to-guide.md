@@ -1,5 +1,5 @@
 ---
-title: "Data Capture Designer for Oracle by Attunity 操作ガイド 』 に変更する |Microsoft ドキュメント"
+title: "Change Data Capture Designer for Oracle by Attunity 操作ガイド | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dee01cafcad2515e5fa80462dff67c14ff66f3ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: faf648ac4c8883c4b3451dcd903bfc8a444a33aa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Change Data Capture Designer for Oracle by Attunity 操作ガイド
   ここでは、Change Data Capture Designer for Oracle by Attunity のタスクを実行する方法について説明します。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/03/2017
 -   [CDC インスタンスのプロパティを表示する方法](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)  
   
   
-

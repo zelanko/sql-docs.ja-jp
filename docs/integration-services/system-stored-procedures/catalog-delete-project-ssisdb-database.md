@@ -1,5 +1,5 @@
 ---
-title: "catalog.delete_project (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.delete_project (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c09d08c3b115a3d5171d368aba7373240458cd48
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  内のフォルダーから既存のプロジェクトを削除、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダーから既存のプロジェクトを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,11 +35,11 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name =] *folder_name*  
- プロジェクトを含むフォルダーの名前。 *folder_name*は**nvarchar (128)**です。  
+ [ @folder_name = ] *folder_name*  
+ プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
- [ @project_name =] *project_name*  
- 削除されるプロジェクトの名前。 *project_name*は**nvarchar (128)**です。  
+ [ @project_name = ] *project_name*  
+ 削除されるプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -54,9 +52,9 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   プロジェクトの READ および MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  次の一覧には、エラーが発生する delete_project ストアド プロシージャが可能性がある条件について説明します。  
@@ -71,4 +69,3 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  対応するプロジェクトのすべてのオブジェクトおよび環境参照が、プロジェクトと共に削除されます。 ただし、プロジェクトのバージョンと関連する操作レコードは、操作のクリーンアップ ジョブが次回実行されるまで保持されます。  
   
   
-

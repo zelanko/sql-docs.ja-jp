@@ -2,9 +2,12 @@
 title: "SQL Server データベースの警告のセットアップ (Windows) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,38 +18,38 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29cc760d28e828b17cb6521c1fe2a6efc011ad24
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 459c324ac13d950f99643e839026d5090e99df78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server データベースの警告のセットアップ (Windows)
-  システム モニターを使用すると、システム モニター カウンターがしきい値に到達した場合に生成される警告を作成できます。 システム モニターは、この警告に応答して、警告状況を処理するために記述されたカスタム アプリケーションなどのアプリケーションを起動できます。 たとえば、デッドロックの数が特定の値を超えたときに生成される警告を作成できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] システム モニターでは、システム モニターのカウンターがしきい値に達したときに発生する警告を作成できます。 システム モニターは、この警告に応答して、警告状況を処理するために記述されたカスタム アプリケーションなどのアプリケーションを起動できます。 たとえば、デッドロックの数が特定の値を超えたときに生成される警告を作成できます。 
   
- 警告は、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して定義することもできます。 詳細については、「 [警告](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)」をご覧ください。  
+ 警告は、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して定義することもできます。 詳細については、「 [警告](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)」を参照してください。  
   
-### <a name="to-set-up-a-sql-server-database-alert"></a>SQL Server データベースの警告をセットアップするには  
+## <a name="set-up-a-sql-server-database-alert"></a>SQL Server データベースの警告をセットアップする  
   
-1.  [パフォーマンス] ウィンドウのナビゲーション ツリーで、 **[パフォーマンス ログと警告]**を展開します。  
+1. **[パフォーマンス]** ウィンドウのナビゲーション ツリーで、**[パフォーマンス ログと警告]** を展開します。  
   
-2.  **[警告]**を右クリックし、 **[新しい警告の設定]**をクリックします。  
+2. **[警告]** を右クリックし、**[新しい警告の設定]** を選択します。
   
-3.  **[新しい警告の設定]** ダイアログ ボックスで、新しい警告の名前を入力し、 **[OK]**をクリックします。  
+3. **[新しい警告の設定]** ダイアログ ボックスで、新しい警告の名前を入力し、**[OK]** を選択します。  
   
-4.  新しい警告のダイアログ ボックスの **[全般]** タブで、 **[コメント]**を追加し、 **[追加]** をクリックして警告にカウンターを追加します。  
+4. 新しい警告のダイアログ ボックスの **[全般]** タブで、**[コメント]** を追加します。 **[追加]** を選択して警告にカウンターを追加します。  
   
      各警告には、少なくとも 1 つのカウンターを含む必要があります。  
   
-5.  [カウンターの追加] ダイアログ ボックスで、 **[パフォーマンス オブジェクト]** の一覧から SQL Server オブジェクトを選択し、 **[一覧からカウンターを選ぶ]**からカウンターを選択します。  
+5. **[カウンターの追加]** ダイアログ ボックスで、**[パフォーマンス オブジェクト]** 一覧から SQL Server オブジェクトを選択します。 **[一覧からカウンターを選択]** でカウンターを選択します。  
   
-6.  警告にカウンターを追加するには、 **[追加]**をクリックします。 カウンターの追加を続行するか、 **[閉じる]** をクリックして新しい警告のダイアログ ボックスに戻ることができます。  
+6. 警告にカウンターを追加するには、**[追加]** を選択します。 カウンターの追加を続行するか、**[閉じる]** を選択して新しい警告のダイアログ ボックスに戻ることができます。  
   
-7.  新しい警告のダイアログ ボックスで、 **[Alert when the value is (次の値になったら警告する)]** の一覧の **[Over (超過)]**または **[Under (以下)]** をクリックし、 **[Limit (制限値)]**にしきい値を入力します。  
+7. 新しい警告のダイアログ ボックスで、**[次の値になったら警告する]** の一覧の **[超過]** または **[以下]** を選択します。 **[制限値]** にしきい値を入力します。  
   
-     警告は、カウンターの値がしきい値を超えたとき、またはしきい値以下になったときに生成されます。これは **[Over (超過)]** または **[Under (以下)]**のどちらをクリックしたかによって決まります。  
+     警告は、カウンターの値がしきい値を超えたとき、またはしきい値以下になったときに生成されます。これは **[超過]** または **[以下]**のどちらを選択したかによって決まります。  
   
-8.  **[Sample data every (データのサンプル間隔)]** ボックスで、サンプリング周期を設定します。  
+8. **[Sample data every (データのサンプル間隔)]** ボックスで、サンプリング周期を設定します。  
   
 9. **[アクション]** タブで、警告がトリガーされたときに実行される操作を設定します。  
   

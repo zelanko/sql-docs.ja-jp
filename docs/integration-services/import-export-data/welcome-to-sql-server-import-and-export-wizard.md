@@ -1,5 +1,5 @@
 ---
-title: "SQL Server インポートおよびエクスポート ウィザードへようこそ |Microsoft ドキュメント"
+title: "SQL Server インポートおよびエクスポート ウィザードへようこそ | Microsoft Docs"
 ms.custom: 
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,30 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.welcome.f1
+f1_keywords: sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: de48d6e15cdb165e865d13a00b6f956816e46e39
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 36872efe2081ae755f796d4ed19e96dbcbcfe341
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>[SQL Server インポートおよびエクスポート ウィザードへようこそ]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動すると、最初のページは **[SQL Server インポートおよびエクスポート ウィザードへようこそ]**になります。 このページで必要な操作はありません。
 
 > [!IMPORTANT]
-> このトピックでは、ウィザードの **最初のページ** についてのみ説明します。 他のものを探しの場合は、次を参照してください。[関連のタスクおよびコンテンツ](#related)です。
+> このトピックでは、ウィザードの **最初のページ** についてのみ説明します。 他のものをお探しの場合は、「[関連タスクとコンテンツ](#related)」を参照してください。
 
-## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>前提条件、お使いのコンピューターにインストールされているウィザードとは
-かどうかに、ウィザードを実行する必要はありません [!含める[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md)です。
+## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>前提条件 - コンピューターへのウィザードのインストール
+ウィザードを実行したいが、[!INCLUDE[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="screen-shot-of-the-welcome-page"></a>[ようこそ] ページのスクリーン ショット  
 次のスクリーン ショットは、ウィザードの **[SQL Server インポートおよびエクスポート ウィザードへようこそ]** というページです。  
@@ -43,30 +40,29 @@ ms.lasthandoff: 09/27/2017
 
 ## <a name="dont-show-this-page-again"></a>[次回からこのページを表示しない]  
 **[次回からこの開始ページを表示しない]**  
- 次回ウィザードを実行して、[ようこそ] ページをスキップします。  
+ 次回ウィザードを実行するときに、ようこそページをスキップします。  
   
 ## <a name="whats-next"></a>次の操作  
  次のページは、 **[データ ソースの選択]**です。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。 詳細については、「 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」を参照してください。
 
-## <a name="related"></a>関連のタスクとコンテンツ  
- その他の基本的な作業のとおりです。
+## <a name="related"></a> 関連タスクとコンテンツ  
+ その他の基本的なタスクは次のとおりです。
 -   **ウィザードのしくみの簡単な例を参照してください。**
 
-    -   **スクリーン ショットを参照する場合は。** 1 つのページ - この単純なエンド ツー エンドの例を見て[インポートおよびエクスポート ウィザードのこの簡単な例の概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)です。
+    -   **スクリーン ショットを参照する場合。** この単純なエンド ツー エンドの例を 1 つのページ示した「[簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)」をご覧ください。
 
-    -   **ビデオを視聴する場合は。** ウィザードを示し、明確に説明された YouTube かつ簡単にデータを Excel にエクスポートする方法の 4 分のビデオ[、SQL Server インポートおよびエクスポート ウィザードを Excel にエクスポートするを使用して](https://go.microsoft.com/fwlink/?linkid=829049)です。
+    -   **ビデオを視聴する場合。** ウィザードを実行し、わかりやすく簡単な手順でデータを Excel にエクスポートする方法を説明した YouTube の 4 分間のビデオ「[Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049)」 (SQL Server インポートおよびエクスポート ウィザードを使用して Excel にエクスポートする) をご覧ください。
 
--   **ウィザードのしくみについて説明します。**
+-   **ウィザードのしくみについては、以下を参照してください。**
 
-    -   **ウィザードの詳細についてを説明します。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
+    -   **ウィザードのしくみについては、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
-    -   **ウィザードの手順について説明します。** ウィザードの手順についての情報を探している場合は、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードの手順を](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)です。 ウィザードの各ページ用のドキュメントの別のページもあります。
+    -   **ウィザードの手順について学習する。** ウィザードの手順についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードの手順](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)」をご覧ください。 ウィザードのページごとに別のドキュメント ページもあります。
 
-    -   **データ ソースおよび変換先に接続する方法を説明します。** データに接続する方法についての情報を探している場合は、ここに一覧から、ページを選択[、SQL Server インポートおよびエクスポート ウィザードでデータ ソースへの接続](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)です。 いくつかの一般的に使用されるデータ ソースごとにドキュメントの別のページがあります。
+    -   **データ ソースおよび変換先に接続する方法を学習する。** データへの接続方法についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)」の一覧から目的のページを選んでください。 いくつかの一般的に使用されるデータ ソースごとに個別のドキュメントのページがあります。
 
 -   **ウィザードを起動します。** ウィザードを実行する準備が整い、開始方法について知りたい場合は、「[SQL Server インポートおよびエクスポート ウィザードを起動する](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
 -  **ウィザードを取得します。**  ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。
-
 
 
