@@ -1,5 +1,5 @@
 ---
-title: "プログラムによる接続の追加 |Microsoft ドキュメント"
+title: "プログラムによる接続の追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,31 +27,30 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b768ad80f2b28cc3fb73a2210188bab26c902441
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ed662d5dff653fc0e245db65f6fe25b4b209c77e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
-  <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、外部データ ソースへの物理接続を表します。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、ランタイムから接続の実装詳細を分離します。 これにより、ランタイムは、一貫した予測可能な方法でそれぞれの接続マネージャーとやり取りを行うことができます。 接続マネージャーには、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A>、および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> など、すべての接続に共通のストック プロパティのセットが含まれています。 ただし、接続マネージャーを構成するために必要なプロパティは、通常 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> プロパティのみです。 異なり他のプログラミング パラダイムと、メソッドの公開接続クラスなど**開く**または**接続**実行時に、物理的にデータ ソースへの接続を確立する、ランタイム エンジンがパッケージのすべての接続を管理します。  
+  <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、外部データ ソースへの物理接続を表します。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、ランタイムから接続の実装詳細を分離します。 これにより、ランタイムは、一貫した予測可能な方法でそれぞれの接続マネージャーとやり取りを行うことができます。 接続マネージャーには、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A>、および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> など、すべての接続に共通のストック プロパティのセットが含まれています。 ただし、接続マネージャーを構成するために必要なプロパティは、通常 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> プロパティのみです。 接続クラスが **Open** や **Connect** などのメソッドを公開して物理的にデータ ソースへの接続を確立する他のプログラミング パラダイムと異なり、ランタイム エンジンは、パッケージの実行中にそのパッケージのすべての接続を管理します。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Connections> クラスは、パッケージに追加されて実行時に使用できる接続マネージャーのコレクションです。 コレクションの <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> メソッドを使用し、接続マネージャーの種類を示す文字列を指定することによって、接続マネージャーをコレクションに追加できます。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> メソッドは、パッケージに追加された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> のインスタンスを返します。  
   
 ## <a name="intrinsic-properties"></a>固有プロパティ  
- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、すべての接続に共通のプロパティのセットを公開します。 ただし、特定の接続の種類に固有のプロパティにアクセスする必要が生じる場合もあります。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> クラスの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> コレクションは、これらのプロパティへのアクセスを提供します。 プロパティは、インデクサーまたはプロパティ名を使用して、コレクションから取得できます、 **GetValue**メソッド、および、値が設定を使用して、 **SetValue**メソッドです。 基になる接続オブジェクトのプロパティには、オブジェクトの実際のインスタンスを取得し、そのプロパティを直接設定することもできます。 基になる接続を取得するには、接続マネージャーの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> プロパティを使用します。 次のコード行は、基になるクラス <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass> を持つ ADO.NET 接続マネージャーを作成する C# の行を示しています。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、すべての接続に共通のプロパティのセットを公開します。 ただし、特定の接続の種類に固有のプロパティにアクセスする必要が生じる場合もあります。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> クラスの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> コレクションは、これらのプロパティへのアクセスを提供します。 プロパティをコレクションから取得するには、インデクサーまたはプロパティ名、および **GetValue** メソッドを使用し、その値を設定するには **SetValue** メソッドを使用します。 基になる接続オブジェクトのプロパティには、オブジェクトの実際のインスタンスを取得し、そのプロパティを直接設定することもできます。 基になる接続を取得するには、接続マネージャーの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> プロパティを使用します。 次のコード行は、基になるクラス <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass> を持つ ADO.NET 接続マネージャーを作成する C# の行を示しています。  
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- これは、マネージ接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合、 **QueryInterface**のメソッド、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>オブジェクトが呼び出され、基になる接続オブジェクトのインターフェイスを要求します。  
+ これは、マネージ接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合は、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトの **QueryInterface** メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
   
- 次の表は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が備えている接続マネージャーと `package.Connections.Add("xxx")` ステートメントで使用される文字列を示しています。 すべての接続マネージャーの一覧は、次を参照してください。 [Integration Services & #40 です。SSIS &#41;接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)です。  
+ 次の表は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が備えている接続マネージャーと `package.Connections.Add("xxx")` ステートメントで使用される文字列を示しています。 すべての接続マネージャーのリストについては、「[Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 |文字列|[ODBC 入力先エディター]|  
 |------------|------------------------|  
@@ -66,7 +63,7 @@ ms.lasthandoff: 08/03/2017
 |"FILE"|ファイル接続用の接続マネージャー|  
 |"MULTIFLATFILE"|複数のフラット ファイル接続用の接続マネージャー|  
 |"MULTIFILE"|複数のファイル接続用の接続マネージャー|  
-|"SQLMOBILE"|接続マネージャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 接続します。|  
+|"SQLMOBILE"|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続用の接続マネージャー|  
 |"MSOLAP100"|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続用の接続マネージャー|  
 |"FTP"|FTP 接続用の接続マネージャー|  
 |"HTTP"|HTTP 接続用の接続マネージャー|  
@@ -217,11 +214,10 @@ End Class
  `Number of connections in package: 2`  
   
 ## <a name="external-resources"></a>外部リソース  
- 技術記事「[接続文字列](http://go.microsoft.com/fwlink/?LinkId=220743)carlprothman.net にします。  
+ carlprothman.net の [接続文字列](http://go.microsoft.com/fwlink/?LinkId=220743)に関する技術記事  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [接続マネージャーを作成します。](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [接続マネージャーを作成する](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

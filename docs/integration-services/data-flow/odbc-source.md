@@ -1,5 +1,5 @@
 ---
-title: "Odbc 入力元 |Microsoft ドキュメント"
+title: "ODBC 入力元 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -89,11 +87,11 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [Odbc 入力元を使用して、データを抽出します。](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [ODBC 変換元を使用したデータ抽出](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [Odbc 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC 変換元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
-## <a name="odbc-source-editor-connection-manager-page"></a>[ODBC ソース エディター]\ ([接続マネージャー] ページ)
+## <a name="odbc-source-editor-connection-manager-page"></a>[ODBC ソース エディター] ([接続マネージャー] ページ)
   **[ODBC 入力元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力元の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
 ### <a name="task-list"></a>タスク一覧  
@@ -127,7 +125,7 @@ ms.lasthandoff: 08/17/2017
 #### <a name="preview"></a>プレビュー  
  **[プレビュー]** をクリックすると、選択したテーブルまたはビューから抽出されたデータを先頭から最大で 200 行表示できます。  
   
-## <a name="odbc-source-editor-columns-page"></a>[ODBC ソース エディター]\ ([列] ページ)
+## <a name="odbc-source-editor-columns-page"></a>[ODBC ソース エディター] ([列] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (入力元) 列にマップできます。  
   
 ### <a name="task-list"></a>タスク一覧  
@@ -152,11 +150,11 @@ ms.lasthandoff: 08/17/2017
 #### <a name="output-column"></a>出力列  
  各出力列の一意の名前を入力します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 入力した名前は、SSIS デザイナーで表示されます。  
   
-## <a name="odbc-source-editor-error-output-page"></a>ODBC ソース エディター ([エラー出力] ページ)
-  **ODBC 入力元エディター** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
+## <a name="odbc-source-editor-error-output-page"></a>[ODBC ソース エディター] ([エラー出力] ページ)
+  **[ODBC 入力元エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
   
 ### <a name="task-list"></a>タスク一覧  
- **ODBC 入力元エディター の [エラー出力] ページを開くには**  
+ **[ODBC 入力元エディター] の [エラー出力] ページを開くには**  
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、ODBC 入力元を含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
   
@@ -200,4 +198,3 @@ ms.lasthandoff: 08/17/2017
  エラーまたは切り捨てが ODBC 入力元のエラー出力に送られる原因となった行。  
   
   
-

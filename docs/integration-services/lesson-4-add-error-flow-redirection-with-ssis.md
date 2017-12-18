@@ -1,5 +1,5 @@
 ---
-title: "レッスン 4: SSIS によるエラー フロー リダイレクトの追加 |Microsoft ドキュメント"
+title: "レッスン 4: SSIS でエラー フロー リダイレクションを追加する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cfe3634566a7ede28e3c1f5640cfe6e4caa1c351
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 71522bf83637a5f783f14c0a13c2e129b5a0afdd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>レッスン 4: SSIS でエラー フロー リダイレクションを追加する
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、変換できないデータの処理方法を、コンポーネントごと、および列ごとに指定できる機能があります。これにより、変換プロセスで発生するエラーを処理することができます。 特定の列で発生したエラーは無視し、変換に失敗した行全体をリダイレクトできます。または、この操作をコンポーネント単位で行うこともできます。 既定の構成では、エラーの発生時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のすべてのコンポーネントが変換に失敗したものと見なされます。 つまり、1 つのコンポーネントの変換が失敗すると、パッケージの変換が失敗されたものと見なされ、以降の処理が中断されます。  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
 -   [手順 2: 破損ファイルの作成](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [手順 3: エラー フロー リダイレクトの追加](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [手順 3 : エラー フロー リダイレクトの追加](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [手順 4: フラット ファイル変換先の追加](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [手順 4 : フラット ファイル変換先の追加](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
 -   [手順 5: レッスン 4 のチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
@@ -59,4 +56,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

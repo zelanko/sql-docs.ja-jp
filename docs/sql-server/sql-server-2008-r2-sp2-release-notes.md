@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2008 R2 SP2 リリース ノート | Microsoft Docs"
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,14 +20,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 リリース ノート
-このリリース ノートでは、Microsoft SQL Server 2008 R2 Service Pack 2 のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。 このリリース ノート ドキュメントは、SQL Server 2008 R2 SP2 のすべてのエディションに適用され、オンラインでのみ利用できます。 このリリース ノート ドキュメントは定期的に更新されます。  
+# <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] このリリース ノートでは、Microsoft SQL Server 2008 R2 Service Pack 2 のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。 このリリース ノート ドキュメントは、SQL Server 2008 R2 SP2 のすべてのエディションに適用され、オンラインでのみ利用できます。 このリリース ノート ドキュメントは定期的に更新されます。  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Service Pack 2 の新機能  
 **sys.dm_db_stats_properties**動的管理ビュー (DMV) が追加されました。 この DMV を使用して、現在のデータベース内にある指定されたテーブルまたはインデックス付きビューの統計プロパティを返すことができます。 たとえば、この DMV は、サンプルの行数およびヒストグラムのステップ数を返します。  

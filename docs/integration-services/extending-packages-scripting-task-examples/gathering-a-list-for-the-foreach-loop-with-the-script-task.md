@@ -1,5 +1,5 @@
 ---
-title: "スクリプト タスクによる ForEach ループの一覧の収集 |Microsoft ドキュメント"
+title: "スクリプト タスクによる ForEach ループの一覧の収集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 526d0a36a1be48f9437e9a9d9ad2b341d4320bb6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>スクリプト タスクによる ForEach ループの一覧の収集
-  Foreach from Variable 列挙子は、変数で渡された一覧の項目を列挙し、各項目に対して同じタスクを実行します。 スクリプト タスクでカスタム コードを使用して、このための一覧を設定することができます。 列挙子の詳細については、次を参照してください。 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)です。  
+  Foreach from Variable 列挙子は、変数で渡された一覧の項目を列挙し、各項目に対して同じタスクを実行します。 スクリプト タスクでカスタム コードを使用して、このための一覧を設定することができます。 この列挙子の詳細については、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」を参照してください。  
   
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
 ## <a name="description"></a>Description  
- 次の例がメソッドを使用して、 **System.IO**変数内のユーザーによって指定された日数よりも古いまたは新しいのいずれかであるコンピューター上の Excel ブックの一覧を収集する名前空間。 拡張子 .xls を持つファイルを探して C ドライブのディレクトリを再帰的に検索し、各ファイルの最終更新日を調べて、一覧に属するかどうかを判定します。 該当するファイルを追加、 **ArrayList**し、保存、 **ArrayList** Foreach ループ コンテナーで後で使用できる変数にします。 この Foreach ループ コンテナーは、Foreach from Variable 列挙子を使用するように構成されています。  
+ 次の例は、**System.IO** 名前空間のメソッドを使用して、ユーザーが変数で指定した日数より新しいまたは古い Excel ブックの一覧をコンピューターで収集します。 拡張子 .xls を持つファイルを探して C ドライブのディレクトリを再帰的に検索し、各ファイルの最終更新日を調べて、一覧に属するかどうかを判定します。 該当するファイルを **ArrayList** に追加した後、その **ArrayList** を変数に保存して、後に Foreach ループ コンテナーで使用できるようにします。 この Foreach ループ コンテナーは、Foreach from Variable 列挙子を使用するように構成されています。  
   
 > [!NOTE]  
->  型の変数に Foreach from Variable 列挙子で使用する必要があります**オブジェクト**です。 変数に配置するオブジェクトは、次のインターフェイスの 1 つを実装する必要があります:**では、System.Collections.IEnumerable**、 **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、 **System.ComponentModel IListSource**、または**Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**です。 **配列**または**ArrayList**は一般的に使用します。 **ArrayList**の参照が必要と**Imports**のステートメント、 **System.Collections**名前空間。  
+>  Foreach From Variable 列挙子で使用する変数は、**Object** 型であることが必要です。 変数に配置するオブジェクトは、**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource**、または **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost** のいずれかのインターフェイスを実装する必要があります。 **Array** または **ArrayList** が一般に使用されます。 **ArrayList** は、**System.Collections** 名前空間に対する参照と **Imports** ステートメントを必要とします。  
   
  このタスクは、`FileAge` パッケージ変数に対して正および負のさまざまな値を使用することによってテストできます。 たとえば、この 5 日間に作成されたファイルを検索するには 5 を入力し、3 日前よりも前に作成されたファイルを検索するには -3 を入力します。 このタスクは、検索するフォルダーの数が多いドライブの場合、実行に 1 ～ 2 分かかることがあります。  
   
@@ -50,11 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  `FileAge` という integer 型のパッケージ変数を作成し、正または負の整数値を入力します。 値が正の場合は、指定した日数より新しいファイルが検索され、値が負の場合は、指定した日数より古いファイルが検索されます。  
   
-2.  という名前のパッケージ変数を作成する`FileList`型の**オブジェクト**from Variable 列挙子の Foreach によって後で使用するスクリプト タスクによって収集されたファイルの一覧を受信します。  
+2.  スクリプト タスクによって収集されたファイルの一覧を受け取るために、`FileList` という **Object** 型のパッケージ変数を作成します。この変数を後に Foreach from Variable 列挙子で使用します。  
   
-3.  追加、`FileAge`変数をスクリプト タスクの**ReadOnlyVariables**プロパティを追加し、`FileList`変数を**ReadWriteVariables**プロパティです。  
+3.  `FileAge` 変数をスクリプト タスクの **ReadOnlyVariables** プロパティに追加し、`FileList` 変数を **ReadWriteVariables** プロパティに追加します。  
   
-4.  コードでは、インポート、 **System.Collections**と**System.IO**名前空間。  
+4.  コードに **System.Collections** および **System.IO** 名前空間をインポートします。  
   
 ### <a name="code"></a>コード  
   
@@ -183,7 +180,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    listForEnumerator = new ArrayList();  
+    ArrayList listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   
@@ -260,4 +257,3 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
  [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

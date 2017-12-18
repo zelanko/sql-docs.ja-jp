@@ -1,5 +1,5 @@
 ---
-title: "ADO NET 変換先 |Microsoft ドキュメント"
+title: "ADO NET 変換先 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: ja-jp
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
   ADO NET 変換先では、データベースのテーブルやビューを使用する、さまざまな [!INCLUDE[vstecado](../../includes/vstecado-md.md)]互換データベースにデータを読み込みます。 このデータを既存のテーブルやビューに読み込むことができますが、新しいテーブルを作成して、そこにデータを読み込むこともできます。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/08/2017
  ADO NET 変換先には、入力列と変換先データ ソースの列との間のマッピングが含まれています。 入力列を変換先のすべての列にマップする必要はありません。 ただし、一部の変換先列のプロパティで、入力列のマップが必要になることがあります。 マップしない場合、エラーが発生することがあります。 たとえば、変換先列で NULL 値が許容されていない場合は、入力列をその変換先列にマップする必要があります。 また、マップされる列のデータ型には互換性がある必要があります。 たとえば、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロバイダーで文字列データ型の入力列を数値データ型の変換先列にマップすることがサポートされていなければ、その操作はできません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イメージを作成するデータ型が設定されている列に挿入するテキストをサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データ型が IMAGE 型に設定された列にテキストを挿入することはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  ADO NET 変換先では、DT_DBTIME 型に設定されている入力列を datetime 型に設定されているデータベース列にマップすることがサポートされていません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型について詳しくは、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」をご覧ください。  
@@ -97,19 +95,19 @@ ms.lasthandoff: 11/08/2017
  **[使用可能な場合は一括挿入を使用する]**  
  一括挿入操作のパフォーマンスを向上させるために <xref:System.Data.SqlClient.SqlBulkCopy> インターフェイスを使用するかどうかを指定します。  
   
- 返す ADO.NET プロバイダーのみ、<xref:System.Data.SqlClient.SqlConnection>オブジェクトの使用をサポートする、<xref:System.Data.SqlClient.SqlBulkCopy>インターフェイスです。 .NET Data Provider for SQL Server (SqlClient) は <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返し、カスタム プロバイダーは <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す可能性があります。  
+ <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す ADO.NET プロバイダーのみが <xref:System.Data.SqlClient.SqlBulkCopy> インターフェイスの使用をサポートしています。 .NET Data Provider for SQL Server (SqlClient) は <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返し、カスタム プロバイダーは <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す可能性があります。  
   
  .NET Data Provider for SQL Server (SqlClient) を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。  
   
- **[使用可能な場合は一括挿入を使用する]**を選択し、 **[エラー]** オプションを **[行をリダイレクトする]**に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 詳細については、**エラー**オプションを参照してください[ADO NET 変換先エディター &#40;です。エラー出力 ページ &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+ **[使用可能な場合は一括挿入を使用する]**を選択し、 **[エラー]** オプションを **[行をリダイレクトする]**に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 **[エラー]** オプションの詳細については、「[[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)」を参照してください。  
   
 > [!NOTE]  
->  SQL Server または Sybase のソース テーブルには、id 列が含まれている場合、ADO NET 変換先の前に IDENTITY_INSERT を有効にして、後でもう一度無効にする SQL 実行タスクを使用する必要があります。 (Id 列のプロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、コピー先のテーブル内の id 列に挿入されるソース テーブルからの明示的な値です。)  
+>  SQL Server または Sybase 変換元テーブルに ID 列が含まれる場合、SQL 実行タスクを利用し、ADO NET 変換先の前に IDENTITY_INSERT を有効にし、その後再び無効にする必要があります。 (ID 列プロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、変換先テーブルの ID 列に、変換元テーブルの明示的値を挿入できます。)  
 >   
->   SET IDENTITY_INSERT ステートメントおよびデータの読み込みを正常を実行するには、次の作業を行うができます。 
->       1. SQL 実行タスクや ADO.NET 変換先は、同じの ADO.NET 接続マネージャーを使用します。 
->       2. 接続マネージャーの設定、 **RetainSameConnection**プロパティおよび**MultipleActiveResultSets**プロパティを True にします。 
->       3. ADO.NET 変換先の設定、 **UseBulkInsertWhenPossible**プロパティを False にします。 
+>   SET IDENTITY_INSERT ステートメントとデータ読み込みを正常に実行するには、次を行う必要があります。 
+>       1. SQL 実行タスクと ADO NET 変換先に同じ ADO.NET 接続マネージャーを使用します。 
+>       2. 接続マネージャーで、**RetainSameConnection** プロパティと **MultipleActiveResultSets** プロパティを True に設定します。 
+>       3. ADO.NET 変換先で、**UseBulkInsertWhenPossible** プロパティを False に設定します。 
 >
 >  詳細については、「[SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)」および「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 11/08/2017
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 選択した入力列を表示します。 マッピングを削除するを選択すると**\<無視 >**出力から列を除外します。  
+ 選択した入力列を表示します。 出力から列を除外するために **\<無視>** を選択することで、マッピングを削除できます。  
   
  **変換先列**  
  マップするかどうかにかかわらず、使用できる変換先列を表示します。  
@@ -176,4 +174,3 @@ ms.lasthandoff: 11/08/2017
  選択したセルにエラー処理オプションを適用します。  
   
   
-

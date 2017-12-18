@@ -1,5 +1,5 @@
 ---
-title: "DBASE ファイルまたはその他の DBF ファイルへの接続 |Microsoft ドキュメント"
+title: "dBASE ファイルまたはその他の DBF ファイルに接続する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - dBase files
 - DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 60fc92f8283ec9b4952152aca6b1e0a5d31a1e6d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>dBASE ファイルまたはその他の DBF ファイルに接続する
-  OLE DB 接続マネージャーを使用して Microsoft OLE DB Provider for Jet 4.0 を選択すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで dBASE データベース ファイルまたは .DBF データベース ファイルに接続できます。  
+  OLE DB 接続マネージャーを使用して Microsoft OLE DB Provider for Jet 4.0 を選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで dBASE データベース ファイルまたは .DBF データベース ファイルに接続できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQL Server インポートおよびエクスポート ウィザードでは、dBASE ファイルやその他の DBF ファイルからのインポート、またはこれらのファイルへのエクスポートはサポートされません。 Microsoft Access または Microsoft Excel を使用して DBF ファイルから Access データベースまたは Excel ワークシートにデータをインポートした後、SQL Server インポートおよびエクスポート ウィザードを使用できます。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 08/03/2017
  [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   
-

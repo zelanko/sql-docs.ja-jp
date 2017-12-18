@@ -1,5 +1,5 @@
 ---
-title: "CDC フロー コンポーネント |Microsoft ドキュメント"
+title: "CDC フロー コンポーネント | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 7fea154af206b964206f7e04eddde0cea6cf08f9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 82e50a6cb72d5b26810493f656eff82f3b7cdccc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
@@ -47,17 +45,17 @@ ms.lasthandoff: 09/14/2017
 ## <a name="installation"></a>インストール  
  このセクションでは、CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のインストール手順について説明します。  
   
- SSIS 用 CDC コンポーネントは、for に同梱されて、Microsoft® Change Data Capture Designer and Service for Oracle by Attunity Microsoft SQL Server® です。 このダウンロードは、SQL Server Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](http://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ SSIS 用の CDC コンポーネントは、Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® に同梱されています。 このダウンロードは、SQL Server の Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](http://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
   
 ### <a name="version-support"></a>バージョンのサポート
 
-#### <a name="sql-server-version-support"></a>SQL Server のバージョンのサポート
+#### <a name="sql-server-version-support"></a>SQL Server のバージョン サポート
 
-SSIS 用 CDC コンポーネントは、Microsoft SQL Server のサポートされているすべてのバージョンでサポートされます。 現時点では、サポートされているバージョン SQL Server にはでは、SQL Server 2012 から SQL Server 2017 が含まれます。
+SSIS の CDC コンポーネントは、サポートされているすべての Microsoft SQL Server バージョンでサポートされています。 現在のところ、サポートされている SQL Server バージョンには、SQL Server 2012 から SQL Server 2017 までが含まれています。
 
-#### <a name="operating-system-version-support"></a>オペレーティング システムのバージョンのサポート
+#### <a name="operating-system-version-support"></a>オペレーティング システムのバージョン サポート
   
-SSIS 用 CDC コンポーネントは、次のオペレーティング システムとプラットフォームでサポートされます。  
+SSIS の CDC コンポーネントは、次のオペレーティング システムとプラットフォームでサポートされています。  
   
 -   Windows 8 および 8.1
 -   Windows 10  
@@ -67,8 +65,8 @@ SSIS 用 CDC コンポーネントは、次のオペレーティング システ
 ### <a name="running-the-installation-program"></a>インストール プログラムの実行  
  インストール ウィザードを実行する前に、必ず [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を閉じてください。 そのうえでインストール ウィザードの指示に従います。  
   
-### <a name="restart-ssis-service"></a>SSIS サービスを再起動します。 
-CDC コンポーネントをインストールした後は、SQL のパッケージを開発するときに、コンポーネントが正しく動作することを確認する SSIS サービスを再起動する必要があります[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]です。  
+### <a name="restart-ssis-service"></a>SSIS サービスの再起動 
+CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でのパッケージの開発時にコンポーネントが正常に機能するように、SSIS サービスを再起動する必要があります。  
   
 コンポーネントをインストールすると、メッセージが表示されます。 メッセージが表示されたら **[はい]** をクリックします。  
   
@@ -83,9 +81,9 @@ CDC コンポーネントをインストールした後は、SQL のパッケー
  SSIS CDC コンポーネントは、同じ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース内の変更テーブルで [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 機能を使用できるようにデザインされています。  
   
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Change Data Capture コンポーネントの概要  
- 一般的な CDC パッケージでは、テーブルのグループに対する変更を処理します。 この種類の CDC パッケージの基本的な制御フロー パーツは、次の図に表示されます。 このパッケージは、トリクル フィード処理パッケージと呼ばれます。  
+ 一般的な CDC パッケージでは、テーブルのグループに対する変更を処理します。 この種類の CDC パッケージの基本的な制御フローを以下の図に示します。 このパッケージは、トリクル フィード処理パッケージと呼ばれます。  
   
- ![トリクル フィード処理パッケージ コントロール フロー](../../integration-services/data-flow/media/tricklefeedprocessing.gif "トリクル フィード パッケージ制御フローの処理")  
+ ![トリクル フィード処理パッケージ制御フロー](../../integration-services/data-flow/media/tricklefeedprocessing.gif "トリクル フィード処理パッケージ制御フロー")  
   
  この [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 制御フローには、2 つの CDC 制御タスクとデータ フロー タスクが含まれています。 **Get CDC Processing Range** (CDC 処理範囲の取得) という最初のタスクでは、 **Process Changes**(変更の処理) というデータ フロー タスクで処理される変更の LSN 範囲を設定します。 この範囲は、前回のパッケージ実行時に処理されて永続的なストアに保存された内容に基づいて設定されます。  
   
@@ -93,13 +91,13 @@ CDC コンポーネントをインストールした後は、SQL のパッケー
   
  次の図に、変更の処理方法を概念的に表した、 **Process Changes (変更の処理)** データ フローを示します。  
   
- ![データ フローを変更するプロセス](../../integration-services/data-flow/media/processchangesdataflow.gif "プロセスのデータ フローの変更")  
+ ![プロセス変更データ フロー](../../integration-services/data-flow/media/processchangesdataflow.gif "プロセス変更データ フロー")  
   
  この図の手順は次のとおりです。  
   
--   **テーブル X に対する変更**CDC で行われたテーブル X に対する変更を読み取る CDC ソースは、親コントロール フローで決定された範囲を処理します。  
+-   **Changes for Table X (テーブル X の変更)** は、テーブル X に対する変更 (親コントロール フローで決定された CDC 処理範囲内での変更) を読み取る CDC ソースです。  
   
--   **CDC スプリッター X**変更挿入、削除に分割するために使用し、更新します。 このシナリオでは、CDC ソースが異なる種類の変更を並列で処理できるように、差分変更を生成するために構成されていると見なされます。  
+-   **CDC Splitter X (CDC スプリッター X)** は、変更を、挿入、削除、および更新に分割するために使用されます。 このシナリオでは、異なる種類の変更を並列処理できるように、差分変更を生成するように CDC ソースが構成されているものとします。  
   
 -   特定の変更は、下流でさらに処理されます。 この図では、変更は複数の ODBC 入力先を使用してテーブルに挿入されていますが、実際の処理方法は異なる可能性があります。  
   
@@ -129,17 +127,17 @@ CDC コンポーネントをインストールした後は、SQL のパッケー
   
  次の図に、最初の 2 つのシナリオが関係する SSIS パッケージを示します。  
   
- ![SSIS パッケージの処理の最初の 2 つのシナリオ](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS パッケージの処理の最初の 2 つのシナリオ")  
+ ![最初の 2 つのシナリオが関係する SSIS パッケージ](../../integration-services/data-flow/media/scenarioonetwo.gif "最初の 2 つのシナリオが関係する SSIS パッケージ")  
   
  次の図に、3 番目のシナリオが関係する SSIS パッケージを示します。  
   
- ![3 番目のシナリオを処理する SSIS パッケージ](../../integration-services/data-flow/media/scenario3.gif "3 番目のシナリオを処理する SSIS パッケージ")  
+ ![3 番目のシナリオが関係する SSIS パッケージ](../../integration-services/data-flow/media/scenario3.gif "3 番目のシナリオが関係する SSIS パッケージ")  
   
  初期読み込みパッケージに続き、トリクル フィード更新パッケージがスケジュールに従って繰り返し実行され、処理できるようになった変更を処理します。  
   
  初期読み込みパッケージからトリクル フィード パッケージ、および各パッケージ内の異なるタスク間での CDC 処理の状態の受け渡しは、特別な SSIS パッケージ文字列変数を使用して行われます。 この変数の値は CDC 状態と呼ばれ、初期読み込みとトリクル フィード パッケージによって処理されるテーブル グループの CDC 処理の現在の状態が反映されます。  
   
- CDC 状態変数の値は、永続的なストレージで保持する必要があります。 CDC 処理の開始前に、読み取る必要があり、処理の完了後に現在の状態を保存する必要があります。 SSIS 開発者は CDC 状態の読み込みと保存のタスクを処理できますが、CDC 制御コンポーネントでこのタスクを自動化することもできます。それには、CDC 状態の値をデータベース テーブルで保持する必要があります。  
+ CDC 状態変数の値は、永続的なストレージで保守管理する必要があります。 CDC 処理の開始前に読み込む必要があり、処理の完了後は、現在の状態で保存する必要があります。 SSIS 開発者は CDC 状態の読み込みと保存のタスクを処理できますが、CDC 制御コンポーネントでこのタスクを自動化することもできます。それには、CDC 状態の値をデータベース テーブルで保持する必要があります。  
   
 ## <a name="security-considerations"></a>セキュリティに関する考慮事項  
  このセクションでは、SSIS での CDC コンポーネントの使用に関連するセキュリティ上の注意点について説明します。  
@@ -148,7 +146,7 @@ CDC コンポーネントをインストールした後は、SQL のパッケー
  トリクル フィード更新パッケージには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 関数へのアクセスが必要です。 既定では、このアクセスは、 **db_owner** 固定データベース ロールのメンバーに許可されます。 **db_owner** は強力なロールなので、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でキャプチャ インスタンスを定義する際には、各キャプチャ インスタンスにゲーティング セキュリティ ロールを関連付け、SSIS CDC パッケージがはるかに制限の厳しいユーザーを変更の処理に使用できるようにすることをお勧めします。  
   
 ### <a name="access-to-cdc-database-current-lsn"></a>CDC データベースの現在の LSN へのアクセス  
- 変更の処理用に開始 LSN にマーキングするための CDC 制御タスク操作では、CDC データベースの現在の LSN を検出できる必要があります。 コンポーネントは、プロシージャを使用して、LSN を検出**sp_replincrementlsn**マスター データベースからです。 このプロシージャの実行権限を、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースに接続するために使用されるログインに付与する必要があります。  
+ 変更の処理用に開始 LSN にマーキングするための CDC 制御タスク操作では、CDC データベースの現在の LSN を検出できる必要があります。 コンポーネントでは、マスター データベースのプロシージャ **sp_replincrementlsn** を利用することで LSN が検出されます。 このプロシージャの実行権限を、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースに接続するために使用されるログインに付与する必要があります。  
   
 ### <a name="access-to-cdc-states-table"></a>CDC 状態テーブルへのアクセス  
  CDC 状態テーブルは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースへの接続に使用されるログインで更新できる必要のある CDC 状態を自動的に保持するために使用されます。 このテーブルを作成するのは SSIS 開発者なので、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースの作成と管理タスクの実行を許可するユーザーとして、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] システム管理者を設定してください。 また、CDC 対応データベースを扱う [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] システム管理者には、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC のテクノロジと実装に関する知識が必要です。  
@@ -156,7 +154,7 @@ CDC コンポーネントをインストールした後は、SQL のパッケー
 ## <a name="grouping-tables-for-cdc-processing"></a>CDC 処理用のテーブルのグループ化  
  データベース プロジェクトの規模は、テーブルが数個のものから数千個のものまで、さまざまです。 初期読み込みパッケージと CDC パッケージをデザインする際には、効率を高め、管理しやすくするために、テーブルをより小さなグループに分けることをお勧めします。 このセクションでは、小さいグループ (各グループ内のテーブルは、初期読み込みの後、グループとして更新される) へのテーブルの並べ替えに関係する各種考慮事項を示します。  
   
- CDC コンポーネントでサポートされる CDC パターンは、このグループ化が既に決定されていることを前提としています。 各グループでは、他のグループとは別に保持される CDC コンテキストが定義されます。 各グループの初期読み込みとトリクル フィード更新パッケージが作成されます。 トリクル フィード更新については、変更処理の制約のレート (たとえば、他のシステムに影響する CPU および IO 使用量) と適切な待機時間に基づいて、定期的な実行がスケジュールされます。  
+ CDC コンポーネントでサポートされる CDC パターンは、このグループ化が既に決定されていることを前提としています。 各グループでは、他のグループとは別に保持される CDC コンテキストが定義されます。 グループごとに、初期読み込みパッケージとトリクル フィード更新パッケージが作成されます。 トリクル フィード更新については、変更処理の制約のレート (たとえば、他のシステムに影響する CPU および IO 使用量) と適切な待機時間に基づいて、定期的な実行がスケジュールされます。  
   
  テーブルは、次の考慮事項に基づいてグループ化されます。  
   
@@ -188,11 +186,11 @@ CDC コンポーネントをインストールした後は、SQL のパッケー
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|TFSTART の後に **GetProcessingRange** が行われたときの状態です。 前の実行が正常に完了しなかったことを表します。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
 |7-ERROR|CDC グループはエラー状態です。|  
   
- CDC コンポーネントの状態ダイアグラムを次に示します。 予期しない状態に達したときに、エラー状態になっています。 予期される状態は、次の図に示します。 ただし、ダイアグラムでは、エラー状態は表示されません。  
+ ここに CDC コンポーネントの状態図があります。 予期しない状態に達したときに、エラー状態になっています。 予期される状態は次の図のようになります。 しかしながら、この図にはエラー状態がありません。  
   
  たとえば、初期読み込みパッケージの終了時に状態を ILEND に設定しようとした時点で、状態が TFSTART の場合は CDC グループはエラー状態になり、トリクル フィード更新パッケージは実行されません (初期読み込みパッケージは実行されます)。  
   
- ![状態の図](../../integration-services/data-flow/media/statediagram.gif "状態の図")  
+ ![状態図](../../integration-services/data-flow/media/statediagram.gif "状態図")  
   
  初期読み込みパッケージが正常に実行されると、定義済みのスケジュールに従ってトリクル フィード更新パッケージが繰り返し実行され、ソース テーブルに対する変更を処理します。 トリクル フィード更新パッケージの各実行は、CDC 実行です。  
   
@@ -226,4 +224,3 @@ CDC コンポーネントをインストールした後は、SQL のパッケー
  [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)  
   
   
-

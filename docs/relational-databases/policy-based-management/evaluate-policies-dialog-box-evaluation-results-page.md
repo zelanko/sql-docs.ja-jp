@@ -2,9 +2,12 @@
 title: "[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdbaf264398ac66a0b237f28eab927183c7421ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ee1bbf3e515fb5da1b5186fbe4d4ad9c37f00034
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ
-  このダイアログ ボックスを使用すると、ポリシーの評価結果を表示したり、ポリシーに準拠していない対象セットにポリシー ベースの管理ポリシーを適用したりできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、ポリシーの評価結果を表示したり、ポリシーに準拠していない対象セットにポリシー ベースの管理ポリシーを適用したりできます。  
   
 ## <a name="options"></a>オプション  
  **[結果: ポリシー]**  

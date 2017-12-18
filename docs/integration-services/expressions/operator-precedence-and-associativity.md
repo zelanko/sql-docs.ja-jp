@@ -1,5 +1,5 @@
 ---
-title: "演算子の優先順位と結合規則 |Microsoft ドキュメント"
+title: "演算子の優先順位と結合規則 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - associativity [Integration Services]
 - precedence [Integration Services]
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b6f1c3252fb8a2f68fae20a67cc6174ea41924a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0f0c07966fb3de75df9477bcd2fdc5ecd9aad5f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
   式エバリュエーターがサポートする演算子セット内の各演算子には、優先順位の階層内で指定された優先順位があり、演算子が評価される方向が含まれています。 演算子の評価の方向は、演算子の結合規則と呼ばれます。 優先順位の高い演算子が先に評価されます。 複合式に複数の演算子がある場合、演算子の優先順位により、操作が実行される順序が決定されます。 実行される順序により、結果の値は大きく変わります。 演算子の一部には、優先順位が同じものがあります。 式に複数の演算子が含まれており、その優先順位が同じ場合、それらの演算子は、左から右または右から左の方向に評価されます。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/03/2017
 |キャスト|単項演算子|右から左|  
 |*、/、%|乗算|左から右|  
 |+、–|加法|左から右|  
-|\<, >, \<=, >=|リレーショナル|左から右|  
+|\<、>、\<=、>=|リレーショナル|左から右|  
 |==、!=|等式|左から右|  
 |&|ビット演算子 AND|左から右|  
 |^|ビット演算子排他的 OR|左から右|  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/03/2017
  [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

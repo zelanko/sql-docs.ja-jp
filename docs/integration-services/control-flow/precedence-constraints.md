@@ -1,5 +1,5 @@
 ---
-title: "優先順位制約 |Microsoft ドキュメント"
+title: "優先順位制約 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.precedenceconstraint.f1
+f1_keywords: sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precedence-constraints"></a>優先順位制約
   優先順位制約は、パッケージ内の実行可能ファイル、コンテナー、およびタスクをリンクして制御フローを作成し、実行可能ファイルを実行するかどうかを決定する条件を指定します。 実行可能ファイルには、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスク、またはイベント ハンドラーを設定できます。 また、イベント ハンドラーは優先順位制約を使用して実行可能ファイルをリンクし、制御フローを作成します。  
   
  優先順位制約は、優先実行可能オブジェクトと制約付きの実行可能オブジェクトを連結します。 優先実行可能オブジェクトは制約付きの実行可能オブジェクトの前に実行され、優先実行可能オブジェクトの実行結果により、制約付きの実行可能オブジェクトを実行するかどうかが決まる場合があります。 次の図は、優先順位制約によってリンクされた 2 つの実行可能ファイルを示しています。  
   
- ![実行可能ファイルは、優先順位制約によって接続されている](../../integration-services/control-flow/media/ssis-pcsimple.gif "優先順位制約によって接続されている実行可能ファイル")  
+ ![優先順位制約によってリンクされた実行可能ファイル](../../integration-services/control-flow/media/ssis-pcsimple.gif "優先順位制約によってリンクされた実行可能ファイル")  
   
  直線的な制御フロー、つまり分岐のない制御フローでは、優先順位制約のみがタスクの実行順序を制御します。 制御フローに分岐がある場合には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイム エンジンが、分岐の直後に続くタスクとコンテナーの実行順序を決定します。 ランタイム エンジンは、制御フロー内で連結されていないワークフローの実行順序も決定します。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアーキテクチャではコンテナーを入れ子にできるので、1 つのタスクのみをカプセル化するタスク ホスト コンテナーを除き、すべてのコンテナーに他のコンテナーと独自の制御フローを含めることができます。 For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーには、タスクとその他のコンテナーを複数含めることができます。さらに、そのコンテナーにも複数のタスクとコンテナーを含めることができます。 たとえば、スクリプト タスクとシーケンス コンテナーを持つパッケージに、そのスクリプト タスクとシーケンス コンテナーをリンクする優先順位制約を含めます。 シーケンス コンテナーには 3 つのスクリプト タスクが含まれ、その優先順位制約は 3 つのスクリプト タスクをリンクして制御フローを作成します。 次の図は、2 レベルの入れ子構造のパッケージの優先順位制約を示しています。  
   
- ![パッケージ内の優先順位制約](../../integration-services/control-flow/media/mw-dts-12.gif "パッケージ内の優先順位制約")  
+ ![パッケージの優先順位制約](../../integration-services/control-flow/media/mw-dts-12.gif "パッケージの優先順位制約")  
   
  パッケージは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] コンテナー階層の最上層にあるため、複数のパッケージを優先順位制約によってリンクすることはできません。ただし、パッケージ実行タスクをパッケージに追加して、別のパッケージを間接的に制御フローにリンクできます。  
   
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  同じ **優先順位制約** コレクションのメンバーである優先順位制約のみを、論理 AND 条件でグループ化できます。 たとえば、2 つの Foreach ループ コンテナーの優先順位制約を組み合わせることはできません。  
   
-## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>優先順位制約エディターでの優先順位制約のプロパティを設定します。  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>[優先順位制約エディター] を使用して優先順位制約のプロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -117,7 +114,7 @@ ms.lasthandoff: 09/26/2017
 **[優先順位制約エディター]** ダイアログ ボックスを使用すると、優先順位制約を構成できます。  
   
 ### <a name="options"></a>オプション  
- **評価操作**  
+ **[評価操作]**  
  優先順位制約で使用する評価操作を指定します。 操作として、 **[制約]**、 **[式]**、 **[式と制約]**、および **[式または制約]**を指定できます。  
   
  **値**  
@@ -144,7 +141,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  この種類の優先順位制約は、緑色、強調表示、または青色の点線で示されます。  
   
-## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>[プロパティ] ウィンドウで、優先順位制約のプロパティを設定します。  
+## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>[プロパティ] ウィンドウを使用して優先順位制約のプロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、変更するパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -168,7 +165,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>ショートカット メニューの優先順位制約の値を設定します。  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>ショートカット メニューを使用して優先順位制約の値を設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -191,13 +188,13 @@ ms.lasthandoff: 09/26/2017
   
  異なる式が含まれる複数の優先順位制約を使用して、実行ファイルをリンクすることもできます。 たとえば、次の図では、実行結果と式を使用する優先順位制約によって、タスク B およびタスク C がタスク A にリンクされています。 制約値は両方とも **Success**に設定されています。 1 つの優先順位制約には式 `@X >== @Z`が含まれ、もう 1 つの優先順位制約には式 `@X < @Z`が含まれています。 変数 **X** と変数 **Z**の値に応じて、タスク C とタスク B のどちらかが実行されます。  
   
- ![優先順位制約で式](../../integration-services/control-flow/media/mw-dts-04.gif "優先順位制約の式")  
+ ![優先順位制約の式](../../integration-services/control-flow/media/mw-dts-04.gif "優先順位制約の式")  
   
  式を追加または変更するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[優先順位制約エディター]** と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で用意されている [プロパティ] ウィンドウを使用します。 ただし、[プロパティ] ウィンドウには、式の構文を検証する機能は用意されていません。  
   
  優先順位制約に式が含まれる場合、 **[制御フロー]** タブのデザイン画面で、優先順位制約の隣にアイコンが表示され、アイコン上のツールヒントには式が表示されます。  
 
-### <a name="add-an-expression-to-a-precedence-constraint"></a>優先順位制約に式を追加します。  
+### <a name="add-an-expression-to-a-precedence-constraint"></a>優先順位制約に式を追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -215,7 +212,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
  
-### <a name="combine-execution-values-and-expressions"></a>実行値と式を結合します。  
+### <a name="combine-execution-values-and-expressions"></a>実行値と式の結合  
  次の表では、実行値制約と優先順位制約の式を結合した場合の結果について説明します。  
   
 |[評価操作]|制約の評価|式の評価|制約付き実行可能ファイルの実行|  
@@ -239,14 +236,14 @@ ms.lasthandoff: 09/26/2017
   
  制約をグループ化して複雑な制約シナリオを組み立てると、複雑な制御フローをパッケージに実装できます。 たとえば、次の図で、タスク D は、 **成功** 制約によってタスク A にリンクされ、 **失敗** 制約によってタスク B にリンクされ、さらに **成功** 制約によってタスク C にリンクされています。 タスク D とタスク A の間、タスク D とタスク B の間、およびタスク D とタスク C の間の優先順位制約は、論理 *AND* リレーションシップになります。 したがって、タスク D を実行するには、タスク A の実行が成功し、タスク B が失敗し、タスク C の実行が成功する必要があります。  
   
- ![タスクが優先順位制約によってリンク](../../integration-services/control-flow/media/precedenceconstraints.gif "優先順位制約によって、タスクのリンク")  
+ ![優先順位制約によってリンクされているタスク](../../integration-services/control-flow/media/precedenceconstraints.gif "優先順位制約によってリンクされているタスク")  
   
 ### <a name="logicaland-property"></a>LogicalAnd プロパティ  
  タスクまたはコンテナーに複数の制約がある場合、 **LogicalAnd** プロパティにより、優先順位制約を単独で評価するか、別の制約と組み合わせて評価するかを指定します。  
   
  **LogicalAnd** プロパティを設定するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されている **[優先順位制約エディター]**、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [プロパティ] ウィンドウを使用します。  
 
-## <a name="set-the-default-value-for-precedence-constraints"></a>優先順位制約の既定値を設定します。  
+## <a name="set-the-default-value-for-precedence-constraints"></a>優先順位制約の既定値を設定する  
 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを初めて使用する場合、優先順位制約の既定値は **[成功]**です。 別の既定値を使用するように [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを構成するには、次の手順に従います。
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を開きます。  
@@ -261,7 +258,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  **[OK]**をクリックします。  
   
-## <a name="create-a-default-precedence-constraint"></a>既定の優先順位制約を作成します。  
+## <a name="create-a-default-precedence-constraint"></a>既定の優先順位制約を作成する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -272,4 +269,3 @@ ms.lasthandoff: 09/26/2017
 4.  **[制御フロー]** タブのデザイン画面で、タスクまたはコンテナーをクリックし、そのコネクタを、優先順位制約を適用する実行可能ファイルにドラッグします。  
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
-

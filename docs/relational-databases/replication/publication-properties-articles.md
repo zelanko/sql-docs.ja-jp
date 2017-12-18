@@ -2,9 +2,12 @@
 title: "[パブリケーションのプロパティ]、[アーティクル] | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c0f2c87e7f36b1c1952b9126f43a0be8d04ea4d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8d3b75391bacc62e7d1b38743f8ab83db78d1e5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-articles"></a>[パブリケーションのプロパティ]、[アーティクル]
-  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[アーティクル]** ページには、パブリケーションに含まれるアーティクルの情報が表示されるため、これを使用すると、既存のパブリケーションに対してアーティクルを追加したり削除したりできます。また、アーティクルのプロパティや列のフィルターを変更することができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[パブリケーションのプロパティ]** ダイアログ ボックスの **[アーティクル]** ページには、パブリケーションに含まれるアーティクルの情報が表示されるため、これを使用すると、既存のパブリケーションに対してアーティクルを追加したり削除したりできます。また、アーティクルのプロパティや列のフィルターを変更することができます。  
   
 > [!NOTE]  
 >  パブリケーションの作成後、プロパティの変更によっては新しいスナップショットが必要となります。 パブリケーションにサブスクリプションが含まれている場合、変更によっては、すべてのサブスクリプションを再初期化する必要もあります。 詳細については、「[Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) と「[既存のパブリケーションでのアーティクルの追加および削除](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。  

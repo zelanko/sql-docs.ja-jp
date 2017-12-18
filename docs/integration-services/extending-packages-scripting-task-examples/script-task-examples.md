@@ -1,5 +1,5 @@
 ---
-title: "タスクの例のスクリプトを作成 |Microsoft ドキュメント"
+title: "スクリプト タスクの例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], examples
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cd20d44652dacf8f5d0c4e6039c477a87f8bd3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="script-task-examples"></a>スクリプト タスクの例
   スクリプト タスクは複数の用途を持つツールで、パッケージで使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に組み込まれているタスクでは満たせないほとんどすべての要件を満たすことができます。 このトピックでは、使用できる機能の一部を示すスクリプト タスクのコード例について説明します。  
@@ -51,16 +47,16 @@ ms.lasthandoff: 09/26/2017
  ユーザー指定条件に適合するファイルのリストを収集し、後に Foreach from Variable 列挙子で使用できるように変数を設定します。  
   
  [スクリプト タスクによる Active Directory へのクエリの実行](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- 値に基づいて Active Directory からユーザー情報を取得、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] System.DirectoryServices 名前空間のクラスを使用して、変数です。  
+ System.DirectoryServices 名前空間のクラスを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変数の値に基づき、Active Directory からユーザー情報を取得します。  
   
  [スクリプト タスクによるパフォーマンス カウンターの監視](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- 実行の進行状況を追跡するために使用できるカスタム パフォーマンス カウンターを作成、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] System.Diagnostics 名前空間のクラスを使用して、パッケージです。  
+ System.Diagnostics 名前空間のクラスを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ実行の進行状況を監視するときに使用できる、カスタム パフォーマンス カウンターを作成します。  
   
  [スクリプト タスクによる画像の操作](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- 画像を JPEG 形式に圧縮し、system.drawing の各名前空間のクラスを使用して、そこからサムネイル画像を作成します。  
+ System.Drawing 名前空間のクラスを使用して、画像を JPEG 形式に圧縮し、そこからサムネイル画像を作成します。  
   
  [スクリプト タスクによるインストールされたプリンターの検索](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- System.Drawing.Printing 名前空間のクラスを使用して、特定の用紙サイズをサポートするインストール済みのプリンターを検索します。  
+ System.Drawing.Printing 名前空間のクラスを使用して、特定の用紙サイズをサポートするインストール済みのプリンターを探します。  
   
  [スクリプト タスクによる HTML メール メッセージの送信](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  プレーン テキスト形式の代わりに HTML 形式でメール メッセージを送信します。  
@@ -72,7 +68,7 @@ ms.lasthandoff: 09/26/2017
  リモート プライベート メッセージ キューにメッセージを送信します。  
   
 ### <a name="other-examples"></a>その他の例  
- 次のトピックでは、スクリプト タスクで使用するためのコード例も紹介します。  
+ 以下のトピックでも、スクリプト タスクで使用するコード例を紹介します。  
   
  [スクリプト タスクでの変数の使用](../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  パッケージ変数の値が別の変数で指定した制限を超える可能性がある場合、パッケージの実行を継続するかどうかをユーザーに確認します。  
@@ -87,4 +83,3 @@ ms.lasthandoff: 09/26/2017
  タスクによって処理されたアイテム数を、有効なログ プロバイダーに記録します。  
   
   
-

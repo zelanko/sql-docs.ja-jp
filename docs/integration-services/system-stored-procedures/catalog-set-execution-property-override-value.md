@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_execution_property_override_value |Microsoft ドキュメント"
+title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +38,20 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @execution_id =] *execution_id*  
- 実行のインスタンスの一意の識別子。 *Execution_id*は**bigint**です。  
+ [ @execution_id = ] *execution_id*  
+ 実行のインスタンスの一意の識別子。 *execution_id* は **bigint** です。  
   
- [ @property_path =] *property_path*  
- パッケージ内のプロパティのパス。 *Property_path*は**nvarchar (4000)**です。  
+ [ @property_path = ] *property_path*  
+ パッケージ内のプロパティのパス。 *property_path* は **nvarchar(4000)** です。  
   
- [ @property_value =] *property_value*  
- プロパティに割り当てるオーバーライド値。 *Property_value*は**nvarchar (max)**です。  
+ [ @property_value = ] *property_value*  
+ プロパティに割り当てるオーバーライド値。 *property_value* は **nvarchar(max)** です。  
   
- [ @sensitive =]*機密性の高い*  
- 値が 1 のとき、プロパティはセンシティブで、格納されるときに暗号化されます。 値が 0 のとき、プロパティはセンシティブではなく、値はプレーンテキストで格納されます。 *機密性の高い*引数は**ビット**です。  
+ [ @sensitive = ] *sensitive*  
+ 値が 1 のとき、プロパティはセンシティブで、格納されるときに暗号化されます。 値が 0 のとき、プロパティはセンシティブではなく、値はプレーンテキストで格納されます。 *sensitive* 引数は **bit** です。  
   
 ## <a name="remarks"></a>解説  
- この手順と同じ機能を実行、**プロパティのオーバーライド**」の「、 **[詳細設定]**のタブ、**パッケージ実行**ダイアログ。 プロパティへのパスがから派生した、**パッケージ パス**パッケージ タスクのプロパティです。  
+ このプロシージャは、**[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションと同じ機能を実行します。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -76,4 +74,3 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [catalog.set_execution_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-

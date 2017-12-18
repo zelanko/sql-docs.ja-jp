@@ -1,5 +1,5 @@
 ---
-title: "手順 1: レッスン 1 パッケージのコピー |Microsoft ドキュメント"
+title: "手順 1: レッスン 1 のパッケージのコピー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3b601049b8904d439136a1fdc9af7cd84a86b5b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cc1fd5b193fa9b9a2da8931ad290b7f2612bd76f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-1---copying-the-lesson-1-package"></a>レッスン 2-1-レッスン 1 パッケージのコピー
+# <a name="lesson-2-1---copying-the-lesson-1-package"></a>レッスン 2-1 - レッスン 1 のパッケージのコピー
 ここでは、レッスン 1 で作成した Lesson 1.dtsx パッケージのコピーを作成します。 レッスン 1 を終了していない場合は、チュートリアルに含まれている、レッスン 1 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 2 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-create-the-lesson-2-package"></a>レッスン 2 のパッケージを作成するには  
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
     1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
-    2.  [ **ダウンロード** ] タブをクリックします。  
+    2.  **[ダウンロード]** タブをクリックします。  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルをクリックします。  
   
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 2: Foreach ループ コンテナーの追加と構成](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
-

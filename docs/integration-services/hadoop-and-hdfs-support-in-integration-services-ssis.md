@@ -1,5 +1,5 @@
 ---
-title: "Hadoop と HDFS のサポートで Integration Services (SSIS) |Microsoft ドキュメント"
+title: "Integration Services (SSIS) での Hadoop と HDFS のサポート | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.SSIS.HADOOP.F1
+f1_keywords: SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da5fafb4145da0d0122e5e57de3e025c012dca3a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fcd6ee17bbd88a138f069b8c27bb2808943c943b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) での Hadoop と HDFS のサポート
   SQL Server 2016 Integration Services (SSIS) には、オンプレミスの Hadoop と HDFS のサポートを提供する次のコンポーネントが含まれています。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
     -   [Hadoop ファイル システム タスク](../integration-services/control-flow/hadoop-file-system-task.md)  
   
-    -   [Hadoop Hive Task](../integration-services/control-flow/hadoop-hive-task.md)  
+    -   [Hadoop Hive タスク](../integration-services/control-flow/hadoop-hive-task.md)  
   
     -   [Hadoop Pig Task](../integration-services/control-flow/hadoop-pig-task.md)  
   
@@ -51,4 +48,3 @@ ms.lasthandoff: 08/03/2017
     -   [HDFS ファイル変換先](../integration-services/data-flow/hdfs-file-destination.md)  
   
   
-

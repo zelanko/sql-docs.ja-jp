@@ -1,5 +1,5 @@
 ---
-title: "マージ変換およびマージ結合変換用のデータを並べ替える |Microsoft ドキュメント"
+title: "マージ変換およびマージ結合変換用にデータを並べ替える | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75bcc0fbc667921debf0fa27d7cc95103fa4860c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  
   
 ## <a name="sorting-the-data"></a>データを並べ替える  
  データを並べ替えるには、次のいずれかの方法を使用します。  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-6.  をクリックして**\<コンポーネント名 > 出力**、設定と、 **IsSorted**プロパティを**True**です。  
+6.  **[\<コンポーネント名> 出力]** をクリックし、**IsSorted** プロパティを **True** に設定します。  
   
     > [!NOTE]  
     >  出力の **IsSorted** プロパティを手動で **True** に設定したにもかかわらず、データが並べ替えられない場合、パッケージの実行時に、下流の結合変換またはマージ結合変換で、データの欠落、または不良データの比較が生じている可能性があります。  
@@ -122,4 +120,3 @@ ms.lasthandoff: 08/03/2017
  [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

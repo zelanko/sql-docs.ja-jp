@@ -1,10 +1,13 @@
 ---
 title: "レッスン 7: 特定の時点にデータベースを復元する | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 479f890cd6623b457b53cc0024691f9169937538
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b321e64b93a696f9a21ceef3279a6b89bea90974
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>レッスン 7: 特定の時点にデータベースを復元する
-このレッスンでは、2 つのトランザクション ログ バックアップ間の特定のポイントに AdventureWorks2014 データベースを復元します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、2 つのトランザクション ログ バックアップ間の特定のポイントに AdventureWorks2014 データベースを復元します。  
   
 従来のバックアップの場合、ポイント イン タイム リストアを実行するには、復元する時点までの、およびその直後の完全なデータベース バックアップ (場合によっては差分バックアップ) とすべてのトランザクション ログ ファイルを使用する必要がありました。 ファイルスナップショット バックアップの場合、復元先の時点を枠内に入れたゴール ポストを設定する 2 つ隣接するログ バックアップ ファイルを必要とするだけです。 各ログ バックアップによって各データベース ファイルのファイル スナップショット (各データ ファイルとログ ファイル) が作成されるので、ログ ファイル スナップショット バックアップ セットが 2 つ必要なだけです。  
   

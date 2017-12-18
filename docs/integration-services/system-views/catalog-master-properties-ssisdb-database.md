@@ -1,5 +1,5 @@
 ---
-title: "catalog.master_properties (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.master_properties (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,46 +8,43 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: 0fcbdca57c7764eaec758d2ad9ef3ab8675a3a9b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 28f72cd6a5ea50bdc310d89bf16dbe498e06a638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-プロパティを表示、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]スケール アウト マスター。
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master のプロパティを表示します。
 
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|property_name|**nvarchar (256)**|スケール アウト マスター プロパティの名前。|  
-|property_value|**nvarchar(max)**|スケール アウト マスター プロパティの値。|
+|property_name|**nvarchar (256)**|Scale Out Master のプロパティの名前。|  
+|property_value|**nvarchar(max)**|Scale Out Master のプロパティの値。|
 
 ## <a name="remarks"></a>解説
-このビューには、それぞれのスケール アウト マスター プロパティに行が表示されます。 このビューで表示されるプロパティは、次のとおりです。
+このビューは、各 Scale Out Master のプロパティの行を表示します。 このビューで表示されるプロパティは、次のとおりです。
 
 |プロパティ名|Description|  
 |-------------------|-----------------| 
-|**CLUSTER_LOGDB_SERVER**|ログ データベース、SQL Server で検索します。|
-|**LAST_ONLINE_TIME**|スケール アウト マスターがオンラインと最後の時刻。|
+|**CLUSTER_LOGDB_SERVER**|ログ データベースのある SQL Server。|
+|**LAST_ONLINE_TIME**|Scale Out Master がオンラインになった最後の時刻。|
 |**MACHINE_IP**|コンピューターの IP。|
-|**コンピューター名**|コンピューターの名前です。|
-|**MASTER_ADDRESS**|スケール アウト master データベースのエンドポイントです。|
-|**MASTER_SERVICE_PORT**|スケール アウト master データベースのエンドポイントのポートです。|
-|**SSLCERT_THUMBPRINT**|スケール アウト マスター証明書の拇印です。|
+|**MACHINE_NAME**|コンピューターの名前です。|
+|**MASTER_ADDRESS**|Scale Out Master のエンドポイント。|
+|**MASTER_SERVICE_PORT**|Scale Out Master のエンドポイントのポート。|
+|**SSLCERT_THUMBPRINT**|Scale Out Master 証明書の拇印。|
 
 ## <a name="permissions"></a>Permissions
-Public データベース ロールのすべてのメンバーの読み取り権限がこのビューです。 
-
+public データベース ロールのすべてのメンバーにこのビューの読み取りアクセス許可が与えられます。 

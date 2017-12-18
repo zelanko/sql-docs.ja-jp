@@ -1,5 +1,5 @@
 ---
-title: "データ プロファイル タスク エディター (プロファイル要求 ページ) |Microsoft ドキュメント"
+title: "データ プロファイル タスク エディター ([プロファイル要求] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,29 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページを使用すると、計算するプロファイルを選択および構成することができます。 単一のデータ プロファイル タスクで、複数のテーブルまたはビューの複数の列または列の組み合わせに対して複数のプロファイルを計算することができます。  
   
  データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
- **プロファイル要求 ページの データ プロファイル タスク エディターを開きます**  
+ **[データ プロファイル タスク エディター] の [プロファイル要求] ページを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、データ プロファイル タスクを含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -121,7 +117,7 @@ ms.lasthandoff: 08/03/2017
  **[サブセット側のテーブルかビュー]**  
  サブセット側の列として選択した列を含むテーブルまたはビューが表示されます。  
   
- **スーパー セット側のテーブルまたはビュー**  
+ **[スーパーセット側のテーブルまたはビュー]**  
  スーパーセット側の列として選択した列を含むテーブルまたはビューが表示されます。  
   
  **[サブセット側の列]**  
@@ -138,25 +134,24 @@ ms.lasthandoff: 08/03/2017
   
  これらのオプションは、選択したプロファイルによって異なります。 個々のプロファイルの種類にあるオプションの詳細については、次のトピックを参照してください。  
   
--   [候補キー プロファイル要求のオプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [列の Null 比プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列統計プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [列の値分布プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列の値分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列長分布プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列長分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列パターン プロファイル要求のオプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [[列パターン プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [機能依存プロファイル要求オプション &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [[機能依存プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [値包含プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [[値包含プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>参照  
- [データ プロファイル タスク エディターと &#40; です。「全般」 ページと &#41; です。](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [単一テーブル クイック プロファイル フォーム &#40; のデータ プロファイル タスクと &#41; です。](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

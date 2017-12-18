@@ -1,5 +1,5 @@
 ---
-title: "フラット ファイル ソース |Microsoft ドキュメント"
+title: "フラット ファイル ソース | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0d9493c57bcfa4285bfadc811d6b24e1485bbb46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
   フラット ファイル ソースは、テキスト ファイルからデータを読み取ります。 テキスト ファイルには、Delimited 形式、FixedWidth 形式、または Mixed 形式を使用できます。  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="related-tasks"></a>関連タスク  
  データ フロー コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="flat-file-source-editor-connection-manager-page"></a>[フラット ファイル ソース エディター]\([接続マネージャー] ページ)
+## <a name="flat-file-source-editor-connection-manager-page"></a>[フラット ファイル ソース エディター] ([接続マネージャー] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、フラット ファイル ソースが使用する接続マネージャーを選択できます。 フラット ファイル ソースは、区切り形式、固定幅形式、または区切りと固定幅が混在した形式のテキスト ファイルからデータを読み取ります。  
   
  フラット ファイル ソースは、次のいずれかの種類の接続マネージャーを使用できます。  
@@ -95,7 +93,7 @@ ms.lasthandoff: 08/17/2017
  **プレビュー**  
  **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
   
-## <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\([列] ページ)
+## <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター] ([列] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
   
 > [!NOTE]  
@@ -105,17 +103,17 @@ ms.lasthandoff: 08/17/2017
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
- **外部列**  
+ **[外部列]**  
  タスクで外部 (変換元) 列を読み取る順序を表示します。 この順序を変更するには、テーブルで選択した列を消去してから、別の順序で一覧から外部列を選択します。  
   
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
-## <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター]\([エラー出力] ページ)
+## <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター] ([エラー出力] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページでは、エラー処理オプションの選択や、エラー出力列に対するプロパティの設定を行えます。  
   
 ### <a name="options"></a>オプション  
- **入力/出力**  
+ **[入力または出力]**  
  データ ソースの名前を表示します。  
   
  **列**  
@@ -132,10 +130,10 @@ ms.lasthandoff: 08/17/2017
  **Description**  
  エラーの説明を表示します。  
   
- **この値を選択したセルに設定します。**  
+ **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **適用**  
+ **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
@@ -143,4 +141,3 @@ ms.lasthandoff: 08/17/2017
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   
-

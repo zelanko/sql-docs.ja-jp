@@ -2,9 +2,12 @@
 title: "[データベースのプロパティ]([全般] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/27/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae88366757fb76d7b0c2a18b99de949b86a0e27a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5ccea14579d4d4e181e102241831a9217c21fe7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="database-properties-general-page"></a>[データベースのプロパティ] \([全般] ページ)
-  このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
+# <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
   
 ## <a name="options"></a>オプション  
  **[最終データベース バックアップ]**  

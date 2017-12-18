@@ -1,5 +1,5 @@
 ---
-title: "PowerShell を使用した SSIS プロジェクトを配置 |Microsoft ドキュメント"
+title: "PowerShell を使用して SSIS プロジェクトを配置する | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: 37fe358eb7e11cb878ebd9b0c8356ac2295ca7e9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: aa8e562bc16cdb6430ad0c8eff8b48b0d0b861b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="deploy-an-ssis-project-with-powershell"></a>PowerShell を使用した SSIS プロジェクトを配置します。
-このクイック スタート チュートリアルでは、PowerShell スクリプトを使用して、データベース サーバーに接続し、SSIS プロジェクトを SSIS カタログに配置する方法を示します。
+# <a name="deploy-an-ssis-project-with-powershell"></a>PowerShell を使用して SSIS プロジェクトを配置する
+このクイック スタート チュートリアルでは、PowerShell スクリプトを使用し、データベース サーバーに接続し、SSIS プロジェクトを配置する方法を示します。
 
 ## <a name="powershell-script"></a>PowerShell スクリプト
-変数の場合、次のスクリプトの上部にある適切な値を指定し、SSIS プロジェクトを配置するスクリプトを実行します。
+次のスクリプトの一番上で変数の適切な値を指定し、スクリプトを実行して SSIS プロジェクトを配置します。
 
 > [!NOTE]
-> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するのには、置換、`Integrated Security=SSPI;`引数と`User ID=<user name>;Password=<password>;`です。
+> 次の例では、Windows 認証を使用します。 SQL Server 認証を使用するには、`Integrated Security=SSPI;` 引数を `User ID=<user name>;Password=<password>;` に置き換えます。
 
 ```powershell
 # Variables
@@ -68,17 +66,16 @@ Write-Host "Done."
 ```
 
 ## <a name="next-steps"></a>次の手順
-- パッケージを配置するには、その他の方法を検討してください。
-    - [SSMS で SSIS パッケージを展開します。](./ssis-quickstart-deploy-ssms.md)
-    - [SSIS パッケージにより、TRANSACT-SQL (SSMS) での展開します。](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Transact SQL (VS Code) を使用した SSIS パッケージを展開します。](ssis-quickstart-deploy-tsql-vscode.md)
-    - [コマンド プロンプトから、SSIS パッケージを展開します。](./ssis-quickstart-deploy-cmdline.md)
-    - [C# を使用して、SSIS パッケージを展開します。](./ssis-quickstart-deploy-dotnet.md) 
-- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事を参照してください。
-    - [SSMS での SSIS パッケージを実行します。](./ssis-quickstart-run-ssms.md)
-    - [TRANSACT-SQL (SSMS) で、SSIS パッケージを実行します。](./ssis-quickstart-run-tsql-ssms.md)
-    - [Transact SQL (VS Code) を使用した SSIS パッケージを実行します。](ssis-quickstart-run-tsql-vscode.md)
-    - [コマンド プロンプトから、SSIS パッケージを実行します。](./ssis-quickstart-run-cmdline.md)
-    - [PowerShell での SSIS パッケージを実行します。](ssis-quickstart-run-powershell.md)
-    - [C# を使用して、SSIS パッケージを実行します。](./ssis-quickstart-run-dotnet.md) 
-
+- パッケージを配置する他の方法を検討します。
+    - [SSMS を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-ssms.md)
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Transact-SQL (VS Code) を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-tsql-vscode.md)
+    - [コマンド プロンプトから SSIS パッケージを配置する](./ssis-quickstart-deploy-cmdline.md)
+    - [C# を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-dotnet.md) 
+- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事をご覧ください。
+    - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)
+    - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
+    - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
+    - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 

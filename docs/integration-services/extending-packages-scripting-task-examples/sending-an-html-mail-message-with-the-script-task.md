@@ -1,5 +1,5 @@
 ---
-title: "スクリプト タスクによる HTML メール メッセージを送信する |Microsoft ドキュメント"
+title: "スクリプト タスクによる HTML メール メッセージの送信 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Send Mail task [Integration Services]
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b5f50a79ca83243ea130c77a0d95ab402ba2d31a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29b1dd04ab4be364b2569f783fe6c07f2929d925
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の SendMail タスクでは、プレーン テキスト形式のメール メッセージのみがサポートされています。 ただし、.NET Framework のスクリプト タスクとメール機能を使用して、HTML メール メッセージを簡単に送信できます。  
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
 ## <a name="description"></a>Description  
- 次の例では、 **System.Net.Mail**名前空間を構成して、HTML メール メッセージを送信します。 スクリプトから、件名、およびパッケージ変数からの電子メールの本文を取得、それらを新規作成に使用**MailMessag**e、およびセットをその**IsBodyHtml**プロパティを**True**です。 別のパッケージ変数のインスタンスを初期化しますから SMTP サーバー名を取得し、 **System.Net.Mail.SmtpClient**、呼び出しとその**送信**html 形式のメッセージを送信する方法です。 このサンプルでは、メッセージ送信機能をサブルーチンにカプセル化しているため、他のスクリプトで再利用できます。  
+ 次の例では、**System.Net.Mail** 名前空間を使用して、HTML メール メッセージを構成および送信します。 スクリプトは、電子メールの宛先、差出人、件名、および本文をパッケージ変数から取得し、これらを使用して新しい **MailMessage** を作成します。また、その **IsBodyHtml** プロパティに **True** を設定します。 次に、別のパッケージ変数から SMTP サーバー名を取得し、**System.Net.Mail.SmtpClient** のインスタンスを初期化し、そのインスタンスの **Send** メソッドを呼び出して HTML メッセージを送信します。 このサンプルでは、メッセージ送信機能をサブルーチンにカプセル化しているため、他のスクリプトで再利用できます。  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>このスクリプト タスクの例を SMTP 接続マネージャーを使用せずに構成するには  
   
@@ -54,19 +50,19 @@ ms.lasthandoff: 08/03/2017
   
 3.  `HtmlEmailServer` という名前の文字列変数を作成し、匿名発信メッセージを受け入れる、使用可能な SMTP サーバーの名前を割り当てます。  
   
-4.  これらの変数の 5 つすべてを割り当てる、 **ReadOnlyVariables**を新しいスクリプト タスクのプロパティです。  
+4.  これらの 5 つすべての変数を、新しいスクリプト タスクの **ReadOnlyVariables** プロパティに割り当てます。  
   
-5.  インポート、 **System.Net**と**System.Net.Mail**コードに名前空間。  
+5.  コードに **System.Net** および **System.Net.Mail** 名前空間をインポートします。  
   
  このトピックのサンプル コードでは、SMTP サーバー名をパッケージ変数から取得します。 ただし、SMTP 接続マネージャーを利用して接続情報をカプセル化し、コード内で接続マネージャーからサーバー名を抽出することもできます。 SMTP 接続マネージャーの <xref:Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn.AcquireConnection%2A> メソッドは、次の形式の文字列を返します。  
   
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`  
   
- 使用することができます、 **String.Split**以上でこの引数のリストをセミコロン (;) で個々 の文字列の配列に分割するメソッドが等号 (=)、およびサーバー名としての配列から 2 番目の引数 (subscript 1) を抽出します。  
+ **String.Split** メソッドを使用して、この引数リストをセミコロン (;) または等号 (=) で個々の文字列の配列に分割し、配列の 2 番目の引数 (subscript 1) をサーバー名として抽出することができます。  
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>このスクリプト タスクの例を SMTP 接続マネージャーを使用して構成するには  
   
-1.  スクリプト タスクを削除することで前に構成を変更、`HtmlEmailServer`の一覧から変数**ReadOnlyVariables**です。  
+1.  **ReadOnlyVariables** の一覧から `HtmlEmailServer` 変数を削除して、前に構成したスクリプト タスクを変更します。  
   
 2.  サーバー名を取得する次のコード行を置き換えます。  
   
@@ -75,7 +71,7 @@ ms.lasthandoff: 08/03/2017
       Dts.Variables("HtmlEmailServer").Value.ToString  
     ```  
   
-     次の行。  
+     次のコードを使用します。  
   
     ```  
     Dim smtpConnectionString As String = _  
@@ -89,10 +85,10 @@ ms.lasthandoff: 08/03/2017
 ```vb  
 Public Sub Main()  
   
-  Dim htmlMessageFrom As String = _  
-    Dts.Variables("HtmlEmailFrom").Value.ToString  
   Dim htmlMessageTo As String = _  
     Dts.Variables("HtmlEmailTo").Value.ToString  
+  Dim htmlMessageFrom As String = _  
+    Dts.Variables("HtmlEmailFrom").Value.ToString  
   Dim htmlMessageSubject As String = _  
     Dts.Variables("HtmlEmailSubject").Value.ToString  
   Dim htmlMessageBody As String = _  
@@ -101,7 +97,7 @@ Public Sub Main()
     Dts.Variables("HtmlEmailServer").Value.ToString  
   
   SendMailMessage( _  
-      htmlMessageFrom, htmlMessageTo, _  
+      htmlMessageTo, htmlMessageFrom, _  
       htmlMessageSubject, htmlMessageBody, _  
       True, smtpServer)  
   
@@ -110,7 +106,7 @@ Public Sub Main()
 End Sub  
   
 Private Sub SendMailMessage( _  
-    ByVal From As String, ByVal SendTo As String,  _  
+    ByVal SendTo As String, ByVal From As String, _  
     ByVal Subject As String, ByVal Body As String, _  
     ByVal IsBodyHtml As Boolean, ByVal Server As String)  
   
@@ -118,7 +114,7 @@ Private Sub SendMailMessage( _
   Dim mySmtpClient As SmtpClient  
   
   htmlMessage = New MailMessage( _  
-    From, SendTo, Subject, Body)  
+    SendTo, From, Subject, Body)  
   htmlMessage.IsBodyHtml = IsBodyHtml  
   
   mySmtpClient = New SmtpClient(Server)  
@@ -132,25 +128,25 @@ End Sub
 public void Main()  
         {  
   
-            string htmlMessageFrom = Dts.Variables["HtmlEmailFrom"].Value.ToString();  
             string htmlMessageTo = Dts.Variables["HtmlEmailTo"].Value.ToString();  
+            string htmlMessageFrom = Dts.Variables["HtmlEmailFrom"].Value.ToString();  
             string htmlMessageSubject = Dts.Variables["HtmlEmailSubject"].Value.ToString();  
             string htmlMessageBody = Dts.Variables["HtmlEmailBody"].Value.ToString();  
             string smtpServer = Dts.Variables["HtmlEmailServer"].Value.ToString();  
   
-            SendMailMessage(htmlMessageFrom, htmlMessageTo, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
+            SendMailMessage(htmlMessageTo, htmlMessageFrom, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
   
             Dts.TaskResult = (int)ScriptResults.Success;  
   
         }  
   
-        private void SendMailMessage(string From, string SendTo, string Subject, string Body, bool IsBodyHtml, string Server)  
+        private void SendMailMessage(string SendTo, string From, string Subject, string Body, bool IsBodyHtml, string Server)  
         {  
   
             MailMessage htmlMessage;  
             SmtpClient mySmtpClient;  
   
-            htmlMessage = new MailMessage(From, SendTo, Subject, Body);  
+            htmlMessage = new MailMessage(SendTo, From, Subject, Body);  
             htmlMessage.IsBodyHtml = IsBodyHtml;  
   
             mySmtpClient = new SmtpClient(Server);  
@@ -164,4 +160,3 @@ public void Main()
  [メール送信タスク](../../integration-services/control-flow/send-mail-task.md)  
   
   
-

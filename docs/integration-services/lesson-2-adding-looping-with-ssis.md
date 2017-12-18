@@ -1,5 +1,5 @@
 ---
-title: "レッスン 2: SSIS によるループの追加 |Microsoft ドキュメント"
+title: "レッスン 2: SSIS でのループの追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>レッスン 2: SSIS でのループの追加
 「 [レッスン 1: SSIS によるプロジェクトと基本パッケージの作成](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)」では、単一のフラット ファイル ソースからデータを抽出するパッケージを作成し、参照変換を使用してデータを変換しました。さらに、変換したデータを、 **AdventureWorksDW2012** サンプル データベースの **FactCurrency** ファクト テーブルに読み込みました。  
@@ -57,7 +54,7 @@ ms.lasthandoff: 08/03/2017
 このレッスンでは、データ フローは変更せずに、制御フローのみを変更します。  
   
 > [!IMPORTANT]  
-> このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールしてデプロイする方法の詳細については、「 [Reporting Services Product Samples Project on CodePlex (CodePlex でのサービス製品サンプルのレポート)](http://go.microsoft.com/fwlink/p/?LinkID=526910)」をご覧ください。  
+> このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールして配置する方法の詳細については、 [CodePlex での Reporting Services 製品サンプル](http://go.microsoft.com/fwlink/p/?LinkID=526910)を参照してください。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
@@ -78,4 +75,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

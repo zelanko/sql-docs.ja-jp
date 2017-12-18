@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: SQL ビューとして SSIS パッケージを公開する |Microsoft ドキュメント"
+title: "チュートリアル: SSIS パッケージを SQL ビューとして公開する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.packagepublishwizard.f1
+f1_keywords: sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
   このチュートリアルでは、SSIS パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに SQL ビューとして公開する詳細な手順について説明します。  
@@ -100,17 +97,17 @@ ms.lasthandoff: 09/27/2017
   
 2.  **[概要]** ページで **[次へ]** をクリックします。  
   
-     ![Data Feed Publishing Wizard - [説明] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Data Feed Publishing Wizard - [説明] ページ")  
+     ![データフィード発行ウィザード - [概要] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "データフィード発行ウィザード - [概要] ページ")  
   
 3.  **[パッケージの設定]** ページで、次のタスクを実行します。  
   
     1.  SSIS カタログを含む SQL Server インスタンスの **名前** を入力するか、 **[参照]** をクリックしてサーバーを選択します。  
   
-         ![Data Feed Publishing Wizard - パッケージ設定 Pag](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Data Feed Publishing Wizard - パッケージの設定 ページ")  
+         ![データフィード発行ウィザード - [パッケージの設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "データフィード発行ウィザード - [パッケージの設定] ページ")  
   
     2.  [パス] フィールドの横にある **[参照]** をクリックして SSIS カタログを参照し、公開する SSIS パッケージを選択し (例: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)、 **[OK]**をクリックします。  
   
-         ![Data Feed Publishing Wizard - パッケージの参照](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Data Feed Publishing Wizard - パッケージの参照")  
+         ![データフィード発行ウィザード - パッケージの参照](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "データフィード発行ウィザード - パッケージの参照")  
   
     3.  ページ下部の [パッケージ パラメーター]、[プロジェクト パラメーター]、[接続マネージャー] タブを使用して、パッケージのパッケージ パラメーター、プロジェクト パラメーター、または接続マネージャーの設定値を入力します。 パッケージを実行するために使用される環境参照を指定して、プロジェクト/パッケージ パラメーターを環境変数にバインドすることもできます。  
   
@@ -122,7 +119,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  ビューを作成する **データベース** を選択します。  
   
-         ![データ フィード公開ウィザード - [パブリッシュの設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "データ フィード Publishing Wizard - [発行設定] ページ")  
+         ![データフィード発行ウィザード - [公開の設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "データフィード発行ウィザード - [公開の設定] ページ")  
   
     2.  **ビュー** の **名前**を入力します。 ボックスの一覧から既存のビューを選択することもできます。  
   
@@ -144,7 +141,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  **[検証]** ページで、すべての設定値の検証結果を確認します。 次の例では、選択した SQL Server インスタンスにリンク サーバーが存在しないために、リンクサーバーの存在に関する **警告** が表示されています。 **[結果]** に **[エラー]**が表示された場合は、 **[エラー]** の上にマウス カーソルを合わせると、エラーの詳細を確認できます。 たとえば、SSISOLEDB プロバイダーの [InProcess 許可] オプションを有効にしていなかった場合は、リンク サーバーの構成操作でエラーが発生します。  
   
-     ![Data Feed Publishing Wizard - [検証] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Data Feed Publishing Wizard - [検証] ページ")  
+     ![データフィード発行ウィザード - [検証] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "データフィード発行ウィザード - [検証] ページ")  
   
 6.  このレポートを XML ファイルとして保存するために [レポートの保存] をクリックします。  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  **[概要]** ページで選択内容を確認し、 **[公開]** をクリックして公開プロセスを開始します。リンク サーバーがサーバー上に存在していない場合は、リンク サーバーの作成後にそのリンク サーバーを使用するビューが作成されます。  
   
-     ![Data Feed Publishing Wizard - [概要] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Data Feed Publishing Wizard - [概要] ページ")  
+     ![データフィード発行ウィザード - [概要] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "データフィード発行ウィザード - [概要] ページ")  
   
      これで、次の SQL ステートメントを TestDB データベースに対して実行することで、パッケージの出力データをクエリできます: SELECT * FROM [SSISPackageView]。  
   
@@ -168,9 +165,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  SQL Server Management Studio を起動します。  
   
-2.  展開\<**マシン名**>、**データベース**、 \<**ウィザードで選択したデータベース**>、および**ビュー**です。  
+2.  \<**コンピューター名**>、**[データベース]**、\<**ウィザードで選択したデータベース**>、**[ビュー]** の順に展開します。  
   
-3.  右クリックし、 \<**ウィザードによって作成されたビュー**> をクリックして、ウィザードによって作成された**上位 1000 行を選択して**です。  
+3.  ウィザードで作成した \<**ウィザードで作成したビュー**> を右クリックし、**[上位 1000 行を選択]** をクリックします。  
   
 4.  SSIS パッケージの結果が表示されることを確認します。  
   
@@ -278,4 +275,3 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [Data Streaming Destination を構成する](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

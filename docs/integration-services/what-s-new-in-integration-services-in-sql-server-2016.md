@@ -1,47 +1,44 @@
 ---
-title: "どのような &#39; SQL server 2016 Integration Services の |Microsoft ドキュメント"
-ms.custom:
-- SQL2016_New_Updated
+title: "SQL Server 2016 の Integration Services の新機能 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 183
+caps.latest.revision: "183"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/29/2017
-
+ms.openlocfilehash: 984807a0a75321b529c5e2519da71b81bed8a788
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>どのような &#39; の SQL server 2016 Integration Services
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-このトピックが追加または SQL Server 2016 で更新された機能について説明[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]です。 追加または更新の機能も含まれています、 [Azure Feature Pack for Integration Services & #40 です。SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) SQL Server 2016 の時間枠内にします。  
+このトピックでは、SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で追加または更新された機能について説明します。 これには、SQL Server 2016 のタイム フレーム中に [Integration Services &#40;SSIS&#41; 用の Azure Feature Pack](../integration-services/azure-feature-pack-for-integration-services-ssis.md) で追加または更新された機能も含まれます。  
 
-## <a name="new-for-ssis-in-azure-data-factory"></a>Azure Data Factory で SSIS の新機能
+## <a name="new-for-ssis-in-azure-data-factory"></a>Azure Data Factory での SSIS の新機能
 
-Azure Data Factory 2017 年 9 月にバージョン 2 のパブリック プレビュー版、今すぐ、次の処理の操作を行うことができます。
--   Azure SQL データベースで、SSIS カタログ データベース (SSISDB) にパッケージを展開します。
--   Azure SSIS の統合ランタイム、Azure Data Factory バージョン 2 のコンポーネントで Azure に展開されているパッケージを実行します。
+2017 年 9 月リリースの Azure Data Factory バージョン 2 のパブリック プレビュー版を使用すると、次の処理ができるようになります。
+-   Azure SQL Database 上の SSIS カタログ データベース (SSISDB) にパッケージを展開する。
+-   Azure に展開されているパッケージを、Azure-SSIS Integration Runtime (Azure Data Factory バージョン 2 のコンポーネント) で実行する。
 
-詳細については、次を参照してください。[をクラウドにリフト アンド シフトの SQL Server Integration Services のワークロード](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)です。
+詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
 
-これらの新機能では、SQL Server Data Tools (SSDT) 17.2 以降のバージョンを必要とは、SQL Server 2017 年 1 または SQL Server 2016 は必要ありません。 Azure にパッケージを配置する場合、パッケージの展開ウィザードは、パッケージを常に最新のパッケージ形式にアップグレードされます。
+これらの新機能では、SQL Server Data Tools (SSDT) のバージョン 17.2 以降が必要ですが、SQL Server 2017 または SQL Server 2016 は必要ありません。 パッケージを Azure に展開すると、常に最新のパッケージ形式となるように、パッケージの展開ウィザードによってパッケージがアップグレードされます。
 
-## <a name="2016-improvements-by-category"></a>カテゴリ別 2016 の機能強化  
+## <a name="2016-improvements-by-category"></a>カテゴリ別の 2016 の機能強化  
   
 -   **管理の容易性**  
   
@@ -162,14 +159,14 @@ Azure Data Factory 2017 年 9 月にバージョン 2 のパブリック プレ�
   
 -   SQL Server インスタンスをアップグレードする前に Always On 可用性グループからデータベースを削除しなかった場合。 この場合、データベースは自動アップグレードされません。 詳細については、「 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)」を参照してください。  
   
- 詳細については、次を参照してください。 [SSIS カタログ & #40 です。SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
+ 詳細については、[SSIS カタログ &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md) に関するページを参照してください。 
 
 ####  <a name="AlwaysOn"></a> SSIS カタログでの Always On 機能のサポート  
  Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。  
   
- SQL Server 2016 では、SSIS には、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置するのに便利な新しい機能が導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
+ SQL Server 2016 では、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置できる新しい機能が SSIS に導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
   
- 詳細な概要と SSISDB に対して常に有効にするための詳細な手順については、次を参照してください。 [SSIS カタログ](../integration-services/service/ssis-catalog.md)です。  
+ Always On 機能の詳細と SSISDB に対して有効にするための手順については、「[SSIS Catalog](../integration-services/service/ssis-catalog.md)」(SSIS カタログ) を参照してください。  
 
 ####  <a name="IncrementalDeployment"></a> パッケージの増分配置  
 パッケージの増分配置機能によって、プロジェクト全体を配置することなく、既存または新規のプロジェクトに&1; つ以上のパッケージを配置できます。 パッケージは、次のツールを使用して増分配置できます。  
@@ -184,7 +181,7 @@ Azure Data Factory 2017 年 9 月にバージョン 2 のパブリック プレ�
   
 -   管理オブジェクト モデル (MOM) API  
   
- 詳細については、次を参照してください [デプロイ Integration Services (SSIS) プロジェクトとパッケージ] (.../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md します。  
+ 詳細については、「[Services (SSIS) プロジェクトとパッケージの配置](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
 ####  <a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
  SSIS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の Always Encrypted 機能を既にサポートしています。 詳細については、次のログの投稿を参照してください。  
@@ -204,12 +201,12 @@ Azure Data Factory 2017 年 9 月にバージョン 2 のパブリック プレ�
  SSIS カタログの新しい **RuntimeLineage** ログ記録レベルは、データ フローの系列情報を追跡するために必要な情報を収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV と開発者は、この情報を利用して、カスタム系列マッピング ツールを構築できます。 
 
 ####  <a name="CustomLogging"></a> SSIS カタログでの新しいカスタム ログ レベル  
- SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 の追加、 **RuntimeLineage**ログ記録レベル。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
+ SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
 
 ####  <a name="ErrorColumn"></a> データ フロー内のエラー列の名前  
  エラー出力にエラーが含まれるデータ フロー内の行をリダイレクトすると、出力には、エラーが発生したが列の名前が表示されない列の数値識別子が含まれています。 エラーが発生した列の名前を、さまざまな方法で検索または表示できるようになりました。  
   
--   ログ記録を構成するときに、記録する **DiagnosticEx** イベントを選択します。 このイベントは、データ フロー列マップをログに書き込みます。 次に、エラー出力でキャプチャされた列識別子を使用して、この列マップで列名を検索できます。 詳細については、「 [Error Handling in Data](../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
+-   ログ記録を構成するときに、記録する **DiagnosticEx** イベントを選択します。 このイベントは、データ フロー列マップをログに書き込みます。 次に、エラー出力でキャプチャされた列識別子を使用して、この列マップで列名を検索できます。 詳細については、「[データのエラー処理](../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
 -   高度なエディターでは、データ フロー コンポーネントの入力列または出力列のプロパティを表示したときに、上流列の列名を確認できます。  
   
@@ -300,7 +297,7 @@ AU5 の PDW にデータを読み込むための変換先アダプターがリ�
 ### <a name="expanded-connectivity-to-the-cloud"></a>クラウドへの接続性の拡張
 
 ####  <a name="AFP2016"></a> SQL Server 2016 用の Azure Feature Pack for SSIS のリリース  
- Integration Services 用 Azure Feature Pack は SQL Server 2016 のリリースされています。 この機能パックには、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  
+ SQL Server 2016 用の Azure Feature Pack for Integration Services がリリースされています。 この機能パックには、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  
 
 #### <a name="dynamics"></a> Service Pack 1 でリリースされた Microsoft Dynamics オンライン リソースのサポート
 
@@ -328,7 +325,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
    
- ![プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ")  
+ ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
 
 >   [!IMPORTANT]
 > SSIS 用のカスタム拡張機能を開発する場合は、「 [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 」(カスタム コンポーネントでの複数ターゲットのサポート) および「 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)」(SSIS のカスタム拡張機能を SSDT 2015 for SQL Server 2016 用 SSDT 2015 の複数バージョン サポートでサポートされるようにする) を参照してください。  
@@ -377,5 +374,4 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

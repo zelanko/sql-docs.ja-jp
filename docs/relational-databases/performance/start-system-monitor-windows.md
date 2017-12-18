@@ -2,9 +2,12 @@
 title: "システム モニターの起動 (Windows) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aaa2aa9d375e545558d6b67000aa3c308dfa1b19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 502160d2f85c9ff8d1c7c3d81a168d58a3b5a319
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="start-system-monitor-windows"></a>システム モニターの起動 (Windows)
-  システム モニターを使用すると、システム リソースの使用率を監視できます。 プロセッサやメモリの使用率などのサーバー リソース、ロックやトランザクションなどの多くの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースについて、リアルタイムのパフォーマンス データをカウンター形式で収集し表示できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] システム モニターを使用すると、システム リソースの使用率を監視できます。 リアルタイムのパフォーマンス データをカウンター形式で収集し表示します。 カウンターは、プロセッサやメモリの使用率などのサーバー リソースに対して使用できます。 また、ロックやトランザクションなどの多くの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースに対しても使用できます。  
   
-### <a name="to-start-system-monitor-in-windows"></a>Windows のシステム モニターを起動するには  
+## <a name="start-system-monitor-in-windows"></a>Windows のシステム モニターを起動する  
   
-1.  **[スタート]** ボタンをクリックして **[ファイル名を指定して実行]**をクリックします。[ファイル名を指定して実行] ダイアログ ボックスで「 **perfmon** 」と入力し、 **[OK]**をクリックします。  
+**[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をポイントし、**[ファイル名を指定して実行]** ダイアログ ボックスで「**perfmon**」と入力し、**[OK]** を選択します。  
   
 ## <a name="see-also"></a>参照  
  [システム モニターの実行](../../relational-databases/performance-monitor/run-system-monitor.md)  

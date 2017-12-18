@@ -1,5 +1,5 @@
 ---
-title: "インフォ パッケージを検索 |Microsoft ドキュメント"
+title: "[インフォパッケージの参照] | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 603f32bbcf61ce562b0e8f6645e0384bb4dccdf2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1c7292503d94efdfa4fb9a7788750a746434dfd9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
   SAP Netweaver BW システムで定義されたインフォパッケージを参照する場合、 **[インフォパッケージの参照]** ダイアログ ボックスを使用します。 インフォパッケージの一覧が表示されたら、目的のインフォパッケージを選択します。変換先の関連するオプションに必要な値が設定されます。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/03/2017
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW に関するドキュメントでは、SAP Netweaver BW 環境について理解していることを前提としています。 SAP Netweaver BW の詳細または SAP Netweaver BW オブジェクトやプロセスを構成する方法については、SAP のマニュアルを参照してください。  
   
- **インフォ パッケージのダイアログ ボックスを開く**  
+ **[インフォパッケージの参照] ダイアログ ボックスを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、SAP BW 変換先が含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -46,22 +44,22 @@ ms.lasthandoff: 08/03/2017
 ## <a name="lookup-options"></a>[参照] のオプション  
  参照フィールドで、アスタリスクのワイルドカード文字 (*) を使用して、または部分的な文字列をアスタリスクのワイルドカード文字と組み合わせて使用して、結果をフィルター処理できます。 ただし、参照フィールドを空にした場合、参照操作は、フィールドの空の文字列のみを検索します。  
   
- **インフォ パッケージ**  
+ **インフォパッケージ**  
  参照するインフォパッケージの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 すべてのインフォパッケージを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
- **インフォ ソース**  
+ **インフォソース**  
  インフォソースの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 インフォソースにかからわずすべてのインフォパッケージを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
- **ソース システム**  
+ **転送元システム**  
  ソース システムの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 ソース システムにかからわずすべてのインフォパッケージを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
- **を検索します。**  
+ **[参照]**  
  SAP Netweaver BW システムで定義されている一致するインフォパッケージを参照します。  
   
 ## <a name="lookup-results"></a>参照結果  
  [参照] ボタンをクリックすると、SAP Netweaver BW システムのインフォパッケージの一覧が、次の列見出しのテーブルに表示されます。  
   
- **インフォ パッケージ**  
+ **インフォパッケージ**  
  SAP Netweaver BW システムで定義された InfoPackage の名前を表示します。  
   
  **型**  
@@ -76,10 +74,10 @@ ms.lasthandoff: 08/03/2017
  **Description**  
  インフォパッケージの説明を表示します。  
   
- **インフォ ソース**  
+ **インフォソース**  
  インフォパッケージに関連付けられているインフォソースの名前を表示します (ある場合)。  
   
- **ソース システム**  
+ **Source System**  
  ソース システムの名前を表示します。  
   
  インフォパッケージの一覧が表示されたら、目的のインフォパッケージを選択します。変換先の関連するオプションに必要な値が設定されます。  
@@ -89,4 +87,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

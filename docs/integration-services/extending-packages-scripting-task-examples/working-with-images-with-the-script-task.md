@@ -1,5 +1,5 @@
 ---
-title: "スクリプト タスクによる画像の操作 |Microsoft ドキュメント"
+title: "スクリプト タスクによる画像の操作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - graphics [Integration Services]
 - Script task [Integration Services], images
@@ -28,53 +25,52 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c86c8f11ec6351882ccb4b152b4254bad70210f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-images-with-the-script-task"></a>スクリプト タスクによる画像の操作
-  製品またはユーザーのデータベースには、テキストや数値データに加え、画像も頻繁に含まれています。 **System.Drawing** Microsoft .NET Framework の名前空間がイメージを操作するためのクラスを提供します。  
+  製品またはユーザーのデータベースには、テキストや数値データに加え、画像も頻繁に含まれています。 Microsoft .NET Framework の **System.Drawing** 名前空間では、画像を操作するためのクラスが提供されています。  
   
- [例 1: 画像を JPEG 形式に変換します。](#example1)  
+ [例 1 : 画像を JPEG 形式に変換する](#example1)  
   
- [例 2: を作成し、サムネイル画像を保存](#example2)  
+ [例 2 : サムネイル画像を作成および保存する](#example2)  
   
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
-##  <a name="example1"></a>例 1 の説明: 画像を JPEG 形式に変換します。  
+##  <a name="example1"></a> 例 1 の説明 : 画像を JPEG 形式に変換する  
  次の例では、変数で指定された画像ファイルを開き、エンコーダーを使用して圧縮 JPEG ファイルとして保存します。 エンコーダー情報を取得するコードは、private 関数にカプセル化されています。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>このスクリプト タスクの例を単一の画像ファイルで使用するように構成するには  
   
 1.  `CurrentImageFile` という名前の文字列変数を作成し、その値を既存の画像ファイルのパスおよびファイル名に設定します。  
   
-2.  **スクリプト**のページ、**スクリプト タスク エディター**、追加、`CurrentImageFile`変数を**ReadOnlyVariables**プロパティです。  
+2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、`CurrentImageFile` 変数を **ReadOnlyVariables** プロパティに追加します。  
   
-3.  スクリプト プロジェクトに参照を設定、 **System.Drawing**名前空間。  
+3.  このスクリプト プロジェクトでは、参照を **System.Drawing** 名前空間に設定します。  
   
-4.  コードで使用**Imports**をインポートするステートメント、 **System.Drawing**と**System.IO**名前空間。  
+4.  コードで **Imports** ステートメントを使用し、**System.Drawing** および **System.IO** 名前空間をインポートします。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>このスクリプト タスクの例を複数の画像ファイルで使用するように構成するには  
   
 1.  Foreach ループ コンテナー内にスクリプト タスクを入れます。  
   
-2.  **コレクション**のページ、 **Foreach ループ エディター**を選択、 **Foreach File 列挙子**列挙子としてソースのパスおよびファイル マスクを指定してなどのファイル"*.bmp"として  
+2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、列挙子として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.bmp" など) を指定します。  
   
-3.  **変数のマッピング**ページで、マップ、`CurrentImageFile`変数をインデックス 0 にします。 この変数は、列挙子が繰り返されるたびに、現在のファイル名をスクリプト タスクに渡します。  
+3.  **[変数のマッピング]** ページで、`CurrentImageFile` 変数をインデックス 0 にマップします。 この変数は、列挙子が繰り返されるたびに、現在のファイル名をスクリプト タスクに渡します。  
   
     > [!NOTE]  
     >  この手順は、単一の画像ファイルで使用する場合の手順としてリストされているものに追加されます。  
   
-### <a name="example-1-code"></a>コード例 1  
+### <a name="example-1-code"></a>例 1 のコード  
   
 ```vb  
 Public Sub Main()  
@@ -159,7 +155,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>例 2 の説明: を作成し、サムネイル画像を保存  
+##  <a name="example2"></a> 例 2 の説明 : サムネイル画像を作成および保存する  
  次の例では、変数で指定された画像ファイルを開いて、一定の縦横比を維持しながら画像のサムネイルを作成し、ファイル名を変更してサムネイルを保存します。 一定の縦横比を維持しながらサムネイルの高さと幅を計算するコードは、private サブルーチンでカプセル化されています。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>このスクリプト タスクの例を単一の画像ファイルで使用するように構成するには  
@@ -168,24 +164,24 @@ End Function
   
 2.  次に `MaxThumbSize` 整数変数を作成し、100 などのピクセル値を割り当てます。  
   
-3.  **スクリプト**のページ、**スクリプト タスク エディター**、両方の変数を追加して、 **ReadOnlyVariables**プロパティです。  
+3.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、両変数を **ReadOnlyVariables** プロパティに追加します。  
   
-4.  スクリプト プロジェクトに参照を設定、 **System.Drawing**名前空間。  
+4.  このスクリプト プロジェクトでは、参照を **System.Drawing** 名前空間に設定します。  
   
-5.  コードで使用**Imports**をインポートするステートメント、 **System.Drawing**と**System.IO**名前空間。  
+5.  コードで **Imports** ステートメントを使用し、**System.Drawing** および **System.IO** 名前空間をインポートします。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>このスクリプト タスクの例を複数の画像ファイルで使用するように構成するには  
   
 1.  Foreach ループ コンテナー内にスクリプト タスクを入れます。  
   
-2.  **コレクション**のページ、 **Foreach ループ エディター**、select、 **Foreach File 列挙子**として、**列挙子**を指定し、"*.jpg"などのソース ファイルのパスおよびファイル マスク  
+2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、**[列挙子]** として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.jpg" など) を指定します。  
   
-3.  **変数のマッピング**ページで、マップ、`CurrentImageFile`変数をインデックス 0 にします。 この変数は、列挙子が繰り返されるたびに、現在のファイル名をスクリプト タスクに渡します。  
+3.  **[変数のマッピング]** ページで、`CurrentImageFile` 変数をインデックス 0 にマップします。 この変数は、列挙子が繰り返されるたびに、現在のファイル名をスクリプト タスクに渡します。  
   
     > [!NOTE]  
     >  この手順は、単一の画像ファイルで使用する場合の手順としてリストされているものに追加されます。  
   
-### <a name="example-2-code"></a>コード例 2  
+### <a name="example-2-code"></a>例 2 のコード  
   
 ```vb  
 Public Sub Main()  
@@ -300,4 +296,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

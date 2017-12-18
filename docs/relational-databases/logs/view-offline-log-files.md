@@ -2,9 +2,12 @@
 title: "オフライン ログ ファイルの表示 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2fbac24caac2af64ba28178a1cfebd9bd860581d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 225e2dafcaac744ed1ecd67ec928d13490472c7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
   
  登録済みサーバーから、またはプログラムにより WMI および WQL (WMI Query Language) クエリを通じて、オフラインのログ ファイルにアクセスできます。  
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  WMI コントロール スナップインを開きます。 これを行うには、次のいずれかの操作を実行します (オペレーティング システムによって異なります)。  
   
-    -   **[スタート]**ボタンをクリックし、**[ 検索の開始 ]** ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
+    -   **[スタート]**ボタンをクリックし、**[検索の開始]** ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
   
     -   **[スタート]**ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックします。「 **wmimgmt.msc**」と入力して Enter キーを押します。  
   

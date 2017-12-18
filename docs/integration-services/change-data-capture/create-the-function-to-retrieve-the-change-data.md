@@ -1,5 +1,5 @@
 ---
-title: "変更データを取得する関数を作成 |Microsoft ドキュメント"
+title: "変更データを取得する関数を作成する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],creating function
+helpviewer_keywords: incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  
@@ -124,9 +121,9 @@ deallocate #hfunctions
   
  変更テーブルのすべての行に対するクエリの実行を簡略化するために、生成されたラッパー関数では、次の規則もサポートされています。  
   
--   場合、@start_timeパラメーターが null、ラッパー関数は、クエリの下限の境界として、キャプチャ インスタンスの最小 LSN 値を使用します。  
+-   @start_time パラメーターが NULL の場合、ラッパー関数では、キャプチャ インスタンスの最小 LSN 値がクエリの下限として使用されます。  
   
--   場合、@end_timeパラメーターが null、ラッパー関数は、クエリの上限として、キャプチャ インスタンスの最大 LSN 値を使用します。  
+-   @end_time パラメーターが NULL の場合、ラッパー関数では、キャプチャ インスタンスの最大 LSN 値がクエリの上限として使用されます。  
   
  ほとんどのユーザーは、 **sys.sp_cdc_generate_wrapper_function** システム ストアド プロシージャによって作成されたラッパー関数を、変更することなく使用できます。 ただし、ラッパー関数をカスタマイズするには、CREATE スクリプトを実行する前にカスタマイズする必要があります。  
   
@@ -220,7 +217,7 @@ go
 |**__$seqval**|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
 |**__$operation**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作。 次のいずれかになります。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
 |**__$update_mask**|**varbinary (128)**|変更された列を識別する、変更テーブルの列序数に基づくビットマスク。 変更された列を特定する必要がある場合にこの値を調べることができます。|  
-|**\<キャプチャされたソース テーブルの列 >**|各種|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
+|**\< キャプチャ対象のソース テーブルの列 >**|各種|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
   
  詳細については、「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)」を参照してください。  
   
@@ -230,4 +227,3 @@ go
  **次のトピック:** [変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

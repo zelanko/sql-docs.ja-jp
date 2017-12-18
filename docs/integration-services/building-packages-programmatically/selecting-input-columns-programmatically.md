@@ -1,5 +1,5 @@
 ---
-title: "プログラムによる入力列の選択 |Microsoft ドキュメント"
+title: "プログラムによる入力列の選択 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,22 +24,21 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2ead17945bc9a6d2d3baeb73c07c86fad0e8cf1f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: aea8e6a9c780cbb56dff74c3ee003be2d4259486
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="selecting-input-columns-programmatically"></a>プログラムによる入力列の選択
   プログラムによってコンポーネントを接続したら、変換する列または下流コンポーネントに渡す列を上流コンポーネントから選択します。 コンポーネント用の入力列を選択しないと、コンポーネントはデータ フロー タスクから行を受信しません。  
   
-## <a name="selecting-columns"></a>列を選択します。  
+## <a name="selecting-columns"></a>列の選択  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.GetVirtualInput%2A> メソッドを呼び出し、使用できる列の一覧を上流コンポーネントから取得します。次に、デザイン時のコンポーネント インスタンスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.SetUsageType%2A> メソッドを呼び出し、仮想入力列のコレクションから列を選択します。 このメソッドを呼び出すと、コンポーネントは、上流コンポーネントの出力コレクション内の対応する列と同じ系列 ID を持つ入力列を、コンポーネントの入力列のコレクション内に新しく作成します。  
   
  仮想入力オブジェクトの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSVirtualInput100.SetUsageType%2A> メソッドを直接呼び出して列を選択しないでください。これによって、不適切なデータ型またはその他のプロパティに基づいて、コンポーネントが列を拒否する機能がバイパスされるためです。  
@@ -224,4 +221,3 @@ End Module
  [プログラムによるパッケージの保存](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   
-

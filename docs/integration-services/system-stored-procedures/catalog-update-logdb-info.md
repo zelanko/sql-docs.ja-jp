@@ -1,30 +1,28 @@
 ---
-title: "catalog.update_logdb_info (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.update_logdb_info (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a898be08859230ab873fd8e358b892789aaed043
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0bd5af1a51baf6947f9634f1f7260af20a7e87b2
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-更新プログラム、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]スケール アウト ログの情報です。
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Logging 情報を更新します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,11 +31,11 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ```
 
 ## <a name="arguments"></a>引数
-[ @server_name =] *server_name*  
- スケール アウト ログに使用する Sql Server。 *Server_name*は**nvarchar**です。  
+[ @server_name = ] *server_name*  
+ Scale Out ログで使用する SQL Server。 *server_name* は **nvarchar** です。  
 
- [ @connection_string =] *connection_string*  
- スケール アウト ログに使用する接続文字列。 *Connection_string*は**nvarchar**です。
+ [ @connection_string = ] *connection_string*  
+ Scale Out ログで使用する接続文字列。 *connection_string* は **nvarchar** です。
 
  ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -45,11 +43,10 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ## <a name="result-sets"></a>結果セット  
  なし  
 
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>Permissions  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
    
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
  
-

@@ -1,5 +1,5 @@
 ---
-title: "カスタム コンポーネントに複数バージョン対応サポート |Microsoft ドキュメント"
+title: "カスタム コンポーネントの複数バージョン対応のサポート | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,60 +8,57 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server (starting with 2016)
+applies_to: SQL Server (starting with 2016)
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dc111f1d884a3553156b55ab490afef2f8df9d61
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: fea00f80ddaa43ee5bcd5d26ddcc515d2f6e849a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントに複数バージョン対応サポートします。
- 使えるようになりました SSIS デザイナーで SQL Server Data Tools (SSDT) を作成、保守、およびそのターゲット SQL Server 2016、SQL Server 2014 または SQL Server 2012 のパッケージを実行します。 SSDT for Visual Studio 2015 を参照してください[最新の SQL Server の Data Tools をダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)です。 
+# <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
+ SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 Visual Studio 2015 用の SSDT を入手する方法については、「[最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
    
- ![プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ](../../integration-services/media/targetserverversion2.png "プロジェクトのプロパティ ダイアログ ボックスの TargetServerVersion プロパティ")  
+ ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
  
- ## <a name="multiple-version-support-and-multi-targeting-for-custom-components"></a>複数のバージョンのサポートおよびカスタム コンポーネントのマルチ ターゲット
+ ## <a name="multiple-version-support-and-multi-targeting-for-custom-components"></a>複数バージョンのサポートとカスタム コンポーネントの複数バージョン対応
  
-SSIS カスタム拡張機能の 5 種類のすべてでは、マルチ ターゲットをサポートします。
+SSIS カスタム拡張機能の 5 種類すべてで、複数バージョン対応がサポートされています。
 -   接続マネージャー
 -   処理手順
 -   列挙子
 -   ログ プロバイダー
 -   データ フロー コンポーネント
 
-マネージ拡張機能の場合は、SSIS デザイナーには、指定された対象のバージョンについては、拡張機能のバージョンが読み込まれます。 例:
--   ターゲット バージョンが SQL Server 2012 の場合は、デザイナーは、2012年バージョンの拡張機能を読み込みます。
--   ターゲット バージョンが SQL Server 2016 の場合は、デザイナーは、拡張機能の 2016年バージョンを読み込みます。
+マネージ拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例:
+-   対応バージョンが SQL Server 2012 の場合、デザイナーは、拡張機能の2012 バージョンを読み込みます。
+-   対応バージョンが SQL Server 2016 の場合、デザイナーは、拡張機能の2016 バージョンを読み込みます。
 
-COM 拡張機能は、マルチ ターゲットをサポートしていません。 SSIS デザイナーは、常に、現在のバージョンの SQL Server では、指定されたターゲット バージョンに関係なく、COM の拡張機能を読み込みます。
+COM 拡張機能は、複数バージョン対応はサポートしていません。 SSIS デザイナーは、指定した対応バージョンに関係なく、常に現在のバージョンの SQL Server の COM の拡張機能を読み込みます。
 
-## <a name="add-basic-support-for-multiple-versions-and-multi-targeting"></a>複数のバージョンおよびマルチ ターゲットの基本的なサポートを追加します。
+## <a name="add-basic-support-for-multiple-versions-and-multi-targeting"></a>複数バージョンおよび複数バージョン対応の基本サポートの追加
 
-基本的なガイダンスについては、次を参照してください。 [SQL Server 2016 用 SSDT 2015 の複数バージョンのサポートによってサポートされる SSIS カスタム拡張を取得する](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)です。 このブログの投稿では、次の手順や要件について説明します。
+基本的なガイダンスについては、「[Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)」 (SQL Server 2016 用 SSDT 2015 の複数バージョン サポートで SSIS カスタム拡張機能がサポートされるようにする) を参照してください。 このブログ投稿では、次の手順や要件について説明しています。
 
--   適切なフォルダーにアセンブリを展開します。
+-   適切なフォルダーへのアセンブリの展開。
 
--   SQL Server 2014 と高いバージョンの拡張マップ ファイルを作成します。
+-   SQL Server 2014 以上のバージョン用の拡張マップ ファイルの作成。
 
-## <a name="add-code-to-switch-versions"></a>バージョンを切り替えるコードを追加します。
+## <a name="add-code-to-switch-versions"></a>バージョンを切り替えるためのコードの追加
 
 ### <a name="switch-versions-in-a-custom-connection-manager-task-enumerator-or-log-provider"></a>カスタム接続マネージャー、タスク、列挙子、またはログ プロバイダーのバージョンを切り替える
 
-カスタム接続マネージャー、タスク、列挙子、またはログ プロバイダーでは、追加のロジックをダウン グレード、 **SaveToXML**メソッドです。
+カスタム接続マネージャー、タスク、列挙子、またはログ プロバイダーには、**SaveToXML** メソッドにダウングレード ロジックを追加します。
 
 ```csharp
 public void SaveToXML(XmlDocument doc, IDTSInfoEvents events)
@@ -78,9 +75,9 @@ public void SaveToXML(XmlDocument doc, IDTSInfoEvents events)
 }
 ```
 
-### <a name="switch-versions-in-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントのバージョンを切り替える
+### <a name="switch-versions-in-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントでのバージョンの切り替え
 
-カスタム接続マネージャー、タスク、列挙子、またはログ プロバイダーでは、新たにダウン グレード ロジックを追加**PerformDowngrade**メソッドです。
+カスタム接続マネージャー、タスク、列挙子、またはログ プロバイダーには、新しい **PerformDowngrade** メソッドにダウングレード ロジックを追加します。
 
 ```csharp
 public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersion targetServerVersion)
@@ -103,18 +100,17 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**エラー メッセージ。** 型のオブジェクトは COM をキャストできません。 'System.__ComObject' インターフェイスには、'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' を入力します。 次のエラーにより IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' を持つインターフェイスの COM コンポーネント上での QueryInterface 呼び出しが失敗したため、この操作が失敗しました: インターフェイスがサポートされて (HRESULT からの例外: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
+**エラー メッセージ。** 型 'System.__ComObject' の COM オブジェクトをインターフェイス型 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' にキャストできません。 IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' が指定されたインターフェイスの COM コンポーネント上での QueryInterface 呼び出しのときに次のエラーが発生したため、この操作に失敗しました: インターフェイスがサポートされていません。(HRESULT からの例外: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**ソリューションです。** カスタム拡張機能は、Microsoft.SqlServer.DTSPipelineWrap など Microsoft.SqlServer.DTSRuntimeWrap SSIS の相互運用機能アセンブリを参照する場合の値を設定、**相互運用機能型の埋め込み**プロパティに * * False"です。
+**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、**[相互運用機能型の埋め込み]** プロパティの値を **False" に設定します。
 
-![相互運用機能型を埋め込み](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
+![相互運用機能型の埋め込み](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 
-### <a name="unable-to-load-some-types-when-target-version-is-sql-server-2012"></a>ターゲット バージョンが SQL Server 2012 の場合、一部の型を読み込めません。
+### <a name="unable-to-load-some-types-when-target-version-is-sql-server-2012"></a>対応バージョンが SQL Server 2012 の場合、一部の型を読み込めない
 
-この問題は、IErrorReportingService または IUserPromptService などの特定の種類に影響します。
+この問題は、IErrorReportingService や IUserPromptService などの特定の型に影響します。
 
-**エラー メッセージ (例:)。** アセンブリから型 'Microsoft.DataWarehouse.Design.IErrorReportingService' を読み込むことができませんでした ' Microsoft.DataWarehouse, Version 13.0.0.0、カルチャを = = neutral, PublicKeyToken = 89845dcd8080cc91' です。
+**エラー メッセージ (例)。** アセンブリ 'Microsoft.DataWarehouse, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' から型 'Microsoft.DataWarehouse.Design.IErrorReportingService' を読み込めませんでした。
 
-**回避策。** ターゲット バージョンが SQL Server 2012 の場合は、これらのインターフェイスではなく、メッセージ ボックスを使用します。
-
+**回避策。** 対応バージョンが SQL Server 2012 の場合、これらのインターフェイスではなく、メッセージ ボックスを使用してください。
 

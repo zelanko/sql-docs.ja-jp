@@ -2,9 +2,12 @@
 title: "ミラー化されたインスタンスのアップグレード | Microsoft Docs"
 ms.custom: 
 ms.date: 02/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>ミラー化されたインスタンスのアップグレード
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のミラー化されたインスタンスを新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス パックまたは累積的な更新プログラム、あるいは新しい Windows サービス パックまたは累積的な更新プログラムにアップグレードする場合、ローリング アップグレードを実行して、ミラー化された各データベースのダウンタイムを 1 回の手動フェールオーバーのみに減らすことができます (または、元のプライマリにフェールバックする場合は 2 回の手動フェールオーバー)。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードする [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のミラー化されたインスタンスを新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス パックまたは累積的な更新プログラム、あるいは新しい Windows サービス パックまたは累積的な更新プログラムにアップグレードする場合、ローリング アップグレードを実行して、ミラー化された各データベースのダウンタイムを 1 回の手動フェールオーバーのみに減らすことができます (または、元のプライマリにフェールバックする場合は 2 回の手動フェールオーバー)。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードする [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
   
 > [!NOTE]  
 >  移行中にデータベース ミラーリングとログ配布を併用する方法については、 [データベース ミラーリングとログ配布に関するホワイト ペーパー](https://t.co/RmO6ruCT4J)をダウンロードしてください。  

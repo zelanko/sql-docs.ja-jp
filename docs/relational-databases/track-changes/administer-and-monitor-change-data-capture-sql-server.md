@@ -2,9 +2,12 @@
 title: "変更データ キャプチャの管理と監視 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
-  このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
   
 ##  <a name="Capture"></a> キャプチャ ジョブ  
  キャプチャ ジョブは、パラメーターなしのストアド プロシージャ **sp_MScdc_capture_job**を実行すると開始されます。 このストアド プロシージャは、msdb.dbo.cdc_jobs からキャプチャ ジョブの *maxtrans*、 *maxscans*、 *continuous*、および *pollinginterval* の構成値を抽出することによって開始されます。 これらの構成値は、パラメーターとしてストアド プロシージャ **sp_cdc_scan**に渡されます。 これは **sp_replcmds** を呼び出してログ スキャンを実行する場合に使用されます。  

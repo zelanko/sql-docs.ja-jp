@@ -1,5 +1,5 @@
 ---
-title: "コマンド プロンプトから、SSIS パッケージを実行 |Microsoft ドキュメント"
+title: "コマンド プロンプトから SSIS パッケージを実行する | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,46 +8,43 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a33b8518ec3284f5de73d38c87209057dc1c7487
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 2c2b83605714e01961c50d71e83ba57691bc3833
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>DTExec.exe を使用してコマンド プロンプトから、SSIS パッケージを実行します。
-このクイック スタート チュートリアルを実行して、コマンド プロンプトから、SSIS パッケージを実行する方法を示しています`DTExec.exe`適切なパラメーターを使用します。
+# <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>DTExec.exe を使用してコマンド プロンプトから SSIS パッケージを実行する
+このクイック スタート チュートリアルでは、コマンド プロンプトから適切なパラメーターを使用して `DTExec.exe` を実行し、SSIS パッケージを実行する方法を説明します。
 
 > [!NOTE]
-> この記事で説明されているメソッドは、Azure SQL Database サーバーに展開されているパッケージでテストされていません。
+> この記事で説明する方法は、Azure SQL Database サーバーに展開されているパッケージではテストされていません。
 
-詳細については`DTExec.exe`を参照してください[dtexec ユーティリティ](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility)です。
+`DTExec.exe` の詳細については、「[dtexec ユーティリティ](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility)」を参照してください。
 
-## <a name="run-a-package-with-dtexec"></a>Dtexec でパッケージを実行します。
+## <a name="run-a-package-with-dtexec"></a>Dtexec でのパッケージの実行
 
-フォルダーを含む`DTExec.exe`に含まれていない、`path`環境変数を使用する必要があります、`cd`そのディレクトリに変更するコマンド。 SQL Server 2017、このフォルダーは通常`C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`です。
+`DTExec.exe` を含むフォルダーが `path` 環境変数にない場合、そのディレクトリに変更するために `cd` コマンドを使用する必要がある場合があります。 SQL Server 2017 の場合、このフォルダーは通常 `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn` です。
 
-次の例で使用するパラメーター値には、プログラムで実行されますパッケージを指定したフォルダー パスに、SSIS サーバーの SSIS カタログ データベース (SSISDB) をホストするサーバーは、します。 `/Server`パラメーターは、サーバー名を提供します。 プログラムは、Windows 統合認証では、現在のユーザーとして接続します。 SQL 認証を使用するには指定、`/User`と`Password`適切な値を持つパラメーター。
+次の例で使用されているパラメーター値で、プログラムは (SSIS カタログ データベース (SSISDB) をホストするサーバーである) SSIS サーバーの指定したフォルダー パスでパッケージを実行します。 `/Server` パラメーターによって、サーバー名が提供されます。 プログラムは、Windows 統合認証を使用して、現在のユーザーとして接続します。 SQL 認証を使用するには、適切な値を使用して、`/User` と `Password` を指定します。
 
 1. コマンド プロンプト ウィンドウを開きます。
 
-2. 実行`DTExec.exe`の最低値を指定し、`ISServer`と`Server`パラメーターは、次の例で示すように。
+2. `DTExec.exe` を実行し、次の例のとおり、最低限 `ISServer` パラメーターと `Server` パラメーターの値は渡します。
 
     ```cmd
     dtexec /ISServer "\SSISDB\Project1Folder\Integration Services Project1\Package.dtsx" /Server "localhost"
     ```
 
 ## <a name="next-steps"></a>次の手順
-- パッケージを実行するには、その他の方法を検討してください。
-    - [SSMS での SSIS パッケージを実行します。](./ssis-quickstart-run-ssms.md)
-    - [TRANSACT-SQL (SSMS) で、SSIS パッケージを実行します。](./ssis-quickstart-run-tsql-ssms.md)
-    - [Transact SQL (VS Code) を使用した SSIS パッケージを実行します。](ssis-quickstart-run-tsql-vscode.md)
-    - [PowerShell での SSIS パッケージを実行します。](ssis-quickstart-run-powershell.md)
-    - [C# を使用して、SSIS パッケージを実行します。](./ssis-quickstart-run-dotnet.md) 
-
+- パッケージを実行する他の方法を検討します。
+    - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
+    - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)
+    - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
+    - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 

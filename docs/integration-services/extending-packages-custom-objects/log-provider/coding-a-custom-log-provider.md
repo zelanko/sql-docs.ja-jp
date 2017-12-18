@@ -1,5 +1,5 @@
 ---
-title: "カスタム ログ プロバイダーをコーディング |Microsoft ドキュメント"
+title: "カスタム ログ プロバイダーのコーディング | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom log providers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0fdab647193d9439ba9be97f89c503978254e0a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-log-provider"></a>カスタム ログ プロバイダーのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
   
- カスタム ログ プロバイダーの実際のサンプルを参照してください。[カスタム ログ プロバイダー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)です。  
+ カスタム ログ プロバイダーの実際のサンプルが必要であれば、「[カスタム ログ プロバイダー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)」をご覧ください。  
   
 ## <a name="configuring-the-log-provider"></a>ログ プロバイダーの構成  
   
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
  <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> メソッドをオーバーライドして、接続のコレクションおよびイベント インターフェイスへの参照をキャッシュします。 キャッシュした参照は、後でログ プロバイダーの他のメソッドで使用できます。  
   
 ### <a name="using-the-configstring-property"></a>ConfigString プロパティの使用  
- デザイン時に、ログ プロバイダーがから構成情報を受け取る、**構成**列です。 この構成情報は、ログ プロバイダーの <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> プロパティに対応しています。 既定では、この列には任意の文字列情報を取得可能なテキスト ボックスが含まれます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれているほとんどのログ プロバイダーは、このプロパティを使用して、外部データ ソースに接続するためにプロバイダーが使用する接続マネージャーの名前を格納します。 ログ プロバイダーで使用する場合、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>プロパティを使用して、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>メソッドをこのプロパティを検証し、プロパティが正しく設定されていることを確認します。  
+ デザイン時に、ログ プロバイダーは **[構成]** 列から構成情報を受け取ります。 この構成情報は、ログ プロバイダーの <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> プロパティに対応しています。 既定では、この列には任意の文字列情報を取得可能なテキスト ボックスが含まれます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれているほとんどのログ プロバイダーは、このプロパティを使用して、外部データ ソースに接続するためにプロバイダーが使用する接続マネージャーの名前を格納します。 ログ プロバイダーで <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> プロパティを使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> メソッドを使用して、このプロパティが正しく設定されていることを検証します。  
   
 ### <a name="validating-the-log-provider"></a>ログ プロバイダーの検証  
  <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> メソッドをオーバーライドして、プロバイダーが正しく構成され、実行の準備ができていることを確認します。 通常、少なくとも <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> が正しく設定されていることを検証します。 ログ プロバイダーが <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> メソッドから <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> を返すまでは、実行を続行できません。  
@@ -87,7 +83,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>ログ プロバイダーの保存  
- 通常、接続マネージャーのカスタムの永続性を実装する必要はありません。 カスタムの永続性は、オブジェクトのプロパティで複合データ型が使用されている場合にのみ必要です。 詳細については、次を参照してください。 [Integration Services 用のカスタム オブジェクトの開発](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)です。  
+ 通常、接続マネージャーに対して、カスタムの永続性を実装する必要はありません。 カスタムの永続性は、オブジェクトのプロパティで複合データ型が使用されている場合にのみ必要です。 詳細については、「[Integration Services 用のカスタム オブジェクトの開発](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)」を参照してください。  
   
 ## <a name="logging-with-the-log-provider"></a>ログ プロバイダーによるログ記録  
  すべてのログ プロバイダーがオーバーライドする必要のある実行時のメソッドには、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>、および <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A> の 3 つがあります。  
@@ -142,7 +138,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>ログ エントリの記述  
- <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>メソッドは、パッケージ内のオブジェクトでは、火災を呼び出すことによってイベントが発生するたびに\<イベント > のイベント インターフェイスのいずれかのメソッドです。 各イベントを発生させるときは、イベントのコンテキスト情報に加えて、通常は説明のメッセージが使用されます。 ただし、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドのすべての呼び出しに、すべてのメソッド パラメーターの情報が含まれているわけではありません。 たとえば、名前が説明になっている一部の標準イベントは MessageText を提供しません。また DataCode と DataBytes は、省略可能な補足情報のためのものです。  
+ パッケージ内のオブジェクトがいずれかのイベント インターフェイスで Fire\<event> メソッドを呼び出してイベントを発生させるたびに、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドが呼び出されます。 各イベントを発生させるときは、イベントのコンテキスト情報に加えて、通常は説明のメッセージが使用されます。 ただし、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドのすべての呼び出しに、すべてのメソッド パラメーターの情報が含まれているわけではありません。 たとえば、名前が説明になっている一部の標準イベントは MessageText を提供しません。また DataCode と DataBytes は、省略可能な補足情報のためのものです。  
   
  次のコード例では、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドを実装し、前のセクションで開かれたストリームにイベントを書き込みます。  
   
@@ -199,8 +195,7 @@ End Sub
 ```  
  
 ## <a name="see-also"></a>参照  
- [カスタム ログ プロバイダーを作成します。](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
+ [カスタム ログ プロバイダーの作成](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
  [カスタム ログ プロバイダー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

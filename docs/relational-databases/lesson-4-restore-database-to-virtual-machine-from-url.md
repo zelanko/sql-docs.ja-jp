@@ -1,10 +1,13 @@
 ---
 title: "レッスン 4: URL から仮想マシンにデータベースを復元する | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f641f3df1010396d54a655beaaf982a7bff63972
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>レッスン 4: URL から仮想マシンにデータベースを復元する
-このレッスンでは、Azure 仮想マシン内の SQL Server 2016 インスタンスに AdventureWorks2014 データベースを復元します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、Azure 仮想マシン内の SQL Server 2016 インスタンスに AdventureWorks2014 データベースを復元します。  
   
 > [!NOTE]  
 > このチュートリアルではわかりやすくするために、データ ファイルおよびログ ファイル用のコンテナーとして、データベースのバックアップの場合と同じものを使用します。 運用環境では、多くの場合、複数のコンテナーを使用し、データ ファイルも複数を頻繁に使用することになります。 SQL Server 2016 では、大規模なデータベースをバックアップする場合にそのパフォーマンスを向上させるために、バックアップを複数の BLOB でストライプ化することも検討可能です。  

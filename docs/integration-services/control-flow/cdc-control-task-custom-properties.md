@@ -1,5 +1,5 @@
 ---
-title: "CDC 制御タスクのカスタム プロパティ |Microsoft ドキュメント"
+title: "CDC 制御タスクのカスタム プロパティ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ed58b63b6bbeff9ffea04325c94d85fe06de1ab
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2d48d78bd1e2e6d86a8416564d5ef7ee22a785d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 制御タスクのカスタム プロパティ
   次の表は、CDC 制御タスクのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
@@ -41,8 +39,7 @@ ms.lasthandoff: 08/03/2017
 |CommandTimeOut|整数 (integer)|この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する際に使用されるタイムアウト (秒単位) を示します。 この値は、データベースからの応答時間が非常に遅い場合に使用されるため、既定値 (30 秒) では不十分です。|  
   
 ## <a name="see-also"></a>参照  
- [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)   
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 制御タスク エディター](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "データ フロー コンポーネントのプロパティを設定 |Microsoft ドキュメント"
+title: "データ フロー コンポーネントのプロパティを設定する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- components [Integration Services], properties
+helpviewer_keywords: components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
   変換元、変換先、変換などを含むデータ フロー コンポーネントのプロパティを設定するには、次の機能のいずれかを使用します。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/26/2017
   
 -   **[詳細エディター]** ダイアログ ボックスでは、各コンポーネントのカスタム プロパティにアクセスできます。 また、 **[詳細エディター]** ダイアログ ボックスを使用すると、すべてのデータ フロー コンポーネントの共通プロパティである、入力、出力、エラー出力、列、および外部列のプロパティにもアクセスできます。  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>コンポーネント エディターを使用して、データ フロー コンポーネントのプロパティを設定します。  
+## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>コンポーネント エディターを使用してデータ フロー コンポーネントのプロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
   
-## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>[プロパティ] ウィンドウで、データ フロー コンポーネントのプロパティを設定します。  
+## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>[プロパティ] ウィンドウでデータ フロー コンポーネントのプロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>エディターでは、高度なデータ フロー コンポーネントのプロパティを設定します。  
+## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>詳細エディターを使用してデータ フロー コンポーネントのプロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -146,7 +143,7 @@ ms.lasthandoff: 09/26/2017
 |[ValidateExternalMetadata]|ブール値|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
 |バージョン|Integer|コンポーネントのバージョン。|  
   
-###  <a name="inputs"></a>入力プロパティ  
+###  <a name="inputs"></a> 入力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換および変換先には入力があります。 データ フロー内のコンポーネントの入力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの入力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -166,7 +163,7 @@ ms.lasthandoff: 09/26/2017
   
  変換先および一部の変換では、エラー出力がサポートされず、これらのコンポーネントの ErrorRowDisposition プロパティおよび TruncationRowDisposition プロパティは読み取り専用です。  
   
-###  <a name="inputcolumns"></a>入力列プロパティ  
+###  <a name="inputcolumns"></a> 入力列プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、入力には入力列のコレクションが含まれています。 データ フロー内のコンポーネントの入力列は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの入力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -190,7 +187,7 @@ ms.lasthandoff: 09/26/2017
   
  入力列には、後の「データ型プロパティ」で説明するデータ型プロパティもあります。  
   
-###  <a name="outputs"></a>出力のプロパティ  
+###  <a name="outputs"></a> 出力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換元および変換には出力があります。 データ フロー内のコンポーネントの出力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの出力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -206,12 +203,12 @@ ms.lasthandoff: 09/26/2017
 |ID|Integer|出力を一意に識別する値。|  
 |[IdentificationString]|文字列|出力を識別する文字列。|  
 |IsErrorOut|ブール値|出力がエラー出力かどうかを示します。|  
-|IsSorted|ブール値|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\*重要な\* \*** の値を設定、 **IsSorted**プロパティを**True**データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。|  
+|IsSorted|ブール値|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\* 重要 \*\*** **IsSorted** プロパティの値を **True** に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。|  
 |名前|文字列|出力の名前。|  
 |SynchronousInputID|Integer|出力に同期する入力の ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
   
-###  <a name="outputcolumns"></a>出力列のプロパティ  
+###  <a name="outputcolumns"></a> 出力列プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、出力に出力列のコレクションが含まれています。 データ フロー内のコンポーネントの出力列は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの出力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -248,7 +245,7 @@ ms.lasthandoff: 09/26/2017
   
  外部メタデータ列には、データ型プロパティの組も含まれています。  
   
-### <a name="data-type-properties"></a>データ型のプロパティ  
+### <a name="data-type-properties"></a>データ型プロパティ  
  出力列および外部メタデータ列には、データ型プロパティの組が含まれています。 列のデータ型に応じて、プロパティは読み取り/書き込み可能または読み取り専用の場合があります。  
   
  次の表は、出力列および外部メタデータ列のデータ型プロパティを示しています。  
@@ -262,7 +259,7 @@ ms.lasthandoff: 09/26/2017
 |Scale|Integer|数値列の小数点以下桁数。|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>データ フロー コンポーネントのカスタム プロパティ
-カスタム プロパティについては、次のトピックを参照してください。  
+カスタム プロパティの詳細については、次のトピックを参照してください。  
   
 -   [ADO NET カスタム プロパティ](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -300,7 +297,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [XML 入力元のカスタム プロパティ](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
-## <a name="use-an-expression-in-a-data-flow-component"></a>データ フロー コンポーネントで式を使用してください。
+## <a name="use-an-expression-in-a-data-flow-component"></a>データ フロー コンポーネントで式を使用する
 この手順では、条件分割変換または派生列変換に式を追加する方法について説明します。 条件分割変換では、式を使用して、変換出力にデータ行を出力する条件を定義します。また、派生列変換では、式を使用して、列に割り当てる値を定義します。  
   
  変換に式を実装するには、あらかじめパッケージに少なくとも 1 つのデータ フロー タスクとソースが含まれている必要があります。 
@@ -335,7 +332,7 @@ ms.lasthandoff: 09/26/2017
     > [!NOTE]  
     >  式が有効でない場合、式に文法エラーがあることを示す警告が表示されます。  
 
-## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>式で設定できるデータ フローのプロパティ
+## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>式で設定できるデータ フロー プロパティ
 データ フロー タスク コンテナーで使用できるプロパティ式を使用して、データ フロー オブジェクトの特定のプロパティの値を指定できます。  
   
  プロパティ式の使用の詳細については、「 [パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
@@ -348,7 +345,7 @@ ms.lasthandoff: 09/26/2017
  
  次の一覧にあるプロパティの値は、プロパティ式を使用して指定できます。  
   
-### <a name="data-flow-sources"></a>データ フローのソース  
+### <a name="data-flow-sources"></a>データ フローの変換元  
   
 |データ フロー オブジェクト|[プロパティ]|  
 |----------------------|--------------|  
@@ -378,7 +375,6 @@ ms.lasthandoff: 09/26/2017
 |----------------------|--------------|  
 |ADO NET 変換先|TableOrViewName プロパティ<br /><br /> BatchSize プロパティ<br /><br /> CommandTimeOut プロパティ|  
 |フラット ファイル変換先|Header プロパティ|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 変換先|TableName プロパティ|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先|BulkInsertTableName プロパティ<br /><br /> BulkInsertFirstRow プロパティ<br /><br /> BulkInsertLastRow プロパティ<br /><br /> BulkInsertOrder プロパティ<br /><br /> Timeout プロパティ|  
-
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 変換先|TableName プロパティ|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先|BulkInsertTableName プロパティ<br /><br /> BulkInsertFirstRow プロパティ<br /><br /> BulkInsertLastRow プロパティ<br /><br /> BulkInsertOrder プロパティ<br /><br /> Timeout プロパティ|  
 

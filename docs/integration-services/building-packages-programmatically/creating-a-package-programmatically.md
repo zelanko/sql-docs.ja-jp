@@ -1,5 +1,5 @@
 ---
-title: "プログラムによるパッケージの作成 |Microsoft ドキュメント"
+title: "プログラムを使用したパッケージ作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b16b2cc623c44884e088168e3c16ccb412dd88b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-package-programmatically"></a>プログラムを使用したパッケージ作成
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> オブジェクトは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] プロジェクトによるソリューションで、他のすべてのオブジェクトの上位に位置するコンテナーです。 パッケージは、トップレベルのコンテナーとして、最初に作成されるオブジェクトです。それ以降のオブジェクトはパッケージに追加され、パッケージのコンテキスト内で実行されます。 パッケージ自体は、データの移動または変換を行いません。 パッケージは、格納しているタスクに依存して作業を実行します。 タスクは、パッケージが実行する作業のほとんどを実行し、パッケージの機能を定義します。 パッケージを作成して実行するには、わずか 3 行のコードを必要とするだけですが、さまざまなタスクおよび <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトをパッケージに追加して、機能を追加できます。 このセクションでは、プログラムによってパッケージを作成する方法について説明します。 タスクまたは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> の作成方法についての説明は行いません。 これらについては、後のセクションで説明します。  
@@ -73,15 +70,15 @@ Module Module1
 End Module  
 ```  
   
- サンプルをコンパイルして実行するには、Visual Studio で F5 キーを押します。 C# コンパイラを使用してコードをビルドする**csc.exe**をコンパイルするコマンド プロンプトでは、次のコマンドを使用して、ファイル参照を置き換えて、 *\<ファイル名 >* .cs または .vb ファイル、およびそれにの名前を持つ、  *\<outputfilename >*選択しました。  
+ サンプルをコンパイルして実行するには、Visual Studio で F5 キーを押します。 C# コンパイラ **csc.exe** を使用してコードを作成し、コマンド プロンプトからコンパイルするには、次のコマンドおよびファイル参照を使用します。*\<filename>* は .cs または .vb ファイルの名前に置き換えて、任意の *\<outputfilename>* を付けます。  
   
- **csc/target:library/out: \<outputfilename > .dll\<ファイル名 > .cs/r:Microsoft.SqlServer.Managed DTS.dll"/r:System.dll**  
+ **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Visual Basic .NET コンパイラを使用してコードをビルドする**vbc.exe**、コンパイルするコマンド プロンプトでは、ファイル参照と、次のコマンドを使用します。  
+ Visual Basic .NET コンパイラ **vbc.exe** を使用してコードを作成し、コマンド プロンプトからコンパイルするには、次のコマンドおよびファイル参照を使用します。  
   
- **vbc/target:library/out: \<outputfilename > .dll\<ファイル名 > .vb/r:Microsoft.SqlServer.Managed DTS.dll"/r:System.dll**  
+ **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- また、ディスク上、ファイル システム、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されている既存のパッケージを読み込むことにより、パッケージを作成することもできます。 その違いは、<xref:Microsoft.SqlServer.Dts.Runtime.Application>オブジェクトが最初に作成され、アプリケーションのオーバー ロードされたメソッドのいずれかによって、パッケージ オブジェクトを入力し、: **LoadPackage**フラット ファイルの場合**LoadFromSQLServer**に保存されたパッケージの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>ファイル システムに保存されているパッケージをします。 次の例では、ディスクから既存のパッケージを読み込み、パッケージの複数のプロパティを表示します。  
+ また、ディスク上、ファイル システム、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されている既存のパッケージを読み込むことにより、パッケージを作成することもできます。 その場合、<xref:Microsoft.SqlServer.Dts.Runtime.Application> オブジェクトが最初に作成され、そのパッケージ オブジェクトが、オーバーロードされた次のアプリケーションのメソッドのいずれかによって設定される点が異なります。そのメソッドとは、フラット ファイル用の **LoadPackage**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されているパッケージ用の **LoadFromSQLServer**、またはファイル システムに保存されているパッケージ用の <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> です。 次の例では、ディスクから既存のパッケージを読み込み、パッケージの複数のプロパティを表示します。  
   
 ```csharp  
 using System;  
@@ -160,7 +157,7 @@ End Module
   
 ## <a name="external-resources"></a>外部リソース  
   
--   ブログ エントリ「 [API サンプル – OleDB ソースと OleDB 変換先](http://go.microsoft.com/fwlink/?LinkId=220824)、blogs.msdn.com です。  
+-   blogs.msdn.com のブログ「[API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824)」(API サンプル – OleDB ソースと OleDB 変換先)  
   
 -   blogs.msdn.com のブログ「[EzAPI – SQL Server 2012 用の更新](http://go.microsoft.com/fwlink/?LinkId=243223)」  
   
@@ -168,4 +165,3 @@ End Module
  [プログラムによるタスクの追加](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

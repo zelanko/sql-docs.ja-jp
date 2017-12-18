@@ -1,5 +1,5 @@
 ---
-title: "ピボット解除変換 |Microsoft ドキュメント"
+title: "ピボット解除変換 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,28 +20,27 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 559bfa5d851d3a40d1ed691ea4023acb3d6eb731
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unpivot-transformation"></a>ピボット解除変換
   ピボット解除変換は、単一のレコード内にある複数の列の値を、単一の列内で同じ値を持つ複数のレコードに展開することにより、正規化されていないデータセットを正規化されたバージョンに変換します。 たとえば、顧客名を一覧表示するデータセットに、顧客ごとに 1 つの行があり、製品と購入した数量がその行の列に表示されているとします。 ピボット解除変換がこのデータセットを正規化すると、データセットには、顧客が購入した各製品に対して異なる行が含まれるようになります。  
   
  次の図は、データが Product 列でピボット解除される前のデータセットを示しています。  
   
- ![ピボット処理解除後のデータセット](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "ピボット処理解除後のデータセット")  
+ ![ピボット解除後のデータセット](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "ピボット解除後のデータセット")  
   
  次の図は、データが Product 列でピボット解除された後のデータセットを示しています。  
   
- ![ピボット処理は前に、のデータセット](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "ピボット処理は前に、のデータセット")  
+ ![ピボット解除前のデータセット](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "ピボット解除前のデータセット")  
   
  状況によっては、ピボット解除された結果には予期しない値を持つ行が含まれる場合があります。 たとえば、図に示したサンプル データのピボット解除では、Fred のすべての Qty 列が NULL 値である場合、出力に含まれる Fred の行は 5 つではなく 1 つだけです。 Qty 列には、列データ型に応じて、NULL または 0 のいずれかが含まれます。  
   
@@ -104,4 +102,3 @@ ms.lasthandoff: 08/19/2017
  [ピボット変換](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
-

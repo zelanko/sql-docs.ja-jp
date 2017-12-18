@@ -1,5 +1,5 @@
 ---
-title: "新しいインフォ オブジェクトを作成 |Microsoft ドキュメント"
+title: "[新しいインフォオブジェクトの作成]| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  
@@ -161,11 +159,10 @@ ms.lasthandoff: 08/03/2017
  選択したインフォオブジェクトを **[属性]** の一覧から削除します。  
   
 ## <a name="see-also"></a>「  
- [トランザクション データのインフォ キューブを作成します。](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
- [インフォ ソースを作成します。](../../integration-services/data-flow/create-infosource.md)   
- [トランザクション データのインフォ ソースを作成します。](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
- [マスター データのインフォ ソースを作成します。](../../integration-services/data-flow/create-infosource-for-master-data.md)   
+ [[トランザクション データのインフォキューブの作成]](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
+ [[インフォソースの作成]](../../integration-services/data-flow/create-infosource.md)   
+ [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [マスター データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

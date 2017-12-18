@@ -2,9 +2,12 @@
 title: "I/O 要求失敗の検出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 964543e35a09e26822d556ef212d6da699fbed52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4d133f1eb5be5f11727558e77e97bd5b068b57ec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="detect-failed-input-and-output-requests"></a>I/O 要求失敗の検出
-  このルールでは、システム イベント ログの EventId 50 を確認します。 このエラーは、I/O 要求失敗によって発生します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このルールでは、システム イベント ログの EventId 50 を確認します。 このエラーは、I/O 要求失敗によって発生します。  
   
 ## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  
  このエラーのトラブルシューティング方法の詳細については、次の [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報を参照してください。  

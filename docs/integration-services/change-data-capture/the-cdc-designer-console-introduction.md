@@ -1,5 +1,5 @@
 ---
-title: "CDC デザイナー コンソールの概要 |Microsoft ドキュメント"
+title: "CDC デザイナー コンソールの概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 12afe7ad2b83c4ab25e4c0803d015442ef9cfc55
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a8e2ce4d5ae36f6b9c202eda8b7bb15d4babe3b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC デザイナー コンソールの概要
   ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。  
@@ -46,8 +44,8 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="source-oracle-database"></a>ソース Oracle データベース
   
--   Oracle Database 10 g Release 2
--   Oracle Database 11 g Release 1 とリリース 2 互換
+-   Oracle Database 10 g リリース 2
+-   Oracle Database 11g リリース 1 およびリリース 2
 -   クラシック インストールでの Oracle Database 12c (マルチテナント インストールはサポートされていません)  
 
 ### <a name="target-sql-server-database"></a>対象の SQL Server データベース
@@ -70,4 +68,3 @@ ms.lasthandoff: 08/03/2017
  CDC デザイナー コンソールをアンインストールするには、コントロール パネルの [プログラムと機能] を使用します。  
   
   
-

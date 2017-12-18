@@ -1,5 +1,5 @@
 ---
-title: "カスタム Foreach 列挙子のコーディング |Microsoft ドキュメント"
+title: "カスタム Foreach 列挙子のコーディング | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,37 +8,33 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom foreach enumerators [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74e6e838c3dcfb18e52a8fbf460a5b71ee25399a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a7b4e876198c38de3b6ead93e3b4c78a08615f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>カスタム Foreach 列挙子のコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
   
- カスタム列挙子の実際のサンプルを参照してください。[カスタム ForEach 列挙子用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)です。  
+ カスタム列挙子の実際のサンプルについては、「[カスタム ForEach 列挙子用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)」を参照してください。  
   
 ## <a name="initializing-the-enumerator"></a>列挙子の初期化  
  <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.InitializeForEachEnumerator%2A> メソッドをオーバーライドして、パッケージで定義されている接続マネージャーへの参照と、エラー、警告、および情報メッセージを発生させるために使用できるイベント インターフェイスへの参照をキャッシュすることができます。  
   
 ## <a name="validating-the-enumerator"></a>列挙子の検証  
- <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> メソッドをオーバーライドして、列挙子が正しく構成されているかどうかを検証します。 メソッドを返す場合**エラー**、列挙子および列挙子を含むパッケージは実行されません。 このメソッドの実装方法は列挙子ごとに異なりますが、列挙子が <xref:Microsoft.SqlServer.Dts.Runtime.Variable> オブジェクトまたは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトに依存する場合は、メソッドに渡されたコレクション内に、これらのオブジェクトが存在することを検証するためのコードを追加する必要があります。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> メソッドをオーバーライドして、列挙子が正しく構成されているかどうかを検証します。 メソッドの **Failure** を返す場合、列挙子および列挙子を含むパッケージは実行されません。 このメソッドの実装方法は列挙子ごとに異なりますが、列挙子が <xref:Microsoft.SqlServer.Dts.Runtime.Variable> オブジェクトまたは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトに依存する場合は、メソッドに渡されたコレクション内に、これらのオブジェクトが存在することを検証するためのコードを追加する必要があります。  
   
  次のコード例では、列挙子のプロパティで指定された変数を確認するために <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> を実装する方法を示します。  
   
@@ -122,4 +118,3 @@ End Function
  [カスタム ForEach 列挙子用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "タスクまたはコンテナーを制御フローに追加または削除 |Microsoft ドキュメント"
+title: "制御フローのタスクまたはコンテナーを追加または削除する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>制御フローのタスクまたはコンテナーを追加または削除する
   制御フロー デザイナーでの作業中、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーのツールボックスには、パッケージの制御フローの作成用に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されているタスクが一覧表示されます。 ツールボックスの詳細については、「 [SSIS ツールボックス](../../integration-services/ssis-toolbox.md)」を参照してください。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 09/26/2017
   
  次の手順では、パッケージの制御フローのタスクまたはコンテナーを追加または削除する方法について説明します。  
   
-## <a name="add-a-task-or-a-container-to-a-control-flow"></a>制御フローにタスクまたはコンテナーを追加します。  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>制御フローにタスクまたはコンテナーを追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>制御フローからタスクまたはコンテナーを削除します。  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>制御フローからタスクまたはコンテナーを削除する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -69,12 +67,12 @@ ms.lasthandoff: 09/26/2017
   
 3.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
-## <a name="set-the-properties-of-a-task-or-container"></a>タスクまたはコンテナーのプロパティを設定します。
+## <a name="set-the-properties-of-a-task-or-container"></a>タスクまたはコンテナーのプロパティを設定する
 タスクおよびコンテナーのほとんどのプロパティは、 **[プロパティ]** ウィンドウを使用して設定できます。 例外は、タスク コレクションのプロパティと、 **[プロパティ]** ウィンドウを使用して設定するには複雑すぎるプロパティです。 たとえば、Foreach ループ コンテナーが使用する列挙子を **[プロパティ]** ウィンドウで構成することはできません。 これらの複雑なプロパティを設定するには、タスク エディターまたはコンテナー エディターを使用する必要があります。 ほとんどの場合、タスク エディターとコンテナー エディターには複数のノードがあり、各ノードには関連プロパティが含まれています。 ノードの名前は、ノードに含まれるプロパティの対象を示します。  
   
  次の手順では、 **[プロパティ]** ウィンドウを使用するか、対応するタスク エディターまたはコンテナー エディターを使用してタスクまたはコンテナーのプロパティを設定する方法を説明します。  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>タスクまたはコンテナーをプロパティ ウィンドウのプロパティを設定します。  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>プロパティ ウィンドウを使用してタスクまたはコンテナーのプロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>タスクまたはコンテナー エディターでは、タスクまたはコンテナーのプロパティを設定します。  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>タスクまたはコンテナー エディターを使用してタスクまたはコンテナーのプロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/26/2017
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   
   
-

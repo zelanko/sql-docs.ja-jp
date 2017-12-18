@@ -2,9 +2,12 @@
 title: "ユーザー定義の分類子関数の作成とテスト | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1893ae84212656ac8b8eac1ca592b5cd5193e69
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4479cf08409b4b8af7b70af9e7d65e029aab3a3a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>ユーザー定義の分類子関数の作成とテスト
-  このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ステートメントを実行します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ステートメントを実行します。  
   
  次の手順で紹介する例のように、ユーザー定義の分類子関数の作成はかなり複雑になる場合があります。  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
 -   実稼働プロセスの要件を満たしていない接続を処理するために、リソース プール (pOffHoursProcessing) とワークロード グループ (gOffHoursProcessing) を作成します。  
   
--   ログイン時間に対して評価可能な開始時間と終了時間を保持するためのテーブル (TblClassificationTimeTable) を master に作成します。 リソース ガバナーが分類子関数にスキーマ バインドを使用するため、このテーブルは master に作成する必要があります。  
+-   ログイン時間に対して評価可能な開始時間と終了時間を保持するためのテーブル (TblClassificationTimeTable) を master に作成します。 Resource Governor が分類子関数にスキーマ バインドを使用するため、このテーブルは master に作成する必要があります。  
   
     > [!NOTE]  
     >  サイズが大きく、頻繁に更新されるテーブルは、master に格納しないようにしてください。  
@@ -271,12 +274,12 @@ ms.lasthandoff: 11/09/2017
         >  以上のベスト プラクティスに従うことを強くお勧めします。 ベスト プラクティスに従うことのできない事情がある場合は、問題の発生を事前に防ぐためにも、Microsoft サポートにお問い合わせいただくことをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
- [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
- [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
- [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
- [テンプレートを使用してリソース ガバナーを構成する](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
- [リソース ガバナー プロパティの表示](../../relational-databases/resource-governor/view-resource-governor-properties.md)   
+ [[Resource Governor]](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor の有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
+ [Resource Governor リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
+ [テンプレートを使用して Resource Governor を構成する](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
+ [Resource Governor プロパティの表示](../../relational-databases/resource-governor/view-resource-governor-properties.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   

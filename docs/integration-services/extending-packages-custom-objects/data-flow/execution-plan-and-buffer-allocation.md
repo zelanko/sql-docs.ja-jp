@@ -1,5 +1,5 @@
 ---
-title: "実行プランおよびバッファー割り当て |Microsoft ドキュメント"
+title: "実行プランおよびバッファーの割り当て | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,27 +23,26 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0beb223eec74e28e70614f324203a0d2d47637e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>実行プランおよびバッファーの割り当て
   実行前に、データ フロー タスクはそのコンポーネントを確認し、コンポーネントの各処理手順に応じて、実行プランを生成します。 このセクションでは、実行プラン、プランの表示方法、および実行プランに基づいて入力および出力バッファーを割り当てる方法に関する詳細について説明します。  
   
 ## <a name="understanding-the-execution-plan"></a>実行プランについて  
- 実行プランには、ソース スレッドと作業スレッドが含まれています。各スレッドには作業一覧が含まれており、ソース スレッドには出力作業一覧が、作業スレッドには入力と出力の作業一覧が指定されています。 実行プラン内のソース スレッドは、データ フローの変換元コンポーネントを表すし、によって実行プランで識別される*SourceThread**n*ここで、  *n* ソース スレッドの 0 から始まる番号です。  
+ 実行プランには、ソース スレッドと作業スレッドが含まれています。各スレッドには作業一覧が含まれており、ソース スレッドには出力作業一覧が、作業スレッドには入力と出力の作業一覧が指定されています。 実行プラン内のソース スレッドは、データ フロー内の変換元コンポーネントを表し、実行プラン内では *SourceThread**n* によって識別されます。ここで *n* は、0 から始まるソース スレッドの番号を示します。  
   
  各ソース スレッドはバッファーを作成してリスナーを設定し、変換元コンポーネントで <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドを呼び出します。 ここで、実行が開始されてデータが生成され、データ フロー タスクによって用意された出力バッファーに、変換元コンポーネントが行を追加し始めます。 ソース スレッドが実行されると、作業スレッド間で作業の負荷が分散されます。  
   
- 作業スレッドに両方の入力と出力作業一覧を含めることはありとして実行プランで識別される*WorkThread**n*ここで、  *n* 作業スレッドの 0 から始まる番号です。 非同期出力型のコンポーネントがグラフに含まれている場合、このスレッドには出力作業一覧が含まれます。  
+ 作業スレッドは、入力および出力の両方の作業一覧を含む場合があり、実行プラン内では *WorkThread**n* によって識別されます。ここで *n* は、0 から始まる作業スレッドの番号を示します。 非同期出力型のコンポーネントがグラフに含まれている場合、このスレッドには出力作業一覧が含まれます。  
   
  次のサンプル実行プランは、変換元コンポーネントが非同期出力型の変換に連結され、その変換が変換先コンポーネントに連結されているデータ フローを示しています。 この例では、変換コンポーネントに非同期出力が含まれているので、WorkThread0 には出力作業一覧が含まれます。  
   
@@ -83,7 +80,7 @@ End WorkThread1
 ```  
   
 > [!NOTE]  
->  パッケージが実行され、ログ プロバイダーを選択し、ログ記録を有効にすると、パッケージに追加することによってキャプチャできるたびに実行プランの生成、 **PipelineExecutionPlan**イベント。  
+>  実行プランはパッケージが実行されるたびに生成され、ログ プロバイダーをパッケージに追加し、ログ記録を有効にして **PipelineExecutionPlan** イベントを選択することにより、実行プランをキャプチャできます。  
   
 ## <a name="understanding-buffer-allocation"></a>バッファーの割り当てについて  
  実行プランに基づき、データ フロー タスクは、データ フロー コンポーネントの出力で定義された列を格納するバッファーを作成します。 このバッファーは、非同期出力型のコンポーネントを検出するまで、コンポーネントの処理手順を通じてデータ フロー内で再使用されます。 次に、新しいバッファーが作成され、非同期出力の出力列と下流コンポーネントの出力列が格納されます。  
@@ -92,6 +89,5 @@ End WorkThread1
   
  非同期出力型の変換コンポーネントは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドから既存の入力バッファーを受け取り、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドから新しい出力バッファーを受け取ります。 非同期出力型の変換コンポーネントは、入力バッファーおよび出力バッファーの両方を受け取る、唯一のデータ フロー コンポーネントです。  
   
- コンポーネントに指定されたバッファーが含まれる可能性があるため、コンポーネントより多くの列が入力または出力列コレクションには、コンポーネントの開発者が呼び出すことができます、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A>メソッドを指定して、バッファー内で列を検索するその**LineageID**です。  
+ コンポーネントに提供されるバッファーには、コンポーネントの入力列コレクションまたは出力列コレクションにない列が含まれる場合があるため、コンポーネントの開発者は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> メソッドを呼び出し、列の **LineageID** を指定することによってバッファー内の列を探すことができます。  
   
-

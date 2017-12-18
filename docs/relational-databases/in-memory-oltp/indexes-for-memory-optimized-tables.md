@@ -1,32 +1,30 @@
 ---
 title: "メモリ最適化テーブルのインデックス | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.component: in-memory-oltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1679cf30077600cbff38aea1869bc7c8c9edc53e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 この記事では、メモリ最適化テーブルで利用可能なインデックスの種類について説明します。 記事の内容は次のとおりです。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="a-syntax-for-memory-optimized-indexes"></a>A. メモリ最適化インデックスの構文  
   
-メモリ最適化テーブルの各 CREATE TABLE ステートメントには、インデックスを宣言する 1 つから 8 つの句を含める必要があります。 インデックスは、次のいずれかにする必要があります。  
+メモリ最適化テーブル用の各 CREATE TABLE ステートメントには、INDEX によって明示的に、または PRIMAY KEY もしくは UNIQUE 制約によって暗黙的にインデックスを含める必要があります。 インデックスは、次のいずれかにする必要があります。  
   
 - ハッシュ インデックス。  
 - 非クラスター化インデックス (B ツリーの既定の内部構造を意味します)。  
@@ -66,7 +64,9 @@ ms.lasthandoff: 07/31/2017
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
-  
+> [!NOTE]  
+>  [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、メモリ最適化テーブルまたはテーブル型あたりインデックスは 8 個までという制限があります。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、メモリ最適化テーブルおよびテーブル型に固有のインデックス数に制限がなくなりました。
+
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 構文のコード例  
@@ -232,4 +232,3 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
   
   
 この表では、可はインデックスが要求に十分に対応できることを意味し、不可はインデックスが要求に十分に対応できないことを意味します。  
-

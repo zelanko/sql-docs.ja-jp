@@ -1,5 +1,5 @@
 ---
-title: "Hadoop 接続マネージャー |Microsoft ドキュメント"
+title: "Hadoop 接続マネージャー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hadoopconn.f1
+f1_keywords: sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c4bf82dad09b90f672e52947267ddf92fbdb984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 接続マネージャー
   Hadoop 接続マネージャーは、SSIS パッケージがプロパティに指定された値を使用して Hadoop クラスターに接続することを可能にします。  
@@ -44,9 +41,9 @@ ms.lasthandoff: 08/03/2017
   
     3.  WebHCat サービスにアクセスするときに使用する **認証** 方法を選択します。 使用できる値は、 **[基本]** と **[Kerberos]**です。  
   
-         ![基本認証での Hadoop 接続マネージャー エディター](../../integration-services/connection-manager/media/hadoop-cm-basic.png "基本認証での Hadoop 接続マネージャー エディター")  
+         ![基本認証が指定された Hadoop 接続マネージャー エディター](../../integration-services/connection-manager/media/hadoop-cm-basic.png "基本認証が指定された Hadoop 接続マネージャー エディター")  
   
-         ![Kerberos 認証での Hadoop 接続マネージャー エディター](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Kerberos 認証での Hadoop 接続マネージャー エディター")  
+         ![Kerberos 認証が指定された Hadoop 接続マネージャー エディター](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Kerberos 認証が指定された Hadoop 接続マネージャー エディター")  
   
     4.  **[WebHCat User]**(WebHCat ユーザー) に、WebHCat へのアクセスが許可されている **ユーザー** を入力します。  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 08/03/2017
  [Hadoop ファイル システム タスク](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   
-

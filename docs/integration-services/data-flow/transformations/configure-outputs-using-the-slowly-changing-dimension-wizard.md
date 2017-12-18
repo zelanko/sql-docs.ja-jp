@@ -1,5 +1,5 @@
 ---
-title: "出力を緩やかに変化するディメンション ウィザードを使用して構成する |Microsoft ドキュメント"
+title: "緩やかに変化するディメンション ウィザードを使用して出力を構成する | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 478b3340eda942efc1cbef8a19a2cb811daf0685
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
   緩やかに変化するディメンション ウィザードは、緩やかに変化するディメンションの変換用のエディターとして機能します。 緩やかに変化するディメンションのデータのデータ フローを構築および構成する作業は、複雑なタスクになる場合があります。 緩やかに変化するディメンション ウィザードを使用すると、列のマッピング、ビジネス キーの列の選択、列の変化する属性の設定、および推定ディメンション メンバー サポートの構成などの手順の指針が示され、これにより、最も簡単な方法で、緩やかに変化するディメンションの変換出力のデータ フローを構築できます。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
      次の図は、固定属性、変化する属性、および履歴属性の変化、推定メンバー、および一致するレコードへの変更をサポートする、データ フローの例を示しています。  
   
-     ![緩やかに変化するディメンション ウィザードではからのデータ フロー](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "緩やかに変化するディメンション ウィザードではからのデータ フロー")  
+     ![緩やかに変化するディメンション ウィザードからのデータ フロー](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "緩やかに変化するディメンション ウィザードからのデータ フロー")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>緩やかに変化するディメンションの出力の更新  
  緩やかに変化するディメンションの変換出力の構成を最も簡単に更新するには、緩やかに変化するディメンション ウィザードを再実行し、ウィザード ページからプロパティを変更します。 また、 **[詳細エディター]** ダイアログ ボックスまたはプログラムによっても、緩やかに変化するディメンションの変換を更新できます。  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/03/2017
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
-

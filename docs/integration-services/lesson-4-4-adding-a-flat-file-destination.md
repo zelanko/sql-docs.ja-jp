@@ -1,5 +1,5 @@
 ---
-title: "手順 4: フラット ファイル変換先の追加 |Microsoft ドキュメント"
+title: "手順 4 : フラット ファイル変換先の追加 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ff4badae70e5762f51003c0d3edae3ad1fb3907b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>レッスン 4-4-フラット ファイル変換先の追加
+# <a name="lesson-4-4---adding-a-flat-file-destination"></a>レッスン 4-4 - フラット ファイル変換先の追加
 Lookup Currency Key 変換のエラー出力では、参照操作に失敗したデータ行がスクリプト変換にリダイレクトされます。 スクリプト変換ではスクリプトが実行され、発生したエラーに関するさらに詳しい情報を記述したエラーの説明が取得されます。  
   
 ここでは、後の処理に向けて、失敗した行に関するすべての情報を区切りファイルに保存します。 失敗した行を保存するには、フラット ファイル接続マネージャーで、フラット ファイル変換先を追加し、エラー データを保存するテキスト ファイルを構成する必要があります。 フラット ファイル変換先が使用するフラット ファイル接続マネージャーでプロパティを設定することにより、フラット ファイル変換先がテキスト ファイルをフォーマットする方法と書き込む方法を指定できます。 詳細については、「 [フラット ファイル接続マネージャー](../integration-services/connection-manager/flat-file-connection-manager.md) 」および「 [フラット ファイル変換先](../integration-services/data-flow/flat-file-destination.md)」を参照してください。  
@@ -73,4 +70,3 @@ Lookup Currency Key 変換のエラー出力では、参照操作に失敗した
   
   
   
-

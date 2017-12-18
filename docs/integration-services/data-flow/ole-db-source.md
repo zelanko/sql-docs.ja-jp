@@ -1,5 +1,5 @@
 ---
-title: "OLE DB ソース |Microsoft ドキュメント"
+title: "OLE DB ソース | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
@@ -121,7 +119,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="related-content"></a>関連コンテンツ  
  social.technet.microsoft.com の Wiki の記事「 [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS から Oracle への接続)」  
   
-## <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター]\ ([接続マネージャー] ページ)
+## <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター] ([接続マネージャー] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、ソースの OLE DB 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
 > [!NOTE]  
@@ -132,7 +130,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  OLE DB ソースの **CommandTimeout** プロパティは、**[OLE DB ソース エディター]** ではアクセスできませんが、**[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>OLE DB ソース エディター ([接続マネージャー] ページ) を開く  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>OLE DB ソース エディターを開く ([接続マネージャー] ページ)  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、OLE DB ソースを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに追加します。  
   
@@ -161,12 +159,12 @@ ms.lasthandoff: 08/17/2017
  **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 **プレビュー** では、最大で 200 行を表示できます。  
   
 > [!NOTE]  
->  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 代わりに、値\<値が大きすぎるため表示 > または System.byte[] として表示します。 前者は、SQL OLE DB プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
+>  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 その代わりに、\<値が大きすぎて表示できません> または System.Byte[] が値として表示されます。 前者は、SQL OLE DB プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
   
 ### <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
   
 #### <a name="data-access-mode--table-or-view"></a>[データ アクセス モード] = [テーブルまたはビュー]  
- **テーブルまたはビューの名前**  
+ **[テーブル名またはビュー名]**  
  データ ソースで使用できるテーブルまたはビューの一覧から、テーブルまたはビューの名前を選択します。  
   
 #### <a name="data-access-mode--table-name-or-view-name-variable"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数]  
@@ -174,7 +172,7 @@ ms.lasthandoff: 08/17/2017
  テーブル名またはビュー名を含む変数を選択します。  
   
 #### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
- **SQL コマンド テキスト**  
+ **[SQL コマンド テキスト]**  
  SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成するか、 **[参照]**をクリックしてクエリ テキストを含むファイルを指定します。  
   
  **パラメーター**  
@@ -193,30 +191,30 @@ ms.lasthandoff: 08/17/2017
  **[変数名]**  
  SQL クエリのテキストを含む変数を選択します。  
   
-## <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター]\ ([列] ページ)
+## <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター] ([列] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
 ### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
- **外部列**  
+ **[外部列]**  
  ここで表示される外部 (変換元) 列の順序は、この変換元のデータを使用するコンポーネントを構成するときの列の表示順に反映されます。 この順序を変更するには、テーブルで選択した列を消去してから、別の順序で一覧から外部列を選択します。  
   
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、SSIS デザイナーに表示されます。  
   
-## <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター]\ ([エラー出力] ページ)
+## <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター] ([エラー出力] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
 ### <a name="options"></a>オプション  
- **入力/出力**  
+ **[入力または出力]**  
  データ ソースの名前を表示します。  
   
  **列**  
  **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択されている外部 (ソース) 列を表示します。  
   
- **エラー**  
+ **[エラー]**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
  **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
@@ -227,16 +225,15 @@ ms.lasthandoff: 08/17/2017
  **Description**  
  エラーの説明を表示します。  
   
- **この値を選択したセルに設定します。**  
+ **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **適用**  
+ **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
  [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services & #40 です。SSIS &#41;変数](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   
-

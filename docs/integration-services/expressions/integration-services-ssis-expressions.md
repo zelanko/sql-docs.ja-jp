@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 式 |Microsoft ドキュメント"
+title: "Integration Services (SSIS) の式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
   式は、単一のデータ値が得られる、識別子、リテラル、関数、演算子などの記号の組み合わせです。 単純式には、1 つの定数、変数、または関数を指定できます。 より頻繁に使用されるのは複雑な式で、複数の演算子や関数を使用し、複数の列や変数を参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、CASE ステートメントの条件の定義、データ列値の生成および更新、変数への値の代入、実行時のプロパティの更新および作成、優先順位制約の制約の定義、および For ループ コンテナーでの利用に式を使用できます。  
@@ -51,9 +49,9 @@ ms.lasthandoff: 08/03/2017
   
 -   変数に値を設定するために式を使用します。 たとえば、GETDATE() を使用すると、変数の値として現在の日付が設定されます。  
   
--   優先順位制約では、式を使用して、パッケージ内の制約付きタスクまたはコンテナーを実行するかどうか判断する条件を指定します。 優先順位制約で使用する式は、 **true** または **false**に評価される必要があります。 たとえば、式@A>@B制約付きタスクを実行するかどうかを決定する 2 つのユーザー定義変数を比較します。  
+-   優先順位制約では、式を使用して、パッケージ内の制約付きタスクまたはコンテナーを実行するかどうか判断する条件を指定します。 優先順位制約で使用する式は、 **true** または **false**に評価される必要があります。 たとえば、@A > @B という式は 2 つのユーザー定義変数を比較して、制約付きタスクを実行するかどうかを判断します。  
   
--   For ループ コンテナーでは、式を使用して、ループ構造で使用する初期化ステートメント、評価ステートメント、および増分ステートメントを作成します。 たとえば、式@Counter1 の初期化にループ カウンターを = です。  
+-   For ループ コンテナーでは、式を使用して、ループ構造で使用する初期化ステートメント、評価ステートメント、および増分ステートメントを作成します。 たとえば、@Counter = 1 という式はループ カウンターを初期化します。  
   
  式は、パッケージ、For ループや Foreach ループなどのコンテナー、タスク、パッケージおよびプロジェクト レベルの接続マネージャー、ログ プロバイダー、Foreach 列挙子のプロパティ値の更新にも使用できます。 たとえば、プロパティの式を使用して、"Localhost.AdventureWorks" という文字列を SQL 実行タスクの ConnectionName プロパティに割り当てることができます。 詳細については、「 [パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "カスタム接続マネージャーの開発 |Microsoft ドキュメント"
+title: "カスタム接続マネージャーの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - packages [Integration Services], connections
 - custom connection managers [Integration Services], about custom connection managers
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1297f0123a896003e2dbca5f01a05fffbf18b23d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b34531a1c303d28584faea0918ae89994f3df8c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-connection-manager"></a>カスタム接続マネージャーの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、接続マネージャーを使用して、外部データ ソースに接続するために必要な情報をカプセル化します。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、エンタープライズ データベースからテキスト ファイルや Excel ワークシートまで、よく使用されるデータ ソースへの接続をサポートする、さまざまな接続マネージャーが用意されています。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] でサポートされている接続マネージャーと外部データ ソースが、要件を必ずしも満たさない場合は、カスタム接続マネージャーを作成できます。  
@@ -46,13 +43,13 @@ ms.lasthandoff: 08/03/2017
 ## <a name="in-this-section"></a>このセクションの内容  
  ここでは、カスタム接続マネージャーとそのオプションのカスタム ユーザー インターフェイスを作成、構成、およびコーディングする方法について説明します。 このセクション内のコード スニペットは、Sql Server Custom Connection Manager のサンプルに含まれています。  
   
- [カスタム接続マネージャーを作成します。](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
+ [カスタム接続マネージャーの作成](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
  カスタム接続マネージャー プロジェクト用のクラスの作成方法について説明します。  
   
  [カスタム接続マネージャーのコーディング](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
  基本クラスのメソッドとプロパティのオーバーライドによる、カスタム接続マネージャーの実装方法について説明します。  
   
- [カスタム接続マネージャーのユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [カスタム接続マネージャー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
  ユーザー インターフェイス クラスと、カスタム接続マネージャーの構成に使用するフォームの実装方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。  
   
  [Integration Services 用のカスタム オブジェクトの開発](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
- カスタム オブジェクトのすべての型を実装する基本的な手順について説明します[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]です。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のすべての型のカスタム オブジェクトを実装する基本手順について説明します。  
   
  [カスタム オブジェクトの永続化](../../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
  カスタムの永続性と、それが必要な場合について説明します。  
@@ -70,7 +67,7 @@ ms.lasthandoff: 08/03/2017
  カスタム オブジェクトをビルド、署名、配置、およびデバッグする方法について説明します。  
   
 ### <a name="information-about-other-custom-objects"></a>その他のカスタム オブジェクトに関する情報  
- 作成できるカスタム オブジェクトの他の種類について[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]、次のトピックを参照してください。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なその他の種類のカスタム オブジェクトについては、次のトピックを参照してください。  
   
  [カスタム タスクの開発](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  カスタム タスクのプログラム方法について説明します。  
@@ -84,4 +81,3 @@ ms.lasthandoff: 08/03/2017
  [カスタム データ フロー コンポーネントの開発](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  カスタム データ フローの変換元、変換、変換先のプログラム方法について説明します。  
   
-

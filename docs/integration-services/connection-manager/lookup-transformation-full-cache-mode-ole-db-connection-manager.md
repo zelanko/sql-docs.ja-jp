@@ -1,5 +1,5 @@
 ---
-title: "参照変換のフル キャッシュ モードの OLE DB 接続マネージャーの |Microsoft ドキュメント"
+title: "フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e038db8132d3c57a16af2a68ba9e6b57e890a444
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25e4840c5fa2b9ae98c172549467811150ec0217
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>参照変換のフル キャッシュ モードの OLE DB 接続マネージャー
+# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー
   フル キャッシュ モードおよび OLE DB 接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
   
  参照変換は、接続されているデータ ソースの入力列のデータを参照データセットの列と結合することにより参照を実行します。 詳細については、「 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  
@@ -90,9 +87,8 @@ ms.lasthandoff: 08/03/2017
 13. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   
 ## <a name="see-also"></a>参照  
- [キャッシュ接続マネージャーを使用してフル キャッシュ モードで参照変換を実装します。](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [キャッシュなしモードまたは部分キャッシュ モードでの参照を実装します。](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [キャッシュなしモードまたは部分キャッシュ モードの参照を実装する](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

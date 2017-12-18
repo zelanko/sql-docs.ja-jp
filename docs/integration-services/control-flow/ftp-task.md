@@ -1,5 +1,5 @@
 ---
-title: "FTP タスク |Microsoft ドキュメント"
+title: "FTP タスク | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
 - sql13.dts.designer.ftptask.general.f1
 - sql13.dts.designer.ftptask.filetransfer.f1
-helpviewer_keywords:
-- FTP task [Integration Services]
+helpviewer_keywords: FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: fe5fd069ec931c3eee57b2ef46da35437dd81875
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ftp-task"></a>FTP タスク
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -84,12 +81,12 @@ ms.lasthandoff: 08/11/2017
   
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   
-## <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター]\ ([全般] ページ)
+## <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
   
 ### <a name="options"></a>オプション  
  **[FtpConnection]**  
- 既存の FTP 接続マネージャーを選択するかクリックして\<**新しい接続をしています.**>、接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
@@ -108,7 +105,7 @@ ms.lasthandoff: 08/11/2017
  **Description**  
  FTP タスクの説明を入力します。  
   
-## <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター]\ ([ファイル転送] ページ)
+## <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター] ([ファイル転送] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[ファイル転送]** ページを使用すると、タスクで実行される FTP 操作を構成できます。  
   
 ### <a name="options"></a>オプション  
@@ -152,33 +149,32 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isremotepathvariable--true"></a>[IsRemotePathVariable] = [True]  
  **[RemoteVariable]**  
- 既存のユーザー定義変数を選択するかクリックして\<**新しい変数しています.**> ユーザー定義変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックしてユーザー定義変数を作成します。  
   
  **関連トピック:** [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)、変数の追加  
   
 #### <a name="isremotepathvariable--false"></a>[IsRemotePathVariable] = [False]  
  **[RemotePath]**  
- 既存の FTP 接続マネージャーを選択するかクリックして\<**新しい接続をしています.**>、接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
   
- **関連トピック**: [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>[IsLocalPathVariable] の動的オプション  
   
 #### <a name="islocalpathvariable--true"></a>[IsLocalPathVariable] = [True]  
  **[LocalVariable]**  
- 既存のユーザー定義変数を選択するかクリックして\<**新しい変数しています.**> 変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックして変数を作成します。  
   
  **関連トピック:** [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)、変数の追加  
   
 #### <a name="islocalpathvariable--false"></a>[IsLocalPathVariable] = [False]  
  **[LocalPath]**  
- 既存のファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**>、接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして、接続マネージャーを作成します。  
   
- **関連トピック**:[フラット ファイル接続マネージャー](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **関連トピック**: [[フラット ファイル接続マネージャー エディター]](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   
   
-

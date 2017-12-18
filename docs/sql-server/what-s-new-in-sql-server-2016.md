@@ -1,10 +1,13 @@
 ---
 title: "SQL Server 2016 の新機能"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
- SQL Server 2016 では、メモリ内パフォーマンスや高度なセキュリティからデータベース内分析まで、すべてが組み込まれたスケーラブルなハイブリッド データベース プラットフォームを使って、インテリジェントでミッションクリティカルなアプリケーションをビルドできます。 SQL Server 2016 のリリースでは、さまざまな改善機能や拡張機能と共に、新しいセキュリティ機能、クエリ機能、Hadoop とクラウド統合、R 分析などが追加されています。 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] SQL Server 2016 では、メモリ内パフォーマンスや高度なセキュリティからデータベース内分析まで、すべてが組み込まれたスケーラブルなハイブリッド データベース プラットフォームを使って、インテリジェントでミッションクリティカルなアプリケーションをビルドできます。 SQL Server 2016 のリリースでは、さまざまな改善機能や拡張機能と共に、新しいセキュリティ機能、クエリ機能、Hadoop とクラウド統合、R 分析などが追加されています。 
 
 このページでは、概要情報と、SQL Server 2016 の各 SQL Server コンポーネントの新機能に関する詳細情報へのリンクを提供します。 
 

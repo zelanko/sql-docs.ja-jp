@@ -2,9 +2,12 @@
 title: "Log File Auto Shrink イベント クラス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32ea569906a61d179c4634f11dff301b5d2c0783
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ff072f287fd371fb0239c2adbe80c90965fee4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink イベント クラス
-  **Log File Auto Shrink** イベント クラスは、ログ ファイルが自動的に圧縮されたことを示します。 明示的な ALTER DATABASE ステートメントによってログ ファイルが圧縮される場合は、このイベントが発生しません。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Log File Auto Shrink** イベント クラスは、ログ ファイルが自動的に圧縮されたことを示します。 明示的な ALTER DATABASE ステートメントによってログ ファイルが圧縮される場合は、このイベントが発生しません。  
   
  ログ ファイルの圧縮を監視するトレースに **Log File Auto Shrink** イベント クラスを含めます。 このイベント クラスをトレースに含めた場合、ファイルが頻繁に圧縮されない限り、発生するオーバーヘッドの量は少なくなります。  
   

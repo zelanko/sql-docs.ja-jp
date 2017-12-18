@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 用の azure Feature Pack |Microsoft ドキュメント"
+title: "Integration Services (SSIS) 用の Azure Feature Pack | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
@@ -8,35 +8,33 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: d4204ba56e515025bed3ae3bf8e7a77d6da471be
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 7bd2425af92d89982ea7ccfc8b2a3220a15b24e7
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
-Azure の SQL Server Integration Services (SSIS) Feature Pack は、for SSIS の Azure サービス、Azure とオンプレミス データ ソース、および Azure に格納されているデータの処理の間で転送データに接続するには、このページで、コンポーネントの一覧を提供する拡張です。
+SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
 
-[![SSIS Feature Pack for Azure のダウンロード](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798)**ダウンロード**
+[![SSIS Feature Pack for Azure のダウンロード](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **ダウンロード**
 
-- SQL server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
-- SQL server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
-- SQL server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
-- SQL server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
+- SQL Server 2017 の場合 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
+- SQL Server 2016 の場合 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
+- SQL Server 2014 の場合 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
+- SQL Server 2012 の場合 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47367)
 
 ## <a name="components-in-the-feature-pack"></a>Feature Pack のコンポーネント
 -   接続マネージャー
@@ -47,7 +45,7 @@ Azure の SQL Server Integration Services (SSIS) Feature Pack は、for SSIS の
     
     -   [Azure Data Lake Store 接続マネージャー](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
     
-    -   [Azure リソース マネージャーの接続マネージャー](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    -   [Azure Resource Manager の接続マネージャー](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
     
     -   [Azure HDInsight 接続マネージャー](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
 
@@ -79,13 +77,13 @@ Azure の SQL Server Integration Services (SSIS) Feature Pack は、for SSIS の
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob & ADLS File 列挙子。 参照してください[Foreach ループ コンテナー](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Azure BLOB および ADLS ファイル列挙子。 「[Foreach ループ コンテナー](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)」を参照してください。
 
 ## <a name="download-the-feature-pack"></a>Feature Pack のダウンロード
- Azure の SQL Server Integration Services (SSIS) Feature Pack をダウンロードします。
+ SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロードします。
  
-- [SSIS 用 Feature Pack Azure](http://go.microsoft.com/fwlink/?LinkID=626967) for SQL Server 2016
-- [SSIS 用 Feature Pack Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798)の[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+- SQL Server 2016 の [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967)
+- [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] の [SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 
 ## <a name="prerequisites"></a>前提条件
  この機能パックをインストールする前に、次の前提条件をインストールする必要があります。
@@ -119,4 +117,3 @@ Azure の SQL Server Integration Services (SSIS) Feature Pack は、for SSIS の
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
-

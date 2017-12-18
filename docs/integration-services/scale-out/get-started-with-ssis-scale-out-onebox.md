@@ -1,65 +1,66 @@
 ---
-title: "1 台のコンピューターに SSIS スケールの概要 |Microsoft ドキュメント"
+title: "1 台のコンピューターでの SSIS Scale Out の概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7175c63be4c0e15e50f2020f75d283ac0e3dfdbf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8514cd548b003a39bf198b83b6b80d775a55384b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Integration Services (SSIS) スケール アウト 1 台のコンピューターの概要します。
-このセクションでは、既定の設定を含む 1 ボックス環境での Integration Services スケール アウトの設定のガイダンスを提供します。
+# <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要
+このセクションでは、コンピューターが 1 台の環境で Integration Services Scale Out を設定する方法を紹介します。既定の設定を利用します。
 
-## <a name="1-install-sql-server-features"></a>1.SQL Server 機能をインストールします。
-SQL Server インストール ウィザードでデータベース エンジン サービス、Integration Services、スケール アウト マスターおよびスケール アウト ワーカーを選択、**機能の選択**ページ。
+## <a name="1-install-sql-server-features"></a>1.SQL Server 機能のインストール
+SQL Server のインストール ウィザードの **[機能の選択]** ページで、[データベース エンジン サービス]、[Integration Services]、[スケール アウト マスター]、[スケール アウト ワーカー] を選択します。
 
-![機能選択 Onebox 1](media/feature-select-onebox1.PNG)
+![機能の選択 Onebox 1](media/feature-select-onebox1.PNG)
 
-![機能選択 Onebox 2](media/feature-select-onebox2.PNG)
+![機能の選択 Onebox 2](media/feature-select-onebox2.PNG)
 
-**サーバー構成** ページで、既定のサービス アカウントとスタートアップの種類を使用するには 次へ をクリックするだけです。
+**[サーバー構成]** ページで、[次へ] をクリックし、既定のサービス アカウントとスタートアップの種類を使用します。
 
-**データベース エンジンの構成**] ページで、["**混在モード**「を」**現在のユーザーの追加**"ボタンをクリックします。 
+**[データベース エンジンの構成]** ページで、**[混合モード]** を選択し、**[現在のユーザーの追加]** ボタンをクリックします。 
 
 ![エンジンの構成](media/engine-config.PNG)
 
-1 つ、 **Integration Services スケール アウトの構成のマスター ノード**と**Integration Services スケール アウトの構成 - ワーカー ノード**ページを単にポートと証明書の既定の設定を適用するには [次へ] をクリックします。
+**[Integration Services Scale Out の構成 - マスター ノード]** ページと **[Integration Services Scale Out の構成 - ワーカーノード]** ページで、[次へ] をクリックし、ポートと証明書に既定の設定を適用します。
 
-SQL Server インストール ウィザードを完了します。
+SQL Server のインストール ウィザードを完了します。
 
-## <a name="2-install-sql-server-management-studio"></a>2.SQL Server Management Studio をインストールします。
+## <a name="2-install-sql-server-management-studio"></a>2.SQL Server Management Studio のインストール
 
-[ダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)SQL Server Management Studio し、インストールします。
+SQL Server Management Studio を[ダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)し、それをインストールします。
 
-## <a name="3-enable-scale-out"></a>3.スケール アウトを有効にします。
-SSMS を開き、ローカルの Sql Server インスタンスに接続します。
-右クリック**Integration Services カタログ**クリックし、オブジェクト エクスプ ローラーで**カタログの作成**です。
+## <a name="3-enable-scale-out"></a>3.スケール アウトの有効化
+SSMS を開き、ローカル Sql Server インスタンスに接続します。
+オブジェクト エクスプローラーで **[Integration Services カタログ]** を右クリックし、**[カタログの作成]** を選択します。
 
-**カタログの作成**ダイアログ ボックスで、 **SSIS のスケール アウト マスターとしてこのサーバーを有効にする**が既定で選択します。 通常どおり、カタログを作成します。 
+**[カタログの作成]** ダイアログで、**[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** が既定で選択されています。 通常どおりカタログを作成します。 
 
-## <a name="4-enable-scale-out-worker"></a>4.スケール アウト ワーカーを有効にします。
-SSMS を右クリックして**SSISDB**選択**スケール アウトを管理しています.**. 
-![スケール アウトの管理します。](media/manage-scale-out.PNG)
+## <a name="4-enable-scale-out-worker"></a>4.スケール アウト ワーカーの有効化
+SSMS で **[SSISDB]** を右クリックし、**[スケール アウトの管理...]** を選択します。![[スケール アウトの管理]](media/manage-scale-out.PNG)
 
-統合サービス スケール アウト マネージャーが表示されます。 スケール アウトして管理できます。 詳細については、次を参照してください。 [Integration Services スケールのアウト マネージャー](integration-services-ssis-scale-out-manager.md)です。
+Integration Services Scale Out Manager マネージャーが表示されます。 このマネージャーでスケール アウトを管理できます。 詳細については、「[Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md)」 (Integration Services スケール アウト マネージャー) を参照してください。
 
-スケール アウト ワーカーを有効にするに切り替えて**ワーカー マネージャー**を有効にワーカーを選択します。 最初は、ワーカーが無効です。 をクリックして**ワーカーを有効にする**有効にします。
+スケール アウト ワーカーを有効にするには、**[ワーカー マネージャー]** に切り替え、有効にするワーカーを選択します。 ワーカーは既定では無効になっています。 **[ワーカーの有効化]** をクリックして有効にします。
 
 ## <a name="5-run-packages-in-scale-out"></a>5.Scale Out でのパッケージの実行
-ここで、スケール アウトで SSIS パッケージを実行する準備ができたらです。 参照してください[Integration services (SSIS) パッケージの実行をスケール アウト](run-packages-in-integration-services-ssis-scale-out.md)です。
+これで、スケール アウトで SSIS パッケージを実行できます。「[Run Packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md)」 (Integration Services (SSIS) スケール アウトでパッケージを実行する) を参照してください。
 
 
-多くのスケール アウト ワーカーを追加するを参照してください。[スケール アウト マネージャーとワーカー スケール アウトの追加](add-scale-out-worker.md)です。
+スケール アウト ワーカーを追加するには、「[Add a Scale Out Worker with Scale Out Manager](add-scale-out-worker.md)」 (スケール アウト マネージャーでスケール アウト ワーカーを追加する) を参照してください。

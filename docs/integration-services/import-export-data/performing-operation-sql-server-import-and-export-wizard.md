@@ -1,5 +1,5 @@
 ---
-title: "操作 (SQL Server インポートおよびエクスポート ウィザード) |Microsoft ドキュメント"
+title: "[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -8,37 +8,34 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.performingoperation.f1
+f1_keywords: sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75dc26699071ee88bb0c05368b4bf36ba677c35b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6d31607e0a2880d0a984efe20e4b11c9195cb789
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています]\(SQL Server インポートおよびエクスポート ウィザード)
+# <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
 ウィザードで行った選択を見直して **[ウィザードを完了する]** ページで **[完了]** をクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[操作を実行しています]**と表示されます。 このページでは、前のページで構成した操作の進行状況と結果を確認できます。 このページで必要な操作はありません。
 
 ## <a name="screen-shot---operation-in-progress"></a>スクリーン ショット - 実行中の操作 
  次のスクリーンショットは、操作がまだ進行中の間に表示されるウィザードの **[操作を実行しています]** ページを示します。  
   
- ![インポートおよびエクスポート ウィザードの実行操作ページ](../../integration-services/import-export-data/media/performing-operation1.png "インポートおよびエクスポート ウィザードの実行操作ページ")  
+ ![インポートおよびエクスポート ウィザードの[操作を実行しています] ページ](../../integration-services/import-export-data/media/performing-operation1.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
 
 ## <a name="screen-shot---operation-completed"></a>スクリーン ショット - 操作の完了 
  次のスクリーンショットは、操作が完了した後に表示されるウィザードの **[操作を実行しています]** ページを示します。 **[メッセージ]** 列のアイテムをクリックすると、対応する手順の詳細が表示されます。  
   
- ![インポートおよびエクスポート ウィザードの実行操作ページ](../../integration-services/import-export-data/media/performing-operation2.png "インポートおよびエクスポート ウィザードの実行操作ページ")  
+ ![インポートおよびエクスポート ウィザードの[操作を実行しています] ページ](../../integration-services/import-export-data/media/performing-operation2.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>操作の進行状況を確認する
  **操作**  
@@ -64,6 +61,5 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>参照
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

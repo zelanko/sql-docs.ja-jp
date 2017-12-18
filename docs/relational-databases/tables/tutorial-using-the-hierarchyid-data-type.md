@@ -2,9 +2,12 @@
 title: "チュートリアル: hierarchyid データ型の使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e862f7dc909b260f3d90edb2a0659cbb7cc3bb55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ed9d79b4dacf83513a41b4d33cd13ed7852be184
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル : hierarchyid データ型の使用
-このチュートリアルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]については理解しているが、 **hierarchyid** データ型は初めて使用するユーザーを対象としています。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] このチュートリアルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] については理解しているが、**hierarchyid** データ型は初めて使用するユーザーを対象としています。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルは、次の 2 つのレッスンで構成されています。  

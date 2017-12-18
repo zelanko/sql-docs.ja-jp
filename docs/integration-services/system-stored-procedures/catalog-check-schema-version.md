@@ -1,5 +1,5 @@
 ---
-title: "catalog.check_schema_version |Microsoft ドキュメント"
+title: catalog.check_schema_version | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac266609952f0e2995dde7a8f7882bbeb50a822c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  SSISDB カタログ スキーマであるかどうかを決定し、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]バイナリ (ISServerExec および SQLCLR アセンブリ) に互換性ができます。  
+  SSISDB カタログ スキーマと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] バイナリ (ISServerExec および SQLCLR アセンブリ) に互換性があるかどうかを示します。  
   
  スキーマとバイナリに互換性がない場合、ISServerExec.exc でエラー メッセージが記録されます。  
   
@@ -41,8 +39,8 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @use32bitruntime=] *use32bitruntime*  
- パラメーターを設定すると**True**、32 ビット バージョンの dtexec が呼び出されます。 *Use32bitruntime*は、 **Bool**です。  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ パラメーターが **True** の場合、32 ビット バージョンの dtexec が呼び出されます。 *use32bitruntime* は、**Bool** です。  
   
 ## <a name="result-set"></a>結果セット  
  なし  
@@ -50,7 +48,6 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ## <a name="permissions"></a>Permissions  
  このストアド プロシージャには、次の権限が必要です。  
   
--   メンバーシップを**ssis_admin**データベース ロール。  
+-   **ssis_admin** データベース ロールのメンバーシップ。  
   
   
-

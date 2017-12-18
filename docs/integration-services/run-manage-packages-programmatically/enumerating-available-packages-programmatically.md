@@ -1,5 +1,5 @@
 ---
-title: "利用可能なパッケージをプログラムで列挙 |Microsoft ドキュメント"
+title: "プログラムによる使用可能なパッケージの列挙 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,30 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programmatically enumerate packages [SSIS]
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ebdf52b9ec71be3845d0fcdf3053b2168467389
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 84ab5ed55cd87c1dce61455a80b75990c423e792
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enumerating-available-packages-programmatically"></a>プログラムによる使用可能なパッケージの列挙
-  <a name="top"></a>作業にプログラムで[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ、可能性があるかどうか、個々 のパッケージまたはフォルダーが存在する、確認または保存済みパッケージの読み込みおよび実行に使用できるを列挙します。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすさまざまなメソッドを提供します。    
+  <a name="top"></a> プログラムにより [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを操作する際に、個々のパッケージまたはフォルダーが存在するかどうかを判断したり、読み込みと実行が可能な保存済みパッケージを列挙したりする必要がある場合があります。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすさまざまなメソッドを提供します。    
     
-##  <a name="exists"></a>パッケージまたはフォルダーが存在するかどうかを決定します。    
+##  <a name="exists"></a> パッケージまたはフォルダーが存在するかどうかの判断    
  保存済みのパッケージの読み込みと実行を行う前に、プログラムによってそのパッケージが存在するかどうかを判断するには、次のいずれかのメソッドを呼び出します。    
     
 |ストレージの場所|呼び出すメソッド|    
@@ -49,9 +46,9 @@ ms.lasthandoff: 09/26/2017
 |[SSIS パッケージ ストア]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [ページのトップへ](#top)    
+ [トップに戻る](#top)    
     
-##  <a name="listing"></a>使用可能なパッケージの列挙    
+##  <a name="listing"></a> 使用可能なパッケージの列挙    
  プログラムにより保存済みパッケージの一覧を取得するには、次のいずれかのメソッドを呼び出します。    
     
 |ストレージの場所|呼び出すメソッド|    
@@ -61,7 +58,7 @@ ms.lasthandoff: 09/26/2017
     
  次のサンプルは、これらのメソッドの使用方法を示すコンソール アプリケーションです。    
     
-###  <a name="listing_store"></a>例 (SSIS パッケージ ストア)    
+###  <a name="listing_store"></a> 例 (SSIS パッケージ ストア)    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> メソッドを使用して、SSIS パッケージ ストアに保存されているパッケージを一覧表示します。 SSIS パッケージ ストアによって管理される既定のストレージの場所は、ファイル システムおよび MSDB です。 これらの場所の中に、追加の論理フォルダーを作成できます。    
     
 ```vb    
@@ -165,9 +162,9 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [ページのトップへ](#top)    
+ [トップに戻る](#top)    
     
-###  <a name="listing_sql"></a>例 (SQL Server)    
+###  <a name="listing_sql"></a> 例 (SQL Server)    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> メソッドを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインスタンスに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを一覧表示します。    
     
 ```vb    
@@ -246,10 +243,9 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [ページのトップへ](#top)    
+ [トップに戻る](#top)    
    
 ## <a name="see-also"></a>参照    
  [パッケージの管理 &#40;SSIS サービス&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   
-

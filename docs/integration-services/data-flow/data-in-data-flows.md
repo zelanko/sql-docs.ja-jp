@@ -1,5 +1,5 @@
 ---
-title: "データ内のデータ フロー |Microsoft ドキュメント"
+title: "データ フロー内のデータ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 15689319652b1527bae7a7c27da9d89979c492d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-in-data-flows"></a>データ フロー内のデータ
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ フローで使用するデータ型のセットが用意されています。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログにパッケージを配置したら、実行時にパッケージのデータ フローを分析して、パフォーマンスを確認したり、他の問題を見つけたりすることができます。 パッケージの状態と履歴を表示できる標準レポートを利用できます。また、パッケージ実行に関する詳細情報を提供するデータベース ビューに対してクエリを実行することもできます。 実行時にデータ タップを動的に追加および削除して、パッケージの特定のコンポーネントをターゲットとすることもできます。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   
   
-

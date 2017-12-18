@@ -2,9 +2,12 @@
 title: "Exchange Spill イベント クラス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bbbac6c6e2fd126ab40cddf9b21aa426b69d04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill イベント クラス
-  **Exchange Spill** イベント クラスは、並列クエリ プランの通信バッファーが一時的に **tempdb** データベースに書き込まれたことを示します。 これは、クエリ プランに複数の範囲スキャンがある場合に限り、まれに発生します。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Exchange Spill** イベント クラスは、並列クエリ プランの通信バッファーが一時的に **tempdb** データベースに書き込まれたことを示します。 これは、クエリ プランに複数の範囲スキャンがある場合に限り、まれに発生します。  
   
  通常、そのような範囲スキャンを生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリには、多くの BETWEEN 操作が含まれています。各 BETWEEN 操作では、テーブルまたはインデックスから行の範囲を選択します。 または、(T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120) などの式を使用して、複数の範囲を取得できます。 さらに、クエリ プランでは、このような範囲を順番にスキャンする必要があります。これは T.a に ORDER BY 句があり、プラン内の反復子で並べ替え順に組を使用することが必要なためです。  
   

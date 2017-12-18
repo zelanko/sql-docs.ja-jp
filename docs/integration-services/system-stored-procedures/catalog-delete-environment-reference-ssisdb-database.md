@@ -1,5 +1,5 @@
 ---
-title: "catalog.delete_environment_reference (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.delete_environment_reference (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd452dfb87037e7aee2001f66a6884a66743697b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 09ba41e69a2011745b5966fa5803dd797075c111
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  環境参照をプロジェクトから削除、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  環境参照を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトから削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,8 +35,8 @@ delete_environment_reference [ @reference_id = ] reference_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @reference_id =] *reference_id*  
- 環境参照の一意の識別子。 *Reference_id*は**bigint**です。  
+ [ @reference_id = ] *reference_id*  
+ 環境参照の一意識別子。 *reference_id* は **bigint** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -51,9 +49,9 @@ delete_environment_reference [ @reference_id = ] reference_id
   
 -   プロジェクトの MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
@@ -63,4 +61,3 @@ delete_environment_reference [ @reference_id = ] reference_id
 -   ユーザーに適切な権限がない  
   
   
-

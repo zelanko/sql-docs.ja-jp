@@ -1,5 +1,5 @@
 ---
-title: "&gt;= (より大きいか等しい) (SSIS 式) |Microsoft ドキュメント"
+title: "&gt;= (以上) (SSIS 式) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8739ef9b5147a2019d71ee5ffa06274dea29d53
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 86e4fb934f5f583314e5d3bc69a9275d911e5dfe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (より大きいか等しい) (SSIS 式)
+# <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (以上) (SSIS 式)
   最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
   
 > [!NOTE]  
@@ -111,11 +109,10 @@ ListPrice >= 500
 ```  
   
 ## <a name="see-also"></a>参照  
- [&#62; です。&#40; です。大きい &#41; です。&#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#60; です。&#40; です。未満 &#41; です。&#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#60;= &#40; です。等しいかそれよりも小さいと &#41; です。&#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#60; (より小さい) (SSIS 式)](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#60;= &#40;以下&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 &#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

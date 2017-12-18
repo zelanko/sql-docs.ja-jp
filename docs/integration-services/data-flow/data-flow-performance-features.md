@@ -1,5 +1,5 @@
 ---
-title: "データ フロー パフォーマンス機能 |Microsoft ドキュメント"
+title: "データ フロー パフォーマンス機能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -106,7 +104,7 @@ ms.lasthandoff: 08/03/2017
  データ フロー コンポーネントの種類に関係なく、パフォーマンスを向上させるには、クエリの最適化と不必要な並べ替えの回避の 2 つの一般的なガイドラインに従う必要があります。  
   
 #### <a name="optimize-queries"></a>クエリの最適化  
- データ フロー コンポーネントの多くは、ソースからデータを抽出したり、参照テーブルを作成するための参照操作を行うときにクエリを使用します。 既定のクエリは、SELECT を使用 * FROM \<tableName > 構文です。 この種類のクエリは、ソース テーブル内のすべての列を返します。 デザイン時にすべての列を使用可能にしておくことで、参照列、パススルー列、またはソース列として、任意の列を選択できます。 ただし、目的の列を選択した後は、選択した列のみを含むようにクエリを修正します。 不必要な列を削除することで、パッケージ内のデータ フローが効率化されます。列数が少なくなると、行が小さくなるためです。 行が小さいほど 1 つのバッファーに収まる行が増え、データセット内のすべての行を処理する作業が減ります。  
+ データ フロー コンポーネントの多くは、ソースからデータを抽出したり、参照テーブルを作成するための参照操作を行うときにクエリを使用します。 既定のクエリでは、SELECT * FROM \<tableName> 構文が使用されます。 この種類のクエリは、ソース テーブル内のすべての列を返します。 デザイン時にすべての列を使用可能にしておくことで、参照列、パススルー列、またはソース列として、任意の列を選択できます。 ただし、目的の列を選択した後は、選択した列のみを含むようにクエリを修正します。 不必要な列を削除することで、パッケージ内のデータ フローが効率化されます。列数が少なくなると、行が小さくなるためです。 行が小さいほど 1 つのバッファーに収まる行が増え、データセット内のすべての行を処理する作業が減ります。  
   
  クエリを作成するには、手動で入力するか、クエリ ビルダーを使用することができます。  
   
@@ -167,13 +165,13 @@ ms.lasthandoff: 08/03/2017
  変換先でのデータの保存には予想以上の時間がかかります。 変換先でデータを迅速に処理できないことが原因で時間がかかっているかどうかを判断するには、変換先を行数変換と置き換えます。 スループットが大幅に改善する場合は、データを読み込んでいる変換先がスローダウンを引き起こしている可能性があります。  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>[進行状況] タブでの情報のレビュー  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージを実行すると、デザイナーが制御フローとデータ フローの両方に関する情報を提供[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 **[進行状況]** タブにはタスクとコンテナーが実行順に表示され、パッケージ自体を含め、タスクやコンテナーごとに開始時刻、終了時刻、警告、エラー メッセージが表示されます。 一覧にはデータ フロー コンポーネントも実行順に表示され、進捗についての情報、完了の割合、処理された行数も表示されます。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] でパッケージを実行すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]デザイナーで制御フローとデータ フローの両方に関する情報を得られます。 **[進行状況]** タブにはタスクとコンテナーが実行順に表示され、パッケージ自体を含め、タスクやコンテナーごとに開始時刻、終了時刻、警告、エラー メッセージが表示されます。 一覧にはデータ フロー コンポーネントも実行順に表示され、進捗についての情報、完了の割合、処理された行数も表示されます。  
   
  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。 進行状況レポートを無効にすると、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で複雑なパッケージを実行する際のパフォーマンスを向上させることができます。  
   
 ## <a name="related-tasks"></a>関連タスク  
   
--   [マージ変換およびマージ結合変換用のデータの並べ替え](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  **記事とブログ投稿**  
@@ -209,8 +207,7 @@ ms.lasthandoff: 08/03/2017
 -   technet.microsoft.com のビデオ「 [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
 ## <a name="see-also"></a>参照  
- [パッケージの開発のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [パッケージの実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [パッケージ開発のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

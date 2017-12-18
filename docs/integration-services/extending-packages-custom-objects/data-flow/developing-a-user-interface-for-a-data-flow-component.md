@@ -1,5 +1,5 @@
 ---
-title: "データ フロー コンポーネント用ユーザー インターフェイスの開発 |Microsoft ドキュメント"
+title: "データ フロー コンポーネント用ユーザー インターフェイスの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,25 +25,24 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5a1e9773d91303335b616159f70de7aa0ddf966e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
   コンポーネント開発者は、コンポーネント用のカスタム ユーザー インターフェイスを作成し、コンポーネントを編集するときに [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に表示させることができます。 カスタム ユーザー インターフェイスを実装すると、データ フロー タスクでコンポーネントが追加または削除されたとき、またはコンポーネントに関するヘルプが要求されたときに通知されます。  
   
- コンポーネント用のカスタム ユーザー インターフェイスを提供しない場合でも、ユーザーは、詳細エディターを使用することで、コンポーネントおよびそのカスタム プロパティを構成することができます。 詳細エディターでユーザーがカスタム プロパティ値を適切に変更できるようにするには、必要に応じて、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> プロパティを使用します。 詳細については、「カスタム プロパティの作成」を参照してください[データ フロー コンポーネントのデザイン時メソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)です。  
+ コンポーネント用のカスタム ユーザー インターフェイスを提供しない場合でも、ユーザーは、詳細エディターを使用することで、コンポーネントおよびそのカスタム プロパティを構成することができます。 詳細エディターでユーザーがカスタム プロパティ値を適切に変更できるようにするには、必要に応じて、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> プロパティを使用します。 詳細については、「[データ フロー コンポーネントのデザイン時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)」の「カスタム プロパティの作成」を参照してください。  
   
 ## <a name="setting-the-uitypename-property"></a>UITypeName プロパティの設定  
- カスタム ユーザー インターフェイスを提供するには、<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> プロパティに、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装したクラスの名前を登録する必要があります。 コンポーネントは、このプロパティが設定されている場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]でコンポーネントを編集する際に、カスタム ユーザー インターフェイスを呼び出しを読み込んで[!INCLUDE[ssIS](../../../includes/ssis-md.md)]デザイナー。  
+ カスタム ユーザー インターフェイスを提供するには、<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> プロパティに、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装したクラスの名前を登録する必要があります。 このプロパティがコンポーネントによって設定されると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでコンポーネントを編集する際に、カスタム ユーザー インターフェイスが読み込まれ、必要な処理が呼び出されます。  
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> プロパティは、型の完全修飾名を示すコンマ区切り形式の文字列です。 次の一覧は、型を識別する要素を順に示したものです。  
   
@@ -53,7 +50,7 @@ ms.lasthandoff: 08/03/2017
   
 -   アセンブリ名  
   
--   ファイルのバージョン  
+-   ファイル バージョン  
   
 -   カルチャ  
   
@@ -94,10 +91,10 @@ End Class
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを介してコンポーネントを直接修正することも可能ですが、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> メソッドを使用して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> のインスタンスを作成することをお勧めします。 インターフェイスを使用してコンポーネントを直接編集すると、コンポーネントの検証処理が省略されるためです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> を介してコンポーネントのデザイン時インスタンスを使用する利点は、コンポーネントに加えられた変更が確実にコンポーネント側で制御されるという点です。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの戻り値は、コンポーネントに加えられた変更が保存されたか、破棄されたかを示します。 このメソッドが戻る**false**、すべての変更は破棄されます。**true**コンポーネントへの変更が引き続き発生して、パッケージを保存する必要があることを示します。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの戻り値は、コンポーネントに加えられた変更が保存されたか、破棄されたかを示します。 このメソッドによって **false** が返される場合、変更はすべて破棄されます。**true** の場合、コンポーネントに対する変更が保存され、パッケージを保存する必要があることを示すマークが付けられます。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS デザイナーのサービスの使用  
- **IServiceProvider**のパラメーター、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A>メソッドの次のサービスへのアクセスを提供する[!INCLUDE[ssIS](../../../includes/ssis-md.md)]デザイナー。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドの **IServiceProvider** パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。  
   
 |サービス|Description|  
 |-------------|-----------------|  
@@ -295,4 +292,3 @@ End Namespace
  [カスタム データ フロー コンポーネントの作成](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   
-

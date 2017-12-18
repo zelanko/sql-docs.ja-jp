@@ -1,5 +1,5 @@
 ---
-title: "catalog.move_environment (SSISDB データベース) |Microsoft ドキュメント"
+title: "catalog.move_environment (SSISDB データベース) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e08328e0baccaa9098d8647b50c6133de2504912
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4c143403ba0ebfb429c8d7f646214704c4e692d4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  環境を内の別の 1 つのフォルダーに移動、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カタログ。  
+  特定のフォルダーの環境を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内の別のフォルダーに移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,14 +37,14 @@ catalog.move_environment [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @source_folder =] *source_folder*  
- 環境が、移動前に配置されていたソース フォルダーの名前。 *Source_folder*は**nvarchar (128)**です。  
+ [ @source_folder = ] *source_folder*  
+ 環境が、移動前に配置されていたソース フォルダーの名前。 *source_folder* は **nvarchar(128)** です。  
   
- [ @environment_name =] *environment_name*  
- 移動される環境の名前。 *Environment_name*は**nvarchar (128)**です。  
+ [ @environment_name = ] *environment_name*  
+ 移動される環境の名前。 *Environment_name* は **nvarchar(128)** です。  
   
- [ @destination_folder =] *destination_folder*  
- 環境が移動後に配置される移動先フォルダーの名前。 *Destination_folder*は**nvarchar (128)**です。  
+ [ @destination_folder = ] *destination_folder*  
+ 環境が移動後に配置される移動先フォルダーの名前。 *destination_folder* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -59,9 +57,9 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   環境の READ および MODIFY 権限  
   
--   メンバーシップを**ssis_admin**データベース ロール  
+-   **ssis_admin** データベース ロールのメンバーシップ  
   
--   メンバーシップを**sysadmin**サーバーの役割  
+-   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
@@ -79,4 +77,3 @@ catalog.move_environment [ @source_folder = ] source_folder
 >  プロジェクトでは、相対または絶対環境参照を使用できます。 相対参照の場合、名前によって環境を参照します。この環境はプロジェクトと同じフォルダーに格納されている必要があります。 絶対参照の場合、名前とフォルダーによって環境を参照します。これらの参照は、プロジェクトとは異なるフォルダーに格納されている環境を参照する場合があります。  
   
   
-

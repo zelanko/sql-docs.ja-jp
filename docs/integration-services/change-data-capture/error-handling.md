@@ -1,5 +1,5 @@
 ---
-title: "エラー処理 |Microsoft ドキュメント"
+title: "エラー処理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,19 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>エラー処理
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   MSXDBCDC.dbo.xdbcdc_trace テーブル。Oracle CDC Service のメイン プロセスで、一般的なログ記録とトレースに使用されます。  
   
--   \<Cdc データベース >. cdc.xdbcdc_trace テーブルは、Oracle CDC インスタンスによって一般的なログ記録とトレースに使用します。 つまり、特定の Oracle CDC インスタンスに関連するエラーは、そのインスタンスのトレース テーブルに記録されます。  
+-   \<cdc-database>.cdc.xdbcdc_trace テーブル。Oracle CDC インスタンスで、一般的なログ記録とトレースに使用されます。 つまり、特定の Oracle CDC インスタンスに関連するエラーは、そのインスタンスのトレース テーブルに記録されます。  
   
  Oracle CDC Service で情報が記録される状況は次のとおりです。  
   
@@ -120,8 +118,7 @@ ms.lasthandoff: 08/03/2017
  Oracle CDC Service では、CDC インスタンスのサブプロセスを監視しています。 CDC インスタンスのサブプロセスが中止されると、MSXDBCDC.dbo.xdbcdc_databases テーブルでそのサブプロセスが無効になり、cdc.xdbcdc_state の状態が ABORTED に更新されます。 この場合、詳細な分析のために、標準の Windows エラー報告ダイアログ ボックスでこのエラーが報告されます。  
   
 ## <a name="see-also"></a>参照  
- [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Attunity の Change Data Capture Designer for Oracle](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC インスタンス](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

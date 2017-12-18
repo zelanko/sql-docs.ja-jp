@@ -1,5 +1,5 @@
 ---
-title: "カスタム タスクの開発 |Microsoft ドキュメント"
+title: "カスタム タスクの開発 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a6f9c16453365ce5b7a278f352c8cec8d86c2780
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 265f05d748398eb4a219899681c0bf71eb481b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-task"></a>カスタム タスクの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] は、作業単位を実行するタスクを使用して、データの抽出、変換、および読み込みをサポートします。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、SQL ステートメントの実行から、FTP サイトからのファイルのダウンロードまで、頻繁に使用される操作を実行するためのさまざまなタスクが用意されています。 用意されているタスクとサポートされている操作が、要件を完全には満たない場合は、カスタム タスクを作成できます。  
@@ -48,22 +45,22 @@ ms.lasthandoff: 08/03/2017
 ## <a name="in-this-section"></a>このセクションの内容  
  ここでは、カスタム タスクとそのオプションのカスタム ユーザー インターフェイスを作成、構成、およびコーディングする方法について説明します。  
   
- [カスタム タスクを作成します。](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  
+ [カスタム タスクの作成](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  
  カスタム タスクを作成する最初の手順について説明します。  
   
  [カスタム タスクのコーディング](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  
  カスタム タスクの主なメソッドのコードを記述する方法について説明します。  
   
- [カスタム タスク内のデータ ソースに接続します。](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
+ [カスタム タスクでのデータ ソースへの接続](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
  カスタム タスクをデータ ソースに接続する方法について説明します。  
   
- [発生させると、カスタム タスクでイベントを定義します。](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
+ [カスタム タスクでのイベントの発生と定義](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
  カスタム タスクからカスタム イベントを発生させ、定義する方法について説明します。  
   
- [カスタム タスクでのデバッグのサポートの追加](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
+ [カスタム タスクにおけるデバッグのサポートの追加](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
  カスタム タスクでのブレークポイント ターゲットの作成方法について説明します。  
   
- [カスタム タスクのユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [カスタム タスク用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーに表示され、カスタム タスクのプロパティを構成するユーザー インターフェイスの作成方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -97,7 +94,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>参照  
  [スクリプト タスクによるパッケージの拡張](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
- [スクリプティング ソリューションとカスタム オブジェクトの比較](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
+ [スクリプティング ソリューションとカスタム オブジェクトとの比較](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

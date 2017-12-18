@@ -1,5 +1,5 @@
 ---
-title: "CDC Service の操作 |Microsoft ドキュメント"
+title: "CDC Service の操作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- cdcServ
+f1_keywords: cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: eda4caf15a2c86f541978b49ee7e55c0d89e053c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="work-with-cdc-services"></a>CDC Service の操作
   CDC Service 構成コンソールを使用すると、新しい CDC サービスを作成したり、CDC 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを準備したりできます。  
@@ -48,8 +45,7 @@ ms.lasthandoff: 08/03/2017
  [新しい Oracle CDC Service] ダイアログ ボックスが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [CDC サービスを操作する方法](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
- [作成し、Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [CDC Service の操作方法](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
+ [Oracle CDC Service の作成と編集](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-
