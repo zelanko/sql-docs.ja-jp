@@ -1,5 +1,5 @@
 ---
-title: "データ フロー |Microsoft ドキュメント"
+title: "データ フロー | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow"></a>データ フロー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  次の図は、1 つの変換元、入力と出力を 1 つずつとる 1 つの変換、および 1 つの変換先を持つデータ フローを示しています。 この図には、入力列、出力列、および外部列に加え、入力、出力、およびエラー出力が含まれています。  
   
- ![データ フロー コンポーネントとその入力と出力](../../integration-services/data-flow/media/mw-dts-dataflow.gif "データ フロー コンポーネントとその入力と出力")  
+ ![データ フロー コンポーネントとそれらの入力および出力](../../integration-services/data-flow/media/mw-dts-dataflow.gif "データ フロー コンポーネントとそれらの入力および出力")  
   
 ## <a name="data-flow-implementation"></a>データ フローの実装  
  パッケージにデータ フローを実装するには、最初にデータ フロー タスクをパッケージの制御フローに追加します。 パッケージには、それぞれ独自のデータ フローを持つ複数のデータ フロー タスクを含めることができます。 たとえば、パッケージで、特定の順序でデータ フローを実行する必要がある場合、またはデータ フロー間で別のタスクを実行する必要がある場合は、データ フローごとに異なるデータ フロー タスクを使用する必要があります。  
@@ -224,4 +222,3 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>関連コンテンツ  
  technet.microsoft.com のビデオ「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkID=210369)」  
-
