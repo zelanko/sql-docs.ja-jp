@@ -73,6 +73,7 @@
 # [パッケージの配置](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [スケール アウト](scale-out/integration-services-ssis-scale-out.md)
 
+# [カタログとサーバー](catalog/integration-services-ssis-server-and-catalog.md)
 # [サービス (レガシ)](../integration-services/service/integration-services-service-ssis-service.md)
 # [セキュリティ](../integration-services/security/security-overview-integration-services.md)
 # [[パフォーマンス]](../integration-services/performance/monitor-running-packages-and-other-operations.md)

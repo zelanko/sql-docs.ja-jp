@@ -2,9 +2,12 @@
 title: "マージ レプリケーションのバックアップと復元の方式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c5c183c029afd8eb87a6df90e09d39b4d8c755bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e93e06006d649fac0046a2e2df8953d9356acfa5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>マージ レプリケーションのバックアップと復元の方式
-  マージ レプリケーションでは、次のデータベースを定期的にバックアップします。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] マージ レプリケーションでは、次のデータベースを定期的にバックアップします。  
   
 -   パブリッシャーにあるパブリケーション データベース  
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/09/2017
   
  サブスクリプションを再初期化するには、「 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)」を参照してください。  
   
- スナップショットを作成および適用するには、「 [Create 」および「 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 」および「 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
+ スナップショットを作成および適用するには、「 [初期スナップショットの作成および適用](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 」および「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>ディストリビューション データベースのバックアップと復元  
  マージ レプリケーションでは、ディストリビューション データベースを定期的にバックアップする必要があります。この場合、使用されるバックアップがディストリビューターを使用するすべてのパブリケーションの最短の保有期間よりも古くない限り、特に注意することなく復元できます。 たとえば、保有期間がそれぞれ 10、20、および 30 日に設定されている 3 つのパブリケーションがある場合は、10 日より長く経過したバックアップはデータベースの復元に使用できません。 マージ レプリケーションでは、ディストリビューション データベースの役割が制限されています。変更の追跡に使用されるすべてのデータは保存されず、トランザクション レプリケーションのような、サブスクリプション データベースの転送先となるマージ レプリケーションの変更の一時的な保存場所も用意されません。  
