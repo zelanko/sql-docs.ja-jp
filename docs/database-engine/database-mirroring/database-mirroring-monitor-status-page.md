@@ -2,9 +2,12 @@
 title: "データベース ミラーリング モニター ([状態] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58634269a34ed091c99954435d93df892fa4d7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 658cb8a6783afc9b01259e8cf2e8915659550867
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-monitor-status-page"></a>[データベース ミラーリング モニター] ([状態] ページ)
-  読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/09/2017
 -   **[自動フェールオーバーを伴う高い安全性 (同期)]**  
   
 ## <a name="remarks"></a>解説  
- **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 状態テーブルは、 **[データベース ミラーリング モニターのジョブ]**によって定期的に更新されます。 表示されている状態の経過期間は、**[プリンシパル ログ (***\<time>*)**]** および **[ミラー ログ (***\<time>***)]** の "time" にあたる部分で確認できます。  
+ **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 状態テーブルは、 **[データベース ミラーリング モニターのジョブ]**によって定期的に更新されます。 表示されている状態の経過期間は、**[プリンシパル ログ (***\<time>***)]** および **[ミラー ログ (***\<time>***)]** の "time" にあたる部分で確認できます。  
   
  該当のジョブが存在しないか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが停止している場合、状態はしだいに古くなるため、ミラーリング セッションの構成が反映されない場合があります。 たとえば、フェールオーバー後、パートナーがプリンシパルまたはミラーなどの同じロールを共有しているように見えたり、現在のプリンシパル サーバーがミラー サーバーとして表示され、その一方で現在のミラー サーバーがプリンシパルとして表示されたりすることがあります。  
   

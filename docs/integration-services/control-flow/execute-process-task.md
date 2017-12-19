@@ -1,5 +1,5 @@
 ---
-title: "プロセス実行タスク |Microsoft ドキュメント"
+title: "プロセス実行タスク | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
 - sql13.dts.designer.executeprocesstask.general.f1
 - sql13.dts.designer.executeprocesstask.process.f1
-helpviewer_keywords:
-- Execute Process task [Integration Services]
+helpviewer_keywords: Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 8beda5fb308ad93d4582bdcf947c1a1a8a9f2f71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
   プロセス実行タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルを実行します。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
@@ -64,7 +61,7 @@ ms.lasthandoff: 08/11/2017
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、 [Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)クラス ライブラリで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
@@ -75,7 +72,7 @@ ms.lasthandoff: 08/11/2017
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     詳細については、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のリファレンスで、[My.Application.CommandLineArgs プロパティ](http://go.microsoft.com/fwlink/?LinkId=129200) のトピックを参照してください。  
+     詳細については、 [のリファレンスで、](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs プロパティ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のトピックを参照してください。  
   
 -   Microsoft Visual C# を使用してアプリケーションを作成する場合は、 **Main** メソッドを使用します。  
   
@@ -90,7 +87,7 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター]\ ([全般] ページ)
+## <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター] ([全般] ページ)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、プロセス実行タスクの名前と説明を入力できます。  
   
 ### <a name="options"></a>オプション  
@@ -120,15 +117,15 @@ ms.lasthandoff: 08/11/2017
  実行可能ファイルが置かれているフォルダーのパスを入力するか、参照ボタン ( **[...]** ) をクリックしてフォルダーを指定します。  
   
  **[StandardInputVariable]**  
- 変数を選択して、プロセスへの入力を指定するか、をクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+ プロセスへの入力を指定する変数を選択するか、\<[**新しい変数>]** をクリックして新しい変数を作成します。  
   
  **関連項目:** [変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[StandardOutputVariable]**  
- 変数を選択して、プロセスの出力をキャプチャするかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+ プロセスの出力をキャプチャする変数を選択するか、\<[**新しい変数]** をクリックして新しい変数を作成します。  
   
  **[StandardErrorVariable]**  
- 変数を選択して、プロセッサのエラー出力をキャプチャするかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+ プロセッサのエラー出力をキャプチャする変数を選択するか、\<[**新しい変数>]** をクリックして新しい変数を作成します。  
   
  **[FailTaskIfReturnCodeIsNotSuccessValue]**  
  プロセス終了コードが **[SuccessValue]**で指定されている値と異なった場合、タスクを終了するかどうかを指定します。  
@@ -150,4 +147,3 @@ ms.lasthandoff: 08/11/2017
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   
   
-

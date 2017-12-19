@@ -2,9 +2,12 @@
 title: "拡張保護を使用したデータベース エンジンへの接続 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e132f07a9bfa81c2eae226f2ce3d63ba3c65826
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 **認証の拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 でサポートされており、 **以前のオペレーティング システムでは、** 拡張保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] がサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降で**拡張保護**がサポートされています。 **認証の拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 でサポートされており、 **以前のオペレーティング システムでは、** 拡張保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] がサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。  
   
 > [!IMPORTANT]  
 >  既定では、Windows の **拡張保護** は有効になっていません。 Windows で **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](http://support.microsoft.com/kb/968389)」を参照してください。  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
 1.  
               **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
   
-2.  **[SQL Server ネットワークの構成]** を展開し、**[\<*InstanceName***> のプロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
+2.  **[SQL Server ネットワークの構成]** を展開し、**[*\<*InstanceName*>* のプロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
   
 3.  チャネル バインドとサービス バインドの両方について、 **[詳細設定]** タブで **[拡張保護]** を適切な値に設定します。  
   

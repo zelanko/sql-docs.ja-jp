@@ -2,9 +2,12 @@
 title: "レッスン 2 : マージ パブリケーションへのサブスクリプションの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56379bef6879a1d5fe1e6f004cbb23ed9a23120c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c1d145f5fc43ad13cbc5f41faec86974ee736f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>レッスン 2 : マージ パブリケーションへのサブスクリプションの作成
-このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 次に、サブスクリプション データベースに権限を設定し、新しいサブスクリプション用のフィルター選択データのスナップショットを手動で作成します。 このレッスンを進めるには、前のレッスン「 [レッスン 1: マージ レプリケーションを使用したデータのパブリッシュ](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)」を完了している必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このレッスンでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してサブスクリプションを作成します。 次に、サブスクリプション データベースに権限を設定し、新しいサブスクリプション用のフィルター選択データのスナップショットを手動で作成します。 このレッスンを進めるには、前のレッスン「 [レッスン 1: マージ レプリケーションを使用したデータのパブリッシュ](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)」を完了している必要があります。  
   
 ### <a name="to-create-the-subscription"></a>サブスクリプションを作成するには  
   
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/09/2017
   
 7.  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **SalesOrdersReplica** 」と入力し、 **[OK]**をクリックして **[次へ]**をクリックします。  
   
-8.  [マージ エージェント セキュリティ] ページで参照ボタン (**[…]**) をクリックし、**[プロセス アカウント]** ボックスに「\<*コンピューター名>***\repl_merge**」と入力して、このアカウントのパスワードを入力します。次に、**[OK]** をクリックし、**[次へ]**をクリックし、**[次へ]**もう一度です。  
+8.  [マージ エージェント セキュリティ] ページで参照ボタン (**[…]**) をクリックし、**[プロセス アカウント]** ボックスに「\<*コンピューター名>***\repl_merge**」と入力して、このアカウントのパスワードを入力します。次に、**[OK]** をクリックし、**[次へ]****** を 2 回クリックします。  
   
-9. [サブスクリプションの初期化] ページで、**[次の場合に初期化]** ボックスの一覧から **[初回同期時]** を選択し、**[次へ]**をクリックし、**[次へ]**もう一度です。  
+9. [サブスクリプションの初期化] ページで、**[次の場合に初期化]** ボックスの一覧から **[初回同期時]** を選択し、**[次へ]****** を 2 回クリックします。  
   
 10. [HOST_NAME 値] ページで、**[HOST_NAME 値]** ボックスに値「**adventure-works\pamela0**」と入力して、**[完了]** をクリックします。  
   

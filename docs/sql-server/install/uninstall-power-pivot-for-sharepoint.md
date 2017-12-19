@@ -2,9 +2,12 @@
 title: "Power Pivot for SharePoint のアンインストール | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
@@ -16,14 +19,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4a43451046d7cbea498941d867b235a58f56d468
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1beb1d390a12ccbfe19d7a8c17f9f862d2b05dd6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアンインストール
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のアンインストールは、複数の手順で構成されるプロセスです。これには、アンインストールの準備、ファームからの機能およびソリューションの削除、プログラム ファイルおよびレジストリ設定の削除が含まれます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のアンインストールは、複数の手順で構成されるプロセスです。これには、アンインストールの準備、ファームからの機能およびソリューションの削除、プログラム ファイルおよびレジストリ設定の削除が含まれます。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  タスク一覧内の各アクションの機能を確認します。  
   
-     **[削除] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除**では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
+     **[削除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除]**では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
   
      データベースを削除するには、 **[削除] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除** を選択し、 **[このサービス アプリケーションに関連付けられているアプリケーション データを削除します]**をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   

@@ -2,11 +2,12 @@
 title: "SysPrep を使用して SQL Server をインストールする | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,13 +16,14 @@ caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 1f13a80130626df2fe09ff37d566395d23e3b952
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep を使用して SQL Server をインストールする
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。 
   
 コマンド プロンプトまたは構成ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの準備および完了を行うこともできます。 詳細については、以下をご覧ください。  

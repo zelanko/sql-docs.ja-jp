@@ -2,9 +2,12 @@
 title: "[可用性グループのプロパティ]: [新しい可用性グループ] ([全般] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a9d2fa593bc36151226c5f345c8e8ac0f9b731dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49b34cb2867b26be38f9d6c9086f5ea038d8cbdc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>[可用性グループのプロパティ]: [新しい可用性グループ] ([全般] ページ)
-  このトピックは、 **[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックは、**[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
   
  **可用性グループのプロパティを表示するには**  
   

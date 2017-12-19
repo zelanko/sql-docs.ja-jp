@@ -1,5 +1,5 @@
 ---
-title: "ファイル システム タスク |Microsoft ドキュメント"
+title: "ファイル システム タスク | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
 - sql13.dts.designer.filesystemtask.general.f1
-helpviewer_keywords:
-- File System task [Integration Services]
+helpviewer_keywords: File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 63fb21cae5f8df981f243035fc7b34e53fa4d0bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a72870b1591218161de2253c65bdb6f290941481
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
@@ -86,7 +83,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="related-tasks"></a>関連タスク  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理するタスクが含まれます。 詳細については、「 [FTP タスク](../../integration-services/control-flow/ftp-task.md)」を参照してください。  
   
-## <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター]\ ([全般] ページ)
+## <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター] ([全般] ページ)
   **[ファイル システム タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクで実行するファイル システム操作を構成できます。  
   
  SourceConnection プロパティと DestinationConnection プロパティを設定して、ソースとターゲットの接続マネージャーを指定する必要があります。 タスクでソースまたはターゲットとして使用されるファイルを指すファイル接続マネージャーの名前を指定することも、ファイルのパスが変数に格納されていれば変数の名前を指定することもできます。 変数を使用してファイル パスを保存するには、最初に、IsSourcePathVariable オプション (ソース接続) および IsDestinationPatheVariable オプション (ターゲット接続) を **True**に設定しておく必要があります。 その後で、既存のシステム変数またはユーザー定義変数を選択するか、新しい変数を作成できます。 変数のスコープは、 **[変数の追加]** ダイアログ ボックスで構成および指定できます。 スコープは、ファイル システム タスクまたは親コンテナーにする必要があります。 詳細については、「[Integration Services (SSIS) Variables](../../integration-services/integration-services-ssis-variables.md)」(Integration Services (SSIS) の変数) と「[Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」(パッケージで変数を使用する) を参照してください。  
@@ -148,27 +145,27 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isdestinationpathvariable--true"></a>[IsDestinationPathVariable] = [True]  
  **[DestinationVariable]**  
- 一覧で、変数名を選択するかクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+ 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services (SSIS) 変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>[IsDestinationPathVariable] = [False]  
  **DestinationConnection**  
- 一覧で、ファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>[IsSourcePathVariable] の動的オプション  
   
 #### <a name="issourcepathvariable--true"></a>[IsSourcePathVariable] = [True]  
  **[SourceVariable]**  
- 一覧で、変数名を選択するかクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+ 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services (SSIS) 変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>[IsSourcePathVariable] = [False]  
  **SourceConnection**  
- 一覧で、ファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [[ファイル接続マネージャー エディター]](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -196,4 +193,3 @@ ms.lasthandoff: 08/11/2017
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   
   
-
