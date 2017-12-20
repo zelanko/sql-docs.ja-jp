@@ -1,5 +1,6 @@
 # [SQL Operations Studio (プレビュー)](what-is.md)
 # [インストール](download.md)
+# [リリース ノート](release-notes.md)
 # クイック スタート
 ## [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 ## [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
