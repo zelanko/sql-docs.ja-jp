@@ -1,6 +1,6 @@
 ---
 title: "Ubuntu の SQL Server 2017 の概要 |Microsoft ドキュメント"
-description: "このクイック スタート チュートリアルでは、Ubuntu に SQL Server 2017 をインストールし、sqlcmd によりデータベースを作成するクエリを実行する方法を示します。"
+description: "このクイック スタート チュートリアルでは、Ubuntu に SQL Server 2017 をインストールし、sqlcmd によりデータベースを作成してクエリを実行する方法を示します。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/01/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このクイック スタート チュートリアルでは、初めに Ubuntu 16.04 にSQL Server 2017 をインストールし、**sqlcmd** で接続し、最初のデータベースを作成する、クエリを実行します。
+このクイック スタート チュートリアルでは、初めに Ubuntu 16.04 に SQL Server 2017 をインストールします。その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザーの入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)インストールに興味がある場合、次の手順を参照してください。[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)
@@ -37,16 +37,16 @@ Ubuntu 16.04 コンピューターに**少なくとも 2 GB**メモリを搭載�
 Ubuntu を自分のコンピューターにインストールするには [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server) に移動してください。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)を参照してください。
 
 > [!NOTE]
-> 現時点で、 Windows 10 の[Windows Subsystem for Linux ](https://msdn.microsoft.com/commandline/wsl/about)は、インストール対象としてサポートされていません。
+> 現時点で、 Windows 10 の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) は、インストール対象としてサポートされていません。
 
 その他のシステム要件については、次を参照してください。 [Linux の SQL Server のシステム要件](sql-server-linux-setup.md#system)
 
 ## <a id="install"></a>SQL Server をインストールします。
 
-SQL Server を構成する Ubuntu のターミナルで次のコマンドを実行し、 **mssql-server** パッケージをインストールします。
+Ubuntu で SQL Server を構成するには、ターミナルで次のコマンドを実行し、**mssql-server** パッケージをインストールします。
 
 > [!IMPORTANT]
-> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールしている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください。[プレビュー リポジトリからリポジトリを GA リポジトリに変更](sql-server-linux-change-repo.md)
+> 既に SQL Server 2017 の CTP または RC リリースをインストールしている場合は、古いリポジトリを削除してからその GA リポジトリの一つを登録する必要があります。 詳細については、[リポジトリをプレビュー リポジトリからGA リポジトリに変更する](sql-server-linux-change-repo.md) を参照してください。
 
 1. パブリック リポジトリ GPG キーをインポートします。
 
@@ -77,12 +77,12 @@ SQL Server を構成する Ubuntu のターミナルで次のコマンドを実�
    ```
 
    > [!TIP]
-   > このチュートリアルでは SQL Server 2017 の、次のライセンスフリーのエディションを選択します Evaluation、Developer、および Express
+   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションはライセンスフリーです: Evaluation、Developer、および Express
 
    > [!NOTE]
-   > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、基本 10 桁の数字や英数字以外の記号) 
+   > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)
 
-1. 構成が完了し、サービスが実行されていることを確認します。
+1. 構成が完了したら、サービスが実行されていることを確認します。
 
    ```bash
    systemctl status mssql-server
@@ -94,7 +94,7 @@ SQL Server を構成する Ubuntu のターミナルで次のコマンドを実�
 
 ## <a id="tools"></a>SQL Server コマンド ライン ツールをインストールします。
 
-データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順では、SQL Server コマンド ライン ツールをインストールします。[sqlcmd](../tools/sqlcmd-utility.md)と[bcp](../tools/bcp-utility.md)
+データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順では、次の SQL Server コマンド ライン ツールをインストールします。[sqlcmd](../tools/sqlcmd-utility.md)と[bcp](../tools/bcp-utility.md)
 
 1. パブリック リポジトリ GPG キーをインポートします。
 
@@ -108,7 +108,7 @@ SQL Server を構成する Ubuntu のターミナルで次のコマンドを実�
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
    ```
 
-1. ソース リストを更新し、unixODBC Developer パッケージをインストールするコマンドを実行します。
+1. ソース リストを更新し、unixODBC Developer パッケージでインストール コマンドを実行します。
 
    ```bash
    sudo apt-get update
