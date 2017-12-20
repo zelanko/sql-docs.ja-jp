@@ -25,3 +25,4 @@
 ### [フェールオーバー クラスター インスタンスの IP アドレスの変更](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [SQL Server フェールオーバー クラスター インスタンスのアップグレード](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
 ### [SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
+### [SQL Server フェールオーバー クラスター インスタンスのアップグレード (Windows Server 2008/2008 R2/2012)](windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
