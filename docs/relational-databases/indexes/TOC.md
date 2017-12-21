@@ -26,11 +26,9 @@
 ## [並列インデックス操作の構成](configure-parallel-index-operations.md)  
 ## [[インデックスのプロパティ] の F1 ヘルプ](index-properties-f1-help.md)  
 
-
-
 # 列ストア インデックス
 ## [概要](columnstore-indexes-overview.md)  
-## [アーキテクチャ](columnstore-indexes-architecture.md)  
+## [アーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
 ## [設計のガイドライン](columnstore-indexes-design-guidance.md)  
 ## [データ読み込みのガイドライン](columnstore-indexes-data-loading-guidance.md)  
 ## [新機能](columnstore-indexes-what-s-new.md)  
