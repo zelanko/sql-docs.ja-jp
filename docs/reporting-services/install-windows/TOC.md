@@ -1,7 +1,7 @@
-# [Reporting Services のインストール](install-reporting-services.md)
+# [Reporting Services 2017 のインストール](install-reporting-services.md)
+## [Reporting Services 2017 のプロダクト キーを見つける](find-reporting-services-product-key-ssrs.md)
 
-
-# [ネイティブ モードの Reporting Services のインストール](install-reporting-services-native-mode-report-server.md)  
+# [ネイティブ モードでの Reporting Services 2016 のインストール](install-reporting-services-native-mode-report-server.md)  
 ## [Reporting Services ファイルのみのインストール](files-only-installation-reporting-services.md)  
 ## [Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール (SSRS ネイティブ モード)](install-reporting-and-internet-information-services-side-by-side.md)  
 ## [SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト](host-a-report-server-database-in-a-sql-server-failover-cluster.md)  
@@ -29,7 +29,7 @@
 ### [Power BI 統合](power-bi-report-server-integration-configuration-manager.md)  
 
 
-# [Reporting Services SharePoint モードのインストール](install-reporting-services-sharepoint-mode.md)  
+# [SharePoint モードでの Reporting Services 2016 のインストール](install-reporting-services-sharepoint-mode.md)  
 ## [SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ (SQL Server 2016)](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 ## [SharePoint 用 SSRS アドインの検索場所](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
 ## [SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)  
