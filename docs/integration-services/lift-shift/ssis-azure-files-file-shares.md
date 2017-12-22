@@ -1,19 +1,19 @@
 ---
 title: "オンプレミスおよび Azure のファイル共有のファイルを格納および取得する | Microsoft Docs"
 description: "この記事では、SSIS でオンプレミスと Azure 両方のファイル システムおよびファイル共有を使う方法について説明します"
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>オンプレミスおよび Azure のファイル共有のファイルを格納および取得する
 この記事では、ローカル ファイル システムを使う SQL Server Integration Services (SSIS) パッケージを Azure にリフト アンド シフトするときにパッケージを更新する方法について説明します。
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/16/2017
 > 現時点では、SSIS カタログ データベース (SSISDB) はアクセス資格情報を 1 セットだけサポートします。 したがって、Azure-SSIS Integration Runtime (IR) は、複数のオンプレミスのファイル共有および Azure Files 共有に、異なる資格情報を使って接続することはできません。
 
 ## <a name="store-temporary-files"></a>一時ファイルを格納する
-単一のパッケージ実行の間に一時ファイルを格納して処理する必要がある場合、パッケージは Azure-SSIS Integration Runtime ノードの一時フォルダー `(.)/temp` または `%TEMP%` を使うことができます。
+単一のパッケージ実行の間に一時ファイルを格納して処理する必要がある場合、パッケージは Azure-SSIS Integration Runtime ノードの現在の作業ディレクトリ (`.`) または一時フォルダー (`%TEMP%`) を使うことができます。
 
 ## <a name="store-files-across-multiple-package-executions"></a>複数のパッケージ実行の間でファイルを格納する
 永続的なファイルを格納して処理し、それらを複数のパッケージ実行にわたって保持する必要がある場合は、オンプレミスのファイル共有または Azure Files を使うことができます

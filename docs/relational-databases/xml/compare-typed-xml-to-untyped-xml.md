@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、 **xml** 型の変数、パラメーター、または列に関連付けることができます。 XML スキーマ コレクションを関連付けた場合、この **xml** データ型のインスタンスを *型指定されている*と呼びます。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  

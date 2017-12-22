@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このトピックでは、フルテキスト インデントとクエリのパフォーマンス低下の一般的な原因をいくつか説明します。 また、このような問題を軽減し、パフォーマンスを改善する提案もいくつか紹介します。
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  `F = 8*10*8=640`  
   
- 次の計算では、最適な **max server memory**値 (*M*) を算出します。 *こ*のシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192`です。  
+ 次の計算では、最適な **max server memory**値 (*M*) を算出します。 このシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192` です。  
   
  `M = 8192-640-500=7052`  
   
