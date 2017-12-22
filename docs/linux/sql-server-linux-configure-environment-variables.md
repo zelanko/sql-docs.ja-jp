@@ -21,14 +21,14 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/01/2017
 ---
-# <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の環境変数で SQL Server の設定を構成します。
+# <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の SQL Server の設定を環境変数で構成する
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 いくつかの別の環境変数を使用して、Linux 上の SQL Server 2017 を構成することができます。 これらの変数は、2 つのシナリオで使用されます。
 
 - `mssql-conf setup` コマンドで初期セットアップを構成。
-- 新しい [SQL Server の Docker コンテナー](quickstart-install-connect-docker.md) を構成。
+- 新しい [Docker の SQL Server コンテナー](quickstart-install-connect-docker.md) を構成。
 
 > [!TIP]
 > これらのシナリオのセットアップ後に SQL Server を構成する必要がある場合は、次を参照してください。 [mssql-conf ツールを使用して Linux 上の SQL Server を構成](sql-server-linux-configure-mssql-conf.md)
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="example-initial-setup"></a>例: 初回セットアップ
 
-この例では環境変数で `mssql-conf setup` を構成します。 次の環境変数が指定されます。
+この例では構成した環境変数で `mssql-conf setup` を実行します。 次の環境変数が指定されます。
 
 - **ACCEPT_EULA** 使用許諾契約書を受け入れます。
 - **MSSSQL_PID** 非運用環境で利用できる、フリーライセンスの Developer Edition の SQL Server を指定します。
@@ -66,12 +66,12 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 
 ## <a name="example-docker"></a>例: Docker
 
-この例は、docker コマンドを次の環境変数を使用して、新しい SQL Server 2017 コンテナーを作成します。
+この例の docker コマンドでは、次の環境変数を使用して、新しい SQL Server 2017 コンテナーを作成します。
 
 - **ACCEPT_EULA** 使用許諾契約書を受け入れます。
 - **MSSSQL_PID** 非運用環境で利用できる、フリーライセンスの Developer Edition の SQL Server を指定します。
 - **MSSQL_SA_PASSWORD** 強力なパスワードを設定します。
-- **MSSQL_TCP_PORT** SQL Server がリッスンする TCP ポートを 1234 として設定します。 この場合、ホスト ポート マッピングのポートは、1433 (既定値) の代わりに、カスタムの TCP ポートのマッピングが必要です。この例のコマンドでは `-p 1234:1234` です。
+- **MSSQL_TCP_PORT** SQL Server がリッスンする TCP ポートを 1234 として設定します。 つまり、この例では、ポート 1433 (既定値) をホスト ポートにマップする代わりに、このカスタム TCP ポートを `-p 1234:1234` コマンドでマップしなければなりません。
 
 Linux/macOS で Docker を実行している場合は、単一引用符で、次の構文を使用します。
 
@@ -86,7 +86,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働環境でコンテナー イメージを実行](sql-server-linux-configure-docker.md#production)
+> コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働のコンテナー イメージを実行](sql-server-linux-configure-docker.md#production)
 
 ## <a name="next-steps"></a>次の手順
 
