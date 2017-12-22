@@ -3,7 +3,7 @@
 # 概要
 ## [Microsoft Machine Learning サービスとは](r/r-services.md)
 ## [Machine Learning の新機能](what-s-new-in-sql-server-machine-learning-services.md)
-## [新規および最近の更新記事](new-updated-advanced-analytics.md)
+## [新規および更新のアーティクル](new-updated-advanced-analytics.md)
 ## [アーキテクチャと概要](architecture-overview-machine-learning.md)
 ## [SQL Server のエディション間での Machine Learning 機能の相違点](r/differences-in-r-features-between-editions-of-sql-server.md)
 
@@ -122,8 +122,6 @@
 
 ### [R のユーザー パッケージ ライブラリによるエラーの回避](r/packages-installed-in-user-libraries.md)
 
-### [データベース ユーザーとしての SQLRUserGroup の追加](r/add-sqlrusergroup-to-database.md)
-
 ## データ探索と予測モデリング
 
 ### [R ライブラリとデータ型](r/r-libraries-and-data-types.md)
@@ -155,7 +153,10 @@
 ### [SQL Server での R ランタイムのセキュリティに関する考慮事項](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [SQL Server Machine Learning Services のユーザー アカウント プールを変更する](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [データベース ユーザーとしての SQLRUserGroup の追加](r/add-sqlrusergroup-to-database.md)
+
 ### [Web サービスを使用したモデルのデプロイと使用](operationalization-with-mrsdeploy.md)
+
 ### [Machine Learning ソリューションの管理と監視](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services のリソース管理](r/resource-governance-for-r-services.md)
 ### [Machine Learning 用のリソース プールの作成](r/how-to-create-a-resource-pool-for-r.md)
