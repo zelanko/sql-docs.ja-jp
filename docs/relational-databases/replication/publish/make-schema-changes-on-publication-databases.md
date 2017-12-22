@@ -24,18 +24,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0da3801d395420c24ebb09b8d8d746ec4d417379
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION (スキーマ変更レプリケーションが有効で、トポロジに [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] または [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] サブスクライバーが含まれている場合は使用しないでください) ALTER VIEW  
+-   ALTER TABLE SET LOCK ESCALATION (スキーマ変更レプリケーションが有効で、トポロジに [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] または [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] サブスクライバーが含まれている場合は使用しないでください)。
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   

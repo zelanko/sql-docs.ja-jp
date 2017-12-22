@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="polybase-guide"></a>PolyBase ガイド
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase は、t-sql 言語を使ってデータベースの外部にあるデータにアクセスするテクノロジです。  SQL Server 2016 では、Hadoop で外部データに対してクエリを実行したり、Azure Blob Storage のデータをインポート/エクスポートしたりできます。 クエリは Hadoop に計算をプッシュするように最適化されます。 Azure SQL データ ウェアハウスでは、Azure Blob Storage と Azure Data Lake Store からデータをインポート/エクスポートできます。
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="performance"></a>パフォーマンス  
   
--   **計算を Hadoop にプッシュする。**クエリ オプティマイザーは、クエリ パフォーマンスが向上するのであれば、Hadoop に計算をプッシュすることをコストに基づいて決定します。  コスト ベースの決定には、外部テーブルの統計が使用されます。   計算のプッシュでは、MapReduce ジョブが作成され、Hadoop の分散コンピューティング リソースが活用されます。  
+-   **計算を Hadoop にプッシュする。**クエリ オプティマイザーは、クエリ パフォーマンスが向上するのであれば、Hadoop に計算をプッシュすることをコストに基づいて決定します。  コスト ベースの決定には、外部テーブルの統計が使用されます。 計算のプッシュでは、MapReduce ジョブが作成され、Hadoop の分散コンピューティング リソースが活用されます。  
   
 -   **コンピューティング リソースをスケーリングする。** クエリのパフォーマンスを向上させるために、SQL Server [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)を使用できます。 これにより、SQL Server インスタンスと Hadoop ノードの間の並列データ転送が可能になります。また、外部データに対する操作のためのコンピューティング リソースが追加されます。  
   

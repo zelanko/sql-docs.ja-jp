@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc794554646b0382f5cb0e0c60451e213746d16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] このトピックでは、XML インスタンスを生成する方法について説明します。  
@@ -73,7 +73,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  XML パーサーは、既定では、文字列データを XML に変換するときに、次のいずれかの条件に当てはまる場合は、重要ではない空白文字を破棄します。  
   
--   `The xml:space` 要素またはその先祖の要素に属性が定義されていない。  
+-   `xml:space` 属性が、要素またはその先祖の要素で定義されていない。  
   
 -   要素またはその先祖の要素の 1 つで有効になっている `xml:space` 属性に既定値が設定されている。  
   
