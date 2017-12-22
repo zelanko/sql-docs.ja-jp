@@ -22,7 +22,7 @@ ms.lasthandoff: 12/01/2017
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のパフォーマンスについてのベスト プラクティスと構成ガイドライン
 
-このトピックでは、Linux 上の SQL Server に接続するデータベース アプリケーションのパフォーマンスを最大化するための、ベスト プラクティスと推奨事項を 提供します。 これらの推奨事項は、Linux プラットフォームで実行されている場合、固有のものです。 インデックスのデザインなどの、すべての一般的な SQL Server の推奨事項は引き続き適用されます。
+このトピックでは、Linux 上の SQL Server に接続するデータベース アプリケーションのパフォーマンスを最大化するための、ベスト プラクティスと推奨事項を提供します。 これらの推奨事項は、Linux プラットフォームで実行されている場合に特化しています。 インデックスのデザインなどの、すべての一般的な SQL Server の推奨事項は引き続き適用されます。
 
 次のガイドラインには、SQL Server と Linux のオペレーティング システムの両方を構成するための推奨事項が含まれています。
 
@@ -34,19 +34,19 @@ ms.lasthandoff: 12/01/2017
 
 - **ノード および/または CPU に PROCESS AFFINITY を使用します**
 
-   `ALTER SERVER CONFIGURATION`を設定して、 Linux オペレーティング システム上の SQL Server (一般的にはすべてのノードと CPU) で使用している、すべての **NUMA ノード** および/または CPU に対して、`PROCESS AFFINITY` を設定することをお勧めします。 プロセッサのアフィニティにより、効率的に Linux および SQL のスケジューリング設定の動作を維持することができます。 **NUMANODE** オプションを使用することが、最も簡単な方法です。 お使いのコンピューターが 1 つの NUMA ノードのみの場合でも、**PROCESS AFFINITY** を使用する必要があります。**PROCESS AFFINITY** を設定する方法の詳細については、次のドキュメントを参照してください。 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)
+`ALTER SERVER CONFIGURATION`を使用して、 Linux オペレーティング システム上の SQL Server で使用しているすべての **NUMANODE** および/または CPU  (一般的にはすべてのノードと CPU) に対して `PROCESS AFFINITY` を設定することをお勧めします。 プロセッサのアフィニティにより、効率的に Linux および SQL のスケジューリングの動作を維持することができます。 **NUMANODE** オプションを使用することが、最も簡単な方法です。 お使いのコンピューターに NUMA ノードが 1 つのみの場合でも、**PROCESS AFFINITY** を使用する必要があることにご注意ください。**PROCESS AFFINITY** を設定する方法の詳細については、次のドキュメントを参照してください。 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) 
 
 - **複数の tempdb データ ファイルを構成します**
 
-   Linux オペレーティング システム上の SQL Server では複数の tempdb ファイルを構成するオプションを提供していないため、インストール後に複数の tempdb データ ファイルの作成を検討することをお勧めします。 詳細については、次の記事のガイダンスを参照してください。[SQL Server の tempdb データベース内の割り当ての競合を減らすための推奨事項](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)
+Linux 上の SQL Server では複数の tempdb ファイルを構成するオプションを提供していないため、インストール後に複数の tempdb データ ファイルの作成を検討することをお勧めします。 詳細については、次の記事のガイダンスを参照してください。[SQL Server の tempdb データベース内の割り当ての競合を減らすための推奨事項](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 
 
 ### <a name="advanced-configuration"></a>高度な構成
 
-次の推奨事項は、Linux に SQL Server のインストール後に実行することができるオプションの構成設定です。 これらのオプションは、ワークロードの要件とLinux オペレーティング システムの構成に基づいています。
+次の推奨事項は、Linux に SQL Server をインストールした後に実行することができる省略可能な構成設定です。 ワークロードの要件とLinux オペレーティング システムの構成に基づいて選択します。  
 
 - **mssql-conf でメモリの制限を設定します**
 
-   Linux オペレーティング システムで、十分な空き物理メモリを確保するために、既定では、SQL Server プロセスは、物理メモリの 80% のみを使用します。いくつかの大量の物理 RAM のシステムでは、20% はかなり大きい可能性があります。 たとえば、1 TB の RAM システムの既定の設定では、約 200 GB の RAM が未使用となります。 このような状況では、メモリ制限の値を大きく構成することができます。 **mssql-conf** ツールおよび、SQL Server のメモリの設定 (MB 単位) を制御する [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit) のドキュメントを参照してください。。
+   Linux オペレーティング システムで、十分な空き物理メモリを確保するために、既定では、SQL Server プロセスは、物理メモリの 80% のみを使用します。いくつかの大量の物理 RAM のシステムでは、20% はかなり大きい可能性があります。 たとえば、1 TB の RAM システムの既定の設定では、約 200 GB の RAM が未使用となります。 このような状況では、メモリ制限の値をより高く構成することができます。 **mssql-conf** ツールおよび、SQL Server のメモリの設定 (MB 単位) を制御する [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit) のドキュメントを参照してください。 
 
    この設定を変更する場合は、高すぎる値を設定しないように注意します。 十分なメモリが残っていない場合、Linux オペレーティング システムおよびその他の Linux アプリケーションで問題が発生する可能性があります。
 
@@ -89,13 +89,13 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>カーネルの仮想アドレス空間の設定
 
-既定の設定の **vm.max_map_count** (65536) SQL Server インストール環境で十分な大きさではない可能性があります。この値を (上限となる) 256K に変更します。
+既定の設定の **vm.max_map_count** (65536) はSQL Server インストール環境では十分な大きさではない可能性があります。この値を (上限となる) 256K に変更します。 
 
 ```bash
 sysctl -w vm.max_map_count 262144
 ```
 
-### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>SQL Server データ ファイルとログ ファイルのファイル システム上の最後にアクセスされる日付/時刻を無効にします
+### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>SQL Server データ ファイルとログ ファイルのファイル システム上の最後にアクセスされた日付/時刻を無効にする
 
 SQL Server のデータおよびログ ファイルを格納するファイル システムでは、**noatime** 属性を使用します。 この属性を設定する方法は Linux のマニュアルを参照してください。
 
@@ -113,6 +113,6 @@ SQL Server のデータおよびログ ファイルを格納するファイル �
 
 ## <a name="next-steps"></a>次の手順
 
-パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)
+パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。 
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux に SQL Server の概要](sql-server-linux-overview.md)
+Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux の SQL Server の概要](sql-server-linux-overview.md)です。 
