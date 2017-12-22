@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server のパフォーマンス機能の概要 |Microsoft ドキュメント"
-description: "このトピックでは、SQL Server に追加された新しい Linux ユーザーの SQL Server のパフォーマンス機能の概要を示します。 すべてのプラットフォームでは、これらの例の多くは機能が Linux にこの記事のコンテキストが存在します。"
+description: "このトピックでは、SQL Server を初めて利用する、Linux ユーザーのための SQL Server のパフォーマンス機能の概要を示します。これらの例の多くの機能はすべてのプラットフォームで動作しますが、この記事は Linux についてとなります。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -23,15 +23,15 @@ ms.lasthandoff: 12/01/2017
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のパフォーマンス機能のチュートリアル
 
-SQL Server に新しい Linux ユーザーの場合は、次のタスクはパフォーマンス機能の一部を説明します。 これらは一意または Linux に固有でないですがさらに詳しく調査するには、領域の概念を付けると便利です。 各例では、リンクは、その領域の深さのドキュメントが提供されます。
+SQL Server を初めて利用する Linux ユーザーの場合、次のタスクはパフォーマンス機能の一部についての解説となります。 これらは Linux に固有のものではありませんが、より詳しく調べたい領域を知るのに役立ちます。 各例では、その領域の詳細なドキュメントのリンクが提供されます。
 
 > [!NOTE]
-> 次の例では、AdventureWorks サンプル データベースを使用します。 手順を取得して、このサンプル データベースをインストールする方法については、次を参照してください。 [Windows から Linux に SQL Server データベースを復元](sql-server-linux-migrate-restore-database.md)です。
+> 次の例では、AdventureWorks サンプル データベースを使用します。 このサンプル データベースを入手し、インストールする方法については、次を参照してください。 [Windows から Linux に SQL Server のデータベースを復元](sql-server-linux-migrate-restore-database.md)
 
 ## <a name="create-a-columnstore-index"></a>列ストア インデックスを作成します。
-列ストア インデックスは、格納して、列ストアと呼ばれる列指向データ形式でデータの大規模なストアのクエリを実行するためのテクノロジです。  
+列ストア インデックスは、列ストアと呼ばれる列指向データ形式で大規模なストアのデータを格納して、クエリを実行するためのテクノロジです。  
 
-1. T-SQL は、以下を実行することによって、salesorderdetail の各テーブルに列ストア インデックスを追加します。
+1. 以下の T-SQL を実行することによって、SalesOrderDetail のテーブルに列ストア インデックスを追加します。 
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +40,7 @@ SQL Server に新しい Linux ユーザーの場合は、次のタスクはパ�
    GO
    ```
 
-2. 列ストア インデックスがテーブルのスキャンを使用して次のクエリを実行します。
+2. 次のクエリを実行します。このクエリでは、列ストア インデックスを使用してテーブルをスキャンします。 
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -50,7 +50,7 @@ SQL Server に新しい Linux ユーザーの場合は、次のタスクはパ�
       ORDER BY ProductID
    ```
 
-3. 列ストア インデックスの object_id を参照して、salesorderdetail の各テーブルの使用状況の統計が表示されることを確認する、列ストア インデックスが使用されたことを確認します。
+3. 列ストア インデックスの object_id を参照して SalesOrderDetail テーブルの使用状況の統計に表示されることを確認することにより、列ストア インデックスが使用されたことを確認します。 
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
@@ -63,10 +63,10 @@ SQL Server に新しい Linux ユーザーの場合は、次のタスクはパ�
    ```
    
 ## <a name="use-in-memory-oltp"></a>インメモリ OLTP を使用します。
-SQL Server では、アプリケーションのシステムのパフォーマンスを大幅に改善できるインメモリ OLTP 機能を提供します。  評価ガイドのこのセクションでは、メモリおよびコンパイルまたは解釈することがなく、テーブルにアクセスできる、ネイティブ コンパイル ストアド プロシージャに格納されているメモリ最適化テーブルを作成する手順を説明します。
+SQL Server では、アプリケーションのシステムのパフォーマンスを大幅に改善できるインメモリ OLTP 機能を提供します。評価ガイドのこのセクションでは、コンパイルまたは解釈することなくテーブルにアクセスできる、ネイティブ コンパイル ストアド プロシージャと、メモリに格納されているメモリ最適化テーブルを作成する手順を説明します。 
 
 ### <a name="configure-database-for-in-memory-oltp"></a>インメモリ OLTP でのデータベースを構成します。
-1. データベースのインメモリ OLTP を使用するには、少なくとも 130 の互換性レベルを設定することをお勧めします。  AdventureWorks の現在の互換性レベルを確認するのにには、次のクエリを使用します。  
+1. インメモリ OLTP を使用するには、データベースで少なくとも 130 の互換性レベルを設定することを推奨します。  AdventureWorks の現在の互換性レベルを確認するには、次のクエリを使用します。
 
    ```sql
    USE AdventureWorks
@@ -85,14 +85,14 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    GO
    ```
 
-2. トランザクションがディスク ベース テーブルとメモリ最適化テーブルの両方に関与の重要なトランザクションのメモリ最適化部分が、トランザクション分離レベルで動作するには、スナップショットがという名前です。  このレベルのコンテナーにまたがるトランザクションでメモリ最適化テーブルを確実に適用するには、次の手順を実行します。
+2. トランザクションにディスク ベース テーブルとメモリ最適化テーブルの両方が含まれる場合、メモリ最適化部分のトランザクションはスナップショットと呼ばれるトランザクション分離レベルで動作させることが重要です。  コンテナーをまたがるトランザクションでメモリ最適化テーブルに対してこのレベルを確実に適用するには、次を実行します。 
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. 作成する前にするには、メモリ最適化テーブルは、メモリ最適化ファイル グループとデータ ファイルのコンテナーを作成します。
+3. メモリ最適化テーブルを作成する前に、メモリ最適化ファイル グループとデータ ファイルのコンテナーを作成します。 
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -102,9 +102,9 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    ```
 
 ### <a name="create-a-memory-optimized-table"></a>メモリ最適化テーブルを作成します。
-メモリ最適化テーブルのプライマリ ストアはメイン メモリしているため、ディスク ベース テーブルとは異なりでのメモリ バッファーにディスクから読み取られるデータは必要ありません。  メモリ最適化テーブルを作成するには、使用、MEMORY_OPTIMIZED = ON 句。
+メモリ最適化テーブルのプライマリ ストアはメイン メモリであるため、ディスク ベース テーブルとは異なり、ディスクからメモリ バッファーにデータを読み取る必要はありません。  メモリ最適化テーブルを作成するには、MEMORY_OPTIMIZED = ON 句を使用します。 
 
-1. メモリ最適化テーブルの dbo を作成する次のクエリを実行します。ShoppingCart です。  として既定では、データは持続性の目的 (持続性を設定して、スキーマのみを保持することもできますメモ) 用のディスクで保持されます。 
+1. メモリ最適化テーブルの dbo.ShoppingCart を作成するために、次のクエリを実行します。  既定では、データは持続性の目的のためディスクに保持されます (注: 持続性は、スキーマのみを保持するよう設定することもできます)。
 
    ```sql
    CREATE TABLE dbo.ShoppingCart ( 
@@ -116,7 +116,7 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    GO
    ```
 
-2. 一部のレコードをテーブルに挿入します。
+2. いくつかのレコードをテーブルに挿入します。
 
    ```sql
    INSERT dbo.ShoppingCart VALUES (8798, SYSDATETIME(), NULL) 
@@ -126,9 +126,9 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    ```
 
 ### <a name="natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャ
-SQL Server には、メモリ最適化テーブルにアクセスするネイティブ コンパイル ストアド プロシージャがサポートしています。 T-SQL ステートメントでは、マシン語コードにコンパイルされ、高速データ アクセスと従来の T-SQL でより効率的なクエリ実行を有効にすると、ネイティブ Dll として格納されていることができます。   NATIVE_COMPILATION が設定されているストアド プロシージャはネイティブでコンパイルされます。 
+SQL Server では、メモリ最適化テーブルにアクセスするネイティブ コンパイル ストアド プロシージャがサポートされています。 T-SQL ステートメントは、機械語のコードにコンパイルされ、高速データ アクセスと従来の T-SQL より効率的なクエリ実行が可能になる、ネイティブ DLL として格納されます。   NATIVE_COMPILATION が設定されているストアド プロシージャはネイティブでコンパイルされます。 
 
-1. ShoppingCart テーブルに大量のレコードを挿入するネイティブ コンパイル ストアド プロシージャを作成する次のスクリプトを実行します。
+1. ShoppingCart テーブルに大量のレコードを挿入するネイティブ コンパイル ストアド プロシージャを作成する次のスクリプトを実行します。 
 
 
    ```sql
@@ -146,7 +146,7 @@ SQL Server には、メモリ最適化テーブルにアクセスするネイテ
     END
    END 
    ```
-2. 行数は 1,000,000 行を挿入します。
+2. 1,000,000 行を挿入します。
 
    ```sql
    EXEC usp_InsertSampleCarts 1000000 
@@ -158,7 +158,7 @@ SQL Server には、メモリ最適化テーブルにアクセスするネイテ
    SELECT COUNT(*) FROM dbo.ShoppingCart 
    ```
 
-### <a name="learn-more-about-in-memory-oltp"></a>インメモリ OLTP の詳細を表示します
+### <a name="learn-more-about-in-memory-oltp"></a>インメモリ OLTP の詳細
 インメモリ OLTP の詳細については、次のトピックを参照してください。
 
 - [クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
@@ -170,13 +170,13 @@ SQL Server には、メモリ最適化テーブルにアクセスするネイテ
 ## <a name="use-query-store"></a>クエリ ストアを使用
 クエリ ストアは、クエリ、実行プランとランタイム統計情報に関する詳細なパフォーマンス情報を収集します。
 
-クエリ ストアは、既定ではアクティブではありませんし、ALTER DATABASE を有効にすることができます。
+クエリ ストアは、既定ではアクティブではありません。ALTER DATABASE で有効にすることができます。
 
    ```sql
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
    ```
 
-クエリ ストアのクエリとプランに関する情報を返す次のクエリを実行します。 
+クエリ ストアのクエリとプランに関する情報を返す次のクエリを実行します。  
 
    ```sql
    SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
@@ -188,9 +188,9 @@ SQL Server には、メモリ最適化テーブルにアクセスするネイテ
    ```
 
 ## <a name="query-dynamic-management-views"></a>クエリの動的管理ビュー
-動的管理ビューは、サーバー インスタンスのヘルスを監視、問題の診断し、パフォーマンスのチューニングに使用できるサーバーの状態情報を返します。
+動的管理ビューは、サーバー インスタンスのヘルスの監視、問題の診断、パフォーマンスのチューニングに使用できる、サーバーの状態の情報を返します。 
 
-Dm_os_wait stats 動的管理ビューを照会します。
+Dm_os_wait stats 動的管理ビューを照会します。 
 
    ```sql
    SELECT wait_type, wait_time_ms
