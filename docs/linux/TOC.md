@@ -100,6 +100,7 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # リソース
+## [よくあるご質問](sql-server-linux-faq.md)
 ## [[トラブルシューティング]](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server のドキュメント](../sql-server/sql-server-technical-documentation.md)
 ## パートナー
