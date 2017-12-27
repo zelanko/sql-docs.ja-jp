@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
 次のスケジュール設定のオプションのいずれかを選択して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されているパッケージの実行をスケジュール設定することができます。
@@ -62,13 +62,13 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
 
-SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
+SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
 
 ### <a name="prerequisites"></a>前提条件
 
 エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
 
-1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
+1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
 
 2. ジョブで SSIS カタログ データベースにコマンドを送信するために使用できるデータベース スコープの資格情報を作成します。 詳細については、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープの資格情報を作成する (Transact-SQL)) を参照してください。
 
@@ -121,7 +121,9 @@ Azure Data Factory SQL Server ストアド プロシージャ アクティビテ
 
 4.  SSIS パッケージを実行する SQL Server ストアド プロシージャ アクティビティを使用するデータ ファクトリ パイプラインを作成する。
 
-このセクションでは、これらの手順の概要を説明します。 データ ファクトリの完全なチュートリアルは、この記事の範囲外です。 詳細については、「[SQL Server ストアド プロシージャ アクティビティ](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)」を参照してください。
+このセクションでは、これらの手順の概要を説明します。 データ ファクトリの完全なチュートリアルは、この記事の範囲外です。 詳細については、「[SQL Server ストアド プロシージャ アクティビティ](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity)」を参照してください。
+
+スケジュールされた実行が失敗し、ADF ストアド プロシージャ アクティビティから失敗した実行の実行 ID が提供されている場合は、SSIS カタログの SSMS でその ID の実行レポートを確認してください。
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>SSISDB をホストする SQL Database のリンク サービスを作成する
 リンク サービスは、データ ファクトリを SSISDB に接続することができます。
@@ -225,9 +227,45 @@ END
 GO
 ```
 
+上記の SQL スクリプトを `stmt` パラメーターの値として提供する場合、通常は次の例のように 1 行にスクリプト全体を含める必要があります。 ([JSON 標準](https://json.org/)は、複数行の文字列の行を分割するために他の言語で使用された `\n` の改行制御文字を含む制御文字をサポートしません。)
+
+```json
+{
+    "name": "SprocActivitySamplePipeline",
+    "properties": {
+        "activities": [
+            {
+                "type": "SqlServerStoredProcedure",
+                "typeProperties": {
+                    "storedProcedureName": "sp_executesql",
+                    "storedProcedureParameters": {
+                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
+                    }
+                },
+                "outputs": [
+                    {
+                        "name": "sprocsampleout"
+                    }
+                ],
+                "scheduler": {
+                    "frequency": "Minute",
+                    "interval": 15
+                },
+                "name": "SprocActivitySample"
+            }
+        ],
+        "start": "2017-12-06T12:00:00Z",
+        "end": "2017-12-06T12:30:00Z",
+        "isPaused": false,
+        "hubName": "test_hub",
+        "pipelineMode": "Scheduled"
+    }
+}
+```
+
 このスクリプトのコードの詳細については、「[ストアド プロシージャを使用した SSIS パッケージの配置と実行](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 SQL Server エージェントの詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。
 
-SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
+SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
