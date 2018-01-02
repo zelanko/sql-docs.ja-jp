@@ -1,7 +1,7 @@
 ---
 title: "Ssms ユーティリティ | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e308a64f82ddb822bc5535c6cae7dc076265d212
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="ssms-utility"></a>Ssms ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **Ssms** ユーティリティが [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。 指定すると、 **Ssms** はサーバーへの接続を確立し、クエリ、スクリプト、ファイル、プロジェクト、ソリューションを開きます。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -58,27 +58,34 @@ Ssms
  開くソリューションを指定します。 パラメーターには、ソリューション ファイルへの完全パスを含める必要があります。  
   
  [**-S** *servername*]  
- サーバー名  
+  サーバー名  
   
  [**-d** *databasename*]  
- データベース名  
+  データベース名  
+
+ **[-G]** Azure Active Directory 認証を使用して接続します。 接続の種類は、**-P** および/または **-U** が含まれるかどうかで決まります。
+ - **-U** も **-P** も含まれて*いない*場合は、**[Active Directory - 統合]** が使用され、ダイアログは表示されません。
+ - **-U** と **-P** の両方が含まれている場合は、**[Active Directory - パスワード]** が使用されます。 このオプションを使用することは**お勧めできません**。コマンドライン上にクリア テキスト パスワードを指定する必要があり、これが推奨されないためです。
+ - **-U** が含まれており、**-P** は含まれていない場合、認証ダイアログはポップアップ表示されますが、ログインの試みはすべて失敗します。 
+
+  **[Active Directory - MFA サポートで汎用]** は現在サポートされていません。 
   
- [**-U** *username*]  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続するときのユーザー名です。  
+[**-U** *username*]  
+ 'SQL 認証' または 'Active Directory - パスワード' に接続するときのユーザー名  
   
- [**-P** *password*]  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続するときのパスワードです。  
+[**-P** *password*]  
+ 'SQL 認証' または 'Active Directory - パスワード' で接続するときのパスワード
   
- **[-E]**  
+**[-E]**  
  Windows 認証を使用した接続  
   
- **[-nosplash]**  
+**[-nosplash]**  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開くとき、スプラッシュ スクリーンのグラフィックを表示しません。 限られた帯域幅を使用した接続では、ターミナル サービスを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動しているコンピューターへ接続する場合に、このオプションを使用してください。 この引数では、大文字と小文字は区別されず、他の引数の前後どちらにも指定できます。  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  トラブルシューティング用に指定したファイルに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のアクティビティを記録します。  
   
- **[-?]**  
+**[-?]**  
  コマンド ライン ヘルプを表示します。  
   
 ## <a name="remarks"></a>解説  
@@ -103,13 +110,21 @@ Ssms
   
 ```  
   
+ 次のスクリプトでは、"*Active Directory - 統合*" を使用してコマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  次のスクリプトは、コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。接続には Windows 認証を使用し、サーバー `ACCTG and the database AdventureWorks2012,` に対して設定されているコード エディターを使用します。また、スプラッシュ スクリーンは表示されません。  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  次のスクリプトは、コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、MonthEndQuery スクリプトを開きます。  
   
 ```  
@@ -130,7 +145,10 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
+ 
+
+
+
 ## <a name="see-also"></a>参照  
  [SQL Server Management Studio の使用 [SQL Server]](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   

@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  ![値を持つ論理レコードの 3 つのテーブル](../../../relational-databases/replication/merge/media/logical-records-02.gif "値を持つ論理レコードの 3 つのテーブル")  
   
- アーティクル間で論理レコード リレーションシップを定義するには、「 [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)」を参照してください。  
+ アーティクル間で論理レコード リレーションシップを定義するには、「 [マージテーブル記事間の論理レコード関係を定義する](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)」を参照してください。  
   
 ## <a name="benefits-of-logical-records"></a>論理レコードの利点  
  論理レコード機能には、2 つの主な利点があります。  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -17,17 +17,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)は以下でダウンロードできます。
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+一般公開 | ビルド番号: 14.0.17213.0
+
+### <a name="whats-new"></a>新機能
+
+**SSMS 全般**
+
+脆弱性評価:
+- データベースをスキャンして潜在的な脆弱性およびベスト プラクティスからの逸脱 (構成の不備、過剰なアクセス許可、公開された機密データなど) がないかを確認できるように新しい SQL 脆弱性評価サービスが追加されました。 
+- 評価の結果には、各々の問題を解決する実践的な手順が含まれ、カスタマイズした修復スクリプトが適宜提供されます。 評価レポートは環境ごとにカスタマイズし、特定の要件に合わせて調整することができます。 詳細については、「[SQL 脆弱性評価](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)」を参照してください。
+
+SMO:
+- Azure 上で *HasMemoryOptimizedObjects* が例外をスローするという問題を修正しました。
+- 新しい CATALOG_COLLATION 機能のサポートが追加されました。
+
+Always On ダッシュボード:
+- 可用性グループでの待機時間の分析の機能強化。
+- 次の 2 つの新しいレポートが追加されました: *AlwaysOn\_Latency\_Primary* および *AlwaysOn\_Latency\_Secondary*
+
+Showplan:
+- 適切なドキュメントを指すようにリンクが更新されました。
+- 実際に作成されたプランから直接、単一プラン分析を実行できます。
+- 新しいアイコンのセット。
+- GbApply や InnerApply などの "Apply 論理演算子" を認識するためのサポートが追加されました。
+        
+XE プロファイラー:
+- XEvent プロファイラーに名前が変更になりました。
+- 既定で、[停止] / [開始] メニュー コマンドによってセッションが停止/開始されるようになりました。
+- キーボード ショートカットが有効になりました (たとえば、検索する場合は CTRL + F キー)。
+- XEvent プロファイラー セッションの適切なイベントに database\_name アクションと client\_hostname アクションが追加されました。 変更を有効にするために、サーバー上で既存の QuickSessionStandard セッション インスタンスまたは QuickSessionTSQL セッション インスタンスを削除することが必要な場合があります - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+コマンド ライン:
+- 新しいコマンド ライン オプション ("-G") が追加されました。このオプションを指定すると、Active Directory 認証 ('統合' または 'パスワード' のいずれか) を使用してサーバー/データベースへの SSMS の自動接続を行うことができます。 詳細については、「[Ssms ユーティリティ](ssms-utility.md)」を参照してください。
+
+フラット ファイルのインポート ウィザード:
+- テーブルの作成時に既定値 ("dbo") 以外のスキーマの名前を選択する方法が追加されました。
+
+クエリ ストア:
+- クエリ ストアで使用可能なレポート リストを展開するときの "低下したクエリ" レポートが復元されました。
+
+**Integration Services (IS)**
+- 展開ウィザードにパッケージ検証機能が追加されました。これにより、ユーザーは、Azure SSIS IR でサポートされていない SSIS パッケージ内のコンポーネントを容易に確認することができます。
+
+### <a name="bug-fixes"></a>バグの修正
+
+**SSMS 全般**
+
+- オブジェクト エクスプローラー:
+    - データベース スナップショットでテーブル値関数ノードが表示されないという問題を修正しました - [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161)です。
+    - サーバーが autoclose データベースがある場合に、"*データベース*" ノードを展開する際のパフォーマンスが向上しました。
+- クエリ エディター:
+    - マスター データベースへのアクセス権をユーザーが持っていない場合に IntelliSense が失敗するという問題を修正しました。
+    - リモート コンピューターへの接続を終了するときに、場合によって SSMS をクラッシュさせていた問題を修正しました - [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557)。
+- XEvent ビューアー:
+    - XEL へのエクスポート機能が再び有効になりました。
+    - 場合によって、ユーザーが XEL ファイル全体を読み込めないという問題を修正しました。
+- XEvent プロファイラー:
+    - ユーザーが *VIEW SERVER STATE* アクセス許可を持っていない場合に SSMS のクラッシュの原因となっていた問題を修正しました。
+    - XE プロファイラー ライブ データ ウィンドウを閉じても基になるセッションが停止しないという問題を修正しました。
+- 登録済みサーバー:
+    - "移動先…" コマンドが機能しなくなるという問題を修正しました -  [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) および [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+- SMO:
+    - 転送オブジェクトの TransferData メソッドが動作していないという問題を修正しました。
+    - SQL DW データベースが一時停止した場合に Server データベースが例外をスローするという問題を修正しました。
+    - SQL DW に対して SQL データベースをスクリプト化すると、不適切な T-SQL パラメーター値が生成されるという問題を修正しました。
+    - DB の拡張をスクリプト化したときに *DATA\_COMPRESSION* オプションが正しく送信されないという問題を修正しました。
+- ジョブの利用状況モニター:
+    - ユーザーがカテゴリによるフィルター処理を試みているときに "インデックスが範囲を超えています。 負でない値で、コレクションのサイズよりも小さくなければなりません。 
+        パラメーター名: インデックス (System.Windows.Forms)" というエラーが発生するという問題を修正しました - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)。
+- 接続ダイアログ:
+    - 読み取り/書き込みドメイン コント ローラーへのアクセス権を持たないドメイン ユーザーは SQL 認証を使用して SQL Server にログインできないという問題を修正しました - [Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381)。
+- レプリケーション:
+    - SQL Server でプル サブスクリプションのプロパティを参照するときに、エラー "値 'null' をプロパティ ServerInstance に適用できません" が表示されるという問題を修正しました。
+- SSMS セットアップ:
+    - SSMS セットアップが原因で、コンピューター上にインストールされている一部の製品が正しく再構成されないという問題を修正しました。
+- ユーザー設定:
+   - この修正プログラムにより、米国政府機関向けソブリン クラウド ユーザーは、ユニバーサル認証と Azure Active Directory ログインを介して SSMS で Azure SQL Database および ARM リソースへのアクセスを中断なく継続できるようになります。  SSMS の以前のバージョンのユーザーの場合は、[ツール]、[オプション]、[Azure サービス] の順に開き、[リソース管理] で "Active Directory Authority" プロパティの構成を https://login.microsoftonline.us に変更する必要があります。
+
+**Analysis Services (AS)**
+
+- プロファイラー: Window 認証を使用して Azure AS に対する接続を試みるときに発生する問題を修正しました。
+- 1400 モデル上で接続の詳細をキャンセルするときにクラッシュを引き起こす可能性のある問題を修正しました。
+- 資格情報を更新するときに、接続プロパティ ダイアログで Azure BLOB キーを設定すると、それが視覚的にマスクされるようになります。
+- Azure Analysis Services のユーザー選択ダイアログで、検索時にオブジェクト ID ではなくアプリケーション ID guid が表示される問題を修正しました。
+- データベース\MDX クエリ デザイナー ツールバーで、いくつかのボタンにアイコンが正しくマップされない原因となっていた問題を修正しました。
+- msmdpump IIS http/https アドレスを使用した SSAS への接続を妨げる問題を修正しました。
+- Azure Analysis Services の[ユーザー ピッカー] ダイアログ内の複数の文字列が新たに他の言語にも翻訳されました。
+- MaxConnections プロパティが表形式モデルのデータ ソースに表示されるようになりました。
+- 配置ウィザードで、Azure AS ロール メンバーに対する適切な JSON 定義が生成されるようになります。
+- Azure AS に対して Windows 認証を選択した場合にログインを求めるメッセージが引き続き表示されるという SQL Profiler での問題を修正しました。
+
+
+## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 一般公開 | ビルド番号: 14.0.17199.0
 
 ### <a name="enhancements"></a>機能強化
@@ -117,10 +213,6 @@ ms.lasthandoff: 12/05/2017
 
 - [catalog].[event_messagea] の [Execution_path] は、Scale Out でのパッケージの実行には正しくありません。[execution_path] は、パッケージの実行可能ファイルのオブジェクト名ではなく、"\Package" で開始します。 SSMS でパッケージ実行の概要レポートを表示すると、実行の概要の "実行パス" のリンクが機能しません。 回避策として、概要レポートの [メッセージの表示] をクリックして、すべてのイベント メッセージを確認します。
 
-
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
-
-以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 一般公開 | ビルド番号: 14.0.17177.0

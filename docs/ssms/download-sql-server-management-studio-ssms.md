@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 550f91939f2ab6b8e16455a6a5dea2a4ac519c5d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90ffdbc2b636c360fd145c83847704f9860d6c37
+ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS には、SQL のインスタンスを構成、監視、および管理するためのツールが備わっています。 SSMS を使用して、アプリケーションで使われるデータ層コンポーネントを配置、監視、アップグレードしたり、クエリとスクリプトを作成したりすることもできます。
@@ -45,9 +45,9 @@ SQL Server Management Studio (SSMS) を使用すると、データベースと�
 
 SSMS 17.x は、*SQL Server Management Studio* の最新世代であり、SQL Server 2017 をサポートしています。
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.3 のダウンロード](https://go.microsoft.com/fwlink/?linkid=858904)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.4 のダウンロード](https://go.microsoft.com/fwlink/?linkid=864329)**
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.3 アップグレード パッケージのダウンロード (17.x から 17.3 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=858906)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.4 アップグレード パッケージのダウンロード (17.x から 17.4 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=864331)**
 
 SSMS 17.x のインストールでは、16.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 17.x は以前のバージョンとは別にサイド バイ サイドでインストールするので、両方のバージョンが使用できます。
 コンピューターに SSMS のサイド バイ サイドのインストールが含まれている場合は、特定のニーズに応じて適切なバージョンを起動してください。 最新バージョンには、*Microsoft SQL Server Management Studio 17* というラベルと新しいアイコンが付いています。 
@@ -55,37 +55,74 @@ SSMS 17.x のインストールでは、16.x 以前のバージョンの SSMS �
    ![SSMS 17.x](media/download-sql-server-management-studio-ssms/version-icons.png)
 
 
-> [!NOTE]
-> SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールになりました。  詳しくは、[ダウンロードに関する説明](download-sql-server-ps-module.md)をご覧ください。
+## <a name="available-languages"></a>使用できる言語
 
+> [!NOTE]
+> SSMS の英語以外のローカライズされたリリースでは、Windows 8、Windows 7、Windows Server 2012、Windows Server 2008 R2 にインストールする場合、 [KB 2862966 セキュリティ更新プログラム パッケージ](https://support.microsoft.com/en-us/kb/2862966) が必要です。
+
+
+SSMS の今回のリリースは、次の言語でインストールできます。
+
+SQL Server Management Studio 17.4:<br>
+[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
+SQL Server Management Studio 17.4 アップグレード パッケージ (17.x から 17.4 へのアップグレード):<br>
+[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
+
+> [!NOTE]
+> SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールになりました。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
 ## <a name="sql-server-management-studio"></a>[SQL Server Management Studio]
 
 **バージョン情報**
 
-リリース番号: 17.3
+リリース番号: 17.4
 
-このリリースのビルド番号: 14.0.17199.0
+このリリースのビルド番号: 14.0.17213.0
+
+リリース日: 2017 年 12 月 7 日
 
 ## <a name="new-in-this-release"></a>このリリースの新機能
 
-SSMS 17.3 は SQL Server Management Studio の最新バージョンです。 SSMS の 17.x 世代は、SQL Server 2008 から SQL Server 2017 までのほぼすべての機能領域をサポートしています。 バージョン 17.x は、SQL Analysis Service PaaS もサポートしています。
+SSMS 17.4 は SQL Server Management Studio の最新バージョンです。 SSMS の 17.x 世代は、SQL Server 2008 から SQL Server 2017 までのほぼすべての機能領域をサポートしています。 バージョン 17.x は、SQL Analysis Service PaaS もサポートしています。
 
-バージョン 17.3 の内容:
+バージョン 17.4 の内容:
 
-- インテリジェントなフレームワークを使用して、CSV ファイルのインポート エクスペリエンスを効率化するための新しい "フラット ファイルのインポート" ウィザードが追加されました。これは最小限のユーザーの介入または特殊なドメインの知識で使用できます。 詳細については、「[Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md)」 (フラット ファイルを SQL ウィザードにインポートする) を参照してください。
-- オブジェクト エクスプローラーに "XEvent プロファイラー" ノードが追加されました。 詳細については、「[SSMS XEvent プロファイラーの使用](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)」を参照してください。
-- パフォーマンス ダッシュボードでの待機の履歴レポートの待機のフィルター処理と分類を更新しました。
-- "Predict" 関数の構文チェックを追加しました。
-- 外部ライブラリ管理のクエリの構文チェックを追加しました。
-- 外部ライブラリ管理の SMO サポートを追加しました。
-- [登録済みサーバー] ウィンドウに [PowerShell の起動] のサポートを追加しました (新しい SQL PowerShell モジュールが必要)。
-- Always On: 可用性グループに[読み取り専用ルーティングのサポート](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)を追加しました。
-- [Active Directory - MFA で汎用のサポート] ログインの出力ウィンドウにトレースの詳細を送信するオプションを追加しました (既定ではオフになっているため、[ツール] > [オプション] > [Azure サービス] > [Azure クラウド] > [ADAL 出力ウィンドウのトレース レベル] の下にあるユーザー設定で有効にする必要があります)。 
-- クエリ ストア: 
-  - クエリ ストア UI は、QDS が何らかのデータを記録している限り、QDS がオフになっている場合でもアクセスできます。
-  - クエリ ストア UI で、既存レポートのすべての待機の分類法が公開されるようになりました。 これにより、顧客が上位の待機中のクエリのシナリオのロック解除などができるようになります。
-- [スクリプト パラメーター ヘッダーを含める] がオプションになりました (既定で無効になっており、[ツール] > [オプション] > [SQL Server オブジェクト エクスプローラー] > [スクリプト] > [スクリプト パラメーター ヘッダーを含める] の下のユーザー設定で有効にすることができます) - [Connect アイテム 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)。
-- "RC" ブランド化を削除しました。
+脆弱性評価:
+- データベースをスキャンして潜在的な脆弱性およびベスト プラクティスからの逸脱 (構成の不備、過剰なアクセス許可、公開された機密データなど) がないかを確認できるように新しい SQL 脆弱性評価サービスが追加されました。 
+- 評価の結果には、各々の問題を解決する実践的な手順が含まれ、カスタマイズした修復スクリプトが適宜提供されます。 評価レポートは環境ごとにカスタマイズし、特定の要件に合わせて調整することができます。 詳細については、「[SQL 脆弱性評価](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)」を参照してください。
+
+SMO:
+- Azure 上で *HasMemoryOptimizedObjects* が例外をスローするという問題を修正しました。
+- 新しい CATALOG_COLLATION 機能のサポートが追加されました。
+
+Always On ダッシュボード:
+- 可用性グループでの待機時間の分析の機能強化。
+- 次の 2 つの新しいレポートが追加されました: *AlwaysOn\_Latency\_Primary* および *AlwaysOn\_Latency\_Secondary*
+
+Showplan:
+- 適切なドキュメントを指すようにリンクが更新されました。
+- 実際に作成されたプランから直接、単一プラン分析を実行できます。
+- 新しいアイコンのセット。
+- GbApply や InnerApply などの "Apply 論理演算子" を認識するためのサポートが追加されました。
+        
+XE プロファイラー:
+- XEvent プロファイラーに名前が変更になりました。
+- 既定で、[停止] / [開始] メニュー コマンドによってセッションが停止/開始されるようになりました。
+- キーボード ショートカットが有効になりました (たとえば、検索する場合は CTRL + F キー)。
+- XEvent プロファイラー セッションの適切なイベントに database\_name アクションと client\_hostname アクションが追加されました。 変更を有効にするために、サーバー上で既存の QuickSessionStandard セッション インスタンスまたは QuickSessionTSQL セッション インスタンスを削除することが必要な場合があります - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+コマンド ライン:
+- 新しいコマンド ライン オプション ("-G") が追加されました。このオプションを指定すると、Active Directory 認証 ('統合' または 'パスワード' のいずれか) を使用してサーバー/データベースへの SSMS の自動接続を行うことができます。 詳細については、「[Ssms ユーティリティ](ssms-utility.md)」を参照してください。
+
+フラット ファイルのインポート ウィザード:
+- テーブルの作成時に既定値 ("dbo") 以外のスキーマの名前を選択する方法が追加されました。
+
+クエリ ストア:
+- クエリ ストアで使用可能なレポート リストを展開するときの "低下したクエリ" レポートが復元されました。
+
+**Integration Services (IS)**
+- 展開ウィザードにパッケージ検証機能が追加されました。これにより、ユーザーは、Azure SSIS IR でサポートされていない SSIS パッケージ内のコンポーネントを容易に確認することができます。
+
 
 変更の完全なリストについては、「[SQL Server Management Studio - Changelog (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md)」を参照してください。
 
@@ -124,36 +161,12 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 * 既知の問題と回避策の一覧については、「[SQL Server Management Studio - リリース ノート](../ssms/sql-server-management-studio-release-notes.md)」をご覧ください。
 
-## <a name="available-languages"></a>使用できる言語
-
-> [!NOTE]
-> SSMS の英語以外のローカライズされたリリースでは、Windows 8、Windows 7、Windows Server 2012、Windows Server 2008 R2 にインストールする場合、 [KB 2862966 セキュリティ更新プログラム パッケージ](https://support.microsoft.com/en-us/kb/2862966) が必要です。
-
-SSMS の今回のリリースは、次の言語でインストールできます。
-
-SQL Server Management Studio 17.3:<br>
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
-
-SQL Server Management Studio 17.3 アップグレード パッケージ (17.x から 17.3 へのアップグレード):<br>
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
 
 ## <a name="release-notes"></a>リリース ノート
 
-この 17.3 リリースの問題と制限事項を次に示します。
+この 17.4 リリースの問題と制限事項を次に示します。
 
-**SSMS 全般**
-
-- MFA を使用した UA を使用する Azure AD 認証では、次の SSMS 機能はサポートされていません。
-   - データベース エンジン チューニング アドバイザーは Azure AD の認証ではサポートされていません。ユーザーに表示されるエラー メッセージが少し曖昧だという既知の問題があります。"Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient) (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
-- DTA でクエリを分析しようとすると、次のエラーが発生します。"Object must implement IConvertible. (mscorlib)" (オブジェクトで IConvertible を実装する必要があります (mscorlib))。
-- *[低下したクエリ]* がオブジェクト エクスプローラーのレポートのクエリ ストアのリストにありません。
-   - 回避策: **[クエリ ストア]** ノードを右クリックし、**[View Regressed Queries]\(低下したクエリを表示します\)** を選択します。
-
-**Integration Services (IS)**
-
-- [catalog].[event_messagea] の [Execution_path] は、Scale Out でのパッケージの実行には正しくありません。[execution_path] は、パッケージの実行可能ファイルのオブジェクト名ではなく、"\Package" で開始します。 SSMS でパッケージ実行の概要レポートを表示すると、実行の概要の "実行パス" のリンクが機能しません。 回避策として、概要レポートの [メッセージの表示] をクリックして、すべてのイベント メッセージを確認します。
-
-
+この時点で既知の問題はありません。
 
 ## <a name="previous-releases"></a>以前のリリース
 
@@ -162,6 +175,9 @@ SQL Server Management Studio 17.3 アップグレード パッケージ (17.x �
 ## <a name="feedback"></a>フィードバック
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect で問題や提案を記録](https://connect.microsoft.com/SQLServer/Feedback)
+
+
+
 
 ## <a name="see-also"></a>参照
 
