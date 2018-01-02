@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ ms.lasthandoff: 11/17/2017
 - インデックス再構築の障害からの回復 (データベースのフェールオーバーやディスク領域の不足など)。
 - インデックス操作を一時停止すると、元のインデックスと新しく作成されたインデックスの両方にディスク領域が必要であり、DML 操作中に更新する必要があります。
 
-- インデックス再構築操作の間は切り捨てログの切り捨てを有効にします (通常のオンライン インデックス操作に対してこの操作を実行することはできません)。
+- インデックス再構築操作の間はトランザクション ログの切り捨てを有効にします (通常のオンライン インデックス操作に対してこの操作を実行することはできません)。
 - SORT_IN_TEMPDB=ON オプションはサポートされていません。
 
 > [!IMPORTANT]
-> 再開可能な再構築では実行時間の長い切り捨てを開いたままにする必要はなく、この操作の間のログの切り捨てと、より優れたログ領域管理が可能です。 新しい設計では、必要なデータを、再開可能な操作を再開するために必要なすべての参照と共に、データベースに保持しています。
+> 再開可能な再構築では実行時間の長いトランザクションを開いたままにする必要はなく、この操作の間のログの切り捨てと、より優れたログ領域管理が可能です。 新しい設計では、必要なデータを、再開可能な操作を再開するために必要なすべての参照と共に、データベースに保持しています。
 >
 
 一般に、再開可能なオンライン インデックス再構築と再開不可能なオンライン インデックス再構築の間に、パフォーマンスの違いはありません。 インデックス再構築操作を一時停止している間に再開可能なインデックスを更新すると、次のようになります。

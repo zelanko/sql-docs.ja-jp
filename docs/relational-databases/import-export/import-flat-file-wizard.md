@@ -16,11 +16,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,6 +32,10 @@ ms.lasthandoff: 11/17/2017
 このウィザードは、Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) と呼ばれるインテリジェント フレームワークを利用して現在のインポート操作を改善するために作成されました。 特殊なドメインの知識を持っていないユーザーの場合、データのインポートは複雑で、間違いやすく、面倒な作業になりがちです。 このウィザードでは、インポート プロセスが入力ファイルと一意のテーブル名を選択するだけの簡単な操作に整理され、後の処理は PROSE フレームワークが行います。
 
 PROSE は、入力ファイルのデータ パターンを分析し、列の名前、型、区切り記号などを推定します。 このフレームワークはファイルの構造を学習し、ユーザーの代わりにすべての面倒な作業を実行します。
+
+フラット ファイルのインポート ウィザードのユーザー エクスペリエンス改善の詳細については、このビデオをご覧ください。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>前提条件
 この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
