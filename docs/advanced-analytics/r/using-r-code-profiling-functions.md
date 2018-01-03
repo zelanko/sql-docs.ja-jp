@@ -2,9 +2,11 @@
 title: "R コード プロファイル関数の使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd66ca3db1594b3d2b2fec11698ef3a53b9454e7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 88d8e1c0948a51ab8ed6aaeb5a74e771bba95032
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="using-r-code-profiling-functions"></a>R コード プロファイル関数の使用
 SQL Server のリソースとツールを使用して R スクリプトの実行を監視できるほか、他の R パッケージが提供するパフォーマンス ツールを使用して、内部関数の呼び出しに関する情報を取得できます。 このトピックでは、始めるための基本的なリソースの一覧を提供します。 専門的なガイダンスについては、Hadley Wickham 著 "Advanced R" の、[Performance](http://adv-r.had.co.nz/Performance.html) の章をお勧めします。

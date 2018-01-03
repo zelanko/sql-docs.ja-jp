@@ -3,7 +3,7 @@ title: "EditModeEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9d1a7543dd09644bbda76a7b3f787479deb6a3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d5f1463191ced2f9e4768193ae5c79c5619896a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 レコードの編集状態を指定します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|進行中の編集操作がないことを示します。|  
-|**adEditInProgress**|1|現在のレコード内のデータが変更されたが保存されませんを示します。|  
+|**adEditInProgress**|@shouldalert|現在のレコード内のデータが変更されたが保存されませんを示します。|  
 |**adEditAdd**|2|示します、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドが呼び出されて、れ、コピー バッファーの現在のレコードが新しいレコードがデータベースに保存されていないでします。|  
 |**adEditDelete**|4|現在のレコードが削除されたことを示します。|  
   

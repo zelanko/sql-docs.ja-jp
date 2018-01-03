@@ -3,7 +3,7 @@ title: "メソッドの例 (vc++) をサポートしています |Microsoft ド�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc6fd5a18070a92669d2db00cabbabc01f106e05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa19d56d4fd7b7744cb1b2d3698d9b9ef9f43e5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supports-method-example-vc"></a>メソッドの例 (vc++) をサポートしています
 この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)別のカーソルの種類を使用して開いたレコード セットでサポートされるオプションを表示するメソッド。 DisplaySupport 関数は、この例を実行する必要があります。  

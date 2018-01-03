@@ -3,7 +3,7 @@ title: "カーソルやロック特性 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84f06591c70a42701ca264c99af00e4f072aadd0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: decfe9ec172e1446c8af78fbea5d534ad98e2985
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursor-and-lock-characteristics"></a>カーソルやロック特性
 プロバイダーの機能によって、カーソルの特性が依存しているときに、次の長所と短所一般的に適用されますさまざまな種類のカーソルとロックします。  
   
-|カーソルまたはロックの種類|利点があります。|短所|  
+|カーソルまたはロックの種類|利点があります。|欠点|  
 |-------------------------|----------------|-------------------|  
 |**adOpenForwardOnly**|-低リソース要件|-後方にスクロールことはできません。<br />-データの同時実行|  
 |**adOpenStatic**|スクロール|-データの同時実行|  

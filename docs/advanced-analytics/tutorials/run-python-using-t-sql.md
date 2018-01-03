@@ -2,23 +2,25 @@
 title: "T-SQL を使用して Python を実行 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: Python
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bcd3fd8e70b2d7b89715c8f0cc1e40e82da25aec
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f584f98f5c30e4ca30b4f75748ee173bb2f1a257
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL を使用して実行の Python
 
@@ -129,14 +131,14 @@ GO
 |DayOfWeek (変更前) に、| Amount|DayOfWeek (変更後) |
 |-----|-----|-----|
 |日曜日|10|7|
-|月曜日|11.1|1|
+|月曜日|11.1|@shouldalert|
 |火曜日|12.2|2|
 |水曜日|13.3|3|
 |木曜日|14.4|4|
 |金曜日|15.5|5|
 |土曜日|16.6|6|
 |金曜日|17.7|5|
-|月曜日|18.8|1|
+|月曜日|18.8|@shouldalert|
 |日曜日|19.9|7|
 
 内のメッセージとして返されるステータス メッセージ、または Python コンソールに返されるエラー、**クエリ**ウィンドウです。 次に表示される出力の抜粋を示します。

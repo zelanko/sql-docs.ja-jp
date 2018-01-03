@@ -1,64 +1,72 @@
 ---
-title: "RxDataStep を使用して、新しい SQL Server のテーブルを作成 |Microsoft ドキュメント"
+title: "RxDataStep (SQL と R deep dive) を使用して SQL Server テーブルを新規作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 98cead96-6de7-4edf-98b9-a1efb09297b9
 caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8f276a09ea785da6b31a54693a6f5d758bb77b43
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5a414c590f72a1b1cfef9a3dbd8082a500592140
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep"></a>rxDataStep を使用した新しい SQL Server テーブルの作成
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-and-r-deep-dive"></a>RxDataStep (SQL と R deep dive) を使用して新しい SQL Server テーブルを作成します。
 
-このレッスンでは、インメモリ データ フレーム、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンテキスト、およびローカル ファイルの間でデータを移動する方法を学習します。
+この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
-> [!NOTE]
-> このレッスンでは、別のデータセットを使用します。 Airline 遅延データセットは、機械学習の実験に広く使用されているパブリック データセットです。 R を始めたばかりの場合、このデータセットをテスト用に利用すると便利です。このデータセットは [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を使用して公開された [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の多様な製品サンプルに使用されています。 この例に必要なデータ ファイルは、その他の製品サンプルと同じディレクトリにあります。
-
-## <a name="create-sql-server-table-from-local-data"></a>ローカル データから SQL Server テーブルを作成する
-
-このチュートリアルの最初の部分で使用して、 **RxTextData**テキスト ファイルから R にデータをインポートする関数を使用して、 **RxDataStep**関数にデータを移動する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
-
-このレッスンでは、別のアプローチを使用して、 [XDF 形式](https://en.wikipedia.org/wiki/Extensible_Data_Format)で保存したファイルからデータを取得します。 XDF 形式は、高次元データ用に開発された XML 標準です。 XDF は、R インターフェイスを使用したバイナリ ファイル形式です。行と列の処理と分析を最適化しています。  XDF 形式は、データの移動や、分析に有用なデータのサブセットを格納するために使用できます。
-
-XDF ファイルを使用するデータに簡単な変換を実行した後に、変換後のデータを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
+このレッスンでは、メモリ内のデータ フレームの間でデータを移動する方法を学習、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンテキスト、およびローカル ファイルです。
 
 > [!NOTE]
-> この手順には、DDL の権限が必要です。
+> このレッスンでは、別のデータセットを使用します。 Airline 遅延データセットは、機械学習の実験に広く使用されているパブリック データセットです。 この例で使用されるデータ ファイルは、他の製品サンプルと同じディレクトリで使用できます。
 
-1. 計算コンテキストをローカル ワークステーションに設定します。
+## <a name="create-sql-server-table-from-local-data"></a>ローカル データから SQL Server テーブルを作成します。
+
+このチュートリアルの前半で使用して、 **RxTextData**テキスト ファイルから R にデータをインポートする関数を使用して、 **RxDataStep**関数にデータを移動する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+
+このレッスンでは、別のアプローチとで保存されたファイルからデータを使用して、 [XDF 形式](https://en.wikipedia.org/wiki/Extensible_Data_Format)です。 XDF ファイルを使用してデータの一部の軽量な変換を行うと、後に、新しい変換されたデータを保存する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。
+
+**XDF とは何ですか。**
+
+XDF 形式は、高次元データ用に開発された XML 標準とは、ネイティブのファイル形式をによって使用[Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)です。 XDF は、R インターフェイスを使用したバイナリ ファイル形式です。行と列の処理と分析を最適化しています。  XDF 形式は、データの移動や、分析に有用なデータのサブセットを格納するために使用できます。
+
+1. 計算コンテキストをローカル ワークステーションに設定します。 **この手順では、DDL のアクセス許可が必要です。**
+
   
     ```R
     rxSetComputeContext("local")
     ```
   
-2. **RxXdfData** 関数を使用して新しいデータ ソース オブジェクトを定義します。 XDF データ ソースの場合、データ ファイルのパスを指定するだけで済みます。  テキストの変数を使用して、ファイルへのパスを指定する可能性がありますが、ここでは、便利なショートカット サンプル データ ファイル (AirlineDemoSmall.xdf) が rxGetOption 関数によって返される、ディレクトリであるため。
+2. **RxXdfData** 関数を使用して新しいデータ ソース オブジェクトを定義します。 XDF データ ソースを定義するのには、データ ファイルへのパスを指定します。  
+
+    テキストの変数を使用して、ファイルへのパスを指定できます。 ただし、ここを使用する、便利なショートカット、 **rxGetOption**機能、サンプル データ ディレクトリからファイル (AirlineDemoSmall.xdf) を取得します。
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. データセットの概要を表示する、インメモリ データに対する rxGetVarInfo を呼び出します。
+3. インメモリ データに対して [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) を呼び出して、データセットの概要を表示します。
   
     ```R
     rxGetVarInfo(xdfAirDemo)
     ```
 
-**[結果]**
+**結果**
 
 *Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)*
 
@@ -68,9 +76,9 @@ XDF ファイルを使用するデータに簡単な変換を実行した後に�
 
 > [!NOTE]
 > 
-> XDF ファイルに、データを読み込む、他の関数を呼び出す必要があるをでした rxGetVarInfo データにすぐに呼び出しに気付いたしますか。 これは、XDF が RevoScaleR の既定の中間格納方法だからです。 XDF ファイルの詳細については、次を参照してください。[作成、XDF](https://msdn.microsoft.com/microsoft-r/scaler-data-xdf)です。
+> ご覧のように、データを XDF ファイルに読み込むために他の関数を呼び出す必要がなく、データに対して **rxGetVarInfo** をすぐに呼び出すことができます。 これは、XDF が RevoScaleR の既定の中間格納方法だからです。 XDF ファイルに加えて、 **rxGetVarInfo**関数では、複数のソースの種類をサポートします。
   
-4. ここで、このデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに配置し、 _DayOfWeek_ を値 1 ～ 7 の整数として格納します。
+4. このデータに設定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを格納する_DayOfWeek_ 7 ~ 1 の値で、整数として。
   
     そのために、まず SQL Server データ ソースを定義します。
   
@@ -84,7 +92,7 @@ XDF ファイルを使用するデータに簡単な変換を実行した後に�
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-6. テーブルを作成し、 **rxDataStep**の多様な製品サンプルに使用されています。 この関数は、既にデータ ソースを定義し、途中のデータを変換できる 2 つの間でデータを移動します。
+6. テーブルを作成し、 **rxDataStep**の多様な製品サンプルに使用されています。 この関数は、2 つのデータは既にデータ ソースを定義し、途中のデータを変換できる必要に応じてを移動します。
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -93,7 +101,7 @@ XDF ファイルを使用するデータに簡単な変換を実行した後に�
             overwrite = TRUE )
     ```
   
-    これは大規模なテーブルのため、しばらくしてから最終的な状態に関する次のメッセージが表示されます。*読み取られた行: 200000、処理行数: 600000*。
+    これは非常に大きなテーブル、次のような最終的な状態メッセージを表示するを待ってため: *Rows Read: 200000、合計行が処理: 600000*です。
      
 7. コンピューティング コンテキストを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターに戻します。
 
@@ -101,7 +109,7 @@ XDF ファイルを使用するデータに簡単な変換を実行した後に�
     rxSetComputeContext(sqlCompute)
     ```
   
-8. 単純な SQL クエリを新しいテーブルで使用して、新しい SQL Server データ ソースを作成します。 この定義では、引数 *colInfo* を RxSqlServerData に使用して、*DayOfWeek* 列の因子レベルを追加します。
+8. 単純な SQL クエリを新しいテーブルで使用して、新しい SQL Server データ ソースを作成します。 この定義の要素のレベルを追加する、 *DayOfWeek*  列を使用して、 *colInfo*に渡す引数**RxSqlServerData**です。
   
     ```R
     SqlServerAirDemo <- RxSqlServerData(
@@ -111,7 +119,7 @@ XDF ファイルを使用するデータに簡単な変換を実行した後に�
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-9. クエリ内のデータの概要を確認するには、もう一度 rxSummary を呼び出します。
+9. 呼び出す**rxSummary**クエリ内のデータの概要を確認します。
   
     ```R
     rxSummary(~., data = sqlServerAirDemo)
@@ -119,10 +127,8 @@ XDF ファイルを使用するデータに簡単な変換を実行した後に�
 
 ## <a name="next-step"></a>次の手順
 
-[RxDataStep を使用して、チャンキング分析を実行します。](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
+[rxDataStep を使用したチャンク分析の実行](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[RxImport を使用しているメモリにデータを読み込む](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-
-
+[rxImport を使用してメモリにデータを読み込む](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

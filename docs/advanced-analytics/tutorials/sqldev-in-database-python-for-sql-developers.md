@@ -2,12 +2,14 @@
 title: "データベース内 Python analytics SQL 開発者のため |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 1f6a1279268668062c83a151b6e7235b5c873325
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 開発者のためのデータベースでの Python の分析
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 
 + Machine Learning のサービスと有効になっている Python には、SQL Server 2017 のインスタンスをインストールします。 詳細については、次を参照してください。 [Python の SQL Server マシン ラーニング Services セットアップ](../python/setup-python-machine-learning-services.md)です。
 + このチュートリアルで使用するログインでは、データベースやその他のオブジェクトを作成し、データをアップロードし、データを選択し、ストアド プロシージャを実行するためのアクセス許可が付与されている必要があります。

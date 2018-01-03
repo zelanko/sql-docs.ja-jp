@@ -3,7 +3,7 @@ title: "ADO MD 列挙定数 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0775023eefc9fd4a9533c9f99076e44a5ce14794
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: adaff06c6669ae0af92e87fee5c2956fa2f4c8e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 列挙定数
 デバッグ用には、ADO MD 列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考、ADO MD の 1 つのリリース別に変更があります。 コードは必要があります列挙定数の実際の値ではなく、名前にのみ依存します。  

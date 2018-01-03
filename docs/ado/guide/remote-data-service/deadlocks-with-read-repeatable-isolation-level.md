@@ -3,7 +3,7 @@ title: "読み取り反復可能な分離レベルを使用してデッドロッ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41c5bba6a874904ed7b1e323e96779a46afcbe7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 361a6c96a461dba4de6b5e72be6a5ec362affefb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>読み取り反復可能な分離レベルを使用してデッドロック
 カスタム ビジネス オブジェクトは repeatable read の分離レベルを使用して、SQL Server へのアクセスをして、ビジネス オブジェクトが、クエリを送信し、同じトランザクションで更新する 2 つのクライアントで同時に呼び出されると、デッドロックは可能性があります。 リモート データ サービスが、デッドロックを解除する際にタイムアウトにプロセスの 1 つを許可するように設計されていますが、そのクライアントの更新プログラムは失敗します。  

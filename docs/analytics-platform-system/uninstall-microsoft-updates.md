@@ -3,10 +3,10 @@ title: "Microsoft 更新プログラム (Analytics Platform System) のアンイ
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df61570a-210d-4154-822f-98acd721f075
 caps.latest.revision: "19"
-ms.openlocfilehash: c801918cbac5d0762384a0cd3adcca9ddf8f346a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52bd212a753f4bb69c79d8b8e274664d2100cbee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninstall-microsoft-updates"></a>Microsoft 更新プログラムをアンインストールします。
 このトピックでは、Analytics Platform System アプライアンス上の以前にインストールされた Microsoft 更新プログラムをアンインストールする方法について説明します。  
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
 次の手順を実行するには、必要があります。  
   
 -   アプライアンスを監視する管理コンソールにアクセスする権限を持つ分析プラットフォーム システム ログインします。  

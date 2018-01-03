@@ -3,7 +3,7 @@ title: "手順 5: DataControl が行われた使用可能な (RDS チュート�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93ac89a0007223681f4844c0ecd36e4581414a6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e7605b16c224e4b299c0f1454dec9372ccd929
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>手順 5: DataControl が行われた使用可能な (RDS チュートリアル)
 返された**Recordset**オブジェクトは、使用するために使用します。 確認、移動、またはと、他のように編集**Recordset**です。 行うことができます、 **Recordset**環境によって異なります。 Visual Basic および Visual C を使用できるビジュアル コントロールがある、 **Recordset**直接的または間接的に有効にすると、データ コントロールを使用しています。  

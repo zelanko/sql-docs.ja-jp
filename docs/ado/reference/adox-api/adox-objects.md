@@ -3,7 +3,7 @@ title: "ADOX オブジェクト |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e27df1ef9208016e0772aadf98514e8fa87df4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac969f567ce38b48d2c82218b09845e8247fea8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-objects"></a>ADOX オブジェクト
 ## <a name="adox-object-summary"></a>ADOX オブジェクトの概要  
   
-|オブジェクト|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[Catalog](../../../ado/reference/adox-api/catalog-object-adox.md)|データ ソースのスキーマ カタログの説明のコレクションが含まれています。|  
 |[列](../../../ado/reference/adox-api/column-object-adox.md)|テーブル、インデックス、またはキーから列を表します。|  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)|ストアド プロシージャを表します。|  
 |[Table](../../../ado/reference/adox-api/table-object-adox.md)|列、インデックス、およびキーを含む、データベース テーブルを表します。|  
 |[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)|セキュリティで保護されたデータベース内でのアクセス許可を持つユーザー アカウントを表します。|  
-|[[表示]](../../../ado/reference/adox-api/view-object-adox.md)|フィルター選択された一連のレコードまたは仮想テーブルを表します。|  
+|[表示](../../../ado/reference/adox-api/view-object-adox.md)|フィルター選択された一連のレコードまたは仮想テーブルを表します。|  
   
  これらのオブジェクト間のリレーションシップの図解は、 [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)です。  
   

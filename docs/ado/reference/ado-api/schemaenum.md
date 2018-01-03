@@ -3,7 +3,7 @@ title: "SchemaEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 78baaa8f9665bc54efdc0b93464013f3fea71a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e8380ba12f6390f8db4661fc570b40f18e7c49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaenum"></a>SchemaEnum
 スキーマの種類を指定**Recordset**を[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを取得します。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |定数|値|Description|制約列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|特定のユーザーによって所有されているカタログで定義されているアサーションを返します。<br /><br /> (アサーションの行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
-|**adSchemaCatalogs**|1|DBMS からアクセス可能なカタログに関連付けられている物理属性を返します。<br /><br /> (行セットのカタログ)|CATALOG_NAME|  
+|**adSchemaCatalogs**|@shouldalert|DBMS からアクセス可能なカタログに関連付けられている物理属性を返します。<br /><br /> (行セットのカタログ)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|カタログで定義されている、指定されたユーザーがアクセスできる文字セットを返します。<br /><br /> (CHARACTER_SETS 行セット)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|特定のユーザーによって所有されているカタログで定義された check 制約を返します。<br /><br /> (CHECK_CONSTRAINTS)行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|文字の照合順序、カタログで定義されている特定のユーザーにアクセスできるを返します。<br /><br /> (行セットの照合順序)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  

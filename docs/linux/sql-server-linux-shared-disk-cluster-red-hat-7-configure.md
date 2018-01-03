@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: d5a621f6bcd1605b7f48ada14607b3e55ef6d6de
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 
 次のセクションでは、フェールオーバー クラスター ソリューションをセットアップする手順について説明します。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 次のエンド ツー エンド シナリオを完了するには、2 台のコンピューターを 2 つのノードのクラスターと NFS サーバーを構成する別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
 
@@ -134,16 +134,16 @@ NFS サーバー上には、次の操作を行います。
 1. 有効化と開始`rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. 有効化と開始`nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要があります。 例: 
+1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要があります。 例 : 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

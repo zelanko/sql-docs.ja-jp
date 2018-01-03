@@ -3,7 +3,7 @@ title: "[XML インデックス] ダイアログ ボックス (Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,23 +18,23 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1d2fc393ebd15e3c76dd17912e0e9f29c7a369a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2c44720dea321d4fee407bd33d6a41ad4cdcee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[XML インデックス]** ダイアログ ボックスを使用すると、**[インデックス/キー]** ダイアログ ボックスではできない、データ型が XML の列に対するインデックスの作成を行うことができます。 各 XML 列に複数の XML インデックスを作成できますが、最初に作成したインデックス (プライマリ インデックス) が他のインデックス (セカンダリ インデックス) の基になります。 プライマリ XML インデックスを削除すると、セカンダリ インデックスも削除されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[選択された XML インデックス]**  
 既存の XML インデックスを一覧表示します。 特定のインデックスを選択すると、右側のグリッドにそのプロパティが表示されます。 一覧が空の場合、テーブルには何も定義されていません。  
   
 **[追加]**  
 XML インデックスを新規作成します。  
   
-**Del**  
+**削除**  
 **[選択された XML インデックス]** ボックスで選択されている XML インデックスを削除します。 プライマリ XML インデックスを削除すると、セカンダリ インデックスもすべて削除されることを示すメッセージが表示されます。このとき、削除を続行するか取り消すかを選択できます。  
   
 **[全般] カテゴリ**  

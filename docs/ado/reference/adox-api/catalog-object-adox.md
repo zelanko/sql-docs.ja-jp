@@ -3,7 +3,7 @@ title: "カタログのオブジェクト (ADOX) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a7b82a70fadffd904d1da5a84f813c015faf80b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ada10bcb335b3ae9d83019d6fc60f6e23c8f7a38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-object-adox"></a>カタログ オブジェクト (ADOX)
 コレクションが含まれます ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) します。データ ソースのスキーマ カタログをについて説明します。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c8d888771c1173d93d5ca44cdab28c10645bb60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fcb8ad39a2ba24890394bb05cb30f1ddb5b63d2e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-database-driver-compatibility"></a>デスクトップ データベース ドライバーの互換性
 Unicode は、ソフトウェア文字エン コードのメソッドのすべての文字を 2 バイトの固定幅を持つものとして扱われます。 このメソッドは、Windows の ANSI 文字エン コード、1 バイトの文字を表すためでは、256 文字に制限の代わりとして使用されます。 文字から成るは表されない多くの言語に対応 Unicode が 65,000 以上の文字を表すことのできるために、ANSI エンコーディングします。  

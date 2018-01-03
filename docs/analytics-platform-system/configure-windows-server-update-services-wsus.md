@@ -3,10 +3,10 @@ title: "Windows Server Update Services (WSUS) (Analytics Platform System) を構
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
 caps.latest.revision: "41"
-ms.openlocfilehash: d2b37819663009df090c76d516d629199691472c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS) を構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System の WSUS を構成するための手順について説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM のバーチャル マシンに既にインストールされています。  
@@ -89,7 +89,7 @@ WSUS を構成する必要があります。
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft Update を使用して更新するには  
   
-    1.  Microsoft Update と同期するために選択する場合は何も変更する必要はありません、**上流サーバーの選択**ページ。 **[次へ]**をクリックします。  
+    1.  Microsoft Update と同期するために選択する場合は何も変更する必要はありません、**上流サーバーの選択**ページ。 **[次へ]** をクリックします。  
   
         ![WSUS: 上流サーバーの同期](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   

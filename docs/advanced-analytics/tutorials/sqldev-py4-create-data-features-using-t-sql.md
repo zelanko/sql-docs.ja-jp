@@ -2,12 +2,14 @@
 title: "手順 4: T-SQL を使用してデータ機能を作成する | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: df714b03de08a3ed1f149df3f7fc7b40e9b8c270
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8768c420e8cb2911a2e48d93944430e67dceb3fb
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>手順 4: T-SQL を使用してデータ機能を作成する
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/01/2017
     END
     GO
     ```
-**注:**
+**注**
 
 - この関数はスカラー値関数であり、事前定義されている種類の単一データ値を返します。
 - 乗車場所と降車場所から取得した緯度値と経度値を入力値として受け取ります。 Haversine 式は場所をラジアンに変換し、その値を利用して 2 場所間の直接距離をマイルで計算します。

@@ -3,7 +3,7 @@ title: "RDS の使用方法とセキュリティ |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d10f7422ca7cf39d343b67a37a6285243248eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 659be3fb60dc311c4fa2d2076cbc90841399c9f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
 このセクションの情報を使用して、サーバーをセットアップし、RDS を簡単に使用します。 このセクションには、RDS とその他のテクノロジの間でキーのリレーションシップの一部について説明します、RDS を実装するときに実行する必要がある固有の構成手順が含まれていますを設定するときに発生する可能性がある問題の解決策を区別し、RDS ソリューションです。  

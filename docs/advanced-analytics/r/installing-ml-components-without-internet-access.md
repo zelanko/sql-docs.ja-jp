@@ -2,11 +2,11 @@
 title: "インターネットにアクセスできないマシン ラーニング コンポーネントをインストールする |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/30/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 93adacb061b3bf4c77606294ae8341144eaf24c9
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>インターネットにアクセスできないマシン ラーニング コンポーネントをインストールします。
 
@@ -193,7 +193,7 @@ Microsoft R のソース コードを表示したい場合はダウンロード�
 
 環境によっては、次の必須コンポーネント用に、インストーラーのローカル コピーを作成しなければならない場合があります。
 
-コンポーネント  |バージョン
+コンポーネント  |[バージョンのオプション]
 ---------|---------
 [SQL Server 2016 用 Microsoft AS OLE DB プロバイダー](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
 [Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
@@ -233,7 +233,7 @@ Microsoft R のソース コードを表示したい場合はダウンロード�
 
 ## <a name="command-line-arguments-for-specifying-component-locations"></a>コンポーネントの場所を指定するためのコマンドライン引数
 
-オフラインのセットアップを実行して、コマンドラインから、事前にダウンロードしたコンポーネントの場所を指定する次のコマンドライン引数を指定する必要があります。 ただし、; 必要な追加のコンポーネントをインストールする追加のフラグを設定する必要はありません。.NET core などの前提条件は、既定で自動的にインストールされます。
+オフラインのセットアップを実行して、コマンドラインから、事前にダウンロードしたコンポーネントの場所を指定する次のコマンドライン引数を指定する必要があります。 ただし、; 必要な追加のコンポーネントをインストールする追加のフラグを設定する必要はありません.NET core などの前提条件は、既定で自動的にインストールされます。
 
 **インストーラーの場所**
 

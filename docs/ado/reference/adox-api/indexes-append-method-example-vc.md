@@ -3,7 +3,7 @@ title: "インデックスの追加メソッドの例 (vc++) |Microsoft ドキ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99a4d86338153c53b3585ec8b5ea845a8a68ab5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df286bd65e57ace0d56b89e209471cc56acb49ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes-append-method-example-vc"></a>インデックスの追加メソッドの例 (vc++)
 次のコードでは、新しいインデックスを作成する方法を示します。 テーブル内の 2 つの列にインデックスがあります。  

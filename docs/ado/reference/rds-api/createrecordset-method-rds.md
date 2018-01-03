@@ -3,7 +3,7 @@ title: "CreateRecordset メソッド (RDS) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空、作成切断[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
@@ -53,7 +53,7 @@ object.CreateRecordset(ColumnInfos)
   
 |属性|Description|  
 |---------------|-----------------|  
-|名前|列ヘッダーの名前。|  
+|[オブジェクト名]|列ヘッダーの名前。|  
 |型|データ型の整数です。|  
 |サイズ|データ型に関係なく、文字幅の整数です。|  
 |NULL 値の許容|ブール値です。|  

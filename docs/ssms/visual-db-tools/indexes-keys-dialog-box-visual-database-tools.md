@@ -3,7 +3,7 @@ title: "[インデックス/キー] ダイアログ ボックス (Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a246ec54d0b0cd439bbdbd8f81acb6ad3be7d9c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fa2fa79f818c344f9228dffe500fbe96236954b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>[インデックス/キー] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、インデックス、主キー、および一意キーを作成したり、変更したりできます。 このダイアログ ボックスにアクセスするには、インデックスまたはキーを持つテーブルのテーブル定義を開いて、テーブル定義グリッドを右クリックし、 **[インデックス/キー]**をクリックします。  
@@ -32,14 +32,14 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[選択された主/一意キーまたはインデックス]**  
 既存の主キーまたは一意キーとインデックスを示します。 右側のグリッドにプロパティを表示するキーまたはインデックスを選択します。 一覧が空の場合、テーブルには何も定義されていません。  
   
 **[追加]**  
 新しい主キー、一意キー、またはインデックスを作成します。  
   
-**Del**  
+**削除**  
 **[選択された主/一意キーまたはインデックス]** 一覧で選択したキーまたはインデックスを削除します。  
   
 **[全般] カテゴリ**  
@@ -51,13 +51,13 @@ ms.lasthandoff: 12/05/2017
 **[UNIQUE]**  
 インデックスまたはキーに入力するデータが一意である必要があるかどうかを示します。 XML インデックスでは使用できません。  
   
-**[型]**  
+**型**  
 **[選択された主/一意キーまたはインデックス]** の一覧で選択された項目が一意のキーであるか、主キーであるか、またはインデックスであるかを指定します。 主キーを選択した場合、該当するフィールドは読み取り専用になります。  
   
 **[IDENTITY] カテゴリ**  
 展開して **[オブジェクト名]** プロパティ フィールドと **[説明]**プロパティ フィールドを表示します。  
   
-**[オブジェクト名]**  
+**名前**  
 キーまたはインデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
 **[説明]**  

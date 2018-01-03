@@ -3,7 +3,7 @@ title: "EventStatusEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de4655072b5ce25b3fb35dbb8bc73b6334a9f6c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82518cbfd6572f03cbe0b742b52bb5e4acd3d8e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 |**adStatusCancel**|4|イベントが発生する原因となった操作の取り消しを要求します。|  
 |**adStatusCantDeny**|3|操作が保留中の操作の取り消しを要求できないことを示します。|  
 |**adStatusErrorsOccurred**|2|エラーまたはエラーのため、イベントの原因となった操作が失敗したことを示します。|  
-|**adStatusOK**|1|イベントの原因となった操作が成功したことを示します。|  
+|**adStatusOK**|@shouldalert|イベントの原因となった操作が成功したことを示します。|  
 |**adStatusUnwantedEvent**|5|イベント メソッドの実行が完了する前に、後続の通知をできないようにします。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  

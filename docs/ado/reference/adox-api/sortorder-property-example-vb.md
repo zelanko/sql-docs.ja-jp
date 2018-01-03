@@ -3,7 +3,7 @@ title: "SortOrder プロパティの例 (VB) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f11956a6030b825c37f6600b2f8b40c47dc0ce20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77ac31157edfe36af85b112fffeaca6bb6cca86b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
 この例で、 [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)に追加された、[列](../../../ado/reference/adox-api/columns-collection-adox.md)のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)です。 コードは、国の列に昇順のインデックスを追加、**従業員**テーブルし、レコードが表示されます。 コードでは、国の列に降順のインデックスを付加してから、**従業員**テーブルが表示され、レコードが再び表示されます。 昇順と降順のインデックスの違いが表示されます。  

@@ -3,7 +3,7 @@ title: "Position プロパティ (ADO) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34f95df4ee5e4ab4ac5c4ce3934ceabe4dacc64f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d26a7c2640b855d34aceadf0369ccb2112d243d9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="position-property-ado"></a>位置プロパティ (ADO)
 内の現在位置を示す、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  

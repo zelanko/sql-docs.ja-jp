@@ -3,7 +3,7 @@ title: "Query メソッド (RDS) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32233e74eece2de258223599a682c8fb27d46fe6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ceedab6dd52492c5660165b3b1377def3a51f253
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-method-rds"></a>クエリ メソッド (RDS)
 返す有効な SQL クエリ文字列を使用して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
@@ -48,7 +48,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *接続*  
  A**文字列**サーバー接続情報を含む値です。 これがに似ていますが、[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティです。  
   
- *Query*  
+ *クエリ*  
  A**文字列**SQL クエリを含むです。  
   
 ## <a name="remarks"></a>解説  

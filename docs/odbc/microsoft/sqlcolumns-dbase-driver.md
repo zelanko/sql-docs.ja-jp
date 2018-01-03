@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,17 +20,17 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66bfc30a692c689744e11aa716b55b746228518c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0761f4237029dca8d99b4dc38acb60f86dec39d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolumns-dbase-driver"></a>SQLColumns (dBASE ドライバー)
 > [!NOTE]  
 >  このトピックでは、dBASE ドライバー固有の情報を提供します。 この関数の概要については、下の該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)です。  
   
-|列|コメント|  
+|[列]|コメント|  
 |------------|--------------|  
 |TABLE_QUALIFIER|ディレクトリへのパスが返されます。|  
 |TABLE_OWNER|所有者名がサポートされていないために、この列に NULL が返されます。|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: beb888ab7920bdac942c60d26980a71a34a54800
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 67379ee540aecb691122d91b42776b0c9d990b1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-database-driver-performance-issues"></a>デスクトップ データベース ドライバー パフォーマンスの問題
 既存の ANSI アプリケーションとの互換性のために、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR データ型は Microsoft アクセス 4.0 または上位のデータ ソースとして SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR に公開されます。 データ ソースはデータ型のワイド文字を返しませんが、データもする必要があります送信 jet ワイド文字形式で。 変換が行われる SQL_C_CHAR パラメーターまたは結果の列が、ANSI アプリケーションで SQL_CHAR データ型にバインドされている場合を理解しておく必要があります。  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>ADO の用語集
 このトピックでは、ADO に関連する用語を定義します。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
  ビジネス ルール  
  検証用の編集、ログオン検証、データベースの検索、ポリシー、および企業のビジネスを行う方法を構成するアルゴリズムの変換の組み合わせ。 呼ばれる*ビジネス ロジック*です。  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  計算式  
  式は、定数ではありませんが、その他の値によって値が決まります。 評価するには、計算式を取得して通常は他のフィールドまたは行で、その他のソースから値を計算します。  
   
@@ -292,7 +292,7 @@ ms.lasthandoff: 11/17/2017
  次の操作が開始する前に完了したコードによって実行される操作です。 非同期操作を参照してください。  
   
 ## <a name="t-z"></a>T Z  
- [ツリー]  
+ trEE  
  (ノード) の要素間の階層リレーションシップを表す構造体。 (ルート) ツリーの最上位レベルに 1 つのノードがあります。 ルートの下に、複数の子があります。 それぞれの子順番の他の子、したがってツリーのように分岐の親があります。 ドキュメントとその他のフォルダーを含むフォルダーでは、ツリー構造の一般的な例を示します。 階層ノード、ルート、子である親も参照してください。  
   
  Web サーバー  

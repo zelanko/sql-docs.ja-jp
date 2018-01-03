@@ -3,10 +3,10 @@ title: "Configuration Manager (Analytics Platform System) の起動します。"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,19 +16,19 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: "22"
-ms.openlocfilehash: 98ae90d198b4a1b68e1b72305721611a8efa30ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="launch-the-configuration-manager"></a>構成マネージャーを起動します。
 このトピックでは起動するための説明、 **Configuration Manager** Analytics Platform System アプライアンスです。  
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="prerequisites"></a>前提条件  
-Analytics Platform System**Configuration Manager**アプライアンス ドメイン管理者によってのみ実行できます。 このツールを実行するには、アプライアンスのドメイン管理者のパスワードが必要です。 APS の追加の管理者を作成するを参照してください[APS ドメイン管理者 &#40; を作成します。。APS&#41;](create-an-aps-domain-administrator-aps.md).  
+### <a name="prerequisites"></a>Prerequisites  
+Analytics Platform System**Configuration Manager**アプライアンス ドメイン管理者によってのみ実行できます。 このツールを実行するには、アプライアンスのドメイン管理者のパスワードが必要です。 APS の追加の管理者を作成するを参照してください[APS ドメイン管理者 &#40; を作成します。APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Configuration Manager ツールを起動します。  
 Configuration Manager を実行するには、PDW 管理ノードに接続するリモート デスクトップを使用 (***PDW_region*-CTL01**) ノード、およびログインとして*appliance_domain* **\Administrator**です。 開始するときに、 **Configuration Manager**プログラムを使用して、**管理者として実行**管理者の資格情報を使用することを確認するにはオプションです。  

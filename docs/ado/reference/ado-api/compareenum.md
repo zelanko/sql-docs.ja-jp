@@ -3,7 +3,7 @@ title: "CompareEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9377c58ed99ff5cc69f8938a614bebdcd0bdfe89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee22fbb105dc9f01444540dbdc46130d8a626bd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compareenum"></a>CompareEnum
 ブックマークによって表される 2 つのレコードの相対位置を指定します。  
   
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|1|ブックマークが等しいことを示します。|  
+|**adCompareEqual**|@shouldalert|ブックマークが等しいことを示します。|  
 |**adCompareGreaterThan**|2|最初のブックマークが、2 つ目の後にあることを示します。|  
 |**adCompareLessThan**|0|2 つ目の最初のブックマークであることを示します。|  
 |**adCompareNotComparable**|4|ブックマークを比較できないことを示します。|  

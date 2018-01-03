@@ -3,7 +3,7 @@ title: "フィルターおよび RecordCount のプロパティの例 (VB) |Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f76a90fdff9969b60929b25727a1ba2dd352c3ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 459fb1d5cfbcf83cd49e6710ba96e7cfea704918
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>フィルターおよび RecordCount のプロパティの例 (VB)
 この例が開いている、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)発行元のテーブルで、 ***Pubs***データベース。 次を使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを特定の国/地域のパブリッシャーに対して表示されるレコードの数を制限します。 **RecordCount**およびフィルター処理がフィルター選択されたレコード セットの違いを表示するプロパティを使用します。  

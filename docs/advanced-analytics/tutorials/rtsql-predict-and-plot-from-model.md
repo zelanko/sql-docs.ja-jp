@@ -2,12 +2,14 @@
 title: "予測し、モデル (SQL のクイック スタートで R) からプロット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0bda90248ff371568ceffe1aad2d074a121cd807
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: aa4bb7404e5469dd4331cca865fbd027ea631a8f
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>予測は、モデル (SQL のクイック スタートで R) から
 
@@ -82,7 +84,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 +  この例で、 `str` R. から返されるデータのスキーマを確認する、テスト段階で関数を追加後でステートメントを削除することができます。
 + R スクリプトで使用する列名は、ストアド プロシージャの出力に必ずしもは渡されません。 ここで新しい列名を定義するのにと結果の句を使用しました。
 
-**[結果]**
+**結果**
 
 ![rsql_basictut_scoringresults_smalldata](media/rsql-basictut-scoringresults-smalldata.PNG)
 
@@ -152,7 +154,7 @@ SQL Server Management Studio を含む多くのクライアントは、[sp_execu
 + プロットへの機能の追加が終了したら、`dev.off()` 関数を使用してグラフィック デバイスを閉じる必要があります。
 + `readBin` 関数は、読み取るファイル、形式指定、およびレコード数を受け取ります。 `rb`* * ' キーワードは、ファイルがテキストではなくバイナリであることを示します。
 
-**[結果]**
+**結果**
 
 ![rsql_basictut_plotresult_small](media/rsql-basictut-plotresult-small.png)
 

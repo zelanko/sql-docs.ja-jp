@@ -3,10 +3,10 @@ title: "ダウンロードし、Microsoft 更新プログラム (Analytics Platf
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>ダウンロードし、Microsoft 更新プログラムの適用
 このトピックでは、Windows Server Update Services (WSUS) を Microsoft Update カタログから更新プログラムをダウンロードし、Analytics Platform System アプライアンス サーバーにそれらの更新プログラムを適用する方法について説明します。 Microsoft Update は Windows および SQL Server のすべての該当する更新プログラムをインストールします。 WSUS は、アプライアンスの VMM 仮想マシンにインストールされます。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 >   
 > アプライアンスの使用中に Microsoft 更新プログラムは適用されません。 更新プログラムを適用すると、アプライアンスのノードを再起動する可能性があります。 アプライアンスが使用されていないときに、メンテナンス期間中に、更新を適用する必要があります。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
 次の手順を実行する前にする必要があります。  
   
 -   アプライアンス上の指示に従いして WSUS を構成[Windows Server Update Services の構成 &#40;です。WSUS&#41;&#40;です。Analytics Platform System &#41;](configure-windows-server-update-services-wsus.md).  

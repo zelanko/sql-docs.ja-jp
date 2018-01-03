@@ -1,39 +1,45 @@
 ---
-title: "RxDataStep を使用して、チャンキング分析を実行 |Microsoft ドキュメント"
+title: "RxDataStep (SQL と R deep dive) を使用してチャンクの分析を実行 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/03/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 4290ee5f-be90-446a-91e8-3095d694bd82
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 245bf9cf48b833a87b96666f1c050ca8fc1b4dbc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7e47db93c014f2512f40afc88d9e9fb0f2031976
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep"></a>rxDataStep を使用したチャンク分析の実行
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>RxDataStep (SQL と R deep dive) を使用してチャンクの分析を実行します。
 
-**rxDataStep** 関数を利用すれば、従来の R のように、データセット全体をメモリに読み込み、一度に処理することを要求せず、データをチャンク単位で処理できます。データをチャンク単位で読み込み、R 関数を利用してデータの各チャンクを順々に処理し、各チャンクのまとめ結果を共通の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースに書き込みます。
+この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
-このレッスンでは、演習でこの手法を使用して、`table`コンティンジェンシー テーブルを計算、R 内の関数。
+このレッスンで使用し、 **rxDataStep**データセット全体がメモリに読み込まれるおよび R. 従来と同様に、同時に処理されるを必要とするのではなく、チャンクのデータを処理する関数**RxDataStep**関数を読み取り、チャンク内のデータが R 関数をさらに、データの各チャンクに適用し、各チャンクの概要の結果を共通に保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。 すべてのデータが読み取られると、結果は結合されます。
 
 > [!TIP]
-> この例は説明のみを目的としています。 使用することをお勧め実際のデータ セットを集計する必要がある場合、 **rxCrossTabs**または**rxCube**関数**RevoScaleR**、この種の最適化されます操作。
+> このレッスンを使用して代替表を計算する、 `table` R. 関数この例は、説明だけを目的のものです。 
+> 
+> 使用することをお勧め実際のデータ セットを集計する必要がある場合、 **rxCrossTabs**または**rxCube**関数**RevoScaleR**、この種の最適化されます操作。
 
-## <a name="partition-data-by-values"></a>値によるデータのパーティション分割
+## <a name="partition-data-by-values"></a>値によってデータのパーティション分割
 
-1. カスタムの R 関数を呼び出すを最初に、作成、*テーブル*、データの各チャンクに対して機能し、名前を付けます`ProcessChunk`です。
+1. R を呼び出すカスタム R 関数を作成`table`、データの各チャンクに対して機能し、新しい関数の名前`ProcessChunk`です。
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -58,24 +64,20 @@ ms.lasthandoff: 12/01/2017
     rxSetComputeContext( sqlCompute )
     ```
   
-3. 処理しているデータを保持する SQL Server データ ソースを定義します。 最初に SQL クエリを変数に代入します。
+3. 処理しているデータを保持するために SQL Server データ ソースを定義します。 最初に SQL クエリを変数に代入します。 次でその変数を使用して、 *sqlQuery*新しいの引数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。
+  
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
-    ```
-
-4. 新しい *データ ソースの* sqlQuery [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引数にその変数を挿入します。
-  
-    ```R
     inDataSource <- RxSqlServerData(sqlQuery = dayQuery,
         connectionString = sqlConnString,
         rowsPerRead = 50000,
         colInfo = list(DayOfWeek = list(type = "factor",
             levels = as.character(1:7))))
     ```
-     このデータ ソースで *rxGetVarInfo* を実行した場合、それに「 *Var 1: DayOfWeek, Type: factor, no factor levels available*」という列が 1 つだけ含まれていることがわかります。
+4. 必要に応じて、実行することができます**rxGetVarInfo**このデータ ソース。 この時点では、1 つの列を含む: *Var 1: DayOfWeek、型: 係数、要素レベルはありません*
      
-5. この因子変数をソース データに適用する前に、中間結果を保持するための別のテーブルを作成します。 もう一度、先ほど RxSqlServerData 関数を使用して、データを定義し、同じ名前の既存のテーブルを削除します。
+5. この因子変数をソース データに適用する前に、中間結果を保持するための別のテーブルを作成します。 もう一度、makign を同じ名前の既存のテーブルを削除するのにことを確認して、データを定義する、だけ RxSqlServerData 関数を使用します。
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -83,13 +85,13 @@ ms.lasthandoff: 12/01/2017
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  これで、ユーザー定義関数を呼び出すあります`ProcessChunk`としてそれを使用して、読み取られると、データを変換する、 *transformFunc* rxDataStep 関数に渡す引数。
+7.  ユーザー定義関数を呼び出す`ProcessChunk`としてそれを使用して、読み取られると、データを変換する、 *transformFunc*への引数、 **rxDataStep**関数。
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  中間結果を表示する`ProcessChunk`rxImport の結果を変数に割り当て、およびコンソールに結果を出力します。
+8.  中間結果を表示する`ProcessChunk`の結果を割り当てる**rxImport**変数にし、コンソールに結果を出力します。
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -98,9 +100,9 @@ ms.lasthandoff: 12/01/2017
 
 **結果の一部**
 
-|      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+|      |    @shouldalert  |   2   |  3   |  4   |  5  |   6   |  7 |
 | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
-| 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
+| @shouldalert | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
 | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
 
 9. チャンク全体の最終結果を計算するには、列を合計し、結果をコンソールに表示します。
@@ -110,23 +112,21 @@ ms.lasthandoff: 12/01/2017
     finalResults
     ```
 
- **[結果]**
-  1  |   2  |   3  |   4  |   5  |   6  |   7
+ **結果**
+  @shouldalert  |   2  |   3  |   4  |   5  |   6  |   7
 ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
 97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. 中間結果のテーブルを削除するには、rxSqlServerDropTable に対して別の呼び出しを確認します。
+10. 削除するには、中間結果のテーブルへの呼び出しを行う**rxSqlServerDropTable**です。
   
     ```R
-    rxSqlServerDropTable( table = "iroResults",     connectionString = sqlConnString)
+    rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
 ## <a name="next-step"></a>次の手順
 
-[ローカル コンピューティング コンテキストにあるデータを分析します。](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
+[ローカル計算コンテキストでデータを分析する](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[RxDataStep を使用して、新しい SQL Server のテーブルを作成します。](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-
-
+[rxDataStep を使用した新しい SQL Server テーブルの作成](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)

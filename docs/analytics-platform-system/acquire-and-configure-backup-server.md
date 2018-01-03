@@ -3,10 +3,10 @@ title: "取得および APS PDW のサーバーのバックアップを構成し
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 caps.latest.revision: "20"
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 3540c2e43082dbdad4f267745683f33ae9b0b036
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>取得して、サーバーのバックアップを構成します。
 このトピックでは、Analytics Platform System (APS) でのバックアップと復元の機能で使用するサーバーのバックアップおよび SQL Server 並列データ ウェアハウス (PDW) としてアプライアンス非 Windows システムを構成する方法について説明します。  
@@ -94,7 +94,7 @@ PDW では、サーバーのバックアップを UNC ファイル共有を通�
   
 5.  PDW へのバックアップ ドメイン アカウントの資格情報を追加します。  
   
-    例:  
+    例 :  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +114,7 @@ PDW では、サーバーのバックアップを UNC ファイル共有を通�
 > [!IMPORTANT]  
 > サーバーのバックアップの InfiniBand IP アドレスを使用してください。 それ以外の場合、データは、InfiniBand の代わりにイーサネット上にコピーされます。  
   
-例:  
+例 :  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  

@@ -3,7 +3,7 @@ title: "Microsoft OLE DB Provider for ODBC |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界がいずれかですべてのデータ ソースは、OLE DB インターフェイスを公開する ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースはこの方法はまだ公開されません。 ただし、現在使用しているほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -189,7 +189,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
+|[[フィルター]](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[ロック。](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[スレッド](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
@@ -210,19 +210,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|可|可|可|可|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|可|可|可|可|
 |[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|可|可|可|可|
-|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|不可|いいえ|はい|可|
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|不可|不可|可|可|
 |[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|可|可|可|可|
-|[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|可|可|可|可|
+|[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|可|可|可|可|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|可|可|可|可|
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|可|可|可|可|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|可|可|可|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|はい|可|可|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|可|可|可|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|可|可|可|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|はい|可|可|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|不可|可|可|可|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|可|可|可|可|
-|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|可|可|可|可|
+|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|可|可|可|可|
 |[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|可|可|可|可|
-|[再同期](../../../ado/reference/ado-api/resync-method.md)|不可|いいえ|はい|可|
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|不可|不可|可|可|
 |[サポートしています](../../../ado/reference/ado-api/supports-method.md)|可|可|可|可|
 |[Update](../../../ado/reference/ado-api/update-method.md)|可|可|可|可|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|可|可|可|可|
@@ -279,7 +279,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |行セットのサポートを開く|DBPROP_OPENROWSETSUPPORT|
 |選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT と|
 |出力パラメーターの使用状況|DBPROP_OUTPUTPARAMETERAVAILABILITY|
-|Password|DBPROP_AUTH_PASSWORD|
+|パスワード|DBPROP_AUTH_PASSWORD|
 |Ref アクセサーを使って渡す|DBPROP_BYREFACCESSORS|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |永続的な ID 型|DBPROP_PERSISTENTIDTYPE と|

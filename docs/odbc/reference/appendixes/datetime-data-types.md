@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff5b0244e54432e28d5a1b43d813911b3f90ffd2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 626d1577fe3b4176a01f95332dc6c90d2cbc2faa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datetime-data-types"></a>Datetime データ型
 ODBC 3*.x*、識別子、日付、時刻、および timestamp SQL データ型は SQL_DATE、SQL_TIME、および SQL_TIMESTAMP から変更された (のインスタンスと**#define** 9、10、および 11 のヘッダー ファイルで) に sql _TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP (のインスタンスと**#define** 91、92、および 93 のヘッダー ファイルで)、それぞれします。 識別子から変更された SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、SQL_C_TYPE_TIMESTAMP、それぞれ、対応する C 型のインスタンスとインスタンス**#define**が変更されましたそれに従っています。  

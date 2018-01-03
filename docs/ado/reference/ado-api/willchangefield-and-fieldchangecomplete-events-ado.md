@@ -3,7 +3,7 @@ title: "WillChangeField および FieldChangeComplete イベント (ADO) |Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c30a41b18016515f97ba044eb0d36724a59a351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField および FieldChangeComplete イベント (ADO)
 **WillChangeField**保留中の操作が 1 つまたは複数の値を変更する前に、イベントが呼び出された[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。 **FieldChangeComplete**イベントは 1 つ以上の値の後に呼び出されます**フィールド**オブジェクトが変更されています。  
@@ -47,7 +47,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  A**長い**の数を示す**フィールド**オブジェクト*フィールド*です。  
   
- *フィールド*  
+ *Fields*  
  **WillChangeField**、*フィールド*パラメーターは配列の**バリアント**を格納している**フィールド**元の値を持つオブジェクト。 **FieldChangeComplete**、*フィールド*パラメーターは配列の**バリアント**を格納している**フィールド**値が変更されたオブジェクト.  
   
  *pError*  

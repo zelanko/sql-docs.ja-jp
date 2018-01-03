@@ -3,7 +3,7 @@ title: "項目のプロパティの例 (VB) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1788c7111c4ccfd5320190ef2fa0ff2de9cb0a75
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e4f8009bdde89fa8f0170c486d17842c09ae0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="item-property-example-vb"></a>項目プロパティの例 (VB)
 この例を示す方法、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティは、コレクションのメンバーにアクセスします。 例では、表示、***作成者***のテーブル、 ***Pubs***パラメーター化コマンドを使用してデータベース。  

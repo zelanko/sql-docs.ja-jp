@@ -1,44 +1,49 @@
 ---
-title: "R を使用して SQL Server のデータを表示する (データ サイエンスの詳細情報) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: " R (SQL と R deep dive) を使用する SQL Server データを視覚化 |Microsoft ドキュメント"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 10def0b3-9b09-4df9-b8aa-69516f7d7659
 caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: fa42e69f1e376dc528b3385ca3c4be38fea4710b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 77321589a87230535502cc37a75bf09722abb66d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="visualize-sql-server-data-using-r"></a>R を使用して SQL Server のデータを表示する
+#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>R (SQL と R deep dive) を使用する SQL Server データを視覚化します。
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] の強化されたパッケージには、スケーラビリティと並列処理に最適化された複数の関数が含まれます。 通常、これらの関数の名前の前には *rx* または *Rx*付いています。
+この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
-このチュートリアルでは、 **rxHistogram** 関数を使用して、 _creditLine_ 列の値の分布を男女別に表示します。
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] の強化されたパッケージには、スケーラビリティと並列処理に最適化された複数の関数が含まれます。 通常、これらの関数の名前の前には **rx** または **Rx**付いています。
+
+このチュートリアルを使用する、 **rxHistogram**の値の分布を表示する関数、 _creditLine_性別に基づいて列です。
 
 ## <a name="visualize-data-using-rxhistogram"></a>RxHistogram を使用してデータを視覚化します。
 
-1. RxHistogram 関数を呼び出すし、数式とデータ ソースを渡すには、次の R コードを使用します。 ローカルで最初にこの操作を実行することで、予想される結果と、所要時間を確認できます。
+1. 次の R コードを使用して [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 関数を呼び出し、式とデータ ソースを渡します。 ローカルで最初にこの操作を実行することで、予想される結果と、所要時間を確認できます。
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    内部的に含まれている rxCube 関数を呼び出し、rxHistogram、 **RevoScaleR**パッケージです。 RxCube 関数は、さらに、カウント列の数式で指定された各変数に対して 1 つの列を含む、1 つのリスト (またはデータ フレーム) を出力します。
+    内部的には、 **rxHistogram** は、 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) パッケージに含まれる **rxCube** 関数を呼び出します。 **rxCube**カウント列に加えて、数式で指定された各変数に対して 1 つの列を含む、1 つのリスト (またはデータ フレーム) を出力します。
     
-2. ここで、リモートの SQL Server コンピューターに、計算コンテキストを設定し、rxHistogram をもう一度実行します。
+2. ここで、リモートの SQL Server コンピューターを計算コンテキストを設定して実行**rxHistogram**もう一度です。
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -48,29 +53,27 @@ ms.lasthandoff: 12/01/2017
    
 ![ヒストグラム結果](media/rsql-sue-histogramresults.jpg "ヒストグラム結果")
 
-4. RxCube 関数を呼び出すし、R プロット関数に結果を渡すことができますも。  たとえば、次の例 rxCube の平均を計算する*fraudRisk*の組み合わせごとに*numTrans*と*numIntlTrans*:
+4. 呼び出すことも、 **rxCube**関数し、R 関数をプロットする結果を渡します。  たとえば、次の例では **rxCube** を使用して、 *numTrans* と *numIntlTrans* のすべての組み合わせに対する *fraudRisk*の平均を計算します。
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    グループの平均の計算に使用するグループを指定するには、 `F()` 表記を使用します。 この例では、 `F(numTrans):F(numIntlTrans)` は、変数 _numTrans_ と _numIntlTrans_ の整数を各整数値をレベルとするカテゴリ変数として処理する必要があることを示します。
+    グループの平均の計算に使用するグループを指定するには、 `F()` 表記を使用します。 この例では`F(numTrans):F(numIntlTrans)`ことを示します、変数の整数`_numTrans`と`numIntlTrans`で、各整数値のレベルのカテゴリ変数として処理する必要があります。
   
-    低レベルと高レベルは ( *colInfo* パラメーターを使用して) データ ソース *sqlFraudDS* に既に追加されているので、レベルはヒストグラムで自動的に使用されます。
+    低、高レベルは、データ ソースに既に追加されているため`sqlFraudDS`(を使用して、`colInfo`パラメーター)、レベルは、ヒストグラムで自動的に使用します。
   
-5. RxCube の戻り値が既定では、 *rxCube オブジェクト*、クロス集計を表します。 ただし、 **rxResultsDF** 関数を使用して、R の標準プロット関数のいずれかで簡単に使用できるデータ フレームに、結果を変換できます。
+5. 既定の戻り値の**rxCube**は、 *rxCube オブジェクト*、クロス集計を表します。 ただし、 [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 関数を使用して、R の標準プロット関数のいずれかで簡単に使用できるデータ フレームに、結果を変換できます。
   
     ```R
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    > [!TIP]
-    > 
-    > 注 rxCube 関数に、省略可能な引数が含まれている*returnDataFrame* = TRUE、結果をデータ フレームに直接変換に使用することでした。 例:
-    >   
-    > `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
-    >   
-    > ただし、rxResultsDF の出力はクリーンで、ソース列の名前を保持します。
+    **RxCube**関数には、オプションの引数が含まれています。 *returnDataFrame* = **TRUE**、結果をデータ フレームに直接変換を使用するとします。 例 :
+    
+    `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
+       
+    ただし、 **rxResultsDF** の出力の方がはるかに簡潔であり、ソース列の名前が保持されます。
   
 6. 最後に、次のコードを使用して、ヒート マップの作成を実行、`levelplot`から機能、**格子**パッケージは、すべての R ディストリビューションに含まれています。
   
@@ -78,20 +81,18 @@ ms.lasthandoff: 12/01/2017
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
     ```
   
-    **[結果]**
+    **結果**
   
     ![散布図の結果](media/rsql-sue-scatterplotresults.jpg "散布図の結果")
   
 この簡単な分析からでも、トランザクションの数および国際的トランザクションの数の両方に伴って不正行為のリスクが高くなることがわかります。
 
-一般的なクロス集計と rxCube 関数に関する詳細については、次を参照してください。[データ サマリ](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries)です。
+詳細については、 **rxCube**関数およびクロスタブが一般を参照して[RevoScaleR を使用したデータの要約](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)です。
 
 ## <a name="next-step"></a>次の手順
 
-[モデルを作成します。](../../advanced-analytics/tutorials/deepdive-create-models.md)
+[SQL Server のデータを使用して R モデルを作成します。](../../advanced-analytics/tutorials/deepdive-create-models.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[レッスン 2: R スクリプトの作成と実行](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-
-
+[R スクリプトの作成と実行](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

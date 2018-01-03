@@ -3,10 +3,10 @@ title: "管理コンソール (Analytics Platform System) を使用してアプ�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
 caps.latest.revision: "26"
-ms.openlocfilehash: c9a2d9e7191a1f362dfc998254f69a2a71e32aac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>管理コンソールを使用してアプライアンスを監視します。
 管理者コンソールは、アプライアンスの状態、ヘルス、およびパフォーマンス情報を表示する SQL Server PDW の web アプリケーションです。 ユーザーは、Internet Explorer で、管理コンソールに接続します。  
@@ -112,7 +112,7 @@ HDInsight の記憶域使用率の概要を示します。
 |-|-|  
 |**情報の種類**|**管理コンソールにアクセスする方法**|  
 |アプライアンスの全体的な状態|をクリックして**のアプライアンス状態**上部のメニューまたは**ホーム**です。|  
-|警告|をクリックして**アラート**です。 詳細については、次を参照してください。[管理者コンソールのアラートについて &#40;です。Analytics Platform System &#41;](understanding-admin-console-alerts.md).|  
+|オブジェクト エクスプローラーには|をクリックして**アラート**です。 詳細については、次を参照してください。[管理者コンソールのアラートについて &#40;です。Analytics Platform System &#41;](understanding-admin-console-alerts.md).|  
 |アプライアンス コンポーネントとそれらの状態|をクリックして**のアプライアンス状態**上部のメニューまたは**ホーム**です。|  
 |要求 (クエリ、読み込み、バックアップ、復元など) を監視|をクリックして**セッション**を現在アクティブまたは最近使用したセッションを表示します。<br /><br />をクリックして**クエリ**を現在アクティブなまたは最近使用したクエリを参照してください。 クエリに表示される情報には、読み込み、バックアップ、および復元が含まれています。<br /><br />をクリックして**ロック**にアクティブなロックを参照してください。|  
 |読み込み、バックアップ、および復元に関する追加情報を監視します。|をクリックして**負荷**または**バックアップ/復元**です。|  

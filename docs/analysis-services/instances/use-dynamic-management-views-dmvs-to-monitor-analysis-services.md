@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services の監視を動的管理ビュー (Dmv) を使用して |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 12/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6969869d6f4a7c10303838d2e3e696ae577fe180
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 567945f59ffad3d5662485663a7b212f94d8af56
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
@@ -37,24 +37,12 @@ SELECT * FROM $System.<schemaRowset>
   
  DMV クエリは、クエリが実行された時点でのサーバーの状態に関する情報を返します。 リアルタイムでの操作を監視するには、代わりにトレースを使用します。 詳細については、「 [SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)」を参照してください。  
   
- このトピックのセクションは次のとおりです。  
-  
- [DMV クエリを使用する利点](#bkmk_ben)  
-  
- [例とシナリオ](#bkmk_ex)  
-  
- [クエリ構文](#bkmk_syn)  
-  
- [ツールと権限](#bkmk_tools)  
-  
- [DMV リファレンス](#bkmk_ref)  
-  
-##  <a name="bkmk_ben"></a> DMV クエリを使用する利点  
+##  <a name="bkmk_ben"></a>使用して DMV クエリの利点  
  DMV クエリは、他の手段では取得できない操作とリソース消費に関する情報を返します。  
   
  DMV クエリは、XML/A Discover コマンドの実行の代わりとなる手段です。 クエリの構文は SQL に基づいているため、多くの管理者にとって DMV クエリを記述するのはより簡単です。 また、結果セットは、読み取りやコピーが容易な表形式で返されます。  
   
-##  <a name="bkmk_ex"></a> 例とシナリオ  
+##  <a name="bkmk_ex"></a>例とシナリオ  
  DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 このセクションでは、DMV クエリが最もよく使用されるシナリオの例を示します。 DMV クエリを使用してサーバー インスタンスを監視する方法の詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 」を参照してください。  
   
  `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「 [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
@@ -65,7 +53,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** このクエリは、特定の時点で使用されるロックのスナップショットを返します。  
   
-##  <a name="bkmk_syn"></a> クエリ構文  
+##  <a name="bkmk_syn"></a>クエリ構文  
  DMV のクエリ エンジンは、データ マイニング パーサーです。 DMV クエリ構文は、[SELECT (DMX)](../../dmx/select-dmx.md) ステートメントに基づきます。  
   
  DMV クエリ構文は SQL SELECT ステートメントに基づいていますが、SELECT ステートメントの完全な構文をサポートしていません。 特に、JOIN、GROUP BY、LIKE、CAST、CONVERT はサポートされていません。  
@@ -90,14 +78,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> ツールと権限  
+##  <a name="bkmk_tools"></a>ツールとアクセス許可  
  DMV のクエリを行うには、Analysis Services インスタンスに対するシステム管理者権限が必要です。  
   
  SQL Server Management Studio、Reporting Services レポート、または PerformancePoint ダッシュボードなど、MDX または DMX クエリをサポートするクライアント アプリケーションを使用できます。  
   
  Management Studio から DMV クエリを実行するには、クエリを行うインスタンスに接続し、 **[新しいクエリ]**をクリックします。 MDX または DMX クエリ ウィンドウからクエリを実行することができます。  
   
-##  <a name="bkmk_ref"></a> DMV リファレンス  
+##  <a name="bkmk_ref"></a>DMV リファレンス  
  すべてのスキーマ行セットに DMV インターフェイスがあるわけではありません。 DMV を使用してクエリを行うことができる、すべてのスキーマ行セットの一覧を返すには、次のクエリを実行します。  
   
 ```  
@@ -171,8 +159,7 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 行セット](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|プロパティの型、データ型、その他のメタデータと共に、各プロパティの完全修飾名を返します。|  
 |[MDSCHEMA_SETS 行セット](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|現在の接続で定義されるセットの一覧を表示します。|  
   
-## <a name="see-also"></a>参照  
- [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+## <a name="see-also"></a>参照   
  [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [制限された行セットと Dmv の新しい SYSTEMRESTRICTEDSCHEMA 関数](http://go.microsoft.com/fwlink/?LinkId=231885)  
   

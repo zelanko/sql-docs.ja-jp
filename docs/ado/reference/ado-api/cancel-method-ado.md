@@ -3,7 +3,7 @@ title: "Cancel メソッド (ADO) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b0112431262f9b120bb3006c07e077e968f79c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b9a22787f40d4ac0104db19db0e95d25999e27c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancel-method-ado"></a>Cancel メソッド (ADO)
 保留中の非同期メソッド呼び出しの実行をキャンセルします。  
@@ -51,8 +51,8 @@ object.Cancel
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[接続](../../../ado/reference/ado-api/connection-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)または[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[レコード](../../../ado/reference/ado-api/record-object-ado.md)|[つまり](../../../ado/reference/ado-api/copyrecord-method-ado.md)、[関係する](../../../ado/reference/ado-api/deleterecord-method-ado.md)、[後続](../../../ado/reference/ado-api/moverecord-method-ado.md)、または[開く](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[開く](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>適用対象  
   

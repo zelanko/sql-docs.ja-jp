@@ -2,9 +2,11 @@
 title: "アーキテクチャの概要 (SQL Server R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 037393dfd83c2576ed0783bfa582e96f2b74da9d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 445c28ab59dd3f66f46a0ad43aff40da5696ee0a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server で R のアーキテクチャの概要
 
@@ -46,7 +48,7 @@ SQL Server 2016 で導入された extensibility framework は SQL Server 2017 �
 
 ように、R をサポートするコンポーネントの詳細については、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]と RLauncher を参照してください[新しいコンポーネント](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)です。
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
 Machine Learning のサービスまたは SQL Server R Services を使用して R コードを実行すると、セキュリティと管理容易性を提供する、SQL Server プロセスの外部のすべての R スクリプトが実行されます。 このようなプロセスの分離は、ストアド プロシージャの一部として、R スクリプトを実行またはリモート コンピューターから SQL Server コンピューターのジョブへの接続し、計算コンテキストとしてサーバーを使用するジョブを開始するかどうかに関係なく true を保持します。
 

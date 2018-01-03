@@ -3,7 +3,7 @@ title: "EventReasonEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f16c5e9ba0c79a8920c4a7d4c9bcd9171d23ec1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f4f863b81149b2cc8e6166be3cf61621fc1cc98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 イベントを発生の原因となった理由を指定します。  
   
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|操作は、新しいレコードを追加します。|  
+|**adRsnAddNew**|@shouldalert|操作は、新しいレコードを追加します。|  
 |**adRsnClose**|9|操作の終了、 **Recordset**です。|  
 |**adRsnDelete**|2|操作は、レコードを削除します。|  
 |**adRsnFirstChange**|11|操作では、最初の変更を行い、レコードにします。|  

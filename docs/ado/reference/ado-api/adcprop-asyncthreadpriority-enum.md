@@ -3,7 +3,7 @@ title: "ADCPROP_ASYNCTHREADPRIORITY_ENUM |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39e10a6563e33ae1d1235bc220d7bd82826be853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a03809de8f86cf4ece91be598a71cd24b3ad9d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 RDS の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、データを取得する非同期スレッドの実行の優先順位を指定します。  
@@ -36,7 +36,7 @@ RDS の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブ
 |**adPriorityAboveNormal**|4|標準と最高の優先順位を設定します。|  
 |**adPriorityBelowNormal**|2|最下位と通常の優先順位を設定します。|  
 |**adPriorityHighest**|5|可能な最高レベルを優先順位を設定します。|  
-|**AdPriorityLowest**|1|最下位に優先順位を設定します。|  
+|**AdPriorityLowest**|@shouldalert|最下位に優先順位を設定します。|  
 |**adPriorityNormal**|3|優先度を normal に設定します。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  

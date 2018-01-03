@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39532ba3a94d99ef4df7479d851348b6b179328a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/18/2017
   
  アプリケーションが SQL_DRIVER_COMPLETE_REQUIRED で接続を確立し、後で、途切れた接続でステートメントを実行しようとする場合、ODBC ドライバーはダイアログ ボックスを再度表示しません。 回復の進行中にもです。  
   
--   回復中に、すべての呼び出しに**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**を返す必要があります**SQL_CD_TRUE**です。  
+-   回復中に、すべての呼び出しに**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**を返す必要があります**SQL_CD_FALSE**です。  
   
--   回復できなかったかどうか、すべての呼び出しに**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**を返す必要があります**SQL_CD_FALSE**です。  
+-   回復できなかったかどうか、すべての呼び出しに**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**を返す必要があります**SQL_CD_TRUE**です。  
   
  次の状態コードは、サーバーでコマンドを実行する関数から返されます。  
   

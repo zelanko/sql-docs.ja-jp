@@ -2,11 +2,11 @@
 title: "SQL Server マシン ラーニング Services (In-database) を設定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 3a32560422e8fc5f1a2e4284702d2cb28562f01f
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 2b0bace5079478e725df9d253c31e583193660cb
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server マシン ラーニング Services (In-database) セットアップします。
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/16/2017
 6. **インストールの準備完了** ページで、次の項目が含まれています、ことを確認を選択し、**インストール**です。
 
    + データベース エンジン サービス
-   + R Services (In-Database)
+   + R Services (データベース内)
 
 7. インストールが完了したら、コンピューターを再起動します。
 
@@ -231,7 +231,7 @@ ms.lasthandoff: 11/16/2017
 
     | hello |
     |----|
-    | 1|
+    | @shouldalert|
 
 
 8. エラーが発生した場合は、インストールが完了したら、またはトラブルシューティング ガイドを参照する必要があります (省略可能) の変更を説明するセクションに進みます。

@@ -3,7 +3,7 @@ title: "[印刷] ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bf2b7655a68c15bca3fea87751f036ebfbe0518
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c4c8a107640273cf14b73b032d945d0274418d85
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[印刷]** ダイアログ ボックスのオプションを選択すると、ドキュメントの印刷方法を指定できます。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/05/2017
 **名前**  
 プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
   
-**[状態]**  
+**ステータス**  
 選択したプリンターの状態を表します (ビジーや準備完了など)。  
   
 **型**  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 **解説**  
 選択したプリンターに関する追加情報が含まれます。  
   
-**プロパティ**  
+**[プロパティ]**  
 クリックすると、[\<*プリンター名のプロパティ*>] ダイアログ ボックスが開きます。  
   
 **[ファイルへ出力]**  

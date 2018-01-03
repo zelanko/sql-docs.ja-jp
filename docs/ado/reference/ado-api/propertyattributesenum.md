@@ -3,7 +3,7 @@ title: "PropertyAttributesEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 853e63dcd520ab45a26f98091a3e48a816350d0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96bbf0a358129254d4cb2997e4659b9f6da8904d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 属性を指定、[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|プロパティがプロバイダーによってサポートされていないことを示します。|  
-|**adPropRequired**|1|データ ソースが初期化される前にユーザーにこのプロパティの値を指定することを示します。|  
+|**adPropRequired**|@shouldalert|データ ソースが初期化される前にユーザーにこのプロパティの値を指定することを示します。|  
 |**adPropOptional**|2|ユーザーがデータ ソースが初期化される前に、このプロパティの値を指定する必要がないことを示します。|  
 |**adPropRead**|512|ユーザーが、プロパティを読み取ることができることを示します。|  
 |**adPropWrite**|1024|ユーザーが、プロパティを設定できますを示します。|  

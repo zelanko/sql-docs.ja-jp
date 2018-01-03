@@ -3,7 +3,7 @@ title: "値の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df9cadb2a5ccf23602df0b9cae6d67c881f647ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 51083883a293bb44c76cadf3971e920e8c3ed05c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameterdirectionenum"></a>値
 指定するかどうか、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)入力パラメーター、出力パラメーター両方の入力を表しますと出力パラメーター、またはストアド プロシージャからの戻り値。  
   
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|既定値です。 パラメーターが入力パラメーターを表すことを示します。|  
+|**adParamInput**|@shouldalert|既定値です。 パラメーターが入力パラメーターを表すことを示します。|  
 |**adParamInputOutput**|3|パラメーターが入力と出力の両方のパラメーターを表すことを示します。|  
 |**adParamOutput**|2|パラメーターが出力パラメーターを表すことを示します。|  
 |**adParamReturnValue**|4|パラメーターが戻り値を表すことを示します。|  

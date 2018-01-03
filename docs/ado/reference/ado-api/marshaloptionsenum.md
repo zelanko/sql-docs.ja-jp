@@ -3,7 +3,7 @@ title: "MarshalOptionsEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7afe4eeecbbfdb759d8772a4bbbb1fcc562c3966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f54d75168f07056ca1edb8aa74d78ae289f4fde
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 サーバーにどのレコードを返す必要がありますを指定します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|既定値です。 サーバーにすべての行を返します。|  
-|**adMarshalModifiedOnly**|1|返しますでは、行をサーバーにのみ変更できます。|  
+|**adMarshalModifiedOnly**|@shouldalert|返しますでは、行をサーバーにのみ変更できます。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
  パッケージ: **com.ms.wfc.data**  

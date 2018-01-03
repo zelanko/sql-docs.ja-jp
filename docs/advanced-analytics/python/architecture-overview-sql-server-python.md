@@ -2,9 +2,11 @@
 title: "アーキテクチャ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19f95f1c29970e9469cd1c0d27200bf50ef06be9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f9a7802848f5355b3bab8a45cd5d2f55b861bfe9
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Python の Machine Learning のサービスのアーキテクチャの概要
 
@@ -37,7 +39,7 @@ Python の SQL Server の相互作用の詳細については、次を参照し�
 
 など、Python をサポートするコンポーネントの詳細については、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]と PythonLauncher を参照してください[新しいコンポーネント](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md)です。
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
 Python のタスクは、セキュリティと管理容易性を提供する、SQL Server プロセス外で実行します。
 

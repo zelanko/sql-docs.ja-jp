@@ -3,7 +3,7 @@ title: "クエリ結果内の行のグループ化 (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad7ba5f8a5f4f155ee5bce77551dfab3ec7fc85e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>クエリ結果内の行のグループ化 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 小計を作成したり、テーブルのサブセットの他の集計情報を表示したりする場合は、集計クエリを使用してグループを作成します。 各グループは、テーブルで同じ値を持つすべての行のデータを集計します。  

@@ -3,7 +3,7 @@ title: "ダイアグラム ペイン (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 572d4a03893a080c6e2e97a882965c160574cfba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e339c6f51a7a6baf20ba1d7264c17a339722e466
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 ダイアグラム ペインでは、各テーブルまたはテーブル値オブジェクトは、独立したウィンドウとして表示されます。 各ウィンドウ (四角形) のタイトル バーに表示されるアイコンは、その四角形に表示されているオブジェクトの種類を示しています。各アイコンの意味は次のとおりです。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **テーブル**  
 ダイアグラム ペインに追加できるテーブルが一覧表示されます。 テーブルを追加するには、テーブルを選択して **[追加]**をクリックします。 複数のテーブルを一度に追加するには、それらのテーブルを選択して **[追加]**をクリックします。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 |アイコン|オブジェクトの種類|  
 |--------|---------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools のアイコン")|Table|  
+|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools のアイコン")|テーブル|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi2.gif "Visual Database Tools のアイコン")|クエリまたはビュー|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi3.gif "Visual Database Tools のアイコン")|リンク テーブル|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dvudficon.gif "Visual Database Tools のアイコン")|ユーザー定義関数|  

@@ -1,12 +1,15 @@
 ---
 title: "更新済み - SQL Server ドキュメントの ADO |Microsoft ドキュメント"
 description: "更新されたコンテンツで最近変更したドキュメントについては、ActiveX データ オブジェクト (ADO) 用 Microsoft SQL Server のスニペットを表示します。"
-services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: ado
+ms.service: 
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
@@ -14,16 +17,14 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: ado-activex-data-objects
-ms.openlocfilehash: 9285c2f40b72151bddd5b5fefd2a2ec870b91ef4
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.workload: On Demand
+ms.openlocfilehash: 335525c5b66e65b8ef1d9f0e63352692229a48e8
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>新規または最近更新された: SQL Server 用の ActiveX Data Objects (ADO)
-
-
 
 ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/04/2017
 
 
 
-- *更新プログラムの日付範囲:* &nbsp; **2017 年-09-28** &nbsp;対&nbsp; **2017 年-12-02**
+- *更新日の範囲:* &nbsp; **2017 年 9 月 28 日**&nbsp;から &nbsp; **2017 年 12 月 2 日**
 - *サブジェクト領域:* &nbsp; **ActiveX データ オブジェクト (ADO) for SQL Server**です。
 
 
@@ -97,26 +98,26 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新しい + 更新 (3 + 14): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (3 + 14): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
 - [新規 + 更新 (1 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新しい + 更新 (87 + 0): **sql 分析プラットフォーム システム**docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新しい + 更新 (5 + 4): **SQL への接続**docs](../connect/new-updated-connect.md)
-- [新しい + 更新 (0 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
-- [新しい + 更新 (2 + 2): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [新しい + 更新 (10 + 9): **SQL の Linux** docs](../linux/new-updated-linux.md)
-- [新しい + 更新 (2 + 4):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [新しい + 更新 (4 + 2): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (0 + 1): **SQL 用のサンプル**docs](../sample/new-updated-sample.md)
-- [新しい + 更新 (21 + 0): **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新しい + 更新 (5 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (87 + 0): **SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新規 + 更新 (5 + 4): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (0 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (2 + 2): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (10 + 9): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (2 + 4): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (4 + 2): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (21 + 0): **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新規 + 更新 (5 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
 - [新規 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新しい + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [新規 + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新しい + 更新 (0 + 2): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (0 + 2): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
-- [新しい + 更新 (0 0 以降):**データ移行アシスタント (DMA) sql** docs](../dma/new-updated-dma.md)
+- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)

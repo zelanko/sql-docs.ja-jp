@@ -3,23 +3,23 @@ title: "dwloader Parallel Data Warehouse 用のコマンド ライン ローダ�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader の * * は、既存のテーブルに一括でテーブルの行をロードする並列データ ウェアハウス (PDW) コマンド ライン ツールです。"
+description: "**dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。"
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader のコマンド ライン ローダー
 **dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。 行を読み込むときに、テーブルの末尾にすべての行を追加することができます (*追加モード*または*fastappend モード*)、新しい行を追加および既存の行を更新 (*upsert モード*)、またはすべてを削除します。既存の読み込みの前に行とし、空のテーブルにすべての行を挿入 (*モードを再読み込み*)。  
@@ -226,7 +226,7 @@ ASCII ファイルでは、null 値が区切り文字を連続して配置する
 **-t** *field_delimiter*  
 内の各フィールド (列)、行区切り記号です。 フィールド区切り記号は、1 つ以上のこれらのエスケープ文字の ASCII または ASCII 16 進値には.  
   
-|名前|エスケープ文字|16 進の文字|  
+|[オブジェクト名]|エスケープ文字|16 進の文字|  
 |--------|--------------------|-----------------|  
 |タブ|\t|0x09|  
 |キャリッジ リターン (CR)|\r|0x0d|  
@@ -402,7 +402,7 @@ append
 fastappend  
 ローダーは、変換先テーブルの既存の行の末尾に、一時テーブルを使用せず、直接、行を挿入します。 fastappend には、複数のトランザクションが必要です (– m) オプション。 Fastappend を使用する場合、ステージング データベースを指定できません。 読み込みプロセスにより、失敗または中止負荷からの復旧を処理する必要があり、fastappend のロールバックは行われません。  
   
-upsert **-k***merge_column* [,...*n* ]    
+upsert **-k***merge_column* [,...*n* ]  
 ローダーでは、SQL Server マージ ステートメントを使用して、既存の行を更新し、新しい行を挿入します。  
   
 -K オプションは、マージの基に列を指定します。 これらの列は、一意の行を表す必要があります、マージのキーを形成します。 コピー先のテーブルに主キーが存在する場合、行が更新されます。 コピー先のテーブルに主キーが存在しない場合、行が追加されます。  
@@ -491,7 +491,7 @@ Char、nchar、varchar、および nvarchar のフィールドの右側と左側
 ## <a name="return-code-values"></a>リターン コードの値  
 0 (成功) またはその他の整数値 (失敗)  
   
-コマンド ウィンドウまたはバッチ ファイルで使用して`errorlevel`リターン コードを表示します。 例:  
+コマンド ウィンドウまたはバッチ ファイルで使用して`errorlevel`リターン コードを表示します。 例 :  
   
 ```  
 dwloader  
@@ -502,7 +502,7 @@ if %errorlevel%==0 echo Success
   
 PowerShell を使用してを使用して`$LastExitCode`です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 読み込み権限とコピー先のテーブルに適用可能な権限 (INSERT、UPDATE、DELETE) が必要です。 ステージング データベース (一時テーブルの作成) に対する作成アクセス許可が必要です。 ステージング データベースを使用しない場合は、転送先データベースに作成する権限が必要です。 
 
 <!-- MISSING LINK
@@ -556,13 +556,13 @@ Append モードでは、2 つのフェーズでデータが読み込まれま�
 |テーブル型|複数のトランザクション<br />モード (-m)|テーブルが空です。|サポートされている同時実行|ログ記録|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |ヒープ|可|可|可|最小|  
-|ヒープ|可|いいえ|可|最小|  
+|ヒープ|可|不可|可|最小|  
 |ヒープ|不可|可|不可|最小|  
-|ヒープ|不可|いいえ|不可|最小|  
+|ヒープ|不可|不可|不可|最小|  
 |cl|可|可|不可|最小|  
-|cl|可|いいえ|可|Full|  
+|cl|可|不可|可|[完全]|  
 |cl|不可|可|不可|最小|  
-|cl|不可|いいえ|可|Full|  
+|cl|不可|不可|可|[完全]|  
   
 上記の表に示す**dwloader** append モード、ヒープまたはクラスター化インデックス (CI) テーブル、トランザクションで複数のフラグの有無を読み込むと、空のテーブルまたは空でないテーブルへの読み込みを使用します。 ロックと、負荷のような組み合わせでは、それぞれの動作をログ記録は、テーブルに表示されます。 たとえばのフェーズ append モードとは異なる (2) の読み込みとテーブル PDW テーブルに排他ロックを作成する必要があるマルチ トランザクション モードを使用せず、クラスター化インデックスと、空にログ記録は最小限に抑える。 これは、顧客がいないできる (2 番目) の段階とクエリを同時に空のテーブルに読み込むことを意味します。 ただし、PDW では、テーブルに排他ロックは発行されませんと空でないテーブルに同じ構成を読み込むときに、同時実行が可能です。 残念ながら、完全ログ記録が発生したプロセスのパフォーマンスの低下します。  
   

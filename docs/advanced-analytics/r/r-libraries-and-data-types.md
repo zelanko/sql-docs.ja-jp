@@ -2,9 +2,11 @@
 title: "R データ型の処理 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09ff5069864db36036685c751759cadcf66d6a02
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e72c4a984359230ace9f800e8ac4efbfcfe5f2a1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-libraries-and-r-data-types"></a>R ライブラリと R データ型
 
@@ -70,7 +72,7 @@ SQL server パッケージ管理システムでは、複数のユーザー、同
 |**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
 |**tinyint**|`integer`|**int**||
-|**ssNoversion**|`character`|**varchar(max)**||
+|**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
 |**varbinary(max)**|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
 |**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
@@ -148,13 +150,13 @@ outputDataSet <- inputDataSet'
  WITH RESULT SETS((C1 int, C2 varchar(max), C3 varchar(max), C4 float));  
 ```
 
-**[結果]**
+**結果**
 
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R で `str` 関数を使用すると、出力データのスキーマが取得されます。 この関数からは、次の情報が返されます。
 

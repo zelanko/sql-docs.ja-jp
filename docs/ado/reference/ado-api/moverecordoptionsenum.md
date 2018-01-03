@@ -3,7 +3,7 @@ title: "MoveRecordOptionsEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d602d52933b6f940131ffbb9cbe9198e6c13699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c95827fcd2a78159f704a5190fc17e505f0a865
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 動作を指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト[後続](../../../ado/reference/ado-api/moverecord-method-ado.md)メソッドです。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|既定値です。 既定の移動操作を実行します。 変換先ファイルまたはディレクトリが既に存在し、操作は、ハイパー テキスト リンクを更新する場合、操作は失敗します。|  
-|**adMoveOverWrite**|1|既に存在する場合でも、変換先ファイルまたはディレクトリを上書きします。|  
+|**adMoveOverWrite**|@shouldalert|既に存在する場合でも、変換先ファイルまたはディレクトリを上書きします。|  
 |**adMoveDontUpdateLinks**|2|既定の動作を変更**後続**ソースのハイパー テキスト リンクを更新しないようにすることによって**レコード**です。 既定の動作は、プロバイダーの機能に依存します。 移動操作は、プロバイダーができる場合に、リンクを更新します。 プロバイダーは、リンクを解決できない場合、またはこの値が指定されていない場合は、移動が成功したでもときのリンクが解決されていません。|  
 |**adMoveAllowEmulation**|4|要求の移動 (ダウンロード、アップロード、および削除操作) をシミュレートするために、プロバイダーを試みることです。 場合に移動する、**レコード**送信先 URL とは別のサーバー上か、ソースは異なるプロバイダーによって処理される、これとが異なるプロバイダーの機能により、増加の待機時間やデータ損失が失敗した場合プロバイダー間でリソースを移動します。|  
   

@@ -1,36 +1,42 @@
 ---
-title: "RxImport を使用しているメモリにデータを読み込む |Microsoft ドキュメント"
+title: "RxImport (SQL と R deep dive) を使用しているメモリにデータを読み込む |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
 caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3517ad7bb95f79dc2dec2567ecb88d64e78338bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 71848a5bf0af5b1dcbce24dbd33ba760369f1338
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="load-data-into-memory-using-rximport"></a>rxImport を使用してメモリにデータを読み込む
+# <a name="load-data-into-memory-using-rximport-sql-and-r-deep-dive"></a>RxImport (SQL と R deep dive) を使用してメモリにデータの読み込み
 
-**rxImport** 関数を使用すると、データ ソースから R セッション メモリのデータ フレームに、またはディスク上の XDF ファイルにデータを移動できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
+この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
-この手順でデータを取得する方法を学習[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、し、rxImport 関数を使用して、ローカル ファイルに関心のあるデータを格納します。 この方法を利用すると、データベースに対して再クエリすることなく、ローカルの計算コンテキストでデータを繰り返し分析できます。
+[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)セッション メモリのデータ フレームやディスク上の XDF ファイルには、データ ソースからデータを移動する関数を使用できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server のデータのサブセットをローカル メモリに抽出する
+この手順でデータを取得する方法を学びます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、しを使用して、 **rxImport**ローカル ファイルに関心のあるデータを格納する関数。 この方法を利用すると、データベースに対して再クエリすることなく、ローカルの計算コンテキストでデータを繰り返し分析できます。
 
-高いリスクの個人のみを精査することになった場合を例に説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース テーブルはサイズが大きいので、高いリスク顧客に関する情報のみを取得し、ローカル ワークステーションのメモリのデータ フレームに読み込みます。
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server からローカル メモリにデータのサブセットを抽出します。
+
+さらに詳しく危険度の高いユーザーのみを確認すると判断しました。 ソース テーブルに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は大きい危険度の高い顧客だけに関する情報を取得するためです。 そのデータは、ローカル ワークステーションのメモリ内のデータ フレームを読み込みます。
 
 1. 計算コンテキストをローカル ワークステーションにリセットします。
 
@@ -47,15 +53,15 @@ ms.lasthandoff: 12/01/2017
         connectionString = sqlConnString)
     ```
 
-3. **rxImport** 関数を使用し、ローカル R セッションのデータ フレームにデータを実際に読み込みます。
+3. 関数を呼び出す[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)データ フレームにローカルの R セッションでデータを読み取る。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    操作に成功した場合、「Rows Read: 35, Total Rows Processed: 35, Total Chunk Time: 0.036 seconds」というステータス メッセージが表示されるはずです。
+    操作が成功した場合は、次のようなステータス メッセージが表示されます:"Rows Read: 35、合計行の処理済み: 35、チャンク時間の合計: 0.036 秒"
 
-4. メモリのデータ フレームに高いリスクの観察対象が格納されたので、多様な R 関数を使用してデータ フレームを操作できるようになりました。 たとえば、リスク スコアで顧客を並べ替え、高いリスクがあると考えられる顧客を印刷できます。
+4. 危険度の高いの観測値は、メモリ内のデータ フレームには、これで、データ フレームを操作するのにさまざまな R 関数を使用できます。 たとえば、顧客の order by、リスクのスコアでき、最高のリスクとなる顧客の一覧を印刷できます。
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -63,7 +69,7 @@ ms.lasthandoff: 12/01/2017
     head(orderedHighRisk)
     ```
 
-**[結果]**
+**結果**
 
 *ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1*
 
@@ -81,21 +87,17 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="more-about-rximport"></a>rxImport の詳細
 
-読み取り、処理を行ってデータを変換するが、データを移動するだけでなく rxImport を使用することができます。 たとえば、幅が固定された列の文字数を指定する、変数の説明を指定する、要素列のレベルを設定する、さらにはインポート後に使用する新しいレベルを作成することもできます。
+**rxImport** は、データの移動だけでなく、読み取りプロセスでデータを変換する場合にも使用できます。 たとえば、幅が固定された列の文字数を指定する、変数の説明を指定する、要素列のレベルを設定する、さらにはインポート後に使用する新しいレベルを作成することもできます。
 
-RxImport 関数は、インポート処理中に、列に変数名を割り当てますを使用して新しい変数の名前を指定することができます、 *colInfo*して、パラメーターを使用するデータ型を変更できます、 *colClasses*パラメーター。
+**RxImport**関数は、インポート処理中に、列を変数名を割り当てますを使用して新しい変数の名前を指定することができます、 *colInfo*パラメーター、または、を使用してデータの種類の変更*colClasses*パラメーター。
 
 *transforms* パラメーターで追加の操作を指定すると、読み取り対象の各データ群に対して基本的な処理を実行できます。
 
 ## <a name="next-step"></a>次の手順
 
-[RxDataStep を使用して、新しい SQL Server のテーブルを作成します。](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+[rxDataStep を使用した新しい SQL Server テーブルの作成](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[R を使用するデータを変換します。](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## <a name="see-also"></a>参照
-
-[機械学習のチュートリアル](../../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
+[R を使用したデータの変換](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 

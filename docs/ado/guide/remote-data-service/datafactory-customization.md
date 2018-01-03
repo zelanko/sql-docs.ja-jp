@@ -3,7 +3,7 @@ title: "DataFactory カスタマイズ |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53054c25f273acc4e5c91e8641dfe50d94b5d115
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11a52b760227f8dad9400c24fe6118703aea3f5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datafactory-customization"></a>DataFactory のカスタマイズ
 リモート データ サービス (RDS) は、3 階層のクライアント/サーバー システムのデータ アクセスを簡単に実行する方法を提供します。 クライアントのデータ コントロールは、リモート データ ソース、または接続文字列でクエリを実行する接続とコマンドの文字列パラメーターを指定し、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの更新を実行するパラメーターです。  

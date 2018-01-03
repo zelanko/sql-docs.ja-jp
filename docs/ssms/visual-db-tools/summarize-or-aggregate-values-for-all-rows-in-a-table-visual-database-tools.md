@@ -3,7 +3,7 @@ title: "テーブルにあるすべての行の値の要約または集計 | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e735ed981d3b2a64f1ddd2d9f3ac621ad14afd39
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b4fb6c1467ebac212e00353cb3e0fc3b4a5b81b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ FROM titles
   
 検索条件を追加すると、条件を満たす行のサブセットを集計できます。  
 
-**注:** 行のカウントは、テーブルのすべての行と、特定の条件を満たす行のどちらでも行うことができます。 詳しくは、「[テーブルの行数のカウント (Visual Database Tools)](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md)」をご覧ください。  
+**メモ** 行のカウントは、テーブルのすべての行と、特定の条件を満たす行のどちらでも行うことができます。 詳しくは、「[テーブルの行数のカウント (Visual Database Tools)](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md)」をご覧ください。  
   
   
 テーブルのすべての行に対して 1 つの集計値を作成すると、集計値だけが表示されます。 たとえば、 `price` テーブルの `titles` 列の値の合計を求める場合、書名、出版社名などは表示されません。  

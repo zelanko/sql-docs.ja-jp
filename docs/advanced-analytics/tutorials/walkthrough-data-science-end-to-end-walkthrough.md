@@ -2,12 +2,14 @@
 title: "R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
@@ -15,11 +17,11 @@ caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: f392f7366ffc2504ce2834311b941351ef4e66c2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9d6654109e3cb5ff2e2c174dc37fd02bfc02dcb3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R と SQL Server のエンド ツー エンドのデータ サイエンスのチュートリアル
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/01/2017
 + すべての SQL と R スクリプトが含まれます。
 + 環境内で実行するには、スクリプト内の文字列を変更する必要があります。 これを行う任意のコード エディターなど[Visual Studio Code](https://code.visualstudio.com/Download)です。
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 
 + SQL Server 2016 のインスタンスまたは SQL Server 2017 の評価版へのアクセスが必要です。
 + SQL Server コンピューターの少なくとも 1 つのインスタンスに [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] がインストールされている必要があります。

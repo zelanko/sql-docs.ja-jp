@@ -3,7 +3,7 @@ title: "AND が優先する場合の条件を結合する (Visual Database Tools
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 375048e54f6cf1b95650a4f21deac8137ece5242
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 33d6a936357454191378295a2387b30b5884df38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] AND で条件を結合するには、クエリに対して列を 2 回 (各条件について 1 回ずつ) 追加します。 OR で条件を結合するには、[フィルター] 列で最初の条件を指定し、次の条件を **[または...]** 列で指定します。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 -   入社日が 5 年以上前で、かつ職務レベルが 100 の従業員  
   
-    -または-  
+    - または -  
   
 -   職務レベルが 200 の従業員  
   

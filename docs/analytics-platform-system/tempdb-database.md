@@ -3,10 +3,10 @@ title: "tempdb データベース (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: "22"
 ms.workload: not set
-ms.openlocfilehash: 94cd8614f5098a1f065dbfe19f0ec024c42f9179
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 **tempdb**はユーザー データベースのローカル一時テーブルを格納する SQL Server PDW システム データベースです。 一時テーブルは、クエリのパフォーマンスを向上させるためによく使用されます。 たとえば、一時テーブルを使用して、スクリプトをモジュール化でき、計算されたデータを再利用できます。  
@@ -86,7 +86,7 @@ SQL Server PDW は、特に明示しない限り、一時テーブルと永続�
 > [!NOTE]  
 > *できます*を作成し、一時テーブルで統計を更新します**。ALTER INDEX**をクラスター化インデックスを再構築するために使用できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 すべてのユーザーが tempdb 内に一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 ユーザーが tempdb を使用できないように tempdb への接続権限を取り消すことはできますが、一部のルーチン処理で tempdb を使用する必要があるためお勧めしません。  
   
 ## <a name="RelatedTasks"></a>関連タスク  

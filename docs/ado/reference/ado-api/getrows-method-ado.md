@@ -3,7 +3,7 @@ title: "GetRows メソッド (ADO) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a80f8619d636c13b8c76b4f867e7cbe6333a742
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 317e654699ab6e2c6abc349d91ed58d4c97a7a19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-ado"></a>GetRows メソッド (ADO)
 複数のレコードを取得、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを配列にします。  
@@ -48,7 +48,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *開始*  
  省略可。 A**文字列**値または**バリアント**元となるレコードのブックマークに評価される、 **GetRows**の操作を開始する必要があります。 使用することも、 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値。  
   
- *フィールド*  
+ *Fields*  
  省略可。 A**バリアント**を表す単一のフィールド名または序数位置、またはフィールド名または序数位置番号の配列。 ADO では、これらのフィールドのデータのみを返します。  
   
 ## <a name="remarks"></a>解説  

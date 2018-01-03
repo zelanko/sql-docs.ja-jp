@@ -1,9 +1,11 @@
 ---
 title: "SQL Server の Machine Learning のアップグレードとインストールに関する FAQ |Microsoft ドキュメント"
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f0c6aac38001506b51ff7d14307f23b461334eb7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 137889dae328d3f780082ca5837717017b66867d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>SQL Server の Machine Learning のアップグレードとインストールに関する FAQ
 
@@ -86,7 +88,7 @@ R、または Python で機械学習を使用するには追加の構成が SQL 
 
 SQL Server のバージョンをアップグレードするには、セットアップ ウィザードを再実行します。
 
-+ [SQL Server をアップグレードする](../../database-engine/install-windows/upgrade-sql-server.md)
++ [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)
 + [インストール ウィザードを使用して SQL Server をアップグレードします。](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 バインディングと呼ばれるプロセスを使用してコンポーネントを学習、マシンだけをアップグレードすることができます。 
@@ -98,7 +100,7 @@ SQL Server 2016 のプレリリース バージョンからのアップグレー
 
 次のバージョンは、SQL Server 2016 のプレリリース バージョンと共にインストールされました。
 
-| バージョン | ビルド         |
+| [バージョンのオプション] | ビルド         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

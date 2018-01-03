@@ -3,7 +3,7 @@ title: "プロパティの例 (VB) の準備 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c712e506073f1094b52bd0f00218e55256997d24
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a736db7dd3eb28ee2e14a173fee0347c2d31828
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepared-property-example-vb"></a>準備済みのプロパティの例 (VB)
 この例を示します、 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)を開いて、2 つのプロパティ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト: 準備された 1 つ、準備されていません。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d40d92b6771aa27a0fbfbdbfefd485496b10984c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ab0a0838c2bac6359452d3870cf3d3c7d8b472d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-control"></a>同時実行制御
 *同時実行*同時に同じデータを使用する 2 つのトランザクションの機能は、トランザクション分離通常は同時実行が少なくします。 これはトランザクションの分離は通常、行をロックで実装が、ロックされた行が少なくとも一時的にブロックされることがなく少ないトランザクションを完了できる複数の行がロックされている、です。 トランザクション分離レベルが高いデータベースの整合性を維持するために必要なのトレードオフとして同時実行が少なく、一般的に、中にカーソルを使用してを高い読み取り/書き込み活動で、インタラクティブなアプリケーションで問題になります。  

@@ -5,7 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a5e5d809845d6ecd7378a370c800231fb10c2a8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 666236842318cfba0cee38f71ac694eef86cdbf5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>データ Migration Assistant を使用して、内部設置型 SQL サーバーの移行します。
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 
 1. 選択すると、接続を暗号化することをお勧め**接続を暗号化**で、**接続プロパティ**セクションです。
 
-1. **[次へ]**をクリックします。
+1. **[次へ]** をクリックします。
 
    ![指定ソースとターゲット ページ](../dma/media/SourceTarget.png)
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 
    ![データベースのバックアップを別の場所にコピーするオプション](../dma/media/CopyDatabaseDifferentLocation.png)
 
-1. **[次へ]**をクリックします。
+1. **[次へ]** をクリックします。
 
 Migration Assistant のデータの検証を行います、バックアップ フォルダーに対するデータとログ ファイルの場所。 いずれかの検証に失敗した場合を修正してください、オプションとクリック**次**です。
 

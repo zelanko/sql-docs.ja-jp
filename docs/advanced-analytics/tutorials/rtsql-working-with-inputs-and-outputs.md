@@ -2,12 +2,14 @@
 title: "操作の入力と出力 (SQL のクイック スタートで R) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e6d155e73d45fd206db41c3cde0856bdd8faea94
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ade3facb692bcd68b34ffedad0924833ac3c504c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>入力と出力 (R で SQL のクイック スタート) の使用
 
@@ -45,7 +47,7 @@ GO
 SELECT * FROM RTestData
 ```
 
-**[結果]**
+**結果**
 
 |col1|
 |------|
@@ -67,7 +69,7 @@ EXECUTE sp_execute_external_script
 
 テーブルからデータを取得、R ランタイムを通じてラウンド トリップし、列の名前、値を返します*NewColName*です。
 
-**[結果]**
+**結果**
 
 ![rsql_basictut_getsamedataR](media/rsql-basictut-getsamedatar.PNG)
 
@@ -131,7 +133,7 @@ EXECUTE sp_execute_external_script
    WITH RESULT SETS (([Col1] char(20) NOT NULL));
 ```
 
-**[結果]**
+**結果**
 
 *Col1*
 *こんにちは*

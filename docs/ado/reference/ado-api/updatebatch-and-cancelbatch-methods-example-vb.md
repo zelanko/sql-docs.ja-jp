@@ -3,7 +3,7 @@ title: "UpdateBatch と CancelBatch メソッドの例 (VB) |Microsoft ドキュ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d6ae4cdb4866d04c66516dd37ba2efc0d779104
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a2c02c2cb03dad3745fa36b96af5dc878d02251
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch と CancelBatch メソッドの例 (VB)
 この例で、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドと組み合わせて、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドです。  

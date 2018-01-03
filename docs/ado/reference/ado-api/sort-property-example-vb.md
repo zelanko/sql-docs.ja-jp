@@ -3,7 +3,7 @@ title: "並べ替えプロパティの例 (VB) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 653f50c01ba6850da1984b5c3bb307ce2580adcd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00bb46252596466986585565bc5dd29b972109f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-property-example-vb"></a>並べ替えプロパティの例 (VB)
 この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[並べ替え](../../../ado/reference/ado-api/sort-property.md)の行の順序を変更するプロパティ、**レコード セット**から派生した、***作成者***のテーブル***Pubs***データベース。 セカンダリ ユーティリティ ルーチンは、各行を出力します。  

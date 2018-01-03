@@ -3,7 +3,7 @@ title: "OriginalValue と UnderlyingValue プロパティの例 (VB) |Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95087b445fa316ebe31055a0e53584334e24b693
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6f80342894b931caac28a3474f5a6502e4b2919
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue と UnderlyingValue プロパティの例 (VB)
 この例で、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することによってプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新をします。  

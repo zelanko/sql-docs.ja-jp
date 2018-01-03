@@ -2,12 +2,14 @@
 title: "予測モデル (SQL のクイック スタートで R) を作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4e0d5dab1f737361a82191b6a3d74561e12722e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6f0117198cd7a548b9e56d228c14231b39ec35a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>予測モデル (SQL のクイック スタートで R) を作成します。
 
@@ -141,11 +143,11 @@ INSERT INTO [dbo].[stopping_distance_models] (model_name, model)
 VALUES (' latest model', @model)
 ```
 
-**[結果]**
+**結果**
 
 ![rslq_basictut_coefficients](media/rslq-basictut-coefficients.PNG)
 
-### <a name="summary"></a>概要
+### <a name="summary"></a>[概要]
 
 SQL パラメーターおよび R 変数を操作するため、これらの規則に従う`sp_execute_external_script`:
 
