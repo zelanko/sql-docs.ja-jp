@@ -3,7 +3,7 @@ title: "テーブルの作成と更新 (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28e181751426bf7169693973ca9c974e1d130e9f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-update-database-tables"></a>データベース テーブルの作成と更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] テーブル デザイナーはビジュアル ツールであり、[データベース テーブル](../../relational-databases/tables/tables.md)の設計および視覚化を行うことができます。 SQL Server Management Studio (SSMS) テーブル デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約を作成、編集、または削除します。  
@@ -65,6 +65,6 @@ ms.lasthandoff: 12/05/2017
 [列のプロパティ](column-properties-visual-database-tools.md)  
 [テーブルへの列の追加](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
 [主キーと外部キー](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
-[インデックス](../../relational-databases/indexes/indexes.md)  
+[[インデックス]](../../relational-databases/indexes/indexes.md)  
 [データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md)  

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] フルテキスト述語の **CONTAINS** および **FREETEXT** と、行セット値関数の **CONTAINSTABLE** と **FREETEXTTABLE** を **SELECT** ステートメントと使用し、フルテキスト クエリを記述します。 このトピックでは、各述語と関数の例と、使用に最適なものを選択する方法を説明します。
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---contains"></a>例: CONTAINS  
  次の例では、 `$80.99` という単語を含み、価格が `"Mountain"`であるすべての製品を検索します。  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -55,7 +55,7 @@ GO
 ### <a name="example---freetext"></a>例: FREETEXT 
  次の例では、vital、safety、components に関連する単語を含むドキュメントをすべて検索します。  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -68,7 +68,7 @@ GO
 ### <a name="example---containstable"></a>例: CONTAINSTABLE  
  次の例では、 **Description** 列の "light" または "lightweight" という語の近くに "aluminum" という語があるすべての製品の説明 ID と説明を返します。 また、順位値が 2 以上の行だけを返します。  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -90,7 +90,7 @@ GO
 ### <a name="example--freetexttable"></a>例: FREETEXTTABLE  
  次の例では、FREETEXTTABLE クエリを拡張して、順位の高いものから順に行を返し、各行の順位を選択リストに追加します。 クエリを指定するには、 **ProductDescriptionID** が **ProductDescription** テーブルの一意なキー列であることを知っている必要があります。  
   
-```tsql 
+```sql 
 USE AdventureWorks2012  
 GO  
   
@@ -106,7 +106,7 @@ GO
   
 以下に、同じクエリを拡張して、順位の値が 10 以上の行だけを返す例を示します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -142,7 +142,7 @@ GO
 |---|---|---|
 |**使用方法**|CONTAINS と FREETEXT のフルテキスト**述語**は、SELECT ステートメントの WHERE 句または HAVING 句で使用します。|CONTAINSTABLE 関数と FREETEXTTABLE 関数のフルテキスト**関数**は、SELECT ステートメントの FROM 句で通常のテーブル名と同じように使用します。|
 |**その他のクエリ オプション**|これらは、LIKE や BETWEEN など他の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語と組み合わせて使用できます。<br/><br/>テーブルの単一の列、一連の列、すべての列のいずれかを検索対象として指定できます。<br/><br/>また、フルテキスト クエリで単語区切りとステミング、類義語辞典の検索、およびノイズ ワードの削除を行うために使用されるリソースの言語を指定することもできます。|これらのいずれかの関数を使用する場合には、検索するベース テーブルを指定する必要があります。 述語と同様に、検索するテーブルの単一の列、一連の列、またはすべての列を指定できます。また、必要に応じて、指定したフルテキスト クエリで使用される言語リソースの言語を指定することもできます。<br/><br/>通常、CONTAINSTABLE または FREETEXTTABLE の結果をベース テーブルと結合する必要があります。 これを実行するには、キー列の一意の名前を把握している必要があります。 この列は、フルテキスト処理に対応する各テーブルに含まれ、テーブルの行を一意にするために使用されます ( *一意な**キー列*)。 キー列の詳細については、「[フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)」をご覧ください。|
-|**[結果]**|CONTAINS 述語と FREETEXT 述語では、特定の行がフルテキスト クエリと一致するかどうかを示す TRUE または FALSE の値が返されます。 一致する行は結果セットで返されます。|これらの関数では、フルテキスト クエリと一致する 0 行、1 行、または 2 行以上で構成されるテーブルが返されます。 返されたテーブルには、ベース テーブルの行のうち、関数のフルテキスト検索条件に指定した選択基準に一致する行のみが含まれます。<br/><br/>このいずれかの関数を使用するクエリでは、次のように、返される各行の関連順位値 (RANK) とフルテキスト キー (KEY) も返されます。<br/><ul><li>**KEY** 列。 KEY 列には、返された行の一意の値が格納されます。 KEY 列は、選択基準を指定する際に使用できます。</li><li>**RANK** 列。 RANK 列は、各行が選択条件にどの程度一致しているかを示す *順位値* を返します。 行内のテキストまたはドキュメントの順位値が高いほど、指定したフルテキスト クエリとその行との関連性が高いことを示します。 複数の行に同じ順位が付けられる可能性もあるので注意してください。 *top_n_by_rank* パラメーター (省略可能) を指定して、返される一致の数を制限することもできます。 詳細については、「 [RANK を使用して検索結果を制限する方法](../../relational-databases/search/limit-search-results-with-rank.md)」を参照してください。</li></ul>|
+|**結果**|CONTAINS 述語と FREETEXT 述語では、特定の行がフルテキスト クエリと一致するかどうかを示す TRUE または FALSE の値が返されます。 一致する行は結果セットで返されます。|これらの関数では、フルテキスト クエリと一致する 0 行、1 行、または 2 行以上で構成されるテーブルが返されます。 返されたテーブルには、ベース テーブルの行のうち、関数のフルテキスト検索条件に指定した選択基準に一致する行のみが含まれます。<br/><br/>このいずれかの関数を使用するクエリでは、次のように、返される各行の関連順位値 (RANK) とフルテキスト キー (KEY) も返されます。<br/><ul><li>**KEY** 列。 KEY 列には、返された行の一意の値が格納されます。 KEY 列は、選択基準を指定する際に使用できます。</li><li>**RANK** 列。 RANK 列は、各行が選択条件にどの程度一致しているかを示す *順位値* を返します。 行内のテキストまたはドキュメントの順位値が高いほど、指定したフルテキスト クエリとその行との関連性が高いことを示します。 複数の行に同じ順位が付けられる可能性もあるので注意してください。 *top_n_by_rank* パラメーター (省略可能) を指定して、返される一致の数を制限することもできます。 詳細については、「 [RANK を使用して検索結果を制限する方法](../../relational-databases/search/limit-search-results-with-rank.md)」を参照してください。</li></ul>|
 |**その他のオプション**|この作業を終えると、CONTAINS または FREETEXT 述語に 4 つの要素で構成される名前を使用して、リンク サーバー上の対象のテーブルのフルテキスト インデックス列にクエリを実行できます。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。|該当なし|
 |**詳細**|これらの述語の構文および引数の詳細については、「[CONTAINS](../../t-sql/queries/contains-transact-sql.md)」と「[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)」を参照してください。|これらの関数の構文および引数の詳細については、「[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)」と「[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)」を参照してください。|
 
@@ -164,7 +164,7 @@ GO
 ###  <a name="Simple_Term"></a> 特定の語または句 (単純語句) の検索  
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、または [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用すると、テーブルで特定の句を検索できます。 たとえば、 **データベースの** ProductReview [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルで、製品に関する記述から "learning curve" という句が含まれるすべてのコメントを検索するには、次のように CONTAINS 述語を使用します。  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +179,7 @@ GO
 ###  <a name="Prefix_Term"></a> プレフィックス付きの語 (プレフィックス語句) の検索  
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) を使用すると、指定したプレフィックスを持つ語または句を検索することができます。 指定したプレフィックスで始まるテキストが含まれる列のすべてのエントリが返されます。 たとえば、 `top`というプレフィックス ( `top``ple`、 `top``ping`、 `top`など) が含まれるすべての行を検索する場合、 クエリは次のようになります。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -198,7 +198,7 @@ GO
   
 次の例は `Comments` データベースの `ProductReview` テーブルの `AdventureWorks` 列にある "foot" のすべての語形 ("foot"、"feet" など) を検索します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -215,7 +215,7 @@ GO
   
 次の例のクエリは、重みを使用して、文字列 "Bay" で始まるテキストに "Street" または "View" が含まれる顧客住所をすべて検索します。 結果では、指定した語が多く含まれている行ほど高い順位が付けられます。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -243,7 +243,7 @@ CONTAINS 述語と CONTAINSTABLE 関数は、同じ検索条件を使用しま�
 ### <a name="example"></a>例  
  次の例では、CONTAINS 述語を使用して、説明 ID が 5 以外で、説明に "Aluminum" と "spindle" という両方の単語が含まれている説明を検索します。 検索条件では、AND ブール演算子を使用します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの ProductDescription テーブルを使用します。
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

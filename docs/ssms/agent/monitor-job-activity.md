@@ -3,7 +3,7 @@ title: "ジョブの利用状況の監視 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddc5235281231c8d1aa08a22e7f55fe4131480d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b989e3a1bc7bdaa3d7e4d241eb674e4ecd58247d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-job-activity"></a>ジョブの利用状況の監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブの利用状況モニターを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
@@ -59,11 +59,11 @@ ms.lasthandoff: 12/05/2017
   
 ストアド プロシージャ **sp_help_jobactivity**を使用することによって、現在のセッションのジョブの利用状況を表示することもできます。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブの実行状態を表示する方法を説明します。|[[ジョブの利用状況の表示]](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>参照  

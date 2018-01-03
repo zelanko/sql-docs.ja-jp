@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="plan-guides"></a>プラン ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドは、サード パーティ ベンダーが提供するデータベース アプリケーションのクエリの小さなサブセットで、期待どおりのパフォーマンスが得られない場合に役に立ちます。 プラン ガイドでは、最適化する Transact-SQL ステートメントのほか、使用するクエリ ヒントを含む OPTION 句またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により Transact-SQL ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  `@Country_region` パラメーターを受け取る次のストアド プロシージャが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -66,7 +66,7 @@ END;
   
  ストアド プロシージャを変更して `OPTIMIZE FOR` クエリ ヒントをクエリに追加することで、この問題に対処できます。 ただし、ストアド プロシージャは配置済みアプリケーション内にあるので、アプリケーション コードを直接変更することはできません。 代わりに、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに次のプラン ガイドを作成できます。  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -86,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>SQL プラン ガイド  
  SQL プラン ガイドでは、データベース オブジェクトの一部ではないスタンドアロン [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとスタンドアロン バッチのコンテキストで実行されるクエリが照合されます。 また、SQL ベースのプラン ガイドを使用して、指定した形式にパラメーター化されたクエリを照合することもできます。 SQL プラン ガイドは、スタンドアロン [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとスタンドアロン バッチに適用されます。 これらのステートメントは、よく [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) システム ストアド プロシージャを使用してアプリケーションから送信されます。 たとえば、次のスタンドアロン バッチについて考えてみましょう。  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  このクエリに並列実行プランが生成されないようにするには、次のプラン ガイドを作成し、 `MAXDOP` パラメーターで `1` クエリ ヒントを `@hints` に設定します。  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -119,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>プラン ガイドの照合要件  
  プラン ガイドの範囲は、そのガイドが作成されているデータベースです。 したがって、クエリの実行時に使用されているデータベース内に存在するプラン ガイドだけをクエリと照合できます。 たとえば、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に次のクエリを実行するとします。  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  この場合、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のプラン ガイドだけがこのクエリと照合されます。 ただし、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に、次のステートメントを実行すると結果が異なります。  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -144,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>プラン キャッシュに対するプラン ガイドの効果  
  モジュールにプラン ガイドを作成すると、そのモジュールのクエリ プランがプラン キャッシュから削除されます。 バッチに OBJECT 型または SQL 型のプラン ガイドを作成すると、同じハッシュ値を持つバッチのクエリ プランが削除されます。 TEMPLATE 型のプラン ガイドを作成すると、単一ステートメントのバッチがデータベース内のプラン キャッシュからすべて削除されます。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスク|トピック|  
 |----------|-----------|  

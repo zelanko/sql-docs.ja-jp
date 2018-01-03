@@ -3,7 +3,7 @@ title: "接続のプロパティを指定する |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87bcb0bed714e3fd2719405fbd1887a7943d219d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80da1a4da2d2a04f6a73b05e57ab366d2cb40e97
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-connection-properties"></a>接続のプロパティを指定します。
 によって指定された情報の大部分を指定することができます、[接続文字列](../../../ado/guide/data/creating-a-connection-string.md)のプロパティを設定して、**接続**接続を開く前にオブジェクト。 接続文字列がで説明したように、同じ効果を得ることがなど[接続文字列を作成する](../../../ado/guide/data/creating-a-connection-string.md)次のコードを使用しています。  

@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3834e2948ea4e43bc5e44a4aed9f1560b2864b64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e9c1bcfec7bd2d009af31b69317f9fd23b68843
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について説明します。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  次の例では、新しい FileTable を作成し、 **FILETABLE_DIRECTORY** と **FILETABLE_COLLATE_FILENAME**の両方に対してユーザー定義の値を指定します。  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -84,7 +84,7 @@ GO
   
  次の例も、新しい FileTable を作成するものです。 ユーザー定義の値が指定されていないため、 **FILETABLE_DIRECTORY** の値が FileTable の名前に、 **FILETABLE_COLLATE_FILENAME** の値が database_default になります。また、主キーと一意の制約にはシステムで生成された名前が指定されます。  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -119,7 +119,7 @@ GO
   
  **例**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -150,7 +150,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> FileTable を作成したときに作成されるその他のデータベース オブジェクト  
  新しい FileTable を作成すると、システム定義のインデックスと制約もいくつか作成されます。 これらのオブジェクトを変更または削除することはできません。これらは、FileTable 自体が削除されると一緒に削除されます。 これらのオブジェクトの一覧を表示するには、カタログ ビュー [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md) に対してクエリを実行します。  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  

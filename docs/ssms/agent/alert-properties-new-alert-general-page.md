@@ -3,7 +3,7 @@ title: "[警告のプロパティ] - [新しい警告] ([全般] ページ) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f3f7d45da8f980797f6ff93a7446cbf827945b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3860afc9e6af4561093350b148b1a36b6c527262
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alert-properties---new-alert-general-page"></a>[警告のプロパティ] - [新しい警告] ([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告の全般プロパティを表示および変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **名前**  
 警告の名前を変更します。  
   
@@ -72,14 +72,14 @@ ms.lasthandoff: 12/05/2017
 **[警告カウンター]**  
 警告が応答するカウンターの動作を指定します。 たとえば、 **[Free space in tempdb (KB)]** カウンターの値が特定の値を下回る条件や、 **[SQL Compilations/sec]** が特定の値を上回る条件に応答するように警告を設定できます。  
   
-**値**  
+**[値]**  
 カウンターの値を指定します。  
   
 ## <a name="wmi-event-alert-options"></a>WMI イベント警告のオプション  
 **名前空間**  
 WQL (WMI Query Language) ステートメントに使用する名前空間を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが実行されているコンピューター上の名前空間だけがサポートされます。  
   
-**Query**  
+**クエリ**  
 警告が応答するイベントを識別する WQL ステートメントを指定します。  
   
 ## <a name="see-also"></a>参照  

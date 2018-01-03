@@ -3,7 +3,7 @@ title: "Microsoft OLE DB Provider for Microsoft インテックス サービス 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft インデックス作成サービスの概要
 Microsoft OLE DB Provider for Microsoft インテックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
@@ -84,7 +84,7 @@ MSIDXS
 |[カーソル。](../../../ado/reference/ado-api/cursortype-property-ado.md)|常に**adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|常に**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|
+|[[フィルター]](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|
 |[ロック。](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|
 |[スレッド](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用不可|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|
@@ -107,12 +107,12 @@ MSIDXS
 |[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|不可|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|可|
 |[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|可|
-|[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|不可|
+|[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|不可|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|可|
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|可|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|可|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|可|
-|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|可|
+|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|可|
 |[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|可|
 |[再同期](../../../ado/reference/ado-api/resync-method.md)|可|
 |[サポートしています](../../../ado/reference/ado-api/supports-method.md)|可|

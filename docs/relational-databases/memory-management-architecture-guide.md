@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 503814b6f9ade3623a4586b97ae09434f78c0db4
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,10 +93,10 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
 |単一ページ割り当て|はい|はい。"あらゆるサイズの" ページ割り当てに統合。|
-|複数ページ割り当て|不可|はい。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|不可|はい|
-|スレッド スタック メモリ|不可|不可|
-|Windows からの直接割り当て|不可|不可|
+|複数ページ割り当て|いいえ|はい。"あらゆるサイズの" ページ割り当てに統合。|
+|CLR 割り当て|いいえ|はい|
+|スレッド スタック メモリ|いいえ|いいえ|
+|Windows からの直接割り当て|いいえ|いいえ|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、***Total Server Memory (KB)*** が (max server memory によって指定される) ***Target Server Memory (KB)*** 設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
 
@@ -120,7 +120,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
-|単一ページ割り当て|不可|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
+|単一ページ割り当て|いいえ|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
 |複数ページ割り当て|はい|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
 |CLR 割り当て|はい|はい|
 |スレッド スタック メモリ|はい|はい|
@@ -138,7 +138,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 次のクエリでは、現在割り当てられているメモリに関する情報を返します。  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 

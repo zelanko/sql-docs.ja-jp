@@ -3,7 +3,7 @@ title: "カスタム レポートでのオブジェクト エクスプローラ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] オブジェクト エクスプローラーで選択されているノードのレポート パラメーターがカスタム レポートで参照されていれば、そのノードのコンテキストでカスタム レポートを実行できます。 これにより、カスタム レポートで現在のコンテキスト (現在のデータベースなど)、またはデータベース オブジェクトやサーバー オブジェクトを使用できるようになります。  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 |[パラメーター名]|データ型|  
 |------------------|-------------|  
 |**ObjectName**|**文字列**|  
-|**ObjectTypeName**|**文字列**|  
+|**ObjectTypeName**|**String**|  
 |**フィルター選択されたインデックス**|**ブール値**|  
-|**ServerName**|**文字列**|  
-|**フォント名**|**文字列**|  
-|**DatabaseName**|**文字列**|  
+|**ServerName**|**String**|  
+|**フォント名**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>オブジェクト エクスプローラー ノードのレポート パラメーターの例  
 この例を実行するには、次の手順に従います。  

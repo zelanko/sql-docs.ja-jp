@@ -3,7 +3,7 @@ title: "[スケジュールの管理] | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3abb52a483d939ade1e2e24ddc9836fe1560548e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fed3a1f1202817d56c1e96c241d0487f5b51aaec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-schedules"></a>[スケジュールの管理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ スケジュールのプロパティを表示および変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[利用可能なスケジュール]**  
 このユーザーが利用可能なスケジュールの一覧を表示します。 ジョブの所有者とスケジュールの所有者は同じである必要があります。 したがって、この一覧には、このジョブの所有者によって所有されているスケジュールだけが表示されます。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 **有効**  
 スケジュールを有効にするには、このオプションを選択します。  
   
-**Description**  
+**[説明]**  
 ジョブを実行するスケジュールの条件を説明します。  
   
 **[スケジュール済みのジョブ]**  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 **新規**  
 新しいスケジュールを作成するには、このボタンをクリックします。  
   
-**Del**  
+**削除**  
 選択されているスケジュールを削除するには、このボタンをクリックします。  
   
 **プロパティ**  

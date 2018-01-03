@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      新しい非対称キーをインポートします。  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      新しい非対称キーに関連付けられる新しいログインを作成します (TDE の手順で説明しています)。  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      ログインにマップする新しい資格情報を作成します。  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      データベース暗号化キーを再暗号化するデータベースを選択します。  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      データベース暗号化キーを再暗号化します。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  最新バージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタを使用して開始するように EKM プロバイダーを変更します。次のステートメントを実行してください。 ファイル パスが、最新バージョンをダウンロードした場所になっていることを確認してください。 (新しいバージョンが元のバージョンと同じ場所にインストールされる場合、この手順はスキップできます。) 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -207,10 +207,10 @@ Active Directory の詳細については、「 [Azure サブスクリプショ�
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのエラー コードの説明  
  **プロバイダーのエラー コード:**  
   
-エラー コード  |記号  |説明    
+エラー コード  |記号  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | 操作は成功しました。    
-1 | scp_err_Failure | 操作は失敗しました。    
+@shouldalert | scp_err_Failure | 操作は失敗しました。    
 2 | scp_err_InsufficientBuffer | バッファーに割り当てるメモリ量を増やすようエンジンに指示が出されます。    
 3 | scp_err_NotSupported | この操作はサポートされていません。 たとえば、指定されたキーの種類やアルゴリズムは、EKM プロバイダーでサポートされていません。    
 4 | scp_err_NotFound | 指定されたキーまたはアルゴリズムを EKM プロバイダーが検出できませんでした。    

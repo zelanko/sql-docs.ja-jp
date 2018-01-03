@@ -3,7 +3,7 @@ title: "テンプレート パラメーターを置き換える | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-templates
 ms.reviewer: 
@@ -23,13 +23,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d36529a476493920ceb74d64069d5e77e7d10e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cae991dbfcdfb2b00a3229746455c58b59f39bd5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="replace-template-parameters"></a>テンプレート パラメーターを置き換える
+# <a name="replace-template-parameters"></a>[テンプレート パラメーターの置換]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] テンプレートには、テンプレートを使用するたびに実装固有の値に置き換えることができるパラメーターが含まれています。 コード エディターでテンプレートを開いた後、パラメーターを実装に関する値に置き換えることができます。  
   
 ## <a name="before-you-begin"></a>はじめに  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 このダイアログ ボックスを使用するには、スクリプトに山かっこ (`< >`) で囲んだパラメーターを `<`*parameter_name*`,` *data_type*`,` *default_value*`>`の形式で含める必要があります。  
   
-## <a name="replace-template-parameters"></a>テンプレート パラメーターを置き換える  
+## <a name="replace-template-parameters"></a>[テンプレート パラメーターの置換]  
 コード エディター ウィンドウでテンプレートを開いた後、次の操作を行います。  
   
 1.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]**をクリックします。  

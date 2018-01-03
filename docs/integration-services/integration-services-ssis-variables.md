@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="system-and-user-defined-variables"></a>システム変数とユーザー定義変数  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、ユーザー定義変数とシステム変数の、2 種類の変数がサポートされています。 ユーザー定義変数とはパッケージの開発者によって定義された変数で、システム変数とは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]によって定義された変数です。 ユーザー定義変数は、パッケージで必要な数だけ作成できますが、システム変数は追加作成できません。  
   
- 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
+ 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」と「[SQL 実行タスクのパラメーターとリターン コード](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
   
 > [!NOTE]  
 >  ユーザー定義変数とシステム変数の名前では、大文字と小文字が区別されます。  
@@ -187,20 +187,20 @@ ms.lasthandoff: 11/20/2017
 ### <a name="add-variable-dialog-box"></a>[変数の追加] ダイアログ ボックス
 **[変数の追加]** ダイアログ ボックスを使用すると、新しい変数のプロパティを指定できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>および  
  **コンテナー**  
  一覧からコンテナーを選択します。 コンテナーにより、変数の有効範囲が定義されます。 パッケージまたはパッケージ内の実行可能ファイルがコンテナーになります。  
   
  **名前**  
  変数名を入力します。  
   
- **名前空間**  
+ **Namespace**  
  変数の名前空間を指定します。 既定で、ユーザー定義の変数は **User** 名前空間に置かれます。  
   
  **[値の型]**  
  データ型を選択します。  
   
- **値**  
+ **[値]**  
  値を入力します。 **[値の型]** オプションで指定したデータ型に適合する値を入力する必要があります。  
   
  **読み取り専用です。**  
@@ -313,7 +313,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="update-a-variable-dynamically-with-configurations"></a>構成での変数の動的更新  
  変数を動的に更新するために、変数の構成を作成し、パッケージと共に構成を配置して、パッケージの配置時に構成ファイルの変数の値を更新できます。 実行時に、パッケージは更新された変数の値を使用します。 詳細については、「 [パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)」を参照してください。  
 
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [子パッケージでの変数およびパラメーターの値の使用](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

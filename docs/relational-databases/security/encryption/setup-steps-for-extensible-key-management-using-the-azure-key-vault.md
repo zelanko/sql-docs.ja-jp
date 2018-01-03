@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3105ead24cc79ba2374e6caf1438ed1384078a01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Azure Key Vault を使用した拡張キー管理のセットアップ手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
      次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを実行して、EKM プロバイダーを使用するための構成を [!INCLUDE[ssDE](../../../includes/ssde-md.md)] に対して行います。  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -294,7 +294,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
      -- Azure Key Vault の EKM プロバイダーである [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタを使用して暗号化サービス プロバイダーを作成します。    
     この例では、 `AzureKeyVault_EKM_Prov`という名前を使用しています。  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -324,9 +324,9 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
         > [!IMPORTANT]  
         >  **クライアント ID**のハイフンは削除してください。  
   
-    -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート 1 で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、*ハイフンを含まない*アルファベットと数字とから成る長い文字列になります。  
+    -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート 1 で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、 *ハイフンを含まない*アルファベットと数字とから成る長い文字列になります。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -351,7 +351,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
     -   `ContosoRSAKey0` の部分は、Azure Key Vault 内の実際のキーの名前に置き換えます。  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  

@@ -3,9 +3,9 @@ title: "SQL Server Management Studio から Windows PowerShell を実行する�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2f3f405a8a0a64d1202918154a163bf9b397ab93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5ed1e815f1a98d791d7cf7d95ce233de15c3d02
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>SQL Server Management Studio から Windows PowerShell を実行する方法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Windows PowerShell セッションは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の**オブジェクト エクスプローラー**から起動できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] によって Windows PowerShell が起動され、 **sqlps** モジュールが読み込まれて、パス コンテキストが、 **オブジェクト エクスプローラー** ツリー内の関連ノードに設定されます。  
@@ -42,7 +42,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
   
 3.  オブジェクトを右クリックし、 **[PowerShell の起動]**を選択します。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  PowerShell を [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で開いた場合は管理者特権で実行されないため、WMI の呼び出しなどの一部のアクティビティが実行されない場合があります。  
   
 ## <a name="see-also"></a>参照  

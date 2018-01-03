@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01cb38024cef71a6a19c9b79ca036270dc46a6ab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 任意のグラフィカルな管理ツール、またはコマンド プロンプトを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインできます。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
   
  次の例は、APPHOST という名前のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 名前付きインスタンスを指定する場合は、インスタンス名の SQLEXPRESS を使用します。  
   
- **例 :**  
+ **使用例:**  
   
 |インスタンスの型|サーバー名の入力|  
 |----------------------|-------------------------------|  
@@ -77,13 +77,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="verifying-your-connection-protocol"></a>接続プロトコルの確認  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続している場合、次のクエリは現在の接続に使用されているプロトコルと認証方法 (NTLM または Kerberos) を返し、接続が暗号化されているかどうかを示します。  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [SQL Server インスタンスへのログイン &#40;コマンド プロンプト&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  以下のリソースは、接続の問題に関するトラブルシューティングに役立ちます。  

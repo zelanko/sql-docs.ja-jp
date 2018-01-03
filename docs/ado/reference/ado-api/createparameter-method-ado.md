@@ -3,7 +3,7 @@ title: "CreateParameter メソッド (ADO) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter メソッド (ADO)
 新たに作成[パラメーター](../../../ado/reference/ado-api/parameter-object.md)指定したプロパティを持つオブジェクト。  
@@ -48,13 +48,13 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *型*  
  省略可。 A[格納](../../../ado/reference/ado-api/datatypeenum.md)のデータ型を指定する値、**パラメーター**オブジェクト。  
   
- *方向*  
+ *[方向]*  
  省略可。 A[値](../../../ado/reference/ado-api/parameterdirectionenum.md)の種類を指定する値**パラメーター**オブジェクト。  
   
- *サイズ*  
+ *[サイズ]*  
  省略可。 A**長い**文字またはバイトで、パラメーターの値の最大長を指定する値。  
   
- *値*  
+ *[値]*  
  省略可。 A**バリアント**の値を指定する、**パラメーター**オブジェクト。  
   
 ## <a name="remarks"></a>解説  

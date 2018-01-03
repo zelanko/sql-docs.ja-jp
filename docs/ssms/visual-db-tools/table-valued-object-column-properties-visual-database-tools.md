@@ -3,7 +3,7 @@ title: "テーブル値オブジェクト (列) のプロパティ (Visual Datab
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a4c3c8d3487215f824eeed8d78aea202b1e0da6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e66ff6af4498f744a0f1144e1b85aace682b650
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
 **[IDENTITY] カテゴリ**  
 展開すると、 **[名前]** プロパティが表示されます。  
   
-**[名前]**  
+**名前**  
 選択した列の名前が表示されます。  
   
 **クエリ デザイナー カテゴリ**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 **[NULL を許容]**  
 列のデータ型で NULL が許容されるかどうかが表示されます。  
   
-**[照合順序]**  
+**照合順序**  
 選択した列における照合順序の設定が表示されます。 照合順序は、Table Designer の [列のプロパティ] タブで設定できます。  
   
 **データ型**  

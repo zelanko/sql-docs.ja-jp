@@ -3,7 +3,7 @@ title: "EOS と LineSeparator プロパティ SkipLine メソッドの例 (VB) |
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2672b5d41683313c36d95adac68f33367396864
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd0c9f048aee7463e54f9de7e55a246f3e72ee62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS と LineSeparator プロパティ SkipLine メソッドの例 (VB)
 この例では、一度に 1 つのテキスト ストリームの行を操作する方法を示します。 既定キャリッジ リターン/ライン フィードからの行区切り記号を変更した場合の効果 (**adCRLF**) 単に改行を (**adLF**) またはキャリッジ リターン (**adCR**) が表示されます。  

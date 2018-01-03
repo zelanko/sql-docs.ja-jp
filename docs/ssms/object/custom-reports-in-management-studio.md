@@ -3,7 +3,7 @@ title: "Management Studio におけるカスタム レポート | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 299019dabf0c16863eda99cb2f841dae8bd4ea5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] では、[!INCLUDE[msCoName](../../includes/msconame_md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]から実行できるようになりました。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="managing-custom-reports"></a>カスタム レポートの管理  
 カスタム レポートが多数ある場合は、適切な NTFS ファイル システム権限を持つファイル システム フォルダーを使用してカスタム レポートを整理することをお勧めします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 カスタム レポートは、現在のユーザーの権限を使用して実行されます。 レポートで実行されるクエリが悪意あるユーザーによって変更されないようにするために、レポート ファイルが格納されるファイル システム フォルダーに権限を設定してアクセスを制限する必要があります。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サービスによって使用されるユーザーとアカウントの両方に、レポート ファイルが格納されるファイル システム フォルダーへの読み取りアクセスが必要です。  

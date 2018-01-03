@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,20 +13,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17670ea5b9cc4f0795a0aa8801a1c9b496ed580b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 151089d319a1106f81426beee4aa2989bc72b978
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
 このクイック スタートでは、SQL Server Management Studio (SSMS) を使って、SSIS カタログ データベースに接続した後、Integration Services 配置ウィザードを実行して SSIS カタログに SSIS プロジェクトを配置する方法を説明します。 
 
-SQL Server Management Studio は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS について詳しくは、「[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)」をご覧ください。
+SQL Server Management Studio は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS については、「[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)」をご覧ください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」をご覧ください。
+始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースに接続する
 
@@ -47,7 +47,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
-3. **[接続]**をクリックします。 [オブジェクト エクスプローラー] ウィンドウで、SSMS を開きます。 
+3. **[接続]**をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 
 4. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
@@ -71,7 +71,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
     -   **[参照]** をクリックして、SSISDB でターゲット フォルダーを選びます。
     **[次へ]** をクリックして **[レビュー]** ページを開きます。  
   
-4.  **[レビュー]** ページで選択した設定を確認します。
+4.  **[レビュー]** ページで、選択した設定を確認します。
     -   選択内容を変更するには、 **[戻る]**をクリックするか、左ペインでいずれかの手順をクリックします。
     -   **[配置]** をクリックして、配置プロセスを開始します。
   

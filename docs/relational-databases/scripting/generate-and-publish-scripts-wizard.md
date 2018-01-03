@@ -3,9 +3,9 @@ title: "スクリプトの生成とパブリッシュ ウィザード | Microsof
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -49,11 +49,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 69d2561990609eb94620ab8a3f7abd9c31dbb316
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 801dba9b807d9928f7d7dcb1db83274ca11ee778
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **スクリプトの生成とパブリッシュ ウィザード**を使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] のインスタンス間でデータベースを転送するスクリプトを作成できます。 データベース用のスクリプトは、ローカル ネットワーク上のデータベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]から生成できます。 生成したスクリプトは、データベース エンジンの別のインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行できます。 また、ウィザードを使用して、Database Publishing Services を使用して作成された Web サービスに、データベースの内容を直接パブリッシュすることもできます。 スクリプトの作成は、データベース全体または特定のオブジェクトに限定して行うことができます。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  データベースを Web ホスティング サービスにパブリッシュするには、ウィザードの **[スクリプト作成オプションの設定]** ページで **[Web サービスにパブリッシュ]** オプションを選択します。  
   
-###  <a name="Permissions"></a> 権限  
+###  <a name="Permissions"></a> Permissions  
  データベースをパブリッシュするには、少なくとも元のデータベースで db_ddladmin 固定データベース ロールのメンバーシップが必要です。 ホスティング プロバイダーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータベース スクリプトをパブリッシュするには、少なくともターゲット データベースで db_ddladmin 固定データベース ロールのメンバーシップが必要です。  
   
  また、ホスティング プロバイダーのアカウントにアクセスしてデータベースをウィザードでパブリッシュするには、ユーザー名とパスワードを入力する必要があります。 ソース データベースをパブリッシュする前に、ホスティング プロバイダーにターゲット データベースを作成しておく必要もあります。 パブリッシュを実行すると、その既存のデータベースのオブジェクトは上書きされます。  
@@ -218,7 +218,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **[トリガーのスクリプトを作成]** : テーブルに DML トリガーを作成するスクリプトを作成します。 既定値は **False**です。 DML トリガーは、データベースで DML (データ操作言語) イベントが発生したときに起動されるようにプログラミングされた操作です。 詳しくは、「 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)」をご覧ください。  
   
--   **[一意キーのスクリプトを作成]** : テーブルに一意キーを作成するスクリプトを作成します。 一意キーにより、重複するデータを入力できなくなります。 既定値は **True**です。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
+-   **[一意キーのスクリプトを作成]** : テーブルに一意キーを作成するスクリプトを作成します。 一意キーにより、重複するデータを入力できなくなります。 既定値は **True**です。 詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
 ###  <a name="MgProviders"></a> [プロバイダーの管理] ページ  
  このダイアログ ボックスを使用すると、ホスティング プロバイダー接続を表示、追加、編集、削除、またはテストできます。 ホスティング プロバイダーによって、CodePlex 上にある SQL Server Hosting Toolkit の Database Publishing Service プロジェクトを使用して作成される Web サービスの接続情報が指定されます。  
@@ -274,7 +274,7 @@ ms.lasthandoff: 11/17/2017
   
  **[テーブル/ビュー オプション]** - 次のオプションは、テーブルまたはビューのみに適用されます。  
   
-1.  **[CHECK 制約のパブリッシュ]** - パブリッシュ処理に **CHECK** 制約の作成を含めます。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
+1.  **[CHECK 制約のパブリッシュ]** - パブリッシュ処理に **CHECK** 制約の作成を含めます。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
 2.  **[外部キーのパブリッシュ]** - パブリッシュ処理に外部キーの作成を含めます。 既定値は **True**です。 外部キーは、テーブル間のリレーションシップを示し、そのリレーションシップを適用します。 詳しくは、「 [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)」をご覧ください。  
   
@@ -353,7 +353,7 @@ ms.lasthandoff: 11/17/2017
 2. **[全般スクリプト作成オプション]** で、次のように設定します。  
     1. データベース エンジンの種類に対応したスクリプト: **Microsoft Azure SQL Database**。  
     2. データベース エンジン エディションのスクリプト: **Microsoft Azure SQL Data Warehouse Edition**。  
-3. クリックして **OK**です。
+3. **[OK]** をクリックします。
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>SQL Data Warehouse が既定のスクリプト作成オプションになっていないときに SQL Data Warehouse のスクリプトを生成する方法  
 

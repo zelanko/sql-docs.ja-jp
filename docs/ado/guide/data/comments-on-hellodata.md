@@ -3,7 +3,7 @@ title: "HelloData に関するコメント |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adda58b0be044229cc4efc26c65b1af1c4ca3dc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b3cde00b3d19798d3a31b6f4c73f9b6f723e9a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comments-on-hellodata"></a>HelloData に関するコメント
 通常、ADO アプリケーションの基本的な操作手順を HelloData アプリケーション: を取得する、検査、編集、およびデータを更新します。 アプリケーションを起動するときに、最初のボタンをクリックして**データの取得**です。 これは、実行、 **GetData**サブルーチンです。  

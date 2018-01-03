@@ -3,7 +3,7 @@ title: "SQL Server エージェント | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e818b754e994c3b6b585712092e5a473ed6e11b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f475fcb1a86f61f684edb65adf637e9234d0a494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 各ジョブ ステップは、特定のセキュリティ コンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql_md.md)]を使用するジョブ ステップでは、EXECUTE AS ステートメントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。 その他のジョブ ステップでは、プロキシ アカウントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。  
   
-### <a name="schedules"></a>スケジュール  
+### <a name="schedules"></a>Schedules  
 *スケジュール* では、ジョブを実行する時期を指定します。 複数のジョブを同じスケジュールで実行したり、1 つのジョブに複数のスケジュールを割り当てることができます。 スケジュールでは、ジョブを実行する時期について次の条件を定義できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが開始されるたびに、ジョブを実行する。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/05/2017
   
 詳細については、「 [スケジュールの作成とジョブへのアタッチ](../../ssms/agent/create-and-attach-schedules-to-jobs.md)」を参照してください。  
   
-### <a name="alerts"></a>警告  
+### <a name="alerts"></a>オブジェクト エクスプローラーには  
 *警告* とは、特定のイベントに対する自動応答のことです。 たとえば、ジョブが開始されたり、システム リソースが特定のしきい値に達したときなどがイベントと見なされます。 警告では、それが発生する条件を定義します。  
   
 警告は、次のいずれかの条件に対して生成できます。  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] からオペレーターに警告を通知できます。  
   
--   電子メール  
+-   [電子メール]  
   
 -   電子メール経由のポケットベル  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 12/05/2017
   
 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 固定サーバー ロール **sysadmin** のメンバーは、プロキシに制限なしにアクセスできます。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 管理を自動化するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを構成するには、次の手順に従ってください。  
   
 1.  定期的に発生する管理タスクまたはサーバー イベントを確定し、それらをプログラムによって管理できるかどうかも確定します。 手順の順序が予測可能で、特定の時刻または特定のイベントに対する応答として行われるタスクは、自動化に適しています。  

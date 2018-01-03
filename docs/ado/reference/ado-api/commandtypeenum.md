@@ -3,7 +3,7 @@ title: "CommandTypeEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4a2e9e05e48913e2aecc3ef5a6f0651cd36e2d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb7c01971633727f1e7e5769060b256eab13914b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 コマンドの引数を解釈する方法を指定します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|コマンドの型引数を指定しません。|  
-|**adCmdText**|1|評価[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)コマンドまたはストアド プロシージャのテキストの定義として呼び出します。|  
+|**adCmdText**|@shouldalert|評価[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)コマンドまたはストアド プロシージャのテキストの定義として呼び出します。|  
 |**adCmdTable**|2|評価**CommandText**列を持つがすべて、内部的に生成された SQL クエリによって返されるテーブル名とします。|  
 |**adCmdStoredProc**|4|評価**CommandText**としてストアド プロシージャの名前。|  
 |**adCmdUnknown**|8|既定値です。 示しますコマンドの種類、 **CommandText**プロパティが不明です。<br /><br /> ADO で解釈するいくつかの試行は、コマンドの種類が認識されていない場合、 **CommandText**です。<br /><br /> -   **CommandText**コマンドまたはストアド プロシージャの呼び出しのテキストの定義として解釈されます。 これと同じ動作**adCmdText**です。<br />-   **CommandText**ストアド プロシージャの名前を指定します。 これと同じ動作**adCmdStoredProc**です。<br />-   **CommandText**は、テーブルの名前として解釈されます。 内部的に生成された SQL クエリでは、すべての列が返されます。 これと同じ動作**adCmdTable**です。|  

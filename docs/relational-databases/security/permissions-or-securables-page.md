@@ -3,7 +3,7 @@ title: "[権限] ページまたは [セキュリティ保護可能なリソー�
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: security
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>[権限] ページまたは [セキュリティ保護可能なリソース] ページ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[権限]** ページまたは **[セキュリティ保護可能なリソース]** ページを使用すると、セキュリティ保護可能なリソースに対するアクセス許可を表示または設定できます。 このページは、さまざまな場面で開くことができます。 このページの内容は、ページを開くときの状況やページに含まれているアイテムによって多少異なる場合があります。 ページの先頭にあるグリッドは、ページを開いたときに設定されます。それ以外では、空になる場合があります。 アイテムを上のグリッドに追加するには、 **[検索]**をクリックします。 上のグリッドでアイテムを選択した後、 **[明示的]** タブで適切な権限を設定します。集計された権限を表示するには、**[有効]** タブを使用します。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="effective-tab"></a>[有効] タブ  
  プリンシパルがセキュリティ保護可能なリソースに関連付けた権限は、複数の異なるプリンシパルに設定されている権限から継承されている場合があります。 たとえば、ログインは個別に権限が与えられるだけでなく、グループのメンバーとしても権限が与えられる場合があります。 **[有効]** タブでは、明示的な権限と、グループまたはロールのメンバーシップから受け取る権限を組み合わせた結果が表示されます。 許可の権限は集計されます。 また、すべての許可の権限よりも拒否の権限が優先されます。  
   
- **[権限]**  
+ **権限**  
  権限の名前です。  
   
  **列**  

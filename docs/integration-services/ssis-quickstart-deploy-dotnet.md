@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7891a781a5874653eb7d4864529630d4d2a03442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET アプリで C# コードを使用して SSIS プロジェクトを配置する
 このクイック スタート チュートリアルでは、データベース サーバーに接続し、SSIS プロジェクトを配置する C# コードの記述方法を示します。
 
 C# アプリを作成するには、Visual Studio、Visual Studio Code、または他の任意のツールを使用できます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 開始する前に Visual Studio または Visual Studio Code がインストールされていることを確認します。 Visual Studio の無償の Community エディション、または無償の Visual Studio Code を「[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)」からダウンロードします。
 

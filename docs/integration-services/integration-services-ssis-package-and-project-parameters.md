@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8a82c0ebb888c4ea075789c7f2149726ff7af25
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e21ab2cdfc462485bf15b741dbe6e795c0833de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 *プロジェクト パラメーター* はプロジェクト レベル、 *パッケージ パラメーター* はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
   
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 **[Project.params]** ウィンドウと **[パラメーター]** タブの使用の詳細については「 [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)」を参照してください。 **[パラメーター化]** ダイアログ ボックスの詳細については、「 [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  次の表に、値の型の一覧を示します。  
   
-|値の名前|説明|値の型|  
+|値の名前|Description|値の型|  
 |----------------|-----------------|-------------------|  
 |実行値|パッケージ実行の特定のインスタンスに割り当てられる値です。 この割り当ては他のすべての値より優先されますが、適用されるのは、パッケージ実行の 1 つのインスタンスのみです|リテラル|  
 |サーバーの値|プロジェクトが Integration Services サーバーに配置された後にプロジェクトのスコープ内にあるパラメーターに割り当てられる値です。 この値は、設計上の既定値より優先されます。|リテラルまたは環境変数の参照|  
@@ -124,11 +124,11 @@ ms.lasthandoff: 11/20/2017
   
     |プロパティ|Description|  
     |--------------|-----------------|  
-    |名前|パラメーターの名前。|  
+    |[オブジェクト名]|パラメーターの名前。|  
     |データ型|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
     |区別する|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
-    |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
+    |Required|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
     |Description|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
   
     > **注:** プロジェクトをカタログに配置すると、いくつかのプロパティがプロジェクトに関連付けられます。 カタログ内のすべてのパラメーターのすべてのプロパティを表示するには、[catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューを使用します。  
@@ -155,11 +155,11 @@ ms.lasthandoff: 11/20/2017
   
     |プロパティ|Description|  
     |--------------|-----------------|  
-    |名前|パラメーターの名前。|  
+    |[オブジェクト名]|パラメーターの名前。|  
     |データ型|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
     |区別する|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
-    |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
+    |Required|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
     |Description|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
   
 5.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーター値はプロジェクト ファイルの構成に格納されます。 プロジェクト ファイルを保存して、パラメーター値の変更をディスクにコミットしてください。  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 **[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、**[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター](https://msdn.microsoft.com/library/hh213214.aspx)」を参照してください。
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **プロパティ**  
  パラメーターと関連付けるタスクのプロパティを選択します。 この一覧には、パラメーター化できるすべてのプロパティが表示されます。  
   
@@ -185,10 +185,10 @@ ms.lasthandoff: 11/20/2017
  **名前**  
  作成するパラメーターの名前を指定します。  
   
- **Description**  
+ **[説明]**  
  パラメーターの説明を指定します。  
   
- **値**  
+ **[値]**  
  パラメーターの既定値を指定します。 これは設計上の既定値とも呼ばれ、後で配置時に上書きできます。  
   
  **スコープ**  

@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b7665fa4beaf0dc48f336c7f706f1a12ed4865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>クイック スタート: SQL Server の拡張イベント
+# <a name="quick-start-extended-events-in-sql-server"></a>クイック スタート: SQL Server 拡張イベント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -87,7 +87,7 @@ SSMS.exe では、拡張イベント向けに優れたユーザー インター�
 - 全般
 - イベント
 - データ ストレージ
-- [詳細設定]
+- 詳細設定
 
 
 SSMS UI が数カ月または数年にわたって微調整されると、テキストとそれを補助するスクリーンショットが少し正確ではなくなる場合があります。 しかし、差異が小さいものであれば、スクリーンショットは説明には十分に役立ちます。
@@ -97,7 +97,7 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
 2. オブジェクト エクスプローラーで、 **[管理]** > **[拡張イベント]** > **[新しいセッション]**をクリックします。 **[新しいセッション]** ダイアログと **新規セッション ウィザード**は互いに似ていますが、[新しいセッション] をお勧めします。
 
-3. 左上で、 **[全般]** ページをクリックします。 *[セッション名]*テキスト ボックスに ” **YourSession** ” または任意の名前を入力します。 *[OK]* ボタンはデモの終了時にのみ押すため、まだ **押さないで** ください。
+3. 左上で、 **[全般]** ページをクリックします。 *[セッション名]*テキスト ボックスに ” **YourSession** ” または任意の名前を入力します。 **[OK]** ボタンはデモの終了時にのみ押すため、まだ*押さないで*ください。
 
     ![[新しいセッション] > [全般] > [セッション名]](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -105,13 +105,13 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
     ![[新しいセッション] > [イベント] > [選択] > [イベント ライブラリ]、選択されたイベント](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. **[イベント ライブラリ]** の領域で、ドロップダウン リストから **[イベント名のみ]**を選択します。
+5. **[イベント ライブラリ]** の領域で、ドロップダウン リストから **[イベント名のみ]** を選択します。
     - テキスト ボックスに ” **sql**" を入力します。これは、 *contains* 演算子を使用して、使用可能なイベントの長いリストをフィルター処理して短くします。
     - スクロールして、 **sql_statement_completed**という名前のイベントをクリックします。
     - 右矢印ボタン **>** をクリックして、イベントを **[選択したイベント]** ボックスに移動します。
 
 6. **[イベント]** ページで、右端にある **[構成]** ボタンをクリックします。
-    - 見やすくするために左側を切り取った次のスクリーンショットで、 **[イベントの構成オプション]** 領域を確認できます。
+    - 見やすくするために左側を切り取った次のスクリーンショットで、**[イベントの構成オプション]** 領域を確認できます。
 
     ![[新しいセッション] > [イベント] > [構成] > [フィルター (述語)] > [フィールド]](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
@@ -138,11 +138,11 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
     ![[新しいセッション] > [詳細] > [ディスパッチの最大待機時間] > [OK]](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. 左上で、 **[詳細]** ページをクリックします。
+12. 左上で、**[詳細]** ページをクリックします。
     - **[ディスパッチの最大待機時間]** を 3 秒に減らします。
     - 最後に、下部にある **[OK]** ボタンをクリックします。
 
-13. **オブジェクト エクスプローラー**に戻り、 **[管理]** > **[セッション]**の順に展開して、 **YourSession**の新しいノードを表示します。
+13. **オブジェクト エクスプローラー**に戻り、**[管理]** > **[セッション]** の順に展開して、**YourSession** の新しいノードを表示します。
 
     ![オブジェクト エクスプローラーで [管理] > [拡張イベント] > [セッション] の下に表示される YourSession という名前の新しい *イベント セッション* のノード](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -165,7 +165,7 @@ SSMS UI を使用して、イベント セッションを作成した T-SQL ス�
 次は、UI でのクリックで生成された、 *YourSession*の T-SQL CREATE EVENT SESSION ステートメントです。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -206,7 +206,7 @@ GO
 CREATE EVENT SESSION ステートメントの前に、名前が既に存在する場合に備えて、DROP EVENT SESSION を条件付きで発行することができます。
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -226,7 +226,7 @@ go
 イベント セッションを作成する際の既定は、自動的に実行を開始しないです。 次の T-SQL ALTER EVENT SESSION ステートメントを使用して、いつでもイベント セッションを開始または停止することができます。
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -252,7 +252,7 @@ SQL Server インスタンスの開始時に、自動的に開始するように
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -304,7 +304,7 @@ SSMS で、次の T-SQL SELECT を実行し、各行が 1 つのイベントの�
 > イベント システムは常に指定した *.xel* event_file ファイル名に long 型の値を付加します。 ファイルから次の SELECT を実行するには、事前にシステムによって付与された完全名をコピーして、SELECT 内に貼り付ける必要があります。
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -430,7 +430,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 次の表は、拡張イベントで使用される用語とその意味を示しています。
 
 
-| 項目 | 説明 |
+| 項目 | Description |
 | :--- | :---------- |
 | イベント セッション | 1 つ以上のイベントを中心にしたコンストラクトと、アクションなどのサポート アイテムがターゲットです。 CREATE EVENT SESSION ステートメントは、各イベント セッションを構築します。 ALTER を使用してイベント セッションを任意に開始、停止できます。 <br/> <br/> イベント セッションは、文脈から *イベント セッション*を指していることが明らかな場合には、単に *セッション*と呼ばれることがあります。 <br/> <br/> イベント セッションの詳細は、「 [SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)」で説明しています。 |
 | イベント | アクティブなイベント セッションによって監視されるシステムでの内の特定の事象です。 <br/> <br/> たとえば、 *sql_statement_completed* イベントは、指定された T-SQL ステートメントが完了した時点を表します。 イベントは、その継続時間とその他のデータを報告できます。 |
@@ -446,7 +446,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 次の T-SQL SELECT は、名前に 'sql' の 3 文字を含む使用可能な各イベントの行を返します。 もちろん、LIKE 値を編集して別のイベント名を検索することもできます。 行は、イベントを含むパッケージにも名前を付けます。
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -578,7 +578,7 @@ SQL Server PowerShell を使用して、SQL Server 拡張イベントを管理�
 次の SELECT...UNION ALL ステートメントは、イベント セッションの作成および拡張イベントのシステム カタログ ビューを照会するために必要な権限を持つユーザーを示す行を返します。
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -636,7 +636,7 @@ SELECT
 さらに、一時的に他のアカウントを *偽装する* 権限がある場合は、 [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) および REVERT ステートメントをコメント解除して、他のアカウントを照会することができます。
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,

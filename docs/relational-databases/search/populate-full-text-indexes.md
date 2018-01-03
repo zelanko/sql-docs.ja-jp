@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 463494b3e3810a31d487b44c58aac58eccbf3674
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] フルテキスト インデックスの作成と保持では、"*作成*" (または "*クロール*") と呼ばれるプロセスを使用してインデックスが作成されます。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>例 - 完全作成を実行せずにフルテキスト インデックスを作成する  
  次の例では、 `Production.Document` サンプル データベースの `AdventureWorks` テーブルにフルテキスト インデックスを作成します。 この例では `WITH CHANGE_TRACKING OFF, NO POPULATION` を利用し、最初の完全作成を遅らせます。  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -77,7 +77,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>例 - テーブルで完全作成を実行する  
  次の例では、 `Production.Document` サンプル データベースの `AdventureWorks` テーブルで完全作成を実行します。  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -110,7 +110,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **例 - 自動で変更が追跡されるようにフルテキスト インデックスを変更する**  
     次の例では、 `HumanResources.JobCandidate` サンプル データベースの `AdventureWorks` テーブルで、自動作成に変更の追跡を使用するようにフルテキスト インデックスを変更します。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -130,7 +130,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **例 - 手動で変更を追跡するようにフルテキスト インデックスを作成する**  
     次の例では、 `HumanResources.JobCandidate` サンプル データベースの `AdventureWorks` テーブルで、手動でのカタログ作成を指定した変更の追跡を使用するフルテキスト インデックスを作成します。  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -144,7 +144,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **例 - 手動作成を実行する**  
     次の例では、 `HumanResources.JobCandidate` サンプル データベースの `AdventureWorks` テーブルで、変更が追跡されるフルテキスト インデックスに対して手動でのカタログ作成を実行します。  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  

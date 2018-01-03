@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b132be5de44e4bb669ce0c1aa014b89aec07a63
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c154bf25df98ca502925b5514e5d0da583ce2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの作成および管理に使用できるグラフィカル ツールです。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの一部として使用できます。  
@@ -150,14 +150,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ
   **デザイナーの** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。 イベント ハンドラーは、パッケージによって生成されたイベントまたはパッケージ内のタスクまたはコンテナーによって生成されたイベントに応答して実行されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[実行可能ファイル]**  
  イベント ハンドラーを作成する実行可能ファイルを選択します。 実行可能ファイルとは、パッケージか、パッケージ内のタスクまたはコンテナーです。  
   
  **イベント ハンドラー**  
  イベント ハンドラーの種類を選択します。 **ツールボックス**からアイテムをドラッグしてイベント ハンドラーを作成します。  
   
- **Del**  
+ **削除**  
  イベント ハンドラーを選択し、**[削除]** をクリックすると、パッケージからイベント ハンドラーを削除できます。  
   
  **実行可能ファイル \<executable name\> の \<event handler name\> を作成するには、ここをクリックします**  
@@ -186,7 +186,7 @@ ms.lasthandoff: 11/20/2017
   
  この領域を右クリックし、メニューから実行する作業のオプションをクリックします。
  
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md)  
   

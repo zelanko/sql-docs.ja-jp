@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de12dd7f28eb427429ecc0260ce37707ff0cec99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcc6d1391487c1e56851f485abd709d29634adc6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 「 [ring_buffer ターゲット](#h2_target_ring_buffer) 」セクションには、 [Transact-SQL で XQuery](../../xquery/xquery-language-reference-sql-server.md) を使用して XML の文字列をリレーショナル行セットにコピーする例が含まれます。
 
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 
 
 - 「 [クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」で説明されている拡張イベントの基本について一般的に理解していること。
@@ -122,7 +122,7 @@ sqlserver      checkpoint_begin   4
 次に示すのは、上のような結果が得られた CREATE EVENT SESSION です。 このテストでは、EVENT...WHERE 句で **package0.counter** フィールドを使用して、カウントが 4 に達したらカウントを終了しました。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -160,7 +160,7 @@ CREATE EVENT SESSION [event_counter_1]
 次に示すのは、テストに使用した CREATE EVENT SESSION です。 ADD TARGET 句の 1 つで、event_file を指定しています。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -292,7 +292,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 複数のソース アクションを追跡するには、CREATE EVENT SESSION ステートメントに histogram ターゲットを追加します。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -358,7 +358,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -451,7 +451,7 @@ sqlserver   lock_acquired   resource_type            NULL
 結果を絞り込むため、最初に sys.objects から SELECT でテスト テーブルの object_id を抽出してあります。 その 1 つの ID に対するフィルターを EVENT...WHERE 句に追加してあります。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -555,7 +555,7 @@ ring_buffer ターゲットは、簡単なイベントのテストに便利で�
 ring_buffer を使用するこの CREATE EVENT SESSION ステートメントに関して特別なことは何もありません。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -668,7 +668,7 @@ SELECT から取得する内容は XML 形式の文字列です。 このテス�
 上の XML を取得するには、イベント セッションがアクティブになっている間に次の SELECT を発行します。 アクティブな XML データが、システム ビュー **sys.dm_xe_session_targets**から取得されます。
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -700,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 上の XML をリレーショナル行セットとして表示するには、上の SELECT ステートメントに続けて次の T-SQL ステートメントを発行します。 コメントの付いた行では、各 XQuery の使用方法が説明されています。
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',

@@ -3,7 +3,7 @@ title: "[フィルターの設定](オブジェクト エクスプローラー�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa2f9375b9fe2883e4dbc2fd69a42f163a6fe386
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebfd7d638615b68d02da5b01c33ce4719cd162b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、フィルターを指定できます。 フィルターを使用すると、特定の条件を満たす項目だけを表示するようにオブジェクト エクスプローラーとユーティリティ エクスプローラーを構成できます。 たとえば、フィルターを使用して、"Maintenance" という単語を含む名前のジョブだけを表示できます。 **[フィルターの設定]** ダイアログ ボックスのヘッダーにはサーバーの名前が含まれ、場合によってはデータベースの名前が含まれます。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 **プロパティ**  
 フィルター処理の対象となるプロパティを表示します。  
   
-**演算子**  
+**[演算子]**  
 フィルターの値をプロパティに適用する方法を選択します。 次のオプションがあります。  
   
 -   **[等しい]**  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     日付に使用できるこのフィルターは、指定された 2 つの日付で示される範囲よりも前または後の日付を持つ項目を表示します。 **[次の値の範囲外]** を選択し、Tab キーを押して **[オペレーター]** 列の外に移動すると、2 番目の日付を入力するための行が追加されます。  
   
-**値**  
+**[値]**  
 プロパティと比較する値を入力します。 日付の場合は、矢印をクリックして日付を選択するためのカレンダーを表示します。  
   
 **[フィルターのクリア]**  

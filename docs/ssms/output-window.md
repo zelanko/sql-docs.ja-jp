@@ -3,7 +3,7 @@ title: "SSMS 出力ウィンドウ | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: shueybubbles
 ms.author: davidshi
 manager: kenvh
 ms.workload: Inactive
-ms.openlocfilehash: 68fedd92d79f508e0b85f369019a886356ed8475
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 915b63d0913131bf817c06d7980c35c5904daf30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio の出力ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 出力ウィンドウは、[表示] メニューから開くことも、Ctrl + Alt + O キーの組み合わせを使用して開くこともできます。 複数の出力チャネルが使用できます。
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
 |Channel|Description|
 |-----------|---------------|  
 |**テレメトリ**|テレメトリは、Microsoft によって収集された[匿名機能の使用状況データ](sql-server-management-studio-ssms.md)のストリームです。 これらのイベントは、SSMS の使用状況を独自に記録する場合に役立つ可能性があります。 展開したオブジェクト エクスプローラー ノードと、出力ウィンドウが開いていたとき SSMS セッション中に実行したコマンドを容易に特定することができます。|
-|**オブジェクト エクスプローラー**|このチャネルでは、オブジェクト エクスプローラーでノードを展開するのに必要とされる SQL クエリのクエリ テキストと経過時間を出力します。 各クエリは、クエリの開始およびクエリの終了イベントを記録します。 各イベントには、クエリ対象のエンティティに関連付けられたタイムスタンプと URN が含まれています。 [URN](https://technet.microsoft.com/library/microsoft.sqlserver.management.smo.urn(v=sql.90).aspx) は基になる SQL 管理オブジェクトを参照し、XPath スタイル階層で構成されます。 たとえば、サーバー "MyServer" 上のデータベース "Db" の "Table1" という名前のテーブルの URN の場合は、"Server[@Name='MyServer']/Database[@Name='Db']/Table[/@Name='Table1']" となります。 オブジェクト エクスプローラーで 1 つのノードを展開すると、このようなクエリを複数、それぞれ異なるパラメーターで実行することができます。 クエリの終了イベントには、TSQL テキストと共にクエリの経過時間が含まれます。 オブジェクト エクスプローラーが特定のノードを展開するのにいつもより時間がかかるような場合、このクエリ データがサーバー パフォーマンスの分析に有用な場合があります。 **注** - 展開時にオブジェクト エクスプローラー内のすべてのノードが、このレベルの詳細なクエリを提供するわけではありません。|
+|**[オブジェクト エクスプローラー]**|このチャネルでは、オブジェクト エクスプローラーでノードを展開するのに必要とされる SQL クエリのクエリ テキストと経過時間を出力します。 各クエリは、クエリの開始およびクエリの終了イベントを記録します。 各イベントには、クエリ対象のエンティティに関連付けられたタイムスタンプと URN が含まれています。 [URN](https://technet.microsoft.com/library/microsoft.sqlserver.management.smo.urn(v=sql.90).aspx) は基になる SQL 管理オブジェクトを参照し、XPath スタイル階層で構成されます。 たとえば、サーバー "MyServer" 上のデータベース "Db" の "Table1" という名前のテーブルの URN の場合は、"Server[@Name='MyServer']/Database[@Name='Db']/Table[/@Name='Table1']" となります。 オブジェクト エクスプローラーで 1 つのノードを展開すると、このようなクエリを複数、それぞれ異なるパラメーターで実行することができます。 クエリの終了イベントには、TSQL テキストと共にクエリの経過時間が含まれます。 オブジェクト エクスプローラーが特定のノードを展開するのにいつもより時間がかかるような場合、このクエリ データがサーバー パフォーマンスの分析に有用な場合があります。 **注** - 展開時にオブジェクト エクスプローラー内のすべてのノードが、このレベルの詳細なクエリを提供するわけではありません。|
 |**利用状況モニター**|このチャネルは、サーバーに対して[利用状況モニターが開く](https://docs.microsoft.com/en-us/sql/relational-databases/performance-monitor/activity-monitor)と開始されます。 このストリームには、各クエリのクエリ テキストおよびタイムスタンプ、エラー メッセージ、および接続の問題のため一時停止中のモニターの通知を部分的に示すイベントが含まれています。 利用状況モニターがアイドル状態、あるいは更新されない状況にあると思われる場合、詳細については、この出力チャネルを確認してください。|
 
 

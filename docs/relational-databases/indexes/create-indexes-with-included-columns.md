@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ab797826f45d019926f4e35055cc18bdece9763b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 064df7a689cbb3da0323448eb5efc8d0fdace5be
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,25 +45,9 @@ ms.lasthandoff: 11/17/2017
  クエリ内のすべての列が、キー列または非キー列としてインデックスに含まれるているとき、非キー列を含むインデックスにより、クエリ パフォーマンスが大幅に向上します。 クエリ オプティマイザーではインデックス内のすべての列値を参照できるので、テーブルやクラスター化インデックスのデータにアクセスすることがなく、ディスク I/O 操作が少なくて済むため、パフォーマンスが向上します。  
   
 > [!NOTE]  
->  クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスは *クエリをカバーしている*と呼ばれます。  
-  
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [設計上の推奨事項](#DesignRecs)  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [セキュリティ](#Security)  
-  
--   **以下を使用して非キー列を含むインデックスを作成するには:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
+> クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスは *クエリをカバーしている*と呼ばれます。  
+   
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="DesignRecs"></a> 設計上の推奨事項  
   
@@ -91,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -112,13 +96,13 @@ ms.lasthandoff: 11/17/2017
   
 7.  **テーブル名***から列を選択* ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
-8.  クリックして **OK**です。  
+8.  **[OK]** をクリックします。  
   
 9. **[付加列]** タブで、 **[追加]**をクリックします。  
   
 10. **テーブル名***から列を選択* ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
-11. クリックして **OK**です。  
+11. **[OK]** をクリックします。  
   
 12. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]**をクリックします。  
   
@@ -132,7 +116,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -143,7 +127,7 @@ ms.lasthandoff: 11/17/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
-  
-  
+
+## <a name="related-content"></a>関連コンテンツ  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
+[SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)   

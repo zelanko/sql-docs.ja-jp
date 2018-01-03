@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 514b16de05b03b43f8187f66e06cf6ff9f94209c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="contained-database-collations"></a>包含データベースの照合順序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 大文字と小文字の区別、アクセント記号の区別、使用されるベース言語など、さまざまなプロパティがテキスト データの並べ替え順序と等値セマンティクスに影響します。 これらの性質の指定は、データの照合順序の選択を通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されます。 照合順序の詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>例 1  
  たとえば、北京で作業する場合は、中国語の照合順序を使用するでしょう。  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  その場合、列を作成すると、既定の照合順序は中国語の照合順序になりますが、必要であれば別の照合順序を選択できます。  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -56,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -68,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>例 2  
  たとえば、上の中国語のデータベースが、 **Latin1_General** 照合順序のインスタンス上で使用されるとします。  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -92,7 +92,7 @@ JOIN #T2
   
  この問題は、一時テーブルの照合順序を明示的に指定することで解決できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **COLLATE** 句に **DATABASE_DEFAULT** キーワードを提供することで、この処理を簡易にしています。  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -136,13 +136,13 @@ END;
 |一時データ (既定値)|TempDB の照合順序|COLLATE|  
 |メタデータ|DATABASE_DEFAULT / CATALOG_DEFAULT|COLLATE|  
 |一時的なメタデータ|TempDB の照合順序|COLLATE|  
-|変数|インスタンスの照合順序|COLLATE|  
+|変数:|インスタンスの照合順序|COLLATE|  
 |Goto ラベル|インスタンスの照合順序|COLLATE|  
 |カーソル名|インスタンスの照合順序|COLLATE|  
   
  前に説明した一時テーブルの例でわかるように、この照合順序の動作によって、多くの一時テーブルでは明示的に **COLLATE** 句を使用する必要がなくなります。 包含データベースでは、データベースとインスタンスの照合順序が異なる場合でも、このコードはエラーにならずに実行されます。  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

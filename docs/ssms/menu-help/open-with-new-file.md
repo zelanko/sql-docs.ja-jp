@@ -3,7 +3,7 @@ title: "[ファイルを開くアプリケーションの選択]([新しいフ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 1 つ以上のエディターでドキュメントを開くには、**[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]**をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]**をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[このファイルを開くのに使用するプログラムを選択してください]**  
 選択されているファイルの種類に対して [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio で利用可能なエディターを一覧表示します。 ドキュメントを開くために使用するエディターを一覧から選択するか、 **[追加]** をクリックして新しいエディターを一覧に含めます。  
   

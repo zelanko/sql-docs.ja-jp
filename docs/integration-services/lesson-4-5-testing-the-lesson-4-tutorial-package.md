@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e16aa094a76f359d65b024fc428f4a2c623700b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>レッスン 4-5 - レッスン 4 のチュートリアル パッケージのテスト
 壊れているファイル Currency_BAD.txt を実行すると、CurrencyKey 参照変換の照合結果の生成に失敗します。 ただし、CurrencyKey 参照変換のエラー出力は、失敗した行を新しい [Failed Rows] 変換先へリダイレクトするように構成されています。したがって、コンポーネント自体は失敗せず、パッケージは正常に実行されます。 エラーがある行はすべて、ErrorOutput.txt に書き込まれます。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 -   メモ帳などのテキスト エディターで ErrorOutput.txt ファイルを開きます。 既定の列の順序は、AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription です。  
   
-    ファイルのすべての行には、一致しない CurrencyID 値 BAD、ErrorCode 値 -1071607778、ErrorColumn 値 0、ErrorDescription 値 "参照中に一致する行が見つかりませんでした" が含まれています。 エラーは列固有ではなく、ErrorColumn の値は 0 になっています。 これは失敗した参照操作を表します。 をクリックします。  
+    ファイルのすべての行には、一致しない CurrencyID 値 BAD、ErrorCode 値 -1071607778、ErrorColumn 値 0、ErrorDescription 値 "参照中に一致する行が見つかりませんでした" が含まれています。 エラーは列固有ではなく、ErrorColumn の値は 0 になっています。 これは失敗した参照操作を表します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
   
   

@@ -3,7 +3,7 @@ title: "[保存オプションの詳細設定] | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c75d958c7cca998117b03821857157cf2eb9355
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、**[ファイル]** メニューの **[名前を付けて** <query name>**.sql を保存]** をクリックします。**[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、**[保存]** ボタンにある下矢印をクリックして、**[エンコード付きで保存]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[エンコード]**  
 このリスト ボックスを使用すると、新しい言語エンコード方式を対象のファイルに適用できます。  
   

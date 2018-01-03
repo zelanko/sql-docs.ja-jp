@@ -3,7 +3,7 @@ title: "スクリプト言語と ADO の併用 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語と ADO の併用
 ADO では、スクリプト環境では、サーバー側のスクリプトを使用してデータを公開できます。 この場合は、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されるコンポーネントです。 この HTML コンテンツは、クライアントの Web ブラウザーに HTTP 経由で渡すことができます。 スクリプトを使用して Web ページは、サーバー側のスクリプトは、更新、移動、および特定のデータを表示することができますに戻す操作を送信できます。  
   
  Web ページで、ActiveX オブジェクトを使用する前に、オブジェクトがスクリプトに対して安全かどうかを知る必要があります。 オブジェクトは、スクリプトを実行しても安全と見なされます、コントロールがユーザーのコンピューターの有害なアクションを実行することはできず、そのため、ユーザーの承認を求められることがなく実行できることを示します。 次の表は、ADO オブジェクトの一覧し、スクリプト作成のため安全であるかどうかを示します。  
   
-|オブジェクト|スクリプト作成のため安全ですか。|  
+|Object|スクリプト作成のため安全ですか。|  
 |------------|-------------------------|  
 |ADO 接続|可|  
 |ADO コマンド|不可|  

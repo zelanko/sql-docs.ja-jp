@@ -3,9 +3,9 @@ title: "XML エディター (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c7f2e3e338e1d8d2bc7df6cc8fb344213e05ed4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ff569edefb2e65e5586ff645584afe755dd4df9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/17/2017
   
  デザイナーで XML ファイル、XML スキーマ、およびデータセットを操作する場合は、次の 3 つのビュー (またはモード) を使用できます。  
   
-|表示|説明|サポートされるファイルの種類|  
+|表示|Description|サポートされるファイルの種類|  
 |----------|-----------------|--------------------------|  
-|**スキーマ**|XML スキーマおよび ADO.NET データセットをビジュアルに作成および変更するために使用します。|.xsd|  
+|**[スキーマ]**|XML スキーマおよび ADO.NET データセットをビジュアルに作成および変更するために使用します。|.xsd|  
 |**データ**|XML データ ファイルを構造化データ グリッドでビジュアルに変更するために使用します。|.xml|  
 |**XML**|XML を編集するために使用します。ソース エディターには、色分け表示機能や、入力候補およびメンバーの一覧を含む IntelliSense 機能があります。|.xml、.xsd、.xslt、.wsdl、.web、.resx、.tdl、.wsf、.hta、.disco、.vsdisco、.config|  
 |**プラン表示**|SET SHOWPLAN_XML ON オプションを使用して作成された XML クエリ プランを表示します。|.showplan|  

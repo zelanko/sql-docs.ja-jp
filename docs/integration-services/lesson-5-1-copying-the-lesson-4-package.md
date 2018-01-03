@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d7c64162898389439190286fa470854bc716318
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 126a5e516c5948b776530874b390e01324fba189
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-1---copying-the-lesson-4-package"></a>レッスン 5-1 - レッスン 4 のパッケージのコピー
 ここでは、レッスン 4 で作成した Lesson 4.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 4 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 5 の実習では、このパッケージの新しいコピーを使用します。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools を開き、SSIS Tutorial プロジェクトを開きます。  
   
-2.  ソリューション エクスプローラーで **[SSIS パッケージ]**を右クリックし、 **[既存のパッケージを追加]**をクリックします。  
+2.  ソリューション エクスプローラーで **[SSIS パッケージ]** を右クリックし、**[既存のパッケージを追加]** をクリックします。  
   
 3.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]**で、 **[ファイル システム]**をクリックします。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
     このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   

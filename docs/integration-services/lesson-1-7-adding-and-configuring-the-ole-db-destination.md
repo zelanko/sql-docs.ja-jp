@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d1e14ed63694a7b5dc320f062de85c73c843883
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d3bbb70503d86358362e78809f9f51408309b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>レッスン 1-7 - OLE DB 変換先の追加と構成
 前回までの実習で、フラット ファイル ソースからデータを抽出し、変換先との互換性のある形式にデータを変換できるパッケージを作成しました。 次は、変換したデータを実際に変換先に読み込みます。 データを読み込むには、データ フローに OLE DB 変換先を追加する必要があります。 OLE DB 変換先では、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込むことができます。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  **[テーブル名またはビュー名]** ボックスで **[dbo].[FactCurrencyRate]**を選択するか、または直接入力します。  
   
-8.  **[新規作成]** ボタンをクリックして新しいテーブルを作成します。  スクリプト内のテーブル名を「 **NewFactCurrencyRate**」に変更します。  **[OK]**をクリックします。  
+8.  **[新規作成]** ボタンをクリックして新しいテーブルを作成します。  スクリプト内のテーブル名を「 **NewFactCurrencyRate**」に変更します。  **[OK]** をクリックします。  
   
 9. **[OK]**をクリックすると、ダイアログが閉じ、 **[テーブル名またはビュー名]** は自動的に「 **NewFactCurrencyRate**」に変更されます。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 11. **AverageRate**、 **CurrencyKey**、 **EndOfDayRate**、および **DateKey** の各入力列が変換先列に正しくマップされていることを確認します。 同じ名前の列がマップされていれば、マッピングは適切です。  
   
-12. **[OK]**をクリックします。  
+12. **[OK]** をクリックします。  
   
 13. **[Sample OLE DB Destination]** 変換先を右クリックし、 **[プロパティ]**をクリックします。  
   

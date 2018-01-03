@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2d1ad6752ce23a04d3c9989d0f35660c05e904e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4072e0134a01cfa27164f3d83b867a68b097295a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>レッスン 2-1 - 配置ユーティリティの構築
 ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスの右側のペインで、 **AllowConfigurationChanges** が **true**に設定されていることを確認し、 **CreateDeploymentUtility** を **true**に設定し、 **DeploymentOutputPath**の既定値を必要に応じて更新します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ### <a name="to-build-the-deployment-utility"></a>配置ユーティリティを構築するには  
   

@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 076c1c9a78441473fccd0435980ecfc4e735803c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e2c0047ec80addecb0825a7c8b85409ef62a0e5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **トランザクション ログ バックアップを復元するために使用するもの:**  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -104,12 +104,12 @@ ms.lasthandoff: 11/17/2017
   
      次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-    |[ヘッダー]|値|  
+    |Header|ReplTest1|  
     |------------|-----------|  
-    |**[復元]**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
+    |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前。|  
     |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、[\<空白>]\(トランザクション ログ用) のいずれかを指定します。|  
-    |**データベース**|バックアップ操作に関係するデータベース名。|  
+    |**[データベース]**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
     |**完了日**|バックアップ操作の完了日時 (クライアントの地域設定に準拠)。|  
     |**[最初の LSN]**|バックアップ セット内の先頭のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
@@ -136,12 +136,12 @@ ms.lasthandoff: 11/17/2017
   
          次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-        |[ヘッダー]|値|  
+        |Header|ReplTest1|  
         |------------|-----------|  
         |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
         |**日付**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
-        |**説明**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
+        |**[説明]**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
         |**LSN (LSN)**|マークされたトランザクションのログ シーケンス番号。|  
         |**[データベース]**|マークされたトランザクションがコミットされたデータベースの名前。|  
         |**[ユーザー名]**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **[復元するデータベースへのアクセスを制限する (WITH RESTRICTED_USER)]**  
   
-         復元するデータベースの使用を **db_owner**、 **dbcreator**、または **sysadmin**のメンバーだけに制限します。  
+         復元するデータベースの使用を、 **db_owner**、 **dbcreator**、または **sysadmin**のメンバーだけに制限します。  
   
          このオプションをチェックすることは、 **RESTORE** ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** オプションを使用することと同じです。  
   
@@ -245,14 +245,14 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  既定では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは単純復旧モデルを使用します。 以下の例では、次に示すように、完全復旧モデルが使用されるようにデータベースを変更する必要があります。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. 1 つのトランザクション ログ バックアップの適用  
  次の例では、まず [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] というバックアップ デバイスに存在するデータベースの完全バックアップを使用して `AdventureWorks2012_1`データベースを復元します。 次に、 `AdventureWorks2012_log`というバックアップ デバイスにある最初のトランザクション ログ バックアップを適用します。 最後に、データベースを復旧します。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -270,7 +270,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. 複数のトランザクション ログ バックアップの適用  
  次の例では、まず [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] というバックアップ デバイスに存在するデータベースの完全バックアップを使用して `AdventureWorks2012_1`データベースを復元します。 次に、 `AdventureWorks2012_log`という名前のバックアップ デバイスにある最初の 3 つのトランザクション ログ バックアップを、1 つずつ適用します。 最後に、データベースを復旧します。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -299,11 +299,11 @@ GO
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
--   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [マークされたトランザクションへのデータベースの復元 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   

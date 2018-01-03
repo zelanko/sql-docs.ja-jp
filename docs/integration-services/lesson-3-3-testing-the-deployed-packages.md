@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ca1b0eb6ba963192597a4ebc471c09024eef3042
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>レッスン 3-3 - 配置したパッケージのテスト
 このタスクでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに配置したパッケージをテストします。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > このチュートリアル内でパッケージが正しく実行されるように、オプションは変更しないでください。  
   
-パッケージ実行ユーティリティを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でパッケージを実行する前に、Integration Services サービスが実行していることを確認してください。 Integration Services サービスは、パッケージの保管と実行のサポートを提供します。 このサービスが停止した場合は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に接続できず、実行するパッケージが [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に表示されません。 また、パッケージを配置したインスタンスでパッケージを実行する権限も必要です。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#40;](../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
+パッケージ実行ユーティリティを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でパッケージを実行する前に、Integration Services サービスが実行していることを確認してください。 Integration Services サービスは、パッケージの保管と実行のサポートを提供します。 このサービスが停止した場合は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に接続できず、実行するパッケージが [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に表示されません。 また、パッケージを配置したインスタンスでパッケージを実行する権限も必要です。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
   
 [格納されたパッケージ] フォルダー内の最上位フォルダーは、Integration Services サービスが監視するユーザー定義フォルダーです。 MsDtsSrvr.ini.xml ファイルで指定できるフォルダー数に制限はありません。 このチュートリアルでは、既定の MsDtsSrvr.ini.xml ファイルを使用し、[格納されたパッケージ] 内の最上位フォルダーの名前は "File System" と "MSDB" であると想定しています。  
   

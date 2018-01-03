@@ -3,7 +3,7 @@ title: "[新しいジョブ スケジュール] - [ジョブ スケジュール�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b1e568c6ccc32c56e098c8bd3ce407c631909c6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94af2eeef2d7a6bc308463deb70207305f52500f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>[新しいジョブ スケジュール] - [ジョブ スケジュールのプロパティ]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **名前**  
 スケジュールの新しい名前を入力します。  
   

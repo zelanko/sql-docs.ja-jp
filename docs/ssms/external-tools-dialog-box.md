@@ -3,7 +3,7 @@ title: "[外部ツール] ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d60bec587daeae84382166194d75db22b0a38a61
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd3875e3c4dfe69fa2428ca8c348648ebd97e2a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[外部ツール]** ダイアログ ボックスは、SQLCMD やメモ帳などの外部ツールを **[ツール]** メニューに追加するために使用します。 外部ツールを追加すると、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境で作業しながら、簡単に他のアプリケーションを起動できるようになります。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 また、一部のツールからの出力を **[出力]** ウィンドウに表示することもできます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[メニューの内容]**  
 **[ツール]** メニューに現在追加されている項目のタイトルを一覧表示します。 メニューに表示される項目の順序を変更するには、 **[上へ移動]** と **[下へ移動]** を使用します。 メニューから項目を削除するには、 **[削除]** ボタンを使用します。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 **[追加]**  
 新しいツールを指定できるようにテキスト ボックスをクリアします。  
   
-**[削除]**  
+**削除**  
 **[メニューの内容]** の一覧および **[ツール]** メニューから、ツールまたはコマンドを削除します。  
   
 **[タイトル]**  
@@ -73,9 +73,9 @@ ms.lasthandoff: 12/05/2017
 ## <a name="example"></a>例  
 **[外部ツール]** ダイアログ ボックスに次の値を入力すると、"DAC" というラベルが付いたメニュー項目が作成されます。このメニュー項目を選択すると、コマンド プロンプトが開き、専用管理者接続を使用して **sqlcmd** ユーティリティが実行されます。  
   
-|ボックス|値|  
+|ボックス|ReplTest1|  
 |-------|---------|  
-|**[タイトル]**|DAC (DAC)|  
+|**Title**|DAC (DAC)|  
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
 |**引数**|-A|  
   

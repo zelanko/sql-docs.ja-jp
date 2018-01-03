@@ -3,7 +3,7 @@ title: "クエリおよびビュー デザイナーのペインの表示 (Visual
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14268591a142263a159d879ea821a8a395d33c1f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e7ab7fc0efacbcd2f777c7c64154d98661d8318
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>クエリおよびビュー デザイナーのペインの表示 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリおよびビュー デザイナーは、ダイアグラム ペイン、検索条件ペイン、SQL ペイン、および結果ペインの 4 つのペインで構成されます。 通常、ビューを開くか、新しいクエリを作成するときには、4 つのウィンドウがすべて開きますが、この 4 つのウィンドウのいずれかを開く必要がある場合は、クエリおよびビュー デザイナーが開いていれば開くことができます。  

@@ -3,7 +3,7 @@ title: "オプション (環境 - ヘルプ - [全般] ページ) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc966f121da19eb546c9950f2f852d0d37fc9a96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b12f4599658f6e9c3a330e96aa87b65090092478
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---help---general-page"></a>オプション (環境 - ヘルプ - [全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[オプション]** ダイアログ ボックスを使用すると、ドキュメントのセットを選択し、トピックを [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] の内部に表示するか、別の外部ウィンドウに表示するかを指定できます。 このダイアログ ボックスを開くには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[環境]** ノードの **[ヘルプ]** を展開し、 **[全般]**をクリックします。  

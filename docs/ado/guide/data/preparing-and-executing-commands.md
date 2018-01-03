@@ -3,7 +3,7 @@ title: "準備とコマンドを実行 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc77ab26c705aaaaed4a7171f8c9349be8ac7f0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40507f382067be8d66442c438ad7e4b0975f23c1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preparing-and-executing-commands"></a>準備とコマンドの実行
 コマンドは、基になるデータ ソースに対して操作を実行する、プロバイダーに発行された手順です。 たとえば、SQL ステートメントは、Microsoft SQL データ プロバイダーにコマンドです。 ADO では、コマンドは、通常によって表される**コマンド**もから簡単なコマンドを発行できますが、オブジェクト**接続**または**Recordset**オブジェクト。  

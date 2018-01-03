@@ -3,7 +3,7 @@ title: "インターネット インフォメーション サービスのエラ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8a273d40b63766b8eb4910ed85fbfdcdbd769dde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 491449f8cf0a2d65edf9b063fd826e716b9fc5bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>インターネット インフォメーション サービスのリモート データ サービスのエラー コード
 次の表は、リモートのデータ サービスの使用に関連する Microsoft® インターネット インフォメーション サービス (IIS) のエラー コードを一覧表示します。 下位 2 バイトの正の 10 進変換、完全なエラー コードと 16 進数の値の負の値の 10 進数の翻訳が表示されます。

@@ -3,7 +3,7 @@ title: "HelloData: 単純な ADO アプリケーション |Microsoft ドキュ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 339f65cf1d4715d66e6c96316b04b072873d015d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1c2733381221139373764577df07afa22e40e49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションをステップ実行の 4 つの主要な ADO 操作: を取得する、検査、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている、Northwind サンプル データベースに対して実行されます。 ADO の基礎に集中し、コードの煩雑さを防ぐためには、エラー処理の例では最小限です。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  ボタンの下に、追加、 **Microsoft DataGrid コントロール**(Msdatgrd.ocx)。 Msdatgrd.ocx ファイルは、Visual Basic に付属しているしは \windows\system32 または \winnt\system32 ディレクトリにあります。 DataGrid コントロールを Visual Basic [ツールボックス] ウィンドウに追加するには、選択**コンポーネント.**から、**プロジェクト**メニュー。 チェック ボックスをオン の横に"Microsoft データ グリッド コントロール 6.0 (SP3) (OLEDB)"をクリックし、 **ok**です。 コントロールをプロジェクトに追加するには、Visual Basic フォームをツールボックスから DataGrid コントロールをドラッグします。  
   
-4.  作成、 ** テキスト ボックス**グリッドの下のフォーム上の表に示すように、そのプロパティを設定します。 フォームが完了したら、次の図のようになります。  
+4.  作成、  **テキスト ボックス**グリッドの下のフォーム上の表に示すように、そのプロパティを設定します。 フォームが完了したら、次の図のようになります。  
   
 5.  最後に記載されているコードをコピー [HelloData コード](../../../ado/guide/data/hellodata-code.md)、し、フォームのコード エディター ウィンドウに貼り付けます。 キーを押して**f5 キーを押して**コードを実行します。  
   
@@ -50,17 +50,17 @@ ms.lasthandoff: 11/17/2017
   
 |コントロール型|プロパティ|値|  
 |------------------|--------------|-----------|  
-|Form|名前|Form1|  
+|Form|[オブジェクト名]|Form1|  
 ||[高さ]|6500|  
 ||[幅]|6500|  
-|MS DataGrid|名前|grdDisplay1|  
-|テキスト ボックス|名前|txtDisplay1|  
+|MS DataGrid|[オブジェクト名]|grdDisplay1|  
+|テキスト ボックス|[オブジェクト名]|txtDisplay1|  
 ||複数行|true|  
-|コマンド ボタン|名前|cmdGetData|  
-||Caption|Get Data|  
-|コマンド ボタン|名前|cmdExamineData|  
-||Caption|データを調べる|  
-|コマンド ボタン|名前|cmdEditData|  
-||Caption|データを編集します。|  
-|コマンド ボタン|名前|cmdUpdateData|  
-||Caption|更新データ|
+|コマンド ボタン|[オブジェクト名]|cmdGetData|  
+||[キャプション]|Get Data|  
+|コマンド ボタン|[オブジェクト名]|cmdExamineData|  
+||[キャプション]|データを調べる|  
+|コマンド ボタン|[オブジェクト名]|cmdEditData|  
+||[キャプション]|データを編集します。|  
+|コマンド ボタン|[オブジェクト名]|cmdUpdateData|  
+||[キャプション]|更新データ|

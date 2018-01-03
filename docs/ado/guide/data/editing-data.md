@@ -3,7 +3,7 @@ title: "データの編集 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a7328007b213817e0d306fe3329e434304dedfa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89d3f549d52b522cdd6668599e114997bd908511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-data"></a>データの編集
 について説明してきました ADO を使用してデータ ソースへの接続、コマンドの実行で、結果を得る方法、**レコード セット**オブジェクト内を移動したり、 **Recordset**です。 ここで、次の基本的な ADO 操作について説明します。 データを編集します。  

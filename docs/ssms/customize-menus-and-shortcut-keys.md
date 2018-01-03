@@ -3,7 +3,7 @@ title: "メニューとショートカット キーのカスタマイズ | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c790f0a159366986a193bbfd4509f92d65ec5492
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] キーボード アクセス キーを使用すると、Alt キーを押しながら *<single letter>* キーを押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
@@ -65,7 +65,7 @@ Ctrl キーを使用したストアド プロシージャのキーボード シ�
   
 3.  ショートカット メニューの **[名前]** ボックスにツール バー ボタンの名前を入力し、キーボード アクセス キーとして使用する文字の前にアンパサンド (&) を付けます。  
   
-4.  **Enter** キーを押します。  
+4.  **Enter**キーを押します。  
   
 5.  **[ユーザー設定]** ダイアログ ボックスの **[閉じる]**をクリックします。  
   
@@ -81,7 +81,7 @@ Ctrl キーを使用したストアド プロシージャのキーボード シ�
   
 4.  ショートカット メニューの **[名前]** ボックスにメニュー コマンドの名前を入力し、キーボード アクセス キーとして使用する文字の前にアンパサンド (&) を付けます。  
   
-5.  **Enter** キーを押します。  
+5.  **Enter**キーを押します。  
   
 6.  **[ユーザー設定]** ダイアログ ボックスの **[閉じる]**をクリックします。  
   
@@ -115,7 +115,7 @@ Ctrl キーを使用したストアド プロシージャのキーボード シ�
   
 6.  Tab キーを使用してショートカット メニューの **[名前]** ボックスに移動し、ツール バー ボタンの名前を入力し、キーボード アクセス キーとして使用する文字の前にアンパサンド (&) を付けます。  
   
-7.  **Enter** キーを押します。  
+7.  **Enter**キーを押します。  
   
 8.  Tab キーを使用して **[閉じる]** ボタンに移動し、 **Enter**キーを押します。  
   

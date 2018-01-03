@@ -3,9 +3,9 @@ title: "スクリプトの生成 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0cdac4e0749c72192db619089592a45607022d2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68b40d2a2ea3556c1483268521c9abe19d440db3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>スクリプトの生成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成するための 2 つのメカニズムが用意されています。 複数のオブジェクト用のスクリプトは、 **スクリプトの生成とパブリッシュ ウィザード**を使用して作成できます。 また、個々のオブジェクトまたは複数のオブジェクト用のスクリプトを、 **オブジェクト エクスプローラー** の **[スクリプト化]**メニューを使用して生成することもできます。  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  スクリプトを作成するオブジェクトのいずれかを左クリックします。  
   
-6.  Ctrl キーを押しながら、スクリプトを作成する 2 番目のオブジェクトを左クリックします。  
+6.  Ctrl</localizedText> キーを押しながら、スクリプトを作成する 2 番目のオブジェクトを左クリックします。  
   
 7.  選択したオブジェクトのいずれかを右クリックし、**[\<オブジェクト タイプ をスクリプト化]** をクリックします。  
   

@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365b24e35f44154c644afbf2646f8c52738bd90c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7058099b0da0b991327f6ab408e55fc7143f8d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、データは複数のデータベース テーブルに格納されており、ビューで表示できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで保護されている可能性がある情報は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにアクセスできるユーザーであれば参照できます。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Staging"></a> データをステージングする  
  次の表では、セキュリティ保護可能な各リソースの名前の一部に "name" を使用しています。 これは、エンティティの作成時に指定するステージング テーブルの名前を示します。 詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
-|操作|セキュリティ保護可能|Permissions|  
+|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |リーフ メンバーとその属性を作成、更新、および削除します。|stg.name_Leaf|必須: INSERT<br /><br /> オプション: SELECT および UPDATE|  
 |リーフ ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Leaf|EXECUTE|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="rules"></a> ビジネス ルールに対してデータを検証する  
   
-|操作|セキュリティ保護可能|Permissions|  
+|操作|セキュリティ保護可能|アクセス許可|  
 |------------|---------------|-----------------|  
 |ビジネス ルールに対してデータのバージョンを検証する|mdm.udpValidateModel|EXECUTE|  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="Versions"></a> バージョンを削除する  
   
-|操作|セキュリティ保護可能|Permissions|  
+|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |削除するバージョンの ID を決定する|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |モデルのバージョンを削除する|mdm.udpVersionDelete|EXECUTE|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="Hierarchy"></a> 階層メンバーの権限を直ちに適用する  
   
-|操作|セキュリティ保護可能|Permissions|  
+|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |メンバー権限を直ちに適用する|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   

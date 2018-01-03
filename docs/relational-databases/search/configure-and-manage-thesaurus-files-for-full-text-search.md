@@ -1,7 +1,7 @@
 ---
 title: "フルテキスト検索に使用する類義語辞典ファイルの構成と管理 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072df52e6a96bae1393f212a3160f549ed2880e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 210fd9bd79fa84ac5a1a2fcaaca2144a393ab585
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索クエリでは、フルテキスト検索の "*類義語辞典*" を使用して、ユーザーが指定した用語のシノニムを検索できます。 各々の類義語辞典では、特定の言語の一連のシノニムを定義します。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。
 
 類義語辞典の照合は、すべての [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) クエリと [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) クエリの場合と `FORMSOF THESAURUS` 句を指定する [CONTAINS](../../t-sql/queries/contains-transact-sql.md) クエリと [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリの場合に行われます。
@@ -176,10 +176,10 @@ ms.lasthandoff: 11/17/2017
   
 類義語辞典の分音文字の設定は、単一の `<diacritics_sensitive>` 要素で指定されます。 この要素には、次のようにアクセントの区別を制御する整数値が含まれます。  
   
-|分音文字の設定|値|XML|  
+|分音文字の設定|ReplTest1|XML|  
 |------------------------|-----------|---------|  
 |アクセントを区別しない|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-|アクセントを区別する|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+|アクセントを区別する|@shouldalert|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
 > [!NOTE]  
 >  この設定はファイルで 1 回のみ適用でき、ファイル内のすべての検索パターンに適用されます。 この設定は個別のパターンには指定できません。  
@@ -204,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  類義語辞典ファイルの内容を tempdb に読み込むために [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) を使用し、類義語辞典ファイルの言語に対応するロケール識別子 (LCID) を指定します。 たとえば、英語の類義語辞典ファイル tsenu.xml の場合、対応する LCID は 1033 です。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO

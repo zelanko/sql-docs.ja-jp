@@ -3,9 +3,9 @@ title: "データベース エンジン クエリ エディター (SQL Server Ma
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6093f85a7efb9b10b03d24d5cb2e2efccb3e73f3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開いているときは、次のボタンを持つ SQL エディター ツール バーが表示されます。  
   
- **Connect**  
+ **のインスタンスに接続するときには、**  
  **[サーバーへの接続]** ダイアログ ボックスを開きます。 このダイアログ ボックスを使用すると、サーバーへの接続を確立できます。  
   
  **[接続解除]**  

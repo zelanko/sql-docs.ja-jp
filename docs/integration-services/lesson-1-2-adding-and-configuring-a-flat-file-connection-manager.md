@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8e55988e5e55671b5ff97b80916e3c368d51dd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>レッスン 1-2 - フラット ファイル接続マネージャーの追加と構成
 この実習では、先ほど作成したパッケージにフラット ファイル接続マネージャーを追加します。 パッケージにフラット ファイル接続マネージャーを追加すると、フラット ファイルからデータを抽出できるようになります。 フラット ファイル接続マネージャーでは、フラット ファイルからデータを抽出するときに適用するファイルの名前と場所、ロケールとコード ページ、およびファイル形式を指定できます。また、列区切り記号も指定できます。 さらに、各列のデータ型を手動で指定できます。 **[列の型の予測]** ダイアログ ボックスを使用して、抽出したデータの列を [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型に自動的にマップすることもできます。  
@@ -92,10 +92,10 @@ ms.lasthandoff: 11/20/2017
   
     |フラット ファイルの列|推測されたデータ型|変換先列|変換先の型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency,CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日付|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     **CurrencyID** 列で推測されたデータ型は、変換先テーブルのフィールドのデータ型と互換性がありません。 `DimCurrency.CurrencyAlternateKey` のデータ型は nchar (3) なので、 **CurrencyID** のデータ型を文字列 [DT_STR] から文字列 [DT_WSTR] に変更する必要があります。 また、 `DimDate.FullDateAlternateKey` フィールドは date データ型として定義されるため、 **CurrencyDate** のデータ型は、date [DT_Date] から database date [DT_DBDATE] に変更する必要があります。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  [プロパティ] ペインで、 **CurrencyDate** 列のデータ型を date [DT_DATE] から database date [DT_DBDATE] に変更します。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 3: OLE DB 接続マネージャーの追加と構成](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

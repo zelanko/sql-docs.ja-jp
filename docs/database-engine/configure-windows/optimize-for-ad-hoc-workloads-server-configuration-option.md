@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 207ca8c64cd20e8e98093960bd68ad23b770ea24
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96e21a0eb32b9aeecabdfeb574d3e793b3ab99d8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="recommendations"></a>推奨事項
 多数の 1 回のみ使われるプランにより、OLTP サーバーの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のメモリの多くの部分が占有されていて、これらのプランがアドホック プランである場合は、このサーバー オプションを使って、これらのオブジェクトのメモリ使用量を削減します。
-1 回のみ使われキャッシュされたプランの数を調べるには、次のクエリを実行します。
+1 回のみ使われてキャッシュされるプランの数を調べるには、次のクエリを実行します。
 
-```t-sql
+```sql
 SELECT objtype, cacheobjtype, 
   AVG(usecounts) AS Avg_UseCount, 
   SUM(refcounts) AS AllRefObjects, 

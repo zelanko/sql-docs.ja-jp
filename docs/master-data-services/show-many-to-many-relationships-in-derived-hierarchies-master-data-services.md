@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec18dcf8fd78dbee82bf74adcf4e492dca604049
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d5c10d9e0e34352db32481270343f948277149d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services) の多対多リレーションシップを表示する
   派生階層 (DH) には 1 対多のリレーションシップが表示されますが、多対多のリレーションシップも表示できるようになります。  
@@ -94,7 +94,7 @@ Customer サンプル モデルや、 [!INCLUDE[ssMDSshort_md](../includes/ssmds
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> メンバーのセキュリティ  
- メンバーの重複を許可する (1 人のメンバーが複数の親を持つことを許可する) 階層を使用して、メンバーのセキュリティ アクセス許可を割り当てることはできません。 例:  
+ メンバーの重複を許可する (1 人のメンバーが複数の親を持つことを許可する) 階層を使用して、メンバーのセキュリティ アクセス許可を割り当てることはできません。 例 :  
   
 -   null 再帰をアンカーしない再帰的派生階層 (RDH) (再帰レベルの各メンバーは、ROOT と再帰的な親以下に出現します)。  
   

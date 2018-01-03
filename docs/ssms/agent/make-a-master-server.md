@@ -3,7 +3,7 @@ title: "マスター サーバーの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec76937f749586eadafb5f3fe01a309d59a146c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 96f9c83cd9266aa225263f5d35c74025a6ee44ec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用してマスター サーバー [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] を作成する方法について説明します。  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/05/2017
     **[接続の追加]**  
     サーバーを登録せずに対象サーバーの一覧に追加します。  
   
-    **接続**  
+    **[接続]**  
     選択したサーバーの接続プロパティを変更します。  
   
 5.  **[マスター サーバー ログインの資格情報]** ページで、必要に応じて対象サーバーの新しいログインを作成してマスター サーバーへの権利を割り当てるかどうかを指定します。  

@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 321ac7ca18880205192923cc567c172342668eec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **プロシージャの作成に使用するもの:**  [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
   
 ##  <a name="Procedures"></a> ストアド プロシージャを作成する方法  
@@ -61,11 +61,11 @@ ms.lasthandoff: 11/17/2017
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
-    |パラメーター|値|  
+    |パラメーター|ReplTest1|  
     |---------------|-----------|  
     |Author|*名前*|  
     |Create Date|*今日の日付*|  
-    |説明|従業員のデータが返されます。|  
+    |Description|従業員のデータが返されます。|  
     |[Procedure_name]|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -74,11 +74,11 @@ ms.lasthandoff: 11/17/2017
     |@Datatype_For_Param2|**nvarchar**(50)|  
     |[Default_Value_For_Param2]|NULL|  
   
-6.  クリックして **OK**です。  
+6.  **[OK]** をクリックします。  
   
 7.  **クエリ エディター**で、SELECT ステートメントを次のステートメントに置き換えます。  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  

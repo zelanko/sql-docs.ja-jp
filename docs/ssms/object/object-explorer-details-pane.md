@@ -3,7 +3,7 @@ title: "[オブジェクト エクスプローラーの詳細] ペイン | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523ea1b976fc5769cd400e9bbe32f380956421df
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 |**進む**|**[戻る]** 操作を選択した後に次の画面に移動します。|  
 |**[上へ]**|親のオブジェクトまたはフォルダーに移動します。|  
 |**同期**|[オブジェクト エクスプローラーの詳細] で選択されているオブジェクトに、オブジェクト エクスプローラーのフォーカスを設定します。|  
-|**[フィルター]**|利用できる場合、構成可能なオブジェクトのサブセットが表示されます。|  
+|**Assert**|利用できる場合、構成可能なオブジェクトのサブセットが表示されます。|  
 |**[更新]**|[オブジェクト エクスプローラーの詳細] の表示を更新します。|  
 |**検索**|特定のデータベース オブジェクトの検索語句を入力するための領域を提供します。|  
   
@@ -104,5 +104,5 @@ ms.lasthandoff: 12/05/2017
 -   大規模なオブジェクト セットを検索した場合、処理に時間がかかったり、サーバーのパフォーマンスが低下したりすることがあります。  
   
 ## <a name="see-also"></a>参照  
-[オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)  
+[[オブジェクト エクスプローラー]](../../ssms/object/object-explorer.md)  
   

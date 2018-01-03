@@ -5,7 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d909039eb43c65358515cd4c3891b20a9a2b7e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4e94eae55ba86f5aa2cd548790f583c281de8f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
   この記事では、Windows Server 2012 R2 コンピューターへの [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のインストール方法、MDS データベースと Web サイトの設定方法、およびサンプル モデルとデータの配置方法について説明します。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) では、組織が信頼されたバージョンのデータを管理できるようにします。   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
    
 9. **[機能]** ページで、次の機能が選択されていることを確認し、**[次へ]** をクリックします。 これらの機能は、[!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] に必要です。
   
-    |機能|機能|  
+    |[機能]|[機能]|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -130,14 +130,14 @@ ms.lasthandoff: 11/20/2017
   
 2.  **[データベースの作成]**をクリックして、 **データベースの作成ウィザード** で **[次へ]**をクリックします。  
   
-3.  **[データベース サーバー]** ページで、 **[認証の種類]** を選択して、 **[接続のテスト]** をクリックし、選択した認証の種類の資格情報を使用して、データベースに接続できることを確認します。 **[次へ]**をクリックします。
+3.  **[データベース サーバー]** ページで、 **[認証の種類]** を選択して、 **[接続のテスト]** をクリックし、選択した認証の種類の資格情報を使用して、データベースに接続できることを確認します。 **[次へ]** をクリックします。
   
     > [!NOTE]  
     >  認証の種類に **[現在のユーザー - 統合セキュリティ]** を選択すると、 **[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、**[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  **[データベース名]** フィールドに名前を入力します。 必要に応じて、Windows 照合順序を選択して、**[SQL Server の既定の照合順序]** チェック ボックスをオフにし、**[大文字小文字を区別する]** などの利用可能なオプションを 1 つ以上クリックします。 **[次へ]**をクリックします。
+4.  **[データベース名]** フィールドに名前を入力します。 必要に応じて、Windows 照合順序を選択して、**[SQL Server の既定の照合順序]** チェック ボックスをオフにし、**[大文字小文字を区別する]** などの利用可能なオプションを 1 つ以上クリックします。 **[次へ]** をクリックします。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -285,7 +285,7 @@ ms.lasthandoff: 11/20/2017
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータの構造を構築するモデルとエンティティを使用する方法の概要については、「[マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services) にコメントをお送りください  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービス データベース](../master-data-services/master-data-services-database.md)   

@@ -5,7 +5,7 @@ ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 76cced5552daf87bffa6ac234f54c3ee780349a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e7b7e796c6badea38ea4423561d26e7f53eb95d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 の Integration Services の新機能
 このトピックでは、 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で追加または更新された機能について説明します。
@@ -47,7 +47,7 @@ SQL Server 2017 の Integration Services の最も重要な新機能は以下の
 
 詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
 
-これらの新機能では、SQL Server Data Tools (SSDT) のバージョン 17.2 以降が必要ですが、SQL Server 2017 または SQL Server 2016 は必要ありません。 パッケージを Azure に展開すると、常に最新のパッケージ形式となるように、パッケージの展開ウィザードによってパッケージがアップグレードされます。
+これらの新機能では、SQL Server Data Tools (SSDT) のバージョン 17.2 以降が必要ですが、SQL Server 2017 または SQL Server 2016 は必要ありません。 パッケージを Azure に配置すると、常に最新のパッケージ形式となるように、パッケージの配置ウィザードによってパッケージがアップグレードされます。
 
 ## <a name="new-in-the-azure-feature-pack"></a>Azure Feature Pack の新機能
 

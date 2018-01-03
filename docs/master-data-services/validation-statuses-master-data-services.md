@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,16 +17,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db272b86bf1256bbf001b3c2662cd0be6f803c94
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d50b9b71731b7bd681f3cc82e3eeb1e2efb58a2e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="validation-statuses-master-data-services"></a>検証状態 (マスター データ サービス)
   **[バージョンの検証]** ページの **[バージョン管理]** 機能領域に表示される状態は次のとおりです。  
   
-|[状態]|Description|  
+|状態|Description|  
 |------------|-----------------|  
 |検証を待機しています|検証を待機している新しく作成されたすべてのメンバー|  
 |再検証を待機しています|検証を待機している既存のメンバー|  

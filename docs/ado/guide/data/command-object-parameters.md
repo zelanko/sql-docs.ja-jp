@@ -3,7 +3,7 @@ title: "オブジェクトのパラメーターをコマンド |Microsoft ドキ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e72e3f17a661d64602c1ede26e8fbaf77d4d6b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9cb0b971096fe603620fc610386e09d985ae9e5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-object-parameters"></a>コマンド オブジェクトのパラメーター
 前に説明したトピック[作成し、簡単なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)です。 使用して、興味深い、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトが SQL コマンドのパラメーター化する、次の例で示すようにします。 この変更により、パラメーターのたびに、別の値を渡して、コマンドを再利用することです。 [プロパティの準備ができている](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを**コマンド**にオブジェクトが設定されている**true**、ADO で指定されたコマンドのコンパイルにプロバイダーが必要になります[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)を初めて実行する前にします。 メモリ内でコンパイル済みのコマンドも保持されます。 少しがパフォーマンスの向上、コマンドがその後呼び出されるたびに結果を準備するためのオーバーヘッドが原因で実行される最初の時間のコマンドの実行はこの低下します。 そのため、1 つ以上の時間を使用する場合にのみ、コマンドを準備する必要があります。  

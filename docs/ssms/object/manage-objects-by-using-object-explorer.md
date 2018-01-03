@@ -3,7 +3,7 @@ title: "オブジェクト エクスプローラーを使用したオブジェ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190cdeff71f6b46b6ff2e7c6f42895137a67eda6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec883f561a30166fc824164e38ac9ba539c98553
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用したオブジェクトの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] オブジェクト エクスプ ローラーを使用して、データベース、テーブル、ストアド プロシージャなどのオブジェクトを管理できます。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]**をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「 [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)  
+[[オブジェクト エクスプローラー]](../../ssms/object/object-explorer.md)  
 [オブジェクト エクスプローラーを開き、構成する](../../ssms/object/open-and-configure-object-explorer.md)  
 [オブジェクト エクスプローラーからインスタンスへの接続](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [[オブジェクト エクスプローラーの詳細] ペイン](../../ssms/object/object-explorer-details-pane.md)  

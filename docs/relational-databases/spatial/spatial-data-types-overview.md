@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c434a1c9c514018176b1afcc0a7a57c63fc896e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cc470ce80e24520283f3a34c9e1f560ab096288
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ OGC の仕様の詳細については、以下を参照してください。
 次の図は、同一の二等辺三角形を示しています (三角形 A は直線セグメントを使用して三角形を定義し、三角形 B は円弧セグメントを使用して三角形を定義しています)。  
 
 ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) この例は、**LineString** インスタンスと **CircularString** インスタンスの両方を使用して上の二等辺三角形を格納する方法を示しています。  
-```tsql
+```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);
@@ -125,7 +125,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 **CircularString** インスタンスでは、三角形を定義するために 7 つの点が必要ですが、 **LineString** インスタンスでは、三角形を定義するために必要な点は 4 つだけです。 その理由は、 **CircularString** インスタンスは直線セグメントではなく円弧セグメントを格納するためです。 したがって、 **CircularString** インスタンスに格納される三角形の辺は ABC、CDE、および EFA であるのに対し、 **LineString** インスタンスに格納される三角形の辺は AC、CE、および EA です。  
 
 次のようなコード スニペットがあるとします。  
-```tsql
+```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
@@ -145,7 +145,7 @@ LS LengthCS Length
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString と CompoundCurve の比較  
 次のコード例は、 **LineString** インスタンスと **CompoundCurve** インスタンスを使用して同じ図を格納する方法を示します。
-```tsql
+```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
@@ -154,7 +154,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 内の複数の  
 
 上の例では、 **LineString** インスタンスまたは **CompoundCurve** インスタンスで図を格納できます。  次の例では、 **CompoundCurve** を使用して円のスライスを格納します。  
-```tsql
+```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
 
@@ -162,7 +162,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString と CompoundCurve の比較  
 次のコード例は、 **CircularString** インスタンスに円のスライスを格納する方法を示します。  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
 SELECT @g.ToString(), @g.STLength();
@@ -170,12 +170,12 @@ SELECT @g.ToString(), @g.STLength();
 
 **CircularString** インスタンスを使用して円のスライスを格納するには、各直線セグメントで 3 つの点を使用する必要があります。  中間点が不明な場合は、中間点を計算するか、次のスニペットで示すように直線セグメントの端点を二重にする必要があります。  
 
-```tsql
+```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
 **CompoundCurve** インスタンスは **LineString** コンポーネントおよび **CircularString** コンポーネントを許可して、認識される必要がある点が、円のスライスの直線セグメントの 2 点だけになるようにします。  このコード例は、 **CompoundCurve** を使用して同じ図を格納する方法を示します。  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');
 SELECT @g.ToString(), @g.STLength();

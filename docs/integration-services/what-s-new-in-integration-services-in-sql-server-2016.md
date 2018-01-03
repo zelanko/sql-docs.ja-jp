@@ -3,8 +3,11 @@ title: "SQL Server 2016 の Integration Services の新機能 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -153,23 +156,23 @@ ms.lasthandoff: 12/04/2017
 ### <a name="better-deployment"></a>配置の強化
 
 ####  <a name="ssisdbupgrwiz"></a> SSISDB アップグレード ウィザード  
- データベースが SQL Server インスタンスの現在のバージョンよりも古い場合、SSISDB アップグレード ウィザードを実行して、SSIS カタログ データベース (SSISDB) をアップグレードします。 この状況は、次のいずれかの条件が該当した場合に発生します。  
+ データベースが SQL Server インスタンスの現在のバージョンよりも古い場合、SSISDB アップグレード ウィザードを実行して、SSIS カタログ データベース (SSISDB) をアップグレードしてください。 この状況は、次のいずれかの条件が該当した場合に発生します。  
   
 -   古いバージョンの SQL Server からデータベースを復元した場合。  
   
--   SQL Server インスタンスをアップグレードする前に Always On 可用性グループからデータベースを削除しなかった場合。 この場合、データベースは自動アップグレードされません。 詳細については、「 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)」を参照してください。  
+-   SQL Server インスタンスをアップグレードする前に Always On 可用性グループからデータベースを削除しなかった場合。 この場合、データベースは自動アップグレードされません。 詳細については、「 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)」を参照してください。  
   
- 詳細については、[SSIS カタログ &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md) に関するページを参照してください。 
+ 詳細については、[SSIS カタログ &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md) に関するページを参照してください。 
 
 ####  <a name="AlwaysOn"></a> SSIS カタログでの Always On 機能のサポート  
  Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。  
   
  SQL Server 2016 では、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置できる新しい機能が SSIS に導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
   
- Always On 機能の詳細と SSISDB に対して有効にするための手順については、「[SSIS Catalog](../integration-services/service/ssis-catalog.md)」(SSIS カタログ) を参照してください。  
+ Always On 機能の詳細と SSISDB に対して有効にするための手順については、「[SSIS Catalog](../integration-services/catalog/ssis-catalog.md)」(SSIS カタログ) を参照してください。  
 
 ####  <a name="IncrementalDeployment"></a> パッケージの増分配置  
-パッケージの増分配置機能によって、プロジェクト全体を配置することなく、既存または新規のプロジェクトに つ以上のパッケージを配置できます。 パッケージは、次のツールを使用して増分配置できます。  
+パッケージの増分配置機能によって、プロジェクト全体を配置することなく、既存または新規のプロジェクトに&1; つ以上のパッケージを配置できます。 パッケージは、次のツールを使用して増分配置できます。  
   
 -   配置ウィザード  
   
@@ -244,7 +247,7 @@ ms.lasthandoff: 12/04/2017
  新しい **AutoAdjustBufferSize** プロパティの値を **true**に設定すると、データ フロー エンジンによって、データ フローのバッファー サイズが自動的に計算されます。 詳細については、「 [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)」を参照してください。  
 
 ####  <a name="Templates"></a> 再利用できる制御フロー テンプレート  
- よく使用される制御フロー タスクまたはコンテナーをスタンドアロン テンプレート ファイルに保存し、制御フロー テンプレートを使用するプロジェクト内の つまたは複数のパッケージで複数回再利用できます。 この再利用可能性によって、SSIS パッケージの設計と管理を容易に実行できます。 詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  
+ よく使用される制御フロー タスクまたはコンテナーをスタンドアロン テンプレート ファイルに保存し、制御フロー テンプレートを使用するプロジェクト内の&1; つまたは複数のパッケージで複数回再利用できます。 この再利用可能性によって、SSIS パッケージの設計と管理を容易に実行できます。 詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  
 
 ####  <a name="Parts"></a> パーツとして名前が変更された新しいテンプレート  
  CTP 3.0 でリリースされた新しい再利用できる制御フロー テンプレートが、制御フロー パーツまたはパッケージ パーツとしてその名前が変更されました。 この機能の詳細については、「 [制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。  
@@ -256,7 +259,7 @@ ms.lasthandoff: 12/04/2017
 ####  <a name="ODatav4"></a> OData v4 データ ソースのサポート  
  OData ソースと OData 接続マネージャーで OData v3 と v4 のプロトコルがサポートされるようになりました。  
   
--   OData V3 プロトコルでは、コンポーネントは ATOM 形式と JSON データ形式をサポートします。  
+-   OData V3 プロトコルでは、ATOM データ形式と JSON データ形式をサポートします。  
   
 -   OData V4 プロトコルでは、コンポーネントは JSON データ形式をサポートします。  
   
@@ -316,7 +319,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 ### <a name="better-install-experience"></a>インストール エクスペリエンスの強化
 
 ####  <a name="Upgrade"></a> SSISDB が可用性グループに属する場合のアップグレードのブロック  
- SSIS カタログ データベース (SSISDB) が Always On 可用性グループに属する場合は、SSISDB を可用性グループから削除し、SQL Server をアップグレードした後、SSISDB を可用性グループに再び追加する必要があります。 詳細については、「 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)」を参照してください。  
+ SSIS カタログ データベース (SSISDB) が Always On 可用性グループに属する場合は、SSISDB を可用性グループから削除し、SQL Server をアップグレードした後、SSISDB を可用性グループに再び追加する必要があります。 詳細については、「 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)」を参照してください。  
 
 ### <a name="better-design-experience"></a>設計エクスペリエンスの強化
 

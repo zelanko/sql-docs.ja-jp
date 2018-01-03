@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数で "*近接語句*" (**NEAR**) を使用すると、互いに似た単語や語句を検索できます。 
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>例 1
  たとえば、次のように "Smith" から 2 つの語の範囲内にある "John" を検索できます。  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-2"></a>例 2
  次の例では、 `Production.Document` サンプル データベースの `AdventureWorks` テーブルを検索して、"reflector" という語を "bracket" と同一のドキュメント内に含むすべてのドキュメントの概要を検出します。  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -113,7 +113,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>NEAR と他の語句を組み合わせる  
- NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 例:  
+ NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 例 :  
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
   
@@ -152,7 +152,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   CONTAINSTABLE 関数による順位付けへの近接語句の影響  
   
-    NEAR を CONTAINSTABLE 関数で使用する場合は、ドキュメント内のその長さに関連する一致数と、各一致における最初の検索語句と最後の検索語句の間の距離が、各ドキュメントの順位付けに影響します。 汎用近接語句では、たとえば、一致する検索語間の距離が 50 論理語より大きい場合、そのドキュメントについて返される順位は 0 になります。 最大距離として整数を指定しないカスタム近接語句では、間隔が 100 論理語より大きい一致のみを含むドキュメントは、順位 0 を取得します。 カスタム近接語句の順位付けの詳細については、「 [RANK を使用して検索結果を制限する方法](../../relational-databases/search/limit-search-results-with-rank.md)」を参照してください。  
+    NEAR を CONTAINSTABLE 関数で使用する場合は、ドキュメント内のその長さに関連する一致数と、各一致における最初の検索語句と最後の検索語句の間の距離が、各ドキュメントの順位付けに影響します。 汎用近接語句では、たとえば、一致する検索語間の距離が 50 論理語より大きい場合、そのドキュメントについて返される順位は 0 になります。 最大距離として整数を指定しないカスタム近接語句では、間隔が 100 論理語より大きい一致のみを含むドキュメントは、順位 0 を取得します。 カスタム近接語句の順位付けの詳細については、「[RANK を使用して検索結果を制限する方法](../../relational-databases/search/limit-search-results-with-rank.md)」を参照してください。  
   
 -   **transform noise words** サーバー オプション  
   

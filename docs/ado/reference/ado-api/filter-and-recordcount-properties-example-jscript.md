@@ -3,7 +3,7 @@ title: "フィルターおよび RecordCount のプロパティの例 (JScript) 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cef90353f6c91df6ce584c2470cf00b59e739208
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28b35e3ff594eaf5ec0ea077cb09939acc508a7d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>フィルターおよび RecordCount のプロパティの例 (JScript)
 この例を開いて、**レコード セット**Northwind データベースおよび、使用の企業の表に、[フィルター](../../../ado/reference/ado-api/filter-property.md)られた CompanyName フィールドから始まり、文字表示されているレコードを制限するプロパティD. 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**貼り付けて filterjs.asp という名前**です。  

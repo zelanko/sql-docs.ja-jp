@@ -3,7 +3,7 @@ title: "[色の設定] ダイアログ ボックス (Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7380a1f338e519517fee09cda3c7419b1ac4817b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c769d37bb4ebda8299498f54c22b87099e788fb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>[色の設定] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[色の設定]** ダイアログ ボックスは、ユーザーが選択した色の RGB 値を返します。 ユーザーは、ディスプレイ ドライバーによって決定された一連の基本色または作成した一連の色から選択できます。 基本色を選択するか、カスタムの色を作成します。 カラー マトリックスに表示された色をクリックするか、 **[色合い]**、 **[鮮やかさ]**、 **[明るさ]**、 **[赤]**、 **[緑]**、 **[青]** の各テキスト ボックスに入力して、色を定義します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[基本色]**  
 ディスプレイ ドライバーによって事前に定義された色。  
   

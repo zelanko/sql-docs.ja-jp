@@ -3,7 +3,7 @@ title: "スケジュールの作成とジョブへのアタッチ | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc61a3323ae24d1c571b743fa4d0d2bed3278585
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1f516bb0add6bd1f415260f061b1de77bf2b22a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>スケジュールの作成とジョブへのアタッチ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブのスケジュール設定とは、ユーザーの操作なしでジョブの実行が開始される条件を定義することです。 ジョブのスケジュールを設定して自動的に実行するには、ジョブの新しいスケジュールを作成するか、既存のスケジュールをジョブにアタッチします。  
@@ -87,11 +87,11 @@ CPU アイドル時に実行するジョブを定義する前に、通常処理�
   
 CPU アイドル条件は、特定の時間にわたり、CPU 使用率が一定の割合を下回っている状態として定義します。 次に、この時間の長さを設定します。 指定された長さの時間にわたって CPU 使用率が指定の率を下回ると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、CPU アイドル時スケジュールが設定されているすべてのジョブを開始します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] またはパフォーマンス モニターを使用して CPU 使用率を監視する方法については、「 [CPU 使用率の監視](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**トピック**|  
+|**[説明]**|**トピック**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブのスケジュールを作成する方法について説明します。|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブのスケジュールを設定する方法について説明します。|[ジョブのスケジュール設定](../../ssms/agent/schedule-a-job.md)|  
 |使用しているサーバーの CPU アイドル状態を定義する方法について説明します。|[CPU のアイドル時間と期間の設定 (SQL Server Management Studio)](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

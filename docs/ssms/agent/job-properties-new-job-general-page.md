@@ -3,7 +3,7 @@ title: "ジョブのプロパティ - [新しいジョブ]([全般] ページ) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,29 +18,29 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29830d258e5cc754e7619d931ad1ba5fffe4974f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4df639fb259f06df03da70c8fef92779f19a3ac3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-properties---new-job-general-page"></a>ジョブのプロパティ - [新しいジョブ] ([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブの全般プロパティを表示したり、変更したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **名前**  
 ジョブの名前を変更します。  
   
-**所有者**  
+**[所有者]**  
 ジョブの所有者を選択します。  
   
 **カテゴリ**  
 ジョブのカテゴリを選択します。  
   
-**[...]**  
+**[[...]]**  
 選択したカテゴリのジョブを表示します。  
   
-**Description**  
+**[説明]**  
 ジョブの説明を変更します。  
   
 **有効**  

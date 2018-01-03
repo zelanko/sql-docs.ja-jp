@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c2b83605714e01961c50d71e83ba57691bc3833
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8d5c64fa4ba32ebd9e95d728b3a7655b523d9627
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>DTExec.exe を使用してコマンド プロンプトから SSIS パッケージを実行する
 このクイック スタート チュートリアルでは、コマンド プロンプトから適切なパラメーターを使用して `DTExec.exe` を実行し、SSIS パッケージを実行する方法を説明します。
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]
 > この記事で説明する方法は、Azure SQL Database サーバーに展開されているパッケージではテストされていません。
 
-`DTExec.exe` の詳細については、「[dtexec ユーティリティ](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility)」を参照してください。
+`DTExec.exe` の詳細については、「[dtexec ユーティリティ](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)」を参照してください。
 
 ## <a name="run-a-package-with-dtexec"></a>Dtexec でのパッケージの実行
 

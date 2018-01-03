@@ -3,7 +3,7 @@ title: "ADO イベントのインスタンス化: Visual Basic |Microsoft ドキ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbeab5ffb8e0478968dd220526f38015cf865e76
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 465b3453303520d06a67a24dc885dd7ac706d34e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Visual Basic の ADO イベントのインスタンス化します。
 Microsoft® Visual Basic® で ADO イベントを処理するために、モジュール レベル変数を使用してを宣言する必要があります、 **WithEvents**キーワード。 変数は、クラス モジュールの一部としてのみ宣言することができ、モジュール レベルで宣言する必要があります。 これはないよう、ただし、として制限の厳しいため Visual Basic**フォーム**オブジェクトはクラスでもします。 使用して変数を宣言する ADO イベントを処理する最も簡単な方法は、 **WithEvents**です。 次の例のハンドル、 **ConnectComplete**イベントを**接続**オブジェクト。  

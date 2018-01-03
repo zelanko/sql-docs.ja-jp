@@ -3,7 +3,7 @@ title: "[ジョブ ステップのプロパティ][新しいジョブ ステッ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58ef4690d93af433ab05fc45841e8de48bfc7904
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89de59aaac4ca2c66272c4be25f9829ed589d563
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示したり、変更したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[成功した場合のアクション]**  
 ジョブ ステップが成功した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが実行するアクションを設定します。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/05/2017
 **[...]**  
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
-**表示**  
+**[表示]**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
 **[既存のファイルに出力を追加する]**  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 **[テーブルにログ記録する]**  
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
-**表示**  
+**[表示]**  
 ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/05/2017
 **[...]**  
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
-**表示**  
+**[表示]**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
 **[既存のファイルに出力を追加する]**  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/05/2017
 **[テーブルにログ記録する]**  
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
-**表示**  
+**[表示]**  
 ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/05/2017
 **[...]**  
 ジョブ ステップからの出力に使用するファイルを参照します。  
   
-**表示**  
+**[表示]**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
 **[既存のファイルに出力を追加する]**  
@@ -109,7 +109,7 @@ ms.lasthandoff: 12/05/2017
 **[テーブルにログ記録する]**  
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
-**表示**  
+**[表示]**  
 ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/05/2017
 **[サーバー]**  
 レプリケーション キュー リーダーのジョブ ステップを使用するように、サーバーを設定します。  
   
-**データベース**  
+**[データベース]**  
 レプリケーション キュー リーダーのジョブ ステップを使用するように、データベースを設定します。  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>SQL Server Analysis Services ジョブ ステップのオプション  
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/05/2017
 **[テーブルにログ記録する]**  
 **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
-**表示**  
+**[表示]**  
 ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
 **[テーブル内の既存のエントリに出力を追加する]**  

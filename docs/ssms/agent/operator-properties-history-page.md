@@ -3,7 +3,7 @@ title: "[<OperatorName> のプロパティ]([履歴] ページ) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a587ca44b6f0af27e16bf06ce3a511b1c71d188
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 65c2668bc19a7b4c000545d8fcd72298439c47e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-properties-history-page"></a>[<OperatorName> のプロパティ] ([履歴] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、オペレーターに送信された最新の通知の日付、時刻、種類を表示できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[電子メール経由]**  
 最新の通知は、電子メールによって試行されました。また、このオペレーターが電子メールによる通知を受け取っていない場合は **[(電子メール未送信)]** となります。  
   

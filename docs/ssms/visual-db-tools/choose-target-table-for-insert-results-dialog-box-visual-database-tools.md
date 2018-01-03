@@ -3,7 +3,7 @@ title: "[挿入先のテーブル選択] ダイアログ ボックス | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ab56a5548e59cac0f7f2d6f84d35453942ce1f6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8acff0ca01947c905615542de85bd2da9b0c5be6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>[挿入先のテーブル選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] INSERT RESULTS クエリの結果として、どのテーブルにデータ行を追加するかを指定できます。 このダイアログ ボックスは、INSERT RESULTS クエリを開始すると表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[挿入先]**  
 行を追加するテーブルの名前を一覧から選択します。 INSERT RESULTS クエリに対して指定できるテーブルは 1 つだけです。  
   

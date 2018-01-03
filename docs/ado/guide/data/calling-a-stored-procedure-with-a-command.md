@@ -3,7 +3,7 @@ title: "コマンドでストアド プロシージャを呼び出す |Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 25d639d9d8f7c8e454957f1b309a449951550b26
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6c22f098efcb2352e450c07aece8f88c8f32b4d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>コマンドでストアド プロシージャを呼び出す
 コマンドを使用して、ストアド プロシージャを呼び出すことができます。 このトピックの最後に、コード サンプルは、次のように定義されている CustOrdersOrders と呼ばれる、Northwind サンプル データベース内のストアド プロシージャを参照します。  

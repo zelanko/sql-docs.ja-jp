@@ -3,7 +3,7 @@ title: "WMI イベント警告の作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d95c99f5252dc6c87329ca4d9d003eba748b11c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da5a68bfb9a0a984c7d43b1f2c3c1de01b83c7af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して、WMI Provider for Server Events によって監視されている特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] イベントが発生したときに通知される [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告を作成する方法について説明します。  
@@ -78,7 +78,7 @@ WMI Provider を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion_m
   
 8.  **[クエリ]** ボックスで、警告が応答するイベントを識別する WQL ステートメントを指定します。  
   
-9. **[OK]**をクリックします。  
+9. **[OK]** をクリックします。  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL の使用  
   

@@ -3,7 +3,7 @@ title: "レコード セット内を移動する方法 |Microsoft ドキュメ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1165b694dbbdedb73fded1178bbc568cbcf0a467
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e44da06a716171f48620c54557d08810fab49ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>レコード セット内を移動する方法
 次の 4 つの方法は、移動またはスクロールするのに使用、 **Recordset**: [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)です。 (これらのメソッドの一部は順方向専用カーソルで使用できます)  

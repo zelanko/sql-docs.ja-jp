@@ -3,7 +3,7 @@ title: "[オプション] ([環境]/[ヘルプ]/[オンライン] ページ) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---help---online-page"></a>[オプション] ([環境]/[ヘルプ]/[オンライン] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 検索に使用するヘルプ ソース (F1 ヘルプなど) を指定できます。 **[ツール]** メニューの **[オプション]**をクリックし、 **[環境]** フォルダーを展開して、 **[ヘルプ]**、 **[オンライン]**の順にクリックします。 **[オンライン]** ページが一覧に表示されない場合は、 **[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにしてください。  

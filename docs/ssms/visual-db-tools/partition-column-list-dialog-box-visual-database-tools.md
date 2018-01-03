@@ -3,7 +3,7 @@ title: "[パーティション列の一覧] ダイアログ ボックス (Visual
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79eb525e471b463368cb928cae0dfcf3cf1bc797
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] テーブルがパーティション スキームに関連付けられている場合、このダイアログ ボックスを使用すると、パーティション関数を適用する列を選択できます。 関数が動作するためには、切り替え先の列のデータ型が、パーティション関数で定義されている列のデータ型と同じである必要があります。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 データ型  
 パーティション スキームで定義されている列のデータ型を表示します。  
   
-列  
+[列]  
 パーティション関数を適用する列を選択できるドロップダウン リストが用意されています。  
   
 ## <a name="see-also"></a>参照  

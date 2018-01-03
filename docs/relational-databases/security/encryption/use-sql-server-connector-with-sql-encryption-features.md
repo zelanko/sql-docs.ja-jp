@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 暗号化機能への SQL Server コネクタの使用
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に関して、Azure Key Vault の保護下にある非対称キーを使用した一般的な作業は、次の 3 つの領域に分けられます。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
     -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート 1 で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、 *ハイフンを含まない*アルファベットと数字とから成る長い文字列になります。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを作成し、手順 1. で作成した資格情報を追加します。 この例の [!INCLUDE[tsql](../../../includes/tsql-md.md)] では、既にインポートされているキーを使用しています。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
      DEK は、データベース インスタンス内のデータとログ ファイルを暗号化するキーです。このキーがさらに、Azure Key Vault の非対称キーで暗号化されます。 DEK [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされている任意のアルゴリズムまたはキーの長さを使用して作成できます。  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  **TDE を有効にする**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/21/2017
   
      代わりに、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを実行してもかまいません。 暗号化の状態が "3" である場合、データベースが暗号化済みであることを示します。  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/21/2017
   
     -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート I で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、 *ハイフンを含まない*アルファベットと数字とから成る長い文字列になります。   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -181,7 +181,7 @@ ms.lasthandoff: 11/21/2017
   
      この例では、Key Vault に格納されている `CONTOSO_KEY_BACKUP` 非対称キーを使用します。このキーは、マスター データベースに対してパート IV の手順 5. の説明に従って作成するか、あらかじめインポートしておくことができます。  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -203,7 +203,7 @@ ms.lasthandoff: 11/21/2017
      
      下の例では、データベースが既に TDE で暗号化されていて、非対称キー `CONTOSO_KEY_BACKUP` が TDE の非対称キーとは異なる場合、バックアップは TDE 非対称キーと `CONTOSO_KEY_BACKUP` の両方で暗号化されることに注意してください。 バックアップの暗号化を解除するには、両方のキーがターゲットの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスで必要になります。
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -226,7 +226,7 @@ ms.lasthandoff: 11/21/2017
     
      復元のサンプル コードは次のとおりです。  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -243,7 +243,7 @@ ms.lasthandoff: 11/21/2017
   
  この例では、「 `CONTOSO_KEY_COLUMNS` Azure Key Vault を使用する拡張キー管理のセットアップ手順 [」の手順 3. (セクション 3) の説明に従って以前にインポートまたは作成した、資格情報コンテナーに格納されている](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)非対称キーを使用します。 この非対称キーを `ContosoDatabase` データベースで使用するには、 `CREATE ASYMMETRIC KEY` ステートメントをもう一度実行して、 `ContosoDatabase` データベースにキーへの参照を提供する必要があります。  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   

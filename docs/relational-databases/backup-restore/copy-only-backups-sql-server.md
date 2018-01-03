@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a9709fa0261784ecb39fa74a90a139a3ecbdd82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b95da2182f5ec836dab827dd959ba3d6607a249e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="copy-only-backups-sql-server"></a>コピーのみのバックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] *コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。  
@@ -59,13 +59,13 @@ ms.lasthandoff: 11/17/2017
 
 3.  **[全般]** ページの **[ソース]** セクションにある **[コピーのみのバックアップ]** チェック ボックスをオンします。
 
-4.  **[OK]**をクリックします。
+4.  **[OK]** をクリックします。
 
   
 ###  <a name="TsqlProcedure"></a>B.  Transact-SQL の使用  
 次の例では、COPY_ONLY parameter パラメーターを使用して `Sales` データベースに対するコピーのみのバックアップが作成されます。  トランザクション ログのコピーのみのバックアップも同様に取得されます。
 
-```tsql
+```sql
 BACKUP DATABASE Sales
 TO DISK = 'E:\BAK\Sales_Copy.bak'
 WITH COPY_ONLY;

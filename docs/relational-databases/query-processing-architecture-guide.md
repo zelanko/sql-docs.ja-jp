@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ SQL ステートメントからインデックスなしのビューが参照さ�
 
 たとえば、次のビューがあるとします。
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +118,7 @@ GO
 
 次の 2 つの SQL ステートメントはどちらも、このビューに基づいてベース テーブルに同じ操作を行い、同じ結果を生成します。
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +142,7 @@ WHERE OrderDate > '20020531';
 
 クエリのビューに設定されるヒントは、ベース テーブルにアクセスするためにビューを展開するときに検出される他のヒントと競合することがあります。 この競合が発生すると、クエリはエラーを返します。 たとえば、定義にテーブル ヒントが含まれている、次のビューについて考えてみます。
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +154,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 ここで次のクエリを入力したとします。
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +168,7 @@ WHERE StateProvinceCode = 'WA';
 
 ビューが含まれるクエリで `FORCE ORDER` ヒントを使用すると、ビュー内のテーブルの結合順序は、順序付けられた構造内のビューの位置によって決まります。 たとえば、次のクエリは 3 つのテーブルとビューから選択を行います。
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +178,7 @@ OPTION (FORCE ORDER);
 
 さらに、次に示すように `View1` が定義されています。
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -249,7 +249,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 Server1 で実行される次のクエリ用に構築される実行プランを考えてみます。
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +259,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ プロセッサでは、プランを構築する必要があるときにキー値がわからない SQL ステートメント用に、クエリの実行プランに動的なロジックを組み込むこともできます。 たとえば、次のようなストアド プロシージャがあるとします。
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +269,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、プロシージャが実行されるたびに `@CustomerIDParameter` パラメーターによって指定されるキー値を予測できません。 クエリ プロセッサはキー値を予測できないので、アクセスする必要のあるメンバー テーブルを予測することもできません。 この状況に対処するために、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、動的フィルターと呼ばれる条件ロジックを含む実行プランが構築され、アクセスされるメンバー テーブルが入力パラメーター値に基づいて制御されます。 `GetCustomer` ストアド プロシージャが Server1 で実行されたと仮定すると、実行プランのロジックは次のように表すことができます。
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -303,7 +303,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 新しい SQL ステートメントをキャッシュ内の使用されていない既存の実行プランと照合するアルゴリズムでは、すべてのオブジェクト参照が完全に修飾されている必要があります。 たとえば、次の `SELECT` ステートメントのうち 2 番目のステートメントは既存の実行プランと一致しますが、最初のステートメントは一致しません。
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +383,13 @@ ADO、OLE DB、ODBC の各アプリケーションのパラメーター マー�
  
 次の 2 つの `SELECT` ステートメントでは、 `WHERE` 句で比較する値のみが異なっています。
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +401,7 @@ WHERE ProductSubcategoryID = 4;
 
 * Transact-SQL では、 `sp_executesql`を使用します。 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +436,7 @@ WHERE ProductSubcategoryID = 4;
 
 強制パラメーター化が有効になっている場合でも、簡易パラメーター化が行われる可能性はあります。 たとえば、強制パラメーター化のルールに従えば、次のクエリはパラメーター化できません。
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +454,18 @@ WHERE AddressID = 1 + 2;
 
 次のステートメントについて考えてみます。
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 ステートメントの最後の値 1 は、パラメーターとして指定できます。 リレーショナル エンジンにより、値 1 の位置にパラメーターが指定されたときと同様にこのバッチの実行プランが構築されます。 この簡易パラメーター化により、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で次の 2 つのステートメントから基本的に同じ実行プランが生成されると認識され、2 番目のステートメントにも最初のプランが再利用されます。
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +561,7 @@ WHERE ProductSubcategoryID = 4;
 
 最初の方法を使用すると、アプリケーションでは、次のように要求された製品ごとに個別のクエリを実行できます。
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +569,7 @@ WHERE ProductID = 63;
 2 番目の方法を使用すると、アプリケーションによって次の処理が行われます。 
 
 1. 次のように、パラメーター マーカー (?) を含むステートメントを準備します。  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -654,7 +654,7 @@ MAXDOP 構成のベスト プラクティスについては、[この Microsoft 
 
 この例には、架空のテーブル名と列名を使用しています。
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +672,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 `lineitem` テーブルと `orders` テーブルで次のインデックスが定義されていると想定します。
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +765,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Transact-
 * リンク サーバー名  
   `sp_addlinkedserver` と `sp_addlinkedsrvlogin` の各システム ストアド プロシージャを使用して、OLE DB データ ソースにサーバー名を渡します。 リンク サーバー内のオブジェクトは、4 部構成の名前を使用して Transact-SQL ステートメント内で参照できます。 たとえば、`DeptSQLSrvr` というリンク サーバー名が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の別のインスタンスで定義されている場合、次のステートメントはこのサーバー上のテーブルを参照します。 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +775,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Transact-
 * アドホック コネクタ名  
   データ ソースを頻繁に参照しない場合は、リンク サーバーに接続するために必要な情報を含めた `OPENROWSET` 関数または `OPENDATASOURCE` 関数を指定します。 これにより、行セットを Transact-SQL ステートメント内でテーブルと同じように参照できます。 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +811,13 @@ OLE DB データ ソースにリンク サーバーとしてアクセスする�
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (論理的な先頭列) およびその他のインデックス キー列に基づいて実行し、続いて 2 番目のレベルのシークを実行できます。このシークは最初のレベルのシーク操作の条件を満たす値ごとに、別の条件を指定した 1 つ以上の追加の列に基づいて実行できます。 つまり、スキップ スキャンと呼ばれるこの操作によって、クエリ オプティマイザーは、ある条件に基づいてシーク操作またはスキャン操作を実行してアクセス対象のパーティションを特定し、その操作内で 2 番目のレベルのインデックスのシーク操作を実行し、特定済みのパーティションのうち別の条件を満たすパーティションから行を返すことができます。 たとえば、次のクエリについて考えてみます。
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 この例では、 `T(a, b, c)`として定義されているテーブル T が列 a でパーティション分割され、列 b にクラスター化インデックスがあるとします。 テーブル T のパーティション境界は、次のパーティション関数によって定義されます。
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -847,7 +847,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 この情報をグラフィカル実行プラン出力と XML プラン表示出力の両方で表示する方法の説明のために、パーティション テーブル `fact_sales`に対する次のクエリについて考えます。 このクエリでは、2 つのパーティションのデータが更新されます。 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -976,7 +976,7 @@ XML プラン表示出力では、 `SeekPredicateNew` 要素がその要素を�
 > [!NOTE]
 > この例では、100 万以上の行をテーブルに挿入します。 この例を実行すると、ハードウェアによっては数分かかる場合があります。 この例を実行する前に、1.5 GB を超えるディスク領域が確保されていることを確認してください。 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL

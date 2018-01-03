@@ -3,7 +3,7 @@ title: "クエリ エディターの最大化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2abd1efbec2221c9f909a79b21df27b6869e828e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e1bd610191d11f3c61db638179fc565bab7e0ea9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>レッスン 2-3 - クエリ エディターの最大化
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] プログラミング時には、コードの記述スペースを拡大する必要性が頻繁に発生します。 この方法は 2 つあり、どちらも簡単です。1 つは、クエリ エディター ウィンドウを最大化する方法。もう 1 つは、使用していないツール ウィンドウを非表示にする方法です。  

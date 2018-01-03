@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> データベースの作成  
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] は、IMOLTP_DB という名前のデータベースを作成します。このデータベースに、1 つ以上のメモリ最適化テーブルを格納します。 パス \<driveAndPath> は、このコマンドを実行する前に存在している必要があります。  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -96,7 +96,7 @@ GO
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードでは、使用可能なメモリを 50% に指定して、Pool_IMOLTP という名前のリソース プールを作成します。  プールが作成された後、Pool_IMOLTP が含まれるようにリソース ガバナーが再構成されます。  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -113,7 +113,7 @@ GO
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] では、リソース プール Pool_IMOLTP へのデータベース IMOLTP_DB のバインドを定義しています。 このバインドは、データベースをオンラインにするまで有効になりません。  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> バインドを確認する  
  バインドを確認します。このとき、IMOLTP_DB のリソース プール ID に注意してください。 NULL にすることはできません。  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -132,7 +132,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> バインドを有効にする  
  バインドを有効にするには、リソース プールにバインドした後で、データベースをいったんオフラインにしてからオンラインに戻す必要があります。 データベースが以前に別のプールにバインドされていた場合は、これによって以前のリソース プールから割り当て済みのメモリが削除され、新しくデータベースにバインドされたリソース プールから、メモリ最適化テーブルおよびインデックス用のメモリが割り当てられます。  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -156,7 +156,7 @@ GO
   
  **サンプル コード**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -185,7 +185,7 @@ GO
   
  データベースが名前付きリソース プールにバインドされている場合は、次のクエリを使用して異なるリソース プールにわたるメモリ割り当てを確認します。  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -216,7 +216,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>参照  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [リソース プールの設定の変更](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

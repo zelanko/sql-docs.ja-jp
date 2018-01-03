@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81021ed7170b6bf92bfd2eebfebef9044de3bde
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 
 ![[新しいセッション] > [全般]、[サーバーの起動時にイベント セッションを開始する]](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-次に、 **[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
+次に、**[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
 
 ![[新しいセッション] > [イベント]、[グローバル フィールド (アクション)]](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
@@ -140,12 +140,12 @@ SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 
 ![[新しいセッション] > [イベント]、[フィルター (述語)] フィールド (アクション)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-次に、 **[データ ストレージ]** セクションでは、 **[event_file]** がターゲットとして選択されています。 さらに、 **[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
+次に、**[データ ストレージ]** セクションでは、**[event_file]** がターゲットとして選択されています。 さらに、**[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
 
 ![[新しいセッション] > [データ ストレージ]、eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-最後に、 **[詳細]** セクションでは、 **[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
+最後に、**[詳細]** セクションでは、**[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
 
 ![[新しいセッション] > [詳細]、[ディスパッチの最大待機時間]](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -165,7 +165,7 @@ SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 
 SSMS でリバース エンジニアリングすることにより、次の T-SQL スクリプトが作成されます。 次のスクリプトは空白のみを使用して手作業で整形されています。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ T-SQL パースペクティブは以上です。
 次に示す T-SQL の SELECT ステートメントは長いですが、複数の小さい SELECT が UNION でまとめられているためです。 どの小さい SELECT もそれだけで実行できます。 小さい SELECT は、さまざまなシステム カタログ ビューを JOIN する方法を示しています。
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -351,7 +351,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>[出力]
 
 
 次に示すのは、前の SELECT JOIN UNION を実行した実際の出力です。 出力のパラメーターの名前と値は、前の CREATE EVENT SESSION ステートメントと対応します。
@@ -414,7 +414,7 @@ DMV のリファレンス ドキュメントについては、「 [拡張イベ�
 拡張イベントの領域で使用できるすべてのオブジェクトは、システムに読み込まれるパッケージから取得されます。 次の SELECT はすべてのパッケージとその説明をリストします。
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -425,7 +425,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>[出力]
 
 パッケージのリストです。
 
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 このセクションの SELECT は、イベント パッケージに含まれるオブジェクトのタイプを表示します。 *sys.dm\_xe\_objects* に含まれるすべてのオブジェクト タイプとそれぞれの数のリストが表示されます。
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ Count-of-Type   object_type
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -538,7 +538,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>[出力]
 
 次に示すのは上の SELECT によって返されるオブジェクトの例です。
 
@@ -583,7 +583,7 @@ type           package0       xml                           Well formed XML frag
 - また、 *o.name =*の WHERE 句の値を編集する必要があります。
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -611,7 +611,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>[出力]
 
 前の SELECT、WHERE `o.name = 'lock_deadlock'`では次の行が返されます。
 
@@ -661,7 +661,7 @@ sqlserver   lock_deadlock   transaction_id
 - 発生したイベントをターゲットに送るかどうかをフィルター処理する。
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -699,7 +699,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>[出力]
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -736,7 +736,7 @@ you could put:
 - また、 *o.name =*の WHERE 句の値を編集する必要があります。
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -771,7 +771,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>[出力]
 
 次のパラメーター行は、SQL Server 2016 で前の SELECT で返された結果の一部です。
 
@@ -801,7 +801,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 - *s.name =*の WHERE 句の値を編集する必要があります。
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ XML-Cast セルをクリックすると、次の出力が表示されます。
     - セッションを再起動するたびに SQL システムが実際の .XEL ファイル名に埋め込む余分な桁に注意する必要はありません。 通常のルート名と拡張子を指定するだけです。
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

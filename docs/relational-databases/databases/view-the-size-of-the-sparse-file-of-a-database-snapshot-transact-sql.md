@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6434b5e98944ee48b51d3d1c06db0ba94fbda0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a84f5bfb08b3824f908b7b38a1da0dddcd8a71c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルがスパース ファイルであることを確認する方法と、その実サイズおよび最大サイズを調べる方法について説明します。 NTFS ファイル システムの機能であるスパース ファイルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットによって使用されます。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>例
 次のスクリプトは、各スパース ファイルのディスク上のサイズを KB 単位で表示します。  また、スパース ファイルが増えた場合の最大サイズも MB 単位で表示します。  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で Transact-SQL スクリプトを実行します。
 
-```tsql
+```sql
 SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
         sd.name AS [Snapshot],
         mf.name AS [Filename], 
