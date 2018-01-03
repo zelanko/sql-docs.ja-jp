@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c7a34974cfcae2d58f7dcaefaffc9bc09e148f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>OVER 句 (TRANSACT-SQL) の選択します。
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -195,7 +195,7 @@ ROWS/RANGE を指定した場合と\<前のウィンドウ フレーム > の使
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. OVER 句を ROW_NUMBER 関数と共に使用する  
  次の例では、OVER 句と ROW_NUMBER 関数を使用して、パーティション内の各行の行番号を表示する方法を示します。 OVER 句に指定した ORDER BY 句によって、列 `SalesYTD` を基準に各パーティション内の行の順序付けが行われます。 SELECT ステートメントの ORDER BY 句によって、クエリ結果セット全体が返される順序が決まります。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +235,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. OVER 句を集計関数と共に使用する  
  次の例では、クエリによって返されるすべての行に対して、`OVER` 句と集計関数を使用しています。 この例では、`OVER` 句を使用した方が、サブクエリを使用して集計値を取得するより効率的です。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +278,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  次の例を使用して、`OVER`計算値で、集計関数を含む句。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +322,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. 移動平均および累積合計を生成する  
  次の例では、OVER 句を指定した AVG および SUM 関数を使用して、`Sales.SalesPerson` テーブルに各区域の年間売り上げの移動平均と累積合計を入力します。 データがパーティション分割`TerritoryID`によって論理的に順序付けと`SalesYTD`です。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 ことに注意して`TerritoryID`1 の場合、そこが 2005 年の 2 つの行を表す 2 つの販売員の売上その年です。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +361,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  この例では、OVER 句に PARTITION BY が含まれません。 これは、関数がクエリによって返されるすべての行に適用されることを意味します。 OVER 句で指定されている ORDER BY 句によって、AVG 関数が適用される論理的な順序が決まります。 このクエリは、WHERE 句で指定されているすべての販売区域について、年ごとの売上の移動平均を返します。 SELECT ステートメントで指定されている ORDER BY 句により、クエリの行が表示される順序が決まります。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  次の例では、行句を使用して、現在の行として行を計算するウィンドウを定義し、 *N* (この例では 1 行) に続く行の数。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +428,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  次の例では、ROWS 句と共に UNBOUNDED PRECEDING を指定しています。 その結果、ウィンドウはパーティションの最初の行から開始します。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +462,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. OVER 句を ROW_NUMBER 関数と共に使用する  
  次の例では、営業担当者が、割り当てられている販売ノルマに基づくを ROW_NUMBER を返します。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. OVER 句を集計関数と共に使用する  
  次の例では、集計関数で OVER 句の使用を示します。 この例では、OVER 句を使用するサブクエリを使用するよりも効率的です。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  計算値で、集計関数を OVER 句を使用して次の例を示しています。 集計が計算される`SalesOrderNumber`とそれぞれの行ごとの販売注文の合計の割合を計算`SalesOrderNumber`です。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   

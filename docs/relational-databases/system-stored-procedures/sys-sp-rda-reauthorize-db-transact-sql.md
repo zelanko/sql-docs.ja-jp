@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6e9f73c96cc07bfe442ac3104c4b1f4824596ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 55c8e5167997ceb944cdce51b9d73b651c347396
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
   
 ## <a name="remarks"></a>解説  
@@ -67,7 +67,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="example"></a>例  
  次の例とリモート データベースのストレッチの有効なローカル データベースの間で認証された接続を復元します。 (推奨)、リモート データのコピーを作成し、新しいコピーに接続します。  
   
-```tsql  
+```sql  
 DECLARE @credentialName nvarchar(128);   
 SET @credentialName = N'<existing_database_scoped_credential_name>';   
 EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;  

@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ PERSIST_SAMPLE_PERCENT = {ON |オフ}
 ## <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats によるすべての統計の更新  
  データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,27 +191,27 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW SQL データ ウェアハウス/  
  PDW では、次の構文はサポートされていない SQL データ ウェアハウス/  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -219,7 +219,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>A. テーブルのすべての統計を更新する  
  次の例は、上のすべてのインデックスの統計を更新、`SalesOrderDetail`テーブル。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +229,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>B. 1 つのインデックスの統計を更新する  
  次の例の統計を更新する、`AK_SalesOrderDetail_rowguid`のインデックス、`SalesOrderDetail`テーブル。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +239,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 50% サンプリングで統計を更新する  
  次の例を作成しの統計を更新し、`Name`と`ProductNumber`内の列、`Product`テーブル。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +253,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. FULLSCAN および NORECOMPUTE を使用して統計を更新する  
  次の例の更新プログラム、`Products`内の統計、`Product`テーブルで、すべての行でフル スキャンの強制、`Product`テーブル、および自動の統計をオフに、`Products`統計。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,21 +266,21 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>E. テーブルで統計を更新します。  
  次の例の更新プログラム、`CustomerStats1`に関する統計情報、`Customer`テーブル。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. フル スキャンを使用して、統計の更新  
  次の例の更新プログラム、`CustomerStats1`内の行をすべてスキャンに基づいて、統計、`Customer`テーブル。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>G. テーブルのすべての統計を更新する  
  次の例は、すべての統計を更新、`Customer`テーブル。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
@@ -293,7 +293,7 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 
 

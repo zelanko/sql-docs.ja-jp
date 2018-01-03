@@ -3,7 +3,7 @@ title: "sqlservr アプリケーション |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlservr
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1736e617da17f058e27a970e73e77ada7957876e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52fb7eaebe655c2be06b23522e434a2e08950b62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlservr**アプリケーションを開始、停止、一時停止、およびのインスタンスを引き続き[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コマンド プロンプトからです。  
@@ -78,7 +78,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  **-n**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスの起動を可能にします。 **-s** パラメーターを設定しない場合、既定のインスタンスが起動します。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に \mssql$Instance1 を使用する場合、ユーザーは \mssql$Instance1\binn ディレクトリで **sqlservr.exe -s instance1**を起動する必要があります。 インスタンスを起動する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で、  **-n** オプションは、使用することをお勧めです、 **-e**オプションも、または[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]イベントは記録されません。  
   
- **-T** *trace#*  
+ **-T** *trace #*  
  指定された、有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
   
 > [!IMPORTANT]  

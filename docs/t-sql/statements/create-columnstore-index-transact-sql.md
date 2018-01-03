@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 行ストア テーブルをクラスター化列ストア インデックスに変換するか、非クラスター化列ストア インデックスを作成します。 OLTP ワークロードに効率的にリアルタイムの経営分析を実行する、またはデータ ウェアハウスのワークロードのデータの圧縮とクエリのパフォーマンスを向上させるためには、列ストア インデックスを使用します。  
   
 > [!NOTE]  
->  以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、クラスター化列ストア インデックスとテーブルを作成することができます。   まず行ストア テーブルを作成し、クラスター化列ストア インデックスに変換する必要は不要になったです。  
-  
+> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、クラスター化列ストア インデックスとテーブルを作成することができます。   まず行ストア テーブルを作成し、クラスター化列ストア インデックスに変換する必要は不要になったです。  
+
+> [!TIP]
+> インデックスのデザイン ガイドラインについてを参照してください、 [SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)です。
+
 例に進みます。  
 -   [行ストア テーブルを列ストアに変換するための例](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [非クラスター化列ストア インデックスの例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -257,7 +260,7 @@ ON
   
 この文脈での default という語はキーワードではありません。 既定のファイル グループの識別子を指定しのように区切る必要があります**"**既定**"**または ON **[**既定**]**です。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="GenRemarks"></a>全般的な解説  
@@ -299,20 +302,20 @@ ON
 **次の一般的なビジネス データ型の 1 つの列ストア インデックス内の各列があります。** 
 -   datetimeoffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   日付  
 -   時間 [(  *n*  )]  
 -   float [(  *n*  )]  
 -   real [(  *n*  )]  
 -   decimal [(*精度*[ *、小数点以下桁数*] **)** ]
 -   数値 [(*精度*[ *、小数点以下桁数*] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (対象[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]およびクラスター化列ストア インデックスのみに Azure SQL データベース premium の価格レベルを)   
@@ -350,7 +353,7 @@ ON
  **列ストア インデックスは、次の機能と組み合わせることはできません。**  
 -   計算列。 SQL Server 2017 から始めて、クラスター化列ストア インデックスは保存されない計算列を含めることができます。 ただし、SQL Server 2017、クラスター化列ストア インデックスが保存される計算列を含めることはできませんし、計算列で非クラスター化インデックスを作成することはできません。 
 -   ページおよび行の圧縮と**vardecimal**ストレージ形式の (列ストア インデックスは、異なる形式で既に圧縮)。  
--   レプリケーション  
+-   のレプリケーション  
 -   Filestream
 
 クラスター化列ストア インデックスを含むテーブルには、カーソルやトリガーを使うことはできません。 この制限は、非クラスター化列ストア インデックスには適用されません。非クラスター化列ストア インデックスを含むテーブルには、カーソルとトリガーを使用できます。

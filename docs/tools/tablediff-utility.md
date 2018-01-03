@@ -3,7 +3,7 @@ title: "tablediff ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**ユーティリティ非収束の 2 つのテーブル内のデータを比較するために使用し、レプリケーション トポロジ内の非収束のトラブルシューティングに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
@@ -170,9 +170,9 @@ tablediff
   
 ## <a name="return-value"></a>戻り値  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
-|**0**|Success|  
+|**0**|成功|  
 |**1**|重大なエラー|  
 |**2**|テーブルの差分|  
   
@@ -218,7 +218,7 @@ tablediff
   
 -   **image**  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  テーブルを比較するには、比較するテーブル オブジェクトに対する SELECT ALL 権限が必要です。  
   
  **-et** オプションを使用するには、db_owner 固定データベース ロールのメンバーであることが必要です。または、少なくともサブスクリプション データベースでの CREATE TABLE 権限、および対象サーバーにある対象所有者スキーマに対する ALTER 権限を持っている必要があります。  

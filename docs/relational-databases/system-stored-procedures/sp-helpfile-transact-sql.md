@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa55f12c6e68df15f1ee9497c28133d4be3470aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f17fa70885b833fcaeabaa221382c738a5885eb6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,18 +57,18 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**fileid**|**smallint**|ファイルの数値識別子。 場合は返されません*名前*が指定されている*です。*|  
 |**ファイル名**|**nchar(260)**|物理ファイル名|  
 |**ファイル グループ**|**sysname**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルは、ログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
-|**サイズ**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
+|**size**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar (15)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**成長**|**nvarchar (15)**|ファイルを拡張するときの増分です。 これは、新しい領域が必要になるたびにファイルに追加される容量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
 |**使用状況**|**varchar (9)**|データ ファイルの場合、値は**'data only'**と、値は、ログ ファイルの**'ログのみ'**です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例は、内のファイルに関する情報を返します[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]です。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfile;  

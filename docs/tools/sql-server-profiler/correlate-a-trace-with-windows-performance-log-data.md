@@ -3,7 +3,7 @@ title: "トレースと Windows パフォーマンス ログ データの関連�
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef4781a05da3e06bc1d098dacce544dd599d647b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe3b9fbc7a0b1b7eed6b478fff11ef4abb2cde83
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>トレースと Windows パフォーマンス ログ データの関連付け
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、Microsoft Windows パフォーマンス ログを開き、トレースと相関させる対象カウンターを選択およびトレースと共に選択したパフォーマンス カウンターを表示することができます、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]グラフィカル ユーザー インターフェイス。 トレース ウィンドウでイベントを選択すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の [システム モニター] データ ウィンドウ画面の赤い縦棒で、選択したトレース イベントに関連付けられているパフォーマンス ログ データが示されます。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  **[開く]** ダイアログ ボックスで、パフォーマンス ログが含まれているファイルを選択します。 パフォーマンス ログ データは、トレース データがキャプチャされたのと同じ期間にキャプチャされている必要があります。  
   
-4.  **[パフォーマンス カウンター制限]** ダイアログ ボックスで、トレースと一緒に表示するシステム モニター オブジェクトとカウンターに対応するチェック ボックスをオンにします。 クリックして **OK.**  
+4.  **[パフォーマンス カウンター制限]** ダイアログ ボックスで、トレースと一緒に表示するシステム モニター オブジェクトとカウンターに対応するチェック ボックスをオンにします。 **[OK]** をクリックします。  
   
 5.  トレース イベント ウィンドウでイベントを選択するか、トレース イベント ウィンドウ内のいくつかの隣接する行の間を、方向キーを使用して移動します。 **[システム モニター データ]** ウィンドウ内の赤い縦棒は、選択したトレース イベントと相互に関連しているパフォーマンス ログ データを示します。  
   

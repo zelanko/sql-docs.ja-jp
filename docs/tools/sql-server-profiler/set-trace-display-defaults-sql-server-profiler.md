@@ -3,7 +3,7 @@ title: "トレース表示の既定値 (SQL Server Profiler) を設定 |Microsof
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8737ffefa5cf01785de31d41ee7a17a3b4787b1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 80fe4bde3fdbd2aad03ca328f4efcbffbecba183
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>トレース表示の既定値の設定 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックのフォントの種類を指定するツール オプションを設定する方法について説明サイズ、およびスタイルを[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース ウィンドウにトレースを表示します。 また、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により、すべての日付と時刻を、オペレーティング システムに構成されている地域設定で表示するよう指定することもできます。  

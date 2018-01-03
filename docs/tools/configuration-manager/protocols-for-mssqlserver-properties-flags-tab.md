@@ -3,7 +3,7 @@ title: "プロトコルの MSSQLSERVER プロパティ ([フラグ] タブ) |Mic
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a04a6eb74cbdf0f66896653b369f26e4065dca42
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ed0d315ee6b469fddcf3f6e10d8016f43653eda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([フラグ] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]証明書がサーバーにインストールされているときに使用、**フラグ**タブで、 **MSSQLSERVER プロパティのプロトコル** ダイアログ ボックスを表示またはプロトコルの暗号化を指定し、インスタンスのオプションを非表示にします。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の設定を有効または無効にするには、 **[ForceEncryption]** を再起動する必要があります。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="cluster-servers"></a>クラスター サーバー  
  フェールオーバー クラスターで暗号化を使用する場合は、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全に修飾された DNS 名でサーバー証明書をインストールする必要があります。 たとえば、"test1 ノード名前付きの 2 ノード クラスターを使用する場合。*\<会社 >*.com"および"test2 *。\<会社 >*.com"の証明書をインストールする必要があります"virtsql"という仮想サーバー、および"virtsql *。\<会社 >*.com"を両方のノードです。 その後、 **SQL Server 構成マネージャー** で **[ForceEncryption]** チェック ボックスをオンにすれば、フェールオーバー クラスターの暗号化を構成できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[ForceEncryption]**  
  プロトコルを強制的に暗号化します。 暗号化とは、データを読み取り不可能な形式に変更することにより、秘密情報を保護する方法です。 仮に転送プロセスで転送パケットが閲覧されることがあっても、暗号化していればデータは安全です。 チャネル バインドを使用するには、 **[強制的に暗号化]** を **[オン]** に設定し、 **[詳細設定]** タブで **[拡張保護]** を構成します。  
   

@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5523e2797d3f0a69e39f0fb3cdbd70a6f389eed2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 71f05b47a4a070e5d797a6f9ff6b5f4d88e585c5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -59,7 +59,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```tsql  
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
@@ -134,7 +134,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>大きなテーブルの切り捨て  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を削除するか、削除に必要なすべてのエクステントに対する同時ロックを保持することがなく、128 を超えるエクステントを持つテーブルを切り捨てる権限を持ちます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  必要な最小権限が ALTER *table_name*です。 TRUNCATE TABLE 権限は、特に指定のない限り、テーブル所有者、固定サーバー ロール sysadmin、および固定データベース ロール db_owner および db_ddladmin のメンバーに与えられ、譲渡できません。 ただし、TRUNCATE TABLE ステートメントをストアド プロシージャなどのモジュール内に組み込み、EXECUTE AS 句を使用してそのモジュールに適切な権限を与えることはできます。  
   
 ## <a name="examples"></a>使用例  
@@ -142,7 +142,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ### <a name="a-truncate-a-table"></a>A. テーブルを切り捨てる  
  次の例では、すべてのデータを`JobCandidate`テーブル。 `SELECT` ステートメントを `TRUNCATE TABLE` ステートメントの前後に挿入して結果を比較しています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
@@ -161,7 +161,7 @@ GO
   
  次の例では、パーティション分割されたテーブルの指定パーティションを切り捨てます。 `WITH (PARTITIONS (2, 4, 6 TO 8))`構文によりパーティション番号 2、4、6、7、および 8 が切り捨てられます。  
   
-```  
+```sql  
 TRUNCATE TABLE PartitionTable1   
 WITH (PARTITIONS (2, 4, 6 TO 8));  
 GO  

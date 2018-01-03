@@ -3,7 +3,7 @@ title: "チューニング推奨設定の表示 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0beed8adb028f43884306b92223a9c3f58db507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edd4b57780ac2df7a8eec09701819b5b44ef19bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>レッスン 1、2、チューニングの推奨設定を表示します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このタスクで作成したチューニング セッションを使用して[ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)です。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] スクリプト MyScript.sql を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをチューニングすると、その結果が [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの **[推奨設定]** タブに表示されます。次の作業では、 **チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の** [推奨設定] [!INCLUDE[ssDE](../../includes/ssde-md.md)] タブについて学習し、このタブに表示されるチューニング セッションの結果について検証します。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  新しいセッションの **[セッション名]** に「 **EvaluateMySession**」と入力し、ツール バーの **[分析の開始]** ボタンをクリックします。 この新しいセッションに対して手順 2. ～ 3. を繰り返し、推奨設定を表示します。  
   
-## <a name="summary"></a>概要  
+## <a name="summary"></a>[概要]  
 MySession チューニング セッションの内容を **[推奨設定]** タブに表示し、新しい EvaluateMySession チューニング セッションでその推奨設定の一部を評価しました。  
   
 チューニング セッションを実行した後で、チューニング オプションを変更する必要があるとわかった場合は、チューニング推奨設定の一部を評価することができます。 たとえば、最初は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでインデックス付きビューを考慮するようにチューニング オプションを指定したものの、推奨設定を生成した後で、やはりインデックス付きビューを使用しないことにしたとします。 このような場合、 **[アクション]** メニューの **[推奨設定の評価]** を使用すれば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでインデックス付きビューを考慮せずにセッションを再評価することができます。 **[推奨設定の評価]** を実行すると、以前に生成した推奨設定が現在の物理構造に仮想的に適用され、その状態から次のチューニング セッションを実行できるようになります。  

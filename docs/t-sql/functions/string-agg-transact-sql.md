@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 戻り値の型は、最初の引数 (式) に依存します。 入力引数が文字列型の場合 (`NVARCHAR`、 `VARCHAR`)、結果型は入力の型と同じになります。 次の表に、自動変換を示します。  
 
-|入力式の型 |結果 | 
+|入力式の型 |[結果] | 
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
@@ -90,7 +90,7 @@ Null 値は無視され、対応する区切り記号は追加されません。
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 新しい行で区切られた名の一覧を生成します。 
 次の例では、復帰で区切られた 1 つの結果セルの名前の一覧を生成します。
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -107,7 +107,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. NULL 値を含まないコンマで区切られた名の一覧を生成します。   
 次の例では、'なし' に null 値を置換し、1 つの結果セルにコンマ区切りで名前を返します。  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -122,7 +122,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>C. コンマ区切り値を生成します。 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -141,7 +141,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 関連するタグのニュース記事を返す 
 
 記事と、タグは、異なるテーブルに区切られます。 開発者は、各アーティクルに関連付けられているすべてのタグごとに 1 行を返すたいとします。 次のクエリを使用します。 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -160,7 +160,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 都市ごとの電子メールの一覧を生成します。
 
 次のクエリでは、従業員の電子メール アドレスを検索し、都市別にグループ化。 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +178,7 @@ GROUP BY town;
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 都市ごとの電子メールの並べ替えられたリストを生成します。   
    
 前の例と同様に、次のクエリの従業員の電子メール アドレスを検索、町、別にグループ化し、電子メールをアルファベット順に並べ替えます。   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 

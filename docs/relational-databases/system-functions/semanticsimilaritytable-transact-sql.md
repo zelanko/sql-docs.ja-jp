@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 236debd7c90389d054de4b06caff9418b15366d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYTABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICSIMILARITYTABLE
   
  この名前は、1 部から 4 部の構成の名前にできますが、リモート サーバー名は許可されません。  
   
- **列**  
+ **column**  
  結果を返すインデックス付きの列の名前です。 列でセマンティック インデックス作成が有効になっている必要があります。  
   
  **column_list**  
@@ -93,9 +93,9 @@ SEMANTICSIMILARITYTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

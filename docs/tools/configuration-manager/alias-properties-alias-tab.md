@@ -3,7 +3,7 @@ title: "&lt;エイリアス&gt;プロパティ ([別名] タブ) |Microsoft ド�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8fe43fb1322109dbd90cdb6923669503ae1ff41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cadb0bdb27b29c3f1a34e5db94154d0aaeda0382
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;エイリアス&gt;プロパティ ([別名] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]エイリアスは、接続を確立するために使用する代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 **[\<**Alias**> のプロパティ]** ダイアログ ボックスの **[別名]** ページでは、別名の接続文字列について各要素の表示や指定を行います。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **Alias Name**  
  この接続を参照するために使用する名前 (別名) です。  
   

@@ -3,7 +3,7 @@ title: "クエリ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
@@ -18,15 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1281c4a6accf5083cf6b023b4dc19b31ff432d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d7e4bf6357fe56f3c9b6a1e67e9e6aeb3675930
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queries"></a>クエリ
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データ操作言語 (DML) のデータを取得して操作に使用するボキャブラリは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。 これらのステートメントを使用して、追加、変更、クエリ、またはデータの削除、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+  データ操作言語 (DML) のデータを取得して操作に使用するボキャブラリは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と SQL データベースです。 SQL Data Warehouse と PDW (詳細については個々 のステートメントを確認) で最もも動作します。 これらのステートメントを使用して、追加、変更、クエリ、またはデータの削除、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用する DML ステートメントを示しています。  

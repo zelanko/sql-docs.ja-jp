@@ -3,7 +3,7 @@ title: "分散再生のインストール |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad107252ba6c6dc86e6720a7a07dfa87d82b2a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-distributed-replay"></a>分散再生のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Distributed Replay は、3 つの方法のいずれかでインストールできます。  
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/05/2017
   
     2.  64 ビット コンピューターで既定のインストール パスは**C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. 終了したら **[次へ]**をクリックします。  
+9. 終了したら **[次へ]** をクリックします。  
   
 10. **[インストール ルール]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップはコンピューターの構成を検証します。 検証プロセスが完了したら、 **[次へ]**をクリックします。  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/05/2017
   
  次の表に示すパラメーターは、インストール用のコマンド ライン スクリプトを作成する場合に使用します。  
   
-|パラメーター|説明|サポートされる値|  
+|パラメーター|Description|サポートされる値|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **省略可**|分散再生コントローラー サービスのサービス アカウント。|アカウントとパスワードのチェック|  
 |/CTLRSVCPASSWORD<br /><br /> **省略可**|分散再生コントローラー のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  

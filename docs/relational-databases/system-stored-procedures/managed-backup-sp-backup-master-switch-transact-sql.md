@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d7567235212388b477abcbfddca8049f2ada735
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84955e0805abf954d23159cbd0bd1e5b32d1f508
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_backup_master_switch   
                      [@state = ] { 0 | 1}  
 ```  
@@ -57,10 +57,10 @@ EXEC managed_backup.sp_backup_master_switch
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  このステートメントに関連したセキュリティの問題について説明します。サブセクション (H3 見出し) として「権限」を含めます。 必要に応じて、組み合わせ所有権や監査に関する他のサブセクションを含めることを検討してください。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  メンバーシップが必要**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対するアクセス許可**sp_deletebackuphistory**ストアド プロシージャです。  
   
 ## <a name="examples"></a>使用例  

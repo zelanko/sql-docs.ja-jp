@@ -3,7 +3,7 @@ title: "SQL Server Profiler ダイアログ ボックス |Microsoft ドキュメ
 ms.custom: 
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -48,11 +48,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 927d9d4f805932f4d95e898649e2cac60547d99c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]キャプチャするツールは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーからのイベントです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。 コマンドとのダイアログ ボックスで使用可能な設定を次に示します[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。  
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/05/2017
 このウィンドウを表示するには、トレース ファイルを開きます。 次に、 **[ファイル]** メニューの **[プロパティ]**をクリックします。  
 |アイテム|Description
 |---|---
-|**ファイル名**|表示するトレース ファイルのパスと名前。  
+|**[ファイル名]**|表示するトレース ファイルのパスと名前。  
 |**[トレース プロバイダー名]**|トレースされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前を表示。  
 |**[トレース プロバイダーの種類]**|トレースを提供したサーバーの種類を表示。  
 |**version**|トレースを提供したサーバーのバージョンを表示。  
@@ -198,16 +198,16 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 |アイテム|Description
 |---|---
 |**SQL Server**|現在接続されている SQL Server のインスタンスを指定します。 このフィールドには自動的に値が入力され、更新することはできません。  
-|**データベース**|トレース テーブルがあるデータベースを指定します。  
-|**所有者**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
+|**[データベース]**|トレース テーブルがあるデータベースを指定します。  
+|**[所有者]**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
 |**Table**|トレースの読み込み元のトレース テーブルの名前を指定します。  
 ## <a name="destination-table"></a>[ターゲット テーブル]
 **[挿入先テーブル]** ダイアログ ボックスを使用すると、トレースを格納するテーブルを指定できます。  
 |アイテム|Description
 |---|---
 |**SQL Server**|現在接続されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定します。 このフィールドには自動的に値が入力され、更新することはできません。 サーバーを変更するには、 **[キャンセル]** をクリックして、トレース テーブルを格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
-|**データベース**|トレース テーブルを格納するデータベースを指定します。  
-|**所有者**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
+|**[データベース]**|トレース テーブルを格納するデータベースを指定します。  
+|**[所有者]**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
 |**Table**|トレースを格納するテーブルの名前を指定します。  
 ## <a name="replay-configuration"></a>構成の再生
 ### <a name="basic-replay-options"></a>基本再生オプション
@@ -262,7 +262,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 
 |アイテム|Description
 |---|---
-|**[列]**|**[グループ]**への移動に使用できるデータ列の一覧です。 **[列]** の左にあるプラス記号 (**[+]**) をクリックすると、一覧が展開されます。  
+|**[列]**|**[グループ]** への移動に使用できるデータ列の一覧です。 **[列]** の左にあるプラス記号 (**[+]**) をクリックすると、一覧が展開されます。  
 |**[上へ]**|データ列を選択した後で、 **[上へ]** をクリックすると、データ列を上に移動して **[グループ]**に入れることができます。 また、 **[上へ]** をクリックして、トレース ウィンドウ表示内の列の表示を再構成することもできます。  
 |**[下へ]**|データ列を選択した後で、 **[下へ]** をクリックすると、データ列を下に移動して **[グループ]**から除外することができます。 また、 **[下へ]** をクリックして、トレース ウィンドウ表示内の列の表示を再構成することもできます。  
 ## <a name="edit-filter"></a>フィルターを編集します。
@@ -278,7 +278,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 |**テンプレート名**|新しいテンプレート名を入力するか、一覧からテンプレート名を選択します。 テンプレートをエクスポートする場合は、一覧からのみテンプレート名を選択できます。 
 
 ## <a name="see-also"></a>参照 
-[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+[[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [サーバーのパフォーマンスと利用状況の監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

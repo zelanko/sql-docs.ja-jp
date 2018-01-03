@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee043b18eebafdc86b0d2d6e6a34afc0fc865c2f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e6de8f9b9a1ed36135915e5985312a02c02fba6d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (ワイルドカード - 一致する文字列) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/18/2017
 ### <a name="a-simple-example"></a>A: 簡単な例   
 次の例は、文字で始まるの名前を返します`m`です。 `[n-z]`2 番目の文字が、範囲内でどこかにする必要がありますを指定します`n`に`z`です。 ワイルドカードのパーセント記号`%`の先頭 3 文字またはない任意の文字が許可されています。 `model`と`msdb`データベースは、この条件を満たしています。 `master`データベースがないし、結果セットから除外されます。
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -59,7 +59,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B: より複雑な例   
  次の例では、4 桁の郵便番号付きの住所を持つ [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] のすべての従業員の ID と名前を [] 演算子を使用して検索します。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  

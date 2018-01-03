@@ -3,7 +3,7 @@ title: "トレース結果をテーブル (SQL Server Profiler) に保存しま�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47c21a4e8505dedbb6f9b811aba09302aeaf019b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dad96c512f0cbbd35155568ad2aa63933ccfadc6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>トレース結果のテーブルへの保存 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックを使用して、データベース テーブルにトレース結果を保存する方法について説明[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **[所有者]** ボックスの一覧で、トレースの所有者を選択します。  
   
-6.  **[テーブル]** ボックスの一覧で、トレース結果用のテーブルの名前を入力または選択します。 クリックして **OK.**  
+6.  **[テーブル]** ボックスの一覧で、トレース結果用のテーブルの名前を入力または選択します。 **[OK]** をクリックします。  
   
 7.  **[トレースのプロパティ]** ダイアログ ボックスで、 **[最大行数の設定 (1000 行単位)]**チェック ボックスをオンにして、保存する最大行数を指定します。  
   

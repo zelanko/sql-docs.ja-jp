@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ string
 ## <a name="examples"></a>使用例
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  文字列の両方の側から、空白文字を削除します。   
 次の例は前に、から、単語の後にスペースを削除`test`です。   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +68,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  指定した文字列の両方の側からの文字を削除   
 次の例では、末尾にピリオドと末尾のスペースを削除します。
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

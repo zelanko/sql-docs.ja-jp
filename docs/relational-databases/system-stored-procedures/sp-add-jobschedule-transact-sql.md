@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63ebaeb737f3e1d1b6abbf2a8b4800161a82e9ef
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_type=** ] *frequency_type*  
  いつジョブを実行するかを示す値を指定します。 *frequency_type*は**int**、既定値は**0**値は次のいずれかを指定できます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |**1**|1 回。|  
 |**4**|毎日。|  
@@ -155,7 +155,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="remarks"></a>解説  
  ジョブ スケジュールはジョブとは別々に管理できます。 ジョブにスケジュールを追加するには、使用**sp_add_schedule**スケジュールを作成し、 **sp_attach_schedule**ジョブにスケジュールをアタッチします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -168,7 +168,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## <a name="example"></a>例
  次の例では、ジョブ スケジュールを`SaturdayReports`毎週土曜日の午前 2 時に実行します。
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
         @name = N'Weekly_Sat_2AM',  -- Schedule name

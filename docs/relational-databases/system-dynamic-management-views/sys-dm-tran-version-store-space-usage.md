@@ -24,11 +24,11 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 8488ee0a8bb823438071cb912bd56c08af640b42
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/17/2017
 |**reserved_page_count**|**bigint**|Tempdb のバージョンで予約済みページの合計数は、データベースのレコードを格納します。|  
 |**reserved_space_kb**|**bigint**|バージョンの tempdb のキロバイトで使用される領域の合計は、データベースのレコードを格納します。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 
 ## <a name="examples"></a>使用例  
  次のクエリは、tempdb で使用されている領域を判断する SQL Server インスタンス内の各データベースのバージョン ストアで使用できます。 
   
-```tsql  
+```sql  
 SELECT 
   DB_NAME(database_id) as 'Database Name',
   reserved_page_count,

@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e5b69caf7cde64cae7454c7132e1ee739898fff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8c83285118f584351172a3722427697479bb1bb7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
@@ -73,9 +73,9 @@ LSN にギャップがある場合は、ログ チェーンが中断されてい
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  必要があります**選択**この関数に対する権限。  
   
 ## <a name="examples"></a>使用例  

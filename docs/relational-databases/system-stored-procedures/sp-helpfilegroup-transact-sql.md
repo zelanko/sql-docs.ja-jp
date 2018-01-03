@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85bb9f9c5e389c80f3316b6a62dea8e82ac25d77
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ab59a2912f51882954420a81514b0fe2089f9a8f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**file_in_group**|**sysname**|ファイル グループ内のファイルの論理名です。|  
 |**fileid**|**smallint**|数値ファイル識別子です。|  
 |**ファイル名**|**nchar(260)**|ディレクトリ パスを含むファイルの物理名です。|  
-|**サイズ**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
+|**size**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar (15)**|ファイルの最大サイズ。<br /><br /> この値は、ファイルのサイズの上限です。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**成長**|**nvarchar (15)**|ファイルを拡張するときの増分です。 これは、新しい領域が必要するたびに、ファイルに追加される領域の量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -76,7 +76,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ### <a name="a-returning-all-filegroups-in-a-database"></a>A. データベース内のすべてのファイル グループを返す  
  次の例は、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースのファイル グループに関する情報を返します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup;  
@@ -86,7 +86,7 @@ GO
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. ファイル グループ内のすべてのファイルを返す  
  次の例は、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの `PRIMARY` ファイル グループにあるすべてのファイルの情報を返します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  

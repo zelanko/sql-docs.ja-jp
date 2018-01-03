@@ -3,7 +3,7 @@ title: "SQL Server Profiler での SHOWPLAN 結果を使用したクエリの分
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf597a585e7fa47f63a7680fb24d76f4bff0331
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aaa8f844875745aff792771df4085e59f7808a54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler での Showplan 結果を使用したクエリの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Showplan イベント クラスを追加するには、トレース定義に[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を収集し、トレース内でクエリ プランの情報を表示します。 また、トレースで収集した他のイベントから Showplan イベントを抽出し、これらの Showplan イベントを個別の XML ファイルに保存することもできます。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="showplan-events"></a>Showplan イベント  
  次の表に、各種の Showplan トレース イベントとその説明を示します。  
   
-|イベント名|説明|  
+|イベント名|Description|  
 |----------------|-----------------|  
 |**Performance statistics**|コンパイル済みの Showplan が初めてキャッシュされたとき、再コンパイルされたとき、およびプラン キャッシュから削除されたときを示します。 **TextData** 列には、XML 形式の Showplan が含まれます。 詳細については、「 [Performance Statistics イベント クラス](../../relational-databases/event-classes/performance-statistics-event-class.md)」を参照してください。|  
 |**Showplan All**|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのコンパイルに関する完全な詳細情報が含まれたクエリ プランを表示します。 たとえば、コストの見積りと列リストを表示できます。 詳細については、「 [Showplan All イベント クラス](../../relational-databases/event-classes/showplan-all-event-class.md)」を参照してください。|  

@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d7a50927d6fc3e193b54e85dd534aa859d13fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  イベント通知の送信が失敗した場合はログに記録されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベース スコープ (ON DATABASE) のイベント通知を作成するには、現在のデータベースの CREATE DATABASE DDL EVENT NOTIFICATION 権限が必要です。  
   
  サーバー スコープ (ON SERVER) の DDL ステートメントのイベント通知を作成するには、サーバーの CREATE DDL EVENT NOTIFICATION 権限が必要です。  
@@ -140,7 +140,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. サーバー スコープのイベント通知を作成する  
  次の例は、サービスを使用してターゲットを設定する必要なオブジェクトを作成[!INCLUDE[ssSB](../../includes/sssb-md.md)]です。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 通知を送信する対象のサービスでイベント通知が作成されるたびに、`Object_Created`のインスタンスでトレース イベントが発生した[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +167,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. データベース スコープのイベント通知を作成する  
  次の例では、前の例と同じ対象サービスに対してイベント通知を作成します。 イベント通知を起動した後、`ALTER_TABLE`イベントで発生する、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]サンプル データベース。  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,7 +186,7 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. データベース スコープのイベント通知に関する情報を取得する  
  次の例のクエリ、`sys.event_notifications`カタログのイベント通知に関するメタデータのビュー`Notify_ALTER_T1`データベース スコープで作成されました。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  

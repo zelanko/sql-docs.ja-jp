@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
   
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  これらのアクセス許可のいずれかが必要です。  
   
 -   ALTER TABLE  
@@ -234,7 +234,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. CREATE STATISTICS を SAMPLE number PERCENT と共に使用する  
  次の例を作成、`ContactMail1`の 5% のランダムなサンプルを使用して、統計、`BusinessEntityID`と`EmailPromotion`の列、`Contact`のテーブル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +243,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. CREATE STATISTICS を FULLSCAN および NORECOMPUTE と共に使用する  
  次の例では、`ContactMail2` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行を対象に、`Contact` 統計情報を作成し、統計の自動再計算を無効にします。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +252,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. CREATE STATISTICS を使用してフィルター選択された統計情報を作成する  
  次の例では、フィルター選択された統計情報 `ContactPromotion1` を作成します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 50% のデータをサンプリングしを持つ行を選択し、 `EmailPromotion` 2 に等しい。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +265,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フル スキャンのオプション、統計を作成する一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合は、既定のサンプリング方法通常で十分です。  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +276,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT で使用します。  
  次の例を作成、`ContactMail2`のすべての行の統計情報、`BusinessEntityID`と`EmailPromotion`の列、`Contact`テーブルし、明示的に必要ないのは後続のすべての更新プログラムを指定、サンプリングの 100% のサンプリング比率を設定割合です。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +287,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>F. 2 つの列に統計を作成します。  
  次の例を作成、`CustomerStats1`に基づいて統計、`CustomerKey`と`EmailAddress`の列、`DimCustomer`テーブル。 内の行の統計的に有意なサンプルに基づいて統計が作成、`Customer`テーブル。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. フル スキャンを使用して統計を作成します。  
  次の例を作成、`CustomerStatsFullScan`内の行をすべてスキャンに基づいて、統計、`DimCustomer`テーブル。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,7 +302,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. サンプルの割合を指定して統計を作成します。  
  次の例を作成、`CustomerStatsSampleScan`内の行の 50% のスキャンに基づく、統計情報、`DimCustomer`テーブル。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 029ba3a0508e3198b3b81e94a508783308a4257d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  整数[式](../../t-sql/language-elements/expressions-transact-sql.md)パスのサーバー コンポーネントの書式設定方法を定義します。 *@option*次の値のいずれかを指定できます。 既定値は 0 です。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |0|サーバー名を BIOS 形式に変換して返します (例: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`)。|  
-|1|たとえば、サーバー名を変換せずが返されます。`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|@shouldalert|たとえば、サーバー名を変換せずが返されます。`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|たとえば、完全なサーバー パスを返します。`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
@@ -68,7 +68,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |-----------|-----------------|  
 |指定されていません。|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
 |0|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
-|1|関数は、パス内のコンピューター名を返します。|  
+|@shouldalert|関数は、パス内のコンピューター名を返します。|  
   
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar(max)**  
@@ -86,7 +86,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. FILESTREAM BLOB のパスを読み取る  
  次の例では、`PathName` を `nvarchar(max)` 変数に代入します。  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -98,7 +98,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. FILESTREAM BLOB のパスをテーブルに表示する  
  次の例では、3 つの FILESTREAM BLOB のパスを作成および表示します。  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  

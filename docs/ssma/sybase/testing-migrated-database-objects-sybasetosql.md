@@ -3,7 +3,7 @@ title: "テストに移行したデータベース オブジェクト (SybaseToS
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6359268254ee4b430380e6de91ad4ac0dc5f9ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a20ba21c0e142db53579500cf7e9f87f15fa556
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>移行されたデータベース オブジェクト (SybaseToSQL) のテスト
 Microsoft SQL Server Migration Assistant for Sybase Tester (SSMA テスター) が自動的にテスト データベース オブジェクトへの変換と SSMA によって行われたデータの移行。 SSMA のすべての移行手順が完了したら後、は、SSMA Tester を使用して、変換したオブジェクトが同じように動作し、すべてのデータが正常に転送されることを確認してください。  
@@ -55,7 +55,7 @@ SSMA テスターは、Sybase および対応する SQL Server でのテスト�
 > [!NOTE]  
 > 注意してください。 実稼働システムでは、SSMA Tester を使用しないでください。 テストの実行中に、送信元スキーマとデータが変更されます。 一方で、元の状態の完全な復元はテスト対象コードの種類によって可能なでない可能性があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 SSMA Tester を使用する場合は、SSMA Sybase 拡張機能パックをインストール、 **Tester データベースのインストール**オプションをオンにします。  
   
 さらに、次の点を確認します。  

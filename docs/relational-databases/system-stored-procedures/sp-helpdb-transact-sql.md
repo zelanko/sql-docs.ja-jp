@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar (128)**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイル ID。|  
 |**ファイル名**|**nchar(260)**|オペレーティング システム ファイル名 (物理ファイル名) です。|  
-|**ファイル グループ**|**nvarchar (128)**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルはログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
-|**サイズ**|**nvarchar(18)**|ファイル サイズ (MB 単位) です。|  
+|**ファイル グループ**|**nvarchar(128)**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルはログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
+|**size**|**nvarchar(18)**|ファイル サイズ (MB 単位) です。|  
 |**maxsize**|**nvarchar(18)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**成長**|**nvarchar(18)**|ファイルを拡張するときの増分です。 これは、新たに領域が必要になるたびにファイルに追加する容量を示します。|  
 |**使用状況**|**varchar (9)**|ファイルの使い方を示します。 データ ファイルの場合は、値は**'data only'**と、値は、ログ ファイルの**'ログのみ'**です。|  
@@ -77,7 +77,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ## <a name="remarks"></a>解説  
  **ステータス**結果内の列がどのオプションは、データベースで ON に設定されているレポートを設定します。 すべてのデータベース オプションがによって報告されていない、**ステータス**列です。 現在のデータベース オプションの設定の完全な一覧を表示する、 **sys.databases**カタログ ビューです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  1 つのデータベースが指定されている場合、メンバーシップ、**パブリック**データベース内のロールが必要です。 データベースが指定されていない場合のメンバーシップ、**パブリック**における役割、**マスター**データベースが必要です。  
   
  データベースにアクセスすることはできない場合、 **sp_helpdb**可能な限り、データベースに関するエラー メッセージ 15622 と情報が表示されます。  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. 特定のデータベースに関する情報を返す  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに関する情報を表示します。  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>B. すべてのデータベースに関する情報を返す  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するサーバー上のすべてのデータベースに関する情報を表示します。  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

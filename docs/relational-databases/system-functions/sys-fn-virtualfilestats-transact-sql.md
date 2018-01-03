@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ## <a name="remarks"></a>解説  
  **fn_virtualfilestats** I/o の合計数などの統計情報は、テーブル値関数が、ファイルに対して実行されるシステムです。 この関数を使用して、ユーザーがファイルに対する読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、この関数は、大量の I/O 利用量が生じたファイルを確認する場合にも役立ちます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -81,7 +81,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. データベースの統計情報を表示する  
  次の例の ID を使用してデータベース内のファイル ID 1 の統計情報を表示する`1`です。  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 指定されたデータベースおよびファイルの統計情報を表示する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数`DB_ID`指定に使用される、 *database_id*パラメーター。  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,7 +99,7 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. すべてのデータベースおよびファイルの統計情報を表示する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベースにあるすべてのファイルの統計情報を表示します。  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  

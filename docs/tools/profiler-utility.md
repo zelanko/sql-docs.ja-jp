@@ -3,7 +3,7 @@ title: "Profiler ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e01a99b3fa95074d48f2d3f7c69596cfd4c2d7e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c3bd2990df59e1ae2ccaa0a5a162b3ac42e4c938
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profiler-utility"></a>profiler ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**プロファイラー**ユーティリティが起動し、[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]ツールです。 このトピックの後半で説明する省略可能な引数を使用して、アプリケーションの起動を制御できます。  
@@ -87,7 +87,7 @@ profiler
  Profiler を起動するときに読み込むトレース テーブルを指定します。 データベース、ユーザーやスキーマ、およびテーブルを指定する必要があります。  
   
  **/T"** *template_name* **"**  
- トレースを構成するために読み込まれるテンプレートを指定します。 テンプレート名は引用符で囲む必要があります。 テンプレートは、システム テンプレート ディレクトリまたはユーザー テンプレート ディレクトリに格納されている必要があります。 同じ名前のテンプレートが両方のディレクトリにある場合は、システム ディレクトリのテンプレートが読み込まれます。 指定した名前のテンプレートが存在しない場合は、標準テンプレートが読み込まれます。 テンプレートのファイル拡張子 (.tdf) は、 *template_name*の一部として指定しないでください。 例:  
+ トレースを構成するために読み込まれるテンプレートを指定します。 テンプレート名は引用符で囲む必要があります。 テンプレートは、システム テンプレート ディレクトリまたはユーザー テンプレート ディレクトリに格納されている必要があります。 同じ名前のテンプレートが両方のディレクトリにある場合は、システム ディレクトリのテンプレートが読み込まれます。 指定した名前のテンプレートが存在しない場合は、標準テンプレートが読み込まれます。 テンプレートのファイル拡張子 (.tdf) は、 *template_name*の一部として指定しないでください。 例 :  
   
 ```  
 /T "standard"  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ad511e008e2d2c1d975f54a03db8290b26e527
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**間接再帰をサポートしていません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  実行する権限が必要です、@tsql引数。  
   
 ## <a name="examples"></a>使用例  
@@ -186,7 +186,7 @@ WHERE object_id = @id1'
   
  0 を使用した例は、情報は返されないことを示します。  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.t (a int PRIMARY KEY, b1 int);  
 GO  
 CREATE VIEW dbo.v AS SELECT b1 AS b2 FROM dbo.t;  
@@ -196,36 +196,36 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|b3|NULL|NULL|NULL|NULL|  
+|0|@shouldalert|b3|NULL|NULL|NULL|NULL|  
   
  1 を使用した例は、クエリに FOR BROWSE オプションが含まれているかのように情報が返されることを示します。  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1  
   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|b3|dbo|t|B1|0|  
-|1|2|a|dbo|t|a|1|  
+|0|@shouldalert|b3|dbo|t|B1|0|  
+|@shouldalert|2|a|dbo|t|a|@shouldalert|  
   
  2 を使用した例は、カーソルを準備しているかのように分析されることを示します。  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|B3|dbo|v|B2|0|  
-|1|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|@shouldalert|B3|dbo|v|B2|0|  
+|@shouldalert|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>問題の例  
  以下の例では、すべて 2 つのテーブルを使用します。 次のステートメントを実行して、これらのテーブルを作成します。  

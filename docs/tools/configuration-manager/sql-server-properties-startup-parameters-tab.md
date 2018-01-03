@@ -3,7 +3,7 @@ title: "SQL Server のプロパティ (起動パラメーター タブ) |Microso
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このダイアログ ボックスを使用して追加またはスタートアップ パラメーターを削除、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 起動時のパラメーターは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに大きな影響を及ぼします。 起動時のパラメーターを追加または変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[起動時のパラメーターの指定]**  
  パラメーターを追加するには、パラメーターを入力し、 **[追加]**をクリックします。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 |パラメーター|簡単な説明|  
 |---------------|-----------------------|  
-|-m|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。|  
+|-M|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。|  
 |-T1204|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを返します。|  
 |-T1224|ロック数に基づいてロックのエスカレーションを無効にします。|  
 |-T3608|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、master データベース以外のすべてのデータベースを自動的に開始および復旧しないようにします。|  

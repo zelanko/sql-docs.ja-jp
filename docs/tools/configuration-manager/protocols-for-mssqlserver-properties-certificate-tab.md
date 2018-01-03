@@ -3,7 +3,7 @@ title: "プロトコルの MSSQLSERVER プロパティ ([証明書] タブ) |Mic
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 906539a3d5bf160a7d4eae77f5503830becb0b72
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22aed889fcc7884a34f770e7931cf82ac6983061
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([証明書] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、**証明書**タブで、 **MSSQLSERVER プロパティのプロトコル**用の証明書を選択するダイアログ ボックス[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または証明書のプロパティを表示します。 証明書を選択するまで、すべてのフィールドは空になっています。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/05/2017
  証明書は、コンピューター上のユーザーにローカルに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用する証明書を読み込むには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスと同じユーザー アカウントで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを実行している必要があります。  
   
 ## <a name="page-header"></a>ページ ヘッダー  
- **表示**  
+ **[表示]**  
  証明書の詳細を表示できます。 **[証明書]** ボックスで証明書を選択するまで使用できません。 証明書の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のドキュメントを参照してください。  
   
  **Clear**  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
  **[MSSQLSERVER のプロトコルのプロパティ]**  
  セキュリティ プロバイダーによって判別される証明書の名前です。 証明書を選択すると、プロパティのグリッドに詳細が表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  [有効期限]  
  証明書の有効期間の最終日付です。  
   

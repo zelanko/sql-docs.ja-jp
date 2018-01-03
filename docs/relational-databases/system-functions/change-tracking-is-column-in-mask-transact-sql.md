@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75d56944852d39d083bd1a8c075c3efb6aaa723
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ca1e489937aba92270fe73978f017c35b4fca99
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |戻り値|Description|  
 |------------------|-----------------|  
 |0|指定した列がない、 *change_columns*  ボックスの一覧です。|  
-|1|指定された列は、 *change_columns*  ボックスの一覧です。|  
+|@shouldalert|指定された列は、 *change_columns*  ボックスの一覧です。|  
   
 ## <a name="remarks"></a>解説  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK を検証するには、どのチェックは行われず、 *column_id*値、すなわち、 *change_columns*パラメーターは、元のテーブルから取得された、 *column_id*取得されました。  
@@ -68,7 +68,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="examples"></a>使用例  
  次の例を決定するかどうか、`Salary`の列、`Employees`テーブルが更新されました。 `COLUMNPROPERTY`関数、列の ID を返します、`Salary`列です。 `@change_columns` CHANGETABLE をデータ ソースとして使用して、クエリの結果をローカル変数を設定する必要があります。  
   
-```tsql  
+```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
     (COLUMNPROPERTY(OBJECT_ID('Employees'), 'Salary', 'ColumnId')  
     ,@change_columns);  

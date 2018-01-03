@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f6134bec732593480cd20973eb7687a29cfbf2b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 63f4d48f77556f04f1d9d2c3c381afd859a7c240
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (ワイルドカード - 1 文字に一致) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 
 次の例では、すべてのデータベースの文字で始まる名前を返します`m`文字があると`d`3 番目の文字として。 アンダー スコア文字では、名前の 2 番目の文字が任意の文字にできることを指定します。 `model`と`msdb`データベースは、この条件を満たしています。 `master`データベースはありません。
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -65,7 +65,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B: より複雑な例
  次の例では、_ 演算子が、内のすべてのユーザーの検索を使用して、`Person`で終わる 3 文字の姓を持つテーブルは、`an`です。  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -76,14 +76,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>C: アンダー スコア文字のエスケープ   
 次の例と同様に、固定データベース ロールの名前を返します`db_owner`と`db_ddladmin`も返されますが、`dbo`ユーザー。 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 3 番目の文字位置にアンダー スコアが、ワイルドカードとして扱わし、文字で始まるプリンシパルのみにフィルター処理されていない`db_`です。 エスケープするために、アンダー スコアかっこで囲む`[_]`です。 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   

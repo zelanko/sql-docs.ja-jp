@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>クエリ プラン内の複数のステートメントに対するプラン ガイドの作成  
  sp_create_plan_guide_from_handle では、sp_create_plan_guide と同様に、対象となるバッチやモジュールのクエリ プランがプラン キャッシュから削除されます。 これは、新しいプラン ガイドがすべてのユーザーによって使用されるようにするための措置です。 1 つのクエリ プラン内の複数のステートメントに対してプラン ガイドを作成する場合は、すべてのプラン ガイドを明示的なトランザクションの中で作成することによって、キャッシュからプランが削除されるのを遅らせることができます。 これにより、そのトランザクションが完了して、指定した各ステートメントのプラン ガイドが作成されるまで、プランがキャッシュに保持されます。 例 B を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。 その他、sp_create_plan_guide_from_handle を使用して作成するプラン ガイドごとに必要な個々の権限があります。 型のプラン ガイドを作成するのには、オブジェクトには、参照先オブジェクトに対する ALTER 権限が必要です。 SQL または TEMPLATE 型のプラン ガイドを作成するには、現在のデータベースに対する ALTER 権限が必要です。 作成されるプラン ガイドの型を特定するには、次のクエリを実行します。  
   
 ```  
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. プラン キャッシュ内のクエリ プランからプラン ガイドを作成する  
  次の例では、プラン キャッシュ内のクエリ プランを指定して 1 つの SELECT ステートメントのプラン ガイドを作成します。 まず、プラン ガイドを作成する単純な `SELECT` ステートメントを実行します。 次に、動的管理ビューの `sys.dm_exec_sql_text` および `sys.dm_exec_text_query_plan` を使用してこのクエリのプランを調べます。 その後、クエリに関連付けられているプラン キャッシュ内のクエリ プランを指定して、クエリのプラン ガイドを作成します。 この例の最後のステートメントは、プラン ガイドが存在することを確認します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

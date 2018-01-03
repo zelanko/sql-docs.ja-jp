@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5fc84614d46bdf32bcbcc4bfa9ace7cf049baa9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 66b921eb3bd6378d20de11a0197a20c957d14ac6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パーティション関数の変更に関するレプリケーションはサポートされていません。 パブリケーション データベース内のパーティション関数への変更は、手動でサブスクリプション データベースに適用させる必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  次の権限のいずれかを使用すると、ALTER PARTITION FUNCTION を実行できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
@@ -117,7 +117,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. パーティション テーブルまたはパーティション インデックスの 1 つのパーティションを 2 つのパーティションに分割する  
  次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 `ALTER PARTITION FUNCTION`5 つのパーティションの集計を作成するのには、2 には、1 つのパーティションを分割します。  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -135,7 +135,7 @@ SPLIT RANGE (500);
 ### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. パーティション テーブルの 2 つのパーティションを 1 つのパーティションにマージする  
  次の例では、上記と同じパーティション関数を作成し、次にこれらのパーティションのうちの 2 つを 1 つにマージして、合計 3 つのパーティションにします。  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  

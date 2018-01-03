@@ -3,7 +3,7 @@ title: "トレース (SQL Server Profiler) に表示される列の構成 |Micro
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7a21efcc0d50f58497cc169610c77cd9fb0d00e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 35692d5068e1dfcbe446d3a9bd79ee7f35ef1e18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>トレースに表示される列の構成 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トレース内のデータ列を選択してグループ化できます**列の**トレース テーブルのまたは**トレース ファイルのプロパティ**ダイアログ ボックスで、トレースを定義する場合またはします。 データ列をグループ化すると、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トレース内のデータ列を選択してグループ化できます**列の**トレース テーブルのまたは**トレース ファイルのプロパティ**ダイアログ ボックスで、トレースを定義する場合またはします。 データ列をグループ化すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)」を参照してください。  
   
  **[列の構成]** を使用すると、トレース イベントをグループ化するか、または選択するデータ列でトレース イベントをグループ化して集計できます。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
-|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   グループ化する列を 1 列だけ選択して、トレース イベントをグループ化し集計します。 グループ化するデータ列を 1 列だけ選択すると、トレース ウィンドウにそのデータ列の値でグループ化されたイベントが表示され、その下にあるすべてのイベントが折りたたまれます。 グループ化するために選択したデータ列のイベントの左側にはプラス記号 (**+**) が表示され、右側にはその下で折りたたまれているイベントの数がかっこ内に表示されます。 次の例は、グループ化用に **EventClass** データ列だけを選択した場合、トレース ウィンドウのグリッドがどのように表示されるかを示しています。 すべてのイベントが **EventClass** データ列に配置されていることに注意してください。 すべてのイベントを表示するには、プラス記号をクリックして展開し、その種類のすべてのイベント クラスを表示します。  

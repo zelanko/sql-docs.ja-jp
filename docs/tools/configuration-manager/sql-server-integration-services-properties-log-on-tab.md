@@ -3,7 +3,7 @@ title: "SQL Server Integration Services のプロパティ ([ログオン] タ�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eaab42d630f5952bf93835d8c3bcd568552a468
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d1809315d710225bca806053d97583d76fa8c604
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、**ログオン**のタブ、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **プロパティ** ダイアログ ボックスで使用されるアカウントを指定する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス、および開始、停止、サービス。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   

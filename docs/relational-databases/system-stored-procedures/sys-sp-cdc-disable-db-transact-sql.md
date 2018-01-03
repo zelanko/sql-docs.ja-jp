@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6bde9363f4778f4aee337d11067b28fefc9895c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bf0fefa010665821d13153072e35214080385566
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 sys.sp_cdc_disable_db  
 ```  
   
@@ -60,13 +60,13 @@ sys.sp_cdc_disable_db
 > [!NOTE]  
 >  変更データ キャプチャが無効なときにデータベースに対して多数のキャプチャ インスタンスが定義されている場合、実行時間の長いトランザクションがあると sys.sp_cdc_disable_db が実行できなくなる場合があります。 sys.sp_cdc_disable_db を実行する前に sys.sp_cdc_disable_table を使用して個々のキャプチャ インスタンスを無効にすれば、この問題を防ぐことができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`AdventureWorks2012` データベースで変更データ キャプチャを無効にします。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE sys.sp_cdc_disable_db;  

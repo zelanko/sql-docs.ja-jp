@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -75,13 +75,13 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  どちらのセッションをデッドロック対象として選択するかは、各セッションのデッドロック優先度によって決まります。  
   
--   両方のセッションであれば、同じデッドロック優先度のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションがデッドロックの対象としてロールバックするより低コストを選択します。 たとえば、両方のセッションがデッドロック優先度を HIGH に設定している場合、インスタンスは、ロールバックするのに負担がかからないと思われるセッションをデッドロック対象として選択します。  
+-   両方のセッションであれば、同じデッドロック優先度のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションがデッドロックの対象としてロールバックするより低コストを選択します。 たとえば、両方のセッションがデッドロック優先度を HIGH に設定している場合、インスタンスは、ロールバックするのに負担がかからないと思われるセッションをデッドロック対象として選択します。 コストは、各トランザクションの時点に書き込まれたログ バイト数を比較することによって決定されます。 (わかりますこの値として"Log Used"deadlock graph)。
   
 -   セッションの間でデッドロック優先度が異なる場合、一番低いデッドロック優先度のセッションがデッドロック対象として選択されます。  
   
  SET DEADLOCK_PRIORITY は、解析時ではなく実行時に設定されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

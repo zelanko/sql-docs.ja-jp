@@ -3,7 +3,7 @@ title: "sqlmaint ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlmaint
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**ユーティリティには、指定された 1 つまたは複数のデータベースでメンテナンス操作のセットを実行します。 **sqlmaint** を使用して、DBCC チェックの実行、データベースとデータベース トランザクション ログのバックアップ、統計の更新、およびインデックスの再構築を行います。 すべてのデータベース メンテナンス操作では、指定されたテキスト ファイル、HTML ファイル、または電子メール アカウントに送信できるレポートが生成されます。 **sqlmaint** は、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。 コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プランを実行するには、 [dtexec](../integration-services/packages/dtexec-utility.md)ユーティリティを使用します。  
@@ -135,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  *sqlmaint* がリモート サーバーにアクセスする場合、 **html_file** には、完全な UNC ファイル名を指定する必要があります。  
   
  **-DelHtmlRpt** \<*time_period*>  
- レポート ファイルの作成後の時間間隔を超えた場合に、レポート ディレクトリ内のすべての HTML レポートを削除するように指定\< *time_period*>。 **-DelHtmlRpt** は、 *html_file* パラメーターを基に生成されたパターンに適合する名前を持つファイルを検索します。 場合*html_file*が c:\Program files \microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm、 **-delhtmlrpt**により**sqlmaint** C:\Program files \microsoft SQL server \mssql\backup\adventureworks2012_maint パターンに一致する名前のファイルを削除する\*.htm とするが、指定よりも古い\< *time_period*>。  
+ レポート ファイルの作成後の時間間隔を超えた場合に、レポート ディレクトリ内のすべての HTML レポートを削除するように指定\< *time_period*>。 **-DelHtmlRpt** は、*html_file* パラメーターを基に生成されたパターンに適合する名前を持つファイルを検索します。 場合*html_file*が c:\Program files \microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm、 **-delhtmlrpt**により**sqlmaint** C:\Program files \microsoft SQL server \mssql\backup\adventureworks2012_maint パターンに一致する名前のファイルを削除する\*.htm とするが、指定よりも古い\< *time_period*>。  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  **-D**に指定されたデータベースから使用されていない領域を削除します。 このオプションは、自動拡張が定義されているデータベースに対してのみ使用できます。 *Threshold_percent* は、 **sqlmaint** が使用されていないデータ領域を削除する基準となるデータベースのサイズを MB 単位で指定します。 データベースが *threshold_percent*より小さい場合、何も行われません。 *Free_percent* は、データベースに残す必要がある使用されていない領域の量を、データベースの最終的なサイズに対する割合として指定します。 たとえば、200 MB のデータベースに 100 MB のデータを取り込む場合、 *free_percent* に 10 を指定すると、最終的なデータベース サイズは 110 MB になります。 データベースが *free_percent* とデータベースのデータ量の合計より小さい場合、データベースは拡張されないことにご注意ください。 たとえば、108 MB のデータベースが 100 MB のデータを持つ場合、 *free_percent* に 10 を指定してもデータベースは 110 MB に拡張されず、108 MB のままです。  
@@ -149,7 +149,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-D** に指定されたデータベースで、NOINDEX オプションを含んだ DBCC CHECKALLOC ステートメントを実行します。 詳細については、「[DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)」を参照してください。  
   
  **-CkCat**  
- **-D**に指定されたデータベースで、DBCC CHECKCATALOG (Transact-SQL) ステートメントを実行します。 詳細については、「[DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)」を参照してください。  
+ **-D** に指定されたデータベースで、DBCC CHECKCATALOG (Transact-SQL) ステートメントを実行します。 詳細については、「[DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)」を参照してください。  
   
  **-UpdOptiStats** *sample_percent*  
  データベースの各テーブルで、次のステートメントを実行します。  

@@ -3,7 +3,7 @@ title: "sqllogship アプリケーション |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllogship
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbc29db3024f217fc09f283c3310ead6034e5003
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqllogship**アプリケーションは、ログ配布構成のバックアップ、コピー、または復元操作、および関連するクリーンアップ タスクを実行します。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
@@ -58,10 +58,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  ログ配布の履歴に追加するメッセージのレベルを指定します。 *level* は、次のいずれかの整数です。  
   
-|level|説明|  
+|level|Description|  
 |-----------|-----------------|  
 |0|トレースおよびデバッグのメッセージを出力しません。|  
-|1|エラー処理メッセージを出力します。|  
+|@shouldalert|エラー処理メッセージを出力します。|  
 |2|警告およびエラー処理メッセージを出力します。|  
 |**3**|情報メッセージ、警告、およびエラー処理メッセージを出力します。 これが既定値です。|  
 |4|すべてのデバッグおよびトレースのメッセージを出力します。|  
@@ -79,10 +79,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  **sqllogship** アプリケーション  (SqlLogShip.exe) は、x:\Program Files\Microsoft SQL Server\130\Tools\Binn ディレクトリにインストールされます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sqllogship** では Windows 認証を使用します。 コマンドを実行する Windows 認証アカウントには、Windows のディレクトリ アクセスおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の権限が必要です。 要件は、 **sqllogship** コマンドで **-backup**、 **-copy**、 **-restore** のいずれのオプションを指定するかで変わります。  
   
-|オプション|ディレクトリ アクセス|権限|  
+|オプション|ディレクトリ アクセス|アクセス許可|  
 |------------|----------------------|-----------------|  
 |**-backup**|バックアップ ディレクトリの読み取り/書き込みアクセス許可が必要です。|BACKUP ステートメントと同一の権限が必要です。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)」を参照してください。|  
 |**-copy**|バックアップ ディレクトリの読み取りアクセス許可と、コピー ディレクトリの書き込みアクセス許可が必要です。|[sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) ストアド プロシージャと同一の権限が必要です。|  

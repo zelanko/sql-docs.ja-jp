@@ -23,11 +23,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 > [!IMPORTANT]
 > TPC c ワークロードのテストと同様に、軽量の統計プロファイル インフラストラクチャを有効にする 1.5 ~ 2% のオーバーヘッドを追加します。 これに対し、標準的な統計プロファイル インフラストラクチャでは、同一のワークロードのシナリオのオーバーヘッドを最大 90% を追加できます。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
 
 ## <a name="examples"></a>使用例  
@@ -88,14 +88,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 実行中のバッチのライブ クエリ プランと実行の統計情報を見る  
  次の例のクエリ**sys.dm_exec_requests**興味深いクエリとコピーを検索するその`session_id`出力からします。  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  次に、ライブ クエリ プランと実行の統計情報を取得するを使用して、先ほどコピーした`session_id`をシステム関数**sys.dm_exec_query_statistics_xml**です。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +103,7 @@ GO
 
  または、実行中のすべての要求を結合します。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

@@ -3,7 +3,7 @@ title: "分散再生の要件 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/08/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,20 +17,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: ondemand
-ms.openlocfilehash: 1344620cc4885e91be7e89432969903fb0e79301
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 951f403905f260532c5d4aa806597e916142d15d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="distributed-replay-requirements"></a>分散再生の要件
+# <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用する前に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をこのトピックで説明する製品要件を検討してください。  
   
 ## <a name="input-trace-requirements"></a>入力トレースの要件  
  トレース データを正常に再生するには、バージョンと形式の要件を満たし、必要なイベントと列が含まれている必要があります。  
   
 ### <a name="input-trace-versions"></a>入力トレースのバージョン  
- 分散再生は、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で収集される入力トレース データをサポートします。  
+ 分散再生は、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で収集される入力トレース データをサポートします。  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]累積更新プログラム 1 以降。 参照してください - [SQL Server 2017 の累積的な更新](http://aka.ms/sql2017cu)です。
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
@@ -139,7 +139,7 @@ ms.lasthandoff: 12/05/2017
   
 |分散再生機能|再生環境ごとのインストール数の上限|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービス|1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービス|@shouldalert|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント サービス|16 (物理コンピューターまたは仮想コンピューター)|  
 |管理ツール|無制限|  
   

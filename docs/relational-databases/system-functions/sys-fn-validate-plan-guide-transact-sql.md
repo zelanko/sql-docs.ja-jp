@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbca0ca02e994a3c286cea445965edd9cd53bfcf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ddde4fe4ff510058ff1a70a329a8939de0808a3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |state|**smallint**|エラーが発生したコード内の場所を示すエラーの状態番号です。|  
 |message|**nvarchar (2048)**|エラー メッセージのテキストです。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  スコープが OBJECT のプラン ガイドでは、参照先オブジェクトに対する VIEW DEFINITION 権限または ALTER 権限と、プラン ガイドに含まれるクエリやバッチをコンパイルするための権限が必要です。 たとえば、バッチに SELECT ステートメントが含まれている場合は、参照先オブジェクトに対する SELECT 権限が必要です。  
   
  スコープが SQL または TEMPLATE のプラン ガイドでは、データベースに対する ALTER 権限と、プラン ガイドに含まれるクエリやバッチをコンパイルするための権限が必要です。 たとえば、バッチに SELECT ステートメントが含まれている場合は、参照先オブジェクトに対する SELECT 権限が必要です。  
@@ -70,7 +70,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### <a name="a-validating-all-plan-guides-in-a-database"></a>A. データベースのすべてのプラン ガイドの検証をテストする  
  次の例では、現在のデータベースのすべてのプラン ガイドの有効性を確認します。 空の結果セットが返された場合は、すべてのプラン ガイドが有効です。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. データベースに変更を実装する前にプラン ガイドを検証する  
  次の例では、明示的なトランザクションを使用してインデックスを削除します。 `sys.fn_validate_plan_guide`この操作で、データベース内のすべてのプラン ガイドを無効にするかどうかを決定する関数を実行します。 この関数の結果に基づいて、`DROP INDEX` ステートメントがコミットされるか、トランザクションがロールバックされます。トランザクションがロールバックされた場合は、インデックスは削除されません。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

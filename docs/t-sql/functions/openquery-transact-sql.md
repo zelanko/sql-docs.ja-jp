@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66c1c5dc3f116cc88b8e61111f626361a1a601b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,15 +57,15 @@ OPENQUERY ( linked_server ,'query' )
 ## <a name="remarks"></a>解説  
  OPENQUERY の引数に変数は指定できません。  
   
- OPENQUERY を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできません。 ただし、4 つの要素で構成される名前を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできます。 例:  
+ OPENQUERY を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできません。 ただし、4 つの要素で構成される名前を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできます。 例 :  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
  FROM 句での OPENDATASOURCE、OPENQUERY、または OPENROWSET の呼び出しは、更新の対象として使用されるこれらの関数の呼び出しとは別に評価されます。これは、両方の呼び出しに同じ引数が指定されている場合にも当てはまります。 特に、いずれか一方の呼び出しの結果に適用されるフィルター条件または結合条件は、もう一方の結果に影響しません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  すべてのユーザーが OPENQUERY を実行できます。 リモート サーバーへの接続に使用される権限は、リンク サーバー用の定義から取得されます。  
   
 ## <a name="examples"></a>使用例  
@@ -73,7 +73,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. UPDATE パススルー クエリを実行する  
  次の例は、パススルー`UPDATE`例 A で作成したリンク サーバーに対するクエリ  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +81,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. INSERT パススルー クエリを実行する  
  次の例は、パススルー`INSERT`例 A で作成したリンク サーバーに対するクエリ  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,14 +89,14 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. DELETE パススルー クエリを実行する  
  次の例では、`DELETE` パススルー クエリを使用して、例 C で追加した行を削除します。  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. SELECT パススルー クエリを実行する  
  次の例は、パススルー`SELECT`例 C で挿入された行を選択するクエリ  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     

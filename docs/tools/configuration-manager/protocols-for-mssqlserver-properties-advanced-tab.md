@@ -3,7 +3,7 @@ title: "プロトコルの MSSQLSERVER プロパティ ([詳細設定] タブ) |
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7755e07d2b2c52cfd22b71e07e607c33f7f2ea27
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b92a99eb2a86a6bbf03c4d6ca84c0d18c7dc4923
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、 **[詳細設定]**タブで、 **MSSQLSERVER プロパティのプロトコル**を構成するダイアログ ボックス**認証の拡張保護**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. **拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 で使用でき、それ以前のオペレーティング システムではサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。 **拡張保護** の利点には、 **[フラグ]** タブで **[強制的に暗号化]** を選択していないと得られないものもあります。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
   
  **拡張保護** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Native Client によって完全にサポートされています。 その他の **クライアント プロバイダーでは、** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は現時点ではサポートされていません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **拡張保護**  
  指定可能な 3 つの値は次のとおりです。  
   

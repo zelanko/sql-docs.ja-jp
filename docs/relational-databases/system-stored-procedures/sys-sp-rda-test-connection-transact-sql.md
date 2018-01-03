@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 897eb5ff888873c7e9befcdb850b13dd2dd9be03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e7376d3b6fa4bebac0e0b176bd4144d6bec54b0c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -75,19 +75,19 @@ EXECUTE sys.sp_rda_test_connection
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|link_state|int|値に対応して、次の値のいずれかの**link_state_desc**です。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state|ssNoversion|値に対応して、次の値のいずれかの**link_state_desc**です。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
 |link_state_desc|varchar(32)|上記に対応して、次の値のいずれかの値を**link_state**です。<br /><br /> -正常<br />     SQL Server とリモート Azure サーバーは正常です。<br />-ERROR_AZURE_FIREWALL<br />     Azure のファイアウォールが原因で SQL Server とリモート Azure サーバー間のリンク。<br />-ERROR_NO_CONNECTION<br />     SQL Server では、リモート Azure サーバーへの接続を作成できません。<br />-ERROR_AUTH_FAILURE<br />     認証の失敗が原因で SQL Server とリモート Azure サーバー間のリンク。<br />-エラー<br />     認証の問題、接続の問題またはファイアウォールの問題ではないエラーが原因で SQL Server とリモート Azure サーバー間のリンク。|  
-|error_number|int|エラーの数。 エラーがない場合は、このフィールドは NULL です。|  
+|error_number|ssNoversion|エラーの数。 エラーがない場合は、このフィールドは NULL です。|  
 |error_message|nvarchar (1024)|エラー メッセージです。 エラーがない場合は、このフィールドは NULL です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>SQL Server から、リモート Azure サーバーへの接続を確認します。  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
 ### <a name="check-the-azure-firewall"></a>Azure ファイアウォールを確認します。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -113,11 +113,11 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<ファイアウォールに関連するエラー番号 >*|*\<ファイアウォールに関連するエラー メッセージ >*|  
+|@shouldalert|ERROR_AZURE_FIREWALL|*\<ファイアウォールに関連するエラー番号 >*|*\<ファイアウォールに関連するエラー メッセージ >*|  
   
 ### <a name="check-authentication-credentials"></a>認証の資格情報を確認  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -133,7 +133,7 @@ GO
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>リモートの Azure サーバーの状態を確認します。  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

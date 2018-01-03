@@ -1,7 +1,7 @@
 ---
 title: "ALTER AVAILABILITY GROUP (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
 > [!IMPORTANT]  
->  AUTOMATED_BACKUP_PREFERENCE 設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、次を参照してください[可用性レプリカ &#40; バックアップの構成。SQL Server &#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  AUTOMATED_BACKUP_PREFERENCE 設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 自動バックアップ設定は、アドホック バックアップには影響を与えません。 詳細については、次を参照してください[可用性レプリカ &#40; バックアップの構成。SQL Server &#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  既存の可用性グループの自動バックアップ設定を表示するには、選択、 **automated_backup_preference**または**automated_backup_preference_desc**の列、 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)カタログ ビューです。 さらに、 [sys.fn_hadr_backup_is_preferred_replica &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)優先されるバックアップ レプリカを決定するために使用できます。  この関数は常に少なくとも 1 つのレプリカの 1 を返す場合でも、`AUTOMATED_BACKUP_PREFERENCE = NONE`です。  
@@ -199,7 +199,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |レベル|エラー状態|  
 |-----------|-----------------------|  
-|1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)」を参照してください。|  
+|@shouldalert|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)」を参照してください。|  
 |2|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クラスターに接続しません。 可用性グループのユーザー指定の HEALTH_CHECK_TIMEOUT しきい値を超えました。<br /><br /> 可用性レプリカがエラー状態である。|  
 |3|重要なので、自動フェールオーバーを開始することを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]孤立したスピンロック、深刻な書き込みアクセス違反、ダンプが多すぎるなどの内部エラーが発生します。<br /><br /> これは既定の動作です。|  
 |4|度が中程度、自動フェールオーバーを開始することを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で永続的なメモリ不足の状態などの内部エラーが発生、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部リソース プールです。|  
@@ -302,7 +302,7 @@ ALTER AVAILABILITY GROUP group_name
 
    詳細については、次を参照してください。[構成のみのレプリカ](../../linux/sql-server-linux-availability-group-ha.md)です。
     
- AVAILABILITY_MODE は、ADD REPLICA ON 句では必須で、MODIFY REPLICA ON 句では省略可能です。 詳細については、「 [可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
+ AVAILABILITY_MODE は、ADD REPLICA ON 句では必須で、MODIFY REPLICA ON 句では省略可能です。 詳細については、「[可用性モード &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。  
   
  FAILOVER_MODE  **=**  {自動 |手動}  
  定義している可用性レプリカのフェールオーバー モードを指定します。  
@@ -337,7 +337,7 @@ ALTER AVAILABILITY GROUP group_name
   
 -   0 は、その可用性レプリカがバックアップの実行に対して選択されないことを示します。 これは、たとえば、バックアップをフェールオーバーすることがないリモート可用性レプリカのような場合に便利です。  
   
- 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+ 詳細については、「 [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  SECONDARY_ROLE **(** . **)**  
  この可用性レプリカが現在セカンダリ ロールを所有している場合に (つまり、セカンダリ レプリカである場合は常に) 有効であるロール固有の設定を指定します。 かっこの中では、いずれか一方または両方のセカンダリ ロール オプションを指定します。 両方を指定する場合は、コンマ区切りのリストを使用します。  
@@ -542,14 +542,14 @@ ALTER AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  運用環境での DHCP の使用はお勧めしません。 ダウンタイムが発生して DHCP IP のリース期限が切れると、リスナーの DNS 名に関連付けられている新しい DHCP のネットワーク IP アドレスの登録に余分な時間がかかり、クライアント接続に影響が及びます。 ただし、開発環境とテスト環境を設定して可用性グループの基本機能を確認する場合や、アプリケーションとの統合の場合には DHCP が適しています。  
   
- 例:  
+ 例 :  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  IP による**(** { **('***four_part_ipv4_address***'、'***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **、** . *n*  ] **)** [ **、**ポート **=**  *listener_port*]  
  可用性グループ リスナーが、DHCP を使用する代わりに、1 つ以上の静的 IP アドレスを使用することを指定します。 複数のサブネットにわたる可用性グループを作成するには、各サブネットのリスナー構成に静的 IP アドレスが 1 つ必要です。 サブネットの静的 IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。 ネットワーク管理者に連絡し、新しい可用性グループの可用性レプリカをホストする各サブネットの静的 IP アドレスを入手してください。  
   
- 例:  
+ 例 :  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
@@ -599,10 +599,10 @@ ALTER AVAILABILITY GROUP group_name
   
  可用性グループの TRANSACT-SQL ステートメントの制限については、次を参照してください[の Always On 可用性グループ &#40; TRANSACT-SQL ステートメントの概要。SQL Server &#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
+ 可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  ALTER ANY DATABASE 権限も必要があります。   
   
 ## <a name="examples"></a>使用例  
   

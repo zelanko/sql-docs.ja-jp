@@ -3,7 +3,7 @@ title: "SQLdiag ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqldiag
 ms.reviewer: 
@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2533811a2ccc47ac836079c4a4972bfc1f9e5bd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ffbcdc873f61ee683e182294d40bb7880047b60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SQLdiag**ユーティリティはコンソール アプリケーションまたはサービスとして実行できる一般的な診断収集ユーティリティです。 **SQLdiag** を使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 **SQLdiag** は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスによる診断情報収集の高速化と簡素化も目的としています。  
@@ -164,11 +164,11 @@ sqldiag
   
  *SQLdiag_application_name* を使用すると、 **SQLdiag** サービスの特定のインスタンスを開始または停止できます。  
   
- 例:  
+ 例 :  
   
  **SQLDIAG START /A**  *SQLdiag_application_name*  
   
- **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 例:  
+ **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 例 :  
   
  **SQLDIAG /R /A** *SQLdiag_application_name*  
   
@@ -227,13 +227,13 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** サービスを開始または停止します。 **STOP_ABORT** は、現在実行されている診断収集が終了していなくても、できるだけ早く強制的にサービスをシャットダウンします。  
   
- このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例:  
+ このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例 :  
   
  **SQLDIAG START**  
   
- **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例:  
+ **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例 :  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START/A** *SQLdiag_application_name*  
   
 ## <a name="security-requirements"></a>セキュリティ要件  
  **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  

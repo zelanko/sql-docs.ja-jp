@@ -3,7 +3,7 @@ title: "レッスン 1: 基本的なナビゲーション データベース エ
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dd5bbaafbd076779463bf205208c12ce0d39b7ea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1eeead53bf2d2f1a6ff1c5117395e134b1af8acd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]データベース エンジン チューニング アドバイザーでは、グラフィカル ユーザー インターフェイス (GUI) ベースのビューのチューニング セッションやチューニング推奨設定レポートする方法を提供します。 このレッスンでは、このツールの起動方法および操作画面の構成方法を説明します。 このレッスンを終了すると、ツールの起動と画面の構成を複数の方法で行い、日常的に実行するチューニング タスクに活用できるようになります。  

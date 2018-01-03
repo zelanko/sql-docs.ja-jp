@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE 互換性レベル (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,17 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5e55a85b2ff67327198ff3fa54654b904429ed8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (TRANSACT-SQL) の互換性レベル
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   
-データベースの特定の動作の指定されたバージョンに合うように設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE &#40;Transact-SQL&#41;。](../../t-sql/statements/alter-database-transact-sql.md)  
+データベースの特定の動作の指定されたバージョンに合うように設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md)  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,21 +79,22 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  バージョンを調べるには、次のクエリ実行、[!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続されています。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
 > [!NOTE]  
 >  サポートされる互換性レベルによって異なる機能をすべて[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
 
- 現在の互換性レベルを特定するのには、クエリ、 **compatibility_level**の列[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
+ 現在の互換性レベルを特定するのには、クエリ、 **compatibility_level**の列[sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
 ## <a name="remarks"></a>解説  
- すべてのインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンに既定の互換性レベルが設定されて、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 データベースがこのレベルに設定されていない限り、**モデル**データベースが互換性レベルを低くします。 以前のバージョンからのデータベースのアップグレードされると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は少なくとも最小のインスタンスを許可されている場合、データベースは、既存の互換性レベルを保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 許可されたレベルより低い互換性レベルでデータベースをアップグレードするには、最下位の互換性レベルに、データベースを設定します。 これはシステム データベースとユーザー データベースの両方に適用されます。 使用して**ALTER DATABASE**データベースの互換性レベルを変更します。 データベースの現在の互換性レベルを表示するには、クエリ、 **compatibility_level**内の列、 **sys.databases**カタログ ビューです。  
+
+すべてのインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンに既定の互換性レベルが設定されて、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 データベースがこのレベルに設定されていない限り、**モデル**データベースが互換性レベルを低くします。 以前のバージョンからのデータベースのアップグレードされると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は少なくとも最小のインスタンスを許可されている場合、データベースは、既存の互換性レベルを保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 許可されたレベルより低い互換性レベルでデータベースをアップグレードするには、最下位の互換性レベルに、データベースを設定します。 これはシステム データベースとユーザー データベースの両方に適用されます。 使用して**ALTER DATABASE**データベースの互換性レベルを変更します。 データベースの現在の互換性レベルを表示するには、クエリ、 **compatibility_level**内の列、 **sys.databases**カタログ ビューです。  
 
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>旧バージョンとの互換性を維持するための互換性レベルの使用  
@@ -136,7 +137,8 @@ SQL Server 2017 する前に SQL Server の以前のバージョンでは、ト�
 | 既定でトレース 2371 は OFF です。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]です。 | [トレース 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)が既定で ON[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 トレース フラグ 2371 は、小さいまだ賢明優れた多数の行があるテーブル内の行のサブセットをサンプリングする自動統計更新を指示します。 <br/> <br/> 1 つの向上では、最近挿入された行にはサンプルが含まれます。 <br/> <br/> 別の向上はクエリ、更新の統計情報の処理を実行しているではなく、クエリをブロックしている間に実行します。 |  
 | レベル 120 の場合、統計情報がによってサンプリングされた、*単一*-プロセスのスレッドします。 | によってレベル 130 の場合、統計のサンプリング、*マルチ*-プロセスをスレッドです。 |  
 | 着信 253 の外部キーは、制限です。 | 指定されたテーブルは、最大 10,000 個の入力方向の外部キーまたは類似の参照で参照できます。 制限については、「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。 |  
-|非推奨の MD2、MD4、MD5、SHA、SHA1、ハッシュ アルゴリズムが許可されます。|SHA2_256 および SHA2_512 のハッシュ アルゴリズムがのみが許可されます。|  
+|非推奨の MD2、MD4、MD5、SHA、SHA1、ハッシュ アルゴリズムが許可されます。|SHA2_256 および SHA2_512 のハッシュ アルゴリズムがのみが許可されます。|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]一部のデータ型変換と一部の (最も一般的ではない) 操作では、機能強化が含まれています。 詳細をご覧ください[いくつかのデータ型とは珍しいことで操作を処理するときの SQL Server 2016 の機能強化](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)です。|
   
   
 トレースの下にあったの修正プログラム フラグの以前のバージョンの 4199[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より前のバージョン[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]は既定で有効になっているようになりました。 互換モードは 130 です。 トレース フラグ 4199 を以降後にリリースされる新しいクエリ オプティマイザー修正プログラムの適用にすることができます[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 古いクエリ オプティマイザーを使用する[!INCLUDE[ssSDS](../../includes/sssds-md.md)]互換性レベル 110 を選択する必要があります。 トレース フラグの 4199 については、次を参照してください。[トレース フラグ 4199](https://support.microsoft.com/en-us/kb/974006)です。  
@@ -146,7 +148,7 @@ SQL Server 2017 する前に SQL Server の以前のバージョンでは、ト�
   
 |互換性レベル設定 110 以下|互換性レベル設定 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|以前のクエリ オプティマイザーが使用されます。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、クエリ プランを作成し最適化するコンポーネントに大幅な改良が加えられました。 この新しいクエリ オプティマイザー機能は、データベース互換性レベル 120 を使用している場合にのみ利用できます。 これらの改良点を利用するには、データベースの互換性レベル 120 を使用して新しいデータベース アプリケーションを開発する必要があります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から移行されたアプリケーションについては、良好なパフォーマンスが維持されているか、またはパフォーマンスが向上していることを確認するために慎重にテストを実行する必要があります。 パフォーマンスが低下する場合は、データベースの互換性レベルを 110 以前に設定して、古いクエリ オプティマイザーの方法を使用することができます。<br /><br /> データベースの互換性レベル 120 に設定した場合は、最新のデータ ウェアハウスと OLTP ワークロード向けにチューニングされた新しい基数推定機能が使用されます。 パフォーマンスの問題があるため、データベースの互換性レベルを 110 に設定、する前に、クエリ プランのセクションの推奨事項を参照してください、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [データベース エンジンの新](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)トピックです。|  
+|以前のクエリ オプティマイザーが使用されます。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]作成し、クエリ プランを最適化するコンポーネントのさらなる改善が含まれます。 この新しいクエリ オプティマイザー機能は、データベース互換性レベル 120 を使用している場合にのみ利用できます。 これらの改良点を利用するには、データベースの互換性レベル 120 を使用して新しいデータベース アプリケーションを開発する必要があります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から移行されたアプリケーションについては、良好なパフォーマンスが維持されているか、またはパフォーマンスが向上していることを確認するために慎重にテストを実行する必要があります。 パフォーマンスが低下する場合は、データベースの互換性レベルを 110 以前に設定して、古いクエリ オプティマイザーの方法を使用することができます。<br /><br /> データベースの互換性レベル 120 に設定した場合は、最新のデータ ウェアハウスと OLTP ワークロード向けにチューニングされた新しい基数推定機能が使用されます。 パフォーマンスの問題があるため、データベースの互換性レベルを 110 に設定、する前に、クエリ プランのセクションの推奨事項を参照してください、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [データベース エンジンの新](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)トピックです。|  
 |変換するときに互換性レベルが 120 未満の場合、言語設定が無視されますが、**日付**値を文字列値です。 この動作はのみに固有です、**日付**型です。 後述の「例」の例 B を参照してください。|変換するときに、言語設定は無視されませんが、**日付**値を文字列値です。|  
 |EXCEPT 句の右側にある再帰参照によって、無限ループが作成されます。 後述の「例」の例 C では、この動作を示します。|EXCEPT 句の再帰参照によって、ANSI SQL 標準に準拠したエラーが生成されます。|  
 |再帰 CTE では、重複する列名を使用できます。|再帰 CTE では、重複する列名を使用できません。|  
@@ -164,7 +166,7 @@ SQL Server 2017 する前に SQL Server の以前のバージョンでは、ト�
 |XQuery 関数**文字列長**と**substring**各サロゲートを 2 つの文字としてカウントします。|XQuery 関数**文字列長**と**substring**各サロゲート文字 1 文字としてカウントします。|  
 |PIVOT は再帰共通テーブル式 (CTE) のクエリで許可されます。 ただし、グループごとに複数の行がある場合、クエリは誤った結果を返します。|PIVOT は再帰共通テーブル式 (CTE) のクエリで許可されません。 エラーが返されます。|  
 |RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材の暗号化を解除できます。|新素材は、RC4 または RC4_128 を使用して暗号化することはできません。 AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材の暗号化を解除できます。|  
-|に対する CAST および CONVERT 操作の既定のスタイル**時間**と**datetime2**データ型は、計算列の式内のいずれかの型を使用する場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。<br /><br /> 例では、後述の「例 D では、スタイル 0 と 121 の違いを示します。 上記の動作については示しません。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。|互換性レベル 110 で CAST および CONVERT 操作の既定のスタイルで**時間**と**datetime2**データ型は常に 121 です。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。<br /><br /> データベースを互換性レベル 110 にアップグレードしても、ディスクに格納されているユーザー データは変更されません。 このようなデータは手動で適切に修正する必要があります。 たとえば、SELECT INTO を使用して、前に説明した計算列の式を含むソースからテーブルを作成した場合は、計算列の定義自体ではなく、(スタイル 0 を使用する) データが格納されます。 このようなデータは、手動で更新してスタイル 121 に一致させる必要があります。|  
+|に対する CAST および CONVERT 操作の既定のスタイル**時間**と**datetime2**データ型は、計算列の式内のいずれかの型を使用する場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。<br /><br /> 例では、後述の「例 D では、スタイル 0 と 121 の違いを示します。 上記の動作については示しません。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)|互換性レベル 110 で CAST および CONVERT 操作の既定のスタイルで**時間**と**datetime2**データ型は常に 121 です。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。<br /><br /> データベースを互換性レベル 110 にアップグレードしても、ディスクに格納されているユーザー データは変更されません。 このようなデータは手動で適切に修正する必要があります。 たとえば、SELECT INTO を使用して、前に説明した計算列の式を含むソースからテーブルを作成した場合は、計算列の定義自体ではなく、(スタイル 0 を使用する) データが格納されます。 このようなデータは、手動で更新してスタイル 121 に一致させる必要があります。|  
 |型のリモート テーブル内の列**smalldatetime**はパーティション ビューで参照されるとしてマップ**datetime**です。 型でなければなりません (選択リスト内の同じ序数位置) でのローカル テーブルの対応する列**datetime**です。|型のリモート テーブル内の列**smalldatetime**はパーティション ビューで参照されるとしてマップ**smalldatetime**です。 型でなければなりません (選択リスト内の同じ序数位置) でのローカル テーブルの対応する列**smalldatetime**です。<br /><br /> 110 にアップグレードした後は、データ型の不一致により、分散パーティション ビューは失敗します。 これを解決するには、リモート テーブルでのデータ型を変更することによって**datetime**またはレベル以下を 100 にローカルのデータベースの互換性を設定します。|  
 |SOUNDEX 関数では、次の規則を実装します。<br /><br /> 2 つの子音数を持つ同じ SOUNDEX コードの場合、1) 大文字の H または大文字の W は無視されます。<br /><br /> 2) 場合、最初の 2 文字*character_expression* SOUNDEX コードの同じ番号、両方の文字が含まれます。 最初の 2 文字の場合を除き、並んでいる一連の子音に SOUNDEX コードの同じ数値が割り当てられている場合、最初の文字以外はすべて除外されます。|SOUNDEX 関数では、次の規則を実装します。<br /><br /> 1) 場合、大文字の H または大文字の W の 2 つの分割数を持つ同じ SOUNDEX コード、右側の子音の子音は無視されます<br /><br /> 2) 一連の子音のサイド バイ サイドでは、SOUNDEX コードの同じ番号がある、すべての除外された場合、先頭を除く。<br /><br /> <br /><br /> その他のルールにより、SOUNDEX 関数で計算された値が、110 未満の互換性レベルで計算された値と異なる結果になる場合があります。 互換性レベル 110 へのアップグレード後に、SOUNDEX 関数を使用するインデックス、ヒープ、または CHECK 制約の再構築が必要になる場合があります。 詳細については、次を参照してください。 [SOUNDEX (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/soundex-transact-sql.md)|  
   
@@ -214,7 +216,7 @@ SQL Server 2017 する前に SQL Server の以前のバージョンでは、ト�
   
  詳細については、「[予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -222,7 +224,7 @@ SQL Server 2017 する前に SQL Server の以前のバージョンでは、ト�
 ### <a name="a-changing-the-compatibility-level"></a>A. 互換性レベルを変更する  
  次の例の互換性レベルを変更する、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースを`110,`[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -230,7 +232,7 @@ GO
   
  次の例では、現在のデータベースの互換性レベルを返します。  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -239,7 +241,7 @@ WHERE name = db_name();
 ### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>B. 互換性レベル 120 を除く、SET LANGUAGE ステートメントは無視されます。  
  次のクエリでは、互換性レベル 120 を除く、SET LANGUAGE ステートメントは無視されます。  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -255,7 +257,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### <a name="c"></a>C.  
  互換性レベル設定 110 以下では、EXCEPT 句の右側にある再帰参照は、無限ループを作成します。  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -268,9 +270,9 @@ FROM r;
 ```  
   
 ### <a name="d"></a>D.  
- この例では、スタイル 0 と 121 の違いを示します。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ この例では、スタイル 0 と 121 の違いを示します。 日付と時刻のスタイルの詳細については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -293,7 +295,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### <a name="e"></a>E.  
  変数代入は、最上位レベルの UNION 演算子を含むステートメントで許可されていますが、予期しない結果が返されます。 たとえば、次のステートメントでは、ローカル変数で`@v`列の値が割り当てられている`BusinessEntityID`2 つのテーブルの和集合からです。 定義上、SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。 この場合は、最後の値が変数に正しく割り当てられますが、SELECT UNION ステートメントの結果セットも返されます。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -309,7 +311,7 @@ SELECT @v;
 ### <a name="f"></a>F.  
  変数代入は、最上位レベルの UNION 演算子を含むステートメントでは許可されていません。 10734 のエラーが返されます。 エラーを解決するには、次の例で示すようにクエリを書き直してください。  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  

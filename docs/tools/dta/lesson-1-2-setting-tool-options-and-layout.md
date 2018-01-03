@@ -3,7 +3,7 @@ title: "ツール オプションとレイアウトを設定 |Microsoft ドキ�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>レッスン 1、2、ツールのオプションの設定とレイアウト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、フォント、起動時に表示するデータベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) を構成するオプションを設定することができ、その他のツールの機能に最もが使用する方法をサポートします。 このページの演習では、ユーザーが設定できるオプションとその設定方法について学習します。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
     -   データベース エンジン チューニング アドバイザーによるワークロードの分析が完了する前に、間違ってチューニング セッションを停止しないように、既定では **[セッションの分析を停止する前に確認する]** がオンになっています。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2 : データベース エンジン チューニング アドバイザーの使用](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[レッスン 2: データベース エンジン チューニング アドバイザーの使用](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

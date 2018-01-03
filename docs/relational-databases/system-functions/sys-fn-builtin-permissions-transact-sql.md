@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -224,15 +224,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Del|DATABASE|  
+|DL|Del|OBJECT|  
+|DL|Del|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|DATABASE|  
-|EX|CREATE ステートメントを実行する前に、|DATABASE|  
-|EX|CREATE ステートメントを実行する前に、|OBJECT|  
-|EX|CREATE ステートメントを実行する前に、|SCHEMA|  
-|EX|CREATE ステートメントを実行する前に、|TYPE|  
-|EX|CREATE ステートメントを実行する前に、|XML SCHEMA COLLECTION|  
+|EX|EXECUTE|DATABASE|  
+|EX|EXECUTE|OBJECT|  
+|EX|EXECUTE|SCHEMA|  
+|EX|EXECUTE|TYPE|  
+|EX|EXECUTE|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|SERVER|  
 |IM|IMPERSONATE|Login|  
 |IM|IMPERSONATE|User|  
@@ -341,27 +341,27 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 > このトピックの一部として、ポスターは、読み取るには小さすぎます。 データベース エンジンの権限ポスターは、 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)からダウンロードしてください。  
    
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 組み込み権限を一覧表示する   
 使用して`DEFAULT`または空の文字列をすべてのアクセス許可を返します。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. 対称キーに設定できる権限を一覧表示する   
 そのクラスのすべてのアクセス許可を返すクラスを指定します。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. SELECT 権限があるクラスを一覧表示する   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  

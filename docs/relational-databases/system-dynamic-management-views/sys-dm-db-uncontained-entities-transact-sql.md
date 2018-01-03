@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/27/2017
 ||||  
 |-|-|-|  
 |**列名**|**型**|**Description**|  
-|*クラス*|**int**|1 = オブジェクトまたは列 (モジュール、XP、ビュー、シノニム、およびテーブルを含む)。<br /><br /> 4 = データベース プリンシパル<br /><br /> 5 = アセンブリ<br /><br /> 6 = 型<br /><br /> 7 = インデックス (フルテキスト インデックス)<br /><br /> 12 = データベース DDL トリガー<br /><br /> 19 = ルート<br /><br /> 30 = 監査の仕様|  
+|*class*|**int**|1 = オブジェクトまたは列 (モジュール、XP、ビュー、シノニム、およびテーブルを含む)。<br /><br /> 4 = データベース プリンシパル<br /><br /> 5 = アセンブリ<br /><br /> 6 = 型<br /><br /> 7 = インデックス (フルテキスト インデックス)<br /><br /> 12 = データベース DDL トリガー<br /><br /> 19 = ルート<br /><br /> 30 = 監査の仕様|  
 |*class_desc*|**nvarchar(120)**|エンティティのクラスの説明。 クラスと一致するには、次のいずれか。<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|エンティティの ID。<br /><br /> 場合*クラス*= 1 の場合は、object_id<br /><br /> 場合*クラス*= 4、sys.database_principals.principal_id です。<br /><br /> 場合*クラス*= 5, sys.assemblies.assembly_id です。<br /><br /> 場合*クラス*= 6, sys.types.user_type_id です。<br /><br /> 場合*クラス*= 7、sys.indexes.index_id です。<br /><br /> 場合*クラス*= 12、sys.triggers.object_id です。<br /><br /> 場合*クラス*= 19、sys.routes.route_id。<br /><br /> 場合*クラス*= 30 の場合は、sys です。 database_audit_specifications.databse_specification_id です。|  
 |*statement_line_number*|**int**|クラスがモジュールの場合は、非包含エンティティの使用が見つかった行番号を返します。  それ以外の場合、値は null になります。|  
@@ -67,15 +67,15 @@ ms.lasthandoff: 11/27/2017
   
 -   システム組み込み関数  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  sys.dm_db_uncontained_entities には、ユーザーが権限のいくつかの種類のオブジェクトのみを返します。 メンバーなど、高い特権を持つユーザーでは、この機能を使用する必要があります、データベースの包含を完全に評価する、 **sysadmin**固定サーバー ロールまたは**db_owner**ロール。  
   
 ## <a name="examples"></a>使用例  
  次の例では、P1 という名前のプロシージャを作成し、 `sys.dm_db_uncontained_entities`にクエリを実行します。 このクエリは、P1 がデータベースの外部にある **sys.endpoints** を使用していることを報告します。  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

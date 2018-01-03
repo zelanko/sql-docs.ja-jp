@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10f9a117a4ecac05d541ffb004f18106f88dec75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e7ba6d9582a0eb3660f206dc68087f4fa4852a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/27/2017
  *is_full_path*  
  相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*値は次のいずれかを持つことができます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは既定値です。|  
 |**1**|以降で、完全な UNC パスを返します、`\\computer_name`です。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
  *@option*  
  パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option*次の値のいずれかを持つことができます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> これが既定値です。|  
 |**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="best-practices"></a>ベスト プラクティス  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、完全なパス、ファイルの実行時に取得を使用して、 **FileTableRootPath**と**GetFileNamespacePath**関数を併用、次の例に示すようにします。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  

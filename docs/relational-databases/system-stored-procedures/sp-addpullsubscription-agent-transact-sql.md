@@ -22,15 +22,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e13ce0bc7be6b2e21a30f13a3cf7cc299d00295
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 01f7e3cdecd4c0a95c9d91104e2feee39f00252b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
+ 
   トランザクション パブリケーションに対するプル サブスクリプションの同期で使用される、スケジュールされたエージェント ジョブを追加します。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -40,8 +40,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 sp_addpullsubscription_agent [ @publisher = ] 'publisher'  
-    [ , [ @publisher_db = ] 'publisher_db' ]  
-        , [ @publication = ] 'publication'  
+    [ , [ @publisher_db = ] 'publisher_db' ]          , [ @publication = ] 'publication'  
     [ , [ @subscriber = ] 'subscriber' ]  
     [ , [ @subscriber_db = ] 'subscriber_db' ]  
     [ , [ @subscriber_security_mode = ] subscriber_security_mode ]  
@@ -57,7 +56,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
     [ , [ @frequency_interval = ] frequency_interval ]  
     [ , [ @frequency_relative_interval = ] frequency_relative_interval ]  
     [ , [ @frequency_recurrence_factor = ] frequency_recurrence_factor ]  
-    [ , [ @frequency_subda y= ] frequency_subday ]  
+    [ , [ @frequency_subday = ] frequency_subday ]  
     [ , [ @frequency_subday_interval = ] frequency_subday_interval ]  
     [ , [ @active_start_time_of_day = ] active_start_time_of_day ]  
     [ , [ @active_end_time_of_day = ] active_end_time_of_day ]  
@@ -152,7 +151,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_type=**] *frequency_type*  
  ディストリビューション エージェントをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |**1**|指定日時|  
 |**2** (既定値)|[要求時]|  
@@ -285,12 +284,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpullsubscription_agent**です。  
   
 ## <a name="see-also"></a>参照  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

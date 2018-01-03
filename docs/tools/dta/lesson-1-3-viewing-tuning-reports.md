@@ -3,7 +3,7 @@ title: "チューニング レポートの表示 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>レッスン 1 ~ 3 - チューニング レポートの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このレッスンの前の実習で参照する、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトを作成または MySession チューニング セッションの結果として生成されたデータベース エンジン チューニング アドバイザーの推奨事項でデータベース オブジェクトを削除します。 MySession チューニング セッションは「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成しました。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  **[レポートの選択]** ボックスの一覧で他のレポートをクリックし、どのようなレポートが表示されるかを確認してください。  
   
-## <a name="summary"></a>概要  
+## <a name="summary"></a>[概要]  
 データベース エンジン チューニング アドバイザー GUI の **[レポート]** タブを使用し、MySession チューニング セッションを検証しました。 同様の手順で、EvaluateMySession チューニング セッションで生成したレポートを調べることができます。 このレポートの内容を検証するには、 **[セッション モニター]** ペインの **[EvaluateMySession]** をダブルクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  

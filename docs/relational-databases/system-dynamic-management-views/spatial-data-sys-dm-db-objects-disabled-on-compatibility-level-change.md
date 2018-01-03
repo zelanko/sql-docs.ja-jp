@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データは - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -51,7 +51,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**クラス**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
+|**class**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
 |**class_desc**|**nvarchar (60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープの場合は INDEX|  
 |**major_id**|**int**|制約の OBJECT ID <br /><br /> インデックスとヒープが含まれたテーブルの OBJECT ID|  
 |**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスとヒープの場合は Index_id|  
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: を減らす**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>無効になったオブジェクトの動作  
- **インデックス**  
+ **[インデックス]**  
   
  クラスター化インデックスが無効になっているか、非クラスター化インデックスが強制された場合、次のエラーが発生する場合:"、クエリ プロセッサは、プランを作成することは、インデックス ' % です。\*'%.*ls' のテーブルまたはビューで ' % です。\*'%.*ls' が無効です"。 これらのオブジェクトを再度有効に、インデックスを再構築のアップグレード後に呼び出すことによって**ALTER INDEX ON しています.再構築**です。  
   
@@ -143,15 +143,15 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  1 つの列を無効にすることはできないので、クラスター化インデックスまたはヒープを無効にすると、テーブル全体が無効になります。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="example"></a>例  
  次の例のクエリを示しています**sys.dm_db_objects_disabled_on_compatibility_level_change**を互換性レベルを 120 に変更することによって影響を受けるオブジェクトを検索します。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

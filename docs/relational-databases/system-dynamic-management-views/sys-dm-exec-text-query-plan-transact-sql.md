@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 -   バッチ内の個々のステートメントを指定できる。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,7 +105,7 @@ sys.dm_exec_text_query_plan
   
 アドホック クエリを使用する場合[単純](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)または[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)、 **query_plan**ステートメント テキストのみと、実際のクエリ プランではない列が含まれます。 クエリ プランを返すを呼び出す**sys.dm_exec_text_query_plan**の準備されたパラメーター化クエリのプラン ハンドル。 参照することによって、クエリがパラメーター化されたかどうかを決定できます、 **sql**の列、 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)ビューまたはの text 列、 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動的管理ビュー。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  実行する**sys.dm_exec_text_query_plan**、ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロールまたはサーバーの VIEW SERVER STATE 権限を持っています。  
   
 ## <a name="examples"></a>使用例  
@@ -118,7 +118,7 @@ sys.dm_exec_text_query_plan
   
  まず、`sp_who` ストアド プロシージャを使用して、クエリまたはバッチを実行しているプロセスのサーバー プロセス ID (SPID) を取得します。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +127,7 @@ GO
   
  によって返される結果セットは`sp_who`、spid の値があることを示します`54`です。 `sys.dm_exec_requests` 動的管理ビューで、この SPID を使用して次のクエリを実行すると、プラン ハンドルを取得できます。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +137,7 @@ GO
   
  によって返されるテーブル**sys.dm_exec_requests**実行速度の遅いクエリまたはバッチのプラン ハンドルがあることを示します`0x06000100A27E7C1FA821B10600`です。 次の例は、指定したプラン ハンドルのクエリ プランを返し、既定値 0 および -1 を使用してクエリまたはバッチ内のすべてのステートメントを返します。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +148,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. プラン キャッシュからすべてのクエリ プランを取得する  
  プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_cached_plans` 列に格納されます。 CROSS APPLY 演算子を使用して、プラン ハンドルを渡す`sys.dm_exec_text_query_plan`次のようにします。 プラン表示の出力は、現在プラン キャッシュにある各プランは、`query_plan`返されるテーブルの列です。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +160,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. サーバーで収集されたクエリ統計情報に関連するすべてのクエリ プランをプラン キャッシュから取得する  
  現在プラン キャッシュにあるクエリ プランのうち、サーバーで統計情報が収集されたすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_query_stats` 動的管理ビューに対してクエリを実行し、キャッシュにあるこれらのプランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_query_stats` 列に格納されます。 CROSS APPLY 演算子を使用して、プラン ハンドルを渡す`sys.dm_exec_text_query_plan`次のようにします。 各プランのプラン表示出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +171,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 平均 CPU 時間ごとの上位 5 つのクエリに関する情報を取得します。  
  次の例では、上位 5 つのクエリにかかった平均 CPU 時間とクエリ プランを返します。 **Sys.dm_exec_text_query_plan**関数は、既定値 0 およびクエリ プランのバッチ内のすべてのステートメントを返すには-1 を指定します。  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  

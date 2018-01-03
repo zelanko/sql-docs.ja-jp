@@ -3,7 +3,7 @@ title: "Distributed Replay のセキュリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e3f2b9639e7643ffefac8e67ac08c7443bb0463
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]インストールして使用する前に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をこのトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/05/2017
 |機能|アカウント|コントローラーで必要な DCOM 権限|  
 |-------------|-------------|---------------------------------------------|  
 |Distributed Replay 管理ツール|対話ユーザー アカウント|ローカル アクセス<br /><br /> リモート アクセス<br /><br /> ローカルからの起動<br /><br /> リモートからの起動<br /><br /> ローカルからのアクティブ化<br /><br /> リモートからのアクティブ化|  
-|分散再生クライアント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client のサービス アカウント|ローカル アクセス<br /><br /> リモート アクセス<br /><br /> ローカルからの起動<br /><br /> リモートからの起動<br /><br /> ローカルからのアクティブ化<br /><br /> リモートからのアクティブ化|  
+|[分散再生クライアント]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client のサービス アカウント|ローカル アクセス<br /><br /> リモート アクセス<br /><br /> ローカルからの起動<br /><br /> リモートからの起動<br /><br /> ローカルからのアクティブ化<br /><br /> リモートからのアクティブ化|  
   
 > [!IMPORTANT]  
 >  悪意のあるクエリまたはサービス拒否攻撃を防ぐために、クライアント サービス アカウントには信頼できるユーザー アカウントのみを使用してください。 このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象のインスタンスに対して接続とワークロードの再生を実行できるようになります。  

@@ -1,12 +1,12 @@
 ---
 title: "SQLRUserGroup をデータベース ユーザーとして追加 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 12/21/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,19 +19,25 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 97a571a9a91ac31e955f6833e27a975f87267218
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7de60bccb72364e124656f03f043c03e812187db
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>SQLRUserGroup をデータベース ユーザーとして追加します。
 
-セットアップ時に[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]または[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]のセキュリティ トークンの下にタスクを実行するために新しい Windows ユーザー アカウントが作成されます、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]サービス。 ユーザーは、機械学習、外部クライアントからのスクリプトを送信するとき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントがアクティブ化、呼び出し元のユーザーの id にマップし、ユーザーの代理としてスクリプトを実行します。 データベース エンジンのこの新しいサービスが、セキュリティで保護された外部スクリプトの実行と呼ばれるをサポートしている*黙示的な認証*です。
+この記事では、データベースに接続し、ユーザーの代理として R または Python のジョブを実行するアクセス許可が必要な SQL Server の machine learning のサービスで使用されるワーカー アカウントのグループに付与する方法について説明します。
 
-これらのアカウントを表示するには、Windows ユーザー グループに**SQLRUserGroup**です。 既定では、20 のワーカー アカウントが作成された、R を実行するために十分な数より多くのジョブは通常です。
+## <a name="what-is-sqlrusergroup"></a>SQLRUserGroup とは何ですか。
 
-ただしをする場合、リモート データ サイエンス クライアントから R スクリプトを実行する必要がある Windows 認証を使用している必要がありますを付与するこれらのワーカー アカウントにサインインするアクセス許可、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたの代理としてのインスタンス。
+セットアップ時に[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]または[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]R の実行をサポートするために新しい Windows ユーザー アカウントを作成、または Python スクリプトのセキュリティ トークンのタスクは、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]サービス。
+
+これらのアカウントを表示するには、Windows ユーザー グループに**SQLRUserGroup**です。 既定では、20 のワーカー アカウントが作成された、機械学習を実行するために十分な数より多くのジョブは通常です。
+
+ユーザーは、機械学習、外部クライアントからのスクリプトを送信するとき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可能なワーカー アカウントがアクティブ化、呼び出し元のユーザーの id にマップし、ユーザーの代理としてスクリプトを実行します。 データベース エンジンのこの新しいサービスが、セキュリティで保護された外部スクリプトの実行と呼ばれるをサポートしている*黙示的な認証*です。
+
+ただし、リモート データ サイエンス クライアントから R または Python スクリプトを実行する必要があるあり、Windows 認証を使用している、付ける必要がありますこれらのワーカー アカウントにサインインするアクセス許可、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あなたの代理としてのインスタンス。
 
 ## <a name="add-sqlrusergroup-as-a-sql-server-login"></a>SQL Server ログインとして SQLRUserGroup を追加します。
 
@@ -55,8 +61,8 @@ ms.lasthandoff: 11/17/2017
 
 5. 1 つの先頭に表示されるまで、サーバー上のグループ アカウントの一覧をスクロール`SQLRUserGroup`です。
     
-    + スタート パッド サービスに関連付けられているグループの名前、_既定のインスタンス_だけは常に**SQLRUserGroup**です。 既定のインスタンスに対してのみ、このアカウントを選択します。
-    + 使用している場合、_名前付きインスタンス_、インスタンス名が既定の名前に追加されます`SQLRUserGroup`です。 そのため場合、インスタンスは、"MLTEST"という名前は、このインスタンスの既定のユーザー グループ名になります**SQLRUserGroupMLTest**です。
+    + スタート パッド サービスに関連付けられているグループの名前、_既定のインスタンス_は常に**SQLRUserGroup**R、Python またはその両方をインストールするかどうかに関係なく、します。 このアカウントの既定のインスタンスのみを選択します。
+    + 使用している場合、_名前付きインスタンス_、インスタンス名が既定の作業者グループ名の名前に追加されます`SQLRUserGroup`です。 そのため場合、インスタンスは、"MLTEST"という名前は、このインスタンスの既定のユーザー グループ名になります**SQLRUserGroupMLTest**です。
  
      ![サーバー上のグループの使用例](media/implied-auth-login5.png "サーバー上のグループの例")
    

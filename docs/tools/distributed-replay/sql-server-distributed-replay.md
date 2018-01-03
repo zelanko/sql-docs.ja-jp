@@ -3,7 +3,7 @@ title: "SQL Server Distributed Replay |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e307c48172d882a3846c6a9ea6053188d9fff201
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bbfa2d70826055e9818985cc9b17679b5048a788
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能では、将来の影響を評価できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレードします。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
  Distributed Replay の管理ツール、コントローラー、およびクライアントは、異なるコンピューターにインストールすることも、同じコンピューターにインストールすることもできます。 同じコンピューターで実行できる Distributed Replay Controller サービスまたは Distributed Replay Client サービスのインスタンスは 1 つだけです。  
   
- 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay の物理アーキテクチャを示したものです。  
+ 次の図は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay の物理アーキテクチャを示したものです。  
   
  ![分散再生アーキテクチャ](../../tools/distributed-replay/media/distributedreplayarch.gif "分散再生アーキテクチャ")  
   

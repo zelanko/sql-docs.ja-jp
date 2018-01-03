@@ -3,7 +3,7 @@ title: "トレース (SQL Server Profiler) 中に値列またはデータ列を�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 197d74983d179aa8d9504c09d0c21786e7ac27db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe703bd160d698de591cad5ce321c0cdf4b544a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>トレース中の値列またはデータ列の検索 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックの中にトレース出力を使用して、トレースが実行中の特定の値またはデータ列を検索する方法について説明[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
      手順 1. で選択した行で検索が開始されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートとアクセス許可](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2867f3aff5b8d6d7256d2a9a4ecbe7dcfdccb88c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER データベース スコープ ベースの構成 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
 > [!NOTE] 
 > このオプションは、プライマリの場合にのみ設定できます。 詳細については、次を参照してください。 [id 列](create-table-transact-sql-identity-property.md)です。  
 
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  必要と任意のデータベース スコープ構成を変更します   
 上のデータベースです。 データベースに対する CONTROL 権限を持つユーザーは、この権限を付与することができます。  
   
@@ -194,7 +194,7 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
 この例は、ALTER DATABASE SCOPED CONFIGURATION を実行するために必要なアクセス許可を付与します。     
 ユーザー [Joe] です。  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +202,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 この例の MAXDOP 設定プライマリ データベースと MAXDOP 1 = セカンダリ データベースの地理的レプリケーションのシナリオ 4 を = です。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 この例では、同じ値に設定されている地理的レプリケーション シナリオでは、プライマリ データベースをセカンダリ データベースの MAXDOP を設定します。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +217,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 この例は、セカンダリ データベースの地理的レプリケーションのシナリオで LEGACY_CARDINALITY_ESTIMATION を ON に設定します。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 この例は、geo レプリケーションのシナリオでは、プライマリ データベースは、セカンダリ データベースの LEGACY_CARDINALITY_ESTIMATION を設定します。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,20 +231,20 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 この例は、プライマリ データベースの地理的レプリケーションのシナリオで PARAMETER_SNIFFING を OFF に設定します。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 この例は、プライマリ データベースの地理的レプリケーションのシナリオで PARAMETER_SNIFFING を OFF に設定します。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 この例ではプライマリ データベースでは、セカンダリ データベースの PARAMETER_SNIFFING を設定します。   
 geo レプリケーションのシナリオです。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
@@ -253,7 +253,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 プライマリ データベースの QUERY_OPTIMIZER_HOTFIXES を ON に設定します。   
 geo レプリケーションのシナリオです。  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +261,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 この例では、(プライマリ データベースに対してのみ可能)、プロシージャ キャッシュをクリアします。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,7 +271,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 この例では、id キャッシュが無効にします。
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 

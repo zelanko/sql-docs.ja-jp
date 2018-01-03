@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec4c1036182df1ab4a9c21dff494a0a17a1bca73
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 32a064570e66de5e2bde0bb539221c04366d5a73
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空間型の geometry (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. geometry 型のデータの追加方法とクエリ方法を示す  
  次の 2 つの例は、geometry 型のデータの追加方法とクエリ方法を示しています。 最初の例では、id 列を持つテーブルを作成し、`geometry`列、`GeomCol1`です。 3 番目の列で、 `geometry` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geometry`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  
   
-```tsql 
+```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -67,7 +67,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>B. 2 つの geometry インスタンスが交差する地点を返す  
  2 番目の例では、 `STIntersection()` メソッドを使用して、前の例で挿入した 2 つの `geometry` インスタンスが交差する点を返します。  
   
-```tsql  
+```sql  
 DECLARE @geom1 geometry;  
 DECLARE @geom2 geometry;  
 DECLARE @result geometry;  
@@ -81,7 +81,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geometry-in-a-computed-column"></a>C. 計算列で geometry 型を使用する  
  次の例では、テーブルを作成、保存される計算列を使用すると、 **geometry**型です。  
   
-```tsql  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  

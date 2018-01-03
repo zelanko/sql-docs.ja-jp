@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ match_expression [ NOT ] LIKE pattern
   
  含むパターンを使用して、文字列比較**char**と**varchar**データは、データの格納方法により、LIKE 比較をパスできません可能性があります。 各データ型の格納方法や、LIKE 比較ができない場合について理解しておく必要があります。 次の例では、ローカル**char**ストアド プロシージャとし、使用パターンと一致するすべての従業員の最後で始まる指定された文字のセットを検索する変数。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  ただし、次の例は成功を後続の空白が追加されないので、 **varchar**変数。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  次の一連の例では、ASCII LIKE パターン検索と Unicode LIKE パターン検索で返される行の違いを示します。  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  たとえば、次のクエリは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のすべての動的管理ビューを表示します。これらのすべての動的管理ビューは、文字 `dm` で始まるためです。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. LIKE を % ワイルドカード文字と共に使用する  
  次の例では、`415` テーブルで市外局番 `PersonPhone` を持つすべての電話番号を検索します。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. NOT LIKE を % ワイルドカード文字と共に使用する  
  次の例では、`PersonPhone` テーブルで `415` 以外の市外局番を持つすべての電話番号を検索します。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 句を使用する  
  次の例では、`ESCAPE`句とエスケープ文字を正確な文字の文字列を検索する`10-15%`列で`c1`の`mytbl2`テーブル。  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. [ ] ワイルドカード文字を使用する  
  次の例は、上の従業員を検索、`Person`の最初の名前を持つテーブル`Cheryl`または`Sheryl`です。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  次の例では、内の従業員の行を検索、`Person`の最後の名前を持つテーブル`Zheng`または`Zhang`です。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. LIKE を % ワイルドカード文字と共に使用する  
  次の例は、のすべての従業員を検索、`DimEmployee`で始まる電話番号を持つテーブル`612`です。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. NOT LIKE を % ワイルドカード文字と共に使用する  
  次の例は、内のすべての電話番号を検索、`DimEmployee`で始まらないテーブル`612`です。  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用するようを _ のワイルドカード文字  
  次の例で始まる市外局番を持つすべての電話番号を検索する`6`と最終`2`で、`DimEmployee`テーブル。 市外局番、電話番号の最初の部分と追加の文字が、列の値の後に存在するためには、% ワイルドカード文字が、検索パターンの末尾に含まれてもことに注意してください。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

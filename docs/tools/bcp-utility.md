@@ -3,7 +3,7 @@ title: "bcp ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 18d7ba613fe4b98adc94bcf099e9576fd0550e6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -143,7 +143,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > フォーマット ファイルの各列に対して照合順序名を指定することをお勧めします (65001 オプションを照合順序/コード ページ仕様よりも優先する場合を除く)。
   
-|コード ページ値|説明|  
+|コード ページ値|Description|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|クライアントが使用する既定のコード ページです。 **-C** が指定されていない場合に使用される既定のコード ページです。|  
@@ -180,7 +180,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-F** ***first_row***<a name="F"></a>  
  テーブルからエクスポートする最初の行、またはデータ ファイルからインポートする最初の行の番号を指定します。 このパラメーターには、0 より大きく (> 0)、行の合計数以下 (< または =) となる値が必要です。 このパラメーターがない場合、既定ではファイルの最初の行となります。  
   
- *first_row* には、2^63-1 以下の正の整数を指定できます。 **-F** *first_row* は 1 から始まります。  
+ *first_row* には、2^63-1 以下の正の整数を指定できます。 **-F** *first_row* is 1-based.  
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> は、データをテーブルまたはビューに一括インポートするときに使用するヒントを指定します。  
   
@@ -281,7 +281,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  詳細については、後の「 [解説](#remarks)」を参照してください。  
   
  **-r** ***row_term***<a name="r"></a>  
- 行ターミネータを指定します。 既定値は **\n** (改行文字) です。 既定の行ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」をご覧ください。  
+ 行ターミネータを指定します。 既定値は **\n** (改行文字) です。 既定の行ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
  bcp.exe コマンドでは、行ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
   
@@ -293,7 +293,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-S** ***server_name*** [\\***instance_name***]<a name="S"> </a>のインスタンスを示す[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を接続します。 サーバーを指定しない場合、 **bcp** ユーティリティは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続されます。 ネットワーク上のリモート コンピューターまたはローカルの名前付きインスタンスから **bcp** コマンドを実行するときは、このオプションが必要です。 サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続するには、 *server_name*のみを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、 *server_name***\\***instance_name*を使用します。  
   
  **-t** ***field_term***<a name="t"></a>  
- フィールド ターミネータを指定します。 既定値は **\t** (タブ文字) です。 既定のフィールド ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」をご覧ください。  
+ フィールド ターミネータを指定します。 既定値は **\t** (タブ文字) です。 既定のフィールド ターミネータを無効にする場合、このパラメーターを使用します。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
  bcp.exe コマンドでは、フィールド ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
   
@@ -400,7 +400,7 @@ bcp ユーティリティは、 [Microsoft SQL Server 2016 Feature Pack](https:/
 |SQLNCHAR または SQLNVARCHAR|データは Unicode として送られます。 結果は、フォーマット ファイルを指定せずに **-w** スイッチを指定した場合と同じです。|  
 |SQLBINARY または SQLVARYBIN|データは変換なしで送られます。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  **bcp out** 操作には、ソース テーブルでの SELECT 権限が必要です。  
   
  **bcp in** 操作には、対象となるテーブルでの SELECT/INSERT 権限が最低限必要となります。 また、次のうちのいずれかに該当する場合は、ALTER TABLE 権限が必要です。  

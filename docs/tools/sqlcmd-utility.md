@@ -3,7 +3,7 @@ title: "sqlcmd ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -226,7 +226,7 @@ sqlcmd
 > [!NOTE]  
 >  OSQLSERVER 環境変数は旧バージョンとの互換性を維持しています。 SQLCMDSERVER 環境変数は OSQLSERVER 環境変数よりも優先されます。これにより、 **sqlcmd** と **osql** を競合することなく組み合わせて使用でき、従来のスクリプトは引き続き機能を実行することができます。  
   
- **-U** *login_id*  
+ **ｰU** *login_id*  
  ログイン名または包含データベースのユーザー名です。 包含データベースのユーザーの場合、データベース名のオプション (-d) を指定する必要があります。  
   
 > [!NOTE]  
@@ -448,7 +448,7 @@ sqlcmd
   
  `Clock Time (ms.): total       t1  avg       t2 (t3 xacts per sec.)`  
   
- ここで:  
+ 各要素の説明は次のとおりです。  
   
  `x`SQL Server によって処理されるトランザクションの数を = です。  
   
@@ -514,7 +514,7 @@ sqlcmd
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (秒)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 無制限に待機|  
-|SQLCMDHEADERS|-h|R/W|"0"|  
+|SQLCMDHEADERS|-H|R/W|"0"|  
 |SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-A|R|"4096"|  
@@ -642,7 +642,7 @@ sqlcmd
   
  `:EXIT(query)`  
   
- 例:  
+ 例 :  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -656,7 +656,7 @@ sqlcmd
   
  EXIT の形式を次に示します。  
   
--   :EXIT   
+-   :EXIT  
   
  バッチを実行せずに直ちに終了し、値を返しません。  
   
@@ -664,11 +664,11 @@ sqlcmd
   
  バッチを実行してから終了し、値を返しません。  
   
--   :EXIT (query)   
+-   :EXIT (query)  
   
  クエリを含むバッチを実行し、クエリの結果を返して終了します。  
   
- RAISERROR を **sqlcmd** スクリプトの中で使用し、状態 127 が発生すると、 **sqlcmd** は終了し、メッセージ ID をクライアントに返します。 例:  
+ RAISERROR を **sqlcmd** スクリプトの中で使用し、状態 127 が発生すると、 **sqlcmd** は終了し、メッセージ ID をクライアントに返します。 例 :  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -729,7 +729,7 @@ sqlcmd
  `:connect $(myservername) $(myusername)`  
   
  **[:]** **!!**< *command*>  
- オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 (**!!**) を入力し、続けてオペレーティング システムのコマンドを入力します。 例:  
+ オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 (**!!**) を入力し、続けてオペレーティング システムのコマンドを入力します。 例 :  
   
  `:!! Dir`  
   
@@ -805,7 +805,7 @@ sqlcmd
 > [!NOTE]  
 >  **sqlcmd** は、通常の形式のエラー メッセージを返します。 エラー メッセージが XML 形式の XML テキスト ストリームで出力されることにも注意してください。 `:XML ON`を使用すると、 **sqlcmd** は情報メッセージを表示しません。  
   
- XML モードをオフにするには、 `:XML OFF`コマンドを使用します。  
+ XML モードをオフにするには、`:XML OFF` コマンドを使用します。  
   
  XML OFF コマンドは **sqlcmd** を行指向の出力に切り替えるので、XML OFF コマンドの実行前に GO コマンドは指定しないでください。  
   

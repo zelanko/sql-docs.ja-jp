@@ -3,7 +3,7 @@ title: "イベントの終了時刻 (SQL Server Profiler) に基づいてイベ�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bebd06fdaccb548e3c189a6d97ec3c423d9a142
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 241526f1d5bf95ffc3baf7d37ee64fd586d0c9a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>イベントの終了時刻に基づいたフィルターでのイベントの選択 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トレース イベントがイベントを使用して、終了時刻に基づいてフィルター選択をする方法を説明[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 6.  **[次の値より大きい]** または **[次の値より小さい]**を展開して、比較演算子の下に表示されるフィールドに **datetime**値を入力します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

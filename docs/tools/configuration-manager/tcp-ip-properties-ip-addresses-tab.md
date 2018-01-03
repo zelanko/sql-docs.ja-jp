@@ -3,7 +3,7 @@ title: "TCP/IP のプロパティ (IP アドレス タブ) |Microsoft ドキュ�
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 018d6474b242e80cfb483fc4ebea76d777af77e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>[TCP/IP のプロパティ]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、 **TCP/IP のプロパティ (IP アドレス タブ)**ダイアログ ボックスを特定の IP アドレスの TCP/IP プロトコル オプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]**を選択することですべてのアドレスを一度に構成できます。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="dynamic-ports"></a>動的ポート  
  SQL Server のインスタンスが動的ポートでリッスンするように構成されている場合、インスタンスは起動時にオペレーティング システムを調べて使用できるポートを検出し、そのポートに対するエンドポイントを開きます。 着信接続は、そのポート番号を指定して接続する必要があります。 SQL Server を起動するたびにポート番号が変わる可能性があるので、SQL Server には、ポートを監視して、着信接続をそのインスタンスの現在のポートにダイレクトする SQL Server Browser サービスが用意されています。 ファイアウォール経由で SQL Server に接続する場合に動的ポートを使用すると、SQL Server の再起動時にポート番号が変わる可能性があるので、そのたびにファイアウォールの設定を変更しなければなりません。 ファイアウォールによる接続の問題を回避するには、静的ポートを使用するように SQL Server を構成します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **Active**  
  コンピューターでその IP アドレスがアクティブかどうかを示します。 **[IPAll]**では指定できません。  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
  **[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)** で **[すべて受信待ち]** プロパティを **[いいえ]**に設定している場合、このプロパティは SQL Server がそのポートでリッスンしているかどうかを示します。 **[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)** で **[すべて受信待ち]** プロパティを **[はい]**に設定している場合、このプロパティは無視されます。 **[IPAll]**では指定できません。  
   
  **[IP アドレス]**  
- この接続が使用している IP 接続を表示または変更します。 コンピューターが使用している IP アドレスと、IP ループバック アドレス 127.0.0.1 が一覧表示されます。 **[IPAll]**では指定できません。 IP アドレスは、IPv4 形式または IPv6 形式で指定できます。  
+ この接続が使用している IP 接続を表示または変更します。 コンピューターが使用している IP アドレスと、IP ループバック アドレス 127.0.0.1 が一覧表示されます。 **[IPAll]** では指定できません。 IP アドレスは、IPv4 形式または IPv6 形式で指定できます。  
   
  **[TCP 動的ポート]**  
  動的ポートが有効になっていない場合は空白です。 動的ポートを使用するには、0 に設定します。  

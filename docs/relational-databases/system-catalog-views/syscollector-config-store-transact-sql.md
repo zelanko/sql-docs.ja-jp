@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6811c1ab9fef0f15422f1d51ac9b969476e58699
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4bf584c6d467d311223831d180838e6851013830
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.lasthandoff: 11/27/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**nvarchar (128)**|プロパティの名前。 NULL 値は許可されません。|  
+|parameter_name|**nvarchar(128)**|プロパティの名前。 NULL 値は許可されません。|  
 |parameter_value|**sql_variant**|プロパティの実際の値。 NULL 値が許可されます。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  ビューの SELECT 権限、または dc_operator、dc_proxy、dc_admin のいずれかの固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="remarks"></a>解説  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>使用例  
  次の例では、syscollector_config_store ビューのクエリを実行します。  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

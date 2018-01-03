@@ -3,7 +3,7 @@ title: "Sybase ASE データベース オブジェクト (SybaseToSQL) を変換
 ms.custom: 
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67806cc9609d6fb0c6fae16c3f73161d91259f7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 38cd19ee1684b52aa7e98d4e9cd30897098e3b4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベース オブジェクト (SybaseToSQL) を変換します。
 SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SAP Adaptive Server Enterprise (ASE) 使用するデータベース オブジェクトに変換するには Azure SQL およびプロジェクトの設定とデータのマッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL データベースオブジェクト。  

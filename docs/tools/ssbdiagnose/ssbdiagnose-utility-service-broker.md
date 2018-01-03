@@ -3,7 +3,7 @@ title: "ssbdiagnose ユーティリティ (Service Broker) |Microsoft ドキュ�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Ssbdiagnose**ユーティリティに関する問題を報告する[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ交換または構成の[!INCLUDE[ssSB](../../includes/sssb-md.md)]services です。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。  
@@ -314,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 環境変数  
  **ssbdiagnose** ユーティリティでは、 **sqlcmd** ユーティリティでも使用されている SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDLOGINTIMOUT の各環境変数がサポートされています。 これらの環境変数を設定するには、コマンド プロンプトの SET コマンドを使用するか、 **sqlcmd** を使用して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの **setvar**コマンドを使用します。 **sqlcmd** で **setvar**を使用する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」をご覧ください。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  各 **connectionoptions** 句では、 **-E** または **-U** のいずれかで指定されたログインが、 **-S** で指定されたインスタンスの **sysadmin**固定サーバー ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  

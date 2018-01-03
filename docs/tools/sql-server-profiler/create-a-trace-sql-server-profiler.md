@@ -3,7 +3,7 @@ title: "トレース (SQL Server Profiler) を作成 |Microsoft ドキュメン�
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fccb9c899fd26666d22cf900cb431bf33f2f87
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec32b39644d4e01ca5d7b168b5d0909f6d9a6f7c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックを使用する方法について説明[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]トレースを作成します。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  **[トレース名]** ボックスに、トレースの名前を入力します。  
   
-3.  **[使用するテンプレート]** ボックスの一覧で、トレースの基本として使用するトレース テンプレートを選択します。テンプレートを使用しない場合は、 **[空白]** を選択します。  
+3.  **[使用するテンプレート]** ボックスの一覧で、トレースの基本として使用するトレース テンプレートを選択します。テンプレートを使用しない場合は、**[空白]** を選択します。  
   
 4.  トレース結果を保存するには、次のいずれかの操作を実行します。  
   

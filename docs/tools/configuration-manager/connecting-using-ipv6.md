@@ -3,7 +3,7 @@ title: "IPv6 を使用して接続する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -21,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a832ed4aeebc246e6fa612436848e36aa77edd0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4f9ac7393ffe9599eec7811a50ce6a0c575611ec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-using-ipv6"></a>IPv6 を使用した接続
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方に完全にサポートします。 Windows で IPv6 が構成されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントは IPv6 の存在を自動的に認識します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で特別な構成は必要ありません。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方に完全にサポートします。 Windows で IPv6 が構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のコンポーネントは IPv6 の存在を自動的に認識します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で特別な構成は必要ありません。  
   
  サポートには次のものが含まれていますが、これらだけではありません。  
   

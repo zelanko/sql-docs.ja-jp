@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63d461ff997a9a438965e039a727999876b3d7a3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1d4790ab20c01be27868696b989ed8228acec6c6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**step_name**|**sysname**|ステップの名前。|  
 |**sql_message_id**|**int**|いずれかの ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ジョブが失敗したかどうかにエラー メッセージが返されます。|  
 |**sql_severity**|**int**|いずれかの重要度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーです。|  
-|**メッセージ**|**nvarchar (4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
+|**message**|**nvarchar (4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
 |**run_status**|**int**|ジョブ実行のステータス。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル|  
 |**run_date**|**int**|ジョブまたはステップが実行を開始した日付。 実行中の場合は、履歴が作成された日付/時刻です。|  
 |**run_time**|**int**|ジョブまたはステップが実行を開始した時刻。|  
@@ -54,12 +54,12 @@ ms.lasthandoff: 11/17/2017
 |**operator_id_netsent**|**int**|ジョブの終了時に Net Send メッセージの通知を受けるオペレーターの ID。|  
 |**operator_id_paged**|**int**|ジョブの終了時にポケットベルの通知を受けるオペレーターの ID。|  
 |**retries_attempted**|**int**|ジョブまたはステップの再試行回数。|  
-|**サーバー (server)**|**sysname**|ジョブが実行されたサーバー名。|  
+|**server**|**sysname**|ジョブが実行されたサーバー名。|  
   
   ## <a name="example"></a>例
  次[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリに変換されます、 **run_time**と**run_duration**列を複数のユーザー フレンドリな形式にします。  スクリプトを実行[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。
  
- ```tsql
+ ```sql
  SET NOCOUNT ON;
  
  SELECT sj.name,

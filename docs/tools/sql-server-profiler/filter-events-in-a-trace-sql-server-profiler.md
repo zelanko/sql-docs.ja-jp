@@ -3,7 +3,7 @@ title: "トレース (SQL Server Profiler) 内のイベントをフィルター�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2111de43f590ebae4a89252b17a2ae8a40be0050
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa5c7ca6a19c0ae5d7afb854645a99fb2aed6131
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>トレース内のイベントへのフィルターの適用 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]フィルターは、トレースで収集されたイベントを制限します。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 トレースのフィルター設定は必須ではありません。 ただし、フィルターを設定すると、トレース中に発生するオーバーヘッドを低減できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 トレースのフィルター設定は必須ではありません。 ただし、フィルターを設定すると、トレース中に発生するオーバーヘッドを低減できます。  
   
  フィルターをトレース定義に追加するには、 **[トレースのプロパティ]** ダイアログ ボックスまたは **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用します。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  フィルターを適用するには、比較演算子をクリックして、フィルターに対して使用する値を入力します。  
   
-4.  クリックして **OK**です。  
+4.  **[OK]** をクリックします。  
   
  **注意点 :**  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
     -   日付は `YYYY/MM/DD HH:mm:sec`の形式で入力します。  
   
-         - または -  
+         -または-  
   
     -   **[全般オプション]** ダイアログ ボックスで、 **[日時の値の表示に地域別設定を使用する]** チェック ボックスをオンにします。 表示する、**全般オプション** ダイアログ ボックスで、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **ツール** メニューのをクリックして**オプション**です。  
   

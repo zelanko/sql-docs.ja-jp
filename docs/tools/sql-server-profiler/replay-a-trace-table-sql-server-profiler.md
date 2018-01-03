@@ -3,7 +3,7 @@ title: "トレース テーブル (SQL Server Profiler) を再生 |Microsoft ド
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82549a55b7aebb74a0b8096e81c3f1f9e51af3d7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2cf799b7b8e0ecfeaf4927e493cac4b2834fa970
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>トレース テーブルの再生 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]再生は、保存されているトレースを開き、もう一度再生する機能です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、ユーザー接続と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証をシミュレートできるマルチスレッド再生エンジンが備わっています。 再生は、アプリケーションまたはプロセスに関する問題のトラブルシューティングを行う際に役立ちます。 問題を特定して修正を実装したら、修正されたアプリケーションまたはプロセスに対して、発生する可能性のある問題を検出したトレースを実行します。 その後、元のトレースを再生し、結果を比較します。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **[トレースされた順番にイベントを再生します。このオプションはデバッグを有効にします。]**または **[複数のスレッドを使用してイベントを再生します。このオプションはパフォーマンスを最適にし、デバッグを無効にします。]**のいずれかを選択します。 次の表では、これらの設定の違いについて説明します。  
   
-    |オプション|説明|  
+    |オプション|Description|  
     |------------|-----------------|  
     |**[トレースされた順番にイベントを再生します。このオプションはデバッグを有効にします。]**|記録された順番にイベントを再生します。 このオプションにより、デバッグが有効になります。|  
     |**[複数のスレッドを使用してイベントを再生します。このオプションはパフォーマンスを最適にし、デバッグを無効にします。]**|このオプションでは、複数のスレッドを使用して、順序に関係なく各イベントを再生します。 このオプションにより、パフォーマンスが最適化されます。|  

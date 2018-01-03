@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475c76c68198719de312a6a7ca9485097596d624
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d784eb9aa4447a60006a5b14d1b525337cb5b87c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  *@option*  
  パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option*次の値のいずれかを持つことができます。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> これが既定値です。|  
 |**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -72,7 +72,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
 ## <a name="best-practices"></a>ベスト プラクティス  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、完全なパス、ファイルの実行時に取得を使用して、 **FileTableRootPath**と**GetFileNamespacePath**関数を併用、次の例に示すようにします。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
   
 @root varchar(100)  
@@ -84,9 +84,9 @@ FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  **FileTableRootPath**関数が必要です。  
   
 -   特定の FileTable のルート パスを取得するために、FileTable に対する SELECT 権限が必要です。  

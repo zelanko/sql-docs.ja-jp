@@ -3,7 +3,7 @@ title: "osql ユーティリティ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: osql
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**ユーティリティを使用すると、入力[!INCLUDE[tsql](../includes/tsql-md.md)]ステートメント、システム プロシージャ、およびスクリプト ファイル。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
@@ -73,7 +73,7 @@ osql
 > [!NOTE]  
 >  ネットワーク上のブロードキャストの特性によっては、 **osql** は、一部のサーバーからタイムリーな応答を受信できない場合があります。 そのため、返されるサーバーのリストは、このオプションの実行ごとに異なる可能性があります。  
   
- **-U** *login_id*  
+ **ｰU** *login_id*  
  ユーザーのログイン ID です。 ログイン ID では大文字と小文字は区別されます。  
   
  **-P** *password*  
@@ -142,7 +142,7 @@ C:\>osql
  コマンド ターミネータを指定します。 既定では、GO だけが入力されている行があると、コマンドが終了したと見なされ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に送られます。 コマンド ターミネータをリセットする場合、 [!INCLUDE[tsql](../includes/tsql-md.md)] の予約語やオペレーティング システムで特別な意味を持つ文字は、先頭に円記号が付いているかどうかに関係なく、使用しないでください。  
   
  **-q "** *query* **"**  
- **osql** の起動時にクエリを実行しますが、クエリが完了しても **osql** を終了しません。 クエリ ステートメントには GO を含めないでください。 バッチ ファイルからクエリを実行する場合は、% 変数 (環境変数 %variable%) も使用できます。 例:  
+ **osql** の起動時にクエリを実行しますが、クエリが完了しても **osql** を終了しません。 クエリ ステートメントには GO を含めないでください。 バッチ ファイルからクエリを実行する場合は、% 変数 (環境変数 %variable%) も使用できます。 例 :  
   
 ```  
 SET table=sys.objects  
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL コマンド  
  [!INCLUDE[tsql](../includes/tsql-md.md)] osql **では、**ステートメントの他に次のコマンドも使用できます。  
   
-|Command|説明|  
+|コマンド|Description|  
 |-------------|-----------------|  
 |GO|最後の GO の後に入力したすべてのステートメントを実行します。|  
 |RESET|入力したステートメントをすべて消去します。|  
@@ -274,13 +274,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- 例:  
+ 例 :  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- バッチ ファイルの一部として、EXIT パラメーターを使用することもできます。 例:  
+ バッチ ファイルの一部として、EXIT パラメーターを使用することもできます。 例 :  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -308,7 +308,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   状態 127 の RAISERROR ステートメント  
   
 > [!NOTE]  
->  RAISERROR を **osql** スクリプトの中で使用し、状態 127 が発生すると、 **osql** は終了し、メッセージ ID がクライアントに返されます。 例:  
+>  RAISERROR を **osql** スクリプトの中で使用し、状態 127 が発生すると、 **osql** は終了し、メッセージ ID がクライアントに返されます。 例 :  
   
 ```  
 RAISERROR(50001, 10, 127)  
