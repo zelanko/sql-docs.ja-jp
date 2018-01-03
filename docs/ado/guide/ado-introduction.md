@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, programming
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01aeb96879bf7822b8dde24a5d7e7605484947f2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-overview-and-benefits"></a>ADO の概要と利点
 ActiveX データ オブジェクト (ADO) は、OLE DB に基本的な使いやすいインターフェイスです。 OLE DB は、さまざまなデータ ストアに低レベルで高性能なインターフェイスです。 ADO と OLE DB 扱えるリレーショナル (テーブル) と非リレーショナル (階層またはストリーム) データ。

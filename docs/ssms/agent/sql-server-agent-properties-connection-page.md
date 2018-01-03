@@ -3,7 +3,7 @@ title: "[SQL Server エージェントのプロパティ]([接続] ページ) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,23 +18,23 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8f11a99a7428200718b8fdf79aff9418d74bf32
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6e7b4cc647a5654a098ab8d3a318dbcfc313a1c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>[SQL Server エージェントのプロパティ] ([接続] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスから [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] への接続の設定を表示および変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[別名ローカル ホスト サーバー]**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のローカル インスタンスへの接続に使用する別名を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの既定の接続オプションを使用できない場合は、インスタンスの別名を定義し、ここでその別名を指定します。  
   
 **[Windows 認証を使用する]**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスへの接続に使用する認証方法として設定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスが実行に使用するアカウントとして接続します。  
   
-**[SQL Server 認証を使用する]**  
+**SQL Server 認証を使用する**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスへの接続に使用する認証方法として設定します。  
   
 > [!IMPORTANT]  

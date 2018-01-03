@@ -24,11 +24,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bad7cdb475aa1b9416e7a0463485293e0035de8d
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 0d02b151b9197d2e6cb3f6a58161e84256a9073e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/12/2017
 ## <a name="select-from-external-table"></a>外部テーブルからの SELECT  
  定義済みの外部テーブルからデータを返す単純なクエリです。  
   
-```tsql  
+```sql  
 SELECT TOP 10 * FROM [dbo].[SensorData];   
 ```
   
@@ -154,7 +154,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Hadoop または Azure ストレージに SQL Server からのデータをエクスポートします。 
 
-まず、'allow polybase export' の `sp_configure` 値を 1 に設定してエクスポート機能を有効にします。 次に、変換先ディレクトリを指す外部テーブルを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースにエクスポートするのに INSERT INTO 使用します。 
+まず、'allow polybase export' の `sp_configure` 値を 1 に設定してエクスポート機能を有効にします。 次に、変換先ディレクトリを指す外部テーブルを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートするのに INSERT INTO 使用します。 
 
 INSERT INTO ステートメントでは、変換先ディレクトリが存在しない場合にそれを作成し、SELECT ステートメントの結果を指定されたファイル形式で指定した場所にエクスポートします。 外部ファイルの名前は *QueryID_date_time_ID.format*です ( *ID* は増分識別子、 *format* はエクスポートされるデータ形式)。 たとえば、あるファイルの名前は QID776_20160130_182739_0.orc となります。
 

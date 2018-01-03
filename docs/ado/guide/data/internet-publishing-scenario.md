@@ -3,7 +3,7 @@ title: "シナリオの公開インターネット |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8adf6d94e93ab707b5b2d3c4e07ea5aa9a8c56c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec405d3f1e0ab13edfe39f71bc049e89d1cb9159
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-publishing-scenario"></a>インターネット発行シナリオ
 このコード例では、for Internet Publishing Microsoft OLE DB Provider と ADO を使用する方法を示します。 このシナリオでは、使用する Visual Basic アプリケーションを作成します**Recordset**、**レコード**、および**ストリーム**によって公開されたリソースの内容を表示するオブジェクトインターネット プロバイダーを公開します。  

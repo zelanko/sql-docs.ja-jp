@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fccc13a0d3ef9d34cfe84e5ed50675eeb801b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
   パッケージは、接続、制御フロー要素、データ フロー要素、イベント ハンドラー、変数、パラメーター、および構成の組み合わせとして構成されています。パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に用意されているグラフィカル デザイン ツールを使用して作成するか、プログラムによって構築します。  完成したパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、またはファイル システムに保存します。または、ssISnoversion プロジェクトを [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバーに配置することができます。 パッケージとは、取得、実行、および保存の対象となる作業単位のことです。  
@@ -65,9 +65,9 @@ ms.lasthandoff: 11/20/2017
  パッケージを別のコンピューターにインストールすると、パッケージと共に構成が保存され、配置されます。 パッケージのインストールの際、別の環境でパッケージがサポートされるように、構成の値を更新できます。 詳細については、「 [パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)」を参照してください。  
   
 ### <a name="logging-and-log-providers"></a>ログ記録とログ プロバイダー  
- ログとは、パッケージの実行時に収集される、パッケージに関する情報の集まりのことです。 たとえば、ログにはパッケージの実行開始時刻と終了時刻を記録できます。 ログ プロバイダーとは、パッケージとそのコンテナーおよびタスクが実行時の情報を記録するために使用する、記録先の種類と形式を定義するものです。 ログはパッケージに関連付けられますが、パッケージ内のタスクとコンテナーの情報は、任意のパッケージ ログに記録できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、ログ記録用の各種のログ プロバイダーが組み込まれています。 たとえば [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびテキスト ファイル用のログ プロバイダーが含まれます。 また、カスタム ログ プロバイダーを作成してログ記録用に使用することもできます。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
+ ログとは、パッケージの実行時に収集される、パッケージに関する情報の集まりのことです。 たとえば、ログにはパッケージの実行開始時刻と終了時刻を記録できます。 ログ プロバイダーとは、パッケージとそのコンテナーおよびタスクが実行時の情報を記録するために使用する、記録先の種類と形式を定義するものです。 ログはパッケージに関連付けられますが、パッケージ内のタスクとコンテナーの情報は、任意のパッケージ ログに記録できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、ログ記録用の各種のログ プロバイダーが組み込まれています。 たとえば [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびテキスト ファイル用のログ プロバイダーが含まれます。 また、カスタム ログ プロバイダーを作成してログ記録用に使用することもできます。 詳細については、「[Integration Services (SSIS) のログ記録](../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-### <a name="variables"></a>変数  
+### <a name="variables"></a>変数:  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、システム変数とユーザー定義変数がサポートされます。 システム変数は、実行時のパッケージ オブジェクトに関する有益な情報を提供します。またユーザー定義変数を使用すると、パッケージのシナリオをユーザー独自でサポートできます。 どちらの種類の変数も、式、スクリプト、および構成の内部で使用できます。  
   
  パッケージ レベルの変数には、1 つのパッケージで使用できる定義済みのシステム変数と、パッケージの範囲を定めたユーザー定義変数が含まれます。 詳細については、「 [Integration Services (SSIS) の変数](../integration-services/integration-services-ssis-variables.md)」を参照してください。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/20/2017
  パッケージ上のトランザクションの属性を設定すると、パッケージ内のタスク、コンテナー、および接続をトランザクションに結合できます。 トランザクションの属性により、パッケージとその要素が全体として成功または失敗するようにできます。 また、パッケージで他のパッケージを実行したり、トランザクション内に他のパッケージを含めることができるため、複数のパッケージを作業の 1 単位として実行できます。 詳細については、「 [Integration Services のトランザクション](../integration-services/integration-services-transactions.md)」を参照してください。  
   
 ## <a name="custom-log-entries-available-on-the-package"></a>パッケージで使用できるカスタム ログ エントリ  
- 次の表は、パッケージのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
+ 次の表は、パッケージのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
   
  パッケージの GUID を変更するには、 **の [プロパティ] ウィンドウで、** [ID] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロパティの GUID を再生成します。 パッケージ名を変更するには、[プロパティ] ウィンドウの **[名前]** プロパティの値を更新します。 また、 **dtutil** コマンド プロンプトを使用したり、プログラムを使用して GUID と名前を更新したりすることもできます。 詳細については、「 [パッケージのプロパティを設定する](../integration-services/set-package-properties.md) 」と「 [dtutil ユーティリティ](../integration-services/dtutil-utility.md)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを作成するための [!INCLUDE[ssIS](../includes/ssis-md.md)] オブジェクト モデルのほかに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] デザイナーと [!INCLUDE[ssIS](../includes/ssis-md.md)] インポートおよびエクスポート ウィザードの、2 つのグラフィック ツールが含まれています。 詳細については、以下のトピックを参照してください。  
   
 -   [SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  

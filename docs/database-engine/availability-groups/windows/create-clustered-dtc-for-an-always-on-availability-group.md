@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77b06bff3d98e39104970adaaeadf9f8d342a357
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76913433e0cfe08d316c668a79d452959ebbee3b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>AlwaysOn 可用性グループのクラスター化された DTC を作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、SQL Server の AlwaysOn 可用性グループのためにクラスター化された DTC を完全に構成する方法について説明します。 完全構成の完了には最大 1 時間かかることがあります。 
@@ -120,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.**in-doubt xact resolution** を構成する 
 このスクリプトは、不明なトランザクションに対して “コミットを推測する” ように **in-doubt xact resolution** サーバー構成オプションを構成します。  **SQLCMD モード**で `SQLNODE1` に対して SQL Server Management Studio (SSMS) の次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -161,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4.テスト データベースを作成する
 このスクリプトは、`SQLNODE1` で `AG1` という名前のデータベースを作成し、`SQLNODE2` で `dtcDemoAG1` という名前のデータベースを作成します。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -219,7 +219,7 @@ GO
 ## <a name="5---create-endpoints"></a>5. エンドポイントを作成する
 このスクリプトは、TCP ポート `5022` で待機する `AG1_endpoint` という名前のエンドポイントを作成します。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -252,7 +252,7 @@ GO
 ## <a name="6---prepare-databases-for-availability-group"></a>6. 可用性グループに使用するデータベースを準備する
 このスクリプトは `SQLNODE1` で `AG1` をバックアップし、`SQLNODE2` に復元します。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -285,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7. 可用性グループを作成する
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]は、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。  現在、既存の可用性グループを変更することはできません。  新しい可用性グループ ウィザードでは、新しい可用性グループに対して DTC サポートを有効にすることができません。  次のスクリプトは新しい可用性グループを作成し、セカンダリを参加させます。  `SQLNODE1` SQLCMD モード **で**に対して SSMS の次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -488,7 +488,7 @@ $nodes = (Get-ClusterNode).Name;
 最初の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスには、分散トランザクションが必要です。この分散トランザクションは DTC サービスに登録されます。 SQL Server サービスでは、再起動されるまで DTC サービスを使用し続けます。 クラスター化された DTC サービスが利用可能な場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はクラスター化された DTC サービスに登録されます。 クラスター化された DTC サービスが利用できない場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はローカル DTC サービスに登録されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がクラスター化された DTC サービスに登録されていることを確認するために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを停止して再起動します。 
 
 下の T-SQL スクリプトに含まれている手順に従います。
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -549,7 +549,7 @@ END
 ### <a name="create-linked-servers"></a>リンク サーバーを作成する  
 次のスクリプトは、 `SQLNODE1`で 2 つのリンク サーバーを作成します。  `SQLNODE1`に対して SSMS の次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -565,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>分散トランザクションを実行する
 このスクリプトは最初に、現在の DTC トランザクションの統計を返します。  次に、 `SQLNODE1` と `SQLNODE2`でデータベースを活用して分散トランザクションを実行します。  次に、DTC トランザクションの統計をもう一度返します。このとき、数が増えているはずです。  `SQLNODE1` に物理的に接続し、 `SQLNODE1` SQLCMD モード **で**に対して SSMS の次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1

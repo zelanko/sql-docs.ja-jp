@@ -3,7 +3,7 @@ title: "ADO MD を使用したプログラミング |Microsoft ドキュメン�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be1112dd330d98f751400cd269bdc237d6c23bad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8ffe243e0307c60ac70b5c620b53272e17c88d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programming-with-ado-md"></a>ADO MD を使用したプログラミング
 ADO MD を使用して、開発ツールで、ADO MD のタイプ ライブラリへの参照を確立する必要があります。 ADO MD ライブラリの説明は、Microsoft ActiveX Data Objects (多次元) ライブラリです。 ADO MD ライブラリのファイル名は msadomd.dll で、プログラム ID (ProgID) は"ADOMD"です。 ライブラリへの参照を確立する方法の詳細については、開発ツールのドキュメントを参照してください。  

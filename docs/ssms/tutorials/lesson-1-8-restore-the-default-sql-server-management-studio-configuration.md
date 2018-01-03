@@ -3,7 +3,7 @@ title: "SQL Server Management Studio の既定の構成の復元 | Microsoft Doc
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f9f8e7064ff8e3735dd31d6727c1cb8329584e89
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b17d30c9849223b3c7ef868ea1a9ca8b45a00663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>レッスン 1-8 - SQL Server Management Studio の既定の構成の復元
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使い慣れないうちは、誤ってウィンドウを閉じたり非表示にしたりして、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を元のレイアウトに戻すことが困難になる場合があります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を既定のレイアウト環境に戻すには、次の手順に従います。  

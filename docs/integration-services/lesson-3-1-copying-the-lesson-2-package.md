@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,24 +18,24 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ce7b3f530f92bed2a50fc498dec9c4667020862
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03a40a21b36aaaf731d9b40fcfed0b9381149f11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>レッスン 3-1 - レッスン 2 のパッケージのコピー
 ここでは、レッスン 2 で作成した Lesson 2.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 2 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 3 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-create-the-lesson-3-package"></a>レッスン 3 のパッケージを作成するには  
   
-1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools がまだ開いていない場合は、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server 2012]**の順にポイントして、 **[SQL Server Data Tools]**をクリックします。  
+1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools がまだ開いていない場合は、**[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[Microsoft SQL Server 2012]** の順にポイントして、**[SQL Server Data Tools]** をクリックします。  
   
 2.  **[ファイル]** メニューの **[開く]**をクリックし、 **[プロジェクト/ソリューション]**をクリックします。次に、 **[SSIS Tutorial]** フォルダーをクリックして **[開く]**をクリックした後、 **SSIS Tutorial.sln**をダブルクリックします。  
   
 3.  ソリューション エクスプローラーで、 **Lesson 2.dtsx**を右クリックし、 **[コピー]**をクリックします。  
   
-4.  ソリューション エクスプローラーで **[SSIS パッケージ]**を右クリックし、 **[貼り付け]**をクリックします。  
+4.  ソリューション エクスプローラーで **[SSIS パッケージ]** を右クリックし、**[貼り付け]** をクリックします。  
   
     コピーしたパッケージの既定の名前は、Lesson 3.dtsx です。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
     このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「 [Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   

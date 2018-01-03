@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ SQL Server データベース エンジンでは、さまざまなオブジェ�
 >  * 古いシステムと新しいシステムには類似点があります。 たとえば、`sysadmin` 固定サーバー ロールのメンバーシップには、`CONTROL SERVER` と同様のアクセス許可が与えられます。 ただし、システムは同じではありません。 たとえば、あるログインに `CONTROL SERVER` アクセス許可のみが与えられ、ストアド プロシージャが `sysadmin` 固定サーバー ロールのメンバーシップを確認する場合、アクセス許可確認は失敗します。 この逆も当てはまります。 
 
 
-## <a name="summary"></a>概要   
+## <a name="summary"></a>[概要]   
 * サーバー レベルのアクセス許可は、固定サーバー ロールかユーザー定義サーバー ロールのメンバーシップから与えられます。 全員が `public` 固定サーバー ロールに属し、そこで割り当てられたアクセス許可を受け取ります。   
 * サーバー レベルのアクセス許可は、ログインに与えられるアクセス許可かユーザー定義サーバー ロールから与えられます。   
 * データベース レベルのアクセス許可は、固定データベース ロールのメンバーシップか各ロールベースのユーザー定義データベース ロールから与えられます。 全員が `public` 固定データベース ロールに属し、そこで割り当てられたアクセス許可を受け取ります。   
@@ -57,7 +57,7 @@ SQL Server データベース エンジンでは、さまざまなオブジェ�
 固定サーバー ロールと固定データベース ロールでは、アクセス許可が事前構成されています。このアクセス許可は変更できません。 固定サーバー ロールのメンバーを判断するには、次のクエリを実行します。    
 >  [!NOTE] 
 >  サーバー レベルのアクセス許可が利用できない SQL データベースまたは SQL データ ウェアハウスには適用しないでください。 `sys.server_principals` の `is_fixed_role` 列が SQL Server 2012 に追加されました。 古いバージョンの SQL Server には必要ありません。  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * このクエリはマスター データベースのテーブルを確認しますが、オンプレミス製品のデータベースでは実行できません。 
 
 固定データベース ロールのメンバーを判断するには、各データベースで次のクエリを実行します。
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ Windows ユーザーは複数の Windows グループに属することがあり
 次のクエリは、サーバー レベルで承諾または拒否されているアクセス許可の一覧を返します。 このクエリはマスター データベースで実行してください。   
 >  [!NOTE] 
 >  サーバー レベルのアクセス許可を SQL データベースまたは SQL データ ウェアハウスで承諾または拒否することはできません。   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>データベース権限
 
 次のクエリは、データベース レベルで承諾または拒否されているアクセス許可の一覧を返します。 このクエリは各データベースで実行してください。   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 アクセス許可テーブルのアクセス許可の各クラスは、セキュリティ保護可能なリソースのそのクラスに関する関連情報を与える他のシステム ビューと結合できます。 たとえば、次のクエリでは、アクセス許可の影響を受けるデータベース オブジェクトの名前が与えられます。    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -151,8 +151,8 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 例:   
-```tsql
+`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 例 :   
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

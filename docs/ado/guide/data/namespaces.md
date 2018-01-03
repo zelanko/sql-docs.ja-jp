@@ -3,7 +3,7 @@ title: "名前空間 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d32b2d51454f48d4ef164058abbf08d06859a281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b5921d1c91ee326810041c612097c41e9e099e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces"></a>名前空間
 ADO での XML 永続形式では、次の 4 つの名前空間を使用します。  
@@ -30,7 +30,7 @@ ADO での XML 永続形式では、次の 4 つの名前空間を使用しま�
 ## <a name="remarks"></a>解説  
  ADO での XML 永続形式では、次の 4 つの名前空間を使用します。  
   
-|プレフィックス|Description|  
+|Prefix|Description|  
 |------------|-----------------|  
 |s|要素と現在のレコード セットのスキーマを定義する属性を含む「XML データ」の名前空間を参照します。|  
 |dt|データ型の定義の仕様を参照します。|  

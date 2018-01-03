@@ -3,7 +3,7 @@ title: "Visual C の拡張機能の使用 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da6cd44f389b059a897ec464e1848cd9660b6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -121,12 +121,12 @@ Update(CADORecordBinding *binding)
 |*Ordinal*|序数のいずれかでカウント、 **Recordset** C と C++ の変数に対応するフィールドです。|
 |*データ型*|C と C++ の変数の同等の ADO データ型 (を参照してください[格納](../../../ado/reference/ado-api/datatypeenum.md)有効なデータ型の一覧については)。 値、 **Recordset**フィールドは、必要な場合はこのデータ型に変換されます。|
 |*バッファー*|C と C++ の変数の名前を**レコード セット**フィールドが格納されます。|
-|*サイズ*|最大サイズ (バイト) の*バッファー*です。 場合*バッファー*可変長の文字列には末尾のゼロの領域を確保できるようにします。|
+|*[サイズ]*|最大サイズ (バイト) の*バッファー*です。 場合*バッファー*可変長の文字列には末尾のゼロの領域を確保できるようにします。|
 |*[状態]*|示す変数の名前かどうかの内容*バッファー*が有効でとかどうか、変換するフィールドの*DataType*が成功しました。<br /><br /> この変数の 2 つの最も重要な値は**adFldOK**、つまり、変換が成功したと**adFldNull**、つまり、フィールドの値となる型 VT_ のバリアントだけでなく、空です。<br /><br /> 指定できる値*ステータス*次の表では、「状態の値です」に。|
 |*変更*|ブール型のフラグです。TRUE の場合は、ADO の対応する、更新が許可されたことを示します**Recordset**フィールドに含まれる値に*バッファー*です。<br /><br /> ブール値を設定*変更*ADO では、バインドされたフィールドが更新を有効にする場合は TRUE と FALSE の変更ではなく、フィールドを確認する場合のパラメーターです。|
 |*有効桁数*|数値型の変数で表すことができる数字の数。|
 |*Scale*|数値型の変数の小数点以下桁数です。|
-|*長さ*|内のデータの実際の長さを格納する 4 バイトの変数の名前*バッファー*です。|
+|*Length*|内のデータの実際の長さを格納する 4 バイトの変数の名前*バッファー*です。|
 
 ## <a name="status-values"></a>状態の値
  値、*ステータス*変数は、フィールドが変数に正常にコピーされたかどうかを示します。
@@ -136,7 +136,7 @@ Update(CADORecordBinding *binding)
 |定数|値|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null 以外のフィールドの値が返されました。|
-|**adFldBadAccessor**|1|バインドが無効でした。|
+|**adFldBadAccessor**|@shouldalert|バインドが無効でした。|
 |**adFldCantConvertValue**|2|符号の不一致またはデータ オーバーフロー以外の理由の値を変換できませんでした。|
 |**adFldNull**|3|フィールドを取得するときに、null 値が返されたことを示します。<br /><br /> フィールドに設定するときに、フィールドを設定する必要がありますを示します。 **NULL**フィールドがエンコードできない**NULL**自体 (たとえば、文字配列または整数)。|
 |**adFldTruncated**|4|可変長のデータまたは数値の桁は切り捨てられました。|

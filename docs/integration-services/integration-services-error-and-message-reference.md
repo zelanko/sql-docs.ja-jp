@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -379,7 +379,7 @@ ms.lasthandoff: 11/20/2017
 |0xC00220E2|-1073602334|DTS_E_TKEXECPACKAGE_INCORRECTCONNECTIONMANAGERTYPE|接続マネージャー "%1" は、サポートされていない種類 "%2" です。 ファイル接続マネージャーおよび OLE DB 接続マネージャーのみがサポートされています。|  
 |0xC00220E3|-1073602333|DTS_E_TKEXECPACKAGE_UNABLETOLOADXML|エラー 0x%1!8.8X! がパッケージ ファイル "%3" を XML ドキュメントに読み込み中に発生しました。 %2。|  
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|エラー 0x%1!8.8X! がパッケージの読み込みを準備中に発生しました。 %2。|  
-|0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
+|0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が返されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|タスクの Execute メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Execute メソッドは成功し、"out" パラメーターを使用して結果が示される必要があります。|  
 |0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク "%1" で依存関係を取得中にエラー 0x%2!8.8X! が 発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|タスクの検証中にエラーが発生しました。|  
@@ -1069,7 +1069,7 @@ ms.lasthandoff: 11/20/2017
 |0xC00470B8|-1073450824|DTS_E_EXPREVALILLEGALESCAPEINSTRINGLITERAL|文字列リテラル "%1" に、無効なエスケープ シーケンス "\\%2!c!" が含まれています。 このエスケープ シーケンスは、式エバリュエーターの文字列リテラルでサポートされていません。 文字列に円記号が必要な場合は、2 つの円記号 "\\\\" を続けて入力してください。|  
 |0xC00470B9|-1073450823|DTS_E_NOOUTPUTCOLUMNS|"%1" には出力列が含まれていません。 非同期出力には出力列が必要です。|  
 |0xC00470BA|-1073450822|DTS_E_LOBDATATYPENOTSUPPORTED|"%1" には、サポートされていない大きなサイズのオブジェクトのデータ型 (DT_TEXT、DT_NTEXT、または DT_IMAGE) があります。|  
-|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|出力 ID %1!d! が複数のエラー出力の構成に指定されました。 最初は %2!d! と %3!d!、次は %4!d! と %5!d! です。|  
+|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|出力 ID %1!d!  が複数のエラー出力の構成に指定されました。 最初は %2!d! と %3!d!、次は %4!d! と %5!d! です。|  
 |0xC00470BC|-1073450820|DTS_E_FAILEDDURINGOLEDBDATATYPECONVERSIONCHECK|OLE DB プロバイダーが、"%1" のデータ型変換の確認中に失敗しました。|  
 |0xC00470BD|-1073450819|DTS_E_BUFFERISEOR|このバッファーは行セットの末尾を表すので、その行数を変更できません。  行セット フラグの末尾を保持するバッファーで AddRow または RemoveRow が呼び出されました。|  
 |0xC00470BE|-1073450818|DTS_E_EXPREVALUNSUPPORTEDTYPE|データ型 "%1" は、式ではサポートされていません。 指定した型がサポートされていないか、無効です。|  
@@ -2019,7 +2019,7 @@ ms.lasthandoff: 11/20/2017
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 は、結合またはコピーで使用されていません。 入力列の一覧から未使用の列を削除してください。|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|入力バッファーの並べ替え中に、スタック オーバーフローによって並べ替えが失敗しました。  データ フロー タスクの DefaultBufferMaxRows プロパティを小さくしてください。|  
 |0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、http://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
-|||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! " %4!s!"。|  
+|||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! "  %4!s!"。|  
 |||DTS_E_GETRTINTERFACEFAILED|COM コンポーネント カテゴリ マネージャーを作成できませんでした。エラー: 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  
   
@@ -2273,7 +2273,7 @@ ms.lasthandoff: 11/20/2017
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|関数が正しくありません。|  
+|0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|関数が正しくありません。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|指定されたファイルが見つかりません。|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Microsoft SSIS サービスを起動しています。<br /><br /> サーバーのバージョン %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS サービスが開始されました。<br /><br /> サーバーのバージョン %1|  

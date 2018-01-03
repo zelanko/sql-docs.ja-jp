@@ -5,7 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: beb17b82f5dc7ce522403d7d32a71e52a497bd2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 60127dd894485c979e0c79dcde0091119d88ed9a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-overview-mds"></a>マスター データ サービスの概要 (MDS)
   このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のデータ編成と管理機能について説明します。 
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  データの基本的な構造を定義したら、インポート機能を使用してデータ レコード (メンバー) の追加を開始できます。 ステージング テーブルにデータを読み込み、ビジネス ルールを使用してデータを検証して、MDS テーブルにデータを読み込みます。  また、属性の値を設定するのにビジネス ルールを使用することもできます。  
   
- 次の表に主要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] タスクの概要を示します。 特に指定がない限り、次のすべての手順を実行するにはモデル管理者であることが必要です。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+ 次の表に主要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] タスクの概要を示します。 特に指定がない限り、次のすべての手順を実行するにはモデル管理者であることが必要です。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 > [!NOTE]  
 >  テスト環境で次のタスクを実行し、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のインストール時に提供されたサンプル データを使用できます。 詳細については、「[モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)」を参照してください。  

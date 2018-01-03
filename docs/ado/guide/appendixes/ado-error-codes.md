@@ -3,7 +3,7 @@ title: "ADO エラー コード |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51e932d5c17c4d33bb15dbf85080a9bc14d51c3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37d535f280d4bfac44795b94cb4a2e3e348993bc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="capture-ado-error-codes"></a>ADO エラー コードをキャプチャします。
 プロバイダーのエラーで返されるだけでなく、[エラー](../../../ado/reference/ado-api/error-object.md)のオブジェクト、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション、ADO 自体にエラーを返す、実行時環境の例外処理機構です。 メカニズムを使用して、エラー トラップ、プログラミング言語など、 **On Error** Microsoft® Visual Basic では、ステートメント、または**try catch** Microsoft Visual C++®、ADO のエラーをキャプチャするをブロックします。

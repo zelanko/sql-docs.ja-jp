@@ -3,7 +3,7 @@ title: "[ジョブ カテゴリ] - [ジョブ カテゴリの管理] | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f6ab862b1c707c990a1c7ac488c6691a5521a8b8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f530257d021d3228649ea5669ce913f5b9e6b509
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-categories---manage-job-categories"></a>[ジョブ カテゴリ] - [ジョブ カテゴリの管理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[ジョブ カテゴリ]** ダイアログ ボックスを使用すると、ジョブ カテゴリを追加したり削除したりできます。 組み込みジョブ カテゴリは削除できません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **名前**  
 ジョブ カテゴリの名前です。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 **[追加]**  
 **[新しいジョブ カテゴリ]** ダイアログ ボックスを開いて、新しいジョブ カテゴリを追加します。  
   
-**Del**  
+**削除**  
 選択したジョブ カテゴリを削除します。 ユーザー定義ジョブ カテゴリの場合のみ有効です。  
   
 **[更新]**  

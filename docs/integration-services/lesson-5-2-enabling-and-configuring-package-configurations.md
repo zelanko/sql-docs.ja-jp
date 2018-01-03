@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>レッスン 5-2 - パッケージ構成の有効化と構成
 ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの **Directory** プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
@@ -66,13 +66,13 @@ ms.lasthandoff: 11/20/2017
   
 2.  警告のメッセージで **[OK]** をクリックし、変換が完了したら、 **[パッケージ配置モデルに変換]** ダイアログで **[OK]** をクリックします。  
   
-3.  **デザイナーで、** [制御フロー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブの背景をクリックします。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、**[制御フロー]** タブの背景をクリックします。  
   
 4.  **[SSIS]** メニューの **[パッケージ構成]**をクリックします。  
   
 5.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで **[パッケージの構成を有効にする]**をクリックし、 **[追加]**をクリックします。  
   
-6.  パッケージ構成ウィザードの初期画面で、 **[次へ]**をクリックします。  
+6.  パッケージ構成ウィザードの初期画面で、**[次へ]** をクリックします。  
   
 7.  **[構成の種類の選択]** ページで、 **[構成の種類]** が **[XML 構成ファイル]**に設定されていることを確認します。  
   

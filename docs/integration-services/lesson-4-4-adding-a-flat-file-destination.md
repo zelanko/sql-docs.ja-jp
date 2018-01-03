@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5037fb489588b174ec66a8845cf4994d8a915e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>レッスン 4-4 - フラット ファイル変換先の追加
 Lookup Currency Key 変換のエラー出力では、参照操作に失敗したデータ行がスクリプト変換にリダイレクトされます。 スクリプト変換ではスクリプトが実行され、発生したエラーに関するさらに詳しい情報を記述したエラーの説明が取得されます。  
@@ -55,7 +55,7 @@ Lookup Currency Key 変換のエラー出力では、参照操作に失敗した
   
     変換元データ ファイルの列に加え、新しい 3 つの列 (ErrorCode、ErrorColumn、および ErrorDescription) が表示されます。 これらの列は、Lookup Currency Key 変換のエラー出力と Get Error Description 変換のスクリプトによって生成されたものです。これらの列は、失敗した行の問題を解決するために使用できます。  
   
-12. **[OK]**をクリックします。  
+12. **[OK]** をクリックします。  
   
 13. **[フラット ファイル変換先エディター]**で、 **[ファイル内のデータを上書きする]** チェック ボックスをオフにします。  
   
@@ -63,9 +63,9 @@ Lookup Currency Key 変換のエラー出力では、参照操作に失敗した
   
 14. **[フラット ファイル変換先エディター]**の **[マッピング]** をクリックし、すべての列が正しいことを確認します。 必要に応じて、変換先の列の名前を変更できます。  
   
-15. **[OK]**をクリックします。  
+15. **[OK]** をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 [手順 5: レッスン 4 のチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

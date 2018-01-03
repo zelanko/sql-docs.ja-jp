@@ -3,9 +3,9 @@ title: "エディターの表示 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bd3905d6c9f0db1081b9d2cf96450a0405fb4da8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a9c50d964997aff809073eb7748b9e9a6986ec53
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>エディターの表示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター、MDX エディター、DMX エディター、または XML/A エディターを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で開く方法について説明します。 エディターを開くと、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の中央のペインに、それぞれのエディター ウィンドウがタブとして表示されます。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  異なるコード ページを使用する別サイトのユーザーとファイルを共有する場合、ファイル読み込み時のエラーを回避するため、適切な Unicode コード ページでファイルを保存してください。 また、UNIX または Macintosh 用にファイルを保存する場合、適切なドキュメント形式で保存してください。 **[ファイル]** メニューの **[名前を付けて保存]**をクリックし、 **[保存]** ボタンの横にある下矢印をクリックして表示されるメニューの **[エンコード付きで保存]** をクリックします。それから、 **[行の終わり]** ボックスの **[Unix]** または **[Macintosh]**をクリックします。  
   
-### <a name="permissions"></a>権限  
+### <a name="permissions"></a>アクセス許可  
  コード エディター内で実行する操作には、ログインに使用した認証アカウントに付与されている権限が適用されます。 たとえば、Windows 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた場合、自分の Windows ログイン アカウントでアクセスできないオブジェクトを参照する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。  
   
 ## <a name="how-to-open-editors"></a>方法: エディターを開く  

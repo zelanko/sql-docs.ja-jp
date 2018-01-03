@@ -3,7 +3,7 @@ title: "ADO オブジェクトおよびコレクション |Microsoft ドキュ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a6796b6511c81dc2a4f9100f656478bef3711b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b2bd4d1caf6ad0f2b180804407aede35155208e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-objects-and-collections"></a>ADO オブジェクトとコレクション
 ADO は、次の 9 つのオブジェクトと 4 つのコレクションで構成されます。  

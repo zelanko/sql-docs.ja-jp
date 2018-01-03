@@ -3,7 +3,7 @@ title: "[列一覧] ダイアログ ボックス (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7347d75f3f213cb5b39fa753fc33a184a36b29cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 95b7b217f2783cdc64577e23d8e4e160a7f275d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>[列一覧] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリを記述するときに、選択したテーブル値オブジェクトで利用可能な列の一覧を確認できると便利なことがあります。  
@@ -31,11 +31,11 @@ ms.lasthandoff: 12/05/2017
   
 このダイアログ ボックスには、選択したテーブル値オブジェクトの列と、その基本的なプロパティ (データ型やその列で null 値が使用できるかどうかなど) が一覧表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **名前**  
 選択したテーブル値オブジェクトに含まれる列の名前を表示します。  
   
-**データ型**  
+**[データ型]**  
 選択したテーブル値オブジェクトの各列のデータ型を表示します。  
   
 **データ型プロパティ**  

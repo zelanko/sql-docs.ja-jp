@@ -5,7 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d7a5ad6abf892a9b8ab0b125336e13cf1318100
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server の各エディションがサポートする Integration Services の機能
  このトピックでは、 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]のさまざまなエディションでサポートされる SQL Server Integration Services (SSIS) の機能の詳細について説明します。  
@@ -55,18 +55,18 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server インポートおよびエクスポート ウィザード|可|可|可|可|はい|  
+|SQL Server インポートおよびエクスポート ウィザード|はい|はい|はい|はい|はい|  
 
 ## <a name="IS"></a> Integration Services  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|組み込みのデータ ソース コネクタ|可|可|||| 
-|組み込みのタスクと変換|可|はい||||  
-|Attunity ODBC ソース/ターゲット|はい|可|||| 
-|Azure データ ソース コネクタおよびタスク|可|はい||||  
-|Hadoop/HDFS コネクタおよびタスク|はい|可||||  
-|基本的なデータ プロファイリング ツール|可|はい|||| 
+|組み込みのデータ ソース コネクタ|はい|はい|||| 
+|組み込みのタスクと変換|はい|はい||||  
+|Attunity ODBC ソース/ターゲット|はい|はい|||| 
+|Azure データ ソース コネクタおよびタスク|はい|はい||||  
+|Hadoop/HDFS コネクタおよびタスク|はい|はい||||  
+|基本的なデータ プロファイリング ツール|はい|はい|||| 
 
 ## <a name="ISAA"></a> Integration Services – 高度なソース/ターゲット  
   

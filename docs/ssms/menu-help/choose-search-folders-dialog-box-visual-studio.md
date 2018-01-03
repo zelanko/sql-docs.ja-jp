@@ -3,7 +3,7 @@ title: "[検索フォルダーの選択] ダイアログ ボックス (Visual St
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bdc3ea0d960d2bb2e4abbe2f16ec2ff2a3db62b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 974a77627d00103a5ac4f89ab9773dfcea0a0ef6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 固有の名前の付いた検索フォルダーのセットのアセンブリ、保存、および変更や、検索の順序の指定ができます。 このダイアログ ボックスを表示するには、[フォルダーを指定して検索]、[フォルダーを指定して置換]、または [検索と置換] のいずれかのウィンドウで、 **[検索対象]** ドロップダウン リストの横の **[...]** をクリックします。  
   
 **[選択されたフォルダー]** 一覧にフォルダーを追加するには、このフォルダー セットの名前を **[フォルダー セット名]** フィールドに入力し、 **[適用]** をクリックして保存します。 このカスタム検索スコープは、後で **[フォルダーを指定して検索]** および **[フォルダーを指定して置換]** の **[検索対象]**ドロップダウン リストから名前で選択できます。 カスタム フォルダーを **[検索対象]** の一覧から削除するには、 **[フォルダー セット名]** フィールドに名前を入力し、 **[削除]**をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 次のコントロールは、固有の名前の付いた検索フォルダーのセットのアセンブリ、保存、および変更に利用できます。  
   
 **[フォルダー セット名]**  

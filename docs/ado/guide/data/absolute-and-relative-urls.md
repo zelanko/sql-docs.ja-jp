@@ -3,7 +3,7 @@ title: "絶対と相対 Url |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolute-and-relative-urls"></a>絶対と相対 Url
 URL では、ローカルまたはネットワーク上のコンピューターに格納されているターゲットの場所を指定します。 ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびなど、ターゲットにできます*です。*  
@@ -41,7 +41,7 @@ URL では、ローカルまたはネットワーク上のコンピューター�
  *スキーム*  
  指定する方法、*リソース*へのアクセスします。  
   
- *サーバー*  
+ *server*  
  コンピューターの名前を指定場所、*リソース*が配置されています。  
   
  *パス*  

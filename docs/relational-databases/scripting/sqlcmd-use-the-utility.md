@@ -3,9 +3,9 @@ title: "sqlcmd ユーティリティの使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0969b3f39f94ec3832cc762ec9419425e099000f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b59520b9b976e6b8e9f7b03a080552818d73904
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **sqlcmd** ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 **sqlcmd** を対話形式で使用したり、 **sqlcmd**を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)]を理解している必要があります。 **sqlcmd** ユーティリティは一般的に次のように使用されます。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     または  
+     内の複数の  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
     > **ヒント** **sqlcmd** ユーティリティでサポートされているオプションの一覧を表示するには、 `sqlcmd -?`を実行してください。  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd を使用して Transact-SQL ステートメントを対話的に実行する  
- コマンド プロンプト ウィンドウでは、 **sqlcmd** ユーティリティを対話的に使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **を使用して対話的に**ステートメントを実行するには、入力ファイルまたはクエリを指定するための **-Q**、 **-q**、 **-Z**、または **-i** オプションを使用せずにこのユーティリティを実行します。 例:  
+ コマンド プロンプト ウィンドウでは、 **sqlcmd** ユーティリティを対話的に使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **を使用して対話的に**ステートメントを実行するには、入力ファイルまたはクエリを指定するための **-Q**、 **-q**、 **-Z**、または **-i** オプションを使用せずにこのユーティリティを実行します。 例 :  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="quoted-strings"></a>引用符で囲まれた文字列  
  引用符で囲まれた文字列は、前処理がまったく行われずそのまま使用されます。ただし、例外として、2 つの連続する引用符を入力することで、引用符自体を文字列に挿入できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この文字の並びを 1 つの引用符として扱います (ただし、この変換はサーバーで行われます)。スクリプト変数が文字列内に存在する場合は展開されません。  
   
- 例:  
+ 例 :  
   
  `sqlcmd`  
   

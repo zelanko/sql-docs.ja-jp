@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50274b346c5a404c9d2c8f82dbd8d75664fa6bbe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL Server データベースでは、フルテキストが既定で有効になっています。 ただし、フルテキスト クエリを実行するには、事前にフルテキスト カタログを作成し、検索するテーブルまたはインデックス付きビューにフルテキスト インデックスを作成しておく必要があります。
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  `AdvWksDocFTCat`という名前のフルテキスト カタログを作成するために、この例では、 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) ステートメントを使用します。  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -59,13 +59,13 @@ ms.lasthandoff: 11/17/2017
  
 2.  Document テーブルにフルテキスト インデックスを作成する前に、テーブルに一意の単一列で NULL 値にならないインデックスが含まれていることを確認します。 次の [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) ステートメントでは、Document テーブルの DocumentID 列に、一意のインデックス `ui_ukDoc`を作成します。  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  一意のキーを作成したら、次の `Document` CREATE FULLTEXT INDEX [ステートメントを使用して、](../../t-sql/statements/create-fulltext-index-transact-sql.md) テーブルにフルテキスト インデックスを作成できます。  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -108,14 +108,14 @@ ms.lasthandoff: 11/17/2017
   
  たとえば、次の [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、システム ストップリストからコピーして、myStoplist という名前の新しいフルテキスト ストップリストを作成します。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  次の [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、myStoplist という名前のストップリストを変更して、単語 'en' をまずスペイン語用に、次にフランス語用に追加します。  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

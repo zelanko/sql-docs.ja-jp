@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 25de11d7825c2e52b8247d44ee790d21c0457468
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 212e1c2913cc8720d2a5ca92916cec187e357c2e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する
   よく使用される制御フロー タスクまたはコンテナーをスタンドアロン パーツ ファイル (".dtsxp"ファイル) に保存し、それを、制御フロー パッケージ パーツを使用して 1 つまたは複数のパッケージで複数回、再利用します。 この再利用性により SSIS パッケージの設計および管理が容易になります。  

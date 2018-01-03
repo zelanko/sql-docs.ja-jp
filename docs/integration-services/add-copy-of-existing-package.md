@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
   **[既存のパッケージのコピーを追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のファイル システムまたは SSIS パッケージ ストアに格納されたパッケージのコピーを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[パッケージの場所]**  
  パッケージのコピー元である格納場所の種類を選択します。  
   
@@ -38,10 +38,10 @@ ms.lasthandoff: 11/20/2017
  **認証の種類**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]からコピーする場合は、認証の種類を選択します。  
   
- **ユーザー名**  
+ **User name**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
- **[パスワード]**  
+ **Password**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  

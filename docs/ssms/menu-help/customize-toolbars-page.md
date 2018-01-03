@@ -3,7 +3,7 @@ title: "[ユーザー設定]([ツール バー] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1be117c2fafffd2272f5af08c987c61e5d64b8e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a0fb95a5c9589b46e2f144362d7b667411965545
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="customize-toolbars-page"></a>[ユーザー設定] ([ツール バー] ページ)
+# <a name="customize-toolbars-page"></a>[ユーザー設定] \([ツール バー] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[ツール バー]** タブを使用すると、ツール バーの作成、名前の変更、削除、リセットができます。 このタブを開くには、 **[ツール]** メニューの **[ユーザー設定]** をクリックした後、 **[ツール バー]**をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
@@ -36,13 +36,13 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > メニュー バーは非表示にできません。 リセットのみ可能です。  
   
-**新規**  
+**[新規作成]**  
 **[新しいツール バー]** ダイアログ ボックスを表示します。このダイアログ ボックスでカスタム ツール バーを作成し、名前を付けることができます。  
   
 **Rename**  
 **[ツール バー名の変更]** ダイアログ ボックスを表示します。このダイアログ ボックスでは、カスタム ツール バーの名前の変更のみ行えます。  
   
-**Del**  
+**削除**  
 **[ツール バー]** の一覧で選択したカスタム ツール バーを削除します。  
   
 **リセット**  

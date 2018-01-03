@@ -3,7 +3,7 @@ title: "Microsoft Visual Basic と ADO を使用して |Microsoft ドキュメ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef8260be592439a3130afe9af830b8159290f2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
 ADO プロジェクトの設定や ADO コードの記述はのようなアプリケーションの Visual Basic または Visual Basic を使用するかどうかです。 このトピックでは、Visual Basic および Visual Basic の両方で ADO を使用してアプリケーションに対応し、ノートのすべての差異。
@@ -47,7 +47,7 @@ ADO プロジェクトの設定や ADO コードの記述はのようなアプ�
 
     -   OLE オートメーション
 
-3.  **[OK]**をクリックします。
+3.  **[OK]** をクリックします。
 
  ADO を使用でき同じくらい簡単に Visual Basic によるアプリケーションについては、たとえば Microsoft Access を使用して、します。
 
@@ -65,7 +65,7 @@ ADO プロジェクトの設定や ADO コードの記述はのようなアプ�
 
     -   DAO 3.5 オブジェクト ライブラリ (またはそれ以降)
 
-4.  **[OK]**をクリックします。
+4.  **[OK]** をクリックします。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic では ADO オブジェクトの作成
  オートメーション変数とその変数にオブジェクトのインスタンスを作成するには、2 つのメソッドを使用することができます: **Dim**または**CreateObject**です。
@@ -103,7 +103,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- オブジェクトがインスタンス化される**CreateObject**遅延バインディングがない厳密に型指定し、コマンド ライン入力候補が無効になっていることを意味します。 ただし、では、プロジェクトから ADO ライブラリの参照をスキップすることし、特定のバージョンのオブジェクトをインスタンス化することができます。 例:
+ オブジェクトがインスタンス化される**CreateObject**遅延バインディングがない厳密に型指定し、コマンド ライン入力候補が無効になっていることを意味します。 ただし、では、プロジェクトから ADO ライブラリの参照をスキップすることし、特定のバージョンのオブジェクトをインスタンス化することができます。 例 :
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

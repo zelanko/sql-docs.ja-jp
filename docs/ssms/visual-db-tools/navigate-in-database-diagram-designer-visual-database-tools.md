@@ -3,7 +3,7 @@ title: "データベース ダイアグラム デザイナー内でのナビゲ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2745dbdedeac792e45e9d7c9cc59fb95f7bca7b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bd6aa99f77bd9a2a43e9c910007466beba9bc9f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナー内でのナビゲーション (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース ダイアグラム デザイナーでの作業には、キーボードとマウスが使用できます。 データベース ダイアグラム デザイナーで使用する特定の方法については、次の表を参照してください。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
 |データベース ダイアグラムのメニューにアクセスする|Alt + M|  
 |テーブルとリレーションシップ間で移動する (可能な場合)|Tab または Shift + Tab|  
 |テーブルの列間で移動する|方向キー|  
-|選択しているテーブルをダイアグラムから除去する|DELETE|  
+|選択しているテーブルをダイアグラムから除去する|Del|  
 |テーブルまたはリレーションシップをデータベースから削除する|Shift + Del|  
 |ダイアグラム画面間でテーブルを移動する|Ctrl + ↑または Ctrl + ↓|  
 |右/左および上/下へスクロールする|垂直方向の場合 PageUp/PageDown、水平方向の場合 Ctrl + PageUp/PageDown|  

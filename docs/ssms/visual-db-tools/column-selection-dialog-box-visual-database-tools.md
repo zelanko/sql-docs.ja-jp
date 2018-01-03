@@ -3,7 +3,7 @@ title: "[列の選択] ダイアログ ボックス (Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f391acc3059f0e263977ea4a3f834a98ce5d962f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa038800133fb48bb16d73a0fb73dbf000ed8d86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>[列の選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース ダイアグラムのテーブルのカスタム ビューを変更するときに使用します。 カスタム ビューには、ユーザーによって指定された列プロパティだけが表示されます。  
   
 このダイアログ ボックスは、テーブルを右クリックしてショートカット メニューの **[カスタム ビューの変更]** をクリックしたときに表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[使用できる列]**  
 選択したデータベース テーブル内にあるすべての列の一覧を表示します。 ここに表示される列は、データベース テーブルのプロパティおよびデータベースのタイプによって異なります。 表示する列を強調表示し、矢印ボタンを使用して列を **[選択した列]** ボックスに移動します。  
   

@@ -3,7 +3,7 @@ title: "その他の言語でのエラー処理 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/14/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5417b64044339867a3e34083d3e62e5416691939
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 328c8e8deb76066a27e42791c6b258bf9abd0946
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-errors-in-other-languages"></a>その他の言語でのエラーを処理
 これまで、このセクションでは、Microsoft® Visual Basic® の観点からのエラーについて説明しました。 このセクションの残りの部分では、Visual Basic 以外の言語でのエラー処理の概要を説明します。  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
   **[変数]** ウィンドウを使用すると、ユーザー定義変数を作成、変更し、システム変数を表示できます。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  **Name** プロパティと **Namespace** プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>および  
  **[変数の追加]**  
  ユーザー定義変数を追加します。  
   
@@ -60,13 +60,13 @@ ms.lasthandoff: 11/20/2017
   
  スコープを変更するには、変数をクリックして **[変数]** ウィンドウの **[変数の移動]** をクリックします。  
   
- **データ型**  
+ **[データ型]**  
  変数のデータ型が表示されます。 一覧からユーザー定義変数のデータ型を選択できます。  
   
 > [!NOTE]  
 >  変数に式を割り当てる場合は、データ型を変更できません。  
   
- **値**  
+ **[値]**  
  変数の値を表示します。 ユーザー定義変数の値を更新できます。 この値は、リテラルまたは式にすることができます。また、複数行の文字列にすることもできます。 変数に式を割り当てるには、 **[変数]** ウィンドウの **[式]** 列の横にある参照ボタンをクリックします。  
   
  **Namespace**  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **[Raise Change Event]**  
  値を変更した場合に **OnVariableValueChanged** イベントを発生させるかどうかを示します。 ユーザー定義変数およびシステム変数の値を更新できます。 既定では、 **[変数]** ウィンドウにこの列は表示されません。 この列を表示するには、 **[グリッドのオプション]**をクリックします。  
   
- **Description**  
+ **[説明]**  
  変数の説明を表示します。 ユーザー定義変数の説明を変更できます。 既定では、 **[変数]** ウィンドウにこの列は表示されません。 この列を表示するには、 **[グリッドのオプション]**をクリックします。  
   
  **[変数]**  
@@ -104,15 +104,15 @@ ms.lasthandoff: 11/20/2017
   
 -   **Data type**  
   
--   **値**  
+-   **[値]**  
   
--   **名前空間**  
+-   **Namespace**  
   
 -   **[変数値の変化時にイベントを発生]**  
   
--   **Description**  
+-   **[説明]**  
   
--   **[変数]**  
+-   **[式]**  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   

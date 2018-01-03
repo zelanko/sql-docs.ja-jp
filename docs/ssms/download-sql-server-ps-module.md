@@ -3,7 +3,7 @@ title: "SQL Server PowerShell モジュールのダウンロード | Microsoft D
 ms.custom: 
 ms.date: 03/10/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 83b535f97682334f6a83f3eb58e2f673c2040b4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 208bf291819a3e847e784e76611acdec0bf2f2d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>SQL Server PowerShell モジュールのダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio の 17.0 リリースの一部として、SQL Server PowerShell モジュールが PowerShell ギャラリーを介して提供されます。  このモジュールは SSMS インストール パッケージには含まれなくなっています。 SSMS 17.0 以降で PowerShell を使うには、追加の手順として SQL Server モジュールをコンピューターにインストールする必要があります。

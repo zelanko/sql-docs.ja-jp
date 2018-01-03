@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
   ADO NET 変換先では、データベースのテーブルやビューを使用する、さまざまな [!INCLUDE[vstecado](../../includes/vstecado-md.md)]互換データベースにデータを読み込みます。 このデータを既存のテーブルやビューに読み込むことができますが、新しいテーブルを作成して、そこにデータを読み込むこともできます。  
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  SQL Server または Sybase 変換元テーブルに ID 列が含まれる場合、SQL 実行タスクを利用し、ADO NET 変換先の前に IDENTITY_INSERT を有効にし、その後再び無効にする必要があります。 (ID 列プロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、変換先テーブルの ID 列に、変換元テーブルの明示的値を挿入できます。)  
 >   
->   SET IDENTITY_INSERT ステートメントとデータ読み込みを正常に実行するには、次を行う必要があります。 
->       1. SQL 実行タスクと ADO NET 変換先に同じ ADO.NET 接続マネージャーを使用します。 
->       2. 接続マネージャーで、**RetainSameConnection** プロパティと **MultipleActiveResultSets** プロパティを True に設定します。 
->       3. ADO.NET 変換先で、**UseBulkInsertWhenPossible** プロパティを False に設定します。 
+>   SET IDENTITY_INSERT ステートメントとデータ読み込みを正常に実行するには、次を行う必要があります。  
+>       1.SQL 実行タスクと ADO NET 変換先に同じ ADO.NET 接続マネージャーを使用します。  
+>       2.接続マネージャーで、**RetainSameConnection** プロパティと **MultipleActiveResultSets** プロパティを True に設定します。  
+>       3.ADO.NET 変換先で、**UseBulkInsertWhenPossible** プロパティを False に設定します。   
 >
 >  詳細については、「[SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)」および「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **[ADO NET 変換先エディター]**で、 **[マッピング]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **[ADO NET 変換先エディター]**で、 **[エラー出力]**をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **入力または出力**  
  入力の名前を表示します。  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **切り捨て**  
  使用されていません。  
   
- **Description**  
+ **[説明]**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  

@@ -3,7 +3,7 @@ title: "[対象サーバー] ダイアログ ボックス ([ダウンロード�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17c67093de57f58f810315050a8b48009e306f7b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 271e01a59fa533df607d26dfc87bdcd3f587b4c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="target-servers-download-instructions-tab"></a>[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、1 つ以上の対象サーバーに対するダウンロード命令の表示および更新ができます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[対象サーバー]**  
 命令の表示または変更を行うサーバーを選択します。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 **[命令のダウンロード状態]**  
 選択されているダウンロード命令の最新の状態を表示します。  
   
-**Del**  
+**削除**  
 選択されているダウンロード命令を削除します。  
   
 **Clear**  

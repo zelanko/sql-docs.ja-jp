@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8ee63b1546b182cad4e0bb2b137c1bad51f15032
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56776e68d9e9ed897bb948ad53e4736c7d1485dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>レッスン 1-1 - 作業フォルダーと環境変数の作成
 このタスクでは、この後のチュートリアル タスクで使用する作業フォルダー (C:\DeploymentTutorial) と新しいシステム環境変数 (`DataTransfer` および `LoadXMLData`) を作成します。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  **[新しいシステム変数]** ダイアログ ボックスで、 **[変数名]** ボックスに「 **DataTransfer** 」と入力し、 **[変数値]** ボックスに「 **C:\DeploymentTutorial\datatransferconfig.dtsconfig** 」と入力します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 7.  **[新規]** を再びクリックし、 **[変数名]** ボックスに「 **LoadXMLData** 」と入力し、 **[変数値]** ボックスに「 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig** 」と入力します。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  **[新しいシステム変数]** ダイアログ ボックスで、 **[変数名]** ボックスに「 **DataTransfer** 」と入力し、 **[変数値]** ボックスに「 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** 」と入力します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 7.  **[新規]** を再びクリックし、 **[変数名]** ボックスに「 **LoadXMLData** 」と入力し、 **[変数値]** ボックスに「 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig** 」と入力します。  
   

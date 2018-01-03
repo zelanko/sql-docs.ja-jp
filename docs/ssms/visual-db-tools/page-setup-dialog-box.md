@@ -3,7 +3,7 @@ title: "[ページ設定] ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,17 +18,17 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e52e80a2de50c69ecc6349a3666e9da5a71f742
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d415cfe737b8b559873b581e094b408495eb386
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="page-setup-dialog-box"></a>[ページ設定] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[ページ設定]** ダイアログ ボックスでオプションを選択して、ページのデザインをカスタマイズできます。 インストールされている言語、および編集が有効になっている言語によっては、使用できないオプションもあります。  
   
 ## <a name="paper"></a>[用紙]  
-**サイズ**  
+**[サイズ]**  
 一覧からサイズを選択します。  
   
 **ソース**  
@@ -48,7 +48,7 @@ Left
 Right  
 ページの右端と右揃えのインデントされていない行の右端との距離を設定します。  
   
-このページのトップへ  
+TOP  
 ページの上端とページの先頭行の上部との距離を設定します。  
   
 [下]  

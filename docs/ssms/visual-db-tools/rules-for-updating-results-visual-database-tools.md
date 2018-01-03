@@ -3,7 +3,7 @@ title: "結果更新の規則 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e40ed53f2d9b239e5bc565533fda84882a8a030
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2894e4f5b670136e1882689758d8c4ce5f580db5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>結果更新の規則 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 多くの場合、[結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)に表示されている結果セットは更新できます。 ただし、更新できない場合もあります。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 次の表は、結果ペインに表示されたクエリの結果を更新できる場合とできない場合の例をまとめたものです。 多くの場合、クエリの結果を更新できるかどうかは、使用しているデータベースによって決まります。  
   
-|Query|結果更新の可/不可|  
+|[クエリ]|結果更新の可/不可|  
 |---------|---------------------------|  
 |出力リストに主キーを持つ、単一のテーブルに基づくクエリ|可 (下のリストを除く)。|  
 |一意のインデックスおよび主キーを持たないテーブルに基づくクエリ|クエリとデータベースによって異なります。 データベースによっては、レコードを一意に識別するのに十分な情報があれば、クエリの結果を更新できます。|  

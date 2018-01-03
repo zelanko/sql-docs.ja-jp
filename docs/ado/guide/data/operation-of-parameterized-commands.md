@@ -3,7 +3,7 @@ title: "パラメーター化コマンドの操作 |Microsoft ドキュメント
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 658d0dc9baa22006b327d826effb5687ccbc1822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子で作業している場合**レコード セット**、特に、親のサイズに比べて**レコード セット**、いくつかの子チャプターのみにアクセスする必要がありますが、した方がより効果的に使用、パラメーター化コマンド。  
@@ -80,7 +80,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  パラメーターのない階層を使用して、ないようにチームとゲームのテーブルを関連付けるを子**Recordset**チームごとに、完全なスケジュールが含まれています。 ホームのスケジュールと道路スケジュールだけが含まれている章を作成することができます。 これは、RELATE 句によって、フォームの親子関係に制限されているため (pc1 = cc1) AND (pc2 pc2 を =)。 そのため場合は、コマンドには、"RELATE team_id TO home_team、team_id TO visiting_team"が含まれている、する得られるゲームのみここで、チームが再生された自体です。 必要な"(team_id=home_team) または (team_id = visiting_team)"は Shape プロバイダーは、OR 句をサポートしていません。  
   
- 目的の結果を得るには、パラメーター化コマンドを使用できます。 例:  
+ 目的の結果を得るには、パラメーター化コマンドを使用できます。 例 :  
   
 ```  
 SHAPE {SELECT * FROM teams}   

@@ -3,7 +3,7 @@ title: "SQL Server Management Studio のプロパティ ページ | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c4c23da504c70c1139705c514d3b95631fa1ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bbb3f4310dfedc47615f47ba07d95ed44a9416e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio のプロパティ ページ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] のプロパティ ページのダイアログ ボックスでは、項目で展開や折りたたみのできる共通の形式で情報が表示されます。 表示されるフィールドは、プロパティごとに異なります。 淡色で表示されているプロパティは変更できません。 [項目別] および [アルファベット順] ボタンはプロパティ ページの上部にあります。  
@@ -34,6 +34,6 @@ ms.lasthandoff: 12/05/2017
 |**項目別**|選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目順に表示します。 項目別表示では、項目を折りたたんで、表示するプロパティの数を少なくすることができます。 項目の展開または折りたたみを行うと、項目名の左側に正符号 (+) または負符号 (-) が表示されます。 項目はアルファベット順に表示されます。|  
 |**アルファベット順**|選択したオブジェクトのすべてのプロパティおよびプロパティ値をアルファベット順に表示します。|  
 |プロパティ名|表の 1 列目にプロパティ名が表示されます。|  
-|プロパティ|表の 2 列目にはプロパティ値が表示されます。|  
+|[プロパティ]|表の 2 列目にはプロパティ値が表示されます。|  
 |説明ペイン|説明ペインはページの最下部にあり、プロパティの種類と、プロパティの短い説明が表示されます。 ショートカット メニューの **[説明]** を使用して、プロパティの説明の表示と非表示を切り替えることができます。|  
   

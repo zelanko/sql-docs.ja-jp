@@ -3,7 +3,7 @@ title: "[空間インデックス] ダイアログ ボックス (Visual Database
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,25 +18,25 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a3a67a16ceef1e85a988b762d7f0cecb4e452d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、**[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
   
 空間インデックスの作成の制限については、「 [空間インデックスの概要](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[選択された空間インデックス]**  
 既存の空間インデックスを一覧表示します。 特定の空間インデックスのプロパティを表示するには、そのインデックスをクリックします。 この一覧が空の場合、テーブルには空間インデックスがまったく定義されていません。  
   
 **[追加]**  
 新しい空間インデックスを作成します。  
   
-**Del**  
+**削除**  
 **[選択された空間インデックス]** ボックスの一覧で選択した空間インデックスを削除します。  
   
 **[オブジェクトごとのセル数]**  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 1 つのオブジェクトが *n*で指定されたセル数よりも多くのセルを使用する場合、インデックス作成では、必要なだけの数のセルが使用され、完全な最上位レベルのテセレーションが提供されます。 その場合、オブジェクトには指定されたセル数よりも多くのセルが割り当てられることがあります。 このとき、最大数は、 **[レベル 1]** の密度に応じて最上位レベルのグリッドで生成されたセルの数となります。  
   
-**列**  
+**[列]**  
 列名と並べ替え順序を示します。  
   
 **[IsSpatialIndex]**  

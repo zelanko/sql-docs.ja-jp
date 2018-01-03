@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5eea1f635fcd1080bf85fe0d45c689ef883181a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2ad5962c25cc48dcb95ff3d8efe8de37886cd971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス
   **[データベース メール プロファイルとアカウントの作成]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータベース メール プロファイルおよびデータベース メール アカウントを作成できます。 このプロファイルは、ビジネス ルールの検証が失敗したときに電子メールでユーザーやグループに通知する際に使用されます。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**[データベース エンジン サービスの資格情報を使用する Windows 認証]**|データベース メールでは、SMTP サーバーの認証に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用することを指定します。|  
 |**[基本認証]**|データベース メールでは、SMTP サーバーの認証に特定のユーザー名とパスワードを使用することを指定します。 この情報は、電子メール サーバーとの認証だけに使用されるため、アカウントは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を実行しているコンピューターのユーザーに対応している必要はありません。|  
-|**ユーザー名**|データベース メールで SMTP サーバーへのログオンに使用されるユーザー アカウントの名前を入力します。 SMTP サーバーで基本認証が求められる場合、ユーザー名が必要になります。|  
+|**User name**|データベース メールで SMTP サーバーへのログオンに使用されるユーザー アカウントの名前を入力します。 SMTP サーバーで基本認証が求められる場合、ユーザー名が必要になります。|  
 |**Password**|データベース メールで SMTP サーバーへのログオンに使用されるパスワードを入力します。 SMTP サーバーで基本認証が求められる場合、パスワードが必要になります。|  
 |**[パスワードの確認入力]**|パスワードに間違いがないことを確認するために、設定したパスワードをもう一度入力します。|  
 |**[匿名認証]**|SMTP サーバーで認証を要求しないことを指定します。 SMTP サーバーの認証には資格情報をまったく使用しません。|  

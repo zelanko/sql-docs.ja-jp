@@ -3,7 +3,7 @@ title: "クエリおよびビュー デザイナーで各種言語データを�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0b88c7cbc8f2976c79017ebca218eb79cbfcc588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 562e347f9f51230c41358545e93cc970743a3f74
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>クエリおよびビュー デザイナーで各種言語データを使用する方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)は、あらゆる言語のデータ、および Windows オペレーティング システムのすべてのバージョンのデータに対応しています。 次のガイドラインでは、各種言語のアプリケーションの相違点を示し、そのデータを管理する方法について説明します。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
   
 抽出条件ペインに入力した地域固有の形式のデータは、クエリおよびビュー デザイナーによって、SQL ペインでは自動的に ANSI 形式に変換されます。 たとえば、[ロケール (国または地域)] に [ドイツ語 (ドイツ)] が設定されている場合は、抽出条件ペインでは「31.12.96」のような形式で日付を入力できます。 しかし SQL ペインでは、このデータは `{ ts '1996-12-31 00:00:00' }.` のように ANSI 形式の日付で表示されます。SQL ペインに直接データを入力する場合は、ANSI 形式で入力する必要があります。  
   
-## <a name="sort-order"></a>並べ替え順序  
+## <a name="sort-order"></a>[並べ替え順序]  
 クエリにおけるデータの並べ替え順序は、データベースによって決まります。 Windows の [地域のオプション] ダイアログ ボックスで設定したオプションは、クエリの並べ替え順序には影響を与えません。 ただし、特定のクエリで、特定の順序で行を返すように要求することはできます。  
   
 ## <a name="using-double-byte-characters"></a>2 バイト文字の使用  

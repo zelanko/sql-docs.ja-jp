@@ -47,11 +47,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2694383403923ad677ba680fcdaaa0a2e7e5138a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e9ff0f1d6fb35c9c5bc63b973e4ec269f12b3865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server サービスの開始、停止、一時停止、再開、再起動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [追加情報](#MoreInformation)  
   
-    -   [セキュリティ](#Security)  
+    -   [Security](#Security)  
   
 -   **使用の手順:**  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Services"></a>[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの概要  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、Windows サービスとして実行される実行可能プログラムです。 Windows サービスとして実行されるプログラムは、コンピューター画面にアクティビティを表示することなく動作を続行できます。  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](http://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**コマンドを使用して** を停止するには、 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限を譲渡することはできません。  
@@ -202,7 +202,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -または-  
+     - または -  
   
      **net start MSSQLSERVER**  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     -または-  
+     - または -  
   
      **net start MSSQL$** *instancename*  
   
@@ -222,7 +222,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -または-  
+     - または -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -235,7 +235,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -または-  
+     - または -  
   
      **net start SQLSERVERAGENT**  
   
@@ -245,7 +245,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     -または-  
+     - または -  
   
      **net start SQLAgent$** *instancename*  
   
@@ -257,7 +257,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server Browser"**  
   
-     -または-  
+     - または -  
   
      **net start SQLBrowser**  
   
@@ -276,13 +276,13 @@ ms.lasthandoff: 11/20/2017
   
 -   現在実行中の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびストアド プロシージャが終了するまで待機してから [!INCLUDE[ssDE](../../includes/ssde-md.md)]を停止するには、次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]を直ちに停止するには、次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

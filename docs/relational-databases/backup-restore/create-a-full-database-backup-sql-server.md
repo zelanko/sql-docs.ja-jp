@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、バックアップの作成での **PASSWORD** および **MEDIAPASSWORD** オプションが廃止されました。 パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
  バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が **必要** です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="back-up-a-database"></a>データベースをバックアップする  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で適切な **オブジェクト エクスプローラー**のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で適切な **[!INCLUDE[ssDEnoversion](../Token/ssDEnoversion_md.md)]**のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開し、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/05/2017
   
     -   **[完了時にバックアップを検証する]**。  
   
-    -   **[メディアに書き込む前にチェックサムを行う]**。  チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)」をご覧ください。  
+    -   **[メディアに書き込む前にチェックサムを行う]**。  チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
     
     -   **[エラーのまま続行する]**。 
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/05/2017
   
          バックアップの有効期限の詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
   
-21. **[圧縮]** セクションで、 **[バックアップの圧縮の設定]** ドロップダウン リストを使用して適切な圧縮レベルを選択します。  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **backup-compression default** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]**をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]**をオンにして圧縮しないようにすることもできます。  
+21. **[圧縮]** セクションで、 **[バックアップの圧縮の設定]** ドロップダウン リストを使用して適切な圧縮レベルを選択します。  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]**をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]**をオンにして圧縮しないようにすることもできます。  
   
      バックアップの圧縮の設定の詳細については、「 [backup compression default サーバー構成オプションの表示または構成](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)」をご覧ください。  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 12/05/2017
 
 2.  **[データベース]**を展開して `Sales`を右クリックし、 **[タスク]**をポイントしてから **[バックアップ]**をクリックします。
 
-3.  クリックして **OK**です。
+3.  **[OK]** をクリックします。
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.既定以外の場所のディスクへの完全バックアップ**
 この例では、 `Sales` データベースを `E:\MSSQL\BAK`にあるディスクにバックアップします。  `Sales` のバックアップは既に作成されています。
@@ -180,9 +180,9 @@ ms.lasthandoff: 12/05/2017
 
 6.  `E:\MSSQL\BAK\Sales_20160801.bak` [ファイル名] **テキスト ボックスに「** 」と入力します。
 
-7.  **[OK]**をクリックします。
+7.  **[OK]** をクリックします。
 
-8.  **[OK]**をクリックします。
+8.  **[OK]** をクリックします。
 
 #### <a name="c--create-an-encrypted-backup"></a>**C.暗号化されたバックアップの作成**
 この例では、 `Sales` データベースを暗号化して既定のバックアップ場所にバックアップします。  [**データベース マスター キー**](../../relational-databases/security/encryption/create-a-database-master-key.md) は既に作成されています。  [**証明書**](../../t-sql/statements/create-certificate-transact-sql.md) は、 `MyCertificate`という名前で既に作成されています。 **データベース マスター キー** と **証明書** を作成する T-SQL の例については、「 [暗号化されたバックアップの作成](../../relational-databases/backup-restore/create-an-encrypted-backup.md)」をご覧ください。  
@@ -198,7 +198,7 @@ ms.lasthandoff: 12/05/2017
 
 6.  **[証明書または非対称キー]** ボックスの一覧で、 `MyCertificate`を選択します。
 
-7.  **[OK]**をクリックします。
+7.  **[OK]** をクリックします。
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.Azure BLOB ストレージ サービスへのバックアップ**
 #### <a name="common-steps"></a>**一般的な手順**  
@@ -218,24 +218,24 @@ ms.lasthandoff: 12/05/2017
 
     6.  **[バックアップ ファイル:]** テキスト ボックスに、「 `Sales_stripe1of2_20160601.bak`」と入力します。
 
-    7.  **[OK]**をクリックします。
+    7.  **[OK]** をクリックします。
 
     8.  手順 **4.** と **5.**を繰り返します。
 
     9.  **[バックアップ ファイル:]** テキスト ボックスに、「 `Sales_stripe2of2_20160601.bak`」と入力します。
 
-    10.  **[OK]**をクリックします。
+    10.  **[OK]** をクリックします。
 
-    11.   **[OK]**をクリックします。
+    11.   **[OK]** をクリックします。
 
     **D2.Shared Access Signature は存在し、SQL Server 資格情報は存在しない場合**
   5.    `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **テキスト ボックスに「** 」と入力します。
   
   6.    **[共有アクセス ポリシー:]** テキスト ボックスに Shared Access Signature を入力します。
   
-  7.    **[OK]**をクリックします。
+  7.    **[OK]** をクリックします。
   
-  8.    **[OK]**をクリックします。
+  8.    **[OK]** をクリックします。
 
     **D3.Shared Access Signature が存在しない場合**
   5.    **[新しいコンテナー]** ボタンをクリックすると、 **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスが開きます。  
@@ -244,7 +244,7 @@ ms.lasthandoff: 12/05/2017
   
   7.    **[バックアップ先の選択]** ダイアログ ボックスで **[OK]** をクリックします。
   
-  8.    **[OK]**をクリックします。
+  8.    **[OK]** をクリックします。
 
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -265,10 +265,10 @@ ms.lasthandoff: 12/05/2017
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
-    |オプション|[説明]|  
+    |オプション|Description|  
     |------------|-----------------|  
     |*database*|バックアップするデータベースです。|  
-    |*backup_device* [ **、**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|  
+    |*backup_device* [ **、**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|  
     |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
   
 2.  必要に応じて、1 つ以上の WITH オプションを指定します。 ここでは、一部の基本的な WITH オプションについて説明します。 すべての WITH オプションについては、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
@@ -304,7 +304,7 @@ ms.lasthandoff: 12/05/2017
 #### <a name="a-back-up-to-a-disk-device"></a>**A.ディスク デバイスへのバックアップ**  
  次の例では、新しいメディア セットを作成する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を使用して、 `FORMAT` データベース全体をディスクにバックアップします。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +318,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B.テープ デバイスへのバックアップ**  
  次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース全体をテープにバックアップし、以前のバックアップに追加します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +331,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C.論理テープ デバイスへのバックアップ**  
  次の例では、テープ ドライブ用の論理バックアップ デバイスを作成した後、 作成したデバイスに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース全体をバックアップします。  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

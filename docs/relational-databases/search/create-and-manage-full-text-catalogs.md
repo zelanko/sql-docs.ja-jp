@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] フルテキスト カタログは、フルテキスト インデックスのグループの論理的なコンテナーです。 フルテキスト インデックスを作成する前に、フルテキスト カタログを作成する必要があります。
@@ -34,9 +34,9 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="creating"></a> フルテキスト カタログを作成する  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Transact SQL を使用してフルテキスト カタログを作成する
-[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 例:
+[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 例 :
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -71,7 +71,7 @@ GO
   
 次の表は、フルテキスト カタログに関連しているプロパティを示しています。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。 
   
-|プロパティ|説明|  
+|プロパティ|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|アクセントの区別の設定。|
 |**ImportStatus**|フルテキスト カタログがインポートされているかどうかを示します。|  

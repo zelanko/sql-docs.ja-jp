@@ -3,7 +3,7 @@ title: "警告 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -29,13 +29,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bcf6d6ecebacd8ea3f3b2a18d5ffe89cb5d2b6ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a8210d7acf8121f616f89f3f87b0cb2d2ba34b36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="alerts"></a>警告
+# <a name="alerts"></a>オブジェクト エクスプローラーには
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] イベントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] によって生成され、[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows アプリケーション ログに記録されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、アプリケーション ログを読み取り、そこに書き込まれているイベントを、定義済みの警告と比較します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントによって一致が検出されると、イベントに対する自動応答である警告を発します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] イベントの監視だけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントはパフォーマンス状態および Windows Management Instrumentation (WMI) イベントも監視します。  
   
 警告を定義するには、次の項目を指定します。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、特定の重大度のエラーが発生したときに警告を発します。 たとえば、Transact-SQL ステートメントでの構文エラーに重大度 15 を指定できます。  
   
--   **データベース**  
+-   **[データベース]**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、特定のデータベースでイベントが発生した場合のみ警告を発します。 このオプションは、エラー番号または重大度に加えて適用できます。 たとえば、1 つのインスタンスで運用データベースとレポート用データベースを使用している場合、運用データベースで構文エラーが発生した場合のみ、警告を発するように定義できます。  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="selecting-a-wmi-event"></a>WMI イベントの選択  
 特定の WMI イベントに応答して警告が発生するように指定できます。 WMI イベントを選択するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
   
--   **名前空間**  
+-   **Namespace**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを WMI クライアントとして、イベントをクエリするために用意された WMI 名前空間に登録します。  
   

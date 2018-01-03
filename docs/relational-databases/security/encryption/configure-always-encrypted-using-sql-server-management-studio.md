@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d4181262d713918c834d7dc971444118f11fe623
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a6e6764d71d632cb4f232eecd34e16f38bede57
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Always Encrypted の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Always Encrypted のパラメーター化は、Transact-SQL 変数をクエリ �
   
 パラメーター化しないと、.NET Framework Data Provider は、クエリ エディターで作成される各ステートメントを非パラメーター化クエリとして渡します。 クエリに、暗号化された列をターゲットとする Transact-SQL 変数またはリテラルが含まれている場合、.NET Framework Data Provider for SQL Server は、データベースにクエリを送信する前に、データを検出して暗号化することはできません。 その結果、(プレーンテキストのリテラル Transact-SQL 変数と暗号化された列の間で) 型が一致しないため、クエリは失敗します。 たとえば、 `SSN` 列が暗号化されていると仮定して、パラメーター化せずに以下のクエリを正常に実行することはできません。   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -128,14 +128,14 @@ WHERE [SSN] = @SSN
 2.  **[クエリ オプション...]**を選択します。   
 3.  **[実行]** > **[詳細]**の順に移動します。   
 4.  **[Always Encrypted のパラメーター化を有効にする]**を選択または選択解除します。   
-5.  **[OK]**をクリックします。   
+5.  **[OK]** をクリックします。   
 
 今後のクエリ エディター ウィンドウで Always Encrypted のパラメーター化を有効化/無効化する場合は、次のようにします。   
 1.  メイン メニューから **[ツール]** を選択します。   
 2.  **[オプション...]**を選択します。   
 3.  **[クエリ実行]** > **[SQL Server]** > **[詳細]**の順に移動します。   
 4.  **[Always Encrypted のパラメーター化を有効にする]**を選択または選択解除します。   
-5.  **[OK]**をクリックします。   
+5.  **[OK]** をクリックします。   
 
 Always Encrypted が有効な状態のデータベース接続を使用するクエリ エディター ウィンドウでクエリを実行する場合に、パラメーター化がクエリ エディター ウィンドウで有効になっていないと、有効にするよう求められます。   
 >   [!NOTE]   
@@ -148,7 +148,7 @@ Always Encrypted が有効な状態のデータベース接続を使用するク
 - 単一のリテラルを使用して初期化されている。 演算子または関数を含む式を使用して初期化された変数はパラメーター化されません。      
 
 SQL Server Management Studio がパラメーター化する、変数の例を以下に示します。   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -156,7 +156,7 @@ DECLARE @Salary money = $30000;
 ```
 
 SQL Server Management Studio がパラメーター化を試みない変数の例を以下に示します。   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -170,7 +170,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
 - 変数の宣言された型が date 型または time 型である場合、以下の ISO 8601 に準拠した形式のいずれかを使用する文字列で変数を初期化する必要があります。   
 
 パラメーター化エラーの原因となる Transact-SQL 変数宣言の例を以下に示します。   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -192,7 +192,7 @@ SQL Server Management Studio が変数のパラメーター化を試みたとき
 >   [!NOTE]
 >   Always Encrypted でサポートされる型変換のサブセットは限られているため、多くの場合、Transact-SQL 変数のデータ型が、ターゲットとなるターゲット データベース列の型と同じである必要があります。 たとえば、 `SSN` テーブル内の `Patients` 列の型が `char(11)`であると仮定して、 `@SSN` である、 `nchar(11)`変数の型が列の型と一致しないため、以下のクエリは失敗します。   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   パラメーター化しないと、型変換を含め、クエリ全体が SQL Server/Azure SQL Database 内で処理されます。 パラメーター化が有効になっている場合は、SQL Server Management Studio 内の .NET Framework でいくつかの型変換が実行されます。 .NET Framework 型システムと SQL Server 型システムには違いがある (float など、いくつかの型の精度が異なる) ため、パラメーター化を有効にして実行されたクエリでは、パラメーター化を有効にせずに実行されたクエリとは異なる結果が生成される場合があります。 
 
-#### <a name="permissions"></a>Permissions      
+#### <a name="permissions"></a>アクセス許可      
 
 暗号化テキストのデータを取得するクエリを含め、暗号化された列でクエリを実行するには、データベースでの `VIEW ANY COLUMN MASTER KEY DEFINITION` と `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` の権限が必要です。   
 これらの権限に加え、クエリ結果を暗号化解除する場合や、(Transact-SQL 変数をパラメーター化することで生成される) クエリ パラメーターを暗号化する場合には、ターゲット列を保護する列マスター キーにアクセスする必要もあります。   
@@ -256,12 +256,12 @@ SQL Server Management Studio により、データベースに列マスター �
 2.  **[列暗号化キー]** フォルダーを右クリックし、 **[新しい列の暗号化キー]**を選択します。 
 3.  **[新しい列の暗号化キー]** ダイアログで、列暗号化キーのメタデータ オブジェクトの名前を入力します。
 4.  データベースの列マスター キーを表すメタデータ オブジェクトを選択します。
-5.  **[OK]**をクリックします。 
+5.  **[OK]** をクリックします。 
 
 
 SQL Server Management Studio では、新しい列暗号化キーを生成し、選択した列マスター キーのメタデータをデータベースから取得します。 次に SQL Server Management Studio は、列マスター キーのメタデータを使用することで、該当する列マスター キーを含むキー ストアと交信して、列暗号化キーを暗号化します。 最後に、新しい列暗号化キーのメタデータがデータベースに作成されます。 ダイアログでこれを実現するには、 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを生成し発行します。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>アクセス許可
 
 ダイアログで、列暗号化キーのメタデータを作成し、列マスター キーのメタデータにアクセスするには、 *ALTER ANY ENCRYPTION MASTER KEY* および *VIEW ANY COLUMN MASTER KEY DEFINITION* データベース権限が必要です。
 キー ストアにアクセスして、列マスター キーを使用するには、キー ストアとキーの両方、またはそのいずれかに対する権限が必要な場合があります。
@@ -290,7 +290,7 @@ SQL Server Management Studio では、新しい列暗号化キーを生成し、
 2.  列マスター キーを右クリックし、**[回転]** を選択します。
 3.  **[列マスター キーの回転]** ダイアログの **[ターゲット]** フィールドで、手順 1 で作成した、新しい列マスター キーの名前を選択します。
 4.  既存の列マスター キーで保護された、列暗号化キーの一覧を確認します。 これらのキーは、回転の影響を受けます。
-5.  **[OK]**をクリックします。
+5.  **[OK]** をクリックします。
 
 SQL Server Management Studio では、古い列マスター キーで保護された列暗号化キーのメタデータと、古い列マスター キーおよび新しい列マスター キーのメタデータを取得します。 次に、SSMS では、列マスター キーのメタデータを使用することで、古い列マスター キーが格納されたキー ストアにアクセスし、列暗号化キーを暗号化解除します。 さらに、SSMS では、新しい列マスター キーを保持しているキー ストアにアクセスして、列暗号化キーの暗号化された値セットを新たに作成し、その新しい値をメタデータに追加します ( [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) ステートメントの生成および発行)。
 
@@ -299,7 +299,7 @@ SQL Server Management Studio では、古い列マスター キーで保護さ�
 
 **手順 3: 新しい列マスター キーでアプリケーションを構成する**
 
-この手順では、回転している列マスター キーで保護されたデータベース列 (つまり、回転されている列マスター キーで暗号化される列暗号化キーで暗号化されたデータベース列) に対してクエリを実行するすべてのクライアント アプリケーションが、新しい列マスター キーにアクセスできるようにする必要があります。 この手順は、新しい列マスター キーが格納されているキー ストアの種類によって異なります。 例:
+この手順では、回転している列マスター キーで保護されたデータベース列 (つまり、回転されている列マスター キーで暗号化される列暗号化キーで暗号化されたデータベース列) に対してクエリを実行するすべてのクライアント アプリケーションが、新しい列マスター キーにアクセスできるようにする必要があります。 この手順は、新しい列マスター キーが格納されているキー ストアの種類によって異なります。 例 :
 - 新しい列マスター キーが Windows 証明書ストアに格納された証明書である場合、データベースの列マスター キーのキー パスに指定された場所と同じ証明書ストアの場所 (*[現在のユーザー]* または *[ローカル コンピューター]*) に証明書を展開する必要があります。 アプリケーションが、証明書にアクセスできる必要があります。
     - 証明書が、 *"現在のユーザー"* の証明書ストアに格納されている場合、証明書をアプリケーションの Windows ID (ユーザー) の [現在のユーザー] ストアにインポートする必要があります。
     - 証明書が *"ローカル コンピューター"* の証明書ストアに格納されている場合、アプリケーションの Windows ID に証明書へのアクセス許可が必要です。
@@ -322,7 +322,7 @@ SQL Server Management Studio では、古い列マスター キーで保護さ�
 1.  **オブジェクト エクスプローラー**で、**[セキュリティ]、[Always Encrypted キー]** フォルダーの順に移動し、交換する既存の列マスター キーを探します。
 2.  既存の列マスター キーを右クリックし、**[クリーンアップ]** を選択します。
 3.  削除される列暗号化キーの値の一覧を確認します。
-4.  **[OK]**をクリックします。
+4.  **[OK]** をクリックします。
 
 SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) ステートメントを発行して、古い列マスター キーで暗号化された列暗号化キーの暗号化された値を削除します。
 
@@ -331,12 +331,12 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 データベースから古い列マスター キーの定義を削除する場合は、次の手順を使用します。 
 1.  **オブジェクト エクスプローラー**で **[セキュリティ]、[Always Encrypted キー]、[列マスター キー]** フォルダーの順に移動し、データベースから削除する古い列マスター キーを探します。
 2.  古い列マスター キーを右クリックし、**[削除]** を選択します  ( [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) ステートメントが生成および発行され、列マスター キーのメタデータが削除されます)。
-3.  **[OK]**をクリックします。
+3.  **[OK]** をクリックします。
 
 > [!NOTE]
 > 回転の後、古い列マスター キーは完全に削除しないを強くお勧めします。 そこで、古い列マスター キーを現在のキー ストアに保存するか、セキュリティで保護された別の場所にアーカイブします。 バックアップ ファイルからデータベースを復元して、新しい列マスター キーを構成する前の時点まで戻る場合は、古いキーでデータにアクセスする必要があります。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>アクセス許可
 
 列マスター キーを回転するには、次のデータベース権限が必要です。
 
@@ -371,7 +371,7 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 7.  **[概要]** ページで、選択したオプションを確認し、完了したら **[完了]** をクリックしてウィザードを閉じます。
 8.  **オブジェクト エクスプローラー**で **[セキュリティ]、[Always Encrypted キー]、[列暗号化キー]** フォルダーの順に移動し、データベースから削除する古い列暗号化キーを探します。 キーを右クリックし、 **[削除]**をクリックします。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>アクセス許可
 
 列暗号化キーを回転するために必要なデータベース権限: **ALTER ANY COLUMN MASTER KEY** – 新しい自動生成の列暗号化キーを使用する場合に必要です (新しい列マスター キーとその新しいメタデータも生成されます)。
 **ALTER ANY COLUMN ENCRYPTION KEY** – 新しい列暗号化キーのメタデータを追加するのに必要です。
@@ -404,7 +404,7 @@ DACPAC を使用してデータベースをアップグレードする場合、D
 > [!NOTE]
 > データベースまたは DACPAC の列に対して構成された列マスター キーが Azure Key Vault に格納されている場合は、Azure にサインインするように求められます (まだサインインしていない場合)。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>アクセス許可
 
 DACPAC またはターゲット データベースで Always Encrypted がセットアップされている場合に DAC アップグレード操作を実行するには、DACPAC 内のスキーマとターゲット データベースのスキーマとの違いに応じて、次に示す権限の一部またはすべてが必要な場合があります。
 
@@ -427,7 +427,7 @@ BACPAC をデータベースにインポートすると、BACPAC からの暗号
 ソース データベース (エクスポートしたデータベース) に格納されている暗号化されたデータを変更または取得するように構成されたアプリケーションがある場合、特別なことをしなくても、そのアプリケーションでターゲット データベース内の暗号化されたデータに対してクエリを実行することができます。これは両方のデータベースのキーが同じであるためです。
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>アクセス許可
 
 ソース データベースに対して *ALTER ANY COLUMN MASTER KEY* および *ALTER ANY COLUMN ENCRYPTION KEY* 権限が必要です。 ターゲット データベースに対して *ALTER ANY COLUMN MASTER KEY*、 *ALTER ANY COLUMN ENCRYPTION KEY*、 *VIEW ANY COLUMN MASTER KEY DEFINITION*、および *VIEW ANY COLUMN ENCRYPTION* 権限が必要です。
 
@@ -442,7 +442,7 @@ BACPAC をデータベースにインポートすると、BACPAC からの暗号
 
 次の表では、考えられる移行シナリオを示し、さらに、これらのシナリオが Always Encrypted と共にデータ ソースとデータ ターゲットの接続構成にどのように関係するのかを説明します。
 
-| Scenario|ソース接続構成| ターゲット接続構成
+| シナリオ|ソース接続構成| ターゲット接続構成
 |:---|:---|:---
 |移行時にデータを暗号化する (データはデータ ソースにプレーンテキストとして保存されており、データ ターゲットの暗号化された列に移行されます)。| データ プロバイダー/ドライバー: *"任意"*<br><br>Column Encryption Setting = Disabled<br><br>(.Net Framework Data Provider for SqlServer および .NET Framework 4.6 以降が使用される場合) | データ プロバイダー/ドライバー: *.Net Framework Data Provider for SqlServer* (.NET Framework 4.6 以降が必要)<br><br>Column Encryption Setting = Enabled
 | 移行時にデータを暗号化解除する (データは、データ ソースの暗号化された列に格納されており、プレーンテキストの形式でデータ ターゲットに移行されます。データ ターゲットがデータベースである場合、ターゲット列は暗号化されません)。<br><br>**注:** 暗号化された列を含むターゲット テーブルは、移行の前に存在する必要があります。|データ プロバイダー/ドライバー: *.Net Framework Data Provider for SqlServer* (.NET Framework 4.6 以降が必要)<br><br>[追加のプロパティ]|データ プロバイダー/ドライバー: *"任意"*<br><br>Column Encryption Setting = Disabled<br><br>(.Net Framework Data Provider for SqlServer および .NET Framework 4.6 以降が使用される場合)
@@ -450,7 +450,7 @@ BACPAC をデータベースにインポートすると、BACPAC からの暗号
 |暗号化を解除することなく、暗号化されたデータを移動します。<br><br>**注:** 暗号化された列を含むターゲット テーブルは、移行の前に存在する必要があります。| データ プロバイダー/ドライバー: *"任意"*<br>Column Encryption Setting = Disabled<br><br>(.Net Framework Data Provider for SqlServer および .NET Framework 4.6 以降が使用される場合)| データ プロバイダー/ドライバー: *"任意"*<br>Column Encryption Setting = Disabled<br><br>(.Net Framework Data Provider for SqlServer および .NET Framework 4.6 以降が使用される場合)<br><br>ユーザーは、ALLOW_ENCRYPTED_VALUE_MODIFICATIONS を ON に設定する必要があります。<br><br>詳細については、 [Always Encrypted で保護された機微なデータの移行](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)を参照してください。
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>アクセス許可
 
 データ ソースに格納されたデータを **暗号化** または **暗号化解除** するには、ソース データベースの *VIEW ANY COLUMN MASTER KEY DEFINITION* および *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* 権限が必要です。
 

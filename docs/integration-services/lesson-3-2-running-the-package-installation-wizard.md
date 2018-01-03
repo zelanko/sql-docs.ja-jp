@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e432e01995835f870b40ff1a0e5df07c06ef56a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2 - パッケージ インストール ウィザードの実行
 この実習では、パッケージ インストール ウィザードを実行して、Deployment Tutorial プロジェクトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにパッケージを配置します。 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルにインストールできるのはパッケージだけです。配置バンドルに含まれるサポート ファイルは、ファイル システムに配置されます。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
     > [!IMPORTANT]  
     > この名前は、構成が使用する環境変数の値で参照されます。 フォルダーと参照の名前が一致しなければ、パッケージを実行できません。  
   
-12. **[OK]**をクリックします。  
+12. **[OK]** をクリックします。  
   
 13. [インストール フォルダーの選択] ページで、[フォルダー] ボックスに **C:\DeploymentTutorialInstall** と表示されていることを確認し、 **[次へ]**をクリックします。  
   
@@ -72,14 +72,14 @@ ms.lasthandoff: 11/20/2017
   
 16. **[構成ファイル]** ボックスの一覧で、 **[datatransferconfig.dtsconfig]**をクリックし、 **[構成]** ボックスの **[パス]** 列のプロパティを展開して、 **[値]** 列を次の値で更新します。  
   
-    |プロパティ|[値]|更新後の値|  
+    |プロパティ|ReplTest1|更新後の値|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. **[構成ファイル]** ボックスの一覧で、[loadxmldataconfig.dtsconfig] をクリックし、 **[構成]** ボックスの **[パス]** 列のプロパティを展開して、 **[値]** 列を次の値で更新します。  
   
-    |プロパティ|[値]|更新後の値|  
+    |プロパティ|ReplTest1|更新後の値|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  

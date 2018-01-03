@@ -3,7 +3,7 @@ title: "インターネットへの発行の OLE DB Provider |Microsoft ドキ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5731b15274e4d2c1acafec09bd6478fc244a1f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>インターネットへの発行用の OLE DB プロバイダー
 ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトで使える Microsoft OLE DB Provider for Internet Publishing (インターネット発行プロバイダー) にアクセスして、リソースを操作する Web フォルダーやファイルなどMicrosoft によって処理されます。 ADO のソースを指定することができます、**レコード**、**ストリーム**、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) URL であります。 ことができますし、アップロード、ダウンロード、移動、コピー、および、リソースを削除またはリソースのプロパティを直接操作します。  
@@ -38,19 +38,19 @@ ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[スト
   
  ストアには、ADO プロバイダーに接続する、インターネット発行の 3 つの方法があります。  
   
--   指定"URL ="接続文字列にします。 例:  
+-   指定"URL ="接続文字列にします。 例 :  
   
     ```  
     objConn.Open "URL=http://servername"  
     ```  
   
--   指定の Msdaipp.dso、*プロバイダー*接続文字列のキーワードです。 例:  
+-   指定の Msdaipp.dso、*プロバイダー*接続文字列のキーワードです。 例 :  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
     ```  
   
--   指定の Msdaipp.dso、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)のプロパティ、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 例:  
+-   指定の Msdaipp.dso、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)のプロパティ、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 例 :  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

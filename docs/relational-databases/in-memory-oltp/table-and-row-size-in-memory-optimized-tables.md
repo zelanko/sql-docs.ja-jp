@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed01c6cc36fac642856ef74bbb6a73f15d433228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52a0c6ab3ddd9f88cc0da731795f1b3d61b72714
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,14 +106,14 @@ ms.lasthandoff: 11/17/2017
   
  時間が 200 より大きくなると、テーブルには次の行が含まれます。  
   
-|名前|City|  
+|[オブジェクト名]|City|  
 |----------|----------|  
 |John|Beijing|  
 |Jane|Prague|  
   
  ただし、開始時刻が 100 のアクティブなトランザクションでは、以下のバージョンのテーブルが表示されます。  
   
-|名前|City|  
+|[オブジェクト名]|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/17/2017
   
  次の定義を含む Orders テーブルがあるとします。  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -232,7 +232,7 @@ GO
   
  実際にこのテーブルおよびインデックスに割り当てられ、使用されるメモリは、次のクエリを使用して取得することができます。  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

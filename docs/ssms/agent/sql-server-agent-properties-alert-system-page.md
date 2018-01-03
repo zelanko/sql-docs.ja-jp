@@ -3,7 +3,7 @@ title: "[SQL Server エージェントのプロパティ]([警告システム] �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35318a641f1f0e59f6ac0c809be44bca43394308
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 072c6c1a55e470499d49ccb11fd449a95df3cbcd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>[SQL Server エージェントのプロパティ] ([警告システム] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告によって送信されるメッセージの設定を表示および変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[メール セッション]**  
 このセクションのオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのメールを構成します。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/05/2017
 **プレフィックス**  
 ポケットベルに送信されるメッセージの **[宛先]** 行の先頭に、システムから要求される固定テキストを入力します。  
   
-**ポケットベル**  
+**[ポケットベル]**  
 メッセージの電子メール アドレスを、プレフィックスとサフィックスの間に含めます。  
   
 **サフィックス**  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 **Subject**  
 メッセージの件名のオプションを指定します。  
   
-**プレフィックス**  
+**Prefix**  
 ポケットベルに送信されるメッセージの **[件名]** 行の先頭に、ポケットベル システムから要求される固定テキストを入力します。  
   
 **サフィックス**  
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/05/2017
 **[緊急時のオペレーターを有効にする]**  
 緊急時のオペレーターを指定します。  
   
-**演算子**  
+**[演算子]**  
 緊急時の通知を受け取るオペレーターを指定します。  
   
 **[通知方法]**  

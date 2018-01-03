@@ -3,7 +3,7 @@ title: "非パラメーター化コマンドの操作 |Microsoft ドキュメン
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c2e82698c31d920643ba68fabd8b0bd4f0d2321
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非パラメーター化コマンドの操作
 コマンドのパラメーターのないすべてのプロバイダー コマンドが実行されると、**レコード セット**コマンドの実行中に作成されます。 コマンドが同期的に実行される場合すべて、**レコード セット**が完全に設定されます。 非同期モードを選択した場合のデータが設定された状態、**レコード セット**母集団モードとのサイズによって異なりますが、**レコード セット**です。  

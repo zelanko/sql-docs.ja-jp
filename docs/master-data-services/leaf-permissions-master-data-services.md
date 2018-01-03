@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -23,18 +23,18 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18a5a0b1d3309d58cda54387fe228010ca11d831
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 630e5a4d312855581c6a2d8b29028d415068a396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
   リーフ権限は、エンティティのすべてのリーフ メンバーの属性値に適用されます。  
   
  明示的階層が有効になっていないエンティティの場合、 **リーフ** への権限の割り当ては、エンティティへの権限の割り当てと同じです。  
   
- **注:**  
+ **注**  
   
 -   リーフ権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 11/20/2017
 |----------------|-----------------|  
 |**読み取り**|ユーザーはリーフ メンバーと属性を読み取ることができます。|  
 |**作成**|ユーザーはリーフ メンバーを作成し、作成時に属性値を割り当てることができます。|  
-|**更新**|ユーザーはリーフ メンバーと属性を更新できます。|  
-|**Del**|ユーザーはリーフ メンバーを削除できます。|  
-|**拒否**|リーフ メンバーに対するすべてのアクセスを拒否します。|  
+|**Update**|ユーザーはリーフ メンバーと属性を更新できます。|  
+|**削除**|ユーザーはリーフ メンバーを削除できます。|  
+|**Deny**|リーフ メンバーに対するすべてのアクセスを拒否します。|  
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除が割り当てられると、読み取り権限が自動的に割り当てられます。  
   
@@ -58,13 +58,13 @@ ms.lasthandoff: 11/20/2017
 |**読み取り**|ユーザーは属性の読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  
 |**更新**|ユーザーは属性を更新できます。|  
-|**Del**|影響しません。|  
+|**削除**|影響しません。|  
 |**拒否**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
   
 ### <a name="example"></a>例  
  Product エンティティの場合、Subcategory 属性に **更新** 権限を割り当てます。 他のすべての属性に対しては権限を拒否します。  
   
-|Name|Code|Subcategory (更新)|  
+|[オブジェクト名]|コード|Subcategory (更新)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|\{5\} Mountain Bikes|  
 |Mountain-100|BK-M201|\{5\} Mountain Bikes|  

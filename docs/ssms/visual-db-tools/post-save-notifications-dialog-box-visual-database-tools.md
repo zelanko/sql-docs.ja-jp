@@ -3,7 +3,7 @@ title: "[保存時の通知] ダイアログ ボックス (Visual Database Tools
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef2947ba3f63c75bef2f4f15822743b16f88d07a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe0d00e66789e1971df2db603cc90213c31067de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>[保存前の通知] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスは、テーブルへ変更を保存するときにエラーが発生した場合に表示されます。 このダイアログ ボックスには、データベースに正常に保存されたオブジェクト、保存されなかったオブジェクト、および発生したエラーが一覧表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[テキスト ファイルを保存]**  
 **[上書き保存]** ダイアログ ボックスが表示され、エラー情報の一覧を含むテキスト ファイルの保存場所を指定するように要求されます。 このファイルは、正常に保存されたデータベースへの変更、およびエラーのために保存できなかった変更を記録しています。  
   

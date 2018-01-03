@@ -3,7 +3,7 @@ title: "[外部ツール] | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0e5946c785c27dc3a3f5718de2220e50aba4b82
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 82affe180f4c69a260306b3043a13ddfa8947e8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="external-tools"></a>[外部ツール]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **[メニューの内容]**  
 **[ツール]** メニューに現在追加されている項目のタイトルを一覧表示します。 メニューに表示される項目の順序を変更するには、 **[上へ移動]** と **[下へ移動]** を使用します。 メニューから項目を削除するには、 **[削除]** ボタンを使用します。  
   
@@ -41,10 +41,10 @@ ms.lasthandoff: 12/05/2017
 **[追加]**  
 新しいツールを指定できるようにテキスト ボックスをクリアします。  
   
-**[削除]**  
+**削除**  
 **[メニューの内容]** の一覧および **[ツール]** メニューから、ツールまたはコマンドを削除します。  
   
-**[タイトル]**  
+**Title**  
 **[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前です。 ツールの名前の中でツールのアクセス キーとして使用する文字の前にアンパサンドを配置します。 たとえば、 `&Spy++` は **[ツール]** メニューの **[Spy++]** を表示します。  
   
 **Command**  

@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 422b1a28f91bb33705f0cb6592f4a19bb6341e76
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8f1ced372910b7fcd5e30a79b92de5808342738
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>[Web の構成] ページ (マスター データ サービス構成マネージャー)
   **[Web 構成]** ページを使用して、Web サイトと Web アプリケーションを構成します。 また、Data Quality Services を有効にすることもできます。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**Select**|**[サーバーへの接続]** ダイアログ ボックスを開きます。このダイアログ ボックスから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続して、選択した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web アプリケーションに関連付ける [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] データベースを選択します。|  
 |**SQL Server インスタンス (SQL Server instance)**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースをホストする、選択した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスの名前が表示されます。 これは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続してデータベースを選択するまで、空白になります。|  
-|**データベース**|選択した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web アプリケーションに関連付けられている [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] データベースの名前が表示されます。 これは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続してデータベースを選択するまで、空白になります。|  
+|**[データベース]**|選択した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web アプリケーションに関連付けられている [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] データベースの名前が表示されます。 これは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続してデータベースを選択するまで、空白になります。|  
   
 ## <a name="enable-dqs-integration"></a>DQS 統合の有効化  
   

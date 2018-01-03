@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab9a4a049b49b3b5e0e7f9692fb8df2f7be5a824
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ab5a722213ba96fe591e9d9b8fa64681230d7733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-master-data-services"></a>セキュリティ (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、セキュリティを使用して、仕事を行うのに必要な特定のマスター データにユーザーがアクセスできるようにすると同時に、利用を許可しないデータにはアクセスできないようにします。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  1 つ注意する必要があるのは、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられたすべてのセキュリティは、Excel で有効になるまでに 20 分かかるということです。 この間隔は、web.config ファイルの設定 *MdsMaximumUserInformationCacheInterval* で定義されています。 間隔を変更するには、設定を変更して IIS を再起動します。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

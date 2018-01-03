@@ -3,9 +3,9 @@ title: "コードと結果の印刷 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e90994acf92b6c2a3ba44d04ec62266f364a2dcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cdbf0bb1cc9965115d76cbf28d452db0e639f59
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-code-and-results"></a>コードと結果の印刷
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリまたはファイルの印刷時には、プリンターがカラー印刷をサポートしており、プリンターの設定でカラー印刷が有効になっている場合、色分けされた要素はカラーで印刷されます。  
@@ -36,6 +36,6 @@ ms.lasthandoff: 11/17/2017
  エディターで行番号表示を有効にしている場合でも、 **[ファイル]** メニューの **[印刷]** ダイアログ ボックスで **[行番号を入れる]** をオンにしない限り、行番号は印刷されません。  
   
 ## <a name="see-also"></a>参照  
- [フォントの色、サイズ、およびスタイルを変更する方法](../../relational-databases/scripting/change-font-color-size-and-style.md)  
+ [フォントの色、サイズ、スタイルを変更する方法](../../relational-databases/scripting/change-font-color-size-and-style.md)  
   
   

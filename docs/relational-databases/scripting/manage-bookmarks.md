@@ -3,9 +3,9 @@ title: "ブックマークの管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] コード エディターでの作業中に、**[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  **[すべてのブックマークを有効/無効にします]**  
  **[ブックマーク]** ウィンドウ内のすべてのブックマークに対して、チェック ボックスをオフまたはオンにします。 ブックマークは削除されません。また、ブックマークが付けられたコードの行は変更されません。  
   
- **Del**  
+ **削除**  
  現在選択されているブックマークを **[ブックマーク]** ウィンドウ、およびブックマークが存在するドキュメントから削除します。 ブックマークが付いたコードの行を削除するのではありません。  
   
  ブックマークのチェック ボックス  
@@ -84,10 +84,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="bookmarks-window-shortcut-menu"></a>[ブックマーク] ウィンドウのショートカット メニュー  
  **[ブックマーク]** ウィンドウ内のエントリを右クリックし、ショートカット メニューから次のコマンドを利用できます。  
   
- **Del**  
+ **削除**  
  現在選択されているブックマークを **[ブックマーク]** ウィンドウ、およびブックマークが存在するドキュメントから削除します。 ブックマークが付いたコードの行を削除するのではありません。  
   
- **Rename**  
+ **名前の変更**  
  ブックマークまたはフォルダーに新しい表示名を割り当てることができます。  
   
  **[ブックマークを有効/無効にする]**  
