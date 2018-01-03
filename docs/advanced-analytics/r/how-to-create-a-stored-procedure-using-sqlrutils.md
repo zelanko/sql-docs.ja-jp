@@ -2,9 +2,11 @@
 title: "sqlrutils を使用してストアド プロシージャを作成する方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86e9655770c55f99514cd5a0a9b9910d5f78e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>ストアド プロシージャを使用して sqlrutils を作成します。
 
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 
 データ フレーム内のオブジェクトと、関数の他のすべての入力パラメーターは、次の R データ型でなければなりません。
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - 整数 (integer)
 - logical
@@ -87,7 +89,7 @@ ms.lasthandoff: 12/01/2017
 
 すべての入力呼び出し力パラメーターは、準備が整ったらへの呼び出しを行う、`StoredProcedure`コンス トラクターです。
 
-**使用方法**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

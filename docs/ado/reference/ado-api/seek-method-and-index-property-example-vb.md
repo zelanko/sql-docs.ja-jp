@@ -3,7 +3,7 @@ title: "メソッドとインデックスのプロパティの例 (VB) をシー
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72f55e15e51933773d956013a70f6bd4e7781dcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3cb49aec1b2908c9dad39b12bfb497409dcd3890
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>メソッドとインデックスのプロパティの例 (VB) にシークします。
 この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドおよび[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティと組み合わせて、指定された***従業員 ID***、検索するには従業員の名、***従業員***Nwind.mdb データベースのテーブルです。  

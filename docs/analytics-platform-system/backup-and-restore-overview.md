@@ -3,10 +3,10 @@ title: "バックアップと復元"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
 caps.latest.revision: "50"
-ms.openlocfilehash: 646db87f946475ebdf427b3f4ef3ec00da0dc5f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-and-restore"></a>バックアップと復元
 データのバックアップし、復元はの SQL Server 並列データ ウェアハウス (PDW) について説明します。 バックアップと復元操作は、災害復旧のために使用されます。 バックアップと復元は、1 つのアプライアンスから別のアプライアンスにデータベースをコピーするも使用できます。  
@@ -85,7 +85,7 @@ PDW では、バックアップし、復元のアプライアンス データベ
   
     -   バックアップは、コンピューティング ノードの数が同じかそれ以上 PDW アプライアンスにしか復元できません。  
   
-    -   復元を実行する前にバックアップの名前を変更することはできません。 バックアップ ディレクトリの名前は、バックアップの元の名前の名前と一致する必要があります。 バックアップの元の名前は、バックアップ ディレクトリ内での backup.xml ファイルに格納されます。 別の名前にデータベースを復元するには、restore コマンドで、新しい名前を指定できます。 たとえば、 `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`のようにします。  
+    -   復元を実行する前にバックアップの名前を変更することはできません。 バックアップ ディレクトリの名前は、バックアップの元の名前の名前と一致する必要があります。 バックアップの元の名前は、バックアップ ディレクトリ内での backup.xml ファイルに格納されます。 別の名前にデータベースを復元するには、restore コマンドで、新しい名前を指定できます。 例: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`」を参照してください。  
   
 ## <a name="RestoreModes"></a>データベースの復元モード  
 データベース全体の復元は、データベースのバックアップにデータを使用して、ディストリビューション データベースを再作成されます。 データベースの復元は、最初に、完全バックアップを復元して、1 つの差分バックアップを必要に応じて復元によって実行されます。 データベースの復元には、データベース ユーザーとデータベース ロールが含まれています。  
@@ -129,7 +129,7 @@ PDW では、バックアップし、復元のアプライアンス データベ
   
 再配布後にすべての計算ノードは、実際の低いデータと小さいソース アプライアンス上のすべての計算ノードよりも多くの空き領域に含まれます。 追加の領域を使用して、データベースにデータを追加します。 使用することができます、復元されたデータベースのサイズが大きい場合、必要以上、 [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)データベース ファイルのサイズを縮小します。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |バックアップと復元タスク|Description|  
 |---------------------------|---------------|  

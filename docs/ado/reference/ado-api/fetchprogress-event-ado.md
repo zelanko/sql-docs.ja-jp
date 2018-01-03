@@ -3,7 +3,7 @@ title: "FetchProgress イベント (ADO) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 990e5bbe3a203cd48c34c6153a9ee0ca8e678758
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d02419b59dec4200bab7279f4afc64d5b6426747
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
 **FetchProgress**イベントが現在までに取得された複数行の数を報告する時間のかかる非同期操作中に定期的と呼ばれる、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  

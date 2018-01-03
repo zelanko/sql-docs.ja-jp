@@ -3,7 +3,7 @@ title: "オブジェクトのプログラミング モデルを RDS |Microsoft �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eafec33754d2c1dd0c7a79ddfae627006e31f493
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0f2d2e5cfb50df5fa6a6b1eaace7ba285b0855e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-programming-model-with-objects"></a>オブジェクトと RDS プログラミング モデル
 RDS の目的にアクセスし、IIS などの中間層経由でデータ ソースの更新です。 プログラミング モデルでは、この目標を達成するために必要な活動のシーケンスを指定します。 オブジェクト モデルでは、あるメソッドとプロパティに影響を与える、プログラミング モデルのオブジェクトを指定します。  

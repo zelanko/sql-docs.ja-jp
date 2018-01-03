@@ -3,7 +3,7 @@ title: "カスタム ビジネス オブジェクトを登録する |Microsoft �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 505473d61ef7cc3aeea2067473cd23e3981a2aaa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registering-a-custom-business-object"></a>カスタム ビジネス オブジェクトを登録します。
 Web サーバーを経由 (.dll または .exe) は、カスタム ビジネス オブジェクトが正常に起動するにはこの手順で説明したようにビジネス オブジェクトの ProgID レジストリに入力する必要があります。 この RDS 機能は、認められている実行可能ファイルだけを実行して、Web サーバーのセキュリティを保護します。  

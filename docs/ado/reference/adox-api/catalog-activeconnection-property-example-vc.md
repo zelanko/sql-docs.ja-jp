@@ -3,7 +3,7 @@ title: "カタログの ActiveConnection プロパティの例 (vc++) |Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967249a588c89ce3a385fc6692a1cf99b2d8d34c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5be09d926019d43bede94f71e19792aee73bb614
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>カタログ ActiveConnection プロパティの例 (vc++)
 設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティに有効な開いている接続は、カタログを「開く」です。 開いているカタログからそのカタログ内に含まれるスキーマ オブジェクトにアクセスできます。  

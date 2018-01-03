@@ -3,10 +3,10 @@ title: "データ型の dwloader の変換規則"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: "30"
-ms.openlocfilehash: 2ac1325b3765bafbe34dc61f65f7641431afdfa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversion-rules-for-dwloader"></a>データ型の dwloader の変換規則
 このトピックは、入力データの形式と暗黙的なデータ型変換について説明する[dwloader のコマンド ライン ローダー](dwloader.md) PDW にデータの読み込み時にサポートしています。 暗黙的なデータ変換は、入力データが SQL Server PDW の対象のテーブルでのデータ型と一致しない場合に発生します。 SQL Server PDW に正常に読み込まれます、データの読み込みプロセスの設計時に、この情報を使用します。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="DateFormats"></a>Datetime の形式  
 Dwloader のでは、SQL Server PDW に読み込まれる入力データの次のデータ形式をサポートしています。 詳細については、表の後に一覧表示されます。  
   
-|datetime|smalldatetime|date|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|日付|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M [M]M-[d] d-[yy] yy HH:mm:ss [.fff]|[M [M]M-[d] d-[yy] yy HH:mm [: 00]|[M [M]M-[d] d-[yy] yy|[M [M]M-[d] d-[yy] yy HH:mm:ss [.fffffff]|[M [M]M-[d] d-[yy] yy HH:mm:ss [.fffffff] zzz|  
 |[M [M]M-[d] d-[yy] yy hh:mm:ss [.fff] [tt]|[M [M]M-[d] d-[yy] yy hh:mm [: 00] [tt]||[M [M]M-[d] d-[yy] yy hh:mm:ss [.fffffff] [tt]|[M [M]M-[d] d-[yy] yy hh:mm:ss [.fffffff] [tt] zzz|  

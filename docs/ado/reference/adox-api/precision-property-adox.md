@@ -3,7 +3,7 @@ title: "Precision プロパティ (ADOX) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56bec31a20963db16346b3cbe67b01182dd190e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16b8471b83283a95998ca6e58047774678d4db63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precision-property-adox"></a>Precision プロパティ (ADOX)
 データの値の最大有効桁数を示す、[列](../../../ado/reference/adox-api/column-object-adox.md)です。  

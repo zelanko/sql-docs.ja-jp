@@ -3,7 +3,7 @@ title: "FilterGroupEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 080b0149fcfe0df39e1efbe44a87fe6243424468
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3b80757a0836fd11757c9e80c2b1650b0cb983f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 フィルター処理するレコードのグループを指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |**競合**|5|最後のバッチ更新が失敗したレコードを表示するためのフィルター。|  
 |**adFilterFetchedRecords**|3|現在のキャッシュ内のレコードを表示するためのフィルター-つまり、データベースからレコードを取得するには、最後の呼び出しの結果。|  
 |**adFilterNone**|0|現在のフィルターを削除し、表示するためのすべてのレコードを復元します。|  
-|**行と列**|1|変更されましたが、サーバーにまだ送信されていないレコードだけを表示するためのフィルター。 バッチ更新モードにのみ適用できます。|  
+|**行と列**|@shouldalert|変更されましたが、サーバーにまだ送信されていないレコードだけを表示するためのフィルター。 バッチ更新モードにのみ適用できます。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
  パッケージ: **com.ms.wfc.data**  

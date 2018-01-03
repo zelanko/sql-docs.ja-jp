@@ -2,12 +2,14 @@
 title: "R と SQL データ型とデータ オブジェクト (SQL のクイック スタートで R) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 04a227a72d18f1cf2338bae384afe74c4529225d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 41219f87c47b970f8b8063db64f81032ab826ee0
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R と SQL データ型とデータ オブジェクト (SQL のクイック スタートで R)
 
@@ -135,7 +137,7 @@ EXECUTE sp_execute_external_script
 
 この場合、3 つの値で構成される列が 1 列の行列に変換されます。 R では行列は特殊なケースの配列であるため、2 つの引数が一致するように、配列 `y` が暗黙的に 1 列の行列に変換されます。
 
-**[結果]**
+**結果**
 
 |Col1|Col2|Col3|Col4|
 |---|---|---|---|
@@ -158,7 +160,7 @@ execute sp_execute_external_script
 
 これで、R は結果として 1 つの値を返します。
 
-**[結果]**
+**結果**
     
 |Col1|
 |---|
@@ -193,14 +195,14 @@ EXECUTE sp_execute_external_script
 
 データ フレームに入力するために、R は RTestData から取得した要素を必要な数だけ繰り返し、配列 `df1` 内の要素の数と一致させます。
 
-**[結果]**
+**結果**
     
 |*Col2*|*Col3*|
 |----|----|
-|1|1|
+|@shouldalert|@shouldalert|
 |10|2|
 |100|3|
-|1|4|
+|@shouldalert|4|
 |10|5|
 |100|6|
 
@@ -251,7 +253,7 @@ WITH RESULT SETS undefined;
 
 クエリを動作させたら、`str` 関数の結果を確認し、R で入力データがどのように処理されるかを把握します。
 
-**[結果]**
+**結果**
 
 ```
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
@@ -263,7 +265,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 日時列は R データ型 **POSIXct** を使用して処理されました。
 + "ProductSeries"として識別された text 列、**係数**、カテゴリ変数を意味します。 文字列値は、既定では因子として処理されます。 R に渡した文字列は、内部で使用するために整数に変換され、出力時に再度文字列にマップされます。
 
-### <a name="summary"></a>概要
+### <a name="summary"></a>[概要]
 
 でもこれらの簡単な例をからは、SQL を渡す入力としてクエリを実行するときに、データ変換の効果を確認する必要性を確認できます。 一部の SQL Server データ型が R でサポートされていないために、次のエラーを回避する方法を考慮してください。
 

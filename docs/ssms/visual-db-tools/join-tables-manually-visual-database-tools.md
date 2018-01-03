@@ -3,7 +3,7 @@ title: "手動でのテーブルの結合 (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f9fe3b4dd3fc65924ef308ca5ce817c9a008fc1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1223e0a42ed48773f2294a5ae58444e52fae2843
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動でのテーブルの結合 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)では、クエリに複数のテーブルを追加すると、共通データ、またはテーブルの関連付けに関するデータベース内に格納されている情報に基づいて、テーブルが結合されます。 詳しくは、「[テーブルの自動結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)」をご覧ください。 ただし、クエリおよびビュー デザイナーでテーブルが自動的に結合されなかった場合、またはテーブル間の結合条件を追加作成する場合は、テーブルを手動で結合できます。  

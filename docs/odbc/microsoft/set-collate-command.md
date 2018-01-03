@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73bf988f0ab1b181a75c7569c8b279b36a9b76d8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
 後続のインデックス作成と並べ替え操作では、文字列フィールドの照合順序を指定します。  
@@ -38,7 +38,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  照合順序を指定します。 使用可能な照合シーケンスのオプションは、次の表で説明します。  
   
-|オプション|言語|  
+|および|[言語]|  
 |-------------|--------------|  
 |オランダ語|オランダ語|  
 |GENERAL|英語、フランス語、ドイツ語、最新のスペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  

@@ -3,7 +3,7 @@ title: "プロバイダーと DefaultDatabase プロパティの使用例 (vc++)
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42993cc9fdaa5deaad46fae2f7c61f8beb776489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 594dc48ba8d78ee8039c80c7c6596993be3c9a05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>プロバイダーと DefaultDatabase プロパティの使用例 (vc++)
 この例で、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)を開き、3 つのプロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを別のプロバイダーを使用します。 また、使用、 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC プロバイダーの既定のデータベースを設定するプロパティです。  

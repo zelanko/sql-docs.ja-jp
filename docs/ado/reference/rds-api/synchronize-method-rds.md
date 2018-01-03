@@ -1,11 +1,13 @@
 ---
 title: "同期メソッド (RDS) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c69217abc435fb4b3438975db560b9ce5836ee8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c933cbb0a39486ea1ed04b645057bdc31011b05b
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="synchronize-method-rds"></a>同期メソッド (RDS)
 ADO 2.5 以降で使用する接続文字列で指定されたデータベースと特定のレコード セットを同期します。  

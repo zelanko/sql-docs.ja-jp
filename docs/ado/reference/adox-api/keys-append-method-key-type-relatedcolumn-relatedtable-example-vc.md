@@ -3,7 +3,7 @@ title: "例を作成する新しい外部キー (vc++) |Microsoft ドキュメ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e3edcf63f507b8fdcc04bd979980a4717dd429f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0059a9c080a33d6bea0bb9b7ccc2ad418debeb24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>キーは追加メソッド、キーの種類、RelatedColumn、RelatedTable および UpdateRule プロパティの使用例 (vc++)
 次のコードでは、新しい外部キーを作成する方法を示します。 2 つのテーブル (Customers と Orders) の存在と見なします。  

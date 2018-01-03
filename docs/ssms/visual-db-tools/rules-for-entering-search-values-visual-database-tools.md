@@ -3,7 +3,7 @@ title: "検索値を入力するときの規則 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec0d150e6ff4d9c6e70ea4045a5557702a7e72b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4ac4ebc852260c2f682b06f9fec24a56820e4410
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>検索値を入力するときの規則 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、検索条件に対して次の種類のリテラル値を入力するときに従う規則について説明します。  
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/05/2017
   
 |**ペイン**|**日付形式**|  
 |------------|-------------------|  
-|条件|ロケール固有&#x2028;データベース固有&#x2028;ANSI 標準<br /><br />[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) で入力された日付は、SQL ペインではデータベース互換の形式に変換されます。|  
+|[抽出条件]|ロケール固有&#x2028;データベース固有&#x2028;ANSI 標準<br /><br />[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) で入力された日付は、SQL ペインではデータベース互換の形式に変換されます。|  
 |SQL|データベース固有&#x2028;ANSI 標準|  
 |[結果]|ロケール固有|  
   

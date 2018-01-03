@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>デスクトップ データベース ドライバーのアーキテクチャ
 使用するには、Microsoft Windows 95 以降、または Windows NT 4.0 および Windows 2000 には、これらのドライバーが設計されています。 Windows 95 以降; のみの 32 ビット アプリケーションがサポートされます。Windows NT 4.0 と Windows 2000 では、16 ビットおよび 32 ビット アプリケーションをサポートします。  

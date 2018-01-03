@@ -3,7 +3,7 @@ title: "ResyncEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f7ad5525f2f9e7ce7e915b97d397d3d7d372a27
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64e65b766600b9da9a721da2ca9ad702dfb05d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resyncenum"></a>ResyncEnum
 呼び出しによって基になる値を上書きするかどうかを示す[再同期](../../../ado/reference/ado-api/resync-method.md)です。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|既定値です。 データは上書きされ、保留中の更新が取り消されます。|  
-|**処理**|1|データは上書きされず、保留中の更新は取り消されません。|  
+|**処理**|@shouldalert|データは上書きされず、保留中の更新は取り消されません。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
  パッケージ: **com.ms.wfc.data**  

@@ -1,12 +1,14 @@
 ---
 title: "R (チュートリアル) を使用するデータの概要を表示および |Microsoft ドキュメント"
 ms.date: 11/10/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 534479bf1a473574038da1a24dc1fc06510f4f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 37d73022a1e45c5166bec70bb68f6bf3b995345e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="view-and-summarize-data-using-r"></a>表示して、R を使用するデータの概要
 
@@ -151,7 +153,7 @@ Microsoft r、*データソース*RevoScaleR 関数を使用して作成する�
     rxGetVarInfo(data = inDataSource)
     ```
 
-    **[結果]**
+    **結果**
     
     ```
     Var 1: tipped, Type: integer
@@ -184,7 +186,7 @@ Microsoft r、*データソース*RevoScaleR 関数を使用して作成する�
     + 出力する統計情報を指定しない場合は、既定では rxSummary 出力平均、StDev、Min、Max、および有効であり、不足しているの観測値の数。
     + この例には、パフォーマンスを比較できるように、関数の開始時間と終了時間を追跡するコードも含まれています。
   
-    **[結果]**
+    **結果**
 
     RxSummary 関数が正常に実行する場合、上記のような結果が表示をカテゴリ別の統計情報のリストが続きます。 
 

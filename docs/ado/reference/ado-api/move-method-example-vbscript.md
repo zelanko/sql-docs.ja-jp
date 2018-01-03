@@ -3,7 +3,7 @@ title: "メソッドの例 (VBScript) の移動 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 78e54e69d608bd36f26d01fe779c4cca0332528f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c86cc6cb0a4b61a2bb83fed0228f7513040d5039
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-method-example-vbscript"></a>メソッドの例 (VBScript) を移動します。
 この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいてレコード ポインターを配置する方法です。  

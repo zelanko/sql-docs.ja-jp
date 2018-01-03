@@ -3,7 +3,7 @@ title: "チュートリアル: データベース ダイアグラムの追加と
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d202d485b27b19a0d7b3461e0f427d996567b4f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7835747f81513f26fb7e69a357094cdc1d8dcfe0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>チュートリアル: データベース ダイアグラムの追加と変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このチュートリアルでは、データベース ダイアグラムを作成および変更する方法と、データベース ダイアグラム コンポーネントを使用してデータベースを変更する方法について説明します。 ダイアグラムにテーブルを追加する方法、テーブル間のリレーションシップを作成する方法、列に制約とインデックスを作成する方法、およびテーブルごとに表示する情報のレベルを変更する方法を記載しています。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 このチュートリアルを完了するには、以下が必要です。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] サンプル データベースへのアクセス権  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  **Table1**に次のデータを追加します。  
   
-    |**[列名]**|**[データ型]**|**[Null を許容]**|  
+    |**[列名]**|**[データ型]**|**[NULL を許容]**|  
     |-------------------|-----------------|-------------------|  
     |**T1col1**|**int**|オン|  
     |**T1col2**|**varchar (50)**|オン|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  ダイアグラム デザイナーで、 `Table2` という新しいテーブルを作成し、次の列を追加します。  
   
-    |**[列名]**|**[データ型]**|**[Null を許容]**|  
+    |**列名**|**[データ型]**|**[NULL を許容]**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|オフ|  
     |**T2col2**|**varchar (50)**|オン|  
@@ -197,11 +197,11 @@ XML を含めて、ほとんどの種類のデータにインデックスを作�
   
     **[上書き保存]** ダイアログ ボックスが表示されます。 **[該当テーブルに関する警告]** チェック ボックスがオンになっている場合、新しいテーブルや変更されるテーブルの一覧が表示されます。  
   
-2.  **[OK]**をクリックします。  
+2.  **[OK]** をクリックします。  
   
 3.  エラーが発生した場合は、 **[保存前の通知]** ダイアログ ボックスにそれらのエラーと原因が表示されます。 エラーを修正し、再度ダイアグラムを保存します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 ここで作成したダイアグラムは、既存のテーブルと新しいテーブルを 2 つずつ使用しただけの基本的なものですが、既存のデータベースのダイアグラムを作成したり、視覚的に新しいスキーマを作成したりできることを示しています。 さらに理解を深めるには、次の操作を行うことをお勧めします。  
   
 -   関連テーブルのグループを含む新しいダイアグラムの作成  

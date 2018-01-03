@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 接続プールのオプションの設定
 接続プールにより、アプリケーションを使用するたびに再確立する必要がない接続プールから接続を使用します。 使用することができます、**接続プール**のタブ、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックスを有効にし、パフォーマンスの監視を無効にします。 接続タイムアウト期間を設定するドライバー名をダブルクリックします。  

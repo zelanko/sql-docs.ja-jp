@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05f969f344ef69777d0586c18aba76cf7630bfd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 784e99e2b0d3885956d31744261345169239dc10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="limitations"></a>制限事項
 このセクションでは、に関して、次のトピックには、ODBC デスクトップ データベース ドライバーの制限事項について説明します。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 |関数|ステートメント|句、型、およびなど|  
 |---------------|----------------|-------------------------------|  
 |[集計関数](../../odbc/microsoft/aggregate-function-limitations.md)|[ALTER TABLE ステートメント](../../odbc/microsoft/alter-table-statement-limitations.md)|[列名](../../odbc/microsoft/column-name-limitations.md)|  
-|[スカラー関数](../../odbc/microsoft/scalar-function-limitations.md)|[CALL ステートメント](../../odbc/microsoft/call-statement-limitations.md)|[データ型](../../odbc/microsoft/data-type-limitations.md)|  
+|[スカラー関数](../../odbc/microsoft/scalar-function-limitations.md)|[CALL ステートメント](../../odbc/microsoft/call-statement-limitations.md)|[[データ型]](../../odbc/microsoft/data-type-limitations.md)|  
 |[集合関数](../../odbc/microsoft/set-functions-limitations.md)|[CREATE INDEX ステートメント](../../odbc/microsoft/create-index-statement-limitations.md)|[日付の算術演算子](../../odbc/microsoft/date-arithmetic-limitations.md)|  
 |[並べ替え](../../odbc/microsoft/sorting-limitations.md)|[テーブル作成ステートメント](../../odbc/microsoft/create-table-statement-limitations.md)|[識別子](../../odbc/microsoft/identifiers-limitations.md)|  
 |[CONVERT 関数](../../odbc/microsoft/convert-function-limitations.md)|[DELETE ステートメント](../../odbc/microsoft/delete-statement-limitations.md)|[Index Name](../../odbc/microsoft/index-name-limitations.md)|  

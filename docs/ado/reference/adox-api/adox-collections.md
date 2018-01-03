@@ -3,7 +3,7 @@ title: "ADOX コレクション |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6e9c005180502d72071635d15ca9cc5341986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a12196d776df1b34f62364938d72fbad33eebb7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-collections"></a>ADOX コレクション
 |||  
 |-|-|  
 |[[列]](../../../ado/reference/adox-api/columns-collection-adox.md)|すべてを含む**列**テーブル、インデックス、またはキーのオブジェクト。|  
 |[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)|すべてを含むストアド**グループ**カタログまたはユーザーのオブジェクト。|  
-|[インデックス](../../../ado/reference/adox-api/indexes-collection-adox.md)|すべてを含む**インデックス**テーブルのオブジェクト。|  
+|[[インデックス]](../../../ado/reference/adox-api/indexes-collection-adox.md)|すべてを含む**インデックス**テーブルのオブジェクト。|  
 |[キー](../../../ado/reference/adox-api/keys-collection-adox.md)|すべてを含む**キー**テーブルのオブジェクト。|  
 |[手順](../../../ado/reference/adox-api/procedures-collection-adox.md)|すべてを含む**プロシージャ**カタログのオブジェクト。|  
 |[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)|すべてを含む**テーブル**カタログのオブジェクト。|  

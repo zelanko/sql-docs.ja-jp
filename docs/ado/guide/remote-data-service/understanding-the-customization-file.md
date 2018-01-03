@@ -3,7 +3,7 @@ title: "カスタマイズ ファイルの概要 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます (**:operator[]**) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**接続**、 **sql**、 **userlist**、または**ログ**です。 パラメーターでは、リテラル文字列、既定値、ユーザー指定の識別子では、または何も行われません。  

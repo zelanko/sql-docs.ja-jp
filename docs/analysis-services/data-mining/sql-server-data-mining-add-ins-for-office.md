@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 用データ マイニング アドイン Office |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,14 +19,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 420437152716f78a03c78e3d9a67216029751f5e
+ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office 用 SQL Server データ マイニング アドイン
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 用データ マイニング アドインでは、軽量な一連の予測分析できるように Excel のデータを使用して、予測、推奨設定、または検索の分析モデルを構築するためのツールです。  
+
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 用データ マイニング アドインは、予測、推奨設定、または検索の分析モデルを構築するために Excel のデータを使用できるようにする軽量な一連の予測分析用ツールです。  
+  
+> [!IMPORTANT]
+> データ マイニング アドインを Office には、Office 2016 またはそれ以降のサポートされません。
   
  アドインのウィザードおよびデータ管理のツールでは、次の一般的なデータ マイニング タスクの実行手順を説明しています。  
   

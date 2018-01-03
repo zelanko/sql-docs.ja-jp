@@ -3,7 +3,7 @@ title: "RDS オブジェクト モデルの概要 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,17 +20,17 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b68f17999d9b6c74155463525ca04d6c000cd23f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09738022f51016f50986e8f6164db87eff24d5f2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-object-model-summary"></a>RDS オブジェクト モデルの概要
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 から始まり、RDS サーバー コンポーネントは含まれなく Windows オペレーティング システムで (Windows 8 を参照し、 [Windows Server 2012 の互換性クックブック](https://www.microsoft.com/en-us/download/details.aspx?id=27416)詳細については)。 RDS クライアント コンポーネントが Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565)です。  
   
-|オブジェクト|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|このオブジェクトには、サーバー プロキシを取得するメソッドが含まれています。 プロキシには、既定またはカスタム サーバー プログラム (ビジネス オブジェクト) があります。 サーバー プログラムは、インターネット、イントラネット、ローカル エリア ネットワークで呼び出すことがまたはまたはローカルのダイナミック リンク ライブラリです。<br /><br /> **DataSpace**オブジェクトにスクリプトを実行しても安全です。|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバー プログラムを表します。 既定 RDS のデータの取得と更新動作を実行します。<br /><br /> **DataFactory**オブジェクトはスクリプトを実行しても安全ではありません。|  

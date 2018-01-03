@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.workload: Inactive
-ms.openlocfilehash: 1c7348433aa9162f64e1ecccb9301276c46ce383
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 989c34ff57fcc6ef0aa561c58043d1073772b63c
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>SQL Server on Linux のセキュリティの制限
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/01/2017
 * 標準のパスワード ポリシーを指定します。 MUST_CHANGE が、唯一のオプションを構成することがあります。  
 * 拡張キー管理はサポートされていません。 
 * Azure Key Vault に格納されたキーを使用することはサポートされていません。
-* SQL Server では、接続を暗号化するため、独自の自己署名証明書を生成します。 現時点では、SSL または TLS 証明書に指定されたユーザーを使用する SQL サーバーを構成することはできません。 
+* SQL Server では、接続を暗号化するため、独自の自己署名証明書を生成します。 TLS 証明書に指定されたユーザーを使用する SQL Server を構成することができます。 
 
 SQL Server で使用できるセキュリティ機能の詳細については、次を参照してください。、 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)です。
 

@@ -3,10 +3,10 @@ title: "PDW の証明書 (Analytics Platform System) のプロビジョニング
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
 caps.latest.revision: "22"
-ms.openlocfilehash: f0134ec239b938ee7ace6fc6dc05e130fb844b2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 証明書のプロビジョニング
 **PDW 証明書のプロビジョニング**Analytics Platform System のページ**Configuration Manager**をインポートまたは PDW 地域で使用される証明書を削除します。 使用して、接続の暗号化に証明書は SQL Server クライアント、SQL Server PDW ドライバーを使用するツールを使ってコントロール ノードをセキュリティで保護された通信を支援できます、[管理コンソール](monitor-the-appliance-by-using-the-admin-console.md)、Integration Services で読み込まれるとします。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 証明書をインストールする前に、次の操作を行います。  
   
 1.  セキュリティで保護された証明書を取得します。 セキュリティで保護された証明書を取得する方法の詳細については、必要がある場合は、Microsoft サポートに問い合わせてください。  

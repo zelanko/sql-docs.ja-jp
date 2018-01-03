@@ -3,7 +3,7 @@ title: "(ADO) のプロパティ-動的な最適化 |Microsoft ドキュメン�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad1ecfc8b29a5b2ca22ef4673ee2d55b3a3c988
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e18837dc119c2bdc1af557cf1385131ff78fd9d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize-property-dynamic-ado"></a>動的プロパティ (ADO) を最適化します。
 インデックスを作成する必要があるかどうかを指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)です。  

@@ -3,7 +3,7 @@ title: "レコードとストリーム |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfe5f8e48eb88233949102e988f3a2296cf373b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b449e3fb216703d41ab67d3a4be6e55234adc1b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="records-and-streams"></a>レコードとストリーム
 ADO は、現在、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト リレーショナル データベースなどのデータ ソース内の情報にアクセスする主な手段として。 ただし、一部のプロバイダーのサポート、[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)のプロバイダーからのデータを操作できるオブジェクトの代替または補完としてオブジェクト。 特性について**レコード**動作、プロバイダーのマニュアルを参照してください。  

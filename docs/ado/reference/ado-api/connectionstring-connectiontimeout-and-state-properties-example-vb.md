@@ -3,7 +3,7 @@ title: "接続のプロパティの例 (VB) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c0d0b13d923862d42301cd5ad8b1d6bb8aade3d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ddbb82b8df430e65bac8ebca1598992fbc5fdcc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、および (VB) の状態プロパティの例
 この例を使用する別の方法を示します、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを開くには、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 でも使用、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)接続タイムアウトを設定するプロパティと[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティを接続の状態を確認します。 GetState 関数は、この手順を実行する必要があります。  

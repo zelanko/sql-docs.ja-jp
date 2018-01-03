@@ -1,10 +1,10 @@
 ---
 title: "Machine Learning のサービスの既知の問題 |Microsoft ドキュメント"
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 62eeb13d172325d70d4efcbc014a3525fabf4136
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2eeadd5a11f3fd16282164ba6536417e7da515da
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning のサービスの既知の問題
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 
 * SQL Server 2016
 
-  - R Services (In-Database)
+  - R Services (データベース内)
   - Microsoft R Server (スタンドアロン)
 
 * SQL Server 2017
@@ -265,7 +265,7 @@ SQL でサポートされているデータ型の一部を R で使用できま�
 
 この問題が発生した場合は、 `f` の定義内の、通常 `g`が `g` を呼び出す場所より前の任意の場所に、 `f`の定義を組み込むことで問題を回避できます。
 
-例:
+例 :
 
 ```r
 f <- function(x) { 2*x * 3 }

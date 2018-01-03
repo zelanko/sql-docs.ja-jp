@@ -3,7 +3,7 @@ title: "ADO プロパティ |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 |||  
@@ -55,10 +55,10 @@ ms.lasthandoff: 11/17/2017
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|データ容量を示す、**フィールド**オブジェクト。|  
 |[Description](../../../ado/reference/ado-api/description-property.md)|について説明します、**エラー**オブジェクト。|  
 |[言語仕様](../../../ado/reference/ado-api/dialect-property.md)|構文と、プロバイダーは解析に使用される一般的な規則を示します、 **CommandText**または**CommandStream**プロパティです。|  
-|[方向](../../../ado/reference/ado-api/direction-property.md)|示すかどうか、**パラメーター**入力パラメーター、出力パラメーター、またはその両方を表すパラメーターがストアド プロシージャからの戻り値の場合、または。|  
+|[[方向]](../../../ado/reference/ado-api/direction-property.md)|示すかどうか、**パラメーター**入力パラメーター、出力パラメーター、またはその両方を表すパラメーターがストアド プロシージャからの戻り値の場合、または。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|現在のレコードの編集状態を示します。|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|現在の位置がストリームの末尾にするかどうかを示します。|  
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|内のデータにフィルターを示します、 **Recordset**です。|  
+|[[フィルター]](../../../ado/reference/ado-api/filter-property.md)|内のデータにフィルターを示します、 **Recordset**です。|  
 |[HelpContext と HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|ヘルプ ファイルとに関連付けられているトピックを示します、**エラー**オブジェクト。<br /><br /> **ヘルプ コンテキスト Id**として、コンテキスト ID を返します、**長い**ヘルプ ファイルのトピックの値。<br /><br /> **HelpFile**を返します、**文字列**ヘルプ ファイルの完全に解決されたパスに評価される値。|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|有効にインデックスを現在の名前を示す、 **Recordset**オブジェクト。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|分離のレベルを示す、**接続**オブジェクト。|  
@@ -98,8 +98,8 @@ ms.lasthandoff: 11/17/2017
 |[型](../../../ado/reference/ado-api/type-property-ado.md)|操作の種類またはデータ型を示す、**パラメーター**、**フィールド**、または**プロパティ**オブジェクト。|  
 |[型 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)|含まれているデータの種類を示す、**ストリーム**(バイナリまたはテキスト)。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|データベースの現在の値を示す、**フィールド**オブジェクト。|  
-|[値](../../../ado/reference/ado-api/value-property-ado.md)|割り当てられた値を示す、**フィールド**、**パラメーター**、または**プロパティ**オブジェクト。|  
-|[バージョン](../../../ado/reference/ado-api/version-property-ado.md)|ADO のバージョン番号を示します。|  
+|[[値]](../../../ado/reference/ado-api/value-property-ado.md)|割り当てられた値を示す、**フィールド**、**パラメーター**、または**プロパティ**オブジェクト。|  
+|[[バージョン]](../../../ado/reference/ado-api/version-property-ado.md)|ADO のバージョン番号を示します。|  
   
 ## <a name="see-also"></a>参照  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   

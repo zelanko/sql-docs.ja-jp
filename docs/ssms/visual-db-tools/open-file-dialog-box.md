@@ -3,7 +3,7 @@ title: "[ファイルを開く] ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 894dcee809aac7b3d32b30f1ee5fdc988eb8b009
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
 フロッピー ディスク ドライブ、ハード ディスク ドライブ、および CD-ROM ドライブの内容を表示します。  
   
 ## <a name="folder-list"></a>フォルダー一覧  
-**ファイル名**  
+**[ファイル名]**  
 このオプションを使用すると、表示するファイルとフォルダーをフィルター選択できます。 フィルター選択に使用するファイル名またはファイル名の一部を入力します。 ワイルドカードとしてアスタリスク (*) を使用できます。  
   
 **ファイルの種類**  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 **[Web の検索]**  
 このボタンは使用できません。  
   
-**Del**  
+**削除**  
 選択したファイルまたはフォルダーを記憶域から削除します。  
   
 **[新しいフォルダー]**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="tools"></a>ツール  
 内容ペインで選択した項目に適用するツールを選択します。  
   
-**Del**  
+**削除**  
 選択したファイルまたはフォルダーを記憶域から削除します。  
   
 **[ネットワーク ドライブの割り当て]**  

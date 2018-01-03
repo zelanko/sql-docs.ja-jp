@@ -2,9 +2,11 @@
 title: "管理と監視 machine learning ソリューション |Microsoft ドキュメント"
 ms.custom: SQL2016_New_Updated
 ms.date: 07/26/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b153db4a35b5ef44e1c385cb902000ef94abc078
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 42da1c7becbb7003ab66b7ce58cbdbb307326aaa
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理と machine learning のソリューションの監視
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
 データベース管理者は、データ サイエンティストは、さまざまなレポート開発者、ビジネス アナリスト、およびビジネス データのユーザーにだけでなく、データ アクセスを提供する必要があります。 R (および Python ようになりました) の SQL Server に統合は、データ サイエンスの役割をサポートする、データベース管理者に多くのメリットを提供します。
 

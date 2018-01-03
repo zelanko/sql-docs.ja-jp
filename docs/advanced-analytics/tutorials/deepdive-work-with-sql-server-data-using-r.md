@@ -1,30 +1,35 @@
 ---
-title: "R を使用する SQL Server データの操作 |Microsoft ドキュメント"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "R (SQL と R deep dive) を使用する SQL Server データの操作 |Microsoft ドキュメント"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
 caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2e8e8d4d802e2a940127fff8f6ecd0f831e6711a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 55eae1d572b8416cafc3774229ddaad91314a61e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="work-with-sql-server-data-using-r"></a>R を使用する SQL Server データを操作します。
+# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>R (SQL と R deep dive) を使用する SQL Server データの操作します。
 
-このレッスンでは、モデルのトレーニングに必要な環境を設定してデータを追加し、データのクイック サマリーを実行します。 このプロセスでは次のタスクを実行します。
+この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
+
+このレッスンでは、モデルのトレーニングに必要なデータを追加し、データのいくつかの概要を実行環境を設定します。 プロセスの一環として、これらのタスクを完了する必要があります。
   
 - 2 つの R モデルのトレーニングとスコアリングに使用するデータを格納するための新しいデータベースを作成します。
   
@@ -38,16 +43,16 @@ ms.lasthandoff: 12/01/2017
   
 - 計算コンテキストを作成して、R コードのリモート実行を有効にします。
   
-- リモート計算コンテキストでトレースを有効にする方法について説明します。
+- (省略可能)リモート計算コンテキストのトレースを有効にします。
   
-## <a name="create-the-database-and-user"></a>データベースとユーザーを作成する
+## <a name="create-the-database-and-user"></a>データベースおよびユーザーを作成します。
 
-このチュートリアルでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で新しいデータベースを作成し、データの読み取りと書き込みおよび R スクリプトの実行のアクセス許可を持つ SQL ログインを追加します。
+このチュートリアルでは、新しいデータベースを作成[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、し、データの読み取りし、書き込みをして、R スクリプトを実行するアクセス許可を持つ SQL ログインを追加します。
 
 > [!NOTE]
-> データを読み取るだけ場合 R スクリプトを実行するアカウントに SELECT 権限のみが必要です (**db_datareader**ロール) で指定されたデータベースです。 ただし、このチュートリアルでは、データベースを準備し、スコアリング結果を保存するテーブルを作成するために、DDL 管理者特権が必要になります。
+> データを読み取るだけ場合、R スクリプトを実行するアカウントに SELECT 権限が必要です (**db_datareader**ロール) で指定されたデータベースです。 ただし、このチュートリアルでは権限が必要 DDL 管理者、データベースを準備して、スコア付けの結果を保存するためのテーブルを作成します。
 > 
-> さらに、データベースの所有者でない場合は、アクセス許可、EXECUTE ANY EXTERNAL SCRIPT、R スクリプトを実行できるようにする必要があります。
+> さらに、データベースの所有者でない場合は、アクセス許可、EXECUTE ANY EXTERNAL SCRIPT、R スクリプトを実行するために必要があります。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を有効にするインスタンスを選択し、 **[データベース]**を右クリックして、 **[新しいデータベース]**を選択します。
   
@@ -100,23 +105,23 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     新しいデータベース管理ツールをインストールしたくない場合は、コントロール パネルの [ODBC データ ソース アドミニストレーター](https://msdn.microsoft.com/library/ms714024.aspx) を使用して、SQL Server インスタンスへのテスト接続を作成できます。 データベースが正しく構成されていて、正しいユーザー名とパスワードを入力した場合は、先に作成したデータベースを表示し、既定のデータベースとして選択することができます。
   
-    データベースに接続できない場合は、サーバーでリモート接続が有効になっていること、および名前付きパイプ プロトコルが有効になっていることを確認します。 その他のトラブルシューティングのヒントについては、 [こちらの記事](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)を参照してください。
+    データベースに接続できない場合は、サーバーでリモート接続が有効になっていること、および名前付きパイプ プロトコルが有効になっていることを確認します。 この記事で説明が追加のトラブルシューティングのヒント: [、SQL Server データベース エンジンへの接続のトラブルシューティングを行う](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)です。
   
 - **テーブル名に datareader というプレフィックスが付くのはなぜですか。**
   
-    このユーザーの既定のスキーマを **db_datareader**と指定すると、このユーザーが作成するすべてのテーブルとその他の新しいオブジェクトの名前の前には、この " *スキーマ*" が付加されます。 スキーマは、オブジェクトを整理するためにデータベースに追加できるフォルダーのようなものです。 スキーマでは、データベース内でのユーザーの権限も定義されています。
+    このユーザーの既定のスキーマを指定すると**db_datareader**、すべてのテーブルと、このユーザーが作成された新しいオブジェクトを他のプレフィックスが付きます、*スキーマ*名。 スキーマは、オブジェクトを整理するためにデータベースに追加できるフォルダーのようなものです。 スキーマでは、データベース内でのユーザーの権限も定義されています。
   
-    スキーマが 1 つの特定のユーザー名に関連付けられている場合は、そのユーザーはスキーマの所有者と呼ばれます。 オブジェクトを作成するときは、別のスキーマに作成することを明示的に要求しない限り、常に自分用のスキーマに作成されます。
+    スキーマは、1 つの特定のユーザー名に関連付けられた、ユーザーが、_スキーマの所有者_です。 オブジェクトを作成するときは、別のスキーマに作成することを明示的に要求しない限り、常に自分用のスキーマに作成されます。
   
-    たとえば、*TestData* という名前のテーブルを作成し、既定のスキーマが **db_datareader** である場合、テーブルは "*<データベース名>.db_datareader.TestData*" という名前で作成されます。
+    たとえば、名前のテーブルを作成する`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< database_name > .db_datareader です。TestData' です。
   
     このため、テーブルが異なるスキーマに属していれば、1 つのデータベースに同じ名前の複数のテーブルを含めることができます。
    
-    テーブルを検索するときにスキーマを指定しないと、データベース サーバーはユーザーが所有するスキーマを探します。 そのため、自分のログインに関連付けられているスキーマ内のテーブルにアクセスするときは、スキーマ名を指定する必要はありません。
+    テーブルを探しているし、スキーマを指定して、自分が所有するスキーマのデータベース サーバーが検索されます。 そのため、自分のログインに関連付けられているスキーマ内のテーブルにアクセスするときは、スキーマ名を指定する必要はありません。
   
 - **DDL 特権を持っていません。それでもチュートリアルを実行できますか。**
   
-    はい。ただし、他のユーザーにデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに事前に読み込んでもらう必要があります。そうすれば、新しいテーブルを作成するセクションを省略できます。 DDL 特権が必要な関数は一般にチュートリアルで呼び出されます。
+    はい。ただし、他のユーザーにデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに事前に読み込んでもらう必要があります。そうすれば、新しいテーブルを作成するセクションを省略できます。 DDL の特権が必要な関数は、可能な限り、このチュートリアルで呼び出されます。
 
     また、管理者に依頼して EXECUTE ANY EXTERNAL SCRIPT、アクセス許可を付与します。 リモートかどうか、またはを使用して、R スクリプトを実行する必要がある`sp_execute_external_script`です。
 

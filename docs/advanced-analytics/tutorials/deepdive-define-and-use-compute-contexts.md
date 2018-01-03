@@ -1,45 +1,49 @@
 ---
-title: "計算コンテキストの定義と使用 (データ サイエンスの詳細情報) | Microsoft Docs"
+title: "定義し、計算コンテキスト (SQL と R deep dive) を使用して |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/22/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: b13058d0-9c6a-44e1-849b-72189d9050ba
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a682a40a9a62af3e1ff18ec0cc777ac9c1da7a9e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 3db63204c3c2e904d2e4a8ba3fa8087bcfdbb1f5
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="define-and-use-compute-contexts"></a>計算コンテキストの定義と使用
+# <a name="define-and-use-compute-contexts-sql-and-r-deep-dive"></a>定義し、計算コンテキスト (SQL と R deep dive) を使用します。
 
+この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
-複雑な計算の一部をローカル コンピューターではなくサーバー上で実行するとします。 これを行うには、サーバー上で R コードを実行できる計算コンテキストを作成します。
+このレッスンでは、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)関数で、SQL Server のコンピューティング コンテキストを定義し、ローカル コンピューターではなく、サーバー上の複雑な計算を実行することができます。 
 
-**RxInSqlServer** 関数は、 [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler) パッケージに入っている拡張 R 関数の 1 つです。 この関数は、ローカル コンピューターとリモート実行コンテキストとの間にデータベース接続を作成してオブジェクトを渡すタスクを処理します。
+RevoScaleR は、Hadoop、Spark、またはデータベース内での R コードを実行できるように、複数のコンピューティング コンテキストをサポートしています。 SQL Server のサーバーを定義して、関数は、データベース、ローカル コンピューターとリモートの実行コンテキストの間の接続を渡してオブジェクトを作成するタスクを処理します。
 
-この手順では、 **RxInSqlServer** 関数を使用して R コードで計算コンテキストを定義する方法について説明します。
+SQL Server を作成する関数は、コンテキストは、次の情報を計算します。
 
-計算コンテキストを作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する次の基本的な情報が必要です。
+- 接続文字列、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス
+- 出力を処理する方法の指定
+- トレースを有効にするか、トレース レベルを指定する省略可能な引数
+- 共有データ ディレクトリの省略可能な指定
 
-- インスタンスの接続文字列
-- 出力の処理方法に関する仕様
-- トレース有効化または共有ディレクトリ指定のための省略可能な引数
+## <a name="create-and-set-a-compute-context"></a>作成し、コンピューティング コンテキストを設定
 
-## <a name="create-and-set-a-compute-context"></a>計算コンテキストを作成して設定する
-
-1. 計算が行われるインスタンスの接続文字列を指定します。  これは、計算コンテキストを作成するときに *RxInSqlServer* 関数に渡す複数の変数のうちのほんの 1 つです。 先に作成した接続文字列を再利用できます。また、別のサーバーに計算を移動したり、別の ID を使用する場合は、別の接続文字列を作成することもできます。
+1. 計算を実行するインスタンスの接続文字列を指定します。  先ほど作成した接続文字列を再利用することができます。 別のサーバーに、計算を移動するかをいくつかのタスクを実行する別のログインを使用する場合は、別の接続文字列を作成できます。
 
     **SQL ログインを使用する**
 
@@ -59,25 +63,27 @@ ms.lasthandoff: 12/01/2017
     sqlConsoleOutput <- FALSE
     ```
   
-    *RxInSqlServer* に渡す *wait* 引数は、次のオプションをサポートします。
+    *RxInSqlServer* に渡す **wait** 引数は、次のオプションをサポートします。
   
-    -   **TRUE**。 ジョブは、完了するか失敗するまでブロックされ、その制御は戻りません。  詳細については、次を参照してください。[分散し、Microsoft R での並列コンピューティング](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)です。
+    -   **TRUE**。 ジョブは、ブロッキングとして構成されて、これが完了するかが失敗したまで返されません。  詳細については、次を参照してください。[分散し、マシン学習サーバーで並列コンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)です。
   
-    -   **FALSE**。 ジョブのブロックが直ちに解除され制御が戻ります。これにより、ユーザーは引き続き他の R コードを実行できるようになります。 ただし、非ブロック モードであっても、ジョブの実行中は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とのクライアント接続を維持する必要があります。
+    -   **FALSE**。 ジョブは、非ブロッキングとして構成されているし、他の R コードの実行を継続することができますが、すぐに戻る。 ただし、非ブロック モードであっても、ジョブの実行中は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とのクライアント接続を維持する必要があります。
 
-3. 必要に応じて、ローカルの R セッションと、リモートの  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターおよびそのアカウントによる、共有使用のためのローカル ディレクトリの場所を指定できます。
+3. 必要に応じて、リモートとローカルの R セッションで共有するローカル ディレクトリの場所を指定することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューター、およびそのアカウント。
 
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
     ```
     
-4. 共有の特定のディレクトリを手動で作成する場合は、次のような行を追加できます。 共有の現在使用されているフォルダーを特定するのには、実行`rxGetComputeContext`、詳細については、現在の計算コンテキストが返されます。 詳細については、 [ScaleR のリファレンス](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinsqlserver)を参照してください。
+4. 共有の特定のディレクトリを手動で作成する場合は、次のような行を追加できます。
 
     ```
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. 作成する RxInSqlServer コンス トラクターに引数としてを指定するすべての変数の場合は、準備ができていること、*コンテキスト オブジェクトをコンピューティング*です。
+    共有の現在使用されているフォルダーを特定するのには、実行`rxGetComputeContext()`、詳細については、現在の計算コンテキストが返されます。 詳細については、 [ScaleR のリファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/)を参照してください。
+
+4. 引数としてを指定するすべての変数の場合は、準備ができていること、 **RxInSqlServer**コンス トラクターを作成する、*コンテキスト オブジェクトをコンピューティング*です。
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -86,19 +92,19 @@ ms.lasthandoff: 12/01/2017
          consoleOutput = sqlConsoleOutput)
     ```
     
-    RxInSqlServer * の構文はデータ ソースの定義を使用した RxSqlServerData 関数のものとほぼ同じことを確認する可能性があります。 しかし、次に示すいくつかの重要な相違点があります。
+    構文**RxInSqlServer**場合とほぼ同様の検索、 **RxSqlServerData**以前に使用したデータ ソースを定義する関数。 しかし、次に示すいくつかの重要な相違点があります。
       
-    - RxSqlServerData、関数を使用して定義されているデータ ソース オブジェクトは、データの格納場所を指定します。
+    - [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)関数を使用して定義するデータ ソース オブジェクトは、データの保存場所を指定します。
     
-    - これに対し、(RxInSqlServer 関数を使用して定義されている) のコンピューティング コンテキストを示します、集計およびその他の計算を行います。
+    - これに対し、コンピューティング コンテキストを関数を使用して定義されている[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)を示します、集計およびその他の計算を実行します。
     
     計算コンテキストを定義しても、ワークステーションで実行されるその他の一般的な R 計算に影響なく、データのソースは変わりません。 たとえば、データ ソースとしてローカル テキスト ファイルを定義できますが、計算コンテキストを SQL Server に変更し、すべての読み取りと集計を SQL Server コンピューター上のデータに対して行うことができます。
 
-## <a name="enable-tracing-on-the-compute-context"></a>計算コンテキストに対するトレースを有効にする
+## <a name="enable-tracing-on-the-compute-context"></a>コンピューティング コンテキストでトレースを有効にします。
 
 リモート計算コンテキストで実行すると、ローカル コンテキストで動作する操作で問題が発生することがあります。 問題を分析したりパフォーマンスを監視したりする場合は、計算コンテキストでトレースを有効にして、実行時のトラブルシューティングをサポートできます。
 
-1. 同じ接続文字列を使用する新しいコンピューティング コンテキストを作成するが、引数を追加*traceEnabled*と*traceLevel*を*RxInSqlServer*コンス トラクターです。
+1. 同じ接続文字列を使用する新しいコンピューティング コンテキストを作成するが、引数を追加*traceEnabled*と*traceLevel*を**RxInSqlServer**コンス トラクターです。
 
     ```R
     sqlComputeTrace <- RxInSqlServer(
@@ -112,7 +118,7 @@ ms.lasthandoff: 12/01/2017
   
     この例では、*traceLevel* プロパティを 7 に設定してあります。これは、"すべてのトレース情報を表示する" ことを意味します。
 
-2. コンピューティング コンテキストを変更するには、rxSetComputeContext 関数を使用し、名前でコンテキストを指定します。
+2. 計算コンテキストを変更するには、[rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 関数を使用して、名前でコンテキストを指定します。
 
     ```R
     rxSetComputeContext( sqlComputeTrace)
@@ -120,19 +126,16 @@ ms.lasthandoff: 12/01/2017
 
     > [!NOTE]
     > 
-    > このチュートリアルでは、トレースを有効にしていない計算コンテキストを使用します。 すべての操作のトレースが有効なオプションのパフォーマンスがテストされていないためにです。
+    > このチュートリアルでは、トレースを有効になっていないコンピューティング コンテキストを使用します。 
     > 
-    > ただし、トレースを使用する場合は、注意してください、エクスペリエンスが、ネットワーク接続によって影響を 可能性があります。
+    > ただし、トレースを使用する場合は、注意してください、エクスペリエンスが、ネットワーク接続によって影響を 可能性があります。 注意するすべての操作のトレースが有効なオプションのパフォーマンスがテストされていないためです。
 
-リモート計算コンテキストを作成したので、次に R コードをサーバーまたはローカルで実行するように計算コンテキストを変更する方法を学習します。
+使用する方法を説明する次の手順で、サーバーに対して R コードを実行する、またはローカルでのコンテキストを計算します。
 
 ## <a name="next-step"></a>次の手順
 
-[作成し、R スクリプトを実行します。](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-
+[R スクリプトの作成と実行](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[クエリおよび SQL Server データの変更](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-
-
+[SQL Server データに対するクエリおよび変更](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)

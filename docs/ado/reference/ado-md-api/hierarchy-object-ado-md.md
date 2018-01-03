@@ -3,7 +3,7 @@ title: "Hierarchy オブジェクト (ADO MD) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e02aefb90af923cea7bfd6d33b8b1e97415c6ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0802ae503911ec8b84ee2f01b15de9ed7f57c4af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy オブジェクト (ADO MD)
 1 つの方法を表すのメンバー、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)集約または「ロール アップされます」。 ディメンションは、1 つまたは複数の階層に従って集計できます。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、利用可能なプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの完全な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|Description|  
+|[オブジェクト名]|Description|  
 |----------|-----------------|  
 |AllMember|階層でプログラムのロールアップの最高レベルにあるメンバー。|  
 |CatalogName|このキューブに所属するカタログの名前。|  

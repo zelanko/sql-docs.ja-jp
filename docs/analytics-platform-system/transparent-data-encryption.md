@@ -3,10 +3,10 @@ title: "並列データ ウェアハウスの transparent Data Encryption"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
 caps.latest.revision: "22"
-ms.openlocfilehash: b0544f5dee735b8444ce68d25e3be288be214202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
@@ -139,7 +139,7 @@ TDE の証明書を次に示すステートメントで処理できるように�
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|データベース内の証明書を表示するカタログ ビュー|  
 |[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|各ノードのデータベース、およびデータベースの暗号化の状態で使用される暗号化キーに関する情報を提供する動的管理ビュー。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 TDE の各機能とコマンドには、上の表で説明されているように、個別の権限要件があります。  
   
 TDE に関係するメタデータを表示する必要があります、`CONTROL SERVER`権限です。  

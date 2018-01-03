@@ -1,30 +1,33 @@
 ---
-title: "チュートリアルの学習の SQL Server マシン |Microsoft ドキュメント"
-ms.custom: SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+title: "SQL Server コンピューターのサービスのチュートリアルを学習 |Microsoft ドキュメント"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: Python
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- Python
+- R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
 caps.latest.revision: "32"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0547d809e73e13b7bedcc8ac960b00c7c8a9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b8c384e5d8e13ed0961ad82f95af17c0352389be
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="sql-server-machine-learning-tutorials"></a>SQL Server の machine learning のチュートリアル
+# <a name="tutorials-for-sql-server-machine-learning-services"></a>SQL Server マシン ラーニング サービス用のチュートリアル
 
 この記事では、チュートリアル、デモ、および SQL Server 2016 または SQL Server 2017 において、マシン学習機能を使用するサンプル アプリケーションの包括的な一覧を提供します。 T-SQL から R、Python またはを実行する方法、リモートおよびローカル コンピューティング コンテキストを使用する方法、および SQL 運用環境のため、R、Python コードを最適化する方法を学習するには、ここから開始します。
 
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 
 + [ソリューション](#bkmk_solutions) 
 
-    Microsoft データ サイエンス チームからのテンプレートはカスタマイズ可能な高速で、機械学習を開始するためです。 各ソリューションは、特定のタスクや業界の問題; に合わせてさらに、SQL server または Azure Machine Learning などのクラウド環境で実行するほとんどのソリューションが設計されています。 その他のソリューションでは、Microsoft R Server または Machine Learning のサーバーを使用して Linux 上または Spark または Hadoop クラスターでを実行できます。
+    Microsoft データ サイエンス チームからのテンプレートはカスタマイズ可能な高速で、機械学習を開始するためです。 各ソリューションをカスタマイズして、特定のタスクまたは業界問題を。 ソリューションの多くは、SQL server、または Azure Machine Learning などのクラウド環境で実行する設計されています。 その他のソリューションでは、Microsoft R Server または Machine Learning のサーバーを使用して Linux 上または Spark または Hadoop クラスターでを実行できます。
 
 ### <a name ="bkmk_samples"></a>SQL Server 製品サンプル
 
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
 
 + [新機能！顧客を実行する Python と SQL Server を使用してクラスタ リング](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
-    Kmeans アルゴリズムを使用して、顧客の監視対象外のクラスタ リングを実行する方法を説明します。 この例では、Python 言語でのデータベースを使用します。 
+    Kmeans アルゴリズムを使用して、顧客の監視対象外のクラスタ リングを実行する方法を説明します。 この例では、Python 言語でのデータベースを使用します。
     
     適用されます SQL Server 2017。
 
@@ -73,6 +76,10 @@ ms.lasthandoff: 11/09/2017
    今後の必要性を計画するために、Python を使用して ski レンタル分析アプリケーションをビルドします。 この例は、新しい Python ライブラリを使用して**revoscalepy**、線形回帰モデルを作成します。
    
    適用されます SQL Server 2017。
+
++ [SQL Server の Machine Learning のサービスで Tableau を使用する方法](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
+
+    ソーシャル メディアを分析し、SQL Server および R. を使用して、Tableau グラフを作成します。
 
 ### <a name="bkmk_solutions"></a>ソリューション テンプレート
 
@@ -111,7 +118,7 @@ SQL Server 2017、R、Python またはその両方をインストールできま
 SQL Server セットアップを実行した後、これらの重要な手順を必ず。
 
 1. 実行して、外部スクリプト実行機能を有効にする`sp_configure 'external scripts enabled', 1`です。 再構成、SQL Server を再起動するための手順に従います。
-2. SQL Server インスタンスに接続できること、ワーカー アカウントが使用して、スタート パッド サービスが実行されていることを確認してください。
+2. スタート パッド サービスが実行されていることと、スタート パッドのワーカー アカウントが SQL Server インスタンスに接続できることを確認します。
 3. R または Python スクリプトを実行する必要があるユーザーに関連付けられているアクセス許可を確認します。 かどうかを使用する SQL ログインまたは Windows ユーザー アカウントに関係なく、ユーザーが R または Python スクリプトを実行する権限が必要し、インスタンスに接続できる必要があります。 このチュートリアルでは、によってユーザー可能性がありますも権限が必要にデータを書き込む、データベース オブジェクトを作成または一括操作を行いますのデータをインポートします。
 
 詳細については、一般的なセットアップと構成の問題は、この資料を参照してください: [Machine Learning のサービスのトラブルシューティング](../machine-learning-troubleshooting-faq.md)

@@ -3,7 +3,7 @@ title: "場所ダイアログ ボックス (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c355410d0536b4f461973ac55ba382183aa3694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、必要なファイルが含まれているフォルダーを見つけて、選択できます。 選択したフォルダーのパスが、このダイアログ ボックスから呼び出し元のダイアログに返されます。 次の方法でこのダイアログ ボックスにアクセスできます。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 **[フォルダー名]**  
 選択されているフォルダーのパスを表示します。  
   
-**開く**  
+**[ファイル]**  
 **[フォルダー名]** フィールドで選択されているフォルダーのパスを呼び出し元のダイアログ ボックスに返します。  
   
 ## <a name="toolbar"></a>[ツール バー]  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 **[1 つ上のフォルダーへ移動]**  
 階層内で次に高い位置にあるフォルダーに移動します。  
   
-**Del**  
+**削除**  
 選択したファイルまたはフォルダーを記憶域から削除します。  
   
 **[新しいフォルダーの作成]**  

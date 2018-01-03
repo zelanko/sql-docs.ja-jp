@@ -3,7 +3,7 @@ title: "ユーザー コレクション (ADOX) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab2952445a0e73b090ab963945f5c3560f6ed2cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 84e4484d2902913be2cf2afa615a474aeb2b4bf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="users-collection-adox"></a>ユーザー コレクション (ADOX)
 すべてを含むストアド[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)のオブジェクト、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)または[グループ](../../../ado/reference/adox-api/group-object-adox.md)です。  

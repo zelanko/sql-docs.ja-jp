@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05e115df47cb916bceafab871d475e98d5074b00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c159bfdc9e6c7c9e6cb50a8197110391723c6a62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>宛名ラベル Visual FoxPro データを使用して Microsoft Word で作成します。
 Visual FoxPro データは、Windows 95 または Windows 98 のドキュメントの Microsoft Word で使用できます。 たとえば、Visual FoxPro テーブルに格納されている顧客の情報から宛名ラベルを作成することができます。  

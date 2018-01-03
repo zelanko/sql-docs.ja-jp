@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-data-sources"></a>データ ソースの管理
 ドライバーのセットアップ プログラムから ODBC ドライバーをインストールした後は、その 1 つまたは複数のデータ ソースを定義できます。 データ ソース名 (DSN) が作成したデータの一意の説明を提供する必要があります。たとえば、*給与*または*Accounts Payable*です。 現在インストールされているすべてのドライバーに定義されているユーザーおよびシステム データ ソースは、「、**ユーザー DSN**または**システム DSN**のタブ、 **ODBC データ ソース アドミニストレーター** ダイアログ ボックス。 特定のディレクトリ内のファイル データ ソースは、「、**ファイル DSN** ; タブに表示されるディレクトリを入力、**ファイルの場所**ボックスに、**ファイル DSN**  タブ。  

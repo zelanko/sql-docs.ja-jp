@@ -3,7 +3,7 @@ title: "GetObjectOwner と SetObjectOwner メソッドの例 (VB) |Microsoft ド
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe26808c74e56a961fedb17c27955a961066ab9f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a0f53d7a2cb2c9685b30c1a0682b2d8fa0bcb50
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner と SetObjectOwner メソッドの例 (VB)
 この例で、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドです。 このコードを想定して、グループのアカウンティング (を参照してください、[グループとユーザーの追加、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)をシステムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、アカウンティングに設定されます。  

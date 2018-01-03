@@ -3,7 +3,7 @@ title: "Update メソッド |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7d416b0d132af4d2f1d2145de577ca930eaeef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update-method"></a>Update メソッド
 現在の行に加えたあらゆる変更を保存、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクション、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。  
@@ -38,7 +38,7 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *フィールド*  
+ *Fields*  
  省略可。 A**バリアント**、単一の名前を表す、または**バリアント**名または変更するフィールドの序数位置を表す配列。  
   
  *値*  

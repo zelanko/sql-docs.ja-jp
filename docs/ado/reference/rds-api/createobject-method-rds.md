@@ -3,7 +3,7 @@ title: "CreateObject メソッド (RDS) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネス オブジェクトのプロキシを作成し、ポインターを返します。 インターネット経由で要求とデータを送信するビジネス オブジェクトとの通信のサーバー側のスタブをプロキシ パッケージとマーシャ リング データ。 インプロセス コンポーネント オブジェクトのプロキシは使用されず、オブジェクトへのポインターのみが提供されます。  

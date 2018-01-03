@@ -3,10 +3,10 @@ title: "ハードウェアの設置 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
 caps.latest.revision: "17"
-ms.openlocfilehash: 9eb9fc0c1249c63550c33f09ac357c519d93bd7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea0935ed3af9dcea187098e39df2d0219f98fd7a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hardware-installation"></a>ハードウェアのインストール
 このトピックでは、移動をアンパックして、SQL Server PDW アプライアンス用のハードウェアをインストールする方法について説明します。 このトピックは、情報提供だけあり、プロセスを理解するためです。 アプライアンスの開梱済みのインストール、およびに経由で有効にする前に検証する必要があります。 顧客への参加は、データなどのアイテムに必要なアクセス、電力、およびイーサネット接続を中央揃えされます。  

@@ -2,12 +2,14 @@
 title: "データベース内 R analytics SQL 開発者 (チュートリアル) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs:
 - R
@@ -18,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb5b3b55f2051589ba9885c39077a0560ea35c13
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e3767912b2b2cd7390b1329ff1c584324e8bd673
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>データベース内 R analytics SQL 開発者 (チュートリアル)
 
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/01/2017
 
     データベースにモデルが保存されたら、ストアド プロシージャを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] から予測モデルを呼び出します。
 
-### <a name="scenario"></a>Scenario
+### <a name="scenario"></a>シナリオ
 
 このチュートリアルでは、ニューヨーク タクシーでトリップに基づいて、よく知られているパブリック データセットを使用します。 サンプル コードをすばやく実行するためには、データの代表的な 1% のサンプリングを作成しました。 このデータを使用して、かどうか特定トリップもそうでない、ヒントを取得する可能性の高い、時刻、距離、および収集場所などの列に基づいて予測する二項分類モデルを作成します。
 

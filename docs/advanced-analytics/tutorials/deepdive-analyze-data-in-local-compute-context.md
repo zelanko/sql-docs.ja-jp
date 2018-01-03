@@ -1,34 +1,39 @@
 ---
-title: "ローカル コンピューティング コンテキストでデータを分析 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "(SQL と R deep dive) のローカル コンピューティング コンテキストでデータを分析 |Microsoft ドキュメント"
+ms.date: 12/18/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 787bb526-4a13-40fa-9343-75d3bf5ba6a2
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d8e6516b7d203180d5c2a605db1099b1dcbae708
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e65a4ad3018cfec6b60dae605945a8641b568c5d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="analyze-data-in-local-compute-context-data-science-deep-dive"></a>ローカル コンピューティング コンテキスト (データ サイエンス Deep Dive) におけるデータを分析します。
+# <a name="analyze-data-in-local-compute-context-sql-and-r-deep-dive"></a>(SQL と R deep dive) のローカル コンピューティング コンテキストでのデータを分析します。
 
-サーバー コンテキストを使用して複雑な R コードを実行する高速ことも、場合によってだけ方が便利ですのうち、データを取得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびプライベート ワークステーションに分析します。
+この記事の内容を使用する方法について、データ サイエンス Deep Dive のチュートリアルの一部である[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server とします。
 
-このセクションでは、ローカル計算コンテキストに切り替えて戻す方法、およびコンテキスト間でデータを移動してパフォーマンスを最適化する方法を説明します。
+このセクションでは、ローカル コンピューティング コンテキストに戻すと、パフォーマンスを最適化するためにコンテキスト間でデータを移動する方法を学習します。
 
-## <a name="create-a-local-summary"></a>ローカル サマリーを作成する
+I は、サーバー コンテキストを使用して複雑な R コードを実行する高速になりますが、場合によってはのうち、データを取得する方が便利[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびローカルのワークステーションで分析します。
+
+## <a name="create-a-local-summary"></a>ローカルの概要を作成します。
 
 1. すべての作業をローカルに行うように計算コンテキストを変更します。
   
@@ -36,7 +41,7 @@ ms.lasthandoff: 12/01/2017
     rxSetComputeContext ("local")
     ```
   
-2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からデータを抽出するときは、1 回の読み取りで抽出する行数を増やすとパフォーマンスが向上することがよくあります。  そのためには、データ ソースで *rowsPerRead* パラメーターの値を大きくします。
+2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からデータを抽出するときは、1 回の読み取りで抽出する行数を増やすとパフォーマンスが向上することがよくあります。  そのためには、データ ソースで *rowsPerRead* パラメーターの値を大きくします。 これまでは、 *rowsPerRead* の値は 5000 に設定されていました。
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -45,24 +50,19 @@ ms.lasthandoff: 12/01/2017
        colInfo = ccColInfo,
        rowsPerRead = 10000)
     ```
-  
-    これまでは、 *rowsPerRead* の値は 5000 に設定されていました。
-  
-3. 今度は、新しいデータ ソースに対して **rxSummary** を呼び出します。
+
+3. 呼び出す**rxSummary**新しいデータ ソースにします。
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
     ```
   
-    実際の結果は rxSummary のコンテキストで実行したときと同じにする必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューター。  ただし、処理は速くなる場合と遅くなる場合があります。 データは分析のためのローカル コンピューターに転送されるので、処理速度はデータベースへの接続に左右されます。
+    実際の結果は、 **コンピューターのコンテキストで** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した場合と同じになるはずです。  ただし、処理は速くなる場合と遅くなる場合があります。 データは分析のためのローカル コンピューターに転送されるので、処理速度はデータベースへの接続に左右されます。
 
-
-## <a name="next--step"></a>次の手順
+## <a name="next-step"></a>次の手順
 
 [SQL Server と XDF ファイル間でデータを移動します。](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[RxDataStep を使用して、チャンキング分析を実行します。](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-
+[rxDataStep を使用したチャンク分析の実行](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

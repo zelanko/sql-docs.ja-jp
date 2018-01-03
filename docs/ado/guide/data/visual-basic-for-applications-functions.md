@@ -3,7 +3,7 @@ title: "Visual Basic アプリケーションの関数の |Microsoft ドキュ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic アプリケーション関数
 データ シェイプの計算式では、アプリケーションの関数の次の Visual Basic を使用できます。  
@@ -35,11 +35,11 @@ ms.lasthandoff: 11/17/2017
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|Chrb 関数|ChrW|Chr$|  
 |Chrb 関数 $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|日付|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|日|DDB|  
-|[エラー]|Error$|Exp|Fix|Format|Format$|  
+|[エラー]|Error$|Exp|Fix|[形式]|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
 |LeftB|Left$|LeftB $|Len|Log|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |PPmt|PV|QBColor|Rate|RGB|Right|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
 |第 2 週|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|文字列|  
+|Sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|[時刻]|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|年||  

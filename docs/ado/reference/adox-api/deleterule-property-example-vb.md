@@ -3,7 +3,7 @@ title: "DeleteRule プロパティの例 (VB) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 865aeacf705b220c54c372d60f8e6c3ba92c958b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ac6fa4e5af1cffe44211e4cbd46e25d7623b070
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule プロパティの例 (VB)
 この例で、 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)のプロパティ、[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクト。 コードを追加、新しい[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、新しい主キー、設定を定義および**DeleteRule**に**adRICascade**です。  

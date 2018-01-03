@@ -3,10 +3,10 @@ title: "Analytics Platform System (APS) の InfiniBand ネットワーク アダ
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
 管理 ノード SQL Server 並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込み、バックアップ、およびその他のプロセスがアクティブの InfiniBand ネットワークに自動的に接続できるように基本的な接続と高可用性は、これらの手順に従います。  
@@ -58,7 +58,7 @@ APS アプライアンスのドメイン アカウント、AD01 ノードへの�
   
 ネットワーク アダプターを構成する権限を持つクライアント サーバーで Windows アカウントが必要です。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
 これらの手順では、クライアント サーバーのラックおよびアプライアンスの InfiniBand ネットワークに配線されていると仮定します。 ラック マウントと指示をケーブルは、次を参照してください。[取得および構成を読み込むサーバー](acquire-and-configure-loading-server.md)です。  
   
 ### <a name="general-remarks"></a>全般的な解説  

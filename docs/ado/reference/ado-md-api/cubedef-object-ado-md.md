@@ -3,7 +3,7 @@ title: "CubeDef オブジェクト (ADO MD) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b2d69c9a59868ee135cc98ec8de61d5be166224
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0317420ee6839e3b445784665a0a2594fb1083c1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef オブジェクト (ADO MD)
 関連するディメンションのセットを含んでいる、マルチ ディメンション スキーマからキューブを表します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、利用可能なプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの完全な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|Description|  
+|[オブジェクト名]|Description|  
 |----------|-----------------|  
 |CatalogName|このキューブに所属するカタログの名前。|  
 |CreatedOn|キューブの作成日時。|  

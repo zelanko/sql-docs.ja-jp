@@ -3,7 +3,7 @@ title: "イベント パラメーター |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 750def3dc0a8f2938bcdf7adb6c3a8935da5dda1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0d73ed8eda955b5b027b662e3e5c80c50730b7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-parameters"></a>イベントのパラメーター
 すべてのイベント ハンドラーには、イベント ハンドラーを制御する状態パラメーターがあります。 完全なイベントは、このパラメーターは、イベントを生成する操作の成否を示すためにも使用します。 最も包括的なイベントには、発生したエラーと、操作を実行するために使用する ADO オブジェクトを参照する 1 つまたは複数のオブジェクトのパラメーターに関する情報を提供するエラー パラメーターもがあります。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)イベントにはオブジェクトのパラメーターが含まれています、**コマンド**、 **Recordset**、および**接続**オブジェクトイベントに関連付けられています。 Microsoft® Visual Basic® の次の例では、pCommand、pRecordset、およびを表す pConnection オブジェクトを参照できます、**コマンド**、 **Recordset**、および**接続**オブジェクトによって使用されている、 **Execute**メソッドです。  

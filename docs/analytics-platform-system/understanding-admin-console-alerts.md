@@ -3,10 +3,10 @@ title: "管理コンソールのアラート (Analytics Platform System) につ�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
 caps.latest.revision: "10"
-ms.openlocfilehash: 4be7ff23e9d7bca299aa1bcf45d14c2d3d7a3c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 84d7632df2e16c6939b91d299850ab26d5d93d4f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-admin-console-alerts"></a>管理コンソールのアラートをについてください。
 アプライアンスに表示されるアラート**管理コンソール**し、 **System Center Operations Manager** (SCOM)。 このアラートの一覧を使用して、どのアラートには、追加の調査が必要です。 識別できるようにします。  
   
-接続する方法について、**管理コンソール**Internet Explorer を使用すると、次を参照してください[アプライアンスを管理コンソール &#40; を使用して監視します。。Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md). について**SCOM**を参照してください[で System Center Operations Manager の使用 &#40; アプライアンスをモニターAnalytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+接続する方法について、**管理コンソール**Internet Explorer を使用すると、次を参照してください[アプライアンスを管理コンソール &#40; を使用して監視します。Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md). について**SCOM**を参照してください[で System Center Operations Manager の使用 &#40; アプライアンスをモニターAnalytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
 Transact を使用して、アラートの情報を取得する方法について\-SQL を参照してください[システム ビューの使用 &#40; によって、アプライアンスの監視Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md).  
   

@@ -3,7 +3,7 @@ title: "XML 形式で保持するレコード |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3259a78bba2451609c728372d9583eb259cbda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>XML 形式で保持するレコード
 Adtg 形式形式のように**Recordset**永続性 XML 形式では、Microsoft OLE DB 永続化プロバイダーが実装されています。 このプロバイダーは、保存されている XML ファイルまたは ADO によって生成されるスキーマ情報を格納しているストリームから順方向専用、読み取り専用の行セットを生成します。 同様に、ADO をかかる**レコード セット**、XML を生成し、ファイルまたは COM を実装する任意のオブジェクトに保存、 **IStream**インターフェイスです。 (ファイルをサポートするオブジェクトの一例は、実際には、 **IStream**)。バージョン 2.5 以降では、ADO 依存している場合に、Microsoft XML パーサー (MSXML) に XML を読み込む、**レコード セット**; したがって行いますが必要です。  

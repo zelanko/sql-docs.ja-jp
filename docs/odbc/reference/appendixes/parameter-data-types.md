@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 655868b77b482a11145e8947e1ea81d34270ca65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1deb0723864a0ed27f639a5060cc17afe886b9e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-data-types"></a>パラメーターのデータ型
 各パラメーターが指定された場合でも**SQLBindParameter**は、SQL データ型を SQL ステートメント内のパラメーターを使用して定義されていない組み込みデータ型であります。 そのため、パラメーター マーカーは、ステートメント内の別のオペランドからのデータ型を推論できる場合にのみ、SQL ステートメントに含めることができます。 たとえばなどの算術式でしますか。 + COLUMN1、パラメーターのデータ型は、COLUMN1 によって表される名前付きの列のデータ型から推論することができます。 データ型を特定できない場合、アプリケーションでパラメーター マーカーを使用することはできません。  

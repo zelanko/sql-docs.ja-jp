@@ -3,7 +3,7 @@ title: "メンバーの例 (VBScript) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e583363b1aeb0af736b34634a158fe6d136acde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41e43b59b8c9fe849582f1bb3845f544f89ddeb7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="members-example-vbscript"></a>メンバーの例 (VBScript)
 このサンプルでは、MDX クエリ文字列を使用して OLAP データを取得し、結果のセル セットを複数の次元のセル セットの列の結合機能を使用して HTML テーブル構造に書き込みます。  

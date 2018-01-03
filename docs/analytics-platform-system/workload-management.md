@@ -3,10 +3,10 @@ title: "ワークロードの管理 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/12/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: "11"
-ms.openlocfilehash: 596fba5031e3183a9278e20384d51852cea0f2b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="workload-management"></a>ワークロードの管理
 SQL Server PDW のワークロードの管理機能には、ユーザーと管理者はあらかじめ設定されているメモリ、および同時実行の構成への要求を割り当てることができるようにします。 すべての要求を永久に不足せずに必要な適切なリソースへの要求を許可することで、一貫性のある、または混合、ワークロードのパフォーマンスを向上させるためにワークロードの管理を使用します。  
@@ -65,7 +65,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |リソース クラス|要求の重要度|最大メモリ使用量 *|同時実行スロット (最大 32 =)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|既定値 (default)|Medium|400 MB|1|既定では、各ログインに少量のメモリ、およびその要求のリソースを同時実行は許可されています。<br /><br />リソース クラスには、ログインを追加するときに、新しいクラスが優先されます。 すべてのリソース クラスからのログインが削除されると、ログインは、既定のリソース割り当てに戻ります。|  
+|既定値 (default)|Medium|400 MB|@shouldalert|既定では、各ログインに少量のメモリ、およびその要求のリソースを同時実行は許可されています。<br /><br />リソース クラスには、ログインを追加するときに、新しいクラスが優先されます。 すべてのリソース クラスからのログインが削除されると、ログインは、既定のリソース割り当てに戻ります。|  
 |MediumRC|Medium|1200 MB|3|メディア リソースのクラスが必要な要求の例:<br /><br />持つ大規模な CTAS 操作はハッシュ結合です。<br /><br />多くのメモリをディスクにキャッシュを回避する必要のある操作を選択します。<br /><br />クラスター化列ストア インデックスにデータを読み込んでいます。<br /><br />ビルド、再構築、および 10 ~ 15 列を含む小さいテーブルのクラスター化列ストア インデックスを再構成します。|  
 |largerc|高|2.8 GB|7|サイズの大きいリソースのクラスが必要な要求の例:<br /><br />大きなハッシュ結合または大規模な ORDER BY 句または GROUP BY 句など、大量の集計を含む非常に大きな CTAS 操作です。<br /><br />ハッシュ結合などの操作または GROUP BY または ORDER BY 句などの集計の非常に大量のメモリを必要とする操作を選択します。<br /><br />クラスター化列ストア インデックスにデータを読み込んでいます。<br /><br />ビルド、再構築、および 10 ~ 15 列を含む小さいテーブルのクラスター化列ストア インデックスを再構成します。|  
 |xlargerc|高|8.4 GB|22|特大リソース クラスは、実行時に余分なサイズの大きいリソースの消費量が必要になる要求します。|  
@@ -136,7 +136,7 @@ SQL ステートメントおよびリソース クラスによって管理され
   
 -   UPDATE  
   
--   DELETE  
+-   Del  
   
 -   データベースの復元より多くのコンピューティング ノードでアプライアンスに復元するときにします。  
   

@@ -3,7 +3,7 @@ title: "テーブルの作成クエリの作成 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3062cf684505e7c67c5b65a8e296ff75deb3610b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c9b53ac6d1a3840f182bf58096a8595c941c8f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>テーブルの作成クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] テーブルの作成クエリを使用すると、新しいテーブルに行をコピーできます。これは、処理するデータのサブセットを作成したり、データベース間でテーブルの内容をコピーしたりするのに役立ちます。 テーブルの作成クエリは結果の挿入クエリと似ていますが、新しいテーブルを作成してそこに行をコピーする点で異なります。  

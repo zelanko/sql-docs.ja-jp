@@ -3,10 +3,10 @@ title: "分析プラットフォームの処理と記憶域の容量"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
 caps.latest.revision: "7"
-ms.openlocfilehash: 5eeb12d1ca257b0caa1566027811d08a4c0bc38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-processing-and-storage-capacity"></a>Analytics Platform System の処理と記憶域の容量
 お客様のビジネス要件では、データのスケール ユニットの数と、Analytics Platform System (APS) アプライアンスで必要なコンピューティング ノードのディスクのサイズを決定します。 これらの処理およびストレージの計算を使用して、容量を購入し、計画に関する決定事項を進めます。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 |データのスケール ユニット|計算ノード|CPU コア|メモリ (GB)|アップグレード|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-|1|2|32|512|-|  
+|@shouldalert|2|32|512|-|  
 |2|4|64|1024|100%|  
 |3|6|96|1536|50%|  
 |4|8|128|2048|33%|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 |データのスケール ユニット|計算ノード|CPU コア|メモリ (GB)|アップグレード|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-|1|3|48|768|-|  
+|@shouldalert|3|48|768|-|  
 |2|6|96|1536|100%|  
 |3|9|144|2,304|50%|  
 |4|12|192|3,072|33%|  

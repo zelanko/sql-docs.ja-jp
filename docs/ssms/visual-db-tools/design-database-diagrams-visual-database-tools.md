@@ -3,7 +3,7 @@ title: "データベース ダイアグラムのデザイン (Visual Database To
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7afa4c3169353a26660f962f84b20346fdd2680b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23b1b757d8c4e0ae00891d4359c285f6e5b24b66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>データベース ダイアグラムのデザイン (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース デザイナーは、接続先のデータベースをデザインしたりビジュアル化したりできるビジュアル ツールです。 データベースをデザインするときは、データベース デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約の作成、編集、または削除を行うことができます。 データベースをビジュアル化するには、データベースに含まれるテーブル、列、キー、およびリレーションシップの一部または全部を表すダイアグラムを作成します。  

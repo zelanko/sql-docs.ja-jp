@@ -3,7 +3,7 @@ title: "LockTypeEnum |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 528d26feb0037a3717ff7b1a9b05606e3ecf37c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 48c9909bf228a6bad0ad7e6d44415a1499fd5ea5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 編集中のレコードに適用されるロックの種類を指定します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 |**adLockBatchOptimistic**|4|オプティミスティック バッチ更新を示します。 バッチ更新モードに必要です。|  
 |**adLockOptimistic**|3|オプティミスティック ロック、レコード単位を示します。 ロックの使用、オプティミスティック ロックのレコードを呼び出すときにのみ、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。|  
 |**adLockPessimistic**|2|レコードごとの排他的ロックを指定します。 プロバイダーはどのような成功レコードの編集、通常で編集した後すぐに、データ ソースのレコードのロックを保つために必要です。|  
-|**adLockReadOnly**|1|読み取り専用のレコードを示します。 データを変更することはできません。|  
+|**adLockReadOnly**|@shouldalert|読み取り専用のレコードを示します。 データを変更することはできません。|  
 |**adLockUnspecified**|-1|ロックの種類は指定しません。 クローンが、元と同じロックの種類と、複製が作成されます。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  
