@@ -1,7 +1,7 @@
 ---
 title: "インベントリ スキーマ (AccessToSQL) にアクセス |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -47,11 +47,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d22835bef06693ecf2fef51240f4bd9d9607a8e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>アクセスのインベントリ スキーマ (AccessToSQL)
 次のセクションへのアクセスのスキーマをエクスポートするときに、SSMA によって作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/05/2017
 |**LinkedTable**|**nvarchar (4000)**|別のテーブル、存在する場合、テーブルにリンクされています。 このテーブルを使用して、追加、削除、およびその他のテーブルを更新するをテーブルをリンクできます。|  
 |**ExternalSource**|**nvarchar (4000)**|データ ソースに存在する場合に関連付けられているテーブル。 テーブルがリンクされている場合、このフィールドで指定された外部データ ソースがあります。|  
   
-## <a name="columns"></a>列  
+## <a name="columns"></a>[列]  
 列のメタデータをエクスポート、 **SSMA_Access_InventoryColumns**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|Description|  
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/05/2017
 |**MacroId**|**int**|マクロを識別する増分する整数。 この列は、テーブルの主キーです。|  
 |**マクロ名**|**nvarchar (4000)**|マクロの名前。|  
   
-## <a name="reports"></a>レポート  
+## <a name="reports"></a>[レポート]  
 レポートのメタデータをエクスポート、 **SSMA_Access_InventoryReports**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|Description|  

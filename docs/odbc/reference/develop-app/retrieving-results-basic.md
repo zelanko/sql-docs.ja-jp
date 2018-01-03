@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54a310e3e2f13431c0963f513fb9d5c4ec4e226b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0762d7f70becf8c6bdbd86bee524bc964676f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-results-basic"></a>結果 (基本) を取得します。
 A*結果セット*特定の条件に一致するデータ ソース上の行のセットです。 これは、クエリの実行結果し、するアプリケーションが使用できる、表形式で概念テーブルです。 **選択**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントは、すべての行と Orders テーブル内のすべての列を含む結果セットを作成し、2 番目の SQL ステートメントの Orders テーブル内の行の OrderID、販売員、およびステータスの列を含む結果セットを作成します。状態の開く。  

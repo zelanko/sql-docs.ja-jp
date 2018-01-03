@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4da263d0f7511aef2e01b66667761a9e364e9720
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 関数
 **準拠**  
@@ -47,7 +47,7 @@ SQLRETURN SQLFetch(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|開始する前に|1|  
+|開始する前に|@shouldalert|  
 |*CurrRowsetStart* \< =  *LastResultRow – 複合カーソル*[1]|*CurrRowsetStart* + *複合カーソル*[2]|  
 |*CurrRowsetStart* > *LastResultRow – 複合カーソル*[1]|末尾の後に|  
 |末尾の後に|末尾の後に|  

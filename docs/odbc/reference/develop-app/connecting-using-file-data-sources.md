@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33d736ccefdf92a08d5575869954ae61a043b55d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-using-file-data-sources"></a>ファイルのデータ ソースを使用して接続します。
 ファイル データ ソースの接続情報は、.dsn ファイルに格納されます。 その結果、接続文字列を 1 人のユーザーによって繰り返し使用または適切なドライバーがインストールされている場合に、いくつかのユーザー間で共有を設定します。 ファイルには、ドライバー名 (または別のデータ ソース名、共有不能なファイルのデータ ソースの場合) が含まれていると、必要に応じて、接続文字列をで使用できる**SQLDriverConnect**です。 ドライバー マネージャーへの呼び出しの接続文字列を構築する**SQLDriverConnect** .dsn ファイル内のキーワードからです。  

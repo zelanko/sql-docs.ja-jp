@@ -1,7 +1,7 @@
 ---
 title: "プロジェクトの設定 (型のマッピング) (DB2ToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 783f169bdc63c8da9d91a321592f9e9fa8788e78
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>プロジェクトの設定 (型のマッピング) (DB2ToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に DB2 データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 現在のオブジェクトまたはオブジェクトのクラスの設定を指定する、**型マッピング**プライマリ SSMA ウィンドウでタブです。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 次の表に、**型マッピング**タブのオプション。  
   
 **変換元の型**  
@@ -71,7 +71,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|ssNoversion|  
 |blob (blob)|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -79,13 +79,13 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日付|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|decimal|float [53]|  
+|Decimal|float [53]|  
 |倍精度|float [53]|  
-|float|float [53]|  
-|int|int|  
-|整数 (integer)|int|  
+|FLOAT|float [53]|  
+|ssNoversion|ssNoversion|  
+|整数 (integer)|ssNoversion|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [\*..8000]<sup>*</sup>|varbinary [*]|  
@@ -95,22 +95,22 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |各国語文字|nvarchar(max)|  
 |各国語文字 varying<sup>**</sup>|nvarchar(max)|  
 |各国語文字 varying<sup>*</sup>|nvarchar(max)|  
-|nchar|nvarchar(max)|  
+|NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
-|Urowid|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
 |Xml 型|xml|  
@@ -135,19 +135,19 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |文字がさまざまな [*..\*]|varchar [*]|  
 |文字 [*..\*]|char [*]|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日付|datetime2 [0]|  
 |dec|dec [38] [0]|  
 |dec [*..\*]|dec [*] [0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|decimal|[38] [0] の 10 進数|  
+|Decimal|[38] [0] の 10 進数|  
 |decimal [*..\*]|decimal [*] [0]|  
 |decimal [*..\*][\*..\*]|decimal [*] [\*]|  
 |倍精度|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|int|int|  
-|整数 (integer)|int|  
+|ssNoversion|ssNoversion|  
+|整数 (integer)|ssNoversion|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [*..8000]|varbinary [*]|  
@@ -155,34 +155,34 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |long varchar|varchar(max)|  
 |長い [*..8000]|varchar [*]|  
 |長い [8001.. *]|varchar(max)|  
-|national char|nchar|  
+|national char|NCHAR|  
 |varying、national char [*..\*]|nvarchar [*]|  
 |national char [*..\*]|nchar [*]|  
-|各国語文字|nchar|  
+|各国語文字|NCHAR|  
 |各国語文字 varying [*..\*]|nvarchar [*]|  
 |各国語文字 [*..\*]|nchar [*]|  
-|nchar|nchar|  
+|NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
 |数値 [*..\*]|数値 [*]|  
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |数値 [*..\*]|数値 [*]|  
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |nvarchar2 [*..\*]|nvarchar [*]|  
 |生 [*..\*]|varbinary [*]|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
+|TIMESTAMP|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
 |ローカルのタイム ゾーンのタイムスタンプ [*..\*]|datetimeoffset [*]|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
 |タイムスタンプのタイム ゾーン [*..\*]|datetimeoffset [*]|  
 |タイムスタンプ [*..\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*..\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*..\*]|UNIQUEIDENTIFIER|  
 |varchar [*..\*]|varchar [*]|  
 |varchar2 [*..\*]|varchar [*]|  
 |Xml 型|xml|  
@@ -195,7 +195,7 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
 |ブール値|bit|  
 |Char|char|  
@@ -209,35 +209,35 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |文字 [*..8000]|char [*]|  
 |文字 [8001.. *]|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日付|datetime2 [0]|  
 |dec|dec [38] [0]|  
 |dec [*..\*]|dec [*] [0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|decimal|[38] [0] の 10 進数|  
+|Decimal|[38] [0] の 10 進数|  
 |decimal [*..\*]|decimal [*] [0]|  
 |decimal [*..\*][\*..\*]|decimal [*] [\*]|  
 |倍精度|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|Int|int|  
-|Integer|int|  
+|Int|ssNoversion|  
+|Integer|ssNoversion|  
 |整数 [*..\*]|数値 [*] [0]|  
 |Long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [*..8000]|varbinary [*]|  
 |long raw [8001.. *]|varbinary(max)|  
-|national char|nchar|  
+|national char|NCHAR|  
 |varying、national char [*..4000]|nvarchar [*]|  
 |varying、national char [4001.. *]|nvarchar(max)|  
 |national char [*..4000]|nchar [*]|  
 |national char [4001.. *]|nvarchar(max)|  
-|各国語文字|nchar|  
+|各国語文字|NCHAR|  
 |各国語文字 [*..4000]|nvarchar [*]|  
 |各国語文字 [4001.. *]|nvarchar(max)|  
 |各国語文字 varying [*..4000]|nvarchar [*]|  
 |各国語文字 varying [4001.. *]|nvarchar(max)|  
-|Nchar|nchar|  
+|Nchar|NCHAR|  
 |nchar [*..4000]|nchar [*]|  
 |nchar [4001.. *]|nvarchar(max)|  
 |nchar varying [*..4000]|nvarchar [*]|  
@@ -251,23 +251,23 @@ SSMA for DB2 をでは、引数、列、ローカル変数、および戻り値�
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |nvarchar2 [*..4000]|nvarchar [*]|  
 |nvarchar2 [4001.. *]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |生 [*..8000]|varbinary [*]|  
 |生 [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |文字列 [*..8000]|varchar [*]|  
 |文字列 [8001.. *]|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
 |ローカルのタイム ゾーンのタイムスタンプ [*..\*]|datetimeoffset [*]|  
 |タイムスタンプのタイム ゾーン [*..\*]|datetimeoffset [*]|  
 |タイムスタンプ [*..\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*..\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*..\*]|UNIQUEIDENTIFIER|  
 |varchar [*..8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |varchar2 [*..8000]|varchar [*]|  

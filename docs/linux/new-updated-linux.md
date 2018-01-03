@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 4adfcb675e52b5b73bd4dcc4867bf79350a26d52
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 030f30580b0ddb02da2a67990d0c58acf15236c9
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新規または最近の更新: SQL Server on Linux のドキュメント
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/04/2017
 
 
 
-- *更新プログラムの日付範囲:* &nbsp; **2017 年-09-28** &nbsp;対&nbsp; **2017 年-12-02**
+- *更新日の範囲:* &nbsp; **2017 年 9 月 28 日**&nbsp;から &nbsp; **2017 年 12 月 2 日**
 - *サブジェクト領域:* &nbsp; **Microsoft SQL Server on Linux**です。
 
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 12/04/2017
 
 ### <a name="1-nbsp-run-the-sql-server-2017-container-image-with-dockerquickstart-install-connect-dockermd"></a>1.&nbsp;[Docker を使用した SQL Server 2017 コンテナー イメージを実行](quickstart-install-connect-docker.md)
 
-*最終更新日: 2017 年-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
+*更新日: 2017 年 11 月 30 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([次へ](#TitleNum_2))
 
 <!-- Source markdown line 261.  ms.author= jroth.  -->
 
@@ -210,7 +210,7 @@ docker rm sql1
 
 | |高可用性 (& a) </br> データの保護 | データの保護
 |:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|@shouldalert
 |プライマリ停止 | 自動フェールオーバー。 新しいプライマリが R が付けられます。 | 自動フェールオーバー。 新しいプライマリでは、ユーザー トランザクションで使用できません。
 |セカンダリ レプリカの停止 | プライマリ ファイル グループは読み取り/書き込みを実行して公開されているデータの損失を (プライマリが失敗し、回復することはできません) です。 プライマリにも失敗した場合はない自動フェールオーバー。 | プライマリでは、ユーザー トランザクションで使用できません。 プライマリにも失敗した場合にフェールオーバーするレプリカがありません。
 |構成のみのレプリカの停止 | プライマリが R 付けられます。 プライマリにも失敗した場合はない自動フェールオーバー。 | プライマリが R 付けられます。 プライマリにも失敗した場合はない自動フェールオーバー。
@@ -256,7 +256,7 @@ docker rm sql1
 **<a id="production"></a>実稼働環境にコンテナー イメージを実行します。**
 
 
-前のセクションでのクイック スタート チュートリアルでは、Docker Hub から SQL Server の無償の Developer エディションを実行します。 情報の大部分は、Enterprise、Standard、または Web edition などのコンテナー イメージの運用を実行する場合にも適用されます。 ただし、ここで説明されている、いくつかの違いがあります。
+前のセクションで、クイック スタートでは、Docker Hub から SQL Server の無償の Developer エディションを実行します。 情報の大部分は、Enterprise、Standard、または Web edition などのコンテナー イメージの運用を実行する場合にも適用されます。 ただし、ここで説明されている、いくつかの違いがあります。
 
 - のみ、有効なライセンスがある場合、SQL Server を実稼働環境で使用できます。 無料の SQL Server Express の運用環境ライセンスを取得する[ここ](https://go.microsoft.com/fwlink/?linkid=857693)です。 を通じて使用可能な SQL Server Standard および Enterprise Edition のライセンス[Microsoft ボリューム ライセンス](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)です。
 
@@ -272,7 +272,7 @@ docker rm sql1
 
    1. 次に、無料の開発者用 Docker ストアにコンテナーのイメージを取得する必要があります。 移動して[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)をクリックして**チェック アウトを続行**、し、指示に従います。
 
-   1. 要件を確認し、[クイック スタート チュートリアル - クイック スタートのインストール-接続-docker.md) での手順を実行します。 2 つの違いがあります。 イメージをプルする必要があります**ストアまたは microsoft/mssql-サーバー-linux:\<タグ名\>** Docker ストアからです。 実稼働のエディションを指定する必要がありますと、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition 用の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
+   1. 要件を確認し、[クイック スタート - クイック スタートのインストール-接続-docker.md) プロシージャを実行します。 2 つの違いがあります。 イメージをプルする必要があります**ストアまたは microsoft/mssql-サーバー-linux:\<タグ名\>** Docker ストアからです。 実稼働のエディションを指定する必要がありますと、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition 用の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 
 
 
@@ -506,7 +506,7 @@ Linux に SQL Server エージェントを使用するには、まず、 **mssql
 
 ### <a name="9-nbsp-troubleshoot-sql-server-on-linuxsql-server-linux-troubleshooting-guidemd"></a>9.&nbsp;[Linux に SQL Server のトラブルシューティング](sql-server-linux-troubleshooting-guide.md)
 
-*最終更新日: 2017 年-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_8))
+*更新日: 2017 年 11 月 30 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_8))
 
 <!-- Source markdown line 125.  ms.author= anshrest.  -->
 
@@ -569,26 +569,26 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新しい + 更新 (3 + 14): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (3 + 14): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
 - [新規 + 更新 (1 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新しい + 更新 (87 + 0): **sql 分析プラットフォーム システム**docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新しい + 更新 (5 + 4): **SQL への接続**docs](../connect/new-updated-connect.md)
-- [新しい + 更新 (0 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
-- [新しい + 更新 (2 + 2): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [新しい + 更新 (10 + 9): **SQL の Linux** docs](../linux/new-updated-linux.md)
-- [新しい + 更新 (2 + 4):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [新しい + 更新 (4 + 2): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (0 + 1): **SQL 用のサンプル**docs](../sample/new-updated-sample.md)
-- [新しい + 更新 (21 + 0): **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新しい + 更新 (5 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (87 + 0): **SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新規 + 更新 (5 + 4): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (0 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (2 + 2): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (10 + 9): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (2 + 4): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (4 + 2): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (21 + 0): **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新規 + 更新 (5 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
 - [新規 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新しい + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [新規 + 更新 (1 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新しい + 更新 (0 + 2): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (0 + 2): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
-- [新しい + 更新 (0 0 以降):**データ移行アシスタント (DMA) sql** docs](../dma/new-updated-dma.md)
+- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)

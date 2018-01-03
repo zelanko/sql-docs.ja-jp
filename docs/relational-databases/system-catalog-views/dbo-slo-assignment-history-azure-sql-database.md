@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_assignment_history (Azure SQL データベース) |Microsoft ドキュメント"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +25,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Azure SQL データベース)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -53,16 +52,16 @@ ms.lasthandoff: 11/09/2017
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|データベースの名前です。|  
 |database_id|**int**|データベースの ID です。|  
-|create_date|**datetimeoffset (7)**|データベースの作成日。|  
+|create_date|**datetimeoffset(7)**|データベースの作成日。|  
 |service_objective_name|**sysname**|サービス レベル目標 (SLO) の名前。|  
 |service_objective_id|**uniqueidentifier**|SLO の ID。|  
 |operation_id|**uniqueidentifier**|操作の ID。|  
-|operation_start_time|**datetimeoffset (7)**|データベース SLO 変更要求の開始時刻。|  
-|operation_end_time|**datetimeoffset (7)**|データベース SLO 変更要求の終了時刻。|  
+|operation_start_time|**datetimeoffset(7)**|データベース SLO 変更要求の開始時刻。|  
+|operation_end_time|**datetimeoffset(7)**|データベース SLO 変更要求の終了時刻。|  
 |error_code|**int**|データベース SLO 変更要求のエラー コード。|  
 |error_desc|**nvarchar**|データベース SLO 変更要求のエラーの説明。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このビューは、仮想に接続する権限を持つすべてのユーザー ロールに利用可能な**マスター**データベース。  
   
 ## <a name="examples"></a>使用例  

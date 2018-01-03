@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 544f4aa32119b0fde5971f76e46a382b92dbd3ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1cb1869039572d0d6da1302f66ce64abc3f2590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-odbc"></a>ODBC とは何ですか。
 コンピューティングの世界で ODBC に関する多くの誤解が存在します。 エンド ユーザーには、Microsoft® Windows® のコントロール パネルのアイコンです。 アプリケーション プログラマは、データ アクセスのルーチンを含むライブラリを勧めします。 他の多くには、想像れたすべてのデータベース アクセスの問題に対する回答を勧めします。  

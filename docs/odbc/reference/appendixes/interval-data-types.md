@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -32,11 +32,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-data-types"></a>Interval データ型
 間隔は 2 つの日付と時刻の差として定義されます。 間隔は 2 つの方法のいずれかで表されます。 1 つは、*年-月*年と月の整数単位の間隔を表す間隔。 もう 1 つは、*日時間*日間、分、および秒単位の間隔を表す間隔。 これら 2 種類の間隔は、distinct か月間で異なる数の日数があるため、混在させることはできません。  

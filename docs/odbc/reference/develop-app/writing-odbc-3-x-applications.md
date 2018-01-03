@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b0c0701ce83e4d1d30bd8f69f94ddc90e7a60a8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: da096dd38c87131259f9ea626fa874c0b83b7b95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x アプリケーションの作成
 ODBC 2 時にします。*x*アプリケーションが ODBC 3 にアップグレードします*。x*、両方の ODBC 2 と連携するようは記述されている必要があります*。x*および 3 *。x*ドライバー。 アプリケーションでは、ODBC 3 の活用するために条件付きのコードを組み込む必要があります。*x*機能します。  

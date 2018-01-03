@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0df56aa9d645e1462017d46d7f24147221423b17
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34aa67ed374f525f6195403b299500019192c19a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 関数
 **準拠**  
@@ -89,7 +89,7 @@ SQLRETURN SQLGetDiagRec(
  *TextLengthPtr*  
  [出力]文字 (null 終端文字のために必要な文字数を除く) の合計数を返すバッファーへのポインターで返される使用可能な *\*MessageText*です。 返される文字数がより大きい場合*BufferLength*、診断メッセージのテキストで *\*MessageText*に切り捨てられます*BufferLength* null 終端文字の長さマイナスです。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

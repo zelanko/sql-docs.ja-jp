@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0565ddfffb5b74344aaa41a1d0dfd243c590850
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 98754c574acd8dea29184fafa70e1df702925a2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-type-identifiers"></a>SQL 型の識別子
 各データ ソースでは、独自の SQL データ型を定義します。 ODBC では、型識別子を定義し、各型の識別子にマップする可能性があります SQL データの種類の一般的な特性について説明します。 これは、ドライバー固有の ODBC SQL 型の識別子に、基になるデータ ソースの各データ型をマップする方法です。  

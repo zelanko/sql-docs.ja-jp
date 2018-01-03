@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7092b59719850ed514ce792c17eea32ae290b932
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5d5caf63abd6b9800ee6e65b7f6c30de108703
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-descriptors"></a>記述子の種類
 記述子を使用して、次のいずれかを説明します。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  記述子の種類は、次の表にまとめたものです。  
   
-|バッファーの種類|行数|動的パラメーター|  
+|バッファーの種類|[行]|動的パラメーター|  
 |-----------------|----------|------------------------|  
 |**アプリケーション バッファー**|アプリケーション行記述子 (ARD)|アプリケーション パラメーター記述子 (APD)|  
 |**バッファーの実装**|実装行記述子 (IRD)|実装パラメーター記述子 (IPD)|  

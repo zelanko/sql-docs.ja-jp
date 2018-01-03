@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e027eb6b5c5afdf361854892a22ad5dd69a9d646
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specific-connection-information"></a>ドライバー固有の接続情報
 **SQLConnect**データ ソース名、ユーザー ID とパスワードがデータ ソースに接続するための十分なことと、システム上の他のすべての接続情報を格納できることを前提としています。 これは頻繁に当てはまりません。 たとえば、ドライバーは、1 人のユーザー ID とパスワード、サーバー、および別のユーザー ID とパスワードにログオンする DBMS にログオンする必要があります。 **SQLConnect** 1 人のユーザー ID とパスワードを受け入れるつまり他のユーザー ID とパスワードが場合、システム上のデータ ソース情報を格納する必要があります**SQLConnect**を使用します。 これは潜在的なセキュリティ侵害であり、パスワードが暗号化されていない限り避ける必要があります。  

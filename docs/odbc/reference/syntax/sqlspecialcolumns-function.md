@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c7f4a796fe40327c1d3691e0178876da010130e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 関数
 **準拠**  
@@ -107,7 +107,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_NULLABLE: は、NULL 値を持っている場合でも、特別な列を返します。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -166,7 +166,7 @@ SQLRETURN SQLSpecialColumns(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|スコープ (ODBC 1.0)|1|Smallint|Rowid の実際の範囲です。 次の値のいずれかが含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL が返されます*IdentifierType* SQL_ROWVER がします。 各値については、の説明を参照してください。*スコープ*構文では"、"このセクションでします。|  
+|スコープ (ODBC 1.0)|@shouldalert|Smallint|Rowid の実際の範囲です。 次の値のいずれかが含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL が返されます*IdentifierType* SQL_ROWVER がします。 各値については、の説明を参照してください。*スコープ*構文では"、"このセクションでします。|  
 |COLUMN_NAME (ODBC 1.0)|2|NULL でない Varchar|列名 ドライバーでは、名前がない列の空の文字列を返します。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)です。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
 |TYPE_NAME (ODBC 1.0)|4|NULL でない Varchar|データ ソースに依存するデータ型の名前です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR () FOR BIT DATA」です。|  

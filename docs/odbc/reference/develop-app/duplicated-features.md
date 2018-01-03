@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b27da2aac2c42987f6eeaba4f104b647912df0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 911e36882d278a997126dbf0ee99bbab837c5125
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duplicated-features"></a>重複する機能
 次の ODBC 2.*x* ODBC 3 で関数が重複しています*。x*関数。 結果として、ODBC 2 です。*x*関数、ODBC 3 で廃止されました*。x*です。 ODBC 3 です。*x*関数を置換機能と呼びます。  

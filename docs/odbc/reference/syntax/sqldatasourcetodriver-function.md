@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0594551a7bc82eb96208ecb5d8840db0477c4f3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d09d649bc53a08ff7389413882bb338d9713ffc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 関数
 **SQLDataSourceToDriver** supportstranslations ODBC ドライバー用です。 この関数は、ODBC 対応のアプリケーションでは呼び出されませんアプリケーション要求経由で翻訳**SQLSetConnectAttr**です。 関連付けられたドライバ、 *ConnectionHandle*で指定された**SQLSetConnectAttr**すべてのデータがドライバーに、データ ソースからフローの変換を実行する指定された DLL を呼び出します。 既定トランスレーター DLL は、ODBC の初期化ファイルで指定できます。  
@@ -88,7 +88,7 @@ BOOL SQLDataSourceToDriver(
  *pcbErrorMsg*  
  [出力]\(Null 終了バイトを除く) バイトの総数へのポインターで返される使用可能な*後*です。 これより大きいまたは等しい場合*cbErrorMsg*、内のデータ*後*に切り捨てられます*cbErrorMsgMax*マイナス、null 終端文字です。 *PcbErrorMsg*引数が null ポインターを指定できます。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  変換が成功した場合、false の場合、変換に失敗した場合は TRUE。  
   
 ## <a name="comments"></a>コメント  

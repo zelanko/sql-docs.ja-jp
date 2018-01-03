@@ -1,7 +1,7 @@
 ---
 title: "トラブルシューティング (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da58ad4dd8a501220ec910abbfe8435222187f05
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 325d19efd43ccc75486ae278d573e2fce7f8eb89
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-accesstosql"></a>トラブルシューティング (AccessToSQL)
 移行の問題中間にあるコンソール スクリプトまたはコマンドの実行に実行するは珍しいことはできません。  
   
 修正可能であるエラーの関連可能性があります。  
   
-1.  関数  
+1.  機能  
   
 2.  手順  
   

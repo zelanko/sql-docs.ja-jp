@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33cc5f63c34618f51196e173e58adbac58377f29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="why-was-odbc-created"></a>ODBC が作成されたはなぜですか。
 従来、企業は、1 つの DBMS を使用します。 すべてのデータベース アクセスは、そのシステムのフロント エンド、またはそのシステムでのみ動作するアプリケーションを通じて行われました。 ただし、コンピューターの使用を拡張し、複数のコンピューターのハードウェアおよびソフトウェアが利用可能になった、会社のさまざまな Dbms の取得を開始します。 理由が多数: が最も高速などのような新機能が最も安価な購入したどのような既に知っていれば、市場で最適な 1 つのアプリケーションの動作内容最新何でした。 その他の理由は、部門を持っていた 1 つの DBMS 必要があるいくつかの再編成と、合併しました。  

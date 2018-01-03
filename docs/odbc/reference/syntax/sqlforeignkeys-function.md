@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c57c8e1aa0548ceaec3342d5e668616b3292400c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 関数
 **準拠**  
@@ -113,7 +113,7 @@ SQLRETURN SQLForeignKeys(
  *NameLength6*  
  [入力]長さ **FKTableName*、文字数。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -172,7 +172,7 @@ SQLRETURN SQLForeignKeys(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|PKTABLE_CAT (ODBC 1.0)|1|Varchar|主キー テーブルのカタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|PKTABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|主キー テーブルのカタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |PKTABLE_SCHEM (ODBC 1.0)|2|Varchar|主キー テーブルのスキーマ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |PKTABLE_NAME (ODBC 1.0)|3|NULL でない Varchar|主キー テーブルの名前です。|  
 |PKCOLUMN_NAME (ODBC 1.0)|4|NULL でない Varchar|主キー列の名前です。 ドライバーでは、名前がない列の空の文字列を返します。|  
@@ -206,19 +206,19 @@ SQLRETURN SQLForeignKeys(
   
 |TABLE_NAME|COLUMN_NAME|KEY_SEQ|  
 |-----------------|------------------|--------------|  
-|ORDERS|ORDERID|1|  
+|ORDERS|ORDERID|@shouldalert|  
   
  この例では次に、 **SQLForeignKeys** ORDERS テーブルの主キーを参照する他のテーブル内の外部キーを取得します。 結果セットが 1 つの行には重要な列は、次の表に表示されます。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|ORDERS|CUSTID|行|CUSTID|1|  
+|ORDERS|CUSTID|行|CUSTID|@shouldalert|  
   
  この例では最後に、 **SQLForeignKeys**を他のテーブルの主キーを参照する ORDERS テーブルの外部キーを取得します。 結果セットが 1 つの行には重要な列は、次の表に表示されます。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|顧客|CUSTID|ORDERS|CUSTID|1|  
+|顧客|CUSTID|ORDERS|CUSTID|@shouldalert|  
   
 ```  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  

@@ -1,11 +1,11 @@
 ---
-title: "データ ソース |Microsoft ドキュメント"
+title: "データ ソース | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,13 +19,13 @@ caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="data-sources"></a>データ ソース
+# <a name="data-sources"></a>ソリューション エクスプローラー
 A*データソース*データのソースだけです。 ファイル、DBMS、またはライブ データ フィードではさらに特定のデータベースがあります。 データをプログラムと同じコンピューター上またはネットワーク上のどこか別のコンピューター上にあることがあります。 たとえば、データ ソースは、Novell® Netware; によってアクセス OS/2® オペレーティング システムで実行されている Oracle DBMS 可能性があります。ゲートウェイ経由でアクセス IBM DB2 DBMSXbase ディレクトリにあるファイル サーバー以外のコレクションまたは、ローカルの Microsoft® Access データベース ファイルを選択します。  
   
  データ ソースの目的は、すべてのデータにアクセスするために必要な技術的な情報を収集する — ドライバー名、ネットワーク アドレス、ネットワーク ソフトウェア、およびよびな —、1 つに配置し、ユーザーに対して非表示にします。 ユーザーを給与、インベントリ、および担当者の一覧を見て、リストから、給与を選択し、アプリケーションの給与データが存在するかして、アプリケーションの経緯を知らなくてもすべて、給与データに接続できる必要があります。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3a33528b7f64bb781e835e3ec0f9bbd563adb35
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用して出力パラメーターを取得します。
 ODBC 3.8 する前に、アプリケーションは、バインドされた出力バッファーを持つクエリの出力パラメーターを取得のみでした。 ただし、パラメーター値のサイズが (たとえば、大きな画像) 非常に大きい場合に非常に大きなバッファーを割り当てるにくくなっています。 ODBC 3.8 には、部分の出力パラメーターを取得する新しい方法が導入されています。 アプリケーションを呼び出せるようになりました**SQLGetData**小さなバッファーを伴うに複数回、大きなパラメーター値を取得します。 これは、大きな列データの取得に似ています。  
@@ -71,7 +71,7 @@ ODBC 3.8 する前に、アプリケーションは、バインドされた出�
   
  次の表では、サーバー、およびアプリケーションの動作に送信された 1 つのコマンドのさまざまなシナリオについて説明します。  
   
-|Scenario|SQLExecute、SQLExecDirect またはからの戻り値|次への対処方法|  
+|シナリオ|SQLExecute、SQLExecDirect またはからの戻り値|次への対処方法|  
 |--------------|---------------------------------------------------|---------------------|  
 |データには、ストリーミングされる出力パラメーターにはのみが含まれます。|SQL_PARAM_DATA_AVAILABLE|使用して**SQLParamData**と**SQLGetData**ストリーミングされる出力パラメーターを取得します。|  
 |データが結果セットが含まれています、ストリーム出力パラメーター|SQL_SUCCESS|使用して結果セットを取得**SQLBindCol**と**SQLGetData**です。<br /><br /> 呼び出す**SQLMoreResults**をストリーム出力パラメーターの処理を開始します。 SQL_PARAM_DATA_AVAILABLE が返されます。<br /><br /> 使用して**SQLParamData**と**SQLGetData**ストリーミングされる出力パラメーターを取得します。|  

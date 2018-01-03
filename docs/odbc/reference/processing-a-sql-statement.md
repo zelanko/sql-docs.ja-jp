@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aaf3c1fddb673e0cd62d334e9b87eeb2d9016ec6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-a-sql-statement"></a>SQL ステートメントの処理
 プログラムによる SQL を使用する方法を説明する前に、SQL ステートメントを処理する方法について説明する必要があります。 必要な手順は、各方法に異なるタイミングで実行が次の 3 つの方法がすべてに必要な場合に共通です。 次の図では、このセクションの残りの部分で説明する SQL ステートメントの処理に関連した手順を示します。  

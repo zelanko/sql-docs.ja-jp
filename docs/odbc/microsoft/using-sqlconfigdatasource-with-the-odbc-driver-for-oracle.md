@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>SQLConfigDatasource を with the ODBC Driver for Oracle を使用してください。
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 |設定|最大の長さ|既定値|有効な値|Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65535|1000|最小のフェッチ バッファー サイズは最大 65535 バイト|  
-|CatalogCap|2|1|0 または 1|1 の場合、nonquoted 識別子は、カタログで大文字に変換関数になります。|  
+|CatalogCap|2|@shouldalert|0 または 1|1 の場合、nonquoted 識別子は、カタログで大文字に変換関数になります。|  
 |ConnectString|128|""|A/N|接続文字列: Msorcl10.dll ドライバーでサーバー名を指定する必要なメソッドです。|  
 |Description|256|""|A/N|説明|  
 |DSN (DSN)|33|""|A/N|データ ソースの名前。|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 |解説|2|0|0 または 1|カタログ関数では、「解説」をが含まれます。|  
 |RowLimit|4|""|0 ~ 99 の範囲|SELECT ステートメントによって返される行の最大数。 長さ 0 の文字列では、制限を適用しないことを示します。|  
 |[サーバー]|128|""|A/N|Oracle サーバーの名前。|  
-|SynonymColumns|2|1|0 または 1|SQLColumns、シノニムがあります。|  
+|SynonymColumns|2|@shouldalert|0 または 1|SQLColumns、シノニムがあります。|  
 |システム テーブル|2|""|0 または 1|0 の場合、システム テーブルは表示されません。 1 の場合、システム テーブルが表示されます。|  
 |TranslationDLL|33|""|A/N|翻訳 .dll の名前です。|  
 |TranslationName|33|""|A/N|翻訳の名前。|  

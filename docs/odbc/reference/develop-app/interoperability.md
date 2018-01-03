@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8ee4a2bd5672c3113c495c46f00b88b11c03e26
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b797bcf1e8e5521ea2b4fd57a68969b3f04e802d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interoperability"></a>相互運用性
 *相互運用性*多くのさまざまな Dbms で動作する 1 つのアプリケーションの機能です。 ジェネリック、相互運用可能なアプリケーションを記述する必要では、ODBC の開発につながる主な要因の 1 つでした。 ただし、相互運用性はありません「いない相互運用可能な」からの続き、単純なパスを「完全に相互運用可能な」。 パスは、多数の分岐を持ち、それぞれの機能、速度、コードの複雑性、および開発時間の間のトレードオフを必要とします。  

@@ -1,7 +1,7 @@
 ---
 title: "新しいプロジェクト (SSMA) (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,16 +21,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee94ebaa133f2403f9f68bb973775cb56b26510b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e1ffcacafa80c8679f2aae6cb873d1c802e84ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-project-ssma-accesstosql"></a>新しいプロジェクト (SSMA) (AccessToSQL)
 使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **名前**  
   
 プロジェクトの名前を入力します。 SSMA では、ファイルの拡張子を追加します。  

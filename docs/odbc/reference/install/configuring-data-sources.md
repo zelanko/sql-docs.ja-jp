@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42f60e7cd5673685a262467e54085a5d0b9ec068
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7e8c96fe9ce093f9a5d3d0f09b0dc6a35568d9e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuring-data-sources"></a>データ ソースの構成
 データ ソースに関する情報は、システム レジストリに格納されます。 ユーザーは、管理プログラムを通じてデータ ソース情報を変更します。 ODBC アドミニストレーター、コントロール パネルの ODBC デバイス、または、アプリケーションまたはドライバーの開発者によって書かれた管理プログラムを指定できます。  

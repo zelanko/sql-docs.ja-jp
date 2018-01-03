@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea0725d098999471ae87bcb6ca4af9a4b18565f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9798d84c3f06449637160d75b2e53bc41b70486a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initialization-of-descriptor-fields"></a>記述子フィールドの初期化
 アプリケーション行記述子が割り当てられると、そのフィールドが表示される初期値で指定されている[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)です。 SQL_DESC_TYPE フィールドの初期値は、SQL_DEFAULT です。 これは、アプリケーションに提示するためのデータベース データの標準的な処理方法を提供します。 アプリケーションは、記述子レコードのフィールドを設定して、データのさまざまな処理方法を指定することがあります。  

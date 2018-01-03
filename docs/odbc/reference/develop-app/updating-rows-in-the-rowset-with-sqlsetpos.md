@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 960845d3101157b3e263230e51bd2b3b5ac05ef5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 898bbdbf15cec2e583d9fa55a82ec8b0caa32d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos で行セット内の行を更新
 更新操作**SQLSetPos**により、データ ソースのデータを使用してアプリケーションのバッファーでバインドされた各列 (長さ/インジケーター バッファー内の値が SQL_COLUMN_IGNORE の場合)、テーブルの 1 つまたは複数の選択した行を更新します。 バインドされていない列は更新されません。  

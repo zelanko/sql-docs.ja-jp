@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8bd2822a1892c967a23e3cdf62753f43952c1c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4602d02a25740ce296a059a0f3f1fd82a9a3db47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-and-freeing-buffers"></a>割り当てと解放バッファー
 すべてのバッファーでは、割り当てられ、アプリケーションによって解放することができます。 バッファーを遅延しませんが場合は、必要がある関数への呼び出しの間のみ存在します。 たとえば、 **SQLGetInfo**が指すバッファー内の特定のオプションに関連付けられている値を返します、 *InfoValuePtr*引数。 このバッファーへの呼び出し後すぐに解放できる**SQLGetInfo**次のコード例のように。  

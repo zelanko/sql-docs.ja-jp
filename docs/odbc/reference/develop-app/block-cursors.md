@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c8d6b3eb0a520d4c5c83e043f57076d164503f6c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb5e136741491e644a223eb4f9294179893121d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="block-cursors"></a>ブロック カーソル
 多くのアプリケーションでは、かなりのネットワーク経由でデータを取り込む時間が短縮されます。 この時間の部分は実際には、ネットワーク経由でデータを取り込むに費やされたし、1 行のデータを要求する、ドライバーによって行われた呼び出しなどの一部がネットワーク オーバーヘッドで消費されします。 アプリケーションにより効率的に使用する場合、後者の時間を短縮できます。*ブロック、*または*fat、* *カーソル、*を一度に 1 つ以上の行を返すことができます。  

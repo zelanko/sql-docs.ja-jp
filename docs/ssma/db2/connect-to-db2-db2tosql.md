@@ -1,7 +1,7 @@
 ---
 title: "DB2 への接続 (DB2ToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92b8b90baea054039b22fb6db6c4761e85fa7aee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
 使用して、 **DB2 への接続**を移行する DB2 データベースに接続する ダイアログ ボックス。  
   
 このダイアログ ボックスにアクセスする、**ファイル**メニューの  **DB2 への接続**です。 以前接続した場合、コマンドは**DB2 への再接続**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **プロバイダー**  
 DB2 データベースへの接続用のデータ アクセス プロバイダーを選択します。 使用可能なプロバイダーは、DB2 クライアント プロバイダー、OLE DB プロバイダーです。 既定値は、DB2 クライアント プロバイダーです。  
   
@@ -65,7 +65,7 @@ TNSNAME モード オプションです。
   
 標準モードのオプションです。  
   
-**ユーザー名**  
+**User name**  
 SSMA が DB2 データベースへの接続に使用するユーザー名を入力します。  
   
 **Password**  

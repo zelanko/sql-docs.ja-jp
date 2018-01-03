@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 003268d449fd21ba23bbe8a905fafc972ee13914
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ac4b30fc9bbbb2e289ca53094d5050f0808b3ec1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-the-number-of-affected-rows"></a>影響を受けた行の数を決定します。
 アプリケーションでは、更新、削除、または、行を挿入、後に呼び出すことができます**SQLRowCount**を影響を受けた行の数を決定します。 **SQLRowCount**更新、削除、または実行することによって挿入された行かどうかは、この値を返す、**更新**、**削除**、または**挿入**ステートメントでは、位置指定の update または delete ステートメントを実行することによって、または呼び出すことによって**SQLSetPos**です。  

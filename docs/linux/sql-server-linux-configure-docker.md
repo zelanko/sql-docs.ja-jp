@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 3a29c6580a4163bd69d2bb2ee1d037afc04f8108
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker でコンテナー イメージの SQL Server 2017 を構成します。
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="pull-and-run-the-container-image"></a>プルし、コンテナー イメージを実行
 
-プルし、SQL Server 2017 の Docker コンテナー イメージを実行するには、次のクイック スタート チュートリアルの前提条件と手順に従ってください。
+プルし、SQL Server 2017 の Docker コンテナー イメージを実行するには、前提条件と、次のクイック スタートの手順に従います。
 
 - [Docker を使用した SQL Server 2017 コンテナー イメージを実行します。](quickstart-install-connect-docker.md)
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a id="production"></a>実稼働環境にコンテナー イメージを実行します。
 
-前のセクションでのクイック スタート チュートリアルでは、Docker Hub から SQL Server の無償の Developer エディションを実行します。 情報の大部分は、Enterprise、Standard、または Web edition などのコンテナー イメージの運用を実行する場合にも適用されます。 ただし、ここで説明されている、いくつかの違いがあります。
+前のセクションで、クイック スタートでは、Docker Hub から SQL Server の無償の Developer エディションを実行します。 情報の大部分は、Enterprise、Standard、または Web edition などのコンテナー イメージの運用を実行する場合にも適用されます。 ただし、ここで説明されている、いくつかの違いがあります。
 
 - のみ、有効なライセンスがある場合、SQL Server を実稼働環境で使用できます。 無料の SQL Server Express の運用環境ライセンスを取得する[ここ](https://go.microsoft.com/fwlink/?linkid=857693)です。 を通じて使用可能な SQL Server Standard および Enterprise Edition のライセンス[Microsoft ボリューム ライセンス](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)です。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/01/2017
 
    1. 次に、無料の開発者用 Docker ストアにコンテナーのイメージを取得する必要があります。 移動して[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)をクリックして**チェック アウトを続行**、し、指示に従います。
 
-   1. プロシージャを実行し、要件を確認、[クイック スタート チュートリアル](quickstart-install-connect-docker.md)です。 2 つの違いがあります。 イメージをプルする必要があります**ストアまたは microsoft/mssql-サーバー-linux:\<タグ名\>** Docker ストアからです。 実稼働のエディションを指定する必要がありますと、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition 用の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
+   1. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)です。 2 つの違いがあります。 イメージをプルする必要があります**ストアまたは microsoft/mssql-サーバー-linux:\<タグ名\>** Docker ストアからです。 実稼働のエディションを指定する必要がありますと、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition 用の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 
       ```bash
       docker run --name sqlenterprise \
@@ -351,7 +351,7 @@ Windows では、PowerShell、または、管理者としてコマンド プロ�
 
 実行する、SQL Server のコンテナーが失敗した場合は、次のテストを試してください。
 
-- など、エラーが発生した場合**' をネットワーク ブリッジ エンドポイント CONTAINER_NAME を作成できませんでした。プロキシを開始中にエラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターに SQL Server をローカルで実行している場合に発生することができます。 また、2 つの SQL Server のコンテナーを開始して、これらの両方を同じホスト ポートにマップしようとした場合も発生することができます。 この場合を使用して、`-p`コンテナー ポート 1433 を別のホストのポートにマップするパラメーターです。 例: 
+- など、エラーが発生した場合**' をネットワーク ブリッジ エンドポイント CONTAINER_NAME を作成できませんでした。プロキシを開始中にエラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターに SQL Server をローカルで実行している場合に発生することができます。 また、2 つの SQL Server のコンテナーを開始して、これらの両方を同じホスト ポートにマップしようとした場合も発生することができます。 この場合を使用して、`-p`コンテナー ポート 1433 を別のホストのポートにマップするパラメーターです。 例 : 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
@@ -431,6 +431,6 @@ cat errorlog
 
 ## <a name="next-steps"></a>次の手順
 
-経由して Docker でコンテナー イメージの SQL Server 2017 の概要、[クイック スタート チュートリアル](quickstart-install-connect-docker.md)です。
+経由して Docker でコンテナー イメージの SQL Server 2017 の概要、[クイック スタート](quickstart-install-connect-docker.md)です。
 
 またを参照してください、 [mssql docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker)リソース、フィードバック、および既知の問題です。

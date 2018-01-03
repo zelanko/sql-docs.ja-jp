@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3941b8cdc2a53cb0f9fe3ad2b94f2ef972ad3775
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccd4cdd57771d32a6a09bf1c1030ba173ee18486
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes"></a>動作の変更
 動作の変更は、これらの変更を*構文*インターフェイスは同じですが、*セマンティクス*が変更されました。 これらの変更、ODBC 2 で使用されている機能です。*x* ODBC 3 で同じ機能の動作は異なります*。x*です。  

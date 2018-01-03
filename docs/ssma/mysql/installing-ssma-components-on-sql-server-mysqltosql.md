@@ -1,7 +1,7 @@
 ---
 title: "SQL Server (MySQLToSql) へ SSMA コンポーネントのインストール |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9e191282cdba94d3c3e48db0a59b7b6d90b6d5b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>SQL server (MySQLToSql) SSMA コンポーネントのインストール
 SSMA をインストールするだけでなくする必要がありますコンポーネントもインストールを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、データの移行、およびサーバーからサーバーへの接続を有効にする MySQL プロバイダーをサポートする、SSMA 拡張機能パックが含まれます。  
@@ -35,7 +35,7 @@ SSMA の拡張機能パックは、データベースを追加**sysdb**のイン
   
 データを移行する場合にも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA 作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]サーバー側のデータ移行のエンジンがデータを移行するために使用されるときに、エージェント ジョブ。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>Prerequisites  
 SSMA for MySQL server のコンポーネントをインストールする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]コンピューターが、次の要件を満たしていることを確認します。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー 3.1 以降。  

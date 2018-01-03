@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3889b64da6484b7aac8adfb0b643467fc716e560
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスへの準拠
 レベル 1 のインターフェイスへの準拠レベルには、コア インターフェイスへの準拠の機能レベルと、OLTP リレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 – インターフェイスに準拠するドライバーは、コア インターフェイスへの準拠レベルの機能に加えて、次の操作をアプリケーションを使用できます。  

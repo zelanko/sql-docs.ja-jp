@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 998e4fd755bfc0c8fb2b02d82da5500f74c6bc2f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a530e24368339305fc510a3a3f6fc9a6193e694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="quoted-identifiers"></a>引用符で囲まれた識別子
 SQL ステートメントで特殊文字または一致するキーワードを含む識別子を囲む必要があります*識別子引用符文字*; このような文字で囲まれた識別子と呼ばれる*の識別子を引用符で囲まれた*(とも呼ばれる*区切られた識別子*sql-92 で)。 次の Accounts Payable の識別子が引用符で囲まれたなど**選択**ステートメント。  

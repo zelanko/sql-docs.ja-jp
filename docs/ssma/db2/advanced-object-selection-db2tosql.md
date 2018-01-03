@@ -1,7 +1,7 @@
 ---
 title: "オブジェクトの選択 (DB2ToSQL) 高度な |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0aeaf76a6d697b4348f0ae53d844a83eb00863f6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b246973c44b1d781ec191c8473b000fd4d54a1de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-object-selection-db2tosql"></a>高度なオブジェクトの選択 (DB2ToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名に文字列および部分文字列を使用してデータベース オブジェクトをフィルター処理し、選択するか、それらのオブジェクトの選択を解除することができます。 SSMA では、選択したオブジェクトでの変換と移行操作を実行します。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 このダイアログ ボックスを使用する前に、スキーマを変換するか、プロジェクトを保存してすべてのメタデータを読み込む SSMA を強制することができます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **すべての項目をチェックします。**  
 すべての項目の横にあるチェック マークを追加します。 これらの項目は、メタデータ エクスプ ローラーで、すぐに選択されます。  
   

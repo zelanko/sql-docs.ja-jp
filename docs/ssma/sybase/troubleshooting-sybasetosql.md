@@ -3,7 +3,7 @@ title: "トラブルシューティング (SybaseToSQL) |Microsoft ドキュメ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,18 +21,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ecf4c6ea3908b7e31b966647dd8b85dfa1267e4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 28a845f17f96b4d48de6fdd7825998add2a1b2b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-sybasetosql"></a>トラブルシューティング (SybaseToSQL)
 移行の問題中間にあるコンソール スクリプトまたはコマンドの実行に実行するは珍しいことはできません。  
   
 修正可能であるエラーの関連可能性があります。  
   
-1.  関数  
+1.  機能  
   
 2.  手順  
   

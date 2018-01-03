@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb3cd6b0bcb1d159e3c32a672b8b9f1038057b51
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54df53e2ff5f095a0404719d6e1219013d90d47f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
 次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、SQL 文法を制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかの方法を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS の値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|または|  
+|COLLATION|スイッチまたは|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/20/2017
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |[DATE]|REFERENCES|  
 |[DAY]|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/20/2017
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|[SECOND]|  
+|Del|[SECOND]|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/20/2017
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|[SUBSTRING]|  
-|CREATE ステートメントを実行する前に、|[SUM]|  
+|EXECUTE|[SUM]|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  

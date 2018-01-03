@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-functions"></a>数値関数
 次の表では、ODBC スカラー関数のセットに含まれている数値の関数について説明します。 呼び出して**SQLGetInfo**で、*情報の種類*する数値関数は、ドライバーでサポートされる SQL_NUMERIC_FUNCTIONS のアプリケーションを決定できます。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  CURRENT_DATE、CURRENT_TIME、CURRENT_TIMESTAMP スカラー関数は、ODBC 3.0 では、sql-92 に合うように追加されました。  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |**ABS (** *numeric_exp* **)** (ODBC 1.0)|絶対値を返します。 *numeric_exp*です。|  
 |**ACOS (** *float_exp* **)** (ODBC 1.0)|コサインを返します*float_exp*ラジアンの角度で表されます。|  

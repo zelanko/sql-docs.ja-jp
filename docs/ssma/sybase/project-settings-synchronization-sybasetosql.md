@@ -3,7 +3,7 @@ title: "プロジェクトの設定 (同期) (SybaseToSQL) |Microsoft ドキュ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba7bda5c531dd688c512973b3293a2166dbde741
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23b91803d96e77e171bb32e4af7d42dc45872b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>プロジェクトの設定 (同期) (SybaseToSQL)
 [同期] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA にテーブルおよびストアド プロシージャなどのデータベース オブジェクトを読み込む方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 -   現在のプロジェクトの設定を指定する、**ツール**メニューの **プロジェクト設定**、し、**同期**左側のウィンドウの下部にあります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **試行回数**  
 SSMA にオブジェクトの読み込み時に行う必要がありますの試行回数を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 オブジェクトに読み込まれていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]現在試行中に再試行されます SSMA が現在の同期プロセスの最大回数に達するまでします。  
   

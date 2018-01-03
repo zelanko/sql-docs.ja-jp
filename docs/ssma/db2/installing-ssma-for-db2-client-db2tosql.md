@@ -1,7 +1,7 @@
 ---
 title: "SSMA の DB2 クライアント (DB2ToSQL) のインストール |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e38e6df37dd5b6aeda71e024850c3549e299c47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cddb418e373c5ac61d2788f7e8a41d51c5976b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>SSMA の DB2 クライアント (DB2ToSQL) のインストール
 SSMA クライアントは、次のタスクを実行するプログラム ファイルで構成されます。  
@@ -41,7 +41,7 @@ SSMA クライアントは、次のタスクを実行するプログラム フ�
   
 このトピックでは、インストールの前提条件と SSMA をインストールするための指示を提供します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 SSMA は、Z/OS 9.0、10.0 のバージョンの DB2 または LUW 9.8 と 10.1 以降のバージョンの DB2 を使用するように設計された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 です。  
   
 SSMA をインストールする前に、コンピューターが、次の要件を満たしていることを確認してください。  

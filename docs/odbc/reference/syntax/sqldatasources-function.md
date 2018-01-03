@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09c64ec707be4d99bb66547f8583f707dd281277
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 関数
 **準拠**  
@@ -54,7 +54,7 @@ SQLRETURN SQLDataSources(
  *EnvironmentHandle*  
  [入力]環境ハンドルです。  
   
- *方向*  
+ *[方向]*  
  [入力]どのデータ ソース ドライバー マネージャーで、に関する情報が返されますを決定します。 次の値をとります。  
   
  SQL_FETCH_NEXT (をフェッチする一覧で、[次へ] のデータ ソース名)、SQL_FETCH_FIRST (をフェッチするリストの先頭から)、(fetch、最初のユーザーに DSN) SQL_FETCH_FIRST_USER または SQL_FETCH_FIRST_SYSTEM (をフェッチする最初のシステム DSN)。  
@@ -83,7 +83,7 @@ SQLRETURN SQLDataSources(
  *NameLength2Ptr*  
  [出力]文字 (null 終了文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な\**説明*です。 返される文字数がより大きいかに等しい場合*BufferLength2*、ドライバーの説明で\**説明*に切り捨てられます*BufferLength2* null 終端文字の長さマイナスです。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

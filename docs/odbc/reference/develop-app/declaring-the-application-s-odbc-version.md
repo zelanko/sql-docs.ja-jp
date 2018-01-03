@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a58aebc6517268c054a4d2ac92066eb0d0469d2c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2c021fb123e0a8cf861fa91fe78d3882ba16111e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>宣言アプリケーション &#39; s ODBC のバージョン
 アプリケーションにより、接続を割り当てる前にまた環境属性を設定する必要があります。 この属性は、アプリケーションが、ODBC 2 を準拠していることを示しています。*x*または ODBC 3 *。x*仕様、次の項目を使用する場合。  

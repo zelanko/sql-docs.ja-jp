@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 698e450fbb816c5fb7e3caf3786f4b8d469af50c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b3e1547dd65d0a604e36f4a11280cfc3d38ee88f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-c-data-type"></a>ブックマークの C データ型
 ブックマークの C データ型には、ブックマークを取得するアプリケーションができます。 ブックマーク C 型は可変長です。 使用可能なブックマークの値を取得する場合のみ使用されます。他のデータ型に変換する必要がありますされません。 アプリケーションの取得と設定のいずれかの結果の列 0 からブックマーク**SQLBulkOperations** (の SQL_ADD の操作)、 **SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**です。 詳細については、次を参照してください。[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)です。  

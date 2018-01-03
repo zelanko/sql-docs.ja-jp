@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 216cfaa83c7b48e94778b98fde9766a47221091b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4002a7b376a752d4c5d3a2ddd2506bc9357842fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-2-interface-conformance"></a>レベル 2 インターフェイスへの準拠
 インターフェイスへの準拠レベル 2 にはでは、レベル 1 インターフェイスへの準拠レベルの機能と、次の機能が含まれます。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |205|に関する詳細情報、データ ディクショナリを呼び出して取得**SQLColumnPrivileges**、 **SQLForeignKeys**、および**SQLTablePrivileges**です。|  
 |206|呼び出すことによって、その他のデータベース操作を実行する SQL ステートメントではなく ODBC 関数を使用して**SQLBulkOperations** SQL_ADD とまたは**SQLSetPos** SQL_DELETE または SQL_UPDATE にします。 (呼び出しのためにサポート**SQLSetPos**で、 *LockType* SQL_LOCK_EXCLUSIVE または SQL_LOCK_UNLOCK に設定引数がへの準拠レベルの一部ではありませんが、オプション機能です)。|  
 |207|指定した個別のステートメントの ODBC 関数の非同期実行を有効にします。|  
-|208|呼び出して、テーブルの SQL_ROWVER - 行を識別する列を入手**SQLSpecialColumns**です。 (詳細については、のサポートを参照してください**SQLSpecialColumns**で、 *IdentifierType*引数 SQL_BEST_ROWID 機能の 20 のように設定されて[コア インターフェイス準拠](../../../odbc/reference/develop-app/core-interface-conformance.md)。.)|  
+|208|呼び出して、テーブルの SQL_ROWVER - 行を識別する列を入手**SQLSpecialColumns**です。 (詳細については、のサポートを参照してください**SQLSpecialColumns**で、 *IdentifierType*引数 SQL_BEST_ROWID 機能の 20 のように設定されて[コア インターフェイス準拠](../../../odbc/reference/develop-app/core-interface-conformance.md).)|  
 |209|また、ステートメント属性 SQL_ATTR_CONCURRENCY を SQL_CONCUR_READ_ONLY 以外には、少なくとも 1 つの値に設定します。|  
 |210|ログイン要求のタイムアウトが発生し、SQL クエリ (SQL_ATTR_LOGIN_TIMEOUT および SQL_ATTR_QUERY_TIMEOUT) する権限です。|  
 |211|既定の分離レベルを変更する機能「シリアル化可能な」分離レベルでのトランザクションを実行する権限です。|

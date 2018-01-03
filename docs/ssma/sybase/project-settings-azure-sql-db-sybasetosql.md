@@ -3,7 +3,7 @@ title: "プロジェクトの設定 (Azure SQL DB) (SybaseToSQL) |Microsoft ド�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dde8b0d823c805baf69fef6b580c8dc988e1316
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c6d39a4ceb167746ffe1f47528ac8e042f45715a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>プロジェクトの設定 (Azure SQL DB) (SybaseToSQL)
 Azure SQL DB プロジェクト設定では、サフィックスを構成する、Azure SQL DB データベース、接続ダイアログで追加する Azure SQL DB の接続でハートビート メカニズムを実装することもできます。  
@@ -35,7 +35,7 @@ Azure SQL DB ペインがで使用できる、**プロジェクト設定**と**�
   
 -   プロジェクトの既定の設定 ダイアログ ボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 Azure SQL DB の設定にアクセスする、**ツール**メニューの [ **DefaultProject 設定**、] をクリックして**全般**クリックし、左側のウィンドウの下部にある**Azure SQL DB**です。  
   
-## <a name="connectivity"></a>[接続]  
+## <a name="connectivity"></a>接続  
 **ハートビートの間隔**  
   
 Azure SQL DB の接続を維持するハートビート メカニズムを使用する時間間隔を指定 ' 分: 秒の形式です。  

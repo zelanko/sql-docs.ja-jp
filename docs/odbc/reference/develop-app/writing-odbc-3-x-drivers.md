@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>書き込み ODBC 3.x ドライバー
 次の表は、ODBC 3 関数のサポートを示します。*x*ドライバーと ODBC アプリケーションでは、ODBC 3 に対して関数が呼び出されると、ドライバー マネージャーでを実行するマッピング*。x*ドライバー。  
   
-|関数|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバーですか。|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> アプリケーションか。|マップ サポート<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
+|機能|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバーですか。|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> アプリケーションか。|マップ サポート<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|不可|[1]|可|  
 |**SQLAllocEnv**|不可|[1]|可|  
@@ -50,17 +50,17 @@ ms.lasthandoff: 11/20/2017
 |**SQLColumns**|可|可|不可|  
 |**SQLConnect**|可|可|不可|  
 |**SQLCopyDesc**|可|可|[はい] [4]|  
-|**SQLDataSources**|不可|はい|可|  
+|**SQLDataSources**|不可|可|可|  
 |**SQLDescribeCol**|可|可|不可|  
 |**SQLDescribeParam**|可|可|不可|  
 |**SQLDisconnect**|可|可|不可|  
 |**SQLDriverConnect**|可|可|不可|  
-|**SQLDrivers**|不可|はい|可|  
+|**SQLDrivers**|不可|可|可|  
 |**SQLEndTran**|可|可|不可|  
 |**SQLError**|不可|[1]|可|  
 |**SQLExecDirect**|可|可|不可|  
 |**SQLExecute**|可|可|不可|  
-|**SQLExtendedFetch**|可|いいえ|不可|  
+|**SQLExtendedFetch**|可|不可|不可|  
 |**SQLFetch**|可|可|不可|  
 |**SQLFetchScroll**|可|可|不可|  
 |**SQLForeignKeys**|可|可|不可|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 |**SQLNumParams**|可|可|不可|  
 |**SQLNumResultCols**|可|可|不可|  
 |**SQLParamData**|可|可|不可|  
-|**SQLParamOptions**|不可|いいえ|可|  
+|**SQLParamOptions**|不可|不可|可|  
 |**SQLPrepare**|可|可|不可|  
 |**SQLPrimaryKeys**|可|可|不可|  
 |**SQLProcedureColumns**|可|可|不可|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
 |**SQLSetDescRec**|可|可|不可|  
 |**SQLSetEnvAttr**|可|可|不可|  
 |**SQLSetPos**|可|可|不可|  
-|**SQLSetParam**|不可|いいえ|可|  
+|**SQLSetParam**|不可|不可|可|  
 |**SQLSetScrollOption**|可|可|不可|  
 |**SQLSetStmtAttr**|可|可|不可|  
 |**SQLSetStmtOption**|[5]|[1]|可|  

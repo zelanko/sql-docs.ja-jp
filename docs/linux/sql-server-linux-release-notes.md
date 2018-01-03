@@ -4,7 +4,7 @@ description: "このトピックでは、リリース ノートが含まれて�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 | 1.8 以降、Mac、または Linux の Windows で docker エンジン | なし | [インストール ガイド](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> 確認、[システム要件](sql-server-linux-setup.md#system)Linux に SQL Server 用です。
+> 詳細については、確認、[システム要件](sql-server-linux-setup.md#system)Linux に SQL Server 用です。 SQL Server 2017 の最新のサポート ポリシーで、次を参照してください。、 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)です。
 
 ## <a name="supported-client-tools"></a>サポートされているクライアント ツール
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/12/2017
 
 次の表は、SQL Server 2017 のリリース履歴を示します。
 
-| リリース | バージョン | リリース日 |
+| リリース | [バージョンのオプション] | リリース日 |
 |-----|-----|-----|
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
@@ -129,12 +129,12 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | &nbsp; | CLR アセンブリと EXTERNAL_ACCESS または UNSAFE 権限の設定します。 |
 | &nbsp; | バッファー プール拡張 |
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダーは、SSIS、SSAS、SSRS |
-| &nbsp; | 警告 |
+| &nbsp; | オブジェクト エクスプローラーには |
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
 | &nbsp; | 変更データ キャプチャ |
 | &nbsp; | 管理対象のバックアップ |
 | **高可用性** | データベース ミラーリング  |
-| **セキュリティ** | 拡張キー管理 |
+| **Security** | 拡張キー管理 |
 | &nbsp; | リンク サーバーの AD の認証 | 
 | &nbsp; | 可用性グループ (Ag) に対して AD の認証 | 
 | &nbsp; | サード パーティ AD ツール (Centrify、いる Vintela、Powerbroker) | 
@@ -143,7 +143,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
+| &nbsp; | [データベース エンジン サービス] |
 | &nbsp; | マスター データ サービス |
 
 ### <a name="known-issues"></a>既知の問題
@@ -289,7 +289,7 @@ Linux 上の SSIS の詳細については、次の記事を参照してくだ�
 
 ### <a name="next-steps"></a>次の手順
 
-開始するには、次のクイック スタート チュートリアルを参照してください。
+開始するには、次のクイック スタートを参照してください。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)

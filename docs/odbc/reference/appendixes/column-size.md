@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size"></a>列のサイズ
 数値データ型の列 (またはパラメーター) のサイズは、パラメーター、または列のデータ型またはデータの有効桁数によって使用される桁の数字の最大数として定義されます。 文字型の場合、これは、データの文字の長さバイナリ データ型の列のサイズは、データの長さ (バイト単位) として定義されます。 時刻、タイムスタンプ、およびすべての interval データ型の場合は、これはこのデータの文字表記の文字数です。 各簡潔な SQL データ型に対して定義されている列のサイズは、次の表に表示されます。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 |-------------------------|-----------------|  
 |すべての文字の種類 [a] [b]。|列またはパラメーター (に記載されている SQL_DESC_LENGTH の記述子フィールド) の文字で定義されているまたは最大列サイズ。 たとえば、1 バイト文字の列の char (10) として定義されている列のサイズは 10 です。|  
 |SQL_DECIMAL SQL_NUMERIC|定義されている桁数です。 たとえば、NUMERIC(10,3) として定義されている列の有効桁数には 10 です。|  
-|SQL_BIT [c]|1|  
+|SQL_BIT [c]|@shouldalert|  
 |SQL_TINYINT [c]|3|  
 |SQL_SMALLINT [c]|5|  
 |SQL_INTEGER [c]|10|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |すべてバイナリ型 [a] [b]。|未定義または最大長さ (バイト単位) の列またはパラメーター。 たとえば、binary (10) として定義されている列の長さは、10 です。|  
 |SQL_TYPE_DATE [c]|10 (文字数、 *yyyy mm dd*形式)。|  
 |SQL_TYPE_TIME [c]|8 (文字数、 *hh mm ss*形式)、または 9 + *s* (文字数、 *hh:mm:ss*[.fff.] 形式場所*の*秒の有効桁数です)。|  
-|SQL_TYPE_TIMESTAMP|16 (文字数、 *- yyyy-mm-dd hh:mm*形式)<br /><br /> 19 (文字数、 *yyyy mm dd* *hh:mm:ss*形式)<br /><br /> または<br /><br /> 20 + *s* (文字数、 *- yyyy-mm-dd hh:mm:ss*[.fff.] 形式場所*s*秒の有効桁数です)。|  
+|SQL_TYPE_TIMESTAMP|16 (文字数、 *- yyyy-mm-dd hh:mm*形式)<br /><br /> 19 (文字数、 *yyyy mm dd* *hh:mm:ss*形式)<br /><br /> 内の複数の<br /><br /> 20 + *s* (文字数、 *- yyyy-mm-dd hh:mm:ss*[.fff.] 形式場所*s*秒の有効桁数です)。|  
 |SQL_INTERVAL_SECOND|ここで*p*有効桁数を先頭間隔と*s*秒の有効桁数は、 *p* (場合*s*= 0) または*p* + *s*+1 (場合*s*> 0) です [。d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|ここで*p*有効桁数を先頭間隔と*s*秒の有効桁数、9 以降を*p* (場合*s*= 0) または 10 +*p*+ *s* (場合*s*> 0) です [。d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|ここで*p*有効桁数を先頭間隔と*s*は秒の有効桁数、6 +*p* (場合*s*= 0) または 7 +*p* + *s* (場合*s*> 0) です [。d]|  

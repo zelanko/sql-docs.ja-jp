@@ -1,10 +1,12 @@
 ---
 title: "Python の Machine Learning のサービスのセットアップと構成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-non-specified
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,15 +14,15 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc9cfe7bf885c99ccfe487e10e001ff36f68ee86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: bea554929e222b98788524203ed060c9b5e0ce17
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python Machine Learning Services (In-database) を設定します。
 
-  実行して、Python のために必要なコンポーネントをインストールする、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザード、および次対話型のプロンプトのこのトピックで説明します。
+  この記事の内容を実行して、Python のために必要なコンポーネントをインストールする方法を説明する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザード、および対話的なプロンプトに従っています。
 
 ## <a name="machine-learning-options-in-sql-server-setup"></a>機械学習の SQL Server セットアップのオプション
 
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/01/2017
 
 インストールが完了したら、外部実行可能ファイルを使用してスクリプトの実行を許可するインスタンスを再構成します。 Machine learning のワークロードをサポートするためにサーバーにさらに変更する必要があります。 構成の変更は、一般に、インスタンスの再起動またはスタート パッド サービスの再起動が必要です。
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 
 + SQL Server 2017 が必要です。 SQL Server の以前のバージョンでは、Python の統合はサポートされていません。
 + 必ず、データベース エンジンをインストールしてください。 Python スクリプトのデータベースでを実行するには、SQL Server のインスタンスが必要です。
@@ -40,11 +42,12 @@ ms.lasthandoff: 12/01/2017
   この問題を回避するには、Python サービスを使用するスタンドアロン SQL Server インスタンスに必要なテーブルをコピーするのにレプリケーションを使用することができます。 また、Python コンピューターのサービスをスタンドアロンの AlwaysOn 設定を使用していて、可用性グループの一部の機械学習をインストールできます。
 
 + SQL Server のインスタンスは Anaconda ディストリビューションのコピーを使用するため、Python の他のバージョンとサイド バイ サイド インストールがあります。 ただし、SQL Server の外部の SQL Server コンピューターで Python を使用するコードを実行するは、さまざまな問題につながることができます。
-    + 別のライブラリと、さまざまな実行可能ファイルを使用して SQL Server で実行しているときよりも、異なる結果を取得します。
-    + 外部ライブラリで実行されている Python スクリプトは、先頭のリソースの競合する SQL Server で管理できません。
+    
+    - 別のライブラリと、さまざまな実行可能ファイルを使用して SQL Server で実行しているときよりも、異なる結果を取得します。
+    - 外部ライブラリで実行されている Python スクリプトは、先頭のリソースの競合する SQL Server で管理できません。
   
 > [!IMPORTANT]
-> セットアップが完了したら、必ず、このトピックで説明されている追加のインストール後の構成手順を完了してください。 これらには、外部のスクリプトを使用する SQL Server を有効にして、あなたに代わって Python ジョブを実行する SQL Server に必要なアカウントを追加することが含まれます。
+> セットアップが完了したら、必ずこの記事で説明されている追加のインストール後の構成手順を完了してください。 次の手順には、外部のスクリプトを使用する SQL Server を有効にして、あなたに代わって Python ジョブを実行する SQL Server に必要なアカウントを追加することが含まれます。
 
 ### <a name="unattended-installation"></a>無人インストール
 
@@ -103,7 +106,12 @@ ms.lasthandoff: 12/01/2017
 
 ##  <a name="bkmk_enableFeature"></a>手順 2: Python スクリプトの実行を有効にします。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 インストールされていない場合は、ダウンロード リンクを開くし、インストールをもう一度、SQL Server のセットアップ ウィザードを実行できます。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
+
+    > [!TIP]
+    > ダウンロードして、このページから、適切なバージョンをインストールすることができます:[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。
+    > 
+    > プレビュー リリースのも試すことができます[SQL 操作 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)、管理タスクと SQL Server に対してクエリをサポートします。
   
 2. Machine Learning のサービスがインストールされているインスタンスに接続し、次のコマンドを実行します。
 
@@ -120,7 +128,7 @@ ms.lasthandoff: 12/01/2017
     RECONFIGURE WITH OVERRIDE
     ```
     
-    実行する必要はありません、R 言語の機能が既に有効な場合、もう一度 Python を再構成します。 基になるの機能拡張のプラットフォームでは、両方の言語をサポートします。
+    実行しない場合は、R 言語の機能を既に有効になっている、Python の 2 番目の時間を再構成します。 基になるの機能拡張のプラットフォームでは、両方の言語をサポートします。
 
 4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの SQL Server サービスを再起動します。 SQL Server のサービスも自動的に再起動すると、関連する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]サービス。
 
@@ -152,7 +160,7 @@ ms.lasthandoff: 12/01/2017
     @input_data_1 = N'SELECT 1 AS col'
     ```
     
-    **[結果]**
+    **結果**
     
     *<code>&nbsp;&nbsp;</code>* *1*
 

@@ -1,6 +1,6 @@
 ---
 title: "Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント"
-description: "このクイック スタート チュートリアルでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。"
+description: "このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 1826b003083d374aa052943016296079491ae158
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server をインストールし、Red hat でデータベースを作成
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このクイック スタート チュートリアルではまずインストールする SQL Server 2017 に Red Hat Enterprise Linux (RHEL) 7.3 以降。 接続し、 **sqlcmd**を最初にデータベースを作成し、クエリを実行します。
+このクイック スタートの最初をインストールする SQL Server 2017 に Red Hat Enterprise Linux (RHEL) 7.3 以降。 接続し、 **sqlcmd**を最初にデータベースを作成し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 興味のある場合、[無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)インストール手順を参照してください[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 RHEL 7.3 または 7.4 マシンで必要**に少なくとも 2 GB**メモリです。
 
@@ -117,6 +117,11 @@ RHEL で SQL Server を構成するをインストールするターミナルで
    ```
 
 > [!TIP]
-> **Sqlcmd**クエリの実行し、管理と開発タスクを実行する SQL Server に接続するためのツールの 1 つだけです。 その他のツールが含まれます[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)と[Visual Studio Code](sql-server-linux-develop-use-vscode.md)です。
+> **Sqlcmd**クエリの実行し、管理と開発タスクを実行する SQL Server に接続するためのツールの 1 つだけです。 その他のツールは次のとおりです。
+>
+> * [SQL Server 操作 Studio (プレビュー)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)です。
+> * [mssql cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

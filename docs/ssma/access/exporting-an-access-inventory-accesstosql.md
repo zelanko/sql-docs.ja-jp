@@ -1,7 +1,7 @@
 ---
 title: "エクスポート アクセス インベントリ (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ec72d4137f8fcee6b600783988981f24b108f1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>アクセス インベントリ (AccessToSQL) をエクスポートします。
 アクセスの複数のデータベースがあり、どれに移行するかわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロジェクト内のすべてのアクセス データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行にこれらのデータベース内のオブジェクトを決定するインベントリのメタデータをクエリします。 このインベントリではすぐに、次のように、質問への回答を検索します。  
@@ -100,7 +100,7 @@ SSMA は、Access データベース、テーブル、列、インデックス�
   
     使用することができます、**すべて選択**と**すべてクリア**をオンまたはオフのすべてのデータベース一覧の上部にあるボタンです。 また、複数の行を選択するのには、CTRL キーを押ししたり、行の範囲を選択するように、SHIFT キーを保持できます。  
   
-7.  **[次へ]**をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  確認してください ページで、をクリックして**完了**です。  
   

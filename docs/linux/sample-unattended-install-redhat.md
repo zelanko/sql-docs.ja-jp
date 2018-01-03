@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Red Hat Enterprise Linux 上の SQL Server の無人インストール |Microsoft ドキュメント"
 description: "SQL Server スクリプトのサンプル - Red Hat Enterprise Linux 上の無人インストール"
 author: edmacauley
@@ -14,32 +14,32 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: a66c65ea0eae4d3f1704f5bbeafb78ff657ab9ed
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 用のサンプル: SQL Server の無人インストール スクリプト
+# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 用のサンプル: SQL Server を無人インストール スクリプト
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このサンプル Bash スクリプトにより、対話型入力をすることなく Red Hat Enterprise Linux (RHEL) に SQL Server 2017 をインストールできます。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
+このサンプル バッシュ スクリプトは、対話型の入力なし Red Hat Enterprise Linux (RHEL) での SQL Server 2017 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
 
 > [!TIP]
-> 無人インストール スクリプトを必要としない場合、SQL Server をインストールする最も素早い方法は、 [Red Hat のクイック スタート チュートリアル](quickstart-install-connect-red-hat.md)に従うことです。 その他のセットアップの情報については、 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)を参照してください。
+> SQL Server をインストールする最も簡単な方法に従う場合は、無人インストール スクリプトを使用する必要はありません、 [Red Hat のクイック スタート](quickstart-install-connect-red-hat.md)です。 その他のセットアップについては、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - Linux 上の SQL Server を実行するには、少なくとも 2 GB のメモリを必要とします。
-- ファイル システムは**XFS**または**EXT4**でなければいけません。 **BTRFS**といったその他のファイル システムはサポートされていません。
-- その他のシステム要件については、[Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system)を参照してください。
+- ファイル システムである必要があります**XFS**または**EXT4**です。 その他のファイル システム**BTRFS**、サポートされていません。
+- その他のシステム要件については、次を参照してください。 [Linux に SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
 
 ## <a name="sample-script"></a>サンプル スクリプト
-サンプルスクリプトをファイルに保存し、それをカスタマイズします。スクリプト内の変数の値を置き換えます。 スクリプト内のいずれの変数も、スクリプトファイルから変数の値を削除する限り、環境変数として設定することができます。
+サンプル スクリプトをファイルに保存し、それをカスタマイズする、スクリプトで変数の値を置き換えます。 設定できますスクリプト変数のいずれかの環境変数として、スクリプト ファイルから削除する限り、します。
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -156,11 +156,11 @@ echo Done!
 
 スクリプトを実行するには
 
-1. サンプルをお気に入りのテキストエディターに貼り付け、`install_sql.sh`といった覚えやすい名前で保存します。
+1. 同様に、覚えやすい名前で保存し、サンプルをお気に入りのテキスト エディターに貼り付け`install_sql.sh`です。
 
-1. `MSSQL_SA_PASSWORD`、`MSSQL_PID`、および変更したいその他の変数をカスタマイズします。
+1. カスタマイズ`MSSQL_SA_PASSWORD`、 `MSSQL_PID`、および変更するには、その他の変数のいずれか。
 
-1. スクリプトを実行可能としてマークします
+1. スクリプトを実行可能ファイルとしてのマークを付ける
 
    ```bash
    chmod +x install_sql.sh
@@ -174,9 +174,9 @@ echo Done!
 
 ## <a name="understanding-the-script"></a>スクリプトを理解します。
 
-Bash スクリプトでは、まず変数を設定します。これらの変数は、このサンプルのようにスクリプト変数として指定することもできますし、環境変数として指定することもできます。 変数``` MSSQL_SA_PASSWORD ```は SQL Server インストールでは**必須**です。その他は、スクリプト用に作成されたカスタム変数です。サンプル スクリプトは、次の手順を実行します。
+バッシュ スクリプトでは、最初の手順には、いくつかの変数が設定されます。  このサンプルのように、スクリプト変数または環境変数のいずれかを指定できます。  変数``` MSSQL_SA_PASSWORD ```は**必要**SQL Server インストールでは、その他は、スクリプト用に作成されたカスタム変数です。  サンプル スクリプトは、次の手順を実行します。
 
-1. Microsoft GPG の公開鍵をインポートします。
+1. Microsoft の鍵は、公開キーをインポートします。
 
 1. SQL Server とコマンド ライン ツールの Microsoft のリポジトリを登録します。
 
@@ -184,29 +184,29 @@ Bash スクリプトでは、まず変数を設定します。これらの変数
 
 1. SQL Server をインストールする
 
-1. ```MSSQL_SA_PASSWORD```で SQL Server を構成し、使用許諾契約書に自動的に同意します。
+1. SQL Server の構成、```MSSQL_SA_PASSWORD```し使用許諾契約書を自動的に同意します。
 
-1. SQL Server コマンド ライン ツールの使用許諾契約書に自動的に同意し、インストールを行い、unixodbc-devel パッケージをインストールします。
+1. SQL Server コマンド ライン ツールの使用許諾契約書に同意自動的にしたり、インストール、および unixodbc デベロッパー パッケージをインストールします。
 
-1. SQL Server コマンド ライン ツールを使いやすくするために、パスに追加します。
+1. SQL Server コマンド ライン ツールを使いやすくするためのパスに追加します。
 
-1. スクリプト変数```SQL_INSTALL_AGENT```が設定されている場合もしくはデフォルトで、SQL Server エージェントをインストールします。
+1. 場合、SQL Server エージェントのインストール スクリプト変数```SQL_INSTALL_AGENT```で既定で設定されます。
 
-1. 変数```SQL_INSTALL_FULLTEXT```が設定されている場合、SQL Server フルテキスト検索をインストールすることもできます。
+1. 場合、SQL Server フルテキスト検索を必要に応じてインストール変数```SQL_INSTALL_FULLTEXT```が設定されています。
 
-1. 別のシステムから SQL Server に接続するために必要な tcp ポート 1433 のブロックをファイアウォール上で解除します。
+1. ファイアウォール上で、システム、別のシステムから SQL Server に接続するために必要な tcp ポート 1433 のブロックを解除します。
 
 1. 必要に応じてデッドロック トレースのトレース フラグを設定します。 (行のコメントを解除する必要があります)
 
-1. これで SQL Server がインストールされました。利用できるようにするために、プロセスを再起動します。
+1. SQL Server がインストールされているようになりました、運用するために、プロセスを再起動します。
 
-1. すべてのエラー メッセージを非表示にし、 SQL Server が正しくインストールされていることを確認します。
+1. すべてのエラー メッセージを非表示にするときに SQL Server が正しくインストールされていることを確認します。
 
-1. ```SQL_INSTALL_USER```と```SQL_INSTALL_USER_PASSWORD```がどちらも設定されている場合、新しいサーバー管理者のユーザーを作成します。
+1. 場合、新しいサーバー管理者のユーザーを作成する```SQL_INSTALL_USER```と```SQL_INSTALL_USER_PASSWORD```がどちらも設定します。
 
 ## <a name="next-steps"></a>次の手順
 
-複数回の無人インストールを簡略化し、適切な環境変数を設定するスタンドアロン Bash スクリプトを作成します。サンプル スクリプトが使用している変数はいずれも削除することができ、独自の Bash スクリプトに配置することができます。
+複数の無人インストールを簡略化し、適切な環境変数を設定するスタンドアロン バッシュ スクリプトを作成します。  サンプル スクリプトを使用し、それら独自バッシュ スクリプトで変数のいずれかを削除することができます。
 
 ```bash
 #!/bin/bash
@@ -218,9 +218,9 @@ export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
 export SQL_INSTALL_AGENT='y'
 ```
 
-その後、次のようにBash スクリプトを実行します。
+ようバッシュ スクリプトを実行します。
 ```bash
 . ./my_script_name.sh
 ```
 
-さらなるLinux 上の SQL Server に関する詳細については、[SQL Server on Linux の概要](sql-server-linux-overview.md)を参照してください。
+Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)です。

@@ -4,7 +4,7 @@ description: "ここでは、SQL Server on Linux を実行し、方法の詳細�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: b598357bb8ebe17ad15fb10e1d74c21c169c1da8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a17c62aeddd0ed898d2a43931965bb7052a58412
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -28,7 +27,7 @@ SQL Server 2017 が Linux で実行されます。 ような多くの機能と�
 
 ## <a name="install"></a>Install
 
-作業を開始するには、次のクイック スタート チュートリアルのいずれかの方法により Linux に SQL Server をインストールします。
+、作業を開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
@@ -39,9 +38,9 @@ SQL Server 2017 が Linux で実行されます。 ような多くの機能と�
 > [!NOTE]
 > Docker 自体は、Linux、Mac、および Windows で Docker イメージを実行できることを意味する、複数のプラットフォームで実行されます。
 
-## <a name="connect"></a>Connect
+## <a name="connect"></a>[接続]
 
-インストール後に、Linux コンピューター上の SQL Server インスタンスに接続します。 ローカルまたはリモートでと、さまざまなツールとドライバーを接続することができます。 クイック スタート チュートリアルが使用する方法をデモンストレーション、 [sqlcmd](sql-server-linux-setup-tools.md)コマンド ライン ツールです。 その他のツールは次のとおりです。
+インストール後に、Linux コンピューター上の SQL Server インスタンスに接続します。 ローカルまたはリモートでと、さまざまなツールとドライバーを接続することができます。 クイック スタートを使用する方法をデモンストレーションする、 [sqlcmd](sql-server-linux-setup-tools.md)コマンド ライン ツールです。 その他のツールは次のとおりです。
 
 | ツール | チュートリアル |
 |-----|-----|
@@ -53,7 +52,7 @@ SQL Server 2017 が Linux で実行されます。 ような多くの機能と�
 
 SQL Server 2017 では、Linux を含む、サポートされているすべてのプラットフォームで同じ基になるデータベース エンジンがあります。 非常に多くの既存の機能と機能は、Linux で同じように動作します。 ドキュメントのこの領域では、Linux の観点からこれらの機能の一部を公開します。 これは、Linux 固有の要件がある領域も呼び出します。
 
-SQL Server を使い慣れている場合は、確認、[リリース ノート](sql-server-linux-release-notes.md)のこのリリースの既知の問題の一般的なガイドラインとします。 見て[SQL Server on Linux の新](sql-server-linux-whats-new.md)だけでなく[新機能の全体的な SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
+SQL Server を使い慣れている場合は、確認、[リリース ノート](sql-server-linux-release-notes.md)のこのリリースの既知の問題の一般的なガイドラインとします。 見て[SQL Server on Linux の新](sql-server-linux-whats-new.md)だけでなく[新機能の全体的な SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。 よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) SQL Server エンジニアリング チームと連携する
 
@@ -62,4 +61,3 @@ SQL Server を使い慣れている場合は、確認、[リリース ノート]
 - [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 技術的な質問
 - [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): バグ、および要求機能の報告
 - [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server の説明
-

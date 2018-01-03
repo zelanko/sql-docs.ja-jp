@@ -1,11 +1,11 @@
 ---
 title: "機械学習で SQL Server の概要 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>機械学習で SQL Server の概要
 
@@ -83,7 +83,7 @@ SQL Server 2016 をインストールするオプションを使う[!INCLUDE[rsq
 
 + [Machine learning のチュートリアル](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  使用して、マシン学習ソリューションについて学習するためのすべてのリソースの一覧を検索するここから始めて[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]または[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]です。
+  SQL Server 2016 および SQL Server 2017 を使用して、マシン学習ソリューションについて学習するためのすべてのリソースの一覧を検索するには、ここから開始します。
 
 ### <a name="r-tutorials"></a>R のチュートリアル
 
@@ -95,7 +95,7 @@ SQL Server 2016 をインストールするオプションを使う[!INCLUDE[rsq
 
 + [短い関数を 25 で R と ScaleR を調べる](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   R 初めてですか。 Microsoft R (または RevoScaleR) を比較する方法には、標準的な R お考えでしょうか。 R Server は、これらのクイック起動を参照してください。
+   R 初めてですか。 Microsoft R (または RevoScaleR) を比較する方法には、標準的な R お考えでしょうか。 R Server と Machine Learning のサーバーは、これらのクイック起動を参照してください。
 
 ### <a name="python-tutorials"></a>Python のチュートリアル
 

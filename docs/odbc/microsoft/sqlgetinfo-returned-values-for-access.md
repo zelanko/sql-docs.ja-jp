@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61fe4d56d73a3d2d7822308af2fb0eb377647ced
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo は、アクセスの値が返されます
 次の表に、C 言語 # を defines、 *fInfoType*引数と、対応する値によって返される**SQLGetInfo**です。 この情報は、表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*です。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_DATA_SOURCE_NAME|、Odbc.ini の DSN または""Odbc.ini で DRIVER キーワードが使用する場合|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|ファイル名|  
+|SQL_DATABASE_NAME|[ファイル名]|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|「アクセス」|  
 |SQL_DBMS_VER|[複数の値]|  

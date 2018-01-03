@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a21a5e5b390e0798ed4dd25fba164a710298af00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 関数
 **準拠**  
@@ -77,7 +77,7 @@ SQLRETURN SQLFetchScroll(
   
  フェッチする行の数です。 この引数の解釈は、の値によって異なります、 *FetchOrientation*引数。 詳細については、"位置指定、Cursor"「コメント」セクションを参照してください。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|*開始する前に*|1|  
+|*開始する前に*|@shouldalert|  
 |*CurrRowsetStart + 複合カーソル*[1]  *\<LastResultRow を =*|*CurrRowsetStart + 複合カーソル*[1]|  
 |*CurrRowsetStart + 複合カーソル*[1]*> LastResultRow*|*末尾の後に*|  
 |*末尾の後に*|*末尾の後に*|  
@@ -258,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  カーソル結果セットに追加された行を検出または結果セットから削除された行を削除、データをフェッチするときにのみこれらの変更が検出された場合のように表示されます。 これには、大文字と小文字が含まれますと**SQLFetchScroll**が FetchOrientation SQL_FETCH_RELATIVE および 0 に設定すると、同じ行セットを再フェッチ FetchOffset に設定して呼び出されましたが、SQLSetPos fOption sql _ に設定を呼び出すときに大文字と小文字は含まれません更新します。 後者の場合、行セットのバッファーでデータを更新するが再フェッチされません、および削除された行は結果セットから削除されません。 したがって、行がから削除されるか、現在の行セットに挿入された、カーソルによって行セットのバッファーは変更されません。 代わりに、すべての行セットをフェッチにしたときに、変更、削除された行が含まれていたまたは挿入された行が含まれていますが検出されます。  
   
- 例:  
+ 例 :  
   
 ```  
 // Fetch the next rowset.  
@@ -278,7 +278,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  たとえば、現在の行セットは 21 から 30 の行で構成、行セットのサイズは 10、カーソルが結果セットから削除された行を削除、カーソルが結果セットに追加された行を検出します。 次の表は、行**SQLFetchScroll**さまざまな状況で返します。  
   
-|変更|フェッチの型|FetchOffset|新しい行セット [1]|  
+|[変更]|フェッチの型|FetchOffset|新しい行セット [1]|  
 |------------|----------------|-----------------|---------------------|  
 |21 行を削除します。|NEXT|0|31 ~ 40|  
 |31 の行を削除します。|NEXT|0|32 を 41|  
@@ -289,9 +289,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |行 21、22 の間に行を挿入します。|PRIOR|0|11 ~ 20|  
 |行 20 と 21 の間に行を挿入します。|PRIOR|0|12 ~ 20 挿入された行|  
 |21 行を削除します。|RELATIVE|0|22 ~ 31<sup>[2]</sup>|  
-|21 行を削除します。|RELATIVE|1|22 ~ 31|  
+|21 行を削除します。|RELATIVE|@shouldalert|22 ~ 31|  
 |行 21、22 の間に行を挿入します。|RELATIVE|0|挿入された行、21、22 ~ 29|  
-|行 21、22 の間に行を挿入します。|RELATIVE|1|22 ~ 31|  
+|行 21、22 の間に行を挿入します。|RELATIVE|@shouldalert|22 ~ 31|  
 |21 行を削除します。|ABSOLUTE|21|22 ~ 31<sup>[2]</sup>|  
 |22 の行を削除します。|ABSOLUTE|21|21、23 ~ 31|  
 |行 21、22 の間に行を挿入します。|ABSOLUTE|22|挿入された行、22 ~ 29|  

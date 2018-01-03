@@ -4,7 +4,7 @@ description: "インストール、更新、および Linux に SQL Server を�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 このトピックでは、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
 
 > [!TIP]
-> 手始めに、用のクイック スタート チュートリアルのいずれかにジャンプ[RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、 [Ubuntu](quickstart-install-connect-ubuntu.md)、または[Docker](quickstart-install-connect-docker.md)です。
+> 手始めのクイック スタートのいずれかにジャンプ[RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、 [Ubuntu](quickstart-install-connect-ubuntu.md)、または[Docker](quickstart-install-connect-docker.md)です。
 
 ## <a id="supportedplatforms"></a>サポートされているプラットフォーム
 
@@ -40,6 +40,10 @@ SQL Server 2017 は次の Linux プラットフォームでサポートされて
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 を入手します。](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 を取得します。](http://www.ubuntu.com/download/server)
 | **Docker エンジン** | 1.8+ | [Docker を取得します。](http://www.docker.com/products/overview)
+
+Microsoft を展開して、OpenShift と Kubernetes を使用して SQL Server のコンテナーの管理をサポートします。
+
+SQL Server 2017 の最新のサポート ポリシーで、次を参照してください。 [for Microsoft SQL Server の技術的なサポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)です。
 
 ## <a id="system"></a>システム要件
 
@@ -62,7 +66,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 
 ## <a id="platforms"></a> SQL Server のインストール
 
-コマンドラインから Linux に SQL Server をインストールできます。 手順については、次のクイック スタート チュートリアルのいずれかを参照してください。
+コマンドラインから Linux に SQL Server をインストールできます。 手順については、次のクイック スタートのいずれかを参照してください。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ sudo rm -rf /var/opt/mssql/
 CU または GDR のリポジトリを構成するのには、次の手順を使用します。
 
 > [!NOTE]
-> [のクイック スタート チュートリアル](#platforms)CU リポジトリを構成します。 これらのチュートリアルを実行する場合は、引き続き CU リポジトリを使用する次の手順を使用する必要はありません。 次の手順では、構成されているリポジトリを変更するために必要なのみです。
+> [クイック スタート](#platforms)CU リポジトリを構成します。 これらのチュートリアルを実行する場合は、引き続き CU リポジトリを使用する次の手順を使用する必要はありません。 次の手順では、構成されているリポジトリを変更するために必要なのみです。
 
 1. 必要に応じて、以前に構成のリポジトリを削除します。
 
@@ -184,7 +188,7 @@ CU または GDR のリポジトリを構成するのには、次の手順を使
 
 1. 新しいリポジトリを構成します。
 
-   | プラットフォーム | リポジトリ | Command |
+   | プラットフォーム | リポジトリ | コマンド |
    |-----|-----|-----|
    | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
@@ -202,7 +206,7 @@ CU または GDR のリポジトリを構成するのには、次の手順を使
 
 次のように、無人インストールを実行できます。
 
-- 最初の手順に従って、[のクイック スタート チュートリアル](#platforms)リポジトリを登録し、SQL Server をインストールします。
+- 最初の手順に従って、[クイック スタート](#platforms)リポジトリを登録し、SQL Server をインストールします。
 - 実行すると`mssql-conf setup`設定、[環境変数](sql-server-linux-configure-environment-variables.md)を使用して、 `-n` (プロンプトは表示されません) オプション。
 
 次の例の構成で SQL Server の Developer edition、 **MSSQL_PID**環境変数。 使用許諾契約も受け入れます (**ACCEPT_EULA**) SA ユーザー パスワードを設定し、(**MSSQL_SA_PASSWORD**)。 `-n`パラメーターは、構成値が環境変数から引き出されます unprompted インストールを実行します。
@@ -266,7 +270,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SQL Server フルテキスト検索](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-データベースの作成および管理を開始するように SQL Server インスタンスに接続します。 開始するには、クイック スタート チュートリアルを参照してください。
+データベースの作成および管理を開始するように SQL Server インスタンスに接続します。 開始するには、クイック スタートを参照してください。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)

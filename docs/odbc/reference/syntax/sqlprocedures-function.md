@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f5c546163e7abe1fa77db36d60b407df1f5bc83
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b919ad9ca1e42ea87e1ac4891870dc8091beb722
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 関数
 **準拠**  
@@ -77,7 +77,7 @@ SQLRETURN SQLProcedures(
  *NameLength3*  
  [入力]文字の長さ **ProcName*です。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -129,7 +129,7 @@ SQLRETURN SQLProcedures(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|プロシージャのカタログの識別子です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどに一部のプロシージャが、他のカタログをサポートする場合 ("") のカタログはありません。 それらの手順をします。|  
+|PROCEDURE_CAT (ODBC 2.0)|@shouldalert|Varchar|プロシージャのカタログの識別子です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどに一部のプロシージャが、他のカタログをサポートする場合 ("") のカタログはありません。 それらの手順をします。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|プロシージャのスキーマの識別子です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどに一部のプロシージャが、他のスキーマをサポートする場合 ("") のスキーマはありません。 それらの手順です。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|NULL でない Varchar|プロシージャの識別子です。|  
 |NUM_INPUT_PARAMS (ODBC 2.0)|4|なし|将来の使用のために予約されています。 これらの結果の列に返されるデータには、アプリケーションは保証はありません。|  

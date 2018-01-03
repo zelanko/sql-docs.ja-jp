@@ -1,7 +1,7 @@
 ---
 title: "MySQL および SQL Server の文字のマッピング (MySQLToSQL) を設定 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3845c66ea4407b48e371f8b2ec0ad7b9da7edfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) を設定する MySQL および SQL Server の文字のマッピング
 MySQL の文字データ型、式およびリテラルの文字セット (文字セット) を指定できます。  
@@ -121,7 +121,7 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
     |cp 1251|Windows (キリル)|CHAR と VARCHAR (既定値)|  
     |cp 1256|Windows アラビア語|CHAR と VARCHAR (既定値)|  
     |cp 1257|Windows バルト言語|CHAR と VARCHAR (既定値)|  
-    |[バイナリ]|バイナリの擬似文字セット|CHAR と VARCHAR (既定値)|  
+    |binary|バイナリの擬似文字セット|CHAR と VARCHAR (既定値)|  
     |geostd8|GEOSTD8 グルジア語|CHAR と VARCHAR (既定値)|  
     |cp932|Windows 日本語の SJIS|NCHAR と NVARCHAR (既定値)|  
     |eucjpms|Windows 日本語の UJIS|NCHAR と NVARCHAR (既定値)|  

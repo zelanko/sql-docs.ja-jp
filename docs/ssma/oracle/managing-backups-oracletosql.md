@@ -1,7 +1,7 @@
 ---
 title: "バックアップ (OracleToSQL) の管理 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: fd9985b00f45933194fe60d805cd2b2f5181ddbb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eba65be518ebd986c6f074a1702ca72945d2fff6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-backups-oracletosql"></a>バックアップ (OracleToSQL) を管理します。
 バックアップと復元のテーブルを作成する前に、またはテストを実行した後、oracle バックアップ管理はことができます。 バックアップ内容の管理 ダイアログでバックアップのコンテンツを管理することもできます。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 -   をクリックして、**キャンセル**ダイアログを閉じるボタンをクリックします。  
   
-### <a name="restore"></a>復元  
+### <a name="restore"></a>[復元]  
 復元 ダイアログを開くには、するには、テスト担当者 メニューの Oracle バックアップの管理をポイントし、復元 をクリックしてください. バックアップに使用できるテーブルを含むツリーがあります。 そのデータを復元する 1 つまたは複数のテーブルを選択します。  
   
 ダイアログ ボックスで、次のボタンがあります。  
@@ -78,7 +78,7 @@ SQL Server バックアップ管理は、バックアップと復元のテーブ
   
 -   をクリックして、**キャンセル**ダイアログを閉じるボタンをクリックします。  
   
-### <a name="restore"></a>復元  
+### <a name="restore"></a>[復元]  
 復元 ダイアログを開くには、テスト担当者 メニューをポイント SQL Server バックアップの管理をクリックして復元してください. バックアップに使用できるテーブルを含むツリーがあります。 そのデータを復元する 1 つまたは複数のテーブルを選択します。  
   
 ダイアログ ボックスで、次のボタンがあります。  

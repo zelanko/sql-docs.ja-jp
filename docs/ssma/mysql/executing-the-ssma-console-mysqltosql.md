@@ -1,7 +1,7 @@
 ---
 title: "SSMA コンソール (MySQLToSQL) を実行 |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39b41addf566e326174a004a210a2ba2b1cdf311
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA コンソール (MySQLToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。  
@@ -295,7 +295,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <generate-assessment-report  
@@ -369,7 +369,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <convert-schema  
@@ -429,7 +429,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 </migrate-data>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <migrate-data  
@@ -517,7 +517,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target  
@@ -526,7 +526,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
   object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target>  
@@ -582,7 +582,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database  
@@ -591,7 +591,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
    object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database>  
@@ -641,7 +641,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <save-as-script  
@@ -717,7 +717,7 @@ sql ステートメントの変換
   
 </convert-sql-statement>  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  
@@ -742,7 +742,7 @@ sql ステートメントの変換
   
 />  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  

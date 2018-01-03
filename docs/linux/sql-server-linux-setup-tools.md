@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
@@ -206,7 +206,7 @@ SQL Server 2017 CTP 2.0 以降では、SQL Server コマンド ライン ツー�
 
 次の表は、最新ツール パッケージの場所を示します。
 
-| ツール パッケージ | バージョン | ダウンロード |
+| ツール パッケージ | [バージョンのオプション] | ダウンロード |
 |-----|-----|-----|
 | Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +215,7 @@ SQL Server 2017 CTP 2.0 以降では、SQL Server コマンド ライン ツー�
 
 これらのパッケージに依存**移動**を最初にインストールする必要があります。 **移動**パッケージもいずれかに依存している**unixODBC devel** (RPM) または**unixodbc デベロッパー** (Debian)。 場所、**移動**パッケージは、次の表に一覧表示されます。
 
-| パッケージの移動 | バージョン | ダウンロード |
+| パッケージの移動 | [バージョンのオプション] | ダウンロード |
 |-----|-----|-----|
 | Red Hat RPM 移動パッケージ | 13.1.6.0-1 | [移動 RPM パッケージ](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM 移動パッケージ | 13.1.6.0-1 | [移動 RPM パッケージ](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -261,7 +261,7 @@ SQL Server 2017 CTP 2.0 以降では、SQL Server コマンド ライン ツー�
 
 ## <a name="next-steps"></a>次の手順
 
-使用する方法の例については**sqlcmd**チュートリアルを開始する次のクイックのいずれかを参照してくださいを SQL Server に接続し、データベースを作成します。
+使用する方法の例については**sqlcmd**を SQL Server に接続し、データベースを作成には、次のクイック スタートのいずれかを表示します。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)

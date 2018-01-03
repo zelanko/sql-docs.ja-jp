@@ -1,7 +1,7 @@
 ---
 title: "プロジェクトの設定 (変換) (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ce9b6bec50de99ba85561ec3a1679692ccb9bf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec31bf02ccdeedd4356d0a85c85d7d33041d5bde
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-accesstosql"></a>プロジェクトの設定 (変換) (AccessToSQL)
 変換のプロジェクト設定では、Access データベース オブジェクトからオブジェクトを変換する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースのオブジェクト。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 -   使用して、**プロジェクト設定の既定の**ダイアログ ボックスをすべてのプロジェクトの構成オプションを設定します。 変換の設定にアクセスする、**ツール**メニューの **プロジェクト設定の既定の**、対象の設定が表示する/から変更を必要な移行プロジェクトの種類を選択**移行のターゲット バージョン**ドロップダウンで、をクリックして**全般**クリックし、左側のウィンドウの下部にある**変換**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **Primary key を追加します。**  
 新しい主キーを作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Access のテーブルには、主キーまたは一意のインデックスがあるない場合は SQL Azure のテーブルです。  
   

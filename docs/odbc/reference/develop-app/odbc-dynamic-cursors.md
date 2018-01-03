@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b5d294aaeebab45e0ff0ce36db0fa39b9738571
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e0d82da741babc168ce305ed8134d8f44f682f57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC の動的カーソル
 動的カーソルは、その: 動的です。 メンバーシップ、順序、および、カーソルが開かれた後に結果セットの値に加えられた変更を検出できます。 たとえば、動的カーソルが 2 つの行をフェッチし、別のアプリケーションは、これらの行のいずれかを更新し、もう一方を削除します。 動的カーソルは、し、それらの行の再フェッチを試みると、削除された行は見つかりませんが、更新された行の新しい値を返します。  

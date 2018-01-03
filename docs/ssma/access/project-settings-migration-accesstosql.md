@@ -1,7 +1,7 @@
 ---
 title: "プロジェクトの設定 (移行) (AccessToSQL) |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7fcf9092c57fd07601171003381812de2ed6b12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-accesstosql"></a>プロジェクトの設定 (移行) (AccessToSQL)
 移行プロジェクトの設定では、データに移行する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 -   使用して、**プロジェクト設定の既定の**ダイアログ ボックスをすべてのプロジェクトの構成オプションを設定します。 移行の設定にアクセスする、**ツール**メニューの **プロジェクト設定の既定の**、プロジェクトの種類を選択**移行のターゲット バージョン**コンボ ボックスの設定にアクセスをクリックする**全般**クリックして、左側のウィンドウの下部にある**移行**です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
 **CHECK 制約**  
 テーブルにデータを追加する場合、SSMA が制約をチェックするかどうかを指定します。  
   

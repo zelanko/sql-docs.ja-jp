@@ -3,7 +3,7 @@ title: "SSMA コンソール (SybaseToSQL) を実行 |Microsoft ドキュメン�
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 072b8f49052e664861c67097d2eed9d1cffca05f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a76b457d7178483d18a5a7a26d176d7e606b6fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソール (SybaseToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 次のセクションでは、同じを詳しく説明します。  
@@ -240,7 +240,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <generate-assessment-report  
@@ -305,7 +305,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <convert-schema  
@@ -361,7 +361,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 </migrate-data>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <migrate-data  
@@ -440,7 +440,7 @@ fail-script>" (optional)
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target  
@@ -449,7 +449,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <synchronize-target>  
@@ -501,7 +501,7 @@ fail-script>" (optional)
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database  
@@ -510,7 +510,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <refresh-from-database>  
@@ -555,7 +555,7 @@ fail-script>" (optional)
   
 />  
 ```  
-または  
+内の複数の  
   
 ```xml  
 <save-as-script  
@@ -629,7 +629,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  
@@ -654,7 +654,7 @@ fail-script>" (optional)
   
 />  
 ```  
-または  
+内の複数の  
   
 ```  
 <convert-sql-statement  

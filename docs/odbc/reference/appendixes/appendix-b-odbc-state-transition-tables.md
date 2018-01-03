@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 b: ODBC 状態遷移のテーブル
 この付録の内容の表では、ODBC 関数による環境、接続、ステートメント、および記述子の状態の遷移の発生を示しています。 通常、環境、接続、ステートメント、または記述子の状態は、ハンドル (環境、接続、ステートメント、または記述子) の対応する型を使用する関数を呼び出すことができる場合は決定します。 環境、接続、ステートメント、および記述子の状態は次の図に示すようにほぼと重複します。 たとえば、接続の正確な重複の状態の C5 と C6、S1 S12 からはデータ ソースに依存する、さまざまなデータ ソースに異なる時刻でトランザクションを開始し、記述子の状態 (暗黙的に割り当てられた記述子) D1i 依存ステートメントの状態記述子が関連付けられているステートメントの状態、状態 (明示的に割り当てられた記述子) D1e 中には任意のステートメントの状態に依存しないです。 各状態の説明は、次を参照してください[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、および[記述子遷移。](../../../odbc/reference/appendixes/descriptor-transitions.md)、後の「します。  

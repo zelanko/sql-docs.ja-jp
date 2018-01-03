@@ -1,7 +1,7 @@
 ---
 title: "MySQL データベースを SQL Server スキーマ (MySQLToSQL) にマッピング |Microsoft ドキュメント"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77a150ac9568f614869b3e6f168c96eb47d2e764
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4dd351ebbb052515d953f02ae74282dd1e1d62f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL データベースを SQL Server スキーマ (MySQLToSQL) にマッピング
 SSMA for MySQL は既定では、MySQL スキーマ内のすべてのオブジェクトを移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースのスキーマの名前します。 ただし、MySQL スキーマ間のマッピングをカスタマイズすることができ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベース。  
@@ -75,7 +75,7 @@ MySQL スキーマと SQL Server スキーマ間のマッピングをカスタ�
   
 1.  スキーマのマッピング] タブで、[任意の行を選択し、をクリックして**既定値にリセット**既定のデータベースとスキーマを元に戻す。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 MySQL オブジェクトの SQL Server または SQL Azure のオブジェクトへの変換を分析する場合は、[変換レポートを作成する](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)できますそれ以外の場合[MySQL のデータベース オブジェクトの定義の変換](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)を SQL Server または SQL Azure のスキーマに  
   
 ## <a name="see-also"></a>参照  

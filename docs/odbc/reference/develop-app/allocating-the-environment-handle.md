@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,18 +25,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c0bbe08b13b45b47fecda5143ca419c31dfe82d5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-the-environment-handle"></a>環境ハンドルの割り当てください。
 ODBC アプリケーションの最初のタスクが、ドライバー マネージャーの読み込みにはこれを行う方法は、オペレーティング システムに依存します。 たとえば、Microsoft® Windows NT® Server または Windows 2000 Server、Windows NT ワークステーション/Windows 2000 Professional、または Microsoft Windows® 95/98 を実行するコンピューターで、アプリケーションかへのリンク ドライバー マネージャーのライブラリまたは呼び出し**LoadLibrary**ドライバー マネージャーの DLL を読み込めません。  
   
  次のタスクは、アプリケーションが他の ODBC 関数を呼び出す前に行う必要がありますは、ODBC 環境を初期化し、次のように、環境ハンドルを割り当てるには。  
   
-1.  アプリケーションでは、型 SQLHENV の変数を宣言します。 呼び出して**SQLAllocHandle**し、この変数と SQL_HANDLE_ENV オプションのアドレスを渡します。 例:  
+1.  アプリケーションでは、型 SQLHENV の変数を宣言します。 呼び出して**SQLAllocHandle**し、この変数と SQL_HANDLE_ENV オプションのアドレスを渡します。 例 :  
   
     ```  
     SQLHENV henv1;  

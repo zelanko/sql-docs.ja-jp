@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>カーソル
 アプリケーションでのデータのフェッチ、*カーソル*です。 カーソルが結果セットを異なる: 結果セットは、特定の検索条件に一致する行のセットをアプリケーションにこれらの行を返すのに対し、カーソルは、ソフトウェア。 名前*カーソル、*データベースに適用される、コンピューターの端末に点滅するカーソルから発生した可能性があります。 そのカーソルは、どこに型指定された単語が [次へ] を表示し、画面上の現在の位置を示すと同様、結果セットのカーソルは結果セットとどのような行が次に返されますの現在の位置を示します。  
