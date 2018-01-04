@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +82,7 @@ END
  ときに*when_expression*  
  単純な式は、 *input_expression*単純 CASE 形式を使用する場合と比較されます。 *when_expression*有効な式です。 データ型*input_expression*とは、それぞれ*when_expression*同じである必要がありますか、暗黙的な変換をする必要があります。  
   
- *Result_expression*  
+  *Result_expression*  
  返される式の場合に*input_expression* equals *when_expression*を TRUE に評価または*Boolean_expression*を TRUE に評価します。 *式の結果*は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  ELSE*戻り値*  
@@ -122,7 +122,7 @@ END
   
  CASE ステートメントは条件を順に評価していき、最初に条件が満たされた時点で評価を止めます。 CASE ステートメントには、評価された式の結果が入力として渡されることがあります。 こうした式の評価中にエラーが発生する可能性もあります。 CASE ステートメントの WHEN 引数に指定された集計式は、あらかじめ評価されて CASE ステートメントに渡されます。 たとえば、次のクエリでは、MAX 集計値を生成する際に 0 除算エラーが発生します。 このエラーが発生するのは、CASE 式が評価される前です。  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   

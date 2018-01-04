@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4bcc1bb453783a38c4b23e6526de1a804bde8f1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aeae0a552d2df0c911b2a95a4578c3b835192612
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/27/2017
   
  統計コレクションを有効にすると、パフォーマンスが低下します。 1 つまたは少数のネイティブ コンパイル ストアド プロシージャのみをトラブルシューティングする必要がある場合は、それらのネイティブ コンパイル ストアド プロシージャに対してのみ統計コレクションを有効にすることができます。  
   
- すべてのネイティブ コンパイル ストアド プロシージャのプロシージャ レベルで統計コレクションを有効にするを参照してください。 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
+ すべてのネイティブ コンパイル ストアド プロシージャのプロシージャ レベルで統計コレクションを有効にするを参照してください。 [sys.sp_xtp_control_proc_exec_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,13 +63,13 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="return-code"></a>リターン コード  
  成功した場合は 0。 失敗した場合は 0 以外の値。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  固定 sysadmin ロールのメンバーシップが必要です。  
   
 ## <a name="code-sample"></a>コード サンプル  
  次のコード サンプルでは、インスタンスに関するすべてのネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にする方法と、特定のネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にする方法を示しています。  
   
-```tsql   
+```sql   
 DECLARE @c bit  
   
 EXEC [sys].[sp_xtp_control_query_exec_stats] @new_collection_value = 1;  

@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -290,7 +290,7 @@ FROM { <table_source> [ ,...n ] }
  ON \<search_condition >  
  結合するときの条件を指定します。 列と比較演算子はよく使用されますが、条件で任意の結合述語を指定できます。たとえば、次のようになります。  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -302,7 +302,7 @@ ON (p.ProductID = v.ProductID);
   
  ON 句に、結合されるテーブルのいずれかだけを指定している述語がある場合があります。 このような述語は、クエリの WHERE 句にもある場合があります。 このように述語を指定した場合、INNER 結合に対しては同じ結果になりますが、OUTER 結合が関係するときは結果が異なることがあります。 ON 句内の述語は結合の前にテーブルに適用されるのに対し、WHERE 句は意味的に結合結果に適用されるためです。  
   
- 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md).  
+ 検索条件および述語の詳細については、次を参照してください。[検索条件 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/search-condition-transact-sql.md)  
   
  CROSS JOIN  
  2 つのテーブルの結合を指定します。 SQL-92 形式でない旧形式の結合で WHERE 句が指定されていない場合と同じ行が返されます。  
@@ -427,7 +427,7 @@ ON (p.ProductID = v.ProductID);
   
  PIVOT および UNPIVOT の例を含む詳細については、次を参照してください。[を使用して PIVOT および UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  DELETE、SELECT、または UPDATE ステートメントに対する権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -435,7 +435,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>A. 単純な FROM 句を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベース内の `TerritoryID` テーブルから `Name` および `SalesTerritory` 列を取得します。  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -462,7 +462,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. TABLOCK および HOLDLOCK オプティマイザー ヒントを使用する  
  次の部分的なトランザクションでは、明示的な共有テーブル ロックを `Employee` に設定する方法と、インデックスを読み取る方法を示します。 ロックはトランザクション全体をとおして保持されます。  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -481,7 +481,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. SQL-92 FULL OUTER JOIN 構文を使用する  
  次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesOrderDetail` テーブル内の製品名、および対応する販売注文を返します。 また、製品記載がない販売注文を返します、`Product`テーブル、およびすべての製品に表示されている別の販売注文、`Product`テーブル。  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -493,7 +493,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. SQL-92 LEFT OUTER JOIN 構文を使用する  
  次の例では、2 つのテーブルを結合に`ProductID`し、左テーブルから一致しない行を保持します。 `Product` テーブルは、各テーブル内の `SalesOrderDetail` 列について `ProductID` テーブルと照合されます。 注文されたかどうかにかかわらず、すべての製品が結果セットに表示されます。  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,7 +504,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>F. SQL-92 INNER JOIN 構文を使用する  
  次の例では、すべての製品名と販売注文 ID を返します。  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +517,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. SQL-92 RIGHT OUTER JOIN 構文を使用する  
  次の例では、`TerritoryID` の 2 つのテーブルを結合し、右側のテーブルから一致しない行を取り出します。 `SalesTerritory`テーブルと対応している、`SalesPerson`テーブルに対して、`TerritoryID`各テーブル内の列です。 販売区域に割り当てられているかどうかに関係なく、すべての販売員は結果セットに表示されます。  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -530,7 +530,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  結合ヒントを指定すると、INNER キーワードを省略することはできません。INNER JOIN を明示的に指定して、実行する必要があります。  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -543,7 +543,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>I. 派生テーブルを使用する  
  次の例では、派生テーブル、つまり `SELECT` 句の後に `FROM` ステートメントを使用することで、すべての従業員の姓と名、およびそれぞれの住所のある都市を返します。  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -559,7 +559,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>J. TABLESAMPLE を使用してテーブル内のサンプル行からデータを読み取る  
  次の例では、`TABLESAMPLE` 句内で `FROM` を使用して、`10` テーブル内にあるすべての行の約 `Customer`% を返します。  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -577,14 +577,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  この例では`APPLY`をその部門ですべての部門およびすべての従業員を返します。 特定の部門に従業員が存在しない場合は、その部門には行が返されません。  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  `EmpID`、`EmpLastName`、および `EmpSalary` 列に対して NULL 値を作成する、従業員が存在しない部門に対してもクエリによって行を作成する場合は、代わりに `OUTER APPLY` を使用します。  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -592,7 +592,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>L. CROSS APPLY を使用する  
  次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 続いて、`CROSS APPLY`へのハンドルを渡す、計画、演算子が指定されて`sys.dm_exec_query_plan`です。 XML プラン表示の出力は、現在プラン キャッシュにある各プランは、`query_plan`返されるテーブルの列です。  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -607,7 +607,7 @@ GO
   
  次の例では、SYSTEM_TIME の date_time_literal_or_variable 引数を使用して、2014 年 1 月 1 日の時点で実際の (現在) をされたテーブル行を返します。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -619,7 +619,7 @@ WHERE ManagerID = 5;
   
  次の例では、date_time_literal_or_variable 引数に FOR SYSTEM_TIME FROM date_time_literal_or_variable を使用して、2013 年 1 月 1 日に開始すると、2014 年 1 月 1 日で終わる定義されている期間中にアクティブだったすべての行を返します上限の境界の排他。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -631,7 +631,7 @@ WHERE ManagerID = 5;
   
  次の例では、SYSTEM_TIME 間で date_time_literal_or_variable と date_time_literal_or_variable 引数のすべての行を返すには、2013 年 1 月 1 日に始まり、2014 年 1 月 1 日で終わる定義されている期間中にアクティブだった上限の境界の包括的です。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -643,7 +643,7 @@ WHERE ManagerID = 5;
   
  次の例は、FOR SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable、date_time_literal_or_variable) 引数を開きで、2013 年 1 月 1 日に開始および終了として定義されている期間中に終了されたすべての行を返す2014 年 1 月 1 日です。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -655,7 +655,7 @@ WHERE ManagerID = 5;
   
  次の例では、リテラルではなく、変数を使用して、クエリの日付の境界値を指定します。  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -673,7 +673,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>N. INNER JOIN 構文を使用します。  
  次の例を返します、 `SalesOrderNumber`、 `ProductKey`、および`EnglishProductName`からの列、`FactInternetSales`と`DimProduct`テーブルの結合キー `ProductKey`、両方のテーブルに一致します。 `SalesOrderNumber`と`EnglishProductName`各列に存在テーブルのみのいずれかが示すように、これらの列を持つテーブルの別名を指定する必要はありません。 これらのエイリアスは読みやすくするために含まれます。 単語**AS**エイリアスの前に名前は必要ありませんが、ANSI 標準に準拠して読みやすくするためにはお勧めします。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
   
  以降、`INNER`キーワードは、内部結合に必要なは、このクエリのように記述します。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -695,7 +695,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  A`WHERE`句こともできますこのクエリに結果を制限します。 次の例は、結果を制限`SalesOrderNumber`'SO5000' よりも大きい値。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -709,7 +709,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O.  LEFT OUTER JOIN、RIGHT OUTER JOIN 構文を使用します。  
  次の例の結合、`FactInternetSales`と`DimProduct`でテーブル、`ProductKey`列です。 左外部結合の構文が左から一致しない行を保持 (`FactInternetSales`) テーブルです。 以降、`FactInternetSales`テーブル含まない`ProductKey`値と一致しない、`DimProduct`テーブルでは、このクエリは、最初の内部結合例と同じ行を返します。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -722,7 +722,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  右外部結合、右テーブルから一致しない行が保持されます。 次の例では、上記の左外部結合の例と同じ行を返します。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  次のクエリは、`DimSalesTerritory`左外部結合の左側のテーブルとしてテーブル。 取得、`SalesOrderNumber`値から、`FactInternetSales`テーブル。 特定の注文が存在しない場合`SalesTerritoryKey`、NULL が返されます、`SalesOrderNumber`その行に対してです。 このクエリが並べ、`SalesOrderNumber`列はこの列のいずれかが null に設定できるように、結果の上部に表示されます。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -745,7 +745,7 @@ ORDER BY fis.SalesOrderNumber;
   
  このクエリは、同じ結果を取得する右外部結合で書き直すことができます。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -758,7 +758,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>P. FULL OUTER JOIN 構文を使用します。  
  次の例では、両方の結合テーブルからすべての行を返しますが、別のテーブルと一致しない値は NULL を返しますが、完全外部結合を示します。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -770,7 +770,7 @@ ORDER BY fis.SalesOrderNumber;
   
  このクエリは、せずも記述できます、`OUTER`キーワード。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -783,7 +783,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>Q.  CROSS JOIN 構文を使用します。  
  次の例のクロス積を返します、`FactInternetSales`と`DimSalesTerritory`テーブル。 すべての組み合わせの一覧`SalesOrderNumber`と`SalesTerritoryKey`が返されます。 ない場合に注意してください、`ON`クロス結合クエリ内の句。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>R.  派生テーブルを使用する  
  次の例では、派生テーブル (、`SELECT`後のステートメント、`FROM`句) を返す、`CustomerKey`と`LastName`内の顧客すべての列、`DimCustomer`を持つテーブル`BirthDate`1 月 1 日より後の値1970、姓と名 'Smith' です。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -809,7 +809,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>S.  結合ヒントの例を減らす  
  次の例では、`REDUCE`結合ヒントをクエリ内で派生テーブルの処理を変更します。 使用する場合、`REDUCE`このクエリで結合ヒント、`fis.ProductKey`は射影、レプリケートされ、個別にし、参加していると`DimProduct`のランダム再生中に`DimProduct`で`ProductKey`です。 結果として得られる派生テーブルに分散させて`fis.ProductKey`です。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -825,7 +825,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>T.  レプリケート結合ヒントの例  
  次の例は、という点以外、前の例と同じクエリを示しています、`REPLICATE`の代わりに結合ヒントを使用、`REDUCE`結合ヒント。 使用、`REPLICATE`ヒント内の値の原因、 `ProductKey` (参加) の列から、`FactInternetSales`すべてのノードにレプリケートされるテーブル。 `DimProduct`テーブルは、それらの値のレプリケートされたバージョンに結合します。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -843,7 +843,7 @@ ORDER BY SalesOrderNumber;
   
  次の例では REDISTRIBUTE ヒント強制的 ProductKey は DimProduct の配布] 列であり、FactInternetSales のディストリビューション列ではないため、FactInternetSales テーブルで、[ランダム再生の移動にします。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  

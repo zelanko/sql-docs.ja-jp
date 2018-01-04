@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -206,7 +206,7 @@ CATALOG_COLLATION 引数ではデータベースの作成中にのみ使用で�
   
  詳細については、次を参照してください。 [Transact SQL を使用して Azure SQL データベースのコピーを作成](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベース ログインを作成するには、必要があります、次のいずれか。  
   
 -   サーバー レベル プリンシパル ログイン  
@@ -223,14 +223,14 @@ SQL Server Management Studio を使用して Azure SQL データベースに接�
 ### <a name="simple-example"></a>簡単な例  
  データベースを作成するための簡単な例です。  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>エディションでの簡単な例  
  標準的なデータベースを作成するための簡単な例です。  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>追加のオプションの使用例  
  複数のオプションを使用する例です。  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>コピーを作成します。  
  データベースのコピーを作成する例です。  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>柔軟なプールにデータベースを作成します。  
  S3M100 をという名前のプールには、新しいデータベースを作成します。  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>別のサーバーにデータベースのコピーを作成します。  
  次の例では、P2 パフォーマンス レベルで db_copy 1 つのデータベースの名前が付いた、db_original データベースのコピーを作成します。  これは、柔軟なプールまたは 1 つのデータベースのパフォーマンス レベルでの db_original がいるかどうかに関係なく当てはまります。  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  次の例では、ep1 という名前の弾力性プールで db_copy をという名前の db_original データベースのコピーを作成します。  これは、柔軟なプールまたは 1 つのデータベースのパフォーマンス レベルでの db_original がいるかどうかに関係なく当てはまります。  別の名前で、弾力性プールでの db_original が、ep1 で db_copy は作成されます。  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 次の例では、データベースの作成は、データベースの照合順序と同じである、カタログ照合順序を設定中に、カタログ照合順序が DATABASE_DEFAULT に設定します。
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

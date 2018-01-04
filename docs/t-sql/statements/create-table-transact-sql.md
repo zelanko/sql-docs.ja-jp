@@ -52,11 +52,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -716,7 +716,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *logical_expression*  
  TRUE または FALSE を返す論理式です。 別名データ型を式に入れることはできません。  
   
- *列*  
+ *column*  
  テーブル制約で使われる、かっこで囲まれた 1 つの列または列リストです。制約定義で使われている列を示します。  
   
  [ **ASC** |DESC]  
@@ -901,7 +901,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  **テーブルに対して Stretch Database を有効にします。**  
   
- 有効にすると拡大テーブルを指定して`ON`、必要に応じて指定することができます`MIGRATION_STATE = OUTBOUND`を開始するデータの移行をすぐに、または`MIGRATION_STATE = PAUSED`データ移行を延期します。 既定値は`MIGRATION_STATE = OUTBOUND`します。 テーブルの Stretch を有効にする方法の詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)です。  
+ 有効にすると拡大テーブルを指定して`ON`、必要に応じて指定することができます`MIGRATION_STATE = OUTBOUND`を開始するデータの移行をすぐに、または`MIGRATION_STATE = PAUSED`データ移行を延期します。 既定値は `MIGRATION_STATE = OUTBOUND` です。 テーブルの Stretch を有効にする方法の詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)です。  
   
  **前提条件**。 テーブルの Stretch を有効にする前にする必要があるサーバーおよびデータベースの Stretch を有効にします。 詳細については、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。  
   
@@ -1075,7 +1075,7 @@ Azure SQL DB のグローバルの一時テーブルは、同じの構文とセ�
 
 トラブルシューティングについては、tempdb を参照してください。[のトラブルシューティングのディスク領域不足 tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396)です。 Azure SQL Database のトラブルシューティングの Dmv にアクセスするには、サーバー管理者をする必要があります。
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
 
  すべてのユーザーには、グローバルの一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
   
@@ -1083,7 +1083,7 @@ Azure SQL DB のグローバルの一時テーブルは、同じの構文とセ�
 
 - セッション A は、Azure SQL Database testdb1 に ##test グローバル一時テーブルを作成し、1 行を追加
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - セッション B は、Azure SQL Database testdb1 に接続し、##test セッション A で作成されたテーブルにアクセスできます。
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - C のセッションでは、Azure SQL Database testdb2 で別のデータベースに接続する、##test testdb1 で作成したにアクセスしようとします。 この選択は、グローバルな一時テーブルのデータベース スコープのため失敗します。 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - 現在のユーザー データベース testdb1 から Azure SQL データベース tempdb 内のシステム オブジェクトのアドレス指定
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1255,7 +1255,7 @@ SELECT * FROM tempdb.sys.database_files
   
  圧縮状態の変更による、テーブル、インデックス、またはパーティションへの影響を評価するには、 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) ストアド プロシージャを使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  データベースの CREATE TABLE 権限と、テーブルを作成するスキーマの ALTER 権限が必要です。  
   
  CLR ユーザー定義型にするのには、CREATE TABLE ステートメント内の列が定義されている場合、型の所有権か、それに対する REFERENCES 権限が必要です。  
@@ -1403,9 +1403,9 @@ GO
   
  列の値に基づいて`col1`の`PartitionTable`パーティションは、次のように割り当てられます。  
   
-|ファイル グループ|test1fg|test2fg|test3fg|test4fg|  
+|[ファイル グループ]|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
-|**パーティション**|1|2|3|4|  
+|**パーティション**|@shouldalert|2|3|4|  
 |**値**|col 1 \<= 1|col1 > 1 の AND col1 \<= 100|col1 > 100 AND col1 \<1,000 を =|col1 > 1000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 列で uniqueidentifier データ型を使用する  

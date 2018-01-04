@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT の INTO 句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="logging-behavior"></a>ログ記録の動作  
  SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  対象となるデータベースの CREATE TABLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 複数のソースの列を指定してテーブルを作成する  
  次の例では、各種の従業員関連テーブルと住所関連テーブルから 7 つの列を選択して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにテーブル `dbo.EmployeeAddresses` を作成します。  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +128,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. 最小ログ記録を使用して行を挿入する  
  次の例は、テーブルを作成`dbo.NewProducts`から行を挿入し、`Production.Product`テーブル。 例では、復旧モデル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースが FULL に設定します。 したがって、最小ログ記録が使用されるようにするために、行を挿入する前に [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの復旧モデルを BULK_LOGGED に設定し、SELECT...INTO ステートメントの後に FULL に戻しています。 これにより、SELECT...INTO ステートメントが使用するトランザクション ログの領域が最小化され、ステートメントが効率的に実行されるようになります。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +144,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. IDENTITY 関数を使用して ID 列を作成する  
  次の例では、IDENTITY 関数を使用して、新しいテーブルに id 列を作成する`Person.USAddress`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 この操作が必要になるのは、テーブルを定義する SELECT ステートメントに結合が含まれているため、IDENTITY プロパティが新しいテーブルに転送されないからです。 IDENTITY 関数で、ソース テーブル `AddressID` の `Person.Address` 列とは異なるシード値と増分値が指定されていることに注意してください。  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
   
  **適用されます:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +216,7 @@ GO
   
  **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -234,7 +234,7 @@ ORDER BY YearlyIncome
 
  **適用されます:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE

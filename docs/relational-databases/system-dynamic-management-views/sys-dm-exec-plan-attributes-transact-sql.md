@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,10 +83,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |sql_handle|**varbinary**(64)|バッチの SQL ハンドルです。|  
 |merge_action_type|**smallint**|MERGE ステートメントの結果として使用するトリガーの実行プランの種類。<br /><br /> 0 は、非トリガー プラン (MERGE ステートメントの結果として実行されないトリガー プラン)、または DELETE アクションのみを指定する MERGE ステートメントの結果として実行されるトリガー プランを示します。<br /><br /> 1 は、MERGE ステートメントの結果として実行される INSERT トリガー プランを示します。<br /><br /> 2 は、MERGE ステートメントの結果として実行される UPDATE トリガー プランを示します。<br /><br /> 3 は、対応する INSERT アクションまたは UPDATE アクションを含む MERGE ステートメントの結果として実行される DELETE トリガー プランを示します。<br /><br /> 連鎖操作によって実行される入れ子のトリガーの場合、この値は、連鎖操作の原因となった MERGE ステートメントのアクションです。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
+  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
   
 ## <a name="remarks"></a>解説  
   
@@ -98,7 +98,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |オプション|値|  
 |------------|-----------|  
-|ANSI_PADDING|1|  
+|ANSI_PADDING|@shouldalert|  
 |Parallel Plan|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -127,7 +127,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |オプション|値|  
 |------------|-----------|  
 |なし|0|  
-|INSENSITIVE|1|  
+|INSENSITIVE|@shouldalert|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -148,7 +148,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 特定のプランの属性を返す  
  次の例では、指定したプランのすべてのプラン属性を返します。 `sys.dm_exec_cached_plans`動的管理ビューが最初に指定したプランのプラン ハンドルを取得するクエリが実行されます。 2 番目のクエリでは、置換`<plan_handle>`プランで最初のクエリから値を処理します。  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. コンパイル済みプランの SET オプションとキャッシュされたプランの SQL ハンドルを返す  
  次の例では、各プランをコンパイルしたオプションを示す値を返します。 さらに、キャッシュされたすべてのプランの SQL ハンドルが返されます。  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

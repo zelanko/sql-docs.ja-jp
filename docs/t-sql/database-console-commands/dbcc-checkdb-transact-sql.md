@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKDB (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  エラーの修復では、バックアップから復元することをお勧めします。 修復操作では、テーブルまたはテーブル間に制約があっても考慮されません。 指定したテーブルに 1 つでも関連する制約がある場合は、修復操作の後に DBCC CHECKCONSTRAINTS を実行することをお勧めします。 REPAIR を使用する必要がある場合は、修復オプションを指定せずに DBCC CHECKDB を実行して、使用する修復レベルを確認してください。 REPAIR_ALLOW_DATA_LOSS レベルを使用する場合は、このオプションを指定して DBCC CHECKDB を実行する前に、データベースをバックアップすることをお勧めします。    
     
  ALL_ERRORMSGS  
- オブジェクトごとに、報告されているすべてのエラーを表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。 エラー メッセージはから生成されるメッセージを除き、オブジェクト ID で並べ替えられます[tempdb データベース](../../relational-databases/databases/tempdb-database.md)です。  
-    
-> [!NOTE] 
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、返されるエラー メッセージの最大数は 1000 です。 使用して、DBCC コマンドを実行することをお勧め ALL_ERRORMSGS を指定すると、 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)またはスケジュールすることによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンドを実行し、ファイルに出力するエージェント ジョブ。 どちらの方法でも、コマンドを 1 回実行するとすべてのエラー メッセージが出力されます。    
+ オブジェクトごとに、報告されているすべてのエラーを表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。 エラー メッセージはから生成されるメッセージを除き、オブジェクト ID で並べ替えられます[tempdb データベース](../../relational-databases/databases/tempdb-database.md)です。     
 
  EXTENDED_LOGICAL_CHECKS  
  互換性レベルが 100 の場合 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) または存在する場合、以降では、インデックス付きビュー、XML インデックス、および空間インデックスは、論理的な一貫性チェックを実行します。  
@@ -227,7 +224,7 @@ DBCC CHECKDB コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion
 |状態|Description|    
 |-----------|-----------------|    
 |0|エラー番号 8930 が発生しました。 このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
-|1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
+|@shouldalert|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
 |2|緊急モードのデータベース修復中にエラーが発生しました。|    
 |3|このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
 |4|アサートまたはアクセス違反が検出されました。|    
@@ -373,7 +370,7 @@ ESTIMATEONLY を指定した場合、DBCC CHECKDB は以下の結果セットを
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>アクセス許可    
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
     
 ## <a name="examples"></a>使用例    

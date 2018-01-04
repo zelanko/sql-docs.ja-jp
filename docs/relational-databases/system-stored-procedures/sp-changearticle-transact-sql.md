@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**destination_owner**||対象オブジェクトの所有者名です。|  
 |**フィルター (filter)**||テーブルをフィルターによって選択 (行方向のフィルター選択) するために使用される新しいストアド プロシージャです。 既定値は NULL です。 ピア ツー ピア レプリケーションのパブリケーションに対しては変更できません。|  
 |**fire_triggers_on_snapshot**|**true**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されます。<br /><br /> 注: トリガーをレプリケートするためのビットマスク値*schema_option*値を含める必要があります**0x100**です。|  
-||**オプション**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されません。|  
+||**false**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されません。|  
 |**identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**ins_cmd**||実行する INSERT ステートメントです。指定しないと、ログから作成されます。|  
 |**pre_creation_cmd**||同期が適用される前に、レプリケーション先のテーブルを削除したり、切り捨てたりできる作成準備コマンドです。|  
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||同期出力ファイルを作成するのに使用されるテーブルまたはビューの名前です。 既定値は NULL です。 Oracle パブリッシャーに対してはサポートされていません。|  
 |**テーブル スペース**||Oracle データベースからパブリッシュされたアーティクルのログ テーブルによって使用されたテーブルスペースを識別します。 詳細については、「[Manage Oracle Tablespaces](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」 (Oracle テーブルスペースの管理) を参照してください。|  
 |**しきい値**||ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値です。 ピア ツー ピア レプリケーションではサポートされません。|  
-|**型**||Oracle パブリッシャーに対してはサポートされていません。|  
+|**type**||Oracle パブリッシャーに対してはサポートされていません。|  
 ||**logbased**|ログベースのアーティクルです。|  
 ||**logbased manualboth**|手動フィルターと手動ビューを使用する、ログベースのアーティクルです。 このオプションでは、する必要があります、 *sync_object*と*フィルター*プロパティも設定します。 Oracle パブリッシャーに対してはサポートされていません。|  
 ||**logbased manualfilter**|手動フィルターを使用する、ログベースのアーティクルです。 このオプションでは、する必要があります、 *sync_object*と*フィルター*プロパティも設定します。 Oracle パブリッシャーに対してはサポートされていません。|  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  既存のパブリケーション内で使用することができます**sp_changearticle**を削除して文書全体を再作成しなくても、アーティクルを変更します。  
   
 > [!NOTE]  
->  値を変更するときに*schema_option*システムでは、ビットごとの更新は実行されません。 つまり、設定すると、 *schema_option*を使用して**sp_changearticle**既存ビット設定が無効にすることがあります。 既存の設定を保持する必要がありますを実行する[& (ビット演算子 AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md)設定する値との現在の値の間で*schema_option*を実行することによって判断できます[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)です。  
+>  値を変更するときに*schema_option*システムでは、ビットごとの更新は実行されません。 つまり、設定すると、 *schema_option*を使用して**sp_changearticle**既存ビット設定が無効にすることがあります。 既存の設定を保持する必要がありますを実行する[|(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)設定する値との現在の値の間で*schema_option*、実行することによって判断できます[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)です。  
   
 ## <a name="valid-schema-options"></a>有効なスキーマ オプション  
  次の表に、指定できる値*schema_option* (が一番上に表示される) レプリケーションの種類およびアーティクルの種類 (1 列目の) に基づいています。  
@@ -246,7 +246,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changearticle**です。  
   
 ## <a name="see-also"></a>参照  

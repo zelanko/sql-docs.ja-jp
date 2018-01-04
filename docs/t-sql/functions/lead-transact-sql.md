@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 67b5d9300d4be84d16b2a650265e812eba1988a9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b736272f07e8767840076fc69cbd5ac3d86d377d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ### <a name="a-compare-values-between-years"></a>A. 年間の値を比較します。  
  クエリでは、LEAD 関数を使用して後の数年間にわたる特定従業員の販売ノルマの差が返されます。 最後の行に使用できるリード値がないため、既定のゼロ (0) が返されることに注意してください。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -92,7 +92,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 ### <a name="b-compare-values-within-partitions"></a>B. パーティション内の値を比較します。  
  次の例では、LEAD 関数を使用して従業員間の今年に入ってからの売上高を比較します。 PARTITION BY 句を指定して、販売区域ごとに結果セットの行をパーティションに分割します。 LEAD 関数は各パーティションに対して個別に適用され、各パーティションで計算が新たに行われます。 OVER 句で指定した ORDER BY 句によって、関数が適用される前に各パーティションの行の順序が設定されます。 SELECT ステートメントの ORDER BY 句によって、結果セット全体で行の順序付けが行われます。 各パーティションの最後の行に使用できるリード値がないため、既定のゼロ (0) が返されることに注意してください。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -118,7 +118,7 @@ Northwest                280              1352577.1325          0.00
 ### <a name="c-specifying-arbitrary-expressions"></a>C. 任意の式を指定する  
  次の例では、LEAD 関数の構文にさまざまな任意の式を指定する方法を示します。  
   
-```t-sql  
+```sql  
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -146,7 +146,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: 四半期間で値を比較します。  
  次の例では、LEAD 関数を示します。 クエリでは、後続のカレンダー四半期に、指定された従業員の販売ノルマの値の差を取得します。 ないためリード値使用可能な最後の行の後に、ゼロ (0) の既定値が使用されることに注意してください。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

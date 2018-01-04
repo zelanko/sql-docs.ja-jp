@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ CREATE DATABASE database_snapshot_name
   
      データベースに対する非トランザクション FILESTREAM アクセスのレベルを指定します。  
   
-    |値|説明|  
+    |値|Description|  
     |-----------|-----------------|  
     |OFF|非トランザクション アクセスは無効です。|  
     |READONLY|このデータベース内の FILESTREAM データは、非トランザクション プロセスによって読み取ることができます。|  
@@ -359,7 +359,7 @@ CREATE DATABASE database_snapshot_name
   
  サイズにすることはできない時に指定された、 *os_file_name*は UNC パスとして指定します。 SIZE は、FILESTREAM ファイル グループには適用されません。  
   
- *サイズ*  
+ *size*  
  ファイルの初期サイズです。  
   
  ときに*サイズ*プライマリ ファイルが指定されていない、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] model データベースのプライマリ ファイルのサイズが使用されます。 モデルの既定のサイズは 8 MB (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) または 1 MB (以前のバージョン)。 セカンダリ データ ファイルまたはログ ファイルを指定するが*サイズ*、ファイルが指定されていない、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ファイルは、8 MB (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) または 1 MB (以前のバージョン)。 なお、プライマリ ファイルに対して指定するサイズは、model データベースのプライマリ ファイルのサイズ以上である必要があります。  
@@ -390,7 +390,7 @@ CREATE DATABASE database_snapshot_name
   
  FILEGROWTH が指定されていない場合、既定値です。  
   
-|バージョン|[既定値]|  
+|[バージョンのオプション]|[既定値]|  
 |-------------|--------------------|  
 |先頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|データ 64 MB です。 ログ ファイルの 64 MB です。|  
 |先頭[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|データ 1 MB です。 ログ ファイルを 10% です。|  
@@ -489,7 +489,7 @@ CREATE DATABASE database_snapshot_name
 ## <a name="viewing-database-information"></a>データベース情報の表示  
  カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  CREATE DATABASE、CREATE ANY DATABASE、または ALTER ANY DATABASE の各権限が必要です。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上のディスク使用量を管理するため、通常、データベースを作成する権限をいくつかのログイン アカウントに制限します。  
@@ -541,7 +541,7 @@ GO
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. データ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する  
  次の例は、データベースを作成`Sales`です。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales_dat`) がプライマリ ファイルになります。 `Sales_dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales_log` ファイルは、`SIZE` パラメーターに `MB` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +563,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 複数のデータ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する  
  次の例では、3 つの `Archive` のデータ ファイルと 2 つの `100-MB` のトランザクション ログ ファイルがある `100-MB` データベースを作成します。 プライマリ ファイルはリストの最初のファイルであり、`PRIMARY` キーワードによって明示的に指定されます。 次のトランザクション ログ ファイルが指定された、`LOG ON`キーワード。 内のファイルで使用される拡張子に注意してください、`FILENAME`オプション:`.mdf`プライマリ データ ファイルを使用`.ndf`セカンダリ データ ファイルを使用し、`.ldf`トランザクション ログ ファイルを使用します。 この例にデータベースを格納する、`D:`の代わりにドライブを`master`データベース。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +609,7 @@ GO
   
  この例では、データ ファイルとログ ファイルは、パフォーマンスを向上させるために別のディスクに格納します。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +658,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. データベースをアタッチする  
  次の例では、例 D で作成された `Archive` データベースをデタッチしてから、`FOR ATTACH` 句を使用してこのデータベースをアタッチします。 `Archive`複数のデータに定義されたファイルとログ ファイルです。 ただし、作成された後に、ファイルの場所が変更されていないため、プライマリ ファイルのみがで指定する、`FOR ATTACH`句。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、アタッチされているデータベースの一部であるフルテキスト ファイルは、データベースと共にアタッチされます。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +674,7 @@ GO
   
  この例のソース データベースは、`Sales`例 D で作成されたデータベース  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +691,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. データベースを作成し、照合順序名とオプションを指定する  
  次の例は、データベースを作成`MyOptionsTest`です。 照合順序名が指定され、`TRUSTYWORTHY` および `DB_CHAINING` オプションが `ON` に設定されます。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -712,7 +712,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 移動されたフルテキスト カタログをアタッチする  
  次の例は、フルテキスト カタログをアタッチ`AdvWksFtCat`と共に、`AdventureWorks2012`データとログ ファイルです。 この例では、フルテキスト カタログは、既定の場所から新しい場所、`c:\myFTCatalogs` に移されます。 データおよびログ ファイルは、それぞれの既定の場所に残ります。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   `FileStreamResumes`FILESTREAM データが含まれています。 これには、1 つの FILESTREAM データ コンテナー `FSResumes` (`C:\MyFSfolder\Resumes` にある) が含まれます。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 複数のファイルを含む FILESTREAM ファイル グループのあるデータベースを作成する  
  次の例を作成、`BlobStore1`データベース。 1 つの row ファイル グループと、1 つの FILESTREAM ファイル グループとデータベースが作成された`FS`です。 FILESTREAM ファイル グループには、2 つのファイルが含まれています。`FS1`と`FS2`です。 その後 `FS3` という 3 つ目のファイルが FILESTREAM ファイルグループに追加されると、データベースが変更されます。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -543,7 +543,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism*値は次のいずれかになります。  
   
- 1  
+ @shouldalert  
  並列プラン生成を抑制します。  
   
  \>1  
@@ -765,7 +765,7 @@ TABLE
   
  **テーブルに対して Stretch Database を有効にします。**  
   
- 有効にすると拡大テーブルを指定して`ON`も指定する必要が`MIGRATION_STATE = OUTBOUND`を開始するデータの移行をすぐに、または`MIGRATION_STATE = PAUSED`データ移行を延期します。 既定値は`MIGRATION_STATE = OUTBOUND`します。 テーブルの Stretch を有効にする方法の詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)です。  
+ 有効にすると拡大テーブルを指定して`ON`も指定する必要が`MIGRATION_STATE = OUTBOUND`を開始するデータの移行をすぐに、または`MIGRATION_STATE = PAUSED`データ移行を延期します。 既定値は `MIGRATION_STATE = OUTBOUND` です。 テーブルの Stretch を有効にする方法の詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)です。  
   
  **前提条件**。 テーブルの Stretch を有効にする前にする必要があるサーバーおよびデータベースの Stretch を有効にします。 詳細については、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。  
   
@@ -777,7 +777,7 @@ TABLE
   
 -   テーブルに対する Stretch を無効にして、テーブルのリモート データを Azure から SQL Server にコピーして戻すには、次のコマンドを実行します。 このコマンドは取り消すことができません。  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   テーブルに対する Stretch を無効にして、リモート データを破棄するには、次のコマンドを実行します。  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -939,11 +939,11 @@ WAIT_AT_LOW_PRIORITY
   
 -   ..schema.table  
   
-以前のバージョンでは、server.database.schema.table という形式を指定すると、エラー 4902 が返されました。 .database.schema.table または ..schema.table という形式を指定すると、成功しました。  
+以前のバージョンでは、server.database.schema.table という形式を指定すると、エラー 4902 が返されました。 .database.schema.table または .schema.table という形式を指定すると、成功しました。  
   
  問題を解決するには、4 部構成のプレフィックスの使用を削除してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  テーブルに対する ALTER 権限が必要です。  
   
  ALTER TABLE 権限は、ALTER TABLE SWITCH ステートメントに含まれる両方のテーブルに適用されます。 切り替えられるデータには、対象テーブルのセキュリティが継承されます。  
@@ -1764,7 +1764,7 @@ WITH
   
 |パーティション|データを持つか。|境界の範囲|  
 |---------------|---------------|--------------------|  
-|1|可|OrderDate < ' 2004-01-01'|  
+|@shouldalert|可|OrderDate < ' 2004-01-01'|  
 |2|可|'2004-01-01' < OrderDate を = <' 2005-01-01'|  
 |3|可|'2005-01-01' < OrderDate を = <' 2006-01-01'|  
 |4|可|'2006-01-01'< OrderDate を = <' 2007-01-01'|  

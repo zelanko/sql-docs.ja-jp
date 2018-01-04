@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (以下の例外を参照)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
+|Del|OPEN|UPDATE|  
 |DROP|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
   
  ときに OFF、上記の T-SQL ステートメントの各に制限されます、含まれる未知の BEGIN TRANSACTION と含まれる未知の COMMIT TRANSACTION ステートメント。 OFF の場合、トランザクション モードは言う*autocommit*です。 T-SQL コードは、視覚的に、BEGIN TRANSACTION を発行した場合、トランザクション モードは言う*明示的な*します。  
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>使用例  
  次の TRANSACT-SQL スクリプトは、いくつかの異なるテスト_ケースを実行します。 テキスト出力は動作の詳細を表示され、各テスト・ケースの結果も提供されます。  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +169,7 @@ go
   
  次は、前述の TRANSACT-SQL スクリプトからのテキストの出力です。  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

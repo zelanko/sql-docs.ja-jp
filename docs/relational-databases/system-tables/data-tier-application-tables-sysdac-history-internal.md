@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>データ層アプリケーション テーブル - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = 展開<br /><br /> **1** = 作成<br /><br /> **2**名前の変更を =<br /><br /> **3** = デタッチ<br /><br /> **4** = delete|  
 |**action_type_name**|**varchar(19)**|アクションの種類の名前。<br /><br /> **展開します。**<br /><br /> **作成します。**<br /><br /> **名前の変更**<br /><br /> **デタッチ**<br /><br /> **削除**|  
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** dacpac を =<br /><br /> **1**ログインを =<br /><br /> **2** = データベース|  
-|**dac_object_type_name**|**varchar (8)**|アクションの影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** DAC インスタンスを =<br /><br /> **ログイン**<br /><br /> **database**|  
+|**dac_object_type_name**|**varchar (8)**|アクションの影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** DAC インスタンスを =<br /><br /> **ログイン**<br /><br /> **データベース (database)**|  
 |**action_status**|**tinyint**|アクションの現在のステータスを識別するコード。<br /><br /> **0** = 保留中<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
 |**action_status_name**|**varchar (11)**|アクションの現在のステータス。<br /><br /> **保留中**<br /><br /> **成功した場合**<br /><br /> **失敗します。**|  
 |**必須**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
@@ -62,13 +62,13 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|作成|dacpac|  
-|12|1|作成|login |  
-|12|2|作成|database|  
-|12|3|名前の変更|database|  
+|12|@shouldalert|作成|login |  
+|12|2|作成|[データベース]|  
+|12|3|名前の変更|[データベース]|  
   
  削除などの DAC 操作がから行を削除しないでください**sysdac_history_internal**です。 次のクエリを使用するには不要になったのインスタンスに配置された Dac の行を手動で削除する、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  
@@ -80,11 +80,11 @@ WHERE instance_id NOT IN
 > [!NOTE]  
 >  現時点では、削除するためのメカニズムがない**sysdac_history_internal**行 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。 このビューに読み取り専用のアクセスは、master データベースに接続するアクセス許可を持つすべてのユーザーに使用できます。  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal に対応する &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   

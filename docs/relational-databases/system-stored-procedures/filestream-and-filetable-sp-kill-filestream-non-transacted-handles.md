@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7958e7a6513363030d8962774a28992bd055661d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d06550f0a9cd322e26acfa8f29890833c15f947
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>Filestream および FileTable - sp_kill_filestream_non_transacted_handles
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
 ```  
   
@@ -66,15 +66,15 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="metadata"></a>メタデータ  
  開いている非トランザクション ファイル ハンドルのについては、動的管理ビューに対してクエリ[sys.dm_filestream_non_transacted_handles &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  必要があります**VIEW DATABASE STATE**からファイル ハンドルを取得するアクセス許可、 **sys.dm_FILESTREAM_non_transacted_handles**動的管理ビューを実行し、 **sp_kill_filestream_non_transacted_handles**です。  
   
 ## <a name="examples"></a>使用例  
  次の例を呼び出す方法を示して**sp_kill_filestream_non_transacted_handles**を FileTable データに対する非トランザクション ファイル ハンドルを閉じます。  
   
-```tsql  
+```sql  
 -- Close all open handles in the current database.  
 sp_kill_filestream_non_transacted_handles  
   
@@ -87,7 +87,7 @@ sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @hand
   
  次の例は、スクリプトを使用して取得する方法を示しています、 *handle_id*して閉じます。  
   
-```tsql  
+```sql  
 DECLARE @handle_id varbinary(16);  
 DECLARE @table_name sysname;  
   

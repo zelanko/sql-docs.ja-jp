@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -212,14 +212,14 @@ WINDOWS
   
  詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]ログインを参照してください[Windows Azure SQL データベースにおけるデータベースの管理とログイン](http://msdn.microsoft.com/library/ee336235.aspx)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が必要です**ALTER ANY LOGIN**メンバーシップまたはサーバーに対する権限、 **securityadmin**固定サーバー ロール。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログインまたは master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。  
   
  場合、**資格情報**オプションを使うと、必要もあります**ALTER ANY CREDENTIAL**サーバーに対する権限。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  ログインを作成するには、ログインに接続できる、[!INCLUDE[ssDE](../../includes/ssde-md.md)]または[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみに許可する権限を持つ、**パブリック**ロール。 次の操作のいくつかを実行することを検討してください。  
   
 -   データベースに接続するには、ログイン用のデータベース ユーザーを作成する必要があります。 詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。  
@@ -228,7 +228,7 @@ WINDOWS
   
 -   使用して**sp_addsrvrolemember**固定サーバー ロールにログインを追加します。 詳細については、次を参照してください。[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)と[sp_addsrvrolemember (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   使用して、 **GRANT**ステートメントでは、新しいログインまたはログインを含むロールにサーバー レベルのアクセス許可を付与します。 詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」を参照してください。  
+-   使用して、 **GRANT**ステートメントでは、新しいログインまたはログインを含むロールにサーバー レベルのアクセス許可を付与します。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -314,7 +314,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. パスワードで SQL Server 認証ログインを作成します。  
  次の例は、ログインを作成`Mary7`パスワードを持つ`A2c3456`します。  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   

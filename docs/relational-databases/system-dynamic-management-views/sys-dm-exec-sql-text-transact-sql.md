@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |**暗号化**|**bit**|1 = SQL テキストは暗号化されています。<br /><br /> 0 = SQL テキストは暗号化されていません。|  
 |**text**|**nvarchar (max** **)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  
@@ -96,7 +96,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 渡すことを示すための基本的な例を次に示します、 **sql_handle** 、直接または**CROSS APPLY**です。
   1.  アクティビティを作成します。  
 新しいクエリ ウィンドウで、次の T-SQL を実行[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  使用して**CROSS APPLY**です。  
     Sql_handle **sys.dm_exec_requests**に渡される**sys.dm_exec_sql_text**を使用して**CROSS APPLY**です。 新しいクエリ ウィンドウを開き、手順 1. で識別される、spid の値を渡します。 この例で、spid の値は表示される`59`です。
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  渡す**sql_handle**直接です。  
 取得、 **sql_handle**から**sys.dm_exec_requests**です。 その後、渡す、 **sql_handle**に直接**sys.dm_exec_sql_text**です。 新しいクエリ ウィンドウを開き、手順 1 で識別される、spid の値を渡す**sys.dm_exec_requests**です。 この例で、spid の値は表示される`59`です。 さらに、返された渡す**sql_handle**への引数として**sys.dm_exec_sql_text**です。
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 平均 CPU 時間ごとの上位 5 つのクエリに関する情報を取得します。  
  次の例では、上位 5 つのクエリにかかった平均 CPU 時間と SQL ステートメントのテキストを返します。  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. バッチ実行の統計情報を提供します。  
  次の例では、バッチで実行されている SQL クエリのテキストを返し、クエリに関する統計情報を提供します。  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

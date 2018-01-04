@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (TRANSACT-SQL) のクエリ
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/17/2017
   
  このクエリ ヒントは、インデックス付きビューを直接使用することを実質的に禁止し、クエリ プラン内のインデックス付きビューにインデックスを指定します。  
   
- ビューがクエリおよび WITH (NOEXPAND) または WITH の SELECT 部分で直接参照されている場合にのみ、インデックス付きビューが展開されていない (NOEXPAND, INDEX ( *index_value* [ **、***.. .n*])) を指定します。 クエリ ヒント WITH (NOEXPAND) の詳細については、次を参照してください。 [FROM](../../t-sql/queries/from-transact-sql.md)です。  
+ ビューがクエリおよび WITH (NOEXPAND) または WITH の SELECT 部分で直接参照されている場合にのみ、インデックス付きビューが展開されていない (NOEXPAND, INDEX ( *index_value* [ **、***. .n*])) を指定します。 クエリ ヒント WITH (NOEXPAND) の詳細については、次を参照してください。 [FROM](../../t-sql/queries/from-transact-sql.md)です。  
   
  INSERT、UPDATE、MERGE、DELETE ステートメントなど、ステートメントの SELECT 要素内のビューのみが、ヒントの影響を受けます。  
   
@@ -291,7 +291,7 @@ ms.lasthandoff: 11/17/2017
  USE PLAN N**'***xml_plan***'**  
  指定されているクエリの既存のクエリ プランを使用する、クエリ オプティマイザー **'***xml_plan***'**です。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
-テーブル ヒント**(***exposed_object_name* [ **、** \<table_hint > **[、 ]**. *n*  ] **)**をテーブルまたはビューに対応する、指定したテーブル ヒントを適用*exposed_object_name*です。 コンテキストのみでのクエリ ヒントとしてのテーブル ヒントを使用することをお勧め、[プラン ガイド](../../relational-databases/performance/plan-guides.md)です。  
+テーブル ヒント**(***exposed_object_name* [ **、** \<table_hint > **[、]**. *n*  ] **)**をテーブルまたはビューに対応する、指定したテーブル ヒントを適用*exposed_object_name*です。 コンテキストのみでのクエリ ヒントとしてのテーブル ヒントを使用することをお勧め、[プラン ガイド](../../relational-databases/performance/plan-guides.md)です。  
   
  *exposed_object_name*次の参照のいずれかになります。  
   
@@ -363,7 +363,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. MAXRECURSION を使用する  
  MAXRECURSION を使用すると、不適切に作成された再帰共通テーブル式による無限ループの発生を防ぐことができます。 次の例は意図的に無限ループを作成し、2 つの再帰レベルの数を制限する、MAXRECURSION ヒントを使用します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  

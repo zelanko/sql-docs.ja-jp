@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +185,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -356,7 +356,7 @@ Execute a character string
   
  データベース コンテキスト内の変更が維持されるのは、EXECUTE ステートメントの終了時までです。 たとえば、次のステートメントの `EXEC` を実行すると、データベース コンテキストは master になります。  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>ベスト プラクティス  
  ステートメントまたはモジュールで定義されている操作の実行に必要な、最小の権限が与えられているログインまたはユーザーを指定します。 たとえば、サーバー レベルの権限を持つ、のみデータベース レベルの権限が必要です。 ログイン名を指定できません。または、これらのアクセス許可が必要でない場合は、データベース所有者アカウントを指定しません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  EXECUTE ステートメントの実行に権限は必要ありませんが、 EXECUTE 文字列内で参照されるセキュリティ保護可能なリソースに対しては権限が必要です。 たとえば、この文字列に INSERT ステートメントが含まれている場合、EXECUTE ステートメントの呼び出し元は対象のテーブルに対する INSERT 権限が必要です。 EXECUTE ステートメントは、モジュール内に含まれている場合でも、検出されるたびに権限が確認されます。  
   
  モジュールの EXECUTE 権限は、既定ではモジュールの所有者に与えられており、所有者はその権限を別のユーザーに譲渡できます。 文字列を実行するモジュールが実行されるとき、権限は、モジュールを作成したユーザーのコンテキストではなく、モジュールを実行しているユーザーのコンテキストに基づいて確認されます。 ただし、呼び出すモジュールと呼び出されるモジュールを所有するユーザーが同じ場合、2 番目のモジュールに対しては EXECUTE 権限の確認は行われません。  
@@ -467,7 +467,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. EXECUTE をストアド プロシージャ変数と共に使用する  
  次の例では、ストアド プロシージャ名を表す変数を作成します。  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
