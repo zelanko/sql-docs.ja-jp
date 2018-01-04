@@ -3,7 +3,7 @@ title: "[オブジェクトの依存関係] | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1d1605a4f702061dc9dcd5be2ee5c673866bed6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52c30e921f61ec720dffc2fddd4ecf7ae17a91de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係] ([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  
