@@ -3,7 +3,7 @@ title: "ジョブ カテゴリの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a115917cffd515c84d7431b5594bc449337602b4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0f06eb24dd8ecbc2781575e40ca516bef59a6f62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-job-category"></a>ジョブ カテゴリの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、[!INCLUDE[tsql](../../includes/tsql_md.md)] 、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 管理オブジェクトを使用して、ジョブ カテゴリを作成する方法について説明します。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  **[すべてのジョブを表示]** チェック ボックスをオンにします。 ジョブに対応するチェック ボックスをオンにして、新しいカテゴリのジョブを 1 つ以上選択します。  
   
-7.  **[OK]**をクリックします。  
+7.  **[OK]** をクリックします。  
   
 8.  **&lt;server_name&gt;**** ダイアログ ボックスで、 **最新の情報に更新** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
   

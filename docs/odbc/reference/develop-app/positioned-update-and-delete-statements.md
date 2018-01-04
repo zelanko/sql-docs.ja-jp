@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a35d57aaa00f7f2406b779f987c4dd07e694f737
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="positioned-update-and-delete-statements"></a>位置指定更新ステートメントと Delete ステートメント
 アプリケーションの更新または位置指定更新と結果セットの現在の行を削除またはステートメントを削除します。 Update および delete に配置されているステートメントは、それらのすべてではなく一部のデータ ソースでサポートされています。 アプリケーションが配置されているデータ ソースのサポートが update および delete ステートメントであるかどうかを決定するを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1*情報の種類*(カーソルの種類) によって異なります。 ODBC カーソル ライブラリが位置指定更新をシミュレートおよび delete ステートメントことに注意してください。  

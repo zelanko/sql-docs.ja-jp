@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc00a53549cb415665f24d1b34bfb17c2d0f1992
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e41ad96d3f1a61e7fa3d6ac77ea79e566f28498
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベースの差分バックアップを復元する方法:**  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復旧する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)でミラー データベースを準備する方法について説明します。  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復旧する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  **[全般]** ページの **ソース** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
-    -   **データベース**  
+    -   **[データベース]**  
   
          復元するデータベースをドロップダウン リストから選択します。 このリストには、 **msdb** バックアップ履歴に従ってバックアップされたデータベースのみが含まれます。  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
-5.  **復元先のセクション** の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
+5.  **** 復元先のセクションの **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
   
     > [!NOTE]  
     >  特定の時点で復元を停止するには、 **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスします。 特定の時点でデータベースの復元を停止する方法については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
@@ -162,7 +162,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="a-restoring-a-differential-database-backup"></a>A. データベースの差分バックアップの復元  
  この例では、 `MyAdvWorks` データベースのデータベース バックアップおよびデータベースの差分バックアップを復元します。  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -182,7 +182,7 @@ GO
 #### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. データベース バックアップ、データベースの差分バックアップ、およびトランザクション ログ バックアップの復元  
  この例では、 `MyAdvWorks` データベースのデータベース バックアップ、データベースの差分バックアップ、およびトランザクション ログ バックアップを復元します。  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  
