@@ -2082,8 +2082,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|タスクが操作 "%1" を実行できませんでした。|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|ファイル/プロセス "%1" がパス上にありません。|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|件名が空です。|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|[宛先] 行に指定されたアドレスの形式が正しくありません。 "@" 記号がないか、無効です。|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|[差出人] 行に指定されたアドレスの形式が正しくありません。 "@" 記号がないか、無効です。|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|[宛先] 行に指定されたアドレスの形式が正しくありません。 "\@" 記号がないか、無効です。|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|[差出人] 行に指定されたアドレスの形式が正しくありません。 "\@" 記号がないか、無効です。|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|2 つの XML ドキュメントが異なっています。|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD の検証には、XML ドキュメント内の DOCTYPE 行で定義されている DTD ファイルが使用されます。 プロパティ "%1" に割り当てられているものは使用されません。|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|タスクが "%1" を検証できませんでした。|  
