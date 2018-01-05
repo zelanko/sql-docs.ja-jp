@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ REORGANIZE はオンラインで実行します。
 -   10% 以上の行が論理的に削除された行グループ、SQL Server は 1 つまたは複数の行グループと、この行グループを結合する再試行してください。    たとえば、500,000 行で 1 行グループが圧縮されて、行グループ 21 は、最大 1,048, 576 行の圧縮します。  行グループ 21 409,830 行が削除された行の 60% があります。 SQL Server では、これら 2 つの行グループを 909,830 行を持つ新しい行グループを圧縮を組み合わせることを優先します。  
   
 使用して再構成. (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2016年以降) および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、COMPRESS_ALL_ROW_GROUPS が開くまたは CLOSED のデルタ行グループ、列ストアに強制的に移動する方法を提供します。 このオプションを使用して、デルタ行グループを空にする、列ストア インデックスを再構築する必要はありません。  これと組み合わせる、他の削除とマージ最適化機能は、ほとんどの状況でインデックスを再構築は必要なくなりました。    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、COMPRESS_ALL_ROW_GROUPS が開くまたは CLOSED のデルタ行グループ、列ストアに強制的に移動する方法を提供します。 このオプションを使用して、デルタ行グループを空にする、列ストア インデックスを再構築する必要はありません。  これと組み合わせる、他の削除とマージ最適化機能は、ほとんどの状況でインデックスを再構築は必要なくなりました。    
+
 -   サイズと終了 (開く) の状態に関係なく、列ストアに、すべての行グループを強制します。  
   
 -   オフには、列ストアに CLOSED 行グループのすべてを強制します。  
@@ -393,17 +394,11 @@ FILLFACTOR = *fillfactor*
  パーティションごとの統計がサポートされていない場合、このオプションは無視され、警告が生成されます。 次の種類の統計では、増分統計がサポートされていません。  
   
 -   ベース テーブルにパーティションで固定されていないインデックスを使用して作成された統計。  
-  
 -   Always On の読み取り可能なセカンダリ データベースに対して作成された統計。  
-  
 -   読み取り専用のデータベースに対して作成された統計。  
-  
 -   フィルター選択されたインデックスに対して作成された統計。  
-  
 -   ビューに対して作成された統計。  
-  
 -   内部テーブルに対して作成された統計。  
-  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
  
 **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
@@ -414,7 +409,7 @@ FILLFACTOR = *fillfactor*
  XML インデックスまたは空間インデックスの場合、ONLINE = OFF だけがサポートされます。ONLINE を ON に設定すると、エラーが発生します。  
   
 > [!NOTE]
->  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[エディションとサポートされる機能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)です。  
+>  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[エディションとサポートされる機能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)と[エディションとサポートされる機能の SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)です。  
   
  ON  
  長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックス操作の主なフェーズでは、基になるテーブル、インテント共有 (IS) ロックのみが保持されます。 これによって、基になるテーブルおよびインデックスに対してクエリや更新を続けることができます。 操作の開始時、非常に短い時間、ソース オブジェクトでは共有 (S) ロックが保持されます。 操作の終了時、非クラクタ化インデックスが作成される場合は、短い時間、ソース オブジェクト上で S ロックが保持されます。また、クラスター化インデックスがオンラインで作成または削除されるか、クラスター化または非クラスター化インデックスが再構築される場合は、SCH-M (スキーマ修正) ロックが取得されます。 インデックスがローカルの一時テーブルに作成される場合、ONLINE は ON にできません。  

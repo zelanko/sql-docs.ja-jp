@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL および不明 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,23 +39,23 @@ ms.lasthandoff: 11/17/2017
   
 -   Null 値は、主キーなど、またはディストリビューション キーなどの行の配信に使用される情報のテーブル内の別の行から、テーブル内の 1 つの行を区別するために必要な情報として使用できません。  
   
- データに NULL 値がある場合、論理演算子と比較演算子は、TRUE や FALSE ではなく UNKNOWN を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 次の表は、NULL 比較を採用した場合の結果を示しています。  
+ データに NULL 値がある場合、論理演算子と比較演算子は、TRUE や FALSE ではなく UNKNOWN を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 論理演算子を未知の要素を含むブール式では、演算子の結果が不明な式に依存しない限り、UNKNOWN を返します。 これらのテーブルは、この動作の例を示します。  
   
- 次の表では、1 つのオペランドが NULL を返します 2 つのブール型オペランドに AND 演算子を適用した結果を示します。  
+ 次の表は、1 つの式に UNKNOWN が返されます次の 2 つのブール式を AND 演算子を適用した結果を示します。  
   
-|第 1 オペランド|第 2 オペランド|結果|  
+|1 の式|Expression 2|[結果]|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- 次の表では、1 つのオペランドが NULL を返すの 2 つのブール型オペランドに OR 演算子を適用する結果を示します。  
+ 次の表は、1 つの式に UNKNOWN が返されます次の 2 つのブール式に OR 演算子を適用した結果を示します。  
   
-|第 1 オペランド|第 2 オペランド|結果|  
+|1 の式|Expression 2|[結果]|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>参照  
  [および &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/and-transact-sql.md)   

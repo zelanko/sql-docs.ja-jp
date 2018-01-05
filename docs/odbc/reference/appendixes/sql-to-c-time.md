@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9382dbade23b52e077818c0ccd29713f1724fa93
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b9879b2a051045fb4ecc6aeb75b92020b187652
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-time"></a>SQL には、c: 時刻
 ODBC SQL データ型は、時間の識別子。  
@@ -39,8 +39,8 @@ ODBC SQL データ型は、時間の識別子。
 |SQL_C_CHAR|*BufferLength* > バイトの長さを文字<br /><br /> *9* <= *BufferLength* < 文字バイトの長さを =<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*BufferLength* > 文字長<br /><br /> *9* <= *BufferLength* < 文字の長さを =<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 切り捨てられたデータ<br /><br /> 未定義。|データの文字の長さ<br /><br /> データの文字の長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|data<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|[なし]: [b]|data|6 [d]|n/a|  
-|SQL_C_TYPE_TIMESTAMP|[なし]: [b]|データ [c]|16 [d]|n/a|  
+|SQL_C_TYPE_TIME|なし [b]|data|6 [d]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|なし [b]|データ [c]|16 [d]|n/a|  
   
  [a] の時刻の秒の小数部が切り捨てられます。  
   

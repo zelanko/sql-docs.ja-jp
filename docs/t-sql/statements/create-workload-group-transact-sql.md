@@ -1,7 +1,7 @@
 ---
 title: "ワークロード グループ (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe9d11d3b018df43eed813f8f987695f41ae189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -65,13 +64,11 @@ CREATE WORKLOAD GROUP group_name
  ワークロード グループでの要求の相対的な重要度を指定します。 重要度は次のいずれかで、MEDIUM が既定値です。  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (既定)    
 -   HIGH  
   
 > [!NOTE]  
->  内部的には、各重要度の設定は計算に使用される数値として格納されます。  
+> 内部的には、各重要度の設定は計算に使用される数値として格納されます。  
   
  IMPORTANCE は、リソース プールに対してローカルです。同じリソース プール内の異なる重要度のワークロード グループは互いに影響しますが、別のリソース プールのワークロード グループには影響しません。  
   
@@ -79,7 +76,7 @@ CREATE WORKLOAD GROUP group_name
  1 つの要求にプールから割り当てられる最大メモリ量を指定します。 このパーセンテージは、MAX_MEMORY_PERCENT で指定したリソース プールのサイズが基準になります。  
   
 > [!NOTE]  
->  指定した量だけがクエリ実行許可メモリに割り当てられます。  
+> 指定した量だけがクエリ実行許可メモリに割り当てられます。  
   
  *値*0 または正の整数にする必要があります。 許容範囲*値*は 0 ~ 100 です。 既定の設定*値*25 です。  
   
@@ -102,7 +99,10 @@ CREATE WORKLOAD GROUP group_name
  要求が使用できる最大 CPU 時間を秒単位で指定します。 *値*0 または正の整数にする必要があります。 既定の設定*値*0 の場合は、無制限を示します。  
   
 > [!NOTE]  
->  リソース ガバナーでは、最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、次を参照してください。 [CPU しきい値 Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)です。  
+> 既定では、リソース ガバナーはの最大時間を超えたかどうかの続行を要求を妨げません。 ただし、イベントが生成されます。 詳細については、次を参照してください。 [CPU しきい値 Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)です。  
+
+> [!IMPORTANT]
+> 以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 を使用して、[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)、リソース ガバナーは、最大時間を超えたときに、要求は中止されます。 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*値*  
  クエリでは、使用可能になるメモリ許可 (作業バッファー メモリ) が待機できる秒単位で最大の時間を指定します。  
@@ -143,7 +143,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   リソース プールを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ワークロードおよびクエリ  
   
--   外部プロセス用の外部リソース プールです。 詳細については、次を参照してください。 [sp_execute_external_script &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+-   外部プロセス用の外部リソース プールです。 詳細については、次を参照してください。 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。  
   
 ## <a name="remarks"></a>解説  
  REQUEST_MEMORY_GRANT_PERCENT: インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるワークスペース メモリの使用が許可されます。 この特別な処理には、リソース ガバナーではサポートされて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。 ただし、最初のメモリ許可も追加のメモリ許可も、リソース プール設定およびワークロード グループ設定によって制限されます。  
@@ -152,7 +152,7 @@ CREATE WORKLOAD GROUP group_name
   
  非固定パーティション分割されたテーブルでインデックスの作成によって消費されるメモリは、含まれるパーティションの数に比例します。 必要なメモリの合計が、リソース ガバナーのワークロード グループの設定によって課せられているクエリごとの制限 (REQUEST_MAX_MEMORY_GRANT_PERCENT) を超えると、インデックス作成の実行に失敗します。 "default" ワークロード グループでは、クエリごとの制限を超えてもクエリの開始に必要な最低限のメモリを使用できるようになっているので、そのようなクエリを実行するのに十分な量のメモリが "default" リソース プールに対して構成されていれば、同じインデックス作成を "default" ワークロード グループで実行できる可能性があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

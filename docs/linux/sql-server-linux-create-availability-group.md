@@ -14,17 +14,19 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 6ad13c3432daee4fd38b6d46704adc0c00913f7a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、Linux 上の SQL Server の可用性グループを構成します。
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 このチュートリアルでは、作成し、可用性グループ (AG) を構成する方法を説明の[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux にします。 異なり[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]以前 Windows では、有効にして Ag 有無にかかわらず、最初に基になるペース クラスターを作成します。 クラスターとの統合が必要な場合は行われません、後で。
+
+このチュートリアルには、次のタスクが含まれています。
  
 > [!div class="checklist"]
 > * 可用性グループを有効にします。
@@ -593,11 +595,9 @@ sudo systemctl restart mssql-server
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[注]RHEL 7.4 で master データベースの使用で警告が発生する可能性があります。 これを回避するには、次の構文を使用します。
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
+    >[!NOTE]
+    >RHEL 7.4 で master データベースの使用で警告が発生する可能性があります。 これを回避するには、次のように使用します。`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -618,7 +618,7 @@ sudo systemctl restart mssql-server
     commit
     ```
     
-    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    場所*NameForAGResource* 、可用性グループのクラスター リソースに指定された一意の名前と*AGName*が作成された可用性グループの名前を指定します。
  
 2.  リスナーの機能に関連付けられる、AG の IP アドレス リソースを作成します。
 
@@ -647,8 +647,7 @@ sudo systemctl restart mssql-server
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES**
     
     ```bash
@@ -690,5 +689,5 @@ sudo systemctl restart mssql-server
 、、のフェールオーバーやアップグレードを含む、ほとんどの AG 管理タスクを参照してください。
 
 > [!div class="nextstepaction"]
-> [SQL Server on Linux の HA 可用性グループを操作](sql-server-linux-availability-group-failover-ha.md)です。
+> [SQL Server on Linux の HA 可用性グループを操作します。](sql-server-linux-availability-group-failover-ha.md)
 

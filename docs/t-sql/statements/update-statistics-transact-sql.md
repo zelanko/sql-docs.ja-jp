@@ -1,7 +1,7 @@
 ---
 title: "UPDATE STATISTICS (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -156,28 +157,42 @@ PERSIST_SAMPLE_PERCENT = {ON |オフ}
  パーティションごとの統計がサポートされていない場合は、エラーが生成されます。 次の種類の統計では、増分統計がサポートされていません。  
   
 -   ベース テーブルにパーティションで固定されていないインデックスを使用して作成された統計。  
-  
 -   Always On の読み取り可能なセカンダリ データベースに対して作成された統計。  
-  
 -   読み取り専用のデータベースに対して作成された統計。  
-  
 -   フィルター選択されたインデックスに対して作成された統計。  
-  
 -   ビューに対して作成された統計。  
-  
 -   内部テーブルに対して作成された統計。  
-  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
 **適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3)。  
+  
+ 上書き、**並列処理の次数の最大**統計操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
+  
+ *max_degree_of_parallelism*を指定できます。  
+  
+ @shouldalert  
+ 並列プラン生成を抑制します。  
+  
+ \>1  
+ 指定した数以内の現在のシステム ワークロードに基づいて並列統計操作で使用されるプロセッサの最大数を制限します。  
+  
+ 0 (既定値)  
+ 現在のシステム ワークロードに基づいて、実際の数以下のプロセッサを使用します。  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
+
 ## <a name="remarks"></a>解説  
   
 ## <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS を使用する場合  
  詳細について UPDATE STATISTICS を使用する場合は、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)です。  
-  
+
+## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+* テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、削除し、統計を再作成します。  
+* MAXDOP オプションは、STATS_STREAM、ROWCOUNT および PAGECOUNT オプションと互換性がありません。
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats によるすべての統計の更新  
  データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
   

@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 指定したデータベース内のデータ ファイルとログ ファイルのサイズを圧縮します。
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  データベースを圧縮した後、データベース ファイル内に残す空き領域のパーセンテージを指定します。  
   
  NOTRUNCATE  
- ファイル末尾の割り当て済みページをファイル先頭の未割り当てページに移動することにより、データ ファイルのデータを圧縮します。 *target_percent*は省略可能です。  
+ ファイル末尾の割り当て済みページをファイル先頭の未割り当てページに移動することにより、データ ファイルのデータを圧縮します。 *target_percent*は省略可能です。 このオプションは、Azure SQL Data Warehouse ではサポートされません。 
   
  ファイル末尾の空き領域はオペレーティング システムに返されず、ファイルの物理サイズは変わりません。 したがって、NOTRUNCATE を指定した場合は、データベースが圧縮されていないように見えます。  
   
  NOTRUNCATE はデータ ファイルにのみ適用され、 ログ ファイルは影響を受けません。  
   
  TRUNCATEONLY  
- ファイル末尾のすべての空き領域をオペレーティング システムに渡します。ただし、ファイル内でのページの移動は行われません。 データ ファイルは、最後に割り当てられたエクステントを限度として圧縮されます。 *target_percent* TRUNCATEONLY と共に指定した場合は無視されます。  
+ ファイル末尾のすべての空き領域をオペレーティング システムに渡します。ただし、ファイル内でのページの移動は行われません。 データ ファイルは、最後に割り当てられたエクステントを限度として圧縮されます。 *target_percent* TRUNCATEONLY と共に指定した場合は無視されます。 このオプションは、Azure SQL Data Warehouse ではサポートされません。
   
  TRUNCATEONLY はログ ファイルに影響します。 データ ファイルのみを切り捨てるには、DBCC SHRINKFILE を使用します。  
   
@@ -108,6 +108,9 @@ NOTRUNCATE オプションも TRUNCATEONLY オプションも指定しないで 
 圧縮されるデータベースは、シングル ユーザー モードになっていなくてもかまいません。データベースを圧縮している最中でも、他のユーザーがそのデータベースで作業することができます。 システム データベースの場合も同様です。
   
 データベースのバックアップ中、データベースを圧縮することはできません。 逆に、データベースの圧縮操作の進行中、データベースをバックアップすることはできません。
+
+>[!NOTE]
+> 現在、Azure SQL Data Warehouse は TDE が有効になっていると、DBCC SHRINKDATABASE をサポートしていません。
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE の動作  
 DBCC SHRINKDATABASE では、データ ファイルはファイルごとに圧縮されますが、ログ ファイルはすべてが 1 つの連続的なログ プールに存在するものとして圧縮されます。 ファイルは常に末尾から圧縮されます。
@@ -147,7 +150,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   圧縮操作を終了します。 完了済みの作業は保持されます。  
 -   何もせず、ブロックしているトランザクションが完了するまで圧縮操作を待機状態にしておきます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

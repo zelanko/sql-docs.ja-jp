@@ -1,7 +1,7 @@
 ---
 title: "統計情報 (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +65,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +85,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +144,11 @@ CREATE STATISTICS statistics_name
   
  次に、Production.BillOfMaterials テーブルのフィルター述語の例をいくつか示します。  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  フィルター述語の詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。  
   
@@ -184,28 +190,38 @@ CREATE STATISTICS statistics_name
  パーティションごとの統計がサポートされていない場合は、エラーが生成されます。 次の種類の統計では、増分統計がサポートされていません。  
   
 -   ベース テーブルにパーティションで固定されていないインデックスを使用して作成された統計。  
-  
 -   Always On の読み取り可能なセカンダリ データベースに対して作成された統計。  
-  
 -   読み取り専用のデータベースに対して作成された統計。  
-  
 -   フィルター選択されたインデックスに対して作成された統計。  
-  
 -   ビューに対して作成された統計。  
-  
 -   内部テーブルに対して作成された統計。  
-  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
+MAXDOP = *max_degree_of_parallelism*  
+**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3)。  
+  
+ 上書き、**並列処理の次数の最大**統計操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
+  
+ *max_degree_of_parallelism*を指定できます。  
+  
+ @shouldalert  
+ 並列プラン生成を抑制します。  
+  
+ \>1  
+ 指定した数以内の現在のシステム ワークロードに基づいて並列統計操作で使用されるプロセッサの最大数を制限します。  
+  
+ 0 (既定値)  
+ 現在のシステム ワークロードに基づいて、実際の数以下のプロセッサを使用します。  
+  
+ \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## <a name="permissions"></a>アクセス許可  
  これらのアクセス許可のいずれかが必要です。  
   
 -   ALTER TABLE  
-  
 -   ユーザーがテーブルの所有者  
-  
 -   メンバーシップ、 **db_ddladmin**固定データベース ロール  
   
 ## <a name="general-remarks"></a>全般的な解説  
@@ -224,8 +240,9 @@ CREATE STATISTICS statistics_name
  [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)カタログ ビューは、参照元の依存関係としてフィルター選択された統計情報の述語内の各列を追跡します。 フィルター選択された統計情報の述語で定義されているテーブル列の定義を削除、名前変更、または変更することはできないので、フィルター選択された統計情報を作成する前に、テーブル列で実行する操作を検討してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-*  テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、削除し、統計を再作成します。  
-*  統計オブジェクトごとの最大 64 個の列を一覧表示できます。
+* テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、削除し、統計を再作成します。  
+* 統計オブジェクトごとの最大 64 個の列を一覧表示できます。
+* MAXDOP オプションは、STATS_STREAM、ROWCOUNT および PAGECOUNT オプションと互換性がありません。
   
 ## <a name="examples"></a>使用例  
 

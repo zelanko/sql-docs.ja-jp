@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  バックアップに含めるファイル グループの論理名、またはこの論理名を値として保持する変数を指定します。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。  
   
 > [!NOTE]  
->  データベースのサイズやパフォーマンス要件によりデータベース バックアップの実行が難しい場合は、ファイル単位のバックアップを検討してください。  
+>  データベースのサイズやパフォーマンス要件によりデータベース バックアップの実行が難しい場合は、ファイル単位のバックアップを検討してください。 NUL デバイスは、バックアップのパフォーマンスをテストするために使用できますが、実稼働環境では使用できません。
   
  *n*  
  複数のファイルおよびファイル グループを、コンマで区切ったリストで指定できることを示すプレースホルダーです。 数値の制限はありません。 
@@ -227,8 +227,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  { *logical_device_name* | **@***logical_device_name_var* }  
  データベースのバックアップが作成されるバックアップ デバイスの論理名を指定します。 論理名は、識別子のルールに従う必要があります。 変数として指定する場合 (@*logical_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 (@*logical_device_name_var*  **=** 論理バックアップ デバイス名)、または任意の文字の文字列データ型以外の変数として、 **ntext**または**テキスト**データ型。  
   
- {ディスク |テープ |URL}  **=**  { **'***physical_device_name***'**  |   **@** *physical_device_name_var* }  
- ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、次を参照してください。 [SQL Server のバックアップと Microsoft Azure Blob ストレージ サービスによる復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。 チュートリアルについては、次を参照してください。[チュートリアル: SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)です。  
+ {ディスク |テープ |URL}  **=**  { **'***physical_device_name***'**  |   **@** *physical_device_name_var* |NUL}  
+ ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、次を参照してください。 [SQL Server のバックアップと Microsoft Azure Blob ストレージ サービスによる復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。 チュートリアルについては、次を参照してください。[チュートリアル: SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)です。 
+
+[!NOTE] 
+ NUL ディスク デバイスは、送信される情報はすべて失わし、テストにのみ使用する必要があります。 本番用途ではありません。
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]まで SP1 CU2 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]URL にバックアップする場合のみ 1 台のデバイスにバックアップすることができます。 URL にバックアップする場合は、複数のデバイスにバックアップをするために使用する必要があります[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]し Shared Access Signature (SAS) トークンを使用する必要があります。 共有アクセス署名を作成する例については、次を参照してください。 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)と[Powershell による Azure Storage に Shared Access Signature (SAS) トークンで、SQL 資格情報の作成を簡素化](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)です。  
@@ -236,6 +239,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 **URL が対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  ディスク デバイスは、BACKUP ステートメントで指定するときにまだ存在していなくてもかまいません。 物理デバイスが既に存在し、BACKUP ステートメントに INIT オプションが指定されていない場合、バックアップはデバイスに追加されます。  
+ 
+ ただし、バックアップは引き続きマーク設定のすべてのページをバックアップ、NUL デバイスは、このファイルに送信されるすべての入力を破棄します。
   
  詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。  
   
@@ -310,7 +315,7 @@ MIRROR TO \<backup_device > [ **、**. *n*  ]、バックアップ デバイス�
 以下のオプションは、このバックアップ操作で作成されるバックアップ セットに対して有効なオプションです。  
   
 > [!NOTE]  
->  復元操作用のバックアップ セットを指定するファイルを使用して **=**   *\<backup_set_file_number >*オプション。 バックアップ セットを指定する方法の詳細についてを参照してください「バックアップ セットの指定" [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  復元操作用のバックアップ セットを指定するファイルを使用して **=**   *\<backup_set_file_number >*オプション。 バックアップ セットを指定する方法の詳細についてを参照してください「バックアップ セットの指定" [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。
   
  COPY_ONLY  
  バックアップがあるを指定します、*コピーのみのバックアップ*、これは通常のバックアップ シーケンスには影響しません。 コピーのみのバックアップは定期的に行われる従来のバックアップとは別に作成するもので、 コピーのみのバックアップはありません、全体的なバックアップと復元、データベースのプロシージャです。  
@@ -346,7 +351,7 @@ DESCRIPTION **=** { **'***text***'** | **@***text_variable* }
 {EXPIREDATE **='***日付***'**|RETAINDAYS  **=**  *日数*}  
 このバックアップのバックアップ セットがいつ上書きできるようになるかを指定します。 オプションを両方とも使用した場合は、RETAINDAYS が EXPIREDATE よりも優先されます。  
   
-有効期限の日付がによって決まりますがどちらのオプションが指定されている場合、 **mediaretention**構成設定。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
+有効期限の日付がによって決まりますがどちらのオプションが指定されている場合、 **mediaretention**構成設定。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
   
 > [!IMPORTANT]  
 >  これらのオプションを防ぐだけ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルを上書きするからです。 テープは別の方法で消去することができ、ディスク ファイルはオペレーティング システムで削除できます。 有効期限の確認の詳細については、このトピックの「SKIP」および「FORMAT」を参照してください。  
@@ -359,7 +364,7 @@ EXPIREDATE  **=**  { **'***日付***'** |   **@** *date_var* }
 -   A **smalldatetime**  
 -   A **datetime**変数  
   
-例:  
+例 :  
   
 -   `'Dec 31, 2020 11:59 PM'`  
 -   `'1/1/2021'`  
@@ -649,7 +654,7 @@ GO
 |ミラー|メディア ファミリ 1|メディア ファミリ 2|メディア ファミリ 3|  
 |------------|--------------------|--------------------|--------------------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  1 つのメディア ファミリは常に、特定のミラー内の同じデバイス上にバックアップされる必要があります。 したがって、既存のメディア セットを使用するときは毎回、メディア セットを作成したときと同じ順序で各ミラーのデバイスを列挙してください。  
   
@@ -714,10 +719,10 @@ GO
   
 復元が行われる場合、バックアップ セットがまだに記録されていない場合、 **msdb**データベース、バックアップ履歴テーブルを変更する可能性があります。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、**パスワード**と**MEDIAPASSWORD**バックアップを作成するオプションが廃止されました。 これは、パスワード付きで作成されたバックアップを復元することも可能です。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>アクセス許可  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
  バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  

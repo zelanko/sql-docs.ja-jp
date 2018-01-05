@@ -1,7 +1,7 @@
 ---
 title: "ALTER データベース スコープ ベースの構成 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -28,20 +28,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2867f3aff5b8d6d7256d2a9a4ecbe7dcfdccb88c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER データベース スコープ ベースの構成 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このステートメントで複数のデータベース構成設定を使用する、**個々 のデータベース**レベル。 このステートメントは、両方で使用できる[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]し、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 これらの設定は次のとおりです。  
+  このステートメントで複数のデータベース構成設定を使用する、**個々 のデータベース**レベル。 このステートメントで使用できる[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]および以降の SQL Server で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 これらの設定は次のとおりです。  
   
 - プロシージャ キャッシュをクリアします。  
   
-- プライマリ データベースに対して、MAXDOP パラメーターを特定のデータベースに最適な内容に基づいて任意の値 (1、2、...) に設定し、(クエリ レポートなどに) 使用されるすべてのセカンダリ データベースに対して別の値 (0 など) を設定します。  
+- プライマリ データベースが特定のデータベースに最適に基づいており、別の値の設定の任意の値 (1、2、...) に、MAXDOP パラメーターを設定 (0 など) すべてのセカンダリ データベースを使用 (レポート クエリなど)。  
   
 - データベースに依存しないクエリ オプティマイザーの基数推定モデルを互換性レベルに設定します。  
   
@@ -50,8 +50,10 @@ ms.lasthandoff: 01/02/2018
 - データベース レベルでのクエリ最適化の修正プログラムを有効または無効にします。
 
 - 有効にするにまたはデータベース レベルで id キャッシュを無効にします。
+
+- 有効にするにまたは、バッチが初めてコンパイルされるときに、キャッシュに格納されるコンパイル済みプランのスタブを無効にします。 
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,6 +73,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 }  
 ```  
   
@@ -85,7 +88,7 @@ MAXDOP  **=**  {\<値 > |プライマリ}
   
 ステートメントの MAXDOP 設定を使用する既定値を指定します。 0 では、既定値をサーバーの構成が代わりに使用されることを示します。 データベース スコープで MAXDOP オーバーライド (場合を除く 0 に設定されています)、**並列処理の次数の最大**sp_configure でサーバー レベルで設定します。 クエリ ヒントでは、DB をオーバーライドできますもを別の設定を必要とする特定のクエリをチューニングするために MAXDOP をスコープします。 これらすべての設定は、MAXDOP、ワークロード グループの設定によって制限されます。   
 
-max degree of parallelism オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 SQL Server で並列実行プランをクエリ、インデックス データ定義言語 (DDL) 操作、並列挿入、オンライン alter 列、並行統計 collectiion および静的およびキーセット ドリブン カーソルの作成。
+max degree of parallelism オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 SQL Server で並列実行プランをクエリ、インデックス データ定義言語 (DDL) 操作、並列挿入、オンライン alter 列、並行統計コレクション、および静的およびキーセット ドリブン カーソルの作成。
  
 インスタンス レベルでは、このオプションを設定するを参照してください。 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)です。 
 
@@ -94,7 +97,7 @@ max degree of parallelism オプションを使用すると、並列プラン実
   
 PRIMARY  
   
-プライマリ上のデータベース中に、セカンダリに対してのみ設定して、構成が 1 つのセットをプライマリになることを示します。 構成のプライマリの変更では、セカンダリ上の値が変更される場合それに応じてを設定する必要がないセカンダリ値明示的に必要です。 **プライマリ**セカンダリの既定の設定です。  
+プライマリ上のデータベース中に、セカンダリに対してのみ設定して、構成が 1 つのセットをプライマリになることを示します。 構成変更については、プライマリ、セカンダリ上の値が変更される場合それに応じて、セカンダリを設定する必要はありません値に明示的にです。 **プライマリ**セカンダリの既定の設定です。  
   
 LEGACY_CARDINALITY_ESTIMATION  **=**  {ON |**OFF** |プライマリ}  
 
@@ -116,7 +119,7 @@ PARAMETER_SNIFFING  **=**  { **ON** |OFF |プライマリ}
   
 PRIMARY  
   
-この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、すべてのセカンダリでは、この設定に値が、プライマリの設定値であることを指定します。 場合を使用するため、プライマリ上の構成[パラメーターを見つけ出す](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)変更、セカンダリ上の値が変更されます適宜を設定する必要がないセカンダリ値、明示的に必要です。 これは、セカンダリの既定の設定です。  
+この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、すべてのセカンダリでは、この設定に値が、プライマリの設定値であることを指定します。 場合、構成を使用するため、プライマリ上[パラメーターを見つけ出す](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)変更、セカンダリ上の値が変更されますそれに応じて設定する必要がないセカンダリ値に明示的にします。 これは、セカンダリの既定の設定です。  
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |プライマリ}  
 
@@ -127,7 +130,7 @@ QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |プライマリ}
   
 PRIMARY  
   
-この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、すべてのセカンダリでは、この設定に値が、プライマリの設定値であることを指定します。 構成のプライマリの変更では、セカンダリ上の値が変更される場合それに応じてを設定する必要がないセカンダリ値明示的に必要です。 これは、セカンダリの既定の設定です。  
+この値は、プライマリ上でデータベース中にセカンダリでのみ有効ですし、すべてのセカンダリでは、この設定に値が、プライマリに設定された値を指定します。 構成変更については、プライマリ、セカンダリ上の値が変更された場合はそれに応じてを設定する必要がないセカンダリ値明示的にです。 これは、セカンダリの既定の設定です。  
   
 クリア PROCEDURE_CACHE  
 
@@ -142,6 +145,12 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
 > [!NOTE] 
 > このオプションは、プライマリの場合にのみ設定できます。 詳細については、次を参照してください。 [id 列](create-table-transact-sql-identity-property.md)です。  
 
+OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }  
+
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+有効またはバッチが初めてコンパイルされるときに、キャッシュに格納されるコンパイル済みプランのスタブを無効にします。 既定値は OFF です。 データベース スコープの構成データベースは、コンパイル済みプランのスタブ OPTIMIZE_FOR_AD_HOC_WORKLOADS が有効になっている場合、バッチのキャッシュに保存されますが、最初にコンパイルされます。 プランのスタブは、完全なコンパイル済みプランのサイズと比較して、小さいメモリ使用量があります。  バッチがコンパイルまたは再実行された場合、コンパイル済みプランのスタブは削除され、コンパイル済みプランの完全に置き換えられます。
+
 ##  <a name="Permissions"></a> Permissions  
  必要と任意のデータベース スコープ構成を変更します   
 上のデータベースです。 データベースに対する CONTROL 権限を持つユーザーは、この権限を付与することができます。  
@@ -149,9 +158,9 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
 ## <a name="general-remarks"></a>全般的な解説  
  セカンダリ データベースがプライマリからのさまざまなスコープを持つ構成設定を構成するときに、すべてのセカンダリ データベースは、同じ構成を使用します。 個々 のセカンダリには、さまざまな設定を構成することはできません。  
   
- このステートメントを実行すると、すべてのクエリを再コンパイルする必要があることを意味、現在のデータベースでプロシージャ キャッシュがクリアされます。  
+ このステートメントを実行するすべてのクエリが再コンパイルする必要が、現在のデータベースでプロシージャ キャッシュをクリアします。  
   
- 3 部構成の名前のクエリでクエリの現在のデータベース接続の設定が受け入れられない場合以外は、現在のデータベース コンテキストでコンパイルしている SQL モジュール (プロシージャ、関数、およびトリガーなど) とそのためのオプションを使用して、データベースが存在します。  
+ 3 部構成の名前のクエリでクエリの現在のデータベース接続の設定が SQL モジュール (プロシージャ、関数、トリガーなど) では、現在のデータベース コンテキストでコンパイルされた以外の受け入れられ、およびそのためのオプションを使用して、データベースが存在します。  
   
  ALTER_DATABASE_SCOPED_CONFIGURATION イベントは、DDL トリガーを起動するために使用できる DDL イベントとして追加されます。 これは、ALTER_DATABASE_EVENTS トリガー グループの子です。  
   
@@ -172,15 +181,15 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
   
 **QUERY_OPTIMIZER_HOTFIXES**  
   
- Querytraceon ですヒントを使用して、従来のクエリ オプティマイザーまたはクエリ オプティマイザー修正プログラムを有効にする、クエリ ヒントとデータベース スコープの構成設定であり、いずれかが有効な場合、オプションが適用されます、OR 条件があります。  
+ Querytraceon ですヒントを使用して、従来のクエリ オプティマイザーまたはクエリ オプティマイザー修正プログラムを有効にする、クエリ ヒントとデータベース スコープの構成設定であり、オプションを適用するかが有効な場合、OR 条件があります。  
   
 **GeoDR**  
   
- Always On 可用性グループや GeoReplication などの読み取り可能なセカンダリ データベースは、データベースの状態をチェックして、セカンダリの値を使用します。 場合でも、フェールオーバーでは再コンパイルしないし、技術的には新しいプライマリがセカンダリの設定を使用しているクエリ、つまり、ワークロードが異なると、キャッシュされたクエリは、そのために、プライマリとセカンダリの間で設定が異なるだけこと新しいクエリでは、それらの適切な新しい設定を取得します。 一方、最適な設定を使用します。  
+ Always On 可用性グループや GeoReplication などの読み取り可能なセカンダリ データベースは、データベースの状態をチェックして、セカンダリの値を使用します。 場合でも、フェールオーバーで再コンパイルは発生しないと、技術的には新しいプライマリがセカンダリの設定を使用しているクエリ、つまり、ワークロードが異なると、キャッシュされたクエリは、そのために、プライマリとセカンダリの間で設定をのみ変化します。最適な設定を使用して、一方、新しいクエリがそれらに対応する新しい設定を選択します。  
   
 **DacFx**  
   
- ALTER DATABASE SCOPED CONFIGURATION が Azure SQL データベースおよびデータベース スキーマに影響する SQL Server 2016 の新機能であるため (またはデータなし)、スキーマのエクスポートことはできません古いバージョンの SQL Server にインポートする[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]または <。c2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] です。 エクスポートなど、 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)または[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)から、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]または[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]この新しい機能を使用するデータベースが下位レベルのサーバーにインポートすることはありません。  
+ ALTER データベース スコープのため構成は、ことへの影響、データベースのスキーマ (またはデータなし)、スキーマのエクスポートはできません、古いバージョンの SQL Server にインポートする SQL Server 2016 以降の Azure SQL Database と SQL Server の新機能例:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]または[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]です。 エクスポートなど、 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)または[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)から、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]または[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]この新しい機能を使用するデータベースが下位レベルのサーバーにインポートすることはありません。  
   
 ## <a name="metadata"></a>メタデータ  
 
@@ -241,8 +250,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
-この例ではプライマリ データベースでは、セカンダリ データベースの PARAMETER_SNIFFING を設定します。   
-geo レプリケーションのシナリオです。  
+この例では、geo レプリケーションのシナリオではプライマリ データベース上にあるように、セカンダリ データベースの PARAMETER_SNIFFING を設定します。  
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
@@ -250,8 +258,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES を設定します。  
 
-プライマリ データベースの QUERY_OPTIMIZER_HOTFIXES を ON に設定します。   
-geo レプリケーションのシナリオです。  
+プライマリ データベースの地理的レプリケーション シナリオでは、QUERY_OPTIMIZER_HOTFIXES を ON に設定します。  
 
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
@@ -275,6 +282,16 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 
+### <a name="h-set-optimizeforadhocworkloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS を設定します。
+
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+この例では、バッチが初めてコンパイルされるときに、キャッシュに格納されるコンパイル済みプランのスタブが有効にします。
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
+```
+
 ## <a name="additional-resources"></a>その他のリソース
 
 ### <a name="maxdop-resources"></a>MAXDOP リソース 
@@ -290,13 +307,12 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [「パラメーターが僕されます」です。](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES リソース    
-* [トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+* [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server クエリ オプティマイザーの修正プログラム トレース フラグ 4199 サービス モデル](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>詳細情報  
- [sys.database_scoped_configurations &#40;です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [サーバー構成オプション &#40;です。SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40;です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
-  
-  
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [データベースとファイルのカタログ ビュー](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [サーバー構成オプション](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ 
