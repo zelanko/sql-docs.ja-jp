@@ -24,7 +24,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2017
 ---
-# <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
   データの出力先とデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[テーブルのコピーまたはクエリの指定]**が表示されます。 このページで、次のいずれかのオプションを選択します。
 -   **1 つ以上のテーブルまたはビューからデータをコピーする**が表示されます。 一覧からテーブル (複数可) を選択します。
 -   **転送するデータを指定するためのクエリを記述する**が表示されます。 SQL クエリのテキストを入力するか貼り付けます。
