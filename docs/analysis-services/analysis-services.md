@@ -54,7 +54,7 @@ Analysis Services がクラウドで Azure のサービスとして使用でき�
  モデルを作成し、サーバーに配置するには、いずれか、テーブルまたは多次元およびデータ マイニング プロジェクト テンプレートを選択する SQL Server Data Tools を使用します。 プロジェクト テンプレートには、モデルで必要とされるすべてのオブジェクトのフォルダーが含まれています。 多くのデータ ソース、リレーションシップ、メジャー、およびロールに接続するなどの基本的な要素を作成するウィザードとデザイナーのヘルプ。 モデル データベースがサーバーに展開した後は、データ処理の構成、監視、およびサーバーとデータベースを管理する SQL Server Management Studio (SSMS) を使用します。 詳細については、次を参照してください。[ツールと Analysis Services で使用されるアプリケーション](../analysis-services/tools-and-applications-used-in-analysis-services.md)です。 
   
 ## <a name="documentation-by-area"></a>領域別のドキュメント  
-一般的な Azure Analysis Services に関するドキュメントは、Azure のドキュメントに含まれて。 また、SQL Server Analysis Services のドキュメントが SQL のドキュメントに含まれる。 、には、少なくとも、表形式モデルの作成方法と、プロジェクトの配置が使用しているどのようなプラットフォームに関係なくほとんど同じです。  
+一般的に、 Azure Analysis Services に関するドキュメントは Azure のドキュメントに含まれます。また、 SQL Server Analysis Services に関する資料は SQL のドキュメントに含まれます。しかし、少なくとも表形式モデルに関しては、どのプラットフォームを使用しているかに関わらず、プロジェクトの作成方法と展開方法は同じです。
    
 *  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
 *  [SQL Server Analysis Services の新機能](../analysis-services/what-s-new-in-analysis-services.md)   
