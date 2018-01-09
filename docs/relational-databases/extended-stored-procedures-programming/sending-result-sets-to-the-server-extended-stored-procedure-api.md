@@ -8,7 +8,7 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 37eb992a4ef260b1d8b94991e95fae6e9326bd6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0dd49eba42bd735430bd73f244e76a13c8315806
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>結果セットのサーバーへの送信 (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Srv_sendmsg**前に、または後で送信されたすべての行 (あれば)、任意の順序で関数を呼び出すことが**srv_sendrow**です。 完了ステータスを送信する前に、クライアントにすべてのメッセージを送信する必要があります**srv_senddone**です。  
   
--   **Srv_sendrow**関数は、クライアントに送信される各行につき 1 回呼び出されます。 すべての行は、メッセージ、状態値の前に、クライアントに送信する必要がありますまたは完了状態を送信する**srv_sendmsg**、 **srv_status**の引数**srv_pfield**、または**srv_senddone**です。  
+-   **srv_sendrow** 関数は、クライアントに送信される各行につき 1 回呼び出されます。 すべての行は、メッセージ、状態値の前に、クライアントに送信する必要がありますまたは完了状態を送信する**srv_sendmsg**、 **srv_status**の引数**srv_pfield**、または**srv_senddone**です。  
   
 -   すべての列で定義されていない行を送る**srv_describe**により、アプリケーションは、情報エラー メッセージを発生させるし、クライアントに FAIL が返さです。 この場合、その行は送信されません。  
   

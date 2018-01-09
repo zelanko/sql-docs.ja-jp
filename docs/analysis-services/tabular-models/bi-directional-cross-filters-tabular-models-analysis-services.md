@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0ffd9fce046edae4098f965f2cc2967fa7f1e3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>双方向クロス フィルター - テーブル モデルの Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新しい SQL Server 2016 では、組み込みのアプローチを有効にする*双方向クロス フィルター*テーブル モデルでテーブル リレーションシップ間でフィルター コンテキストを反映するために DAX 式を手動で作成必要があります。  
@@ -123,7 +121,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  ContosoRetailDW データベースを選択します。  
   
-4.  **[次へ]**をクリックします。  
+4.  **[次へ]** をクリックします。  
   
 5.  テーブルの選択では、Ctrl キーを押しながら次のテーブルを選択します。  
   

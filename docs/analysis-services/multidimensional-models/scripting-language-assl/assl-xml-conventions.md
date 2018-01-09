@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9627648fa47b750f4b9b98b45b5878cea0806961
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 規則
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services スクリプト言語 (ASSL) は、定義されている子要素を含めることができる要素型のセットとしてオブジェクトの階層を表します。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
  これらの規則の他にも、Analysis Services は基数、継承、空白文字、データ型、既定値などに関する一定の規則に従います。  
   
-## <a name="cardinality"></a>Cardinality  
+## <a name="cardinality"></a>基数  
  要素に 1 より大きい基数がある場合は、この要素をカプセル化する XML 要素のコレクションがあります。 コレクションの名前は、コレクションに含まれている要素の複数形を使用します。 たとえば、次の XML フラグメントを表す、**ディメンション**内のコレクション、**データベース**要素。  
   
  `<Database>`  
@@ -135,7 +133,7 @@ ms.lasthandoff: 12/08/2017
  **Long**  
  -263 ～ 263 - 1 の範囲の整数値。  
   
- **文字列**  
+ **String**  
  次のグローバル ルールに従う文字列値。  
   
 -   制御文字は除去されます。  
@@ -158,7 +156,7 @@ ms.lasthandoff: 12/08/2017
 |XML データ型|既定値|  
 |-------------------|-------------------|  
 |**ブール値**|False|  
-|**文字列**|"" (空の文字列)|  
+|**String**|"" (空の文字列)|  
 |**整数**または**長**|0 (ゼロ)|  
 |**タイムスタンプ**|12時 00分: 00、1/1/0001 (に対応する、.NET フレームワーク**System.DateTime** 0 タイマー刻みで)|  
   

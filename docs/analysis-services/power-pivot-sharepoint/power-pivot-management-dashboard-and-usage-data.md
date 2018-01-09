@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d275e7cbe68ddd7dca965d50d05d1777711b48e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理ダッシュ ボードが定義済みのレポートのコレクションで、SQL Server を管理するのに役立つ、SharePoint サーバーの全体管理の web パーツ[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint の配置。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |ブックの利用状況 - リスト|データ アクセスの頻度をレポートします。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データ ソースへの接続が発生する頻度を日単位または週単位で確認できます。|  
 |データ更新 - 最近の利用状況|データ更新ジョブの状態をレポートします (実行に失敗したジョブを含む)。 このレポートは、データ更新操作をアプリケーション レベルで総合的に理解するのに役立ちます。 管理者は、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション全体に対して定義されているデータ更新ジョブの数が一目でわかります。|  
 |データ更新 - 最近のエラー|データ更新が正常に完了しなかった [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックを一覧表示します。|  
-|レポート|Excel で開くことができるレポートへのリンクを示します。|  
+|[レポート]|Excel で開くことができるレポートへのリンクを示します。|  
   
 ##  <a name="open"></a> Power Pivot 管理ダッシュボードを開く  
  ダッシュボードには、一度に 1 つの [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの情報が表示されます。 管理ダッシュボードは、異なる 2 つの場所から開くことができます。  

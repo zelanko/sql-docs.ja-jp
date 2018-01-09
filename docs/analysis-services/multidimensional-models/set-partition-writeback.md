@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-partition-writeback"></a>パーティションの書き戻しの設定
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]場合は書き込みを有効にする、メジャー グループ、エンドユーザーは、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルで変更を保存する場所を参照しながらキューブ データを変更できます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
  パーティションの書き戻しテーブルに含まれるデータは、パーティションに変換できます。 この手順により、書き戻しテーブルは新しいパーティションのファクト テーブルになります。  
   
 > [!CAUTION]  
->  パーティションの使い方が不適切な場合、キューブ データが不正確になることがあります。 詳細については、「[ローカル パーティションの作成と管理 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)」を参照してください。  
+>  パーティションの使い方が不適切な場合、キューブ データが不正確になることがあります。 詳細については、「 [ローカル パーティションの作成と管理 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)」を参照してください。  
   
  書き戻しデータ テーブルをパーティションに変換すると、パーティションの書き込みも無効になります。 パーティションのセルの無制限読み取り/書き込みポリシーと読み取り/書き込み (Read/Write) 権限はすべて無効になり、エンド ユーザーは表示されるキューブ データを変更できなくなります。 無制限読み取り/書き込みポリシーまたは読み取り/書き込み権限が無効であるエンド ユーザーでもキューブを参照できます。読み取り (Read) 権限と条件付き読み取り (Read-Contingent) 権限は影響を受けません。  
   

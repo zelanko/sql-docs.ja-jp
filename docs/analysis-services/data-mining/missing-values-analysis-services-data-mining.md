@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>不足値 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]処理*欠損値*効果的なモデル化の重要な部分を正しくです。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
@@ -56,10 +54,10 @@ ms.lasthandoff: 12/08/2017
   
  たとえば次の表は、Bike Buyer チュートリアルのために作成されたデシジョン ツリー モデルの (すべて) ノードの値の分布を示しています。 この例のシナリオでは、[Bike Buyer] 列は予測可能な属性です。1 は "Yes" を表し、0 は "No" を表します。  
   
-|Value|ケース|  
+|値|ケース|  
 |-----------|-----------|  
 |0|9296|  
-|1|9098|  
+|@shouldalert|9098|  
 |Missing|0|  
   
  この分布からは、自転車を購入した顧客と購入しなかった顧客の数がほぼ半々であることがわかります。 このデータセットは完璧であるため、すべてのケースが [Bike Buyer] 列の値を持ち、 **Missing** 値の数は 0 になっています。 しかし、[Bike Buyer] フィールドに NULL のケースがあった場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、その行が **Missing** 値を持つケースとしてカウントされます。  
@@ -72,10 +70,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="adjusting-probability-for-missing-states"></a>不足状態のための確率の調整  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、値がカウントされるだけでなく、データセット全体での値の確率も計算されます。 これは、 **Missing** 値にも当てはまります。 たとえば次の表は、前の例のケースの確率を示しています。  
   
-|Value|ケース|確率|  
+|値|ケース|確率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-|1|9098|49.42%|  
+|@shouldalert|9098|49.42%|  
 |Missing|0|0.03%|  
   
  **Missing** 値の確率が、ケースの数が 0 なのに 0.03% として計算されているのは奇妙に見えるかもしれません。 実のところ、この動作は意図的なものであり、モデルで不明な値を適切に処理できるようにするための調整を表しています。  
@@ -111,18 +109,18 @@ ms.lasthandoff: 12/08/2017
   
  この調整の最終的な効果として、ツリーの安定性が維持されます。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  次のトピックでは、不足値の処理方法の詳細について説明します。  
   
 |処理手順|リンク|  
 |-----------|-----------|  
-|不足値の処理を制御するためのフラグを個々のモデル列に追加する。|[モデリング フラグの表示または変更 (データ マイニング)](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|不足値の処理を制御するためのフラグを個々のモデル列に追加する。|[モデリング フラグの表示または変更 &#40;データ マイニング&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |マイニング モデルに、不足値の処理を制御するためのプロパティを設定する。|[マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
 |DMX でモデリング フラグを指定する方法を習得する。|[モデリング フラグ (DMX)](../../dmx/modeling-flags-dmx.md)|  
 |マイニング構造が不足値を処理する方法を変更する。|[マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>「  
- [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>参照  
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [モデリング フラグ (データ マイニング)](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

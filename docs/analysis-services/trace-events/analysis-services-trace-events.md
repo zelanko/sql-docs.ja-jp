@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bda0bd4dac6b7f60bbda2fd9562af9fa2ebe9abb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services トレース イベント
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]取得し、インスタンスによって生成されるトレース イベントを分析して、Microsoft SQL Server Analysis Services (SSAS) インスタンスのアクティビティを行うことができます。  トレース イベントは、関連するトレース イベントをより簡単に見つけることができるようにグループ化されます。  各トレース イベントには、イベントに関連するデータのセットが含まれています。データのすべての部分がすべてのイベントに関連するわけではありません。  
@@ -174,7 +174,7 @@ ms.lasthandoff: 12/08/2017
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
 |------------------|--------------------|---------------------------|  
-|1|Audit Login|SQL Server のインスタンスを実行するサーバーへの接続をクライアントが要求したときなど、トレースが開始された後の接続イベントをすべて収集します。|  
+|@shouldalert|Audit Login|SQL Server のインスタンスを実行するサーバーへの接続をクライアントが要求したときなど、トレースが開始された後の接続イベントをすべて収集します。|  
 |2|Audit Logout|クライアントが切断コマンドを発行したときなど、トレースが開始された後の切断イベントをすべて収集します。|  
 |4|Audit Server Starts And Stops|サービスのシャットダウン、起動、一時停止のアクティビティを記録します。|  
 |18|Audit Object Permission Event|オブジェクト権限の変更を記録します。|  

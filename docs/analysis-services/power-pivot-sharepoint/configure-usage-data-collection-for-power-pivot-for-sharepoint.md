@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f939c078a2b21cfa16a4f36228b46822f2bc8457
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用状況データ収集は、ファーム レベルの SharePoint 機能です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint では、このシステムを使用および拡張して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデータやサービスがどのように使用されているかを示すレポートが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
@@ -132,7 +129,7 @@ ms.lasthandoff: 12/08/2017
   
      データは、次のイベントが発生したときに実際に削除されます。 使用状況データ履歴の制限は、システムがイベントを処理したときにのみ確認されます。  
   
-3.  **[OK]**をクリックします。  
+3.  **[OK]** をクリックします。  
   
  使用状況データが収集および格納されるしくみの詳細については、「 [Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)」を参照してください。  
   
@@ -155,7 +152,7 @@ ms.lasthandoff: 12/08/2017
   
      この制限を超えるすべての要求は、 *超過*と分類されます。 *超過*についての構成可能なしきい値はありません。 [長い応答の上限] で指定した上限から推測されます。 超過カテゴリに分類される要求は、定義した SLA によって許容される時間よりも長く実行される要求です。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ##  <a name="ttr"></a> クエリ統計を使用状況データ収集システムに報告する頻度の指定  
  レポート間隔によって、クエリ統計を使用状況データ収集システムに報告する頻度を指定します。 クエリ統計は、プロセス内で蓄積され、単一のイベントとして定期的に報告されます。 この間隔を調整して、ログ ファイルに書き込む頻度を増減させることができます。  
@@ -170,7 +167,7 @@ ms.lasthandoff: 12/08/2017
   
      この値を大幅に増やすと、統計データが報告前に失われる可能性があります。 たとえば、サービスを再起動すると、クエリ統計が失われます。 逆に、組み込みの利用状況レポートに十分なデータが表示されない場合、間隔を短くして、レポート間隔イベントをより頻繁に取得することを検討してください。  
   
-3.  **[OK]**をクリックします。  
+3.  **[OK]** をクリックします。  
   
 ##  <a name="openconfig"></a> Power Pivot サービス アプリケーションのページを開いて構成設定にアクセスする  
  サービス アプリケーションの設定を変更するには、ファームまたはサービスの管理者であることが必要です。 ファームで複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを定義した場合は、それぞれを個別に変更する必要があります。  
@@ -195,7 +192,7 @@ ms.lasthandoff: 12/08/2017
 |**Usage data history**|365 (日)|Integer|0 は無制限を示しますが、履歴データが期限切れとなる上限を設定し、履歴データを自動的に削除することもできます。 限られた保持期間の有効な値は 1 ～ 5,000 (日) です。|  
 |[簡易応答の上限]|500 (ミリ秒単位)|Integer|簡易要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 0 ～ 500 ミリ秒で完了する要求は簡易要求であり、レポートでは無視されます。|  
 |迅速な応答の上限|1000 (ミリ秒単位)|Integer|迅速な要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
-|[想定される応答の上限]|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
+|想定される応答の上限|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
 |長い応答の上限|10,000 (ミリ秒)|Integer|長い要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 この上限を超えるすべての要求は、上限のしきい値がない超過カテゴリに分類されます。|  
   
 ## <a name="see-also"></a>参照  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot の認証および承認
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint、SharePoint 2010 ファーム内で実行される配置が SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連のすべての操作はファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のコンテンツや操作にまで及ぶことになります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
@@ -96,7 +93,7 @@ ms.lasthandoff: 12/08/2017
 |ファームまたはサービス管理者|サービスおよびアプリケーションをインストール、有効化、および構成します。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードを使用し、管理レポートを表示します。|  
 |フル コントロール|サイト コレクション レベルで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能統合をアクティブ化します。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリを作成します。<br /><br /> データ フィード ライブラリを作成します。|  
 |投稿|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを追加、編集、削除、およびダウンロードします。<br /><br /> データ更新を構成します。<br /><br /> SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに基づいて新しいブックやレポートを作成します。<br /><br /> データ フィード ライブラリにデータ サービス ドキュメントを作成します。|  
-|読み取り|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに外部データ ソースとしてアクセスします。ブックの URL は接続ダイアログ ボックス (たとえば、Excel のデータ接続ウィザード) で明示的に入力されます。|  
+|Read|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに外部データ ソースとしてアクセスします。ブックの URL は接続ダイアログ ボックス (たとえば、Excel のデータ接続ウィザード) で明示的に入力されます。|  
 |表示のみ|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを表示します。<br /><br /> データ更新履歴を表示します。<br /><br /> ローカル ブックを SharePoint サイト上の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに接続し、そのデータの用途を変更します。<br /><br /> ブックのスナップショットをダウンロードします。 スナップショットは、スライサー、フィルター、式、またはデータ接続を含まない、データの静的なコピーです。 スナップショットの内容は、ブラウザー ウィンドウからのセル値のコピーに似ています。|  
   
 ##  <a name="excel"></a> Excel Services での Power Pivot ブックのセキュリティに関する考慮事項  
@@ -115,7 +112,7 @@ ms.lasthandoff: 12/08/2017
 |信頼できる場所|場所の種類|この値は、 **[Microsoft SharePoint Foundation]**に設定されている必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーは、.xlsx ファイルのコピーを取得して、それをファーム内の Analysis Services サーバーに読み込みます。 このサーバーはコンテンツ ライブラリから .xlsx ファイルのみを取得できます。|  
 ||外部データの許可|この値は、 **[信頼できるデータ接続ライブラリと、埋め込まれている接続]**に設定されている必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ接続は、ブックに埋め込まれています。 埋め込み接続を禁止した場合、ユーザーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] キャッシュは表示できますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを操作することはできなくなります。|  
 ||更新時の警告|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを使用してブックやレポートを格納している場合は、この値を無効にする必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーには、[開くときに更新する] と [更新時の警告] の両方がオフになっているときに最適に動作するドキュメント プレビュー機能が含まれています。|  
-|信頼できるデータ プロバイダー|MSOLAP.4<br /><br /> MSOLAP.5|既定では MSOLAP.4 が含まれますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスでは、MSOLAP.4 プロバイダーが SQL Server 2008 R2 バージョンである必要があります。<br /><br /> MSOLAP.5 は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] バージョンと共にインストールされます。<br /><br /> これらのプロバイダーは、信頼できるデータ プロバイダー一覧から削除しないでください。 場合によっては、ファーム内の別の SharePoint サーバーにもこのプロバイダーの追加のコピーをインストールすることが必要になることもあります。 「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。|  
+|信頼できるデータ プロバイダー|MSOLAP.4<br /><br /> MSOLAP.5|既定では MSOLAP.4 が含まれますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスでは、MSOLAP.4 プロバイダーが SQL Server 2008 R2 バージョンである必要があります。<br /><br /> MSOLAP.5 は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] バージョンと共にインストールされます。<br /><br /> これらのプロバイダーは、信頼できるデータ プロバイダー一覧から削除しないでください。 場合によっては、ファーム内の別の SharePoint サーバーにもこのプロバイダーの追加のコピーをインストールすることが必要になることもあります。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。|  
 |信頼できるデータ接続ライブラリ|省略可。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックでは、Office データ接続 (.odc) ファイルを使用できます。 .odc ファイルを使用してローカル [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに接続情報を提供する場合、同じ .odc ファイルをこのライブラリに追加できます。|  
 |ユーザー定義関数アセンブリ|該当なし。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint では、Excel Services 用にビルドし、配置するユーザー定義関数アセンブリは無視されます。 特定の動作でユーザー定義アセンブリに依存している場合、作成したユーザー定義関数は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリ処理で使用されないことに留意してください。|  
   

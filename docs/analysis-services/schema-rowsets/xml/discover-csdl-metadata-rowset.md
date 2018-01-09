@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]に関する情報を返します、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データ モデル (テーブルまたは多次元)、CSDLBI 形式 (Conceptual Schema Definition Language BI 注釈付き) でモデルの定義を提供します。 CSDLBI は、Entity Data Framework によって使用される XML スキーマである CSDL に基づくもので、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーと [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] クライアントの間の通信に使用されます。 ビジネス インテリジェンス (BI) 注釈は、テーブル モデルとテーブル モデル内のオブジェクトに関する追加のメタデータを提供します。 テーブル データ モデルの詳細については、「[ビジネス インテリジェンス向け CSDL 注釈 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)」を参照してください。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
  行セットとして返された XML 文字列には、次の言語固有のプロパティまたは値が含まれていることがあります。 たとえば、LCID が 0403 (Catalan Spanish) であるクライアントから行セット要求を発行した場合、プロパティからは、Catalan Spanish に応じた適切な値が返されます。 サーバー上に翻訳が存在しない場合は、サーバーの既定の言語の文字列が返されます。  
   
--   Caption  
+-   [キャプション]  
   
 -   Qualifier  
   

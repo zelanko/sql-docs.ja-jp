@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]ディメンション名、その属性、および各属性のメンバーの数を含むデータベースの名前を含む、ディメンションに関する情報を提供します。 テーブル モデルでは、これはテーブルの列および各列の値の数に相当します。  
@@ -36,8 +34,8 @@ ms.lasthandoff: 12/08/2017
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|必須|ディメンションを含むデータベースの名前。<br /><br /> この列は制限リストに必要です。|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|必須|ディメンションの名前。<br /><br /> この列は制限リストに必要です。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Required|ディメンションを含むデータベースの名前。<br /><br /> この列は制限リストに必要です。|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Required|ディメンションの名前。<br /><br /> この列は制限リストに必要です。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||ディメンションの属性の名前。|  
 |**ATTRIBUTE_COUNT**|**DBTYPE_I8**||指定された属性の値の数。 テーブル モデルでは、値は常にテーブル内の行数と同じです。|  
   

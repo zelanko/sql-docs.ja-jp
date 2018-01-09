@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38eb6dae47c01758b3ca3b5c04794014b247b495
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバーで現在実行中のジョブによって実行されたクォータ付与内部メモリの一覧を返します。 サーバーでジョブが実行されているかどうかを調べるには、`Select * from $System.Discover_Jobs` を使用します。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MEMORY_ID**|**DBTYPE_I8**||メモリ クォータ付与を識別する番号。 1 つの DISCOVER_MEMORYGRANT 要求のコンテキスト内で一意です。|  
-|**SPID**|**DBTYPE_I4**|必須|SPID は、`Select * from $System.Discover_Sessions` を実行することにより取得できます。|  
+|**SPID**|**DBTYPE_I4**|Required|SPID は、`Select * from $System.Discover_Sessions` を実行することにより取得できます。|  
 |**CreationTime**|**DBTYPE_I8 DBTYPE_DBTIMESTAMP**||クォータが付与された時刻。|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||クォータ要求を前回変更した時刻。|  
 |**MemoryUsed**|**DBTYPE_I4**||クォータに関連して使用されたメモリの量。|  

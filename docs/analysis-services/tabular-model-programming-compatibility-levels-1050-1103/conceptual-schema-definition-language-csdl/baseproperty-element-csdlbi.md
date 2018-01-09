@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0dfb628e7c70edf6e5daf197e3f0d48d4cc9b20
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7f28d100ef59df6fe73b8dd93d1fbfebdb87bbb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]BaseProperty 要素は、その他の要素の基本クラスとして機能する複合型です。  
@@ -34,13 +32,13 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、BaseProperty 要素を定義する要素と属性を示します。  
   
-|名前|必須かどうか|Description|  
+|[オブジェクト名]|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
-|Alignment|いいえ|Member 型の実装によって定義されるメンバー (列、メジャー、ナビゲーション プロパティ、階層、またはレベル) に与えられた名前。|  
-|FormatString|いいえ|メンバーの表示名。|  
-|IsRightToLeft|いいえ|右から左に読むことができるテキストをフィールドが含むかどうかを示すブール値。<br /><br /> この属性が省略されると、(モデルの) 既定の設定が使用されます。|  
-|SortDirection|いいえ|フィールド値の一般的な並べ替え方法を示す値。 この属性の内容は SortDirection 単純型によって定義されます。<br /><br /> この属性が省略されると、フィールドのデータ型に基づいて既定の並べ替え方向が決定されます。|  
-|単位|いいえ|単位を表現するためにフィールド値に適用される記号。<br /><br /> 省略された場合、単位は不明です。|  
+|Alignment|不可|Member 型の実装によって定義されるメンバー (列、メジャー、ナビゲーション プロパティ、階層、またはレベル) に与えられた名前。|  
+|FormatString|不可|メンバーの表示名。|  
+|IsRightToLeft|不可|右から左に読むことができるテキストをフィールドが含むかどうかを示すブール値。<br /><br /> この属性が省略されると、(モデルの) 既定の設定が使用されます。|  
+|SortDirection|不可|フィールド値の一般的な並べ替え方法を示す値。 この属性の内容は SortDirection 単純型によって定義されます。<br /><br /> この属性が省略されると、フィールドのデータ型に基づいて既定の並べ替え方向が決定されます。|  
+|単位|不可|単位を表現するためにフィールド値に適用される記号。<br /><br /> 省略された場合、単位は不明です。|  
   
 ## <a name="alignment-element"></a>Alignment 要素  
  この単純型は、メンバーを明確に識別するために使用される名前付け形式を定義します。  

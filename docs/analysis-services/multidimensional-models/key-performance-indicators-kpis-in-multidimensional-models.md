@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多次元モデルの主要業績評価指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ビジネス用語では、主要業績評価指標 (KPI) は、ビジネスの成功度を判断するための測定値をことです。  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |----------|----------------|  
 |[目標]|KPI のターゲット値を返す MDX 数値式または計算。|  
 |値|KPI の実際の値を返す MDX 数値式。|  
-|[状態]|特定時点の KPI の状態を示す MDX 式。<br /><br /> 状態 MDX 式は、-1 ～ 1 の正規化された値を返します。 -1 以下の値は "不良" または "低" と解釈されます。 値 0 は "許容値" または "中" と解釈されます。 1 以上の値は、"良" または "高" と解釈されます。<br /><br /> 中間値は数の制限なく返すことができ、クライアント アプリケーションでサポートされていれば、それを使用して任意の数の状態情報を表示できます。|  
+|状態|特定時点の KPI の状態を示す MDX 式。<br /><br /> 状態 MDX 式は、-1 ～ 1 の正規化された値を返します。 -1 以下の値は "不良" または "低" と解釈されます。 値 0 は "許容値" または "中" と解釈されます。 1 以上の値は、"良" または "高" と解釈されます。<br /><br /> 中間値は数の制限なく返すことができ、クライアント アプリケーションでサポートされていれば、それを使用して任意の数の状態情報を表示できます。|  
 |傾向|一定期間にわたり、KPI の値を評価する MDX 式。 傾向は、特定のビジネス コンテキストで役に立つ任意の時間ベースの条件です。<br /><br /> 傾向 MDX 式を使用すると、ビジネス ユーザーは、一定期間内の KPI の上下を判断できるようになります。|  
 |状態インジケーター|KPI の状態をわかりやすく示す視覚的要素。 要素の表示は、状態を評価する MDX 式の値によって決まります。|  
 |傾向インジケーター|KPI の傾向をわかりやすく示す視覚的要素。 要素の表示は、傾向を評価する MDX 式の値によって決まります。|  

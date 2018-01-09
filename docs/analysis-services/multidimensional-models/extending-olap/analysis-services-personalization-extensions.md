@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bcc21da9d0f0297bf5db834d3ec66acdb3be397a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services のパーソナル化拡張機能
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、プラグイン アーキテクチャを実装するという概念の基盤です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、次を実現するためにできるようにする機能を提供します。  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/08/2017
 #### <a name="new-adomdconnection-class"></a>新しい AdomdConnection クラス  
  新しく追加された <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> クラスは、プロパティとイベントの両方を介していくつかのパーソナル化拡張機能を公開します。  
   
- **プロパティ**  
+ **[プロパティ]**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>: 現在の接続のセッション ID を表す読み取り専用の文字列値です。  
   
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/08/2017
 #### <a name="new-server-class"></a>新しい Server クラス  
  新しく追加された <xref:Microsoft.AnalysisServices.AdomdServer.Server> クラスは、クラスのプロパティとイベントの両方を介していくつかのパーソナル化拡張機能を公開します。  
   
- **プロパティ**  
+ **[プロパティ]**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>: サーバー名を表す読み取り専用の文字列値です。  
   

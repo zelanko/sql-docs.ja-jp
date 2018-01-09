@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="impersonation"></a>権限借用 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックは、表形式モデルの作成者ログオン資格情報の使用方法の Analysis Services によってデータ ソースに接続するときに (更新) のデータをインポートおよび処理について理解を提供します。  
@@ -81,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |**特定の Windows ユーザー名とパスワード**|このオプションは、モデルで使用するインポートまたはデータ ソースからデータを処理する Windows ユーザー アカウントを指定します。 ドメインとユーザー アカウントの名前は、次の形式:**\<ドメイン名 >\\< ユーザー アカウント名\>**です。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
 |**[サービス アカウント]**|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
   
-##  <a name="bkmk_impers_sec"></a> セキュリティ  
+##  <a name="bkmk_impers_sec"></a> Security  
  偽装と共に使用される資格情報は、メモリ内に保存 VertiPaq™ エンジンによってが。 資格情報が書き込まれることをディスクにします。 ワークスペース データベースがメモリ内ではないモデルを配置するときに場合、は、データ ソースとデータのフェッチへの接続に使用する資格情報の入力を求められます。  
   
 > [!NOTE]  

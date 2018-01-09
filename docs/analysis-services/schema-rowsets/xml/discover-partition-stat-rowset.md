@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0660deb042e8b3d0c665152779fc6900833b26d9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 649475fa5fd1a4e0bb2a6c734f916270ac7f9a64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]特定のパーティションの集計に関する統計情報を返します。  
@@ -36,10 +34,10 @@ ms.lasthandoff: 12/08/2017
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|必須|ディメンションを含むデータベースの名前。<br /><br /> この列は制限リストに必要です。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|必須|パーティションを含むキューブまたはテーブル モデルの名前です。<br /><br /> この列は制限リストに必要です。|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|必須|ディメンション内のメジャー グループの名前です。<br /><br /> この列は制限リストに必要です。|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|必須|パーティションの名前。<br /><br /> この列は制限リストに必要です。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Required|ディメンションを含むデータベースの名前。<br /><br /> この列は制限リストに必要です。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Required|パーティションを含むキューブまたはテーブル モデルの名前です。<br /><br /> この列は制限リストに必要です。|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Required|ディメンション内のメジャー グループの名前です。<br /><br /> この列は制限リストに必要です。|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|Required|パーティションの名前。<br /><br /> この列は制限リストに必要です。|  
 |**AGGREGATION_NAME**|**DBTYPE_WSTR**||集計の名前です。|  
 |**AGGREGATION_SIZE**|**DBTYPE_I8**||集計のサイズです。|  
   

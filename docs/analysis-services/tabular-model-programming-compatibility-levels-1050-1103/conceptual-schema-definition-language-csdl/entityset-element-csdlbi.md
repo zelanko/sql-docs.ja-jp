@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20401dbc3487931219009811c83694c7f2f19703
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entityset-element-csdlbi"></a>EntitySet 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntitySet 要素は、CSDLBI データ モデル内の特定の種類のエンティティのコレクションを定義します。  
@@ -38,10 +36,10 @@ ms.lasthandoff: 12/08/2017
   
 |属性名|必須かどうか|Description|  
 |--------------------|-----------------|-----------------|  
-|Caption|いいえ|エンティティ セットについてのわかりやすい説明。|  
-|CollectionCaption|いいえ|エンティティの複数形の名前を表す文字列です。|  
-|ReferenceName|いいえ|エンティティのマージされていない完全修飾名を含みます。 多次元モデルでは CubeDimension 名に対応します。|  
-|[非表示]|いいえ|エンティティが非表示かどうかを示します。 既定ではエンティティは非表示ではありません。|  
+|[キャプション]|不可|エンティティ セットについてのわかりやすい説明。|  
+|CollectionCaption|不可|エンティティの複数形の名前を表す文字列です。|  
+|ReferenceName|不可|エンティティのマージされていない完全修飾名を含みます。 多次元モデルでは CubeDimension 名に対応します。|  
+|[非表示]|不可|エンティティが非表示かどうかを示します。 既定ではエンティティは非表示ではありません。|  
   
 ## <a name="example"></a>例  
  **テーブル**  

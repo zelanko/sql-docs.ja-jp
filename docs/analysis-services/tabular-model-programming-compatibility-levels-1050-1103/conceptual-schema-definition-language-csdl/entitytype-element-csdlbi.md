@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 303f09187528dd7fa2c897fea5fd86ec6d7f23d9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**EntityType**要素は複合型であり、顧客やデータ モデル内の注文などの高レベルのエンティティの構造体を表します。 **Bi: EntityType**要素の定義を拡張する[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)で使用される、 [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx)です。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表は、要素と属性を定義する、 **EntityType**要素。 適用される属性を参照しても、 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx)要素。  
   
-|名前|必須かどうか|Description|  
+|[オブジェクト名]|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
 |目次|不可|列内のデータの種類を含む文字列です。 値は、データ モデルの DimensionAttributeTypeEnumType の値から取得されます。<br /><br /> DimensionAttributeTypeEnumType の値が ExtendedType の場合は、Contents の値は DimensionAttribute の ExtendedType 要素から取得されます。 クライアントはこれらの値に対応する必要はありません。|  
 |DefaultDetails|不可|プロパティ参照のリスト。テーブル内の列のセットを表します。<br /><br /> 参照してください[DefaultDetails 要素 &#40;です。CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
@@ -60,10 +58,10 @@ ms.lasthandoff: 12/08/2017
 |Accounts|財務報告用の勘定科目一覧表を表す属性。|  
 |Customers|顧客情報や連絡先情報を表す属性。|  
 |Products|製品情報を表す属性。|  
-|Scenario|計画的または戦略的な分析情報を表す属性。|  
+|シナリオ|計画的または戦略的な分析情報を表す属性。|  
 |Quantitative|量的な情報を表す属性。|  
 |Utility|その他の情報を表す属性。|  
-|Currency|通貨のデータとメタデータが含まれます。|  
+|通貨|通貨のデータとメタデータが含まれます。|  
 |Rates|通貨レート情報を表す属性。|  
 |Channel|チャネル情報を表す属性。|  
 |Promotion|マーケティング関連のプロモーション情報を表す属性。|  

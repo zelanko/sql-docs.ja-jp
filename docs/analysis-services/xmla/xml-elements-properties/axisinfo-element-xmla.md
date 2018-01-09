@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AxisInfo Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69c1a17e7badcab61023d353314ac4c273c81a0b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ad12131fe961f279bf0d670d91ab03900a8a6ad1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親に含まれる 1 つの軸のメタデータを表す[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)要素。  
@@ -52,11 +50,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|Cardinality|1-n : 必須要素で、複数回の出現が可能です|  
+|基数|1-n : 必須要素で、複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
 |属性|Description|  
 |---------------|-----------------|  
-|名前|必要な**文字列**属性。 軸の名前です。|  
+|[オブジェクト名]|必要な**文字列**属性。 軸の名前です。|  
   
 ## <a name="remarks"></a>解説  
  **ルート**を使用する要素、 **MDDataSet**オブジェクト、 **AxisInfo**要素のコレクションを含みます**HierarchyInfo**要素を、の値と組み合わせると、**名前**属性では、多次元データセットで返される 1 つの軸の定義を表します。  

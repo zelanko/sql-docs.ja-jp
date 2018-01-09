@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1d1caae0c63d1ffdbbed07940b35a4a822787f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Set-PowerPivotServiceApplication コマンドレット
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]プロパティを設定、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション。  
@@ -159,7 +159,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |ワイルドカード文字の受け入れ|オプション|  
   
 ### <a name="-datarefreshfailurethreshold-int"></a>-Datarefreshfailurethreshold & \<int >  
- スケジュールが無効にされる前に連続するエラーの数を指定します。 既定値は、10 です。 更新のエラーのためにスケジュールを無効にしない場合は 0 を入力することもできます。  
+ スケジュールが無効にされる前に連続するエラーの数を指定します。 既定値は 10 です。 更新のエラーのためにスケジュールを無効にしない場合は 0 を入力することもできます。  
   
 |||  
 |-|-|  

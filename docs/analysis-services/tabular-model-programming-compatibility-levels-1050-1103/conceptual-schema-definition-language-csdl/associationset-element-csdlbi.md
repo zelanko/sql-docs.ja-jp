@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet**要素は複合型であり、関連付けを定義します。 CSDLBI データ モデルでは、関連付けは 2 つのテーブル間のリレーションシップを表します。  
@@ -34,10 +32,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="applicable-attributes"></a>該当する属性  
  次の表に、**AssociationSet** 要素を定義する要素と属性を示します。  
   
-|名前|必須かどうか|Description|  
+|[オブジェクト名]|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
 |状態|可|関連付けがアクティブかどうかを示す文字列。 値は State 要素によって定義されます。|  
-|[非表示]|いいえ|リレーションシップが表示されるかどうかを示すブール値。 既定では Hidden の値は **false** で、モデル内のすべてのリレーションシップが表示されます。|  
+|[非表示]|不可|リレーションシップが表示されるかどうかを示すブール値。 既定では Hidden の値は **false** で、モデル内のすべてのリレーションシップが表示されます。|  
   
 ## <a name="state-element"></a>State 要素  
  **State** 要素は、関連付けがアクティブで、計算で使用される状態と、関連付けが非アクティブで、計算で明示的に参照される必要がある状態のどちらであるかを示す単純型です。  

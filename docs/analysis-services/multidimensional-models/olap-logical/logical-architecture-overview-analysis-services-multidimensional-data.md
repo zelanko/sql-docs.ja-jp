@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を決定するサーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートします。 **SharePoint 統合モード**としてインストールされた Analysis Services のインスタンスを指す[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の読み込みと Excel のクエリを実行するために使用 for SharePoint、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブック内のデータ モデル。  
@@ -119,12 +117,12 @@ ms.lasthandoff: 12/08/2017
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|パッケージ|Last|  
-|3516987|1|6|1|15|年 1 月-10-99|  
-|3554790|1|6|1|40|年 1 月 19 99 の範囲|  
-|3572673|1|6|1|34|Jan-27-99|  
-|3600974|1|6|1|45|Feb-02-99|  
-|3645541|1|6|1|20|Feb-09-99|  
-|3674906|1|6|1|36|Feb-17-99|  
+|3516987|@shouldalert|6|@shouldalert|15|年 1 月-10-99|  
+|3554790|@shouldalert|6|@shouldalert|40|年 1 月 19 99 の範囲|  
+|3572673|@shouldalert|6|@shouldalert|34|Jan-27-99|  
+|3600974|@shouldalert|6|@shouldalert|45|Feb-02-99|  
+|3645541|@shouldalert|6|@shouldalert|20|Feb-09-99|  
+|3674906|@shouldalert|6|@shouldalert|36|Feb-17-99|  
   
  上記の表に行のそれぞれがの値が同一、 **RouteKey**、 **SourceKey**、および**TimeKey**列、これらの行が同じキューブ セルに貢献ことを示すです。  
   

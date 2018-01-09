@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45e4461956c78278d367715e8ef665821d487e3f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>Restore コマンド (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]バックアップ ファイルから Analysis Services データベースを復元します。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**プロパティ**|**[Default]**|**Description**|  
-|database|[必須]|復元するデータベース オブジェクトの名前。|  
+|[データベース]|[必須]|復元するデータベース オブジェクトの名前。|  
 |file|[必須]|バックアップ ファイル名またはパス。|  
 |パスワード|空|バックアップ ファイルを復号化に使用するパスワード。|  
 |allowOverwrite|False|True の場合、バックアップ ファイルがすでに存在することを示すブール値が上書きされます。それ以外の場合は false。|  

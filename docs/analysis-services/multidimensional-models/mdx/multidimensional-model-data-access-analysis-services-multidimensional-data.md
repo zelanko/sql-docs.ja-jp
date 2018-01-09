@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックの情報を使用してアクセスする方法について[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]プログラム方法、スクリプト、またはに接続するための組み込みサポートが含まれているクライアント アプリケーションを使用してデータを多次元、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ネットワーク上のサーバー。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
  次の Microsoft アプリケーションでは、多次元データへのネイティブ接続がサポートされます。  
   
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>[エクスポート]  
  通常、Analysis Services の多次元データの表示には、Excel ブックのピボット テーブルとピボット グラフ コントロールが使用されます。 モデル内の階層と集計、ナビゲーション構造は、ピボットテーブルのデータ サマリー機能と相性がよいことから、ピボットテーブルは多次元データに適しています。 データ接続を簡単にセットアップできるように、Analysis Services OLE DB データ プロバイダーは Excel のインストールに含まれています。 詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](http://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
   
 ### <a name="reporting-services-reports"></a>Reporting Services レポート  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
   
  SQL Server データ ツールは Visual Studio のシェルをベースに構築されており、モデルの編成と格納にはプロジェクトが使用されます。 詳細については、「[SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)」を参照してください。  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
  データベース管理者にとって SQL Server Management Studio は、多次元データベースや Analysis Services のインスタンスを含む、SQL Server のインスタンスを管理するための統合環境です。 詳細については、「 [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b) 」と「 [Analysis Services への接続](../../../analysis-services/instances/connect-to-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_querylang"></a> クエリ言語  

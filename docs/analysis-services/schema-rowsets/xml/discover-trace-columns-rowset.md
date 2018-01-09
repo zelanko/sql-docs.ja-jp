@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9cdeebfead1e664db65d9a08112497199442ca1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 75e41e8d4784d04570eaebafc0efc607a45f40b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]トレースに表示される列を記述する XML ドキュメントを返します。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**データ**|**DBTYPE_WSTR**|可|トレース プロバイダーによって提供されるトレース列に関する情報を記述するエンコードされた XML 文字列が含まれています。|  
+|**Data**|**DBTYPE_WSTR**|可|トレース プロバイダーによって提供されるトレース列に関する情報を記述するエンコードされた XML 文字列が含まれています。|  
   
  このスキーマ行セットは並べ替えられません。  
   

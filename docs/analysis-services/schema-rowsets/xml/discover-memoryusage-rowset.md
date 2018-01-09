@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d1f0c2dd179e54760eeff4254c19265105e08f3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバーによって割り当てられるさまざまなオブジェクトの DISCOVER_MEMORYUSAGE 統計を返します。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 |**ElementCount**|**DBTYPE_UI4**||コンテナー オブジェクトの場合、これはそのオブジェクトに含まれるオブジェクトの数です。|  
 |**圧縮可能**|**DBTYPE_BOOL**|可|メモリが圧縮可能かどうかを示すブール値 (メモリ不足により解放することができます)。 true の場合メモリは圧縮可能であり、false の場合メモリは圧縮不能です。|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||このオブジェクトの完全なパスを識別する文字列。|  
-|**ObjectID**|**DBTYPE_WSTR**||オブジェクトを識別する文字列。 このオブジェクトの完全なパスが、文字列で表される: (ObjectParentPath + '.' + ObjectId)。|  
+|**Exchange Spill**|**DBTYPE_WSTR**||オブジェクトを識別する文字列。 このオブジェクトの完全なパスが、文字列で表される: (ObjectParentPath + '.' + ObjectId)。|  
   
  このスキーマ行セットは並べ替えられません。  
   

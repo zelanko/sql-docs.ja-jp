@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>補足レッスン - Power View レポートのレポートのプロパティを構成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 このレッスンの推定所要時間: **30 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 この補足のレッスンは表形式モデルの作成チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
 この補足のレッスンを完了するには、次の準備も必要です。  
   
@@ -155,7 +155,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Customer**  
   
-    |列|プロパティ|値|  
+    |[列]|プロパティ|値|  
     |----------|------------|---------|  
     |[Geography Id]|[非表示]|True|  
     |[Birth Date]|データ形式|短い日付|  
@@ -165,9 +165,9 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
     > [!NOTE]  
     > Date テーブルは「レッスン 7: 日付テーブルとしてマーク」で、[日付テーブルとしてマーク] 設定を使ってモデル日付テーブルとして選択されています。また、Date テーブルの Date 列は一意の識別子として使われる列です。そのため、Date 列の [行識別子 (ROWID)] プロパティは自動的に True に設定され、変更することができません。 DAX 式でタイム インテリジェンス関数を使用するときは、日付テーブルを指定する必要があります。 このモデルでは、タイム インテリジェンス関数を使用していくつかのメジャーを作成して、さまざまな期間 (前四半期と現四半期など) の売上データを計算しました。これは KPI にも使用できます。 日付テーブルの指定の詳細については、SQL Server オンライン ブックの「[タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)」を参照してください。  
   
-    |列|プロパティ|値|  
+    |[列]|プロパティ|値|  
     |----------|------------|---------|  
-    |Date|データ形式|短い日付|  
+    |date|データ形式|短い日付|  
     |Day Number of Week|[非表示]|True|  
     |Day Name|[列で並べ替え]|Day Number of Week|  
     |Day of Week|[非表示]|True|  
@@ -182,14 +182,14 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Geography**  
   
-    |列|プロパティ|値|  
+    |[列]|プロパティ|値|  
     |----------|------------|---------|  
     |[Geography Id]|[非表示]|True|  
     |Sales Territory Id|[非表示]|True|  
   
     **Product**  
   
-    |列|プロパティ|値|  
+    |[列]|プロパティ|値|  
     |----------|------------|---------|  
     |[Product Id]|[非表示]|True|  
     |Product Alternate Id|[既定のラベル]|True|  
@@ -199,7 +199,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Internet Sales**  
   
-    |列|プロパティ|値|  
+    |[列]|プロパティ|値|  
     |----------|------------|---------|  
     |[Product Id]|[非表示]|True|  
     |[Customer Id]|[非表示]|True|  

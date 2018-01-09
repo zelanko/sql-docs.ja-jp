@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f12f3aaada759d91c77d56bb4fc199d2b038eab4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]この記事では、Power View、SQL Server での多次元モデル機能について説明し、BI プロフェッショナルと管理者が組織に多次元モデルの Power View を実装する向けの重要な情報を提供します。  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
  ![Power View の多次元モデル アーキテクチャ](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View の多次元モデル アーキテクチャ")  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  **サーバーの要件**  
   
 -   多次元モードで実行されている Microsoft SQL Server 2016 Analysis Services  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
   
-## <a name="features"></a>機能  
+## <a name="features"></a>[機能]  
  **Power View のネイティブ サポート**  
   
  このリリースでは、多次元モデルで、SharePoint モードの Power View を使用した分析とビジュアル化がサポートされています。 多次元モデルで特別な構成は必要ありません。 ただし、Microsoft Excel や Microsoft Performance Point など、その他のクライアント ツールと比較すると、Power View での多次元モデル オブジェクトの表示形式にはいくつか違いがあります。 このリリースでは、Excel の Power View を使用した多次元モデルの分析とビジュアル化はサポートされていません。  
@@ -65,9 +62,9 @@ ms.lasthandoff: 12/08/2017
 |多次元オブジェクト|表形式オブジェクト|  
 |-----------------------------|--------------------|  
 |Cube|[モデル]|  
-|キューブ ディメンション|Table|  
-|ディメンション属性 (キー、名前)|列|  
-|[メジャー グループ]|Table|  
+|キューブ ディメンション|テーブル|  
+|ディメンション属性 (キー、名前)|[列]|  
+|[メジャー グループ]|テーブル|  
 |[メジャー]|[メジャー]|  
 |メジャー グループのないメジャー|Measures という名前のテーブル内|  
 |メジャー グループとキューブ ディメンションのリレーションシップ|リレーションシップ|  
@@ -226,7 +223,7 @@ ms.lasthandoff: 12/08/2017
   
  DISCOVER_CSDL_METADATA 要求には、次の制限があります。  
   
-|名前|必須|Description|  
+|[オブジェクト名]|Required|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|可|カタログ\データベース名。|  
 |PERSPECTIVE_NAME|キューブに複数のパースペクティブが含まれている場合は必須。 キューブが 1 つしかない場合や既定のパースペクティブがある場合は省略可能。|多次元データベース内のキューブ名またはパースペクティブ名。|  
