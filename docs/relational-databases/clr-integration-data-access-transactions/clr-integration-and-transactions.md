@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91af8f269dce39e8e707c570aba606f743b1a7e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 231d1a9904409f36b551cd6c314283dbc753bcde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 統合とトランザクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions**名前空間は ADO.NET と完全に統合される新しいトランザクション フレームワークを提供し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合します。 **System.Transactions**と ADO.NET は連携して拡張およびローカル トランザクションと分散トランザクションのマネージ アプリケーションでの使用を単純化します。  

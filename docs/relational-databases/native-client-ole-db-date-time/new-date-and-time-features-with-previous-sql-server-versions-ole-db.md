@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77f4f9bb86b2c04baf35cd9df02d3abbdb64e540
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c147dcd51706f9b67b6154ffc15bd449b0b27332
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新しい日付と時刻の機能と以前の SQL Server バージョン (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,19 +38,19 @@ ms.lasthandoff: 11/17/2017
   
 |OLE DB クライアントの型|SQL Server 2005 の型|SQL Server 2008 (またはそれ以降) の種類|結果の変換 (サーバーからクライアントへ)|パラメーターの変換 (クライアントからサーバーへ)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DateTime|日付|OK|OK|  
+|DBTYPE_DBDATE|DATETIME|date|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部は 0 でない場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIME||Time (7)|失敗します (時刻リテラルが無効です)。|OK|  
-|DBTYPE_DBTIMESTAMP|||失敗します (時刻リテラルが無効です)。|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|日付|OK|OK|  
+|DBTYPE_DBTIME||Time (7)|失敗します (時刻リテラルが無効です)。|[OK]|  
+|DBTYPE_DBTIMESTAMP|||失敗します (時刻リテラルが無効です)。|[OK]|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|[OK]|[OK]|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|[OK]|[OK]|  
+|DBTYPE_DBDATE|Smalldatetime|date|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部は 0 でない場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|[OK]|[OK]|  
   
  OK は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能した場合には、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降でも引き続き機能することを意味します。  
   
@@ -72,10 +72,10 @@ ms.lasthandoff: 11/17/2017
   
 |パラメーターの型|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|日付|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -86,10 +86,10 @@ ms.lasthandoff: 11/17/2017
   
 |列の型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|date|DBTYPE_WSTR|10|NULL|NULL|  
+|日付|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
@@ -98,10 +98,10 @@ ms.lasthandoff: 11/17/2017
   
 |パラメーターの型|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|日付|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -113,10 +113,10 @@ ms.lasthandoff: 11/17/2017
   
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|date|DBTYPE_WSTR|10|20|NULL|  
+|日付|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
@@ -125,19 +125,19 @@ ms.lasthandoff: 11/17/2017
   
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|date|DBTYPE_WSTR|10|20|date|  
+|日付|DBTYPE_WSTR|10|20|日付|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
+|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES 行セット  
  日付/時刻型に対して返される行を次に示します。  
   
-|型 -><br /><br /> 列|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|型 -><br /><br /> [列]|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/17/2017
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

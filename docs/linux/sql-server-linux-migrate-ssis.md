@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>抽出、変換、および SSIS Linux でのデータを読み込む
 
@@ -31,7 +31,7 @@ Linux で実行されている SSIS パッケージは、Windows、オンプレ�
 
 SSIS の機能に関する詳細については、次を参照してください。 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)です。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 最初を Linux コンピューターで SSIS パッケージを実行するには、SQL Server Integration Services をインストールする必要があります。 SSIS は、Linux コンピューターの SQL Server のインストールには含まれません。 インストール手順については、次を参照してください。 [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)です。
 
@@ -47,6 +47,34 @@ Linux コンピューターで、SSIS パッケージを実行するには、次
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
+## <a name="run-an-encrypted-password-protected-package"></a>暗号化された (パスワードで保護された) パッケージを実行します。
+これには、パスワードで暗号化されている SSIS パッケージを実行する 3 つの方法があります。
+
+1.  環境変数の値を設定`SSIS_PACKAGE_DECRYPT`次の例のように。
+
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
+
+2.  指定して、`/de[crypt]`対話形式で、次の例で示すように、パスワードを入力するオプション。
+
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
+
+3.  指定して、`/de`次の例のように、コマンド ラインで、パスワードを提供するオプションです。 このメソッドは、コマンド履歴にコマンドを使用して復号化パスワードを格納するためには推奨されません。
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
+
 ## <a name="design-packages"></a>パッケージの設計
 
 **ODBC データ ソースに接続**です。 Linux CTP 2.1 の更新以降、SSIS で SSIS パッケージは、Linux の ODBC 接続を使用できます。 この機能は、SQL Server および MySQL の ODBC ドライバーでテスト済みですはまた、ODBC 仕様に従うすべての Unicode ODBC ドライバーを使用する必要があります。 、デザイン時に、ODBC データに接続する DSN または接続文字列を指定できますWindows 認証を使用することもできます。 詳細については、次を参照してください。、 [Linux 上のブログの投稿 announcing ODBC サポート](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)です。
@@ -56,7 +84,7 @@ Linux コンピューターで、SSIS パッケージを実行するには、次
 ## <a name="deploy-packages"></a>パッケージを展開します。
 パッケージは、このリリースでは、Linux 上のファイル システムにのみ保存できます。 SSIS カタログ データベースと、レガシ SSIS サービスでは、パッケージの配置とストレージの Linux で使用できません。
 
-## <a name="schedule-packages"></a>パッケージのスケジュール
+## <a name="schedule-packages"></a>パッケージのスケジュール設定
 スケジューリング ツールなど、Linux システムを使用する`cron`パッケージをスケジュールします。 このリリースでは、パッケージの実行をスケジュールするのに Linux で SQL エージェントを使用することはできません。 詳細については、次を参照してください。 [cron を Linux 上のスケジュールの SSIS パッケージ](sql-server-linux-schedule-ssis-packages.md)です。
 
 ## <a name="limitations-and-known-issues"></a>制限事項と既知の問題

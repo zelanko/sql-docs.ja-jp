@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOPSUM
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a8535866b0bbf263cd4f9345dd2e8c10b7ae8889
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b6681b8cb16336c077ad4d3d6c54ab8da97c9a58
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *値*  
+ *[値]*  
  各組の比較の基準値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、メジャーを返す多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **TopSum**関数セットを降順で並べ替え、指定されたセットに対して評価される指定メジャーの合計を計算します。 次に、値の大きい方から、指定した数値式の合計が指定値以上になるように要素のセットを作成して返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!IMPORTANT]  
@@ -69,6 +69,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8212e4077187ac68835c732ecbaee0891ad461b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f030fff57fba783584d3b46ba5ad56d45771bf2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の補足の動的機能コードが報告されます。この動的機能コードでは、最後に試行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが特定されます。 動的機能コードは、診断レコード セットのヘッダー (レコード 0) に返されるので、各実行が成功しても失敗しても参照できます。  
   
-|動的機能コード|ソース|  
+|動的機能コード|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE ステートメント|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT ステートメント|  

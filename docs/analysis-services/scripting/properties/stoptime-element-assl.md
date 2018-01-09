@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StopTime Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6102abc0aa7b14d14a5bc1bcebc5e8a5d4c5d96
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fedfcb3eb2d75419927d8d3c2b0686e80954992
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="stoptime-element-assl"></a>StopTime 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]日付と時刻を指定、[トレース](../../../analysis-services/scripting/objects/trace-element-assl.md)要素を停止する必要があります。  
@@ -47,11 +45,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|DateTime|  
 |既定値|なし|  
-|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

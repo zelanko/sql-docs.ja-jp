@@ -1,26 +1,26 @@
 ---
 title: "どのような &#39; s Machine Learning のサービスの新機能 |Microsoft ドキュメント"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server の Machine Learning のサービスの新機能
 
@@ -34,9 +34,11 @@ SQL Server 2017、データベースに統合された機械学習は一般的�
 
 SQL Server でマシン学習サーバーは、構築および R または Python で machine learning ソリューションを配置するための包括的なサポートを提供します。 このリリースの要点を次に示します。
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>SQL Server 2017 累積的な更新プログラム 1 の新機能
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>SQL Server 2017 の累積更新プログラム 3 の新機能
 
-Machine Learning サーバー 9.2.1.24 に、Python と R コンポーネントをアップグレードすることができますようになりました。 このリリースの特徴は多くの機能強化**revoscalepy**と**RevoScaleR**パフォーマンスの向上を含むです。
+このリリースには、Python と R コンポーネントの更新プログラムが含まれています。 
+
++ Python モデルでのシリアル化 revoscalepy、rx_serialize_model 関数を使用してサポートが追加されました
 
 ### <a name="in-database-python-integration"></a>データベース内の Python の統合
 

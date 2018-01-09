@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d21033d8d839a11f4c511d7913f94b809a64881f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3f97137b00c611c1be5671f52d8e23cefb8c7c55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>モデルでリグレッサーとして使用する列の指定
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]線形回帰モデルでは、予測可能な属性の値を表す方法として、密接に可能な限りデータを収めることで、入力を結合する数式の結果として、推定回帰直線にします。 このアルゴリズムでは、入力として使用できるのは数値だけであり、最適な入力が自動的に検出されます。  

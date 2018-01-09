@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e47fb9f30ca2a6f3156d3ef4fb70565f31183a65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eaf6ef5624ccff8fac0885640efed5011cdc5b09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-options"></a>[復元オプション]
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]復元する方法はたくさんあります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース、サーバー コンピューターの両方の管理者権限を持つことが必要のある、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元するには、 **で** [データベースの復元] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを開き、このダイアログ ボックスから適切なオプション構成を選択して、復元を実行します。 または、ファイルに既に指定されている設定を使用してスクリプトを作成できます。このスクリプトを保存して、必要に応じて実行できます。 この場合、次のセクションの説明に従って、XMLA を使用して復元を実行します。  

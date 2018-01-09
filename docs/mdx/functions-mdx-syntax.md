@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d5c7ea60f1ee1bc59e1557bcd2e57278db75142e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 00259604fe891a21f6f52835b1844762a751f09a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="functions-mdx-syntax"></a>関数 (MDX 構文)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +34,11 @@ ms.lasthandoff: 11/27/2017
   多次元式 (MDX) には、特定の操作を実行するための固有の関数の分類がいくつかあります。 MDX で使用できる関数の分類を以下の表に示します。  
   
 > [!NOTE]  
->  個々 の関数の詳細については、次を参照してください。 [MDX 関数リファレンス &#40;です。MDX と #41 です;](../mdx/mdx-function-reference-mdx.md)。  
+>  個々 の関数の詳細については、次を参照してください。 [MDX 関数リファレンス &#40;です。MDX と #41 です](../mdx/mdx-function-reference-mdx.md)。  
   
 |関数の分類|Description|  
 |-----------------------|-----------------|  
-|配列関数|ストアド プロシージャで使用する配列を提供します。<br /><br /> 詳細については、次を参照してください。[ストアド プロシージャの使用 &#40;です。MDX と #41 です;](../mdx/using-stored-procedures-mdx.md)。|  
+|配列関数|ストアド プロシージャで使用する配列を提供します。<br /><br /> 詳細については、次を参照してください。[ストアド プロシージャの使用 &#40;です。MDX と #41 です](../mdx/using-stored-procedures-mdx.md)。|  
 |ディメンション関数|階層、レベル、またはメンバーから、ディメンションへの参照を返します。<br /><br /> 詳細については、次を参照してください。[を使用してディメンション、階層、およびレベル関数](../mdx/using-dimension-hierarchy-and-level-functions.md)です。|  
 |階層関数|レベルまたはメンバーから、階層への参照を返します。<br /><br /> 詳細については、次を参照してください。[を使用してディメンション、階層、およびレベル関数](../mdx/using-dimension-hierarchy-and-level-functions.md)です。|  
 |レベル関数|メンバー、ディメンション、階層、または文字列式から、レベルへの参照を返します。<br /><br /> 詳細については、次を参照してください。[を使用してディメンション、階層、およびレベル関数](../mdx/using-dimension-hierarchy-and-level-functions.md)です。|  
@@ -53,6 +53,6 @@ ms.lasthandoff: 11/27/2017
  関数は、任意の MDX 式の中に含めて使用することができます。 関数は入れ子にすることもできます。入れ子とは、関数の内部にさらに関数を使用することです。  
   
 ## <a name="see-also"></a>参照  
- [MDX 構文の要素 &#40;です。MDX と #41 です。](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 構文の要素 &#40;です。MDX と #41 です](../mdx/mdx-syntax-elements-mdx.md)  
   
   

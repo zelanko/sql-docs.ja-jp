@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f881435773a1a87969f1ad66c46cd9f55208071
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b74fcdb45f2f7fb85423da9faa629e3565b10209
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="the-data-connection-path-is-invalid"></a>データ接続パスが正しくありません。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]含む Excel ブック[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データ、Excel Services は、埋め込みデータ ソースに接続できない場合にこのエラーを返します。  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/08/2017
   
 5.  [外部データ] の [外部データの許可] で、 **[信頼できるデータ接続ライブラリと、埋め込まれている接続]**をクリックします。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
- または、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが含まれるサイト用に新しく信頼できる場所を作成し、そのサイトの構成設定だけを変更することもできます。 詳細については、「 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+ または、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが含まれるサイト用に新しく信頼できる場所を作成し、そのサイトの構成設定だけを変更することもできます。 詳細については、「 [サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
   

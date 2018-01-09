@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
 |SSPROP_MAXBLOBLENGTH|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_I4<br /><br /> 既定値 : プロバイダーは、サーバーから返されるテキストのサイズを制限しません。このプロパティの値は、サーバーの最大値に設定されます。 たとえば、2147483647 に設定されます。<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが SELECT ステートメントで返されるバイナリ ラージ オブジェクト (BLOB) データの長さを制限する SET TEXTSIZE ステートメントを実行します。|  
 |SSPROP_NOCOUNT_STATUS|列 : NoCount <br /><br /> R/w 読み取り専用<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SET NOCOUNT ON/OFF の状態を表すブール値です。<br /><br /> VARIANT_TRUE: SET NOCOUNT ON の場合<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF の場合|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR (許可される文字数 : 1 ～ 2,000 文字)<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知のメッセージ テキストです。 これはユーザーが定義するので、定義済みの書式はありません。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知オプションです。 これらは `name=value` 形式の文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。 クエリ通知オプションの文字列の構文です。<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 例:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知オプションです。 これらは `name=value` 形式の文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。 クエリ通知オプションの文字列の構文です。<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 例 :<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_UI4 <br /><br /> 既定値 : 432,000 秒 (5 日)<br /><br /> 最小値 : 1 秒<br /><br /> 最大値 : 2^31-1 秒<br /><br /> 説明 : クエリ通知をアクティブのままにしておく秒数です。|  
   
 ## <a name="see-also"></a>参照  

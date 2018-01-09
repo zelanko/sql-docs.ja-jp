@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6aa28e97c1fc20086dd03d1fc48173a02cde29d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f566aea6e37a41af0866df53a985f40eabf56c92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-smo-exceptions"></a>SMO 例外の処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]マネージ コードでは、エラーが発生したときに例外がスローされます。 SMO のメソッドやプロパティは、戻り値で成功や失敗をレポートしません。 代わりに、例外ハンドラーによって例外のキャッチと処理を行うことができます。  

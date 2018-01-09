@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d9a37e946ba4a660b205b948a7f52d2dc84e6f39
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2520764fdd298dc63d6af5b2d44fd41bd67160ce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>日付テーブルとしてマーク タイム インテリジェンスで使用するための指定します。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]DAX の数式でタイム インテリジェンス関数を使用するために、日付テーブルと Date データ型の一意識別子 (datetime) 列を指定する必要があります。 日付テーブルの列が一意の識別子として指定されている場合は、日付テーブル内の列と任意のファクト テーブルのリレーションシップを作成できます。  
@@ -47,9 +44,9 @@ ms.lasthandoff: 12/08/2017
   
 2.  **[テーブル]** メニュー、 **[日付]**、 **Mark as [日付] [テーブル]**の順にクリックします。  
   
-3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意識別子として使用する列を選択します。 この列は、一意の値を含んでいる必要があり、Date データ型である必要があります。 例:  
+3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意識別子として使用する列を選択します。 この列は、一意の値を含んでいる必要があり、Date データ型である必要があります。 例 :  
   
-    |[日付]|  
+    |date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  

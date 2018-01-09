@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: MEMBERTOSTR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f9f346e2dc1b02b8edd7c9e33908a28ce840e36e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c7c6ce3c1458c31d30c716720caf129d86d5425d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ MemberToStr(Member_Expression)
  *メンバー式*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、メンバーの一意の名前を表す文字列を返します。 通常、メンバーの一意の名前を外部関数に渡すために使用されます。  
   
 ## <a name="example"></a>例  

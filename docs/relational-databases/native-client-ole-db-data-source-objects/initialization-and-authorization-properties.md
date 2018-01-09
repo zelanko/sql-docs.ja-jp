@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6837fe5d825a12287cd46c122e5d3bcfc69c4e05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08cca5788a9e3908fd72fd415feaab72533b1480
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>初期化プロパティと承認プロパティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
  プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを追加のプロパティを定義します。 表示[データ ソース情報プロパティ](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)詳細についてはします。  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>SQL Server Native Client OLE DB プロバイダーの文字列  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、プロバイダーの文字列プロパティ値として、ODBC と同様の構文を認識します。 プロバイダーの文字列プロパティは、OLE DB データ ソースへの接続が確立される時点で、OLE DB 初期化プロパティ DBPROP_INIT_PROVIDERSTRING の値として提供されます。 このプロパティは、OLE DB データ ソースへの接続の実装に必要な OLE DB プロバイダー固有の接続データを示します。 この文字列内では、要素がセミコロンを使用して区切られます。 文字列の最後の要素には、セミコロンを付けて、終端を示す必要があります。 各要素は、キーワード、等号文字、初期化時に渡される値で構成されます。 例:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、プロバイダーの文字列プロパティ値として、ODBC と同様の構文を認識します。 プロバイダーの文字列プロパティは、OLE DB データ ソースへの接続が確立される時点で、OLE DB 初期化プロパティ DBPROP_INIT_PROVIDERSTRING の値として提供されます。 このプロパティは、OLE DB データ ソースへの接続の実装に必要な OLE DB プロバイダー固有の接続データを示します。 この文字列内では、要素がセミコロンを使用して区切られます。 文字列の最後の要素には、セミコロンを付けて、終端を示す必要があります。 各要素は、キーワード、等号文字、初期化時に渡される値で構成されます。 例 :  
   
 ```  
 Server=MyServer;UID=MyUserName;  

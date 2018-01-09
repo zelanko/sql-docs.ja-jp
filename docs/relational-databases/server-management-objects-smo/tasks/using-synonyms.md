@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: synonyms [SMO]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd77a87430f9b9405c9b6bc900f924cba66368ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf13a234a187b9da168cc77c26794131c8c32222
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-synonyms"></a>シノニムの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]シノニムとは、スキーマ スコープ オブジェクトの代替名です。 SMO では、シノニムがによって表される、<xref:Microsoft.SqlServer.Management.Smo.Synonym>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの子です。 これは、シノニムは、そのシノニムが定義されているデータベースのスコープ内でのみ有効であることを意味しています。 ただし、シノニムを別のデータベース上またはリモート インスタンス上のオブジェクトに参照できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  

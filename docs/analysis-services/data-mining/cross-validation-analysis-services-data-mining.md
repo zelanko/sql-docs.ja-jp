@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>相互検証 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*クロス検証*標準の分析ツールでは、開発し、データ マイニング モデルの微調整に役立つ重要な機能です。 マイニング構造および関連マイニング モデルを作成した後に、相互検証を使用してモデルの有効性を確認します。  相互検証には次の用途があります。  
@@ -199,6 +197,6 @@ ms.lasthandoff: 12/08/2017
 |各種の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
- [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

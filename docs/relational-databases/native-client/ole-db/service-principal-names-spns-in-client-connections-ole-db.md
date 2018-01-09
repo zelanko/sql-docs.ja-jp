@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2946428883f9db43a3f00ac2f6cb5ebfa4191dcb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2f4140619a98798e057c8e4ae85c1e99c58e68a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>クライアント接続 (OLE DB) でのサービス プリンシパル名 (SPN)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="data-source-initialization-properties"></a>データ ソース初期化プロパティ  
  次のプロパティ、 **DBPROPSET_SQLSERVERDBINIT**プロパティ セットを使用すると、アプリケーションの Spn を指定します。  
   
-|名前|型|使用方法|  
+|[オブジェクト名]|型|使用方法|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR、読み取り/書き込み|サーバーの SPN を指定します。 既定値は空の文字列です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR、読み取り/書き込み|フェールオーバー パートナーの SPN を指定します。 既定値は空の文字列です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="data-source-properties"></a>データ ソースのプロパティ  
  次のプロパティ、 **DBPROPSET_SQLSERVERDATASOURCEINFO**プロパティ セットを使用すると、認証方法を検出するアプリケーション。  
   
-|名前|型|使用方法|  
+|[オブジェクト名]|型|使用方法|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR、読み取り専用|接続に使用された認証方法を返します。 アプリケーションに返される値は、Windows が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client に返す値です。 返される値は次のとおりです。 <br />"NTLM"。これは NTLM 認証を使用して接続を開いたときに返されます。<br />"Kerberos"。これは Kerberos 認証を使用して接続を開いたときに返されます。<br /><br /> 接続が開いていて認証方法を特定できない場合は、VT_EMPTY が返されます。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 データ ソースが初期化される前に、プロパティの読み取りを試みると、IDBProperties::GetProperies は DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED、必要に応じて、返し DBPROPSET_PROPERTIESINERROR に DBPROPSTATUS_NOTSUPPORTED が設定されます。このプロパティです。 この動作は、OLE DB のコア仕様に従っています。|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL、読み取り専用|接続されているサーバーが相互に認証されている場合は VARIANT_TRUE を返し、それ以外の場合は VARIANT_FALSE を返します。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 ある場合、データ ソースが初期化される前に、プロパティを読み取ろうとして、IDBProperties::GetProperies は DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED、必要に応じて、返し DBPROPSET_ に DBPROPSTATUS_NOTSUPPORTED が設定されます。このプロパティの PROPERTIESINERROR します。 この動作は、OLE DB のコア仕様に従って、します。<br /><br /> Windows 認証を使用していない接続に対してこの属性が照会されると、VARIANT_FALSE が返されます。|  

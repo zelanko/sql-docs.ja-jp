@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cc03641e5c0757aba32964077e7ec72307abe3d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c409654fe8ae5ae504dcf4cad42c552ccb11ca22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>レッスン 8-1-を定義して、ドリルスルー アクションを使用します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]ファクト ディメンションによってファクト データをクエリ パフォーマンスが低下が発生することができます、クエリで返されるデータのフィルターを設定しない寸法。 これを回避するために、返される合計行数を制限するドリルスルー アクションを定義できます。 これにより、クエリのパフォーマンスが大幅に向上します。  

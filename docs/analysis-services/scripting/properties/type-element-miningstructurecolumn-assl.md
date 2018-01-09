@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Type Element (MiningStructureColumn)
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 15c18862d04cd5e50bd80238fcb3d649a3d835cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: edbbd08e5086157866ff5738d171614925c681cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="type-element-miningstructurecolumn-assl"></a>Type 要素 (MiningStructureColumn) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]型を含む、 [MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)要素。  
@@ -47,11 +45,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
 |既定値|なし|  
-|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
+|基数|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -60,10 +58,10 @@ ms.lasthandoff: 12/08/2017
 |親要素|[MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*長い*|64 ビットの符号付き整数です。 このデータ型にマップ、 **Int64**のデータ型の[!INCLUDE[msCoName](../../../includes/msconame-md.md)]OLE DB に .NET Framework と DBTYPE_I8 データを入力します。|  
 |*ブール値*|ブール値です。 このデータ型にマップ、**ブール**.NET Framework と OLE DB の DBTYPE_BOOL データ型でのデータ型。|  

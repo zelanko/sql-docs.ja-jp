@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b221b5f0e73224062b8c0d9a8aaec00f547fa610
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5e64785a1f71ecd88fb840b108de3f1e638bcc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>サンプル: WMI プロバイダーと SQL Server エージェント警告を作成します。
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]WMI イベント プロバイダーを使用する 1 つの一般的な方法では、特定のイベントに応答する SQL Server エージェント警告を作成します。 次のサンプルでは、後で分析するために、テーブルに XML デッドロック グラフ イベントを保存する簡単な警告を提供しています。 SQL Server エージェントは、WQL 要求の送信、WMI イベントの受信、およびイベントに応答したジョブの実行を行います。 通知メッセージの処理に関連する Service Broker オブジェクトはいくつかありますが、WMI イベント プロバイダーはこれらのオブジェクトの作成および管理の詳細を処理します。  

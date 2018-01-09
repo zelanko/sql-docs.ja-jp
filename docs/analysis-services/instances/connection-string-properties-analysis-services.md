@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、デザイナーまたは管理ツール のいずれかで設定したりに接続するクライアント アプリケーションと Analysis Services データのクエリにより作成された接続文字列を参照して、接続文字列プロパティを説明します。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 |**統合セキュリティ**|Analysis Services に接続するために使用する呼び出し元の Windows ID。 有効な値は、空白、SSPI、および BASIC です。<br /><br /> **Integrated Security**=**SSPI** は、TCP 接続の既定値です。NTLM、Kerberos、または匿名認証を許可します。 空白は、HTTP 接続の既定値です。<br /><br /> **SSPI**を使用する場合、 **ProtectionLevel** を **Connect**、 **PktIntegrity**、 **PktPrivacy**のいずれかに設定する必要があります。|  
 |**Persist Encrypted**|クライアント アプリケーションでデータ ソース オブジェクトに暗号化された形式で秘密の認証情報 (パスワードなど) を保存する必要がある場合に、このプロパティを設定します。 既定では、認証情報は保存されません。|  
 |**Persist Security Info**|有効値は True および False です。 True に設定した場合、以前に接続文字列に指定したユーザー ID やパスワードなどのセキュリティ情報を接続の確立後に接続から取得できます。 既定値は False です。|  
-|**保護レベル**|接続で使用するセキュリティ レベルを指定します。 以下の値が有効です。<br /><br /> -   **None**。 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br />-   **Connect**。 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br />-   **パケット整合性**。 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br />-   **パケット プライバシー**。 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)」をご覧ください。|  
+|**保護レベル**|接続で使用するセキュリティ レベルを指定します。 有効な値は、<br /><br /> -   **None**。 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br />-   **Connect**。 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br />-   **パケット整合性**。 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br />-   **パケット プライバシー**。 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)」をご覧ください。|  
 |**Roles**|定義済みロールのコンマ区切りの一覧を指定します。そのロールによって与えられる権限を使用して、サーバーまたはデータベースに接続します。 このプロパティを省略した場合、すべてのロールを使用し、有効な権限はすべてのロールの組み合わせになります。 Roles=' ' のように、プロパティを空の値に設定した場合、クライアント接続にロールのメンバーシップは与えられません。<br /><br /> このプロパティを使用した管理者は、ロールによって与えられた権限を使用して接続します。 ロールによって与えられた権限が十分でない場合、コマンドが失敗することがあります。|  
 |**SSPI**|**Integrated Security** が **SSPI**に設定されているときにクライアント認証に使用するセキュリティ パッケージを明示的に指定します。 SSPI では複数のパッケージがサポートされていますが、このプロパティを使用すると特定のパッケージを指定できます。 有効な値は、Negotiate、Kerberos、NTLM、および Anonymous User です。 このプロパティを設定しない場合、接続ですべてのパッケージを使用できます。|  
 |**Use Encryption for Data**|データ転送を暗号化します。 有効な値は True および False です。|  

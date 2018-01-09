@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff62bf4280fb1e01c6df47e2f748038ec92378fd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="property-element-csdlbi"></a>Property 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]CSDLBI の Property 要素は、ビジネス インテリジェンス データ モデルをサポートするための CSDL Property 要素に追加機能を提供する複合型です。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、CSDLBI Property 要素を定義する要素と属性を示します。  
   
-|名前|必須かどうか|Description|  
+|[オブジェクト名]|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
 |目次|不可|要求の LCID を含む文字列。|  
 |DefaultAggregationFunction|可|計算が属性上で実行され、他の関数が指定されていない場合に使用される集計関数を指定する文字列。<br /><br /> 指定されない場合、モデルに対する既定の集計関数が使用されます。通常 SUM です。|  

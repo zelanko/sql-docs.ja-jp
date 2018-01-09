@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98c99d91fcbd0452f0873c32e2ef6f4fbe7d356d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b3c2fc5eb3c70f65c8453bd844a61db71464d39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]いいえ[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]インストール操作や復旧操作が信頼性の高い検証テスト合格、サービスのことを確認することがなく完了し、データが操作可能です。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  

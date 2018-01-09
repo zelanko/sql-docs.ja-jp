@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: COUNT
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6d02abf139734cd7769f5f5c591cfd06bdd6fdc5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 41d5ff72346e95985b19812f194d266e8d5db165
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="count-set-mdx"></a>Count (セット) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ Set_Expression.Count
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Count (セット)**関数を追加または使用する構文に応じて、空のセルを除外します。 空のセルの除外またはを使用して含まれている標準の構文を使用する場合、 **EXCLUDEEMPTY**または**INCLUDEEMPTY**フラグにより、それぞれします。 代替構文を使用した場合、空白セルは常に対象に含められます。  
   
  空のセル セットの数に、除外する、標準の構文と省略可能なを使用して**EXCLUDEEMPTY**フラグ。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1bdecb5570f4c139fd42a77d2ef5479758bdf63a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37d547672455e794854d2143819a445fc25edef2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]共通言語ランタイム (CLR) は、マネージ コードに対してコード アクセス セキュリティというセキュリティ モデルをサポートします。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 詳細については、.NET Framework Software Development Kit の「コード アクセス セキュリティ」を参照してください。  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 |**プログラミング モデルの制限**|可|可|制限はありません。|  
 |**検証の必要性**|可|可|不可|  
 |**ローカル データ アクセス**|可|可|可|  
-|**ネイティブ コードを呼び出すための機能**|不可|いいえ|可|  
+|**ネイティブ コードを呼び出すための機能**|不可|不可|可|  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

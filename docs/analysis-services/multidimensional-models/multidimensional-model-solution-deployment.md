@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fb17843b2c01de1a99bff2d37b22eaa07783c8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多次元モデルのソリューションの配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]開発を完了した後、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト、Analysis Services サーバーにデータベースを配置することができます。 Analysis Services には、テスト サーバーまたは実稼働サーバーにデータベースを移動するために使用できる 6 つの配置方法が用意されています。 ここでは、それらの方法を効果の大きいものから、AMO オートメーション、XMLA、配置ウィザード、配置ユーティリティ、同期ウィザード、バックアップおよび復元の順に説明します。  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
  [XMLA を使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)  
   
- [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [配置ウィザードを使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
  [配置ユーティリティを使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)  
   

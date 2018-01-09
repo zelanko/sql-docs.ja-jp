@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-transact-sql"></a>予測 (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ MODEL = @model | model_literal
 
 モデル オブジェクトは、R、Python または他のツールを使用して作成できます。
 
-**データ**
+**data**
 
 データ パラメーターを使用してをスコア付けまたは予測に使用するデータを指定します。 データは、クエリでテーブル ソースの形式で指定されます。 テーブル ソースには、テーブル、テーブルの別名、CTE のエイリアス、ビュー、またはテーブル値関数を指定できます。
 
@@ -91,7 +91,7 @@ MODEL = @model | model_literal
 
 内部構造を使用してモデルを表示することはできません`PREDICT`です。 モデル自体の内容を理解する場合は、モデル オブジェクトを読み込み、逆シリアル化、適切な R コードを使用して、モデルを解析してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `PREDICT`関数は、Linux を含む、SQL Server のすべてのエディションでサポートされています。
 
@@ -101,7 +101,7 @@ R、Python、または言語を習得する別のコンピューターを使用�
 
 モデルを使用する必要があります作成されている RevoScaleR パッケージからサポートされているアルゴリズムのいずれかを使用します。 現在サポートされているモデルの一覧は、次を参照してください。[リアルタイム スコアリング](../../advanced-analytics/real-time-scoring.md)です。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>アクセス許可
 
 アクセス許可は必要ありません`PREDICT`。 ただし、ユーザーのニーズ`EXECUTE`、データベースに対する権限と、入力として使用されるデータをクエリする権限です。 ユーザーも必要があります、テーブルからモデルを読み込むこと、モデルをテーブルに格納されている場合。
 

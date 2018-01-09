@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d66238df770dfd647c3013441024409f15fdef9b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25ced29f577ca896f190922e7debfc82c1fcc6f4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration---enabling"></a>CLR 統合の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]共通言語ランタイム (CLR) 統合機能は、既定では無効になってと CLR 統合を使用して実装されているオブジェクトを使用するために有効にする必要があります。 CLR 統合を有効にするを使用して、**有効になっている clr**のオプション、 **sp_configure**ストアド プロシージャ[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  

@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>テーブル モデル データ アクセス
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis services 表形式モデル データベースは、同じクライアント、インターフェイス、および多次元モデルからのデータまたはメタデータの取得に使用する言語のほとんどでアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="power-bi"></a>Power BI
 [Power BI](https://powerbi.microsoft.com/)からオンプレミスの Analysis Services テーブル モデル データベースに接続できます。 Power BI は、データを分析して詳細情報を共有するためのビジネス分析用ツール群です。 
 
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>[エクスポート]  
  テーブル モデルのデータベースには Excel から接続できます。Excel にあるデータの視覚エフェクトと分析機能を使用してデータを操作することができます。 データにアクセスするには、Analysis Services のデータ接続を定義し、表形式サーバー モードで動作するサーバーを指定してから、使用するデータベースを選択します。 詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](http://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
   
  また、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でテーブル モデルを参照する用途にも Excel は適しています。 このツールには、 **[Excel で分析]** というオプションがあります。このオプションを選択すると、新しい Excel インスタンスが起動して Excel ブックが作成され、そのブックからモデル ワークスペース データベースへのデータ接続が開きます。 Excel でテーブル モデル データを参照する際は、モデルに対するクエリが、Excel PivotTable クライアントを使用して実行される点に注意してください。 したがって、Excel ブック内の操作は、DAX クエリではなく、MDX クエリとしてワークスペース データベースに送信されます。 SQL Profiler などの監視ツールを使用してクエリを監視したとき、プロファイラー トレースに表示されるのは DAX ではなく MDX です。 "Excel で分析" 機能の詳細については、「[Excel で分析 (SSAS テーブル)](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)」を参照してください。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントからモデルへと送信されるクエリは DAX ステートメントとして発行され、モデルにトレースを設定することによって監視できます。  クライアントは、概念スキーマ定義言語 (CSDL) に従って提示される初期スキーマ定義をサーバーに要求しますが、その際にも、サーバーに要求を送信します。 詳細については、「 [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>[SQL Server Management Studio]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、テーブル モデルをホストするインスタンスの管理や、テーブル モデル内のメタデータおよびデータに対するクエリを行うことができます。 モデルやモデル内のオブジェクトの処理、パーティションの作成と管理、さらには、データ アクセスを管理するためのセキュリティの設定を行うこともできます。 詳細については、次の各トピックを参照してください。  
   
 -   [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

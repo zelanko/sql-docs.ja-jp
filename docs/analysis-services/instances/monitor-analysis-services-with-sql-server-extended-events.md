@@ -5,13 +5,10 @@ ms.date: 12/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 58e23a9d4732274b84c325f6ac8424b0330d8dc4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 拡張イベントを使用した Analysis Services の監視
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]拡張イベント (*xEvents*) は、軽量のトレースとパフォーマンスがわずかなシステム リソースを使用するシステムの監視、実稼働環境とテストの両方のサーバー上の問題を診断するための理想的なツールになります。 また、拡張性が高く、詳細な構成が可能で、SQL Server 2016 では、新しい組み込みのツール サポートにより使用が簡単です。 SQL Server Management Studio で Analysis Services インスタンスに接続すると、SQL Server Profiler を使用するようにライブ トレースを構成、実行、および監視することができます。 優れたツールを追加することで、SQL Server Profiler から xEvent に置き換える合理性が高まり、データベース エンジンと Analysis Services ワークロードの問題を同等に診断できるようになります。  

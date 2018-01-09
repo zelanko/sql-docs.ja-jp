@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47be5d6d22ad4dc036547ce5410321be7675d02a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27a4a1e0a7fecccab1b61c29d7be82f9a1d4b047
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SqlTriggerContext**クラスは、トリガーに関するコンテキスト情報を提供します。 このコンテキスト情報には、変更された列、更新操作にされ、さらにデータ定義言語 (DDL) トリガーを XML に、トリガーを原因となったアクションの種類が含まれています**EventData**構造体。トリガーを起動する操作について説明します。 詳細と使用方法の例について、 **SqlTriggerContext**クラスを参照してください[CLR トリガー](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)です。  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-ssas-tabular"></a>リレーションシップ (SSAS テーブル)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデルでは、リレーションシップは、データの 2 つのテーブル間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
@@ -39,34 +37,34 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="what"></a> 利点  
  リレーションシップは、各テーブル内の 1 つ以上の列に基づく、2 つのデータ テーブル間の接続を表します。 リレーションシップが有用である理由を理解するために、業務において顧客注文のデータを追跡する場合を考えます。 すべてのデータは、次のような構造を持つ単一のテーブルで追跡できます。  
   
-|CustomerID|名前|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|[オブジェクト名]|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  この方法でも機能しますが、すべての注文に対して顧客の電子メール アドレスなど冗長なデータを多数格納することになってしまいます。 ストレージは安価ですが、電子メール アドレスが変更された場合には、その顧客に関連する行をすべて更新する必要があります。 この問題に対する解決策の 1 つとして、データを複数のテーブルに分割し、それらのテーブル間のリレーションシップを定義する方法があります。 これで使用されているアプローチ*リレーショナル データベース*などの SQL Server。 たとえば、モデルにインポートしたデータベースでは、次の 3 つの関連テーブルを使用して注文データを表すことができます。  
   
 ### <a name="customers"></a>Customers  
   
-|CustomerID|名前|EMail|  
+|CustomerID|[オブジェクト名]|EMail|  
 |--------------------|----------|-----------|  
-|1|Ashton|chris.ashton@contoso.com|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |CustomerID|DiscountRate|  
 |--------------------|------------------|  
-|1|.05|  
+|@shouldalert|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |CustomerID|OrderID|OrderDate|Product|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|1|256|2010-01-07|Compact Digital|11|  
-|1|255|2010-01-03|SLR Camera|15|  
+|@shouldalert|256|2010-01-07|Compact Digital|11|  
+|@shouldalert|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  これらのテーブルを同じデータベースからインポートした場合、テーブルのインポート ウィザードではテーブル間のリレーションシップを角かっこ ([ ]) で囲んで示した列に基づいて検出できるため、モデル デザイナーでこれらのリレーションシップを再現できます。 詳細については、このトピックの「 [リレーションシップの自動検出と自動推定](#detection) 」を参照してください。 説明したように、手動でリレーションシップを作成するテーブルを複数のソースからインポートした場合[、リレーションシップの間で 2 つのテーブルを作成する](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)です。  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
  次の表は、3 つのテーブル間のリレーションシップを示しています。  
   
-|リレーションシップ|型|参照列|列|  
+|リレーションシップ|型|参照列|[列]|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一対一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一対多|Customers.CustomerID|Orders.CustomerID|  

@@ -109,7 +109,7 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>参照  
- [!= (等しくない) (SSIS 式)](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [\!= (等しくない) (SSIS 式)](../../integration-services/expressions/unequal-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
   

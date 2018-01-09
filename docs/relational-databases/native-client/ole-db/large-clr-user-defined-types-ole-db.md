@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e016e0f7d6250f25f1c92d3f2527f68dc91c69e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd1b3396b763d6ca8eb8c3f3f6f2559f3ef4c44e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
   
 |記号|意味|  
 |------------|-------------|  
-|1|サーバー以外の型で dbtype_udt 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が DBTYPE_UDT と、ステートメントが実行されるときにエラーが発生します。  発生するエラーは DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR です。<br /><br /> UDT ではないサーバー パラメーターに UDT 型のパラメーターを指定すると、エラーになります。|  
+|@shouldalert|サーバー以外の型で dbtype_udt 型が指定された場合**icommandwithparameters::setparameterinfo**アクセサーの型が DBTYPE_UDT と、ステートメントが実行されるときにエラーが発生します。  発生するエラーは DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR です。<br /><br /> UDT ではないサーバー パラメーターに UDT 型のパラメーターを指定すると、エラーになります。|  
 |2|データが 16 進数文字列からバイナリ データに変換されます。|  
 |3|データがバイナリ データから 16 進文字列に変換されます。|  
 |4|使用する場合、検証が行われる**CreateAccessor**または**GetNextRows**です。 このエラーは DB_E_ERRORSOCCURRED です。 バインドの状態は、DBBINDSTATUS_UNSUPPORTEDCONVERSION に設定されます。|  

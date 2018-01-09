@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37923455444f171842e84349a2ce6fc71cd7fd57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 726cab6d57171e33d30ea61d397e54f7926cf00b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>レッスン 1 ~ 4 - 既定のテーブル名の変更
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]値を変更することができます、 **FriendlyName**を確認してを使用しやすくためのデータ ソース ビュー内のオブジェクトのプロパティです。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 [レッスン 2 : キューブの定義と配置](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
-[多次元モデルのデータ ソース ビュー](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+[「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

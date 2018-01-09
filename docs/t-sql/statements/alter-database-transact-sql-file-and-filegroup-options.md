@@ -47,23 +47,22 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0672b00cbb7064bdb889908585b4333865ac75c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (TRANSACT-SQL) の File および Filegroup オプション 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ファイルおよびファイル グループ内のデータベースに関連付けられている変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 データベースに対するファイルやファイル グループの追加と削除、およびデータベースおよびデータベースのファイルやファイル グループの属性の変更を行います。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md).  
+  ファイルおよびファイル グループ内のデータベースに関連付けられている変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 データベースに対するファイルやファイル グループの追加と削除、およびデータベースおよびデータベースのファイルやファイル グループの属性の変更を行います。 その他の ALTER DATABASE オプションについては、次を参照してください。 [ALTER DATABASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql.md)  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 ALTER DATABASE database_name   
 {  
     <add_or_modify_files>  
@@ -135,18 +134,18 @@ ALTER DATABASE database_name
  使用される論理名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルを参照するときにします。  
   
 > [!WARNING]  
->  FILE_SNAPSHOT のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルでは、切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的に削除されません。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)します。  
+> FILE_SNAPSHOT のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルでは、切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的に削除されません。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。  
   
  MODIFY FILE  
  変更するファイルを指定します。 1 つだけ\<filespec > プロパティを一度に変更できます。 常にで名前を指定する必要があります、 \<filespec > を変更するファイルを識別します。 SIZE を指定する場合、ファイルの現在のサイズより新しいサイズの方が大きくなければなりません。  
   
- データ ファイルまたはログ ファイルの論理名を変更するには、変更するファイルの論理名を `NAME` 句で指定し、`NEWNAME` 句にそのファイルの新しい論理名を指定します。 例:  
+ データ ファイルまたはログ ファイルの論理名を変更するには、変更するファイルの論理名を `NAME` 句で指定し、`NEWNAME` 句にそのファイルの新しい論理名を指定します。 例 :  
   
 ```  
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )   
 ```  
   
- データ ファイルまたはログ ファイルを別の場所に移動するには、`NAME` 句にファイルの現在の論理名を指定し、`FILENAME` 句に新しいパスとオペレーティング システム ファイル名を指定します。 例:  
+ データ ファイルまたはログ ファイルを別の場所に移動するには、`NAME` 句にファイルの現在の論理名を指定し、`FILENAME` 句に新しいパスとオペレーティング システム ファイル名を指定します。 例 :  
   
 ```  
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )  
@@ -188,7 +187,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  ファイルに対して UNC パスが指定されている場合、SIZE、MAXSIZE、および FILEGROWTH パラメーターは設定できません。  
   
 > [!NOTE]  
->  システム データベースを UNC 共有ディレクトリに置くことはできません。  
+> システム データベースは、UNC 共有ディレクトリに置くことはできません。  
   
  データ ファイルが読み取り専用のセカンダリ ファイルであるか、データベースが読み取り専用である場合を除き、データ ファイルを圧縮ファイル システム上には置かないでください。 ログ ファイルは、圧縮ファイル システム上に置くことはできません。  
   
@@ -209,7 +208,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  サイズ*サイズ*  
  ファイルのサイズを指定します。 サイズは、FILESTREAM ファイル グループには適用されません。  
   
- *サイズ*  
+ *size*  
  ファイルのサイズです。  
   
  ADD FILE と共に指定すると*サイズ*ファイルの初期サイズします。 MODIFY FILE と共に指定すると*サイズ*ファイルは、新しいサイズは、現在のファイル サイズより大きくする必要があります。  
@@ -239,10 +238,10 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  FILEGROWTH が指定されていない場合、既定値です。  
   
-|バージョン|[既定値]|  
+|[バージョンのオプション]|[既定値]|  
 |-------------|--------------------|  
-|先頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|データ 64 MB です。 ログ ファイルの 64 MB です。|  
-|先頭[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|データ 1 MB です。 ログ ファイルを 10% です。|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB です。 ログ ファイルの 64 MB です。|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB です。 ログ ファイルを 10% です。|  
 |前のバージョン[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|データ 10% です。 ログ ファイルを 10% です。|  
   
  OFFLINE  
@@ -252,7 +251,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 >  このオプションは、ファイルは破損しているが、復元可能な場合にのみ使用してください。 OFFLINE に設定したファイルは、そのファイルをバックアップから復元することによってのみ、オンラインに設定されます。 単一ファイルの復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  \<filespec > オプションは、包含データベースで使用できません。  
+> \<filespec > オプションは、包含データベースで使用できません。  
   
  **\<add_or_modify_filegroups >:: =**  
   
@@ -266,13 +265,13 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**適用されます**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  ファイル グループが、ファイル システムでメモリ最適化データを格納することを指定します。 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。 MEMORY_OPTIMIZED_DATA ファイル グループは、1 つのデータベースにつき 1 つしか許可されません。 メモリ最適化テーブルを作成する場合は、ファイル グループを空にすることはできません。 ファイルが少なくとも 1 つ必要です。 *filegroup_name*パスを参照します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。  
   
  次の例では、xtp_db というデータベースに追加するファイル グループを作成し、そのファイル グループにファイルを追加します。 このファイル グループには、メモリ最適化データを格納します。  
   
-```  
+```sql  
 ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
 GO  
 ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
@@ -282,7 +281,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  データベースからファイル グループを削除します。 ファイル グループが空でない場合は削除できません。 最初に、ファイル グループからすべてのファイルを削除してください。 詳細については、次を参照してください。"REMOVE FILE。 *logical_file_name*、"このトピックで前述しました。  
   
 > [!NOTE]  
->  FILESTREAM ガベージ コレクターは、FILESTREAM コンテナーからのすべてのファイルを削除するが、場合を除き、FILESTREAM コンテナーを削除する ALTER DATABASE REMOVE FILE 操作が失敗し、エラーが返されます。 このトピックの「解説」の「FILESTREAM コンテナーの削除」を参照してください。  
+> FILESTREAM ガベージ コレクターは、FILESTREAM コンテナーからのすべてのファイルを削除するが、場合を除き、FILESTREAM コンテナーを削除する ALTER DATABASE REMOVE FILE 操作が失敗し、エラーが返されます。 このトピックの「解説」の「FILESTREAM コンテナーの削除」を参照してください。  
   
 変更のファイル グループ*filegroup_name* { \<filegroup_updatability_option > |既定の |名前 **=**  *new_filegroup_name* } を READ_ONLY または READ_WRITE、ファイル グループ、データベースの既定のファイル グループの作成状態を設定して、ファイル グループを変更またはファイル グループの名前を変更します。  
   
@@ -296,13 +295,13 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  ファイル グループの名前変更、 *new_filegroup_name*です。  
   
  AUTOGROW_SINGLE_FILE  
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  グループ内のファイルが自動拡張のしきい値を満たす場合は、そのファイルのみが大きくなります。 これは既定値です。  
   
  AUTOGROW_ALL_FILES  
 
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  グループ内のファイルが自動拡張のしきい値を満たさない場合に、ファイル グループ内のすべてのファイルが拡大されます。  
   
@@ -316,9 +315,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  読み取り専用データベースのデータを変更することはできないため、次のようになります。  
   
 -   システム起動時に自動復旧がスキップされます。  
-  
 -   データベースの圧縮が不可能になります。  
-  
 -   読み取り専用データベースでは、ロックは発生しません。 これにより、クエリのパフォーマンスが向上することがあります。  
   
 > [!NOTE]  
@@ -328,42 +325,39 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  ファイル グループを READ_WRITE に指定します。 ファイル グループ内のオブジェクトを更新できます。 この状態を変更するには、データベースに対する排他的アクセスが必要になります。 詳細については、SINGLE_USER 句をご覧ください。  
   
 > [!NOTE]  
->  キーワード READWRITE はの将来のバージョンで削除される[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新しい開発作業では READWRITE の使用は避け、現在 READWRITE を使用しているアプリケーションは修正するようにしてください。 代わりに、READ_WRITE を使用してください。  
+>  キーワード`READWRITE`の将来のバージョンで削除される予定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 使用しないでください`READWRITE`新しい開発作業、および現在使用しているアプリケーションの変更を計画`READWRITE`を使用する`READ_WRITE`代わりにします。  
   
- これらのオプションの状態を調べることで決定できます、 **is_read_only**内の列、 **sys.databases**カタログ ビューまたは**Updateability**のプロパティ、DATABASEPROPERTYEX 関数。  
+ これらのオプションの状態を調べることで決定できます、 **is_read_only**内の列、 **sys.databases**カタログ ビューまたは**Updateability** のプロパティ`DATABASEPROPERTYEX`関数。  
   
 ## <a name="remarks"></a>解説  
  データベースのサイズを小さくを使用して[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)です。  
   
- BACKUP ステートメントの実行中にファイルを追加したり削除したりすることはできません。  
+追加または中にファイルを削除することはできません、`BACKUP`ステートメントが実行されています。  
   
- 各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。  
+各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または後で、(たとえば、オンラインまたはオフライン)、データベース ファイルの状態が管理されていない別に、データベースの状態からです。 詳細については、次を参照してください。[ファイルの状態](../../relational-databases/databases/file-states.md)です。 ファイル グループ内のファイルの状態は、ファイル グループ全体の可用性を決定します。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 ファイル グループがオフラインの場合、SQL ステートメントでそのファイル グループにアクセスを試行するとエラーが発生します。 SELECT ステートメントのクエリ プランを作成する場合、クエリ オプティマイザーは、オフラインのファイル グループにある非クラスター化インデックスやインデックス付きビューを回避します。 これにより、これらのステートメントは正常に実行できます。 ただし、オフラインのファイル グループに、対象テーブルのヒープやクラスター化インデックスが含まれている場合には、SELECT ステートメントは失敗します。 また、オフラインのファイル グループ内にあるインデックス付きのテーブルを変更する INSERT、UPDATE、または DELETE ステートメントは失敗します。  
+以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]データベースの状態から (たとえば、オンラインまたはオフライン)、データベース ファイルの状態が別に保持されます。 詳細については、次を参照してください。[ファイルの状態](../../relational-databases/databases/file-states.md)です。 
+-  ファイル グループ内のファイルの状態は、ファイル グループ全体の可用性を決定します。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 
+-  ファイル グループがオフラインの場合、SQL ステートメントでそのファイル グループにアクセスを試行するとエラーが発生します。 クエリ プランを作成する場合`SELECT`ステートメント、クエリ オプティマイザーは、非クラスター化インデックスおよびオフライン ファイル グループ内に存在するインデックス付きビューを避けます。 これにより、これらのステートメントは正常に実行できます。 ただし、オフラインのファイル グループには、ヒープまたは、対象のテーブルのクラスター化インデックスが含まれている場合、`SELECT`ステートメントは失敗します。 さらに、いずれか`INSERT`、 `UPDATE`、または`DELETE`オフラインのファイル グループ内のすべてのインデックスを持つテーブルを変更するステートメントは失敗します。  
   
 ## <a name="moving-files"></a>ファイルの移動  
- FILENAME に新しい場所を指定することにより、システムまたはユーザー定義のデータ、およびログ ファイルを移動することができます。 これは、次のようなシナリオで役立ちます。  
+FILENAME に新しい場所を指定することにより、システムまたはユーザー定義のデータ、およびログ ファイルを移動することができます。 これは、次のようなシナリオで役立ちます。  
   
--   障害復旧。 たとえば、ハードウェア障害により、データベースが問題のあるモードになっている場合や、シャットダウンされた場合など。  
+-   障害復旧。 たとえば、ハードウェア障害により、データベースが問題のあるモードになる場合やシャットダウンされるた場合など。  
+-   計画に従った再配置。  
+-   スケジュールされたディスク メンテナンスとしての再配置。  
   
--   計画に従った再配置  
-  
--   スケジュールされたディスク メンテナンスでの再配置。  
-  
- 詳細については、次を参照してください。[データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)です。  
+詳細については、次を参照してください。[データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)です。  
   
 ## <a name="initializing-files"></a>ファイルの初期化  
- 既定では、データ ファイルおよびログ ファイルは、次のいずれかの操作を実行したときに、ファイルを 0 で埋め込むことにより初期化されます。  
+既定では、データ ファイルおよびログ ファイルは、次のいずれかの操作を実行したときに、ファイルを 0 で埋め込むことにより初期化されます。  
   
--   データベースを作成します。  
+-   データベースの作成。   
+-   既存データベースへのファイルの追加   
+-   既存のファイルのサイズの拡張   
+-   データベースまたはファイル グループの復元。   
   
--   既存のデータベースへのファイルの追加  
-  
--   既存のファイルのサイズを大きくする  
-  
--   データベースまたはファイル グループの復元  
-  
- データ ファイルを瞬時に初期化できます。 そのため、このようなファイル操作を高速に実行できます。  
+データ ファイルを瞬時に初期化できます。 そのため、このようなファイル操作を高速に実行できます。 詳細については、「 [データベース ファイルの初期化](../../relational-databases/databases/database-instant-file-initialization.md)」を参照してください。 
   
 ## <a name="removing-a-filestream-container"></a>FILESTREAM コンテナーの削除  
  DBCC SHRINKFILE 操作によって FILESTREAM コンテナーが空にされた場合でも、データベースは、さまざまなシステム保守上の理由から、削除されたファイルへの参照を維持する必要があります。 [sp_filestream_force_garbage_collection &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)これを行うには安全ではときに、これらのファイルを削除する FILESTREAM ガベージ コレクターを実行します。 FILESTREAM ガベージ コレクターによって FILESTREAM コンテナーからすべてのファイルが削除されない限り、ALTER DATABASE REMOVE FILE 操作で FILESTREAM コンテナーを削除する試みは失敗し、エラーが返されます。 FILESTREAM コンテナーを削除する場合は、次の手順をお勧めします。  
@@ -387,7 +381,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
 ### <a name="a-adding-a-file-to-a-database"></a>A. データベースにファイルを追加する  
  次の例では、5 MB のデータ ファイルを[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -406,7 +400,7 @@ GO
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 2 つのファイルから成るファイル グループをデータベースに追加する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに `Test1FG1` ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -436,7 +430,7 @@ GO
 ### <a name="c-adding-two-log-files-to-a-database"></a>C. 2 つのログ ファイルをデータベースに追加する  
  次の例では、2 つの 5 MB のログ ファイル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -462,20 +456,19 @@ GO
 ### <a name="d-removing-a-file-from-a-database"></a>D. データベースからファイルを削除する  
  次の例では、例 B で追加したファイルの一方を削除します。  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 REMOVE FILE test1dat4;  
 GO  
-  
 ```  
   
 ### <a name="e-modifying-a-file"></a>E. ファイルを変更する  
 次の例では、例 B で追加したファイルのうち、1 つのサイズを拡張します。  
  ALTER DATABASE MODIFY FILE コマンドを使用できますのみ大きくファイルのサイズ、ファイルのサイズを小さくする必要がある場合は、DBCC SHRINKFILE を使用する必要があります。 します。  
   
-```  
+```sql  
 USE master;  
 GO
   
@@ -488,7 +481,7 @@ GO
 
 この例では、100 mb、データ ファイルのサイズを縮小し、その量のサイズを指定します。 
 
-```
+```sql
 USE AdventureWorks2012;
 GO
 
@@ -510,9 +503,9 @@ GO
  次の例では、例 A で作成した `Test1dat2` ファイルを、新しいディレクトリに移動します。  
   
 > [!NOTE]  
->  この例を実行する前に、ファイルを新しいディレクトリに物理的に移動しておく必要があります。 その後、停止してのインスタンスを起動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するか、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースの変更を実装するには、オフラインおよびから ONLINE です。  
+> この例を実行する前に、ファイルを新しいディレクトリに物理的に移動しておく必要があります。 その後、停止してのインスタンスを起動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するか、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースの変更を実装するには、オフラインおよびから ONLINE です。  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -529,7 +522,7 @@ GO
   
 1.  論理ファイル名を判断、`tempdb`データベースとディスク上の現在の場所。  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -538,7 +531,7 @@ GO
   
 2.  `ALTER DATABASE`を使用して、各ファイルの場所を変更します。  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     ALTER DATABASE tempdb   
@@ -553,7 +546,7 @@ GO
   
 4.  ファイルの変更を確認します。  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -564,7 +557,7 @@ GO
 ### <a name="h-making-a-filegroup-the-default"></a>H. ファイル グループを既定にする  
  次の例では、`Test1FG1`既定のファイル グループは、例 B のファイル グループを作成します。 既定のファイル グループをリセットし、`PRIMARY`ファイル グループ。 なお`PRIMARY`角かっこまたは引用符で区切る必要があります。  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -573,13 +566,12 @@ GO
 ALTER DATABASE AdventureWorks2012   
 MODIFY FILEGROUP [PRIMARY] DEFAULT;  
 GO  
-  
 ```  
   
 ### <a name="i-adding-a-filegroup-using-alter-database"></a>I. ALTER DATABASE を使用してファイル グループを追加する  
  次の例では、`FILEGROUP` 句が含まれる `FILESTREAM` を、`FileStreamPhotoDB` データベースに追加します。  
   
-```  
+```sql  
 --Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
 --the FileStreamPhotoDB database.  
 ALTER DATABASE FileStreamPhotoDB  
@@ -601,7 +593,7 @@ GO
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. グループ内のファイルが自動拡張のしきい値を満たさない場合に、ファイル グループ内のすべてのファイルが拡張できるように、ファイル グループを変更します。
  次の例は、必要な生成`ALTER DATABASE`と読み取り/書き込みファイル グループを変更するステートメント、`AUTOGROW_ALL_FILES`設定します。  
   
-```  
+```sql  
 --Generate ALTER DATABASE ... MODIFY FILEGROUP statements  
 --so that all read-write filegroups grow at the same time.  
 SET NOCOUNT ON;
@@ -661,5 +653,6 @@ GO
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
  [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
+ [データベース ファイルの初期化](../../relational-databases/databases/database-instant-file-initialization.md)    
   
   

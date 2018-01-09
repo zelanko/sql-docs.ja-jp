@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a9aa5d16960e9d52bb1a6e6edac30e7be02cf64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf1d65068cc72b7fda04be8b98ac999b22e010fd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>データベースおよびトランザクション ログのバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO では、<xref:Microsoft.SqlServer.Management.Smo.Backup>クラスおよび<xref:Microsoft.SqlServer.Management.Smo.Restore>クラスは、バックアップと復元の特定のタスクを実行するツールを提供するユーティリティ クラス。 A<xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクトの代わりに必要な特定のバックアップ タスクを表す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバー インスタンス上のオブジェクト。  

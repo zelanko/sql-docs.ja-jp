@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 034e0ad04a92d2257a798ed8a41b8c2d5cdcddec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 971e75599c1b0d0ac6960a8db45a9ed6cfab9041
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>ユーザー定義型へのアクセス - UDT データの取得
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]クライアントに UDT として登録されたアセンブリでユーザー定義型 (UDT) を作成するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースは、クライアント アプリケーションに使用する必要があります。 この UDT アセンブリは、アプリケーションと同じディレクトリまたは GAC (グローバル アセンブリ キャッシュ) に配置できます。 また、プロジェクト内で、このアセンブリへの参照を設定することもできます。  

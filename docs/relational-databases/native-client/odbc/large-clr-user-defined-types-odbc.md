@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|ODBC
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef77c1006995e8acbe2e5de12efd52807ee5589e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5cbcc9fd355a75a690fd77914340212362f34766
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  次の表に、パラメーターおよび結果セットでのデータ型のマッピングを示します。  
   
-|SQL Server データ型|SQL データ型|値|  
+|SQL Server データ型|SQL データ型|ReplTest1|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   

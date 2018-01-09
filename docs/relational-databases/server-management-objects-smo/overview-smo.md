@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a768d79345789dfbe9e33dc885e296928429e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96293d1bf121ac3697d494f1c5a6fc22f4dffb64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="overview-smo"></a>概要 (SMO)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) は、プログラムによる管理のために設計されたオブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SMO を使用すると、カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理アプリケーションを作成することができます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するための強力で高度なアプリケーションですが、SMO アプリケーションの方が適している場合もあります。  

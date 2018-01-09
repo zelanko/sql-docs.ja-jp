@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 caps.latest.revision: "44"
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 96dba471bb1b3de2b04561392b29eaa173bed6a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b038693ccbc913ac0a16ee42c8b4063b62ae6bf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client のインストール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ SQL Server 2012 Feature Pack の web ページから sqlncli.msi を取得する
   
  x64 バージョンと Itanium バージョンの sqlncli.msi では、32 ビット バージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client もインストールされます。 アプリケーションが、開発時に使用したものとは異なるプラットフォームを対象としている場合、Microsoft ダウンロード センターから x64、Itanium、および x86 用のバージョンの sqlncli.msi をダウンロードできます。  
   
- sqlncli.msi を呼び出すと、既定ではクライアント コンポーネントだけがインストールされます。 クライアント コンポーネントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用して開発されたアプリケーションの実行をサポートするファイルです。 SDK コンポーネントもインストールするには、コマンド ラインで `ADDLOCAL=All` を指定します。 例:  
+ sqlncli.msi を呼び出すと、既定ではクライアント コンポーネントだけがインストールされます。 クライアント コンポーネントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用して開発されたアプリケーションの実行をサポートするファイルです。 SDK コンポーネントもインストールするには、コマンド ラインで `ADDLOCAL=All` を指定します。 例 :  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

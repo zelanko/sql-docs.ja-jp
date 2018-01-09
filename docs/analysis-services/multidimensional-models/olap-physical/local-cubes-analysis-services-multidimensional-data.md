@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06178b8d1023a95433d76543ff05db4d9c654a27
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>ローカル キューブ (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]作成、更新、またはローカルのキューブを削除する書き込みおよび ASSL スクリプトまたは AMO プログラムのいずれかを実行する必要があります。  
@@ -46,10 +44,10 @@ ms.lasthandoff: 12/08/2017
   
 |ローカル キューブ用データのソース|作成方法|  
 |------------------------------------|---------------------|  
-|サーバーベースのキューブ|CREATE GLOBAL CUBE ステートメントを使用することができます、または[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]スクリプト言語 (ASSL) スクリプトを作成し、サーバー ベースのキューブからキューブを入力します。 詳細については、次を参照してください。[グローバル CUBE ステートメントの作成 & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-create-global-cube.md)または[Analysis Services スクリプト言語 & #40 です。ASSL を XMLA & #41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|サーバーベースのキューブ|CREATE GLOBAL CUBE ステートメントを使用することができます、または[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]スクリプト言語 (ASSL) スクリプトを作成し、サーバー ベースのキューブからキューブを入力します。 詳細については、次を参照してください。[グローバル CUBE ステートメントの作成 &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-create-global-cube.md)または[Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
 |リレーショナル データ ソース|ASSL スクリプトを使用して、OLE DB リレーショナル データベースからキューブを作成して設定します。 ASSL を使用してローカル キューブを作成するには、ローカル キューブ ファイル (*.cub) に接続して、サーバー キューブを作成するときに [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスで ASSL スクリプトを実行するのと同じ要領で ASSL スクリプトを実行するだけです。 詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)」を参照してください。|  
   
- ローカル キューブを再構築してデータを更新するには、REFRESH CUBE ステートメントを使用します。 詳細については、次を参照してください。 [CUBE ステートメントの更新 & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-refresh-cube.md)  
+ ローカル キューブを再構築してデータを更新するには、REFRESH CUBE ステートメントを使用します。 詳細については、次を参照してください。 [CUBE ステートメントの更新 &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>サーバーベースのキューブから作成されたローカル キューブ  
  サーバーベースのキューブからローカル キューブを作成する場合は、次の点に注意してください。  
@@ -76,14 +74,14 @@ ms.lasthandoff: 12/08/2017
   
 -   ローカル キューブに追加されたメジャーおよびディメンションに依存する計算されるメンバー、名前付きセット、および割り当てだけがローカル キューブに表示されます。 無効な計算されるメンバー、名前付きセット、および割り当ては自動的に除外されます。  
   
-### <a name="security"></a>セキュリティ  
- ユーザーがサーバー キューブからローカル キューブを作成するためには、ユーザーに許可する必要があります**ドリルスルーとローカル キューブ**サーバー キューブに対する権限。 詳細については、次を参照してください。[許可キューブまたはモデル権限 & #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+### <a name="security"></a>Security  
+ ユーザーがサーバー キューブからローカル キューブを作成するためには、ユーザーに許可する必要があります**ドリルスルーとローカル キューブ**サーバー キューブに対する権限。 詳細については、次を参照してください。[許可キューブまたはモデル権限 &#40;です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  ローカル キューブは、サーバー キューブのようにロールを使用してセキュリティで保護されていません。 ローカル キューブ ファイルへのファイル レベルのアクセス権を持っていれば、ローカル キューブ ファイル内のキューブに対してクエリを実行できます。 使用することができます、**暗号化パスワード**接続ファイルのプロパティをローカル キューブに、ローカル キューブ ファイルにパスワードを設定します。 ローカル キューブ ファイルにパスワードを設定すると、以後クエリを実行するためにローカル キューブ ファイルに接続するときにそのパスワードが必要になります。  
   
 ## <a name="see-also"></a>参照  
- [GLOBAL CUBE ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-global-cube.md)   
- [Analysis Services スクリプト言語 & #40; を使用した開発ASSL & #41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [更新の CUBE ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-refresh-cube.md)  
+ [GLOBAL CUBE ステートメント &#40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-global-cube.md)   
+ [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [更新の CUBE ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   

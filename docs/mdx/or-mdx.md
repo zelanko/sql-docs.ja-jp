@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: OR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: eb87411a86aad46ed3fcd00737f8ae46b99f5999
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3816be8be6945e21d3e6863292d4ed718a2352a2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="or-mdx"></a>OR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,9 +54,9 @@ Expression1 OR Expression2
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**オプション**|**true**|  
-|**オプション**|**true**|**true**|  
-|**オプション**|**オプション**|**オプション**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>例  
  次のクエリで計算されるメジャーは、Customer ディメンションの Gender 階層にある現在のメンバーが Male の場合、または Customer ディメンションの Marital Status 階層にある現在のメンバーが Married の場合、“MARRIED OR MALE” 文字列を返し、それ以外の場合は、“UNMARRIED OR FEMALE” 文字列を返します。  

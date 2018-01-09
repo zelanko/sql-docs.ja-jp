@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: STRTOVALUE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1de92936fce3c277861ddfb3502ce76ff96279a1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 37424120aee0b38303b086019e2fb74a823cdc1b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  直接的または間接的に 1 つのセルに解決される有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **StrToValue**関数は、MDX 式によって指定された数値を返します。 **StrToValue**関数は、通常使用ユーザー定義関数を 1 つのセルに解決される MDX ステートメントを外部関数から MDX 式を返します。  
   
 -   CONSTRAINED フラグを使用する場合、MDX 式にはスカラー値のみを含める必要があります。 CONSTRAINED フラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 直接スカラー値に解決できない MDX 式を指定すると、"STRTOVALUE 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラー メッセージが表示されます。  

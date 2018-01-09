@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cd29e3864c1da332e126dddb484e0733c55d769
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: afaba804013202b0850d22e0b3e4cafce560d3dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
  使用して、アプリケーションを開発する場合は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]サーバー バージョンへの接続がよりも前[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、メタデータ検出機能は、サーバーのバージョンに対応します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の bcp 関数が機能強化され、メタデータ検出機能が向上しています。  
   
 -   [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  

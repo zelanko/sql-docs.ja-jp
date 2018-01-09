@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [ODBC], C to SQL
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bda65e6abcfe3d75163352d6d3ec03a318478232
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a476140684c4bb5b44f15374e15836f6a6c262c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime C から SQL へのデータ型変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,13 +30,13 @@ ms.lasthandoff: 11/17/2017
 
   このトピックは C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントのサーバーで定義されているパラメーターとは異なる小数秒の有効桁数が指定されている場合、クライアントの変換が成功する可能性がありますが、サーバーには、エラーが返されます場合**SQLExecute**または**SQLExecuteDirect**と呼びます。 一方、ODBC で秒の小数部の切り捨てをエラーとして扱う具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作に丸めるたとえば、丸め処理を行うときに発生から移動した**datetime2(6)**に**datetime2(2)**。. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントのサーバーで定義されているパラメーターとは異なる小数秒の有効桁数が指定されている場合、クライアントの変換が成功する可能性がありますが、サーバーには、エラーが返されます場合**SQLExecute**または**SQLExecuteDirect**と呼びます。 一方、ODBC で秒の小数部の切り捨てをエラーとして扱う具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作に丸めるたとえば、丸め処理を行うときに発生から移動した**datetime2(6)**に**datetime2(2)**. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
+|SQL_C_DATE|@shouldalert|-|-|1,6|1,5,6|1,13|1,13|  
+|SQL_C_TIME|-|@shouldalert|@shouldalert|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
 |SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|なし|なし|1,10,11|なし|なし|なし|なし|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
@@ -86,8 +86,8 @@ ms.lasthandoff: 11/17/2017
   
     ||||  
     |-|-|-|  
-    |型|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1..9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |型|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1.9|  
+    |SQL_C_TYPE_TIMESTAMP|19|21.29|  
   
      ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。  
   

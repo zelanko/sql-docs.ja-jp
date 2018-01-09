@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 440464913f4dc6e38ca1da47dc4045f4249656f7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a9ba34222580b292fbc6281df49505f57739911a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Analysis Services での XMLA による開発
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) は、HTTP 接続経由でアクセスできる任意の標準的な多次元データ ソースへの汎用データ アクセス用に設計された、SOAP ベースの XML プロトコルです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、クライアント アプリケーションとの通信を行う場合に、XMLA を唯一のプロトコルとして使用します。 基本的に、Analysis Services によってサポートされるすべてのクライアント ライブラリでは、要求と応答は XMLA で作成されます。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="namespace-and-schema"></a>名前空間とスキーマ  
   
-### <a name="namespace"></a>名前空間  
+### <a name="namespace"></a>Namespace  
  この仕様で定義されたスキーマが XML 名前空間を使用して`http://schemas.microsoft.com/AnalysisServices/2003/Engine`と標準的な省略形"DDL"  
   
 ### <a name="schema"></a>スキーマ  

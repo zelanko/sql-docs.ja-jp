@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 550455ead049191d94de93a40a55aa3b064602a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be30c3c81333080fdcf3bc40bd6abad7c7449d5b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-the-current-transaction"></a>現在のトランザクションへのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トランザクションの時点で実行されている共通言語ランタイム (CLR) コードでアクティブな場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が入力すると、トランザクションはによって公開される、 **System.Transactions.Transaction**クラスです。 **Transaction.Current**プロパティは、現在のトランザクションにアクセスするために使用します。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 ADO.NET データベース接続に対してチェック**Transaction.Current**時に自動的に、 **Connection.Open**メソッドが呼び出され、そのトランザクションに、接続を透過的に登録 (しない限り、**Enlist**キーワードが接続文字列で false に設定されている)。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -24,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 77f06bad91fb9b7aa60f2f4725dd79cf36f41d77
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="expressions-mdx"></a>式 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/27/2017
  MDX のスカラー関数は、評価のコンテキスト内で単一の値を返します。 MDX がスカラー関数を解決する方法を理解するうえで、この違いは重要です。ほとんどの MDX 式、ステートメント、およびスクリプトは単一のデータ要素に対して評価されるのではなく、(複数のセル、メンバーなど) データ要素のグループに対して反復的に評価されます。 しかし、スカラー関数の評価時には、通常、関数は単一のデータ要素を検査します。  
   
  オブジェクト識別子  
- 多次元データの性質上、MDX はオブジェクト指向です。 MDX では、オブジェクト識別子は単純式と見なされます。 識別子の詳細については、次を参照してください。[識別子 &#40;です。MDX と #41 です;](../mdx/identifiers-mdx.md)。  
+ 多次元データの性質上、MDX はオブジェクト指向です。 MDX では、オブジェクト識別子は単純式と見なされます。 識別子の詳細については、次を参照してください。[識別子 &#40;です。MDX と #41 です](../mdx/identifiers-mdx.md)。  
   
  これらのエンティティを演算子で結合して、複合式を作成することができます。  
   
@@ -99,7 +99,7 @@ WHERE [Product].[Category].[Bikes]
 |[空の値の操作](../mdx/working-with-empty-values.md)|空の値とは何か、そのような値がどのように処理されるかを説明します。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 言語リファレンス &#40;です。MDX と #41 です](../mdx/mdx-language-reference-mdx.md)   
  [MDX クエリの基礎と #40 です。Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

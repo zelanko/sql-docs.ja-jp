@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CubeAttribute Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa66494ac00ffde2d082bbfdee15b04476ffad93
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 84899c5d82286fbcc49404f854ff38c0243a655e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cubeattribute-data-type-assl"></a>CubeAttribute データ型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]関連付けられている属性を表すプリミティブ データ型を定義、[キューブ](../../../analysis-services/scripting/objects/cube-element-assl.md)要素。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>データ型の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |基本データ型|なし|  
 |派生データ型|なし|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |子要素|[AggregationUsage](../../../analysis-services/scripting/properties/aggregationusage-element-assl.md)、[注釈](../../../analysis-services/scripting/collections/annotations-element-assl.md)、 [AttributeHierarchyEnabled](../../../analysis-services/scripting/properties/attributehierarchyenabled-element-assl.md)、 [AttributeHierarchyOptimizedState](../../../analysis-services/scripting/properties/attributehierarchyoptimizedstate-element-assl.md)、 [AttributeHierarchyVisible](../../../analysis-services/scripting/properties/attributehierarchyvisible-element-assl.md)、 [AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md)|  
 |派生要素|[属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)([属性](../../../analysis-services/scripting/collections/attributes-element-assl.md)のコレクション[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *AttributeHierarchyOptimizedState* 1 または 2 の DeploymentMode 構成プロパティの値で、サービスを実行する場合、要素がサポートされていません (SharePoint モードまたはテーブル モードで実行するために使用[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]と表形式モデルデータベースの場合)。  
   
  階層のレベルとして属性を追加することはできませんとプロパティは、 *AtttributeHierarchyEnabled*FALSE に設定されている DeploymentMode 1 または 2 (SharePoint モードまたは表形式サーバー モード) インスタンスが動作しています。  

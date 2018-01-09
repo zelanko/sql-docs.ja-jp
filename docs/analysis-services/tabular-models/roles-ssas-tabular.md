@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bbbcfdbaafa7e5cbc17defc91b5dc7e391d92ad6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="roles"></a>ロール
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]役割、テーブル モデルでは、モデルのメンバーの権限を定義します。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。 
@@ -56,10 +53,10 @@ ms.lasthandoff: 12/08/2017
   
  各ロールに対して、次のうちいずれかの権限を定義できます。  
   
-|Permissions|Description|DAX を使用する行フィルター|  
+|アクセス許可|Description|DAX を使用する行フィルター|  
 |-----------------|-----------------|----------------------------|  
 |なし|メンバーは、モデルのデータベース スキーマを変更したり、データを照会したりすることはできません。|行フィルターは適用されません。 このロールのユーザーには、データは表示されません。|  
-|読み取り|メンバーは、(行フィルターに基づいて) データに対してクエリを実行できますが、SSMS のモデル データベースを表示することはできず、モデルのデータベース スキーマを変更することはできません。また、ユーザーはモデルを処理できません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみがユーザーに表示されます。|  
+|Read|メンバーは、(行フィルターに基づいて) データに対してクエリを実行できますが、SSMS のモデル データベースを表示することはできず、モデルのデータベース スキーマを変更することはできません。また、ユーザーはモデルを処理できません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみがユーザーに表示されます。|  
 |読み取りと処理|メンバーは、(行レベル フィルターに基づいて) データを照会でき、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで処理操作を実行できますが、データベースを変更することはできません。 SSMS で、モデル データベースを表示できません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみ照会できます。|  
 |[処理]|メンバーは、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで、処理操作を実行できます。 モデルのデータベース スキーマを変更することはできません。 データを照会することはできません。 SSMS で、モデル データベースを照会できません。|行フィルターは適用されません。 この役割ではデータを照会できません。|  
 |管理者|メンバーは、モデルのスキーマに変更を加えることし、モデル デザイナー、レポート作成クライアントは、SSMS でのすべてのデータを照会できます。|行フィルターは適用されません。 この役割ではすべてのデータを照会することはできません。|  
@@ -73,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
  行フィルターは、指定行と関連行に適用されます。 1 つのテーブルに複数のリレーションシップがある場合、フィルターによりセキュリティがアクティブなリレーションシップに適用されます。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。次に例を示します。  
   
-|Table|DAX 式|  
+|テーブル|DAX 式|  
 |-----------|--------------------|  
 |Region|=Region[Country]="USA"|  
 |ProductCategory|=ProductCategory[Name]="Bicycles"|  
@@ -88,7 +85,7 @@ ms.lasthandoff: 12/08/2017
   
  動的なセキュリティを実装する場合、DAX 式に次の関数を使用すると、現在ログオンしているユーザーの名前、または接続文字列の CustomData プロパティが返されます。  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |[USERNAME 関数 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)|現在ログオンしているユーザーの domain\username を返します。|  
 |[CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|接続文字列の CustomData プロパティを返します。|  
@@ -114,7 +111,7 @@ ms.lasthandoff: 12/08/2017
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|@shouldalert|Corporate|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Manufacturing|  
@@ -123,7 +120,7 @@ ms.lasthandoff: 12/08/2017
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]**をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)です。  
+ モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   

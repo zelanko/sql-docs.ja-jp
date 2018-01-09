@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff9e7a288496a5cf15ad8d053c4df6ee43eb8668
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e15452378461c3799d82b3a204bda9c3893dcd5f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>カーソル用の SQL ステートメントの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、サーバー カーソルを使用して、ODBC 仕様で定義されたカーソル機能を実装します。 ODBC アプリケーションを使用してカーソル動作を制御する[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)別のステートメント属性を設定します。 次に、属性とその既定値を示します。  
   
-|属性|既定値|  
+|属性|既定|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|1|  
+|SQL_ATTR_ROW_ARRAY_SIZE|@shouldalert|  
   
  これらのオプションが設定されている既定値には、SQL ステートメントの実行時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーには、結果セットを実装する、サーバー カーソルは使用しません。 代わりに、既定の結果セットを使用します。 これらのオプションのいずれかが、SQL ステートメントの実行時に、既定値から変更された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは結果セットを実装する、サーバー カーソルを使用しようとしています。  
   

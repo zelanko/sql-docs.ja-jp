@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], client to server
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faabdef1b0668b8c5de5de5f80442ee458243fae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f939afc47e0ca7bcd6286dd0d090a088c5d6458a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,14 +38,14 @@ ms.lasthandoff: 11/17/2017
 |変換先 -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |[DATE]|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
-|DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
-|DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time (7)|  
+|DBDATE|@shouldalert|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|@shouldalert<br /><br /> 日付|  
+|DBTIME|-|@shouldalert|@shouldalert|1,7|1,7|1,7|1,5, 7|1,10|1,10|@shouldalert<br /><br /> Time(0)|  
+|DBTIME2|-|1,3|@shouldalert|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|@shouldalert<br /><br /> Time (7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|なし|なし|なし|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|なし|なし|1,10|  
+|VARIANT|@shouldalert|@shouldalert|@shouldalert|1,10|1,10|1,10|1,10|なし|なし|1,10|  
 |SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|なし|なし|1,16|  
 |BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|なし|なし|なし|  
 |STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|なし|なし|なし|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |------------|-------------|  
 |-|変換はサポートされていません。 Iaccessor::createaccessor が呼び出されたときに、バインドが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION がで返されます*rgStatus*です。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |なし|該当なし。|  
-|1|指定されたデータが有効でない場合、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 入力データが検証されてから変換が適用されるので、コンポーネントは後続の変換で無視されることがあっても、変換を成功させるには有効である必要があります。|  
+|@shouldalert|指定されたデータが有効でない場合、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 入力データが検証されてから変換が適用されるので、コンポーネントは後続の変換で無視されることがあっても、変換を成功させるには有効である必要があります。|  
 |2|時刻フィールドは無視されます。|  
 |3|秒の小数部は 0 である必要があります。そうでなければ、DBSTATUS_E_DATAOVERFLOW が設定されます。|  
 |4|日付部分は無視されます。|  

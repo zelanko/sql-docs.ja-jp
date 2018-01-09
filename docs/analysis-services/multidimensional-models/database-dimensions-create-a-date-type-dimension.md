@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3be92a4572e464d23c24c0f7152a7a106e1932c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>データベース ディメンション - 日付型ディメンションの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]時間ディメンションは、ディメンションの種類を表す属性を持つなど、年、半期、四半期、月、および日の時間間隔。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  

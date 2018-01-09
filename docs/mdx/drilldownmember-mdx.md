@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNMEMBER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 35fb3fec36ffc3aacd68bab3baf4612942c5afd8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9f7f9a3cdb4faa7946744d9f4b0913ee866e5a04
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  *Include_Calc_Members*  
  計算されるメンバーがドリルダウン結果に含まれるようにするキーワードです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、階層によって順序付けられた子メンバーのセットを返します。また、2 番目のセットにも存在する 1 番目のセットで指定されたメンバーが含まれています。 最初のセットに親メンバーと 1 つ以上の子が含まれている場合、親メンバーはドリル ダウンされません。 1 番目のセットの次元は任意ですが、2 番目には 1 次元のセットを指定する必要があります。 1 番目のセット内の元のメンバーの間で順序を維持、それぞれの親メンバーの結果に含まれるすべての子メンバーが設定されること以外、関数がすぐに含まれています。 この関数は、最初のセットのメンバーのうち、2 番目のセット内にも存在する各メンバーの子メンバーを取得することによって結果セットを作成します。 場合**再帰**を指定すると、関数は、再帰的に比較し、結果セットに対して、結果内の各メンバーの子を取得する 2 番目のセットのメンバーを 2 番目のセットで、結果セットから他のメンバーが見つかるまで、2 番目のセット内にも存在します。  
   
  XMLA プロパティのクエリを実行する**MdpropMdxDrillFunctions**サーバーがドリル関数が提供するサポートのレベルを確認することができます。 参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)詳細についてはします。  

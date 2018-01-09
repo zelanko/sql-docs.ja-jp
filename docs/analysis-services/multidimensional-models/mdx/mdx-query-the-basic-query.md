@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 91f450be525f7ec0d019a3f17f28ee25886c44aa
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX クエリの基本的なクエリ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基本的な多次元式 (MDX) クエリが SELECT ステートメント、MDX で最も頻繁にクエリを使用します。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f37528588c5d302036bb39d3de4349c44120e86f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 492191dfa1f3784ccacd8d7f7f12a247f76c9741
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="transaction-promotion"></a>トランザクションの昇格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トランザクション*プロモーション*自動的に昇格できる完全な分散トランザクションを必要に応じて、軽量のローカル トランザクションを示します。 サーバー側で実行されているデータベース トランザクション内でマネージ ストアド プロシージャが呼び出されると、CLR (共通言語ランタイム) コードはローカル トランザクションのコンテキストで実行されます。  データベース トランザクション内でリモート サーバーへの接続が開かれると、リモート サーバーへの接続が分散トランザクションに参加し、ローカル トランザクションは自動的に分散トランザクションに昇格します。 トランザクションの昇格では、必要になるまで分散トランザクションの作成を遅延し、分散トランザクションのオーバーヘッドを最小限に抑えます。 トランザクションの昇格は自動的を使用して有効にする場合、 **Enlist**キーワードでは、開発者による介入は必要ありません。 .NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションの昇格、.NET Framework のクラスを介して処理のサポートを提供**System.Data.SqlClient**名前空間。  

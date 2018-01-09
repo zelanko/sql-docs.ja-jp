@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX の主な概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多次元式 (MDX) を使用すると、多次元データのクエリまたはキューブ内で MDX 式を作成して、前に、多次元の概念と用語を理解するのに役立ちます。  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **データベース ディメンションとキューブ ディメンション**。 モデル内では、スタンドアロン ディメンションを定義して、同じモデル内の任意の数のキューブに含めることができます。 ディメンションがキューブに追加された場合は、キューブ ディメンションと呼ばれます。 プロジェクト内部では、Object Explorer 内のスタンドアロン項目として、データベース ディメンションと呼ばれます。 どうして区別が必要なのでしょうか。 それは、それぞれに独立的にプロパティを設定できるからです。 製品マニュアルでは、両方の用語が使用されているため、それぞれの意味を理解しておく必要があります。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  これで、重要な概念と用語が理解できたところで、Analysis Services の基本的な概念をさらに詳しく説明している以下のトピックに進むことができます。  
   
 -   [MDX の基本的なクエリ (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  

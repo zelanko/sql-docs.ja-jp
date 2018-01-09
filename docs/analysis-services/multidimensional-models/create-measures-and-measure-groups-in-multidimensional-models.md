@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: measure groups [Analysis Services], defining
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa140461d48e1059c4eed74a3308b0b70a1e6c10
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a66d433e5b96e8012e8c4c05c14d3078235db958
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*メジャー*数値の合計、カウント、最小、最大、平均値、または作成したカスタム MDX 式などのデータ値の集計です。 *メジャー グループ* は、1 つ以上のメジャーに対応するコンテナーです。 すべてのメジャーは、メジャーが 1 つしかない場合を含め、1 つのメジャー グループ内に存在します。 キューブには、少なくとも 1 つのメジャーとメジャー グループが必要です。  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |-|-|  
 |**source**|ほとんどのメジャーは、AdventureWorks データ ウェアハウス内の Internet Sales (インターネット売上) や Reseller Sales (販売店売上) テーブルにある Sales Amount 列など、外部データ ウェアハウス内のファクト テーブルの数値列に由来していますが、定義する計算全体に基づいてメジャーを新規作成することもできます。<br /><br /> ディメンション テーブルの属性列は、メジャーの定義に使用できますが、これらのメジャーの集計動作は、通常、準加法または非加法です。 準加法の動作の詳細については、「 [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。|  
 |**集計 (aggregation)**|既定では、各ディメンションに従ってメジャーが集計されます。 ただし、 **AggregateFunction** プロパティを使用するとこの動作を変更できます。 一覧については [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) を参照してください。|  
-|**プロパティ**|プロパティの追加説明については [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) を参照してください。|  
+|**[プロパティ]**|プロパティの追加説明については [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) を参照してください。|  
   
 ##  <a name="bkmk_modeling"></a> ファクトとファクト テーブルでのメジャーとメジャー グループのモデリング  
  ウィザードを実行する前に、メジャーの定義の背後にあるモデリングの原則を理解するのに役立ちます。  
@@ -92,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
  キューブ デザイナーの **[ディメンションの使用法]** タブを使用すると、特定のディメンションに関してメジャー グループの粒度を指定できます。 ディメンションのリレーションシップの詳細については、「 [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [多次元モデルのキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [メジャーおよびメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   

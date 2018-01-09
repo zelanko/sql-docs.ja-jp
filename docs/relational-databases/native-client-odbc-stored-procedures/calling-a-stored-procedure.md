@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a5e9efb687e9a554841e945f7575a75a5ac3d4ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06859de8da70eb1357802fdca1e758e1872a7f10
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calling-a-stored-procedure"></a>ストアド プロシージャの呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +48,11 @@ ms.lasthandoff: 11/17/2017
   
  プロシージャには、0 個以上のパラメーターを指定できます。 また、構文の先頭に省略可能なパラメーター マーカー ?= を指定することによって値を返すこともできます。 パラメーターが入力パラメーターまたは入出力パラメーターの場合は、リテラルまたはパラメーター マーカーを使用できます。 パラメーターが出力パラメーターの場合、出力は不明なので、パラメーター マーカーを使用する必要があります。 パラメーター マーカーにバインドする必要があります[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)プロシージャ呼び出しの前にステートメントを実行します。  
   
- プロシージャ呼び出しでは、入力パラメーターと入出力パラメーターを省略できます。 かっこだけを指定し、パラメーターを指定しないでプロシージャを呼び出した場合、ドライバーは最初のパラメーターの既定値を使用するように、データ ソースに指示します。 例:  
+ プロシージャ呼び出しでは、入力パラメーターと入出力パラメーターを省略できます。 かっこだけを指定し、パラメーターを指定しないでプロシージャを呼び出した場合、ドライバーは最初のパラメーターの既定値を使用するように、データ ソースに指示します。 例 :  
   
  {**呼び出す** *procedure_name***に関するページ ()**}  
   
- プロシージャにパラメーターを指定しないと、失敗する可能性があります。 かっこを付けないでプロシージャを呼び出すと、ドライバーはパラメーター値を送信しません。 例:  
+ プロシージャにパラメーターを指定しないと、失敗する可能性があります。 かっこを付けないでプロシージャを呼び出すと、ドライバーはパラメーター値を送信しません。 例 :  
   
  {**呼び出す** *procedure_name*}  
   

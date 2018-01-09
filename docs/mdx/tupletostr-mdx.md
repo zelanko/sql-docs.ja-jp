@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TUPLETOSTR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 13b1548435e826c0ca71fcdfe98d5c654bd63038
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0c777583e5ae027ab3f2ada53b4b168431e3390a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  組を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、解析用に組の文字列表記を外部関数に転送する場合に使用します。 返される文字列は中かっこ {} で囲まれ、組内で複数のメンバーが明示的に定義されている場合は、各メンバーがコンマで区切られます。  
   
 ## <a name="examples"></a>使用例  
@@ -74,6 +74,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

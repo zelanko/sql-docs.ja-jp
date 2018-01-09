@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [ODBC], SQL to C
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f62d1fc4e1a79b61fb9dbdf24076b91a38fe7b3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36a60d790397b34ee66020fc3a174ba6df18ce63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime SQL から C へのデータ型変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,19 +35,19 @@ ms.lasthandoff: 11/17/2017
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
+|SQL_TYPE_DATE|[OK]|12|13|12|13,23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|[OK]|10,23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7,8|[OK]|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|[OK]|21|16|16|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |記号|意味|  
 |------------|-------------|  
-|OK|変換の問題は発生しません。|  
-|1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前の規則が適用されます。|  
+|[OK]|変換の問題は発生しません。|  
+|@shouldalert|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前の規則が適用されます。|  
 |2|先頭および末尾にあるスペースは無視されます。|  
 |3|文字列が日付、時刻、タイム ゾーン、またはタイム ゾーン オフセットに解析され、秒の小数部は 9 桁まで許容されます。 タイム ゾーン オフセットが解析されると、時刻はクライアントのタイム ゾーンに変換されます。 この変換中にエラーが発生した場合と「Datetime フィールド オーバーフロー」メッセージの SQLSTATE 22018 の診断レコードが生成されます。|  
 |4|値が日付、タイムスタンプ、またはタイムスタンプ オフセットの有効な値ではない場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  

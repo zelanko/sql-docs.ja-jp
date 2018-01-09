@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8527382a85e1e85fb7981e69ea02304d2a7a940c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用してキューブとディメンションの定義を変更する次の最初のスキーマの生成、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、スキーマ生成ウィザードを再実行します。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  

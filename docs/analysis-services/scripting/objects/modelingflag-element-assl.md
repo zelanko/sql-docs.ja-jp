@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ModelingFlag Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bacadb681082a638fa7d9d3df394e43267c878f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9e26e418f889f6d0bf6db33b643f803e33471028
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="modelingflag-element-assl"></a>ModelingFlag 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]マイニング構造またはマイニング モデル内の列にモデリング フラグが含まれています。  
@@ -45,11 +43,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|[MiningModelingFlag](../../../analysis-services/scripting/data-type/miningmodelingflag-data-type-assl.md)|  
 |既定値|なし|  
-|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |親要素|[ModelingFlags](../../../analysis-services/scripting/collections/modelingflags-element-assl.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  分析管理オブジェクト (AMO) オブジェクト モデルで密接に関連する要素は、<xref:Microsoft.AnalysisServices.MiningModelingFlags> です。  
   
 ## <a name="see-also"></a>参照  

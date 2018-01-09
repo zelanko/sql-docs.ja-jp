@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -28,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 387b16e4d3570655b75bd548d6c2b5cd9e631d1b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 37649d37d1cef67eb50caf8f3768beba19545988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX データ定義の更新キューブ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ REFRESH CUBECube_Name
  *Cube_Name*  
  キューブ名を提供する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  インスタンスに接続されているクライアント アプリケーションの[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、このステートメントにより、サーバーと同期するクライアント アプリケーションでキャッシュされているメモリです。 この検出および更新は日常的かつ自動的に行われますが、同期が行われるまでの時間はクライアント接続文字列の設定によって異なります。 REFRESH CUBE ステートメントを実行すると、データが直ちに更新されます。  
   
  ローカル キューブに接続しているクライアント アプリケーションの場合、REFRESH CUBE ステートメントは、ローカルのキューブ ファイルを再構築します。  

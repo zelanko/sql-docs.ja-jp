@@ -1,7 +1,7 @@
 ---
 title: "外部データ ソース (TRANSACT-SQL) を ALTER |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/13/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,16 +24,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 028a300c8dc6b295a0f10b3cb137809c81c4af95
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9257f2747d29933ce04f8e7faa2112c3f4231eaf
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alter-external-data-source-transact-sql"></a>変更する外部データ ソース (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  外部テーブルを作成するために使用する外部データ ソースを変更します。 外部データ ソースは、Hadoop または Azure blob ストレージ (WASB) にすることができます。  
+  外部テーブルを作成するために使用する外部データ ソースを変更します。 外部データ ソースは、Hadoop または Azure blob ストレージ (WASB) にすることができます。
   
 ## <a name="syntax"></a>構文  
   
@@ -65,7 +65,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
   
  RESOURCE_MANAGER_LOCATION = '\<IP アドレスです。ポート >' Hadoop リソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理こともできます。 これは、コストベースの判断です。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。
   
- 資格情報の名前付きの資格情報 = Credential_Name を指定します。 参照してください[CREATE DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ 資格情報の名前付きの資格情報 = Credential_Name を指定します。 参照してください[CREATE DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL と #41 です](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
 型 BLOB_STORAGE を =   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。
@@ -74,10 +74,10 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
   
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
  一度に 1 つのソースを変更できます。 同時実行の要求を同じソースを変更するには、待機する 1 つのステートメントが発生します。 ただし、さまざまなソースは、同時に変更できます。 このステートメントは、その他のステートメントと同時に実行できます。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  任意の外部データ ソースの ALTER 権限が必要です。
  > [!IMPORTANT]  
  >  任意の外部データ ソースの ALTER 権限は、任意のプリンシパルを作成し、任意の外部データ ソース オブジェクトを変更する権限を付与し、そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする権限付与もします。 このアクセス許可する必要がありますと見なされる高度な権限し、そのため、システムで信頼されたプリンシパルにのみ付与する必要があります。

@@ -1,13 +1,13 @@
 ---
 title: "SQL Server と共にインストールされている R パッケージ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -15,27 +15,23 @@ ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 070e1776f0a9760742e933064be569818fe200b2
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 2783d4ce6ca9cd25b41c1e658f5e3bf2a4f05f24
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="r-packages-installed-with-sql-server"></a>SQL Server と共にインストールされている R パッケージ
 
-ここでは、SQL Server と共にインストールされている R パッケージについて説明し、管理し、既存のパッケージを表示する方法に関する情報を提供します。
-
-この記事では、SQL Server で使用する新しいパッケージを追加する方法についての情報へのリンクも提供します。
+この記事では、インストールし、マシン学習機能を有効にする場合は、SQL Server と一緒にインストールされている R パッケージについて説明します。 この記事では、管理し、既存のパッケージを表示または SQL Server インスタンスに新しいパッケージを追加する方法も説明します。
 
 **適用されます:** SQL Server 2017 Machine Learning Services (In-database)、SQL Server 2016 R Services (In-database)
 
 ## <a name="what-is-the-instance-library-and-where-is-it"></a>インスタンスのライブラリおよび場所とは
 
-SQL Server で実行されている任意の R ソリューションでは、インスタンスに関連付けられている既定の R ライブラリにインストールされているパッケージのみを使用できます。
-
-SQL Server で R の機能をインストールするときに、R パッケージのライブラリは、インスタンス フォルダーに格納します。
+SQL Server で実行されている任意の R ソリューションでは、インスタンスに関連付けられている既定の R ライブラリにインストールされているパッケージのみを使用できます。 SQL Server で R の機能をインストールするときに、R パッケージのライブラリは、インスタンス フォルダーに格納します。
 
 + 既定のインスタンス*MSSQLSERVER* 
 
@@ -51,25 +47,44 @@ SQL Server で R の機能をインストールするときに、R パッケー�
 
 次のステートメントを実行すると、R の現在のインスタンスの既定のライブラリを確認することができます。
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script  @language = N'R'
 , @script = N'OutputDataSet <- data.frame(.libPaths());'
 WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
+
+また、使用できます、新しい[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) sp を実行している場合に、機能\_実行\_外部\_ターゲット コンピューター上で直接スクリプト。 関数は、リモート接続のライブラリ パスを返すことはできません。
+
+```sql
+EXEC sp_execute_external_script
+  @language =N'R',
+  @script=N'
+  sql_r_path <- rxSqlLibPaths("local")
+  print(sql_r_path)
+```
+
+> [!NOTE]
+> バインディングを使用してインスタンスに R コンポーネントをアップグレードする場合、インスタンスのライブラリへのパスを変更できます。 必ず SQL Server でどのライブラリが使用されていることを確認してください。
+
 ## <a name="r-packages-installed-with-sql-server"></a>SQL Server と共にインストールされている R パッケージ
 
-インストールすると、R 言語で SQL Server では、既定では、R**基本**パッケージがインストールされています。 基本パッケージを含めるなどパッケージによって提供されるコア機能`stats`と`utils`です。
+既定では、R**基本**パッケージがインストールされています。 基本パッケージを含めるなどパッケージによって提供されるコア機能`stats`と`utils`です。
 
-SQL Server 2016 および SQL Server 2017 で R のインストールにも含まれています、 **RevoScaleR**パッケージ、および関連する拡張パッケージおよびプロバイダー、リモート計算コンテキストをサポートするストリーミング、並列 rx 関数の実行とその他の多くの機能です。
+常に SQL Server 2016 または SQL Server 2017 での R のインストールに含まれる、 **RevoScaleR**パッケージ、および関連する拡張パッケージおよびプロバイダー、リモート計算コンテキストをサポートするストリーミング、並列 rx 関数の実行とその他の多くの機能です。 RevoScaleR パッケージをアップグレードするには、か、機械学習のコンポーネントだけをアップグレードまたは修正プログラムまたは新しいバージョンの SQL Server のインスタンスをアップグレードするバインディングを使用します。
 
-+ 強化された R 機能の概要については、次を参照してください[Machine Learning サーバーについて。](https://docs.microsoft.com/r-server/what-is-microsoft-r-server)
++ 強化された R 機能の概要については、次を参照してください[Machine Learning サーバーについて。](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
 
-+ クライアント コンピューター上に RevoScaleR ライブラリをダウンロードするには、インストール[Microsoft R クライアント](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)
++ クライアント コンピューター上に RevoScaleR ライブラリをダウンロードするには、インストール[Microsoft R クライアント](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
 ## <a name="permissions-required-for-installing-r-packages"></a>R パッケージをインストールするために必要なアクセス許可
 
-SQL Server 2016 では、管理者は、インスタンス全体を対象に新しい R パッケージをインストールする必要があります。 SQL Server の 2017 で、データベース管理者を選択したユーザーにパッケージの管理を委任する権限を付与する新しいデータベース機能が追加されました。
+SQL Server 2016 では、管理者は、インスタンス全体を対象に新しい R パッケージをインストールする必要があります。 
+
+SQL Server 2017 には、パッケージのインストールと管理の新機能が導入されています。
+
++ リモート クライアントから R コマンドを使用して、プライベートまたは共有のいずれかのスコープを使用してパッケージをインストールすることができます。 この機能では、いずれかが必要[Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install)または[Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)、インスタンスに対する dbo 特権とします。
++ 新しいデータベース機能が追加されましたパッケージの管理をサポートするためにデータベース管理者によって T-SQL を使用してなし。 今後、これらの機能は、特権のあるユーザーへのパッケージ管理のほとんどのファセットを委任することを Dba を提供します。
 
 このセクションでは、インストールし、バージョンごとのパッケージの管理に必要な権限について説明します。
 
@@ -81,9 +96,9 @@ SQL Server 2016 では、管理者は、インスタンス全体を対象に新�
 
 + SQL Server 2017 Machine Learning サービス
 
-    このリリースには、データベース管理者は選択したユーザーにパッケージのインストールの権限を委任することのできるパッケージ管理機能が含まれています。 この機能が有効になっている、データベース管理者を追加する新しいパッケージのロールのいずれかを要求します。 詳細については、次を参照してください。 [for SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)です。
-
     SQL Server インスタンスの管理者の場合で新しいパッケージをインストールできます。 インスタンスに関連付けられている既定のライブラリを使用することを確認するだけです。 ストアド プロシージャから呼び出されたときに、他の場所にインストールされているパッケージを実行できません。 コンピューティング コンテキストとしても、SQL Server を使用して実行するすべての R コードでは、パッケージが、インスタンス ライブラリで使用できることが必要です。
+
+    このリリースでは、今後のリリースでの Dba によってパッケージの管理が簡単をサポートすると一部の新機能も含まれます。 ここでは、インスタンス単位での R パッケージのインストールを続行することをお勧めします。
 
 + R Server (スタンドアロン)
 

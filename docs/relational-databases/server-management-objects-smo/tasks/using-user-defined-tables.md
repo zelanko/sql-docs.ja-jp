@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: user-defined tables [SQL Server]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bbec0404e9a28a58d76afce072bf47cf7b6e871
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7155a66d912f4cb854d23cca3bf8babd2ae1deef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-user-defined-tables"></a>ユーザー定義テーブルの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]ユーザー定義テーブルは、表形式の情報を表します。 ストアド プロシージャやユーザー定義関数に表形式のデータを渡すときにパラメーターとして使用されます。 データベース テーブルの列を表すために使用することはできません。  

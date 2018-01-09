@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: SessionID Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1206d4e706f1975e58189ef13809766ecaa5fb18
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8685d7e1b0f605530877639711744bf0d325baef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sessionid-element-xmla"></a>SessionID 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親の実行に使用するアクティブなセッションを識別[キャンセル](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)要素。  
@@ -50,11 +48,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
-|データ型と長さ|文字列|  
+|データ型と長さ|String|  
 |既定値|なし|  
-|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

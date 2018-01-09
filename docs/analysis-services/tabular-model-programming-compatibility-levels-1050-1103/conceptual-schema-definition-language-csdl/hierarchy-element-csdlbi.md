@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 53d88729411c0a353b82923d3f4a3337647902ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Hierarchy 要素は、階層を形成する互いにリンクできるテーブルのフィールドの論理コンテナーです。 Hierarchy 要素は CSDL Member 要素から派生し、ビジネス インテリジェンス データ モデルで作成される階層をサポートするように拡張されています。  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、Hierarchy 要素を定義する要素と属性を示します。  
   
-|名前|必須かどうか|Description|  
+|[オブジェクト名]|必須かどうか|Description|  
 |----------|-----------------|-----------------|  
-|ドキュメント|いいえ|階層の説明。|  
+|ドキュメント|不可|階層の説明。|  
 |レベル|可|階層内で使用される列を定義する 1 つまたは複数の Level 要素。<br /><br /> 「[Level 要素 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)」を参照してください。|  
   
 ## <a name="remarks"></a>解説  

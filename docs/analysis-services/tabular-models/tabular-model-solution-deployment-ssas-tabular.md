@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00a88530d8917d45358cbd69a21b9b2555e1f82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>テーブル モデル ソリューションの配置 (SSAS テーブル)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデル プロジェクトを作成した後に、ユーザーがレポート クライアント アプリケーションを使用してモデルを参照するために展開する必要があります。 このトピックでは、テーブル モデル ソリューションを環境に配置する際に使用できるさまざまなプロパティと方法について説明します。  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 |プロパティ|既定の設定|Description|  
 |--------------|---------------------|-----------------|  
-|**[処理オプション]**|**[既定]**|このプロパティでは、オブジェクトの変更を配置するときに必要な処理方法を指定します。 このプロパティには、次のオプションがあります。<br /><br /> **[既定]** – Analysis Services によって必要な処理方法が決定されることを指定します。 未処理のオブジェクトは処理され、必要に応じて、属性リレーションシップ、属性階層、ユーザー階層、および計算列が再計算されます。 通常は、[完全処理] オプションを使用するよりも、配置時間が高速になります。<br /><br /> **[処理しない]** - メタデータが配置されるのみであることを指定します。 配置後、配置済みのモデルに対して処理操作を実行してデータの更新および再計算を実行する必要がある場合があります。<br /><br /> **[完全]** - メタデータが配置され、完全な処理操作が実行されることを指定します。 これにより、配置済みのモデルには、メタデータおよびデータの最新の更新が含まれます。|  
+|**[処理オプション]**|**[Default]**|このプロパティでは、オブジェクトの変更を配置するときに必要な処理方法を指定します。 このプロパティには、次のオプションがあります。<br /><br /> **[既定]** – Analysis Services によって必要な処理方法が決定されることを指定します。 未処理のオブジェクトは処理され、必要に応じて、属性リレーションシップ、属性階層、ユーザー階層、および計算列が再計算されます。 通常は、[完全処理] オプションを使用するよりも、配置時間が高速になります。<br /><br /> **[処理しない]** - メタデータが配置されるのみであることを指定します。 配置後、配置済みのモデルに対して処理操作を実行してデータの更新および再計算を実行する必要がある場合があります。<br /><br /> **[完全]** - メタデータが配置され、完全な処理操作が実行されることを指定します。 これにより、配置済みのモデルには、メタデータおよびデータの最新の更新が含まれます。|  
 |**トランザクション配置**|**False**|このプロパティでは、配置がトランザクションかどうかを指定します。 既定では、すべてのオブジェクトまたは変更されたオブジェクトの配置は、それらを配置した後の処理とトランザクション関係がありません。 処理に失敗しても、配置は成功して持続できます。 これを変更して、配置と処理を 1 つのトランザクションに組み込むこともできます。|  
 |**クエリ モード**|**In-Memory**|このプロパティでは、クエリ結果が返される元のソースが In-Memory (キャッシュ) モードと DirectQuery モードのどちらで実行されるかを指定します。 このプロパティには、次のオプションがあります。<br /><br /> **[DirectQuery]** – モデルに対するすべてのクエリがリレーショナル データ ソースのみを使用する必要があることを指定します。<br /><br /> **[DirectQuery (およびインメモリ)]** - クライアントから接続文字列で特に指定されていない限り、既定ではリレーショナル ソースを使用してクエリに応答する必要があることを指定します。<br /><br /> **[インメモリ]** - キャッシュのみを使用してクエリに応答する必要があることを指定します。<br /><br /> **[インメモリ (および DirectQuery)]** - 既定で次のように指定します。 クライアントから接続文字列で指定されていない限り、キャッシュを使用してクエリに応答する必要があります。<br /><br /> <br /><br /> 詳細については、「[DirectQuery モード &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)」を参照してください。|  
   
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|---------------------|-----------------|  
 |**[サーバー]**<br /><br /> プロジェクトの作成時に設定します。|**localhost**|このプロパティは、プロジェクトの作成時に設定し、モデルを配置する Analysis Services インスタンスの名前を指定します。 既定では、モデルは、ローカル コンピューター上の Analysis Services の既定のインスタンスに配置されます。 ただし、この設定を変更して、ローカル コンピューター上の名前付きインスタンスや、Analysis Services オブジェクトを作成する権限のあるリモート コンピューター上の任意のインスタンスを指定できます。|  
 |**のエディション**|ワークスペース サーバーがある場所のインスタンスと同じエディション。|このプロパティでは、モデルを配置する Analysis Services サーバーのエディションを指定します。 サーバー エディションにより、プロジェクトに組み込むことができるさまざまな機能が定義されます。 既定では、ローカルの Analysis Services サーバーのエディションになります。 Analysis Services の実稼働サーバーなど、別の Analysis Services サーバーを指定する場合は、その Analysis Services サーバーのエディションを指定する必要があります。|  
-|**データベース**|**\<プロジェクト名 >**|このプロパティでは、配置時にモデル オブジェクトがインスタンス化される Analysis Services データベースの名前を指定します。 この名前は、レポート クライアント データ接続や .bism データ接続ファイルにも指定されます。<br /><br /> この名前は、モデルの作成中にいつでも変更できます。 モデルを配置した後に名前を変更した場合、配置後に行った変更は既に配置されているモデルには反映されません。 たとえば、 **TestDB** という名前のソリューションを開き、既定の model データベース名の Model という名前のソリューションを配置した後、ソリューションを変更して、model データベースの名前を **Sales**に変更すると、そのソリューションが配置された Analysis Services インスタンスには、Model という名前のデータベースと Sales という名前のデータベースが別々に表示されます。|  
+|**[データベース]**|**\<プロジェクト名 >**|このプロパティでは、配置時にモデル オブジェクトがインスタンス化される Analysis Services データベースの名前を指定します。 この名前は、レポート クライアント データ接続や .bism データ接続ファイルにも指定されます。<br /><br /> この名前は、モデルの作成中にいつでも変更できます。 モデルを配置した後に名前を変更した場合、配置後に行った変更は既に配置されているモデルには反映されません。 たとえば、 **TestDB** という名前のソリューションを開き、既定の model データベース名の Model という名前のソリューションを配置した後、ソリューションを変更して、model データベースの名前を **Sales**に変更すると、そのソリューションが配置された Analysis Services インスタンスには、Model という名前のデータベースと Sales という名前のデータベースが別々に表示されます。|  
 |**[キューブ名]**|**[モデル]**|このプロパティでは、クライアント ツール (Excel など) および分析管理オブジェクト (AMO) に表示するキューブ名を指定します。|  
   
 ### <a name="directquery-options-properties"></a>[DirectQuery オプション] のプロパティ  
@@ -103,7 +100,7 @@ ms.lasthandoff: 12/08/2017
 |タスク|Description|  
 |----------|-----------------|  
 |[SQL Server データ ツールからの配置 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で Deploy コマンドを使用して、配置プロパティを構成し、テーブル モデル プロジェクトを配置する方法について説明します。|  
-|[Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|このセクションの各トピックでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを使用して、テーブル モデル ソリューションと多次元モデル ソリューションの両方を配置する方法について説明します。|  
+|[配置ウィザードを使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|このセクションの各トピックでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを使用して、テーブル モデル ソリューションと多次元モデル ソリューションの両方を配置する方法について説明します。|  
 |[配置ユーティリティを使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ユーティリティを使用して、テーブル モデル ソリューションと多次元モデル ソリューションを配置する方法について説明します。|  
 |[XMLA を使用したモデル ソリューションの配置](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|XMLA を使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル ソリューションと多次元ソリューションを配置する方法について説明します。|  
 |[Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|データベースの同期ウィザードを使用して、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル データベースと多次元データベース間でメタデータとデータを同期する方法について説明します。|  

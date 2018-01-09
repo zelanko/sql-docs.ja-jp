@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0f34af9c1c466f09040c7915f53b993cb04ac1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>線形回帰モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング モデルに対するクエリを作成するときに、分析で検出されたパターンの詳細情報を提供するには、コンテンツのクエリを作成するまたはパターンを使用して、モデルに新しいデータについて予測する予測クエリを作成することができます。 たとえばコンテンツ クエリを使用すると、回帰式に関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントがモデルに適合するかどうかを調べることができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -91,9 +89,9 @@ FROM LR_PredictIncome.CONTENT
   
  期待される結果:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  

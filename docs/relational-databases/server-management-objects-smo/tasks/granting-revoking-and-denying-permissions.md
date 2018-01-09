@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25903194512146b53d325b217ff7d866d7b38ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d9a4e8529fdb24060db49e2263576f492570e64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>権限の許可、取り消し、および拒否
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>オブジェクトがアクセス許可またはに個別のサーバー権限のセットを割り当てるため、<xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>オブジェクト。 サーバー レベルの権限については、ログオンが参照されます。 Windows によって認証されたログオンは、Windows ユーザー名としてリストされます。 このコード例を実行すると、権限付与対象ユーザーから権限が取り消され、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> メソッドを使用してこの権限が削除されたことが確認されます。  

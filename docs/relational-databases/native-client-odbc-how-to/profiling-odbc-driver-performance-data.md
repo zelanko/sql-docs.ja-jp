@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: driver performance data [ODBC]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1f09e0a9accb1b5940823609fb9fbb7313fcc067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5391255c4e3141a2c1436d36277fb046918e48a1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>ODBC ドライバー パフォーマンス データのプロファイル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してドライバーのパフォーマンス データをログに記録するには  
   
-1.  **コントロール パネルの **をダブルクリックして**管理ツール**順にダブルクリック**データ ソース (ODBC)**です。 または、odbcad32.exe を呼び出すことができます。  
+1.  **コントロール パネルの** をダブルクリックして**管理ツール**順にダブルクリック**データ ソース (ODBC)**です。 または、odbcad32.exe を呼び出すことができます。  
   
 2.  クリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>ドライバーのパフォーマンス データをプログラムを使用してログに記録するには  
   
-1.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG およびパフォーマンス データのログ ファイルの完全パスとファイル名にします。 例:  
+1.  呼び出す[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG およびパフォーマンス データのログ ファイルの完全パスとファイル名にします。 例 :  
   
     ```  
     "C:\\Odbcperf.log"  

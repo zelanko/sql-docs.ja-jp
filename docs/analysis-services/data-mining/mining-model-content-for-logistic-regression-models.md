@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-content-for-a-logistic-regression-model"></a>ロジスティック回帰モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、ロジスティック回帰に関連する列についてのみ詳細と例を紹介します。 このモデル コンテンツはニューラル ネットワーク モデルのものとほぼ同じなので、便宜上、この表にも、ニューラル ネットワーク モデルに当てはまる説明が記載されている場合があります。  
   
- ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
+|非表示層|空白|  
 |出力層|空白|  
 |出力ノード|出力属性名|  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/08/2017
   
 |ノードの種類の ID|Description|  
 |------------------|-----------------|  
-|1|モデル。|  
+|@shouldalert|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
 |18|入力層のオーガナイザー ノード。|  
 |19|非表示層のオーガナイザー ノード。 非表示層は空です。|  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |マージナル統計|常に 0 です。|  
 |入力層|モデルで使用された入力属性と値のペアの数を示します。|  
 |入力ノード|常に 0 です。|  
-|非表示層|ロジスティック回帰モデルでは常に 0 です。|  
+|hidden layer|ロジスティック回帰モデルでは常に 0 です。|  
 |出力層|出力値の数を示します。|  
 |出力ノード|常に 0 です。|  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
+|非表示層|空白|  
 |出力層|空白|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 12/08/2017
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |出力層|空白|  
 |出力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
   

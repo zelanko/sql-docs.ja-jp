@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sample-data-and-projects"></a>サンプル データとプロジェクトをインストールします。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]すべての Analysis Services のチュートリアルで使用されるデータとプロジェクト ファイルをインストールするのに手順とここで指定されたリンクを使用します。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
     既定では Analysis Services は、多次元のインスタンスとしてインストールされますが、インストール ウィザードのサーバー構成ページで表形式のサーバー モードを選択することによりオーバーライドできます。 両方のサーバー モードを実行する場合は、同じコンピューター上の SQL Server セットアップを再実行して、他方のモードで Analysis Services の第 2 のインスタンスをインストールします。  
   
--   SQL Server Management Studio  
+-   [SQL Server Management Studio]  
   
 チュートリアルを進めていくと、多次元データを参照することがあるので、必要に応じて Excel のインストールを検討してください。 Excel をインストールすると、構築するキューブに接続されているピボットテーブル フィールド リストを使用して Excel を起動する、" **Excel で分析** " 機能が有効になります。 データと対話するためのピボット レポートをすばやく作成できるので、Excel を使用してデータを参照することをお勧めします。  
   
@@ -133,7 +133,7 @@ Analysis Services 多次元モデルでは、リレーショナル データベ�
   
     -   Lesson 10 Complete  
   
-4.  これらのファイルの読み取り専用権限を削除します。 親フォルダーである [Analysis Services Tutorial SQL Server 2012] を右クリックし、 **[プロパティ]**をクリックして、 **[読み取り専用]**のチェックボックスをオフにします。 **[OK]**をクリックします。 このフォルダー、サブフォルダー、およびファイルへの変更を適用します。  
+4.  これらのファイルの読み取り専用権限を削除します。 親フォルダーである [Analysis Services Tutorial SQL Server 2012] を右クリックし、 **[プロパティ]**をクリックして、 **[読み取り専用]**のチェックボックスをオフにします。 **[OK]** をクリックします。 このフォルダー、サブフォルダー、およびファイルへの変更を適用します。  
   
 5.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を起動します。  
   

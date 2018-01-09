@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,11 +33,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、両方の物理データ型の列を定義するには、マイニング構造およびモデルでは、使用されている列の論理コンテンツの種類  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/08/2017
   
  コンテンツの種類 **Discretized** は、 **Date**、 **Double**、 **Long**、および **Text**の各データ型によってサポートされています。  
   
-## <a name="key"></a>[キー]  
+## <a name="key"></a>Key  
  コンテンツの種類 *key* は、この列が行を一意に識別することを表します。 ケース テーブルの場合、通常、キー列は数値またはテキストの識別子です。 コンテンツの種類を **key** に設定すると、分析には使用しない、レコードの追跡専用の列であることが示されます。  
   
  入れ子になったテーブルにもキーはありますが、入れ子になったテーブルのキーは使い方が多少異なります。 入れ子になったテーブルでコンテンツの種類を **key** に設定するのは、その列が分析する属性である場合です。 入れ子になったテーブルのキーの値は各ケースで一意である必要がありますが、ケースのセット全体では重複していてもかまいません。  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Source Element (Error)
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d462830f097bd3f7992715cd44c4c05437a65e84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0a680f6d011b5f082dee13e247b2bf182773a719
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="source-element-error-xmla"></a>Source 要素 (Error) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親を生成したコンポーネントの名前を含む[エラー](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)要素。  
@@ -50,11 +48,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
-|データ型と長さ|文字列|  
+|データ型と長さ|String|  
 |既定値|なし|  
-|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |親要素|[[エラー]](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)|  
 |子要素|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

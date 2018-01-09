@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot サービス アカウントの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]インストールには、サーバー操作をサポートする 2 つのサービスが含まれています。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** サービスは、アプリケーション サーバー上での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  **[このサービスのアカウントを選択する]**で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ##  <a name="bkmk_appPool"></a> Power Pivot サービス アプリケーションのアプリケーション プールの作成または変更  
   

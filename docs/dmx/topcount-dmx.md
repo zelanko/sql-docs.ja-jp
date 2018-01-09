@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOPCOUNT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b5d0020ea38edda21d5aec96b0b5a469d2f5f963
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式 >  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  によって指定された値、\<式をランク付け > 引数で指定される行のランクの減少順を決定する、\<テーブル式 > 引数とで指定されている最上位の行の数、 \<count > 引数が返されます。  
   
  TopCount 関数が結合型の予測を有効にするのには導入最初および一般に、同じ結果を含むステートメントとして**SELECT TOP**と**ORDER BY**句。 使用する場合は、結合型の予測のパフォーマンスが向上を取得するが、 **Predict (DMX)**関数で、さまざまな予測を返すの仕様をサポートします。  

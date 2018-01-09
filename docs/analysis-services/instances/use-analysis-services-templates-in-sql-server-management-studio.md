@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] XMLA スクリプトをすばやく作成するためにテンプレートのセットは、DMX または MDX クエリでは、キューブまたは表形式モデル、スクリプトのバックアップで Kpi を作成および復元操作、およびその他の多くのタスクを実行します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。  
@@ -217,14 +214,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\管理|バックアップ|XMLA の **Backup** コマンドを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをファイルにバックアップする方法を示します。|  
 ||キャンセル|XMLA の **Cancel** コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|  
 ||リモート パーティション データベースの作成|XMLA の **Create** コマンドを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) データベース要素と共に使用して、リモート パーティションを保存する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびデータ ソースを作成する方法を示します。|  
-||Del|XMLA の **Delete** コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|  
+||DELETE|XMLA の **Delete** コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|  
 ||ディメンションの処理|XMLA の **Batch** コマンドを **Parallel** 要素および **Process** コマンドと組み合わせ、並列バッチ操作を使用してディメンションの属性を更新する方法を示します。|  
 ||パーティションの処理|XMLA の **Batch** コマンドを **Parallel** 要素および **Process** コマンドと組み合わせ、並列バッチ操作を使用してパーティションを完全に処理する方法を示します。|  
-||復元|XMLA の **Restore** コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|  
+||[復元]|XMLA の **Restore** コマンドを使用して、既存のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する方法を示します。|  
 ||同期|XMLA の **Synchronize** コマンドで、SynchronizeSecurity タグの SkipMembership オプションを使用して別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースと同期させる方法を示します。|  
 |XMLA\スキーマ行セット|スキーマ行セットの検出|XMLA の **Discover** メソッドを使用して、DISCOVER_SCHEMA_ROWSETS スキーマ行セットの内容を取得する方法を示します。|  
 |XMLA\サーバー ステータス|接続|XMLA の **Discover** メソッドを使用して、DISCOVER_CONNECTIONS スキーマ行セットの内容を取得する方法を示します。|  
-||ジョブ|XMLA の **Discover** メソッドを使用して、DISCOVER_JOBS スキーマ行セットの内容を取得する方法を示します。|  
+||の|XMLA の **Discover** メソッドを使用して、DISCOVER_JOBS スキーマ行セットの内容を取得する方法を示します。|  
 ||[場所]|XMLA の **Discover** メソッドを使用して、場所バックアップ ファイルのパスを指定して DISCOVER_LOCATIONS スキーマ行セットの内容を取得する方法を示します。|  
 ||Locks|XMLA の **Discover** メソッドを使用して、DISCOVER_LOCKS スキーマ行セットの内容を取得する方法を示します。|  
 ||メモリ許可|XMLA の **Discover** メソッドを使用して、DISCOVER_MEMORYGRANT スキーマ行セットの内容を取得する方法を示します。|  

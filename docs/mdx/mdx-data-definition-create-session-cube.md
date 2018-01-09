@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -29,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ab4dc73881d8c29586b4f70a2b89f68a00263abd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: be395f43e1a372e54f9759edcf58d0b35f03d15c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX データ定義、セッション キューブの作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -130,7 +130,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<レベルの種類 >  
  派生ディメンションの定義でのみ指定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバー キューブやローカル キューブと異なり、セッション キューブは、それを作成したセッションの期間を超えて保持されません。 セッション キューブは、それを定義するメジャーおよび定義を使用して定義されます。 ディメンションには次の 2 種類があります。  
   
 -   ソース ディメンション - 1 つ以上のソース キューブの一部であったディメンションです。  

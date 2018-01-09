@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54feb379272889d7bed97128b0d4eb7ca274cafa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf47c53748e56fa455a62e8489839321e960493b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework での SQL Server データ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SqlTypes**ライブラリの基底クラス ライブラリの一部である、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET フレームワークです。 このライブラリには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ型と同じセマンティクスと有効桁数を備えたデータ型が用意されています。 このトピックは、.NET Framework プログラマにとっては新しいセマンティクスについて説明し、実装されている型が導入されています、 **System.Data.SqlTypes**に含まれている名前空間、 **System.Data**ライブラリです。  

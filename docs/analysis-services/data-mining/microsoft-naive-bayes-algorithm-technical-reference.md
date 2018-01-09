@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f467621594b3ed81793d0925b600650dfa1e3599
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 93884e29674fa1a96402d23e397cddb3a1fe0bef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、によって提供される分類アルゴリズム[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]予測モデリングに使用します。 このアルゴリズムでは、各列に依存関係がないと仮定して、入力列と予測可能列の条件付き確率が計算されます。 この非依存性の仮定が、Naive Bayes という名前の由来です。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 |アルゴリズム|分析の方法|コメント|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Naive Bayes で使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。|  
+|Naive Bayes|Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Naive Bayes で使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。|  
   
  このアルゴリズムは、処理時間が最短になり、最も重要な属性を効率よく選択できるように設計されています。ただし、次のようにパラメーターを設定することで、アルゴリズムが使用するデータを制御できます。  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Cyclical、Discrete、Discretized、Table、Ordered|  

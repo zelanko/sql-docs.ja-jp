@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2bec0055791056d71879f9d2d4be2dbda26c5b7b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a7a63cc3ce5a86701a20bb4083b7eb88ef1d4b66
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cubes-in-multidimensional-models"></a>多次元モデルのキューブ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブは、分析の目的で情報を含む多次元構造体キューブの主な構成要素とは、ディメンションとメジャーです。 ディメンションでは、スライスおよびダイス化に使用するキューブの構造が定義され、メジャーによってエンド ユーザーが必要とする集計された数値が用意されます。 論理構造としてキューブを使用すると、クライアント アプリケーションでは、キューブ内のセルに含まれているかのようにメジャーの値を取得できます。セルは、考えられるすべての集約値に対して定義されます。 キューブのセルは、ディメンションのメンバーの交差領域によって定義され、その交差領域のメジャーの集計値を含みます。  
@@ -49,10 +46,10 @@ ms.lasthandoff: 12/08/2017
 |階層|[ユーザー定義階層の作成](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)|  
 |アクション|[多次元モデルのアクション](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|  
 |主要業績評価指標 (KPI)|[多次元モデルの主要業績評価指標 &#40;KPI&#41;](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
-|計算|[多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
+|[新しい名前付きセット]|[多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
 |翻訳|[多次元モデルの翻訳 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |トピック|Description|  
 |-----------|-----------------|  

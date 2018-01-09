@@ -8,7 +8,7 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -24,11 +24,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4cc170e6b8da5bc83e4ca2927baed90c8a02fe24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a80c26130d5671dd387122930e599a2c33a5db60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |counter_value|**整数 (integer)**|登録されている外部スクリプト関数がサーバーで呼び出されたインスタンスの合計数です。 この値は、機能がインスタンスにインストールされてからの累積値で、リセットすることはできません。|  
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 > [!NOTE]  

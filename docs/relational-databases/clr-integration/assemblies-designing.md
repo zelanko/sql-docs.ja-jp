@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce4e2e7fb36146d9e7e84a8a5c0a1b2f3fe09f58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9273db56dfc99f76325ee9938678d2dc24aad8e8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assemblies---designing"></a>アセンブリの設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックでは、アセンブリをデザインする際に考慮する、次の要因について説明します。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  コードをアセンブリにパッケージ化しているときは、次のことを考慮する必要があります。  
   
--   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、次を参照してください。[を実装するアセンブリ](../../relational-databases/clr-integration/assemblies-implementing.md)と[ALTER ASSEMBLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、次を参照してください。[を実装するアセンブリ](../../relational-databases/clr-integration/assemblies-implementing.md)と[ALTER ASSEMBLY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
 -   マネージ コードの一部分で上位の権限が必要な場合、そのコードは、上位の権限を必要としないコードとは別のアセンブリにパッケージ化することをお勧めします。  
   

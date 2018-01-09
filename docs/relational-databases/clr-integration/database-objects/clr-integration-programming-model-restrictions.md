@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 180f770c24721ef9e8ed84e4d6f01204b0fd42b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23972fb78bafaca778b37fc7226d3db4f53083e8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成するときはコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]まず、データベースに登録されているときに、マネージ コード アセンブリに対する検査は実行を使用して、 **CREATE ASSEMBLY**ステートメントでは、および実行時にもします。 マネージ コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要がある要件として、アセンブリが登録されているかどうかによって変わります**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**、**セーフ** 、最も制限の厳しい、され、次のとおりです。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 dev_langs:
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0c4cf9fb0c941751dbf8e79b570ce040895ff8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f16f13a8f55429cb196a9cc6bc82e61bb8c7328
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックでは、名前空間とライブラリを使用してデータベース オブジェクトのコンパイルに必要なの概説、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) と統合します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
@@ -102,7 +102,7 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- version は、インストールされた再配布可能な .NET Framework のバージョン番号を表します。 例:  
+ version は、インストールされた再配布可能な .NET Framework のバージョン番号を表します。 例 :  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v4.6.1  

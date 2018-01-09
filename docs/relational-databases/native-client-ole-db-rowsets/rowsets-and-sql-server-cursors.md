@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c309c174deec84526ffb0a85612fe833b0a24d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e0546fe394d34b9a06bed38b0277192ca8f9ff8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  次の行セット プロパティによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを使用することが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに指示されます。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
   
-|プロパティ ID|値|行セットの動作|  
+|プロパティ ID|ReplTest1|行セットの動作|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットは順次処理され、順方向のスクロールとフェッチのみがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_CANSCROLLBACKWARDS または DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  特定の種類のカーソル モデルを使用するには、カーソル モデルに対応する列を探し、列の値が "T" であるすべての行セット プロパティを見つけます。 これらの行セット プロパティに VARIANT_TRUE を設定すると、その特定のカーソル モデルを使用できます。 値が "-" の行セット プロパティには、VARIANT_TRUE と VARIANT_FALSE のどちらも設定できます。  
   
-|行セット プロパティ/カーソル モデル|既定値<br /><br /> result<br /><br /> セット (set)<br /><br /> (RO)|[高速]<br /><br /> 順方向<br /><br /> のみ<br /><br /> (RO)|静的<br /><br /> (RO)|Keyset<br /><br /> ドリブン<br /><br /> (RO)|  
+|行セット プロパティ/カーソル モデル|既定<br /><br /> result<br /><br /> セット (set)<br /><br /> (RO)|[高速]<br /><br /> 順方向<br /><br /> のみ<br /><br /> (RO)|静的<br /><br /> (RO)|Keyset<br /><br /> ドリブン<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

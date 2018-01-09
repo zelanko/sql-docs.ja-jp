@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Attribute Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2100479529d5d7ca15bd8b6dcf0600088617c02
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d8441c406aac47d1c67bc8f24f049c6073043261
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-element-xmla"></a>Attribute 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定義またはフィルターの対象である属性内のメンバー、親[挿入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)、[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)、または[ドロップ](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)コマンドを実行します。  
@@ -60,11 +58,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
+|基数|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 |[Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)、[場所](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)|[AttributeName](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)、[キー](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)|  
 |[挿入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)、[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|[AttributeName](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)、 [[customrollup]](../../../analysis-services/xmla/xml-elements-properties/customrollup-element-xmla.md)、 [[customrollupproperties]](../../../analysis-services/xmla/xml-elements-properties/customrollupproperties-element-xmla.md)、[キー](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)、[名前](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)、 [SkippedLevels](../../../analysis-services/xmla/xml-elements-properties/skippedlevels-element-xmla.md)、[翻訳](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)、 [[unaryoperator]](../../../analysis-services/xmla/xml-elements-properties/unaryoperator-element-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Attribute** 要素は、 **Insert**、 **Update**、または **Drop** コマンドによって、挿入、更新、または削除される属性メンバーを定義します。 1 つの属性メンバーだけで、一度に処理できるためにこれらのコマンド、[属性](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)のコレクション、**挿入**、**更新**、および**をドロップ**コマンドには、1 つだけ含めることができます**属性**要素。 ただし、 **Attributes** および **Where** コマンドの **Drop** 要素の **Update** コレクションには複数の **Attribute** 要素を含めることができ、書き込み許可ディメンション内の削除または更新対象の属性をフィルター処理できます。  
   
 ## <a name="see-also"></a>参照  

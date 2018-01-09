@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQLSetDescRec function
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 03db037c6048261681a1f2857be910ebf800c5ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f05f9909793298f2eba15a647ac24f0d232c1205
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*サブタイプ*|無視|SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合は、これに SQL_DESC_DATETIME_INTERVAL_CODE を設定します。|  
-|*長さ*|SQL_DESC_OCTET_LENGTH|テーブル値パラメーターの型名の長さ。 型名が null 終端、または 0 場合、テーブル値パラメーターの名前を入力する必要はない場合は、SQL_NTS にできます。|  
+|*Length*|SQL_DESC_OCTET_LENGTH|テーブル値パラメーターの型名の長さ。 型名が null 終端、または 0 場合、テーブル値パラメーターの名前を入力する必要はない場合は、SQL_NTS にできます。|  
 |*有効桁数*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*Scale*|SQL_DESC_SCALE|未使用。 このパラメーターは 0 にする必要があります。|  
 |*DataPtr*|APD の SQL_DESC_DATA_PTR|SQL_CA_SS_TYPE_NAME<br /><br /> このパラメーターは、ストアド プロシージャの呼び出しでは省略可能で、不要の場合は NULL を指定できます。 このパラメーターは、プロシージャの呼び出し以外の SQL ステートメント用に指定する必要があります。<br /><br /> *DataPtr*可変の行バインドを使用する場合は、このテーブル値パラメーターを識別する、アプリケーションが使用できる一意の値としても機能します。|  
@@ -51,11 +51,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して許可される値を次に示します。  
   
-||*型*|*サブタイプ*|*長さ*|*有効桁数*|*Scale*|  
+||*型*|*サブタイプ*|*Length*|*有効桁数*|*Scale*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|日付|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

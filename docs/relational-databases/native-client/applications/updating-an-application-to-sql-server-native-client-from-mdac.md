@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13e82915a2ddce9cb21dabb6ec2ad1aa96543069
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2c72e6ab626db31ec329dce777f17e04774b01d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
 -   ODBC または OLE DB 呼び出しを使用してトランザクションを開始した場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC とでは動作が異なります。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ではトランザクションがすぐに開始されますが、MDAC では最初のデータベース アクセスの後にトランザクションが開始されます。 ストアド プロシージャとバッチの動作に影響するためできますこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]@ 必要があります@TRANCOUNTバッチまたはストアド プロシージャが終了すると、バッチやストアド プロシージャの開始時と同じであります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction でトランザクションが即座に開始します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction でトランザクションが即座に開始します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
   
 -   使用する場合に、エラーが発生する可能性があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ドライバー System.Data.Odbc にアクセスすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、新しい公開サーバー コンピューター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定のデータ型または機能します。 System.Data.Odbc は、ODBC の汎用実装を提供し、後では公開しませんベンダー固有の機能または拡張機能です。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーは最新の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能をネイティブでサポートするように更新されます)。回避策をこの問題、MDAC に戻すか、System.Data.SqlClient に移行します。  
   

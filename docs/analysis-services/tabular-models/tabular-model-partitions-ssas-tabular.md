@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 812d973da1d754ee8fcca06151b2068c180cfc5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ac102f21aeadab1d5ca7b916a2081405c654cd5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティション (SSAS テーブル)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]パーティションは、テーブルを論理部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時にあるモデルのために定義されたパーティションが、配置済みモデルで複製されます。 いったん配置されると、 **の** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスまたはスクリプトを使用して、それらのパーティションを管理したり、新しいパーティションを作成したりできます。 このトピックでは、配置済みのテーブル モデル データベースにおけるパーティションについて説明します。 モデル作成時のパーティションの作成と管理の詳細については、「[パーティション (SSAS テーブル)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [利点](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [権限](#bkmk_permissions)  
   
 -   [パーティションの処理](#bkmk_process_partitions)  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |----------------|-------------|  
 |管理者|読み取り、処理、作成、コピー、マージ、削除|  
 |[処理]|読み取り、処理|  
-|[読み取り専用]|読み取り|  
+|[読み取り専用]|Read|  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してモデル作成時にロールを作成する方法の詳細については、「[ロール (SSAS テーブル)](../../analysis-services/tabular-models/roles-ssas-tabular.md)」を参照してください。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して配置済みテーブル モデル ロールのロール メンバーを管理する方法の詳細については、「[テーブル モデル ロール (SSAS テーブル)](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)」を参照してください。  
   

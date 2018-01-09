@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-provider
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5dac1fe79571bd160a1b7c061733c54bdc8d4568
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 61f67561c03646f196b87b17e832cb9759cc1abe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>データ ソースへの接続の確立
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  同じコンピューター上で複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが実行されている場合、サーバー名を ServerName\InstanceName のように指定します。  
   
- データ ソース オブジェクトに公開、 **IDBInitialize**インターフェイスです。 呼び出すことによって、データ ソースへの接続が確立されたプロパティを設定した後、 **idbinitialize::initialize**メソッドです。 例:  
+ データ ソース オブジェクトに公開、 **IDBInitialize**インターフェイスです。 呼び出すことによって、データ ソースへの接続が確立されたプロパティを設定した後、 **idbinitialize::initialize**メソッドです。 例 :  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

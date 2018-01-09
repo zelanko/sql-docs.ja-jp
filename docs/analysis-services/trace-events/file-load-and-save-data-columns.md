@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 788c4b0e0ff0b35a193f5af55b3e4949fb04e572
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f10d93cf8670da5e14d2fb65193c43398ad1c6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="file-load-and-save-data-columns"></a>ファイルの読み込みと保存のデータ列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ファイルの読み込みと保存のイベント カテゴリには、次のイベント クラスがあります。  
@@ -43,18 +43,18 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
@@ -63,24 +63,24 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
-|IntegerData|10|1|整数データ。|  
+|IntegerData|10|@shouldalert|整数データ。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|Severity|22|1|例外の重大度レベル。|  
-|成功|23|1|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
-|[エラー]|24|1|特定のイベントのエラー番号。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|Severity|22|@shouldalert|例外の重大度レベル。|  
+|成功|23|@shouldalert|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
+|[エラー]|24|@shouldalert|特定のイベントのエラー番号。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
@@ -89,18 +89,18 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前|  
@@ -109,24 +109,24 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
-|IntegerData|10|1|整数データ。|  
+|IntegerData|10|@shouldalert|整数データ。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|Severity|22|1|例外の重大度レベル。|  
-|成功|23|1|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
-|[エラー]|24|1|特定のイベントのエラー番号。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|Severity|22|@shouldalert|例外の重大度レベル。|  
+|成功|23|@shouldalert|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
+|[エラー]|24|@shouldalert|特定のイベントのエラー番号。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
@@ -135,18 +135,18 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
@@ -155,24 +155,24 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
-|IntegerData|10|1|整数データ。|  
+|IntegerData|10|@shouldalert|整数データ。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|Severity|22|1|例外の重大度レベル。|  
-|成功|23|1|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
-|[エラー]|24|1|特定のイベントのエラー番号。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|Severity|22|@shouldalert|例外の重大度レベル。|  
+|成功|23|@shouldalert|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
+|[エラー]|24|@shouldalert|特定のイベントのエラー番号。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
@@ -181,18 +181,18 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
@@ -201,24 +201,24 @@ ms.lasthandoff: 12/08/2017
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventClass|0|@shouldalert|イベント クラスを使用してイベントを分類します。|  
 |CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
-|JobID|7|1|進行状況に対応するジョブ ID。|  
+|JobID|7|@shouldalert|進行状況に対応するジョブ ID。|  
 |SessionType|8|8|セッションの種類 (操作の原因となったエンティティ)。|  
-|IntegerData|10|1|整数データ。|  
+|IntegerData|10|@shouldalert|整数データ。|  
 |ObjectID|11|8|オブジェクト ID (文字列です)。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectType|12|@shouldalert|オブジェクトの種類です。|  
 |ObjectName|13|8|オブジェクト名です。|  
 |ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|Severity|22|1|例外の重大度レベル。|  
-|成功|23|1|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
-|[エラー]|24|1|特定のイベントのエラー番号。|  
-|ConnectionID|25|1|一意の接続 ID。|  
+|Severity|22|@shouldalert|例外の重大度レベル。|  
+|成功|23|@shouldalert|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|  
+|[エラー]|24|@shouldalert|特定のイベントのエラー番号。|  
+|ConnectionID|25|@shouldalert|一意の接続 ID。|  
 |DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|ClientProcessID|36|1|クライアント アプリケーションのプロセス ID。|  
+|ClientProcessID|36|@shouldalert|クライアント アプリケーションのプロセス ID。|  
 |SessionID|39|8|セッション GUID。|  
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  

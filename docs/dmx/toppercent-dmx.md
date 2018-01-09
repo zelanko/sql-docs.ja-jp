@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOPPERCENT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 465adf40fdbd7db16df5b2b88031d9e0b2cec779
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb2026feb025f90443f531da6668adc0eaad087c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,7 +111,7 @@ NATURAL PREDICTION JOIN
  **注**この例は、TopPercent の使用を示すことだけを提供します。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
   
 > [!WARNING]  
->  TOPPERCENT および BOTTOMPERCENT の MDX 関数は、比率の計算に使用される値に負の数が含まれていた場合に、予期しない結果を生成する場合があります。 この動作は、DMX 関数には影響しません。 詳細については、次を参照してください。 [BottomPercent &#40;です。MDX と #41 です。](../mdx/bottompercent-mdx.md).  
+>  TOPPERCENT および BOTTOMPERCENT の MDX 関数は、比率の計算に使用される値に負の数が含まれていた場合に、予期しない結果を生成する場合があります。 この動作は、DMX 関数には影響しません。 詳細については、次を参照してください。 [BottomPercent &#40;です。MDX と #41 です](../mdx/bottompercent-mdx.md)。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   

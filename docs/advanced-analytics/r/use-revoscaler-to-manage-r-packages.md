@@ -1,13 +1,13 @@
 ---
 title: "SQL Server にパッケージ化 RevoScaleR 関数を使用して、見つからないか、R をインストールする方法 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 関数を使用して、見つからないか、SQL Server で R パッケージをインストールする方法
 
@@ -38,7 +38,7 @@ Microsoft R Server リリース 9.0.1 には、操作のサポートに、SQL Se
 
 + 指定しないと、ユーザー名とパスワード、計算コンテキストを作成するときに、R コードを実行しているユーザーの id が使用されます。
 
-+ リモート R クライアントからこれらの関数を使用する場合必要がありますオブジェクトを作成する計算コンテキスト最初に、RxInSQLServer 関数を使用します。 その後、各パッケージの管理機能を使用するには、引数としてコンピューティング コンテキストを渡します。
++ リモート R クライアントからこれらの関数を使用する場合必要があります最初に作成する計算コンテキストのオブジェクトを使用して、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)関数。 その後、各パッケージの管理機能を使用するには、引数としてコンピューティング コンテキストを渡します。
 
 + 使用してパッケージの管理機能を実行することは`sp_execute_external_script`します。 これを行うと、ストアド プロシージャの呼び出し元のセキュリティ コンテキストを使用して、関数が実行されます。
 
@@ -46,22 +46,23 @@ Microsoft R Server リリース 9.0.1 には、操作のサポートに、SQL Se
 
 次のパッケージ管理機能は、指定された計算コンテキストでパッケージのインストールと削除のための RevoScaleR で提供されます。
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): 指定された計算コンテキストでインストールされているパッケージに関する情報を確認します。
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): 指定された計算コンテキストでインストールされているパッケージに関する情報を確認します。
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): パッケージの zip 形式を指定したリポジトリから、またはローカルに保存されたを読み取ることにより、コンピューティング コンテキストにパッケージをインストールします。
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): パッケージの zip 形式を指定したリポジトリから、またはローカルに保存されたを読み取ることにより、コンピューティング コンテキストにパッケージをインストールします。
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): インストール済みパッケージのコンピューティング コンテキストから削除します。
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): インストール済みパッケージのコンピューティング コンテキストから削除します。
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): 指定された計算コンテキストで 1 つまたは複数のパッケージのパスを取得します。
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): 指定された計算コンテキストで 1 つまたは複数のパッケージのパスを取得します。
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): 指定された計算のコンテキストで、ファイル システムおよびデータベース間でパッケージのライブラリにコピーします。
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): 指定された計算のコンテキストで、ファイル システムおよびデータベース間でパッケージのライブラリにコピーします。
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 内で実行中にパッケージのライブラリ ツリーの検索パスを取得します。
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 内で実行中にパッケージのライブラリ ツリーの検索パスを取得します。
 
-SQL Server 2017 で既定では、これらのパッケージが含まれています。 これらの関数については、RevoScaleR 関数のリファレンス ページを参照してください: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+SQL Server 2017 で既定では、これらのパッケージが含まれています。 これらの関数については、RevoScaleR 関数のリファレンス ページを参照してください: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > パッケージの管理の R 関数とは、Microsoft R Server 9.0.1 から使用可能です。 RevoScaleR の関数は、できない場合は、おそらく最新バージョンにアップグレードする必要があります。 
+
 ## <a name="examples"></a>使用例
 
 このセクションには、SQL Server インスタンスまたはデータベースでパッケージの管理機能を使用する方法の例が含まれています。 

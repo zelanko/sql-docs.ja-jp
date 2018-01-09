@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CellData Element
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee3c480458f793903bedd3ac3833e26a8546fcb8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 10fcbcd71afa8899eb55fe4c83cd2cae12041ea2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="celldata-element-xmla"></a>CellData 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]含まれるセル データを表すセル要素のコレクションを格納、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)を使用する要素、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型。  
@@ -52,11 +50,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |親要素|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |子要素|[セル](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  親の root 要素で、**軸**要素が続く、 **CellData**要素では、一連の**セル**各セルのセル プロパティ値を格納している要素多次元データセットで返されます。  
   
 ## <a name="see-also"></a>参照  

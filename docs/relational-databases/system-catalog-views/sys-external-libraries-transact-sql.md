@@ -8,7 +8,7 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,11 +21,11 @@ helpviewer_keywords: sys.external_libraries catalog view
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bb229022bcccfb9cdc8c419844d30335337575d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9370c00fa528f204f5f76cc3bba4c807ae82a173
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ R、Python などの外部のランタイムに関連するパッケージ ラ�
 
 |列名 |データ型 | Description|
 |------|------|------|
-|external_library_id |int | 外部ライブラリ オブジェクトの ID。 |
-|name |sysname |外部ライブラリの名前です。 所有者ごとのデータベース内で一意です。|
-|principal_id |int |この外部ライブラリを所有するプリンシパルの ID です。 |
+|external_library_id |ssNoversion | 外部ライブラリ オブジェクトの ID。 |
+|NAME |sysname |外部ライブラリの名前です。 所有者ごとのデータベース内で一意です。|
+|principal_id |ssNoversion |この外部ライブラリを所有するプリンシパルの ID です。 |
 |language | sysname | 言語または外部のライブラリをサポートするランタイムの名前。 有効な値は、'R' です。 追加のランタイムは、将来追加される可能性があります。|
-|スコープ (scope) |int |パブリックのスコープ以外の場合は 0プライベート スコープの場合は 1 |  
+|スコープ (scope) |ssNoversion |パブリックのスコープ以外の場合は 0プライベート スコープの場合は 1 |  
 |scope_desc |varchar (7) |パッケージがパブリックかプライベートかどうかを示します|
 
 

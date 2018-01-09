@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 839c98f0735b700dd8f222b43ecb317479c26f47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4bd0b2effecf483376270594e63de91ff168dcc6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client におけるスパース列のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="user-scenarios-for-sparse-columns-and-sql-server-native-client"></a>スパース列と SQL Server Native Client のユーザー シナリオ  
  スパース列を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ユーザーの一般的なユーザー シナリオの概要を次の表に示します。  
   
-|Scenario|動作|  
+|シナリオ|動作|  
 |--------------|--------------|  
 |**選択\*テーブルから**または iopenrowset::openrowset です。|スパースのメンバーではないすべての列が返されます**column_set**、XML 列、スパースのメンバーであるすべての null 以外の列の値を含む**column_set**です。|  
 |名前で列を参照する。|スパース列かに関係なく、列を参照できるまたは**column_set**メンバーシップです。|  

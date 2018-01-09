@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d309feb925649d49016a614237b517e67bd21308
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b71adcc0740631e70228859e7282445139e120f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationshipend-data-type-assl"></a>RelationshipEnd データ型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]リレーションシップのリレーションシップ end を表すプリミティブ データ型を定義します。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>データ型の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |基本データ型|なし|  
 |派生データ型|なし|  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |子要素|[ロール](../../../analysis-services/xmla/xml-elements-properties/role-element-xmla.md)、[多重度](../../../analysis-services/scripting/properties/multiplicity-element-assl.md)、 [DimensionID](../../../analysis-services/scripting/properties/dimensionid-element-assl.md)、[属性](../../../analysis-services/scripting/collections/attributes-element-assl.md)、[翻訳](../../../analysis-services/scripting/collections/translations-element-assl.md)、 [VisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
 |派生要素||  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.RelationshipEnd>します。  
   
 ## <a name="see-also"></a>参照  

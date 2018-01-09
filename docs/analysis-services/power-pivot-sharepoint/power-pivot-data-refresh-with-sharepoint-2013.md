@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fefda98d12920fb3f7ae2cb03c52f932f371602
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 での PowerPivot データ更新
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]更新に対応する設計[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint 2013 でのデータ モデルを読み込んでインスタンス上のデータ モデルを更新して、主要なコンポーネントとして Excel Services を使用し[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint モードで実行します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーは、SharePoint ファームの外部で実行されます。 SharePoint 2013 の Excel Services のアーキテクチャでは、 **対話型のデータ更新** と **定期データ更新**の両方がサポートされています。  
@@ -138,7 +135,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **定期データ更新の要点**  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドインのデプロイが必要です。 詳細については、「[PowerPivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドインのデプロイが必要です。 詳細については、「 [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
   
 -   ユーザーはブックの更新スケジュールを構成します。 予定の時間になると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスから Excel Services に対して次の要求が送信されます。  
   

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba933bad47beead99ea5f645a910b1783caa280e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa7b169b3ff6887616346a8324854ab10aceab07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 *database_id* |NULL |**既定**
 
 データベースの ID です。 `database_id`is `int`. 有効な入力値は、データベースの ID 番号`NULL`、または`DEFAULT`です。 既定値は `NULL` です。 `NULL`および`DEFAULT`は現在のデータベースのコンテキストで対応する値。  
-組み込み関数は、`DB_ID`を指定できます。 使用する場合`DB_ID`データベース名を指定せず、現在のデータベースの互換性レベルを 90 以上でなければなりません。
+組み込み関数は、 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)を指定できます。 使用する場合`DB_ID`データベース名を指定せず、現在のデータベースの互換性レベルを 90 以上でなければなりません。
 
   
 ## <a name="tables-returned"></a>返されたテーブル  
@@ -57,34 +57,34 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |データベース ID |  
 |recovery_model |**nvarchar (60)**   |   データベースの復旧モデルです。 有効な値は次のとおりです。 <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
-|log_min_lsn    |**nvarchar(24)**   |   トランザクション ログの現在の開始 LSN。 |  
-|log_end_lsn    |**nvarchar(24)**   |   トランザクション ログの最後のログ レコードの LSN です。 |  
-|current_vlf_sequence_number    |**bigint** |   現在 VLF のシーケンス番号時に実行します。 |  
-|current_vlf_size_mb    |**float**  |   現在の VLF が mb 単位でサイズ。 |   
-|total_vlf_count    |**bigint** |   トランザクション ログ内の Vlf の総数です。 |  
+|log_min_lsn    |**nvarchar(24)**   |   現在の開始[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)トランザクション ログにします。|  
+|log_end_lsn    |**nvarchar(24)**   |   [ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)のトランザクション ログの最後のログ レコード。|  
+|current_vlf_sequence_number    |**bigint** |   現在[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)実行時にシーケンス番号。|  
+|current_vlf_size_mb    |**float**  |   現在[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) MB のサイズ。|   
+|total_vlf_count    |**bigint** |   合計数[仮想ログ ファイル (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)トランザクション ログにします。 |  
 |total_log_size_mb  |**float**  |   トランザクション ログ サイズの合計 (MB)。 |  
-|active_vlf_count   |**bigint** |   トランザクション ログのアクティブな Vlf の合計数。 |  
-|active_log_size_mb |**float**  |   アクティブなトランザクション ログ サイズの合計 mb 単位で。 |  
+|active_vlf_count   |**bigint** |   アクティブな数の合計[仮想ログ ファイル (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)トランザクション ログにします。|  
+|active_log_size_mb |**float**  |   アクティブなトランザクション ログ サイズの合計 mb 単位で。|  
 |log_truncation_holdup_reason   |**nvarchar (60)**   |   ログ切り捨てホールド アップ理由です。 値と同じ`log_reuse_wait_desc`の列`sys.databases`です。  (詳細なこれらの値の説明を参照してください。[トランザクション ログ](../../relational-databases/logs/the-transaction-log-sql-server.md))。 <br />有効な値は次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的なもの |  
-|log_backup_time    |**datetime**   |   最後のトランザクション ログ バックアップされた時刻。 |   
-|log_backup_lsn |**nvarchar(24)**   |   最後のトランザクション ログ バックアップの LSN。 |   
-|log_since_last_log_backup_mb   |**float**  |   最後のトランザクション ログ バックアップ LSN 以降、サイズを mb 単位でログに記録します。 |  
-|log_checkpoint_lsn |**nvarchar(24)**   |   最後のチェックポイントの LSN。 |  
-|log_since_last_checkpoint_mb   |**float**  |   最後のチェックポイント LSN 以降、サイズを mb 単位でログに記録します。 |  
-|log_recovery_lsn   |**nvarchar(24)**   |   回復データベースの LSN。 場合`log_recovery_lsn`チェックポイントの LSN をする前に発生`log_recovery_lsn`それ以外の場合は、最も古いアクティブなトランザクション LSN、`log_recovery_lsn`は、チェックポイントの LSN。 |  
-|log_recovery_size_mb   |**float**  |   ログのサイズ (MB) ログの復旧 LSN 以降。 |  
-|recovery_vlf_count |**bigint** |   フェールオーバーまたはサーバーの再起動が発生した場合、回復する Vlf の合計数。 |  
+|log_backup_time    |**datetime**   |   最後のトランザクション ログ バックアップされた時刻。|   
+|log_backup_lsn |**nvarchar(24)**   |   最後のトランザクション ログ バックアップ[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)です。|   
+|log_since_last_log_backup_mb   |**float**  |   ログのサイズを mb 単位で最後のトランザクション ログ バックアップ以降[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)です。|  
+|log_checkpoint_lsn |**nvarchar(24)**   |   最後のチェックポイント[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)です。|  
+|log_since_last_checkpoint_mb   |**float**  |   ログのサイズを mb 単位で最後のチェックポイント以降[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)です。|  
+|log_recovery_lsn   |**nvarchar(24)**   |   回復[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)データベース。 場合`log_recovery_lsn`チェックポイントの LSN をする前に発生`log_recovery_lsn`それ以外の場合は、最も古いアクティブなトランザクション LSN、`log_recovery_lsn`は、チェックポイントの LSN。|  
+|log_recovery_size_mb   |**float**  |   ログのサイズを mb 単位でログを復旧してから[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)です。|  
+|recovery_vlf_count |**bigint** |   合計数[仮想ログ ファイル (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)を回復する場合はフェールオーバーやサーバーの再起動が発生しました。 |  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
 必要があります、`VIEW DATABASE STATE`データベースの権限です。   
   
 ## <a name="examples"></a>使用例  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. 内のデータベースを決定する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vlf の数が多いとインスタンス   
-次のクエリは、ログ ファイルで 100 を超える vlf を使用してデータベースを返します。 Vlf 数が多いデータベースの起動、復元、および復旧時間に影響を与えることができます。
+### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. 内のデータベースを決定する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vlf の数が多いとインスタンス   
+次のクエリは、ログ ファイルで 100 を超える Vlf を使用してデータベースを返します。 Vlf 数が多いデータベースの起動、復元、および復旧時間に影響を与えることができます。
 
-``` t-sql  
+```sql  
 SELECT name AS 'Database Name', total_vlf_count AS 'VLF count' 
 FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id) 
@@ -94,7 +94,7 @@ WHERE total_vlf_count  > 100;
 ### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 内のデータベースを決定する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4 時間以上経過してトランザクション ログのバックアップを持つインスタンス   
 次のクエリでは、インスタンス内のデータベースの前回のログ バックアップ時刻を決定します。
 
-``` t-sql  
+```sql  
 SELECT name AS 'Database Name', log_backup_time AS 'last log backup time' 
 FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
@@ -102,8 +102,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 
 ## <a name="see-also"></a>参照  
 [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[データベース関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[データベース関連の動的管理ビュー & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
-
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

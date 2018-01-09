@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1846ad954cfd764a9c5df1aabf4fc761b23d16b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1940375cc3d822d994c673d965e1fb7e23385596
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client の HADR サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC アプリケーションは、次に示した 3 つの関数のいずれかを使用して、接続を行うことができます。  
   
-|関数|Description|  
+|機能|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** から返されるサーバーの一覧に VNN は含まれません。 確認できるのはサーバーの一覧だけです。スタンドアロン サーバーであるのか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が有効な 2 つ以上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスターのうちのプライマリ サーバーまたはセカンダリ サーバーであるのかは示されません。 サーバーへの接続時にエラーが返された場合、接続先のサーバーの構成に **ApplicationIntent** 設定との互換性がないことが原因として考えられます。<br /><br /> **SQLBrowseConnect** は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] が有効な 2 つ以上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のサーバーを認識しません。このため、**MultiSubnetFailover** 接続文字列キーワードは、**SQLBrowseConnect** では無視されます。|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** は、データ ソース名 (DSN) または接続プロパティを介して **ApplicationIntent** と **MultiSubnetFailover** の両方をサポートしています。|  

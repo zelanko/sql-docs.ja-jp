@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40c3ac24cc6be800fea8da1fab407569e4cdab87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-systemtransactions"></a>System.Transactions の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions**名前空間は ADO.NET と完全に統合される新しいトランザクション フレームワークを提供し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合します。 **System.Transactions.TransactionScope**クラスは、暗黙的に接続を分散トランザクションに参加させることで、コード ブロックをトランザクションです。 呼び出す必要があります、**完了**でマークされたメソッドのコード ブロックの最後に、 **TransactionScope**です。 **Dispose**プログラムの実行が中止された場合、トランザクションの原因と、コード ブロックを離れるときに、メソッドが呼び出され、**完了**メソッドは呼び出されません。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  

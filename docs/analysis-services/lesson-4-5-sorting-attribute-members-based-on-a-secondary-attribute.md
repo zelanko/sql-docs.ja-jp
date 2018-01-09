@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>レッスン 4、5、2 次属性に基づく並べ替え属性メンバー
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]レッスン 3 では、名前またはキーの値のいずれかに基づく属性メンバーの並べ替え方法を学習しました。 また、属性メンバーと並べ替え順序に影響する複合メンバー キーの使用方法も学習しました。 詳細については、「 [Date ディメンションの変更](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)」を参照してください。 ただし、属性の名前とキーのどちらを使用しても目的の順序での並べ替えを実現できない場合は、2 次属性を使用して目的の順序で並べ替えるようにすることもできます。 属性間にリレーションシップを定義すると、2 次属性を使用して、1 次属性のメンバーを並べ替えることができます。  

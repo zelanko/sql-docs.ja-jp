@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]カスタマイズされたメジャーまたはディメンション メンバー、キューブ データ、算術演算子、数字、および関数を組み合わせることによって、計算されるメンバーを呼び出すを作成することができます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  階層はレベルに分割され、そこにメンバーが含まれています。 各メンバーによってヘッダーが作成されます。 キューブ内のデータを参照中、選択したヘッダーから、これまで表示されていなかった下位のヘッダーにドリル ダウンできます。 計算されるメンバーのヘッダーは、選択した親メンバーの直下に属するレベルに追加されます。  
   
- **式**  
+ **[式]**  
  計算されるメンバーの値を作成する式を指定します。 この式は、多次元式 (MDX) で記述できます。 式には、次の要素を含めることができます。  
   
 -   ディメンション、レベル、メジャーなどのキューブのコンポーネントを表すデータ式  

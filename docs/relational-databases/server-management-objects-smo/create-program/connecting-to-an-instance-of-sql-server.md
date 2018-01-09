@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: edbad8837867dbb863672db7d3803a0d9e1e4ac5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 066bee36d4dabdf6b11894d5d0158451d601adb9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>SQL Server のインスタンスへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]最初のプログラミングのステップで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) アプリケーションがのインスタンスを作成するには、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスへの接続を確立するために、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
 -   <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドは、RMO プログラミング オブジェクトに接続を渡す前に呼び出す必要があります。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください[Visual C &#35; を作成する。Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください[Visual C & #35; を作成する。Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic で Windows 認証を使用して SQL Server のローカル インスタンスに接続する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスへの接続に必要なコードは多くありません。 ただし、認証方法とサーバーの既定の設定によってコードが異なります。 接続は、データの取得を必要とする操作が初めて発生する際に作成します。  

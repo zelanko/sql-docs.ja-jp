@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
 
@@ -119,6 +119,29 @@ sudo yum update mssql-server-is
 ```bash
 sudo yum remove mssql-server-is
 ```
+
+## <a name="unattended-installation"></a>無人インストール
+実行すると、無人インストールを実行する`ssis-conf setup`、次の機能を提供します。
+1.  指定して、 `-n` (プロンプトは表示されません) オプション。
+2.  環境変数を設定して、必要な値を提供します。
+
+次の例は、次の処理します。
+-   SSIS をインストールします。
+-   Developer エディションを指定の値を提供することによって、`SSIS_PID`環境変数。
+-   値を提供することで、使用許諾契約書を受け入れる、`ACCEPT_EULA`環境変数。
+-   指定して、無人インストールを実行、 `-n` (プロンプトは表示されません) オプション。
+
+```
+sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### <a name="environment-variables-for-unattended-installation"></a>無人インストール用の環境変数
+
+| 環境変数 | Description |
+|---|---|
+| **ACCEPT_EULA** | 任意の値に設定すると、SQL Server の使用許諾契約書を受け入れる (たとえば、 `Y`)。|
+| **SSIS_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 使用可能な値を次に示します。<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>プロダクト キー<br/><br/>プロダクト キーを指定すると場合、プロダクト キーがあります形式で`#####-#####-#####-#####-#####`ここで、`#`はアルファベットまたは数字がします。  |
+| | |
 
 ## <a name="next-steps"></a>次の手順
 

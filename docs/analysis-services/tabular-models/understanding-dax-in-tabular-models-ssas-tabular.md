@@ -5,13 +5,10 @@ ms.date: 10/21/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e44414be7517bbecf0411753bdd55337cc9e0d39
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX では、テーブル モデル (SSAS テーブル)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Data Analysis Expressions (DAX) は、Analysis Services、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
@@ -76,9 +73,9 @@ ms.lasthandoff: 12/08/2017
 |整数|64 ビット (8 バイト) の整数値 <sup>1、2</sup>|小数点以下を含まない数値。 整数は正の数値または負の数値のどちらも有効ですが、-9,223,372,036,854,775,808 (-2^63) ～ 9,223,372,036,854,775,807 (2^63-1) の範囲の整数でなければなりません。|  
 |10 進数|64 ビット (8 バイト) の実数 <sup>1、2</sup>|小数点以下を含む数値。 実数では次のような幅広い値が有効です。<br /><br /> 負の値 (-1.79E +308 ～ -2.23E -308 の範囲)<br /><br /> Zero<br /><br /> 正の値 (2.23E -308 ～ 1.79E + 308 の範囲)<br /><br /> ただし、有効桁数は小数点以下が 17 桁に制限されます。|  
 |ブール値|ブール値|True または False の値。|  
-|テキスト|文字列|Unicode 文字データ文字列。 文字列、数字、またはテキスト形式で表現される日付を使用できます。|  
-|日付|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
-|Currency|Currency|通貨データ型では、-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 の範囲の値 (小数点以下が 4 桁で有効桁数が固定長) が有効です。|  
+|Text|String|Unicode 文字データ文字列。 文字列、数字、またはテキスト形式で表現される日付を使用できます。|  
+|date|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
+|通貨|通貨|通貨データ型では、-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 の範囲の値 (小数点以下が 4 桁で有効桁数が固定長) が有効です。|  
 |なし|空白|空白は、DAX では SQL の NULL に相当するデータ型です。 空白を作成するには BLANK 関数を使用し、空白かどうかをテストするには論理関数の ISBLANK を使用します。|  
   
  テーブル モデルには、多くの DAX 関数の入力または出力として使用される Table データ型が含まれています。 たとえば、FILTER 関数は、入力としてテーブルを受け取り、フィルター条件を満たした行のみを含んだ別のテーブルを出力します。 テーブル関数と集計関数を組み合わせることにより、動的に定義されるデータセットに対して複雑な計算を実行することができます。  

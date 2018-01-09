@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: efa4d190bcc1048a091731672e38df9c4e63ce8f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 40b4189e6ce20c49ad7aab24b53ea41900b022f5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="---comment-dmx-summary"></a>-(コメント) (DMX) の概要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ ms.lasthandoff: 11/20/2017
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  1 行のコメントまたは入れ子にしたコメントには、この演算子を使用します。 -- を使用して挿入されたコメントは、改行文字によって区切られます。  
   
  コメントの長さには制限がありません。  

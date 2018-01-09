@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8361308afe6ffabf33fd152f308ad12c9bedd479
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>レッスン 7-1-の定義と Kpi を表示
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]主要業績評価指標 (Kpi) を定義するには、まずを定義する KPI の名前と、KPI と関連付けられているメジャー グループ。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5b68420b936ca796cea7fcd267c99d455bf16d88
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5282451ccad6f4cd8f3deb80542f5b2d72e3e05d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 要素
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]テスト セットを含む、提示されたパーティションに使用されるデータ ソース内のケースの最大割合を指定します、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。 残りのケースは、トレーニングに使用されます。 値が 0 の場合、テスト セットとして提示できるケースの数は制限されません。  
@@ -45,11 +43,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|0 ～ 99 の整数|  
 |既定値|30|  
-|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
+|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

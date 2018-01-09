@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d0f9c22476a7005ed5eee055c6c95f078e743f90
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7d4d1ba933a5f927c86908f743d21093e9ded602
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="partitions"></a>パーティション
+# <a name="partitions"></a>[メジャー グループ]
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]パーティションは、テーブルを論理部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時に SSDT の [パーティション] ダイアログ ボックスを使用して作成されたパーティションは、モデル ワークスペース データベースに適用されます。 モデルが配置されたときに、モデル ワークスペース データベースに定義されたパーティションが配置済み model データベースで複製されます。 さらに、作成し、SSMS の [パーティション] ダイアログ ボックスを使用して、配置済みモデル データベースのパーティションを管理することができます。  このトピックで提供される情報には、SSDT のパーティション マネージャー ダイアログ ボックスを使用してモデルを作成中に作成されたパーティションがについて説明します。 作成して、配置済みモデルのパーティションの管理については、次を参照してください。[作成および表形式モデル パーティションの管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_benefits"></a> 利点  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e822a52ab516d65c9e28aaaa3bcfb7d78f2eec16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 055023bf4c41bad380e1306a2facd7dc884b75ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="debugging-clr-database-objects"></a>CLR データベース オブジェクトのデバッグ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デバッグのサポートを提供[!INCLUDE[tsql](../../includes/tsql-md.md)]共通言語ランタイム (CLR) のデータベースのオブジェクトします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのデバッグの重要な特徴は、セットアップと使用が容易になったことと、SQL Server デバッガーと Microsoft Visual Studio デバッガーが統合されたことです。 さらに、複数の言語にまたがったデバッグを実行できます。 ユーザーは [!INCLUDE[tsql](../../includes/tsql-md.md)] から CLR オブジェクト (またはその逆) にシームレスにステップインできます。 SQL Server Management Studio の Transact-SQL デバッガーを使用してマネージ データベース オブジェクトをデバッグすることはできませんが、Visual Studio のデバッガーを使用すると、このオブジェクトをデバッグすることができます。 Visual Studio でのマネージ データベース オブジェクトのデバッグでは、サーバーで実行するルーチン内の "step into" ステートメントや "step over" ステートメントなど、一般的なデバッグ機能すべてがサポートされます。 デバッグ中は、ブレークポイントの設定、呼び出し履歴の調査、変数の調査、変数値の変更を行うことができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたはデバッグには使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  

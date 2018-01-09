@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b1441eed61d8efba39ee33ff17b8fc81b98a7ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 758db0c45f710e760db31c5ddb3a48fd30139301
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
  接続プールを使用する場合は、SQLSetConnectAttr ではなく、接続文字列で SQL_COPT_SS_ANSI_NPW を設定してください。 接続プールを使用している場合、接続が確立された後にこの属性を変更しようとすると、何も通知されずに失敗します。  
   
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は**Readonly**と**ReadWrite**です。 例:  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は**Readonly**と**ReadWrite**です。 例 :  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -195,7 +195,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  MARS の詳細については、次を参照してください。[複数のアクティブな結果セットの使用 &#40;です。MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 異なるサブネット上にある [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループ (AG) に対してアプリケーションが接続している場合、この接続プロパティによって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が構成されます。 例:  
+ 異なるサブネット上にある [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループ (AG) に対してアプリケーションが接続している場合、この接続プロパティによって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が構成されます。 例 :  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  

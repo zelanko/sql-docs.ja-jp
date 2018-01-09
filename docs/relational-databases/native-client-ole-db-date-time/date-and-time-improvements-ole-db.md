@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 521848a7d7948e2b1d4cd09277811447a754e0d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81a014038625cb955d2b0e9f8a90224dc05df860
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日付と時刻の強化 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、新しい日付と時刻のデータ型が導入されています。 このセクションでは、拡張機能としてこれらの新しい型を公開する方法について説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client です。 概要については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、新しい日付と時刻のデータ型のサポートを参照してください[日付と時刻の強化](../../relational-databases/native-client/features/date-and-time-improvements.md)です。 サンプルについては、次を参照してください。[使用の強化された日付と時刻の機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)です。  
   
- 一般的な日付と時刻データ型については、次を参照してください。 [datetime &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/datetime-transact-sql.md).  
+ 一般的な日付と時刻データ型については、次を参照してください。 [datetime &#40;です。TRANSACT-SQL と #41 です](../../t-sql/data-types/datetime-transact-sql.md)。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [OLE DB の日付/時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  

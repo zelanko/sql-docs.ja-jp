@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4caf403fe2fee4b43031efd387a170aae3de1353
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68732b099e87a8d890d99e35e17bfff3b1452092
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>ホスト保護属性と CLR 統合プログラミング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]共通言語ランタイム (CLR) は、マネージ アプリケーション プログラミング インターフェイス (Api 可能性がある、CLR のホストに関心のあるなど、特定の属性を使用して .NET Framework の一部である) コメントを付けるメカニズムを備えています[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以降。[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. このような HPA (ホスト保護属性) の例としては、次のものがあります。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   サーバー プロセス自体の不安定化につながる脅威  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型またはメンバーを持つの使用は許可されていません、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙の値が**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**. これにより、状態の共有を可能にしたり、同期を実行するメンバーをアセンブリから呼び出すことができなくなります。さらに、終了時にリソース リークを発生させたり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性があるメンバーの呼び出しも禁止されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型またはメンバーを持つの使用は許可されていません、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙の値が**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**。 これにより、状態の共有を可能にしたり、同期を実行するメンバーをアセンブリから呼び出すことができなくなります。さらに、終了時にリソース リークを発生させたり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性があるメンバーの呼び出しも禁止されます。  
   
 ### <a name="disallowed-types-and-members"></a>許可されない型およびメンバー  
  次のトピックでは、特定の型とメンバーが**HostProtectionResource**によって値が許可されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  

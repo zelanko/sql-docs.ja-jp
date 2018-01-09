@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cb57075143154d8e317350625b6ac602dc241597
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]クラスタ リング アルゴリズムは、*セグメンテーション*または*クラスタ リング*類似した特性を持つクラスターにグループ化するデータセット内のケースを反復処理するアルゴリズム。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/08/2017
 -   OLAP マイニング モデルの使用およびデータ マイニング ディメンションの作成がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft クラスタ リング アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [クラスタ リング モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
