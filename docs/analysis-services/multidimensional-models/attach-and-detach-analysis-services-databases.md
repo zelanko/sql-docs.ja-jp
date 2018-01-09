@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f882dfe4979beeb7fa162c7bc649fd01440291d1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4abef02a67a334486b123a2ed29b8119e7a29f8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services データベースのインポートとデタッチ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多くの場合、状況もある場合に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を一定期間、データベースのオフラインを実行してからそのデータベースをオンラインに戻す、同じサーバー インスタンスまたは別のデータベース管理者 (dba) がします。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。 このような状況だけでなくさまざまな場合に、 **Attach** コマンドと **Detach** コマンドを使用することによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA は、データベースをオフラインにした後、簡単にオンラインに戻すことができます。  

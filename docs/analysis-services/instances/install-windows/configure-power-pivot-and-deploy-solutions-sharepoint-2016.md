@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6675b8338a54dca9dac4b842ec2d0f563058e1b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfa636d3fcf08410ecaf2062aa7cd68d1e4aeaec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックではの展開と構成に中間層機能強化について説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]機能[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]など[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ギャラリー、スケジュール データ更新、管理ダッシュ ボード、およびデータ プロバイダー。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 構成** ツールを実行して、以下の操作を完了します。  

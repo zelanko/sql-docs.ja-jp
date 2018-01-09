@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PREDICT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7130d9a4dd3d89e456c53b47c49e14734b670f85
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +45,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>戻り値の型  
  \<スカラー列参照 >  
   
- または  
+ 内の複数の  
   
  \<テーブルの列参照 >  
   
@@ -64,7 +62,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID パラメーターは、結果に $NODEID 列を返します。 NODE_ID は、特定のケースに対して予測が実行されるコンテンツ ノードです。 テーブルの列に対して予測を使用する場合、このパラメーターは省略できます。  
   
- *n* パラメーター テーブルの列に適用されます。 これにより、予測の種類に基づいて、返される列の数が設定されます。 呼び出す、基になる列がシーケンスの場合、 **PredictSequence**関数。 基になる列が時系列の場合は、呼び出し、 **PredictTimeSeries**関数。 予測の種類が結合型を呼び出し、 **PredictAssociation**関数。  
+  *n* パラメーター テーブルの列に適用されます。 これにより、予測の種類に基づいて、返される列の数が設定されます。 呼び出す、基になる列がシーケンスの場合、 **PredictSequence**関数。 基になる列が時系列の場合は、呼び出し、 **PredictTimeSeries**関数。 予測の種類が結合型を呼び出し、 **PredictAssociation**関数。  
   
  **Predict**関数はポリモーフィズムをサポートします。  
   

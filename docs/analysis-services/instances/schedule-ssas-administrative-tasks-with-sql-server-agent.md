@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4d2bc32eb76882c00b411e7eff81fd3cf5b45b77
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]SQL Server エージェント サービスを使用して、スケジュールを設定できます[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理タスクが実行されると時刻の順にする必要があります。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
   
  このトピックでは、SQL Server エージェントを使用して XMLA スクリプトを実行する方法を 2 つ紹介します。 最初の例では、単一のディメンションの処理をスケジュール設定する方法を示します。 2 番目の例では、スケジュールに従って実行される単一のスクリプトに複数の処理タスクを組み合わせる方法を示します。 このチュートリアルを完了するには、次の条件を満たす必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  SQL Server エージェント サービスがインストールされている必要があります。  
   
  既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、「 [Analysis Services インスタンスにサーバー管理者権限を付与する](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」を参照してください。  
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
 9. **[コマンド]**で、右クリックして **[貼り付け]**を選択します。 前の手順で生成した XMLA スクリプトがコマンド ウィンドウに表示されます。  
   
-10. **[OK]**をクリックします。  
+10. **[OK]** をクリックします。  
   
 11. **[ページの選択]**で、 **[スケジュール]**をクリックし、 **[新規作成]**をクリックします。  
   
@@ -214,7 +211,7 @@ ms.lasthandoff: 12/08/2017
   
 10. **[コマンド]**で、右クリックして **[貼り付け]**を選択します。  
   
-11. **[OK]**をクリックします。  
+11. **[OK]** をクリックします。  
   
 12. **[スケジュール]** ページで **[新規作成]**をクリックします。  
   
@@ -222,7 +219,7 @@ ms.lasthandoff: 12/08/2017
   
      この手順により、日曜日午前 12 時 00 分のスケジュールが作成されます。 次の手順では、ジョブを手動で実行する方法を示します。 ジョブを監視しているときに、ジョブを実行するスケジュールを選択することもできます。  
   
-14. **[OK]** をクリックして、ダイアログ ボックスを閉じます。  
+14. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 15. **オブジェクト エクスプローラー**で、 **[ジョブ]**を展開し、作成したジョブを右クリックして、 **[ステップでジョブを開始]**をクリックします。  
   

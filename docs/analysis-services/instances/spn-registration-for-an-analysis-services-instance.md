@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services インスタンスの SPN 登録
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]サービス プリンシパル名 (SPN) は、クライアントとサービス id の相互認証に Kerberos を使用すると、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  
@@ -102,7 +99,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **NT service \msolap$ として実行されている名前付きインスタンスの構文例\<インスタンス名 >**  
   
- この例に示した **setspn** の構文は、名前付きインスタンスが既定の仮想アカウントで実行されていることを想定しています。 この例のコンピューターのホスト名は **AW-SRV02**、インスタンス名は **AW-FINANCE**です。 仮想アカウントではなく、spn が指定されているマシン アカウント**NT service \msolap$**\<インスタンス名 >。  
+ この例に示した **setspn** の構文は、名前付きインスタンスが既定の仮想アカウントで実行されていることを想定しています。 この例のコンピューターのホスト名は **AW-SRV02**、インスタンス名は **AW-FINANCE** です。 仮想アカウントではなく、spn が指定されているマシン アカウント**NT service \msolap$**\<インスタンス名 >。  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

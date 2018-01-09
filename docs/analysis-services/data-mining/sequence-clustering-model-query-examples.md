@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング モデルに対するクエリを作成する場合、コンテンツ クエリ、モデルに格納されている情報の詳細を提供するを作成するか、パターンを使用して、モデルに新しいデータに基づいて予測を行う予測クエリを作成することができます。提供することです。 シーケンス クラスター モデルでコンテンツ クエリを使用すると、一般に、検出されたクラスターやクラスター内の遷移に関する追加情報を取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -240,7 +238,7 @@ AS t
   
 |Expression.$Sequence|Expression.Line 番号|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
-|1||Cycling Cap|  
+|@shouldalert||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
 |4||Long-Sleeve Logo Jersey|  
@@ -269,7 +267,7 @@ AS t
 |[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
 |[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|結合メンバーシップを予測します。|  
 |[PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md)|入力したケースが既存のモデル内に収まる確率値を返します。|  
-|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|指定された列の予測のためのヒストグラムを表すテーブルを返します。|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|指定された列の予測のためのヒストグラムを表すテーブルを返します。|  
 |[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|ケースが分類されるノードの Node_ID を返します。|  
 |[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
 |[PredictSequence (DMX)](../../dmx/predictsequence-dmx.md)|指定された一連のシーケンス データに対して予測される将来のシーケンス値です。|  
@@ -277,7 +275,7 @@ AS t
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   
- すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
+ すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   

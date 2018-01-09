@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 49b33d951d759ea941ad8944db5f9e515698bfc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>マイニング モデル ビューアーのタスクと操作方法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング デザイナーで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]マイニング モデルを探索に使用できるいくつかのツールが含まれています。 次のトピックでは、デザイナーの **[マイニング モデル ビューアー]** タブを使用して特定のタスクを実行する手順について説明します。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [アソシエーション ルール モデルのアイテムセットのフィルター選択](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
   
--   [マイニング モデルからケース データへのドリルスルー](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
+-   [マイニング モデルからケース データにドリルスルーする](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
   
 -   [タイム シリーズ モデルの式の表示 (データ マイニング)](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   

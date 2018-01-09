@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88e8d798f3e3a37fafab3f06ca6354310508e2b5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-properties"></a>マイニング モデルのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング モデルでは、次のようなプロパティがあります。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**アルゴリズム**|マイニング モデルのアルゴリズムの種類を設定します。|  
 |**AlgorithmParameters**|アルゴリズムの各種類で使用可能なアルゴリズム パラメーターの値を設定します。|  
-|**[フィルター]**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
+|**Assert**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
 |**名前**|マイニング モデルの名前を設定します。|  
 |**AllowDrillThrough**|マイニング モデルでドリルスルーを有効にするかどうかを指定します。|  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |**名前**|マイニング モデル列の名前を設定します。 新しい名前を入力し、マイニング モデル列に別名を指定できます。|  
 |**ModelingFlags**|列に対してアルゴリズム固有のフラグを設定します。|  
 |**SourceColumnID**|モデル列の基になるマイニング構造列の名前を示します。<br /><br /> このプロパティは読み取り専用です。|  
-|**使用方法**|マイニング モデルによる列の使用方法を設定します。|  
+|**Usage**|マイニング モデルによる列の使用方法を設定します。|  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: IntermediateGranularityAttributeID Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0c30785a5f0c46894dd65c1d28cd7cd3f67cd7e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ab6203fa49448fc3a9059f6cedfffd33d169d86
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="intermediategranularityattributeid-element-assl"></a>IntermediateGranularityAttributeID 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]参照ディメンションを中間ディメンションに関連付けるために使用される中間キューブ ディメンションにおける粒度属性の識別子 (ID) が含まれています。  
@@ -48,11 +46,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
-|データ型と長さ|文字列|  
+|データ型と長さ|String|  
 |既定値|なし|  
-|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
+|基数|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

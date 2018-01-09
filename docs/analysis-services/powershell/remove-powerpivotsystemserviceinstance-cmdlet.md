@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bc46094a-5584-47ba-8883-77dc79373a5d
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64bb88fb6bc4a86228fef718f1ba8382ef492039
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bc93af457830a9efe0c57707a37ec946597887fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="remove-powerpivotsystemserviceinstance-cmdlet"></a>Remove-PowerPivotSystemServiceInstance コマンドレット
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]削除、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス インスタンスをファームからです。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch>] [-Identity <PowerPivotMidTierServiceInstancePipeBind>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
  Remove-PowerPivotSystemServiceInstance コマンドレットは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスに関するインスタンス情報をファームから削除します。 プログラム ファイルは削除しません。 プログラム ファイルを完全に削除するには、それらをアンインストールする必要があります。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスを削除する場合は、関連する Analysis Services インスタンスを削除する Remove-PowerPivotEngineServiceInstance とPowerPivotservice アプリケーションを削除する Remove-PowerPivotServiceApplication も必ず実行してください。 サービスを削除すると、サービス アプリケーションを実行できなくなります。  

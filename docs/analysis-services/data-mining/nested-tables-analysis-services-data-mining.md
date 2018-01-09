@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>入れ子になったテーブル (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データは、一連のケース テーブル内に含まれるケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *入れ子になったテーブル*を使用して、このようなケースを扱うための独自の方法が用意されています。 次の図は、入れ子になったテーブルの概念を示しています。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
  モデル フィルターの作成と使用の方法の詳細については、「[マイニング モデルのフィルター選択 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8d2c400fc82852333b64d9bd89b2e7c74190061
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 473813a85d925bc98f914293ae075a7254597b6d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>分析データ ソースからのデータの取得
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]接続を作成するし、クエリを作成すると、すべてのデータを取得できます。 ADOMD.NET では、次の 3 つの異なるオブジェクトを使用してデータを取得することができます (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>、 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>、および<xref:System.Xml.XmlReader>) のいずれかを呼び出すことによって、 **Execute**のメソッド、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>オブジェクト。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
  次の表は、各オブジェクトの対話性とオーバーヘッドを示しています。それぞれの違いを確認したうえで、アプリケーションに最適なデータ取得オブジェクトを選択してください。  
   
-|オブジェクト|対話性|オーバーヘッド|次元の保持|使用方法に関する情報|  
+|Object|対話性|オーバーヘッド|次元の保持|使用方法に関する情報|  
 |------------|-------------------|--------------|----------------------------|-----------------------|  
 |<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>|最も高い|やや大きい (結果として、データの取得は最も低速)|可|[セルセットを使用したデータの取得](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)|  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter>|中程度|中程度|不可|[DataAdapter からの DataSet の読み込み](http://go.microsoft.com/fwlink/?LinkId=70016)|  

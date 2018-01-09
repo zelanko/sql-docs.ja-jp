@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 336dd3cc52fc72576c60c20c0e324f177b488837
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fefc08fae0dbb06692a914e72ce29f684db2161
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、Microsoft シーケンス クラスター アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -186,7 +184,7 @@ ORDER BY Count(*) DESC
   
 |OrderNumber|LineNumber|[モデル]|  
 |-----------------|----------------|-----------|  
-|SO58845|1|Mountain-500|  
+|SO58845|@shouldalert|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
 |SO58845|3|Mountain Tire Tube|  
 |SO58845|4|Fender Set - Mountain|  

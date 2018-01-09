@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>エラーおよび警告の処理 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) ときに、エラー処理が必要な[Discover](../../analysis-services/xmla/xml-elements-methods-discover.md)または[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しは実行されませんが、正常に実行されますが、エラーまたは警告が生成されますまたはが正常に実行結果を返しますエラーが含まれます。  
@@ -63,9 +61,9 @@ ms.lasthandoff: 12/08/2017
 |-----------------|----------|-----------------|------------------------------|  
 |**ErrorCode**|**UnsignedInt**|メソッドの成功または失敗を示すリターン コード。 16 進数値に変換する必要があります、 **UnsignedInt**値。|不可|  
 |**WarningCode**|**UnsignedInt**|警告の状況を示すリターン コード。 16 進数値に変換する必要があります、 **UnsignedInt**値。|可|  
-|**Description**|**文字列**|エラーを生成したコンポーネントによって返されたエラーまたは警告のテキストと説明。|可|  
-|**ソース**|**文字列**|エラーまたは警告を生成したコンポーネントの名前。|可|  
-|**ヘルプ ファイル**|**文字列**|エラーまたは警告について説明しているファイルまたはトピックへのパス、または URL。|可|  
+|**Description**|**String**|エラーを生成したコンポーネントによって返されたエラーまたは警告のテキストと説明。|可|  
+|**ソース**|**String**|エラーまたは警告を生成したコンポーネントの名前。|可|  
+|**ヘルプ ファイル**|**String**|エラーまたは警告について説明しているファイルまたはトピックへのパス、または URL。|可|  
   
  <sup>1</sup>を示すかどうか、データが必要返す必要があるまたはかどうか、データが省略可能な列が適用されない場合、null 文字列は許可されています。  
   

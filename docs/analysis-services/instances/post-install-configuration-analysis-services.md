@@ -5,14 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
@@ -21,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 58d6481958138346ee40b9815b8209cb41bf2bae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>インストール後の構成 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services をインストールすると、追加の構成は必要完全に機能し、一般的な使用可能なサーバーにします。 このセクションでは、インストールを完了するための追加の作業について説明します。 接続要件によっては、認証も構成する必要がある場合があります (「 [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)」を参照)。  
@@ -47,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 |[Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|インストール中に、サーバー上で実行されるモデルの種類 (多次元またはテーブル) を決めるサーバー モードを選択します。 サーバー モードが不明な場合は、どちらのモードがインストールされたかを判断するために、このトピックの情報を参照してください。|  
 |[Analysis Services インスタンスの名前変更](../../analysis-services/instances/rename-an-analysis-services-instance.md)|わかりやすい名前を付けると、サーバー モードが異なる複数のインスタンスや、組織の部門やチームに主に使用されるインスタンスを区別するために役立ちます。 インスタンス名をインストールが管理しやすい名前に変更する方法については、このトピックの情報を参照してください。|  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  クライアント ライブラリを使用して Microsoft アプリケーションまたはカスタム アプリケーションから Analysis Services に接続する方法について学習します。 ソリューションの要件によっては、Kerberos 認証用にサービスを構成する必要がある場合もあります。 ドメインの境界を超える必要のある接続では、HTTP アクセスが必要です。 次の手順に関する指示については、「 [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  

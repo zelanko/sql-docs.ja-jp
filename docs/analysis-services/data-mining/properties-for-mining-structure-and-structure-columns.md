@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>マイニング構造と構造列のプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]設定またはを使用して、マイニング構造とその関連付けられた列および入れ子になったテーブルのプロパティを変更することができます、**マイニング構造**データ マイニング デザイナーのタブです。 このタブで設定したプロパティは、その構造に関連付けられている各マイニング モデルに反映されます。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |プロパティ|Description|  
 |--------------|-----------------|  
 |**CacheMode**|トレーニングに使用したケースを、トレーニングの完了後にキャッシュするか破棄するかを指定します。 **注:**  ドリルスルーおよび提示データを有効にするには、このプロパティを **KeepTrainingCases** に設定する必要があります。|  
-|**[照合順序]**|列の既定の照合順序を指定します。 照合順序を指定しない場合は、サーバーの照合順序が使用されます。|  
+|**照合順序**|列の既定の照合順序を指定します。 照合順序を指定しない場合は、サーバーの照合順序が使用されます。|  
 |**Description**|マイニング構造について説明します。 構造のデータの目的と構成について説明することをお勧めします。|  
 |**ErrorConfiguration (既定)**|特別なエラー処理が行われる場合のオプションを指定します。|  
 |**HoldoutMaxCases**|テスト データセットとして予約できる構造ケースの最大数を指定します。  **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。 **注:**  このプロパティを設定するには、 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> を **KeepTrainingCases**をクリックします。|  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |**HoldoutSeed**|提示されたテスト セットのパーティション分割を初期化するシードを指定して、テスト データセットを確実に再作成できるようにします。 **注:**  このプロパティを設定するには、 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> を **KeepTrainingCases**をクリックします。|  
 |**ID**|マイニング構造の一意識別子を表示します。<br /><br /> マイニング構造の作成時に構造に割り当てた名前が、ID として使用されます。 その後 **Name** プロパティに新しい値を入力して名前を変更した場合、新しい名前は別名としてのみ使用され、ID は変化しません。|  
 |**言語**|マイニング構造内のキャプションの言語を指定します。|  
-|**Name**|マイニング構造の名前または別名を指定します。<br /><br /> Name プロパティの値を変更した場合、新しい名前はキャプションまたは別名としてのみ使用されます。マイニング構造の識別子は変化しません。|  
+|**名前**|マイニング構造の名前または別名を指定します。<br /><br /> Name プロパティの値を変更した場合、新しい名前はキャプションまたは別名としてのみ使用されます。マイニング構造の識別子は変化しません。|  
 |**ソース**|データ ソースの名前と種類を表示します。|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>マイニング構造列のプロパティ  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 |**IsKey**|列がキー列であるかどうかを示します。|  
 |**[KeyColumns]**|キーであるか、属性のキーの一部である列の定義を含みます。|  
 |**ModelingFlags**|アルゴリズムによって使用可能になる追加のパラメーターを設定します。|  
-|**Name**|列の名前です。|  
+|**名前**|列の名前です。|  
 |**NameColumn**|親要素の名前を指定する列を示します。|  
 |**ソース**|列のソースを表示します。<br /><br /> リレーショナル データ ソースの場合、値は常に **(なし)**です。<br /><br /> OLAP キューブに基づく構造の場合、値は、入れ子になったテーブルのソースとして使用するスライスを定義する MDX ステートメントです。|  
 |**SourceMeasureGroup**|メジャー グループのソースを表示します。<br /><br /> リレーショナル データ ソースの場合、値は常に **(なし)**です。<br /><br /> OLAP キューブに基づく構造の場合、値は、入れ子になったテーブルのソースとして使用するスライスを定義する MDX ステートメントです。|  

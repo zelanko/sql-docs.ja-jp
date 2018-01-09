@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f836f060a52db56267cd943c1dea018c9b0732a3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-queries"></a>データ マイニング クエリ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング クエリは、多くの目的で役立ちます。 可能な代替手段としては以下の方法があります。  
@@ -117,9 +115,9 @@ ms.lasthandoff: 12/08/2017
     |||  
     |-|-|  
     |[結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)|[Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
-    |[クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
-    |[デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)|[ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
+    |[デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[シーケンス クラスター モデルのクエリの例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
+    |[線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
     |[ロジスティック回帰モデルのクエリ例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      また、VBA 関数を呼び出したり、独自の関数を作成したりすることもできます。 詳細については、「[関数 &#40;DMX&#41;](../../dmx/functions-dmx.md)」を参照してください。  
@@ -160,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  データ マイニング クエリを作成および操作する方法の詳細については、次のリンクを使用してください。  
   
 |処理手順|リンク|  
@@ -175,7 +173,7 @@ ms.lasthandoff: 12/08/2017
 |Integration Services のデータ マイニング コンポーネントの使用|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

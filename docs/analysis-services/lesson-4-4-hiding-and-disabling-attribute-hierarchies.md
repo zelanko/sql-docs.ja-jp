@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b1ae1a57e05d8953c4bd5f93b9e247419ee986c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: acdeb1132fab9ecd8ea141362a2d1a961ba7192a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>レッスン 4-4-非表示にして、属性階層を無効化
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]既定では、ディメンションでは、すべての属性の属性階層が作成および各階層はディメンションのファクト データに使用できます。 属性階層は、"All" レベルと、その階層のすべてのメンバーを含む詳細レベルで構成されます。 既に学習したように、これらの属性をユーザー定義階層として整理し、キューブ内にナビゲーション パスを設けることができます。 状況によっては、一部の属性とその階層を無効にしたり、非表示にしたりする必要が生じます。 たとえば、社会保障番号 (身分登録番号)、給与、誕生日、ログイン情報などは、キューブ情報の生成には必要のない属性です。 一般に、これらの情報は、特定の属性メンバーの詳細情報としてのみ表示されます。 したがって、これらの属性階層を非表示にして、各属性のメンバー プロパティとしてのみ表示されるようにする必要があります。 また、顧客名、郵便番号など他の属性メンバーは、属性階層に個別に表示するのではなく、ユーザー階層からのみ表示されるようにする必要があります。 このような処理をするのは、属性階層内の独立したメンバーが非常に多いためです。 処理パフォーマンスを向上させるため、ユーザーが参照しない属性階層を無効にしてください。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 -   **AttributeHierarchyOrdered**  
   
-    既定では、処理中に  **が有効な属性階層のメンバーを整理し、Name や Key などの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]OrderBy** プロパティの値に基づいてメンバーを格納します。 メンバーが順不同でもよい場合は、このプロパティの値を **False**に設定することにより、パフォーマンスを向上させることができます。  
+    既定では、処理中に  **が有効な属性階層のメンバーを整理し、Name や Key などの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]OrderBy** プロパティの値に基づいてメンバーを格納します。 メンバーが順不同でもよい場合は、このプロパティの値を **False** に設定することにより、パフォーマンスを向上させることができます。  
   
 -   **AttributeHierarchyOptimizedState**  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  **[ディメンション構造]** タブに切り替え、 **[属性]** ペインで次の属性を選択します。複数の属性を選択するときは、Ctrl キーを押しながら各属性をクリックします。  
   
-    -   **Full Name**  
+    -   **[名前]**  
   
     -   **Postal Code**  
   

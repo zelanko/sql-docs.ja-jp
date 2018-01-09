@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>レッスン 3-3-Product ディメンションの変更
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このトピックのタスクでは、名前付き計算を使用して製品ラインにわかりやすい名前、Product ディメンションに階層を定義し、階層の (All) メンバー名を指定します。 また、属性をグループ化して別々の表示フォルダーに格納します。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 12/08/2017
   
     -   **Safety Stock Level**  
   
-    -   **サイズ**  
+    -   **[サイズ]**  
   
     -   **Size Range**  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/08/2017
   
     -   **[開始日]**  
   
-    -   **[状態]**  
+    -   **ステータス**  
   
 6.  [プロパティ] ウィンドウで、 **AttributeHierarchyDisplayFolder** プロパティのセルに「 **History**」と入力します。  
   
@@ -165,11 +165,11 @@ ms.lasthandoff: 12/08/2017
   
 2.  ダイアグラムで、 **[Model Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Model Name]**を指定します。 **[関連属性]** を **[Product Line]**に設定します。  
+3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Model Name]** を指定します。 **[関連属性]** を **[Product Line]**に設定します。  
   
     時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。 たとえば、製品モデルが最終的に別の製品ラインに移動される場合があります。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 5.  **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
   

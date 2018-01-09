@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8aa30485bdddd9dffc053268bb205dc950157a7e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 85bef4a254d86857d682dae062c7fc546891581d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>サーバー グループへの Analysis Services インスタンスの登録
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services サーバー インスタンスの数が多い場合は、Management studio のサーバーの管理が容易にサーバー グループを作成できます。 サーバー グループの目的は、管理ワークスペース内の関連するサーバーのグループで近接性を提供することです。 たとえば、10 個の独立した Analysis Services インスタンスを管理する必要があるとします。 サーバー モード、連続稼動条件、または部門や地域によってそれらをグループ化することで、同じ特徴を持つインスタンスをより簡単に表示および接続することができます。 サーバーがどのように使用されるかを思い出すために役立つ情報を追加することもできます。  

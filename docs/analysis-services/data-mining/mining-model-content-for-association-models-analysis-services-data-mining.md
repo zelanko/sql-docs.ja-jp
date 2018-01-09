@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0da3079620f64d2c2b1def8225f359b6cb0d4454
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックの説明を使用するモデルに固有のマイニング モデル コンテンツ、[!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション ルール アルゴリズムです。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |ノードの種類の ID|型|  
 |------------------|----------|  
 |1 (モデル)|ルート ノード (親ノード)。|  
-|7 (アイテムセット)|アイテムセット (属性と値のペアのコレクション)。 例 :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> または<br /><br /> `Gender = Male`」を参照してください。|  
+|7 (アイテムセット)|アイテムセット (属性と値のペアのコレクション)。 例 :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 内の複数の<br /><br /> `Gender = Male`」を参照してください。|  
 |8 (ルール)|アイテムが互いにどのように関連付けられるかを定義するルール。<br /><br /> 例:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`」を参照してください。|  
   
  NODE_CAPTION  

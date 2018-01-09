@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーション ルール アルゴリズムはよく知られている Apriori アルゴリズムの実装は簡単です。  
@@ -161,7 +159,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Cyclical、Discrete、Discretized、Table、Ordered|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9cdbd57f570c79b3efaabf5d07fb09ea4cc20c8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>レッスン 1-1-Analysis Services プロジェクトの作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]使用する次の実習で[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]新しい[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]という名前のプロジェクト**Analysis Services Tutorial**に基づいて、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト テンプレート。 *プロジェクト* とは、関連するオブジェクトのコレクションです。 プロジェクトはソリューションに追加され、各ソリューションは 1 つ以上のプロジェクトで構成されます。 詳しくは、「 [Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)」を参照してください。  

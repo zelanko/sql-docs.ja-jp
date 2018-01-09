@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>レッスン 4-1-Analysis Services チュートリアル プロジェクトの変更済みバージョンを使用します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このチュートリアルの残りのレッスンは、強化されたバージョンに基づく、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]最初の 3 つのレッスンで作成したチュートリアルのプロジェクトです。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で **[ファイル]** メニューの **[ソリューションを閉じる]** をクリックして、使用しないファイルを閉じます。  
   
-2.  **[ファイル]** メニューの **[開く]**をポイントし、 **[プロジェクト/ソリューション]**をクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をポイントし、**[プロジェクト/ソリューション]** をクリックします。  
   
 3.  チュートリアルのプロジェクト ファイルを展開した場所を参照します。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="understanding-the-enhancements-to-the-project"></a>プロジェクトの修正について  
 プロジェクトの修正版は、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトとは異なります。 この相違点について、次のセクションで説明します。 チュートリアルの残りのレッスンを続ける前に、この情報を確認してください。  
   
-### <a name="data-source-view"></a>データ ソース ビュー  
+### <a name="data-source-view"></a>[データ ソース ビュー]  
 修正したプロジェクトのデータ ソース ビューには、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベースから取得された 1 つのファクト テーブルと 4 つのディメンション テーブルが追加されています。  
   
 このデータ ソース ビューには 10 個のテーブルがあり、 <All Tables> ダイアグラムの情報が整理されていません。 このため、テーブル間のリレーションシップがわかりにくく、簡単には特定のテーブルを探すことができません。 この問題を解決するために、テーブルを 2 つの論理ダイアグラムに整理します。2 つのダイアグラムとは、 **Internet Sales** ダイアグラムと **Reseller Sales** ダイアグラムです。 1 つのファクト テーブルに対し、これらのダイアグラムを 1 つずつ構成します。 1 つのダイアグラムにテーブルやそのリレーションシップをすべて表示しなくとも、論理ダイアグラムを作成することにより、複数のテーブルから特定のサブセットのみをデータ ソース ビューに表示し、操作できます。  

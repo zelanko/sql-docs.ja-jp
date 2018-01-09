@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b8da7c6608b10c5816fafda8129efbf9e393e9b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
+|非表示層|空白|  
 |隠しノード|空白|  
 |出力層|空白|  
 |出力ノード|出力属性名|  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
 |ノードの種類の ID|Description|  
 |------------------|-----------------|  
-|1|モデル。|  
+|@shouldalert|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
 |18|入力層のオーガナイザー ノード。|  
 |19|非表示層のオーガナイザー ノード。|  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
+|非表示層|空白|  
 |隠しノード|隠しノードの一覧における隠しノードのシーケンスを示す整数。|  
 |出力層|空白|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
@@ -245,7 +243,7 @@ ms.lasthandoff: 12/08/2017
  **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性の平均、ノード全体の係数、および係数の分散が含まれます。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

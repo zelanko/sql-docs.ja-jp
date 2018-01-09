@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="designing-aggregations-xmla"></a>集計のデザイン (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]集計デザインは、集計を格納するときに、パーティションで同じ構造を使用するかどうかを確認する特定のメジャー グループのパーティションに関連付けられます。 使用して後でマージできるパーティションを簡単に定義することにより、パーティションに対して同じ記憶域の構造を使用して、 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)です。  
@@ -110,7 +108,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="returning-design-statistics"></a>デザインの統計を返す処理  
  ときに、 **DesignAggregations**コマンドは、クライアント アプリケーションに制御を返す、コマンドをコマンドのデザインの統計を表す 1 つの行を含む行セットが返されます。 行セットに含まれる列は、次の表のとおりです。  
   
-|列|データ型|Description|  
+|[列]|データ型|Description|  
 |------------|---------------|-----------------|  
 |手順|Integer|クライアント アプリケーションに制御を返すまでに、コマンドによって行われたステップの数です。|  
 |[時刻]|Long integer|クライアント アプリケーションに制御を返すまでに、コマンドで経過したミリ秒単位の時間です。|  

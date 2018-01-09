@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData インターフェイス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]IMDEmbeddedData インターフェイスは、埋め込みの管理に使用するパブリック インターフェイス[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベースまたは表形式モデル データベース。 インターフェイスが継承、 **IPersistStream**インターフェイスです。 このインターフェイスでは、次の操作を実行できます。  
@@ -112,13 +110,13 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA は、次のいずれかの値をとります。  
   
-|名前|値|定義|  
+|[オブジェクト名]|値|定義|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|使用できる埋め込みデータベースがありません。|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|現在のアプリケーションには埋め込みデータベースが含まれています。|  
 |DBPROPVAL_EMBED_LINKED|0x02|埋め込みデータベースはリモート アプリケーション (SharePoint Server など) でホストされています。|  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -148,7 +146,7 @@ HRESULT SetContainerURL (
  **E_FAIL**  
  コンテナー URL の設定中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -178,7 +176,7 @@ HRESULT SetHosted (
  **E_FAIL**  
  フラグの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -208,7 +206,7 @@ HRESULT SetTempDirPath (
  **E_FAIL**  
  パスの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -238,7 +236,7 @@ HRESULT Cancel ( void )
  **E_FAIL**  
  埋め込み操作の取り消し中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   

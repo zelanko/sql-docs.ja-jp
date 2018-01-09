@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,19 +23,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a9ab0de9eae86293f25781cc5b85f175037f1ffc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b7a0c3e57a5249a26bf13a2cf9709e58df85da8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>ストアド プロシージャのクエリ コンテキストへのアクセス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ストアド プロシージャの実行コンテキストは、ストアド プロシージャとしてのコード内で使用可能な**コンテキスト**ADOMD.NET サーバー オブジェクト モデルのオブジェクト。 これは、読み取り専用のコンテキストであり、ストアド プロシージャによって変更することはできません。 このオブジェクトでは次のプロパティを使用できます。  
   
-|プロパティ|[種類]|Description|  
+|プロパティ|型|Description|  
 |--------------|----------|-----------------|  
 |**[Currentcube]**|Cube|現在のクエリ コンテキストのキューブです。|  
-|**CurrentDatabaseName**|文字列|現在のデータベースの識別子です。|  
+|**CurrentDatabaseName**|String|現在のデータベースの識別子です。|  
 |**CurrentConnection**|接続|現在のコンテキストの接続オブジェクトへの参照です。|  
 |**パス**|Integer|現在のコンテキストのパス番号です。|  
   

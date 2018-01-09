@@ -108,6 +108,8 @@
 
 ### [SQL Server に新しい R パッケージをインストールする](r/install-additional-r-packages-on-sql-server.md)
 
+### [SQL Server に新しい Python パッケージをインストールする](python/install-additional-python-packages-on-sql-server.md)
+
 ### [SQL Server インスタンスの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
 
 ### [SQL Server にインストールされているパッケージの確認](r/determine-which-packages-are-installed-on-sql-server.md)
@@ -137,7 +139,7 @@
 ### [R での OLAP キューブからのデータの使用](r/using-data-from-olap-cubes-in-r.md)
 ### [sqlrutils を使用してストアド プロシージャを作成する](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## パフォーマンス
+## [パフォーマンス]
 
 ### [R のパフォーマンス チューニング - 概要](r/sql-server-r-services-performance-tuning.md)
 ### [R のパフォーマンス チューニング - SQL Server の構成](r/sql-server-configuration-r-services.md)

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5f899bb9902c06d1288db8d94d719c27c250112
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e2929691553884a7c52d3d46918455c8d39a8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Power Pivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]アプリケーション サーバー コンポーネントとを提供するバックエンド サービスのコレクションは、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]のデータ アクセス、[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]ファーム。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerpivot.msi**) は、アプリケーション サーバー コンポーネントのインストールに使用されるインストーラー パッケージです。  
@@ -110,12 +110,12 @@ ms.lasthandoff: 12/08/2017
   
 4.  **[機能の選択]** ページでは、すべての機能が既定で選択されています。  
   
-5.  **[次へ]**をクリックします。  
+5.  **[次へ]** をクリックします。  
   
 6.  **[インストール]** をクリックしてインストールを実行し、インストールを終了します。  
   
 ### <a name="command-line-installation"></a>コマンド ライン インストール  
- コマンド ライン インストールでは、管理権限でコマンド プロンプトを開き、 **spPowerPivot.msi**を実行します。 例:  
+ コマンド ライン インストールでは、管理権限でコマンド プロンプトを開き、 **spPowerPivot.msi**を実行します。 例 :  
   
  `Msiexec.exe /i SpPowerPivot.msi`」を参照してください。  
   
@@ -150,7 +150,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
 ```  
   
-|オプション|説明|  
+|オプション|Description|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成|  
 |SQL_OLAPDM|MSOLAP|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: "Analysis Services のテスト"
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]言語と照合順序によって提供されるサポート[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows オペレーティング システムです。 **Language** プロパティと **Collation** プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
@@ -184,6 +184,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>参照  
  [Analysis Services のグローバリゼーションのシナリオ](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [グローバリゼーションのヒントとベスト プラクティス (&) #40 です。Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
- [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

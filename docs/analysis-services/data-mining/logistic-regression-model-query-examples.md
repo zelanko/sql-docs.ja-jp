@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,18 +20,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2255369fe9a3e8c74088a13efba5eaab19f7bb53
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>ロジスティック回帰モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング モデルに対するクエリを作成するときに、分析で検出されたパターンの詳細情報を提供するには、コンテンツのクエリを作成するまたはパターンを使用して、モデルに新しいデータを使用して予測する予測クエリを作成することができます。  
   
  ここでは、Microsoft ロジスティック回帰アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
- **Content Queries**  
+ **コンテンツ クエリ**  
   
  [データ マイニング スキーマ行セットを使用してモデル パラメーターを取得する](#bkmk_Query1)  
   
@@ -99,12 +97,12 @@ FROM [TM_Logistic Regression].CONTENT
   
 |t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Age|Missing|0|0|0|1|  
-|Age|45.43491192|17484|1|126.9544114|3|  
-|Bike Buyer|Missing|0|0|0|1|  
+|Age|Missing|0|0|0|@shouldalert|  
+|Age|45.43491192|17484|@shouldalert|126.9544114|3|  
+|Bike Buyer|Missing|0|0|0|@shouldalert|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1|8615|0.492736216|0|4|  
-|Commute Distance|Missing|0|0|0|1|  
+|Bike Buyer|@shouldalert|8615|0.492736216|0|4|  
+|Commute Distance|Missing|0|0|0|@shouldalert|  
 |Commute Distance|5-10 Miles|3033|0.173472889|0|4|  
   
  実際のクエリではさらに多くの行が返されますが、このサンプルでは、入力に関して提供される情報の種類の例を示しています。 不連続入力については、可能性のある各値を表に示しています。 Age などの連続値入力については、完全な一覧を示すことはできないので、入力を平均として分離しています。 マージナル統計ノードでの情報の使用方法の詳細については、「 [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)」を参照してください。  
@@ -199,10 +197,10 @@ NATURAL PREDICTION JOIN
 |-|-|  
 |予測関数|使用方法|  
 |[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
 |[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
-|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
-|[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,16 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>ユーザー定義階層内の属性リレーションシップの 4、6 を指定します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このチュートリアルで既に学習したように、キューブ内のユーザーのナビゲーション パスを提供するユーザー階層内のレベルに属性階層を整理できます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
   
-一般階層で、各層を構成する属性間に属性リレーションシップが定義されている場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、1 つの階層の集計結果を使用して、その階層に関連付けられている別の階層の結果を取得することができます。 属性間にリレーションシップを定義していない場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってキー属性からすべての非キー属性が集計されます。 そのため、基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理パフォーマンスが向上します。 詳細については、「 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md) 」および「 [属性リレーションシップ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
+一般階層で、各層を構成する属性間に属性リレーションシップが定義されている場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、1 つの階層の集計結果を使用して、その階層に関連付けられている別の階層の結果を取得することができます。 属性間にリレーションシップを定義していない場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってキー属性からすべての非キー属性が集計されます。 そのため、基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理パフォーマンスが向上します。 詳細については、「[属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)」および「[属性リレーションシップ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
 属性リレーションシップを定義する際、リレーションシップを変更できるようにするのか、または固定するのかを指定できます。 固定のリレーションシップを定義した場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってディメンションの更新時の集計が保持されます。 固定のリレーションシップを変更すると、ディメンションが完全に処理されない限り、処理の途中で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってエラーが生成されます。 適切なリレーションシップとリレーションシップのプロパティを指定すると、クエリ パフォーマンスと処理パフォーマンスが向上します。 詳細については、「 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)」および「 [ユーザー階層プロパティ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)」を参照してください。  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  ダイアグラムで、 **[Full Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-4.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** を **[Full Name]**にします。 **[関連属性]** を **[Postal Code]**に設定します。 時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。  
+4.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** を **[Full Name]**にします。 **[関連属性]** を **[Postal Code]**に設定します。 時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、**[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
 6.  **[属性リレーションシップ]** ペインで、 **[Geography**-> **Postal Code]** を右クリックし、 **[削除]**をクリックします。  
   
-7.  **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]**をクリックします。  
+7.  **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、**[OK]** をクリックします。  
   
 8.  ダイアグラムで、 **[Postal Code]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/08/2017
   
 17. **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]**をクリックします。  
   
-18. ダイアグラムで、 **[State-Province]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
+18. ダイアグラムで、**[State-Province]** 属性を右クリックし、**[新しい属性リレーションシップ]** をクリックします。  
   
 19. **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[State-Province]**を指定します。 **[関連属性]** を **[Country-Region]**に設定します。 都道府県と国/地域のリレーションシップは時間が経過しても変化しないので、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
     **Geography** と他の属性との最後の属性リレーションシップを削除すると、その **Geography** 自体が削除されます。 その後は属性が使用されなくなるためです。  
   
-24. [ファイル] メニューの **[すべてを保存]**をクリックします。  
+24. [ファイル] メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>Sales Territory 階層の属性に対する属性リレーションシップの定義  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  ダイアグラムで、 **[Model Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Model Name]**を指定します。 **[関連属性]** を **[Product Line]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定を **[可変]**のままにします。  
+3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Model Name]**を指定します。 **[関連属性]** を **[Product Line]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定を **[可変]** のままにします。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -141,19 +141,19 @@ ms.lasthandoff: 12/08/2017
   
 1.  ダイアグラムで、 **[Month Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-2.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Month Name]**を指定します。 **[関連属性]** を **[Calendar Quarter]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
+2.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Month Name]** を指定します。 **[関連属性]** を **[Calendar Quarter]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  ダイアグラムで、 **[Calendar Quarter]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-5.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Quarter]**を指定します。 **[関連属性]** を **[Calendar Semester]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
+5.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Calendar Quarter]** を指定します。 **[関連属性]** を **[Calendar Semester]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  ダイアグラムで、 **[Calendar Semester]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-8.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Semester]**を指定します。 **[関連属性]** を **[Calendar Year]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
+8.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Calendar Semester]** を指定します。 **[関連属性]** を **[Calendar Year]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  Geography ディメンションのディメンション デザイナーを開き、 **[属性リレーションシップ]** タブをクリックします。  
   
-2.  ダイアグラムで、 **[Postal Code]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
+2.  ダイアグラムで、**[Postal Code]** 属性を右クリックし、**[新しい属性リレーションシップ]** をクリックします。  
   
 3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Postal Code]**を指定します。 **[関連属性]** を **[City]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[可変]**に設定します。  
   
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  ダイアグラムで、 **[City]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-6.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[City]**を指定します。 **[関連属性]** を **[State-Province]**に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
+6.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[City]**を指定します。 **[関連属性]** を **[State-Province]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 12/08/2017
   
 13. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
   
-14. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+14. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、**[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [不明なメンバーと NULL 処理のプロパティの定義](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  

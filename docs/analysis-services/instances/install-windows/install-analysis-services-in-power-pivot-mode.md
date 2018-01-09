@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0215c2ebdd4a98607dcb60418e468fbe02f6663f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7c958feff44c2947c74f51eaec94abcd4ca8e543
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックの手順でインストールの手順を 1 台のサーバーの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]内のサーバー [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の配置モードです。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
@@ -167,7 +167,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  **[SQL Server Management Studio]**を選択します。  
   
-3.  Analysis Services インスタンス (たとえば、 **[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
+3.  Analysis Services インスタンス (たとえば、**[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
   
 ##  <a name="bkmk_config"></a> 手順 2. 基本的な Analysis Services SharePoint 統合の構成  
  SharePoint ドキュメント ライブラリ内で Excel の高度なデータ モデルを操作できるようにするには、次の手順を実行して構成を変更する必要があります。 これらの手順は、SharePoint と SQL Server Analysis Services をインストールしてから実行します。  
@@ -178,7 +178,7 @@ ms.lasthandoff: 12/08/2017
 #### <a name="grant-office-online-server-machine-account-administration-rights-on-analysis-services"></a>Office Online Server マシン アカウントへの Analysis Services に対する管理権限の付与  
  Analysis Services のインストール時に、Analysis Services 管理者として Office Online Server マシン アカウントを追加した場合は、このセクションの手順を実行する必要はありません。  
   
-1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、 `[MyServer]\POWERPIVOT`) に接続します。  
+1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
   
 2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 12/08/2017
 #### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Excel Services への Analysis Services に対するサーバー管理権限の付与  
  Analysis Services のインストール時に、Analysis Services 管理者として Excel Services アプリケーションのサービス アカウントを追加した場合は、このセクションの手順を実行する必要はありません。  
   
-1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、 `[MyServer]\POWERPIVOT`) に接続します。  
+1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
   
 2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
   

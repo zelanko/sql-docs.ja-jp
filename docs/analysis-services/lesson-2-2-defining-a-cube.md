@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 17fde2d95fb202712610a31769b1a50623bac7c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>レッスン 2-2-キューブの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブ ウィザードでは、メジャー グループとキューブのディメンションを定義できます。 この実習では、キューブ ウィザードを使用してキューブを作成します。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
     ウィザードでそれらのテーブルが調べられ、 **InternetSales** がメジャー グループ テーブルとして提示されます。 メジャー グループ テーブル (ファクト テーブルとも呼ばれます) には、販売数など必要なメジャーが含まれています。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[メジャーの選択]** ページで、 **Internet Sales** メジャー グループ内の選択されているメジャーを確認し、以下のメジャーのチェック ボックスをオフにします。  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 12/08/2017
   
     既定では、ファクト テーブル内で、ディメンションにリンクしていないすべての数値列がメジャーとして選択されます。 ただし、上の 4 つの列は実際にはメジャーではありません。 最初の 3 つは、ファクト テーブルとディメンション テーブルをリンクするキー値で、この初期段階のキューブでは使用しません。  
   
-8.  **[次へ]**をクリックします。  
+8.  **[次へ]** をクリックします。  
   
 9. **[既存のディメンションの選択]** ページで、既に作成した **Date** ディメンションが選択されていることを確認し、 **[次へ]**をクリックします。  
   
 10. **[新しいディメンションの選択]** ページで、作成する新しいディメンションを選択します。 そのためには、 **[Customer]**、 **[Geography]**、 **[Product]** の各チェック ボックスがオンになっていることを確認し、 **[InternetSales]** チェック ボックスをオフにします。  
   
-11. **[次へ]**をクリックします。  
+11. **[次へ]** をクリックします。  
   
 12. **[ウィザードの完了]** ページで、[キューブ名] ボックスに「 **Analysis Services Tutorial**」と入力します。 [プレビュー] ペインで、 **InternetSales** メジャー グループとそのメジャーを表示できます。 **Date**、 **Customer** 、 **Product** の各ディメンションも表示できます。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>参照  
 [多次元モデルのキューブ](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[多次元モデル内のディメンション](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
+[「多次元モデル内のディメンション」](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
   

@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41cb7d7f1c2da7ef2664de3e41c17613019094d6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 88e23e63ccea23fd175371629d95dd2c1dc46a33
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Analysis Services データベースの変更または削除
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]説明と名前を変更することができます、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で展開する前にデータベース[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で配置後に[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。 また、環境に応じて [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの追加の設定を調整することもできます。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 57d2db22484a8c6a8b8301e11cbd4799aae6bd91
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ebaeba0db0daaf494533cafe03f89effff2fe792
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>レッスン 1: 新しいテーブル モデル プロジェクトの作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 このレッスンの推定所要時間: **10 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
 このトピックは、テーブル モデル作成チュートリアルの最初のレッスンです。 このレッスンを完了するには、SQL Server インスタンスにインストールされている、AdventureWorksDW サンプル データベースが必要です。 詳細については、次を参照してください。[テーブル モデリング (&) #40 です。Adventure Works チュートリアル &#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>新しいテーブル モデル プロジェクトの作成  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
     既定では、 **[ソリューション名]** はプロジェクト名と同じですが、別のソリューション名を入力することもできます。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 5.  **表形式モデル デザイナー**ダイアログ ボックスで、**統合ワークスペース**です。  
   

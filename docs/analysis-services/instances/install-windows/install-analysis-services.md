@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services をインストールします。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services は、表形式モデル、多次元キューブ、およびレポート、スプレッドシート、およびダッシュ_ボードからアクセスできるデータ マイニング モデルをホストする分析データベース サーバーです。  
@@ -72,7 +72,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** では、大文字と小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、 **ASSERVERMODE**の有効な値を示します。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |TABULAR|これが既定値です。 設定しない場合**ASSERVERMODE**、表形式モードでは、サーバーをインストールします。|
 |MULTIDIMENSIONAL|この値は省略可能です。|  

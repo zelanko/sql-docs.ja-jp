@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0055b4c33a489d13ee7feac39f179505d76d50e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多次元データベースの互換性レベル (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、データベース互換性レベル プロパティは、データベースの機能レベルを決定します。 互換性レベルは、各モデルの種類に固有です。 たとえば、互換性レベル **1100** は、データベースが多次元か表形式かによって意味が異なります。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  高いレベルに設定したデータベース互換性は元に戻せません。 互換性レベルを **1100**に上げた後は、データベースをより新しいサーバーで実行し続ける必要があります。 **1050**にロールバックすることはできません。 **または** より前のサーバーのバージョンでは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 1100 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベースをアタッチまたは復元できません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  データベース互換性レベルは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入されました。 データベース互換性レベルを表示または設定するには、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降が必要です。  
   
  データベースをローカル キューブにすることはできません。 ローカル キューブは **CompatibilityLevel** プロパティをサポートしません。  
@@ -97,7 +94,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  サーバーの同期は、サーバーで同じバージョンとデータベース互換性レベルを共有している場合にのみサポートされます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  データベース互換性レベルを上げると、 **で** StringStoresCompatibilityLevel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]プロパティを設定できるようになります。 これにより、メジャーとディメンションの文字列ストレージが大きくなります。 この機能の詳細については、「 [ディメンションおよびパーティションの文字列ストレージの構成](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

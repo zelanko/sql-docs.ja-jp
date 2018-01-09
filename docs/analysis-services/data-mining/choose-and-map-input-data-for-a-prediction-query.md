@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>予測クエリの入力データの選択およびマップ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング モデルから予測を作成するときに一般的にこれを行う新しいデータをモデルに供給することで。 (例外はタイム シリーズ モデルで、履歴データのみに基づいて予測を行うことができます)。モデルに新しいデータを提供するには、データがデータ ソース ビューの一部として使用可能であることを確認する必要があります。 予測に使用するデータがあらかじめわかっている場合は、モデルの作成に使用するデータ ソース ビューにそのデータを含めることができます。 それ以外の場合は、新しいデータ ソース ビューを作成する必要があります。 詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  **[テーブル名またはビュー名]**で、モデルのテストに使用するデータが含まれているテーブルを選択します。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
      マイニング構造の列が、入力テーブル内の同じ名前を持つ列に自動的にマップされます。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  外部データ ソースで使用可能な列の一覧から新しい列を選択します。 列マッピングを削除するには、一覧内の空白の項目を選択します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
      新しい列マッピングがデザイナーに表示されます。  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  **[リレーションシップの削除]**をクリックします。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
      ケース テーブルと入れ子になったテーブルの間のリレーションシップが削除されます。  
   

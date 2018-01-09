@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>レッスン 5-4-メジャー グループ内のディメンションの粒度の定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]さまざまな目的で、ユーザーに異なる粒度または特異性におけるディメンションのファクト データがします。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
@@ -81,11 +81,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Sales Quota メジャー グループのメジャーの日付順での表示  
   
-1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]**ボタンをクリックします。  
   
-3.  Excel ショートカットをクリックし、 **[有効化]**をクリックします。  
+3.  Excel ショートカットをクリックし、**[有効化]** をクリックします。  
   
 4.  ピボットテーブル フィールド リストで **[Sales Quotas]** メジャー グループを展開し、 **Sales Amount Quota** メジャーを値領域にドラッグします。  
   
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/08/2017
   
 9. **[具体化する]** チェック ボックスがオンになっていることを確認します。  
   
-10. **[OK]**をクリックします。  
+10. **[OK]** をクリックします。  
   
 11. **Sales Territory** ディメンションと **Sales Quotas 1** メジャー グループが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。 **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/08/2017
   
 16. **[具体化する]** チェック ボックスがオンになっていることを確認します。  
   
-17. **[OK]**をクリックします。  
+17. **[OK]** をクリックします。  
   
 18. **Date** キューブ ディメンションを削除します。  
   
@@ -194,7 +194,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Quarter]**を指定します。 **[関連属性]** を **[Fiscal Quarter]**に設定します。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
     **Date** ディメンションに、1 つまたは複数の重複する属性リレーションシップが含まれており、このことが原因で、非キー属性が粒度属性として使用されている場合にデータの集計ができない可能性があることを警告するメッセージが表示されます。  
   

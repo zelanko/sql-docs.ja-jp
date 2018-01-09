@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d9e924f914822b7eb26b4242c1120113da7c3b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ac35e52322e82cff60dd9f62504db59f8f4b982e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drillthrough-on-mining-structures"></a>マイニング構造でのドリルスルー
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*ドリル スルー*モデルのマイニング モデルまたはマイニング構造のいずれかのクエリを実行し、詳細データを取得する機能が公開されていないことを意味します。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/08/2017
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、ケース データへのドリルスルーの 2 つのオプションを提供します。 マイニング モデルの作成に使用されたデータにドリルスルーすることも、マイニング構造のソース データにドリルスルーすることもできます。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>モデル ケースへのドリルスルーと構造へのドリルスルー  
- **モデル ケース**へのドリルスルーは、モデル内のルール、パターン、またはクラスターに関する詳細情報を探すのに役立ちます。  
+ **モデル ケース** へのドリルスルーは、モデル内のルール、パターン、またはクラスターに関する詳細情報を探すのに役立ちます。  
   
  対照的に、 **構造データへのドリルスルー** は、モデル内で使用できなかった情報へのアクセスを可能にすることが目的です。 たとえば、適切な権限がある場合は、モデルのトレーニングに使用されたデータ行とテストに使用されたデータ行を調べることができます。  
   
@@ -56,14 +54,14 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  マイニング構造とマイニング モデルの両方についてドリルスルーを有効にした場合、そのマイニング モデルに対するドリルスルー権限を持つロールのすべてのメンバー ユーザーが、マイニング構造内の列を表示できるようになります。これらの列がマイニング モデルに含まれていなかったとしても同様です。 したがって、機密データを保護するため、個人情報をマスクするデータ ソース ビューを設定し、マイニング構造に対するドリルスルー アクセスは必要な場合にのみ許可する必要があります。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  マイニング モデルでドリルスルーを使用する方法の詳細については、次のトピックを参照してください。  
   
 |||  
 |-|-|  
 |マイニング モデル ビューアーから構造へのドリルスルーの使用|[モデル ビューアーからのドリルスルーの使用](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |特定のモデルの種類に対するドリルスルー クエリの例|[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)|  
-|特定のマイニング構造とマイニング モデルに適用される権限の詳細|[データ マイニング構造およびデータ マイニング モデルに対する権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|特定のマイニング構造とマイニング モデルに適用される権限の詳細|[データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデルでのドリルスルー](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  

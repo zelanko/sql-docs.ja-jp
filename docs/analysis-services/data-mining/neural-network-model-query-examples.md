@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,13 +21,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d13b5801cbf011723fa0ec9272819a83364f3f8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="neural-network-model-query-examples"></a>ニューラル ネットワーク モデルのクエリ例
+# <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング モデルに対するクエリを作成するときに、分析で検出されたパターンの詳細情報を提供するには、コンテンツのクエリまたはパターンを使用して、モデルに新しいデータについて予測する予測クエリを作成できます。 たとえば、ニューラル ネットワーク モデルのコンテンツ クエリでは、非表示層の数などのモデル メタデータを取得できます。 また、予測クエリでは、入力に基づいて分類を提示し、必要に応じて各分類の確率を提供することもできます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
@@ -71,9 +69,9 @@ WHERE NODE_TYPE = 24
   
  例の結果を次に示します。  
   
-|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|Call Center NN|案件あたりの平均時間|Missing|0|0|1|  
+|Adventure Works DW Multidimensional 2012|Call Center NN|案件あたりの平均時間|Missing|0|0|@shouldalert|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|案件あたりの平均時間|< 64.7094100096|11|0.407407407|5|  
   
  ニューラル ネットワーク モデルのコンテキストにおけるスキーマ行セットの列の意味については、「 [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)というマイニング モデルを基にしています。  
@@ -163,7 +161,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  例の結果を次に示します。  
   
-|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -230,7 +228,7 @@ NATURAL PREDICTION JOIN
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通する関数の一覧は、「[アルゴリズム リファレンス (Analysis Services - データ マイニング)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [ニューラル ネットワーク モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル &#40; 中級者向けデータ マイニング チュートリアル &#41; の作成](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5818339f5bcc44770cdf728d93deb1b41b9bf618
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]指定された数のセクションでは、マイニング構造のパーティションは、各パーティションに対してモデルをトレーニングし、各パーティションに対して精度の基準を返します。  
@@ -174,20 +174,20 @@ NULL
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|値|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|True Positive|144|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|False Positive|105|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|True Negative|186|  
-|Target Mail DT|Bike Buyer|1|1|500|分類|False Negative|65|  
-|Target Mail DT|Bike Buyer|1|1|500|Likelihood|ログ スコア|-0.619042807138345|  
-|Target Mail DT|Bike Buyer|1|1|500|Likelihood|リフト|0.0740963734002671|  
-|Target Mail DT|Bike Buyer|1|1|500|Likelihood|2 乗平均平方根誤差|0.346946279977653|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|True Positive|162|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|False Positive|86|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|True Negative|165|  
-|Target Mail DT|Bike Buyer|1|2|500|分類|False Negative|87|  
-|Target Mail DT|Bike Buyer|1|2|500|Likelihood|ログ スコア|-0.654117781086519|  
-|Target Mail DT|Bike Buyer|1|2|500|Likelihood|リフト|0.038997399132084|  
-|Target Mail DT|Bike Buyer|1|2|500|Likelihood|2 乗平均平方根誤差|0.342721344892651|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|True Positive|144|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|False Positive|105|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|True Negative|186|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分類|False Negative|65|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|Likelihood|ログ スコア|-0.619042807138345|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|Likelihood|リフト|0.0740963734002671|  
+|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|Likelihood|2 乗平均平方根誤差|0.346946279977653|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|True Positive|162|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|False Positive|86|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|True Negative|165|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|分類|False Negative|87|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|Likelihood|ログ スコア|-0.654117781086519|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|Likelihood|リフト|0.038997399132084|  
+|Target Mail DT|Bike Buyer|@shouldalert|2|500|Likelihood|2 乗平均平方根誤差|0.342721344892651|  
   
 ## <a name="requirements"></a>必要条件  
  相互検証は、 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 以降の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]でのみ使用できます。  

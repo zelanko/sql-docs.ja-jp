@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックではの展開と構成に中間層機能強化について説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]機能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]など[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ギャラリー、スケジュール データ更新、管理ダッシュ ボード、およびデータ プロバイダー。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成** ツールを実行して、以下の操作を完了します。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2013 の構成の実行  
  **注:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップ ウィザードでは、 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]の 2 種類の構成ツールがインストールされます。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
   
-|名前|説明|  
+|[オブジェクト名]|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツール|SharePoint 2010 Service Pack 1 (SP1)|  
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  **[正常性データの収集を有効にする]** が選択されていることを確認します。  
   
-5.  クリックして **OK**です。  
+5.  **[OK]** をクリックします。  
   
  データ更新のトラブルシューティングに関する詳細については、 [Troubleshooting Power Pivot Data Refresh (Power Pivot データ更新のトラブルシューティング)](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) に関するページを参照してください。  
   

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb23accde5d3711a97d67aab6750a6a16a6a8b3d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>モデル ビューアーからのドリルスルーの使用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ある参照ビューアーからのドリルスルーを使用するモデルの種類に応じて、**マイニング モデル ビューアー**をマイニング モデルで使用するケースを調べたり、マイニング構造に追加の列を参照したり、データ マイニング デザイナーのタブです。 モデルのパターンは特定のケースに直接リンクできないため、多くのモデルの種類ではドリルスルーがサポートされませんが、次のモデルの種類ではドリルスルーがサポートされます。  

@@ -8,7 +8,7 @@ ms.component:
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0a11280eca74da75737d30fe795c856988d422ae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services とは
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services は、意思決定支援とビジネスの分析、Reporting Services レポート、ビジネス レポートおよび Power BI では、Excel などのクライアント アプリケーションの分析データを提供およびその他のデータの視覚化ツールで使用される分析データ エンジンです。  

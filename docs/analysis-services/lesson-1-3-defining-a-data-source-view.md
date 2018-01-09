@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fb0297f91f6a7b3cac69e262eac707cdc59040bd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4bdf8563587ef08dd89634676a56324dc0191edb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>レッスン 1 ~ 3-データ ソース ビューを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]使用するデータ ソースを定義した後、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトでは、次の手順は一般に、プロジェクトのデータ ソース ビューを定義します。 データ ソース ビューは、指定したテーブルのメタデータと、プロジェクトのデータ ソースによって定義されているビューを 1 つに統合したものです。 データ ソース ビューにメタデータを格納すると、基になるデータ ソースへの接続を開かなくても、開発時にメタデータを操作することができます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]**をクリックします。 **[データ ソースの選択]** ページが表示されます。  
   
-3.  **[リレーショナル データ ソース]** の一覧で、**[Adventure Works DW 2012]** データ ソースが選択されていることを確認します。 **[次へ]**をクリックします。  
+3.  **[リレーショナル データ ソース]** の一覧で、**[Adventure Works DW 2012]** データ ソースが選択されていることを確認します。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     > 複数のデータ ソースに基づくデータ ソース ビューを作成するには、まず、1 つのデータ ソースに基づくデータ ソース ビューを定義します。 このデータ ソースをプライマリ データ ソースと呼びます。 次に、2 番目のデータ ソースのテーブルとビューを追加します。 複数のデータ ソースの関連するテーブルに基づいた属性を含むディメンションを設計する場合は、分散クエリ エンジン機能を使用するために、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースをプライマリ データ ソースとして定義する必要があります。  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>属性のプロパティ]-[グループ メンバーの属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]メンバー グループは、システムによって生成された連続したディメンション メンバーのコレクションです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、分離と呼ばれるプロセスにより、1 つの属性のメンバーを複数のメンバー グループに分割できます。 階層内のレベルには、メンバー グループまたはメンバーのどちらかが含まれています。 メンバー グループが属するレベルをビジネス ユーザーが参照すると、メンバー グループの名前とセル値が表示されます。 メンバー グループをサポートするために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されたメンバーはグループ化メンバーと呼ばれ、通常のメンバーと同じように表示されます。  

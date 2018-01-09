@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: batches [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 34082c3567e1050be6e72992387435ec9ef0c22b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ec94963644de42f6fd07da60c16f2f314f168e41
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batch-processing-analysis-services"></a>バッチ処理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、1 つの要求でサーバーに複数の処理コマンドを送信するバッチ コマンドを使用することができます。 バッチ処理では、どのオブジェクトがどの順序で処理されるのかを制御できます。 また、バッチは、一連のスタンドアロン ジョブとして実行するか、1 つのプロセスが失敗したときにバッチ全体をロールバックするトランザクションとして実行することもできます。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_ssdt"></a> SQL Server データ ツールでのバッチ処理  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でオブジェクトを処理するには、そのオブジェクトを含んでいるプロジェクトを配置する必要があります。 詳細については、「[Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)」を参照してください。  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を開きます。  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を開きます。  
   
 2.  配置されているプロジェクトを開きます。  
   

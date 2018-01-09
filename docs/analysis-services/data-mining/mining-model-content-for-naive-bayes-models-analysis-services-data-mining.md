@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e6fb2186671be3fee4132ee67d39e7ea2c8c824
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea4b76bc06098491a1ef7025b326cc254a5e1cdc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックの説明を使用するモデルに固有のマイニング モデル コンテンツ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムです。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -265,11 +263,11 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  期待される結果:  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|@shouldalert|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|@shouldalert|4216|0.527065883|4|  
   
  これらの結果の SUPPORT 列の値は、指定した結婚歴に当てはまる顧客のうち、自転車を購入した顧客の数を示します。 PROBABILITY 列には、このノードのみについて計算された各属性値の確率が格納されます。 NODE_DISTRIBUTION テーブルで使用される用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
@@ -278,16 +276,16 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|Missing|0|0|0|1|  
+|Bike Buyer|Missing|0|0|0|@shouldalert|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1|8615|0.492736216|0|4|  
-|Marital Status|Missing|0|0|0|1|  
+|Bike Buyer|@shouldalert|8615|0.492736216|0|4|  
+|Marital Status|Missing|0|0|0|@shouldalert|  
 |Marital Status|S|7999|0.457504004|0|4|  
 |Marital Status|M|9485|0.542495996|0|4|  
-|Total Children|Missing|0|0|0|1|  
+|Total Children|Missing|0|0|0|@shouldalert|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
-|Total Children|1|3406|0.19480668|0|4|  
+|Total Children|@shouldalert|3406|0.19480668|0|4|  
   
  マージナル統計ノードには常に予測可能な属性とその取り得る値の説明が含まれるため、[Bike Buyer] 列が含まれます。 表中のその他の列はすべて入力属性を表し、モデルで使用された値と共に表示されています。 値は不足値、不連続値、または分離された値のみになります。  
   

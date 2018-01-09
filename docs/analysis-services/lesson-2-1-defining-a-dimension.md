@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 125908516823730701e0502398d4c8346d093edb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>レッスン 2-1-ディメンションを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]次の実習では、日付ディメンションを作成するのにディメンション ウィザードを使用します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  **[メイン テーブル]** ボックスの一覧で、 **[Date]**を選択します。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[ディメンション属性の選択]** ページで、次の属性の横にあるチェック ボックスをオンにします。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/08/2017
   
     -   **Calendar Semester**  
   
-8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]**の順にクリックします。 **[OK]**をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
+8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]**の順にクリックします。 **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
   
     -   **English Month Name** から **Month**  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
     -   **Calendar Semester** から **Half Year**  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 10. **[ウィザードの完了]** ページの [プレビュー] ペインで、 **Date** ディメンションとその属性を確認できます。  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/08/2017
 [キューブの定義](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
-[多次元モデル内のディメンション](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
+[「多次元モデル内のディメンション」](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [既存のテーブルを使用したディメンションの作成](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [ディメンション ウィザードを使用したディメンションの作成](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 19d9c5cae52ed4eee5ee553905475bcbf62c38c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>レッスン 2 ~ 5-Analysis Services プロジェクトを配置します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]内のオブジェクトのキューブとディメンション データを表示する、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアル プロジェクトは、指定のインスタンスにプロジェクトを配置する必要があります[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]し、キューブとそのディメンションを処理します。 *プロジェクトを* 配置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに定義済みオブジェクトが作成されます。 *のインスタンス内のオブジェクトを* 処理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] すると、基となるデータ ソースのデータがキューブ オブジェクトにコピーされます。 詳細については、「 [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) 」および「 [Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)のインスタンスに定義済みオブジェクトが作成されます。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     > プロジェクトの名前付きインスタンスを配置する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、ローカル コンピューター上またはリモート サーバー上のインスタンスには、変更、**サーバー**プロパティを適切なインスタンス名など、 \< *ServerName**>\\<**InstanceName**>*です。  
   
-3.  **[OK]**をクリックします。  
+3.  **[OK]** をクリックします。  
   
 4.  ソリューション エクスプローラーで、 **[Analysis Services Tutorial]** プロジェクトを右クリックし、 **[配置]**をクリックします。 場合によっては、しばらく待つ必要があります。  
   

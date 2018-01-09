@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラル ネットワークを使用して、*多層パーセプトロン*とも呼ばれる、ネットワーク、*バックプロパゲーション デルタ ルール ネットワーク*を最大 3 つの層のニューロン、構成、または*パーセプトロン*です。 これらの層は、入力層、オプションの非表示層、および出力層です。  
@@ -200,7 +198,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Ordered|  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clustering-model-query-examples"></a>クラスタリング モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング モデルに対するクエリを作成するときに、モデルに関するメタデータを取得したり、分析で検出されたパターンの詳細情報を提供するコンテンツ クエリを作成できます。 モデル内のパターンを使用して新しいデータの予測を行う予測クエリを作成することもできます。 取得できる情報は、クエリの種類によって異なります。 たとえばコンテンツ クエリを使用すると、検出されたクラスターに関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントが所属する可能性が高いクラスターを調べることができます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
- **Content Queries**  
+ **コンテンツ クエリ**  
   
  [DMX を使用してモデル メタデータを取得する](#bkmk_Query1)  
   
@@ -85,7 +83,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|すべて|  
+|NODE_DESCRIPTION|All|  
   
  アソシエーション モデル内でのこれらの列の意味については、「[クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
   
@@ -171,13 +169,13 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|1|0.109354156|  
+|001|@shouldalert|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
 |001|Missing|0|  
 |002|0|0.576980023|  
-|002|1|0.406623939|  
+|002|@shouldalert|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
@@ -283,13 +281,13 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|式|  
 |----------------|----------------|  
-|1|0.592924735740338|  
+|@shouldalert|0.592924735740338|  
   
  使用法を **PredictOnly** に設定し、モデルを再処理した場合の結果の例を次に示します。  
   
 |Bike Buyer|式|  
 |----------------|----------------|  
-|1|0.55843544003102|  
+|@shouldalert|0.55843544003102|  
   
  この例ではモデルに大きな違いはありませんが、 値の実際の分布とモデルの予測との違いを検出することが重要になる場合もあります。 そのような場合は、 [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 関数を使用できます。この関数は、特定のモデルについてケースの確率を返します。  
   
@@ -364,7 +362,7 @@ NATURAL PREDICTION JOIN
 |Cluster 7|0.979081275926724|0.0209187240732763|  
 |クラスター 1|0.999169044818624|0.000830955181376364|  
 |Cluster 9|0.999831227795894|0.000168772204105754|  
-|Cluster 8|1|0|  
+|Cluster 8|@shouldalert|0|  
   
  既定では、結果は確率で順位付けされます。 この結果から、Cluster 2 は、確率はかなり低いとはいえ、新しいデータ ポイントに最適なクラスターであることがわかります。  
   

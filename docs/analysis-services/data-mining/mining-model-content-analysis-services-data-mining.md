@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]設計された、基になるマイニング構造からデータを使用してマイニング モデルを処理した後、マイニング モデルが完成しが含まれています*マイニング モデル コンテンツ*です。 このコンテンツを使用して、予測やデータの分析を行うことができます。  
@@ -84,8 +82,8 @@ ms.lasthandoff: 12/08/2017
   
 |NODE_TYPE ID|ノード ラベル|ノードのコンテンツ|  
 |-------------------|----------------|-------------------|  
-|1|[モデル]|メタデータおよびルート コンテンツ ノード。 すべての種類のモデルに適用されます。|  
-|2|[ツリー]|分類ツリーのルート ノード。 デシジョン ツリー モデルに適用されます。|  
+|@shouldalert|[モデル]|メタデータおよびルート コンテンツ ノード。 すべての種類のモデルに適用されます。|  
+|2|trEE|分類ツリーのルート ノード。 デシジョン ツリー モデルに適用されます。|  
 |3|Interior|ツリーの内部分割ノード。 デシジョン ツリー モデルに適用されます。|  
 |4|Distribution|ツリーの末端のノード。 デシジョン ツリー モデルに適用されます。|  
 |5|クラスター|アルゴリズムにより検出されたクラスター。 クラスター モデルとシーケンス クラスター モデルに適用されます。|  
@@ -221,7 +219,7 @@ ms.lasthandoff: 12/08/2017
   
 |VALUE_TYPE ID|値のラベル|値の型名|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|ケース データにこの属性の値が含まれていないことを示します。 **Missing** 状態は、値を持つ属性とは別に計算されます。|  
+|@shouldalert|Missing|ケース データにこの属性の値が含まれていないことを示します。 **Missing** 状態は、値を持つ属性とは別に計算されます。|  
 |2|Existing|ケース データにこの属性の値が含まれていることを示します。|  
 |3|Continuous|属性の値が連続する数値であるため、分散および標準偏差と共に平均で表すことができることを示します。|  
 |4|Discrete|不連続値として扱われる値 (数値またはテキスト) を示します。<br /><br /> **注** 不連続値は不足値にすることもできます。ただし、計算時の処理方法は異なります。 詳細については、「[Missing 値 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)」をご覧ください。|  
@@ -260,7 +258,7 @@ ms.lasthandoff: 12/08/2017
   
 |ノードまたは属性と値のレベル|周辺確率|ノードの確率|  
 |----------------------------------------|--------------------------|----------------------|  
-|モデル ルート<br /><br /> すべての対象顧客|1|1|  
+|モデル ルート<br /><br /> すべての対象顧客|@shouldalert|@shouldalert|  
 |性別に基づいて分割された対象顧客|.5|.5|  
 |性別に基づいて分割され、収入に基づいて 3 つの方法で再度分割された対象顧客|.33|.5 * .33 = .165|  
   
@@ -288,7 +286,7 @@ ms.lasthandoff: 12/08/2017
 |Naïve Bayes モデル|[Naive Bayes モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |ニューラル ネットワーク モデル|[ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |シーケンス クラスター|[シーケンス クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|タイム シリーズ モデル|[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|タイム シリーズ モデル|[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> マイニング モデル コンテンツを表示するためのツール  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でモデルを参照または調査する場合、 **Microsoft 汎用コンテンツ ツリー ビューアー**で情報を表示できます。このビューアーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で使用できます。  

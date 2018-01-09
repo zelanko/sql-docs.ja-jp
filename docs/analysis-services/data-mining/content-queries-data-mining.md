@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c32111e19274ecd744f968c7ce128a924487f22c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-queries-data-mining"></a>コンテンツ クエリ (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]コンテンツ クエリは、内部の統計およびマイニング モデルの構造に関する情報を抽出する方法です。 コンテンツ クエリを使用すると、ビューアーでは簡単に得られない詳細な情報がわかる場合があります。 また、コンテンツ クエリの結果を利用して、他の用途のためにプログラムで情報を抽出できます。  

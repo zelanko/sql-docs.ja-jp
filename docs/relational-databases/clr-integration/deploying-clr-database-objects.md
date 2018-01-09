@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73dd29d7c658a9537c6860aecfb69c5fcd538460
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5fd0a8abac60e2e5b0e2f1bce35bd1d6e3554e1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploying-clr-database-objects"></a>CLR データベース オブジェクトの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]展開は、完成したアプリケーションやモジュールをインストールしても、別のコンピューター上で実行するように配布するためのプロセスです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio を使用して、共通言語ランタイム (CLR) データベース オブジェクトを開発し、これらをテスト サーバーに配置することができます。 また、Visual Studio ではなく [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework の再配布ファイルを使用して、マネージ データベース オブジェクトをコンパイルすることも可能です。 コンパイルすると、CLR データベース オブジェクトを含むアセンブリを、Visual Studio または [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、テスト サーバーに配置することができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたは配置には使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  **スクリプト オプションの** ウィンドウで、をクリックして**次へ**、オプションの変更 をクリックし、 **次へ**です。  
   
-5.  **オブジェクトの種類を選択** ウィンドウで、展開するデータベース オブジェクトの種類を選択します。 **[次へ]**をクリックします。  
+5.  **オブジェクトの種類を選択** ウィンドウで、展開するデータベース オブジェクトの種類を選択します。 **[次へ]** をクリックします。  
   
 6.  選択したオブジェクトの種類ごと、**オブジェクトの種類を選択** ウィンドウで、**選択\<型 >**ペインが表示されます。 このペインでは、指定したデータベースに登録されているデータベース オブジェクトの種類のすべてのインスタンスから、いずれかのオブジェクトを選択できます。 1 つまたは複数のオブジェクトを選択し、クリックして**次**です。  
   

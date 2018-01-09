@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2926b71ccc00d178c9a60aa5c8fc9856e6c8a81
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスの構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  次の表には、さまざまなシナリオで HTTP アクセスを有効にするときに検討する必要がある追加の検討事項が示されています。  
   
-|Scenario|構成|  
+|シナリオ|構成|  
 |--------------|-------------------|  
 |IIS と Analysis Services が同じコンピューター上にある場合|これが、既定の構成 (サーバー名は localhost)、ローカルの Analysis Services OLE DB プロバイダー、および NTLM を使用した Windows 統合セキュリティを使用できるため最も簡単な構成となります。 クライアントも同じドメインにあることを前提としているため、認証はユーザーにはわからないように内部的に行われ、追加の作業も必要ありません。|  
 |IIS と Analysis Services が異なるコンピューター上にある場合|このトポロジでは、Web サーバーに Analysis Services OLE DB プロバイダーをインストールする必要があります。 msmdpump.ini ファイルを編集して、リモート コンピューター上の Analysis Services インスタンスの場所を指定する必要もあります。<br /><br /> このトポロジでは、ダブルホップ認証ステップが追加されます。この認証では、資格情報がクライアントから Web サーバーに渡され、バックエンドの Analysis Services サーバーまで到達する必要があります。 Windows 資格情報と NTLM を使用している場合、NTLM では 2 番目のサーバーへのクライアント資格情報の委任が許可されないためにエラーが発生します。 最も一般的なソリューションは、SSL (Secure Sockets Layer) で基本認証を使用する方法です。ただし、この場合、MSMDPUMP 仮想ディレクトリにアクセスするときにユーザー名とパスワードの入力が必要となります。 さらにわかりやすい方法として、Kerberos を有効にし、Analysis Services 制約付き委任を構成することによって認証を内部的に処理して Analysis Services にアクセスできるようにすることもできます。 詳細については、「 [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 」を参照してください。<br /><br /> Windows ファイアウォールでどのポートのブロックを解除するかを検討してください。 両方のサーバー上のポートのブロックを解除して IIS 上の Web アプリケーションと、リモート サーバー上の Analysis Services にアクセスできるようにする必要があります。|  
@@ -114,7 +111,7 @@ ms.lasthandoff: 12/08/2017
 4.  ウィザードの指示に従って、インストールを完了させます。  
   
 > [!NOTE]  
->  クライアントがリモートの Analysis Services サーバーに接続できるようにするために、Windows ファイアウォールでポートのブロックを忘れずに解除してください。 詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
+>  クライアントがリモートの Analysis Services サーバーに接続できるようにするために、Windows ファイアウォールでポートのブロックを忘れずに解除してください。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
 ##  <a name="bkmk_copy"></a> 手順 1: MSMDPUMP ファイルを Web サーバー上のフォルダーにコピーする  
  作成した各 HTTP エンドポイントに、独自の MSMDPUMP ファイル セットを用意する必要があります。 この手順では、Analysis Services プログラム フォルダーの MSMDPUMP 実行可能ファイル、構成ファイル、およびリソース フォルダーを、IIS が実行されているコンピューターのファイル システム上に作成する新しい仮想ディレクトリ フォルダーにコピーします。  
@@ -166,7 +163,7 @@ ms.lasthandoff: 12/08/2017
   
      ![アプリケーションへの変換の設定を](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "アプリケーションへの変換の設定")  
   
-4.  **[OK]**をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
+4.  **[OK]** をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
   
      ![アプリケーションに変換後の OLAP フォルダー](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "アプリケーションへの変換後の OLAP フォルダー")  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f37da1066d505f36b6863dd65d401d689ccdedf5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ac64c706d3f8583d614989214940423d19ce7ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>既定のデータ モデルと配置プロパティの構成 (SSAS テーブル)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]このトピックは、既定の互換性レベルを構成する方法を説明、展開およびワークスペース データベース プロパティの設定、可能性がある定義済みする新しい各テーブル モデル プロジェクトの作成で[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。 新しいプロジェクトの作成後も、これらのプロパティを特定の要件に応じて変更できます。  

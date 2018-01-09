@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-solutions"></a>データ マイニング ソリューション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング ソリューションは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を 1 つまたは複数のデータ マイニング プロジェクトを含むソリューションです。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
  [リレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  マイニング構造は、リレーショナル データやテキスト ファイルのほか、データ ソース ビューに組み込むことのできる各種のソースから作成できます。  
   
- [Create an OLAP Mining Structure](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
+ [OLAP マイニング構造の作成](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  OLAP キューブのデータを基にマイニング構造を作成します。 OLAP データから作成したモデルは、データ マイニング ディメンションとして保存できるほか、データ セットやモデルを新しいキューブとして保存することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

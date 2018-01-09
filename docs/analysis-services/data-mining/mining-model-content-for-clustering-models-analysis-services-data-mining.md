@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8ce27412abf931efcc0b18de246b921afc2e4fe
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、Microsoft クラスタ リング アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
@@ -45,10 +43,10 @@ ms.lasthandoff: 12/08/2017
   
  親ノードには、すべてのトレーニング ケースの実際の分布を表す便利な統計も含まれています。 これらの統計は、入れ子になったテーブル列である NODE_DISTRIBUTION に含まれています。 たとえば次の表は、「 `TM_Clustering`基本的なデータ マイニング チュートリアル [」で作成したクラスター モデル (](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)) の顧客の人口統計の分布を表す NODE_DISTRIBUTION テーブルのいくつかの行を示しています。  
   
-|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (Missing: 不足)|  
-|Age|44.9016152716593|12939|1|125.663453102554|3 (Continuous: 連続)|  
+|Age|44.9016152716593|12939|@shouldalert|125.663453102554|3 (Continuous: 連続)|  
 |Gender|Missing|0|0|0|1 (Missing: 不足)|  
 |Gender|F|6350|0.490764355823479|0|4 (Discrete: 不連続)|  
 |Gender|M|6589|0.509235644176521|0|4 (Discrete: 不連続)|  

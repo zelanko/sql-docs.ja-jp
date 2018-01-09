@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d3f3148837cd2e511ffd6d8fc539c32db362c88
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-linked-dimensions"></a>リンク ディメンションの定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]リンク ディメンションが作成され、同じバージョンとの互換性レベルの別の Analysis Services データベースに格納されているディメンションに基づいています。 リンク ディメンションを使用すると、1 つのデータベースでディメンションを作成、保存、保守することができ、さらにそのディメンションを複数のデータベースで使用可能にすることができます。 ユーザーに対しては、リンク ディメンションは他のディメンションと同様に表示されます。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  更新機能が利用できないため、ほとんどの Analysis Services 開発者は、ディメンションをリンクする代わりにディメンションをコピーします。 同じソリューション内にある複数のプロジェクトに対してソリューションをコピーできます。 詳細については、「 [SSAS 内でのリンク ディメンションの更新](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)」をご覧ください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  ディメンションを提供するソース データベースとそれを使用する現在のデータベースは、同じバージョンと互換性レベルとする必要があります。 詳細については、「 [多次元データベースの互換性レベル &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)」をご覧ください。  
   
  ソース データベースを配置してオンラインにする必要があります。 リンク オブジェクトをパブリッシュまたは使用するサーバーは、操作ができるように構成する必要があります (以下の説明を参照)。  
@@ -81,7 +78,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  [権限借用情報] ページで、 **[サービス アカウントを使用する]**をクリックします。 **[次へ]**をクリックし、ウィザードを終了します。 リンク オブジェクト ウィザードでは、ここで定義した接続が選択されます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  リンク ディメンションの構造は変更できないので、ディメンション デザイナーの **[ディメンション構造]** タブではリンク ディメンションの構造を表示できません。 リンク ディメンションの処理後に、 **[ブラウザー]** タブで表示できます。また、名前の変更や名前の翻訳の作成を行うことができます。  
   
 ## <a name="see-also"></a>参照  

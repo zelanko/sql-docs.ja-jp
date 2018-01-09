@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]指定された数のセクションでは、マイニング構造のパーティションは、各パーティションに対してモデルをトレーニングし、各パーティションに対して精度の基準を返します。  
@@ -131,10 +131,10 @@ CALL SystemGetClusterCrossValidationResults(
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|値|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|クラスター 1|||1|3025|クラスター|ケースの確率値|0.930524511864121|  
+|クラスター 1|||@shouldalert|3025|クラスター|ケースの確率値|0.930524511864121|  
 |クラスター 1|||2|3025|クラスター|ケースの確率値|0.919184178430778|  
 |クラスター 1|||3|3024|クラスター|ケースの確率値|0.929651120490248|  
-|Cluster 2|||1|1289|クラスター|ケースの確率値|0.922789726933607|  
+|Cluster 2|||@shouldalert|1289|クラスター|ケースの確率値|0.922789726933607|  
 |Cluster 2|||2|1288|クラスター|ケースの確率値|0.934865535691068|  
 |Cluster 2|||3|1288|クラスター|ケースの確率値|0.924724595688798|  
   

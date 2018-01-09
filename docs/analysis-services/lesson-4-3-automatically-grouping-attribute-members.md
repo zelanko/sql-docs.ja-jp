@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d787f200287979270ce8ffe818c3375878fc284
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 46154c876e57ea952e0df93294f6d65891fa91c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>レッスン 4-3 - 属性メンバーの自動的にグループ化
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブを表示するときに別の属性階層のメンバーが 1 つの属性階層のメンバーが通常ディメンションです。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 このとき、属性の種類によっては、属性階層内のメンバー分布に基づいて、属性が自動的にグループ化されるように [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定しておくと便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。  

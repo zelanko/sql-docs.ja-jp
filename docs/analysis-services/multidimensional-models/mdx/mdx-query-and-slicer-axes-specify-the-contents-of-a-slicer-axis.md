@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c88d724873a7e2a7e811a4a28c9b76b5c9b12ccd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX クエリ軸とスライサー軸にスライサー軸の内容を指定します。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]スライサー軸は、指定されたメンバーと重なり合うデータだけが返されるようにする、返されたデータを制限する多次元式 (MDX) SELECT ステートメントによって返されるデータをフィルター処理します。 クエリ内の見えない追加の軸であると考えることができます。 スライサー軸は、MDX の SELECT ステートメントの WHERE 句で定義します。  

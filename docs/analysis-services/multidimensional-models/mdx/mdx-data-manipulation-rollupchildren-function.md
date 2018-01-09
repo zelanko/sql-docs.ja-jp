@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c913406650e267cb715267f4a2a91235b6259b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX データ操作 - RollupChildren 関数
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多次元式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md)関数は、それぞれの子に異なる単項演算子を適用する、メンバーの子がロールアップされ、数値としてこのプログラムのロールアップの値を返します。 単項演算子は、子メンバーに関連付けられたメンバー プロパティによって提供されるか、関数に直接指定される文字列式の場合もあります。  
@@ -50,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="using-a-custom-member-property"></a>カスタム メンバー プロパティの使用  
  ロールアップ計算を頻繁に実行する場合、特定の関数に対してそれぞれの子が使用する演算子を格納するメンバー プロパティを作成しておくという方法があります。 次の表では、有効な単項演算子を示し、予期される結果を説明します。  
   
-|演算子|結果|  
+|演算子|[結果]|  
 |--------------|------------|  
 |+|合計 = 合計 + 現在の子|  
 |-|合計 = 合計 - 現在の子|  

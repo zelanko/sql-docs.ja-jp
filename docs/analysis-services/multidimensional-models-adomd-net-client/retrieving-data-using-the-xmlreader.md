@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 70b268a896a7acbbf515ac49a722eccb17afdfd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>XmlReader を使用したデータの取得
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**XmlReader**クラスの一部、 **System.Xml** Microsoft .NET Framework クラス ライブラリの名前空間がに似ていますが、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>を内のクラス、 **XmlReader**クラスもにより高速かつ非キャッシュ、前方参照専用データにアクセスします。 メモリ内分析のビューを使用して、データの必要性が存在しない場合、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>オブジェクト、 **XmlReader**オブジェクトでは、特に大量のデータ用の XML データを取得するために最適です。 **XmlReader** 、データをストリーム**XmlReader**を取得し、場合と同様に、呼び出し元にデータを公開する前にすべてのデータをキャッシュする必要はありません、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>オブジェクトは、変換に使用された、XML for Analysis 応答を分析オブジェクト モデル表現です。  

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>予測クエリ ビルダーを使用した予測クエリの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]か、SQL Server Management Studio で既存のマイニング モデルを右クリックし、このオプションを選択し、BI Development Studio でのデータ マイニング ソリューションを構築するときに、予測クエリを作成することができます**予測クエリの作成**.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
 -   **デザイン**  
   
--   **Query**  
+-   **クエリ**  
   
 -   **結果**  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
  **フィールド**  
  **[ソース]** 列の選択に関連付けられている特定の列または関数を決定します。  
   
- **別名**  
+ **[エイリアス]**  
  結果セット内で列に付けられる名前を決定します。  
   
  **[表示]**  

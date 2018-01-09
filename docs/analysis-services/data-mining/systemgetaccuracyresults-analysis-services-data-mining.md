@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング構造とクラスタ リング モデルを除く、すべての関連モデルのクロス検証の精度の基準を返します。  
@@ -88,19 +88,19 @@ SystemGetAccuracyResults(<mining structure>,
   
  既定値は **null**です。  
   
- (オプション)  
+ (省略可能)  
   
  *target threshold*  
  予測値が正確であると見なされる最小確率を示す 0.0 ～ 1 の範囲の数値。  
   
  既定値は **null**です。これは、すべての予測が正しいと見なされることを意味します。  
   
- (オプション)  
+ (省略可能)  
   
  *テスト リスト (test list)*  
  テスト オプションを指定する文字列。 このパラメーターは将来使用するために予約されています。  
   
- (オプション)  
+ (省略可能)  
   
 ## <a name="return-type"></a>戻り値の型  
  返される行セットには、各パーティションのスコアと、すべてのモデルの集計が含まれます。  
@@ -109,7 +109,7 @@ SystemGetAccuracyResults(<mining structure>,
   
 |列名|Description|  
 |-----------------|-----------------|  
-|モデル|テストされたモデルの名前。 **All** は、結果がすべてのモデルの集計であることを示します。|  
+|[モデル]|テストされたモデルの名前。 **All** は、結果がすべてのモデルの集計であることを示します。|  
 |AttributeName|予測可能列の名前。|  
 |AttributeState|予測可能列の対象の値。<br /><br /> この列に値が含まれる場合、指定した状態の基準だけが収集されます。<br /><br /> この値が指定されていない場合や Null の場合は、予測ごとに最も可能性の高い状態の基準が計算されます。|  
 |PartitionIndex|結果が適用されるパーティションを表します。<br /><br /> このプロシージャでは、常に 0 になります。|  
@@ -123,7 +123,7 @@ SystemGetAccuracyResults(<mining structure>,
   
 |整数値|Description|  
 |-------------------|-----------------|  
-|1|トレーニング ケースのみが使用されます。|  
+|@shouldalert|トレーニング ケースのみが使用されます。|  
 |2|テスト ケースのみが使用されます。|  
 |3|トレーニング ケースとテスト ケースの両方が使用されます。|  
 |4|無効な組み合わせです。|  
@@ -153,13 +153,13 @@ CALL SystemGetAccuracyResults (
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|値|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|True Positive|605|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|False Positive|177|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|True Negative|501|  
-|v Target Mail DT|Bike Buyer|1|0|1638|分類|False Negative|355|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Likelihood|ログ スコア|-0.598454638753028|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Likelihood|リフト|0.0936717116894395|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Likelihood|2 乗平均平方根誤差|0.361630800104946|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|True Positive|605|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|False Positive|177|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|True Negative|501|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分類|False Negative|355|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|Likelihood|ログ スコア|-0.598454638753028|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|Likelihood|リフト|0.0936717116894395|  
+|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|Likelihood|2 乗平均平方根誤差|0.361630800104946|  
   
 ## <a name="requirements"></a>必要条件  
  相互検証は、 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 以降の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]でのみ使用できます。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ed7b1d026369b249b1acfc7da23242efcc22b26
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 486d4c78c92f9de8f70a8d3cdb70cced525b3e4e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4 : 高度な属性およびディメンションのプロパティの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このレッスンでは、属性、属性階層、およびディメンションのプロパティの詳細プロパティの一部を使用する方法を学習します。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="see-also"></a>参照  
 [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[多次元モデル内のディメンション](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
+[「多次元モデル内のディメンション」](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
   

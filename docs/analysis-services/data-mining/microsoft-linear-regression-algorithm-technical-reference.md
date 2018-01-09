@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された Microsoft デシジョン ツリー アルゴリズムの特別なバージョンです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
@@ -82,9 +80,9 @@ ms.lasthandoff: 12/08/2017
  線形回帰モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Ordered|  

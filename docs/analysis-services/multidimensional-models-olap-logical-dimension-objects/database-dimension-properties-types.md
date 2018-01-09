@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimension-properties---types"></a>データベース ディメンションのプロパティ - 種類
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**型**プロパティの設定は、サーバーおよびクライアント アプリケーションにディメンションの内容に関する情報を提供します。 場合によっては、**型**設定は、のみクライアント アプリケーションのガイダンスを提供し、省略可能です。 それ以外の場合になど**アカウント**または**時間**ディメンション、**型**ディメンションとその属性のプロパティ設定を特定のサーバーに基づく動作を決定します。キューブ内の特定の動作を実装する必要があります。 たとえば、**型**にディメンションのプロパティを設定できます**アカウント**標準ディメンションに勘定科目属性が含まれているクライアント アプリケーションを指定します。 時間、アカウント、および通貨ディメンションの詳細については、次を参照してください[日付型ディメンションの作成](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)、[親子型ディメンションの財務アカウントを作成する](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)、および[、通貨の作成。ディメンションの入力](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)です。  
@@ -61,10 +59,10 @@ ms.lasthandoff: 12/08/2017
 |Accounts|財務報告用の勘定科目一覧表を表す属性を持つディメンションです。|  
 |Customers|属性が顧客情報や連絡先情報を表すディメンションです。|  
 |Products|属性が製品情報を表すディメンションです。|  
-|Scenario|属性が計画的または戦略的な分析情報を表すディメンションです。|  
+|シナリオ|属性が計画的または戦略的な分析情報を表すディメンションです。|  
 |Quantitative|属性が量的な情報を表すディメンションです。|  
 |Utility|属性がその他の情報を表すディメンションです。|  
-|Currency|この種類のディメンションには、通貨のデータとメタデータが含まれています。|  
+|通貨|この種類のディメンションには、通貨のデータとメタデータが含まれています。|  
 |Rates|属性が通貨レート情報を表すディメンションです。|  
 |Channel|属性がチャネル情報を表すディメンションです。|  
 |Promotion|属性がマーケティング関連のプロモーション情報を表すディメンションです。|  

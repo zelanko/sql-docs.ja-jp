@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、ディメンション ウィザードを使用することができます[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]既存のデータ ソースを使用せずにディメンションを作成します。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Customer  
   
--   日付  
+-   date  
   
 -   Department  
   
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Sales Territory  
   
--   Scenario  
+-   シナリオ  
   
 -   Source Currency  
   

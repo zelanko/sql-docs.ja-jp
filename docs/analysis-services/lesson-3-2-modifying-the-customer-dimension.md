@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>レッスン 3-2 の Customer ディメンションの変更
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブのディメンションの機能と使いやすさを向上させる多くのさまざまな方法はあります。 このトピックの実習では、Customer ディメンションを変更します。  
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/08/2017
   
     **[City]** 列と **[StateProvinceName]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  **City** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/08/2017
   
     **[EnglishCountryRegionName]** 列と **[StateProvinceName]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  **State-Province** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
   
@@ -227,7 +227,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  ダイアグラムで、 **[City]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
   
-3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[City]**を指定します。 **[関連属性]** を **[State-Province]**に設定します。  
+3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[City]**を指定します。 **[関連属性]** を **[State-Province]** に設定します。  
   
 4.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   
@@ -241,7 +241,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   
-9. **[OK]**をクリックします。  
+9. **[OK]** をクリックします。  
   
 10. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
   

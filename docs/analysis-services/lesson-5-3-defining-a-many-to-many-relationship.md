@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c36bae9436786544f9d11ebcea289faac9de5687
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a5edd0a3c672b5186a97423e0cf2d1ad22b8509d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>レッスン 5-3-多対多リレーションシップを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]ディメンションを定義するときに通常各ファクトは結合を 1 つのディメンション メンバーに対し、1 つのディメンション メンバーは、多くのさまざまなファクトを関連付けることができます。 たとえば、各顧客は多数の商品を注文できますが、それぞれの注文は 1 人の顧客に所属します。 リレーショナル データベース用語では、これを *一対多のリレーションシップ*と呼びます。 しかし、1 つのファクトが複数のディメンション メンバーに結合する場合があります。 リレーショナル データベース用語では、これを *多対多のリレーションシップ*と呼びます。 たとえば、1 回の購入には複数の購入動機があることが考えられ、また、1 つの購入動機が複数の購入に結び付く (関連付けられる) ことがあります。 結合テーブルは、各購入に関連する購入動機の定義に使用されます。 このようなリレーションシップから作成された Sales Reason ディメンションには、1 回の販売取り引きに関連付けられるメンバーが複数存在します。 多対多のディメンションは、従来のスター スキーマ以上にディメンショナル モデルを展開し、ディメンションが直接ファクト テーブルに関連付けられていなくても複雑な分析を可能にします。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  **[名前列]** ボックスの一覧から **[SalesReasonName]**を選択します。  
   
-8.  **[次へ]**をクリックします。  
+8.  **[次へ]** をクリックします。  
   
 9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type** 属性の横にあるチェック ボックスをオンにし、その名前を **Sales Reason Type**に変更して、 **[次へ]**をクリックします。  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 12/08/2017
   
     ![定義するリレーションシップ ダイアログ ボックス](../analysis-services/media/l5-many-to-many-3.gif "リレーションシップの定義 ダイアログ ボックス")  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
     多対多アイコンにより、Sales Reason ディメンションと Internet Sales メジャー グループの間のリレーションシップが表されます。  
   
