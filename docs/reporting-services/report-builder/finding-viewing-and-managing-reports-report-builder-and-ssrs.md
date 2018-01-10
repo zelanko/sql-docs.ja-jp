@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fc5a838e47221f6686cb417ae4c20e9ac95d09f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ca04c9558b827539bdb6dac8431a768e8d68f414
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="refreshing-reports"></a>レポートの更新  
  レポートのデータは頻繁に変わるので、レポートを更新して最新のデータを表示する必要があります。 レポートは 3 種類の方法で更新できます。  
   
-|オプション|結果|  
+|オプション|[結果]|  
 |------------|------------|  
 |ブラウザー ウィンドウの**[更新]** ボタン|セッションのキャッシュに保存されているレポートを表示します。 セッションのキャッシュは、ユーザーがレポートを開いた時点で作成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ブラウザー セッションを使用して、レポートが開いている間の表示状態の整合性を保ちます。|  
 |![[レポート] ツールバーのブラウザー更新ボタン](../../reporting-services/media/htmlviewer-refresh.GIF "[レポート] ツールバーのブラウザー更新ボタン")|[レポート] ツール バーで **[更新]** ボタンをクリックすると、レポート サーバーは、クエリを再実行し、レポートが要求時に実行される場合はレポート データを更新します。 レポートがキャッシュされる場合、またはスナップショットである場合は、 **[更新]** をクリックすると、レポート サーバー データベースに保存されているレポートが表示されます。|  
@@ -144,7 +142,7 @@ ms.lasthandoff: 12/05/2017
  セッション情報は、レポート サーバーの一時データベースに格納されます。 レポート サーバーでは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] のセッション管理を使用しません。 サーバーを再起動したり、データベースの復旧操作を実行した場合、セッション状態は復元されません。 セッションの管理の詳細については、「 [実行状態の識別](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)」をご覧ください。  
   
  
-##  <a name="InThisSection"></a> このセクションの内容  
+##  <a name="InThisSection"></a> トピックの内容  
  以下のトピックでは、レポートの表示と管理について詳しく説明します。  
   
   [レポートの検索、表示、管理](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

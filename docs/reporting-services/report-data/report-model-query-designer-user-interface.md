@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f02abfbd27673219495569994f5d0fafc4e87a36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ec879b55af66aa8044327ab88a1ea65e92ec844
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-model-query-designer-user-interface"></a>レポート モデル クエリ デザイナーのユーザー インターフェイス
   レポート デザイナーには、レポートに必要なデータを指定して、Report Server Model データ ソースから抽出するためのクエリ デザイナーが 2 つ用意されています。 モデルのエンティティやエンティティのフィールドを参照したり選択したりする場合は、グラフィカル クエリ デザイナーを使用します。 XML 形式の SMDL (セマンティック モデル定義言語) 仕様を直接操作するには、テキストベースのクエリ デザイナーを使用します。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|関数|  
+|ペイン|機能|  
 |----------|--------------|  
 |エクスプローラー ペイン|モデル内のエンティティやエンティティ フィールドをグラフィカルに表示します。 このペインは、エンティティや、そのエンティティに関連したエンティティ、フィールドを参照するときに使用します。|  
 |デザイン領域|モデルからフィールドが一覧表示されます。 このペインは、選択したフィールドのレイアウトを調整するときに使用します。|  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|関数|  
+|ペイン|機能|  
 |----------|--------------|  
 |クエリ ペイン|SMQL 仕様テキストを表示します。|  
 |結果ペイン|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]**をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  

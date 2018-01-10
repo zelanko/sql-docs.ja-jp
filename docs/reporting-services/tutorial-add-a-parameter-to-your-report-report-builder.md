@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c8de922f602a743fb0c2cdf6a247355f3794ef01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 種類が **SQL Server**である任意のデータ ソースを選択します。  
       
-8.  **[次へ]**をクリックします。  
+8.  **[次へ]** をクリックします。  
 
     資格情報の入力が必要な場合があります。    
      
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/05/2017
   
     クエリ パラメーターは存在しません。 以降、このチュートリアルの中でクエリ パラメーターを追加していきます。   
   
-12. **[次へ]**をクリックします。  
+12. **[次へ]** をクリックします。  
   
 ## <a name="CompleteWizard"></a>2.ウィザードでデータを整理し、レイアウトを選択する  
 ウィザードは、データを表示するための最初のデザインを提供します。 ウィザードのプレビュー ペインでは、テーブルやマトリックスのデザインを完了する前にデータのグループ化の結果を表示できます。  
@@ -110,13 +110,13 @@ ms.lasthandoff: 12/05/2017
   
     販売数量の値を、店舗ごとに 1 つの列で、サブカテゴリごとにグループ化された行に整理しました。  
   
-4.  **[次へ]**をクリックします。  
+4.  **[次へ]** をクリックします。  
   
 5.  **[レイアウトの選択]** ページの **[オプション]**で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
     レポートを実行すると、最後の列にはすべての店舗のサブカテゴリごとの合計数量が表示され、最後の行には店舗ごとのすべてのサブカテゴリの合計数量が表示されます。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 8.  **[完了]**をクリックします。  
   
@@ -505,7 +505,7 @@ For *@StoreID*の値として表示されます。この値が、店舗 ID **200
   
 レポートがレポート サーバーに保存されます。 接続しているレポート サーバーがウィンドウ下部のステータス バーに表示されます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、レポートにパラメーターを追加する方法のチュートリアルは終了です。 パラメーターの詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

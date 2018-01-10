@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e38dcb5203dc4d09a24f53ec380f5af724b1bde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e6b37d9f8cd174be9cd70339217e6dba4c7cffc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
 
@@ -35,8 +33,8 @@ ms.lasthandoff: 12/05/2017
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## <a name="options"></a>オプション  
- **構成**  
+## <a name="options"></a>および  
+ **Configuration**  
  編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]**、 **[DebugLocal]**、および **[Release]**です。 アクティブな構成が、 **Active(Debug)**のように最初に表示されます。  
   
  複数の構成のプロパティを同時に表示するには、 **[すべての構成]** または **[複数の構成]**を選択します。  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
   
  ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します。 たとえば、 `http:\\<server>\reportserver`のようにします。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。 既定では、レポート サーバーは、"reportserver" という名前の仮想ディレクトリにインストールされます。  
   
- SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 例: 
+ SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 例 : 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`」をご覧ください。  

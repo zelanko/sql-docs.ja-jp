@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、Linux 上の SQL Server の可用性グループを構成します。
 
@@ -327,11 +327,11 @@ sudo systemctl restart mssql-server
 
 2.  [概要] ダイアログ ボックスで、をクリックして**次**です。
 
-3.  可用性グループ オプションの指定 ダイアログ ボックスで、可用性グループの名前を入力し、ドロップダウン リストで なし の外部のクラスターの種類を選択します。 ペースが配置されるときに、外部を使用する必要があります。 [なし] が、読み取りのスケール アウトなどの特殊なシナリオです。データベース レベルの正常性の検出のオプションを選択することはオプションです。 このオプションの詳細については、次を参照してください。[可用性グループ データベース レベルの正常性の検出フェールオーバー オプション](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)です。 **[次へ]** をクリックします。
+3.  可用性グループ オプションの指定 ダイアログ ボックスで、可用性グループの名前を入力し、ドロップダウン リストで なし の外部のクラスターの種類を選択します。 ペースが配置されるときに、外部を使用する必要があります。 [なし] が、読み取りのスケール アウトなどの特殊なシナリオです。データベース レベルの正常性の検出のオプションを選択することはオプションです。 このオプションの詳細については、次を参照してください。[可用性グループ データベース レベルの正常性の検出フェールオーバー オプション](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)です。 **[次へ]**をクリックします。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  データベースの選択 ダイアログ ボックスで、可用性グループに参加するデータベースを選択します。 各データベースは、可用性グループに追加する前に、完全バックアップに必要です。 **[次へ]** をクリックします。
+4.  データベースの選択 ダイアログ ボックスで、可用性グループに参加するデータベースを選択します。 各データベースは、可用性グループに追加する前に、完全バックアップに必要です。 **[次へ]**をクリックします。
 
 5.  レプリカの指定 ダイアログ ボックスでをクリックして**のレプリカ追加**です。
 
@@ -357,17 +357,17 @@ sudo systemctl restart mssql-server
 
 11. リスナーを作成する場合は読み取り可能なシナリオの 17.3 またはそれ以降の SSMS がウィザードで読み取り専用ルーティングの作成を許可します。 SSMS または TRANSACT-SQL を使用して後で、追加することもできます。 追加する読み取り専用ルーティングをようになりました。
 
-    A.  読み取り専用ルーティング タブを選択します。
+    a.  読み取り専用ルーティング タブを選択します。
 
-    B.  読み取り専用レプリカの Url を入力します。 エンドポイントではない、インスタンスのポートを使用する点を除いて、これらの Url は、エンドポイントに似ています。
+    b.  読み取り専用レプリカの Url を入力します。 エンドポイントではない、インスタンスのポートを使用する点を除いて、これらの Url は、エンドポイントに似ています。
 
     c.  各 URL を選択し、下から読み取り可能なレプリカを選択します。 複数選択して、押しながら shift キーまたはをクリックしてドラッグします。
 
-12. **[次へ]** をクリックします。
+12. **[次へ]**をクリックします。
 
-13. セカンダリ レプリカの初期化方法を選択します。 既定値が使用するには[自動シード処理](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)、可用性グループに参加しているすべてのサーバー上の同じパスにする必要があります。 ウィザードはバックアップ、コピー、および (2 番目のオプション); を復元することもできます。手動でバックアップ、コピー、および、レプリカ上のデータベースを復元する場合に参加させて (オプション 3) です。データベースを後で追加または (最後のオプション)。 同様に証明書を手動でバックアップを作成すると、コピーすることは、バックアップ ファイルのアクセス許可は、その他のレプリカに設定する必要があります。 **[次へ]** をクリックします。
+13. セカンダリ レプリカの初期化方法を選択します。 既定値が使用するには[自動シード処理](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)、可用性グループに参加しているすべてのサーバー上の同じパスにする必要があります。 ウィザードはバックアップ、コピー、および (2 番目のオプション); を復元することもできます。手動でバックアップ、コピー、および、レプリカ上のデータベースを復元する場合に参加させて (オプション 3) です。データベースを後で追加または (最後のオプション)。 同様に証明書を手動でバックアップを作成すると、コピーすることは、バックアップ ファイルのアクセス許可は、その他のレプリカに設定する必要があります。 **[次へ]**をクリックします。
 
-14. [検証] ダイアログ ボックスで、成功として戻すすべて作成されていない場合を調査します。 いくつかの警告は許容といない致命的などのリスナーを作成しない場合です。 **[次へ]** をクリックします。
+14. [検証] ダイアログ ボックスで、成功として戻すすべて作成されていない場合を調査します。 いくつかの警告は許容といない致命的などのリスナーを作成しない場合です。 **[次へ]**をクリックします。
 
 15. [概要] ダイアログ ボックスで、をクリックして**完了**です。 可用性グループを作成するプロセスを開始します。
 
@@ -415,7 +415,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -479,7 +479,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -551,7 +551,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```

@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: acecdf5905c48a57b753726bfcc4fb3c6750e56f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a7935916421262b5e8e5bc5ac2a1df48495ad49
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>開発者ガイド : 操作方法に関するトピック (レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="creating-modifying-and-deleting-publications-and-articles"></a>パブリケーションおよびアーティクルの作成、変更、削除  
   
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+-   [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
--   [アーティクルのプロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
+-   [アーティクルのプロパティの表示と変更](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
   
 -   [パブリケーションの削除](../../../relational-databases/replication/publish/delete-a-publication.md)  
   

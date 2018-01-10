@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services のプロパティ - レポート サーバー アイテムのプロパティ
   アイテム プロパティは、レポート サーバー データベースのアイテムに固有のプロパティです。 アイテム プロパティには、レポート、リンク レポート、フォルダー、リソース、モデル、データ ソースなどがあります。  
@@ -43,14 +41,14 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |**CreatedBy**|レポート サーバー データベースへアイテムを最初に追加したユーザーの名前。|  
 |**CreationDate**|アイテムがレポート サーバー データベースに追加された日付と時刻。|  
-|**Description**|アイテムの説明。|  
+|**[説明]**|アイテムの説明。|  
 |**[非表示]**|ユーザーがアイテムを表示および使用できるかどうかを示す値。|  
 |**ID**|レポート サーバー データベースのアイテムの ID。|  
 |**ModifiedBy**|レポート サーバー データベースのアイテムを最後に変更したユーザーの名前。|  
 |**ModifiedDate**|ユーザーがアイテムを最後に変更した日付と時刻。|  
 |**名前**|レポート サーバー データベースのアイテムの名前。|  
 |**[パス]**|アイテムの完全なパス名です。 レポート サーバー データベースのアイテムのパスの長さは最大 260 字です。|  
-|**サイズ**|レポート サーバー データベースのアイテムのサイズ (バイト単位)。|  
+|**[サイズ]**|レポート サーバー データベースのアイテムのサイズ (バイト単位)。|  
 |**型**|レポート サーバー データベースのアイテムの種類。|  
 |**VirtualPath**|レポート サーバー データベースのアイテムの仮想パス。 <xref:ReportService2010.CatalogItem.VirtualPath%2A> プロパティの値は、ユーザーがそのアイテムを表示するときに使用するパスです。 たとえば、report1 というレポートがユーザーの個人的な My Reports フォルダー内にある場合、仮想パスは /My Reports となります。 アイテムの実際のパスは /Users/username/My Reports です。|  
   

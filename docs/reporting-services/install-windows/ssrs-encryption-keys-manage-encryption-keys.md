@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b19b3aa513ed38faa40439b256c83607574aef89
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3005a99fcfe0d18e3b39394bbf9cb34b908201e8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 暗号化キー - 暗号化キーの管理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化キーを使用して、レポート サーバー データベースに格納されている資格情報および接続情報をセキュリティで保護します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の暗号化では、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、レポート サーバーをインストールまたは構成するとき、レポート サーバーの初期化中に作成されます。レポート サーバーはこの対称キーを使用して、レポート サーバーに保存される機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、レポート サーバー データベースに機密データを格納するレポート サーバー インスタンスごとに作成されます。  
@@ -67,4 +67,4 @@ ms.lasthandoff: 12/05/2017
  暗号化キーを追加および削除し、どのレポート サーバーをスケールアウト配置の一部に含めるのかを管理する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
-[Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+[Reporting Services Configuration Manager (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

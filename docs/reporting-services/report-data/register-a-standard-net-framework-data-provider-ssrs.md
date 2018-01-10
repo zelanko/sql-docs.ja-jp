@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 454c87f8c7ced0404681f500c00453f69433c08c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90600a0b51f489dcb2a1bd21038bf30562b7f144
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>標準 .NET Framework データ プロバイダーを登録する (SSRS)
   サード パーティの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート データセット用のデータを取得するには、レポート作成クライアントとレポート サーバーの 2 か所に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリを配置し、登録する必要があります。 レポート作成クライアントでは、データ プロバイダーをデータ ソースの種類として登録し、それをクエリ デザイナーに関連付ける必要があります。 これにより、レポート データセットを作成する際に、データ ソースの種類としてこのデータ プロバイダーを選択できるようになります。 関連付けられているクエリ デザイナーが開き、それを利用してこのデータ ソースの種類に対するクエリを作成することができます。 レポート サーバーでは、データ プロバイダーをデータ ソースの種類として登録する必要があります。 そうすることで、このデータ プロバイダーを使用してデータ ソースからデータを取得するパブリッシュ済みレポートを処理することができます。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     アセンブリをグローバル アセンブリ キャッシュ (GAC) に読み込む場合、厳密な名前のプロパティを指定する必要があります。 例:  
+     アセンブリをグローバル アセンブリ キャッシュ (GAC) に読み込む場合、厳密な名前のプロパティを指定する必要があります。 例 :  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     アセンブリを GAC に読み込む場合、厳密な名前のプロパティを指定する必要があります。 例:  
+     アセンブリを GAC に読み込む場合、厳密な名前のプロパティを指定する必要があります。 例 :  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

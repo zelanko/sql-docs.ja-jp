@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10444"
@@ -18,13 +16,13 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 638baa68c3d0d00e57c88782eaafdcde223d3108
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd313455388e0447f3ddf0acba5203110086090c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
   レポート内のアイテムを書式設定すると、レポートの見栄えがよくなって読みやすくなります。 レポート デザイン モードでは、テキスト ボックスや、テキスト ボックスの個々のアイテム、画像、式、およびデータを書式設定できます。  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d6e228e158ec7c00c212e2e29a11279afe42fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8f8606ab4516b05c71fc33f09623ea81af3da9df
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-assignments---modify-or-delete"></a>ロールの割り当て - 変更または削除
   ロールの割り当てとは、実行できるタスクがあらかじめ規定されたロール定義に、グループまたはユーザー アカウントをマップすることです。 ユーザーが実行できる操作の種類は、フォルダー、レポート、モデルなど、コンテンツの種類に基づいて決定されます。 ロールの割り当てを作成、変更、または削除するには、レポート マネージャーを使用します。 特定のユーザーまたはグループに対して作成したロールの割り当ては、後で異なるロールを選択することによって変更できます。 レポート サーバーに対する権限を取り消したい場合は、ロールの割り当てをレポート サーバーから削除します。  

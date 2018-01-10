@@ -8,29 +8,27 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 488bdc3d56427922095ba1ed35e73cb82c88c41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9377c8a436f057a1b257af70c0c8d23ee52a8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータを取得することができます。  
   
  このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースは、SharePoint サイトの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーにパブリッシュされている必要があります。  
   
  レポート ビルダーから [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 このクライアント ライブラリは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と共にインストールされますが、このアプリケーションがインストールされていないコンピューターを使用する場合は、 [SQL Server 2008 R2 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565)に関するページから ADOMD.NET をダウンロードしてインストールする必要があります。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="data-source-type"></a>データ ソースの種類  
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
-## <a name="connection-string"></a>接続文字列  
+## <a name="connection-string"></a>[接続文字列]  
  接続文字列は、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーまたはその他のライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの URL です (例: `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`)。  
   
 ## <a name="credentials"></a>[資格情報]  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="parameters"></a>パラメーター  
  フィルター ペインで、フィルターの **[パラメーター]** オプションを選択して、フィルターの選択に対応する使用可能な値を持つレポート パラメーターが自動的に作成されるようにします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからレポート ビルダーを開いた場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのピボットテーブル、ピボットグラフ、スライサー、およびその他のレイアウト機能や分析機能は、レポートで再作成されません。 代わりに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック内のデータを参照する、あらかじめ構成されたデータ ソースが空のレポートに含まれます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに基づくレポートをデザインする場合、レポートで再作成するスライサー、フィルター、およびテーブルやグラフの数によっては、手間と時間がかかることがあります。 そのため、レポートでのデータの表示方法については、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデザインとは切り離して考えることをお勧めします。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック内のデータは大幅に圧縮されていますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックから取得されたレポートのデータは圧縮されません。 クエリ デザイナーを使用してフィルターとパラメーターを指定し、レポートに必要なデータだけに制限します。  

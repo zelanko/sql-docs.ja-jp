@@ -8,27 +8,27 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 740191557130edaa87688733ea6b1d61d254826b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a6316978d5799462526a28c196bd70100bf3c09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-the-web-portal"></a>Web ポータルの構成
 
 Web ポータルは、Web フロント エンド アプリケーションであり、レポートの表示、レポート サーバー コンテンツの管理、およびネイティブ モードのレポート サーバーへのアクセス権の付与に使用されます。 Web ポータルは、レポート サーバー Web サービスと共に、同じレポート サーバー インスタンス内にインストールされます。また、セットアップ時に **[ネイティブ モードの既存の構成をインストールする]** を選択した場合は、必要に応じて構成できます。 Web ポータルはインストール後のタスクとしても構成できます。 このトピックでは、次の Web ポータルの構成シナリオについて説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 Web ポータルを使用するには、次の条件を満たす必要があります。
 

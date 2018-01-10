@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b230522d04db42f66884acfcd110e1f1594df5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
   レポートには、各ページの上部と下部にヘッダーとフッターを含めることができます。 ヘッダーとフッターには、静的テキスト、画像、線、四角形、罫線、背景色、背景画像、式などを含めることができます。 式には、データセットが 1 つしかないレポートでのデータセット フィールド参照と、スコープとしてデータセットを指定する集計関数呼び出しが含まれます。  
@@ -65,9 +63,9 @@ ms.lasthandoff: 12/05/2017
   
 |式でサポート|ReportItems の集計|データセットの集計 (スコープがデータセット名であること)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|レポート本文のテキスト ボックス|可|いいえ|  
-|&PageNumber|可|いいえ|  
-|&TotalPages|可|いいえ|  
+|レポート本文のテキスト ボックス|はい|いいえ|  
+|&PageNumber|はい|いいえ|  
+|&TotalPages|はい|いいえ|  
 |集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例を次に示します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例を次に示します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

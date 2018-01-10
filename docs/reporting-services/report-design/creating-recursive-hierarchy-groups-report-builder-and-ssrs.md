@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3062eacef7de155c81bab789cc808cb3e1bffc5d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 86c1fd83cfd413275c18c335a69efaa3e0fccbb4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>複数の再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートに再帰型データを表示するには (親子間のリレーションシップがデータセットのフィールドで表されている)、子フィールドに基づいたデータ領域グループ式や、親フィールドに基づいた親プロパティを設定できます。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
  パラメーター *Recursive* を受け取る Reporting Services 集計関数を使用して、再帰型階層の集計データを計算できます。 関数 **Sum** 、 [Avg](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [Count](../../reporting-services/report-design/report-builder-functions-avg-function.md)、 [CountDistinct](../../reporting-services/report-design/report-builder-functions-count-function.md)、 [CountRows](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)、 [Max](../../reporting-services/report-design/report-builder-functions-countrows-function.md)、 [Min](../../reporting-services/report-design/report-builder-functions-max-function.md)、 [StDev](../../reporting-services/report-design/report-builder-functions-min-function.md)、 [StDevP](../../reporting-services/report-design/report-builder-functions-stdev-function.md)、 [Sum](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)、 [Var](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [VarP](../../reporting-services/report-design/report-builder-functions-var-function.md)は、パラメーターとして [Recursive](../../reporting-services/report-design/report-builder-functions-varp-function.md)を受け入れます。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

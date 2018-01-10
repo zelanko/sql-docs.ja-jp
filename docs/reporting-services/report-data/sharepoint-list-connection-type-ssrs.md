@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2dc5ac094612cbe2566b505fe4088d02762ae853
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ba9625e6d50c14ee47070b4980e6b376cc68e738
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint リストの接続の種類 (SSRS)
 
@@ -38,7 +36,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
  クエリ デザイナーには、付与されている権限でアクセスできる SharePoint リストが表示されます。  
   
- 接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
+ 接続文字列の例について詳しくは、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」をご覧ください。  
   
 ##  <a name="Credentials"></a> [資格情報]  
  クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。 レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。 このデータ拡張機能で使用できる資格情報の種類は、データ ソースとして使用している SharePoint リストの SharePoint テクノロジの構成によって異なります。  
@@ -51,10 +49,10 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
 ||サポートされる資格情報|クラシック モードの Windows 認証|*要求認証|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|可|可|  
-||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|可|いいえ|  
-|リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|可|いいえ<br /><br /> フォーム ベース認証と要求認証は、リモートの SharePoint リストに対してはサポートされていません。|  
-||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|可|いいえ<br /><br /> フォーム ベース認証と要求認証は、リモートの SharePoint リストに対してはサポートされていません。|  
+|ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|はい|  
+||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|はい|いいえ|  
+|リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|いいえ<br /><br /> フォーム ベース認証と要求認証は、リモートの SharePoint リストに対してはサポートされていません。|  
+||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|はい|いいえ<br /><br /> フォーム ベース認証と要求認証は、リモートの SharePoint リストに対してはサポートされていません。|  
   
  *Windows 認証、フォーム ベース認証 (FBA)、セキュア アプリケーション マークアップ言語 (SAML) トークン、その他の ID プロバイダー、または上記の認証プロバイダーの組み合わせ。  
   
@@ -62,9 +60,9 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
 ||サポートされる資格情報|クラシック モードの Windows 認証|*要求認証|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|可|可|  
+|ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|はい|  
 ||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|いいえ|いいえ|  
-|リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|可|いいえ<br /><br /> フォーム ベース認証と要求認証は、リモートの SharePoint リストに対してはサポートされていません。|  
+|リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|いいえ<br /><br /> フォーム ベース認証と要求認証は、リモートの SharePoint リストに対してはサポートされていません。|  
 ||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|いいえ|いいえ<br /><br /> フォーム ベース認証と要求認証は、リモートの SharePoint リストに対してはサポートされていません。|  
   
  *Windows 認証、フォーム ベース認証 (FBA)、セキュア アプリケーション マークアップ言語 (SAML) トークン、その他の ID プロバイダー、または上記の認証プロバイダーの組み合わせ。  
@@ -197,4 +195,4 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
 [データのフィルター、グループ化、および並べ替え](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

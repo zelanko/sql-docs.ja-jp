@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,14 +19,14 @@ helpviewer_keywords:
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: e4a32e6dc9401db120557c7f7cd3988f57fb2418
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 998426333430c4b082a4ac2a265672dcd48175bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
 
@@ -41,10 +39,10 @@ ms.lasthandoff: 12/05/2017
   
 |認証の種類の名前|HTTP 認証レイヤーの値|既定で使用|Description|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
-|RSWindowsNegotiate|ネゴシエート|可|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
-|RSWindowsNTLM|NTLM|可|Windows 統合認証に NTLM を使用します。<br /><br /> 資格情報は、他の要求で委任または権限借用されません。 後続の要求は、新しい要求/応答シーケンスに従います。 ネットワークのセキュリティ設定によっては、ユーザーは資格情報または認証要求を透過的に処理するように要求される場合があります。|  
+|RSWindowsNegotiate|ネゴシエート|はい|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
+|RSWindowsNTLM|NTLM|はい|Windows 統合認証に NTLM を使用します。<br /><br /> 資格情報は、他の要求で委任または権限借用されません。 後続の要求は、新しい要求/応答シーケンスに従います。 ネットワークのセキュリティ設定によっては、ユーザーは資格情報または認証要求を透過的に処理するように要求される場合があります。|  
 |RSWindowsKerberos|Kerberos|いいえ|Windows 統合認証に Kerberos を使用します。 サービス アカウントのセットアップ サービス プリンシパル名 (SPN) を設定して、Kerberos を構成する必要があります。そのためには、ドメイン管理者権限が必要です。 Kerberos での ID 委任を設定した場合は、レポートを要求したユーザーのトークンを使用して、レポート データを提供する別の外部データ ソースに接続することもできます。<br /><br /> RSWindowsKerberos を指定する前に、使用しているブラウザーの種類で実際にサポートされていることを確認してください。 Microsoft Edge、または Internet Explorer を使用している場合、Kerberos 認証はネゴシエートを通してのみサポートされます。 Microsoft Edge、または Internet Explorer では、Kerberos を直接指定する認証要求は作成されません。|  
-|RSWindowsBasic|基本|いいえ|基本認証は、HTTP プロトコルで定義され、レポート サーバーへの HTTP 要求の認証にのみ使用できます。<br /><br /> HTTP 要求で資格情報が base64 エンコードとして渡されます。 基本認証を使用した場合、ユーザー アカウント情報をネットワークで送信する前に Secure Sockets Layer (SSL) で暗号化できます。 SSL は、クライアントからレポート サーバーに接続要求を送信するための暗号化されたチャネルを HTTP TCP/IP 接続で提供します。 詳細については、 [TechNet Web サイトの「](http://go.microsoft.com/fwlink/?LinkId=71123) SSL を使用して資格情報データを暗号化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。|  
+|RSWindowsBasic|[標準]|いいえ|基本認証は、HTTP プロトコルで定義され、レポート サーバーへの HTTP 要求の認証にのみ使用できます。<br /><br /> HTTP 要求で資格情報が base64 エンコードとして渡されます。 基本認証を使用した場合、ユーザー アカウント情報をネットワークで送信する前に Secure Sockets Layer (SSL) で暗号化できます。 SSL は、クライアントからレポート サーバーに接続要求を送信するための暗号化されたチャネルを HTTP TCP/IP 接続で提供します。 詳細については、 [TechNet Web サイトの「](http://go.microsoft.com/fwlink/?LinkId=71123) SSL を使用して資格情報データを暗号化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。|  
 |Custom|(Anonymous)|いいえ|匿名認証は、HTTP 要求の認証ヘッダーを無視するようにレポート サーバーに指示します。 レポート サーバーですべての要求が受け入れられますが、ユーザーを認証する場合は、カスタムの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] フォーム認証を指定する必要があります。<br /><br /> **Custom** は、レポート サーバーにすべての認証要求を処理するカスタム認証モジュールを配置している場合にのみ指定します。 カスタム認証は、既定の Windows 認証拡張機能と共に使用することはできません。|  
   
 ## <a name="unsupported-authentication-methods"></a>サポートされない認証方法  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [レポート サーバーでカスタム認証またはフォーム認証を構成する](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|リンク|  
 |-----------------------|-----------|  

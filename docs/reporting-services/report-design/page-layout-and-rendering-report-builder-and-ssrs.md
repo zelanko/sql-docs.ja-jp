@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 4a6f721715d867a59d3d551be68bddfc46b9cffd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d85d4f4fcf4a62ff152268c01a9fe3686278653
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
 ページ レイアウト、改ページ、用紙サイズなど、意図したとおりのレポートを作成できるように、ページ分割されたレポートに関する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表示拡張機能について説明します。 
@@ -112,7 +110,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [最初のページまたは最後のページでページ ヘッダーまたはページ フッターを非表示にする &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> このセクションの内容  
+##  <a name="InThisSection"></a> トピックの内容  
  以下のトピックでは、ページ レイアウトとレンダリングに関する詳細情報について説明します。  
   
  [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

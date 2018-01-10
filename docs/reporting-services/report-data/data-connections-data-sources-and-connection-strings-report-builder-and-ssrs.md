@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e1f5b27d158714d5e379617e935a2b152a343278
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 697a387240a9e2e0edafeac45b68264187c2a3f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
 
@@ -111,10 +109,10 @@ ms.lasthandoff: 12/05/2017
  > [!NOTE]  
 >  [Connectionstrings.com](http://www.connectionstrings.com/) では、接続文字列の別の例を見ることができます。 
   
-|**Data source**|**例**|**Description**|  
+|**Data source**|**例**|**[説明]**|  
 |---------------------|-----------------|---------------------|  
 |ローカル サーバーの SQL Server データベース|`data source="(local)";initial catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。 詳細については、「[SQL Server の接続の種類 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)」を参照してください。|  
-|SQL Server インスタンス<br /><br /> データベース (database)|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
+|SQL Server インスタンス<br /><br /> [データベース]|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
 |SQL Server Express データベース|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
 |Azure SQL データベース|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類を **Microsoft Azure SQL Database** に設定します。 詳細については、「[SQL Azure の接続の種類 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
 |SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を **Microsoft SQL Server Parallel Data Warehouse**に設定します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ead354a4f95b061f44728b76bbbccd6ef84606a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加
   レポートのフィルターは、レポート内で使用されるデータを制限するために作成したデータセット、データ領域、またはデータ領域グループの一部です。 データセット クエリを変更できない場合 (共有データセットを使用している場合など)、レポート データを制御する方法としてフィルターを使用できます。  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
 |**[次の値の間]**|式が 2 つの値の範囲内にあるかどうかを調べます。|  
 |**In**|式が特定の値の集合に含まれるかどうかを調べます。|  
   
-### <a name="value"></a>値  
+### <a name="value"></a>ReplTest1  
  [値] 式は、フィルター式の最後の部分を指定します。 レポート プロセッサは、[式] で指定されたデータにフィルターの通過を許可するかどうかを判断する際、評価対象の式を指定のデータ型に変換した後、フィルター式全体を評価します。  
   
  標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]**の **[変換]**) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
  トップに戻る  
   
 ## <a name="see-also"></a>参照  
- [レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

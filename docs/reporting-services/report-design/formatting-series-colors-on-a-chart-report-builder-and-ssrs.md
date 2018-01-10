@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,13 +20,13 @@ ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b887ca39b5198b02294c8e09de765e61ffe5a0e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b506dfd94eaf507c7cb46498b45641a7a08f1ef3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS)
   Reporting Services にはグラフ用にいくつかの組み込みパレットが用意されていますが、カスタム パレットを定義することもできます。 既定では、グラフの組み込みの **[Pacific]** カラー パレットを使用して各系統が塗りつぶされます。 これらの色は、凡例にも表示されます。 複数の系統をグラフに追加すると、グラフでは、パレットで定義されている色の順序で系統に色が割り当てられます。  
@@ -63,9 +61,9 @@ ms.lasthandoff: 12/05/2017
  [ストリップ ラインの追加によるグラフのデータの強調表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
- [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
   
   

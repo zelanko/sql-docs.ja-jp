@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a0f28b38685f5ffd2ddd067a054e1f23ea6e4482
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a608539635d00b07ba001e37172f3f71b6fc3465
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>マトリックスの作成 (レポート ビルダーおよび SSRS)
   グループ化されたデータと概要情報を表示するには、マトリックスを使用します。 データは、複数のフィールドまたは式によって、行グループと列グループにグループ化できます。 マトリックスには、クロスタブやピボット テーブルと同様の機能があります。 実行時にレポート データとデータ領域が組み合わされると、マトリックスはページ上で縦横に拡大します。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。 行と列の書式を設定すると、強調するデータをハイライトできます。 ドリルダウン トグルを含めて、最初は詳細データを非表示にすることもできます。ユーザーは、トグルをクリックすることにより、表示するデータの量を調整できます。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
  ![グループが展開されているマトリックス形式表示のプレビュー](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "グループが展開されているマトリックス形式表示のプレビュー")  
   
- 作業を開始したマトリックスは、Tablix データ領域に基づいたテンプレートです。 入れ子になった行グループや列グループ、隣接した行グループや列グループを追加したり、詳細行を追加したりすることによって、マトリックスの開発を継続することもできます。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 作業を開始したマトリックスは、Tablix データ領域に基づいたテンプレートです。 入れ子になった行グループや列グループ、隣接した行グループや列グループを追加したり、詳細行を追加したりすることによって、マトリックスの開発を継続することもできます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="AddingParentGroupChild"></a> 親グループまたは子グループのマトリックスへの追加  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a004db77f5c137742542a729ced6e79c708c43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI の接続の種類 (SSRS)
   SAP NetWeaver® Business Intelligence の外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のデータ拡張機能に基づいています。  
@@ -91,15 +89,15 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
 |**プロパティ**|**型**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**オブジェクト**|フィールドのデータ値を指定します。|  
+|**[値]**|**オブジェクト**|フィールドのデータ値を指定します。|  
 |**IsMissing**|**ブール値**|フィールドが結果データセットに存在するかどうかを示します。|  
-|**FormattedValue**|**文字列**|主要データの書式設定した値を返します。|  
-|**BackgroundColor**|**文字列**|データベースで定義されたフィールドの背景色を返します。|  
-|**色**|**文字列**|データベースで定義されたアイテムの前景色を返します。|  
+|**FormattedValue**|**String**|主要データの書式設定した値を返します。|  
+|**BackgroundColor**|**String**|データベースで定義されたフィールドの背景色を返します。|  
+|**色**|**String**|データベースで定義されたアイテムの前景色を返します。|  
 |**[キー]**|**オブジェクト**|レベルのキーを返します。|  
 |**LevelNumber**|**Integer**|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
-|**ParentUniqueName**|**文字列**|親子階層の場合は、親レベルの完全修飾名を返します。|  
-|**UniqueName**|**文字列**|レベルの完全修飾名を返します。 たとえば、従業員の **UniqueName** の値は *[0D_Company].[10D_Department].[11]*のようになります。|  
+|**ParentUniqueName**|**String**|親子階層の場合は、親レベルの完全修飾名を返します。|  
+|**UniqueName**|**String**|レベルの完全修飾名を返します。 たとえば、従業員の **UniqueName** の値は *[0D_Company].[10D_Department].[11]*のようになります。|  
   
  フィールドおよびフィールド プロパティを式で使用する方法について詳しくは、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」をご覧ください。  
   

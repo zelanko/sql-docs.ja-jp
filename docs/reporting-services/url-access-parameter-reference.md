@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +16,17 @@ helpviewer_keywords:
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2924bd13417cbe3b9ce114516b998871abb0c89d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="url-access-parameter-reference"></a>URL アクセス パラメーター リファレンス
+# <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
  レポート サーバー コマンドには接頭辞として *rs:* が付き、レポート サーバーを対象として使用されます。  
   
 -   *コマンド*:  
-                  アイテムの種類に応じて、カタログ アイテムに対して操作を実行します。 既定値は、URL アクセス文字列で参照されるカタログ アイテムの種類で決まります。 以下の値が有効です。  
+                  アイテムの種類に応じて、カタログ アイテムに対して操作を実行します。 既定値は、URL アクセス文字列で参照されるカタログ アイテムの種類で決まります。 有効な値は、  
   
     -   **ListChildren** および **GetChildren** : フォルダーの内容が表示されます。 フォルダー アイテムは、汎用アイテム ナビゲーション ページに表示されます。  
   
@@ -320,7 +318,7 @@ ms.lasthandoff: 12/05/2017
   
 -   *AsyncRender*: レポートが非同期に表示されるかどうかを制御します。 既定値は **true**で、レポートが非同期に表示されることを示します。 この値には、 **true** または **false**のブール値を指定する必要があります。  
   
--   *ParamMode*: レポート ビューアー Web パーツのパラメーター プロンプト領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 以下の値が有効です。  
+-   *ParamMode*: レポート ビューアー Web パーツのパラメーター プロンプト領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 有効な値は、  
   
     -   **Full**: パラメーター プロンプト領域を表示します。  
   
@@ -334,7 +332,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: レポート ビューアー Web パーツのドキュメント マップ領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 以下の値が有効です。  
+-   *DocMapMode*: レポート ビューアー Web パーツのドキュメント マップ領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 有効な値は、  
   
     -   **Full**: ドキュメント マップ領域を表示します。  
   
@@ -350,7 +348,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: 表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。 既定値は **-1**です。すべてのツール バー項目を表示します。 以下の値が有効です。  
+-   *ToolBarItemsDisplayMode*: 表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。 既定値は **-1**です。すべてのツール バー項目を表示します。 有効な値は、  
   
     -   1 (0x1): **[戻る]** ボタン  
   

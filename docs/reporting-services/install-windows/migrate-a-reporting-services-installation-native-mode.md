@@ -8,9 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - migrating Reporting Services
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dabd177ad6949ea9ff461324e1072d8f364496e8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b05058e8d0254939f0c2018a484a12f458213f0b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
@@ -250,7 +248,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 
 以前のインストールで RSReportServer.config ファイルまたは RSWebApplication.config ファイルを変更していた場合、新しい RSReportServer.config ファイルで同じ変更を行います。 以前の構成ファイルで変更された可能性があるいくつかの項目と、SQL Server 2016 で同じ設定を構成するための方法に関する追加情報へのリンクを次に示します。  
   
-|カスタマイズ|情報|  
+|カスタマイズ|[情報]|  
 |-------------------|-----------------|  
 |カスタム設定を使用したレポート サーバーの電子メール配信|[電子メールの設定 - Reporting Services のネイティブ モード](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |デバイス情報設定|[RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
@@ -293,4 +291,4 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 [Reporting Services の旧バージョンとの互換性](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

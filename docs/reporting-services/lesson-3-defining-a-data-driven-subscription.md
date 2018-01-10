@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] チュートリアル レッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルのデータ ドリブン サブスクリプションを使用し、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、および結果セットとレポート、配信オプションのマッピングを行います。  
@@ -43,13 +43,13 @@ ms.lasthandoff: 12/05/2017
 1.  説明に「 **Sales Order delivery** 」と入力します。
 ## <a name="type"></a>説明に「
 1.  **[データ ドリブン サブスクリプション]**をクリックします。  
-## <a name="schedule"></a>スケジュール
+## <a name="schedule"></a>[スケジュール]
 1. スケジュール セクションで、 **[レポート固有のスケジュール]**をクリックします。
 2. **[スケジュールの編集]**をクリックします。
 3.  **[スケジュールの詳細]**で、 **[一度だけ]**をクリックします。  
 4.  開始時刻として、現在の時刻から数分後を指定します。  
 5.  **[適用]**をクリックします。
-## <a name="destination"></a>転送先  
+## <a name="destination"></a>[Destination]  
 1.  [転送先] セクションで、配信方法に対して **[Windows ファイル共有]** を選択します。  
 
 ## <a name="dataset"></a>データセット
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
  3.  **[ユーザー名]** と **[パスワード]**に、ドメイン ユーザー名とパスワードを入力します。 **[ユーザー名]**には、ドメインとユーザー アカウントの両方を指定します。
      > [!NOTE]  
     > サブスクライバー データ ソースへの接続に使用する資格情報は、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に返されません。 後でサブスクリプションを変更する場合は、データ ソースへの接続に使用するパスワードをこのページで再入力する必要があります。
-## <a name="query"></a>Query      
+## <a name="query"></a>[クエリ]      
 1.  クエリ ボックスに次のクエリを入力します。  
   
     ```  
@@ -83,19 +83,19 @@ ms.lasthandoff: 12/05/2017
 
 パラメーター  |値のソース  | 値/フィールド  
 ---------|---------|---------
-**ファイル名**     |データセットから値を取得 | 書     
+**[ファイル名]**     |データセットから値を取得 | 書     
 **[パス]**     | 値を入力  | [値] に、書き込み権限のあるパブリック ファイル共有の名前を入力します (例: `\\mycomputer\public\myreports`)。 
-**表示形式** | データセットから値を取得 | Format
+**表示形式** | データセットから値を取得 | [形式]
 **[書き込みモード]**| 値を入力| 自動増分    
 **ファイル拡張子** |値を入力 |True
 **[ユーザー名]** | 値を入力 | ドメイン ユーザー アカウントを入力します。 \<ドメイン>\\\<アカウント> の形式で入力します。 ユーザー アカウントには、構成したパスに対する権限が必要です。 
-**[パスワード]** | 値を入力 | パスワードを入力
+**Password** | 値を入力 | パスワードを入力
 
 ## <a name="report-parameters"></a>レポート パラメーター
  1. **[OrderNumber]** フィールドには、 **[データセットから値を取得]**を選択します。 [値] で、 **[注文]**をクリックします。 
  2. **[サブスクリプションの作成]**をクリックします。
    
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 サブスクリプションを実行すると、 *Subscribers* データ ソースの注文ごとに 1 つずつ、4 つのレポート ファイルが、指定したファイル共有に配信されます。 各配信では、データ (注文固有のデータ)、表示形式、ファイル形式がそれぞれ異なっています。 各レポートを共有フォルダーから開き、定義したサブスクリプション オプションに基づいて各バージョンがカスタマイズされているかどうかを確認できます。  
   
 ![サブスクリプションによって作成されるファイルの一覧](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "サブスクリプションによって作成されるファイルの一覧")  

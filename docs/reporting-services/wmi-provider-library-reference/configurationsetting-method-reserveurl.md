@@ -8,23 +8,21 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9ae852377e60f54274ba065a4f7b087d6a5b9d0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f94910ca666c8a48c68921895723d6da004b742f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting メソッド - ReserveURL
   指定したアプリケーションの URL 予約を追加します。  
@@ -61,7 +59,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *UrlString* には仮想ディレクトリ名は含まれません。 仮想ディレクトリ名の設定用に、 [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) メソッドが用意されています。  
   
  現在の Windows サービス アカウントに対して URL 予約が作成されます。 Windows サービス アカウントを変更するには、すべての URL 予約を手動で更新する必要があります。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63d4542741f790f2f4bc78750ded7ee54d05a83e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77b2487bf741c7be1a232aaefa4396b17a1ba897
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  

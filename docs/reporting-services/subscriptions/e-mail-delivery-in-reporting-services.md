@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 89246a976a0de3c1f3c3581509cb0f71a26cd1a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cbf8b0a5e84efd67ffa41c4518b6432c2d3283e5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メールでレポートを配信するには、1) 電子メール配信のレポート サーバーを構成し、2) 標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 単一のサブスクリプションでは、1 通の電子メール メッセージで複数のレポートを配信できません。 ただし、複数のサブスクリプションを作成することはできます。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 333d687c7d08be6187a493cd04b7e39dd2c61865
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c7035ef5f0f7c40504363dbfac696d96fcc3d13
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---inscope-function"></a>レポート ビルダー関数 - InScope 関数
   アイテムの現在のインスタンスが、指定したスコープ内にあるかどうかを示します。  
@@ -44,7 +42,7 @@ InScope(scope)
 ## <a name="return-type"></a>戻り値の型  
  **Boolean**値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **InScope** 関数では、レポート アイテムの現在のインスタンスのスコープを調べて、 *scope*パラメーターで指定されたスコープのメンバーシップを確認します。  
   
  *Scope* には、式を指定することはできません。  

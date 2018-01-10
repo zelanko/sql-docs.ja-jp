@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e9500bdeffd9c7e9e9480f30a87e1678074cc57
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ Microsoft SQL Server 2016 Express **LocalDB** は、開発者を対象とした 
 ## <a name="install-localdb"></a>LocalDB をインストールする  
  インストール ウィザードまたは SqlLocalDB.msi プログラムを使用して、 **LocalDB** をインストールします。 **LocalDB** は [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]をインストールするときのオプションです。 
  
-インストール時に **[機能の選択/共有機能]** ページで **LocalDB** を選択します。 主要な **のバージョンごとに** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のバイナリ ファイルのインストールが 1 つだけ表示されます。 複数の [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセスを開始することができ、すべてのプロセスが使用するバイナリは同じです。 LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] として開始された **LocalDB** のインスタンスには [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+インストール時に **[機能の選択/共有機能]** ページで **LocalDB** を選択します。 主要な **のバージョンごとに** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のバイナリ ファイルのインストールが 1 つだけ表示されます。 複数の [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセスを開始することができ、すべてのプロセスが使用するバイナリは同じです。 **LocalDB** として開始された [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスには、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] と同じ制限があります。  
 
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** のインスタンスは、 **SqlLocalDB.exe** ユーティリティを使用して管理されます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] を使用する必要があります。 
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
  **LocalDB** セットアップ プログラムは、SqlLocalDB.msi プログラムを使用してコンピューターに必要なファイルをインストールします。 **LocalDB** はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているユーザーのローカル AppData パスに格納されます。 たとえば、**C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** などです。 ユーザー データベース ファイルは、ユーザーが指定する場所、通常は **C:\Users\\<user\>\Documents\\** フォルダーに格納されます。  
   
  **LocalDB** をアプリケーションに含める方法については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のマニュアル「[ローカル データの概要](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースの作成](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)」、「[チュートリアル: SQL Server LocalDB データベースのデータへの接続 (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)」を参照してください。  
@@ -109,10 +109,10 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|名前|"LocalDBApp1"|  
-|バージョン|\<現在のバージョン>|  
+|[オブジェクト名]|"LocalDBApp1"|  
+|[バージョンのオプション]|\<現在のバージョン>|  
 |共有名|""|  
-|所有者|"\<Windows ユーザー>"|  
+|[所有者]|"\<Windows ユーザー>"|  
 |自動作成|いいえ|  
 |状態|実行|  
 |前回の開始時刻|\<日付と時刻>|  

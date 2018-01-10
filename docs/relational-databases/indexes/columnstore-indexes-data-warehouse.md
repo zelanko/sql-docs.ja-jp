@@ -1,7 +1,7 @@
 ---
 title: "列ストア インデックス - データ ウェアハウス | Microsoft Docs"
 ms.custom: 
-ms.date: 01/27/2017
+ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -17,11 +17,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5fd07fe225529bd8a3be25a988059a72e99dc5c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 445ba773310316e4d3938e7842937650b55c04f7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,32 +32,23 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、列ストアのパフォーマンスを向上させるために、次の機能が導入されています。  
   
 -   AlwaysOn で、読み取り可能なセカンダリ レプリカで列ストア インデックスのクエリをサポートします。  
-  
 -   複数のアクティブな結果セット (MARS) で、列ストア インデックスをサポートします。  
-  
 -   新しい動的管理ビュー [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) は、パフォーマンスのトラブルシューティングに関する情報を行グループ レベルで提供します。  
-  
 -   列ストア インデックスでのシングル スレッド クエリは、バッチ モードで実行できます。 以前は、バッチ モードで実行できるのはマルチ スレッド クエリのみでした。  
-  
--   SORT 演算子は、バッチ モードで実行されます。  
-  
--   複数の DISTINCT 操作は、バッチ モードで実行されます。  
-  
--   ウィンドウ集計がデータベース互換性レベル 130 のバッチ モードで実行されるようになりました。  
-  
+-   `SORT` 演算子は、バッチ モードで実行されます。  
+-   マルチ `DISTINCT` 演算子は、バッチ モードで実行されます。  
+-   ウィンドウ集計がデータベース互換性レベル 130 以上のバッチ モードで実行されるようになりました。  
 -   集計を効率的に処理するための集計プッシュ ダウン。 これは、すべてのデータベース互換性レベルでサポートされています。  
-  
 -   文字列の述語を効率的に処理するための文字列述語プッシュ ダウン。 これは、すべてのデータベース互換性レベルでサポートされています。  
-  
--   データベース互換性レベル 130 でのスナップショット分離  
+-   データベース互換性レベル 130 以上でのスナップショット分離。  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>非クラスター化インデックスと列ストア インデックスを組み合わせてパフォーマンスを改善する  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例: 非クラスター化インデックスを使用してテーブルの検索効率を改善する  
  データ ウェアハウスでのテーブルの検索効率を改善するために、テーブルの検索でクエリが最高のパフォーマンスを発揮するように設計された非クラスター化インデックスを作成できます。 たとえば、一致する値を見つけるクエリや、値の小さな範囲を返すクエリは、列ストア インデックスではなく B ツリー インデックスに対して実行したほうが高いパフォーマンスを発揮します。 このようなクエリでは、列ストア インデックスを介したテーブル全体のスキャンは必要ありません。B ツリー インデックスを介したバイナリ検索を実行すると、よりすばやく正しい結果が返されます。  
   
-```  
+```sql  
 --BASIC EXAMPLE: Create a nonclustered index on a columnstore table.  
   
 --Create the table  
@@ -78,13 +69,13 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>例: 非クラスター化インデックスを使用して列ストア テーブルに主キー制約を適用する  
- 仕様により、列ストア テーブルに主キー制約を設定することはできません。 ただし、列ストア テーブルで非クラスター化インデックスを使用して、主キー制約を適用できるようになりました。 主キーは非 NULL 列での UNIQUE 制約に相当し、SQL Server は UNIQUE 制約を非クラスター化インデックスとして実装します。 これらの事実を組み合わせて、次の例では、非 NULL 列 accountkey に UNIQUE 制約を定義しています。 その結果、非クラスター化インデックスにより、非 NULL 列の UNIQUE 制約として主キー制約が適用されます。  
+ 仕様により、列ストア テーブルに主キー制約を設定することはできません。 ただし、列ストア テーブルで非クラスター化インデックスを使用して、主キー制約を適用できるようになりました。 主キーは非 NULL 列での UNIQUE 制約に相当し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は UNIQUE 制約を非クラスター化インデックスとして実装します。 これらの事実を組み合わせて、次の例では、非 NULL 列 accountkey に UNIQUE 制約を定義しています。 その結果、非クラスター化インデックスにより、非 NULL 列の UNIQUE 制約として主キー制約が適用されます。  
   
  次に、テーブルはクラスター化列ストア インデックスに変換されます。 変換中は、非クラスター化インデックスが保持されます。 その結果、クラスター化列ストア インデックスに、主キー制約を適用する非クラスター化インデックスが含まれます。 列ストア テーブルでの更新または挿入は非クラスター化インデックスにも影響するため、UNIQUE 制約と非 NULL に違反する操作を行うと、操作全体の失敗につながります。  
   
  その結果、列ストア インデックスに、両方のインデックスに主キー制約を適用する非クラスター化インデックスが含まれます。  
   
-```  
+```sql 
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  
@@ -110,15 +101,13 @@ CREATE CLUSTERED COLUMNSTORE INDEX t_account_cci ON t_account
 --If desired, add a foreign key constraint on AccountKey.  
   
 ALTER TABLE [dbo].[t_account]  
-WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey)  
-;  
-  
+WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey); 
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>行レベルおよび行グループ レベルのロックを有効にしてパフォーマンスを改善する  
  列ストア インデックス機能で非クラスター化インデックスを補完するために、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、選択、更新、および削除の各操作に対してより細分化されたロック機能が用意されています。 クエリの実行では、非クラスター化インデックスに対するインデックス検索に行レベルのロックを使用できます。また、列ストア インデックスに対するテーブル全体のスキャンに行グループ レベルのロックを使用できます。 行レベルのロックと行グループ レベルのロックを適切に使用すると、読み取り/書き込みの同時実行度を高めることができます。  
   
-```  
+```sql  
 --Granular locking example  
 --Store table t_account as a columnstore table.  
 CREATE CLUSTERED COLUMNSTORE INDEX taccount_cci ON t_account  
@@ -137,18 +126,16 @@ BEGIN TRAN
     -- and takes the row lock  
     SELECT * FROM t_account WHERE AccountKey = 100;  
 END TRAN  
-  
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>スナップショット分離と Read Committed スナップショット分離  
  列ストア インデックスのクエリに対し、トランザクションの一貫性を保証するにはスナップショット分離 (SI) を使用し、ステートメント レベルの一貫性を保証するには Read Committed スナップショット分離 (RCSI) を使用します。 これにより、データ ライターをブロックすることなくクエリを実行できるようになります。 この非ブロッキング動作によって、複雑なトランザクションがデッドロックする可能性も大幅に減少します。 詳細については、MSDN の「 [SQL Server でのスナップショット分離](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- 列ストア インデックス ガイド   
- 列ストア インデックス データの読み込み   
- 列ストア インデックスのバージョン管理機能の概要   
+ [列ストア インデックスの設計ガイダンス](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
+ [列ストア インデックスのデータ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [列ストア インデックスのアーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 90ac80211acb0f761963b1da4889d5319158375e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fbd752c6da1b706eb2d9e7327ae042e9173f9377
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extensions-ssrs"></a>拡張機能 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート サーバーでは、拡張機能を使用して、認証、データ処理、レポート表示、およびレポート配信で使用できる入力または出力の種類をモジュール化します。 これにより、既存の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールで、業界の新しいソフトウェア標準 (新しい認証方法やカスタム データ ソースの種類など) を簡単に利用できます。 レポート サーバーは、カスタム認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、配信拡張機能、およびユーザーが RSReportServer.config 構成ファイルで構成できる拡張機能をサポートします。 たとえば、レポート ビューアーで使用できるエクスポート形式を制限できます。 レポート サーバーには、少なくとも 1 つの認証拡張機能、データ処理拡張機能、および表示拡張機能が必要です。 配信拡張機能とレポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。  

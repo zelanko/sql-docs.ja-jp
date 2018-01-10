@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a39e6c65d56d17330a3ffbcf5b1b2bace51d93ac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8faf295d4afa2967adaa1bcb922f8b360bbc138e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (構成マネージャー)
   **構成マネージャーの** [サブスクリプションの設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。 ファイル共有アカウントでは、複数のサブスクリプションで 1 つの資格情報のセットを使用し、ファイル共有にレポートを配信することができます。 資格情報の変更が必要なときは、ファイル共有アカウントの変更を構成します。個々のサブスクリプションは更新しません。  

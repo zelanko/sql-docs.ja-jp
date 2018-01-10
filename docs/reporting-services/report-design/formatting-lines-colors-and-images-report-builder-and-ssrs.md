@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b91a57a70fd258f71e687f18654e6445892c2657
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99dbf2e386831ec182c9c3c98680388fdb122314
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、線、色、データ領域、画像、その他のレポート アイテムの書式を設定する機能が用意されています。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/05/2017
  ロゴなどの画像をレポートの背景に追加したり、四角形、テキスト ボックス、テーブル、マトリックスなどのグラフの一部、またはレポートの本文やページのセクションに追加することもできます。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [数値と日付の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [[塗りつぶし] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  

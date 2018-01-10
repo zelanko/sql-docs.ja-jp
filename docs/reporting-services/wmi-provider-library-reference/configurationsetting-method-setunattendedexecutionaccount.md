@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: SetUnattendedExecutionAccount method
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7be832f86baacd31c6d603e2c774a6f48816a94
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21cf31421d581c79b0ed5c4620adad88a74fb33e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>ConfigurationSetting メソッド - SetUnattendedExecutionAccount
   レポートの自動実行に使用するアカウントを指定します。  
@@ -57,7 +55,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SetUnattendedExecutionAccount メソッドは、レポート サーバーが指定されたユーザーとしてログインできるかどうかを検証しません。  
   
  SetUnattendedExecutionAccount メソッドを使用してレポート サーバー Windows サービスのコンテキストで自動実行を行うことはできません。  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data regions
@@ -18,13 +16,13 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc5666464075a418dbb9490095209856fb68a56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2609574eeb2c41bb4eeab2c85bebd483867ee16
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>データ領域とマップ (レポート ビルダーおよび SSRS)
   データ領域は、レポート データセットのデータを表示するレポート内のオブジェクトです。 レポート データは、数字やテキストとしてテーブル、マトリックス、または一覧に表示することも、グラフまたはゲージでグラフィカルに表示することも、マップの地理的背景上に表示することもできます。 テーブル、マトリックス、および一覧は、 *Tablix* データ領域に基づいており、データセットのデータをすべて表示するために必要に応じて拡張されます。 Tablix データ領域では、複数の行グループおよび列グループと、静的および動的な行と列がサポートされます。 グラフでは、複数の系列グループとカテゴリ グループをさまざまなグラフ形式で表示します。 ゲージでは、データセットの単一の値または集計値を表示します。 マップでは、データセットの集計データに基づいて表示を変更できるマップ要素として空間データを表示します。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>テーブル  
  テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 レポートにテーブルを追加する方法の詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="matrix"></a>マトリックス  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/05/2017
  詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   

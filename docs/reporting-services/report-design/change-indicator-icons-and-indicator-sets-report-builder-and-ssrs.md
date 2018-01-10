@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2439245c62a0ac0fe4e0ba3490f8a14d9e0b408
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 80fe34a56f00d45d659dade8e1613cf6d559b85d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ページ分割されたレポート向けに、あらかじめ構成済みのインジケーター セットが用意されていますが、これらが常にデータを効果的に表したり、配信されたレポートで正しく機能するとは限りません。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
      **[その他の色]**をクリックした場合は、 **[色の選択]** ダイアログ ボックスが表示され、さまざまな色から選択できます。 各オプションの詳細については、「[[色の選択] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)」を参照してください。 **[OK]** をクリックして、 **[色の選択]** ダイアログ ボックスを閉じます。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ## <a name="to-change-the-icon"></a>アイコンを変更するには  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
      必要に応じて、 **式** (*[fx]*) ボタンをクリックし、 **[アイコン]** オプションの値を設定する式を編集します。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ## <a name="to-use-a-custom-image-as-an-indicator-icon"></a>カスタム イメージをインジケーター アイコンとして使用するには  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     -   データベースにある画像を使用するには、 **[次のフィールドを使用]** の一覧から フィールドを選択し、 **[次の MIME の種類を使用]** の一覧から画像の MIME の種類を選択します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ## <a name="to-add-an-icon-to-the-indicator-set"></a>インジケーター セットにアイコンを追加するには  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
      指定したアイコンと色を使用するようにインジケーターを構成します。 手順については、このトピックの前半で説明しています。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ## <a name="to-delete-an-icon-to-the-indicator-set"></a>インジケーター セットからアイコンを削除するには  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  削除するアイコンを選択し、 **[削除]**をクリックします。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

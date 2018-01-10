@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f0c57efec1f1e0c06f516cef9d53bae19272d568
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e85eaa93ebeb16e9e5aff25bbe1f77e4fab3781f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] (Management Studio)
   このページを使用すると、パブリッシュされたレポートおよびサブスクリプションを実行するための共有スケジュールを作成できます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 集中管理されるスケジュール情報と、スケジュールされた操作を一時停止して再開する機能は、アイテム固有のスケジュールと共有スケジュールを区別する 2 つの重要な機能です。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473) 」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **名前**  
  共有スケジュールの名前を入力します。 この名前は、ユーザーがレポートおよびサブスクリプションの共有スケジュールを選択するときにドロップダウン リストに表示されます。 リスト内に納まり、共有スケジュールと別のスケジュールとを簡単に区別できるわかりやすい名前を付けてください。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
@@ -58,13 +56,13 @@ ms.lasthandoff: 12/05/2017
  **[時間] ([定期的なパターン])**  
  スケジュール設定した操作を一定時間ごとに実行する (たとえば 6 時間ごとにレポートを実行する) ためのオプションを選択します。 間隔は時間と分で指定できます。  
   
- **[日] ([定期的なパターン])**  
+ **[日]\([定期的なパターン])**  
  スケジュール設定した操作を数日間隔で実行する (たとえば 2 日ごとにレポートを実行する) ためのオプションを選択します。 間隔は日数で指定し、スケジュールを実行する時と分を指定できます。  
   
- **[週] ([定期的なパターン])**  
+ **[週]\([定期的なパターン])**  
  スケジュール設定した操作を毎週実行するか、繰り返しのパターンが週単位 (たとえば隔週でレポートを実行する) の場合のオプションを選択します。 週間スケジュールについて、スケジュールを実行する日、時、分を指定できます。  
   
- **[月] ([定期的なパターン])**  
+ **[月]\([定期的なパターン])**  
  スケジュール設定した操作を毎月実行するか、繰り返しのパターンが月単位の場合のオプションを選択します。 月間スケジュールについて、スケジュールを実行する日、時、分を指定できます。 スケジュールでは特定の月を指定しなくてもかまいません。  
   
  **1 回。**  

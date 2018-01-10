@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: afdb8a3c8dbd683853f5cc7a129fa52009d13764
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 71d8664ab522a8e33bafaf4fd6916c0721a1713b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-remote-errors-reporting-services"></a>リモート エラーの有効化 (Reporting Services)
   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージに "このエラーの詳細を表示するには、ローカルのサーバー コンピューターでレポート サーバーを開くか、リモート エラーを有効にしてください。" と表示されている場合は、 **EnableRemoteErrors** プロパティを設定すると、問題のトラブルシューティングに役立つ追加情報にアクセスできます。 詳細については、 [オンライン ブックの「](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) レポート サーバーのシステム プロパティ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
- このトピックの内容:  
+ このトピックの内容  
   
 -   [SharePoint モードのリモート エラーの有効化](#bkmk_sharepoint)  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **[セキュリティ]** セクションで **[リモート エラーを有効にする]** をクリックします。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>SharePoint サイトのリモート エラーの有効化  
   

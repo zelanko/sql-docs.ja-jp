@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d30bd923a2a88d4438c2700073cf8430966e0d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7618d07d7329a92c4c059b68f099fb6acbf3e338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions"></a>ロールの定義
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、" *ロールの**定義* " は、ユーザーがレポート サーバー上で実行できる操作を定義する、一連の名前付きタスクです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  

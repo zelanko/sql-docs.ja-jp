@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,13 +24,13 @@ ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 423768a2a0381377a3d780e632399a41ecf11e5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d26444b6232558c09d694c523d21e70f1d5d9475
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>組み込みコレクション - レポート変数とグループ変数の参照 (レポート ビルダー)
   レポート内の式で複数回使用される複雑な計算があれば、変数を作成した方がよい場合があります。 このような場合は、レポート変数またはグループ変数を作成できます。 変数名は、レポート内で一意である必要があります。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="group-variables"></a>グループ変数  
  グループ変数は、グループのスコープ内で複合式を 1 回計算するために使用します。 グループ変数は、グループとその子グループのスコープ内でのみ有効です。  
   
- たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 例:  
+ たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 例 :  
   
 -   `[Category]`に基づく親グループでは、値 *Tax* を指定して、変数 `[Tax]`を定義します。 カテゴリ値が Food と Clothing であるとします。  
   

@@ -8,20 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ece2ccbf6f9c67789d5d248a9ad92b2acf0a7f36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリー マップおよびサンバースト視覚エフェクトは、階層データを視覚的に表現する上で非常に効果的です。 この記事では、ツリー マップまたはサンバースト グラフを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに追加する方法の概要を説明します。 この記事には、開始するための AdventureWorks サンプル クエリも含まれています。  
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/05/2017
   
     3.  [接続の種類] で **[Microsoft SQL Server]** を選択します。  
   
-    4.  サーバーとデータベースに接続文字列を入力します。 例:  
+    4.  サーバーとデータベースに接続文字列を入力します。 例 :  
   
         ```  
         Data Source=[server name];Initial Catalog=AdventureWorks2016  

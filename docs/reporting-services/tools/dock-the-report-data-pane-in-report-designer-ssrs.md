@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6b573f7c3020ee1206f01b3c66a9c47941335bc1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7300a2cd51617c29aae8c78b1b7780a1a2f1c92f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>レポート デザイナーのレポート データ ペインをドッキングする (SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート デザイナーでは、データ ソース、データセット、フィールド、パラメーター、画像など、レポートで使用できるデータ オブジェクトの階層ビューがレポート データ ペインに表示されます。 このビューのデータ ソースは、埋め込みデータ ソースである場合と、ソリューション エクスプローラーに表示される共有データ ソースのデータ ソース参照である場合があります。  
@@ -51,6 +49,6 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="see-also"></a>参照  
  [レポート データ ペイン](../../reporting-services/report-data/report-data-pane.md)   
- [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -20,14 +19,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 03be01e0efe2a6cf437f448cf952c7949d45026d
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="json-data-sql-server"></a>JSON データ (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON は、最新の Web アプリケーションとモバイル アプリケーションでデータを交換するために使用される、一般的なテキスト形式のデータ形式です。 また、JSON はログ ファイル内の非構造化データや Microsoft Azure Cosmos DB のような NoSQL データベースを格納するためも使用されます。 REST Web サービスの多くは結果を JSON テキスト形式で返し、データを JSON 形式で受け取ります。 たとえば、Azure Search、Azure Storage、Azure Cosmos DB などの Azure のほとんどのサービスには、JSON を返すか使用する REST エンドポイントがあります。 JSON は、AJAX 呼び出しを使用して Web ページおよび Web サーバー間でデータをやり取りするための主な形式でもあります。  
   
@@ -119,7 +118,7 @@ FROM OPENJSON(@json)
         age int, dateOfBirth datetime2 '$.dob')  
 ```  
   
- **[結果]**  
+ **結果**  
   
 |id|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
@@ -149,7 +148,7 @@ FOR JSON PATH
   
 [曜日] **FOR JSON** 句は SQL 結果を JSON テキスト形式に設定し、JSON を理解するすべてのアプリケーションで使用できます。 PATH オプションでは、SELECT 句にドット区切りのエイリアスを使用して、クエリ結果内のオブジェクトを入れ子にします。  
   
- **[結果]**  
+ **結果**  
   
 ```json  
 [{

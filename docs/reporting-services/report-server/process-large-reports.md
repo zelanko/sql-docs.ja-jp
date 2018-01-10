@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbf1b1b15e7eef1cb45338d825924fea97e96040
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 048397a9df14002d360512b64d1384a20d608906
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  

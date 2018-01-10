@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -17,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ae801441cdd683f32d36cccd859ecb21ba7198
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc211f9a4f61cc45669d3a45a187dd1413255cd7
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH モードで入れ子になった JSON 出力を書式設定する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 
 **FOR JSON PATH** 句は、列の別名または列の名前を使用して JSON 出力のキー名を決定します。 別名にドットが含まれている場合、PATH オプションで入れ子になったオブジェクトが作成されます。  
 
- **Query**  
+ **クエリ**  
   
 ```sql  
 SELECT TOP 5   
@@ -92,7 +91,7 @@ SELECT TOP 5
 ## <a name="example---multiple-tables"></a>例 - 複数のテーブル  
 クエリで複数のテーブルを参照すると、**FOR JSON PATH** でその別名を使用して各列が入れ子にされます。 次のクエリは、クエリで結合される (OrderHeader、OrderDetails) ペアごとに 1 つの JSON オブジェクトを作成します。 
   
- **Query**  
+ **クエリ**  
   
 ```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  

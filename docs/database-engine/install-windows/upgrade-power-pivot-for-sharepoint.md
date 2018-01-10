@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9f4ff9921b0965fdd57620a29298688f4604b0f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bd176479745f786197782bc489b45ea2c1e74429
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置を [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] にアップグレードするために必要な手順について説明します。 具体的な手順は、お使いの環境で現在実行されている SharePoint のバージョンによって異なります。また、この手順には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) が含まれます。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/20/2017
   
          ![2 つの PowerPivot 構成ツール](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "2 つの PowerPivot 構成ツール")  
   
-         または  
+         スイッチまたは  
   
          **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 2013 構成**の順にクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
   
@@ -166,7 +166,7 @@ ms.lasthandoff: 11/20/2017
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows サービスを実行する最初の SharePoint アプリケーション サーバーで、**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行**して、POWERPIVOT インスタンスをアップグレードします。 SQL Server セットアップ ウィザードの [インストール] ページで、アップグレード オプションを選択します。 詳細については、「[インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)」を参照してください。  
+5.  **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows サービスを実行する最初の SharePoint アプリケーション サーバーで、**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行**して、POWERPIVOT インスタンスをアップグレードします。 SQL Server セットアップ ウィザードの [インストール] ページで、アップグレード オプションを選択します。 詳細については、「 [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)」を参照してください。  
   
 6.  構成ツールを実行する前に**サーバーを再起動します** 。 これにより、SQLServer セットアップによってインストールされた更新プログラムや必須コンポーネントがシステムで完全に構成されます。  
   

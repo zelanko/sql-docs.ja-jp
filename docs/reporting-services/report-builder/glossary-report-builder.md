@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
@@ -237,7 +235,7 @@ ms.lasthandoff: 12/05/2017
 |入れ子 (nesting)|テーブル内のスパークラインなど、1 つのデータ領域を別のデータ領域内に配置すること。 入れ子になったデータ領域は、同じレポート データセットに基づいており、入れ子データ領域のデータのスコープはそれが配置された親データ領域によって自動的に定義されます。|  
 |NULL|値を明示的に代入していないエントリ。|  
 |数値式 (numeric expression)|数値に評価される式。|  
-|オブジェクト (object)|テーブル、インデックス、ストアド プロシージャなど、データベースのコンポーネントの 1 つ。|  
+|object|テーブル、インデックス、ストアド プロシージャなど、データベースのコンポーネントの 1 つ。|  
 |オブジェクト ID (object identifier)|1.オブジェクトに付けられる一意名。 2. Meta Data Services では、GUID (グローバル一意識別子) と内部識別子から構成される一意識別子。|  
 |ODBC データ ソース (ODBC data source)|1.ODBC ドライバーを使用してアクセスできるデータのセットがある場所。 2. ODBC アプリケーションからデータ ソースに接続するために必要なすべての接続情報が含まれた、保存されている定義。|  
 |ODBC ドライバー (ODBC driver)|Excel などの ODBC 対応のアプリケーションから ODBC データ ソースにアクセスできるようにする DLL (ダイナミック リンク ライブラリ)。|  
@@ -267,7 +265,7 @@ ms.lasthandoff: 12/05/2017
 |主テーブル (primary table)|一対多のリレーションシップにある 2 つの関連するテーブルのうちの "一" にあたるテーブル。|  
 |投影 (projection)|N 次元座標系から (N-1) 次元座標系へのデータのマッピング。 たとえば、3 次元の地理的データの 2 次元のデザイン表面へのマッピング。|  
 |プロパティ ページ (properties page)|オブジェクトに関する情報を表示するダイアログ ボックス。|  
-|プロパティ|コントロール、フィールド、データベース オブジェクトの名前が付いた属性。オブジェクトの特性 (サイズ、色、画面上の位置など) のいずれか、または動作の特徴 (非表示かどうかなど) を定義するために設定します。|  
+|property|コントロール、フィールド、データベース オブジェクトの名前が付いた属性。オブジェクトの特性 (サイズ、色、画面上の位置など) のいずれか、または動作の特徴 (非表示かどうかなど) を定義するために設定します。|  
 |プロトコル (protocol)|コンピューターどうしで情報を交換できるようにするための、標準的な形式とプロシージャのセット。|  
 |provider|1.OLE DB プロバイダー。 2. データベースへのアクセスを提供するインプロセス DLL (ダイナミック リンク ライブラリ)。|  
 |クエリ パラメーター (query parameters)|Transact-SQL クエリなどのデータセット クエリで指定されるパラメーター。|  
@@ -319,7 +317,7 @@ ms.lasthandoff: 12/05/2017
 |行識別子 (row identifier)|1.1 つの行をテーブル内の他のすべての行から区別する際に使用する列または列のセット。 2. ヒープでは、行を指すポインターを指します。|  
 |スカラー (scalar)|集計とは対照的な、単一値フィールド。|  
 |スカラー集計 (scalar aggregate)|MIN()、MAX()、AVG() などの集計関数。集計関数のみを含む SELECT ステートメントの列リストに指定されます。|  
-|スキーマ (schema)|SQL-92 標準において、単一ユーザーが所有し、単一の名前空間を形成するデータベース オブジェクトの集合。 名前空間は、重複した名前を持つことができないオブジェクトのセットです。|  
+|schema|SQL-92 標準において、単一ユーザーが所有し、単一の名前空間を形成するデータベース オブジェクトの集合。 名前空間は、重複した名前を持つことができないオブジェクトのセットです。|  
 |スコープ (scope)|複数のコンテキストで使用されます。 スコープは、式の評価に使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。|  
 |スクリプト (script)|操作を実行するために使用する Transact-SQL ステートメントの集合。|  
 |セキュリティ保護可能なリソース (securable)|権限を使用してセキュリティで保護できるエンティティ。|  

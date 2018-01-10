@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -42,13 +40,13 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 310e1f5c45187d5065203f86cafd384318d72ed3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1caed0f401f74ad420475aae125ba47558d0163a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]のテーブル、マトリックス、および一覧は、行と列で構成されたセルにページ分割されたレポート データを表示する *データ領域* です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて *Tablix* データ領域と呼ぶことがあります。  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/05/2017
  ウィザードを使用すると、手順に従ってテーブルやマトリックスを簡単に構築および構成できます。 ウィザードを完了した後、または Tablix データ領域を最初から構築する場合、さらに詳細に構成および調整できます。 データ領域の右クリック メニューで表示されるダイアログ ボックスで、改ページ、ヘッダーとフッターの繰り返しと表示設定、表示オプション、フィルター、並べ替えなどの一般的に使用するプロパティを簡単に設定できます。 ただし、Tablix データ領域にはレポート ビルダーのプロパティ ペインでのみ設定できる追加のプロパティも多数含まれています。 たとえば、テーブル、マトリックス、または一覧のデータセットが空の場合にメッセージを表示するには、プロパティ ペインの NoRowsMessage Tablix プロパティでメッセージ テキストを指定します。  
   
 ##  <a name="ChangingBetweenTablixTemplates"></a> Tablix テンプレート間の切り替え  
- 最初に選択した Tablix テンプレートによる制限はありません。 グループ、合計、ラベルなどの追加に伴い、Tablix デザインを変更できます。 たとえば、テーブルから開始し、その後詳細行を削除したり、列グループを追加したりする場合があります。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 最初に選択した Tablix テンプレートによる制限はありません。 グループ、合計、ラベルなどの追加に伴い、Tablix デザインを変更できます。 たとえば、テーブルから開始し、その後詳細行を削除したり、列グループを追加したりする場合があります。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
  Tablix 機能を追加することで、テーブル、マトリックス、または一覧の改良を続けることができます。 Tablix 機能には、詳細データやグループ化されたデータの集計を行および列に表示する機能が含まれます。 入れ子構造のグループ、独立した隣接するグループ、または再帰的なグループを作成できます。 グループ データのフィルター処理や並べ替えが可能なほか、複数のグループ式をグループ定義に含めることにより、グループを簡単に組み合わせることができます。  
   
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [テーブル、マトリックス、または一覧の追加、移動、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> このセクションの内容  
+##  <a name="InThisSection"></a> トピックの内容  
  次の各トピックでは、Tablix データ領域の使用に関する追加情報について説明します。  
   
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
@@ -169,13 +167,13 @@ ms.lasthandoff: 12/05/2017
  グループの概要、グループを使用する状況、およびさまざまな Tablix データ領域に使用できるグループについて説明します。  
   
 ## <a name="see-also"></a>参照  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

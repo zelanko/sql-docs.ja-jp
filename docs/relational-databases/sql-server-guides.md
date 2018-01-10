@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1c80c429cd094c36ec92aa71039e6431e60e73e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65789c30fdb080171e70ab16e81808990a7b636e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="sql-server-guides"></a>SQL Server ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 [インデックスのデザイン ガイド](../relational-databases/sql-server-index-design-guide.md)  
 [メモリ管理アーキテクチャ ガイド](../relational-databases/memory-management-architecture-guide.md)  
 [ページとエクステントのアーキテクチャ ガイド](../relational-databases/pages-and-extents-architecture-guide.md)  
-[移行後の検証および最適化ガイド](post-migration-validation-and-optimization-guide.md)  
+[移行後の検証および最適化ガイド](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [クエリ処理アーキテクチャ ガイド](../relational-databases/query-processing-architecture-guide.md)  
 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](https://msdn.microsoft.com/library/jj856598)  
 [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 914afdde95e3b3a130cb71e5b9277f7331ee4e56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
   変数を使用すると、値を動的に設定し、パッケージ、コンテナー、タスク、およびイベント ハンドラーの処理を制御できます。 また、優先順位制約で変数を使用して、別のタスクへのデータ フローの方向を制御することもできます。 変数には、以下のようにさまざまな使用方法があります。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 -   変数値が含まれる式を構築する。  
   
--   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+-   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
 ## <a name="scope"></a>スコープ  
  各コンテナーには、独自の <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションが含まれています。 新しい変数が作成されると、その親コンテナーのスコープ内に格納されます。 パッケージ コンテナーは、コンテナー階層の最上層にあるため、パッケージ スコープを持つ変数はグローバル変数と同じように機能し、パッケージ内のすべてのコンテナーで使用できます。 また、子コンテナーは、<xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションを介して、親コンテナーの変数コレクションにアクセスできます。アクセスするには、コレクション内の変数名または変数のインデックスのどちらかを使用します。  
@@ -169,7 +169,7 @@ End Module
   
  使用できるシステム変数は、コンテナーの種類によって異なります。 パッケージ、コンテナー、タスク、およびイベント ハンドラーで使用できるシステム変数の一覧については、「[システム変数](../../integration-services/system-variables.md)」を参照してください。  
   
-## <a name="value"></a>値  
+## <a name="value"></a>ReplTest1  
  カスタム変数の値には、リテラルまたは式を設定できます。  
   
 -   変数にリテラル値を格納する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティの値を設定します。  

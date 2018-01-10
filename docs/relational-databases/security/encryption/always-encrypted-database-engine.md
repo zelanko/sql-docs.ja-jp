@@ -23,18 +23,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted は、 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに格納されたクレジット カード番号や身分登録番号 (アメリカの社会保障番号など) などの機微なデータを保護するために設計された機能です。 Always Encrypted を使用すると、クライアントは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に暗号化キーを開示することなく、クライアント アプリケーション内の機微なデータを暗号化することができます。 結果として、Always Encrypted は、データを所有 (および表示できる) 人とデータを管理する (ただし、アクセス権を与えない) 人を分離します。 Always Encrypted は、オンプレミスのデータベース管理者やクラウド データベース オペレーターなどを含む、高い特権を持つものの無許可のユーザーによる暗号化データへのアクセスを無効にすることで、顧客が機微なデータを直接管理することなく安心して格納できます。 これにより、組織は保存データと実行データを暗号化して Azure に格納し、オンプレミスのデータベースの管理をサード パーティに委任するか、自社の DBA スタッフによる取り扱い許可の要件を緩和できます。  
+ Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに格納されたクレジット カード番号や身分登録番号 (アメリカの社会保障番号など) などの機微なデータを保護するために設計された機能です。 Always Encrypted を使用すると、クライアントは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に暗号化キーを開示することなく、クライアント アプリケーション内の機微なデータを暗号化することができます。 結果として、Always Encrypted は、データを所有 (および表示できる) 人とデータを管理する (ただし、アクセス権を与えない) 人を分離します。 Always Encrypted は、オンプレミスのデータベース管理者やクラウド データベース オペレーターなどを含む、高い特権を持つものの無許可のユーザーによる暗号化データへのアクセスを無効にすることで、顧客が機微なデータを直接管理することなく安心して格納できます。 これにより、組織は保存データと実行データを暗号化して Azure に格納し、オンプレミスのデータベースの管理をサード パーティに委任するか、自社の DBA スタッフによる取り扱い許可の要件を緩和できます。  
   
  Always Encrypted は、アプリケーションに対して暗号化を透過的に実行します。 クライアント コンピューターにインストールされている、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機微なデータを自動的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]にデータを渡す前に機微な列のデータを暗号化し、アプリケーションに対するセマンティクスが維持されるように自動的にクエリを書き換えます。 同様に、ドライバーはクエリ結果に含まれている暗号化されたデータベース列に格納されているデータを透過的に暗号化解除します。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  顧客はオンプレミスのクライアント アプリケーションを社内で運用しています。 アプリケーションは、Azure にホストされたデータベース (Microsoft Azure の仮想マシンで実行されている[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) に格納された機微なデータを元に運用しています。 顧客は Always Encrypted を使用して、Always Encrypted のキーをオンプレミスにホストされた信頼できるキー ストアに格納することで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] クラウドの管理者が機微なデータにアクセスできないようにします。  
   
 ### <a name="client-and-data-in-azure"></a>クライアントとデータの両方が Azure 内にある  
- 顧客には、(ワーカー ロールや Web ロールなどで) Microsoft Azure でホストされているクライアント アプリケーションがあります。このアプリケーションは、Azure でホストされているデータベースに格納されている機密データに影響があります。 Always Encrypted には、クラウド管理者からのデータの完全な分離機能がありませんが、データとキーの両方がクライアント層をホストするプラットフォームのクラウド管理者に公開されているので、セキュリティ攻撃の対象となる領域を減らすという利点が顧客にあります (データベース内のデータは常に暗号化されています)。  
+ 顧客には、(worker ロールや Web ロールなどで) Microsoft Azure でホストされているクライアント アプリケーションがあります。このアプリケーションは、Azure でホストされているデータベースに格納されている機密データに影響があります。 Always Encrypted には、クラウド管理者からのデータの完全な分離機能がありませんが、データとキーの両方がクライアント層をホストするプラットフォームのクラウド管理者に公開されているので、セキュリティ攻撃の対象となる領域を減らすという利点が顧客にあります (データベース内のデータは常に暗号化されています)。  
  
 ## <a name="how-it-works"></a>機能
 
@@ -85,10 +85,10 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 
 |タスク|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|はい|可|いいえ|
-|データベース内にキー メタデータを作成する。|はい|可|はい|
-|暗号化された列がある新しいテーブルを作成する|はい|可|はい|
-|選択されたデータベース列内にあるデータを暗号化する|はい|可|いいえ|
+|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|はい|はい|いいえ|
+|データベース内にキー メタデータを作成する。|はい|はい|はい|
+|暗号化された列がある新しいテーブルを作成する|はい|はい|はい|
+|選択されたデータベース列内にあるデータを暗号化する|はい|はい|いいえ|
 
 > [!NOTE]
 > 必ず、データベースをホストするコンピューターと異なるコンピューターで、キー プロビジョニングまたはデータ暗号化ツールを実行してください。 そうしないと、機密データやキーがサーバー環境に漏れ、Always Encrypted を使用する利点が少なくなる可能性があります。  
@@ -184,7 +184,7 @@ Always Encrypted は、以下の特性を持つ列に対してはサポートさ
   
  次の表は、一般的な操作に必要なアクセス許可をまとめたものです。  
   
-|Scenario|`ALTER ANY COLUMN MASTER KEY`|`ALTER ANY COLUMN ENCRYPTION KEY`|`VIEW ANY COLUMN MASTER KEY DEFINITION`|`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`|  
+|シナリオ|`ALTER ANY COLUMN MASTER KEY`|`ALTER ANY COLUMN ENCRYPTION KEY`|`VIEW ANY COLUMN MASTER KEY DEFINITION`|`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`|  
 |--------------|-----------------------------------|---------------------------------------|---------------------------------------------|-------------------------------------------------|  
 |キー管理 (データベース内のキーの作成/変更/確認)|×|×|×|×|  
 |暗号化された列のクエリ|||×|×|  

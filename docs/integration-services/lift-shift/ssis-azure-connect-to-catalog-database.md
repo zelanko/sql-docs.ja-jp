@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure 上の SSISDB カタログ データベースへの接続
 
@@ -26,7 +26,10 @@ Azure SQL Database でホストされている SSIS カタログ データベー
 - データベース名
 - ログイン情報 
 
-## <a name="prerequisites"></a>前提条件
+> [!IMPORTANT]
+> この時点では、Azure Data Factory バージョン 2 での Azure SSIS Integration Runtime の作成とは切り離して、Azure SQL Database に SSISDB カタログ データベースを作成することはできません。 Azure SSIS IR は、Azure 上で SSIS パッケージを実行するからです。 詳細説明と、PowerShell スクリプトのサンプルについては、「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)」を参照してください。 
+
+## <a name="prerequisites"></a>Prerequisites
 始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal から接続情報を取得する

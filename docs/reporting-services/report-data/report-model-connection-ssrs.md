@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b5e95cd5974f1bcef5ed5edf6c0708d8c856cc0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a4fe779b3bae2a10452e9ae9c26ade7f8e8ea68a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-model-connection-ssrs"></a>レポート モデルの接続 (SSRS)
   レポート モデルのデータを含めるには、レポート モデルに基づいたデータセットがデータ ソースとして必要です。 他のレポート データ ソースとは異なり、レポート モデルにはデータ拡張機能がありません。 レポート ビルダーでは、レポート サーバーを参照して、モデルを直接選択します。 レポート デザイナーでは、レポート モデルへの URL を指定します。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
  レポート パラメーターは、既定のプロパティ値を使用して作成されます。この既定のプロパティ値は、変更が必要になることがあります。 各レポート パラメーターの既定のデータ型は **Text**です。 基になるデータのデータ型が異なる場合は、パラメーターのデータ型を変更する必要があります。  
   
- 詳細については、「 [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
   
 ##  <a name="Remarks"></a> 解説  

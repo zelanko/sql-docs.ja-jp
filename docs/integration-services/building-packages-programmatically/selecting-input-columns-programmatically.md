@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aea8e6a9c780cbb56dff74c3ee003be2d4259486
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 460c6fc491ce0088c174c49aeb66523079f8016b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="selecting-input-columns-programmatically"></a>プログラムによる入力列の選択
   プログラムによってコンポーネントを接続したら、変換する列または下流コンポーネントに渡す列を上流コンポーネントから選択します。 コンポーネント用の入力列を選択しないと、コンポーネントはデータ フロー タスクから行を受信しません。  

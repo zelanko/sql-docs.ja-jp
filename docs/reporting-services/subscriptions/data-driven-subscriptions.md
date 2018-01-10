@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c58c81a095d072c807d61fcfd5571febb247ca9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8deb6531b2bc14cb156787c6de115af34f402cc4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-driven-subscriptions"></a>データ ドリブン サブスクリプション
   データ ドリブン サブスクリプションでは、実行時に外部データ ソースから取得した動的サブスクリプション データを使用できます。 サブスクリプションの定義時に指定した静的テキストや既定値を使用することもできます。 データ ドリブン サブスクリプションを使用すると、次のようなことが可能になります。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="working-with-data-driven-subscriptions"></a>データ ドリブン サブスクリプションの処理  
  以下のトピックでは、データ ドリブン サブスクリプションの詳細について説明します。  
   
-|トピック|説明|  
+|トピック|Description|  
 |------------|-----------------|  
 |[データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|データ ドリブン サブスクリプションの作成、変更、および削除方法について説明します。|  
 |[サブスクライバー データに対して外部データ ソースを使用する &#40;データ ドリブン サブスクリプション&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|データ ドリブン サブスクリプションに使用できるデータ ソースに関する情報を記載しています。|  

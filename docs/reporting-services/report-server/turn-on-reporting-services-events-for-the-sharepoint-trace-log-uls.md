@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7dfb7020fe79961b4b52a5a6b36919e7abdbb7b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -50,11 +48,11 @@ ms.lasthandoff: 12/05/2017
   
 |カテゴリ|レベル|Description|  
 |--------------|-----------|-----------------|  
-|データベース|[詳細]|データベース アクセスに関連するイベントが記録されます。|  
-|全般|[詳細]|次の項目へのアクセスを伴うイベントが記録されます。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Web ページ<br /><br /> レポート ビューアーの HTTP ハンドラー<br /><br /> レポート アクセス (.rdl ファイル)<br /><br /> データ ソース (.rsds ファイル)<br /><br /> SharePoint サイト上の URL (.smdl ファイル)|  
+|[データベース]|"詳細"|データベース アクセスに関連するイベントが記録されます。|  
+|全般|"詳細"|次の項目へのアクセスを伴うイベントが記録されます。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Web ページ<br /><br /> レポート ビューアーの HTTP ハンドラー<br /><br /> レポート アクセス (.rdl ファイル)<br /><br /> データ ソース (.rsds ファイル)<br /><br /> SharePoint サイト上の URL (.smdl ファイル)|  
 |Office Server 全般|例外|ログオンの失敗が記録されます。|  
-|トポロジ|[詳細]|現在のユーザー情報が記録されます。|  
-|Web パーツ|[詳細]|レポート ビューアー Web パーツへのアクセスを伴うイベントが記録されます。|  
+|トポロジ|"詳細"|現在のユーザー情報が記録されます。|  
+|Web パーツ|"詳細"|レポート ビューアー Web パーツへのアクセスを伴うイベントが記録されます。|  
   
 ##  <a name="bkmk_turnon"></a> Reporting Services カテゴリ内の Reporting Services イベントのオン/オフを切り替えるには  
   
@@ -163,4 +161,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  SharePoint 2010 サーバーの全体管理で SharePoint サーバーに対する診断ログを構成する手順については、「 [診断ログ設定を構成する (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)」を参照してください。  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

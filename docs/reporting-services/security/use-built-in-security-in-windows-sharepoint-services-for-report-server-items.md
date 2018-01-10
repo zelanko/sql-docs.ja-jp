@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c213a3cf52c65b83609bb5f7a0a1acc1cbbc906
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c805ba92cc4b83e09b4328ab2cffa9947eb93c33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する
   SharePoint は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセスに使用できる、組み込みのセキュリティ機能を提供します。 サイトおよびリストに対する権限がユーザーに割り当て済みである場合は、SharePoint とレポート サーバーの間の統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
 |---------------------------|--------------------------|-----------------|------------------------------|  
 |**所有者**|フル コントロール|所有者には、レポート サーバーのアイテムと操作の作成、管理、およびセキュリティ保護を行う完全な権限があります。|サイト内のライブラリに格納されたすべてのレポート サーバー アイテムへのアクセスを制御する権限を設定します。 レポート モデル内の権限を設定します (モデル アイテム セキュリティとも呼ばれます)。 レポート ビューアー Web パーツをカスタマイズします。 レポートなどのアイテムをライブラリに追加します。 レポートなどのドキュメントに使用するアイテム プロパティを編集します。 レポートなどのアイテムを削除します。 データ探索にレポート モデルを使用するレポートなど、レポートを表示します。 レポートのパラメーターを設定します。 レポートの処理オプションを設定します。 レポート モデルを生成します。 レポート ビルダーでレポートを作成します。 共有データ ソースを作成および管理します。 任意のユーザーが所有するサブスクリプションを作成、変更、および削除します。 サイト全体で使用される共有スケジュールを作成および管理します。 レポート履歴など、ドキュメントのバージョンを作成および管理します。 レポート定義またはレポート モデルのソース ファイルをダウンロードします。 レポート定義、レポート モデル、共有データ ソース、またはリソースを置き換えます (アイテムのプロパティおよび権限は維持)。|  
 |**メンバー**|投稿|メンバーは、新しいアイテムを作成し、アイテムのレポートおよびモデルをデザイン ツールから SharePoint ライブラリにパブリッシュすることができます。|レポートなどのアイテムをライブラリに追加します。 レポートなどのドキュメントに使用するアイテム プロパティを編集します。 レポートなどのアイテムを削除します。 データ探索にレポート モデルを使用するレポートなど、レポートを表示します。 レポート履歴スナップショットなど、ドキュメントの過去のバージョンを表示します (ユーザーには、レポート履歴が作成された元のレポートを開く権限が必要)。 レポートのパラメーターを設定します。 レポートの処理オプションを設定します。 レポート モデルを生成します。 レポート ビルダーでレポートを作成します。 共有データ ソースを作成および管理します。 そのユーザーが所有するサブスクリプションを作成、変更、および削除します。 サブスクリプションで共有スケジュールを使用します。 レポート履歴など、ドキュメントのバージョンを作成および管理します。 レポート定義またはレポート モデルのソース ファイルをダウンロードします。 レポート定義、レポート モデル、共有データ ソース、またはリソースを置き換えます (アイテムのプロパティおよび権限は維持)。|  
-|**閲覧者**と**ビューアー**|読み取り|閲覧者はレポートを表示できます。|データ探索にレポート モデルを使用するレポートなど、レポートを表示します。|  
+|**閲覧者**と**ビューアー**|Read|閲覧者はレポートを表示できます。|データ探索にレポート モデルを使用するレポートなど、レポートを表示します。|  
   
  組み込みのグループおよび権限レベルを使用しない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能にアクセスするには、特定の権限が必要になります。 詳細については、「 [SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)」を参照してください。  
   

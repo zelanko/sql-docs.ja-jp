@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Report Designer [Reporting Services], report creation
@@ -18,13 +16,13 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: "77"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2b881a5ae4058c9b1be144ff4d38709f9320d181
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0fca00b134b3e17458933dfb6e3c14a61a1cc218
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
 
@@ -180,7 +178,7 @@ ms.lasthandoff: 12/05/2017
 |エラー レベル|Description|  
 |-----------------|-----------------|  
 |0|レポートのプレビューおよび配置を妨げる、最も重大で避けることのできないビルドの問題。|  
-|1|レポートのレイアウトが大幅に変更される重大なビルドの問題。|  
+|@shouldalert|レポートのレイアウトが大幅に変更される重大なビルドの問題。|  
 |2|レポートのレイアウトが大きく変更される重大度のやや低いビルドの問題。|  
 |3|レポートのレイアウトが目立たない程度に若干変更されるマイナーなビルドの問題。|  
 |4|パブリッシュ上の警告としてのみ使用される。|  
@@ -194,4 +192,4 @@ ms.lasthandoff: 12/05/2017
 [クエリ デザイン ツール](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [SQL Server Data Tools の配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

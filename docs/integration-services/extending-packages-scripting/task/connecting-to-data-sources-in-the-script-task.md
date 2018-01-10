@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 052113c5e6f18381a26d9a3a7f1703659a40a88e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76108d1b6c4004d85456b0f412874012b8d71228
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>スクリプト タスクでのデータ ソースへの接続
   接続マネージャーは、パッケージ内に構成されたデータ ソースへのアクセスを提供します。 詳細については、「[Integration Services (SSIS) の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -57,51 +57,39 @@ ms.lasthandoff: 11/20/2017
  次の例では、スクリプト タスク内での接続マネージャーへのアクセス方法を示します。 このサンプルでは、**Test ADO.NET Connection** という名前の [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーと **Test Flat File Connection** という名前のフラット ファイル接続マネージャーが作成および構成済みであることを前提にしています。 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーは、データ ソースに接続するときにすぐに使用できる **SqlConnection** オブジェクトを返します。 これに対し、フラット ファイル接続マネージャーは、パスとファイル名が含まれる文字列のみを返します。 フラット ファイルを開いて作業するには、**System.IO** 名前空間のメソッドを使用する必要があります。  
   
 ```vb  
-Public Sub Main()  
-  
-    Dim myADONETConnection As SqlClient.SqlConnection  
-    myADONETConnection = _  
-        DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction), _  
-        SqlClient.SqlConnection)  
-    MsgBox(myADONETConnection.ConnectionString, _  
-        MsgBoxStyle.Information, "ADO.NET Connection")  
-  
-    Dim myFlatFileConnection As String  
-    myFlatFileConnection = _  
-        DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _  
-        String)  
-    MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")  
-  
-    Dts.TaskResult = ScriptResults.Success  
-  
-End Sub  
+    Public Sub Main()
+
+        Dim myADONETConnection As SqlClient.SqlConnection =
+            DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
+                SqlClient.SqlConnection)
+        MsgBox(myADONETConnection.ConnectionString,
+            MsgBoxStyle.Information, "ADO.NET Connection")
+
+        Dim myFlatFileConnection As String =
+            DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
+                String)
+        MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")
+
+        Dts.TaskResult = ScriptResults.Success
+
+    End Sub
 ```  
   
 ```csharp  
-using System;  
-using System.Data.SqlClient;  
-using Microsoft.SqlServer.Dts.Runtime;  
-using System.Windows.Forms;  
-  
-public class ScriptMain  
-{  
-  
-        public void Main()  
-        {  
-            SqlConnection myADONETConnection = new SqlConnection();  
-            myADONETConnection = (SqlConnection)(Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)as SqlConnection);  
-            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");  
-  
-            string myFlatFileConnection;  
-            myFlatFileConnection = (string)(Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);  
-            MessageBox.Show(myFlatFileConnection, "Flat File Connection");  
-  
-            Dts.TaskResult = (int)ScriptResults.Success;  
-  
-        }  
-  
-}  
-  
+        public void Main()
+        {
+            SqlConnection myADONETConnection = 
+                Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)
+                as SqlConnection;
+            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");
+
+            string myFlatFileConnection = 
+                Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) 
+                as string;
+            MessageBox.Show(myFlatFileConnection, "Flat File Connection");
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
 ```  
   
 ## <a name="see-also"></a>参照  

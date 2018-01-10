@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 643bbac27a2db99f611a164e97da36c6e5204dbf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b3afbb9788926f78a732bb42fb01ea646d9b5147
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのトレース ログは、レポート サーバー サービスの操作に関する詳細な情報が記録されている ASCII テキスト ファイルです。  このファイル内の情報には、レポート サーバー Web サービス、Web ポータル、およびバックグラウンド処理によって実行された操作が含まれます。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。 たとえば、サブスクリプションに関する問題をトラブル シューティングしている場合です。  
@@ -73,12 +71,12 @@ ms.lasthandoff: 12/05/2017
 |設定|Description|値|  
 |-------------|-----------------|------------|  
 |**RStrace**|エラーおよびトレースに使用される名前空間を指定します。||  
-|**DefaultTraceSwitch**|ReportServerService トレース ログにレポートされる情報のレベルを指定します。 各レベルには、そのレベルより低いすべてのレベルでレポートされる情報が含まれます。 トレースを無効にすることはお勧めしません。|以下の値が有効です。<br /><br /> <br /><br /> 0= トレースの無効化。 ReportServerService ログ ファイルは既定で有効になります。 オフにする場合は、トレース レベルを 0 に設定します。<br /><br /> 1= 例外および再起動<br /><br /> 2= 例外、再起動、警告<br /><br /> 3= 例外、再起動、警告、状態メッセージ (既定)<br /><br /> 4= 詳細モード|  
+|**DefaultTraceSwitch**|ReportServerService トレース ログにレポートされる情報のレベルを指定します。 各レベルには、そのレベルより低いすべてのレベルでレポートされる情報が含まれます。 トレースを無効にすることはお勧めしません。|有効な値は、<br /><br /> <br /><br /> 0= トレースの無効化。 ReportServerService ログ ファイルは既定で有効になります。 オフにする場合は、トレース レベルを 0 に設定します。<br /><br /> 1= 例外および再起動<br /><br /> 2= 例外、再起動、警告<br /><br /> 3= 例外、再起動、警告、状態メッセージ (既定)<br /><br /> 4= 詳細モード|  
 |**FileName**|ログ ファイル名の最初の部分を指定します。 **Prefix** で指定した値が付加されて、完全な名前になります。||  
 |**FileSizeLimitMb**|トレース ログのサイズの上限を指定します。 ファイルは MB 単位で測定されます。<br /><br /> トレース レベル (0 ～ 4) を設定して、ログに記録される内容を制御することにより、ファイル サイズを制御することができます。 また、トレースするコンポーネントを指定することもできます。 14 日間の有効期限が切れる前にログ ファイルが最大サイズに達すると、古いエントリが新しいエントリに置き換えられます。|正しい値は、0 から整数型の最大値までです。 既定値は 32 です。 0 または負の値を指定した場合、レポート サーバーでは値が 1 として扱われます。|  
 |**KeepFilesForDays**|トレース ログ ファイルを削除するまでの保持期間を日数で指定します。|正しい値は、0 から整数型の最大値までです。 既定値は 14 です。 0 または負の値を指定した場合、レポート サーバーでは値が 1 として扱われます。|  
 |**Prefix**|あるログのインスタンスを別のログのインスタンスと区別するために生成する値を指定します。|既定では、トレース ログ ファイル名にタイムスタンプの値が追加されます。 この値は、"appdomain, tid, time" に設定されます。 この設定は変更しないでください。|  
-|**TraceListeners**|トレース ログ コンテンツの出力先を指定します。 複数の出力先を指定する場合、各出力先をコンマで区切ってください。|以下の値が有効です。<br /><br /> <br /><br /> DebugWindow<br /><br /> File (既定値)<br /><br /> StdOut|  
+|**TraceListeners**|トレース ログ コンテンツの出力先を指定します。 複数の出力先を指定する場合、各出力先をコンマで区切ってください。|有効な値は、<br /><br /> <br /><br /> DebugWindow<br /><br /> File (既定値)<br /><br /> StdOut|  
 |**TraceFileMode**|トレース ログに 24 時間データを含めるかどうかを指定します。 コンポーネントごとに、毎日 1 つ、一意のトレース ログが必要です。|この値は、"Unique (既定値)" に設定されます。 この値は変更しないでください。|  
 |**コンポーネント カテゴリ**|トレース ログ情報の生成対象となるコンポーネントおよびトレース レベルを次の形式で指定します。<br /><br /> \<component category>:\<tracelevel><br /><br /> コンポーネント (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**) のすべてまたは一部を指定できます。 特定のコンポーネントに関する情報を生成しない場合は、そのコンポーネントのトレースを無効にできます (たとえば "SemanticModelGenerator:0")。 **all**の場合は、トレースを無効にしないでください。<br /><br /> 各セマンティック クエリに対して生成される Transact-SQL ステートメントを表示する場合は、"SemanticQueryEngine:4" を設定できます。 Transact-SQL ステートメントは、トレース ログに記録されます。 次の例では、Transact-SQL ステートメントをログに追加する構成設定を示しています。<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|コンポーネントのカテゴリには次の値を設定できます。<br /><br /> <br /><br /> 特定のカテゴリに分類されないすべてのプロセスに対する通常のレポート サーバーの利用状況を追跡するには、**All** を使用します。<br /><br /> 実行中のレポートまたはサブスクリプションの操作を追跡するには、**RunningJobs** を使用します。<br /><br /> ユーザーがモデルベースのレポートでアドホック データ探索を実行する場合に処理されるセマンティック クエリを追跡するには、**SemanticQueryEngine** を使用します。<br /><br /> モデルの生成を追跡するには、**SemanticModelGenerator** を使用します。<br /><br /> レポート サーバーの HTTP ログ ファイルを有効にするには、**http** を使用します。 詳しくは、「 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)」をご覧ください。|  
 |コンポーネント カテゴリの**tracelevel** 値|\<component category>:\<tracelevel><br /><br /> <br /><br /> コンポーネントにトレース レベルを追加しない場合は、 **DefaultTraceSwitch** に指定された値が使用されます。 たとえば、"all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator" と指定すると、すべてのコンポーネントで既定のトレース レベルが使用されます。|トレース レベルの有効な値は次のとおりです。<br /><br /> <br /><br /> 0= トレースの無効化<br /><br /> 1= 例外および再起動<br /><br /> 2= 例外、再起動、警告<br /><br /> 3= 例外、再起動、警告、状態メッセージ (既定)<br /><br /> 4= 詳細モード<br /><br /> レポート サーバーの既定値は "all:3" です。|  

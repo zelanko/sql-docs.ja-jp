@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: "26"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9f2208649450d4b9ce385da7b4653522756a575b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 48e36e0ad8fd7e46a9ffd40b476e651b7fe5876c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting メソッド - GenerateDatabaseRightsScript
   レポート サーバー データベースおよびレポート サーバーの実行に必要なその他のデータベースに対してユーザー権限を付与する際に使用できる、SQL スクリプトを生成します。 呼び出し元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーに接続して、スクリプトを実行する必要があります。  
@@ -68,7 +66,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *DatabaseName* が空の場合、 *IsRemote* は無視され、レポート サーバーの構成ファイルの値がデータベース名に使用されます。  
   
  *IsWindowsUser* を **true** に設定した場合、*UserName* は \<domain>\\<username\> 形式で指定する必要があります。  
@@ -81,10 +79,10 @@ out Int32 HRESULT);
   
 |変換されるアカウントまたは SID|共通名|リモート名|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Local System|\<Domain>\\<ComputerName\>$|  
-|.\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
-|ComputerName\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
-|LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-18)|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Local Service|エラー (下記参照)|  

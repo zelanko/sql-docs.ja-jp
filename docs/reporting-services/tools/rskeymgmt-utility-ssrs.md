@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6d98e612a8f2033cb72ab59caa6eaab94ed5754
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
   重要なレポート サーバー データを不正アクセスから保護するための対称キーを、抽出、復元、作成、および削除します。 また、このユーティリティは、レポート サーバー インスタンスをスケール アウト配置に追加する場合にも使用されます。 *レポート サーバーのスケール アウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -114,7 +112,7 @@ rskeymgmt {-?}
  **-t**  *trace*  
  エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このツールを実行するには、ローカル管理者であることが必要です。また、このツールは、レポート サーバーをホストするコンピューター上でローカルに実行する必要があります。 rskeymgmt ユーティリティは、ローカルのレポート サーバー Windows インスタンスと連動します (このユーティリティはレポート サーバー Windows サービスのリモート インスタンスに接続できないので、このユーティリティを使用してリモート レポート サーバー インスタンスの暗号化キーを管理することはできません)。  
   
 > [!NOTE]  
@@ -175,7 +173,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>ファイルの場所  
  Rskeymgmt.exe is は、**\<*ドライブ*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** または **\<*ドライブ*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  レポート サーバーは、格納された資格情報および接続情報を暗号化します。 データの暗号化には、公開キーおよび対称キーが使用されます。 レポート サーバーを実行するには、レポート サーバー データベースに有効なキーが含まれている必要があります。 キーのバックアップ、削除、復元を行うには **rskeymgmt** を使用します。 このツールには、キーを復元できない場合に、使用できなくなった暗号化されたコンテンツを削除する方法が用意されています。  
   
  セットアップや初期化の際に定義されるキーのセットを管理するには、 **rskeymgmt** ユーティリティを使用します。 このユーティリティは、リモート プロシージャ呼び出し (RPC) エンドポイントを介して、ローカルのレポート サーバー Windows サービスに接続されます。 このユーティリティが動作するには、レポート サーバー Windows サービスが実行されている必要があります。  

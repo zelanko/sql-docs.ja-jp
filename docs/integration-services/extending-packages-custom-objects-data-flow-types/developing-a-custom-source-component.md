@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a73c1630674189dd1f86a1aca68937a558d5149f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-source-component"></a>カスタム変換元コンポーネントの開発
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用することで、開発者は、データ フロー タスクでカスタム データ ソースに接続して、変換元のデータを他のコンポーネントに提供する変換元コンポーネントを記述できます。 カスタム変換元を作成できると、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換元のいずれかを使用してアクセスできないデータ ソースに接続する必要がある場合に便利です。  
@@ -182,7 +182,7 @@ End Sub
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|0 より大きく 28 以下で、有効桁数の値未満|1 以上 38 以下|0|  
 |DT_BYTES|0 より大きい|0|0|0|  
-|DT_STR|0 より大きく 8000 より小さい。|0|0|0 以外の有効なコード ページ|  
+|DT_STR|0 より大きく 8000 未満|0|0|0 以外の有効なコード ページ|  
 |DT_WSTR|0 より大きく 4000 未満|0|0|0|  
   
  データ型プロパティの制約は出力列のデータ型に基づくため、マネージ型を処理する場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)] の正しいデータ型を選択する必要があります。 基本クラスでは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>、および <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> の 3 つのヘルパー メソッドが提供され、これを使用すると、マネージ コンポーネントの開発者は、マネージ型に対応する [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデータ型を適切に選択できます。 これらのメソッドは、マネージ データ型と [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデータ型を相互に変換します。  

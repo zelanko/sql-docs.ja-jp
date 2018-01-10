@@ -1,7 +1,8 @@
 ---
 title: SQL Server Integration Services Scale Out Manager | Microsoft Docs
+ms.description: This article describes the Scale Out Manager tool which you can use to manager SSIS Scale Out
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -16,86 +17,95 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fe58d4dc7894728c43cb19d17d3444b5b84820
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d57ff685c7c094a9b0ff8b645c7a46cabb6ad26
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
 
-Scale Out Manager は、1 つの場所にある完全な SSIS Scale Out トポロジを管理できる管理ツールです。 複数のコンピューターでの操作と TSQL コマンドを処理する負担がなくなります。 
+Scale Out Manager は、1 つのアプリから SSIS Scale Out トポロジ全体を管理できる管理ツールです。 管理タスクを減らし、複数のコンピューターで Transact-SQL コマンドを実行するという負担をなくします。
 
-Scale Out Manager をトリガーする 2 つの方法があります。
+## <a name="open-scale-out-manager"></a>Scale Out Manager を開く
 
-## <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1.SQL Server Management Studio から Scale Out Manager を開く
-SQL Server Management Studio を開き、Scale Out Master の SQL Server インスタンスに接続します。
+Scale Out Manager は 2 つの方法で開くことができます。
 
-オブジェクト エクスプローラーで **[SSISDB]** を右クリックし、**[スケール アウトの管理]** を選択します。![スケール アウトの管理](media/manage-scale-out.PNG)
+### <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1.SQL Server Management Studio から Scale Out Manager を開く
+SQL Server Management Studio (SSMS) を開き、Scale Out Master の SQL Server インスタンスに接続します。
+
+オブジェクト エクスプローラーで、**[SSISDB]** を右クリックして、**[スケール アウトの管理]** を選択します。
+
+![スケール アウトの管理](media/manage-scale-out.PNG)
 
 > [!NOTE]
-> 管理者特権を必要とする "Scale Out Worker の追加" などの一部の Scale Out 管理操作と同じように、管理者として SQL Server Management Studio を実行することをお勧めします。
+> SSMS は管理者として実行することをお勧めします。Scale Out Worker の追加など、一部のスケール アウト管理操作には管理者特権が必要になるためです。
 
+### <a name="2-open-scale-out-manager-by-running-ismanagerexe"></a>2.ISManager.exe を実行して、Scale Out Manager を開く
 
-## <a name="2-open-scale-out-manager-by-runing-ismanagerexe-directly"></a>2.ISManager.exe を直接実行して、Scale Out Manager を開く
+`%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management` の下で `ISManager.exe` を見つけます。 **ISManager.exe** を右クリックし、**[管理者として実行]** を選択します。 
 
-ISManager.exe は、%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management の下にあります。 **ISManager.exe** を右クリックし、[管理者として実行] を選択します。 
-
-ISManager.exe が開いたら、Scale Out を管理する前に、Scale Out Master の SQL Server 名を入力して接続する必要があります。
+Scale Out Manager を開いたら、Scale Out Master の SQL Server インスタンス名を入力し、それに接続し、スケール アウト環境を管理します。
 
 ![ポータルの接続](media/portal-connect.PNG)
 
-Scale Out Manager は、次のようなさまざまな機能を提供します。 
+## <a name="tasks-available-in-scale-out-manager"></a>Scale Out Manager で利用できるタスク
+Scale Out Manager で、次の操作を実行できます。
 
-## <a name="enable-scale-out"></a>Scale Out を有効にする
-SQL Server に接続した後で、Scale Out が有効になっていない場合は、[有効] ボタンをクリックして有効にできます。
+### <a name="enable-scale-out"></a>スケール アウトの有効化
+SQL Server に接続した後で、Scale Out が有効になっていない場合、**[有効]** を選択して有効にできます。
 
 ![ポータルで Scale Out を有効にする](media/portal-enable-scale-out.PNG) 
-## <a name="view-scale-out-master-status"></a>Scale Out Master の状態を表示する
+
+### <a name="view-scale-out-master-status"></a>Scale Out Master の状態を表示する
 Scale Out Master の状態は、**[ダッシュボード]** ページに表示されます。
 
 ![ポータルのダッシュボード](media/portal-dashboard.PNG)
-## <a name="view-scale-out-worker-status"></a>Scale Out Worker の状態を表示する
-Scale Out Worker の状態は、**[ワーカー マネージャー]** ページに表示されます。 各ワーカーをクリックすると、個別の状態を表示できます。
+
+### <a name="view-scale-out-worker-status"></a>Scale Out Worker の状態を表示する
+Scale Out Worker の状態は、**[ワーカー マネージャー]** ページに表示されます。 各ワーカーを選択すると、個別の状態を表示できます。
 
 ![ポータルのワーカー マネージャー](media/portal-worker-manager.PNG)
 
-## <a name="add-scale-out-worker"></a>Scale Out Worker を追加する
-Scale Out Worker を追加するには、Scale Out Worker リストの下部にある [+] ボタンをクリックします。 
+### <a name="add-a-scale-out-worker"></a>Scale Out Worker を追加する
+Scale Out Worker を追加するには、Scale Out Worker リストの下部にある **[+]** を選択します。 
 
-追加する Scale Out Worker のコンピューター名を入力し、[検証] をクリックします。 Scale Out Manager によって、現在のユーザーが Scale Out Master と Scale Out Worker のコンピューター上の証明書ストアへのアクセス権を持っているかどうかがチェックされます。
+追加する Scale Out Worker のコンピューター名を入力し、**[検証]** をクリックします。 Scale Out Manager によって、現在のユーザーが Scale Out Master と Scale Out Worker のコンピューター上の証明書ストアにアクセスできるかどうかがチェックされます。
 
 ![ワーカーの接続](media/connect-worker.PNG)
 
-検証に合格すると、Scale Out Manager は、ワーカー構成ファイルを読み取り、ワーカーの証明書のサムプリントの取得を試みます。 詳細については、「[Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)」を参照してください。 ワーカー構成ファイルを読み取れない場合、ワーカー証明書を提供するための 2 つの代替方法があります。 
+検証に合格すると、Scale Out Manager はワーカーのサーバー構成ファイルを読み取り、ワーカーの証明書のサムプリントを取得します。 詳細については、[Scale Out Worker](integration-services-ssis-scale-out-worker.md) に関するページを参照してください。 Scale Out Manager がワーカー サービス構成ファイルを読み取れない場合、ワーカー証明書を提供するための 2 つの代替方法があります。 
 
-ワーカー証明書のサムプリントを直接入力するか、 
+1.  ワーカー証明書のサムプリントを直接入力するか、
 
-![ワーカー証明書 1](media/portal-cert1.PNG)
+    ![ワーカー証明書 1](media/portal-cert1.PNG)
 
-証明書ファイルを提供します。 
+2.  証明書ファイルを提供します。 
 
-![ワーカー証明書 2](media/portal-cert2.PNG)
+    ![ワーカー証明書 2](media/portal-cert2.PNG)
 
-すべての情報を収集すると、Scale Out Manager が実行されるアクションを提供します。 通常、これには証明書のインストール、ワーカー構成ファイルの更新、およびワーカー サービスの再起動が含まれます。 
+情報を収集すると、実行されるアクションの説明が Scale Out Manager に表示されます。 実行されるアクションには通常、証明書のインストール、ワーカー サービス構成ファイルの更新、ワーカー サービスの再開などがあります。
 
 ![ポータルの追加の確認 1](media/portal-add-confirm1.PNG)
 
-ワーカー証明書にアクセスできない場合は、ユーザーが証明書を手動で更新してから、ワーカー サービスを再起動する必要があります。
+ワーカー証明書にアクセスできない場合、証明書を手動で更新してからワーカー サービスを再起動する必要があります。
 
 ![ポータルの追加の確認 2](media/portal-add-confirm2.PNG)
 
-確認のチェック ボックスをクリックし、Scale Out Worker の追加を開始します。
+**[確認]** チェックボックスを選択し、**[OK]** を選択し、Scale Out Worker の追加を開始します。
 
-## <a name="delete-scale-out-worker"></a>Scale Out Worker を削除する
-Scale Out Worker を削除するには、Scale Out Worker を選択し、Scale Out Worker リストの下部にある [-] ボタンをクリックします。
+### <a name="delete-a-scale-out-worker"></a>Scale Out Worker を削除する
+Scale Out Worker を削除するには、Scale Out Worker を選択し、Scale Out Worker リストの下部にある **[-]** を選択します。
 
+### <a name="enable-or-disable-a-scale-out-worker"></a>Scale Out Worker を有効または無効にする
+Scale Out Worker を有効または無効にするには、Scale Out Worker を選択し、**[ワーカーの有効化]** または **[ワーカーの無効化]** を選択します。 ワーカーがオフラインではない場合、Scale Out Manager に表示されるワーカーの状態が適宜変更されます。
 
-## <a name="enabledisable-scale-out"></a>Scale Out を有効/無効にする
-Scale Out Worker を有効または無効にするには、[ワーカーの有効化] または [ワーカーの無効化] をクリックします。 Scale Out Manager のワーカーの状態は、ワーカーがオフラインでなければ、都度変化します。
-
-## <a name="edit-scale-out-worker-description"></a>Scale Out Worker の説明を編集する
-Scale Out Worker の説明を編集するには、Scale Out Worker を選択し、[編集] ボタンをクリックします。 編集が完了したら、[保存] ボタンをクリックします。
+## <a name="edit-a-scale-out-worker-description"></a>Scale Out Worker の説明を編集する
+Scale Out Worker の説明を編集するには、Scale Out Worker を選択し、**[編集]** を選択します。 説明の編集が終わったら、**[保存]** を選択します。
 
 ![ポータルのワーカーの保存](media/portal-save-worker.PNG)
 
+## <a name="next-steps"></a>次の手順
+詳細については、次の記事をご覧ください。
+-   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
+-   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

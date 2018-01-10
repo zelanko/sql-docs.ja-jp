@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +20,17 @@ helpviewer_keywords:
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: "51"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e23823f0e372964e6193a8c7a67a349fa170f514
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d148c29185b72fe433a34034993342afa61970be
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="schedules"></a>スケジュール
+# <a name="schedules"></a>Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
   
   -   共有スケジュールは、個別のアイテムとして作成されます。 共有スケジュールは、作成後、サブスクリプションまたは他のスケジュール操作を定義するときに参照します。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6c9222d132975e0fa1bcdb54ceb647a8abd56af9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 731e14ba0da7b3d9b54b1ba24aa2fda41adda49b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
 この [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] チュートリアルでは、データ ドリブン サブスクリプションを作成し、フィルター処理されたレポート出力を生成してファイル共有に保存する簡単な例の手順を示すことで、データ ドリブン サブスクリプションの概念を説明します。 

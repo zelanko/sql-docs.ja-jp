@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17b7cc091c2723a35260665c30dc947171a8d6f1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f167edb4e9391a14682e46c3a7e839c48bc43396
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
   レポート サーバーでは、複数のレポートで共有データセット アイテムを使用できます。 共有データセットをセキュリティ保護することによって、共有データセットにユーザーがアクセスする度合いを制御できます。 既定では、あらかじめ登録された **Administrators** グループのメンバーであるユーザーのみが、共有データセットの表示、プロパティの変更、キャッシュの有効化、キャッシュ更新計画の作成、およびアイテムの削除を行えます。 他のすべてのユーザーについては、共有データセットへのアクセスを許可するロールの割り当てを作成する必要があります。  

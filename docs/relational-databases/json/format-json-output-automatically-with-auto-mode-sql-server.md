@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4d6bca8c03edec6ce2e53433a7266b65c8affb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aef9d09f6f8a9606a742be05a2076bf65aeb9a40
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO モードで自動的に JSON 出力を書式設定する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>使用例
 
 ### <a name="example-1"></a>例 1
- **Query**  
+ **クエリ**  
   
 クエリで 1 つのテーブルだけが参照されている場合、FOR JSON AUTO 句の結果は、FOR JSON PATH の結果と同様になります。 この場合、FOR JSON AUTO では、入れ子になったオブジェクトは作成されません。 唯一の違いは、FOR JSON AUTO が、入れ子になったオブジェクトではなく、ドット付きのキーとしてドット区切りの別名 (次の例では `Info.MiddleName`) を出力する点です。  
   
@@ -88,7 +87,7 @@ SELECT TOP 5
 
 ### <a name="example-2"></a>例 2
 
-**Query**  
+**クエリ**  
   
 テーブルを結合すると、最初のテーブル内の列はルート オブジェクトのプロパティとして生成されます。 2 番目のテーブル内の列は、入れ子になったオブジェクトのプロパティとして生成されます。 2 番目のテーブルのテーブル名または別名 (次の例では `D`) は、入れ子になった配列の名前として使用されます。  
   
@@ -126,7 +125,7 @@ FOR JSON AUTO
 
 ### <a name="example-3"></a>例 3
  
-**Query**  
+**クエリ**  
 FOR JSON AUTO を使用せずに、次の例のように SELECT ステートメントに FOR JSON PATH サブキーを入れ子にすることができます。 この例では、前の例と同じ結果が出力されます。  
   
 ```sql  

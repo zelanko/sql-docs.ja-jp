@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 caps.latest.revision: "4"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b379a4a9cb342c96e23be750ff4c8c1df08a6dff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b772d7a4a73e2aa37b35866f57064a0610c18de
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Reporting Services レポートの処理のトラブルシューティング
 レポート データが取得されると、レポート プロセッサによってデータとレイアウトの情報が結合され、 結合されたデータとレイアウトのコンテキストで、式を持つ各レポート アイテム プロパティが評価されます。 このトピックでは、このような問題のトラブルシューティングについて説明します。   

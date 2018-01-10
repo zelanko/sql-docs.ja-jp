@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 523dcd99da61b11e42848ea77037baf59a3ea00b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0da34dd83cd9e7b10a21a4a89047902e656ab3
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>簡単な例によるインポートおよびエクスポート ウィザードの概要
 Excel スプレッドシートから SQL Server データベースにデータをインポートするというよくあるシナリオを使って、SQL Server インポートおよびエクスポート ウィザードの機能について説明します。 別の変換元および別の変換先を使う予定の場合でも、このトピックを読むとウィザードの実行について知っておく必要があるほとんどのことがわかります。
@@ -47,7 +47,7 @@ Windows の [スタート] メニューの [Microsoft SQL Server 2016] グルー
 > [!NOTE]
 > この例では、32 ビット バージョンの Microsoft Office がインストールされているため、32 ビットのウィザードを選びます。 その結果、32 ビットのデータ プロバイダーを使って Excel に接続する必要があります。 他の多くのデータ ソースでは、通常、64 ビットのウィザードを選ぶことができます。
 >
-> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使うには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
+> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
 詳細については、「 [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)」(SQL Server インポートおよびエクスポート ウィザードを開始する) を参照してください。
 
@@ -70,7 +70,7 @@ Excel への接続について詳しくは、「[Excel データ ソースに接
 
 ページにプロバイダーのプロパティの一覧が表示されます。 これらの多くは、わかりにくい名前となじみのない設定です。 幸い、任意のエンタープライズ データベースに接続するには、通常、3 つの情報を提供するだけで済みます。 他の設定の既定値は無視できます。
 
-|必要な情報|.NET Framework Data Provider for SQL Server のプロパティ|
+|必要な情報|.NET Framework Data Provider for SQL Server プロパティ|
 |---|---|
 |サーバー名|**[データ ソース]**|
 |認証 (ログイン) 情報|**[統合セキュリティ]**、または **[ユーザー ID]** と **[パスワード]**<br/>サーバー上のデータベースのドロップダウン リストを表示する場合は、まず、有効なログイン情報を提供する必要があります。|
@@ -155,7 +155,7 @@ SQL Server Management Studio で、ウィザードが SQL Server に作成した
 
 ## <a name="learn-more"></a>詳細情報  
 ウィザードのしくみについては、以下を参照してください。
--   **ウィザードについてさらに詳しく学習する。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
+-   **ウィザードのしくみについては、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
 -   **ウィザードの手順について学習する。** ウィザードの手順についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードの手順](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)」の一覧から目的のページを選んでください。 ウィザードのページごとに別のドキュメント ページもあります。
 

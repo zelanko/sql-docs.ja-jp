@@ -1,12 +1,12 @@
 ---
 title: "tempdb データベース | Microsoft Docs"
-ms.custom: 
-ms.date: 11/16/2017
+description: "このトピックでは、SQL Server と Azure SQL Database で tempdb データベースを構成し、使用する方法について説明します。"
+ms.custom: P360
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: databases
-ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
@@ -17,36 +17,39 @@ helpviewer_keywords:
 - temporary stored procedures [SQL Server]
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-caps.latest.revision: "66"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.openlocfilehash: 6d71dcbda413d604c2c6ac2e4d85a815a4aa3719
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.reviewer: carlrab
+ms.openlocfilehash: 162734e2bb90d83d3f84fce2467b0fab3175baff
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="tempdb-database"></a>tempdb データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **tempdb** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているすべてのユーザーが使用できるグローバル リソースであり、以下のものを保持するために使用されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **tempdb** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたは SQL Database に接続しているすべてのユーザーが使用できるグローバル リソースです。 Tempdb で保持するもの:  
   
 - グローバルまたはローカルな一時テーブルおよびインデックス、一時ストアド プロシージャ、テーブル変数、テーブル値関数で返されるテーブル、カーソルなど、明示的に作成された一時的な**ユーザー オブジェクト**。  
-- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって作成された **内部オブジェクト**。 たとえば、次のオブジェクトにアクセスできます。
+- データベース エンジンによって作成された**内部オブジェクト**。 たとえば、次のオブジェクトにアクセスできます。
   - スプール、カーソル、並べ替え、および一時的なラージ オブジェクト (LOB) 記憶域の中間結果を格納する作業テーブル。
   - ハッシュ結合操作またはハッシュ集計操作用の作業ファイル
   - インデックスの作成または再構築などの操作 (SORT_IN_TEMPDB を指定した場合) や、GROUP BY、ORDER BY、または UNION クエリにおける並べ替えの中間結果
 
   > [!NOTE]
-  > 各内部オブジェクトでは、少なくとも 9 つのページが使用されます (1 つの IAM ページと 8 ページ分のエクステント)。 ページとエクステントの詳細については、「[ページとエクステント](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)」を参照してください。
+  > 各内部オブジェクトでは、少なくとも 9 つのページが使用されます (IAM ページと 8 ページ分のエクステント)。 ページとエクステントの詳細については、「[ページとエクステント](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)」を参照してください。
 
-- **バージョン ストア**。これは行のバージョン管理を使用する機能のサポートに必要なデータ行を保持するデータ ページのコレクションです。 共通バージョン ストアとオンライン インデックス構築用のバージョン ストアの 2 つのバージョン ストアがあります。 バージョン ストアには、次の内容が保持されます。
+  > [!IMPORTANT]
+  > Azure SQL Database は、tempdb に保存され、データベース レベルまで調べられるグローバル一時テーブルとグローバル一時ストアド プロシージャをサポートしています。 グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ Azure SQL データベース内ですべてのユーザーのセッションで共有されます。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。
+
+- **バージョン ストア**。これは行のバージョン管理を使用する機能のサポートに必要なデータ行を保持するデータ ページのコレクションです。 共通バージョン ストアとオンライン インデックス構築用のバージョン ストアの 2 つのバージョン ストアがあります。 バージョン ストアに保持される内容:
   - 行のバージョン管理を伴う READ COMMITTED 分離トランザクションまたはスナップショット分離トランザクションを使用するデータベースで、データ変更トランザクションによって生成される行バージョン。  
   - オンライン インデックス操作、複数のアクティブな結果セット (MARS)、AFTER トリガーなどの機能に対してデータ変更トランザクションによって生成される行バージョン。  
   
-**tempdb** 内の操作は、最低限必要な情報だけがログに記録されます。 これにより、トランザクションをロールバックできます。 **が起動されるたびに** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再作成され、システムが常にデータベースのクリーンなコピーで起動されるようにします。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるセッションから別のセッションに保存されるものは一切含まれません。 **tempdb**では、バックアップ操作と復元操作は実行できません。  
+トランザクションをロールバックできるように、**tempdb** のログ記録は最小限に抑えられます。 **が起動されるたびに** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再作成され、システムが常にデータベースのクリーンなコピーで起動されるようにします。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるセッションから別のセッションに保存されるものは一切含まれません。 **tempdb**では、バックアップ操作と復元操作は実行できません。  
   
-## <a name="physical-properties-of-tempdb"></a>tempdb の物理プロパティ  
- 次の表は、**tempdb** のデータ ファイルとログ ファイルの初期構成値 (Model データベースの既定値に基づく) の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
+## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server の tempdb の物理プロパティ
+ 次の表は、SQL Server の **tempdb** のデータ ファイルとログ ファイルの初期構成値 (Model データベースの既定値に基づく) の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
   
 |ファイル|論理名|物理名|初期サイズ|ファイル拡張|  
 |----------|------------------|-------------------|------------------|-----------------|  
@@ -59,10 +62,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]
 > データ ファイルの数の既定値は、 [KB 2154845](http://support.microsoft.com/kb/2154845/)の一般的なガイドラインに基づいています。  
   
-### <a name="moving-the-tempdb-data-and-log-files"></a>tempdb のデータ ファイルとログ ファイルの移動  
+### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>SQL Server の tempdb のデータ ファイルとログ ファイルの移動  
  **tempdb** データ ファイルとログ ファイルを移動するには、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   
-### <a name="database-options"></a>データベース オプション  
+### <a name="database-options-for-tempdb-in-sql-server"></a>SQL Server の tempdb のデータベース オプション  
  **tempdb** データベースの各データベース オプションの既定値とそのオプションを変更できるかどうかを次の表に示します。 これらのオプションの現在の設定を表示するには、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。  
   
 |データベース オプション|既定値|変更可否|  
@@ -97,8 +100,34 @@ ms.lasthandoff: 11/20/2017
 |Service Broker のオプション|ENABLE_BROKER|はい|  
 |TRUSTWORTHY|OFF|いいえ|  
   
- これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
+ これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
+## <a name="tempdb-database-in-sql-database"></a>SQL Database の Tempdb データベース
+
+|SLO|最大 Tempdb データ ファイル サイズ (MB)|tempdb データ ファイルの数|最大 tempdb データ サイズ (MB)|
+|---|---:|---:|---:|
+|[標準]|14,225|@shouldalert|14,225|
+|S0|14,225|@shouldalert|14,225| 
+|S1|14,225|@shouldalert|14,225| 
+|S2|14,225| @shouldalert|14,225| 
+|S3|32,768|@shouldalert|32,768| 
+|S4|32,768|2|65,536| 
+|S6|32,768|3|98,304| 
+|S7|32,768|6|196,608| 
+|S9|32,768|12|393,216| 
+|S12|32,768|12|393,216| 
+|P1|32,768|12|393,216| 
+|P2|32,768|12|393,216| 
+|P4|32,768|12|393,216| 
+|P6|32,768|12|393,216| 
+|P11|32,768|12|393,216| 
+|P15|32,768|12|393,216| 
+|Premium エラスティック プール (すべての DTU 構成)|14,225|12|170,700| 
+|Standard エラスティック プール (すべての DTU 構成)|14,225|12|170,700| 
+|Basic エラスティック プール (すべての DTU 構成)|14,225|12|170,700| 
+||||
+
+
 ## <a name="restrictions"></a>制限  
  **tempdb** データベースでは、次の操作は実行できません。  
   
@@ -118,33 +147,33 @@ ms.lasthandoff: 11/20/2017
 - データベースの OFFLINE への設定。  
 - データベースまたはプライマリ ファイル グループの READ_ONLY への設定。  
   
-## <a name="permissions"></a>権限  
- すべてのユーザーが tempdb 内に一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 ユーザーが tempdb を使用できないように tempdb への接続権限を取り消すことはできますが、一部のルーチン処理で tempdb を使用する必要があるためお勧めしません。  
+## <a name="permissions"></a>アクセス許可  
+ すべてのユーザーが tempdb 内に一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 ユーザーが tempdb を使用できないように tempdb への接続アクセス許可を取り消すことはできますが、一部のルーチン処理で tempdb を使用する必要があるためお勧めしません。  
 
-## <a name="optimizing-tempdb-performance"></a>tempdb のパフォーマンスの最適化
- tempdb データベースのサイズと物理的な配置場所は、システムのパフォーマンスに影響を与える可能性があります。 たとえば、tempdb に定義されているサイズが小さすぎると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再起動するたびに、tempdb のサイズがワークロードのサポートに必要なサイズまで自動的に拡張されるので、システムの処理負荷の一部が占有されます。
+## <a name="optimizing-tempdb-performance-in-sql-server"></a>SQL Server の tempdb のパフォーマンスの最適化 
+ tempdb データベースのサイズと物理的な配置場所は、システムのパフォーマンスに影響を与えることがあります。 たとえば、tempdb に定義されているサイズが小さすぎると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再起動するたびに、tempdb のサイズがワークロードのサポートに必要なサイズまで自動的に拡張されるので、システムの処理負荷の一部が占有されます。
 
  可能な場合は、[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用して、データ ファイル拡張操作のパフォーマンスを向上します。
  
- すべての tempdb ファイルに対する領域をあらかじめ割り当てるには、環境における一般的なワークロードに十分に対応できる大きさの値にファイル サイズを設定します。 これにより、パフォーマンスに影響を与える可能性がある tempdb の過度に頻繁な拡張が回避されます。 tempdb データベースは自動拡張が行われるように設定する必要がありますが、これは想定外の例外に対してディスク領域を増加するために使用する必要があります。 
+ すべての tempdb ファイルに対する領域をあらかじめ割り当てるには、環境における一般的なワークロードに十分に対応できる大きさの値にファイル サイズを設定します。 事前に割り当てることで、tempdb が頻繁に拡張されることなく、パフォーマンスに影響が出ません。 tempdb データベースは自動拡張が行われるように設定する必要がありますが、これは想定外の例外に対してディスク領域を増加するために使用する必要があります。 
 
  各[ファイル グループ](../../relational-databases/databases/database-files-and-filegroups.md#filegroups)内でデータ ファイルのサイズは等しくする必要があります。これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がより多くの空き領域を持つファイル内の割り当てを優先する比例配分アルゴリズムを使用していることによります。 サイズの等しい複数のデータ ファイルに tempdb を分割すると、tempdb を使用する操作において効率の高い並列処理を実現できます。 
  
- tempdb データベース ファイルの拡張単位が小さすぎることのないように、ファイル拡張の増分値を妥当なサイズに設定します。 tempdb に書き込まれたデータ量と比較してファイルの拡張単位が小さすぎると、tempdb を頻繁に拡張する必要が生じる場合があります。 このことは、パフォーマンスに影響します。
+ tempdb データベース ファイルの拡張単位が小さすぎることのないように、ファイル拡張の増分値を妥当なサイズに設定します。 tempdb に書き込まれたデータ量と比較してファイルの拡張単位が小さすぎると、tempdb を頻繁に拡張する必要が生じ、パフォーマンスに影響が出る場合があります。
  
  現在の tempdb のサイズと拡張パラメーターを確認するには、次のクエリを使用します。
- ```t-sql
+ ```sql
  SELECT name AS FileName, 
     size*1.0/128 AS FileSizeinMB,
     CASE max_size 
         WHEN 0 THEN 'Autogrowth is off.'
         WHEN -1 THEN 'Autogrowth is on.'
-        ELSE 'Log file will grow to a maximum size of 2 TB.'
+        ELSE 'Log file grows to a maximum size of 2 TB.'
     END,
     growth AS 'GrowthValue',
     'GrowthIncrement' = 
         CASE
-            WHEN growth = 0 THEN 'Size is fixed and will not grow.'
+            WHEN growth = 0 THEN 'Size is fixed.'
             WHEN growth > 0 AND is_percent_growth = 0 
                 THEN 'Growth value is in 8-KB pages.'
             ELSE 'Growth value is a percentage.'
@@ -157,19 +186,19 @@ GO
  
  ユーザー データベースによって使用されるディスクとは異なるディスクに tempdb データベースを配置します。
 
-## <a name="performance-improvements-in-tempdb"></a>tempdb でのパフォーマンスの強化  
+## <a name="performance-improvements-in-tempdb-for-sql-server"></a>SQL Server の tempdb でのパフォーマンスの強化 
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、**tempdb** のパフォーマンスが次の方法でさらに最適化されています。  
   
 - 一時テーブルとテーブル変数はキャッシュされます。 キャッシュを使用することで、一時オブジェクトを削除および作成する操作を非常に高速に実行でき、ページ割り当ての競合が減少します。  
-- 割り当てページ ラッチ プロトコルが強化されています。 これにより、使用される UP (更新) ラッチの数が減少します。  
-- **tempdb** に対するログ記録のオーバーヘッドが削減されています。 これにより、 **tempdb** ログ ファイルでのディスク I/O 帯域幅の消費量が減少します。  
-- セットアップによって、新しいインスタンスのインストール中に複数の tempdb データ ファイルが追加されます。 この操作を実行するには、 **[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンド ライン パラメーター /SQLTEMPDBFILECOUNT を使用します。 既定では、セットアップ時に、論理プロセッサ数または 8 のいずれか小さい方と同数の tempdb データ ファイルが追加されます。  
+- 割り当てページのラッチ プロトコルが改善され、使用される UP (更新) ラッチの回数が減っています。  
+- **tempdb** のログ記録オーバーヘッドが減らされ、**tempdb** ログ ファイルのディスク I/O 帯域幅消費が減りました。  
+- セットアップによって、新しいインスタンスのインストール中に複数の tempdb データ ファイルが追加されます。 この操作を実行するには、**[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンドライン パラメーター /SQLTEMPDBFILECOUNT を使用します。 既定では、セットアップ時に、論理プロセッサ数または 8 のいずれか小さい方と同数の tempdb データ ファイルが追加されます。  
 - 複数の **tempdb** データ ファイルがある場合は、拡張設定に応じて、すべてのファイルが同時に同量ずつ自動拡張されます。 トレース フラグ 1117 は必須ではなくなりました。  
 - **tempdb** 内のすべての割り当てで単一エクステントが使用されます。 [トレース フラグ 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) は必須ではなくなりました。  
 - プライマリ ファイル グループの場合は、AUTOGROW_ALL_FILES プロパティがオンで、プロパティは変更できません。 
 
-## <a name="capacity-planning-for-tempdb"></a>tempdb に使用するディスク領域の計画
- 運用環境での tempdb の適切なサイズを判断するには、多くの要因が関係します。 このトピックで前述されているように、これらの要因には既存のワークロードや使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能などがあります。 SQL Server のテスト環境で次のタスクを実行して、既存のワークロードを分析することをお勧めします。
+## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server の tempdb に使用するディスク領域の計画
+ SQL Server 運用環境での tempdb の適切なサイズを判断するには、多くの要因が関係します。 この記事で前述されているように、これらの要因には既存のワークロードや使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能などがあります。 SQL Server のテスト環境で次のタスクを実行して、既存のワークロードを分析することをお勧めします。
 - tempdb に自動拡張を設定する。
 - 個々のクエリまたはワークロード トレース ファイルを実行し、tempdb 領域の使用を監視する。
 - インデックスの再構築などのインデックス メンテナンス操作を実行し、tempdb 領域を監視する。 
@@ -178,28 +207,28 @@ GO
 ## <a name="how-to-monitor-tempdb-use"></a>tempdb の使用状況を監視する方法
   tempdb のディスク領域が不足すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の運用環境で重大な障害が発生したり、実行中のアプリケーションの操作を完了できなくなったりする場合があります。 [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) 動的管理ビューを使用して、tempdb ファイルで使用されているディスク領域を監視できます。
   
- ```t-sql
+ ```sql
  -- Determining the Amount of Free Space in tempdb
  SELECT SUM(unallocated_extent_page_count) AS [free pages], 
   (SUM(unallocated_extent_page_count)*1.0/128) AS [free space in MB]
  FROM sys.dm_db_file_space_usage;
  ```
  
- ```t-sql
+ ```sql
  -- Determining the Amount Space Used by the Version Store
  SELECT SUM(version_store_reserved_page_count) AS [version store pages used],
   (SUM(version_store_reserved_page_count)*1.0/128) AS [version store space in MB]
  FROM sys.dm_db_file_space_usage;
  ```
  
- ```t-sql
+ ```sql
  -- Determining the Amount of Space Used by Internal Objects
  SELECT SUM(internal_object_reserved_page_count) AS [internal object pages used],
   (SUM(internal_object_reserved_page_count)*1.0/128) AS [internal object space in MB]
  FROM sys.dm_db_file_space_usage;
  ```
  
- ```t-sql
+ ```sql
  -- Determining the Amount of Space Used by User Objects
  SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
   (SUM(user_object_reserved_page_count)*1.0/128) AS [user object space in MB]
@@ -208,7 +237,7 @@ GO
   
   また、tempdb のページの割り当てや割り当て解除の状態をセッション レベルまたはタスク レベルで監視するには、[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) 動的管理ビューと [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md) 動的管理ビューを使用できます。 これらのビューを使用すると、tempdb のディスク領域を大量に使用している大きなクエリ、一時テーブル、またはテーブル変数を特定できます。 さらに、tempdb で使用できる空き領域と tempdb を使用しているリソースの監視に使用できるいくつかのカウンターもあります。 詳細については、次のセクションを参照してください。
 
- ```t-sql
+ ```sql
  -- Obtaining the space consumed by internal objects in all currently running tasks in each session
  SELECT session_id, 
   SUM(internal_objects_alloc_page_count) AS task_internal_objects_alloc_page_count,
@@ -217,7 +246,7 @@ GO
  GROUP BY session_id;
  ```
  
- ```t-sql
+ ```sql
  -- Obtaining the space consumed by internal objects in the current session for both running and completed tasks
  SELECT R2.session_id,
   R1.internal_objects_alloc_page_count 
@@ -233,8 +262,8 @@ GO
 ## <a name="related-content"></a>関連コンテンツ  
  [インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
  [システム データベース](../../relational-databases/databases/system-databases.md)  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+ [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
  [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
   
 ## <a name="see-also"></a>参照  

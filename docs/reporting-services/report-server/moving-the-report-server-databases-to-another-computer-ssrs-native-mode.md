@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bf0061fb7a02901f24f75e7627d35f0916a843ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3449aa8547e62e89e3fc40ab893e1eb2fefcfd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
 
@@ -210,15 +208,15 @@ GO
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスへの接続を開きます。  
   
-2.  [データベース] ページの **[データベースの変更]**をクリックします。 **[次へ]**をクリックします。  
+2.  [データベース] ページの **[データベースの変更]**をクリックします。 **[次へ]** をクリックします。  
   
-3.  **[既存のレポート サーバー データベースを選択する]**をクリックします。 **[次へ]**をクリックします。  
+3.  **[既存のレポート サーバー データベースを選択する]**をクリックします。 **[次へ]** をクリックします。  
   
-4.  現在レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、 **[接続テスト]**をクリックします。 **[次へ]**をクリックします。  
+4.  現在レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、 **[接続テスト]**をクリックします。 **[次へ]** をクリックします。  
   
-5.  [データベース名] で、使用するレポート サーバー データベースを選択します。 **[次へ]**をクリックします。  
+5.  [データベース名] で、使用するレポート サーバー データベースを選択します。 **[次へ]** をクリックします。  
   
-6.  レポート サーバーがレポート サーバー データベースに接続するときに使用する資格情報を [資格情報] に指定します。 **[次へ]**をクリックします。  
+6.  レポート サーバーがレポート サーバー データベースに接続するときに使用する資格情報を [資格情報] に指定します。 **[次へ]** をクリックします。  
   
 7.  **[次へ]** 、 **[完了]**の順にクリックします。  
   

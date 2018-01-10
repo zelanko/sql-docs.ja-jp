@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0795006b2ec1b6dbc0f222f9513bf9d6ce9a17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3da875380580bcf7151db13c0b14280a9790d5dc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>既定のスキーマを使用する OPENJSON の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,35 +31,35 @@ ms.lasthandoff: 11/17/2017
  ここでは、既定のスキーマを使用して **OPENJSON** を使用する例をいくつか紹介します。 詳細とその他の例については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)」を参照してください。  
   
 ## <a name="example---return-each-property-of-an-object"></a>例 - オブジェクトの各プロパティを返す  
- **Query**  
+ **クエリ**  
   
 ```sql  
 SELECT *
 FROM OPENJSON('{"name":"John","surname":"Doe","age":45}') 
 ```  
   
- **[結果]**  
+ **結果**  
   
-|[キー]|値|  
+|Key|ReplTest1|  
 |---------|-----------|  
-|name|John|  
+|NAME|John|  
 |姓|Doe|  
-|有効期間|45|  
+|age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>例 - 配列の各要素を返す  
- **Query**  
+ **クエリ**  
   
 ```sql  
 SELECT [key],value
 FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]') 
 ```  
   
- **[結果]**  
+ **結果**  
   
-|[キー]|値|  
+|Key|ReplTest1|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en 英国|  
+|@shouldalert|en 英国|  
 |2|de AT|  
 |3|es AR|  
 |4|sr という|  
@@ -90,9 +89,9 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **[結果]**  
   
-|[キー]|値|型|  
+|Key|ReplTest1|型|  
 |---------|-----------|----------|  
-|型|1|0|  
+|型|@shouldalert|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |タグ|[「スポーツ」、「Water ポーロ」]|4|  
   

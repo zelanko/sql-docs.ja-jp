@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8f9aac801e823f364070fc2b3ce2e6b4b015f78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 |RDL 型|CLR 型|  
 |--------------|---------------|  
-|文字列|既定値: String<br /><br /> Chart、GUID、Timespan|  
+|String|既定値: String<br /><br /> Chart、GUID、Timespan|  
 |ブール値|既定値: Boolean|  
 |Integer|既定値: Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
 |DateTime|既定値: DateTime<br /><br /> DateTimeOffset|  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/05/2017
   
  次のいずれかの方法を使用することで、このデータを 1 つまたは複数の CLR 値に変換できます。  
   
--   テキスト ボックスに、文字列の一部分を抽出する式を入力します。 例:  
+-   テキスト ボックスに、文字列の一部分を抽出する式を入力します。 例 :  
   
     -   UTC タイム ゾーン オフセットの時間部分だけを抽出し、分に変換するには、次の式を使用します。 `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

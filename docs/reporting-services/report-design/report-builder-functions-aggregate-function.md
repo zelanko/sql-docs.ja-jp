@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 834118e295a58af22a0e0cdd3817af2f33cb023c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a1d7035d148f104a7661f2741c8e3ad6bac2a2ca
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-function"></a>レポート ビルダー関数 - 集計関数
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  
@@ -48,7 +46,7 @@ Aggregate(expression, scope)
 ## <a name="return-type"></a>戻り値の型  
  戻り値の型はデータ プロバイダーによって決められます。 プロバイダーがこの関数をサポートしていない場合や、データが取得できなかった場合は、 **Nothing** が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Aggregate** 関数を使用すると、外部データ ソース上で計算される集計を使用できます。 この機能のサポートは、データ拡張機能によって異なります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、MDX クエリからフラットな行セットを取得します。 結果セット内の一部の行には、データ ソース サーバーで計算される集計値を含めることができます。 これらは、 *サーバー集計*と呼ばれます。 サーバー集計を [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のグラフィカル クエリ デザイナーで表示するには、ツール バーの **[集計の表示]** ボタンを使用します。 詳細については、「[Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)」を参照してください。  
   
  Tablix データ領域の詳細行にデータセットの集計値および詳細値の組み合わせを表示する場合、通常、サーバー集計値は詳細データではないため含まれません。 ただし、データセットから取得したすべての値を表示し、集計データを計算および表示する方法をカスタマイズできます。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 59069ccd23dc528f27186772acbe30739c1fc4e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3333479da0d2989354242869c430712a3688e968
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>入れ子になったデータ領域 (レポート ビルダーおよび SSRS)
   グラフなどのデータ領域をマトリックスなどの別のデータ領域に挿入して入れ子化することができます。この方法は通常、データの要約を簡潔に表示する場合や、視覚的な表示およびテーブルやマトリックスの表示を行う場合に使用します。  
@@ -86,17 +84,17 @@ ms.lasthandoff: 12/05/2017
  リストのデータ領域にグループを定義できます。さらに Tablix とグラフを追加して同じデータの異なったビューを提供できます。 それには、埋め込まれた Tablix とグラフに同じグループ化と並べ替えの式を定義する必要があります。 Tablix とグラフは親となるリストのデータ領域のデータを使用するように定義されています。  
   
 > [!NOTE]  
->  既定では、デザイン画面にリスト データ領域を追加すると、そのリストには詳細行が含まれています。 この既定動作を変更して、詳細行を取り除き、グループ行を追加できます。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+>  既定では、デザイン画面にリスト データ領域を追加すると、そのリストには詳細行が含まれています。 この既定動作を変更して、詳細行を取り除き、グループ行を追加できます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
  詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」と「[テーブル、マトリックス、または一覧の追加、移動、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   

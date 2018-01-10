@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7289e2f995df5f111982df4b90381d9802d85332
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 後で、インメモリ OLTP によるパフォーマンスの向上を実証する以下の記事を参照してください。  
   
 - 「[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 」には、大幅なパフォーマンス向上が望める小規模なデモが用意されています。  
-- 「[Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 」 (インメモリ OLTP のサンプル データベース) には、より大規模なデモが用意されています。  
+- 「[Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)」 (インメモリ OLTP のサンプル データベース) には、より大規模なデモが用意されています。  
   
   
   
@@ -253,7 +253,7 @@ MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、サ
 ALTER TABLE...ADD/DROP では、メモリ最適化テーブルの列またはインデックスを追加または削除できます。  
   
 - メモリ最適化テーブルに対して CREATE INDEX や DROP INDEX を実行することはできません。代わりに、ALTER TABLE ...ADD/DROP INDEX を使用してください。  
-- 詳細については、「[メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)」を参照してください。  
+- 詳細については、「 [メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)」を参照してください。  
   
   
 #### <a name="plan-your-memory-optimized-tables-and-indexes"></a>メモリ最適化テーブルとインデックスの計画  
@@ -414,30 +414,25 @@ EXECUTE によるネイティブ コンパイル ストアド プロシージャ
 - [アプリケーション レベルのパーティション分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### <a name="trade-offs-of-native-procs"></a>ネイティブ プロシージャのトレードオフ  
   
-  
 - ネイティブ コンパイル ストアド プロシージャは、ディスク ベース テーブルにアクセスできません。 ネイティブ プロシージャは、メモリ最適化テーブルにのみアクセスできます。  
 - サーバーまたはデータベースがオンラインに戻った後、初めてネイティブ プロシージャを実行するときは、そのネイティブ プロシージャを一度再コンパイルする必要があります。 そのため、ネイティブ プロシージャが実行するまでに遅延が発生します。  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## <a name="advanced-considerations-for-memory-optimized-tables"></a>メモリ最適化テーブルに関する高度な考慮事項  
   
-  
-[メモリ最適化テーブルのインデックス](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) は、従来のディスク上のテーブルのインデックスとはいくつかの点が異なります。  
-  
-- [ハッシュ インデックス](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) は、メモリ最適化テーブルでのみ使用できます。  
-  
+[メモリ最適化テーブルのインデックス](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) は、従来のディスク上のテーブルのインデックスとはいくつかの点が異なります。 ハッシュ インデックスは、メモリ最適化テーブルでのみ使用できます。
+    
+- [メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [メモリ最適化テーブル用の非クラスター化インデックス](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 計画したメモリ最適化テーブルとインデックスのための十分なアクティブ メモリがあることを確認する必要があります。 次のチュートリアルを参照してください。  
   
 - [メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 メモリ最適化テーブルは DURABILITY = SCHEMA_ONLY で宣言できます。  
   
@@ -445,17 +440,13 @@ EXECUTE によるネイティブ コンパイル ストアド プロシージャ
 - データベースがオンラインに復帰すると、メモリ最適化テーブルがアクティブ メモリに読み込まれ、データは空になります。  
 - 数千の行が含まれている場合は、tempdb の [#temporary テーブルよりも](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) SCHEMA_ONLY テーブルの方が適していることがあります。  
   
-  
 テーブル変数をメモリ最適化として宣言することもできます。 次のチュートリアルを参照してください。  
   
 - [メモリ最適化を使用した一時テーブルとテーブル変数の高速化](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## <a name="advanced-considerations-for-natively-compiled-modules"></a>ネイティブ コンパイル モジュールに関する高度な考慮事項  
-  
   
 Transact-SQL で使用可能なネイティブ コンパイル モジュールの種類:  
   
@@ -465,7 +456,6 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
   - メモリ最適化テーブルでは、ネイティブ コンパイル トリガーのみが許可されます。  
 - ネイティブ コンパイル [テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 ネイティブ コンパイルのユーザー定義関数 (UDF) は、解釈された UDF よりも高速で実行されます。 UDF に関するいくつかの考慮事項を以下に示します。  
   
@@ -477,15 +467,13 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
 ネイティブ UDF のパフォーマンスに関するテスト データと説明については、以下を参照してください。  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [Gail Shaw によるブログ記事](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)(2016 年 1 月投稿)。  
-  
+  - 2016 年 1 月、Gail Shaw 氏によるブログ投稿「[Natively Compiled User Defined Functions](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)」 (ネイティブ コンパイル ユーザー定義関数)。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## <a name="documentation-guide-for-memory-optimized-tables"></a>メモリ最適化テーブルのドキュメント ガイド  
   
-  
-メモリ最適化テーブルの特別な考慮事項について説明するその他の資料へのリンクを示します。  
+メモリ最適化テーブルの特別な考慮事項について説明した以下の記事も参照してください。  
   
 - [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
@@ -498,9 +486,7 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
 - [Transact-SQL によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - メモリ最適化テーブルとネイティブ プロシージャでの T-SQL とデータ型のサポート状況を示します。  
 - [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)(メモリ最適化テーブルを持つデータベースのリソース プールへのバインド) - オプションの高度な考慮事項について説明しています。  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>ネイティブ プロシージャのドキュメント ガイド  
@@ -514,8 +500,7 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
 ## <a name="related-links"></a>関連リンク  
   
 - 最初の記事: [インメモリ OLTP (インメモリ最適化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+    
 インメモリ OLTP を使用して実現できるパフォーマンスの向上を実証するためのコードを提供する記事は以下のとおりです。  
   
 - 「[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 」には、大幅なパフォーマンス向上が望める小規模なデモが用意されています。  

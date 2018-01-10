@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae9b5358621f27a8a7f90ae60e63b23c75421bc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>データ処理拡張機能を実装する準備
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 インターフェイスのセット全体にわたって拡張機能固有の実装を行うことができます。<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスや <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> インターフェイスなど、サブセットだけを実装することもできます。このようなインターフェイスでは、クライアントが **DataReader** オブジェクトとして主に結果セットと対話し、[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能を結果セットとデータ ソース間のブリッジとして使用します。  
@@ -75,17 +73,17 @@ ms.lasthandoff: 12/05/2017
   
 |インターフェイス|Description|実装|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|データソースとの一意のセッションを表します。 クライアント/サーバー データベース システムの場合は、セッションがサーバーとのネットワーク接続と同じことがあります。|必須|  
+|IDbConnection|データソースとの一意のセッションを表します。 クライアント/サーバー データベース システムの場合は、セッションがサーバーとのネットワーク接続と同じことがあります。|Required|  
 |IDbConnectionExtension|[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能によって実装できる、セキュリティと承認に関する追加の接続プロパティを表します。|省略可|  
-|IDbTransaction|ローカル トランザクションを表します。|必須|  
+|IDbTransaction|ローカル トランザクションを表します。|Required|  
 |IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] データ処理拡張機能によって実装できる追加のトランザクション プロパティを表します。|省略可|  
-|IDbCommand|データ ソースと接続するときに使用するクエリまたはコマンドを表します。|必須|  
+|IDbCommand|データ ソースと接続するときに使用するクエリまたはコマンドを表します。|Required|  
 |IDbCommandAnalysis|クエリを分析し、クエリで使用されるパラメーター名の一覧を返す追加コマンド情報を表します。|省略可|  
-|IDataParameter|コマンドまたはクエリに渡すパラメーターまたは名前と値のペアを表します。|必須|  
-|IDataParameterCollection|コマンドまたはクエリに関連するすべてのパラメーターのコレクションを表します。|必須|  
-|IDataReader|データ ソースから順方向専用、読み取り専用のデータのストリームを読み取るメソッドを提供します。|必須|  
+|IDataParameter|コマンドまたはクエリに渡すパラメーターまたは名前と値のペアを表します。|Required|  
+|IDataParameterCollection|コマンドまたはクエリに関連するすべてのパラメーターのコレクションを表します。|Required|  
+|IDataReader|データ ソースから順方向専用、読み取り専用のデータのストリームを読み取るメソッドを提供します。|Required|  
 |IDataReaderExtension|データ ソースでコマンドを実行することによって取得された、順方向専用の結果セットのストリームを 1 つ以上読み取るメソッドを提供します。 このインターフェイスは、フィールド集計の追加サポートを提供します。|省略可|  
-|IExtension|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能の基本クラスです。 ローカライズされた拡張機能名を追加し、構成ファイルから拡張機能へ構成設定を渡すインプリメンタも有効にします。|必須|  
+|IExtension|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能の基本クラスです。 ローカライズされた拡張機能名を追加し、構成ファイルから拡張機能へ構成設定を渡すインプリメンタも有効にします。|Required|  
   
  データ処理拡張機能インターフェイスは、可能な場合は [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダーのインターフェイス、メソッド、およびプロパティのサブセットと同じです。 完全な [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダーの実装の詳細については、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) ドキュメントの「.NET Framework データ プロバイダーの実装」を参照してください。  
   

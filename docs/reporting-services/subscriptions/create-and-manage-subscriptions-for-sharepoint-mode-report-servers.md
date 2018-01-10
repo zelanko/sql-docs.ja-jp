@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1679abc5cdec550cd1c81208e71532613996e2cd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -165,7 +163,7 @@ ms.lasthandoff: 12/05/2017
 3.  削除するサブスクリプションの横にあるチェック ボックスをオンにし、 **[削除]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [サブスクリプションと配信 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services でのファイル共有の配信](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services での SharePoint ライブラリへの配信](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   

@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key (プレビュー) サポートによる Transparent Data Encryption
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-[Transparent Data Encryption (TDE)](transparent-data-encryption.md) のための Bring Your Own Key (BYOK) サポートを利用すると、TDE 暗号化キーを管理できるようになり、キーにアクセスできるユーザーと時期を制限することができます。 Azure のクラウド ベースの外部キー管理システムである [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) は、TDE により BYOK のサポートが統合された最初のキー管理サービスです。 BYOK がサポートされていると、データベース暗号化キーは Key Vault に格納されている非対称キーによって保護されます。 非対称キーはサーバー レベルで設定され、そのサーバーに存在するすべてのデータベースによって継承されます。 
+[Transparent Data Encryption (TDE)](transparent-data-encryption.md) のための Bring Your Own Key (BYOK) サポートを利用すると、TDE 暗号化キーを管理できるようになり、キーにアクセスできるユーザーと時期を制限することができます。 Azure のクラウド ベースの外部キー管理システムである [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) は、TDE により BYOK のサポートが統合された最初のキー管理サービスです。 BYOK がサポートされていると、データベース暗号化キーは Key Vault に格納されている非対称キーによって保護されます。 非対称キーはサーバー レベルで設定され、そのサーバーに存在するすべてのデータベースによって継承されます。 現在のところ、この機能はプレビューであり、一般公開が宣言されるまでは実稼働ワークロードでの使用をお勧めしません。
 
 BYOK のサポートにより、ユーザーは、キーのローテーション、キー コンテナーのアクセス許可、キーの削除、すべての暗号化キーの監査/レポートの有効化など、キー管理タスクを制御できるようになります。 Key Vault は、キーの集中管理機能を提供し、厳重に監視されたハードウェア セキュリティ モジュール (HSM) を利用して、キー管理とデータ管理の間で役割の分離を可能にすることにより規制のコンプライアンス対応を実現します。 
 
@@ -57,6 +60,7 @@ BYOK による TDE を使うと、新しいキー管理タスクが発生する�
 アプリケーションのリソースの暗号化キー管理を引き受けることは、重要な責任です。 Key Vault を利用して BYOK による TDE を使うときは、以下のキー管理タスクが想定されます。
 - **キーのローテーション**: TDE プロテクターは、社内のポリシーやコンプライアンスの要件に従って、ローテーションする必要があります。 キーのローテーションは、TDE プロテクターの Key Vault を通して行うことができます。  
 - **Key Vault のアクセス許可**: Key Vault 内のアクセス許可は、Key Vault とサーバー レベルでプロビジョニングされます。 Key Vault に対するサーバーのアクセス許可は、Key Vault のアクセス ポリシーを使っていつでも取り消すことができます。
+- **Key Vault の冗長性**: キー マテリアルは Azure Key Vault から決して離れず、Key Vault の外では、キャッシュされているコピーにサーバーはアクセスできないため、Azure Key Vault リージョンの 1 つで停電が発生した場合でもキー マテリアルにアクセスできるように、Azure Key Vault geo レプリケーションを構成する必要があります。  geo レプリケーションされたデータベースは、1 つの Azure Key Vault に依存している場合、キー マテリアルへのアクセスを失いません。
 - **キーの削除**: 安全性強化とコンプライアンス要件への対応のため、Key Vault と SQL Server からキーを削除することができます。
 - **すべての暗号化キーの監査/レポート**: Key Vault が提供するログは、他のセキュリティ情報ツールやイベント管理 (SIEM) ツールに簡単に取り込むことができます。 Operations Management Suite (OMS) の [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) は、既に統合されているサービスの 1 つの例です。
 
@@ -91,12 +95,11 @@ SQL Database または Data Warehouse に固有の TDE プロテクターはサ�
 
 ### <a name="high-availability-and-disaster-recovery"></a>高可用性とディザスター リカバリー
   
-Key Vault を使用してサーバー用の geo レプリケーションを構成する方法には、次の 2 とおりがあります。 
+Azure Key Vault のキー マテリアルの高可用性を維持するには、Key Vault に対して geo レプリケーションを構成する必要があります。
 
-- **個別の Key Vault**: 各サーバーが個別の Key Vault にアクセスします (理想的には、それぞれ独自の Azure リージョン内)。 これは、暗号化されて geo レプリケートされたデータベース用の TDE プロテクターの独自のコピーが各サーバーにあるので、推奨される構成です。 いずれかのサーバーの Azure リージョンがオフラインになった場合でも、他のサーバーは geo レプリケートされたデータベースに引き続きアクセスできます。   
+- **冗長的 Key Vault**: geo レプリケーションされたサーバーごとに、個別の Key Vault へのアクセスを与えます。同じ Azure リージョンに配置するのが理想的です。 これは、暗号化されて geo レプリケートされたデータベース用の TDE プロテクターの独自のコピーが各サーバーにあるので、推奨される構成です。 いずれかのサーバーの Azure リージョンがオフラインになった場合でも、他のサーバーは geo レプリケートされたデータベースに引き続きアクセスできます。  1 つの Key Vault が利用不可能になったとき、サーバーが他の Key Vault の TDE プロテクターのバックアップにアクセスできるように、これは慎重に構成する必要があります。     
 
-- **共有 Key Vault**: すべてのサーバーが同じ Key Vault を共有します。 この構成はセットアップは簡単ですが、Key Vault のある Azure リージョンがオフラインになると、すべてのサーバーが、暗号化されて geo レプリケートされたデータベースまたは独自の暗号化されたデータベースを読み取ることができなくなります。 
- 
+
 最初に、[Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) コマンドレットを使って、各サーバーの Key Vault キーを geo レプリケーション リンク内の他のサーバーに追加します。  
 (Key Vault の KeyId の例: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
 

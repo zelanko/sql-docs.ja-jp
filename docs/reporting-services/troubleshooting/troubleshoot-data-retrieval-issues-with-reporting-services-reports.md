@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 caps.latest.revision: "4"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae2ec9a548d851f8494d144401e043547d68e4b8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e58fa865cfa0465e6256bda88819ad2a73253cc4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services レポートのデータ取得に関する問題のトラブルシューティング
 レポート処理の最初の手順は、データセット クエリを実行して各データセットのレポート データを取得することです。 レポートをローカルでプレビューする場合は、データ ソースの接続と資格情報で十分な権限を使用して、コンピューターにデータを取得する必要があります。 レポートをレポート サーバーで実行する場合は、データ ソースの接続と資格情報で十分な権限を使用して、レポート サーバーでデータを取得する必要があります。 このトピックでは、レポート データの取得に関する問題のトラブルシューティングを行います。   

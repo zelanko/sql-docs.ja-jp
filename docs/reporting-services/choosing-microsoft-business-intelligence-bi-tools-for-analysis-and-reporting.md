@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7ef1064afe9efed32630e411d234d358aaa27d10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fca144fd34a3b0e506ab19daba46c16b3760a0e8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>分析用とレポート用の Microsoft Business Intelligence (BI) ツールの選択
 適切なビジネス インテリジェンス ツールを選択することは困難な場合があります。 さまざまな Microsoft 製品を確認し、ニーズに最も合う製品を見つけてください。
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
   
 |ワークロード|ユーザー|||BI ツール|||  
 |---------------|----------|-|-|--------------|-|-|  
-|||Excel|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
+|||[エクスポート]|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**セルフサービス BI**|アナリスト/エンド ユーザー||||||  
 |パブリック データと企業データの検出とアクセスの簡素化||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure データ カタログ](https://azure.microsoft.com/services/data-catalog/)||  
 |強力なデータ モデルの作成||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  

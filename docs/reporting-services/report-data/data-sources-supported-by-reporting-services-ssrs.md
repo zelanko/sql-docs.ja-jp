@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 caps.latest.revision: "96"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96b080d0244783a3af13c8bbe4a7f1587cb10f18
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29c605b8a41fefd8d4cdc1bebe3131823aa6ca20
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="DataSourcesTable"></a> データ ソースの種類  
   
-|レポート データの<br /><br /> ソース|Reporting Services データ ソースの種類|データ処理拡張機能/データ プロバイダーの名前|基になるデータ プロバイダーのバージョン<br /><br /> (オプション)|データ<br /><br /> ソース<br /><br /> プラットフォーム x86|データ<br /><br /> ソース<br /><br /> プラットフォーム x64|データ ソースのバージョン|RS<br /><br /> プラットフォーム x86|RS<br /><br /> プラットフォーム x64|  
+|レポート データの<br /><br /> ソース|Reporting Services データ ソースの種類|データ処理拡張機能/データ プロバイダーの名前|基になるデータ プロバイダーのバージョン<br /><br /> (オプション)|data<br /><br /> Source<br /><br /> プラットフォーム x86|データ<br /><br /> Source<br /><br /> プラットフォーム x64|データ ソースのバージョン|RS<br /><br /> プラットフォーム x86|RS<br /><br /> プラットフォーム x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|[Microsoft SQL Server](#MicrosoftSQLServer)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|Y|Y|SQL Server 2008 以降。|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OledbClient を拡張|Y|Y|SQL Server 2008 以降。|Y|Y|  

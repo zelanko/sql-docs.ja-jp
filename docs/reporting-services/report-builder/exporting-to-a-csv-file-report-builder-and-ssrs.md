@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a41d99b7087463d5583e9cbb194175118dcab583
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ff683e7c226812f8e5045464ea7f226dabb2fee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り値) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でページ分割されたレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 -   線  
   
--   [イメージ]  
+-   image  
   
 -   四角形  
   
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 |アイテム|表示動作|  
 |----------|------------------------|  
 |テキスト ボックス|テキスト ボックスの内容を表示します。 既定のモードでは、アイテムは、そのアイテムの書式設定プロパティに基づいて書式が設定されます。 準拠モードでは、デバイス情報設定によって書式を変更できます。 CSV 表示モードの詳細については、以下の説明を参照してください。|  
-|Table|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
+|テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
 |マトリックス|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
 |一覧|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
 |サブレポート|親アイテムは、コンテンツのインスタンスごとに繰り返し表示されます。|  

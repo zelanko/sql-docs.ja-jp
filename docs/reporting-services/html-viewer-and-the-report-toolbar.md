@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/05/2017
 |CSV|コンマ区切り形式でレポートを表示します。 レポートは、CSV ファイル形式に関連付けられているアプリケーションで開きます。|  
 |PDF|クライアント側の PDF ビューアーを使用して、レポートを表示します。 この形式を使用するには、サード パーティの PDF ビューアー (たとえば、Adobe Acrobat Reader) が必要です。|  
 |MHTML|イメージおよびリンクされたコンテンツをレポートに保持する、MIME エンコード HTML 形式でレポートを表示します。|  
-|Excel|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel でレポートを表示します (.xlsx ファイル)。|  
+|[エクスポート]|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel でレポートを表示します (.xlsx ファイル)。|  
 |PowerPoint|[!INCLUDE[msCoName](../includes/msconame-md.md)] PowerPoint でレポートを表示します (.pptx ファイル)。|  
 |TIFF ファイル|標準の TIFF ビューアーでレポートを表示します。 一部の [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows クライアントでは、これは Windows 画像と FAX ビューアーです。 印刷ページのレイアウトでレポートを表示するには、この形式を選択します。|  
 |Word|[!INCLUDE[msCoName](../includes/msconame-md.md)] Word でレポートを表示します (.docx ファイル)。|  

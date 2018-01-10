@@ -22,11 +22,11 @@ caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 198d9e8f67003e23a6c94094b7e559249a2d3fad
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 
 可用性グループが分散トランザクション用に構成されていない場合であっても、[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] は可用性グループ内のデータベースに対する分散トランザクションを妨げません。 ただし、可用性グループが分散トランザクション対応に構成されていない場合は、一部の状況でフェールオーバーが失敗する可能性があります。 具体的には、新しいプライマリ レプリカの [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] インスタンスが、DTC からトランザクションの結果を取得できない場合があります。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] インスタンスがフェールオーバー後に DTC から未確定トランザクションの結果を取得できるようにするには、可用性グループを分散トランザクション対応に構成します。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 分散トランザクションをサポートするように可用性グループを構成するには、次の前提条件が満たされている必要があります。
 
@@ -86,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 未確定トランザクションの解決について詳しくは、「[トランザクションを手動で解決する](http://technet.microsoft.com/library/cc754134.aspx)」をご覧ください。
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 
 [分散トランザクション](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddd945cd1ccd0ce85082c9d4a2a4d05a6eac626c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c73f9685bd5f340376d95191730fecaf7e54dbf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションの管理
 
@@ -148,7 +146,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
 
-### <a name="options"></a>オプション
+### <a name="options"></a>および
 
  **[実行アカウントの指定]**  
  アカウントを指定します。  
@@ -166,7 +164,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  
 
-### <a name="options"></a>オプション
+### <a name="options"></a>および
 
  **[SMTP サーバーの使用]**  
  レポート サーバー電子メールが SMTP サーバーによってルーティングされるように指定します。  

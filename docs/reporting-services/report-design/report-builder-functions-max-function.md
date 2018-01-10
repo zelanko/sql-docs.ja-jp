@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5a5278f2136dec089f71f57d4065e82d6e9eb3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9d63ef94f891a6743e35c05943a06376e3cc48a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---max-function"></a>レポート ビルダー関数 - Max 関数
   指定されたスコープのコンテキストで、式で指定された NULL 以外のすべての数値の中から最大値を返します。  
@@ -51,7 +49,7 @@ Max(expression, scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  式の型によって決まります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt**、 **CDbl** 、 **CDec**などの変換関数を使用します。 詳細については、「 [データ型変換関数](http://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  

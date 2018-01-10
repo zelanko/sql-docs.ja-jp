@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6919cb9eea7da37cb3967b4e06d945a66ab6c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2645f7db1b7e65c1fea7f72ab70b79b7565bdb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---first-function"></a>レポート ビルダー関数 - First 関数
   指定された式の指定されたスコープの最初の値を返します。  
@@ -48,7 +46,7 @@ First(expression, scope)
 ## <a name="return-type"></a>戻り値の型  
  式の種類によって決まります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **First** 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最初の値を返します。  
   
  **First** 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  

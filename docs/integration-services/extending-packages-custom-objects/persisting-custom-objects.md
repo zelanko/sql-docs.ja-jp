@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27b800182751ea40ad827c77ea71c6f2815eecc7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 588af2fe968458e7dd3718f081ca4cc1524b0f9a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="persisting-custom-objects"></a>カスタム オブジェクトの永続化
   プロパティで **integer** や **string** などの単純なデータ型のみを使用している限り、カスタム オブジェクトのカスタムの永続性を実装する必要はありません。 既定の永続性の実装により、オブジェクトのメタデータがすべてのプロパティの値と共に保存されます。  

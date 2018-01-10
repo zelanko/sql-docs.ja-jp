@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 706d719a813508541f3eda5df4045937a3af4643
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 00cf7478716df5e790c54708f9b1c66a6004bdd0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>四角形またはコンテナーの追加 (レポート ビルダーおよび SSRS)
   グラフィック要素によってレポートの領域を分けたり、レポートの領域を強調したり、1 つ以上のレポート アイテムに背景を提供したりするには、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートに四角形を追加します。 また、四角形をコンテナーとして使用すると、レポートでのデータ領域のレンダリング方法を制御することもできます。 四角形の外観は、背景や罫線の色など、四角形のプロパティを編集することによりカスタマイズできます。 四角形をコンテナーとして使用する方法について詳しくは、「[四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)」および「[マトリックスとグラフでの同じデータの表示 &#40;レポート ビルダー&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)」をご覧ください。    

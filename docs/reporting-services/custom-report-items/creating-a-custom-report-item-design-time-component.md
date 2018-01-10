@@ -8,24 +8,22 @@ ms.service:
 ms.component: custom-report-items
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
 helpviewer_keywords: custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 746ca3586d58f561278eb25ad9459e6102b8b55a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 45934b9f7de755cd62f1ddc10a672c66fdf33682
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
   カスタム レポート アイテムのデザイン時コンポーネントは、Visual Studio レポート デザイナー環境で使用できるコントロールです。 カスタム レポート アイテムのデザイン時コンポーネントは、ドラッグ アンド ドロップ操作を使用できるアクティブ化されたデザイン画面、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーとの統合、およびカスタム プロパティ エディター機能を提供します。  

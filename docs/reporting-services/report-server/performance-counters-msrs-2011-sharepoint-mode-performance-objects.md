@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: af59aeaede83bad3d2b2d0acbbc7b6fd272c65cb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: acc06da22cc03530e3a7ddc05f8825eaadfd8f6a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト
   このトピックでは、 **SharePoint モード配置の一部である** MSRS 2011 Web Service SharePoint Mode **と** MSRS 2011 Windows Service SharePoint Mode [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  パフォーマンス カウンターとネイティブ モードのレポート サーバーについては、「[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)」および「[MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)」を参照してください。  
   
- このトピックの内容:  
+ このトピックの内容  
   
 -   [MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター](#bkmk_webservice)  
   

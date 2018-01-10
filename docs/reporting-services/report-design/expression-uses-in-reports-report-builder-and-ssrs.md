@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: expressions [Reporting Services], about expressions
@@ -18,13 +16,13 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c99fec659eaeffa55efee403bd336a20f9ccab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc3cfbff325d163ca9ddde120ecc17db97e91c03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**[fx]**) ボタンが表示されるダイアログ ボックスや、**[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/05/2017
 |文字列と小数点 2 桁のパーセンテージとして書式設定された数を連結します。|データ領域のテキスト ボックス内のプレースホルダーの値。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[全般]**を使用します。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
 ## <a name="see-also"></a>参照  
- [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   

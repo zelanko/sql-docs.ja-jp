@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: SetSecureConnectionLevel method
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 caps.latest.revision: "21"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4bd99314d2b3e62585c2a9bad53c39ffa01ef16c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3278c7f0ff788ca99fb10adcac0266545a3931d1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting メソッド - SetSecureConnectionLevel
   レポート サーバーのセキュリティで保護された接続レベルを設定します。  
@@ -54,7 +52,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドを呼び出すと、レポート サーバーの SecureConnectionLevel プロパティ値が指定した値に設定されます。 値 0 は、SSL がオフであることを示します。 1 以上の値は、SSL がオンであることを示します。  
   
 -   値を設定すると、レポート サーバー構成ファイルの SecureConnectionLevel 要素が変更されます。指定した **Level** が 1 以上の場合は、構成ファイルの *URLRoot* 要素が "https://" を使用するように設定されます。指定した *Level* が 0 の場合は、"http://" を使用するように設定されます。  

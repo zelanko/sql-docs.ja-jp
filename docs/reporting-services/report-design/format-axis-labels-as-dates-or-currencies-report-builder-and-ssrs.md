@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a40b9d38810a28b68cf3eff2af03148af7f52ad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4088309ae5c10316ce0ffc4e8e2ba4d74c9473ef
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>日付または通貨として軸ラベルを書式設定する (レポート ビルダーおよび SSRS)
 適切に書式設定された DateTime 値を、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート内の軸に表示すると、これらの値が日数として自動的にグラフに表示されます。 月や時間の間隔など、X 軸の日付や期間を指定するには、軸ラベルの書式を設定し、軸間隔の種類を有効な日付または期間に設定する必要があります。  

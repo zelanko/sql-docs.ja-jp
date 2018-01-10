@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c89659ad5743675a4e8503c40367eea0eabacac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a084d3bb236100728b5decab3569c37f46600f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>組み込みコレクション - ReportItems コレクションの参照 (レポート ビルダー)
   組み込みコレクション **ReportItems** は、データ領域の行などのレポート アイテムのテキスト ボックスや、レポート デザイン画面上のテキスト ボックスのセットです。 **ReportItems** コレクションには、ページ ヘッダー、ページ フッター、またはレポート本文の現在のスコープにあるテキスト ボックスが含まれています。 このコレクションは、レポート プロセッサおよびレポート レンダラーによって実行時に決定されます。 ユーザーがレポートのページを表示する際には、レポート プロセッサによってレポート データとレポート アイテムのレイアウト要素が連続的に結合されますが、これに伴って現在のスコープが変化します。 組み込みコレクション **ReportItems** を使用すると、各ページの最初のアイテムと最後のアイテムを表示する辞書形式のページ ヘッダーを作成できます。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="using-the-reportitems-value-property"></a>ReportItems の Value プロパティの使用  
  **ReportItems** コレクション内のアイテムに設定されるプロパティは、Value だけです。 **ReportItems** アイテムの値を使用すると、レポート内の別のフィールドのデータを表示または計算できます。 現在のテキスト ボックスの値にアクセスするには、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] に組み込まれたグローバルの Me.Value を使用するか、単なる Value を使用します。 First 関数や集計関数などのレポート関数では、完全修飾された構文を使用してください。  
   
- 例:  
+ 例 :  
   
 -   テキスト ボックスで次の式を使用すると、 **という名前の** ReportItem `Textbox1`テキスト ボックスの値が表示されます。  
   

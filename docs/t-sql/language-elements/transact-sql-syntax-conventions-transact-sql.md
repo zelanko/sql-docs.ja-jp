@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/18/2017
 |(& a) #124 です。(縦棒)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目を示します。 中かっこは入力しません。|  
-|[**,**...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目はコンマで区切ります。|  
-|[...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目は空白で区切ります。|  
+|[**,**...*n*]|先行する項目が繰り返せることを示します *n* 回数。 項目はコンマで区切ります。|  
+|[...*n*]|先行する項目が繰り返せることを示します *n* 回数。 項目は空白で区切ります。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータを示します。セミコロンは、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのステートメントでは必須ではありませんが、将来のバージョンでは必須となる予定です。|  
 |\<ラベル >:: =|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる箇所は山かっこで囲まれたラベル:\<ラベル >。<br /><br /> セットは、式のコレクションがたとえば\<セットをグループ化 >; 一覧は、セットのコレクションなどと\<複合要素一覧 >。|  
   
@@ -118,9 +118,9 @@ ms.lasthandoff: 11/18/2017
  多くのコード例は、文字で Unicode 文字列定数をプレフィックス**N**です。なし、 **N**プレフィックスは、文字列は、データベースの既定のコード ページに変換されます。 この既定のコード ページでは、一部の文字が認識されない場合があります。  
   
 ## <a name="applies-to-references"></a>"適用対象" リファレンス  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]参照に関連するトピックが含まれています[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、および[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]です。 各トピックの上部近くには、トピックのサブジェクトをサポートする製品を示すセクションがあります。 製品が省略されている場合は、トピックで説明されている機能は、その製品では使用できません。 たとえば、可用性グループで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。 **可用性グループの作成**トピックに適用されることを示します**SQL Server (SQL Server 2012 ~ 現行バージョン)**には適用されないため[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]リファレンスに関連する記事の内容は[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、および[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]です。 各記事の上部にある、記事の主題をサポートする製品を示すセクションです。 製品を省略すると、この記事で説明されている機能はその製品で使用できません。 たとえば、可用性グループで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。 **CREATE AVAILABILITY GROUP**記事に適用されることを示します**SQL Server (SQL Server 2012 ~ 現行バージョン)**には適用されないため[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- 場合によっては、トピックの一般的なサブジェクトは製品に使用できますが、すべての引数はサポートされていません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER**ステートメントは、いずれかで使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品、ただし、 **WITH PASSWORD**構文は、以前のバージョンでは使用できません。 この場合、追加で**対象**セクションのトピックの本文に適切な引数の説明に挿入されます。  
+ 場合によっては、アーティクルの一般的な主題は製品で使用できますが、すべての引数はサポートされていません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER**ステートメントは、いずれかで使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品、ただし、 **WITH PASSWORD**構文は、以前のバージョンでは使用できません。 この場合、追加で**対象**セクションの記事の本文に適切な引数の説明に挿入されます。  
   
 ## <a name="see-also"></a>参照  
  [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)  

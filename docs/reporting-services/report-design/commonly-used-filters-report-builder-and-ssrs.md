@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,13 +20,13 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5c79a0e5645cb3cd462e24f3981adcf7d95b112
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc8f2253699c71300ba234dfc24f7ee9c3193540
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>一般的に使用されるフィルター (レポート ビルダーおよび SSRS)
   フィルターを作成するには、1 つ以上のフィルター式を指定する必要があります。 フィルター式には、式、データ型、演算子、および値が含まれます。 ここでは、一般的に使用されるフィルターの例を示します。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="filter-examples"></a>フィルターの例  
  次の表は、さまざまなデータ型と演算子を使用するフィルター式の例を示します。 比較のスコープは、フィルターが定義されたレポート アイテムによって決まります。 たとえば、データセットに定義されたフィルターの場合、 **[上位 10%]** はデータセットの値の上位 10% になります。グループに定義されたフィルターの場合、 **[上位 10%]** はグループの値の上位 10% になります。  
   
-|単純式|データ型|演算子|値|Description|  
+|単純式|データ型|演算子|ReplTest1|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|7 より大きいデータ値が含まれます。|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|上位 10 データ値が含まれます。|  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="examples-with-report-parameters"></a>レポート パラメーターの例  
  次の表は、単一値か複数値のパラメーター参照を含むフィルター式の例を示します。  
   
-|パラメーターの型|(フィルター) 式|演算子|値|データ型|  
+|パラメーターの型|(フィルター) 式|演算子|ReplTest1|データ型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |単一値|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |MultiValue|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  

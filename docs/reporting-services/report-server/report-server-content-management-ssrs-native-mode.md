@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 21bafd5c07350c38ee14f7de27aaeab265f22e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f40de7d519da0def4ad65cf5f1d96a592489b5a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 以降では、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用できます。 この記事では、レポート マネージャーと新しい Web ポータルのエクスペリエンスを取り上げます。  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
   
  レポート サーバー フォルダーには次のアイテムを含めることができます。  
   
--   レポート  
+-   [レポート]  
   
 -   共有データ ソース  
   

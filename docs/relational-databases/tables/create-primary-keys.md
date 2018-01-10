@@ -18,34 +18,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 388ea24b3ae23533db81025287d41ccdce10efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 42c1a7168ee509cf343f0ca6cc2ab54b0a468c07
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-primary-keys"></a>主キーの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[主キーの作成](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx)」を参照してください。
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して主キーを定義できます。 主キーを作成すると、対応する一意なクラスター化または非クラスター化インデックスが自動的に作成されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して主キーを定義できます。 主キーを作成すると、指定に従って対応する一意なクラスター化または非クラスター化インデックスが自動的に作成されます。  
   
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [セキュリティ](#Security)  
-  
--   **主キーを変更する方法:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  主キーが設定された、新しいテーブルを作成するには、データベースの CREATE TABLE 権限と、テーブルを作成するスキーマの ALTER 権限が必要です。  
   
  既存のテーブルに主キーを作成するには、テーブルに対する ALTER 権限が必要です。  
@@ -80,8 +66,8 @@ ms.lasthandoff: 11/17/2017
  複合キーを定義する場合は、主キーの列の順序が、テーブルに表示される列の順序と同じになります。 ただし、主キー作成後に列の順序を変更することもできます。 詳細については、「 [主キーの変更](../../relational-databases/tables/modify-primary-keys.md)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
-  
-#### <a name="to-create-a-primary-key-in-an-existing-table"></a>既存のテーブルに主キーを作成するには  
+
+### <a name="to-create-a-primary-key-in-an-existing-table"></a>既存のテーブルに主キーを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -89,35 +75,58 @@ ms.lasthandoff: 11/17/2017
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 `TransactionID`列で主キーを作成します。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER TABLE Production.TransactionHistoryArchive   
     ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID);  
     GO  
-  
     ```  
   
-#### <a name="to-create-a-primary-key-in-a-new-table"></a>新しいテーブルに主キーを作成するには  
+### <a name="to-create-a-primary-key-in-a-new-table"></a>新しいテーブルに主キーを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、テーブルを作成して `TransactionID` 列に主キーを定義します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、テーブルを作成して `TransactionID`列に主キーを定義します。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
-       TransactionID int NOT NULL,  
+       TransactionID int IDENTITY (1,1) NOT NULL,  
        CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)  
     );  
     GO  
-  
     ```  
+
+### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>新しいテーブルに非クラスター化インデックスの主キーを作成するには  
   
-     詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」、および「[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)」を参照してください。  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-###  <a name="TsqlExample"></a>  
+2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、テーブルを作成して `CustomerID` 列に主キーを、`TransactionID` にクラスター化インデックスを定義します。  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+    CREATE TABLE Production.TransactionHistoryArchive1  
+    (  
+       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
+       TransactionID int IDENTITY (1,1) NOT NULL,  
+       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)  
+    );  
+    GO  
+
+    -- Now add the clustered index
+    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
+    GO
+    ```  
+
+## <a name="see-also"></a>参照    
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
+[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)    

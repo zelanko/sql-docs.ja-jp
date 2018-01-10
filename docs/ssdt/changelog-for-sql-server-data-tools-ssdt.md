@@ -1,9 +1,9 @@
 ---
 title: "SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 12/22/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,16 +17,102 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b6fbdbf9d53273abe660ca6d16ba2afb51fa26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT for Visual Studio 2017 (15.5.1)
+ビルド番号: 14.0.16148.0
+  
+### <a name="whats-new"></a>新機能
+
+Visual Studio 2017 (15.5.1) はバージョン 15.5.0 と同じリリースですが、インストーラーの次のバグが修正されています。
+
+1.  SQL Server Integration Services のインストールの後処理でインストーラーがハングする問題を修正しました。
+2.  セットアップに失敗し、"The requested metafile operation is not support (0x800707D3)" (要求されたメタファイル操作はサポートされていません) というエラー メッセージが表示される問題を修正しました。
+
+以上の 2 つのバグ修正に加え、15.5.0 の次の詳細が 15.5.1 にも当てはまります。
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT for Visual Studio 2017 (15.5.0)
+ビルド番号: 14.0.16146.0
+  
+### <a name="whats-new"></a>新機能
+
+SSDT for Visual Studio 2017 (15.5.0) がプレビューから一般公開 (GA) になりました。
+
+**インストーラー**
+1. セットアップ UI がローカライズされました。
+1. アイコンが品質の良いものに変わりました。
+
+**Integration Services (IS)**
+1. ADF で Azure SSIS IR にデプロイするときのデプロイ ウィザードにパッケージ検証手順が追加されました。Azure SSIS IR で実行する SSIS パッケージの互換性問題を検出します。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](..\integration-services\lift-shift\ssis-azure-validate-packages.md)」を参照してください。
+1. SSIS 拡張機能がローカライズされました。
+
+### <a name="bug-fixes"></a>バグの修正
+
+**Integration Services (IS)**
+1. OLEDB と ADO.NET の接続マネージャーのレイアウトが壊れる問題を修正しました。
+2. ディメンション処理タスクを編集しようとすると、アセンブリが見つからないエラーが表示される問題を修正しました。
+
+### <a name="known-issues"></a>既知の問題
+
+ExecuteOutOfProcess が True に設定されていると、**Integration Services (IS)** SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 for Visual Studio 2015
+ビルド番号: 14.0.61712.050
+
+### <a name="whats-new"></a>新機能
+
+**Analysis Services (AS) プロジェクト**
+- 表形式プロジェクトに新しいオプションを 3 つ追加しました ([オプション]、[Analysis Services 表形式]、[データ インポート] の下):
+  - レガシ データ ソースを有効にする - ユーザーは最新の互換性モードで以前の "1200 互換性モード" データ ソースを作成できます。
+  - 型の自動検出 - 有効にすると、最新のデータ ソースのクエリ エディターは、非構造化クエリが読み込まれるとデータ型の検出を試行します。 検出に成功した場合、新しい手順がクエリに追加されることがあります。
+  - バックグラウンド分析の実行 - 有効にすると、最新のデータ ソースのクエリ エディターは、クエリの出力スキーマを分析する目的で、クエリが読み込まれるとデータ ソースに対してクエリを実行します。
+
+**Integration Services (IS)**
+- ADF で Azure SSIS IR にデプロイするときのデプロイ ウィザードにパッケージ検証手順が追加されました。Azure SSIS IR で実行する SSIS パッケージの互換性問題を検出します。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](..\integration-services\lift-shift\ssis-azure-validate-packages.md)」を参照してください。
+
+
+### <a name="bug-fixes"></a>バグの修正
+
+**Analysis Services (AS) プロジェクト:**
+- TFS のモデル変更を確認するとき、ハンドルされていない例外を引き起こす可能性がある問題を修正しました。
+- 複雑な M 式の表を 1400 モデルに追加するとき、例外を引き起こす可能性がある問題を修正しました。
+- モデル ダイアグラム ビューでメタデータを検索するとき、Visual Studio でクラッシュを引き起こす可能性がある問題を修正しました。
+- パーティション M クエリの変更を保存すると、計算済みの列を表の定義から削除することがあるという、1400 モデルの問題を修正しました。
+- データの取得/テーブル エディター UI で 1400 モデルに [クエリ名の変更] を使用するとき、現在のデータ モデルとの互換性の検証中にフリーズする可能性がある問題を修正しました。
+- Azure Analysis Service に 1400 モデルをデプロイするとき、Newtonsoft アセンブリ参照がなくなる問題を修正しました。
+- 特定の状況で、1400 モデルに PQ 経由でデータをインポートするときにエラーを引き起こした問題を修正しました。
+- Windows スケーリングを設定したときに表示される PowerQuery ユーザー インターフェイス ダイアログのスケーリング問題を修正しました。
+- 名前変更ロールの問題を修正しました。
+- 特定の状況で変更を適切に保存/同期しないという、プロジェクト構成の問題を修正しました。
+- "型の変更" 手順を自動的に追加するという、PowerQuery の問題を修正しました。
+- 統合ワークスペース モードに、または統合ワークスペース モードから切り替えた後、BIM ファイルを開けなくなる問題を修正しました。
+- MaxConnections プロパティが表形式モデルのデータ ソースに表示されるようになりました。
+- PowerQuery エディター ウィンドウの初期サイズを大きくしました。
+- PowerQuery エディターで、"Source" など、M クエリ キーワードがローカライズされました。
+- 編集する表ごとに同じ資格情報を入力しなくても済むように、1400 モデルと構造化データ ソースを使用するとき、資格情報をキャッシュします。
+
+**RS プロジェクト:**
+- マルチ レポート プロジェクトでシングル レポートをデプロイできない問題を修正しました。
+- デプロイで問題を引き起こした可能性がある共有データ ソースの問題を修正しました。
+- コード ビュー、デザイン ビュー、クエリ エディター ウィンドウを切り替えたときに元に戻すマネージャーをクラッシュさせた問題を修正しました。
+- ランタイム エラー後、パラメーター ウィンドウが消える原因となった可能性がある問題を修正しました。
+- ソース管理マッピングを失わせる可能性があった、レポート プロジェクトの問題を修正しました。
+
+**Integration Services:**
+- Analysis Services プロセス タスクで接続を切り替えるときに発生した可能性がある問題を修正しました。
+- 一部のタスク/コンポーネントが正しくローカライズされていない問題を修正しました。
+- \__$command\_id 列を追加する CDC に SQL 修正を適用した後、CDC コンポーネントが壊れる問題を修正しました。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT for Visual Studio 2017 (15.4.0 プレビュー)
@@ -271,7 +357,7 @@ ms.lasthandoff: 12/05/2017
         - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。  たとえば、HTTPS から HTTP URI へのリダイレクト)  
         - エラー値を null として返します (既定値は false です。true にすると、セル レベルのエラーが null として返されます。 false の場合、セルにエラーが含まれると例外が発生します)  
     - PowerQuery を使う追加データ ソース (ファイル データ ソース)
-        - Excel 
+        - [エクスポート] 
         - テキスト/CSV 
         - Xml 
         - Json 

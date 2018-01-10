@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>レポート サーバー上のアイテムの URL の例 - SharePoint モード
   レポートおよび関連アイテムを SharePoint ライブラリにパブリッシュするには、レポート デザイナーなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作成ツールを使用してコンテンツをパブリッシュするか、SharePoint サイトのアクションを使用してコンテンツをアップロードします。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  レポート サーバー コンテンツへのアクセスおよびセキュリティ保護には、次に示す Web 階層の要素を使用します。 リストやページなどのオブジェクトは、レポート サーバーのコンテンツへのアクセスに使用されないため、この表では説明しません。  
   
-|オブジェクト|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには `http:*//servername*` などの URL を指定します。複数のサイトを指定することもできます。|  
 |Site|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  

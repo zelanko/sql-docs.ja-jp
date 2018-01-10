@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c1057911b1443b5d83777ec7a6e7fff90d73ece
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード
   パラメーター化されたレポートとは、レポートの実行時にデータのフィルター処理に使用する入力値を受け取るレポートです。 パラメーターは、レポートの作成時に定義します。 レポート定義でレポート パラメーターがどのように定義されているかによって、単一の値、複数の値、または動的な値を受け入れることができます。動的な値は、直前の選択に応じて変化します (たとえば、製品カテゴリを選択したとき、次の選択ではそのカテゴリの特定の製品を選択するなど)。 パラメーターには既定値を指定することもできます。フィルター選択したレポートを自動的に実行する場合に既定値を使用することも、既定値を別の値に置き換えることもできます。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
      期待する結果を得られない値の組み合わせを指定してしまう可能性もあります。 必要な情報が得られない場合は、作成者によるレポートの変更が必要である可能性があります。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 ### <a name="to-set-parameter-properties"></a>パラメーター プロパティを設定するには  
   

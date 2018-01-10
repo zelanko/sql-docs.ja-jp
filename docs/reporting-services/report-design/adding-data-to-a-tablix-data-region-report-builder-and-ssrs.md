@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc72748fdcb76e456c9c8155a5d91c83a1ad2483
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2bf18d57ac033120507c9c2ab5df9b98bf5cc2db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域へのデータの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、レポート データセットのデータをテーブルまたはマトリックス形式で表示するには、各データ セルで表示するデータセット フィールドの名前を指定します。 詳細データまたはグループ化されたデータを表示できます。 グループをテーブルまたはマトリックスに追加すると、グループの値およびデータの行と列が自動的に追加されます。 データの小計および合計を追加できます。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
  グループまたはデータ領域のラベルを追加するには、ラベルを作成するグループの外側に行または列を追加します。 ラベルの行および列は、合計を表示するために追加した行および列に似ています。 詳細については、「[行の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)」または「[列の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>別のレポートにある既存の Tablix データ領域の追加  
- 別のレポートからデータ領域をコピーし、新しいレポートまたは既存のレポートに貼り付けることができます。 データ領域を貼り付けた後で、データ領域が使用するデータセットが定義されており、データセット フィールドの名前およびデータ型が元のレポートと同じであることを確認する必要があります。 データセットは、異なるレポート間でコピーできません。ただし、レポートが共有データ ソースを使用している場合は、別のレポートにデータセットをすばやく複製できます。 また、データセット用にデータを取得するクエリのクエリ テキストもインポートできます。この操作によって、複数のレポート内でクエリを簡単に複製できます。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
+ 別のレポートからデータ領域をコピーし、新しいレポートまたは既存のレポートに貼り付けることができます。 データ領域を貼り付けた後で、データ領域が使用するデータセットが定義されており、データセット フィールドの名前およびデータ型が元のレポートと同じであることを確認する必要があります。 データセットは、異なるレポート間でコピーできません。ただし、レポートが共有データ ソースを使用している場合は、別のレポートにデータセットをすばやく複製できます。 また、データセット用にデータを取得するクエリのクエリ テキストもインポートできます。この操作によって、複数のレポート内でクエリを簡単に複製できます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

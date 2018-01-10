@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: "30"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e794dde4202bbd680f82a8c8cbe1f9af30711fc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 03fcc6acbfb855a42a91ef139a2ccff0d7b62ac2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-considerations-for-extensions"></a>拡張機能のセキュリティに関する考慮事項
   共通言語ランタイム (CLR) をターゲットとするすべてのアプリケーションは、CLR セキュリティ システムと対話する必要があります。 このようなアプリケーションを実行すると、CLR によってアプリケーションが自動的に評価され、権限のセットが付与されます。 アプリケーションに付与された権限に応じて、実行が継続されるかセキュリティ例外が生成されます。 特定のレポート サーバーのセキュリティ ポリシー構成ファイルのローカル セキュリティ設定とポリシーによって、アセンブリが受け取るコード権限が定義されます。  

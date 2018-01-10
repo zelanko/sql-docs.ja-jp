@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f105f34e6e5d5c06159c40c8958f097ca5b2512
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd273c3dd52eb3feb0ab4f5db30b4569744e78c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-device-information-settings"></a>HTML デバイス情報設定
 次の表は、HTML 形式で表示するデバイス情報設定を示しています。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  次の表に示す **(\*)** の付いたデバイス情報設定は非推奨になっているため、新しいアプリケーションでは使用できません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨機能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|設定|値|  
+|設定|ReplTest1|  
 |-------------|-----------|  
 |**AccessibleTablix**|スクリーン リーダー用の追加のアクセシビリティ メタデータを使用して表示するかどうかを示します。 追加のアクセシビリティ メタデータを使用すると、「Electronic and Information Technology Accessibility Standards (電子/情報技術アクセシビリティ基準)」(Section 508 (第 508 条)) の「Web-based Intranet and Internet Information and Applications (Web ベースのイントラネットとインターネットの情報およびアプリケーション)」(1194.22) で定められている次の技術標準に準拠したレポートを表示できます。<br /><br /> (g) データ テーブルの行と列のヘッダーは、識別できるようにすること。<br /><br /> (h) データ テーブルの行または列のヘッダーの論理階層が 2 階層以上になる場合は、マークアップを使用してデータ セルとヘッダー セルを関連付けること。|  
 |**ActionScript(\*)**|ドリルスルーやブックマークのクリックなどのアクション イベントが発生したときに使用する JavaScript 関数の名前を指定します。 このパラメーターを指定した場合、アクション イベントが発生すると、サーバーへのポストバックを行う代わりに、名前付き JavaScript 関数がトリガーされます。|  

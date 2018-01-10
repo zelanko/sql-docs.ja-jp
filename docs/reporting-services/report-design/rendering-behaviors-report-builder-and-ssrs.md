@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a053cd0065c28b3bbad3a46b25c68aad46bea6b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fda90a3b613306b1dcb162f55e007225eb03b181
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>レンダリングの動作 (レポート ビルダーおよび SSRS)
   選択したレンダラーによっては、レポートをレンダリングする際に、レポート本文とそのコンテンツに特定の規則が適用されます。 レポート アイテムが 1 ページにまとめられる際の方法は、次に示す要因の組み合わせによって決まります。  

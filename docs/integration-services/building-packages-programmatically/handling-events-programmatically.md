@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dadff8ac9d513c998dbe8f019e00e4fd84983344
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6eacc7562384189a9b70da5c548b929dabfb7ce4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-events-programmatically"></a>プログラムによるイベントの処理
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] のランタイムには、パッケージの検証や実行の処理前、処理中、処理後に発生する一連のイベントがあります。 これらのイベントをキャプチャするには、次の 2 つの方法があります。 1 つは、あるクラスに <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装し、このクラスをパラメーターとして、パッケージの **Execute** および **Validate** メソッドに渡す方法です。 もう 1 つは <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成する方法です。このオブジェクトには、タスクやループなど、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> に属するイベントが発生したときに実行される、他の [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクトを含めることができます。 ここでは、この 2 つの方法について説明し、その使用法をコード例で示します。  

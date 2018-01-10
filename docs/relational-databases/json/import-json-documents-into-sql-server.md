@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -17,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59b8b667a9a895b9e95388ac781ec6bb46923920
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: efb8daaa71c08e9292e7d0427e04fc0a7878f219
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -163,7 +162,7 @@ SELECT book.*
 
 この例では、OPENROWSET(BULK) はファイルの内容を読み取り、出力用に定義されたスキーマでその内容を OPENJSON 関数に渡します。 OPENJSON は、列名を使用して、JSON オブジェクト内のプロパティを対応付けます。 たとえば、`price` プロパティは `price` 列として返され、float データ型に変換されます。 結果は次のようになります。
 
-|Id|名前|price|pages_i|Author
+|Id|[オブジェクト名]|price|pages_i|Author
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 

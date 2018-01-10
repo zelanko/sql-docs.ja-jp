@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40287fab45cb2c89f3be869518c11f622ccc1c17
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5be7180ca534c697b94655199a7557070e2b319f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-variables-in-the-script-component"></a>スクリプト コンポーネントでの変数の使用
   変数には、パッケージとそのコンテナー、タスク、およびイベント ハンドラーが実行時に使用できる値が格納されます。 詳細については、「[Integration Services (SSIS) の変数](../../../integration-services/integration-services-ssis-variables.md)」を参照してください。  

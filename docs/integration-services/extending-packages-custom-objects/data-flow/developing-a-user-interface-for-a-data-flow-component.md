@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d087ffe2ecbf3cc136950fb7069f32c926582554
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
   コンポーネント開発者は、コンポーネント用のカスタム ユーザー インターフェイスを作成し、コンポーネントを編集するときに [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に表示させることができます。 カスタム ユーザー インターフェイスを実装すると、データ フロー タスクでコンポーネントが追加または削除されたとき、またはコンポーネントに関するヘルプが要求されたときに通知されます。  

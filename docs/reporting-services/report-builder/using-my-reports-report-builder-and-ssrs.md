@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b80b260f392298dd02d37d411ae910d81b420715
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b7dd0fec5e2843db1297ed79e7cc3710e393005
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>個人用レポートの使用 (レポート ビルダーおよび SSRS)
   [個人用レポート] フォルダーは、ネイティブ モードで構成されたレポート サーバーにおいて、所有しているレポートを保存したり、操作することができる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 一方、[個人用レポート] フォルダーは、ユーザーが管理する作業領域です。 個々のユーザーが独自の設定を基にレポートやフォルダーの追加や削除を行い、リンク レポートを保存することができます。  

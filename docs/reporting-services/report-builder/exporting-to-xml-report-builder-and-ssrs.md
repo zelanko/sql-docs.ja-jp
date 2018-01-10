@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 450aab8382de0a22729a65b7fe506b2db41d9fc2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d87aa313c0bec7dccfd97feaf3e1771633d773ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、改ページ調整されたレポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |**Float** (または **Decimal** と任意の整数かバイト データ型)|**xsd:float**|  
 |**Double** (または **Decimal** と任意の整数かバイト データ型)|**xsd:double**|  
 |**DateTime または DateTime Offset**|**xsd:dateTime**|  
-|**[時刻]**|**xsd:string**|  
+|**Time**|**xsd:string**|  
 |**ブール値**|**xsd:boolean**|  
 |**String**、 **Char**|**xsd:string**|  
 |その他|**xsd:string**|  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  それぞれの変数の値は次のとおりです。  
   
-|名前|値|  
+|[オブジェクト名]|ReplTest1|  
 |----------|-----------|  
 |レポート|Report.DataElementName|  
 |ReportURL|サーバー上のレポートに対する絶対 URL です。URL エンコードされます。|  

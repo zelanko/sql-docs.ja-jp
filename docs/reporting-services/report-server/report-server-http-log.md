@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7e004056a630e55ef90112c909b77ca7e801c4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
   レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|ファイル名|既定のファイル名は ReportServerService_HTTP_\<timestamp>.log です。 ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
+|[ファイル名]|既定のファイル名は ReportServerService_HTTP_\<timestamp>.log です。 ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
 |ファイルの場所|このファイルは、\Microsoft SQL Server\\*\<SQL Server Instance>*\Reporting Services\LogFiles に格納されています。|  
 |ファイル形式|このファイルは EN-US 形式です。 ASCII テキスト ファイルです。|  
 |ファイルの作成および保存|HTTP ログは、構成ファイルでログ機能を有効にし、サービスを再開した後、レポート サーバーによって HTTP 要求が処理されて初めて作成されます。 設定を構成したにもかかわらず、ログ ファイルが確認できない場合は、レポートを開くか、レポート サーバー アプリケーション (レポート マネージャーなど) を起動して、HTTP 要求を生成すると、ログ ファイルが作成されます。<br /><br /> ログ ファイルの新しいインスタンスは、各サービスが再開され、その後、HTTP 要求がレポート サーバーに送信されると作成されます。<br /><br /> 既定では、トレース ログのサイズの上限は 32 MB であり、14 日後に削除されます。|  
@@ -65,18 +63,18 @@ ms.lasthandoff: 12/05/2017
   
 |フィールド|Description|既定|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|可|  
+|HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|はい|  
 |HTTPTraceSwitches|この値は省略可能です。 指定した場合、ログ ファイルに使用するフィールドをコンマ区切り形式で構成できます。|いいえ|  
-|日付|アクティビティが発生した日付。|いいえ|  
+|date|アクティビティが発生した日付。|いいえ|  
 |[時刻]|アクティビティが発生した時刻。|いいえ|  
-|ClientIp|レポート サーバーにアクセスしているクライアントの IP アドレス。|可|  
+|ClientIp|レポート サーバーにアクセスしているクライアントの IP アドレス。|はい|  
 |UserName|レポート サーバーにアクセスしたユーザー名。|いいえ|  
 |ServerPort|接続に使用されたポート番号。|いいえ|  
-|Host|ホスト ヘッダーの内容。|いいえ|  
-|方法|クライアントから呼び出されたアクションまたは SOAP メソッド。|可|  
-|UriStem|アクセスされたリソース。|可|  
+|ホスト|ホスト ヘッダーの内容。|いいえ|  
+|方法|クライアントから呼び出されたアクションまたは SOAP メソッド。|はい|  
+|UriStem|アクセスされたリソース。|はい|  
 |UriQuery|リソースへのアクセスに使用されたクエリ。|いいえ|  
-|ProtocolStatus|HTTP 状態コード。|可|  
+|ProtocolStatus|HTTP 状態コード。|はい|  
 |BytesReceived|サーバーが受信したバイト数。|いいえ|  
 |TimeTaken|HTTP.SYS が要求データを返してから、サーバーが最後の送信を完了するまでのミリ秒単位の時間 (ネットワークの伝送時間を除く)。|いいえ|  
 |ProtocolVersion|クライアントが使用するプロトコル バージョン。|いいえ|  

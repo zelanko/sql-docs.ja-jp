@@ -8,22 +8,20 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4eb8037bfbb7f1fd3edebcd108c59fe8168ffeff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
  レポート サーバー モードの詳細については、「 [Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)」をご覧ください。  
   
- このトピックの内容:  
+ このトピックの内容  
   
 -   [レポート エクスプローラーとレポート ビューアーについて](#bkmk_aboutwebparts)  
   
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  **[レポート パス]**で、スラッシュ、フォルダーのパス、レポート名の順に指定します。 サーバー名やレポート マネージャーの仮想ディレクトリは **含めないでください** 。 たとえば、Adventure Works フォルダーにある Company Sales レポートを開くには、「 **/Adventure Works/Company Sales**」と指定します。 Products レポートがレポート サーバーのルート フォルダーの **/Products**にある別の例を次に示します。  
   
-9. **[OK]**をクリックします。  
+9. **[OK]** をクリックします。  
   
 #### <a name="add-report-explorer-and-connect-to-report-viewer"></a>レポート エクスプローラーの追加とレポート ビューアーへの接続  
   
@@ -166,7 +164,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  必要に応じて、 **[開始パス]**を設定します。 開始パスは、レポート サーバーのフォルダー階層内のフォルダーです。 既定のページをフォルダー階層の下層のフォルダーに置く場合、開始パスを指定できます。 パスは必ずスラッシュから開始します。 レポート サーバーのフォルダー階層のルート ノードを起点とし、サーバー名やレポート マネージャー仮想ディレクトリを含まない、完全なパスを指定する必要があります。 たとえば、ルート ノードの直下にある Adventure Works という名前のフォルダーを開くには、[開始パス] に「 **/Adventure Works** 」と指定します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  レポート エクスプローラーに、レポート サーバー内のレポート アイテムの一覧が表示されます。 既定では、レポートの名前をクリックすると、レポートが新しいウィンドウに表示されます。 レポート エクスプローラーとレポート ビューアーを接続し、レポート エクスプローラーでクリックしたレポートがレポート ビューアーに表示されるようにするには、以下の手順を完了します。  
   
@@ -176,4 +174,4 @@ ms.lasthandoff: 12/05/2017
   
     3.  **[レポート ビューアー]**をクリックします。  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

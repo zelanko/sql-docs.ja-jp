@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  ここでは、SQL Server 自体のアップグレードについてのみ説明します。 これには、Windows Server フェールオーバー クラスタリング (WSFC) のクラスターを含む、オペレーティング システムのアップグレードは含まれません。 フェールオーバー クラスターをホストしている Windows オペレーティング システムのアップグレードは、Windows Server 2012 R2 より前のオペレーティング システムではサポートされません。 Windows Server 2012 R2 で実行されているクラスター ノードのアップグレードについては、「 [Cluster Operating System Rolling Upgrade (クラスター オペレーティング システムのローリング アップグレード)](https://technet.microsoft.com/library/dn850430.aspx)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  作業を開始する前に、次の重要な情報を確認してください。  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 自分のバージョンの Windows オペレーティング システムと SQL Server から SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
@@ -41,7 +41,10 @@ ms.lasthandoff: 11/20/2017
 -   [データベース エンジンのアップグレード計画の策定およびテスト](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
   
 -   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]をインストールするためのソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
-  
+
+> [!NOTE]  
+>  同じ可用性グループ内における SQL Server のバージョンの混在はサポートされていません。 可用性グループを使用して新しいバージョンに移行するには、SQL Server 2016 Enterprise Edition 以降でサポートされている分散型可用性グループを使用するしかありません。
+
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>AlwaysOn 可用性グループのローリング アップグレードのベスト プラクティス  
  サーバーのアップグレード時に可用性グループのダウンタイムとデータ損失を最小限に抑えるには、次のベスト プラクティスに従ってください。  
   

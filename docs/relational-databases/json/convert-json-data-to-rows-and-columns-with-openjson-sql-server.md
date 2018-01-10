@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -21,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>OPENJSON を使用して JSON データを行と列に変換する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,12 +57,12 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**[結果]**  
+**結果**  
   
 |キー (key)|value|型|  
 |---------|-----------|----------|  
-|name|John|1|  
-|姓|Doe|1|  
+|NAME|John|@shouldalert|  
+|姓|Doe|@shouldalert|  
 |有効期間|45|2|  
 |スキル|["SQL","C#","MVC"]|4|
 
@@ -119,11 +118,11 @@ WITH (
  ) 
 ```  
   
-**[結果]**  
+**結果**  
   
-|数値|日付|Customer|Quantity|  
+|数値|date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
-|SO43659|2011-05-により、|AW29825|1|  
+|SO43659|2011-05-により、|AW29825|@shouldalert|  
 |として SO43661|2011-06-01T00:00:00|AW73565|3|  
   
 この関数は JSON 配列の要素を返し、書式設定します。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c0991804db66f94aa8216353998035043ea8225
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4660fb6aaf21c418ecf19d9ef5953015eaa36e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services でのレポートのデザインに関する問題のトラブルシューティング
 レポートのデザインに関する問題は、レポート作成アプリケーションのデザイン ビューでレポート レイアウトを作成しているときに発生することがあります。 このトピックでは、このような問題のトラブルシューティングについて説明します。   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd531049f4446df4f367907d13721f194a307e52
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンでは、ブレークポイントを使用することにより、パッケージ、タスク、およびその他の種類のコンテナーを実行中に中断できます。 ブレークポイントを使用すると、アプリケーションまたはタスクの正しい動作を妨げるエラーを確認し、修正できます。 ブレークポイントのアーキテクチャにより、クライアントは、タスクの処理を中断している間にパッケージ内のオブジェクトのランタイム値を定義された実行地点で評価できます。  

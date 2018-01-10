@@ -4,7 +4,7 @@ description: "このトピックでは、リリース ノートが含まれて�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/21/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 5b66fa7db6547bfbb9340ce5738dff064f6a48c9
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -49,8 +49,9 @@ ms.lasthandoff: 12/23/2017
 
 次の表は、SQL Server 2017 のリリース履歴を示します。
 
-| リリース | [バージョンのオプション] | リリース日 |
+| リリース | バージョン | リリース日 |
 |-----|-----|-----|
+| [CU3](#CU3) | 14.0.3015.40| 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
@@ -65,6 +66,20 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 - [フルテキスト検索のパッケージをインストールします。](sql-server-linux-setup-full-text-search.md)
 - [SQL Server エージェント パッケージをインストールします。](sql-server-linux-setup-sql-agent.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
+
+## <A id="CU2"></a>累積更新プログラム 3 (年 2018年 1 月)
+
+これは、SQL Server 2017 の累積更新プログラム 3 (CU3) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3015.40 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)です。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールで、次の表の情報とパッケージの RPM と Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 14.0.3015.40-1 | [エンジンは RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3015.40-1 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian パッケージ | 14.0.3015.40-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[SQL Server エージェントの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <A id="CU2"></a>Cumulative Update 2 (2017 年 11 月)
 
@@ -129,12 +144,12 @@ SQL Server の既存のパッケージを更新する場合は、最新の累積
 | &nbsp; | CLR アセンブリと EXTERNAL_ACCESS または UNSAFE 権限の設定します。 |
 | &nbsp; | バッファー プール拡張 |
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダーは、SSIS、SSAS、SSRS |
-| &nbsp; | オブジェクト エクスプローラーには |
+| &nbsp; | 警告 |
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
 | &nbsp; | 変更データ キャプチャ |
 | &nbsp; | 管理対象のバックアップ |
 | **高可用性** | データベース ミラーリング  |
-| **Security** | 拡張キー管理 |
+| **セキュリティ** | 拡張キー管理 |
 | &nbsp; | リンク サーバーの AD の認証 | 
 | &nbsp; | 可用性グループ (Ag) に対して AD の認証 | 
 | &nbsp; | サード パーティ AD ツール (Centrify、いる Vintela、Powerbroker) | 

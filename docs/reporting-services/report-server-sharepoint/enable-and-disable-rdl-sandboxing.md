@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee561435c401a1b0e3299216172bf4e25e146137
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化
 
@@ -48,7 +46,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 -   式での名前付きパラメーター。  
   
- このトピックでは、RSReportServer.Config ファイルの \<**RDLSandboxing**> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
+ このトピックでは、RSReportServer.Config ファイルの \<**RDLSandboxing**> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成例
  RSReportServer.Config ファイルの \<**RDLSandboxing**> 要素の設定および値の例を次に示します。  
@@ -82,9 +80,9 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
 |**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値: 100|  
 |**型**|RDL 式内で許可されるメンバーの一覧です。|  
 |**Allow**|RDL 式で許可される型または型のセットです。|  
-|**名前空間**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
+|**Namespace**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
 |**AllowNew**|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> **RDLSandboxing** が有効であるときは、**AllowNew**の設定に関係なく、RDL 式に新しい配列を作成できません。|  
-|**値**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
+|**[値]**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
 |**メンバー**|**\<Types>** 要素に含まれる型の一覧に対する、RDL 式で許可されないメンバー名の一覧です。|  
 |**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
   

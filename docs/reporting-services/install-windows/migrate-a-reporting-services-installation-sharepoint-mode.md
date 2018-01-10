@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 515fb60031f75d0c3743628a345e415770a731fe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
 
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 ####  <a name="bkmk_databases"></a> 移行の完了時に存在するデータベース  
  次の表に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint を正常に移行した後に存在する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連の SQL Server データベースを示します。  
   
-|データベース|名前の例||  
+|[データベース]|名前の例||  
 |--------------|------------------|-|  
 |カタログ データベース|ReportingService_[service application GUID] **(\*)**|ユーザーが移行。|  
 |一時データベース|ReportingService_[service application GUID]TempDB **(\*)**|ユーザーが移行。|  
@@ -86,8 +84,8 @@ ms.lasthandoff: 12/05/2017
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 暗号化キー|**Rskeymgmt.exe** または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャー。 「 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。|このツールはバックアップ操作だけでなく、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページまたは PowerShell を使用した復元操作にも使用できます。|  
 |**2**|SharePoint コンテンツ データベース||データベースをバックアップし、デタッチします。<br /><br /> 「 [アップグレード戦略を決定する (SharePoint Server 2010)」(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)の「データベース接続アップグレード」を参照してください。|  
-|**3**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カタログ データベースである SQL Server データベース。|SQL Server データベースのバックアップと復元<br /><br /> または<br /><br /> SQL Server データベースのデタッチとアタッチ。||  
-|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイル|単純なファイル コピー。|ファイルをカスタマイズしていた場合に、単純に rsreportserver.config をコピーします。 ファイルの既定の場所の例: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> レポート サーバーの ASP.NET アプリケーション用の Web.config<br /><br /> ASP.NET 用の Machine.config|  
+|**3**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カタログ データベースである SQL Server データベース。|SQL Server データベースのバックアップと復元<br /><br /> 内の複数の<br /><br /> SQL Server データベースのデタッチとアタッチ。||  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイル|単純なファイル コピー。|ファイルをカスタマイズしていた場合に、単純に rsreportserver.config をコピーします。 ファイルの既定の場所の例: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> レポート サーバーの ASP.NET アプリケーション用の Web.config<br /><br /> ASP.NET 用の Machine.config|  
   
 ####  <a name="bkmk_restore_operations"></a> 復元操作  
  ここでは、移行に必要な情報の種類と、復元の実行に使用するツールやプロセスについて説明します。 復元に使用するツールは、バックアップ時に使用するツールと異なる場合があります。  

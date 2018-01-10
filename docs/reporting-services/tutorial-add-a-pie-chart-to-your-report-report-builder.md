@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 330e6807dc0e3ff1715b030bdb4ddeaed7e8a94f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 68b4e3536833e23be59db3195f5903bfccbc5539
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)
 このチュートリアルでは、Reporting Services の改ページ調整されたレポートに円グラフを作成します。 パーセンテージを追加し、小さいスライスを 1 つのスライスに結合します。
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 ## <a name="ChartType"></a>2.グラフの種類を選択する  
 あらかじめ定義されているさまざまなグラフの種類から選択できます。  
@@ -220,7 +220,7 @@ ms.lasthandoff: 12/05/2017
   
 レポートがレポート サーバーに保存されます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、「レポートへの円グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

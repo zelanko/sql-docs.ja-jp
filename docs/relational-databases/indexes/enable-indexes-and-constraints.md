@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05993c2ce383b65938712557cd82db47aaaf28bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc82c95d6bed2f0479a576d2cab04a24f4ab2176
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-indexes-and-constraints"></a>インデックスと制約の有効化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して無効なインデックスを有効にするには:**  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -75,10 +75,12 @@ ms.lasthandoff: 11/17/2017
     |ALTER INDEX REBUILD|操作は失敗します。|操作は成功します。|  
     |DROP INDEX|操作は成功します。|操作は成功します。|  
     |CREATE INDEX WITH DROP_EXISTING|操作は失敗します。|操作は成功します。|  
-  
+
+-   無効で圧縮済みの非クラスター化インデックスを再構築すると、data_compression は既定で 'none' に設定されます。つまり、インデックスは解凍されます。 これは、非クラスター化インデックスが無効になると、圧縮設定のメタデータが失われるためです。 これを回避するには、再構築ステートメントに明示的なデータ圧縮を指定する必要があります。
+
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 DBCC DBREINDEX を使用している場合、ユーザーはテーブルを所有しているか、 **sysadmin** 固定サーバー ロールのメンバーであるか、 **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  

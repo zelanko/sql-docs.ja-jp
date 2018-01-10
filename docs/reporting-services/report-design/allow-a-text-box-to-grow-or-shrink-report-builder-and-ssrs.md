@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 821458f2eac2a87cd05a4070b60983957c745bd0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0f8ed90ae80b3e2e1ef526e596a9d2f712a76ed2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>テキスト ボックスの拡大または縮小 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートのテキスト ボックスは、レポート デザイン画面上のスタンドアロン ボックスだけではありません。 テーブルまたはマトリックス (Tablix データ領域) の各セルにもテキスト ボックスがあり、スタンドアロン テキスト ボックスと同じ方法で書式設定できます。既定では、テキスト ボックスのサイズは固定されています。 内容に応じてテキスト ボックスを拡大または縮小するためのオプションを選択できます。 これらのオプションは、それぞれプロパティ ペインの **CanGrow** プロパティまたは **CanShrink** プロパティに対応します。  

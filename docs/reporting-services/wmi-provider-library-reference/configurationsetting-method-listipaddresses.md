@@ -8,23 +8,21 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec2238f83d91f881776367798ced2a7091cbbcb4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5c5e9894f58c8d4d634f7def1b1c7211e0792281
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting メソッド - ListIPAddresses
   レポート サーバー コンピューターの IP アドレスを一覧表示します。  
@@ -62,7 +60,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *IPVersion* の文字列は、"V4" または "V6" です。  
   
  *IsDhcpEnabled* が **True**の場合、 *IPAddress* は動的です。 これは、SSL バインドには使用しないでください。  

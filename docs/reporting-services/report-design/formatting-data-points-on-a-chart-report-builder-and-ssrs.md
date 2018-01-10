@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -68,21 +66,21 @@ ms.lasthandoff: 12/05/2017
   
 |グラフ キーワード|Description|適用可能なグラフの種類|同等の簡単な式の例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|データ ポイントの Y 値|すべて|`=Fields!MyDataField.Value`|  
+|#VALY|データ ポイントの Y 値|All|`=Fields!MyDataField.Value`|  
 |#VALY2|データ ポイントの Y 値の 2 番目の値|範囲、バブル|なし|  
 |#VALY3|データ ポイントの Y 値の 3 番目の値|株価、ローソク足|なし|  
 |#VALY4|データ ポイントの Y 値の 4 番目の値|株価、ローソク足|なし|  
-|#SERIESNAME|系列名|すべて|なし|  
-|#LABEL|データ ポイント ラベル|すべて|なし|  
+|#SERIESNAME|系列名|All|なし|  
+|#LABEL|データ ポイント ラベル|All|なし|  
 |#AXISLABEL|軸データ ポイント ラベル|図形|`=Fields!MyDataField.Value`|  
-|#INDEX|データ ポイントのインデックス|すべて|なし|  
-|#PERCENT|データ ポイントの Y 値の比率|すべて|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|系列のすべての Y 値の合計|すべて|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|凡例項目のテキストに対応するテキスト|すべて|なし|  
-|#AVG|系列内のすべての Y 値の平均|すべて|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|データ ポイントのインデックス|All|なし|  
+|#PERCENT|データ ポイントの Y 値の比率|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|系列のすべての Y 値の合計|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|凡例項目のテキストに対応するテキスト|All|なし|  
+|#AVG|系列内のすべての Y 値の平均|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|系列内のすべての Y 値の最小値|すべて|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|系列内のすべての Y 値の最大値|すべて|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|系列内のすべての Y 値の最初の値|すべて|`=First(Fields!MyDataField.Value)`|  
+|#MAX|系列内のすべての Y 値の最大値|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|系列内のすべての Y 値の最初の値|All|`=First(Fields!MyDataField.Value)`|  
   
  キーワードを書式設定するには、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列をかっこで囲みます。 たとえば、ツールヒントでデータ ポイントの値を小数点以下 2 桁の数値として指定するには、書式設定文字列 "N2" を中かっこで囲みます。たとえば、系列の **ToolTip** プロパティで "#VALY{N2}" のようになります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列の詳細については、MSDN の「 [型の書式設定](http://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の数値を書式設定する方法については、「[数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="see-also"></a>参照  
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

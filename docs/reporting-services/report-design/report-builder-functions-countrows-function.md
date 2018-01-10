@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8013a03e8f108a8ae625a8946fca148c65ed8ea8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 39914679c931086a526a4bf88ec159b984fb5273
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---countrows-function"></a>レポート ビルダー関数 - CountRows 関数
   NULL 値の行を含めて、指定されたスコープ内の行数を返します。  
@@ -48,7 +46,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  **Integer**値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **CountRows** は、指定されたスコープ内のすべての行 (NULL 値を持つ行を含む) をカウントします。  
   
  *scope* の値には、式を指定することができません。また、この値では、現在のスコープまたはコンテナー スコープを参照する必要があります。  
