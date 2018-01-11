@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2821641b938291ac67fefb08e4e174f8113db033
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a9f819427b4abb5e9ee4032a990842a4137611f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. **[次へ]**をクリックします。  
+13. **[次へ]** をクリックします。  
   
 ## <a name="Query"></a>2.テーブル ウィザードでクエリおよびテーブル レイアウトを作成する  
 レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
@@ -131,7 +131,7 @@ ms.lasthandoff: 12/05/2017
   
     **SalesDate**、 **Subcategory**、 **Product**、 **Sales**、および **Quantity**の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
-5.  **[次へ]**をクリックします。  
+5.  **[次へ]** をクリックします。  
   
 6.  **[フィールドの配置]** ページで、 **Sales** を **[値]**にドラッグします。  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 10. **[レイアウトの選択]** ページの **[オプション]**で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. **[次へ]**をクリックします。  
+11. **[次へ]** をクリックします。  
   
 12. **[完了]**をクリックします。  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 12/05/2017
   
      このオプションによって、各スパークラインのバーの高さが相対的に設定されます。 
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 5.  スパークラインを右クリックし、 **[横軸のプロパティ]**をクリックします。  
   
@@ -252,7 +252,7 @@ ms.lasthandoff: 12/05/2017
   
     このオプションによって、各スパークラインのバーの幅が相対的に設定されます。 あるスパークラインで他のスパークラインよりバーの数が少ない場合は、そのスパークラインのデータがない位置は空白のスペースになります。  
   
-7.  **[OK]**をクリックします。  
+7.  **[OK]** をクリックします。  
   
 8.  **[実行]** をクリックして、レポートをもう一度プレビューします。  
   
@@ -323,11 +323,11 @@ ms.lasthandoff: 12/05/2017
   
 4.  **[保存]**をクリックします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 
 これで、スパークライン グラフを使ったテーブル レポートを作成するチュートリアルを終了します。 スパークラインの詳細については、「[スパークラインとデータ バー](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

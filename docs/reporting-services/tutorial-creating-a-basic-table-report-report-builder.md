@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 197954e502e00b4402243f89ba1549aae75293f8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a94fabf2c89005a3125cc73c54b55d537dc2458b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)
 このチュートリアルでは、サンプルの売上データに基づいて基本的な表レポートを作成する方法を説明します。 次の図に、ここで作成するレポートを示します。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/05/2017
   
     新しいデータ ソースが選択された状態で **[データ ソースへの接続の選択]** ページに戻ります。  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 ## <a name="Query"></a>1b. テーブル ウィザードでクエリを作成する  
 レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
@@ -139,7 +139,7 @@ ms.lasthandoff: 12/05/2017
   
     結果セットの列見出しはクエリの名前に基づきます。 データセットの列見出しはフィールド名になり、レポートに保存されます。 ウィザードを完了した後、レポート データ ペインを使用してデータセット フィールドのコレクションを表示できます。  
   
-4.  **[次へ]**をクリックします。  
+4.  **[次へ]** をクリックします。  
   
 ## <a name="Groups"></a>1c. テーブル ウィザードでデータをグループにまとめる  
 グループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むテーブルをデザインします。  
@@ -166,7 +166,7 @@ ms.lasthandoff: 12/05/2017
   
     手順 4. および 5. で、フィールドの値がまず日付でまとめられ、次にその日付の製品サブカテゴリでまとめられます。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 ## <a name="Subtotals"></a>1d. テーブル ウィザードで小計行と合計行を追加する  
 グループを作成したら、フィールドの集計値を表示する行を追加して書式を設定できます。 すべてのデータを表示するか、グループ化されたデータの展開と折りたたみをユーザーが対話的に行えるようにするかを選択できます。  
@@ -359,7 +359,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 2.  ブック見出しの名前が「 **Product Sales Excel**」であることを確認します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
 これで、基本的なテーブル レポートを作成する方法のチュートリアルは終了です。 テーブルの詳細については、「[テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
