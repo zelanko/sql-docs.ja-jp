@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,13 +25,13 @@ ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 caps.latest.revision: "63"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b3c663595759647cce4bdaa8458ae5533d7c0ae5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5fb39a5bfeab9dc2ad3b78c94238c66e174d3395
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
 
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] の入手]** を選択します。  
   
-     または  
+     スイッチまたは  
   
      Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](http://go.microsoft.com/fwlink/?LinkID=219138) します。  
   
@@ -173,7 +171,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] の入手]** を選択します。  
   
-     または  
+     スイッチまたは  
   
      Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](http://go.microsoft.com/fwlink/?LinkID=733527) します。  
   
@@ -189,4 +187,4 @@ ms.lasthandoff: 12/05/2017
 [クエリ デザイン ツール](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Reporting Services のチュートリアル](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

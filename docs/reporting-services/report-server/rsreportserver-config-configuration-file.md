@@ -8,24 +8,22 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 312db6c9454c0fca1f50d63d2d5135f2fb20f6db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 構成ファイル
+# <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
 
 SharePoint モードでは、そのコンピューターで実行されているすべてのサービス アプリケーション インスタンスに適用される設定が、構成ファイルに含まれています。 SharePoint 構成データベースには、特定のサービス アプリケーションに適用される構成設定が含まれています。 構成データベースに格納され、SharePoint 管理ページを通じて管理される設定は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサービス アプリケーションごとに異なるものにすることができます。  
@@ -78,7 +76,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|×|  
 |**SecureConnectionLevel**|Web サービス呼び出しにおける SSL (Secure Sockets Layer) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 有効な値は、0 ～ 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 」と「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|  
 |**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|×|  
-|**CleanupCycleMinutes**|レポート サーバー データベースから古いセッションと期限切れのスナップショットを削除するまでの保持期間を分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は、10 です。 値を 0 に設定すると、データベースによる処理のクリーンアップが無効になります。|N、S|  
+|**CleanupCycleMinutes**|レポート サーバー データベースから古いセッションと期限切れのスナップショットを削除するまでの保持期間を分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 10 です。 値を 0 に設定すると、データベースによる処理のクリーンアップが無効になります。|N、S|  
 |**MaxActiveReqForOneUser**|ユーザーが同時に処理できる最大レポート数を指定します。 最大数に達すると、それ以降のレポート処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 20 です。<br /><br /> 要求の大半はきわめて迅速に処理されるため、1 人のユーザーが任意の時点で 20 より多くの接続を開くということはまずありません。 ユーザーが 15 より多い処理集中型のレポートを同時に開く場合は、この値を増やす必要があります。<br /><br /> この設定は、SharePoint 統合モードで動作するレポート サーバーでは無視されます。|N、S|  
 |**MaxActiveReqForAnonymous**|同時に処理できる匿名要求の最大数を指定します。 最大数に達すると、それ以降の処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 200 です。
 |**DatabaseQueryTimeout**|レポート サーバー データベースへの接続がタイムアウトするまでの期間を秒単位で指定します。この値は、System.Data.SQLClient.SQLCommand.CommandTimeout プロパティに渡されます。 有効な値の範囲は 0 ～ 2147483647 です。 既定値は 120 です。 値を 0 に設定することはお勧めできません。0 にすると待ち時間が無制限になります。|×|  
@@ -163,7 +161,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**IsNotificationService**|レポート サーバーが通知および配信を処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False**の場合、サブスクリプションは配信されません。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S|  
 |**IsEventService**|サービスがイベント キュー内のイベントを処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False**の場合、レポート サーバーは、スケジュールまたはサブスクリプションの処理を実行しません。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S|  
 |**IsAlertingService**|既定値は **True**です。|S|  
-|**PollingInterval**|レポート サーバーによるイベント テーブルへのポーリング間隔を、秒単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は、10 です。|N、S|  
+|**PollingInterval**|レポート サーバーによるイベント テーブルへのポーリング間隔を、秒単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 10 です。|N、S|  
 |**WindowsServiceUseFileShareStorage**|キャッシュされたレポート、およびユーザー セッション中にレポート サーバー サービスにより作成された一時スナップショットをファイル システムに格納するかどうかを指定します。 有効な値は、 **True** および **False** (既定) です。|N、S|  
 |**MemorySafetyMargin**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを中レベルと低レベルに分けたとき、その境界を定義するパーセンテージを指定します。 既定値は 80 です。 **WorkingSetMaximum** と利用可能なメモリの構成の詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S|  
 |**MemoryThreshold**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを高レベルと中レベルに分けたとき、その境界を定義するパーセンテージを指定します。 既定値は **90**です。 この値は、 **MemorySafetyMargin**で設定する値より大きくする必要があります。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S|  
@@ -243,7 +241,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|Description|  
 |-------------|-----------------|  
-|**ExcludedRenderFormats**、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
+|**ExcludedRenderFormats**、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> レポート サーバーの電子メール拡張機能の構成設定  
  レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) 」および「 [Reporting Services 構成ファイル](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
@@ -261,7 +259,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**From**|レポートの送信元の電子メール アドレスを、 *abc@host.xyz*」を参照してください。 アドレスは、送信する電子メール メッセージの **[差出人]** 行に表示されます。 リモート SMTP サーバーを使用している場合に、この値が必要です。 メールを送信する権限を持つ有効な電子メール アカウントを指定する必要があります。|  
 |**EmbeddedRenderFormats、RenderingExtension**|電子メール メッセージ本文内のレポートのカプセル化に使用する表示形式を指定します。 続いて、レポート内の画像がレポートに埋め込まれます。 有効な値は、MHTML および HTML4.0 です。|  
 |**PrivilegedUserRenderFormats**|"すべてのサブスクリプションを管理" タスクを使用してサブスクライブが有効になっている場合に、ユーザーがレポートのサブスクリプション用に選択できる表示形式を指定します。 この値が設定されていない場合は、意図的に除外されたものを除く、すべての表示形式を使用できます。|  
-|**ExcludedRenderFormats、RenderingExtension**|指定の配信拡張機能で適切に処理されない形式を意図的に除外します。 同じ表示拡張機能の複数のインスタンスは除外できません。 複数のインスタンスを除外すると、レポート サーバーが構成ファイルを読み取るときにエラーが発生します。 既定では、電子メール配信に対し、次の拡張機能は除外されます。<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
+|**ExcludedRenderFormats、RenderingExtension**|指定の配信拡張機能で適切に処理されない形式を意図的に除外します。 同じ表示拡張機能の複数のインスタンスは除外できません。 複数のインスタンスを除外すると、レポート サーバーが構成ファイルを読み取るときにエラーが発生します。 既定では、電子メール配信に対し、次の拡張機能は除外されます。<br /><br /> HTMLOWC<br /><br /> [Null]<br /><br /> RGDI|  
 |**SendEmailToUserAlias**|この値は、 **DefaultHostName**と連動します。<br /><br /> **SendEmailToUserAlias** を **True**に設定すると、個々のサブスクリプションを定義したユーザーが、レポートの受信者として自動的に指定されます。 **[宛先]** フィールドは非表示になります。 この値が **False**に設定されている場合、 **[宛先]** フィールドが表示されます。 レポートの配信を最大限に制御する場合は、この値を **True** に設定します。 有効な値は次のとおりです。<br /><br /> **True**= サブスクリプションを作成しているユーザーの電子メール アドレスが使用されます。 これが既定値です。<br /><br /> **False**= 任意の電子メール アドレスを指定できます。|  
 |**DefaultHostName**|この値は、 **SendEmailToUserAlias**と連動します。<br /><br /> **SendEmailToUserAlias** が True に設定されている場合に、ホスト名を示す文字列値を指定して、ユーザーの別名に追加します。 この値には、ドメイン ネーム システム (DNS) 名または IP アドレスを指定できます。|  
 |**PermittedHosts**|電子メール配信を受信できるホストを明示的に指定することにより、レポートの配信を制限します。 **PermittedHosts**内で、各ホストは **HostName** 要素として指定されます。この値は、IP アドレスまたは DNS 名のいずれかです。<br /><br /> ホストに定義された電子メール アカウントのみが、有効な受信者です。 **DefaultHostName**を指定した場合、そのホストが **PermittedHosts** の **HostName**要素として含まれていることを確認してください。 この値は、1 つ以上の DNS 名または IP アドレスである必要があります。 既定では、この値は設定されていません。 値が設定されていない場合は、電子メール化されたレポートを受信できるユーザーは制限されません。|  

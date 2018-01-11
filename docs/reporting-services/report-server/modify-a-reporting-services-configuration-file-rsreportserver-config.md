@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d1b8d12e3b01fc8717770ae5fdb117f114ae324d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb4c74bd26d25d35612b49dd9575ac244ee1a20d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  構成ファイルを変更する場合は注意が必要です。 内部で使用するために予約されている設定を変更すると、インストールが無効になることがあります。 一般的に、特定の問題を解決しようとしている場合を除いて、構成設定を変更することはお勧めしません。 安全に変更できる設定の詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」または「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。 構成ファイルの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントを参照してください。  
   
- このトピックの内容:  
+ このトピックの内容  
   
 -   [構成値の読み取りと使用](#bkmk_read_values)  
   

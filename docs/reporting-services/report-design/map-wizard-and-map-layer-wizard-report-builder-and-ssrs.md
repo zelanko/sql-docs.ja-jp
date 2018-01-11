@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d810c44d790b73cb9bd8050370487e25ea6870eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8799fa0b54d60990ee701f4fef2950cf5e0d2b86
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
