@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 14e26b4d8f398fcfc8d648f757e782e0afda2101
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a03feca8dfe4da40235745087577e307af69ba7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
 -   リモート インターフェイスの使用  
   
--   開く  
+-   [ファイル]  
   
 -   アプリケーション ページの表示  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/05/2017
   
 |タスク|権限|  
 |----------|----------------|  
-|レポート ビルダーを起動する。|レポート ビルダーへのアクセスを制御するために明示的に使用される権限はありません。 レポート サーバー統合が構成されており、アイテムをライブラリに追加する権限があれば、レポート ビルダーは利用可能です。 レポート ビルダーをライブラリの **[新規作成]** メニューから起動するには、コンテンツの種類としてレポート ビルダーを登録する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。|  
+|レポート ビルダーを起動する。|レポート ビルダーへのアクセスを制御するために明示的に使用される権限はありません。 レポート サーバー統合が構成されており、アイテムをライブラリに追加する権限があれば、レポート ビルダーは利用可能です。 レポート ビルダーをライブラリの **[新規作成]** メニューから起動するには、コンテンツの種類としてレポート ビルダーを登録する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。|  
 |モデルまたは共有データ ソースをアップロードする。|ファイルの格納先となるライブラリに対する "**アイテムの追加** "。|  
 |モデルまたは依存する共有データ ソースを表示する。|ファイルが含まれているライブラリに対する "**アイテムの表示** "。<br /><br /> モデルにモデル アイテム セキュリティが含まれている場合、ユーザーには対象モデルに対する " **権限の列挙** " 権限も必要になります。|  
 |モデルを共有データ ソースから生成する。|モデルを生成する基になる共有データ ソース (.rsds) ファイルが含まれているライブラリに対する "**アイテムの追加** "。|  
@@ -128,7 +126,7 @@ ms.lasthandoff: 12/05/2017
   
 |処理手順|権限|  
 |-----------|----------------|  
-|共有データ ソースを作成する。|共有データ ソースが含まれているライブラリに対する "**アイテムの追加** "。 ライブラリの [新規作成] メニューから新しい共有データ ソースを作成できます。 そのためには、コンテンツの種類としてレポート データ ソースをライブラリに登録する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。|  
+|共有データ ソースを作成する。|共有データ ソースが含まれているライブラリに対する "**アイテムの追加** "。 ライブラリの [新規作成] メニューから新しい共有データ ソースを作成できます。 そのためには、コンテンツの種類としてレポート データ ソースをライブラリに登録する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。|  
 |共有データ ソースを編集する。|共有データ ソースが含まれているライブラリまたは共有データ ソース自体に対する "**アイテムの編集** "。|  
 |共有データ ソースを削除する。|共有データ ソースが含まれているライブラリまたは共有データ ソース自体に対する "**アイテムの削除** "。|  
 |レポートに共有データ ソース (.rsds) を使用する。|レポート、またはレポートが含まれているライブラリに対する "**アイテムの編集** "。 レポートのデータ ソース プロパティを設定する一環として、共有データ ソースを選択します。|  
