@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2017 Docker を使ってみる |Microsoft ドキュメント"
-description: "このクイック スタート チュートリアルでは、Docker を使用して、SQL Server 2017 コンテナー イメージを実行する方法を示します。 作成し、sqlcmd によるデータベースのクエリを実行します。"
+description: "この クイックスタート チュートリアル では SQL Server 2017 コンテナー イメージ を実行するための Docker の使用方法を説明します。その次に sqlcmd を使用して データベース を作成し、問い合わせします。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
