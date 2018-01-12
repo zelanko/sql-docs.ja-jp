@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: 
@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 641ad24e22893b10ff5ad40f648e431c78731aea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e8aa8d51c54fb98b3851676ddedd367f476dd1fa
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R での OLAP キューブからデータの使用
 
@@ -105,7 +105,7 @@ SQL Server Management Studio などのクライアントを使用して Analysis
 
 サーバーのプロパティを照会する方法については、次の記事を参照してください。
 
-+ [OLE DB for OLAP Schema 行セット](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB for OLAP スキーマ行セット](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
 
 ### <a name="writeback-is-not-supported"></a>書き戻しはサポートされていません
 
