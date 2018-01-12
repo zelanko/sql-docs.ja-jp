@@ -1,7 +1,7 @@
 # [概要](json-data-sql-server.md)  
 # [JSON ドキュメントの SQL Server への保存](store-json-documents-in-sql-tables.md)
-# [JSON ドキュメントの SQL Server へのインポート](import-json-documents-into-sql-server.md)  
 # [JSON データへのインデックスの追加](index-json-data.md)  
+# [JSON ドキュメントの SQL Server へのインポート](import-json-documents-into-sql-server.md)  
 # [FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)](format-query-results-as-json-with-for-json-sql-server.md)  
 ## [PATH モードで入れ子になった JSON 出力を書式設定する](format-nested-json-output-with-path-mode-sql-server.md)  
 ## [AUTO モードで自動的に JSON 出力を書式設定する](format-json-output-automatically-with-auto-mode-sql-server.md)  
