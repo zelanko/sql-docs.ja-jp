@@ -34,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT の INTO 句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を表示するには、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,9 +99,9 @@ ms.lasthandoff: 01/02/2018
  リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、SELECT...INTO が実行された時点の計算値になります。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+ SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「[トランザクションログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください.  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  対象となるデータベースの CREATE TABLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -230,7 +230,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 別のテーブルのコピーとして新しいテーブルを作成して、指定されたファイル グループを読み込む
-次の例を別のテーブルのコピーとして新しいテーブルを作成して、ユーザーの既定のファイル グループから別の指定されたファイル グループへの読み込みを demostrates です。
+次の例では、別のテーブルのコピーとして新しいテーブルを作成して、ユーザーの既定のファイル グループから別の指定されたファイル グループに読み込むを示します。
 
  **適用されます:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
@@ -250,7 +250,7 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [例 &#40; を選択します。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [挿入 &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/insert-transact-sql.md)   
  [ID および #40 です。関数と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/identity-function-transact-sql.md)  
   
   
