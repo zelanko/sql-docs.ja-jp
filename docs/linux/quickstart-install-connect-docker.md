@@ -80,7 +80,7 @@ ms.lasthandoff: 12/04/2017
    | **-名前 sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 1 つ以上のコンテナーを実行すると場合に、この同じ名前を再利用することはできません。 |
    | **microsoft/mssql-サーバー-linux:2017-最新** | SQL Server 2017 Linux コンテナー イメージ。 |
 
-1. 表示するには、Docker コンテナーを使用して、`docker ps`コマンド。
+1. Docker コンテナーを表示するには、 `docker ps` コマンドを使用します。
 
    ```bash
    sudo docker ps -a
@@ -94,9 +94,9 @@ ms.lasthandoff: 12/04/2017
 
    ![Docker ps コマンドの出力](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-1. 場合、**ステータス**項目のステータスを表示**を**、コンテナー内の SQL Server を実行しとで指定されたポートでリッスンしている、**ポート**列です。 場合、**ステータス**列、SQL Server のコンテナーの番組を**Exited**を参照してください、[構成ガイド」のセクションのトラブルシューティング](sql-server-linux-configure-docker.md#troubleshooting)です。
+1. **ステータス** 項目が **Up** を示している場合、 SQL Server はコンテナー内で実行状態で、 **PORTS** 項目で示されているポート番号でサービスをリッスンしています。 SQL Server のコンテナーの **STATUS** 項目が **Exited** を示している場合、[構成ガイド」のセクションのトラブルシューティング](sql-server-linux-configure-docker.md#troubleshooting) を参照してください。
 
-`-h` (ホスト名) のパラメーターも、役立ちますが、わかりやすくするためには、このチュートリアルでは使用されません。 これは、カスタム値をコンテナーの内部名を変更します。 これは、次の TRANSACT-SQL クエリで返される名前が表示されます。
+`-h` パラメーター (ホスト名) も便利なものですが、簡潔さを維持する理由のため、このチュートリアルでは使用されません。 これは、コンテナーの内部名を任意のカスタム値へ変更します。 これは、次の Transact-SQL クエリで返されることになる名前です。
 
 ```sql
 SELECT @@SERVERNAME,
@@ -105,17 +105,17 @@ SELECT @@SERVERNAME,
     SERVERPROPERTY('ServerName')
 ```
 
-設定`-h`と`--name`同じ値には、ターゲット コンテナーを特定しやすくすることをお勧めします。
+`-h` と `--name` を同じ値に設定することは、対象のコンテナーを特定しやすくするためのひとつの良い方法です。
 
-## <a name="change-the-sa-password"></a>SA パスワードを変更します。
+## <a name="change-the-sa-password"></a>SA のパスワードの変更
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
 ## <a name="connect-to-sql-server"></a>SQL Server に接続します。
 
-次の手順は、SQL Server コマンド ライン ツールを使用して**sqlcmd**、SQL Server に接続するコンテナーの内部です。
+次の手順では、コンテナー内の SQL Server のコマンドライン ツール **sqlcmd** を使用して、SQL Server に接続します。
 
-1. 使用して、`docker exec -it`実行中のコンテナー内の対話型 bash シェルを起動するコマンド。 次の例で`sql1`によって指定された名前、`--name`コンテナーを作成した場合のパラメーターです。
+1. コマンド `docker exec -it` を使用して、実行中のコンテナー内の対話型 bash シェルを起動します。 次の例にある `sql1` は、コンテナーを作成したときに `--name` パラメーターで指定した名前です。
 
    ```bash
    sudo docker exec -it sql1 "bash"
@@ -125,7 +125,7 @@ SELECT @@SERVERNAME,
    docker exec -it sql1 "bash"
    ```
 
-1. 1 回、コンテナー内の接続ローカル sqlcmd でします。 Sqlcmd がパスにない、既定では、完全なパスを指定する必要があるようにします。
+1. 1 度、コンテナー内で、sqlcmd を使用してローカルに接続します。 既定では　Sqlcmd がパスにないため、フルパスを指定する必要があります。
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
@@ -134,11 +134,11 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > コマンド ラインでパスワードを省略すると、入力を求められます。
 
-1. 成功すると、**sqlcmd** コマンド プロンプト `1>` が表示されます。
+1. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。
 
-## <a name="create-and-query-data"></a>データの作成とクエリ
+## <a name="create-and-query-data"></a>データの作成とデータの問い合わせ
 
-以下のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
+次のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
 
 ### <a name="create-a-new-database"></a>新しいデータベースの作成
 
@@ -166,7 +166,7 @@ SELECT @@SERVERNAME,
 
 次に、新しいテーブル `Inventory` を作成し、2 つの新しい行を挿入します。
 
-1. **sqlcmd** のコマンド プロンプトで、コンテキストを新しい `TestDB` データベースに切り替えます。
+1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。
 
    ```sql
    USE TestDB
@@ -190,11 +190,11 @@ SELECT @@SERVERNAME,
    GO
    ```
 
-### <a name="select-data"></a>データの選択
+### <a name="select-data"></a>データの取得
 
-ここで、`Inventory` テーブルからデータを返すクエリを実行します。
+ここで、`Inventory` テーブルからデータを問い合わせるクエリを実行します。
 
-1. **sqlcmd** のコマンド プロンプトで、数量が 152 より大きい`Inventory` テーブルから行を返すクエリを入力します。
+1. **sqlcmd** のコマンド プロンプトで、quantity が 152 より大きい `Inventory` テーブルから行を返すクエリを入力します。
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -214,17 +214,17 @@ SELECT @@SERVERNAME,
    QUIT
    ```
 
-1. 終了するには、コンテナー内の対話型のコマンド プロンプトを入力`exit`です。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
+1. コンテナー内の対話型のコマンド プロンプトを終了するには、`exit` と入力します。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
 
-## <a id="connectexternal"></a>コンテナーの外から接続します。
+## <a id="connectexternal"></a>コンテナー外部からの接続
 
-できますも接続する SQL Server インスタンスに Docker コンピューターに、外部 Linux、Windows、または macOS ツールから SQL 接続をサポートします。
+コンテナ外の Linux、Windows、または macOS にある任意のSQL 接続ツールから、Docker コンピューターの SQL Server インスタンスへ接続することもできます。
 
-次の手順を使用して**sqlcmd**コンテナーで実行されている SQL Server に接続するコンテナーの外部でします。 次の手順では、SQL Server コマンド ライン ツールが、コンテナーの外にインストール済みであることを前提としています。 同じプリンシパルが、他のツールを使用するときに適用が、接続するプロセスは、各ツールに固有です。
+次の手順は、コンテナーの外部にある **sqlcmd** を使用して、コンテナの内部で動作している SQL Server へ接続します。 これらの手順は、コンテナーの外に SQL Server コマンドライン ツールがインストール済みであることを前提としています。 他のツールを使用するときと同じプリンシパルが適用されますが、接続プロセスは各ツールでユニークなものです。
 
-1. コンテナーをホストしているコンピューターの IP アドレスが見つかりません。 Linux では、次のように使用します。 **ifconfig**または**ip アドレス**です。Windows では、次のように使用します。 **ipconfig**です。
+1. コンテナーをホストしているコンピューターの IP アドレスを用意してください。 Linux では、 **ifconfig** または **ip addr** を使用します。 Windows では、 **ipconfig** を使用します。
 
-1. IP アドレスとポート 1433、コンテナー内にマップされているポートを指定する sqlcmd を実行します。 この例では、ホスト マシン上のポート 1401 であります。
+1. IP アドレスとコンテナーのポート 1433 にマップされたポートを指定して sqlcmd を実行します。 この例では、ホスト マシンのポート 1401 です。
 
    ```bash
    sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
@@ -234,16 +234,16 @@ SELECT @@SERVERNAME,
    sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
-1. TRANSACT-SQL コマンドを実行します。 終了したら、入力`QUIT`です。
+1. Transact-SQL コマンドを実行します。 終了したら `QUIT` を入力します。
 
-SQL Server に接続するその他の一般的なツールは次のとおりです。
+SQL Server に接続するその他の一般的なツールには次のものがあります:
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [Windows で SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md)
 
-## <a name="remove-your-container"></a>コンテナーを削除します。
+## <a name="remove-your-container"></a>コンテナーの削除
 
-このチュートリアルで使用される SQL Server のコンテナーを削除する場合は、次のコマンドを実行します。
+このチュートリアルで使用した SQL Server のコンテナーを削除する場合は、次のコマンドを実行します:
 
 ```bash
 sudo docker stop sql1
@@ -256,10 +256,10 @@ docker rm sql1
 ```
 
 > [!WARNING]
-> コンテナーの完全に削除を停止して、コンテナー内の任意の SQL Server データを削除します。 データを保持する必要がある場合[を作成し、コンテナーからのバックアップ ファイルをコピー](tutorial-restore-backup-in-sql-server-container.md)か使用して、[コンテナー データの永続化手法](sql-server-linux-configure-docker.md#persist)です。
+> コンテナーを停止して完全に削除すると、コンテナー内にあるすべての SQL Server のデータを削除します。 データを保持する必要がある場合 [コンテナーからバックアップ ファイルを作成して、コピーする](tutorial-restore-backup-in-sql-server-container.md) または [コンテナー データの永続化手法](sql-server-linux-configure-docker.md#persist) を参考にしてください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-コンテナー内にデータベースのバックアップ ファイルを復元する方法のチュートリアルでは、次を参照してください。 [Linux Docker コンテナーでの SQL Server データベースを復元](tutorial-restore-backup-in-sql-server-container.md)です。 複数のコンテナーを実行するなどその他のシナリオを探索するデータの永続性、およびトラブルシューティングを参照してください[Docker でコンテナーのイメージを構成する SQL Server 2017](sql-server-linux-configure-docker.md)です。
+データベースのバックアップ ファイルをコンテナー内に復元する方法のチュートリアルは、 [Linux Docker コンテナーでの SQL Server データベースを復元](tutorial-restore-backup-in-sql-server-container.md) を参照してください。 複数のコンテナーを実行する、データを永続性させる、およびトラブルシューティング等のような、その他のシナリオを探すには [Docker で SQL Server 2017 のコンテナーのイメージを構成する ](sql-server-linux-configure-docker.md) を参照してください。
 
-また、チェック アウト、 [mssql docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker)リソース、フィードバック、および既知の問題です。
+また、その他のリソース、フィードバック、および既知の問題については [mssql-docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker) を参考にしてください。
