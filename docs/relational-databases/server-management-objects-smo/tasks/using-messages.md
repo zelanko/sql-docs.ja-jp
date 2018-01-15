@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf26f0e7f9795e793f9da85d312f39fe44b611f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3ed18e9b9b7f91613a23d0146b79e0da2b056618
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-messages"></a>メッセージの使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO では、システム メッセージがによって表される、<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>オブジェクトに属し、**サーバー**オブジェクト。 システム メッセージが変更されることはできません、ため**SystemMessage**オブジェクトのプロパティは読み取り専用です。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO では、システム メッセージがによって表される、<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>オブジェクトに属し、**サーバー**オブジェクト。 システム メッセージが変更されることはできません、ため**SystemMessage**オブジェクトのプロパティは読み取り専用です。  
   
  SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいをインスタンス化して、新しいユーザー定義のメッセージを作成できます**UserDefinedMessage**オブジェクトと適切なプロパティを設定します。  
   

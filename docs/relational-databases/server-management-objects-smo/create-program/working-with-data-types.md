@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16d7cc6bac67972516efb5bc916eefacd91eafc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 575e2b0553bd37ca095c1864cc775547ace36a76
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="working-with-data-types"></a>データ型の処理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]データは、多くの型および長さが定義されてを特定の精度を持つ数値、または、独自の規則のセットを持つ別のオブジェクトであるユーザー定義データ型を持つ文字列などのサイズで取得されます。 <xref:Microsoft.SqlServer.Management.Smo.DataType>をによって適切に処理できるように、オブジェクトがデータの種類を分類[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 <xref:Microsoft.SqlServer.Management.Smo.DataType> オブジェクトは、データを受け入れるオブジェクトに関連付けられています。 次[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) オブジェクトに渡すデータによって定義する必要があります、<xref:Microsoft.SqlServer.Management.Smo.DataType>オブジェクトのプロパティ。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  データは、定義済みの長さを持つ文字列、特定の精度を持つ数値、または独自のルール セットを持つ別のオブジェクトであるユーザー定義データ型など、さまざまな型およびサイズで表現されます。 <xref:Microsoft.SqlServer.Management.Smo.DataType>をによって適切に処理できるように、オブジェクトがデータの種類を分類[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 <xref:Microsoft.SqlServer.Management.Smo.DataType> オブジェクトは、データを受け入れるオブジェクトに関連付けられています。 次[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) オブジェクトに渡すデータによって定義する必要があります、<xref:Microsoft.SqlServer.Management.Smo.DataType>オブジェクトのプロパティ。  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-basic"></a>Visual Basic でのコンストラクター内の指定による DataType オブジェクトの構築  
- このコード例は、コンス トラクターを使用して、データ型に基づく別のインスタンスを作成する方法を示しています。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。  
+ このコード例では、コンストラクターを使用して各種の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に基づいたデータ型のインスタンスを作成する方法を示しています。  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>、および XML 型にはすべて、オブジェクトを識別するための名前の値が必要です。  
@@ -81,7 +83,7 @@ dt = New DataType(SqlDataType.Decimal, 10, 2)
 ``` 
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-c"></a>Visual C# でのコンストラクター内の指定による DataType オブジェクトの構築  
- このコード例は、コンス トラクターを使用して、データ型に基づく別のインスタンスを作成する方法を示しています。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。  
+ このコード例では、コンストラクターを使用して各種の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に基づいたデータ型のインスタンスを作成する方法を示しています。  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>、および XML 型にはすべて、オブジェクトを識別するための名前の値が必要です。  
@@ -96,7 +98,7 @@ dt = new DataType(SqlDataType.Decimal, 10, 2);
 ```  
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-basic"></a>Visual Basic での既定のコンストラクターを使用した DataType オブジェクトの構築  
- このコード例は、既定のコンス トラクターを使用して、データ型に基づく別のインスタンスを作成する方法を示しています。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。 データ型の指定にはプロパティを使用します。  
+ このコード例では、既定のコンストラクターを使用して各種の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に基づいたデータ型のインスタンスを作成する方法を示します。 データ型の指定にはプロパティを使用します。  
   
  **注**、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>、すべての XML 型がオブジェクトを識別する名前の値を必要とします。  
   
@@ -111,7 +113,7 @@ dt.MaximumLength = 100
 ```
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-c"></a>Visual C# での既定のコンストラクターを使用した DataType オブジェクトの構築  
- このコード例は、既定のコンス トラクターを使用して、データ型に基づく別のインスタンスを作成する方法を示しています。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。 データ型の指定にはプロパティを使用します。  
+ このコード例では、既定のコンストラクターを使用して各種の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に基づいたデータ型のインスタンスを作成する方法を示します。 データ型の指定にはプロパティを使用します。  
   
  **注**、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>、すべての XML 型がオブジェクトを識別する名前の値を必要とします。  
   

@@ -1,7 +1,7 @@
 ---
-title: "SQL Server 用 ODBC Driver 13.1 で Always Encrypted を使用して |Microsoft ドキュメント"
+title: "SQL Server 用 ODBC ドライバーで Always Encrypted を使用して |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,18 +17,25 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>SQL Server 用 ODBC Driver 13.1 で Always Encrypted を使用します。
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-この記事の内容を使用する ODBC アプリケーションを開発する方法について情報を提供する[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と[SQL Server 用 ODBC Driver 13.1](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)です。
+### <a name="applicable-to"></a>適用
 
-Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Always Encrypted が有効になっているドライバーなどが、SQL Server 用 ODBC Driver 13.1 がこれを透過的に暗号化およびクライアント アプリケーション内の機密データを復号化を実現します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。
+- ODBC Driver 13.1 for SQL Server
+- SQL Server 用 ODBC Driver 17
+
+### <a name="introduction"></a>概要
+
+この記事の内容を使用する ODBC アプリケーションを開発する方法について情報を提供する[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)です。
+
+Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Always Encrypted が有効になっているドライバーなどが、SQL Server 用 ODBC ドライバーでは、これを実現に透過的に暗号化して、クライアント アプリケーション内の機密データを復号化します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。
 
 ### <a name="prerequisites"></a>前提条件
 
@@ -282,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 - 列マスター キーにアクセスするための列マスター キー ストアの呼び出し。
 
-このセクションでは、SQL Server とのパフォーマンスに上記の 2 つの要因の影響を制御する方法の ODBC Driver 13.1 で組み込みのパフォーマンスの最適化について説明します。
+このセクションでは、組み込みのパフォーマンス最適化機能、ODBC ドライバーで SQL Server とのパフォーマンスに上記の 2 つの要因の影響を制御する方法について説明します。
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>メタデータを取得するクエリ パラメーターのラウンド トリップを制御します。
 
-接続に対して Always Encrypted が有効になっている場合、ODBC Driver 13.1 SQL Server が、既定では、呼び出す[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)パラメーター化各クエリの渡す (パラメーターを指定しないで、クエリ ステートメントSQL Server には値)。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合に、クエリ ステートメントを分析し、それらを暗号化するドライバーを許可するには、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションへの透過性の高度な: アプリケーション (およびアプリケーション開発者) は暗号化された列をターゲットとする値が渡される限り、暗号化された列にアクセスするクエリについて注意する必要ありませんドライバーのパラメーターにします。
+接続に対して Always Encrypted が有効になっている場合、ドライバーは、既定では、呼び出す[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)パラメーター化各クエリのクエリ ステートメント (パラメーター値) を除く SQL Server を渡します。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合に、クエリ ステートメントを分析し、それらを暗号化するドライバーを許可するには、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションへの透過性の高度な: アプリケーション (およびアプリケーション開発者) は暗号化された列をターゲットとする値が渡される限り、暗号化された列にアクセスするクエリについて注意する必要ありませんドライバーのパラメーターにします。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>ステートメントごとの動作を常に暗号化します。
 
@@ -294,7 +301,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ステートメントの Always Encrypted の動作を制御するに呼び出しを設定する SQLSetStmtAttr、`SQL_SOPT_SS_COLUMN_ENCRYPTION`ステートメント属性を次の値のいずれか。
 
-|値|Description|
+|[値]|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|ステートメントの暗号化が常に無効になっています|
 |`SQL_CE_RESULTSETONLY` (1)|復号化だけです。 結果セットと戻り値が復号化、およびパラメーターが暗号化されていません|
@@ -329,7 +336,7 @@ SQL Server では、パラメーターを暗号化する必要はありません
 列暗号化キーの暗号化を解除するための列マスター キー ストアへの呼び出しの数を減らすためには、ドライバーは、メモリ内でプレーン テキスト Cek をキャッシュします。 受信したらを使用して ECEK データベース メタデータから、ドライバーは、まず、キャッシュ内で暗号化されたキーの値に対応するプレーン テキスト CEK を検索を試みます。 ドライバーは、キャッシュに対応するプレーン テキスト CEK を見つけられない場合にのみ、CMK を含むキー ストアを呼び出します。
 
 > [!NOTE]
-> SQL Server 用 ODBC Driver 13.1、キャッシュ内のエントリが 2 時間のタイムアウト後に削除されます。 つまり、特定の使用して ECEK のドライバーは、2 時間ごと、またはアプリケーションの有効期間中に 1 回だけキー ストアを取引先担当者、か小さい方です。
+> ODBC Driver for SQL Server では、キャッシュ内のエントリが 2 時間のタイムアウト後に削除されます。 つまり、特定の使用して ECEK のドライバーは、2 時間ごと、またはアプリケーションの有効期間中に 1 回だけキー ストアを取引先担当者、か小さい方です。
 
 ## <a name="working-with-column-master-key-stores"></a>列マスター キー ストアを操作する
 
@@ -339,7 +346,7 @@ SQL Server では、パラメーターを暗号化する必要はありません
 
 ### <a name="built-in-keystore-providers"></a>組み込みキー ストア プロバイダー
 
-SQL Server 用 ODBC Driver 13.1 は、次の組み込みキー ストア プロバイダーが付属します。
+ODBC Driver for SQL Server は、次の組み込みキー ストア プロバイダーが付属します。
 
 | 名前 | Description | プロバイダー (メタデータ) の名前 |可用性|
 |:---|:---|:---|:---|
@@ -352,7 +359,7 @@ SQL Server 用 ODBC Driver 13.1 は、次の組み込みキー ストア プロ�
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault Provider を使用します。
 
-Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Linux、macOS、および Windows 上の SQL Server 用 ODBC Driver 13.1 には、Azure Key Vault の組み込み列マスター キー ストア プロバイダーが含まれています。 参照してください[Azure Key Vault – ステップ バイ ステップ](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、 [Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および[Azure Key Vault で列マスター_キーの作成](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)Azure キーを構成する方法について資格情報コンテナーの Always Encrypted のです。
+Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Linux、macOS、および Windows での SQL Server ODBC ドライバーには、Azure Key Vault の組み込み列マスター キー ストア プロバイダーが含まれています。 参照してください[Azure Key Vault のステップ バイ ステップ](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、 [Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および[Azure Key Vault で列マスター_キーの作成](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)Azure キーを構成する方法について資格情報コンテナーの Always Encrypted のです。
 
 ドライバーは、次の資格情報の種類を使用して Azure Key Vault への認証をサポートします。
 
@@ -387,11 +394,11 @@ AKV CMK 記憶域を使用するその他の ODBC アプリケーションの変
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 証明書ストアのプロバイダーを使用します。
 
-Windows 上の SQL Server 用 ODBC Driver 13.1 には、Windows 証明書ストア、という名前の組み込み列マスター キー ストア プロバイダーが含まれています。`MSSQL_CERTIFICATE_STORE`です。 (このプロバイダーは macOS または Linux で使用できません) です。このプロバイダーと、クライアント コンピューターに CMK をローカルに格納されてし、アプリケーションによって追加の構成は、ドライバーで使用する必要はありません。 ただし、アプリケーションでは、ストアに証明書とその秘密キーへのアクセスが必要です。 参照してください[(Always Encrypted) ストア列のマスター_キーの作成と](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)詳細についてはします。
+ODBC Driver for SQL Server on Windows には、Windows 証明書ストア、という名前の組み込み列マスター キー ストア プロバイダーが含まれています。`MSSQL_CERTIFICATE_STORE`です。 (このプロバイダーは macOS または Linux で使用できません) です。このプロバイダーと、クライアント コンピューターに CMK をローカルに格納されてし、アプリケーションによって追加の構成は、ドライバーで使用する必要はありません。 ただし、アプリケーションでは、ストアに証明書とその秘密キーへのアクセスが必要です。 参照してください[(Always Encrypted) ストア列のマスター_キーの作成と](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)詳細についてはします。
 
 ### <a name="using-custom-keystore-providers"></a>カスタム キー ストア プロバイダーを使用します。
 
-SQL Server 用 ODBC Driver 13.1 CEKeystoreProvider インターフェイスを使用して、サード パーティのカスタム キー ストア プロバイダーがサポートされます。 これにより、アプリケーションを読み込むには、クエリ、および暗号化された列にアクセスする、ドライバーで使用できるようにする、キー ストア プロバイダーを構成します。 アプリケーションが SQL Server でストレージの Cek を暗号化および ODBC; の暗号化された列へのアクセスを超えるタスクを実行するために、キー ストア プロバイダーと連携する可能性も直接詳細については、次を参照してください。[カスタム キー ストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)です。
+ODBC Driver for SQL Server では、CEKeystoreProvider インターフェイスを使用して、サード パーティのカスタム キー ストア プロバイダーもサポートします。 これにより、アプリケーションを読み込むには、クエリ、および暗号化された列にアクセスする、ドライバーで使用できるようにする、キー ストア プロバイダーを構成します。 アプリケーションが SQL Server でストレージの Cek を暗号化および ODBC; の暗号化された列へのアクセスを超えるタスクを実行するために、キー ストア プロバイダーと連携する可能性も直接詳細については、次を参照してください。[カスタム キー ストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)です。
 
 2 つの接続属性は、カスタム キー ストア プロバイダーとの対話に使用されます。 これらは次のとおりです。
 
@@ -515,11 +522,44 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Always Encrypted を使用する場合は、ODBC ドライバーの制限事項
 
-### <a name="bulk-copy-function-usage"></a>一括コピー関数の使用法
-使用、 [SQL 一括コピー関数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)Always Encrypted で ODBC ドライバーを使用する場合はサポートされていません。 SQL 一括コピー関数で使用される暗号化された列に対して透過的な暗号化/暗号化解除は行われません。
-
 ### <a name="asynchronous-operations"></a>非同期操作
 ODBC ドライバーの使用を許可中に[非同期操作](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)Always encrypted によりは、パフォーマンスに影響操作で Always Encrypted が有効にするとします。 呼び出し`sys.sp_describe_parameter_encryption`、ステートメントがブロックしているとすると、サーバーを返す前に、メタデータを返すまで待機するドライバーを暗号化メタデータを決定する`SQL_STILL_EXECUTING`です。
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>SQLGetData を使用してパーツ内のデータを取得します。
+SQL Server 用 ODBC ドライバーの 17 暗号化前に文字とバイナリ列は、SQLGetData を使用してパーツで取得できません。 列全体のデータを格納するための十分な長さのバッファーが、SQLGetData を 1 つだけの呼び出しを作成できます。
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>SQLPutData を使用してパーツでデータを送信します。
+SQLPutData を使用してパーツでは、データを挿入または比較を送信できません。 全体のデータを格納するバッファーと、SQLPutData のみ 1 回の呼び出しを作成できます。 長い形式のデータを暗号化された列に挿入するためには、入力データ ファイルを使用して、次のセクションで説明されている、一括コピー API を使用します。
+
+### <a name="encrypted-money-and-smallmoney"></a>暗号化された money および smallmoney
+暗号化**money**または**smallmoney**列は、パラメーターの対象となることはできません、ODBC データ型のオペランド型の競合エラーでその結果、それらの型に対応する関連があるためです。
+
+## <a name="bulk-copy-of-encrypted-columns"></a>暗号化された列の一括コピー
+
+使用、 [SQL 一括コピー関数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)と**bcp** for SQL Server ODBC ドライバーの 17 以降、ユーティリティが Always Encrypted でサポートされています。 挿入することができます (では暗号化された挿入およびで復号化された取得) のプレーン テキストと (そのまま転送) の暗号化テキストの両方と、一括コピー (bcp_ *) Api を使用して取得し、 **bcp**ユーティリティです。
+
+- Varbinary (max) 形式 (たとえば、別のデータベースに読み込む一括) で暗号化テキストを取得せずに接続する、`ColumnEncryption`オプション (またはに設定する`Disabled`) BCP OUT 操作を実行するとします。
+
+- 挿入し、プレーン テキストを取得および、ドライバーが暗号化および復号化、必要な設定としてを透過的に実行できるように`ColumnEncryption`に`Enabled`だけで十分です。 BCP API の機能は、それ以外の場合変更されません。
+
+- Varbinary (max) 形式 (例: 取得された上) で暗号化テキストを挿入、設定、`BCPMODIFYENCRYPTED`オプションを TRUE に設定し、BCP IN 操作を実行します。 結果として得られるデータを復号可能なためには、転送先の列の CEK が元となる、暗号化テキストの取得元と同じことを確認します。
+
+使用する場合、 **bcp**ユーティリティ: コントロールに、`ColumnEncryption`設定すると、-d オプションを使用し、目的の値を含む DSN を指定します。 暗号化テキストを挿入することを確認、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザーの設定を有効にします。
+
+次の表は、暗号化された列で使用する場合、アクションの概要を示します。
+
+|`ColumnEncryption`|BCP の方向|Description|
+|----------------|-------------|-----------|
+|`Disabled`|(クライアント) をチェック アウト|暗号化テキストを取得します。 観察対象のデータ型は**varbinary (max)**です。|
+|`Enabled`|(クライアント) をチェック アウト|プレーン テキストを取得します。 ドライバーは、列のデータを復号化されます。|
+|`Disabled`|(サーバー)|暗号化テキストを挿入します。 これは、復号化に読み込まなくても不透過として暗号化されたデータを移動するためのものです。 場合、操作が失敗、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザーのオプションが設定されていないか、BCPMODIFYENCRYPTED が接続ハンドルに設定されていません。 詳細については、以下を参照してください。|
+|`Enabled`|(サーバー)|プレーン テキストを挿入します。 ドライバーでは、列のデータを暗号化します。|
+
+### <a name="the-bcpmodifyencrypted-option"></a>BCPMODIFYENCRYPTED オプション
+
+データの破損を防ぐためには、サーバー通常できない暗号化された列に直接暗号化テキストを挿入して、したがってこれを行うには失敗します。ただし、設定、BCP API を使用して暗号化されたデータの一括読み込みの`BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を直接挿入される暗号化テキストにより、オプションを TRUE に設定で暗号化されたデータの破損のリスクを軽減し、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザー アカウントのオプションです。 ただし、キーは、データを一致する必要があります、一括挿入後、さらに使用する前に挿入するデータの一部の読み取り専用チェックを実行することをお勧めします。
+
+参照してください[機密性の高いデータで保護された移行 Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)詳細についてはします。
 
 ## <a name="always-encrypted-api-summary"></a>Always Encrypted の API の概要
 
@@ -551,6 +591,12 @@ ODBC ドライバーの使用を許可中に[非同期操作](../../relational-d
 |IPD フィールド|サイズ/型|既定値|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 バイト)|0|ときに 0 (既定): このパラメーターを暗号化するかどうかは暗号化メタデータの可用性によって決定されます。<br><br>0 以外の場合: 暗号化メタデータがこのパラメーターに使用できる場合は、暗号化されています。 エラー [CE300] で、要求が失敗するそれ以外の場合、[Microsoft] [ODBC Driver 13 for SQL Server] の必須の暗号化では、パラメーターが指定されましたが、サーバーによって暗号化メタデータが指定されていません。|
+
+### <a name="bcpcontrol-options"></a>bcp_control オプション
+
+|オプション名|既定値|Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|TRUE の場合は、暗号化された列に挿入する varbinary (max) 値を許可します。 FALSE の場合は、正しい種類と暗号化メタデータを指定しない限り、カーソルをできないようにします。|
 
 ## <a name="see-also"></a>参照
 

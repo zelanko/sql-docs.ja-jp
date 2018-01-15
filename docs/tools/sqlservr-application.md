@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52fb7eaebe655c2be06b23522e434a2e08950b62
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 345977aa442e8b2a646c2c13caaf71d946ee1a93
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlservr**アプリケーションを開始、停止、一時停止、およびのインスタンスを引き続き[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コマンド プロンプトからです。  
@@ -67,7 +67,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを最小構成で起動します。 設定値によりサーバーが起動できないとき (たとえば使用できるメモリが不足している場合) などに便利です。  
   
  **-e** *error_log_path*  
- エラー ログ ファイルのフル パスを指定します。 指定しない場合、既定の場所は、 *\<ドライブ >*: 既定のインスタンスの \Program Files\Microsoft SQL server \mssql\log\errorlog と*\<ドライブ >*: \Program Files\Microsoft SQL server \mssql$*instance_name*\Log\Errorlog 名前付きインスタンス。 **-e** と *error_log_path*の間には空白を入れません。  
+ エラー ログ ファイルのフル パスを指定します。 指定しない場合、既定の場所は、 *\<ドライブ >*: 既定のインスタンスの \Program Files\Microsoft SQL server \mssql\log\errorlog と*\<ドライブ >*: \Program Files\Microsoft SQL server \mssql$*instance_name*\Log\Errorlog 名前付きインスタンス。 **-e** と *error_log_path* の間には空白を入れません。  
   
  **-l** *master_log_path*  
  **master** データベース トランザクション ログ ファイルの完全修飾パスを指定します。 **-l** と *master_log_path*の間には空白を入れません。  
@@ -76,9 +76,9 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  シングル ユーザー モードで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを起動します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動した場合、1 人のユーザーのみ接続できます。 CHECKPOINT メカニズムは起動しません。CHECKPOINT メカニズムとは、完了したトランザクションをディスク キャッシュからデータベース デバイスに正しく書き込むことを保証する機能です。 一般的に、システム データベースを修復する必要がある問題が発生したときに、このオプションを使用します。このオプションによって **sp_configure allow updates** オプションが有効になります。 既定の設定では、 **allow updates** は無効になります。  
   
  **-n**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスの起動を可能にします。 **-s** パラメーターを設定しない場合、既定のインスタンスが起動します。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に \mssql$Instance1 を使用する場合、ユーザーは \mssql$Instance1\binn ディレクトリで **sqlservr.exe -s instance1**を起動する必要があります。 インスタンスを起動する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で、  **-n** オプションは、使用することをお勧めです、 **-e**オプションも、または[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]イベントは記録されません。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの起動を可能にします。 **-s** パラメーターを設定しない場合、既定のインスタンスが起動します。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に \mssql$Instance1 を使用する場合、ユーザーは \mssql$Instance1\binn ディレクトリで **sqlservr.exe -s instance1**を起動する必要があります。 インスタンスを起動する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で、  **-n** オプションは、使用することをお勧めです、 **-e**オプションも、または[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]イベントは記録されません。  
   
- **-T** *trace #*  
+ **-T** *trace#*  
  指定された、有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -101,7 +101,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
 -   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
- これらのメッセージは、拡張ストアド プロシージャ .dll ファイルやオートメション オブジェクトなどのアイテムの格納領域を確保するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ プールの一部を解放しようとしていることを示している場合があります。 その場合は、 **-g**スイッチによって確保するメモリ量を増やすことを検討してください。  
+ これらのメッセージは、拡張ストアド プロシージャ .dll ファイルやオートメション オブジェクトなどのアイテムの格納領域を確保するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ プールの一部を解放しようとしていることを示している場合があります。 その場合は、 **-g** スイッチによって確保するメモリ量を増やすことを検討してください。  
   
  既定値より小さい値を使用すると、バッファー プールおよびスレッド スタックが利用できる容量が増えます。その結果、拡張ストアド プロシージャ、分散クエリまたはオートメーション オブジェクトを多用しないシステムの、メモリ負荷の高い作業のパフォーマンスが向上することがあります。  
   

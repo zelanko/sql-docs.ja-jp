@@ -18,18 +18,20 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a8626731b1fde43a1713ba4afbc6a98988e2c2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 326c98022af0adbb6e508cc9ba8c6e63f7fd6d23
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WMI プロバイダーが公開されているインターフェイスで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)]を管理する管理コンソール (MMC)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスとネットワーク プロトコルです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>オブジェクトは、WMI プロバイダーを表します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  WMI プロバイダーが公開されているインターフェイスで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)]を管理する管理コンソール (MMC)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスとネットワーク プロトコルです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>オブジェクトは、WMI プロバイダーを表します。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>で確立された接続とは独立して動作するオブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、し、Windows 資格情報を使用して、WMI サービスに接続します。  
   

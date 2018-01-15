@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/05/2018
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
 |pdw_node_id|**int**|この分布はでは、ノードの識別子。 <br/> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/05/2018
   
  この動的管理ビューの内容は、次のコマンドを実行してリセットできます。  
   
-``` t-sql  
+```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
@@ -332,7 +332,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を処理するバックグラウンド タスクの起動完了を待機しています。 内部使用のみ、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を処理するバックグラウンド タスクの終了を待機しています。 内部使用のみ、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_PARTNER_SYNC |パートナーの一覧で同時実行制御の待機します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HADR_READ_ALL_NETWORKS |WSFC ネットワークの一覧に対する読み取りまたは書き込みアクセスの取得を待機しています。 内部使用のみです。 注: をエンジンが (sys.dm_hadr_cluster_networks) などの動的管理ビューで使用される WSFC ネットワークの一覧を維持または WSFC を参照するステートメントを常に Transact SQL を検証するには、ネットワークの情報です。 WSFC 関連のエンジンの起動時にこの一覧が更新されて、通知、および (たとえば、データが失われるとし、WSFC クォーラムを取り戻します) の内部で常に再起動します。 通常、この一覧の更新中はタスクがブロックされます。 、 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HADR_READ_ALL_NETWORKS |WSFC ネットワークの一覧に対する読み取りまたは書き込みアクセスの取得を待機しています。 内部使用のみです。 注: をエンジンが (sys.dm_hadr_cluster_networks) などの動的管理ビューで使用される WSFC ネットワークの一覧を維持または WSFC を参照するステートメントを常に Transact SQL を検証するには、ネットワークの情報です。 WSFC 関連のエンジンの起動時にこの一覧が更新されて、通知、および (たとえば、データが失われるとし、WSFC クォーラムを取り戻します) の内部で常に再起動します。 通常、この一覧の更新中はタスクがブロックされます。 , <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |復旧を実行する前に、セカンダリ データベースがプライマリ データベースに接続するのを待機しています。 これは、想定される待機で、プライマリへの接続の確立に時間がかかる場合に長くなることができます、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |データベース復旧が、セカンダリ データベースが復帰および初期化フェーズを完了し、プライマリ データベースと共通のログ ポイントに戻るのを待機しています。 これは、フェールオーバー後に想定される待機です。元に戻す、Windows システム モニター (perfmon.exe) と動的管理ビューにより、進行状況を追跡できます、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_REPLICAINFO_SYNC |現在のレプリカの状態を更新する同時実行制御を待機しています、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 

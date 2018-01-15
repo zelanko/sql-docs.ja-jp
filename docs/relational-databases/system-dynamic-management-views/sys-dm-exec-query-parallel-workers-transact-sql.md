@@ -24,11 +24,11 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: dd0653ae9177673026eb07bbc14f2b6769315e00
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99165e38dc4f1ad0b25a754f2c0f38b4ae413e84
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -44,16 +44,16 @@ ms.lasthandoff: 11/17/2017
 |**free_worker_count**|**int**|タスクの使用可能なワーカーの数。<br /><br />**注:**すべての受信要求を消費に少なくとも 1 つのワーカーは、空いているワーカー カウントから減算されます。  空いているワーカーの数が負荷の高いサーバーに負の数を指定できます。| 
 |**used_worker_count**|**int**|並列クエリで使用しているワーカーの数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
+  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 階層には、データベースの VIEW DATABASE STATE 権限が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard および Basic 階層が必要です、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理者アカウントです。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-viewing-current-parallel-worker-availability"></a>A. 現在の並列ワーカーの可用性を表示します。  
 
-``` tsql 
+```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   

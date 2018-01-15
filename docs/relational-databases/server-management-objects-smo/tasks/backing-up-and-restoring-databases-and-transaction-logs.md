@@ -22,18 +22,20 @@ helpviewer_keywords:
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf1d65068cc72b7fda04be8b98ac999b22e010fd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 12728d80dbae777438b4b9d63a2bc736d2f4ece5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>データベースおよびトランザクション ログのバックアップと復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO では、<xref:Microsoft.SqlServer.Management.Smo.Backup>クラスおよび<xref:Microsoft.SqlServer.Management.Smo.Restore>クラスは、バックアップと復元の特定のタスクを実行するツールを提供するユーティリティ クラス。 A<xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクトの代わりに必要な特定のバックアップ タスクを表す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバー インスタンス上のオブジェクト。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO の <xref:Microsoft.SqlServer.Management.Smo.Backup> クラスおよび <xref:Microsoft.SqlServer.Management.Smo.Restore> クラスは、バックアップおよび復元の特定のタスクを実行するツールを提供するユーティリティ クラスです。 A<xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクトの代わりに必要な特定のバックアップ タスクを表す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバー インスタンス上のオブジェクト。  
   
  データの損失や破損が発生した場合、バックアップを完全に、または部分的に復元する必要があります。 部分的な復元では、復元するデータを分割するために <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> コレクションが使用されます。 トランザクション ログのバックアップの場合、<xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Restore> プロパティを使用して、データが特定の時点まで復元されます。 データは、<xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> メソッドを使用して検証することができます。 推奨されるバックアップ手順は、復元操作とデータベース内のデータのチェックを定期的に実行することによってバックアップの整合性をチェックすることです。  
   

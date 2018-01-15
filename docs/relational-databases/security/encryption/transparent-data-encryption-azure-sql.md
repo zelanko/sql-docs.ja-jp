@@ -2,28 +2,30 @@
 title: "Azure SQL Database と Data Warehouse 用の TDE | Microsoft Docs"
 description: "SQL Database と Data Warehouse 用の Transparent Data Encryption の概要。 このドキュメントでは、利点と、構成のオプション (サービス管理 TDE、Bring Your Own Key など) について説明します。"
 keywords: 
-services: sql-database
-documentationcenter: 
 author: becczhang
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.component: security
+ms.custom: 
 ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: d486dd7b9d3019cfb3f3cf88482cdb578e9f9066
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39e1807178f536a1bac2148deae406b1e3bb44b5
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database と Data Warehouse 用の Transparent Data Encryption
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Transparent Data Encryption (TDE) を使用すると、データベース、関連するバックアップ、静止したトランザクション ログ ファイルのリアルタイム暗号化および暗号化解除を実行して、悪意のあるアクティビティの脅威から Azure SQL Database と Data Warehouse を保護できます。アプリケーションに変更を加える必要はありません。
 
@@ -43,9 +45,9 @@ Azure の TDE の既定設定では、データベース暗号化キーは、組
 > 新しく作成されたすべての SQL データベースは、既定でサービス管理 TDE を使用して暗号化されます。 2017 年 5 月より前の既存のデータベースと、復元、geo レプリケーション、およびデータベースのコピーで作成されたデータベースは、既定で暗号化されません。
 >
 
-## <a name="bring-your-own-key"></a>Bring Your Own Key
+## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (プレビュー)
 
-Bring Your Own Key (BYOK) サポートを利用すると、TDE 暗号化キーをユーザーが制御できるようになり、いつ誰がキーにアクセスできるかを制御できます。 Azure のクラウド ベースの外部キー管理システムである Azure Key Vault (AKV) は、BYOK のサポートのために TDE が統合された最初のキー管理サービスです。 BYOK がサポートされていると、データベース暗号化キーは AKV に格納されている非対称キーによって保護されます。 非対称キーが Key Vault を離れることはありません。サーバーが Key Vault へのアクセス許可を取得すると、サーバーから Key Vault サービス経由で基本的なキー操作要求が送信されます。 非対称キーはサーバー レベルで設定され、そのサーバーに存在するすべてのデータベースによって継承されます。 BYOK のサポートにより、ユーザーは、キーのローテーション、キー コンテナーのアクセス許可、キーの削除、すべての暗号化キーの監査/レポートの有効化など、キー管理タスクを制御できるようになります。 Key Vault は、キーの集中管理機能を提供し、厳重に監視されたハードウェア セキュリティ モジュール (HSM) を利用して、キーとデータの管理の分離を促進することにより規制のコンプライアンス対応を実現します。 Key Vault の詳細については、「[キー コンテナーのセキュリティ保護](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)」を参照してください。
+Bring Your Own Key (BYOK) (プレビュー中) サポートを利用すると、TDE 暗号化キーをユーザーが制御できるようになり、いつ誰がキーにアクセスできるかを制御できます。 Azure のクラウド ベースの外部キー管理システムである Azure Key Vault (AKV) は、BYOK のサポートのために TDE が統合された最初のキー管理サービスです。 BYOK がサポートされていると、データベース暗号化キーは AKV に格納されている非対称キーによって保護されます。 非対称キーが Key Vault を離れることはありません。サーバーが Key Vault へのアクセス許可を取得すると、サーバーから Key Vault サービス経由で基本的なキー操作要求が送信されます。 非対称キーはサーバー レベルで設定され、そのサーバーに存在するすべてのデータベースによって継承されます。 BYOK のサポートにより、ユーザーは、キーのローテーション、キー コンテナーのアクセス許可、キーの削除、すべての暗号化キーの監査/レポートの有効化など、キー管理タスクを制御できるようになります。 Key Vault は、キーの集中管理機能を提供し、厳重に監視されたハードウェア セキュリティ モジュール (HSM) を利用して、キーとデータの管理の分離を促進することにより規制のコンプライアンス対応を実現します。 Key Vault の詳細については、「[キー コンテナーのセキュリティ保護](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)」を参照してください。
 
 Azure SQL Database と Data Warehouse 用の BYOK がサポートされた TDE の詳細については、「[Transparent Data Encryption with Bring Your Own Key support](transparent-data-encryption-byok-azure-sql.md)」(Bring Your Own Key がサポートされた Transparent Data Encryption) を参照してください。
 
@@ -85,8 +87,8 @@ PowerShell で TDE を構成するには、Azure の所有者、共同作成者�
 | コマンドレット | Description |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |データベースの TDE を有効または無効にします。|
-| [Get-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |データベースの TDE の状態を取得します。 |
-| [Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |データベースの暗号化の進行状況を確認します。 |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |データベースの TDE の状態を取得します。 |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |データベースの暗号化の進行状況を確認します。 |
 | [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |SQL Server に Key Vault キーを追加します。 |
 | [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |SQL Server の Key Vault キーを取得します。 |
 | [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |SQL Server の TDE プロテクターを設定します。 |
@@ -98,11 +100,11 @@ PowerShell で TDE を構成するには、Azure の所有者、共同作成者�
 
 管理者またはマスター データベースの **dbmanager** ロールのメンバーとしてログインし、データベースに接続します。
 
-| Command | Description |
+| コマンド | Description |
 | --- | --- |
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) | SET ENCRYPTION ON/OFF を使用してデータベースの暗号化または暗号化解除を行います。 |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |データベースの暗号化の状態およびデータベースに関連付けられているデータベース暗号化キーに関する情報を返します。 |
-| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |各データ ウェアハウス ノードの暗号化状態と、それに関連付けられているデータベース暗号化キーに関する情報を返します。 | 
+| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |各データ ウェアハウス ノードの暗号化状態と、それに関連付けられているデータベース暗号化キーに関する情報を返します。 | 
 |  | |
 
 Transact-SQL を使用する場合、TDE プロテクターを Azure Key Vault のキーに切り替えることはできません。PowerShell または Azure Portal を使用してください。
@@ -111,7 +113,7 @@ Transact-SQL を使用する場合、TDE プロテクターを Azure Key Vault �
  
 REST API で TDE を構成するには、Azure の所有者、共同作成者、または SQL セキュリティ マネージャーとして接続する必要があります。 
 
-| Command | Description |
+| コマンド | Description |
 | --- | --- |
 |[サーバーの作成または更新](/rest/api/sql/servers/createorupdate)|AAD ID を SQL Server に追加します (Key Vault にアクセス権を付与するために使用されます)。|
 |[サーバー キーの作成または更新](/rest/api/sql/serverkeys/createorupdate)|SQL Server に Key Vault キーを追加します。|

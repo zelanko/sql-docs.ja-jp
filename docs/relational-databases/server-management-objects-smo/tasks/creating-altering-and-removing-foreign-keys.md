@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf86a8be5f18bd64cb6f632e22a246317927e3e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 015a01acc3316e4eccc1c4b93ec77388d0b057ab
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>外部キーの作成、変更、および削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO)、外部キーは、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、外部キーは <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトで表現します。  
   
  SMO では、外部キーを作成するには、外部キーが、コンス トラクターで定義されているテーブルを指定する必要があります、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。 このテーブルから、外部キーになる列を少なくとも 1 つ選択する必要があります。 選択するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> オブジェクト変数を作成し、外部キーの列の名前を指定します。 次に、参照先のテーブルと列を指定します。 使用して、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>列を追加する方法、**列**オブジェクト プロパティです。  
   

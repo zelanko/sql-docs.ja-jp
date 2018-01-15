@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ ms.lasthandoff: 01/05/2018
 |**last_used_threads**|**bigint**|このプランが最後に実行されたときに使用される並列スレッドの数。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**min_used_threads**|**bigint**|最小数は、このプランの 1 つの実行中に使用することの並列スレッドを使用します。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**max_used_threads**|**bigint**|最大数は、このプランの 1 回の実行中に使用される並列スレッドを使用します。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_columnstore_segment_reads**|**bigint**|列ストア セグメントが、クエリで読み取りの合計。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**last_columnstore_segment_reads**|**bigint**|クエリの前回の実行によって読み取られた列ストア セグメントの数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**min_columnstore_segment_reads**|**bigint**|1 つの実行中に、クエリによって読み取られた列ストア セグメントの最小数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
@@ -116,11 +115,16 @@ ms.lasthandoff: 01/05/2018
 |**last_columnstore_segment_skips**|**bigint**|クエリの前回の実行によってスキップされた列ストア セグメントの数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**min_columnstore_segment_skips**|**bigint**|1 つの実行中に、クエリによってこれまでスキップ列ストア セグメントの最小数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**max_columnstore_segment_skips**|**bigint**|1 つの実行中に、クエリによってこれまでスキップ列ストア セグメントの最大数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
-  
+|**total_spills**|**bigint**|コンパイルされた後に、このクエリの実行によって書き込まれたページの合計数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|ページの数には、クエリが実行された最終時刻が書き込まれました。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最小数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最大数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+
 > [!NOTE]
 > <sup>1</sup>ネイティブ コンパイル ストアド プロシージャに対する統計コレクションを有効にすると、ワーカー時間がミリ秒単位で収集します。 クエリを 1 ミリ秒未満で実行した場合、値は 0 になります。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 階層が必要です、`VIEW DATABASE STATE`データベースの権限です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。
   
@@ -133,8 +137,6 @@ ms.lasthandoff: 01/05/2018
  次の例では、CPU の平均時間で順位付けされた上位 5 つのクエリに関する情報を返します。 この例では、クエリ ハッシュに従ってクエリを集計して、論理的に等価のクエリを累積リソース使用量別にグループ化しています。  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
     SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
     MIN(query_stats.statement_text) AS "Statement Text"  
@@ -172,11 +174,12 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## <a name="see-also"></a>参照  
- 
- [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-  
+[実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_procedure_stats および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_cached_plans &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

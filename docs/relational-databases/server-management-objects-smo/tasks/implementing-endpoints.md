@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76a3dee0b7df584ae5bf08923f6b0b8c88289e59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1d8ce479654f80d54c1a5aef6fb63138e13dbc6
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="implementing-endpoints"></a>エンドポイントの実装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]エンドポイントとは、要求をネイティブにリッスンできるサービスです。 SMO を使用してさまざまな種類のエンドポイントをサポートする、<xref:Microsoft.SqlServer.Management.Smo.Endpoint>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> オブジェクトのインスタンスを作成し、そのプロパティを設定することで、特定のプロトコルを必要とする特定の種類のペイロードを処理するためのエンドポイント サービスを作成できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  エンドポイントは、要求をネイティブにリッスンできるサービスです。 SMO を使用してさまざまな種類のエンドポイントをサポートする、<xref:Microsoft.SqlServer.Management.Smo.Endpoint>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> オブジェクトのインスタンスを作成し、そのプロパティを設定することで、特定のプロトコルを必要とする特定の種類のペイロードを処理するためのエンドポイント サービスを作成できます。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Endpoint>上の次のペイロードの種類を指定するオブジェクトを使用できます。  
   
@@ -135,6 +137,6 @@ $ep.EndpointState;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [データベース ミラーリングのエンドポイントと &#40; です。SQL Server と &#41; です。](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

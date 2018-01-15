@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: synonyms [SMO]
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf13a234a187b9da168cc77c26794131c8c32222
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7babb8b9bfb95e964cda26324813b1f7da81953a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-synonyms"></a>シノニムの使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]シノニムとは、スキーマ スコープ オブジェクトの代替名です。 SMO では、シノニムがによって表される、<xref:Microsoft.SqlServer.Management.Smo.Synonym>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの子です。 これは、シノニムは、そのシノニムが定義されているデータベースのスコープ内でのみ有効であることを意味しています。 ただし、シノニムを別のデータベース上またはリモート インスタンス上のオブジェクトに参照できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  シノニムは、スキーマ スコープ オブジェクトの別名です。 SMO では、シノニムがによって表される、<xref:Microsoft.SqlServer.Management.Smo.Synonym>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの子です。 これは、シノニムは、そのシノニムが定義されているデータベースのスコープ内でのみ有効であることを意味しています。 ただし、シノニムを別のデータベース上またはリモート インスタンス上のオブジェクトに参照できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
   
  別名を持つオブジェクトは、ベース オブジェクトと呼ばれます。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> オブジェクトの名前プロパティは、ベース オブジェクトの別名です。  
   

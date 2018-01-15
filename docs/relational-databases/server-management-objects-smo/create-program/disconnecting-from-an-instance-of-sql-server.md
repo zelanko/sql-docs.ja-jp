@@ -18,18 +18,20 @@ helpviewer_keywords:
 - disconnecting [SMO]
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad257fc7f6c68ff08beaa223d57e3c83519644c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93a6600e5b47354caabefef2afae8eda8b31eeae
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server のインスタンスからの切断
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]手動で閉じたり切断する処理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) オブジェクトが必須ではありません。 接続を開いたり閉じたりする操作は、必要に応じて行われます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを手動で閉じたり切断する処理は必要ありません。 接続を開いたり閉じたりする操作は、必要に応じて行われます。  
   
 ## <a name="connection-pooling"></a>接続のプール  
  ときに、[接続](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)メソッドが呼び出されると、接続は自動的に解放されません。 [切断](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)接続プールへの接続を解放するメソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 設定して、これを行う、 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>を参照するプロパティ、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクト。  

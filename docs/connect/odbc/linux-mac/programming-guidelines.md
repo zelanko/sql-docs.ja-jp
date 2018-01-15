@@ -1,7 +1,7 @@
 ---
 title: "プログラミング ガイドライン |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 118099ee43fa1644c8026f968dc041ea148588f1
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-プログラミング機能、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 およびの 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS および Linux では、ODBC に基づいて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client は Windows Data Access Components の ODBC に基づいて ([ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+プログラミング機能、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS および Linux では、ODBC に基づいて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client は Windows Data Access Components の ODBC に基づいて ([ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
-複数のアクティブな結果セット (MARS) およびその他の ODBC アプリケーションで使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定の機能を含めることによって`/usr/local/include/msodbcsql.h`unixODBC ヘッダーを含めた後 (`sql.h`、 `sqlext.h`、 `sqltypes.h`、および`sqlucode.h`)。 場合は、同じシンボル名を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC アプリケーションでは特定の項目。  
+複数のアクティブな結果セット (MARS) およびその他の ODBC アプリケーションで使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定の機能を含めることによって`/usr/local/include/msodbcsql.h`unixODBC ヘッダーを含めた後 (`sql.h`、 `sqlext.h`、 `sqltypes.h`、および`sqlucode.h`)。 場合は、同じシンボル名を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC アプリケーションでは特定の項目。
 
 ## <a name="available-features"></a>利用可能な機能  
 以下のセクション、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ODBC 用 Native Client のドキュメント ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) macOS および Linux で ODBC driver を使用しているときに有効。  
@@ -75,42 +75,52 @@ MacOS および Linux の ODBC ドライバーのこのリリースでは、次�
 
 ## <a name="character-set-support"></a>文字セットのサポート
 
-次の文字セットのいずれかの SQLCHAR データは、ドライバーによってサポートされます。
+ODBC Driver 13 および 13.1、SQLCHAR データは utf-8 をする必要があります。 その他のエンコーディングがサポートされていません。
 
-  -  UTF-8
-  -  CP437
-  -  CP850
-  -  CP874
-  -  CP932
-  -  CP936
-  -  CP949
-  -  CP950
-  -  CP1251
-  -  CP1253
-  -  CP1256
-  -  CP1257
-  -  CP1258
-  -  ISO 8859-1/CP1252
-  -  ISO 8859-2/CP1250
-  -  ISO 8859-3
-  -  ISO 8859-4
-  -  ISO 8859-5
-  -  ISO 8859-6
-  -  ISO 8859-7
-  -  ISO 8859-8/CP1255
-  -  ISO 8859-9/CP1254
-  -  ISO 8859-13
-  -  ISO 8859-15
+ODBC ドライバーの 17、次の文字セットとエンコーディングのいずれかの SQLCHAR データはサポートされています。
 
-接続時に、ドライバーに読み込まれるプロセスの現在のロケールを検出します。 ドライバーはその SQLCHAR (ナロー文字) のデータのエンコードを使用、上記のサポートされているエンコーディングのいずれかである場合それ以外の場合、既定値は utf-8 です。 すべてのプロセスは既定では、"C"ロケールで開始 (そして、utf-8 を既定値に、ドライバーが発生するため)、使用する場合は、アプリケーションは、上記のエンコーディングのいずれかを使用する必要がある、 **setlocale、_wsetlocale**前に適切なロケールを設定する関数接続です。目的のロケールを明示的に指定またはなどの空の文字列を使用して、`setlocale(LC_ALL, "")`環境のロケール設定を使用します。
+|名前|Description|
+|-|-|
+|UTF-8|Unicode|
+|CP437|MS-DOS ラテン アメリカ|
+|CP850|MS-DOS ラテン 1|
+|CP874|ラテン/タイ語|
+|CP932|日本語、SHIFT-JIS|
+|CP936|簡体字中国語、GBK|
+|CP949|韓国語、EUC-KR|
+|CP950|繁体字中国語、Big5|
+|CP1251|キリル文字|
+|CP1253|ギリシャ語|
+|CP1256|アラビア語|
+|CP1257|バルト語|
+|CP1258|ベトナム語|
+|ISO 8859-1/CP1252|ラテン語-1|
+|ISO 8859-2/CP1250|ラテン語-2|
+|ISO 8859-3|ラテン語-3|
+|ISO 8859-4|ラテン語-4|
+|ISO 8859-5|ラテン/キリル|
+|ISO 8859-6|ラテン語とアラビア語|
+|ISO 8859-7|ラテン語とギリシャ語|
+|ISO 8859-8/CP1255|ヘブライ語|
+|ISO 8859-9/CP1254|トルコ語|
+|ISO 8859-13|ラテン語-7|
+|ISO 8859-15|ラテン 9|
+
+接続時に、ドライバーに読み込まれるプロセスの現在のロケールを検出します。 ドライバーはその SQLCHAR (ナロー文字) のデータのエンコードを使用上のエンコーディングのいずれかを使用している場合それ以外の場合、既定値は utf-8 です。 すべてのプロセスは既定では、"C"ロケールで開始 (そして、utf-8 を既定値に、ドライバーが発生するため)、使用する場合は、アプリケーションは、上記のエンコーディングのいずれかを使用する必要がある、 **setlocale、_wsetlocale**前に適切なロケールを設定する関数接続です。目的のロケールを明示的に指定またはなどの空の文字列を使用して、`setlocale(LC_ALL, "")`環境のロケール設定を使用します。
+
+したがって、環境では一般的な Linux または Mac utf-8 エンコードが、ODBC ドライバーの 17 が 13 または 13.1 からアップグレードする場合のユーザー監視しませんのすべての差異です。 ただし、これを使用して、上記のリストで非 utf-8 のエンコードを使用してアプリケーション`setlocale()`utf-8 ではなく、ドライバーからのデータをそのエンコーディングを使用する必要があります。
 
 SQLWCHAR データは UTF 16LE (リトル エンディアン) である必要があります。
 
-SQLDescribeParameter でサーバーの SQL 型を指定していない場合、ドライバーは SQLBindParameter の *ParameterType* パラメーターに指定された SQL 型を使用します。 SQLBindParameter に SQL_VARCHAR などのナロー文字 SQL 型が指定されている場合、ドライバー、提供されたデータ、クライアント コード ページからに変換既定値[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]コード ページです。 (既定値[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]コード ページは一般に 1252 です)。クライアントのコード ページがサポートされていない場合は、utf-8 に設定されます。 この場合、ドライバー utf-8 データを既定のコード ページとし、変換します。 ただし、データが失われる可能性があります。 コード ページ 1252 で文字を表現できない場合、ドライバーは文字を疑問符 ('?') に変換します。 このデータの損失を回避するには、SQLBindParameter に SQL_NVARCHAR などの Unicode SQL 文字型を指定します。 この場合、ドライバーは、utf-8 エンコードで utf-16 データの損失なしで指定された Unicode データを変換します。
+ドライバーがクライアントの既定値 (通常のコード ページ 1252) にエンコーディングから提供されたデータを変換ナロー文字 SQL 型などが SQL_VARCHAR が指定されている場合は、SQLBindParameter での入力パラメーターをバインドする場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]エンコードします。 出力パラメーターの場合は、ドライバーは、クライアントのエンコーディングのデータに関連付けられた照合順序の情報に指定されたエンコーディングから変換します。 ただし、データ損失が発生する---ターゲット エンコードでは表現できないソースのエンコード中に文字が疑問符 () に変換されます ('? ')。
 
-Windows と Linux および macOS の iconv ライブラリの複数のバージョンの間でテキスト エンコード変換違いがあります。 コードページ 1255 (ヘブライ語) でエンコードされたテキスト データは、変換時に動作が異なる 1 つのコード ポイント (0 xca) がします。 この文字を Windows では Unicode に変換するには、0x05BA の utf-16 コード ポイントが生成されます。 Libiconv バージョンと macOS および Linux で Unicode への変換 1.15 より以前生成 0x00CA の utf-16 コード ポイント。
+このデータの損失を避けるためには、入力パラメーターをバインドするときに、SQL_NVARCHAR などの Unicode SQL 文字型を指定します。 この場合、ドライバーは、すべての Unicode 文字を表すことができます、utf-16 にエンコードしてクライアントから変換されます。 さらに、ターゲット列またはサーバー上のパラメーターもありますか、Unicode 型 (**nchar**、 **nvarchar**、 **ntext**) または 1 つが、照合順序/エンコーディングが元のソース データのすべての文字を表します。 Output パラメーターとデータの損失を回避するため、Unicode の SQL 型と型を指定いずれか、Unicode C (SQL_C_WCHAR) utf-16; としてデータを返すドライバーの原因または、ナロー C 型、およびクライアントのエンコーディングがすべて (これは常に utf-8 では可能です)、ソース データの文字を表すことができることを確認してください。
 
-UTF-8 マルチバイト文字または UTF-16 サロゲートが SQLPutData バッファー間で分割されている場合、データの破損が発生します。 部分文字エンコーディングで終了していないストリーミング SQLPutData にバッファーを使用します。  
+照合順序とエンコーディングの詳細については、次を参照してください。 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)です。
+
+なエンコード変換相違 Windows と Linux および macOS の iconv ライブラリの複数のバージョンがあります。 テキストのコードページ 1255 (ヘブライ語) にはデータを Unicode に変換すると動作が異なる 1 つのコード ポイント (0 xca)。 Windows では、この文字は、0x05BA の utf-16 コード ポイントに変換します。 MacOS および libiconv 1.15 より前のバージョンの Linux では、0x00CA に変換します。 Big5/CP950 の 2003年バージョンをサポートしていない iconv ライブラリと Linux の (名前付き`BIG5-2003`)、そのリビジョンを使用して追加の文字が正しく変換されません。
+
+ODBC Driver 13 および 13.1、マルチバイト文字の utf-8 または utf-16 サロゲートが SQLPutData バッファー間で分割はデータの破損で行われます。 部分文字エンコーディングで終了していないストリーミング SQLPutData にバッファーを使用します。 この制限は、ODBC ドライバーの 17 で削除されました。
 
 ## <a name="additional-notes"></a>追加の注意事項  
 

@@ -17,22 +17,24 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51e983b398a6273680e503ca42a839ad3fd8350
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 06920ebc2a8ea8613a9b24f9e9cbd84eed52e468
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="available-programming-samples"></a>使用できるプログラミング サンプル
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]次の表、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) プログラミング サンプルで使用できる、 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]programmability \smo ディレクトリにします。 これらのサンプルは両方で使用できる[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET です。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  次の表、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) プログラミング サンプルで使用できる、 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]programmability \smo ディレクトリにします。 これらのサンプルは両方で使用できる[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET です。  
   
  サンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server 2012 用 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)です。  
   
-|[タイトル]|Description|  
+|Title|Description|  
 |-----------|-----------------|  
 |BackRest|データベースのバックアップと復元の方法を示します。|  
 |ChangeTableOwner|dbo ではないすべてのテーブルの所有者を dbo に変更する方法を説明します。|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 |ServerInfo |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバーと接続のプロパティのリストを表示します。|  
 |SMOPing |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 確認に使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。|  
 |SQLServerList|使用可能なインスタンスの一覧を列挙[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
-|SQLService |開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
+|SQLService|開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
 |Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからトレース情報の読み込みと表示を行います。|  
 |トリガー|データベース トリガーが表示されます。|  
 |UtilityConversion |と共に使用**LoadRegAssembly**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共に使用するための共通言語ランタイム (CLR) 関数の使用方法も含まれています。|  

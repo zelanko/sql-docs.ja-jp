@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 7e7c733332d7d7b38c8067daf45ce39b2023d311
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var | NUL }  
+     { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
  }   
   
 <MIRROR TO clause>::=  
@@ -181,7 +181,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  WITH NO_TRUNCATE または COPY_ONLY を指定する以外の標準的な方法でログ バックアップを行うと、一部のトランザクション ログ レコードはアクティブでなくなります。 1 つ以上の仮想ログ ファイル内ですべてのレコードがアクティブでなくなった場合、ログは切り捨てられます。 定期的なログ バックアップの後ログが切り捨てられない場合は、何らかの原因によりログの切り捨てが遅れている可能性があります。 詳細については、以下を参照してください。  
   
  { *database_name* | **@**database_name_var *}   
- トランザクション ログ、データベースの一部、またはデータベース全体をバックアップする場合の、バックアップ元となるデータベースを指定します。 変数として指定する場合 (**@***database_name_var*)、この名前を指定できます文字列定数として指定 ( **@**  *database_name_var***=***データベース名*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
+ トランザクション ログ、データベースの一部、またはデータベース全体をバックアップする場合の、バックアップ元となるデータベースを指定します。 変数として指定する場合 (**@***database_name_var*)、この名前を指定できます文字列定数として指定 (**@***database_name_var***=***データベース名*) または文字の文字列データ型の変数として以外の**ntext**または**テキスト**データ型。  
   
 > [!NOTE]  
 >  データベース ミラーリング パートナーシップ内のミラー データベースは、バックアップできません。  
@@ -189,10 +189,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 \<file_or_filegroup > [ **、**.*n* ]  
  BACKUP DATABASE でのみ使用できます。ファイル バックアップに含めるデータベース ファイルまたはファイル グループを指定するか、部分バックアップに含める読み取り専用ファイルまたはファイル グループを指定します。  
   
- ファイル **=**  { *logical_file_name*| **@***logical_file_name_var* }  
+ ファイル **=**  { *logical_file_name*| **@ * * * logical_file_name_var* }  
  バックアップに含めるファイルの論理名、またはこの論理名を値として保持する変数を指定します。  
   
- ファイル グループ **=**  { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ ファイル グループ **=**  { *logical_filegroup_name*| **@ * * * logical_filegroup_name_var* }  
  バックアップに含めるファイル グループの論理名、またはこの論理名を値として保持する変数を指定します。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。  
   
 > [!NOTE]  
@@ -203,7 +203,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  詳細についてを参照してください:[ファイルの完全バックアップ &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)と[ファイルおよびファイル グループ &#40; バックアップSQL Server &#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **、**ファイル グループ = { *logical_filegroup_name*| **@***logical_filegroup_name_var* }[ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **、**ファイル グループ = { *logical_filegroup_name*| **@ * * * logical_filegroup_name_var* } [ **,**...*n *]  
  部分バックアップを指定します。 部分バックアップには、データベース内のすべての読み取り/書き込みファイル (プライマリ ファイル グループ、存在する場合は読み取り/書き込みセカンダリ ファイル グループ、および指定の読み取り専用ファイルまたはファイル グループ) が含まれます。  
   
  READ_WRITE_FILEGROUPS  
@@ -212,7 +212,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!IMPORTANT]  
 >  READ_WRITE_FILEGROUPS の代わりに FILEGROUP を使用して、読み取り/書き込みファイル グループのリストを明示的に指定すると、ファイル バックアップが作成されます。  
   
- ファイル グループ = { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ ファイル グループ = { *logical_filegroup_name*| **@ * * * logical_filegroup_name_var* }  
 部分バックアップに含める読み取り専用ファイル グループの論理名、またはこの論理名を値として保持する変数を指定します。 詳細については、次を参照してください。"\<file_or_filegroup >、"このトピックで前述しました。
   
  *n*  
@@ -224,10 +224,9 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 \<backup_device >、バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
- { *logical_device_name* | **@***logical_device_name_var* }  
- データベースのバックアップが作成されるバックアップ デバイスの論理名を指定します。 論理名は、識別子のルールに従う必要があります。 変数として指定する場合 (@*logical_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 (@*logical_device_name_var*  **=** 論理バックアップ デバイス名)、または任意の文字の文字列データ型以外の変数として、 **ntext**または**テキスト**データ型。  
+ { *logical_device_name* | **@ * * * logical_device_name_var* }、データベースをバックアップするバックアップ デバイスの論理名を指定します。論理名は、識別子のルールに従う必要があります。変数として指定する場合 (@*logical_device_name_var*)、バックアップ デバイス名を指定できます文字列定数として指定 (@*logical_device_name_var * **=** 論理バックアップ デバイス名)、または任意の文字の文字列データ型以外の変数として、 **ntext**または**テキスト**データ型。  
   
- {ディスク |テープ |URL}  **=**  { **'***physical_device_name***'**  |   **@** *physical_device_name_var* |NUL}  
+ {ディスク |テープ |URL}  **=**  { **'***physical_device_name***'** | **@ * * * physical_device_name_var* |NUL'}  
  ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、次を参照してください。 [SQL Server のバックアップと Microsoft Azure Blob ストレージ サービスによる復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)です。 チュートリアルについては、次を参照してください。[チュートリアル: SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)です。 
 
 [!NOTE] 
@@ -242,7 +241,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  
  ただし、バックアップは引き続きマーク設定のすべてのページをバックアップ、NUL デバイスは、このファイルに送信されるすべての入力を破棄します。
   
- 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。  
+ 詳細については、「 [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)のインスタンスが動作しているコンピューターにテープ ドライブが装着されている場合のみ使用できます。  
   
 > [!NOTE]  
 >  TAPE オプションは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
@@ -315,7 +314,7 @@ MIRROR TO \<backup_device > [ **、**. *n*  ]、バックアップ デバイス�
 以下のオプションは、このバックアップ操作で作成されるバックアップ セットに対して有効なオプションです。  
   
 > [!NOTE]  
->  復元操作用のバックアップ セットを指定するファイルを使用して **=**   *\<backup_set_file_number >*オプション。 バックアップ セットを指定する方法の詳細についてを参照してください「バックアップ セットの指定" [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。
+>  復元操作用のバックアップ セットを指定するファイルを使用して **=***\<backup_set_file_number >*オプション。 バックアップ セットを指定する方法の詳細についてを参照してください「バックアップ セットの指定" [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。
   
  COPY_ONLY  
  バックアップがあるを指定します、*コピーのみのバックアップ*、これは通常のバックアップ シーケンスには影響しません。 コピーのみのバックアップは定期的に行われる従来のバックアップとは別に作成するもので、 コピーのみのバックアップはありません、全体的なバックアップと復元、データベースのプロシージャです。  
@@ -342,29 +341,28 @@ COMPRESSION
 NO_COMPRESSION  
 バックアップの圧縮を明示的に無効にします。  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+説明 **=**  { **'***テキスト***'** | **@ * * * text_variable* }  
 バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。  
   
-名前 **=**  { *backup_set_name*| **@***backup_set_var* }  
+名前 **=**  { *backup_set_name*| **@ * * * backup_set_var* }  
 バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。  
   
 {EXPIREDATE **='***日付***'**|RETAINDAYS  **=**  *日数*}  
 このバックアップのバックアップ セットがいつ上書きできるようになるかを指定します。 オプションを両方とも使用した場合は、RETAINDAYS が EXPIREDATE よりも優先されます。  
   
-有効期限の日付がによって決まりますがどちらのオプションが指定されている場合、 **mediaretention**構成設定。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+有効期限の日付がによって決まりますがどちらのオプションが指定されている場合、 **mediaretention**構成設定。 詳細については、「 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
   
 > [!IMPORTANT]  
 >  これらのオプションを防ぐだけ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルを上書きするからです。 テープは別の方法で消去することができ、ディスク ファイルはオペレーティング システムで削除できます。 有効期限の確認の詳細については、このトピックの「SKIP」および「FORMAT」を参照してください。  
   
-EXPIREDATE  **=**  { **'***日付***'** |   **@** *date_var* }  
- バックアップ セットが失効して上書きできるようになる日を指定します。 変数として指定する場合 (@*date_var*)、この日付が構成されたシステムに従う必要があります**datetime**書式設定し、次のいずれかとして指定します。  
+EXPIREDATE  **=**  { **'***日付***'**| **@ * * * date_var* } かを指定、バックアップセットが失効して上書きできます。変数として指定する場合 (@*date_var *)、この日付が構成されたシステムに従う必要があります**datetime**書式設定し、次のいずれかとして指定します。  
   
 -   文字列定数 (@*date_var*  **=** 日付)  
 -   文字列データ型の変数 (を除き、 **ntext**または**テキスト**データ型)  
 -   A **smalldatetime**  
 -   A **datetime**変数  
   
-例 :  
+例:  
   
 -   `'Dec 31, 2020 11:59 PM'`  
 -   `'1/1/2021'`  
@@ -374,8 +372,7 @@ EXPIREDATE  **=**  { **'***日付***'** |   **@** *date_var* }
 > [!NOTE]  
 >  失効日を無視するには、SKIP オプションを使用します。  
   
-RETAINDAYS  **=**  {*日数*| **@***days_var* }  
- このバックアップ メディア セットに上書きできるようになるまでの経過日数を指定します。 変数として指定する場合 (**@***days_var*)、整数として指定する必要があります。  
+RETAINDAYS  **=**  {*日数*| **@ * * * days_var* } このバックアップ メディアの前になるまでの経過日数を指定しますセットを上書きすることができます。変数として指定する場合 (**@***days_var*)、整数として指定する必要があります。  
   
 **メディア セットのオプション**  
   
@@ -390,7 +387,7 @@ RETAINDAYS  **=**  {*日数*| **@***days_var* }
 NOINIT  
  バックアップ セットを指定のメディア セットに追加します。この場合、既存のバックアップ セットは維持されます。 メディア セットのメディア パスワードが定義されている場合は、パスワードを指定する必要があります。 既定値は NOINIT です。  
   
-詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
 INIT  
  すべてのバックアップ セットを上書きします。ただし、メディア ヘッダーは維持されます。 INIT を指定した場合は、条件が満たされる限り、そのデバイス上にある既存のすべてのバックアップ セットが上書きされます。 既定では、BACKUP によって次の状況が確認され、いずれかの状況に該当する場合はバックアップ メディアは上書きされません。  
@@ -400,7 +397,7 @@ INIT
   
 これらのチェックを無効にするには、SKIP オプションを使用します。  
   
-詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
 { **NOSKIP** |SKIP}  
 バックアップ操作で、上書き前にメディア上のバックアップ セットの失効日と失効時刻を確認するかどうかを制御します。  
@@ -429,13 +426,13 @@ FORMAT
   
 FORMAT を指定することは SKIP を実行することを意味します。SKIP を明示的に指定する必要はありません。  
   
-MEDIADESCRIPTION  **=**  {*テキスト* | **@***text_variable* }  
+MEDIADESCRIPTION  **=**  {*テキスト*| **@ * * * text_variable* }  
 メディア セットを記述した自由形式のテキストを最大 255 文字で指定します。  
   
-MEDIANAME  **=**  { *media_name* | **@***media_name_variable* }  
+MEDIANAME  **=**  { *media_name* | **@ * * * media_name_variable* }  
 バックアップ メディア セット全体に対するメディア名を指定します。 メディア名は最長 128 文字まで入力できます。MEDIANAME を指定する場合、バックアップ ボリュームに既に存在する、前回指定したメディア名と一致する必要があります。 MEDIANAME を指定しない場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。  
   
-BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE  **=**  { *blocksize* | **@ * * * blocksize_variable* }  
 物理ブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP でデバイスに適したブロック サイズが自動的に選択されるので、このオプションは不要です。 ブロック サイズは、自動的に選択された値よりも明示的に指定された値が優先されます。  
   
 バックアップを作成して CD-ROM に格納したり、CD-ROM からバックアップを復元する場合は、BLOCKSIZE=2048 と指定します。  
@@ -445,7 +442,7 @@ BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }
   
 **データ転送オプション**  
   
-BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT  **=**  { *buffercount* | **@ * * * buffercount_variable* }  
 バックアップ操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセスで仮想アドレス空間が不足し、"メモリ不足" エラーの原因となる場合があります。  
   
 バッファーで使用される領域の合計はによって決定されます。 *buffercount***\****maxtransfersize*です。  
@@ -453,7 +450,7 @@ BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }
 > [!NOTE]  
 >  BUFFERCOUNT オプションを使用してに関する重要な情報は、次を参照してください。、 [OOM の状態につながる可能性が不適切な BufferCount データ転送オプション](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)ブログ。  
   
-MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@ * * * maxtransfersize_variable* }  
  間で使用できるをバイト単位で最大転送単位を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とバックアップ メディア。 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。  
 > [!NOTE]  
 >  データベースで構成されて FILESTREAM、か、インメモリ OLTP ファイル グループが含まれます場合に、SQL ライター サービスを使用してバックアップを作成するときに、`MAXTRANSFERSIZE`時的な部分復元のより大きいか等しくなければなりませんを`MAXTRANSFERSIZE`となった際に使用される、バックアップが作成されました。 
@@ -495,7 +492,7 @@ RESTART
   
 **監視オプション**  
   
-統計情報 [  **=** *割合*]  
+統計情報 [**= * * * 割合*]  
  ごとにメッセージが表示されます*割合*が完了し、進行状況の測定に使用されます。 場合*割合*を省略すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各 10% が完了した後、メッセージが表示されます。  
   
 STATS オプションでは、次のパーセンテージをレポートするためのしきい値に達した時点で、完了したパーセンテージがレポートされます。 このしきい値は、指定したパーセンテージを正確に反映するものではありません。たとえば STATS=10 の場合、40% が完了しても、43% の時点でメッセージが表示されることがあります。 大きいバックアップ セットの場合、これは重要な問題にはなりません。これは、完了した I/O 呼び出し間で、完了パーセンテージの変化が非常に遅くなるためです。  
@@ -536,13 +533,13 @@ NOUNLOAD
 > [!NOTE]  
 >  ログ バックアップを作成しない場合は、単純復旧モデルを使用します。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
   
-{NORECOVERY |スタンバイ **=**  *undo_file_name* }  
+{NORECOVERY |スタンバイ **= * * * undo_file_name* }  
   NORECOVERY  
   ログの末尾をバックアップし、データベースを RESTORING の状態のままにします。 NORECOVERY は、セカンダリ データベースにフェールオーバーする場合、または RESTORE 操作の前にログの末尾を保存する場合に便利です。  
   
   ログの切り捨てをスキップするベストエフォートのログ バックアップを実行して、データベースを自動的に RESTORING 状態にするには、NO_TRUNCATE および NORECOVERY オプションを同時に使用します。  
   
-  スタンバイ **=**  *standby_file_name*  
+  スタンバイ **= * * * standby_file_name*  
   ログの末尾をバックアップし、データベースを読み取り専用および STANDBY 状態のままにします。 STANDBY 句では、スタンバイ データが書き込まれます。ロールバックが実行されますが、追加の復元を行うこともできます。 STANDBY オプションの使用は、BACKUP LOG WITH NORECOVERY の後に RESTORE WITH STANDBY を使用する場合と同じ効果があります。  
   
   指定した、スタンバイ ファイルをスタンバイ モードを使用する必要があります*standby_file_name*、ある場所は、データベースのログに格納します。 指定したファイルが既に存在する場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が上書きされます。 ファイルが存在しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって作成されます。 スタンバイ ファイルはデータベースの一部となります。  
@@ -654,7 +651,7 @@ GO
 |ミラー|メディア ファミリ 1|メディア ファミリ 2|メディア ファミリ 3|  
 |------------|--------------------|--------------------|--------------------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  1 つのメディア ファミリは常に、特定のミラー内の同じデバイス上にバックアップされる必要があります。 したがって、既存のメディア セットを使用するときは毎回、メディア セットを作成したときと同じ順序で各ミラーのデバイスを列挙してください。  
   
@@ -719,13 +716,13 @@ GO
   
 復元が行われる場合、バックアップ セットがまだに記録されていない場合、 **msdb**データベース、バックアップ履歴テーブルを変更する可能性があります。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、**パスワード**と**MEDIAPASSWORD**バックアップを作成するオプションが廃止されました。 これは、パスワード付きで作成されたバックアップを復元することも可能です。  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
- バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
+ バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デバイスへの読み書きできる必要があります。アカウントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの実行には、書き込みアクセス許可が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
   
 ##  <a name="examples"></a> 使用例  
  ここでは、次の例について説明します。  

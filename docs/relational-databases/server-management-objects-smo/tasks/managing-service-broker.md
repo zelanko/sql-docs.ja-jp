@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211edf4746ab07cd65ce189c4279e91e1e956a0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80784d2a5df6d8bd6a2514da6451da6496688ed4
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-service-broker"></a>Service Broker の管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO では、[!INCLUDE[ssSB](../../../includes/sssb-md.md)]内のオブジェクトにある、 **Microsoft.SqlServer.Management.Smo.Broker**名前空間は Microsoft.SqlServer.Smo.dll への参照が必要です。 クラス情報のサポートには、Microsoft.SqlServer.ServiceBrokerEnum.dll への参照も必要です。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO では、[!INCLUDE[ssSB](../../../includes/sssb-md.md)]内のオブジェクトにある、 **Microsoft.SqlServer.Management.Smo.Broker**名前空間は Microsoft.SqlServer.Smo.dll への参照が必要です。 クラス情報のサポートには、Microsoft.SqlServer.ServiceBrokerEnum.dll への参照も必要です。  
   
  SMO によって、[!INCLUDE[ssSB](../../../includes/sssb-md.md)] 実装のプログラムによる管理 (DDL) を許可する [!INCLUDE[ssSB](../../../includes/sssb-md.md)] オブジェクトのセットが提供されます。 これには、メッセージ型、コントラクト、キュー、およびサービスの定義が含まれます。 SMO はデータ操作を目的としていない管理ツールであるため、[!INCLUDE[ssSB](../../../includes/sssb-md.md)] メッセージの送受信は SMO ではサポートされていません。  
   
@@ -47,6 +49,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
- [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker (SQL Server Service Broker)](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

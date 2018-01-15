@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7658d69ae0b59e079e40348962d11fe202a85235
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Windows からのバックアップと復元を使用して Linux に SQL Server データベースを移行します。
 
@@ -195,6 +195,7 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
 > * 復元処理の準備をするバックアップ ファイルを再配置します。
 > * 使用して**sqlcmd** TRANSACT-SQL コマンドを実行するには
 > * データベースのバックアップと復元、 **RESTORE DATABASE**コマンド 
+> * 移行を検証するクエリを実行します。
 
 Linux 上 SQL Server の他の移行シナリオを次に、表示します。 
 

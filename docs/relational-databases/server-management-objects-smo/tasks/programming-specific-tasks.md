@@ -21,18 +21,20 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fb3927a735f0dddfa753bb939947e8d40b6ef88
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c9e3323e743360d3a6ce2a340c87ab7dac7720b
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO オブジェクトを使用して特定のプログラミング作業には、統計の監視、レプリケーション、インスタンス オブジェクトを管理および構成オプションの設定のみをバックアップなど、特定の機能をプログラムで必要となる複雑な処理が含まれます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO オブジェクトを使用したプログラミングに特有のタスクには、バックアップ、統計の監視、レプリケーション、インスタンス オブジェクトの管理、および構成オプションの設定など、特定の関数を使用したプログラムにのみ必要となる場合がある複雑な処理が含まれています。  
   
 |トピック|Description|  
 |-----------|-----------------|  

@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: full-text search [SMO]
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0db7400457bb39daa082650a73f5fbdc9689a16d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fe4843e762233eae4e85be8662b1291b794c59a7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="implementing-full-text-search"></a>フルテキスト検索の実装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]フルテキスト検索の各インスタンスがある[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって SMO で表されると、<xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService>下にあるオブジェクトが存在する、**サーバー**オブジェクト。 このオブジェクトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] フルテキスト検索サービスの構成オプションを管理するために使用します。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに属し、データベースに対して定義されるフルテキスト カタログを表す <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> オブジェクトのコレクションです。 通常のインデックスとは異なり、フルテキスト インデックスは各テーブルに対して 1 つのみ定義されます。 これは、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> オブジェクト内の <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトで表現されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに使用することができ、SMO では <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> オブジェクトで表現されます。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService>下にあるオブジェクトが存在する、**サーバー**オブジェクト。 このオブジェクトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] フルテキスト検索サービスの構成オプションを管理するために使用します。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに属し、データベースに対して定義されるフルテキスト カタログを表す <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> オブジェクトのコレクションです。 通常のインデックスとは異なり、フルテキスト インデックスは各テーブルに対して 1 つのみ定義されます。 これは、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> オブジェクト内の <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトで表現されます。  
   
  フルテキスト検索サービスを作成するには、データベースにフルテキスト カタログが定義されており、データベース内のいずれかのテーブルにフルテキスト検索インデックスが定義されている必要があります。  
   
