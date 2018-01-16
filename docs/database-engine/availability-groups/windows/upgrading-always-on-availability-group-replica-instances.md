@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]をインストールするためのソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
 
 > [!NOTE]  
->  同じ可用性グループ内における SQL Server のバージョンの混在はサポートされていません。 可用性グループを使用して新しいバージョンに移行するには、SQL Server 2016 Enterprise Edition 以降でサポートされている分散型可用性グループを使用するしかありません。
+>  レプリカをアップグレードするローリング アップグレードでなければ、同じ AG でさまざまなバージョンの SQL Server を混在させることはできません。 つまり、新しいバージョンの SQL Server を既存の AG に新しいレプリカとして追加することはできません。 たとえば、SQL Server 2017 レプリカは既存の SQL Server 2016 AG に追加できません。 可用性グループを使用して SQL Server の新しいバージョンに移行するには、SQL Server 2016 Enterprise Edition 以降でサポートされている分散型可用性グループを使用するしかありません。
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>AlwaysOn 可用性グループのローリング アップグレードのベスト プラクティス  
  サーバーのアップグレード時に可用性グループのダウンタイムとデータ損失を最小限に抑えるには、次のベスト プラクティスに従ってください。  

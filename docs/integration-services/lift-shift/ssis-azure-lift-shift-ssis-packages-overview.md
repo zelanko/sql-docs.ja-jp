@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
 SQL Server Integration Services (SSIS) パッケージとワークロードを Azure クラウドに移動できるようになりました。
@@ -54,7 +54,7 @@ SSIS IR は 1 回だけプロビジョニングを行う必要があります。
 
 Data Factory は、他の種類の Integration Runtime もサポートしています。 SSIS IR と他の種類の Integration Runtime の詳細については、「[Azure Data Factory の統合ランタイム](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 この記事で説明されている機能には、SQL Server 2017 または SQL Server 2016 は必要ありません。
 
 これらの機能には、次のバージョンの SQL Server Data Tools (SSDT) が必要です。
@@ -68,7 +68,7 @@ Azure の前提条件の詳細については、「[SQL Server Integration Servi
 
 ## <a name="ssis-features-on-azure"></a>Azure の SSIS 機能
 
-SSISDB をホストする SQL Database のインスタンスをプロビジョニングする際に、SSIS 用 Azure Feature Pack と Access Redistributable もインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、**Excel ファイルと Access ファイル**、およびさまざまな **Azure** データ ソースへの接続を提供します。 この時点では、SSIS 用の**サード パーティ コンポーネント** (Attunity や SAP BI コンポーネントなど、Microsoft が提供するサード パーティ コンポーネントを含む) をインストールすることはできません。
+SSISDB をホストする SQL Database のインスタンスをプロビジョニングする際に、SSIS 用 Azure Feature Pack と Access Redistributable もインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、**Excel ファイルと Access ファイル**、およびさまざまな **Azure** データ ソースへの接続を提供します。 この時点では、SSIS 用の**サード パーティ コンポーネント** (Attunity がサポートする Oracle と Teradata のコンポーネント、SAP BI コンポーネントなど、Microsoft が提供するサード パーティ コンポーネントを含む) をインストールすることはできません。
 
 SSISDB をホストする **SQL Database の名前**が、SSDT および SSMS からパッケージを配置して管理する際に使用する 4 つの部分から成る名前の最初の部分になります: `<sql_database_name>.database.windows.net`。
 

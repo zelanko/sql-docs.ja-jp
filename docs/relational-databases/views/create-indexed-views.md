@@ -24,16 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e72f863a4746bf091c15e48349943906e172c616
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c82b7d40310c22d9c064367ba5437106ff32422
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用し、インデックス付きビューを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] このトピックでは、ビューにインデックスを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
  次の手順は、インデックス付きビューの作成に必要な手順であり、インデックス付きビューの正常な実装に不可欠です。  
   
 1.  SET オプションが、ビューで参照されるすべての既存のテーブルに対して正しいことを確認します。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 -   クエリ オプティマイザーで、クエリ プランの生成にインデックス付きビューが使用される。  
   
-    |SET オプション|必要な値|既定のサーバー値|既定値<br /><br /> OLE DB および ODBC 値|既定値<br /><br /> DB-Library 値|  
+    |SET オプション|必要な値|既定のサーバー値|既定<br /><br /> OLE DB および ODBC 値|既定<br /><br /> DB-Library 値|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  データベースの CREATE VIEW 権限と、ビューが作成されているスキーマの ALTER 権限が必要です。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  

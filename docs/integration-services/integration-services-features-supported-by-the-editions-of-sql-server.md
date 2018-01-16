@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server の各エディションがサポートする Integration Services の機能
  このトピックでは、 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]のさまざまなエディションでサポートされる SQL Server Integration Services (SSIS) の機能の詳細について説明します。  
@@ -63,7 +63,7 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |組み込みのデータ ソース コネクタ|はい|はい|||| 
 |組み込みのタスクと変換|はい|はい||||  
-|Attunity ODBC ソース/ターゲット|はい|はい|||| 
+|ODBC のソースとターゲット |はい|はい|||| 
 |Azure データ ソース コネクタおよびタスク|はい|はい||||  
 |Hadoop/HDFS コネクタおよびタスク|はい|はい||||  
 |基本的なデータ プロファイリング ツール|はい|はい|||| 

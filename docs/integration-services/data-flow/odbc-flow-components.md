@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 514818fce9654a720dac0a0721697b30bdcab787
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用の Connector for Open Database Connectivity (ODBC) by Attunity を使用すると、SSIS 開発者は、ODBC でサポートされているデータベースからのデータの読み込みおよびアンロードを実行するパッケージを簡単に作成できます。  
+ [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用の Connector for Open Database Connectivity (ODBC) を使用すると、SSIS 開発者は、ODBC でサポートされているデータベースからのデータの読み込みおよびアンロードを実行するパッケージを簡単に作成できます。  
   
  ODBC コネクタは、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のコンテキストで、ODBC でサポートされているデータベースへのデータの読み込みやデータのアンロードを実行するときに、最適なパフォーマンスを得ることができるように設計されています。  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [ODBC 入力元](../../integration-services/data-flow/odbc-source.md)  
   
--   [ODBC 入力先](../../integration-services/data-flow/odbc-destination.md)  
+-   [ODBC 変換先](../../integration-services/data-flow/odbc-destination.md)  
   
  ODBC 入力元および ODBC 入力先を使用すると、データのアンロードと読み込み、ODBC でサポートされているソース データベースからのデータ転送、ODBC でサポートされている入力先データベースへのデータ転送を簡単に実行できます。  
   
@@ -137,7 +137,7 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 入力元](../../integration-services/data-flow/odbc-source.md)  
+-   [ODBC 変換元](../../integration-services/data-flow/odbc-source.md)  
   
 -   [ODBC 入力先](../../integration-services/data-flow/odbc-destination.md)  
   

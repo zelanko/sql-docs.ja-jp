@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a1254e44ac2fcc110a81d9ac7f566a348812f80
+ms.sourcegitcommit: 1eac335235847c3578e376e0854413710d345dee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>ログ末尾のバックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップと復元のみに関連しています。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 |BACKUP LOG オプション|コメント|  
 |-----------------------|--------------|  
-|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。 これと併せて、NO_TRUNCATE オプションまたは COPY_ONLY オプションを指定しない限り、ログは切り捨てられます。<br /><br /> **\*\* 重要 \*\*** データベースが破損している場合を除き、NO_TRUNCATE を使用しないでください。|  
+|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。 これと併せて、NO_TRUNCATE オプションまたは COPY_ONLY オプションを指定しない限り、ログは切り捨てられます。<br /><br /> **重要:** データベースが破損している場合を除き、NO_TRUNCATE を使用しないでください。|  
 |CONTINUE_AFTER_ERROR|破損したデータベースの末尾をバックアップする場合に限り、CONTINUE_AFTER_ERROR を使用します。<br /><br /> 破損したデータベースにログ末尾のバックアップを適用する場合、通常であればログ バックアップにキャプチャされるメタデータの一部を使用できない場合があります。 詳細については、このトピックの「 [不完全なバックアップ メタデータが含まれたログ末尾のバックアップ](#IncompleteMetadata)」を参照してください。|  
   
 ##  <a name="IncompleteMetadata"></a> 不完全なバックアップ メタデータが含まれたログ末尾のバックアップ  
@@ -63,13 +63,9 @@ ms.lasthandoff: 11/17/2017
  ログ末尾のバックアップのメタデータが不完全な場合、ログ末尾のバックアップ時に、ファイル グループに関する情報の大部分が [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) テーブルから欠落します。 **backupfilegroup** テーブルのほとんどの列は NULL になり、意味を持つ列は次の列のみです。  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **型**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
@@ -83,6 +79,6 @@ ms.lasthandoff: 11/17/2017
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

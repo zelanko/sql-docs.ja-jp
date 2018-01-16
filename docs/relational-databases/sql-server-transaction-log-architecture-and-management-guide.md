@@ -1,7 +1,7 @@
 ---
 title: "SQL Server トランザクション ログのアーキテクチャと管理ガイド | Microsoft Docs"
 ms.custom: 
-ms.date: 10/21/2016
+ms.date: 01/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -14,17 +14,21 @@ ms.topic: article
 helpviewer_keywords:
 - transaction log architecture guide
 - guide, transaction log architecture
+- vlf
+- transaction log guidance
+- vlfs
+- virtual log files
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d778d6a5fe6340e1a5125b60f16a2dbe7dfa781
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  データ変更のログ レコードには、実行した論理操作の記録または変更したデータの前後のイメージの記録が行われます。 前イメージは、操作が実行される前のデータのコピーです。後イメージは、操作を実行した後のデータのコピーです。  
   
- 操作を復旧する手順は、ログ レコードの種類によって異なります。  
+操作を復旧する手順は、ログ レコードの種類によって異なります。  
   
 -   論理操作が記録されている場合  
   
@@ -51,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
     -   操作をロールバックするには、前イメージを適用します。  
   
- トランザクション ログには各種の操作が記録されます。 記録される操作には次のようなものがあります。  
+トランザクション ログには各種の操作が記録されます。 記録される操作には次のようなものがあります。  
   
 -   各トランザクションの開始および終了。  
   
@@ -63,23 +67,30 @@ ms.lasthandoff: 11/17/2017
   
  ロールバック操作も記録されます。 トランザクションごとにトランザクション ログの領域が予約されるので、明示的にロールバック ステートメントを実行したときやエラーが発生したときのロールバックに備え、十分なログ領域が確保されます。 予約領域のサイズは、トランザクションで実行される操作によって変わりますが、一般には各操作を記録するために使用される領域のサイズと同じです。 この予約領域は、トランザクションが完了したときに解放されます。  
   
- ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、または *アクティブ ログ*といいます。 これは、データベースの完全復旧を実行するために必要なログのセクションです。 アクティブなログはどの部分も切り捨てることができません。 この先頭ログ レコードのログ シーケンス番号 (LSN) は、最小復旧 LSN (*MinLSN*) と呼ばれます。  
+<a name="minlsn"></a> ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、または*アクティブ ログ*といいます。 これは、データベースの完全復旧を実行するために必要なログのセクションです。 アクティブなログはどの部分も切り捨てることができません。 この先頭ログ レコードの[ログ シーケンス番号 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) は、**最小復旧 LSN (*MinLSN*) と呼ばれます。  
   
 ##  <a name="physical_arch"></a> トランザクション ログの物理アーキテクチャ  
- データベースのトランザクション ログは、1 つ以上の物理ファイルにマップされます。 概念的には、ログ ファイルは一続きのログ レコードです。 物理的には、一連のログ レコードは、トランザクション ログを実装する一連の物理ファイルに効率的に格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。  
+データベースのトランザクション ログは、1 つ以上の物理ファイルにマップされます。 概念的には、ログ ファイルは一続きのログ レコードです。 物理的には、一連のログ レコードは、トランザクション ログを実装する一連の物理ファイルに効率的に格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] により、各物理ログ ファイルは内部的に多くの仮想ログ ファイル (VLF) に分割されています。 仮想ログ ファイルのサイズは固定されておらず、1 つの物理ログ ファイルに対する仮想ログ ファイルの数も決まっていません。 仮想ログ ファイルのサイズは、ログ ファイルの作成時や拡張時に [!INCLUDE[ssDE](../includes/ssde-md.md)] により動的に選択されます。 [!INCLUDE[ssDE](../includes/ssde-md.md)] では、管理する仮想ファイルの数を少なく保とうとします。 ログ ファイルを拡張した後の仮想ファイルのサイズは、既存のログのサイズと増加した新しいファイルのサイズの合計になります。 管理者が仮想ログ ファイルのサイズや数を構成または設定することはできません。  
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] により、各物理ログ ファイルは内部的に多くの仮想ログ ファイル (VLF) に分割されています。 仮想ログ ファイルのサイズは固定されておらず、1 つの物理ログ ファイルに対する仮想ログ ファイルの数も決まっていません。 仮想ログ ファイルのサイズは、ログ ファイルの作成時や拡張時に [!INCLUDE[ssDE](../includes/ssde-md.md)] により動的に選択されます。 [!INCLUDE[ssDE](../includes/ssde-md.md)] では、管理する仮想ファイルの数を少なく保とうとします。 ログ ファイルを拡張した後の仮想ファイルのサイズは、既存のログのサイズと増加した新しいファイルのサイズの合計になります。 管理者が仮想ログ ファイルのサイズや数を構成または設定することはできません。  
 
 > [!NOTE]
-> 次の方法に従って VLF を作成します。
+> 次の方法に従って仮想ログ ファイル (VLF) を作成します。
 > - 次の増加量が現在のログの物理サイズの 1/8 未満の場合、増加分のサイズに対応する 1 個の VLF を作成します ([!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降)。
 > - 増加分が 64 MB 未満の場合、増加分のサイズに対応する 4 個の VLF を作成します (たとえば、1 MB 増加の場合は 4 個の 256 KB VLF を作成します)
 > - 増加分が 64 MB 以上 1 GB 以下の場合、増加分のサイズに対応する 8 個の VLF を作成します (たとえば、512 MB 増加の場合は 8 個の 64 MB VLF を作成します)
 > - 増加分が 1 GB を超える場合、増加分のサイズに対応する 16 個の VLF を作成します (たとえば、8 GB 増加の場合は 16 個の 512 MB VLF を作成します)
 
- 仮想ログ ファイルがシステムのパフォーマンスに影響を与えるのは、小さな *size* 値と *growth_increment* 値で物理ログ ファイルを定義した場合のみです。 *size* 値はログ ファイルの初期サイズであり、 *growth_increment* 値は新しい領域が必要になるたびにファイルに追加される容量を示します。 小さな増加が繰り返されることにより、これらのログ ファイルが大きいサイズに拡張された場合、多くの仮想ログ ファイルが生成されます。 このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。 ログ ファイルの *size* には最終的に必要なサイズに近い値を割り当て、*growth_increment* には比較的大きい値を割り当てることをお勧めします。 これらのパラメーターの詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
+小さな増加が繰り返されることにより、これらのログ ファイルが大きいサイズに拡張された場合、多くの仮想ログ ファイルが生成されます。 **このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。** ログ ファイルの *size* には最終的に必要なサイズに近い値を割り当て、*growth_increment* には比較的大きい値を割り当てることをお勧めします。 下のヒントを参照し、現在のトランザクション ログ サイズに最適な VLF 配布を決定してください。
+ - *サイズ*値は `ALTER DATABASE` の `SIZE` 引数で設定されますが、これはログ ファイルの初期サイズとなります。
+ - *growth_increment* 値は `ALTER DATABASE` の `FILEGROWTH` 引数で設定されますが、これは新しい領域が必要になるたびにファイルに追加される領域の量です。 
+ 
+`ALTER DATABASE` の `FILEGROWTH` 引数と `SIZE` 引数の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
+
+> [!TIP]
+> 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
   
- トランザクション ログは、循環して使用されるファイルです。 たとえば、4 つの仮想ログ ファイルに分割された 1 つの物理ログ ファイルが格納されたデータベースがあるとします。 このデータベースの作成時、論理ログ ファイルは物理ログ ファイルの先頭から始まります。 新しいログ レコードは論理ログの末尾に追加され、物理ログの末尾に向かって拡張されます。 ログの切り捨てにより、最小復旧ログ シーケンス番号 (MinLSN) より前にあるすべての仮想ログ レコードが解放されます。 *MinLSN* は、データベース全体を正常にロールバックするために必要な最も古いログ レコードのログ シーケンス番号です。 例として挙げたデータベースのトランザクション ログは、次の図のようになります。  
+ トランザクション ログは、循環して使用されるファイルです。 たとえば、4 つの VLF に分割された 1 つの物理ログ ファイルが格納されたデータベースがあるとします。 このデータベースの作成時、論理ログ ファイルは物理ログ ファイルの先頭から始まります。 新しいログ レコードは論理ログの末尾に追加され、物理ログの末尾に向かって拡張されます。 ログの切り捨てにより、最小復旧ログ シーケンス番号 (MinLSN) より前にあるすべての仮想ログ レコードが解放されます。 *MinLSN* は、データベース全体を正常にロールバックするために必要な最も古いログ レコードのログ シーケンス番号です。 例として挙げたデータベースのトランザクション ログは、次の図のようになります。  
   
  ![tranlog3](../relational-databases/media/tranlog3.gif)  
   
@@ -89,11 +100,14 @@ ms.lasthandoff: 11/17/2017
   
  このサイクルは、論理ログの末尾が論理ログの先頭に達しない限り、無限に繰り返されます。 古いログ レコードが頻繁に切り捨てられ、次のチェックポイントで作成されるすべての新規ログ レコードを格納するのに必要な領域が常に確保されている場合、論理ログがいっぱいになることはありません。 ただし、論理ログの末尾が論理ログの先頭に達した場合には、次のいずれかの処理が発生します。  
   
--   ログで FILEGROWTH の設定が有効になっていて、ディスクの領域が使用できる場合、ファイルは *growth_increment* パラメーターで指定した量だけ拡張され、新規ログ レコードがその拡張部分に追加されます。 FILEGROWTH 設定の詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
+-   ログで `FILEGROWTH` の設定が有効になっていて、ディスクの領域が使用できる場合、ファイルは *growth_increment* パラメーターで指定した量だけ拡張され、新規ログ レコードがその拡張部分に追加されます。 `FILEGROWTH` 設定の詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
   
--   FILEGROWTH の設定が有効になっていない場合、またはログ ファイルを保持しているディスクの空き領域が *growth_increment* で指定した量よりも少ない場合は、エラー 9002 が生成されます。 詳細については、「[満杯になったトランザクション ログのトラブルシューティング](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
+-   `FILEGROWTH` の設定が有効になっていない場合、またはログ ファイルを保持しているディスクの空き領域が *growth_increment* で指定した量よりも少ない場合は、エラー 9002 が生成されます。 詳細については、「[満杯になったトランザクション ログのトラブルシューティング](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
- ログに複数の物理ログ ファイルが含まれている場合、論理ログは、すべての物理ログ ファイルの領域を使用し終えてから、最初の物理ログ ファイルの先頭に戻ります。  
+ ログに複数の物理ログ ファイルが含まれている場合、論理ログは、すべての物理ログ ファイルの領域を使用し終えてから、最初の物理ログ ファイルの先頭に戻ります。 
+ 
+> [!IMPORTANT]
+> トランザクション ログ サイズ管理の詳細については、「[トランザクション ログ ファイルのサイズの管理](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。
   
 ### <a name="log-truncation"></a>ログの切り捨て  
  ログの切り捨ては、ログがいっぱいにならないようにするために不可欠です。 ログの切り捨てでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの論理トランザクション ログから非アクティブな仮想ログ ファイルが削除されます。これにより、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。 ただし、ログの切り捨て前に、チェックポイント操作が必要です。 チェックポイントでは、現在メモリにある修正ページ (ダーティ ページ) とトランザクション ログ情報がメモリからディスクに書き込まれます。 チェックポイントが実行されると、トランザクション ログの非アクティブな部分は再利用できるようにマークが付けられます。 その後、ログの切り捨てにより、非アクティブな部分を解放できます。 チェックポイントの詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。  
@@ -109,7 +123,6 @@ ms.lasthandoff: 11/17/2017
  何かの理由で遅延が発生している場合を除いて、ログの切り捨ては、次のイベントの後に自動的に発生します。  
   
 -   単純復旧モデルでは、チェックポイント以降。  
-  
 -   完全復旧モデルまたは一括ログ復旧モデルで、前回のバックアップ後にチェックポイントが発生している場合は、ログ バックアップの後。  
   
  ログの切り捨ては、さまざまな要因で遅延が発生する場合があります。 ログの切り捨てで長時間の遅延が発生すると、トランザクション ログがいっぱいになる可能性があります。 詳細については、「[ログの切り捨てが遅れる原因となる要因](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)」と「[満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
@@ -126,9 +139,15 @@ ms.lasthandoff: 11/17/2017
   
  最初のログ バックアップを作成する前に、データベース バックアップや一連のファイル バックアップの最初のバックアップを行って、完全バックアップを作成する必要があります。 ファイル バックアップだけを使ったデータベースの復元は複雑になる可能性があります。 したがって、可能な時点でデータベースの完全バックアップを行うことから始めることをお勧めします。 その後、トランザクション ログを定期的にバックアップする必要があります。 その結果、作業損失の可能性が最小限に抑えられるだけでなく、トランザクション ログの切り捨ても可能になります。 一般に、トランザクション ログは、通常のログ バックアップ後に毎回切り捨てられます。  
   
- ログ バックアップは、ビジネス要件に対応するために十分な頻度で作成することをお勧めします。特に、ログ ドライブに障害が起こった場合に生じる作業損失に対する許容範囲を考慮してください。 ログ バックアップを行う適切な頻度は、作業損失に対する許容範囲と、ログ バックアップを保存、管理、復元できる量とのバランスによります。 15 分から 30 分間隔でログ バックアップを行えば十分でしょう。 業務上、作業損失の可能性を最小限に抑えることが求められる場合は、ログ バックアップの頻度を増やすことを検討します。 ログ バックアップの頻度を増やせば、ログ切り捨ての頻度も高くなり、ログ ファイルが小さくなる利点もあります。  
+> [!IMPORTANT]
+> ログ バックアップは、ビジネス要件に対応するために十分な頻度で作成することをお勧めします。特に、ログ ストレージに障害が起こった場合に生じる作業損失に対する許容範囲を考慮してください。 ログ バックアップを行う適切な頻度は、作業損失に対する許容範囲と、ログ バックアップを保存、管理、復元できる量とのバランスによります。 復旧計画を導入するときは必要な [RTO](http://wikipedia.org/wiki/Recovery_time_objective) と [RPO](http://wikipedia.org/wiki/Recovery_point_objective) について、特にログ バックアップの頻度について検討してください。
+> 15 分から 30 分間隔でログ バックアップを行えば十分でしょう。 業務上、作業損失の可能性を最小限に抑えることが求められる場合は、ログ バックアップの頻度を増やすことを検討します。 ログ バックアップの頻度を増やせば、ログ切り捨ての頻度も高くなり、ログ ファイルが小さくなる利点もあります。  
   
- 復元する必要があるログ バックアップの数を制限するには、定期的なデータのバックアップが不可欠です。 たとえば、データベースの完全バックアップを毎週実行し、差分バックアップを毎日実行するようにスケジュールできます。  
+> [!IMPORTANT]
+> 復元する必要があるログ バックアップの数を制限するには、定期的なデータのバックアップが不可欠です。 たとえば、データベースの完全バックアップを毎週実行し、差分バックアップを毎日実行するようにスケジュールできます。  
+> 繰り返しになりますが、復旧計画を導入するときは必要な [RTO](http://wikipedia.org/wiki/Recovery_time_objective) と [RPO](http://wikipedia.org/wiki/Recovery_point_objective) について、特に、データベースの完全バックアップと差分バックアップの頻度について検討してください。
+
+トランザクション ログのバックアップの詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。
   
 ### <a name="the-log-chain"></a>ログ チェーン  
  ログ バックアップの連続的なシーケンスは、 *ログ チェーン*と呼ばれます。 ログ チェーンは、データベースの完全バックアップから始まります。 通常、新しいログ チェーンが開始されるのは、データベースが最初にバックアップされたとき、または復旧モデルを単純復旧から完全復旧または一括ログ復旧に変更したときだけです。 データベースの完全バックアップの作成時に既存のバックアップ セットを上書きしない限り、既存のログ チェーンはそのまま残ります。 ログ チェーンがそのまま残っている場合は、メディア セット内にあるデータベースの完全バックアップからデータベースを復元し、その後で復旧ポイントに達するまで後続のログ バックアップをすべて復元できます。 復旧ポイントは、最後のログ バックアップの末尾、または任意のログ バックアップの特定の復旧ポイントである場合があります。 詳細については、「[トランザクション ログ バックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。  
@@ -194,12 +213,11 @@ SQL Server データベース エンジンでは自動チェックポイント�
 復旧間隔の設定については、「 [recovery interval サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)」を参照してください。
 
 > [!TIP]  
->  一部の種類のチェックポイントでは、データベース管理者が -k SQL Server の詳細設定オプションを使用して、I/O サブシステムのスループットに基づいてチェックポイントの I/O 動作を調整できます。 -k 設定オプションは、自動チェックポイントと、-k を使用しなければ調整されないチェックポイントに適用されます。 
+> 一部の種類のチェックポイントでは、データベース管理者が -k SQL Server の詳細設定オプションを使用して、I/O サブシステムのスループットに基づいてチェックポイントの I/O 動作を調整できます。 -k 設定オプションは、自動チェックポイントと、-k を使用しなければ調整されないチェックポイントに適用されます。 
  
 データベースで単純復旧モデルを使用している場合、自動チェックポイントにより、トランザクション ログの未使用のセクションが切り捨てられます。 ただし、データベースで完全復旧モデルまたは一括ログ復旧モデルを使用している場合は、自動チェックポイントにより、ログが切り捨てられることはありません。 詳細については、「 [トランザクション ログ](../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください. 
 
 CHECKPOINT ステートメントでは、チェックポイントが終了するまでの時間を秒単位で指定する checkpoint_duration 引数が使用できるようになりました。この引数は省略可能です。 詳細については、「 [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md)」を参照してください。
-
 
 ### <a name="active-log"></a>アクティブ ログ
 
@@ -222,15 +240,15 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
 
 ログ リーダー エージェントは、トランザクション レプリケーション用に構成した各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 アクティブなログには、レプリケーション用にマークされていて、まだディストリビューション データベースに配信されていないすべてのトランザクションが含まれている必要があります。 これらのトランザクションが時間どおりにレプリケートされない場合、そのことが原因でログを切り捨てられなくなる場合もあります。 詳細については、「 [Transactional Replication](../relational-databases/replication/transactional/transactional-replication.md)」 (トランザクション レプリケーション) を参照してください。
 
+## <a name="see-also"></a>参照 
+トランザクション ログとログ管理のベスト プラクティスに関するその他の情報については、次の記事および書籍を参照することをお勧めします。  
   
-## <a name="additional-reading"></a>その他の情報  
- トランザクション ログに関するその他の情報については、次の記事および書籍を参照することをお勧めします。  
-  
- [トランザクション ログ ファイルのサイズの管理](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
- [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
- [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
- [トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
- [SQL Server のログ記録と復旧について (著者: Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
- [SQL Server Transaction Log Management (SQL Server のトランザクション ログ管理) (著者: Tony Davis、Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)    
+[トランザクション ログ ファイルのサイズの管理](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+[トランザクション ログのバックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
+[SQL Server のログ記録と復旧について (著者: Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[SQL Server Transaction Log Management (SQL Server のトランザクション ログ管理) (著者: Tony Davis、Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

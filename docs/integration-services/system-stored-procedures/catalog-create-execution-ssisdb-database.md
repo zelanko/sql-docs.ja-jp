@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>引数  
  [@folder_name =] *folder_name*  
- 実行するパッケージが格納されているフォルダーの名前。 *folder_name* は **nvarchar (128)** です。  
+ 実行するパッケージが格納されているフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [@project_name =] *project_name*  
- 実行するパッケージが格納されているプロジェクトの名前。 *project_name* は **nvarchar (128)** です。  
+ 実行するパッケージが格納されているプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [@package_name =] *package_name*  
  実行するパッケージの名前。 *package_name* は **nvarchar (260)** です。  
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  実行が Scale Out であるかどうかを示します。パッケージを Scale Out で実行するには、値 1 を使用します。Scale Out を使用せずにパッケージを実行するには、値 0 を使用します。このパラメーターはオプションです。 指定しない場合、その値は [SSISDB].[catalog].[catalog_properties] で DEFAULT_EXECUTION_MODE に設定されます。 *runinscaleout* は **bit** です。 
  
- [@useanyworker =] *useanyworker*  
-  任意の Scale Out Worker の実行が許可されるかどうかを示します。 任意の Scale Out Worker を使用してパッケージを実行するには、値 1 を使用します。 すべての Scale Out Worker にパッケージの実行を許可しないことを示すには、値 0 を使用します。 このパラメーターはオプションです。 指定しない場合、その値は 1 に設定されます。 *useanyworker* は **bit** です。 
+[@useanyworker =] *useanyworker*  
+任意の Scale Out Worker の実行が許可されるかどうかを示します。
+
+-   任意の Scale Out Worker を使用してパッケージを実行するには、値 1 を使用します。 `@useanyworker` を True に設定すると、(Worker 構成ファイルに指定されている) 最大タスク数に到達していない Worker でパッケージを実行できます。
+
+-   すべての Scale Out Worker にパッケージの実行を許可しないことを示すには、値 0 を使用します。 `@useanyworker` を False に設定すると、Scale Out Manager を使用するか、ストアド プロシージャ `[catalog].[add_execution_worker]` を呼び出し、パッケージの実行が許可される Worker を指定する必要があります。
+
+このパラメーターはオプションです。 指定しない場合、その値は 1 に設定されます。 *useanyworker* は **bit** です。 
   
  [@execution_id =] *execution_id*  
  実行のインスタンスの一意識別子を返します。 *execution_id* は **bigint** です。  
 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  実行は、パッケージの実行の 1 つのインスタンス中にパッケージによって使用されるパラメーター値を指定するために使用されます。  
   
  環境参照を指定した場合、*reference_id* パラメーター、ストアド プロシージャは、プロジェクトおよびパッケージ パラメーターをリテラル値や対応する環境変数から参照される値を設定します。 環境参照が指定されている場合は、パッケージの実行中、既定のパラメーター値が使用されます。 特定の実行のインスタンスに使用される値を正確に判断するには、このストアド プロシージャからの *execution_id* 出力パラメーター値を使用して、[execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) ビューをクエリします。  
@@ -99,7 +105,7 @@ GO
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   プロジェクトの READ および EXECUTE 実行権限と、該当する場合は、参照先の環境での READ 権限  
@@ -135,6 +141,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [catalog.start_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
- [catalog.set_execution_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
   

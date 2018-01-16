@@ -20,11 +20,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2050eed47dbe036cf0b51c9acb3fb823f4c6fa60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>可用性グループへの拡張データベース フェールオーバーの追加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して�
 
 インスタンス A とインスタンス B 間で可用性グループが構成されています。これには、DB1 と DB2 という名前のデータベースが 2 つ格納されています。 この可用性モードは、同期コミットと自動フェールオーバー モードに設定されており、拡張データベース フェールオーバーが有効になっています。 DB2 のデータとトランザクション ログ ファイルを含むディスクへのアクセスが失われています。 可用性グループは、問題が検出されると、インスタンス B に自動的にフェールオーバーされます。
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>拡張データベース フェールオーバー オプションを構成および参照する
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>拡張データベース フェールオーバー オプションを構成および参照する
 
 拡張データベース フェールオーバーは、SQL Server Management Studio または TRANSACT-SQL を使用して構成できます。 現在、PowerShell コマンドレットでは、この機能は実行できません。 既定では、拡張データベース フェールオーバーは無効です。
 
@@ -55,11 +55,11 @@ SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して�
 
 *手動で可用性グループを作成する*
 
-可用性グループを作成するには、「[[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」のトピックの手順に従います。 拡張データベース フェールオーバーを有効にするには、*[データベース レベルの正常性検出]* の横のチェックボックスをオンにします。
+可用性グループを作成するには、記事「[[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」の手順に従います。 拡張データベース フェールオーバーを有効にするには、*[データベース レベルの正常性検出]* の横のチェックボックスをオンにします。
 
 *可用性グループ ウィザードを使用する*
 
-「[可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)」のトピックの手順に従います。 拡張データベース フェールオーバーを有効にするオプションは、[可用性グループ名の指定] ダイアログにあります。 これを有効にするには、*[データベース レベルの正常性検出]* の横のボックスをオンにします。
+記事「[可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)」の手順に従います。 拡張データベース フェールオーバーを有効にするオプションは、[可用性グループ名の指定] ダイアログにあります。 これを有効にするには、*[データベース レベルの正常性検出]* の横のボックスをオンにします。
 
 ### <a name="transact-sql"></a>Transact-SQL
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>動的管理ビュー
-可用性グループでエンハンスド データベース フェールオーバーが有効かどうかを確認するには、動的管理ビュー `sys.availablity_groups` に対してクエリを実行します。 列 `db_failover` は、無効の場合は 0 を、有効の場合は 1 になっています。 
+可用性グループでエンハンスド データベース フェールオーバーが有効かどうかを確認するには、動的管理ビュー `sys.availability_groups` に対してクエリを実行します。 列 `db_failover` は、無効の場合は 0 を、有効の場合は 1 になっています。 
 
 ## <a name="next-steps"></a>次の手順 
 

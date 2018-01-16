@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28da6b7f73721a99937dcfca82264463367830c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bf442aad4542358644835a64111ca63ed59b51a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -121,7 +119,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
  その他の例については、「 [Reporting Services スクリプト ファイルを実行する](../../reporting-services/tools/run-a-reporting-services-script-file.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  スクリプトを定義して、システム プロパティの設定、レポートのパブリッシュなどが行えます。 作成したスクリプトには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API の任意のメソッドを含めることができます。 使用可能なメソッドおよびプロパティの詳細については、「 [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)」を参照してください。  
   
  スクリプトは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内でコードを実行します。  

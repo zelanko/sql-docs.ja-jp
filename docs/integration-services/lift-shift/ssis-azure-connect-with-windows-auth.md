@@ -1,5 +1,5 @@
 ---
-title: "Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する | Microsoft Docs"
+title: "Windows 認証でデータ ソースとファイル共有に接続する | Microsoft Docs"
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する
 この記事では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、オンプレミスのデータ ソースと Azure ファイル共有に接続する方法について説明します。 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS Integration Runtime と同じ仮想ネットワーク内のデータ ソースに接続できます。
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/12/2017
 
 3.  SSMS から、使用するオンプレミスの SQL Server に接続できるかどうかを確認します。
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>Prerequisites
 Azure で実行されるパッケージからオンプレミスの SQL Server に接続するには、次の前提条件を有効にする必要があります。
 
 1.  SQL Server 構成マネージャーで、TCP/IP プロトコルを有効にします。

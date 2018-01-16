@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae63f120997ba5018b131f8a946b0f9ae9e384d0
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -133,7 +133,17 @@ ms.lasthandoff: 12/21/2017
  **[IncludeInDebugDump]** オプションが **false**にリセットされると、ユーザーが選択した値を上書きする場合があります。  
   
 **値**    
- ユーザー定義変数の値には、リテラルまたは式を設定できます。 変数には、変数値および変数のデータ型を設定するオプションが含まれています。 この 2 つのプロパティには互換性が必要です。たとえば、文字列の値を整数データ型に使用することはできません。  
+ユーザー定義変数の値には、リテラルまたは式を設定できます。 変数の値を null にすることはできません。 変数の既定値は次のようになります。
+
+| データ型 | 既定値 |
+|---|---|
+| ブール値 | False |
+| 数値データ型とバイナリ データ型 | 0 (ゼロ) |
+| Char データ型と文字列データ型 | (空の文字列) |
+| Object | System.Object |
+| | |
+
+変数には、変数値と変数のデータ型を設定するオプションが含まれています。 この 2 つのプロパティには互換性が必要です。たとえば、文字列の値を整数データ型に使用することはできません。  
   
  変数を式として評価するように構成した場合は、式を指定する必要があります。 式は実行時に評価され、変数は評価結果に設定されます。 たとえば、変数が式 `DATEPART("month", GETDATE())` を使用している場合、変数の値は、現在の日付の月と等しい数値になります。 式は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 式の構文文法を使用する、有効な式である必要があります。 変数に式を使用する場合、リテラルおよび式文法が提供する演算子と関数も使用できますが、パッケージ内のデータ フローの列は参照できません。 式の最大長は 4,000 文字です。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   

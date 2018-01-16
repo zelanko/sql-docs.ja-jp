@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47221585f9bf08f4493043224390ff2d82bb30e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  
@@ -60,29 +58,29 @@ rsconfig {-?}
 |**-e**|**-c** 引数を使用しない場合は必須。|自動的にレポートを実行する場合のアカウントを指定します。<br /><br /> この引数は値を取りません。 ただし、構成ファイルで暗号化されている値を指定する場合は、コマンド ラインに追加の引数を追加する必要があります。<br /><br /> **-e** と共に指定する引数には、 **-u** および **-p**があります。 **-t**を設定することもできます。|  
 |**-m**  *computername*|リモート レポート サーバー インスタンスを構成する場合は必須。|レポート サーバーをホストするコンピューターの名前を指定します。 この引数が省略された場合、既定は **localhost**です。|  
 |**-s**  *servername*|必須。|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
-|**-i**  *instancename*|名前付きインスタンスを使用する場合は必須。|名前付き [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用してレポート サーバー データベースをホストする場合、この値には名前付きインスタンスを指定します。|  
+|**-i**  *instancename*|名前付きインスタンスを使用する場合は必須。|名前付きの Reporting Services インスタンスを使用した場合、この値により、Reporting Services インスタンスの名前が指定されます。|  
 |**-d**  *databasename*|必須。|レポート サーバー データベースの名前を指定します。|  
 |**-a**  *authmethod*|必須。|レポート サーバーがレポート サーバー データベースへの接続に使用する認証方法を指定します。 有効な値は、 **Windows** または **SQL** です (この引数は大文字と小文字を区別しません)。<br /><br /> **Windows** は、レポート サーバーが Windows 認証を使用することを指定します。<br /><br /> **SQL** は、レポート サーバーが SQL Server 認証を使用することを指定します。|  
 |**-u**  *[domain\\]username*|**-e** の場合は必須。 **-c**の場合は省略可。|レポート サーバー データベース接続または自動アカウントのためのユーザー アカウントを指定します。<br /><br /> **rsconfig -e**では、この引数は必須です。 引数はドメイン ユーザー アカウントであることが必要です。<br /><br /> **rsconfig -c** および **-a SQL**では、この引数には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定する必要があります。<br /><br /> **rsconfig -c** および **-a Windows**では、この引数には、ドメイン ユーザー、組み込みアカウント、またはサービス アカウント資格情報を指定できます。 ドメイン アカウントを指定している場合は、 *domain* と *username* を *domain\username*の形式で指定します。 組み込みアカウントを使用する場合、この引数は省略可能です。 サービス アカウント資格情報を使用する場合、この引数は省略してください。|  
 |**-p**  *password*|**-u** を指定した場合は必須。|*username* 引数と共に使用するパスワードを指定します。 アカウントがパスワードを必要としない場合、この引数を空白に設定できます。 この値は、ドメイン アカウントの大文字と小文字を区別します。|  
 |**-t**|省略可。|エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  構成中のレポート サーバーをホストするコンピューターのローカル管理者であることが必要です。  
   
 ## <a name="file-location"></a>ファイルの場所  
  rsconfig.exe は **\Program Files\Microsoft SQL Server\110\Tools\Binn**にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Rsconfig.exe は次の 2 つの目的で使用します。  
   
 -   レポート サーバー データベースへの接続でレポート サーバーが使用する接続情報の修正。  
   
 -   他の資格情報が利用できない場合に、リモート データベース サーバーへのログオンでレポート サーバーが使用する特別なアカウントの構成。  
   
- **rsconfig** ユーティリティは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のローカル インスタンスまたはリモート インスタンスで実行できます。 **rsconfig** ユーティリティは、既に設定されている値の暗号化解除または参照に使用することはできません。  
+**rsconfig** ユーティリティは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のローカル インスタンスまたはリモート インスタンスで実行できます。 **rsconfig** ユーティリティは、既に設定されている値の暗号化解除または参照に使用することはできません。  
   
- このユーティリティを実行する前に、構成中のコンピューターに、Windows Management Instrumentation (WMI) をインストールしておく必要があります。  
+このユーティリティを実行する前に、構成中のコンピューターに、Windows Management Instrumentation (WMI) をインストールしておく必要があります。  
   
 ## <a name="examples"></a>使用例  
  次の例は、 **rsconfig**の使用方法を示しています。  

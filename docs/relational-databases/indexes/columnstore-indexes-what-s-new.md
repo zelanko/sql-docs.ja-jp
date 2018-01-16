@@ -17,11 +17,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24426c82299598fbf80b31b8d2a1ee24b6142d9a
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/15/2017
 |`CREATE TABLE` および `ALTER TABLE` での列ストア インデックスの圧縮遅延オプション|||はい|はい|はい|はい|
 |列ストア インデックスは保存されない計算列を使用できる||||はい|||   
   
- <sup>1</sup> 読み取り可能な非クラスター化列ストア インデックスを作成するには、読み取り専用ファイル グループにインデックスを格納します。  
+ <sup>1</sup> 読み取り専用の非クラスター化列ストア インデックスを作成するには、読み取り専用ファイル グループにインデックスを格納します。  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] での新機能は次のとおりです。
@@ -142,8 +142,8 @@ ms.lasthandoff: 12/15/2017
 -   バッチ処理は、クエリのパフォーマンスを 2 倍以上向上させますが、並列クエリの実行でしか利用できません。  
   
 ## <a name="see-also"></a>参照  
- [列ストア インデックス設計ガイダンス](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [列ストア インデックス - データ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [列ストア インデックスの設計ガイダンス](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
+ [列ストア インデックスのデータ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   

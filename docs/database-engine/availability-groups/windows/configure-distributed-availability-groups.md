@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be67496825da165dca22ed5074e0e1ee67a32a56
-ms.sourcegitcommit: d8d602898e80797e330aab54e53ee7dde8282e21
+ms.openlocfilehash: b26a0a774c6f1f6dcb7dd9b01c732be336f76b94
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="configure-distributed-availability-group"></a>分散型可用性グループを構成する  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/06/2017
 
 分散型可用性グループの技術の概要については、「[Distributed availability groups](distributed-availability-groups.md)」 (分散可用性グループ) を参照してください。   
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>エンドポイント リスナーがすべての IP アドレスをリッスンするよう設定する
 
@@ -220,7 +220,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];
 現在のところ、手動フェールオーバーのみがサポートされています。 次の Transact-SQL ステートメントは、`distributedag` という分散型可用性グループでフェールオーバーします。  
 
 
-1. セカンダリ可用性グループで、可用性モードを同期コミットに設定します。 
+1. 両方の可用性グループに対して、可用性モードを同期コミットに設定します。 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -229,7 +229,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 
