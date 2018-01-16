@@ -26,6 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_ペースメーカー クラスターの配置](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_可用性グループの作成と構成](sql-server-linux-create-availability-group.md)
+## [9_高可用性のための Kubernetes の構成](tutorial-sql-server-containers-kubernetes.md)
 
 # 概念
 ## Install
@@ -85,11 +86,11 @@
 #### [読み取りスケールのみ用に作成する]()
 ##### [AG の構成](sql-server-linux-availability-group-configure-rs.md)
 
-## [セキュリティ](sql-server-linux-security-overview.md)
+## [Security](sql-server-linux-security-overview.md)
 ### [セキュリティ機能の入門](sql-server-linux-security-get-started.md)
 ### [接続の暗号化](sql-server-linux-encrypted-connections.md)
 
-## パフォーマンス
+## [パフォーマンス]
 ### [ベスト プラクティス](sql-server-linux-performance-best-practices.md)
 ### [パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)
 
