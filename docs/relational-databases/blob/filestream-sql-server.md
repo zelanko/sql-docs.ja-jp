@@ -1,7 +1,7 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 10/17/2016
+ms.date: 01/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,14 +21,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9435c864a481a5df25e74c132062cada5ca0e7b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 393b9178fcda3ba0487fc361e4edf107c17d042b
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
 
 FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベースのアプリケーションで非構造化データ (ドキュメントやイメージなど) をファイル システムに格納できます。 これにより、ファイル システムの豊富なストリーミング API と高いパフォーマンスをアプリケーションで活用できるほか、非構造化データとそれに対応する構造化データの間でトランザクションの一貫性も維持されます。  
@@ -154,7 +153,7 @@ FILESTREAM データへのリモート ファイル システム アクセスは
 
 FILESTREAM ハンドルを使用してメモリ マップ表示 (メモリ マップ I/O) を作成することはできません。 FILESTREAM データに対してメモリ マッピングを使用すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でデータの一貫性および持続性やデータベースの整合性を保証できなくなります。  
 
-## <a name="related-tasks"></a>関連タスク
+## <a name="related-tasks"></a>Related Tasks
 
 [FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md)  

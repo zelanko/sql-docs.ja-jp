@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 86f3a722b11761f2d195cd0490c1b9adb5479bed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b48c2c0953e3565a406bf2a22788a2e1c537110
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcolumns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ RETCODE bcp_columns (
  ユーザー ファイル内の合計列数です。 データを一括コピーするユーザー ファイルから準備している場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルで、ユーザー ファイル内のすべての列をコピーする予定がないと、設定する必要があります*nColumns*ユーザー ファイルの列の合計数。  
   
 ## <a name="returns"></a>返します。  
- 成功または失敗します。  
+ SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>解説  
  この関数は、後にのみ呼び出すことができる[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)有効なファイル名で呼び出されました。  

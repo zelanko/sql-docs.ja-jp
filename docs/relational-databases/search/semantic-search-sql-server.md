@@ -22,14 +22,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6bd21c1c3be6109431165eb0c7c17ad1cb88a1c6
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="semantic-search-sql-server"></a>セマンティック検索 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 統計的セマンティック検索では、統計的に関連性がある "*キー フレーズ*" を抽出してインデックスを作成することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている非構造化ドキュメントを深く解釈することができます。 次に、これらのキー フレーズを使用して、*類似または関連ドキュメント*を特定してインデックスを作成することができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 統計的セマンティック検索では、統計的に関連性がある "*キー フレーズ*" を抽出してインデックスを作成することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている非構造化ドキュメントを深く解釈することができます。 次に、これらのキー フレーズを使用して、*類似または関連ドキュメント*を特定してインデックスを作成することができます。  
   
 ##  <a name="whatcanido"></a> セマンティック検索で実行できる操作  
  セマンティック検索は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既存のフルテキスト検索機能を基にして構築されていますが、キーワード検索を超える新しいシナリオにも対応できます。 フルテキスト検索ではドキュメントの *単語* に対してクエリを実行しますが、セマンティック検索ではドキュメントの *意味* に対してクエリを実行します。 これによって、自動タグ抽出、関連性のあるコンテンツの検出、類似コンテンツにまたがる階層的なナビゲーションなどのソリューションが可能になりました。 たとえば、キー フレーズのインデックスに対してクエリを実行して、ドキュメントの編成またはコーパスに関する分類を作成することができます。 また、ドキュメントの類似性のインデックスに対してクエリを実行して、ジョブの説明に一致するレジュメを特定できます。  

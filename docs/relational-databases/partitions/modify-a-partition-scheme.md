@@ -3,7 +3,7 @@ title: "パーティション構成の変更 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -17,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef0b8ce7c9ba0c23da4d689b37a01cff34f3f0ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb7b93313a278db10ecffa7efd61e971b418868d
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="modify-a-partition-scheme"></a>パーティション構成の変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でパーティション構成を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、パーティション テーブルに追加される次のパーティションを保持するファイル グループを指定します。 この操作は、NEXT USED プロパティをファイル グループに割り当てることで実行できます。 NEXT USED プロパティは、空のファイル グループか、またはパーティションを既に保持しているファイル グループに割り当てることができます。 つまり、ファイル グループでは、複数のパーティションを保持することができます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でパーティション構成を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、パーティション テーブルに追加される次のパーティションを保持するファイル グループを指定します。 この操作は、NEXT USED プロパティをファイル グループに割り当てることで実行できます。 NEXT USED プロパティは、空のファイル グループか、またはパーティションを既に保持しているファイル グループに割り当てることができます。 つまり、ファイル グループでは、複数のパーティションを保持することができます。  
   
  **このトピックの内容**  
   
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してパーティション テーブルまたはパーティション インデックスを作成するには:**  
   
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  ALTER PARTITION SCHEME の対象となるファイル グループは、オンラインになっている必要があります。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  次の権限を使って ALTER PARTITION SCHEME を実行できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  

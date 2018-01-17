@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae86d774a168a3e68ca4cb0bbcec1f3a741f801b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19e15b0c56bc673bff3bd88bc3b5a639e54ea48c
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ RETCODE bcp_init (
  コピーの方向です。この値は DB_IN または DB_OUT になります。 DB_IN は、プログラム変数またはユーザー ファイルからテーブルへのコピーを示します。 DB_OUT は、データベース テーブルからユーザー ファイルへのコピーを示します。 DB_OUT を指定する場合は、ユーザー ファイル名を指定する必要があります。  
   
 ## <a name="returns"></a>返します。  
- 成功または失敗します。  
+ SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>解説  
  呼び出す**bcp_init**他の一括コピー関数を呼び出す前にします。 **bcp_init**ワークステーション間でデータの一括コピーに必要な初期化を実行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
@@ -91,7 +91,7 @@ RETCODE bcp_init (
   
  インデックスを含まないテーブルの場合は、データベース復旧モデルを SIMPLE または BULK_LOGGED に設定することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。 詳細については、次を参照してください。[一括インポートで最小ログ記録の前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)と[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)です。  
   
- データ ファイルを使用しない場合を呼び出す必要があります[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)形式および場所データ列ごのメモリ内の各列を指定するデータ行をコピーし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)です。  
+ データ ファイルを使用しない場合を呼び出す必要があります[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)形式と場所の各列のデータをメモリを指定するデータ行をコピーし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)です。  
   
 ## <a name="example"></a>例  
  このサンプルでは、ODBC bcp_init 関数をフォーマット ファイルと共に使用する方法を示します。  

@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  一括コピー操作が失敗するまでに発生してもかまわないエラーの数です。 既定値は 10 です。1 より小さい値は、その既定値には、このオプションをリセットします。 一括コピーでは、最大 65,535 個のエラーが許容されます。 このオプションに 65,535 を超える値を設定しようとすると、65,535 が設定されます。  
   
  BCPODBC  
- TRUE の場合、指定される**datetime**と**smalldatetime** ODBC タイムスタンプ エスケープ シーケンスのプレフィックスとサフィックス文字形式で保存された値が使用されます。 BCPODBC オプションは、BCP_OUT にのみ適用されます。  
+ TRUE の場合、指定される**datetime**と**smalldatetime** ODBC タイムスタンプ エスケープ シーケンスのプレフィックスとサフィックス文字形式で保存された値が使用されます。 BCPODBC オプションは、DB_OUT にのみ適用されます。  
   
  FALSE の場合、 **datetime** 1997 年 1 月 1 日を表す値は、文字の文字列に変換されます。 1997-01-01 00:00:00.000 されます。 TRUE の場合、同じ**datetime**として表される値: {ts ' 1997-01-01 00:00:00.000'}。  
   
@@ -133,7 +133,7 @@ RETCODE bcp_control (
  指定された値は、 *eOption*です。 *iValue*は、整数値 (LONGLONG) を 64 ビット値に拡張できるように void ポインターにキャストします。  
   
 ## <a name="returns"></a>返します。  
- 成功または失敗します。  
+ SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>解説  
  この関数では、一括コピー操作のさまざまな制御パラメーターを設定します。たとえば、一括コピーが取り消されるまでに発生してもかまわないエラーの数、データ ファイルから最初にコピーする行番号や最後にコピーする行番号、バッチ サイズなどを設定します。  

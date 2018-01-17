@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] ドキュメントまたはテキストが格納されている選択した列に対して統計的セマンティック インデックス作成を有効または無効にする方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ドキュメントまたはテキストが格納されている選択した列に対して統計的セマンティック インデックス作成を有効または無効にする方法について説明します。  
   
  統計的セマンティック検索では、フルテキスト検索によって作成されたインデックスを使用し、追加のインデックスを作成します。 このフルテキスト検索に対する依存関係があるため、新しいフルテキスト インデックスの定義や既存のフルテキスト インデックスの変更の際には、新しいセマンティック インデックスを作成します。 新しいセマンティック インデックスを作成するには、このトピックで説明するように、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するか、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のフルテキスト インデックス作成ウィザードおよびその他のダイアログ ボックスを使用します。  
   

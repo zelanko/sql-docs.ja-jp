@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 44464415177cffc2e09c5218ecd9440801be7d96
+ms.sourcegitcommit: 0c6d858a507bd38b9b06eb7676736de5d38a1c87
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 > [!NOTE]
 > sqlcmd ユーティリティの最近のバージョンは [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=825643)から Web リリースとして利用できます。 13.1 以降 Always Encrypted をサポートするバージョンが必要 (`-g`) と Azure Active Directory の認証 (`-G`)。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
+
+既定ではインストール済みとして Azure クラウド シェルから、sqlcmd ユーティリティを試みることができます: [![クラウド シェルを起動して](https://shell.azure.com/images/launchcloudshell.png "クラウド シェルの起動")](https://shell.azure.com)
 
   SSMS で sqlcmd ステートメントを実行するには、上部のナビゲーションの [クエリ] メニューのドロップダウン リストから SQLCMD モードを選択します。  
   
@@ -117,7 +119,7 @@ sqlcmd
 ## <a name="command-line-options"></a>コマンド ライン オプション  
  **ログイン関連のオプション**  
   **-A**  
- 専用管理者接続 (DAC) と SQL Server にログインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 またこの接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC が使用できない場合は、 **sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションでは、-a オプションがサポートされていません。 -A を使用して、SQL データベースに接続するときは、SQL server の管理者があります。 DAC は、使用可能な Azure Active Directory 管理者のではありません。
+ 専用管理者接続 (DAC) と SQL Server にログインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 またこの接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC が使用できない場合は、 **sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「[データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションでは、-a オプションがサポートされていません。 -A を使用して、SQL データベースに接続するときは、SQL server の管理者があります。 DAC は、使用可能な Azure Active Directory 管理者のではありません。
   
  **-C**  
  クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
@@ -217,16 +219,16 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  接続先の SQL Server のインスタンスを指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSERVER が設定されます。  
   
- 指定*server_name*サーバー コンピューターの SQL Server の既定のインスタンスに接続します。 指定*server_name* [  **\\**  *instance_name* ] サーバー コンピューターの SQL Server の名前付きインスタンスに接続します。 サーバー コンピューターが指定されていない場合**sqlcmd**がローカル コンピューターに SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
+ 指定*server_name*サーバー コンピューターの SQL Server の既定のインスタンスに接続します。 指定*server_name* [**\\* * * instance_name* ] サーバー コンピューターの SQL Server の名前付きインスタンスに接続します。 サーバー コンピューターが指定されていない場合**sqlcmd**がローカル コンピューターに SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
   
  *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。  
   
- 指定しない場合、 *server_name* [  **\\**  *instance_name* ] 起動時**sqlcmd**、SQL Server を確認および SQLCMDSERVER 環境変数を使用します。  
+ 指定しない場合、 *server_name* [**\\* * * instance_name* ] 起動時**sqlcmd**、SQL Server をチェックし、SQLCMDSERVER 環境を使用します変数。  
   
 > [!NOTE]  
 >  OSQLSERVER 環境変数は旧バージョンとの互換性を維持しています。 SQLCMDSERVER 環境変数は OSQLSERVER 環境変数よりも優先されます。これにより、 **sqlcmd** と **osql** を競合することなく組み合わせて使用でき、従来のスクリプトは引き続き機能を実行することができます。  
   
- **ｰU** *login_id*  
+ **-U** *login_id*  
  ログイン名または包含データベースのユーザー名です。 包含データベースのユーザーの場合、データベース名のオプション (-d) を指定する必要があります。  
   
 > [!NOTE]  
@@ -262,7 +264,7 @@ sqlcmd
   
  Cmd.exe のコード ページを確認するには、コマンド プロンプトに「 **chcp** 」と入力します。  
   
- **-i** *input_file*[**」、「***input_file2*...]  
+ **-i** *input_file*[**,***input_file2*...]  
  SQL ステートメントまたはストアド プロシージャのバッチを含むファイルを指定します。 複数のファイルを指定すると、それらのファイルは順番に読み取られて処理されます。 ファイル名とファイル名の間には空白を使用しないでください。 **sqlcmd** により、最初に、指定したすべてのファイルが存在しているかどうかがチェックされます。 1 つ以上のファイルが存在していない場合は、 **sqlcmd** は終了します。 -i と -Q/-q オプションは同時に使用できません。  
   
  パスの例:  
@@ -275,7 +277,7 @@ sqlcmd
   
  空白を含むファイル パスは、引用符で囲む必要があります。  
   
- このオプションは **-i***input_file* **-I***I input_file*のように複数使用できます。  
+ このオプションは複数回使用される可能性があります: **-i * * * input_file* **-すれば * * * は input_file です。*  
   
  **-o** *output_file*  
  **sqlcmd**からの出力を受信するファイルを指定します。  
@@ -338,13 +340,13 @@ sqlcmd
  このオプションと共に **-b** を指定すると、 **sqlcmd** はエラーで終了します。 **-b** オプションについては、このトピックの後半で説明します。  
   
  **-t** *query_timeout*  
- コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSTATTIMEOUT が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。*query**time_out* は、1 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。  
+ コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSTATTIMEOUT が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。*クエリ * * time_out* 1 ~ 65,534 の範囲の数値を指定する必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。  
   
 > [!NOTE]  
 >  実際のタイムアウト値は、指定した *time_out* 値より数秒異なる場合があります。  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- **sqlcmd**スクリプトで使用できる **sqlcmd** スクリプト変数を作成します。 値に空白が含まれる場合は、値を引用符で囲みます。 複数の ***var***=**"***values***"** の値を指定できます。 指定した値にエラーが生じた場合は、 **sqlcmd** は、エラー メッセージを生成してから終了します。  
+ **sqlcmd**スクリプトで使用できる **sqlcmd** スクリプト変数を作成します。 値に空白が含まれる場合は、値を引用符で囲みます。 複数を指定する***var***=**"***値***"**値。 指定した値にエラーが生じた場合は、 **sqlcmd** は、エラー メッセージを生成してから終了します。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -575,7 +577,7 @@ sqlcmd
  **:List**  
  ステートメント キャッシュの内容を出力します。  
   
- **変数**  
+ **変数:**  
   **:Setvar** \<**var**> [ **"***value***"** ]  
  **sqlcmd** スクリプト変数を定義します。 スクリプト変数は `$(VARNAME)`という形式になります。  
   
@@ -642,7 +644,7 @@ sqlcmd
   
  `:EXIT(query)`  
   
- 例 :  
+ 例:  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -668,7 +670,7 @@ sqlcmd
   
  クエリを含むバッチを実行し、クエリの結果を返して終了します。  
   
- RAISERROR を **sqlcmd** スクリプトの中で使用し、状態 127 が発生すると、 **sqlcmd** は終了し、メッセージ ID をクライアントに返します。 例 :  
+ RAISERROR を **sqlcmd** スクリプトの中で使用し、状態 127 が発生すると、 **sqlcmd** は終了し、メッセージ ID をクライアントに返します。 例:  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -686,8 +688,8 @@ sqlcmd
  GO は、バッチの終わりを通知し、いずれかの実行は、TRANSACT-SQL ステートメントをキャッシュします。バッチは別々 のバッチとして複数回の実行します。単一のバッチで複数回変数を宣言することはできません。
   
  **その他のコマンド**  
-  **:r \<** *filename***>**  
- その他の TRANSACT-SQL ステートメントを解析および**sqlcmd**コマンドで指定されたファイルから **\<** *ファイル名***>**ステートメント キャッシュ内にします。  
+  **:r \<** *filename* **>**  
+ その他の TRANSACT-SQL ステートメントを解析および**sqlcmd**コマンドで指定されたファイルから **\< ***filename***>**ステートメントにキャッシュします。  
   
  ファイルが続いていない TRANSACT-SQL ステートメントを含むかどうか**移動**、入力する必要があります**移動**次の行で**: r**です。  
   
@@ -702,7 +704,7 @@ sqlcmd
  **:Serverlist**  
  ローカルに構成されたサーバーと、ネットワーク上でブロードキャストしているサーバー名の一覧を表示します。  
   
- **:Connect**  *の既定のインスタンスに接続するには、*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server のインスタンスに接続します。 また、現在の接続を終了します。  
   
  タイムアウト オプション :  
@@ -729,7 +731,7 @@ sqlcmd
  `:connect $(myservername) $(myusername)`  
   
  **[:]** **!!**< *command*>  
- オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 (**!!**) を入力し、続けてオペレーティング システムのコマンドを入力します。 例 :  
+ オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 (**!!**) を入力し、続けてオペレーティング システムのコマンドを入力します。 例:  
   
  `:!! Dir`  
   
@@ -745,7 +747,7 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd のファイル名  
  **sqlcmd** の入力ファイルは **-i** オプションまたは **:r** コマンドで指定できます。 出力ファイルは **-o** オプションまたは **:Error**、 **:Out** 、および **:Perftrace** コマンドで指定できます。 指定するファイルについてのガイドラインを次に示します。  
   
--   **:Error**、 **:Out** 、および **:Perftrace** を指定するときは、個別に **\<***filename***>**を指定します。 同じ **\<***filename***>** を使用すると、各コマンドからの入力が混在する場合があります。  
+-   **: エラー**、 **: アウト**と**::perftrace**個別を使用する必要があります **\< ***filename***>**です。 場合同じ **\< ***filename*** >** はこれを使用すると、コマンドからの入力が混在場合があります。  
   
 -   ローカル コンピューターの **sqlcmd** からリモート サーバー上の入力ファイルが呼び出され、ファイルに :out c:\OutputFile.txt のようにドライブ パスが含まれていると、 出力ファイルはリモート サーバーではなく、ローカル コンピューター上に作成されます。  
   

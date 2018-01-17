@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>包含データベースでのセキュリティのベスト プラクティス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   包含データベースには固有の脅威があるので、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の管理者はそれを理解し、危険性を軽減する必要があります。 脅威の多くは **USER WITH PASSWORD** 認証プロセスと関連しており、このプロセスでは認証の境界を [!INCLUDE[ssDE](../../includes/ssde-md.md)] のレベルからデータベースのレベルへと移します。  
   
