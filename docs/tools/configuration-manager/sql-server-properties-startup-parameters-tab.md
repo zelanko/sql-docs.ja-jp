@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91141f2ae083baf9792e4de9248de488b4146d07
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このダイアログ ボックスを使用して追加またはスタートアップ パラメーターを削除、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 起動時のパラメーターは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに大きな影響を及ぼします。 起動時のパラメーターを追加または変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[起動時のパラメーターの指定]**  
  パラメーターを追加するには、パラメーターを入力し、 **[追加]**をクリックします。  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  パラメーターを削除するには、パラメーターを選択し、 **[削除]**をクリックします。  
   
 ## <a name="parameter-format"></a>パラメーターの形式  
- パラメーターの間に区切り記号を入力しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって自動的に区切り記号が追加されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって、次のパラメーターの要件が適用されます。  
+ パラメーターの間に区切り記号を入力しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって自動的に区切り記号が追加されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager では、次のパラメーターの要件を強制します。  
   
 -   先頭および末尾のスペースは、すべての起動時のパラメーターから削除します。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 |パラメーター|簡単な説明|  
 |---------------|-----------------------|  
-|-M|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。|  
+|-m|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。|  
 |-T1204|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを返します。|  
 |-T1224|ロック数に基づいてロックのエスカレーションを無効にします。|  
 |-T3608|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、master データベース以外のすべてのデータベースを自動的に開始および復旧しないようにします。|  

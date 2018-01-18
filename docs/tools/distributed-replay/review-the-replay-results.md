@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]後に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能には、分散再生が完了すると、各クライアントの再生アクティビティをキャプチャし、各クライアントに結果トレース ファイルに保存することができます。 このアクティビティをキャプチャするには、 **replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -62,9 +62,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="column-descriptions-for-result-trace"></a>結果トレースの列の説明  
  次の表では、結果トレース データの列について説明します。  
   
-|データ列名|データ型|Description|列 ID|  
+|データ列名|データ型|説明|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|イベント クラスの名前。|@shouldalert|  
+|EventClass|**nvarchar**|イベント クラスの名前。|1|  
 |EventSequence|**bigint**|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応するキャプチャ イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは元のトレース データ内のイベント シーケンスです。|2|  
 |ReplaySequence|**bigint**|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応する再生イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは再生中に割り当てられるイベント シーケンスです。|3|  
 |TextData|**ntext**|TextData の内容は、EventClass に依存します。<br /><br /> Audit Login および ExistingConnection では、これは接続の設定オプションです。<br /><br /> SQL:BatchStarting では、これはバッチ要求の本文です。<br /><br /> RPC:Starting では、これは呼び出されたストアド プロシージャです。<br /><br /> Replay Settings Event では、この列には再生構成ファイルで定義された設定が含まれます。<br /><br /> Replay Statistics Event では、これは次の情報を含みます。<br /><br /> - 再生対象 SQL サーバー<br /><br /> - 再生可能なイベントの総数<br /><br /> - プロバイダー エラーの数<br /><br /> - 内部エラーの数<br /><br /> - 内部の警告<br /><br /> - エラーの総数<br /><br /> - 全体のパス レート<br /><br /> - 再生時間 (HH:MM:SS: MMM)<br /><br /> Replay Result Set Event では、これは返される結果の列ヘッダーのリストを示します。<br /><br /> Replay Result Row Event では、その行のすべての列の戻り値を示します。<br /><br /> Replay Internal Warning および Replay Provider Error では、この列はプロバイダー警告またはエラーを含みます。|4|  
@@ -84,8 +84,8 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理ツールのコマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay を構成します。](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

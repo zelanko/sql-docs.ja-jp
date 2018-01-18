@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 25fc141818d0e0d638cf463990da8d44955fef17
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Linux 上の SQL Server の Always On 可用性グループを構成します。
 
@@ -92,7 +92,7 @@ Linux 上の高可用性の可用性グループを作成します。 使用し�
 
 - [次の 3 つの同期レプリカが可用性グループの作成](#threeSynch)です。
 - [2 つの同期レプリカと構成のレプリカの可用性グループを作成します。](#configOnly)
-- [次の 3 つの同期レプリカが可用性グループの作成](#readScale)です。
+- [2 つの同期レプリカが可用性グループの作成](#readScale)です。
 
 <a name="threeSynch"></a>
 

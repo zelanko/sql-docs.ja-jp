@@ -16,15 +16,15 @@ helpviewer_keywords:
 - closing trace window
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37f15393e48a1125eaeb7f3f49b8c80e9174394a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2783c740646294f035ddbdc4582e3ae5453cf350
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>トレース ウィンドウを閉じる (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックは実行中または保存済みのトレースのトレースを使用して表示しているため、トレース ウィンドウを閉じる方法について説明[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。  

@@ -2,7 +2,7 @@
 title: "ダウンロードし、インストールの Microsoft SQL 操作 Studio (プレビュー) |Microsoft ドキュメント"
 description: "ダウンロードおよびインストール Microsoft SQL 操作 (プレビュー) 対応の Studio Windows、macOS、または Linux"
 ms.custom: tools|sos
-ms.date: 12/19/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a34a03b447e26f072b6c8064cd115333600fef4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>ダウンロードして SQL 操作 Studio (プレビュー) のインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]Windows、macOS、および Linux で実行されます。
 
-ダウンロードし、最新のリリースをインストール、*年 12 月のパブリック プレビュー*:
+ダウンロードし、最新のリリースをインストール、*年 1 月のパブリック プレビュー*:
 
 |プラットフォーム|ダウンロード|リリース日|
 |:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|2017 年 12 月 19 日 |
-|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=865306)|2017 年 12 月 19 日 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[。 tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|2017 年 12 月 19 日|
+|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 年 1 月 17日 |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 年 1 月 17日 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 年 1 月 17日|
 
 最新のリリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes.md)です。
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 12/21/2017
 
 **インストーラー**
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=865305)です。
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=866480)です。
 1. 開始、[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]アプリ。
 
 
-**.zip ファイル**
+**.zip file**
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows .zip](https://go.microsoft.com/fwlink/?linkid=865304)です。
+1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows .zip](https://go.microsoft.com/fwlink/?linkid=866479)です。
 2. ダウンロードしたファイルを参照し、抽出しています。
 3. 実行します。`\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS の SQL 操作 Studio (プレビュー) を取得します。
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS の](https://go.microsoft.com/fwlink/?linkid=865306)します。
+1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS の](https://go.microsoft.com/fwlink/?linkid=866481)します。
 2. Zip の内容を展開しをダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*sqlops.app*を*アプリケーション*フォルダーです。
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux 用の SQL 操作 Studio (プレビュー) の取得します。
 
-1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=865307)です。
+1. ダウンロード[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=866482)です。
 1. ファイルと起動を抽出する[!INCLUDE[name-sos](../includes/name-sos-short.md)]新しいターミナル ウィンドウを開きを次のコマンドを入力します。
 
    ```bash
@@ -109,7 +109,7 @@ ms.lasthandoff: 12/21/2017
 - Windows Server 2012 (64 ビット)
 - Windows Server 2008 R2 (64 ビット)
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 - macOS 10.13 高 Sierra
 - macOS 10.12 Sierra
 
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 作業を開始する次のクイック スタートのいずれかを参照してください。
 - [接続し、クエリの SQL Server](quickstart-sql-server.md)

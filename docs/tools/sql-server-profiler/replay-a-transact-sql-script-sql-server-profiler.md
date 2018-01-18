@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 337569e89216611f972b0ac2305b42cc5c519826
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b21ed5c4b270a64c6eee3cc2d41cb4f1ba0518df
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Transact-SQL スクリプトの再生 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]パフォーマンスの問題の解決策の候補をテストするときに使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を再生する[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト、および変更の前後にパフォーマンスを比較します。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 4.  **[構成の再生]** ダイアログ ボックスで設定を確認し、 **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   
+ [トレースを再生します。](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

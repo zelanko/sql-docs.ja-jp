@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5e4399ad96555e109c0488c75cf2cc964885b64
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3386a798bc29742f55da658d2e0117575b2ebd27
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-services"></a>[SQL Server のサービス]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このセクションには F1 ヘルプ トピックが含まれています、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services のダイアログ ボックスで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager です。  
@@ -33,6 +33,6 @@ ms.lasthandoff: 12/21/2017
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのノードに、そのコンピューターで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスが表示されない場合は、WMI (Windows Management Instrumentation) にアクセスするための権限が与えられていない可能性があります。 WMI の権限を構成する方法については、オンライン ブックの「SQL Server ツールでサーバーの状態を表示できるように WMI を構成する方法」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 構成マネージャーのヘルプ](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
+ [SQL Server 構成マネージャー ヘルプ](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

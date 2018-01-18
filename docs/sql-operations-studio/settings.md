@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>ユーザーとワークスペースの設定
 
@@ -47,12 +47,22 @@ ms.lasthandoff: 12/21/2017
 
 、プラットフォームによっては、ユーザー設定ファイルはここで。
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 ワークスペースの設定ファイルが下にある、`.[!INCLUDE[name-sos](../includes/name-sos-short.md)]`プロジェクトのフォルダーにします。
 
+## <a name="hot-exit"></a>ホット終了
+
+SQL 操作の Studio を忘れずに未保存の変更ファイル既定で終了するとします。 これは、Visual Studio のコードでホット終了機能と同じです。
+
+既定では、ホット終了は off です。 ホットを有効にする終了を編集して、`files.hotExit`設定します。 詳細については、「 [(Visual Studio コードのドキュメント) にホットの終了](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)です。
+
+
+## <a name="tab-color"></a>タブの色
+
+簡単に使用しているどのような接続を識別するをエディターで開いているタブは、接続が所属するサーバー グループの色を一致するように設定するそれぞれの色を持つことができます。 既定では、タブの色は既定で無効です。 編集することによって、タブの色を有効にする、`sql.tabColorMode`設定します。
 
 ## <a name="additional-resources"></a>その他のリソース
 

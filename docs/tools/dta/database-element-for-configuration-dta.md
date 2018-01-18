@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e65efde942a30cf6e173ad2558c0eb7899723d11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02fc044ef6ce1e015743ee503ed77ea843b0e182
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-configuration-dta"></a>Configuration の Database 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]仮定の構成を評価する、データベース エンジン チューニング アドバイザーの対象となるデータベースを指定します (によって指定された、**構成**要素)。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -49,8 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[Configuration の Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
-|**子要素**|[Database の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Database の Schema 要素 &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [Recommendation 要素 &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
+|**親要素**|[構成 &#40;DTA&#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)|  
+|**子要素**|[データベース &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [データベース &#40;DTA&#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [Recommendation 要素 &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseTypecomplexType** の名前です。 この **Database** 要素を、ルートの親要素が **Server** 要素である (XML 入力ファイルの最上位に発生する) 他の要素と混同しないでください。 詳細については、「[Server の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)」を参照してください。  

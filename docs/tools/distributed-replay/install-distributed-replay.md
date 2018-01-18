@@ -15,13 +15,13 @@ ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>分散再生のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Distributed Replay は、3 つの方法のいずれかでインストールできます。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]ツール  
   
-     \- または -  
+     \- OR-  
   
      \<共有機能ディレクトリ > \Tools\\(ユーザーが指定した代替の共有機能ディレクトリ)  
   
@@ -75,9 +75,9 @@ ms.lasthandoff: 12/21/2017
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- または -  
+     \- OR-  
   
-     \<共有機能ディレクトリ (x86) > \Tools\\(ユーザーが指定した代替の共有機能 (x86) ディレクトリ)  
+     \<Share Feature Directory (x86)>\Tools\\(user-supplied alternative shared feature (x86) directory)  
   
 #### <a name="to-install-distributed-replay-features"></a>分散再生機能をインストールするには  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 12/21/2017
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **省略可**|分散再生コントローラー サービスのサービス アカウント。|アカウントとパスワードのチェック|  
 |/CTLRSVCPASSWORD<br /><br /> **省略可**|分散再生コントローラー のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
-|/CTLRSTARTUPTYPE<br /><br /> **省略可**|分散再生コントローラー サービスのスタートアップの種類。|自動<br /><br /> Disabled<br /><br /> 手動|  
+|/CTLRSTARTUPTYPE<br /><br /> **省略可**|分散再生コントローラー サービスのスタートアップの種類。|Automatic<br /><br /> Disabled<br /><br /> 手動|  
 |/CTLRUSERS<br /><br /> **省略可**|分散再生コントローラー サービスの権限を持つユーザーを指定します。|区切り記号に " " (スペース) を使用した、一連のユーザー アカウント文字列<br /><br /> **重要**: 分散再生コントローラー サービスを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。<br /><br /> ドメイン ユーザー アカウント<br /><br /> ユーザーによって作成されたローカル ユーザー アカウント<br /><br /> 管理者<br /><br /> 管理者<br /><br /> 仮想アカウントおよび管理されたサービス アカウント (MSA)<br /><br /> ネットワーク サービス、ローカル サービス、およびシステム<br /><br /> <br /><br /> 注: グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。|  
 |/CLTSVCACCOUNT<br /><br /> **省略可**|分散再生クライアント サービスのサービス アカウント。|アカウントとパスワードのチェック|  
 |/CLTSVCPASSWORD<br /><br /> **省略可**|分散再生クライアント のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
-|/CLTSTARTUPTYPE<br /><br /> **省略可**|分散再生クライアント サービスのスタートアップの種類。|自動<br /><br /> Disabled<br /><br /> 手動|  
+|/CLTSTARTUPTYPE<br /><br /> **省略可**|分散再生クライアント サービスのスタートアップの種類。|Automatic<br /><br /> Disabled<br /><br /> 手動|  
 |/CLTCTLRNAME<br /><br /> **省略可**|分散再生クライアント サービスと通信するクライアントのコンピューター名です。||  
 |/CLTWORKINGDIR<br /><br /> **省略可**|分散再生クライアント サービス用の作業ディレクトリです。|有効なパス|  
 |/CLTRESULTDIR<br /><br /> **省略可**|分散再生クライアント サービス用の結果ディレクトリです。|有効なパス|  
@@ -223,8 +223,8 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理ツールのコマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay を構成します。](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

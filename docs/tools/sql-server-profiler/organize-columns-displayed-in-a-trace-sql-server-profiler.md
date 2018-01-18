@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35692d5068e1dfcbe446d3a9bd79ee7f35ef1e18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>トレースに表示される列の構成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]トレース内のデータ列を選択してグループ化できます**列の**トレース テーブルのまたは**トレース ファイルのプロパティ**ダイアログ ボックスで、トレースを定義する場合またはします。 データ列をグループ化すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
-|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   グループ化する列を 1 列だけ選択して、トレース イベントをグループ化し集計します。 グループ化するデータ列を 1 列だけ選択すると、トレース ウィンドウにそのデータ列の値でグループ化されたイベントが表示され、その下にあるすべてのイベントが折りたたまれます。 グループ化するために選択したデータ列のイベントの左側にはプラス記号 (**+**) が表示され、右側にはその下で折りたたまれているイベントの数がかっこ内に表示されます。 次の例は、グループ化用に **EventClass** データ列だけを選択した場合、トレース ウィンドウのグリッドがどのように表示されるかを示しています。 すべてのイベントが **EventClass** データ列に配置されていることに注意してください。 すべてのイベントを表示するには、プラス記号をクリックして展開し、その種類のすべてのイベント クラスを表示します。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/21/2017
 7.  トレース データの通常のビューに戻すには、 **[表示]** メニューの **[集計ビュー]** をクリックし、選択を取り消します。 集計ビューに戻す場合は、 **[表示]** メニューの **[集計ビュー]** を再びクリックします。 **[表示]** メニューの **[グループ化ビュー]** をクリックして、グループ化されたトレース イベントを折りたたまずに表示することもできます。  
   
 ## <a name="see-also"></a>参照  
- [トレースの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [トレース &#40; を作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [トレース テーブル &#40; を開くSQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**ユーティリティ非収束の 2 つのテーブル内のデータを比較するために使用し、レプリケーション トポロジ内の非収束のトラブルシューティングに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
@@ -85,7 +85,7 @@ tablediff
  サポートされているパラメーターのリストを返します。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 *の名前付きインスタンスの***\\***source_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
+ ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 指定*source_server_name***\\***instance_name*の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
  **-sourcedatabase** *source_database*  
  ソース データベース名を指定します。  
@@ -109,7 +109,7 @@ tablediff
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 *の名前付きインスタンスの***\\***destination_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 指定*destination_server_name***\\***instance_name*の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
  **-destinationdatabase** *subscription_database*  
  対象データベース名を指定します。  
@@ -170,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>戻り値  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|重大なエラー|  
@@ -218,7 +218,7 @@ tablediff
   
 -   **image**  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  テーブルを比較するには、比較するテーブル オブジェクトに対する SELECT ALL 権限が必要です。  
   
  **-et** オプションを使用するには、db_owner 固定データベース ロールのメンバーであることが必要です。または、少なくともサブスクリプション データベースでの CREATE TABLE 権限、および対象サーバーにある対象所有者スキーマに対する ALTER 権限を持っている必要があります。  

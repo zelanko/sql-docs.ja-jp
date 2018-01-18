@@ -28,15 +28,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Ssbdiagnose**ユーティリティに関する問題を報告する[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ交換または構成の[!INCLUDE[ssSB](../../includes/sssb-md.md)]services です。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。  
@@ -122,7 +122,7 @@ ssbdiagnose
  **-IGNORE** *error_id*  
  指定した *error_id* のエラーまたはメッセージがレポートから除外されます。 **-IGNORE** を複数回指定すると、複数のメッセージ ID を除外することができます。  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  接続オプションが特定の句に含まれていない場合に **ssbdiagnose** が使用する、基本的な接続情報を指定します。 特定の句で指定された接続情報は、 **baseconnectionoption** の情報よりも優先されます。 優先的に使用される接続情報は、パラメーターごとに判別されます。 たとえば、 **-S** と **-d** の両方が **baseconnetionoptions**で指定され、 **-d** のみが **toconnetionoptions**で指定されている場合、 **ssbdiagnose** では、 **baseconnetionoptions** の -S と **toconnetionoptions**の -d が使用されます。  
   
  **CONFIGURATION**  
@@ -131,7 +131,7 @@ ssbdiagnose
  **FROM SERVICE** *service_name*  
  メッセージ交換を開始するサービスを指定します。  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  発信側サービスが格納されているデータベースへの接続に必要な情報を指定します。 **fromconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions** の接続情報を使用して発信側データベースに接続します。 **fromconnectionoptions** が指定されている場合は、発信側サービスが格納されているデータベースを含める必要があります。 **fromconnectionoptions** が指定されていない場合は、 **baseconnectionoptions** で発信側データベースを指定する必要があります。  
   
  **TO SERVICE** *service_name*[, *broker_id* ]  
@@ -147,13 +147,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  発信先サービスが格納されているデータベースへの接続に必要な情報を指定します。 **toconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions** の接続情報を使用して発信先データベースに接続します。  
   
  **MIRROR**  
  関連する [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスが、ミラー化されたデータベースでホストされます。 **ssbdiagnose** は、サービスへのルートがミラー化されたルートであることを確認します。この場合、MIRROR_ADDRESS が CREATE ROUTE で指定されています。  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  ミラー データベースへの接続に必要な情報を指定します。 **mirrorconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions** の接続情報を使用してミラー データベースに接続します。  
   
  **ON CONTRACT** *contract_name*  
@@ -208,7 +208,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** *timeout_interval*  
  **RUNTIME** レポートを実行する秒数を指定します。 **-TIMEOUT** が指定されていない場合、ランタイム レポートは無制限に実行されます。 **-TIMEOUT** は、**CONFIGURATION** レポートではなく、**RUNTIME** レポートのみで使用されます。 Ctrl + C を使用して、終了する**ssbdiagnose**場合**タイムアウト**が指定されていない時刻の前にランタイム レポートを終了したりする**-**タイムアウト間隔を経過します。 *timeout_interval* は 1 から 2,147,483,647 までの数値にする必要があります。  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  監視対象のメッセージ交換要素に関連付けられたサービスが格納されているデータベースについての接続情報を指定します。 すべてのサービスが同じデータベースに格納されている場合は、 **CONNECT TO** 句を 1 つ指定するだけで十分です。 サービスが異なるデータベースに格納されている場合は、各データベースに対して **CONNECT TO** 句を指定する必要があります。 **runtimeconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions**の接続情報を使用します。  
   
  **–E**  
@@ -249,7 +249,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  分析対象の [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスが格納されている、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスを指定します。  
   
- サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] を指定します。 サーバー上の *の既定のインスタンスに接続するには、***\\***server_name* instance_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] を指定します。 **-S** が指定されていない場合、 **ssbdiagnose** では、SQLCMDSERVER 環境変数の値を使用します。 SQLCMDSERVER も設定されていない場合、 **ssbdiagnose** はローカル コンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスに接続します。  
+ サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] を指定します。 指定*server_name***\\***instance_name*の名前付きインスタンスに接続する、[!INCLUDE[ssDE](../../includes/ssde-md.md)]そのサーバーにします。 **-S** が指定されていない場合、 **ssbdiagnose** では、SQLCMDSERVER 環境変数の値を使用します。 SQLCMDSERVER も設定されていない場合、 **ssbdiagnose** はローカル コンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
  **-d** *database_name*  
  分析対象の [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスが格納されているデータベースを指定します。 データベースが存在しない場合は、エラー メッセージが生成されます。 **-d** が指定されていない場合、ログインの既定のデータベースのプロパティに指定されたデータベースが既定値になります。  
@@ -314,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 環境変数  
  **ssbdiagnose** ユーティリティでは、 **sqlcmd** ユーティリティでも使用されている SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDLOGINTIMOUT の各環境変数がサポートされています。 これらの環境変数を設定するには、コマンド プロンプトの SET コマンドを使用するか、 **sqlcmd** を使用して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの **setvar**コマンドを使用します。 **sqlcmd** で **setvar**を使用する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」をご覧ください。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  各 **connectionoptions** 句では、 **-E** または **-U** のいずれかで指定されたログインが、 **-S** で指定されたインスタンスの **sysadmin**固定サーバー ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  
