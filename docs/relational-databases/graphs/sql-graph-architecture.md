@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ca6de15012a8fb929c207ab1a79a41607bd74cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph のアーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -104,20 +104,20 @@ SQL のグラフを構築する方法について説明します。 基本を知
 ノードはテーブルの暗黙の列  
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
-|graph_id_\<変更 > |bigint |1  |内部 graph_id 列  |
-|$node_id_\<変更 > |NVARCHAR   |0  |外部のノード id 列  |
+|graph_id_\<hex_string> |bigint |1  |internal graph_id column  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |外部のノード id 列  |
 
 エッジ テーブル内の暗黙の列  
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
-|graph_id_\<変更 > |bigint |1  |内部 graph_id 列  |
-|$edge_id_\<変更 > |NVARCHAR   |0  |id 列の外部境界  |
-|from_obj_id_\<変更 >  |INT    |1  |オブジェクト id のノードから内部  |
-|from_id_\<変更 >  |bigint |1  |内部ノード graph_id から  |
-|$from_id_\<変更 > |NVARCHAR   |0  |ノード id から外部  |
-|to_obj_id_\<変更 >    |INT    |1  |ノードのオブジェクト id の内部  |
-|to_id_\<変更 >    |bigint |1  |内部ノード graph_id から  |
-|$to_id_\<変更 >   |NVARCHAR   |0  |外部のノード id  |
+|graph_id_\<hex_string> |bigint |1  |internal graph_id column  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |id 列の外部境界  |
+|from_obj_id_\<hex_string>  |INT    |1  |オブジェクト id のノードから内部  |
+|from_id_\<hex_string>  |bigint |1  |内部ノード graph_id から  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |ノード id から外部  |
+|to_obj_id_\<hex_string>    |INT    |1  |ノードのオブジェクト id の内部  |
+|to_id_\<hex_string>    |bigint |1  |内部ノード graph_id から  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |外部のノード id  |
  
 ### <a name="system-functions"></a>システム関数
 次の組み込み関数が追加されます。 生成された列から情報を抽出するユーザーに役立つ情報します。 これらのメソッドでは、ユーザーから入力は検証されませんが、注意してください。 ユーザーが、無効なを指定した場合`sys.node_id`メソッドは適切な部分を抽出し、それを返します。 たとえば、OBJECT_ID_FROM_NODE_ID になります、`$node_id`として入力し、object_id を返すはこのノードが属するテーブルのです。 

@@ -13,21 +13,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b9dab3881ea4c78254f9e6db183603a4a53a4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f286661863d1d6ec065f3b9532530d9e96205821
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="report-server-properties-service-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>および  
- **バイナリ パス**  
+## <a name="options"></a>オプション  
+ **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
  **[エラー制御]**  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
  **[SQL サービスの種類]**  
  呼び出し側プロセスに提供されるサービスの種類です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
- **開始モード**  
+ **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
 -   「手動」: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
@@ -61,6 +61,6 @@ ms.lasthandoff: 12/21/2017
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [[SQL Server のサービス]](../../tools/configuration-manager/sql-server-services.md)  
+ [SQL Server サービス](../../tools/configuration-manager/sql-server-services.md)  
   
   

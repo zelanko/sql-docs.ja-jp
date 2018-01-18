@@ -17,31 +17,31 @@ helpviewer_keywords:
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa8f844875745aff792771df4085e59f7808a54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler での Showplan 結果を使用したクエリの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Showplan イベント クラスを追加するには、トレース定義に[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を収集し、トレース内でクエリ プランの情報を表示します。 また、トレースで収集した他のイベントから Showplan イベントを抽出し、これらの Showplan イベントを個別の XML ファイルに保存することもできます。  
   
  トレースから Showplan イベントを抽出するために使用できる方法は、次のとおりです。  
   
--   トレースの構成時に、 **[イベント抽出の設定]** タブを使用する。このタブは、 **[イベントの選択]** タブでいずれかの Showplan イベントを選択するまで表示されないことに注意してください。  
+-   トレースの構成時に、 **[イベント抽出の設定]** タブを使用します。このタブは、 **[イベントの選択]** タブでいずれかの Showplan イベントを選択するまで表示されないことに注意してください。  
   
--   **[ファイル]** メニューの **[SQL Server イベントの抽出]** オプションを使用する。  
+-   **[ファイル]** メニューの **[SQL Server イベントの抽出]** オプションを使用します。  
   
 -   特定のイベントを右クリックして **[イベント データの抽出]**をクリックすることにより、個々のイベントを抽出して保存します。  
   
 ## <a name="showplan-events"></a>Showplan イベント  
  次の表に、各種の Showplan トレース イベントとその説明を示します。  
   
-|イベント名|Description|  
+|イベント名|説明|  
 |----------------|-----------------|  
 |**Performance statistics**|コンパイル済みの Showplan が初めてキャッシュされたとき、再コンパイルされたとき、およびプラン キャッシュから削除されたときを示します。 **TextData** 列には、XML 形式の Showplan が含まれます。 詳細については、「 [Performance Statistics イベント クラス](../../relational-databases/event-classes/performance-statistics-event-class.md)」を参照してください。|  
 |**Showplan All**|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのコンパイルに関する完全な詳細情報が含まれたクエリ プランを表示します。 たとえば、コストの見積りと列リストを表示できます。 詳細については、「 [Showplan All イベント クラス](../../relational-databases/event-classes/showplan-all-event-class.md)」を参照してください。|  

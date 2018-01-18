@@ -17,15 +17,15 @@ helpviewer_keywords:
 - IPv6
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f9ac7393ffe9599eec7811a50ce6a0c575611ec
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f66c4dde6dbf2b14709f8bcac291a81cd7136b90
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connecting-using-ipv6"></a>IPv6 を使用した接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方に完全にサポートします。 Windows で IPv6 が構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のコンポーネントは IPv6 の存在を自動的に認識します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で特別な構成は必要ありません。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   IPv4 および IPv6 の両方をサポートするコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスに対して、IPv4 アドレスにクエリが実行された場合、IPv4 アドレスとそのリストにある最初の IPv4 TCP ポートを使用して応答が行われます。 IPv6 アドレスにクエリが実行された場合は、IPv6 アドレスとそのリストにある最初の IPv6 TCP ポートを使用して応答が行われます。 一貫性を保つために、IPv4 リスナーと IPv6 リスナーが同じポートでリッスンするように構成することをお勧めします。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーなどのツールでは、IP アドレスに IPv4 と IPv6 の両方の形式を使用できます。 ほとんどの場合は、接続文字列は変更する必要ありません、 \< *computer_name*>\\<*instance_name*> サーバーのホスト名または完全修飾ドメイン名 (FQDN) を使用して指定します。 サーバー コンピューターで IPv4 と IPv6 の両方が構成されている場合、そのホスト名または FQDN は複数の IP アドレス (少なくとも、1 つの IPv4 アドレスと複数の IPv6 アドレス) に解決されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、これらの IP アドレスを TCP/IP から受信した順序で使用して接続の確立を試み、最初に成功した接続を使用します。 順序は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が予測できないため、ランダムな順序になります。 IPv4 アドレスと IPv6 アドレスの両方が存在する場合、最初に IPv4 アドレスで試行されます。 このロジックは、ODBC、OLE DB、または ADO.NET のユーザーに対して透過的です。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーなどのツールでは、IP アドレスに IPv4 と IPv6 の両方の形式を使用できます。 ほとんどの場合は、接続文字列は変更する必要ありません、 \< *computer_name*>\\<*instance_name*> サーバーのホスト名または完全修飾ドメイン名 (FQDN) を使用して指定します。 サーバー コンピューターで IPv4 と IPv6 の両方が構成されている場合、そのホスト名または FQDN は複数の IP アドレス (少なくとも、1 つの IPv4 アドレスと複数の IPv6 アドレス) に解決されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client では、TCP/IP から受信した順序でこれらの IP アドレスを使用して接続を確立しようとして、成功すると、最初の接続を使用します。 順序は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が予測できないため、ランダムな順序になります。 IPv4 アドレスと IPv6 アドレスの両方が存在する場合、最初に IPv4 アドレスで試行されます。 このロジックは、ODBC、OLE DB、または ADO.NET のユーザーに対して透過的です。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] が IPv4 でリッスンしていない場合、IPv6 アドレスで試行するには、試行された IPv4 接続がタイムアウトするまでの間、待機する必要があります。 これを回避するには、直接 IPv6 の IP アドレスで接続するか、IPv6 アドレスを使用してクライアントの別名を構成してください。  

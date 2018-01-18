@@ -16,15 +16,15 @@ helpviewer_keywords:
 - trace templates [SQL Server]
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a294c8688f629934b119d505fafdc4f8880eefb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02f621e6b63a03ea6875dfc68fa6bae86b2d7ae4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>トレース ファイルまたはトレース テーブルからのテンプレートの作成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このトピックを使用して、既存のトレース ファイルまたはテーブルからトレース テンプレートを作成する方法について説明[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]です。  
@@ -35,13 +35,13 @@ ms.lasthandoff: 12/21/2017
   
 2.  **[ファイル]** メニューの **[名前を付けて保存]** をポイントし、**[トレース テンプレート]** をクリックします。  
   
-3.  名前を入力するか、または一覧から選択します。 **[OK]** をクリックします。  
+3.  名前を入力するか、または一覧から選択します。 クリックして **OK**です。  
   
 > [!NOTE]  
 >  既存のテンプレート ファイルを選択した場合は、ファイルを上書きするかどうかを確認するメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [トレース テンプレート &#40; を作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレート &#40; を変更します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [実行中のトレース &#40; からのテンプレートを作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

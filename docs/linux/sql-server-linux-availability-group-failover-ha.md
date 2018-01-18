@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux の HA 可用性グループを操作します。
+# <a name="operate-always-on-availability-groups-on-linux"></a>Linux 上の可用性グループに対して常に実行します。
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -195,14 +195,14 @@ ms.lasthandoff: 12/01/2017
    >[!NOTE]
    >のみの場合、可用性グループ非同期レプリカ - をデータの損失を回避するのには 1 つのレプリカを同期に変更しが同期されるまでを待ちます。 このレプリカをアップグレードします。
    
-   b.1 です。 アップグレードの対象となるセカンダリ レプリカをホストしているノード上のリソースを停止します。
+   b.1. アップグレードの対象となるセカンダリ レプリカをホストしているノード上のリソースを停止します。
    
    アップグレード コマンドを実行する前に、クラスターを監視し、は、不必要に失敗するように、リソースを停止します。 次の例では、停止するためのリソースに原因となるノードの場所の制約を追加します。 更新`ag_cluster-master`リソース名を持つと`nodeName1`アップグレードの対象となるレプリカをホストしているノードにします。
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b.2 です。 セカンダリ レプリカで SQL Server をアップグレードします。
+   b.2. セカンダリ レプリカで SQL Server をアップグレードします。
 
    次の例のアップグレード`mssql-server`と`mssql-server-ha`パッケージです。
 
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/01/2017
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b.3 です。 場所の制約の削除
+   b.3. 場所の制約の削除
 
    アップグレード コマンドを実行する前に、クラスターを監視し、は、不必要に失敗するように、リソースを停止します。 次の例では、停止するためのリソースに原因となるノードの場所の制約を追加します。 更新`ag_cluster-master`リソース名を持つと`nodeName1`アップグレードの対象となるレプリカをホストしているノードにします。
 

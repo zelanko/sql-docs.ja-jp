@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu クラスターと可用性グループ リソースを構成します。
 
@@ -101,7 +101,7 @@ sudo systemctl enable pacemaker
 
 1. すべてのノードから、既存のクラスター構成を削除します。 
 
-   実行中の 'sudo apt get インストール pc' は、ペース、corosync、および pc を同時にインストールし、サービスのすべての 3 を実行を開始します。  テンプレートが生成される開始 corosync '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを正常に存在してはいけません – ペースを停止するため、回避策/corosync および削除 '/etc/cluster/corosync.conf'、し、次の手順は正常に完了とします。 'pc クラスターを破棄' 同じ操作を実行し、1 つとして使用することができますに初期クラスター セットアップの手順です。
+   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  テンプレートが生成される開始 corosync '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを正常に存在してはいけません – ペースを停止するため、回避策/corosync および削除 '/etc/cluster/corosync.conf'、し、次の手順は正常に完了とします。 'pc クラスターを破棄' 同じ操作を実行し、1 つとして使用することができますに初期クラスター セットアップの手順です。
    
    次のコマンドは、既存のクラスターの構成ファイルを削除し、すべてのクラスター サービスを停止します。 クラスターが完全に破棄します。 実稼働前環境の最初の手順として実行します。 注 'pc クラスターを破棄こと' は無効、ペースのサービスに再度有効にする必要があります。 すべてのノードで次のコマンドを実行します。
    
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. クラスターを作成します。 
 
    >[!WARNING]
-   >クラスタ リングの仕入先があり、調査して、開始する既知の問題によりクラスター ('pc クラスター start') は、以下のエラーで失敗します。 /Etc/corosync/corosync.conf で構成されているログ ファイルが正しくないためにです。 この問題を回避するには、ログ ファイルを変更:/var/log/corosync/corosync.log です。 また、/var/log/cluster/corosync.log ファイルを作成します。
+   >クラスタ リングの仕入先があり、調査して、開始する既知の問題によりクラスター ('pc クラスター start') は、以下のエラーで失敗します。 ログ ファイルは、クラスター セットアップ コマンドが実行時に作成されて、間違った/etc/corosync/corosync.conf で構成されているためにです。 この問題を回避するには、ログ ファイルを変更:/var/log/corosync/corosync.log です。 また、/var/log/cluster/corosync.log ファイルを作成します。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

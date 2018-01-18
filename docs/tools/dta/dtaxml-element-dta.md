@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a652a6e44909984906fcbcbe2b962cc7de374fbb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4eeed88249de7d3d04bee44262d72e113a8e04ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]データベース エンジン チューニング アドバイザーの XML ルート要素入力または出力ファイル、 **DTAXML**するチューニング入力と、チューニング データベース エンジン チューニング アドバイザーで生成される出力を記述するすべての要素が含まれています。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  一般的な **DTAXML** 要素の例については、「[XML 入力ファイル サンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [XML 入力ファイル リファレンス &#40; データベース エンジン チューニング アドバイザー &#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

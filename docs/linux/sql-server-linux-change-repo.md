@@ -1,5 +1,5 @@
 ---
-title: "登録、SQL Server on Linux の一般提供リポジトリ |Microsoft ドキュメント"
+title: "SQL Server on Linux の一般提供のリポジトリを登録 |Microsoft ドキュメント"
 description: "Linux 上の一般公開 (GA) リポジトリにプレビュー SQL Server 2017 リポジトリからリポジトリを変更 (GA もとも呼ば RTM)。"
 author: annashres
 ms.author: anshrest
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c2c674c90b327cfe4baf2d109fab09d045f890
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f74c74bddf8337bf4555ce4ecdf0b6e2c869e44f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>リポジトリをプレビュー リポジトリから GA リポジトリに変更します。
 

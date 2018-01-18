@@ -1,7 +1,7 @@
 ---
-title: "テーブル モデリング (Adventure Works チュートリアル) |Microsoft ドキュメント"
+title: "テーブル モデリング (互換性レベル 1200) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 04/19/2017
+ms.date: 01/17/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -23,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f8c49a838abe5cc6948c59f3d0d67984122136a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
+# <a name="tabular-modeling-1200-compatibility-level"></a>テーブル モデリング (互換性レベル 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このチュートリアルでの Analysis Services 表形式モデルを作成する方法のレッスンでは、[互換性レベル 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)を使用して[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)、Analysis Services にモデルを配置およびサーバーをオンプレミスまたは Azure です。  
@@ -55,7 +55,7 @@ SQL Server 2017 または Azure Analysis Services を使用して、1400 互換�
   
 -   Analysis Services サーバーにオンプレミスまたは Azure では、表形式モデルを展開する方法です。  
   
-## <a name="scenario"></a>シナリオ  
+## <a name="scenario"></a>Scenario  
 このチュートリアルは、Adventure Works Cycles、架空の会社に基づいています。 Adventure Works は、生成し、金属製自転車を北アメリカ、ヨーロッパ、およびアジアの市場を配布する、大規模な多国籍製造会社です。 ワシントン州ボセルに本社では、会社には、500 の作業者が採用しています。 さらに、Adventure Works では、市場には、全体で複数の地域販売チームが採用しています。  
   
 あなたは、販売チーム、マーケティング チーム、および上級管理職のデータ分析ニーズにより高度に対応するべく、AdventureWorksDW サンプル データベース内のインターネット販売データを分析するためのテーブル モデルを作成します。  
@@ -66,7 +66,7 @@ SQL Server 2017 または Azure Analysis Services を使用して、1400 互換�
   
 このチュートリアルでは、配置したテーブル モデル データベースを SQL Server Management Studio で管理する方法や、レポート クライアント アプリケーションを使用して配置済みのモデルに接続し、モデル データを参照する方法については説明しません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルを完了するために次の前提条件が必要です。  
   
 -   最新バージョンの [!含める[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md)です。

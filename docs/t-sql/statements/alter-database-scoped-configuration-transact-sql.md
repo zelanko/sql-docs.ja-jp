@@ -1,5 +1,5 @@
 ---
-title: "ALTER データベース スコープ ベースの構成 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER データベース スコープ ベースの構成 (TRANSACT-SQL)
+# <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このステートメントで複数のデータベース構成設定を使用する、**個々 のデータベース**レベル。 このステートメントで使用できる[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]および以降の SQL Server で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 これらの設定は次のとおりです。  
+  このステートメントで複数のデータベース構成設定を使用する、**個々 のデータベース**レベル。 このステートメントで使用できる[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 これらの設定は次のとおりです。  
   
 - プロシージャ キャッシュをクリアします。  
-  
 - プライマリ データベースが特定のデータベースに最適に基づいており、別の値の設定の任意の値 (1、2、...) に、MAXDOP パラメーターを設定 (0 など) すべてのセカンダリ データベースを使用 (レポート クエリなど)。  
-  
 - データベースに依存しないクエリ オプティマイザーの基数推定モデルを互換性レベルに設定します。  
-  
 - データベース レベルでパラメーター スニッフィングを有効または無効にします。
-  
 - データベース レベルでのクエリ最適化の修正プログラムを有効または無効にします。
-
 - 有効にするにまたはデータベース レベルで id キャッシュを無効にします。
-
-- 有効にするにまたは、バッチが初めてコンパイルされるときに、キャッシュに格納されるコンパイル済みプランのスタブを無効にします。 
+- 有効にするにまたは、バッチが初めてコンパイルされるときに、キャッシュに格納されるコンパイル済みプランのスタブを無効にします。    
   
  ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,8 +77,8 @@ ALTER DATABASE SCOPED CONFIGURATION
  
 (すべてのセカンダリ データベースは同一の値が必要) のセカンダリ データベースの設定を指定します。  
   
-MAXDOP  **=**  {\<値 > |プライマリ}  
-**\<値 >**  
+MAXDOP **=** {\<value> | PRIMARY }  
+**\<value>**  
   
 ステートメントの MAXDOP 設定を使用する既定値を指定します。 0 では、既定値をサーバーの構成が代わりに使用されることを示します。 データベース スコープで MAXDOP オーバーライド (場合を除く 0 に設定されています)、**並列処理の次数の最大**sp_configure でサーバー レベルで設定します。 クエリ ヒントでは、DB をオーバーライドできますもを別の設定を必要とする特定のクエリをチューニングするために MAXDOP をスコープします。 これらすべての設定は、MAXDOP、ワークロード グループの設定によって制限されます。   
 
@@ -99,7 +93,7 @@ PRIMARY
   
 プライマリ上のデータベース中に、セカンダリに対してのみ設定して、構成が 1 つのセットをプライマリになることを示します。 構成変更については、プライマリ、セカンダリ上の値が変更される場合それに応じて、セカンダリを設定する必要はありません値に明示的にです。 **プライマリ**セカンダリの既定の設定です。  
   
-LEGACY_CARDINALITY_ESTIMATION  **=**  {ON |**OFF** |プライマリ}  
+LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }  
 
 データベースの互換性レベルに依存しない SQL Server 2012 および以前のバージョンにクエリ オプティマイザーの基数の推定モデルを設定できます。 既定値は**OFF**、クエリ オプティマイザーの基数の推定モデルは、データベースの互換性レベルに基づく設定します。 これを設定する**ON**を有効にすると等価[トレース フラグ 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 
 
@@ -110,7 +104,7 @@ PRIMARY
   
 この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、クエリ オプティマイザー基数推定モデルの設定ですべてのセカンダリがプライマリに設定値であることを指定します。 クエリ オプティマイザーの基数の推定モデルのプライマリで構成が変更された場合、セカンダリ上の値を変更します。 **プライマリ**セカンダリの既定の設定です。  
   
-PARAMETER_SNIFFING  **=**  { **ON** |OFF |プライマリ}  
+PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
 
 有効または無効に[パラメーターを見つけ出す](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)です。 既定値は ON です。 これは、 [トレース フラグ 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を指定した場合と同じです。   
 
@@ -121,7 +115,7 @@ PRIMARY
   
 この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、すべてのセカンダリでは、この設定に値が、プライマリの設定値であることを指定します。 場合、構成を使用するため、プライマリ上[パラメーターを見つけ出す](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)変更、セカンダリ上の値が変更されますそれに応じて設定する必要がないセカンダリ値に明示的にします。 これは、セカンダリの既定の設定です。  
   
-QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |プライマリ}  
+QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
 有効またはデータベースの互換性レベルに関係なく、クエリ オプティマイザーの修正プログラムを無効にします。 既定値は**OFF**、無効にクエリ オプティマイザーの修正プログラム、最高の使用可能な互換性レベルは、特定のバージョンの導入された後にリリースされていた (RTM)。 これを設定する**ON**を有効にすると等価[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。   
 
@@ -132,7 +126,7 @@ PRIMARY
   
 この値は、プライマリ上でデータベース中にセカンダリでのみ有効ですし、すべてのセカンダリでは、この設定に値が、プライマリに設定された値を指定します。 構成変更については、プライマリ、セカンダリ上の値が変更された場合はそれに応じてを設定する必要がないセカンダリ値明示的にです。 これは、セカンダリの既定の設定です。  
   
-クリア PROCEDURE_CACHE  
+CLEAR PROCEDURE_CACHE  
 
 データベースのプロシージャ (プラン) キャッシュをクリアします。 これは、プライマリとセカンダリの両方で実行できます。  
 
@@ -145,13 +139,13 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
 > [!NOTE] 
 > このオプションは、プライマリの場合にのみ設定できます。 詳細については、次を参照してください。 [id 列](create-table-transact-sql-identity-property.md)です。  
 
-OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }  
+OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
 **適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 有効またはバッチが初めてコンパイルされるときに、キャッシュに格納されるコンパイル済みプランのスタブを無効にします。 既定値は OFF です。 データベース スコープの構成データベースは、コンパイル済みプランのスタブ OPTIMIZE_FOR_AD_HOC_WORKLOADS が有効になっている場合、バッチのキャッシュに保存されますが、最初にコンパイルされます。 プランのスタブは、完全なコンパイル済みプランのサイズと比較して、小さいメモリ使用量があります。  バッチがコンパイルまたは再実行された場合、コンパイル済みプランのスタブは削除され、コンパイル済みプランの完全に置き換えられます。
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> アクセス許可  
  必要と任意のデータベース スコープ構成を変更します   
 上のデータベースです。 データベースに対する CONTROL 権限を持つユーザーは、この権限を付与することができます。  
   
@@ -163,6 +157,8 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }
  3 部構成の名前のクエリでクエリの現在のデータベース接続の設定が SQL モジュール (プロシージャ、関数、トリガーなど) では、現在のデータベース コンテキストでコンパイルされた以外の受け入れられ、およびそのためのオプションを使用して、データベースが存在します。  
   
  ALTER_DATABASE_SCOPED_CONFIGURATION イベントは、DDL トリガーを起動するために使用できる DDL イベントとして追加されます。 これは、ALTER_DATABASE_EVENTS トリガー グループの子です。  
+ 
+ データベース スコープの設定が引き継がれます、データベースを構成します。 これは、特定のデータベースが復元またはアタッチされたときに、既存の構成設定が残ることを意味します。
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
 **MAXDOP**  

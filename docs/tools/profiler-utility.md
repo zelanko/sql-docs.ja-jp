@@ -19,15 +19,15 @@ helpviewer_keywords:
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3bd2990df59e1ae2ccaa0a5a162b3ac42e4c938
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>profiler ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**プロファイラー**ユーティリティが起動し、[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]ツールです。 このトピックの後半で説明する省略可能な引数を使用して、アプリケーションの起動を制御できます。  
@@ -66,7 +66,7 @@ profiler
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に使用するユーザー ログイン ID を指定します。 ログイン ID では大文字と小文字は区別されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]」をご覧ください。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]」を参照してください。  
   
  **/P** *password*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で必要なユーザーのパスワードを指定します。  
@@ -87,7 +87,7 @@ profiler
  Profiler を起動するときに読み込むトレース テーブルを指定します。 データベース、ユーザーやスキーマ、およびテーブルを指定する必要があります。  
   
  **/T"** *template_name* **"**  
- トレースを構成するために読み込まれるテンプレートを指定します。 テンプレート名は引用符で囲む必要があります。 テンプレートは、システム テンプレート ディレクトリまたはユーザー テンプレート ディレクトリに格納されている必要があります。 同じ名前のテンプレートが両方のディレクトリにある場合は、システム ディレクトリのテンプレートが読み込まれます。 指定した名前のテンプレートが存在しない場合は、標準テンプレートが読み込まれます。 テンプレートのファイル拡張子 (.tdf) は、 *template_name*の一部として指定しないでください。 例 :  
+ トレースを構成するために読み込まれるテンプレートを指定します。 テンプレート名は引用符で囲む必要があります。 テンプレートは、システム テンプレート ディレクトリまたはユーザー テンプレート ディレクトリに格納されている必要があります。 同じ名前のテンプレートが両方のディレクトリにある場合は、システム ディレクトリのテンプレートが読み込まれます。 指定した名前のテンプレートが存在しない場合は、標準テンプレートが読み込まれます。 テンプレートのファイル拡張子 (.tdf) は、 *template_name*の一部として指定しないでください。 例:  
   
 ```  
 /T "standard"  

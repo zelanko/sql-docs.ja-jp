@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: TuningOptions element
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 979f070f80d21ff8b7fd502d7e4d3d6d0cb7646b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f82d39a90f515d4f70d9e48bef7f20996ba60f78
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]特定のチューニング セッションのチューニング オプションを格納します。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

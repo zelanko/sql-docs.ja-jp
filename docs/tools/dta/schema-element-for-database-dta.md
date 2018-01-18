@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Schema element
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89c36f9df5ab507edad6254e6c09ccb8039878df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c2b4da3d22c91ad05ba53736eb17a2210b0c0b5d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="schema-element-for-database-dta"></a>Database の Schema 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]チューニングするデータベースのスキーマを指定します。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -49,8 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[Server の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)|  
-|**子要素**|[Schema の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [Schema の Table 要素 &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**親要素**|[サーバー &#40;DTA&#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)|  
+|**子要素**|[スキーマ &#40; DTA &#41; の name 要素](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [スキーマ &#40; DTA &#41; の table 要素](../../tools/dta/table-element-for-schema-dta.md)|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)」を参照してください。  

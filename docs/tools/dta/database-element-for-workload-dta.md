@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Database element
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bd00572b79a564dc61ef18edd12052152a401a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02bf075186f8bc9c8efc6fb05b9288f636494a7c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-workload-dta"></a>Workload の Database 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]ワークロード トレース テーブルが置かれているデータベースを指定します。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[Workload 要素 &#40;DTA&#41;](../../tools/dta/workload-element-dta.md)|  
-|**子要素**|[Database の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Database の Schema 要素 &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|**子要素**|[データベース &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [データベース &#40;DTA&#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseDetailsTypecomplexType** の名前です。 この **Database** 要素を、ルートの親要素が **Configuration** 要素である他の要素と混同しないでください (「[Configuration の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)」を参照)。  
