@@ -49,9 +49,9 @@
 ### [SQL Server のセキュリティ](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## フィードバックとヘルプ
+### [SQL Server の推奨事項](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [ヘルプ ビューアーでのローカル コンテンツ](sql-server-help-installation.md)

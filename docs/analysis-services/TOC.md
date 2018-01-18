@@ -19,7 +19,7 @@
 ## [Analysis Services のサンプル](analysis-services-samples.md)
 
 # チュートリアル
-## [テーブル モデリング (Adventure Works チュートリアル)](tabular-modeling-adventure-works-tutorial.md)  
+## [表形式のモデリング (1200 互換性レベル)](tabular-modeling-adventure-works-tutorial.md)  
 ### [レッスン 1: 新しいテーブル モデル プロジェクトの作成](lesson-1-create-a-new-tabular-model-project.md)  
 ### [レッスン 2: データの追加](lesson-2-add-data.md)  
 ### [レッスン 3: 日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [補足のレッスン: 行フィルターを使用した動的なセキュリティの実装](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [補足のレッスン: Power View レポートのレポート プロパティの構成](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [多次元モデリング](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)  
 ### [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)  
 ### [レッスン 1: Analysis Services プロジェクト内でのデータ ソース ビューの定義](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -93,7 +93,7 @@
 ## [サーバーの管理](../analysis-services/instances/analysis-services-instance-management.md)
 ## [トレース イベント](../analysis-services/trace-events/analysis-services-trace-events.md)
 
-# 開発者
+# Developer
 ## テーブル モデル
 ### [テーブル モデルのプログラミング互換性レベル 1200 以降](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
 #### [テーブル モデルのスクリプト言語 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
