@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07c9278bc7c277a0991f0f55cad18f496c514cde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
- *距離*  
+ *distance*  
  **Float**からの距離を指定する式、 **geography**バッファー計算の対象となるインスタンスです。  
   
  バッファーの最大距離は、0.999 を超えることはできません\* *π* * minorAxis \* minorAxis/#42/majoraxis (~0.999 \* 1/2 地球の円周) または全球。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  最小値は距離の 0.1% で、それより小さい許容範囲はこの最小値に切り上げられます。  
   
- *相対*  
+ *relative*  
  **ビット**を指定するかどうか、*トレランス*値が相対パスまたは絶対です。 かどうかは 'TRUE' または 1 が、許容範囲は相対値との積として計算されます、*トレランス*パラメーターと角度\*楕円の赤道半径。 'FALSE' または 0 の場合、tolerance は絶対値の場合、*トレランス*値は、返された線形近似の理想的なバッファー距離の最大幅。  
   
 ## <a name="return-types"></a>戻り値の型  

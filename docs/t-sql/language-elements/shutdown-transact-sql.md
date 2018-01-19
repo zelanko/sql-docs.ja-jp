@@ -23,15 +23,15 @@ helpviewer_keywords:
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 10a6b2c5bf093eaee3eacf183f98ecb644d2fc68
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e4cf8ea2b61d4f1acb69ea489a5116a701264469
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager です。  
   
--   実行して**net stop mssqlserver**の既定のインスタンス、またはを実行して、コマンド プロンプトから**「net stop mssql$***instancename*名前付きインスタンスのコマンド プロンプトからです。  
+-   実行して**net stop mssqlserver**の既定のインスタンス、またはを実行して、コマンド プロンプトから **「net stop mssql$ * * * instancename*名前付きインスタンスのコマンド プロンプトからです。  
   
 -   [コントロール パネル] の [サービス] を使用する。  
   
@@ -78,11 +78,11 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  これらのメソッドのいずれかを使用して停止する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信、`SERVICE_CONTROL_STOP`メッセージごとに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにシャット ダウンのアクセス許可が割り当てられている、 **sysadmin**と**serveradmin**は、固定サーバー ロール、およびそれらに転送できません。  
   
 ## <a name="see-also"></a>参照  
- [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [チェックポイント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr アプリケーション](../../tools/sqlservr-application.md)   

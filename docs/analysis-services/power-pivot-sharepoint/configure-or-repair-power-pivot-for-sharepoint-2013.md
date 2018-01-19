@@ -17,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5f72d312cff6b0660faa1ebbd30890d53c43f2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0986792fb9c8e7d6300e85d9a700e75cac783aeb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>構成または Power Pivot for SharePoint 2013 を修復します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]構成またはのインストールを修復する[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 構成ツール。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードでは、SharePoint 2010 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールと SharePoint 2013 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールがインストールされます。 このトピックでは、SharePoint 2013 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールについて説明します。 SharePoint 2010 の詳細については、「 [PowerPivot for SharePoint 2010 の構成または修復 (PowerPivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
  [開始前の準備](#bkmk_before)  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/08/2018
   
  次の表は、サーバーの構成に使用する値を示しています。  
   
-|ページ|入力値|Source|Description|  
+|ページ|入力値|ソース|Description|  
 |----------|-----------------|------------|-----------------|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の構成または修復**|既定のアカウント|現在のユーザー|既定のアカウントは、ファーム内の共有サービスの準備に使用されるドメイン Windows ユーザー アカウントです。 これは、次の準備に使用されます。|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション|  
@@ -215,12 +215,12 @@ ms.lasthandoff: 01/08/2018
  後でデータ ストレージや処理能力を追加する必要が生じた場合は、SharePoint モードで Analysis Services が実行されているサーバーをファームに追加できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 の場合、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを SharePoint モードでインストールして、Excel Services を構成します。 詳細については、「 [Power Pivot モードでの Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」の「シングル サーバー インストールではない場合」を参照してください。  
   
 ## <a name="additional-resources"></a>その他のリソース  
- ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") [ご意見および連絡先情報は、Microsoft SQL Server に関するフィードバックの送信ページ](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) からお送りください。  
+ ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を SQL Server に関するフィードバックを送信](https://feedback.azure.com/forums/908035-sql-server)です。  
   
 ## <a name="see-also"></a>参照  
  [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [ブックと定期データ更新 &#40; をアップグレードします。SharePoint 2013 &#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: "Windows 認証でデータ ソースとファイル共有に接続する | Microsoft Docs"
-ms.date: 11/27/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -13,16 +13,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Windows 認証でオンプレミス データ ソースと Azure ファイル共有に接続する
 この記事では、Azure SQL Database で SSIS カタログを構成して、Windows 認証を使用するパッケージを実行し、オンプレミスのデータ ソースと Azure ファイル共有に接続する方法について説明します。 Windows 認証を使用して、オンプレミスと Azure の仮想マシンの両方、さらに Azure Files で Azure SSIS Integration Runtime と同じ仮想ネットワーク内のデータ ソースに接続できます。
 
-この記事の手順を実行する際に指定するドメインの資格情報は、資格情報を変更または削除するまで、SQL Database インスタンスのすべてのパッケージの実行に適用されます。
+> [!WARNING]
+> この記事で説明されているように、`catalog`.`set_execution_credential` を実行して、Windows 認証に有効なドメイン資格情報を指定しない場合、 Windows 認証に依存するパッケージはデータ ソースに接続することができず、実行時に失敗します。
+
+この記事の手順を実行するときに指定したドメインの資格情報は、資格情報を変更または削除するまで、SQL Database インスタンスのすべてのパッケージの実行 (インタラクティブまたはスケジュール) に適用されます。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Windows 認証のドメイン資格情報を提供する
 パッケージが Windows 認証を使用して、オンプレミスのデータ ソースに接続できるようにするドメイン資格情報を提供するには、次のことを行います。

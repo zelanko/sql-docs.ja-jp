@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2265efe9fab240d25d03e3e1ef16009d294166af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9fc240d76c2939e0ed96d87fdbfee35ec8208ce
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="at-time-zone-transact-sql"></a>タイム ゾーン (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  式に解決されることができるは、 **smalldatetime**、 **datetime**、 **datetime2**、または**datetimeoffset**値。  
   
- *タイム ゾーン*  
+ *timezone*  
  変換先タイム ゾーンの名前です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows レジストリに格納されているタイム ゾーンに依存します。 次のレジストリ ハイブに、コンピューターにインストールされているすべてのタイム ゾーンが格納されている: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time ゾーン**です。 を通じてインストールされているタイム ゾーンの一覧が公開されても、 [sys.time_zone_info &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)ビュー。  
   
 ## <a name="return-types"></a>戻り値の型  

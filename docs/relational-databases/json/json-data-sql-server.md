@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 03be01e0efe2a6cf437f448cf952c7949d45026d
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 1f6ecf8c1970a3e7fa78dc78b83afce4082f0e63
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="json-data-sql-server"></a>JSON データ (SQL Server)
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ JSON は、最新の Web アプリケーションとモバイル アプリケー
   
  ![組み込みの JSON サポートの概要](../../relational-databases/json/media/jsonslides1overview.png "組み込みの JSON サポートの概要")  
   
-## <a name="key-json-capabilities-of-sql-server"></a>SQL Server の主な JSON 機能 
+## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>SQL Server と SQL Database の主な JSON 機能
 SQL Server がその組み込みの JSON サポートで提供する主な機能について以下に説明します。
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON テキストから値を抽出し、それらをクエリで使用する
@@ -178,51 +178,22 @@ JSON テキストは通常、varchar 列または nvarchar 列に格納されて
 純粋な JSON ワークロードがあり、JSON ドキュメントの処理のためにカスタマイズされたクエリ言語を使用する場合は、Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/) の使用をお勧めします。  
   
  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で組み込みの JSON サポートの使用方法を示すユース ケースを紹介します。  
+
+## <a name="store-and-index-json-data-in-sql-server"></a>JSON データの SQL Server への格納とインデックスの追加
+
+JSON データの SQL Server への保存、インデックスの追加、最適化のオプションに関する詳細については、次の記事を参照してください。
+-   [SQL Server または SQL Database に JSON ドキュメントを格納する](store-json-documents-in-sql-tables.md)
+-   [JSON データへのインデックスの追加](index-json-data.md)
+-   [インメモリ OLTP を使用した JSON の処理の最適化](optimize-json-processing-with-in-memory-oltp.md)
+
+### <a name="load-json-files-into-sql-server"></a>SQL Server に JSON ファイルを読み込む  
+ ファイルに格納された情報は、標準の JSON または行区切りの JSON 形式に書式設定できます。 SQL Server は JSON ファイルのコンテンツをインポートし、**OPENJSON** または **JSON_VALUE** 関数を使用してそれを解析してテーブルに読み込むことができます。  
   
-## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>JSON として書式設定された SQL Server テーブルからデータを返す  
- データベース層からデータを取得し、それを JSON 形式で返す Web サービス、または JSON 形式に設定されたデータを受け取る JavaScript フレームワークまたはライブラリがある場合、JSON 出力を SQL クエリで直接設定できます。 コードを記述するかライブラリを追加して、タブ形式のクエリ結果を変換し、それからオブジェクトを JSON 形式にシリアライズする代わりに、FOR JSON を使用して JSON 形式への設定を SQL Server に委任できます。  
+-   JSON ドキュメントが SQL Server がアクセスできる ローカル ファイル、共有ネットワーク ドライブ、Azure File Storage の場所に格納されている場合は、一括インポートを使用して SQL Server に JSON データを読み込むことができます。 このシナリオの詳細については、「 [OPENROWSET (BULK) を使用して SQL Server に JSON ファイルをインポートする](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)」を参照してください。  
   
- たとえば、OData の仕様に準拠した JSON 出力を生成するとします。 Web サービスは、次の形式の要求と応答を求めています。  
-  
--   要求: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
-  
--   応答: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
-  
- この OData URL は、ID が 1 のプロダクトの Product ID 列と ProductName 列に対する要求を表します。 **FOR JSON** を使用して、出力を SQL Server で求められている形式に設定できます。  
-  
-```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
- AS '@odata.context',   
- ProductID, Name as ProductName   
-FROM Production.Product  
-WHERE ProductID = 1  
-FOR JSON AUTO  
-```  
-  
-このクエリの出力は、OData 仕様に完全に準拠した JSON テキストになります。形式設定とエスケープは、SQL Server によって処理されます。 SQL Server はクエリ結果も OData JSON や GeoJSON など、任意の形式に設定できます。詳細については、「[空間データを GeoJSON 形式で返す](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)」をご覧ください。  
-  
-## <a name="analyze-json-data-with-sql-queries"></a>SQL クエリで JSON データを分析する  
- レポート作成のために JSON データをフィルター処理または集計する必要がある場合は、**OPENJSON** を使用して JSON をリレーショナル形式に変換できます。 その後、標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] と組み込み関数を使用してレポートを用意します。  
-  
-```sql  
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
-FROM   SalesOrderRecord AS Tab  
-          CROSS APPLY  
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')  
-           WITH (  
-              Number   varchar(200) N'$.Order.Number',   
-              Date     datetime     N'$.Order.Date',  
-              Customer varchar(200) N'$.AccountNumber',   
-              Quantity int          N'$.Item.Quantity'  
-           )  
-  AS SalesOrderJsonData  
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
-```  
-  
- 同じクエリに標準テーブルの列と JSON テキストからの値の両方を使用できます。 `JSON_VALUE(Tab.json, '$.Status')` 式にインデックスを追加して、クエリのパフォーマンスを向上させることができます。 詳細については、「 [JSON データへのインデックスの追加](../../relational-databases/json/index-json-data.md)」をご覧ください。
-  
-## <a name="import-json-data-into-sql-server-tables"></a>SQL Server に JSON データをインポートする  
+-   行区切りの JSON ファイルが Azure Blob Storage または Hadoop ファイル システムに格納されている場合、Polybase を使用して JSON テキストを読み込み、Transact-SQL コードでそれを解析してテーブルに読み込むことができます。  
+
+### <a name="import-json-data-into-sql-server-tables"></a>SQL Server に JSON データをインポートする  
  JSON データを外部サービスから SQL Server に読み込む必要がある場合は、アプリケーション レイヤー内でデータを解析する代わりに、**OPENJSON** を使用してデータを SQL Server にインポートできます。  
   
 ```sql  
@@ -269,16 +240,52 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   [JSON データを SQL Server にインポートする方法に関するブログ](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/09/22/openjson-the-easiest-way-to-import-json-text-into-table/)
 -   [Upsert JSON documents in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/03/upsert-json-documents-in-sql-server-2016)
 -   [Loading GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)」をご覧ください。  
+
+## <a name="analyze-json-data-with-sql-queries"></a>SQL クエリで JSON データを分析する  
+ レポート作成のために JSON データをフィルター処理または集計する必要がある場合は、**OPENJSON** を使用して JSON をリレーショナル形式に変換できます。 その後、標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] と組み込み関数を使用してレポートを用意します。  
   
-## <a name="load-json-files-into-sql-server"></a>SQL Server に JSON ファイルを読み込む  
- ファイルに格納された情報は、標準の JSON または行区切りの JSON 形式に書式設定できます。 SQL Server は JSON ファイルのコンテンツをインポートし、**OPENJSON** または **JSON_VALUE** 関数を使用してそれを解析してテーブルに読み込むことができます。  
+```sql  
+SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
+FROM   SalesOrderRecord AS Tab  
+          CROSS APPLY  
+     OPENJSON (Tab.json, N'$.Orders.OrdersArray')  
+           WITH (  
+              Number   varchar(200) N'$.Order.Number',   
+              Date     datetime     N'$.Order.Date',  
+              Customer varchar(200) N'$.AccountNumber',   
+              Quantity int          N'$.Item.Quantity'  
+           )  
+  AS SalesOrderJsonData  
+WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
+ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
+```  
   
--   JSON ドキュメントが SQL Server がアクセスできる ローカル ファイル、共有ネットワーク ドライブ、Azure File Storage の場所に格納されている場合は、一括インポートを使用して SQL Server に JSON データを読み込むことができます。 このシナリオの詳細については、「 [OPENROWSET (BULK) を使用して SQL Server に JSON ファイルをインポートする](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)」を参照してください。  
+ 同じクエリに標準テーブルの列と JSON テキストからの値の両方を使用できます。 `JSON_VALUE(Tab.json, '$.Status')` 式にインデックスを追加して、クエリのパフォーマンスを向上させることができます。 詳細については、「 [JSON データへのインデックスの追加](../../relational-databases/json/index-json-data.md)」をご覧ください。
+ 
+## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>JSON として書式設定された SQL Server テーブルからデータを返す  
+ データベース層からデータを取得し、それを JSON 形式で返す Web サービス、または JSON 形式に設定されたデータを受け取る JavaScript フレームワークまたはライブラリがある場合、JSON 出力を SQL クエリで直接設定できます。 コードを記述するかライブラリを追加して、タブ形式のクエリ結果を変換し、それからオブジェクトを JSON 形式にシリアライズする代わりに、FOR JSON を使用して JSON 形式への設定を SQL Server に委任できます。  
   
--   行区切りの JSON ファイルが Azure Blob Storage または Hadoop ファイル システムに格納されている場合、Polybase を使用して JSON テキストを読み込み、Transact-SQL コードでそれを解析してテーブルに読み込むことができます。  
+ たとえば、OData の仕様に準拠した JSON 出力を生成するとします。 Web サービスは、次の形式の要求と応答を求めています。 
+  
+-   要求: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+  
+-   応答: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+  
+ この OData URL は、`id` が 1 の製品の ProductID 列と ProductName 列に対する要求を表します。 **FOR JSON** を使用して、出力を SQL Server で求められている形式に設定できます。  
+  
+```sql  
+SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+ AS '@odata.context',   
+ ProductID, Name as ProductName   
+FROM Production.Product  
+WHERE ProductID = 1  
+FOR JSON AUTO  
+```  
+  
+このクエリの出力は、OData 仕様に完全に準拠した JSON テキストになります。形式設定とエスケープは、SQL Server によって処理されます。 SQL Server はクエリ結果も OData JSON や GeoJSON など、任意の形式に設定できます。詳細については、「[空間データを GeoJSON 形式で返す](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)」をご覧ください。  
   
 ## <a name="test-drive-built-in-json-support"></a>組み込みの JSON サポートを試用する  
- **AdventureWorks サンプル データベースを使用して、組み込みの JSON サポートを試用できます。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://www.microsoft.com/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 SQL Server 2016 のインスタンスにサンプル データベースを復元したら、サンプル ファイルを解凍し、JSON フォルダーから "JSON Sample Queries procedures views and indexes.sql" ファイルを開きます。 このファイルのスクリプトを実行して JSON データとして既存のデータの一部の形式を再度設定し、JSON データに対してサンプル クエリとレポートを実行してから、JSON データにインデックスを付けて JSON をインポートおよびエクスポートします。  
+ **AdventureWorks サンプル データベースを使用して、組み込みの JSON サポートを試用できます。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://www.microsoft.com/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 SQL Server 2016 のインスタンスにサンプル データベースを復元したら、サンプル ファイルを解凍し、JSON フォルダーから "JSON Sample Queries procedures views and indexes.sql" ファイルを開きます。 このファイルのスクリプトを実行して JSON データとして既存のデータの一部の形式を再度設定し、JSON データに対してサンプル クエリとレポートをテストしてから、JSON データにインデックスを付けて JSON をインポートおよびエクスポートします。  
   
  ファイルに含まれているスクリプトでは、次のことを実行できます。  
   
@@ -299,25 +306,6 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 6.  スクリプトをクリーンアップする - 手順 2 と 4 で作成したストアド プロシージャとビューを保持する場合は、この部分を実行しないでください。  
   
 ## <a name="learn-more-about-built-in-json-support"></a>組み込みの JSON サポートの詳細情報  
-  
-### <a name="topics-in-this-section"></a>このセクションのトピック  
- [FOR JSON を使用してクエリ結果を JSON として書式設定する &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
- FOR JSON 句を使用して、JSON 出力の形式設定をクライアント アプリケーションから SQL Server に委任します。  
-  
- [OPENJSON を使用して JSON データを行と列に変換する &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)  
- OPENJSON を使用して、JSON データを SQL Server にインポートする、または現状 JSON を直接処理できないアプリケーションやサービス (SQL Server Integration Services など) 用に、JSON データをリレーショナル形式に変換します。  
-  
- [組み込み関数を使用した JSON データの検証、クエリ、変更 &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)  
- これらの組み込み関数を使用して JSON テキストを検証し、スカラー値、オブジェクト、配列を抽出します。  
-  
- [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)  
- パス式を使用して、使用する JSON テキストを指定します。  
-  
- [JSON データへのインデックスの追加](../../relational-databases/json/index-json-data.md)  
- 計算列を使用して、JSON ドキュメントのプロパティに対して照合順序に対応したインデックスを作成します。  
-  
-[SQL Server での JSON に関する一般的な問題を解決する](../../relational-databases/json/solve-common-issues-with-json-in-sql-server.md)  
- SQL Server での組み込み JSON サポートに関する一般的な質問に対する回答を見つけることができます。  
   
 ### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
   

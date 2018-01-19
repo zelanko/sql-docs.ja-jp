@@ -26,15 +26,15 @@ helpviewer_keywords:
 - local variables [SQL Server]
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 56303a563bce3def564fe3b92067eb6f4c6a2177
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0c86742889f3ff486aaa533e0f865e0a404d595c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-localvariable-transact-sql"></a>選択@local_variable(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 {= | += | -= | \*= | /= | %= | &= | ^= | |= }   
 右側の値を左側の変数に代入します。  
   
-複合代入演算子です。  
+複合代入演算子です:  
   |演算子 (operator) |アクション (action) |   
   |-----|-----|  
   | = | これに続く、式を変数に代入します。 |  

@@ -30,15 +30,15 @@ helpviewer_keywords:
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b2f6bffa6a19007fc98796daa9ff34bda729bd4d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 815d114944cfa233777fce1ba01c4639cc7417b3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ COMMIT [ TRAN | TRANSACTION ]
  
   
 ## <a name="arguments"></a>引数  
- *では無視*  
+ *transaction_name*  
  **適用対象:** SQL Server と Azure SQL Database
  
  は無視されます、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]です。 *では無視*前の BEGIN TRANSACTION により割り当てられるトランザクション名を指定します。 *では無視*識別子の規則に従う必要がありますが、32 文字を超えることはできません。 *では無視*プログラマは、BEGIN TRANSACTION と COMMIT TRANSACTION の関連を入れ子になったに指定することにより、読みやすさを目的として使用できます。  
@@ -93,7 +93,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]ステートメントの開始時点のトランザクション数が 0 の場合にのみ、ステートメント内でトランザクション数が増加します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

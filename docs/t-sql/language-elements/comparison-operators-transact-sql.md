@@ -22,15 +22,15 @@ helpviewer_keywords:
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 45c0e85b89d542dce815104eb8e831169599227b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7c36efad752eb830b44415add3d279a4a3ecf3ab
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="comparison-operators-transact-sql"></a>比較演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 |演算子|意味|  
 |--------------|-------------|  
-|[= (等しい)](../../t-sql/language-elements/equals-transact-sql.md)|一致します。|  
+|[= (等しい)](../../t-sql/language-elements/equals-transact-sql.md)|等しい|  
 |[> (より大きい)](../../t-sql/language-elements/greater-than-transact-sql.md)|より大きい|  
 |[< (より小さい)](../../t-sql/language-elements/less-than-transact-sql.md)|より小さい|  
 |[>= (以上)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|以上|  

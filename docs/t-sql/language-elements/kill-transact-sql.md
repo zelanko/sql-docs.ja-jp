@@ -35,15 +35,15 @@ helpviewer_keywords:
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c05f03abc5bb03da332ba2ec28294ea7af3f9d1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ff321a1ceec820049fc8c757d97336d0c25f1ce3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +124,7 @@ JOIN sys.dm_exec_connections AS conn
   
  同じ状態レポートは、同じ KILL を繰り返すことで取得できます*セッション ID*|*UOW* ; WITH STATUSONLY オプションを使用することがなくステートメントただし、お勧めしませんこれを行います。 強制終了を繰り返し*セッション ID*ロールバックが完了すると、新しい KILL ステートメントの実行前にセッション ID は、新しいタスクに再割り当てされました、ステートメントが新しいプロセスを終了する可能性があります。 WITH STATUSONLY を指定すると、このような状況が発生しなくなります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** ALTER ANY CONNECTION 権限が必要です。 ALTER ANY CONNECTION は、固定サーバー ロール sysadmin または processadmin のメンバーシップに含まれています。  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** KILL DATABASE CONNECTION 権限が必要です。 サーバー レベル プリンシパル ログインが、KILL DATABASE CONNECTION です。  

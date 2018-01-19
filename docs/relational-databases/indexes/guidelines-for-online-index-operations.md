@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: c69295e84e5bd6ef1162bb007c206b0addd8656c
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,8 +95,7 @@ ms.lasthandoff: 12/07/2017
 ## <a name="resumable-index-rebuild-considerations"></a>再開可能なインデックスの再構築に関する考慮事項
 
 > [!NOTE]
-> 「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」をご覧ください。 
->
+> 再開可能なインデックス オプションは、SQL Server (SQL Server 2017 以降) と SQL Database に適用されます。 「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」をご覧ください。 
 
 再開可能なオンライン インデックスの再構築を実行するときは、次のガイドラインが適用されます。
 -   インデックス メンテナンス期間の管理、計画、延長。 インデックス再構築操作を何回でも一時停止して再開し、メンテナンス期間に合わせることができます。
@@ -108,7 +107,6 @@ ms.lasthandoff: 12/07/2017
 
 > [!IMPORTANT]
 > 再開可能な再構築では実行時間の長いトランザクションを開いたままにする必要はなく、この操作の間のログの切り捨てと、より優れたログ領域管理が可能です。 新しい設計では、必要なデータを、再開可能な操作を再開するために必要なすべての参照と共に、データベースに保持しています。
->
 
 一般に、再開可能なオンライン インデックス再構築と再開不可能なオンライン インデックス再構築の間に、パフォーマンスの違いはありません。 インデックス再構築操作を一時停止している間に再開可能なインデックスを更新すると、次のようになります。
 - 通常は読み取り専用のワークロードの場合、パフォーマンスに与える影響は大きくありません。 

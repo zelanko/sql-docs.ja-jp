@@ -1,7 +1,7 @@
 ---
 title: "分散型可用性グループ (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 01/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,11 +18,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 245eb466e756017c3ae70a5fc408d4ce876370d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: efa0ea34a2b5432f3c7059d98cee4cbd35fa18ab
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)を補完します。
@@ -147,7 +147,11 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 上のどちらの例でも、3 つの可用性グループ全体で最大 27 個のレプリカを持つことができ、そのすべてを読み取り専用クエリに使うことができます。 
 
-[読み取り専用ルーティング]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)は、現在、分散型可用性グループでは動作しません。 すべてのクエリは、接続にリスナーを使っている場合、プライマリ レプリカに送られます。 それ以外の場合は、各レプリカがすべての接続をセカンダリ レプリカとして許可し、それらに直接アクセスするように、構成する必要があります。 この動作は、SQL Server 2016 の更新プログラムまたは SQL Server の将来のバージョンで、変更される可能性があります。
+[読み取り専用ルーティング]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)は、分散型可用性グループでは正しく動作しません。 より詳細な情報:
+
+1. 読み取り専用ルーティングを構成することができ、分散型可用性グループのプライマリ可用性グループに対して動作します。 
+2. 読み取り専用ルーティングを構成できますが、分散型可用性グループのセカンダリ可用性グループには動作しません。 すべてのクエリがリスナーを使ってセカンダリ可用性グループに接続する場合は、セカンダリ可用性グループのプライマリ レプリカに移動します。 それ以外の場合は、各レプリカがすべての接続をセカンダリ レプリカとして許可し、それらに直接アクセスするように、構成する必要があります。 ただし、フェールオーバー後に、セカンダリ可用性グループがプライマリになっている場合は、読み取り専用ルーティングは動作します。 この動作は、SQL Server 2016 の更新プログラムまたは SQL Server の将来のバージョンで、変更される可能性があります。
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>分散型可用性グループのセカンダリ可用性グループを初期化する
 

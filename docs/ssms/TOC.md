@@ -4,7 +4,7 @@
 ## [リリース ノート](download-sql-server-management-studio-ssms.md#release-notes)
 ## [英語以外の SSMS のインストール](install-other-languages.md)
 ## [新規および更新のアーティクル](new-updated-ssms.md)
-# [SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)
+# [SQL Server PowerShell モジュールのインストール](../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json)
 
 # [SQL Server エージェント +](../ssms/agent/sql-server-agent.md)
 # [F1 ヘルプ +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)

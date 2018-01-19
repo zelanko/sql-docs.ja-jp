@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>JSON データへのインデックスの追加
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SQL Server 2016 では、JSON のデータ型は組み込まれておらず、SQL Server には、カスタム JSON インデックスはありません。 ただし、標準的なインデックスを使用して、JSON ドキュメント用にクエリを最適化できます。 
+SQL Server と SQL Database では、JSON のデータ型は組み込まれておらず、SQL Server には、カスタム JSON インデックスはありません。 ただし、標準的なインデックスを使用して、JSON ドキュメント用にクエリを最適化できます。 
 
 データベース インデックスでは、フィルターおよび並べ替え操作のパフォーマンスを向上させることができます。 インデックスがない場合、SQL Server は、データのクエリを実行するたびに、テーブルを完全にスキャンしなければなりません。  
   
@@ -69,7 +69,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
   
 計算列は、クエリで使用するのと同じ式を使用して作成することが重要です。この例では、式は `JSON_VALUE(Info, '$.Customer.Name')` です。  
   
-クエリは書き直す必要はありません。 `JSON_VALUE` 関数を含む式を使用する場合、上の例のクエリのように、SQL Server は同じ式を使用する同等な計算列が存在することを確認し、可能であればインデックスを適用します。
+クエリは書き直す必要はありません。 `JSON_VALUE` 関数を含む式を使用する場合、前述の例のクエリのように、SQL Server は同じ式を使用する同等な計算列が存在することを確認し、可能であればインデックスを適用します。
 
 ### <a name="execution-plan-for-this-example"></a>この例の実行プラン
 この例のクエリの実行プランを次に示します。  
@@ -79,7 +79,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 SQL Server では、テーブルを完全にスキャンするのではなく、非クラスター化インデックスに index seek を使用し、指定した条件に一致する行を探します。 次に、`SalesOrderHeader` テーブルでキー参照を使って、クエリで参照される他の列 (この例では `SalesOrderNumber` と `OrderDate`) をフェッチします。  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>付加列でインデックスをさらに最適化する
-インデックスに必要な列を追加すれば、テーブルでこの追加の参照を回避できます。 これらの列は、次の例のとおり標準の付加列として追加できます。これは、前に示した `CREATE INDEX` の例を拡張します。  
+インデックスに必要な列を追加すれば、テーブルでこの追加の参照を回避できます。 これらの列は、次の例のとおり標準の付加列として追加できます。これは、前述の `CREATE INDEX` の例を拡張します。  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-この場合、必要なものがすべて JSON の非クラスター化インデックスに含まれているため、SQL Server は `SalesOrderHeader` テーブルから追加のデータを読み取る必要はありません。 これは、JSON と列データをクエリに結合し、ワークロードに最適なインデックスを作成するよい方法です。  
+この場合、必要なものがすべて JSON の非クラスター化インデックスに含まれているため、SQL Server は `SalesOrderHeader` テーブルから追加のデータを読み取る必要はありません。 このインデックスの種類は、JSON と列データをクエリに結合し、ワークロードに最適なインデックスを作成するよい方法です。  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>照合順序対応のインデックスである JSON インデックス  
 JSON データに対するインデックスの重要な機能は、インデックスが照合順序に対応することです。 計算列の作成に使う `JSON_VALUE` 関数の結果は、入力式からその照合順序を継承するテキスト値です。 そのため、インデックス内の値は、ソース列で定義されている照合順序規則を使用して並べ替えられています。  
   
-これを示すために、次の例では、主キーと JSON コンテンツを使用して単純なコレクション テーブルを作成します。  
+インデックスが照合順序対応であることを示すために、次の例では、主キーと JSON コンテンツを使用して単純なコレクション テーブルを作成します。  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  クエリには `ORDER BY` 句がありますが、実行計画では、Sort 演算子は使用しません。 JSON インデックスは既にセルビア語 (キリル) の規則に従って並んでいます。 したがって、結果が既に並べ替えられている場合、SQL Server は非クラスター化インデックスを使用できます。  
   
- ただし、`JSON_VALUE` 関数の後に `COLLATE French_100_CI_AS_SC` を配置するなど、`ORDER BY` 式の照合順序を変更した場合、得られるクエリ実行計画は異なります。  
+ ただし、`JSON_VALUE` 関数の後に `COLLATE French_100_CI_AS_SC` を追加するなど、`ORDER BY` 式の照合順序を変更した場合、得られるクエリ実行プランは異なります。  
   
  ![実行計画](../../relational-databases/json/media/jsonindexblog3.png "実行計画")  
   

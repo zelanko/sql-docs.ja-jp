@@ -24,15 +24,15 @@ helpviewer_keywords:
 - '| (bitwise OR operator)'
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65a39571e4cd02b9bbb20d42463301d38d0f8836
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e77a2e7132b7d32a27b7f5be236d75576cb0fcf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (ビット演算子 OR) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ expression | expression
 ## <a name="remarks"></a>解説  
  ビットごとの | 演算子は、2 つの式の対応するビットを対象にビットごとの論理和演算を実行します。 入力式の中で現在処理の対象にあるビットについて、いずれかのビットまたは両方のビットが 1 の値を持つ場合、結果セットのビットは 1 に設定されます。入力式のビットが両方とも 1 の値を持たない場合、結果セットのビットは 0 に設定されます。  
   
- 左と右の式が異なる整数データ型を持つかどうか (たとえば、左側*式*は**smallint**と右*式*は**int**)、小さいデータ型の引数が大きいデータ型に変換します。 この例では、 **smallint***式*に変換されますが、 **int**です。  
+ 左と右の式が異なる整数データ型を持つかどうか (たとえば、左側*式*は**smallint**と右*式*は**int**)、小さいデータ型の引数が大きいデータ型に変換します。 この例では、**smallint * * * 式*に変換されますが、 **int**です。  
   
 ## <a name="examples"></a>使用例  
  次の例を含むテーブルを作成する**int**データ型を元の値を表示して、テーブルに 1 行にします。  

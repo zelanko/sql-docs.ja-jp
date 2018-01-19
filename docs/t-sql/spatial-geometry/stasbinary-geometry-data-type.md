@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STAsBinary (geometry Data Type)
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5da53f9a5c9c0262e2d12cae36de477d1e51b391
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 331d28d55c055d2a55d72f52abfd5bea1cde2806
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型を返す: **varbinary (max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
   
  CLR の戻り値の型: **SqlBytes**  
   

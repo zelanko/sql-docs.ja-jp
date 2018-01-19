@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e0b4cf5509bf68801938a93aac339108539a0ea1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86f89cd7d2e8198383a548dbfbcabb39e5f1738c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 ```  
   
 ## <a name="arguments"></a>引数  
- *では無視*  
+ *transaction_name*  
  MS DTC ユーティリティ内で分散管理トランザクションの追跡に使用する、ユーザー定義のトランザクション名を指定します。 *では無視*識別子の規則に従う必要がありする必要があります\<= 32 文字です。  
   
  @*tran_name_variable*  
@@ -81,7 +81,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  分散トランザクションの環境と処理の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーターのマニュアルを参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

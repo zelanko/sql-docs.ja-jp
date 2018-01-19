@@ -15,11 +15,11 @@ author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: ebf8e75c505d75206de798bc2682cefc3623075e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d4cf71c25d2c1a6f7aadb57d6417fc4818c9ff2f
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>SQL Server Reporting Services の変更ログ
 
@@ -28,6 +28,9 @@ ms.lasthandoff: 01/08/2018
 この記事では、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の変更点について説明します。 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
+  - *バージョン 14.0.600.594、リリース日: 2018 年 1 月 9 日*
+    - セキュリティ更新プログラム
+
   - *バージョン 14.0.600.490、リリース日: 2017 年 11 月 1 日* 
     - バグの修正:
         - SKU アップグレードの問題を解決

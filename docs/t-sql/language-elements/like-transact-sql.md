@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データ型。  
   
- *パターン*  
+ *pattern*  
  特定の文字列内で検索する文字の*match_expression*、次の有効なワイルドカード文字を含めることができます。 *パターン*8,000 バイトの最大数を指定できます。  
   
 |ワイルドカード文字|Description|例|  
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. NOT LIKE を % ワイルドカード文字と共に使用する  
- 次の例は、内のすべての電話番号を検索、`DimEmployee`で始まらないテーブル`612`です。  のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。  
+ 次の例は、内のすべての電話番号を検索、`DimEmployee`で始まらないテーブル`612`です。  」をご覧ください。  
   
 ```sql  
 -- Uses AdventureWorks  

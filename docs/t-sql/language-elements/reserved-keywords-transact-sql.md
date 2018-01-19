@@ -19,15 +19,15 @@ helpviewer_keywords:
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f2a3e554a7a3b46242c44c38137609322e6d89f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/18/2017
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
 |EXEC|PRECISION|のすべてのメンションを|  
-|CREATE ステートメントを実行する前に、|PRIMARY|WITHIN GROUP|  
+|EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
   
@@ -115,85 +115,85 @@ ms.lasthandoff: 11/18/2017
   
 ||||  
 |-|-|-|  
-|**絶対**|**EXEC**|**重複しています**|  
-|**アクション**|**EXECUTE**|**パッド**|  
-|**ADA**|**EXISTS**|**部分的です**|  
-|**追加**|**EXTERNAL**|**PASCAL**|  
-|**ALL**|**抽出**|**位置**|  
-|**割り当てる**|**FALSE**|**有効桁数**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**PARTIAL**|  
+|**ADD**|**EXTERNAL**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**POSITION**|  
+|**ALLOCATE**|**FALSE**|**PRECISION**|  
 |**ALTER**|**FETCH**|**準備します。**|  
-|**AND**|**まずは**|**保持します。**|  
-|**ANY**|**浮動小数点数**|**PRIMARY**|  
-|**します。**|**の**|**前に**|  
-|**AS**|**外部**|**特権**|  
+|**と**|**FIRST**|**PRESERVE**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
+|**ARE**|**FOR**|**PRIOR**|  
+|**AS**|**FOREIGN**|**PRIVILEGES**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**アサーション**|**見つかりません**|**パブリック**|  
-|**AT**|**FROM**|**読み取り**|  
-|**AUTHORIZATION**|**FULL**|**本当の**|  
-|**AVG**|**取得**|**参照**|  
-|**BEGIN**|**グローバル**|**相対**|  
-|**BETWEEN**|**GO**|**制限します。**|  
-|**ビット**|**GOTO**|**REVOKE**|  
+|**ASSERTION**|**FOUND**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
+|**AVG**|**GET**|**参照**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**両方とも**|**グループ**|**ロールバック**|  
-|**によって**|**持つ**|**行**|  
-|**CASCADE**|**1 時間**|**SCHEMA**|  
-|**カスケード**|**ID**|**スクロール**|  
-|**CASE**|**イミディ エイト**|**1 秒**|  
-|**キャスト**|**IN**|**セクション**|  
-|**カタログ**|**含まれます**|**SELECT**|  
-|**CHAR**|**INDEX**|**セッション**|  
-|**CHAR_LENGTH**|**インジケーター**|**SESSION_USER**|  
-|**文字**|**最初に**|**設定**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
+|**BY**|**持つ**|**ROWS**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
+|**CASCADED**|**ID**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**SECOND**|  
+|**CAST**|**IN**|**SECTION**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
+|**CHAR**|**INDEX**|**SESSION**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CHARACTER**|**最初に**|**SET**|  
 |**CHARACTER_LENGTH**|**内部**|**サイズ**|  
-|**チェック**|**入力**|**SMALLINT**|  
-|**CLOSE**|**小文字を区別しません。**|**いくつか**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
-|**部単位印刷します。**|**INT**|**SQL**|  
-|**照合順序**|**整数**|**SQLCA**|  
-|**列**|**INTERSECT**|**SQLCODE**|  
-|**コミット**|**間隔**|**SQLERROR**|  
-|**接続**|**に**|**SQLSTATE**|  
-|**接続**|**IS**|**行いません**|  
-|**制約**|**分離**|**SUBSTRING**|  
-|**制約**|**結合**|**SUM**|  
-|**CONTINUE**|**キー**|**SYSTEM_USER**|  
-|**変換**|**LANGUAGE**|**TABLE**|  
-|**対応します。**|**前の**|**一時**|  
-|**COUNT**|**先行します。**|**そうしたら**|  
-|**作成します。**|**LEFT**|**時間**|  
-|**クロス**|**レベル**|**タイムスタンプ**|  
+|**COLLATE**|**INT**|**SQL**|  
+|**照合順序**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**接続**|**INTO**|**SQLSTATE**|  
+|**接続**|**します。**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
+|**COUNT**|**LEADING**|**し、**|  
+|**CREATE**|**LEFT**|**TIME**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**現在の**|**LIKE**|**TIMEZONE_HOUR**|  
-|**CURRENT_DATE**|**地元の**|**TIMEZONE_MINUTE**|  
+|**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
 |**CURRENT_TIME**|**LOWER**|**宛先**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**末尾**|  
-|**CURRENT_USER**|**MAX**|**トランザクション**|  
-|**カーソル**|**MIN**|**TRANSLATE**|  
-|**日付**|**1 分**|**翻訳**|  
-|**DAY**|**モジュール**|**TRIM**|  
-|**DEALLOCATE**|**MONTH**|**場合は TRUE。**|  
-|**年 12 月**|**名**|**共用体**|  
-|**10 進数**|**各国語**|**一意**|  
-|**宣言**|**自然です**|**不明**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
+|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATE**|**MINUTE**|**TRANSLATION**|  
+|**DAY**|**MODULE**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**TRUE**|  
+|**DEC**|**NAMES**|**UNION**|  
+|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
+|**DECLARE**|**NATURAL**|**不明**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**遅延**|**次に**|**UPPER**|  
-|**遅延**|**違います**|**使用状況**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**使用します。**|  
-|**説明**|**NULL**|**VALUE**|  
-|**記述子**|**NULLIF**|**値**|  
-|**診断**|**数値**|**VARCHAR**|  
-|**切断**|**OCTET_LENGTH**|**さまざまな**|  
-|**DISTINCT**|**の**|**VIEW**|  
-|**ドメイン**|**ON**|**いつ**|  
-|**DOUBLE**|**のみ**|**ときに**|  
-|**ドロップ**|**OPEN**|**WHERE**|  
-|**その他**|**オプション**|**と**|  
-|**END**|**OR**|**作業**|  
-|**終了 EXEC**|**順序**|**書き込み**|  
-|**エスケープ**|**外部**|**YEAR**|  
-|**点を除いて**|**出力**|**ゾーン**|  
-|**例外**|||  
+|**DESC**|**NOT**|**USING**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**診断**|**NUMERIC**|**VARCHAR**|  
+|**切断**|**OCTET_LENGTH**|**VARYING**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**DOMAIN**|**ON**|**WHEN**|  
+|**DOUBLE**|**のみ**|**WHENEVER**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**OPTION**|**WITH**|  
+|**END**|**または**|**WORK**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>将来のキーワード  
  次に示すキーワードは、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリリースで新しい機能が実装されたときに予約される可能性があります。 これらの語はできるだけ識別子として使用しないでください。  
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/18/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|いいえ|TIMEZONE_MINUTE|  
 |CURRENT_PATH|なし|TRAILING|  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/18/2017
 |DEC|ORDINALITY|UNNEST|  
 |[DECIMAL]|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|パラメーター|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  

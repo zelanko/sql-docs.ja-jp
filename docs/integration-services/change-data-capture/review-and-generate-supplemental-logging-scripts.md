@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 492a21e51a6bdc1dbcf0a39451a81caee737dba4
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>補足ログ スクリプトの確認および生成
-  補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、 **[スクリプト]** タブを使用します。  
+  補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、**[スクリプト]** タブを使用します。  
   
  スクリプトを実行する前に、次のいずれかを選択します。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  補足ログ スクリプトを実行すると、[スクリプトを実行するための Oracle 資格情報] ダイアログ ボックスが表示されます。このダイアログ ボックスで、有効な Oracle ユーザー名とパスワードを指定します。 適切な Oracle 資格情報を指定する方法については、「 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)」を参照してください。  
   
- 必要に応じて、SQL*Plus を使用してスクリプトを手動で実行することもできます。  
+ 必要に応じて、SQL\*Plus を使用してスクリプトを手動で実行することもできます。  
   
 ### <a name="to-run-the-scripts-manually"></a>スクリプトを手動で実行するには  
   

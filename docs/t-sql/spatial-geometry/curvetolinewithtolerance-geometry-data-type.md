@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: caa3a00f6ed962122288fa0d71a4f2d2f92bd6f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2f7429f54395b5a765c84939aac2ce7fe0a94c08
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  *許容範囲*  
  **二重**元の円弧とその線形近似の間の最大誤差を定義する式。  
   
- *相対*  
+ *relative*  
  **Bool**偏差に相対最大値を使用するかどうかを示す式です。 relative を false (0) に設定すると、線形近似で許容される偏差に絶対最大値が設定されます。 relative を true (1) に設定すると、tolerance は tolerance パラメーターと空間オブジェクトに外接する四角形の直径の積として計算されます。  
   
 ## <a name="return-types"></a>戻り値の型  

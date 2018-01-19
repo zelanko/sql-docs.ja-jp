@@ -21,15 +21,15 @@ helpviewer_keywords:
 - UNION operator [SQL Server]
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 04f90ae1f5976e29a8281cab3638b63f0525f454
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 329048d4a4f520612ce62bcf6764fa438bcbbe15
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---union-transact-sql"></a>集合演算子の和集合 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>引数  
-\<query_specification > |( \<query_expression >) は、クエリの仕様または別のクエリ仕様またはクエリ式からのデータと結合するデータを返すクエリ式。 UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 規則に基づいて、結果のデータ型を決定するデータ型が異なる場合、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。 型が同じで、有効桁数、小数点以下桁数、長さが異なる場合、結果は式の結合と同じ規則に基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
+\<query_specification> | ( \<query_expression> ) Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 規則に基づいて、結果のデータ型を決定するデータ型が異なる場合、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。 型が同じで、有効桁数、小数点以下桁数、長さが異なる場合、結果は式の結合と同じ規則に基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
   
  列、 **xml**データ型は、同等である必要があります。 また、すべての列が XML スキーマに従って型指定されているか、型指定されていないかのいずれかでなければなりません。 型指定されている場合は、同じ XML スキーマ コレクションに従って型指定されている必要があります。  
   

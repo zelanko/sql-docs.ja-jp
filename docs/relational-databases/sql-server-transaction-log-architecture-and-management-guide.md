@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
  ロールバック操作も記録されます。 トランザクションごとにトランザクション ログの領域が予約されるので、明示的にロールバック ステートメントを実行したときやエラーが発生したときのロールバックに備え、十分なログ領域が確保されます。 予約領域のサイズは、トランザクションで実行される操作によって変わりますが、一般には各操作を記録するために使用される領域のサイズと同じです。 この予約領域は、トランザクションが完了したときに解放されます。  
   
-<a name="minlsn"></a> ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、または*アクティブ ログ*といいます。 これは、データベースの完全復旧を実行するために必要なログのセクションです。 アクティブなログはどの部分も切り捨てることができません。 この先頭ログ レコードの[ログ シーケンス番号 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) は、**最小復旧 LSN (*MinLSN*) と呼ばれます。  
+<a name="minlsn"></a> ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、または*アクティブ ログ*といいます。 これは、データベースの完全復旧を実行するために必要なログのセクションです。 アクティブなログはどの部分も切り捨てることができません。 この先頭ログ レコードの[ログ シーケンス番号 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) は、**最小復旧 LSN (*MinLSN*)** と呼ばれます。  
   
 ##  <a name="physical_arch"></a> トランザクション ログの物理アーキテクチャ  
 データベースのトランザクション ログは、1 つ以上の物理ファイルにマップされます。 概念的には、ログ ファイルは一続きのログ レコードです。 物理的には、一連のログ レコードは、トランザクション ログを実装する一連の物理ファイルに効率的に格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。  
@@ -77,9 +80,10 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]
 > 次の方法に従って仮想ログ ファイル (VLF) を作成します。
 > - 次の増加量が現在のログの物理サイズの 1/8 未満の場合、増加分のサイズに対応する 1 個の VLF を作成します ([!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降)。
-> - 増加分が 64 MB 未満の場合、増加分のサイズに対応する 4 個の VLF を作成します (たとえば、1 MB 増加の場合は 4 個の 256 KB VLF を作成します)
-> - 増加分が 64 MB 以上 1 GB 以下の場合、増加分のサイズに対応する 8 個の VLF を作成します (たとえば、512 MB 増加の場合は 8 個の 64 MB VLF を作成します)
-> - 増加分が 1 GB を超える場合、増加分のサイズに対応する 16 個の VLF を作成します (たとえば、8 GB 増加の場合は 16 個の 512 MB VLF を作成します)
+> - 次の増加分が現在のログ サイズの 1/8 を超える場合は、2014 以前の方法を使用します。
+>    -  増加分が 64 MB 未満の場合、増加分のサイズに対応する 4 個の VLF を作成します (たとえば、1 MB 増加の場合は 4 個の 256 KB VLF を作成します)
+>    -  増加分が 64 MB 以上 1 GB 以下の場合、増加分のサイズに対応する 8 個の VLF を作成します (たとえば、512 MB 増加の場合は 8 個の 64 MB VLF を作成します)
+>    -  増加分が 1 GB を超える場合、増加分のサイズに対応する 16 個の VLF を作成します (たとえば、8 GB 増加の場合は 16 個の 512 MB VLF を作成します)
 
 小さな増加が繰り返されることにより、これらのログ ファイルが大きいサイズに拡張された場合、多くの仮想ログ ファイルが生成されます。 **このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。** ログ ファイルの *size* には最終的に必要なサイズに近い値を割り当て、*growth_increment* には比較的大きい値を割り当てることをお勧めします。 下のヒントを参照し、現在のトランザクション ログ サイズに最適な VLF 配布を決定してください。
  - *サイズ*値は `ALTER DATABASE` の `SIZE` 引数で設定されますが、これはログ ファイルの初期サイズとなります。

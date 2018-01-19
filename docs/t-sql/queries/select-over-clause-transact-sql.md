@@ -26,15 +26,15 @@ helpviewer_keywords:
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d70183e7c52c4fb9eabed51a8df5acc68625397d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>OVER 句 (TRANSACT-SQL) の選択します。
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,7 +118,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  *value_expression*  
  行セットをパーティションに分割するときに使用する列を指定します。 *value_expression* FROM 句で取得した列のみ参照できます。 *value_expression*選択リストの式または別名を参照できません。 *value_expression*列式、スカラー サブクエリ、スカラー関数、またはユーザー定義変数を指定できます。  
   
- \<ORDER BY 句 >  
+ \<ORDER BY clause>  
  結果セットの各パーティション内の行の論理的な順序を定義します。 つまり、ウィンドウ関数の計算が実行される論理的な順序を指定します。  
   
  *order_by_expression*  
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  COLLATE *collation_name*  
  指定された照合順序に従って ORDER BY 操作を実行する必要がありますを指定*collation_name*です。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は型の列に対してのみ適用**char**、 **varchar**、 **nchar**、および**nvarchar**です。  
   
- **ASC** |DESC  
+ **ASC** | DESC  
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
   
  ROWS | RANGE  

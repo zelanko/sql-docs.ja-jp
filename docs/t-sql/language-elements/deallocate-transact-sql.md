@@ -23,15 +23,15 @@ helpviewer_keywords:
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f0b4fbd8d6cffb43fc8a6c7c69a9e1182a2dadb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7dd1a4deca2a3c6db7db7596c94f0def97934da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ GO
   
  カーソル変数は、明示的に割り当てを解除する必要はありません。 変数は、有効範囲を失うと暗黙的に割り当てが解除されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  DEALLOCATE 権限は、既定では、有効なユーザーであればどのユーザーにも与えられます。  
   
 ## <a name="examples"></a>使用例  

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5886a873afc23c47085a7705c3cf77ddb57b0999
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e9652ee470d83111b889f7c816414710f9c80bd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>引数  
  *polygon_tagged_text*  
- WKT 表現です、 **geographyPolygon**インスタンスを取得します。 *polygon_tagged_text*は、 **nvarchar (max)**式。  
+ WKT 表現です、 **geographyPolygon**インスタンスを取得します。 *polygon_tagged_text* is an **nvarchar(max)** expression.  
   
  *SRID*  
  **Int** 、空間を表す式の ID (SRID) を参照、 **geographyPolygon**インスタンスを取得します。  
