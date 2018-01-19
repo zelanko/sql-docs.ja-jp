@@ -75,7 +75,7 @@
 
 # [カタログとサーバー](catalog/integration-services-ssis-server-and-catalog.md)
 # [サービス (レガシ)](../integration-services/service/integration-services-service-ssis-service.md)
-# [セキュリティ](../integration-services/security/security-overview-integration-services.md)
+# [Security](../integration-services/security/security-overview-integration-services.md)
 # [[パフォーマンス]](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [トラブルシューティング](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [システム ビュー](../integration-services/system-views/views-integration-services-catalog.md)
@@ -181,5 +181,5 @@
 ### [MSDN の SSIS フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow の SSIS](http://stackoverflow.com/questions/tagged/ssis)  
 ## フィードバックの送信
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+### [SQL Server フィードバック フォーラム](https://feedback.azure.com/forums/908035-sql-server)  
 ## [PC のドキュメントを入手](../sql-server/sql-server-help-installation.md)
