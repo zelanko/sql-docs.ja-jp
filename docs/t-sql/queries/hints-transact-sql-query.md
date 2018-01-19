@@ -62,7 +62,7 @@ manager: jhubbard
 ms.workload: Active
 ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/17/2018
 ---
@@ -151,14 +151,14 @@ ms.lasthandoff: 01/17/2018
  { LOOP | MERGE | HASH } JOIN  
  LOOP JOIN、MERGE JOIN、または HASH JOIN によって、すべての結合操作がクエリ全体で実行されることを指定します。 結合ヒントを複数指定した場合は、可能なヒントの中から最も負荷の軽い方法がオプティマイザーによって選択されます。  
   
- 同じクエリの中で、特定のテーブルのペアに対して FROM 句に結合ヒントが指定されている場合も、2 つのテーブルの結合ではこの結合ヒントが優先されますが、クエリ ヒントは引き続き有効です。 このため、テーブルのペアの結合ヒントは、クエリ ヒント内で許可される結合方法の選択を制限できるだけです。 詳細については、次を参照してください。[結合ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-join.md).  
+ 同じクエリの中で、特定のテーブルのペアに対して FROM 句に結合ヒントが指定されている場合も、2 つのテーブルの結合ではこの結合ヒントが優先されますが、クエリ ヒントは引き続き有効です。 このため、テーブルのペアの結合ヒントは、クエリ ヒント内で許可される結合方法の選択を制限できるだけです。 詳細については、次を参照してください。[結合ヒント &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/hints-transact-sql-join.md)。  
   
  EXPAND VIEWS  
  インデックス付きビューが展開されていることを指定します。これによって、クエリ オプティマイザーがインデックス付きビューをクエリの一部の代わりであると見なすことがなくなります。 ビューが展開されるのは、ビュー名がクエリ テキスト内のビュー定義に置換される場合です。  
   
  このクエリ ヒントは、インデックス付きビューを直接使用することを実質的に禁止し、クエリ プラン内のインデックス付きビューにインデックスを指定します。  
   
- ビューがクエリおよび WITH (NOEXPAND) または WITH の SELECT 部分で直接参照されている場合にのみ、インデックス付きビューが展開されていない (NOEXPAND, INDEX ( *index_value* [**、* * *. .n* ])) を指定します。 クエリ ヒント WITH (NOEXPAND) の詳細については、次を参照してください。 [FROM](../../t-sql/queries/from-transact-sql.md)です。  
+ ビューがクエリおよび WITH (NOEXPAND) または WITH の SELECT 部分で直接参照されている場合にのみ、インデックス付きビューが展開されていない (NOEXPAND, INDEX ( *index_value* [**、* * *.. .n* ])) を指定します。 クエリ ヒント WITH (NOEXPAND) の詳細については、次を参照してください。 [FROM](../../t-sql/queries/from-transact-sql.md)です。  
   
  INSERT、UPDATE、MERGE、DELETE ステートメントなど、ステートメントの SELECT 要素内のビューのみが、ヒントの影響を受けます。  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 01/17/2018
  MAXDOP*数*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 上書き、**並列処理の次数の最大**構成オプションの**sp_configure**とは、このオプションを指定して、クエリのリソース ガバナーです。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP 値を超える場合、リソース ガバナーで構成されている、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で説明されている、リソース ガバナーの MAXDOP 値を使用して[ALTER WORKLOAD GROUP &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-workload-group-transact-sql.md). 使用されるすべての意味ルール、**並列処理の次数の最大**MAXDOP クエリ ヒントを使用する場合に、構成オプションが適用されます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ 上書き、**並列処理の次数の最大**構成オプションの**sp_configure**とは、このオプションを指定して、クエリのリソース ガバナーです。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP 値を超える場合、リソース ガバナーで構成されている、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で説明されている、リソース ガバナーの MAXDOP 値を使用して[ALTER WORKLOAD GROUP &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-workload-group-transact-sql.md)。 使用されるすべての意味ルール、**並列処理の次数の最大**MAXDOP クエリ ヒントを使用する場合に、構成オプションが適用されます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 > [!WARNING]  
 > MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
@@ -210,7 +210,7 @@ ms.lasthandoff: 01/17/2018
   
  このエラーのため、ステートメントのすべての効果がロールバックされます。 ステートメントが SELECT ステートメントであった場合、結果の一部が返されるか、結果がまったく返されないかのいずれかになります。 結果の一部が返された場合でも、指定した最大再帰レベルを超える再帰レベルのすべての行は含まれていない可能性があります。  
   
- 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 詳細については、次を参照してください。[で common_table_expression と #40 です。TRANSACT-SQL と #41 です](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
  NO_PERFORMANCE_SPOOL  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -255,7 +255,7 @@ ms.lasthandoff: 01/17/2018
  このようなプランが可能でない場合は、クエリ実行の後でエラー検出を行うのではなく、クエリ オプティマイザーがエラーを返します。 行は可変長列を含む可能性があります。[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、機能を高めて、最大の潜在的なサイズを持つ行を定義する、[!INCLUDE[ssDE](../../includes/ssde-md.md)]それらを処理します。 一般に、最大の潜在的なサイズに関係なく、アプリケーションの行を格納、制限内での実際のサイズを[!INCLUDE[ssDE](../../includes/ssde-md.md)]を処理できます。 場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が長すぎる、実行エラーが返される行を検出します。  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **適用されます**: 対象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。
+ **適用されます**: 対象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) と[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。
  
  ヒントの名前で指定されたクエリ プロセッサに 1 つまたは複数追加するヒントを提供**単一引用符で囲んだ**です。 
 
@@ -300,7 +300,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
  ときに*exposed_object_name*がオブジェクトのテーブル ヒントの一部は無視され、インデックスの使用状況は、クエリ オプティマイザーによって決定されます、クエリで指定されたインデックスのテーブル ヒントを指定せずに指定されています。 この手法を使用すると、元のクエリに変更を加えることができない場合に INDEX テーブル ヒントの効果を除去できます。 例 J を参照してください。  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. これらのヒントについては、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. これらのヒントについては、次を参照してください。[テーブル ヒント &#40;です。TRANSACT-SQL と #41 です](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 詳細については、「解説」を参照してください。  
   

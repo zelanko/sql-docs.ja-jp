@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 71b8ce296640f1d205335be7d5f58d8c8e22b7c4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,16 +56,16 @@ CHAR ( integer_expression )
 0 ～ 255 の整数です。 `NULL`かどうか整数式がこの範囲内が返されます。
   
 ## <a name="return-types"></a>戻り値の型
-**char (1)**
+**char(1)**
   
 ## <a name="remarks"></a>解説  
 `CHAR`文字の文字列に制御文字を挿入するために使用します。 次の表に、よく使用される制御文字の一部を示します。
   
-|制御文字|値|  
+|制御文字|[値]|  
 |---|---|
-|タブ|**char (9)**|  
-|ライン フィード|**char (10)**|  
-|キャリッジ リターン|**char (13)**|  
+|タブ|**char(9)**|  
+|ライン フィード|**char(10)**|  
+|キャリッジ リターン|**char(13)**|  
   
 ## <a name="examples"></a>使用例  
   
@@ -172,8 +172,11 @@ AdventureWorksPDW2012    is currently  ONLINE
 ```
   
 ## <a name="see-also"></a>参照
-[+ (& a) #40 です。文字列の連結 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)
+ [ASCII &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ascii-transact-sql.md)  
+ [NCHAR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/unicode-transact-sql.md)  
+ [+ (& a) #40 です。文字列の連結 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

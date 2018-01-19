@@ -26,15 +26,15 @@ helpviewer_keywords:
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0480f1c295c45f32f4ca3bdaec761a6bd2fa924
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -54,16 +54,16 @@ ROLLBACK { TRAN | TRANSACTION }
 ```  
   
 ## <a name="arguments"></a>引数  
- *では無視*  
+ *transaction_name*  
  BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *では無視*識別子の規則に従う必要がありますが、トランザクション名の最初の 32 文字だけが使用されます。 トランザクションを入れ子にする場合*では無視*最も外側の BEGIN TRANSACTION ステートメントから名前にする必要があります。 *では無視*、大文字小文字を区別は常に場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]小文字は区別されません。  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。  
   
  *savepoint_name*  
  *Savepoint_name* SAVE TRANSACTION ステートメントからです。 *savepoint_name*識別子の規則に従う必要があります。 使用して*savepoint_name*と条件付きのロールバックには影響は、トランザクションの一部のみです。  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  有効なセーブポイント名を格納しているユーザー定義変数の名前です。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。  
   
 ## <a name="error-handling"></a>エラー処理  
@@ -104,7 +104,7 @@ ROLLBACK { TRAN | TRANSACTION }
 ## <a name="locking-behavior"></a>ロック動作  
  ROLLBACK TRANSACTION ステートメントの指定、 *savepoint_name*エスカレーションおよび変換を除き、セーブポイントを超える取得されるロックは解放されます。 これらのロックは解放されず、前のロック モードに戻ることはありません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  

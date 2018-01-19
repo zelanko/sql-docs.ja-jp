@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; です。エラー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  @@ERROR がオフになって、各ステートメントの実行にリセットし、みることを確認して、ステートメントの直後、または後で確認できるローカル変数に保存します。  
   
- エラーを処理するには、TRY...CATCH 構造を使用します。 TRY しています.CATCH は作成もサポートするその他のシステム関数 (ERROR_LINE、ERROR_MESSAGE、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE) @ よりも詳細なエラー情報を返す@ERRORです。 また、ERROR_NUMBER 関数もサポートされます。この関数では、エラーが発生したステートメントの直後のステートメントでエラー番号を返すなどの操作を行えます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
+ エラーを処理するには、TRY...CATCH 構造を使用します。 TRY しています.CATCH は作成もサポートするその他のシステム関数 (ERROR_LINE、ERROR_MESSAGE、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE) @ よりも詳細なエラー情報を返す @ERROR です。 また、ERROR_NUMBER 関数もサポートされます。この関数では、エラーが発生したステートメントの直後のステートメントでエラー番号を返すなどの操作を行えます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. を使用して @@ERROR を条件付きでプロシージャを終了するには  
- 次の例で`IF...ELSE`ステートメントをテスト`@@ERROR`後、`INSERT`ストアド プロシージャ内のステートメント。 値、`@@ERROR`変数がプロシージャの成功または失敗を示す、呼び出し元のプログラムに送信されるリターン コードを決定します。  
+ 次の例で`IF...ELSE`ステートメントをテスト`@@ERROR`後、`DELETE`ストアド プロシージャ内のステートメント。 値、`@@ERROR`変数がプロシージャの成功または失敗を示す、呼び出し元のプログラムに送信されるリターン コードを決定します。  
   
 ```  
 USE AdventureWorks2012;  

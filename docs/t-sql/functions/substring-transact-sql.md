@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +52,10 @@ SUBSTRING ( expression ,start , length )
  *式 (expression)*  
  **文字**、**バイナリ**、**テキスト**、 **ntext**、または**イメージ**[式](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *開始*  
+ *start*  
  整数または**bigint**返される文字の開始位置を指定する式。 (番号は、式の最初の文字が 1 である 1 に基づいて、意味です) です。 場合*開始*が 1 より小さい、返される式で指定されている最初の文字から始まります*式*です。 返される文字数の合計の最大値は、この場合、*開始* + *長さ*- 1 と 0 です。 場合*開始*数よりも大きい値式の文字は、長さゼロの式が返されます。  
   
- *length*  
+ *長さ*  
  正の整数または**bigint**文字数を指定する式、*式*が返されます。 場合*長さ*は負の場合、エラーが生成され、ステートメントは終了します。 場合の合計*開始*と*長さ*内の文字数よりも大きい*式*、値式全体で始まる*開始*が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -63,9 +63,9 @@ SUBSTRING ( expression ,start , length )
   
 |指定した式|戻り値の型|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**テキスト**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
-|**バイナリ**/**varbinary**/**イメージ**|**varbinary**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>解説  
  値は、*開始*と*長さ*の文字数で指定する必要があります**ntext**、 **char**、または**varchar**データ型とのバイト**テキスト**、**イメージ**、**バイナリ**、または**varbinary**データ型。  
@@ -92,7 +92,7 @@ WHERE database_id < 5;
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
-|tempdb  |t  |管理パック |
+|tempdb  |t  |mp |
 |model   |m  |de |
 |msdb    |m  |db |
 
@@ -222,6 +222,12 @@ bcd
 ```  
   
 ## <a name="see-also"></a>参照  
+ [左と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ltrim-transact-sql.md)  
+ [右 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [トリム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/trim-transact-sql.md)  
  [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

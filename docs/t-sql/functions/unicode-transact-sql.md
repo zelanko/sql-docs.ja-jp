@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 345fa8bd8abe4f26b2c3def6c48e1dc49fa37a7c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ce87bcab037ff99b7eaa03a443727db17db19b74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,6 +144,8 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## <a name="see-also"></a>参照  
+ [ASCII &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/nchar-transact-sql.md)   
  [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
  [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)  

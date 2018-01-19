@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 10edb8b1b1e3008321bc03e2e65419dca8956f86
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +52,10 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *character_expression*  
  [式](../../t-sql/language-elements/expressions-transact-sql.md)の文字データです。 *character_expression*定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。  
   
- *開始*  
+ *start*  
  削除と挿入を開始する位置を整数で指定します。 場合*開始*が負の値または 0 の場合、null 文字列が返されます。 場合*開始*最初よりも長い*character_expression*、null 文字列が返されます。 *開始*型でも**bigint**です。  
   
- *length*  
+ *長さ*  
  削除する文字数を整数で指定します。 場合*長さ*は負の場合、null 文字列が返されます。 場合*長さ*最初よりも長い*character_expression*、文字までが削除最後に、最後の*character_expression*です。  場合*長さ*0 の場合は、カーソルが、文字列の最初の文字の前に発生します。 *長さ*型でも**bigint**です。
 
  *replaceWith_expression*  
@@ -90,5 +90,14 @@ aijklmnef
 ```  
   
 ## <a name="see-also"></a>参照  
+ [CONCAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
+ [置換 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/replace-transact-sql.md)  
+ [リバース &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [変換 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/translate-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  

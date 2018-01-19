@@ -23,15 +23,15 @@ helpviewer_keywords:
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9dbabcc0fe5f9573554384549023ab8395b87762
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6958a7b472f8837f9fc0b9c83548474d61dab17a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>引数  
- *ラベル*  
+ *label*  
  GOTO によりラベルを指定した場合、そのラベルが以降の処理を開始する位置になります。 ラベルの規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)です。 GOTO の使用の有無にかかわらず、ラベルをコメント行として使用することができます。  
   
 ## <a name="remarks"></a>解説  
  GOTO は、条件付きフロー制御ステートメント、ステートメント ブロック、またはプロシージャ内に存在できますが、バッチの外にあるラベルに移動できません。 GOTO による分岐は、GOTO の前後に定義されたラベルに移動できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  GOTO 権限は、特に指定のない限りすべての有効なユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
@@ -84,7 +84,7 @@ Branch_Three:
   
 ## <a name="see-also"></a>参照  
  [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
- [作業を開始してください.END &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [中断 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/break-transact-sql.md)   
  [続行 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/continue-transact-sql.md)   
  [もし。。。ELSE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/if-else-transact-sql.md)   

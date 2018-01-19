@@ -1,7 +1,7 @@
 ---
 title: "sys.column_store_segments (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 12/30/2016
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ ms.lasthandoff: 01/02/2018
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|パーティション ID を示します。 データベース内で一意です。|  
-|**hobt_id で**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
+|**hobt_id**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
 |**column_id**|**int**|列ストアの列の ID。|  
 |**segment_id**|**int**|行グループの ID です。 旧バージョンと互換性のため、列名が呼び出す segment_id 行グループ ID です。 この場合でも引き続き 使用してセグメントを一意に識別できる\<hobt_id で、partition_id、column_id >、< segment_id >。|  
 |**version**|**int**|列セグメント形式のバージョン。|  
-|**encoding_type**|**int**|そのセグメントで使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (いくつか内部のバリエーションを 4 に非常に似ています)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 4 STORE_BY_VALUE_BASED - 非文字列/バイナリないディクショナリを =<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - 文字列/にあるバイナリ辞書が見つかりません<br /><br /> すべてのエンコーディング利用可能な場合のエンコード ビット パッキングと実行の長さ。|  
+|**encoding_type**|**int**|そのセグメントで使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (いくつか内部のバリエーションを 4 に非常に似ています)<br /><br /> 2 = VALUE_HASH_BASED   - non-string/binary column with common values in dictionary<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 4 STORE_BY_VALUE_BASED - 非文字列/バイナリないディクショナリを =<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - 文字列/にあるバイナリ辞書が見つかりません<br /><br /> すべてのエンコーディング利用可能な場合のエンコード ビット パッキングと実行の長さ。|  
 |**row_count**|**int**|行グループ内の行の数。|  
 |**has_nulls**|**int**|列セグメントに NULL 値がある場合は 1。|  
-|**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、id をベース値です。  エンコードの種類 1 が、使用されていない場合、base_id は 1 に設定します。|  
-|**絶対値**|**float**|エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が、使用されていない場合は、絶対値が 1 に設定されます。|  
+|**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、id をベース値です。  エンコードの種類 1 が使用されていない場合、base_id は-1 に設定します。|  
+|**magnitude**|**float**|エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が使用されていない場合は大きさが-1 に設定します。|  
 |**primary_dictionary_id**|**int**|値 0 は、グローバルの辞書を表します。 値-1 は、この列用に作成されたグローバルの辞書がないことを示します。|  
 |**secondary_dictionary_id**|**int**|0 以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。|  
 |**min_data_id**|**bigint**|列セグメントの最小データ ID。|  
@@ -70,10 +70,10 @@ GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;
 GO  
 ```  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  すべての列が少なくとも必要**VIEW DEFINITION**テーブルに対する権限。 ユーザーがあるない限り列は null を返します**選択**権限: has_nulls、base_id、magnitude、min_data_id、max_data_id、および null_value します。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

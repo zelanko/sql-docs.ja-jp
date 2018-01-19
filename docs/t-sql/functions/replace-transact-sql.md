@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a50c0b7220eba654df21349e2fd3cd57b9a0d7d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 330a3d79893bd24e3253eced054fa029b7f8d1d9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +50,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  文字列は、[式](../../t-sql/language-elements/expressions-transact-sql.md)検索します。 *string_expression*文字またはバイナリ データ型であることができます。  
   
- *string _*パターン  
+ *string_*pattern  
  検索するサブストリングを指定します。 *string_pattern*文字またはバイナリ データ型であることができます。 *string_pattern*空の文字列 (") にすることはできませんし、ページに収まる最大バイト数を超えない必要があります。  
   
- *string _*置換  
+ *string_*replacement  
  置き換え後の文字列を指定します。 *string_replacement*文字またはバイナリ データ型であることができます。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -102,6 +102,15 @@ This is a desk
 
   
 ## <a name="see-also"></a>参照  
+ [CONCAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
+ [リバース &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stuff-transact-sql.md)  
+ [変換 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/translate-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
   

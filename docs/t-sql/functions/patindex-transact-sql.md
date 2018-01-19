@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd0df5a4dba946748dc39c245fcd54d50f1e97e5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 95a86e78aad7ea01a7f57a046b250825c9e37192
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>引数  
- *パターン*  
+ *pattern*  
  検索するシーケンスを含む文字式です。 ワイルドカード文字を使用できます。ただし、% 文字が前にし、次の必要があります*パターン*を除く最初と最後の文字を検索する場合)。 *パターン*文字の文字列データ型カテゴリの式を指定します。 *パターン*は 8,000 文字に制限されます。  
   
  *式 (expression)*  
@@ -147,6 +147,8 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## <a name="see-also"></a>参照  
+ [Charindex 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/charindex-transact-sql.md)  
+ [Len 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/len-transact-sql.md)  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
  [&#40;です。ワイルドカード - 文字 &#40; s &#41;一致と #41 です。&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   

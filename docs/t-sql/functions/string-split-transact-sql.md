@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ STRING_SPLIT ( string , separator )
  *string*  
  [式](../../t-sql/language-elements/expressions-transact-sql.md)任意の文字型 (つまり**nvarchar**、 **varchar**、 **nchar**または**char**)。  
   
- *区切り記号*  
+ *separator*  
  1 つの文字は、[式](../../t-sql/language-elements/expressions-transact-sql.md)任意の文字型 (例: **nvarchar(1)**、 **varchar (1)**、 **nchar (1)**または**char (1)**) 連結された文字列の区切り記号として使用されます。  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -92,7 +92,7 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. 分割コンマ区切りの列に値の文字列  
  Product テーブルには、次の例に示すようにタグのコンマで区切った一覧の列があります。  
   
-|productId|名前|Tags|  
+|ProductId|名前|Tags|  
 |---------------|----------|----------|  
 |1|フル指 Gloves|clothing、road、touring、自転車|  
 |2|LL ヘッドセット|自転車|  
@@ -108,7 +108,7 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|名前|value|  
+|ProductId|名前|value|  
 |---------------|----------|-----------|  
 |1|フル指 Gloves|clothing|  
 |1|フル指 Gloves|road|  
@@ -171,7 +171,12 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 ```  
   
 ## <a name="see-also"></a>参照  
- [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
+ [左と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ltrim-transact-sql.md)  
+ [右 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rtrim-transact-sql.md)  
  [部分文字列と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/substring-transact-sql.md)  
+ [トリム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/trim-transact-sql.md)  
+ [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

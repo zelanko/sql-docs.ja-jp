@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d8792951add2462067bc21ed22ef1e5ce005c0f0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  *float_expression*  
  概数型の式です (**float**) 小数点付きのデータ型。  
   
- *length*  
+ *長さ*  
  全体の長さを指定します。 これには小数点、負号、数字、空白文字も含まれます。 既定値は、10 です。  
   
  *decimal*  
@@ -114,6 +114,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
+ [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [形式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/format-transact-sql.md)  
  [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

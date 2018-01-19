@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>引数 
 
-*区切り記号*  
+*separator*  
 [式](../../t-sql/language-elements/expressions-transact-sql.md)の`NVARCHAR`または`VARCHAR`の区切り記号として使用される型が文字列を連結します。 リテラルまたは変数を指定できます。 
 
 *式 (expression)*  
 [式](../../t-sql/language-elements/expressions-transact-sql.md)任意の型。 式に変換する`NVARCHAR`または`VARCHAR`連結中に種類です。 非文字列型に変換されます`NVARCHAR`型です。
 
 
-< order_clause >   
+<order_clause>   
 使用して連結の結果の順序を必要に応じて指定`WITHIN GROUP`句。
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   非定数の一覧[式](../../t-sql/language-elements/expressions-transact-sql.md)結果の並べ替えを使用できます。 1 つだけ`order_by_expression`1 つのクエリは許可されています。 既定の並べ替え順は昇順です。   
   
@@ -66,18 +66,18 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 戻り値の型は、最初の引数 (式) に依存します。 入力引数が文字列型の場合 (`NVARCHAR`、 `VARCHAR`)、結果型は入力の型と同じになります。 次の表に、自動変換を示します。  
 
-|入力式の型 |[結果] | 
+|入力式の型 |結果 | 
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1...4000) |NVARCHAR (4000) |
-|VARCHAR (1...8000) |VARCHAR (8000) |
-|int、bigint、smallint、tinyint、数値、float、real、bit、decimal、smallmoney、money、datetime、datetime2、 |NVARCHAR (4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int、bigint、smallint、tinyint、数値、float、real、bit、decimal、smallmoney、money、datetime、datetime2、 |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>解説  
  
-`STRING_AGG`集計は、行からのすべての式を受け取り、1 つの文字列に連結します。 式の値は文字列型に暗黙的に変換され、連結されています。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換の詳細については、次を参照してください。 [CAST および CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)です。 
+`STRING_AGG`集計関数を行からのすべての式を受け取って 1 つの文字列に連結します。 式の値は文字列型に暗黙的に変換され、連結されています。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換の詳細については、次を参照してください。 [CAST および CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)です。 
 
 入力式が型の場合`VARCHAR`、区切り記号が型にすることはできません`NVARCHAR`です。 
 
@@ -115,7 +115,7 @@ FROM Person.Person;
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
  
 
-|csv | 
+|Csv | 
 |--- |
 |John、N/A、Mike、Peter、N/A、N/A、Alice、Bob します。 |  
 
@@ -132,7 +132,7 @@ FROM Person.Person;
 
 |名 | 
 |--- |
-|Ken Sánchez (Feb 8 2003 12時 00分 AM) <br />Terri Duffy (2 月 24日 2002 12時 00分 AM) <br />Roberto Tamburello (2001 年 12 月 5日 12時 00分 AM) <br />Rob Walters (2001 年 12 月 29日 12時 00分 AM) <br />[...] |
+|Ken Sánchez (Feb 8 2003 12時 00分 AM) <br />Terri Duffy (2 月 24日 2002 12時 00分 AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (2001 年 12 月 29日 12時 00分 AM) <br />[...] |
 
 > [!NOTE]  
 >  Management Studio のクエリ エディターを使用する場合、**結果をグリッドに**オプションは、キャリッジ リターンを実装できません。 切り替える**結果をテキスト**結果を適切に設定します。   
@@ -194,6 +194,15 @@ GROUP BY town;
 
 
 ## <a name="see-also"></a>参照  
-
-[文字列関数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [CONCAT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/quotename-transact-sql.md)  
+ [置換 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/replace-transact-sql.md)  
+ [リバース &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/stuff-transact-sql.md)  
+ [変換 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/translate-transact-sql.md)  
+ [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [文字列関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
 

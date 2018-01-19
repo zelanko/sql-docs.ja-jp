@@ -1,7 +1,7 @@
 ---
 title: "ALTER スキーマ (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/01/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bcbc6cf4ed18bef5d4736375dd7eddaaa1167a33
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30ef553ccfba1f30be9b75f8d0290115be395925
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,11 +67,11 @@ ALTER SCHEMA schema_name
  *schema_name*  
  現在のデータベース内にあるスキーマの名前を指定します。セキュリティ保護可能なリソースの移動先です。 SYS または INFORMATION_SCHEMA は指定できません。  
   
- \<entity_type >  
+ \<entity_type>  
  所有者を変更するエンティティのクラスを指定します。 既定値はオブジェクトです。  
   
  *securable_name*  
- 移動元のスキーマに含まれているセキュリティ保護可能なリソースの名前を指定します。このリソースが対象のスキーマに移動されます。名前を指定するときは、1 つまたは 2 つの要素で構成される名前を使用します。  
+ スキーマ スコープの 1 つまたは 2 部構成の名前は、スキーマに移動するセキュリティ保護可能なです。  
   
 ## <a name="remarks"></a>解説  
  ユーザーとスキーマは完全に分離されています。  
@@ -82,15 +82,19 @@ ALTER SCHEMA schema_name
   
  セキュリティ保護可能なリソースに関連付けられているすべての権限は、リソースが新しいスキーマに移動したときに削除されます。 セキュリティ保護可能なリソースの所有者が明示的に設定されている場合、所有者は変更されません。 セキュリティ保護可能なリソースの所有者が SCHEMA OWNER に設定されている場合、所有者は SCHEMA OWNER のままですが、移動後、SCHEMA OWNER は新しいスキーマの所有者に解決されます。 新しい所有者の principal_id は NULL になります。  
   
- 使用して、テーブルまたはビューのスキーマを変更する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をオブジェクト エクスプ ローラーで、テーブルまたはビューを右クリックし、をクリックして**デザイン**です。 キーを押して**F4**プロパティ ウィンドウを開きます。 **スキーマ**ボックスで、新しいスキーマを選択します。  
+ ストアド プロシージャ、関数、ビュー、またはトリガーの移動名は変更されません、スキーマ、現在のところ、対応するオブジェクトの定義列のいずれかの場合、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューまたはを使用して取得、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)組み込み関数。 そのため、ALTER SCHEMA をこれらのオブジェクト タイプの移動に使用しないことをお勧めします。 代わりに、削除し、その新しいスキーマにオブジェクトを再作成します。  
+  
+ シノニム、テーブルなどのオブジェクト移動しても、そのオブジェクトへの参照が自動的に更新はされません。 転送されたオブジェクトを手動で参照するすべてのオブジェクトを変更する必要があります。 たとえば、テーブルを移動する、そのテーブルがトリガーで参照されている場合は、新しいスキーマの名前を反映するようにトリガーを変更する必要があります。 使用して[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)移動する前に、オブジェクトの一覧の従属関係をします。  
+
+ 使用して、テーブルのスキーマを変更する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、オブジェクト エクスプ ローラーでテーブルを右クリックし、をクリックして**デザイン**です。 キーを押して**F4**プロパティ ウィンドウを開きます。 **スキーマ**ボックスで、新しいスキーマを選択します。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  他のスキーマからセキュリティ保護可能なリソースを移動する場合、現在のユーザーには、(スキーマではなく) セキュリティ保護可能なリソースに対する CONTROL 権限と対象スキーマに対する ALTER 権限が必要です。  
   
- セキュリティ保護可能なリソースに EXECUTE AS OWNER の指定があり、所有者が SCHEMA OWNER に設定されている場合は、対象スキーマの所有者に対する IMPERSONATION 権限も必要です。  
+ セキュリティ保護可能な EXECUTE AS OWNER 仕様上にあり、所有者がスキーマの所有者に設定されている場合、ユーザーも必要 IMPERSONATE 権限、ターゲット スキーマの所有者にします。  
   
  移動するセキュリティ保護可能なリソースに関連付けられているすべての権限は、移動時に削除されます。  
   

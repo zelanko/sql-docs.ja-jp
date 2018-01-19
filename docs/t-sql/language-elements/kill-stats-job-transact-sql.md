@@ -24,15 +24,15 @@ helpviewer_keywords:
 - statistics update jobs [SQL Server]
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abcd6b4ae1d7e6b253214ae7bddee1b382f5900e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2df18cfd1e0803fb937965ecc6c5880614e25df2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ KILL STATS JOB job_id
 ## <a name="remarks"></a>解説  
  job_id は、他の形式の KILL ステートメントで使用されている session_id または作業単位とは無関係です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  sys.dm_exec_background_job_queue 動的管理ビューからの情報にアクセスするには VIEW SERVER STATE 権限が必要です。  
   
  KILL STATS JOB 権限は、特に指定のない限り固定データベース ロール sysadmin および processadmin のメンバーに与えられ、これを譲渡することはできません。  

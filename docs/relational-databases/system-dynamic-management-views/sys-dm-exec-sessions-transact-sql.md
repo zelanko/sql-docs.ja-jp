@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.lasthandoff: 01/02/2018
 |program_name|**nvarchar(128)**|セッションを開始したクライアント プログラムの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |host_process_id|**int**|セッションを開始したクライアント プログラムのプロセス ID。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |client_version|**int**|クライアントでサーバーへの接続に使用されるインターフェイスの TDS プロトコル バージョン。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
-|client_interface_name|**nvarchar (32)**|サーバーと通信するために、クライアントによって使用されているライブラリ/ドライバーの名前です。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
+|client_interface_name|**nvarchar(32)**|サーバーと通信するために、クライアントによって使用されているライブラリ/ドライバーの名前です。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |security_id|**varbinary(85)**|ログインに関連付けられた、Microsoft Windows のセキュリティ ID。 NULL 値は許可されません。|  
 |login_name|**nvarchar(128)**|現在セッションを実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。 セッションを作成した元のログイン名については、original_login_name を参照してください。 指定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名または Windows 認証済みのドメイン ユーザー名を認証します。 NULL 値は許可されません。|  
 |nt_domain|**nvarchar(128)**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションで Windows 認証または信頼された接続を使用している場合のクライアントの Windows ドメイン。 内部セッションまたはドメイン以外のユーザーの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |nt_user_name|**nvarchar(128)**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションで Windows 認証または信頼された接続を使用している場合のクライアントの Windows ユーザー名。 内部セッションまたはドメイン以外のユーザーの場合、この値は NULL になります。 NULL 値が許可されます。|  
-|ステータス|**nvarchar (30)**|セッションの状態です。 有効値は次のとおりです。<br /><br /> **実行している**-現在 1 つまたは複数の要求を実行します。<br /><br /> **スリープ**-現在実行されていない要求<br /><br /> **休止**– セッションはリセットされたため、接続プールとはログイン前の状態に移行します。<br /><br /> **Preconnect** -セッションは、リソース ガバナーの分類します。<br /><br /> NULL 値は許可されません。|  
+|ステータス|**nvarchar(30)**|セッションの状態です。 有効値は次のとおりです。<br /><br /> **実行している**-現在 1 つまたは複数の要求を実行します。<br /><br /> **スリープ**-現在実行されていない要求<br /><br /> **休止**– セッションはリセットされたため、接続プールとはログイン前の状態に移行します。<br /><br /> **Preconnect** -セッションは、リソース ガバナーの分類します。<br /><br /> NULL 値は許可されません。|  
 |context_info|**varbinary (128)**|セッションの CONTEXT_INFO 値。 コンテキスト情報を使用して、ユーザーが設定されて、 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)ステートメントです。 NULL 値が許可されます。|  
 |cpu_time|**int**|セッションで使用された CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |memory_usage|**int**|セッションで使用されたメモリの 8 KB ページの数。 NULL 値は許可されません。|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/02/2018
 |open_transaction_count|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションごとに開いているトランザクションの数。|  
 |pdw_node_id|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 すべてのユーザーは、独自のセッション情報を参照してくださいことができます。  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:**必要`VIEW SERVER STATE`に対する権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、サーバー上のすべてのセッションを表示します。  
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**必要`VIEW DATABASE STATE`を現在のデータベースに対するすべての接続を確認します。 `VIEW DATABASE STATE`付与することはできません、`master`データベース。 
@@ -109,6 +109,10 @@ ms.lasthandoff: 01/02/2018
 -   unsuccessful_logons  
   
  このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、次を参照してください。[共通の criteria compliance enabled サーバー構成オプション](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)です。  
+ 
+ 
+ 管理者以外の接続は、データベース ユーザーのセッションに関連する情報のみ表示中に、Azure SQL データベース上の管理の接続は、認証済みセッションごとに 1 行に表示されます。 
+ 
   
 ## <a name="relationship-cardinalities"></a>リレーションシップの基数  
   
@@ -117,7 +121,7 @@ ms.lasthandoff: 01/02/2018
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|一対ゼロまたは一対多|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|一対ゼロまたは一対多|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|一対ゼロまたは一対多|  
-|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id (& a) #124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|一対ゼロまたは一対多|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|一対ゼロまたは一対多|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|一対一|  
   
 ## <a name="examples"></a>使用例  
