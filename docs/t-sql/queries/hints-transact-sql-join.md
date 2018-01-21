@@ -1,4 +1,4 @@
----
+ ---
 title: "結合ヒント (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/09/2017
@@ -34,7 +34,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="hints-transact-sql---join"></a>ヒント (TRANSACT-SQL) の参加します。
+# <a name="hints-transact-sql---join"></a>結合ヒント (TRANSACT-SQL) JOIN
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文の詳細については、次を参照してください。 [FROM &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/from-transact-sql.md).  
