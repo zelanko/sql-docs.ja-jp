@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -378,7 +378,7 @@ Azure Key Vault は、特にアプリケーションが Azure でホストされ
 
 次の接続文字列は、次の 2 つの資格情報の種類を Azure Key Vault に認証する方法を示します。
 
-**ClientID/Secret**:
+**ClientID/シークレット**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
@@ -526,7 +526,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ODBC ドライバーの使用を許可中に[非同期操作](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)Always encrypted によりは、パフォーマンスに影響操作で Always Encrypted が有効にするとします。 呼び出し`sys.sp_describe_parameter_encryption`、ステートメントがブロックしているとすると、サーバーを返す前に、メタデータを返すまで待機するドライバーを暗号化メタデータを決定する`SQL_STILL_EXECUTING`です。
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>SQLGetData を使用してパーツ内のデータを取得します。
-SQL Server 用 ODBC ドライバーの 17 暗号化前に文字とバイナリ列は、SQLGetData を使用してパーツで取得できません。 列全体のデータを格納するための十分な長さのバッファーが、SQLGetData を 1 つだけの呼び出しを作成できます。 ODBC Driver for SQL Server、17 暗号化**varbinary (max)** SQLGetData と SQL_C_BINARY C 型を使用してパーツの列を取得することはできません。
+SQL Server 用 ODBC ドライバーの 17 暗号化前に文字とバイナリ列は、SQLGetData を使用してパーツで取得できません。 列全体のデータを格納するための十分な長さのバッファーが、SQLGetData を 1 つだけの呼び出しを作成できます。
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>SQLPutData を使用してパーツでデータを送信します。
 SQLPutData を使用してパーツでは、データを挿入または比較を送信できません。 全体のデータを格納するバッファーと、SQLPutData のみ 1 回の呼び出しを作成できます。 長い形式のデータを暗号化された列に挿入するためには、入力データ ファイルを使用して、次のセクションで説明されている、一括コピー API を使用します。
