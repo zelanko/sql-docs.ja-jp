@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b92074c5a43c81673cb3464780ae878d78c14276
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dbb05ab73e9994d4f3c14a9bdfd919ec48c6f29
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services で使用するツールとアプリケーション
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]ツールとアプリケーションが Analysis Services モデルの構築にする必要がありますを検索し、配置済みデータベースを管理します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  ツールとアプリケーションが Analysis Services モデルの構築にする必要がありますを検索し、配置済みデータベースを管理します。  
   
 ## <a name="analysis-services-model-designers"></a>Analysis Services モデルのデザイナー  
  モデルは、プロジェクト テンプレートで SQL Server Data Tools (SSDT)、Visual Studio シェルを使用して作成されます。 プロジェクト テンプレートは、Analysis Services ソリューションを構成するデータ モデル オブジェクトを作成するため、モデル デザイナーを提供します。 SSDT とは、毎月更新され、無料の web ダウンロードです。

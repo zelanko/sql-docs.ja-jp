@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>通貨換算 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)]多次元のみ  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] 多次元のみ  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、多次元式 (MDX) スクリプトによって実行される機能の組み合わせを使用して、複数の通貨をサポートしているキューブに通貨換算のサポートが提供されています。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-currency-conversions"></a>通貨換算の定義  
  ビジネス インテリジェンス ウィザードを使用すると、キューブの通貨換算機能を定義できます。また、MDX スクリプトを使用して通貨換算を手動で定義することもできます。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>前提条件  
  ビジネス インテリジェンス ウィザードを使用してキューブに通貨換算を定義するには、少なくとも 1 つの通貨ディメンション、少なくとも 1 つの時間ディメンション、および少なくとも 1 つのレート メジャー グループを定義する必要があります。 ビジネス インテリジェンス ウィザードでは、レポートの通貨ディメンションおよび MDX スクリプトの作成に使用するデータとメタデータをこれらのオブジェクトから取得し、通貨換算機能を提供できます。  
   
 ### <a name="decisions"></a>決定事項  

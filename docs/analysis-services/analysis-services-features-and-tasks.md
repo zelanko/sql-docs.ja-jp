@@ -17,19 +17,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dafe91acc4a753b9b6335d1b8b5bbd56c30586f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: db03f796d3271a7141f3cd754dd04d0e312bdc33
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services の機能とタスク
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Analysis Services の基本的なドキュメントはモデルの種類とサーバーのモードで整理されるので、ツール、タスク、およびインストールしたモードで使用できる機能に集中できます。 複数のモードに関連するサーバー管理タスクは、インスタンス管理にあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Analysis Services に関する基本ドキュメントは、インストールしたモードで使用できるツール、タスク、および機能に関する情報だけを参照できるように、モデルの種類およびサーバーのモード別に分類されています。 複数のモードに関連するサーバー管理タスクは、インスタンス管理にあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [テーブル ソリューションと多次元ソリューションの比較 &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [比較する表形式ソリューションと多次元ソリューション &#40;です。SSAS &#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- [Analysis Services で使用するツールとアプリケーション](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
+ [ツールと Analysis Services で使用されるアプリケーション](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
  [Analysis Services インスタンス管理](../analysis-services/instances/analysis-services-instance-management.md)  
   

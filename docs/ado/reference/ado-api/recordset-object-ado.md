@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>レコード セット オブジェクト (ADO)
 ベース テーブル、または実行されたコマンドの結果から、レコードのセット全体を表します。 いつでも、 **Recordset**オブジェクトとして現在のレコード セット内で 1 つのレコードのみを参照します。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  使用することができます、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 **MoveLast**、 **MoveNext**、および**MovePrevious**メソッド以外の場合は、[移動](../../../ado/reference/ado-api/move-method-ado.md)メソッド。および[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、[と、AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[フィルター](../../../ado/reference/ado-api/filter-property.md)プロバイダーは、サポート、関連すると仮定すると、現在のレコードの位置を変更するプロパティ機能します。 順方向専用**Recordset**オブジェクトのみをサポート、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドです。 使用する場合、**移動**各レコードにアクセスするメソッド (または列挙、**レコード セット**)、使用することができます、 **BOF**と**EOF**プロパティ先頭または末尾のを越えて移動したかどうかの判断、 **Recordset**です。  
   
- 機能を使用する前に、 **Recordset**オブジェクトを呼び出す必要があります、**サポート**機能がサポートされているか使用可能であることを確認するオブジェクトのメソッドです。 機能を使用する必要がありますいないときに、**サポート**false が返されます。 たとえば、使用することができます、 **MovePrevious**場合にのみ、メソッド`Recordset.Supports(adMovePrevious)`返します**True**です。 それ以外の場合、エラーになりますが、ため、 **Recordset**オブジェクトが閉じられている可能性がありますされ、機能が使用不可のインスタンスで表示されます。 興味のある機能がサポートされていない場合**サポート**も false に戻ります。 上の対応するプロパティまたはメソッドの呼び出しを避ける必要があります、ここで、 **Recrodset**オブジェクト。  
+ 機能を使用する前に、 **Recordset**オブジェクトを呼び出す必要があります、**サポート**機能がサポートされているか使用可能であることを確認するオブジェクトのメソッドです。 機能を使用する必要がありますいないときに、**サポート**false が返されます。 たとえば、使用することができます、 **MovePrevious**場合にのみ、メソッド`Recordset.Supports(adMovePrevious)`返します**True**です。 それ以外の場合、エラーになりますが、ため、 **Recordset**オブジェクトが閉じられている可能性がありますされ、機能が使用不可のインスタンスで表示されます。 興味のある機能がサポートされていない場合**サポート**も false に戻ります。 上の対応するプロパティまたはメソッドの呼び出しを避ける必要があります、ここで、 **Recordset**オブジェクト。  
   
  **レコード セット**オブジェクトは、2 種類の更新をサポートできます: 即時とバッチです。 即時更新でデータに対するすべての変更が直ちに書き込まれます、基になるデータ ソースを呼び出すと、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。 パラメーターとして配列の値を渡すことも、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)と**更新**メソッドを同時に、レコードのいくつかのフィールドを更新します。  
   

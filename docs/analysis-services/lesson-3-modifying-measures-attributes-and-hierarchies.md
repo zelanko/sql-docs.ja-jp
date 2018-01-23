@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e5c678f53cbf6ffe66d8713e7c847137330eb7e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 692d6b3567f9f9ea3e3fe404a85f8d9e09f44c5f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>レッスン 3 : メジャー、属性、および階層の修正
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]最初、キューブを定義した後、有用性と、キューブの使いやすさを向上させるために準備ができたらです。 そのためには、特定のメジャーに書式を適用し、計算やリレーションシップを定義して、さまざまなレベルでのナビゲーションと集計をサポートする階層を追加します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+前のレッスンでは、最初のキューブを定義しました。次は、このキューブをさらに使いやすくしましょう。 そのためには、特定のメジャーに書式を適用し、計算やリレーションシップを定義して、さまざまなレベルでのナビゲーションと集計をサポートする階層を追加します。  
   
 > [!NOTE]  
 > このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](http://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
@@ -44,12 +46,12 @@ ms.lasthandoff: 01/08/2018
 [Date ディメンションの変更](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
 この実習では、ユーザー階層を定義し、属性のメンバー名を変更します。また、複合キーを使用して一意な属性メンバーを指定します。  
   
-[配置したキューブの表示](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
+[配置されたキューブの表示](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
 この実習では、キューブ デザイナーのブラウザーを使用してキューブ データを表示します。  
   
 ## <a name="see-also"></a>参照  
 [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多次元モデリング &#40;です。Adventure Works チュートリアル &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

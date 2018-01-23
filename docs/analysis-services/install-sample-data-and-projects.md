@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 609d8f220df38081e5f14b3aa9154eb86350e014
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="install-sample-data-and-projects"></a>サンプル データとプロジェクトをインストールします。 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]すべての Analysis Services のチュートリアルで使用されるデータとプロジェクト ファイルをインストールするのに手順とここで指定されたリンクを使用します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+このトピックに示す手順とリンクを使用して、Analysis Services チュートリアルで使用するすべてのデータとプロジェクト ファイルをインストールします。  
   
 ## <a name="step-1-install-sql-server-software"></a>手順 1: SQL Server ソフトウェアのインストール  
 このチュートリアルのレッスンでは、次のソフトウェアをインストール済みであることを前提としています。 次のソフトウェアはすべて、SQL Server のインストール メディアを使用してインストールされます。 配置を簡単にするために、すべての機能を 1 台のコンピューターにインストールできます。 これらの機能をインストールするには、SQL Server セットアップを実行して [機能の選択] ページから機能を選択します。 詳細については、「 [インストール ウィザードからの SQL Server 2016 のインストール &#40;セットアップ &#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」を参照してください。  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
     既定では Analysis Services は、多次元のインスタンスとしてインストールされますが、インストール ウィザードのサーバー構成ページで表形式のサーバー モードを選択することによりオーバーライドできます。 両方のサーバー モードを実行する場合は、同じコンピューター上の SQL Server セットアップを再実行して、他方のモードで Analysis Services の第 2 のインスタンスをインストールします。  
   
--   [SQL Server Management Studio]  
+-   SQL Server Management Studio  
   
 チュートリアルを進めていくと、多次元データを参照することがあるので、必要に応じて Excel のインストールを検討してください。 Excel をインストールすると、構築するキューブに接続されているピボットテーブル フィールド リストを使用して Excel を起動する、" **Excel で分析** " 機能が有効になります。 データと対話するためのピボット レポートをすばやく作成できるので、Excel を使用してデータを参照することをお勧めします。  
   
@@ -133,7 +135,7 @@ Analysis Services 多次元モデルでは、リレーショナル データベ�
   
     -   Lesson 10 Complete  
   
-4.  これらのファイルの読み取り専用権限を削除します。 親フォルダーである [Analysis Services Tutorial SQL Server 2012] を右クリックし、 **[プロパティ]**をクリックして、 **[読み取り専用]**のチェックボックスをオフにします。 **[OK]** をクリックします。 このフォルダー、サブフォルダー、およびファイルへの変更を適用します。  
+4.  これらのファイルの読み取り専用権限を削除します。 親フォルダーである [Analysis Services Tutorial SQL Server 2012] を右クリックし、 **[プロパティ]**をクリックして、 **[読み取り専用]**のチェックボックスをオフにします。 **[OK]**をクリックします。 このフォルダー、サブフォルダー、およびファイルへの変更を適用します。  
   
 5.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を起動します。  
   

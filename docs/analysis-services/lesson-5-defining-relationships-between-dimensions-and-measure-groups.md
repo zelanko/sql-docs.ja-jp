@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3000dfc2ecd94fb70061eead07ef92cfd643f73
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b3637cc09617b51663ac2bc65dea13c764981c2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>レッスン 5 : ディメンションおよびメジャー グループ間のリレーションシップの定義
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このチュートリアルで前のレッスンでは、キューブに追加したデータベース ディメンションを 1 つまたは複数のキューブ ディメンションの基礎として使用できることを学習します。 このレッスンでは、キューブ ディメンションとメジャー グループの間に各種のリレーションシップを定義し、これらのリレーションシップのプロパティを指定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+このチュートリアルの前のレッスンでは、キューブに追加したデータベース ディメンションを、1 つ以上のキューブ ディメンションの基準として使用できることを学習しました。 このレッスンでは、キューブ ディメンションとメジャー グループの間に各種のリレーションシップを定義し、これらのリレーションシップのプロパティを指定します。  
   
 詳細については、「 [ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」を参照してください。  
   
@@ -40,19 +42,19 @@ ms.lasthandoff: 01/08/2018
 [ファクト リレーションシップの定義](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
 ここでは、ファクト テーブルのデータに基づいてディメンションを定義する方法を学習します。また、ディメンション リレーションシップをファクト リレーションシップとして定義する方法を学習します。  
   
-[多対多関係の定義](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+[多対多リレーションシップを定義します。](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
 ここでは、ディメンション テーブルとファクト テーブルの間に存在する多対多リレーションシップの定義を使用し、ファクトを複数のディメンション メンバーに関連付ける方法を学習します。  
   
-[メジャー グループでのディメンション粒度の定義](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[メジャー グループ内のディメンションの粒度を定義します。](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 ここでは、特定のメジャー グループに対し、ディメンションの粒度を定義する方法を学習します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 6 : 計算の定義](../analysis-services/lesson-6-defining-calculations.md)  
+[レッスン 6: 計算の定義](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>参照  
 [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[多次元モデリング &#40;です。Adventure Works チュートリアル &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[ディメンションのリレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
   

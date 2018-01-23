@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6cfbba4598bad19dc0b581131f977fa2f3e9b40e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>レッスン 2-2-キューブの定義
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブ ウィザードでは、メジャー グループとキューブのディメンションを定義できます。 この実習では、キューブ ウィザードを使用してキューブを作成します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+キューブ ウィザードを使用すると、キューブのメジャー グループとディメンションを定義できます。 この実習では、キューブ ウィザードを使用してキューブを作成します。  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>キューブとそのプロパティを定義するには  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
     ウィザードでそれらのテーブルが調べられ、 **InternetSales** がメジャー グループ テーブルとして提示されます。 メジャー グループ テーブル (ファクト テーブルとも呼ばれます) には、販売数など必要なメジャーが含まれています。  
   
-6.  **[次へ]** をクリックします。  
+6.  **[次へ]**をクリックします。  
   
 7.  **[メジャーの選択]** ページで、 **Internet Sales** メジャー グループ内の選択されているメジャーを確認し、以下のメジャーのチェック ボックスをオフにします。  
   
@@ -55,13 +57,13 @@ ms.lasthandoff: 01/08/2018
   
     既定では、ファクト テーブル内で、ディメンションにリンクしていないすべての数値列がメジャーとして選択されます。 ただし、上の 4 つの列は実際にはメジャーではありません。 最初の 3 つは、ファクト テーブルとディメンション テーブルをリンクするキー値で、この初期段階のキューブでは使用しません。  
   
-8.  **[次へ]** をクリックします。  
+8.  **[次へ]**をクリックします。  
   
 9. **[既存のディメンションの選択]** ページで、既に作成した **Date** ディメンションが選択されていることを確認し、 **[次へ]**をクリックします。  
   
 10. **[新しいディメンションの選択]** ページで、作成する新しいディメンションを選択します。 そのためには、 **[Customer]**、 **[Geography]**、 **[Product]** の各チェック ボックスがオンになっていることを確認し、 **[InternetSales]** チェック ボックスをオフにします。  
   
-11. **[次へ]** をクリックします。  
+11. **[次へ]**をクリックします。  
   
 12. **[ウィザードの完了]** ページで、[キューブ名] ボックスに「 **Analysis Services Tutorial**」と入力します。 [プレビュー] ペインで、 **InternetSales** メジャー グループとそのメジャーを表示できます。 **Date**、 **Customer** 、 **Product** の各ディメンションも表示できます。  
   
@@ -74,11 +76,11 @@ ms.lasthandoff: 01/08/2018
 15. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[ディメンションへの属性の追加](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
+[属性をディメンションに追加する](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>参照  
 [多次元モデルのキューブ](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[「多次元モデル内のディメンション」](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
+[多次元モデル内のディメンション](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
   

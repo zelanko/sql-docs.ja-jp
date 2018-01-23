@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fae54870409e11ed94050dd621784e57625eb02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d6d0c4561b4c913799857774fa19dd35999614d1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming---ole-db"></a>データ マイニングのプログラミングの OLE DB
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]データ マイニング機能は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]遵守、 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB for Data Mining 1.0 仕様の 2000 年 6 月にリリースします。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  データ マイニング機能は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]遵守、 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB for Data Mining 1.0 仕様の 2000 年 6 月にリリースします。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、この仕様を拡張し、新しいスキーマ行セットを追加しました。また、既存のスキーマ行セットに列を追加し、マイニング構造の作成と管理に使用する DMX (データ マイニング拡張機能) 言語に構文を追加しました。  
   

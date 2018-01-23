@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>テーブル ソリューションと多次元ソリューションの比較
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services、business intelligence semantic model を作成するためのいくつかのアプローチの提供: 表形式、多次元、および Power Pivot for SharePoint です。
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services、business intelligence semantic model を作成するためのいくつかのアプローチの提供: 表形式、多次元、および Power Pivot for SharePoint です。
   
  複数のアプローチにより、さまざまなビジネスとユーザーの要件に応じたモデリング エクスペリエンスを実現できます。 多次元モデルは、オープン スタンダードに組み込まれている成熟したテクノロジで、多くの BI ソフトウェア ベンダーで採用されていますが、習得が難しい場合があります。 テーブル モデルは、多くの開発者にとって直感的なリレーショナル モデリング アプローチを提供します。 Power Pivot モデルはさらにシンプルで、Excel 形式でビジュアル データ モデリングを提供するほか、SharePoint 経由でサーバーのサポートが可能になっています。  
   

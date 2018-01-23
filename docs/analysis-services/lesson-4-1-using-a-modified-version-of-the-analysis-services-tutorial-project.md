@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>レッスン 4-1-Analysis Services チュートリアル プロジェクトの変更済みバージョンを使用します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このチュートリアルの残りのレッスンは、強化されたバージョンに基づく、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]最初の 3 つのレッスンで作成したチュートリアルのプロジェクトです。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+このチュートリアルの残りのレッスンでは、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版を使用します。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
   
 チュートリアルを続ける前に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版のダウンロード、展開、読み込み、および処理を行う必要があります。  すべての手順を確実に実行するために、このレッスンでの指示に従ってください。  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="understanding-the-enhancements-to-the-project"></a>プロジェクトの修正について  
 プロジェクトの修正版は、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトとは異なります。 この相違点について、次のセクションで説明します。 チュートリアルの残りのレッスンを続ける前に、この情報を確認してください。  
   
-### <a name="data-source-view"></a>[データ ソース ビュー]  
+### <a name="data-source-view"></a>データ ソース ビュー  
 修正したプロジェクトのデータ ソース ビューには、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベースから取得された 1 つのファクト テーブルと 4 つのディメンション テーブルが追加されています。  
   
 このデータ ソース ビューには 10 個のテーブルがあり、 <All Tables> ダイアグラムの情報が整理されていません。 このため、テーブル間のリレーションシップがわかりにくく、簡単には特定のテーブルを探すことができません。 この問題を解決するために、テーブルを 2 つの論理ダイアグラムに整理します。2 つのダイアグラムとは、 **Internet Sales** ダイアグラムと **Reseller Sales** ダイアグラムです。 1 つのファクト テーブルに対し、これらのダイアグラムを 1 つずつ構成します。 1 つのダイアグラムにテーブルやそのリレーションシップをすべて表示しなくとも、論理ダイアグラムを作成することにより、複数のテーブルから特定のサブセットのみをデータ ソース ビューに表示し、操作できます。  
@@ -124,5 +126,5 @@ Geography ディメンションは、 **Adventure Works DW 2012** データ ソ�
 [親子階層の親属性プロパティの定義](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>参照  
-[Analysis Services プロジェクトの配置](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Analysis Services プロジェクトの展開](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

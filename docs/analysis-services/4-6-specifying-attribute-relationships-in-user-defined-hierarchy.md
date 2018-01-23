@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>ユーザー定義階層内の属性リレーションシップの 4、6 を指定します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このチュートリアルで既に学習したように、キューブ内のユーザーのナビゲーション パスを提供するユーザー階層内のレベルに属性階層を整理できます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+このチュートリアルで既に学習したように、ユーザー階層に属性階層を配置し、キューブ内を移動するためのパスを作ることができます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
   
 一般階層で、各層を構成する属性間に属性リレーションシップが定義されている場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、1 つの階層の集計結果を使用して、その階層に関連付けられている別の階層の結果を取得することができます。 属性間にリレーションシップを定義していない場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってキー属性からすべての非キー属性が集計されます。 そのため、基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理パフォーマンスが向上します。 詳細については、「[属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)」および「[属性リレーションシップ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 01/08/2018
 14. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、**[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[不明なメンバーと NULL 処理のプロパティの定義](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+[不明なメンバーと Null 処理のプロパティを定義します。](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## <a name="see-also"></a>参照  
 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)  

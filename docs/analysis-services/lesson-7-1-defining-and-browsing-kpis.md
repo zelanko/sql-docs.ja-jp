@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>レッスン 7-1-の定義と Kpi を表示
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]主要業績評価指標 (Kpi) を定義するには、まずを定義する KPI の名前と、KPI と関連付けられているメジャー グループ。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+主要業績評価指標 (KPI) を定義するには、まず、KPI の名前と、KPI に関連するメジャー グループを定義します。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。  
   
 -   値式  
   
@@ -275,5 +277,5 @@ ms.lasthandoff: 01/08/2018
     Q3 CY 2007 の North America における小売店のバイクの売上総利益率が表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 8 : アクションの定義](../analysis-services/lesson-8-defining-actions.md)  
+[レッスン 8: アクションの定義](../analysis-services/lesson-8-defining-actions.md)  
   

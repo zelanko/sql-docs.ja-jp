@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>レッスン 5-1-参照されているリレーションシップを定義します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]チュートリアルのこの時点までは、各キューブ ディメンションを定義は、外部キー リレーションシップに主キーによって、メジャー グループのファクト テーブルに直接リンクが、テーブルに基づいていました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+このチュートリアルのこれまでの実習では、主キーから外部キーへのリレーションシップを使用し、メジャー グループのファクト テーブルに直接リンクしているテーブルに基づいて、各キューブ ディメンションを定義しました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>販売店の売上と地域を関連付ける  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
     **[具体化する]** チェック ボックスがオンになっています。 これは、MOLAP ディメンションの既定設定です。 ディメンション属性のリンクを具体化すると、各行のファクト テーブルおよび参照ディメンション間のリンクの値が具体化され、処理中にディメンションの MOLAP 構造に格納されます。 この操作は、処理パフォーマンスやストレージの要件に少しだけ影響しますが、クエリ パフォーマンスを (場合により大幅に) 向上させます。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
     **Geography** キューブ ディメンションが **Reseller Sales** メジャー グループにリンクされました。 このアイコンは、リレーションシップが参照ディメンションのリレーションシップであることを表します。  
   

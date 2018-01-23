@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker を使用した SQL Server 2017 コンテナー イメージを実行します。
 
@@ -68,17 +68,20 @@ ms.lasthandoff: 12/23/2017
    ```
 
    > [!NOTE]
+   > パスワードが SQL Server の既定のパスワード ポリシーに従う必要があります、それ以外の場合、コンテナーの SQL server をセットアップできませんでき、動作が停止します。 既定では、パスワード必要がありますには、少なくとも 8 文字にして、次の 4 つのセットのうち、3 つの文字を含める: 大文字、小文字、数字、およびシンボルです。 実行することによって、エラー ログを調査することができます、 [docker ログ](https://docs.docker.com/engine/reference/commandline/logs/)コマンド。
+
+   > [!NOTE]
    > 既定では、これは、コンテナーを作成 2017 年 1 SQL Server の Developer edition を使用します。 コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働環境にコンテナー イメージを実行](sql-server-linux-configure-docker.md#production)です。
 
    次の表は、前に、パラメーターの説明を示します`docker run`例。
 
    | パラメーター | Description |
    |-----|-----|
-   | **e ' ACCEPT_EULA = Y'** |  設定、 **ACCEPT_EULA**変数への同意を確認する任意の値を[使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388)です。 SQL Server イメージの設定が必要です。 |
-   | **e ' MSSQL_SA_PASSWORD =\<YourStrong!Passw0rd\>'** | 8 文字以上には、満たす独自の強力なパスワードを指定、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md)です。 SQL Server イメージの設定が必要です。 |
+   | **-e 'ACCEPT_EULA=Y'** |  設定、 **ACCEPT_EULA**変数への同意を確認する任意の値を[使用許諾契約書](http://go.microsoft.com/fwlink/?LinkId=746388)です。 SQL Server イメージの設定が必要です。 |
+   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8 文字以上には、満たす独自の強力なパスワードを指定、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md)です。 SQL Server イメージの設定が必要です。 |
    | **-p 1401:1433** | ホスト環境での TCP ポートにマップ (先頭の値)、コンテナーの TCP ポートと (2 番目の値)。 この例では SQL Server がコンテナー内の TCP 1433 でリッスンしていると、ホスト上の 1401 ポートにこの公開されます。 |
-   | **-名前 sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 1 つ以上のコンテナーを実行すると場合に、この同じ名前を再利用することはできません。 |
-   | **microsoft/mssql-サーバー-linux:2017-最新** | SQL Server 2017 Linux コンテナー イメージ。 |
+   | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 1 つ以上のコンテナーを実行すると場合に、この同じ名前を再利用することはできません。 |
+   | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux コンテナー イメージ。 |
 
 1. 表示するには、Docker コンテナーを使用して、`docker ps`コマンド。
 
@@ -241,7 +244,7 @@ SQL Server に接続するその他の一般的なツールは次のとおりで
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [Windows で SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 - [SQL Server 操作 Studio (プレビュー)](../sql-operations-studio/what-is.md)
-- [mssql cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+- [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>コンテナーを削除します。
 

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>レッスン 3-3-Product ディメンションの変更
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]このトピックのタスクでは、名前付き計算を使用して製品ラインにわかりやすい名前、Product ディメンションに階層を定義し、階層の (All) メンバー名を指定します。 また、属性をグループ化して別々の表示フォルダーに格納します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+このトピックの実習では、名前付き計算を使用して製品ラインにわかりやすい名前を指定し、Product ディメンションに階層を定義して、その階層の (All) メンバー名を指定します。 また、属性をグループ化して別々の表示フォルダーに格納します。  
   
 ## <a name="adding-a-named-calculation"></a>名前付き計算の追加  
 データ ソース ビューで名前付き計算をテーブルに追加できます。 次の実習では、製品ラインの完全な名前を表示する名前付き計算を作成します。  
@@ -112,7 +114,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **Safety Stock Level**  
   
-    -   **[サイズ]**  
+    -   **サイズ**  
   
     -   **Size Range**  
   
@@ -142,7 +144,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **[開始日]**  
   
-    -   **ステータス**  
+    -   **[状態]**  
   
 6.  [プロパティ] ウィンドウで、 **AttributeHierarchyDisplayFolder** プロパティのセルに「 **History**」と入力します。  
   
@@ -169,7 +171,7 @@ ms.lasthandoff: 01/08/2018
   
     時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。 たとえば、製品モデルが最終的に別の製品ラインに移動される場合があります。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 5.  **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
   
@@ -189,7 +191,7 @@ ms.lasthandoff: 01/08/2018
 [Date ディメンションの変更](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>参照  
-[データ ソース ビューでの名前付き計算の定義 (Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[データ ソース ビュー &#40; での名前付き計算を定義します。Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [ユーザー定義階層の作成](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [属性階層の &#40;All&#41; レベルの構成](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

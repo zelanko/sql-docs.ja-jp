@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>レッスン 6-1-を定義する計算されるメンバー
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]計算されるメンバーがディメンションのメンバーまたはキューブ データ、算術演算子、数字、および関数の組み合わせに基づいて定義されているメジャー グループです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+計算されるメンバーとは、キューブ データ、算術演算子、数値、関数を組み合わせて定義した、ディメンション グループまたはメジャー グループのメンバーです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
   
 計算されるメンバーを作成するには、キューブ デザイナーの **[計算]** タブで **[新しい計算されるメンバー]** コマンドを使用します。 計算されるメンバーは、メジャー ディメンションなどの任意のディメンション内に作成できます。 **[計算プロパティ]** ダイアログ ボックスを使用して、計算されるメンバーを表示フォルダー内に配置することもできます。 詳しくは、「 [計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)」、「 [多次元モデルの計算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)」、および「 [計算されるメンバーの作成](../analysis-services/multidimensional-models/create-calculated-members.md)」を参照してください。  
   
@@ -294,7 +296,7 @@ ms.lasthandoff: 01/08/2018
     アクセサリの売上は毎年増加しているものの、合計売上に占める割合が非常に小さいことがわかります。 また、アクセサリの売上における総利益率は、自転車よりも高くなっています。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[名前付きセットの定義](../analysis-services/lesson-6-2-defining-named-sets.md)  
+[名前付きセットを定義します。](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>参照  
 [[新しい計算されるメンバー]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

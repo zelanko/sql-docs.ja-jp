@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cc3614124b6e47f4da3526351927218dba8b03ba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>レッスン 5-2-ファクト リレーションシップの定義
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]ユーザーすることもできるディメンションのメジャーはファクト テーブルにデータ項目をまたは特定追加などの関連情報、請求書番号のファクト テーブルをクエリや特定の販売のファクトに関連する受注番号。 このように、ファクト テーブル アイテムに基づいて定義されたディメンションを、 *ファクト ディメンション*と呼びます。 ファクト ディメンションは、逆ディメンションとも呼ばれます。 特定の請求番号に関連するすべての行をグループ化する場合などのように、関連するテーブルの行をまとめてグループ化するには、ファクト ディメンションを使用すると便利です。 この情報は、リレーショナル データベースの個々のディメンション テーブルに格納することができます。しかし、情報ごとに異なるディメンション テーブルを作成してもメリットはありません。ファクト テーブルのサイズに比例してディメンション テーブルが大きくなり、データを複製することによって不要な複雑さを招くことになるからです。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+ディメンション メジャーをファクト テーブルのデータ アイテムに関連付けなければならない場合があります。また、特定の販売ファクター (請求番号や受注番号) など、関連している特定の補足情報について、ファクト テーブルから情報を抽出しなければならない場合があります。 このように、ファクト テーブル アイテムに基づいて定義されたディメンションを、 *ファクト ディメンション*と呼びます。 ファクト ディメンションは、逆ディメンションとも呼ばれます。 特定の請求番号に関連するすべての行をグループ化する場合などのように、関連するテーブルの行をまとめてグループ化するには、ファクト ディメンションを使用すると便利です。 この情報は、リレーショナル データベースの個々のディメンション テーブルに格納することができます。しかし、情報ごとに異なるディメンション テーブルを作成してもメリットはありません。ファクト テーブルのサイズに比例してディメンション テーブルが大きくなり、データを複製することによって不要な複雑さを招くことになるからです。  
   
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、MOLAP ディメンションにファクト ディメンション データを複製してクエリ パフォーマンスを向上させる方法か、ファクト ディメンションを ROLAP ディメンションとして定義し、クエリ パフォーマンスという点を譲歩して記憶領域を節約する方法を選択できます。 MOLAP ストレージ モードでディメンションを格納する場合、すべてのディメンション メンバーは、メジャー グループのパーティションの他に、圧縮率の高い MOLAP 構造内の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに格納されます。 ROLAP ストレージ モードでディメンションを格納する場合、MOLAP 構造にはディメンション定義のみが格納され、ディメンションのメンバー自体はクエリが行われるたびに基となるリレーショナル ファクト テーブルからクエリされます。 ファクト ディメンションにクエリを送信する頻度、通常のクエリにより返される行数、クエリのパフォーマンス、および処理コストなどを考慮し、適切なストレージ モードを決定します。 ディメンションを ROLAP モードとして定義する場合は、そのディメンションを使用するすべてのキューブを ROLAP ストレージ モードで格納しなければならないということではありません。 各ディメンションのストレージ モードは、個別に構成できます。  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  **[名前列]** ボックスの一覧から **[SalesOrderLineNumber]**を選択します。  
   
-8.  **[次へ]** をクリックします。  
+8.  **[次へ]**をクリックします。  
   
 9. **[関連テーブルの選択]** ページで、すべてのテーブルの横のチェック ボックスをオフにし、 **[次へ]**をクリックします。  
   
@@ -125,11 +127,11 @@ ms.lasthandoff: 01/08/2018
     ![Internet Sales-sales Amount の領域確保](../analysis-services/media/l5-factrelationship-3.gif "Internet Sales-sales Amount の寸法")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[多対多関係の定義](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+[多対多リレーションシップを定義します。](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>参照  
-[ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
-[ファクト リレーションシップとファクト リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
+[ディメンションのリレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[ファクト リレーションシップとファクト リレーションシップのプロパティを定義します。](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   
   

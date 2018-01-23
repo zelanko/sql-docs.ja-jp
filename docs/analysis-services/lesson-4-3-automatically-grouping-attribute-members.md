@@ -18,24 +18,26 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46154c876e57ea952e0df93294f6d65891fa91c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>レッスン 4-3 - 属性メンバーの自動的にグループ化
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブを表示するときに別の属性階層のメンバーが 1 つの属性階層のメンバーが通常ディメンションです。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 このとき、属性の種類によっては、属性階層内のメンバー分布に基づいて、属性が自動的にグループ化されるように [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定しておくと便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+キューブを表示するとき、通常は、ある属性階層のメンバーと別の属性階層のメンバーとを多次元化します。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 このとき、属性の種類によっては、属性階層内のメンバー分布に基づいて、属性が自動的にグループ化されるように [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定しておくと便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。  
   
 **DiscretizationMethod** プロパティは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] にグループを作成させるかどうか、どのような種類のグループ化を実行するかを指定します。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] はグループ化を実行しません。 自動グループ化を有効にすると、属性の構造に基づいて、最適なグループ化の方法が [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって自動的に判断されます。また、次の一覧からいずれかのグループ化アルゴリズムを選択してグループ化の方法を指定することもできます。  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ディメンション メンバーの母集団全体がすべてのグループに均等に分散するように、グループ範囲が作成されます。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ディメンション メンバーの合計の母集団はグループ間で均等に分散されるように、グループの範囲を作成します。  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] K-Means クラスタリング法とガウス分布を使用し、入力値に対して 1 次元クラスタリングが実行されます。 このオプションは、数値列でのみ使用できます。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ガウス分布と K-means クラスタ リング手法を使用して、入力値を 1 次元クラスタ リングを実行してグループを作成します。 このオプションは、数値列でのみ使用できます。  
   
-グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「 [属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「[属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
 このトピックの実習では、 **Customer** ディメンションの年収値、 **Employees** ディメンションの病気休暇時間、および **Employees** ディメンションの休暇時間でグループ化を行います。 その後、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを処理して表示し、メンバー グループの効果を確認します。 最後に、メンバー グループのプロパティを変更し、グループの種類を変更した場合の影響を確認します。  
   
@@ -130,10 +132,10 @@ ms.lasthandoff: 01/08/2018
     **Vacation Hours** 属性メンバーのグループが 3 つあります。各メンバーに製品の売上の値が含まれています (他の 7 つのグループには、売上データのあるメンバーが存在しません)。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[属性階層の非表示化と無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+[非表示にして、属性階層を無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>参照  
-[属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[グループ メンバーの属性 &#40;分離&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

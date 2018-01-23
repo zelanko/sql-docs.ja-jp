@@ -20,14 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services の開発者向けドキュメント
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services ではほとんどすべてのオブジェクトとワークロードは、プログラミング、および多くの場合からを選択する 1 つ以上の方法もあります。  マネージ コードの記述、スクリプト、または場合は、ソリューションの要件は、.NET framework を使用できないわけでは、XMLA および MSOLAP などのオープン スタンダードを使用して、オプションが含まれます。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+Analysis Services ではほとんどすべてのオブジェクトとワークロードは、プログラミング、および多くの場合からを選択する 1 つ以上の方法もあります。  マネージ コードの記述、スクリプト、または場合は、ソリューションの要件は、.NET framework を使用できないわけでは、XMLA および MSOLAP などのオープン スタンダードを使用して、オプションが含まれます。
 
 ## <a name="what-you-can-accomplish-in-code"></a>コードで行うことができます。
 一般的なプログラミング シナリオには、サーバーとデータベースの配置、管理、モデルとデータベースの作成、およびカスタム アプリケーションと Analysis Services データを使用するレポートのデータにアクセスが含まれます。 固定のアーキテクチャとオブジェクトの定義の階層、データ定義、処理、およびクエリのワークロードにまたがる周知の操作は、これらすべてのシナリオに一般的なのです。

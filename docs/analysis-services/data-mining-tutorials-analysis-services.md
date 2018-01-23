@@ -19,15 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33717f3b72c46ba55e2e774fde62eba0646fa9c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>データ マイニングのチュートリアル (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ウィザードと統合された視覚エフェクトを使用してデータ マイニング ソリューションを作成できるようになります。 特に機械学習に慣れていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すれば、データ マイニング モデルの設計、トレーニング、および調査を簡単に行うことができます。 モデル内のデータは、キューブ、リレーショナル データベース、または [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によってサポートされるその他の任意のソースに格納できます。 モデルを作成した後は、モデルにアクセスし、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] や ASP.NET などの複数のクライアントを使用して予測を作成することで、運用環境に展開することができます。  
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、ウィザードと、統合された視覚エフェクトを使用してデータ マイニング ソリューションを簡単に作成できます。 特に機械学習に慣れていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すれば、データ マイニング モデルの設計、トレーニング、および調査を簡単に行うことができます。 モデル内のデータは、キューブ、リレーショナル データベース、または [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によってサポートされるその他の任意のソースに格納できます。 モデルを作成した後は、モデルにアクセスし、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] や ASP.NET などの複数のクライアントを使用して予測を作成することで、運用環境に展開することができます。  
   
 > [!NOTE]  
 >ここで説明しているチュートリアルは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]用に更新されていません。 SQL Server 2014 用に作成されたチュートリアルを使用できます。 機能的には、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のデータ マイニング機能に変更はありません。 手順は同じです。  

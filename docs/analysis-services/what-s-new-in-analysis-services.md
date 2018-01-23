@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services の新機能
-[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]各種 SQL Server 2016 Analysis Services パフォーマンスの向上、簡単にソリューションの作成、データベースの自動管理を提供する新しい機能強化、双方向クロス フィルター処理、強化された関係並列パーティションの処理、およびいっそうです。 このリリースのほとんどの拡張機能の核となるのは、表形式モデル データベースの新しい互換性レベル 1200 です。     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+各種 SQL Server 2016 Analysis Services パフォーマンスの向上、簡単にソリューションの作成、データベースの自動管理を提供する新しい機能強化、双方向クロス フィルター処理、強化された関係並列パーティションの処理、およびいっそうです。 このリリースのほとんどの拡張機能の核となるのは、表形式モデル データベースの新しい互換性レベル 1200 です。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 2016 SQL PASS Conference で発表されたように、Azure のサービスとしてクラウドで Analysis Services を使用できるようになりました。 **Azure Analysis Services**表形式モデル 1200 以降の互換性レベルをサポートしています。 DirectQuery、パーティション、行レベルのセキュリティ、双方向のリレーションシップ、および翻訳がすべてサポートされます。 詳細を確認し、無料版をお試しになる場合は、「 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)」を参照してください。 
@@ -37,7 +39,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 
 特に、SQL Server 2016 SP1 Analysis Services は、以下の主要領域の機能を改善しています。
 
--   **NUMA 対応** - NUMA のサポートを改善するために、Analysis Services 内のインメモリ (VertiPaq) エンジンは各 NUMA ノードで別のジョブ キューを維持するようになりました。 これによって、セグメント スキャン ジョブを、セグメント データのメモリが割り当てられている同じノードで確実に実行することができます。 ただし、NUMA 対応は、既定で&4; つ以上の NUMA ノードがあるシステムで有効にすることができます。 2 ノード システムの場合、割り当て済みメモリにリモート アクセスするコストは、NUMA の詳細を管理するオーバーヘッドを保証しません。
+-   **NUMA 対応** - NUMA のサポートを改善するために、Analysis Services 内のインメモリ (VertiPaq) エンジンは各 NUMA ノードで別のジョブ キューを維持するようになりました。 これによって、セグメント スキャン ジョブを、セグメント データのメモリが割り当てられている同じノードで確実に実行することができます。 ただし、NUMA 対応は、既定で 4 つ以上の NUMA ノードがあるシステムで有効にすることができます。 2 ノード システムの場合、割り当て済みメモリにリモート アクセスするコストは、NUMA の詳細を管理するオーバーヘッドを保証しません。
 -   **メモリの割り当て** - Analysis Services は、Intel Threading Building Blocks (Intel TBB) で高速になりました。Intel TBB は、すべてのコアに別のメモリ プールを提供するスケーラブルな割り当てツールです。 コア数の増加に比例してシステムを拡張することができます。
 -   **ヒープの断片化** - Intel TBB ベースのスケーラブルな割り当てツールを使用すると、Windows ヒープで発生するヒープの断片化によるパフォーマンスの問題を軽減できます。
 
@@ -130,7 +132,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 
 データベース レベルで、CREATE、ALTER、および DELETE コマンドは、TMSL スクリプトを使い慣れた XMLA ウィンドウに出力します。  Process などの他のコマンドは、このリリースでもスクリプトを作成できます。 将来のリリースで、その他の多くのアクションに対するスクリプトのサポートが追加される可能性があります。    
 
-**スクリプト可能なコマンド** | **[説明]**
+**スクリプト可能なコマンド** | **Description**
 --------------- | ----------------
 作成|データベース、接続、またはパーティションを追加します。 ASSL では CREATE に相当します。
 createOrReplace|以前のバージョンを上書きして、既存のオブジェクト定義 (データベース、接続、またはパーティション) を更新します。 ASSL では、AllowOverwrite が true、および ObjectDefinition が ExpandFull に設定された ALTER に相当します。
@@ -144,7 +146,7 @@ refresh|オブジェクトを処理します。 ASSL では PROCESS に相当し
 ### <a name="dax-variables"></a>DAX の変数    
 このリリースでは、DAX の変数のサポートが追加されました。 変数は、式の結果を名前付きの変数として保存できるようになりました。これは、他のメジャーの式に引数として渡すことができます。 結果の値が可変式に対して計算されると、その変数が別の式で参照される場合でも、それらの値は変更されません。 詳細については、「 [VAR 関数](http://msdn.microsoft.com/library/mt243785.aspx)」を参照してください。    
 ### <a name="new-dax-functions"></a>DAX の新しい関数
-このリリースでは、計算を高速化し、Power BI での視覚化機能を強化する&50; 以上の新しい関数が DAX に導入されました。 詳細については、「 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)」 (DAX の新しい関数) を参照してください。
+このリリースでは、計算を高速化し、Power BI での視覚化機能を強化する 50 以上の新しい関数が DAX に導入されました。 詳細については、「 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)」 (DAX の新しい関数) を参照してください。
 ### <a name="save-incomplete-measures"></a>不完全なメジャーを保存する
 不完全な DAX メジャーを表形式 1200 のモデル プロジェクトに直接保存できるようになりました。作業を続ける準備ができたときに、もう一度選択することができます。
 ### <a name="additional-dax-enhancements"></a>DAX の追加の拡張機能
@@ -154,7 +156,7 @@ refresh|オブジェクトを処理します。 ASSL では PROCESS に相当し
 - 冗長な結合の排除 - ストレージ エンジンに対する単一のクエリがディメンション列とメジャー値の両方を返します。
 - IF/SWITCH の厳密な評価 - 条件が false の分岐の結果がストレージ エンジンのクエリになりません。 以前は分岐が積極的に評価されていましたが、後に結果は破棄されていました。     
     
-## <a name="developer"></a>Developer    
+## <a name="developer"></a>開発者    
  ### <a name="microsoftanalysisservicestabular-namespace-for-tabular-1200-programmability-in-amo"></a>AMO 内の表形式 1200 のプログラミングの Microsoft.AnalysisServices.Tabular 名前空間
  Analysis Services 管理オブジェクト (AMO) は、プログラムを使用した表形式 1200 モデルの作成や変更用にデータ定義言語を提供するためだけでなく、SQL Server 2016 Analysis Services の表形式モード インスタンスの管理用に新しい表形式の名前空間を含めるために更新されます。 API の詳細については、「 [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) 」を参照してください。    
  ### <a name="analysis-services-management-objects-amo-updates"></a>Analysis Services 管理オブジェクト (AMO) の更新プログラム

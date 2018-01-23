@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5edd0a3c672b5186a97423e0cf2d1ad22b8509d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>レッスン 5-3-多対多リレーションシップを定義します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]ディメンションを定義するときに通常各ファクトは結合を 1 つのディメンション メンバーに対し、1 つのディメンション メンバーは、多くのさまざまなファクトを関連付けることができます。 たとえば、各顧客は多数の商品を注文できますが、それぞれの注文は 1 人の顧客に所属します。 リレーショナル データベース用語では、これを *一対多のリレーションシップ*と呼びます。 しかし、1 つのファクトが複数のディメンション メンバーに結合する場合があります。 リレーショナル データベース用語では、これを *多対多のリレーションシップ*と呼びます。 たとえば、1 回の購入には複数の購入動機があることが考えられ、また、1 つの購入動機が複数の購入に結び付く (関連付けられる) ことがあります。 結合テーブルは、各購入に関連する購入動機の定義に使用されます。 このようなリレーションシップから作成された Sales Reason ディメンションには、1 回の販売取り引きに関連付けられるメンバーが複数存在します。 多対多のディメンションは、従来のスター スキーマ以上にディメンショナル モデルを展開し、ディメンションが直接ファクト テーブルに関連付けられていなくても複雑な分析を可能にします。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+通常、ディメンションを定義する場合、1 つのディメンション メンバーは多数のファクトに結合できますが、各ファクトを結合できるのは 1 つのディメンションのみです。 たとえば、各顧客は多数の商品を注文できますが、それぞれの注文は 1 人の顧客に所属します。 リレーショナル データベース用語では、これを *一対多のリレーションシップ*と呼びます。 しかし、1 つのファクトが複数のディメンション メンバーに結合する場合があります。 リレーショナル データベース用語では、これを *多対多のリレーションシップ*と呼びます。 たとえば、1 回の購入には複数の購入動機があることが考えられ、また、1 つの購入動機が複数の購入に結び付く (関連付けられる) ことがあります。 結合テーブルは、各購入に関連する購入動機の定義に使用されます。 このようなリレーションシップから作成された Sales Reason ディメンションには、1 回の販売取り引きに関連付けられるメンバーが複数存在します。 多対多のディメンションは、従来のスター スキーマ以上にディメンショナル モデルを展開し、ディメンションが直接ファクト テーブルに関連付けられていなくても複雑な分析を可能にします。  
   
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、ディメンションとメジャー グループの間に多対多のリレーションシップを定義します。この定義は、ディメンション テーブルに関連付けられる中間ファクト テーブルを指定することにより行われます。 その後、中間ファクト テーブルは、ファクト テーブルを関連付ける中間ディメンション テーブルに関連付けられます。 中間ファクト テーブルとリレーションシップ内のディメンション テーブル、および中間ファクトと中間ディメンション間の多対多のリレーションシップにより、そのリレーションシップに指定されている主ディメンションのメンバーおよびメジャー グループ内のグループとの間に多対多のリレーションシップが作成されます。 中間メジャー グループを通じてディメンションとメジャー グループ間の多対多のリレーションシップを定義するには、中間メジャー グループは 1 つ以上のディメンションを元のメジャー グループと共有する必要があります。  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  **[Internet Sales Reason Count]** を選択し、[プロパティ] ウィンドウでこのメジャーのプロパティを確認します。  
   
-    このメジャーの **AggregateFunction** プロパティは、 **Sum** ではなく、 **Count**として定義されていることがわかります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でこのプロパティが **Count** になっているのは、基のデータ型が文字列データ型であるためです。 基のファクト テーブルの他の 2 つの列は、メジャーとしては選択されていません。これらは実際のメジャーではなく、数値キーであることを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が検出したためです。 準加法の動作の詳細については、「 [準加法の動作の定義](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。  
+    このメジャーの **AggregateFunction** プロパティは、 **Sum** ではなく、 **Count**として定義されていることがわかります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]選択した**カウント**基になるデータ型が文字列データ型であるためです。 基のファクト テーブルの他の 2 つの列は、メジャーとしては選択されていません。これらは実際のメジャーではなく、数値キーであることを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が検出したためです。 準加法の動作の詳細については、「 [準加法の動作の定義](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。  
   
 6.  [プロパティ] ウィンドウで、 **Internet Sales Reason Count** メジャーの **Visible** プロパティを **False**に変更します。  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  **[名前列]** ボックスの一覧から **[SalesReasonName]**を選択します。  
   
-8.  **[次へ]** をクリックします。  
+8.  **[次へ]**をクリックします。  
   
 9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type** 属性の横にあるチェック ボックスをオンにし、その名前を **Sales Reason Type**に変更して、 **[次へ]**をクリックします。  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/08/2018
   
     ![定義するリレーションシップ ダイアログ ボックス](../analysis-services/media/l5-many-to-many-3.gif "リレーションシップの定義 ダイアログ ボックス")  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
     多対多アイコンにより、Sales Reason ディメンションと Internet Sales メジャー グループの間のリレーションシップが表されます。  
   
@@ -177,11 +179,11 @@ ms.lasthandoff: 01/08/2018
     ![キューブ デザイナーのペインのデータのフィルターおよび](../analysis-services/media/l5-many-to-many-5.gif "キューブ デザイナーのフィルターおよびデータ ペイン")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[メジャー グループでのディメンション粒度の定義](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[メジャー グループ内のディメンションの粒度を定義します。](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>参照  
-[データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
-[ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[データ ソース ビュー デザイナー &#40; でのダイアグラムの操作します。Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[ディメンションのリレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [多対多のリレーションシップと多対多のリレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   
   

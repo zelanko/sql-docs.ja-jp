@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>レッスン 3-2 の Customer ディメンションの変更
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブのディメンションの機能と使いやすさを向上させる多くのさまざまな方法はあります。 このトピックの実習では、Customer ディメンションを変更します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+キューブのディメンションの使いやすさと機能性を向上させる方法は数多くあります。 このトピックの実習では、Customer ディメンションを変更します。  
   
 ## <a name="renaming-attributes"></a>属性名の変更  
 属性名は、ディメンション デザイナーの **[ディメンション構造]** タブで変更できます。  
@@ -190,7 +192,7 @@ ms.lasthandoff: 01/08/2018
   
     **[City]** 列と **[StateProvinceName]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 6.  **City** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
   
@@ -210,7 +212,7 @@ ms.lasthandoff: 01/08/2018
   
     **[EnglishCountryRegionName]** 列と **[StateProvinceName]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 6.  **State-Province** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
   
@@ -241,7 +243,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
   
-9. **[OK]** をクリックします。  
+9. **[OK]**をクリックします。  
   
 10. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
   

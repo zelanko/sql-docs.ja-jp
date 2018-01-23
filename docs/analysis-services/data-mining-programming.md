@@ -19,14 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a401073a7bcf0d7e8559c65ab6b05d25bd2a681e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming"></a>データ マイニングのプログラミング
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]見つかったかどうか、組み込みのツールやビューアー [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、要件を満たしていないの機能を拡張できます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]独自の拡張機能をコーディングしています。 この方法では、次の 2 つのオプションがあります。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の組み込みのツールやビューアーが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能を拡張できます。 この方法では、次の 2 つのオプションがあります。  
   
 -   **XMLA**  
   

@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0a11280eca74da75737d30fe795c856988d422ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services とは
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services は、意思決定支援とビジネスの分析、Reporting Services レポート、ビジネス レポートおよび Power BI では、Excel などのクライアント アプリケーションの分析データを提供およびその他のデータの視覚化ツールで使用される分析データ エンジンです。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Analysis Services は、意思決定支援とビジネスの分析、Reporting Services レポート、ビジネス レポートおよび Power BI では、Excel などのクライアント アプリケーションの分析データを提供およびその他のデータの視覚化ツールで使用される分析データ エンジンです。  
   
  一般的なワークフローには、多次元形式または表形式データ モデル、内部設置型 SQL Server Analysis Services または Azure Analysis Services サーバー インスタンスにデータベースとしてモデルを展開する、定期的なデータの処理を設定する、割り当ての作成が含まれています。エンドユーザーによってデータ アクセスを許可する権限です。 準備完了である場合は、セマンティック データ モデルをデータ ソースとして Analysis Services をサポートする任意のクライアント アプリケーションによってアクセスできます。  
  

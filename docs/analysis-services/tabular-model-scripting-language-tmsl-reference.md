@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>表形式モデルのスクリプト言語 (TMSL) のリファレンス
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Tabular Model Scripting Language (TMSL) は、Analysis Services 表形式モデルのデータベース互換性レベル 1200 以上のコマンドとオブジェクト モデルの定義構文です。 TMSL は、XMLA プロトコルを介して Analysis Services と通信する場所、 [XMLA です。実行](../analysis-services/xmla/xml-elements-methods-execute.md)メソッドは、両方を受け取ります JSON ベース**ステートメント**TMSL だけでなく、従来 XML ベースのスクリプトでスクリプト[Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Tabular Model Scripting Language (TMSL) は、Analysis Services 表形式モデルのデータベース互換性レベル 1200 以上のコマンドとオブジェクト モデルの定義構文です。 TMSL は、XMLA プロトコルを介して Analysis Services と通信する場所、 [XMLA です。実行](../analysis-services/xmla/xml-elements-methods-execute.md)メソッドは、両方を受け取ります JSON ベース**ステートメント**TMSL だけでなく、従来 XML ベースのスクリプトでスクリプト[Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  TMSL の主要な要素は次のとおりです。  
   

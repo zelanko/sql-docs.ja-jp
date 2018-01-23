@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: bc7d14a9b90c18eeccc977ba73ec6787b11093e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e5955c54a3b5e92632cd421294bb85b834374ead
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多次元モデリング (Adventure Works チュートリアル)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]ようこそ、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアルです。 このチュートリアルでは、架空の会社 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] の例を使用しながら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] プロジェクトの開発と配置を行う方法を説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のチュートリアルへようこそ。 このチュートリアルでは、架空の会社 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] の例を使用しながら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] プロジェクトの開発と配置を行う方法を説明します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルでは、次の内容を学習します。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 これらのレッスンのコンテキストをよりよく理解できるように、このチュートリアルにはシナリオの説明が付属しています。 詳細については、「 [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルのすべてのレッスンを完了するには、サンプル データ、サンプル プロジェクト ファイル、およびソフトウェアが必要です。 このチュートリアルの必要条件を入手およびインストールする方法については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../analysis-services/install-sample-data-and-projects.md)」を参照してください。  
   
 また、このチュートリアルを正常に完了するには、次の権限が付与されている必要があります。  
@@ -57,16 +59,16 @@ ms.lasthandoff: 01/08/2018
   
 |レッスン|推定所要時間|  
 |----------|------------------------------|  
-|[レッスン 1 : Analysis Services プロジェクト内でのデータ ソース ビューの定義](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分|  
-|[レッスン 2 : キューブの定義と配置](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)|30 分|  
-|[レッスン 3 : メジャー、属性、および階層の修正](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分|  
-|[レッスン 4 : 高度な属性およびディメンションのプロパティの定義](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分|  
-|[レッスン 5 : ディメンションおよびメジャー グループ間のリレーションシップの定義](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分|  
-|[レッスン 6 : 計算の定義](../analysis-services/lesson-6-defining-calculations.md)|45 分|  
-|[レッスン 7: 主要業績評価指標 (KPI) の定義](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 分|  
-|[レッスン 8 : アクションの定義](../analysis-services/lesson-8-defining-actions.md)|30 分|  
-|[レッスン 9 : パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 分|  
-|[レッスン 10 : 管理ロールの定義](../analysis-services/lesson-10-defining-administrative-roles.md)|15 分|  
+|[レッスン 1: 分析結果内のデータ ソース ビューを定義するサービス プロジェクト](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分|  
+|[レッスン 2: 定義して、キューブの展開](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)|30 分|  
+|[レッスン 3: メジャー、属性および階層を変更する](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分|  
+|[レッスン 4: 高度な属性およびディメンションのプロパティを定義します。](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分|  
+|[レッスン 5: ディメンションとメジャー グループ間のリレーションシップを定義します。](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分|  
+|[レッスン 6: 計算の定義](../analysis-services/lesson-6-defining-calculations.md)|45 分|  
+|[レッスン 7: 主要業績評価指標を定義する &#40;です。Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 分|  
+|[レッスン 8: アクションの定義](../analysis-services/lesson-8-defining-actions.md)|30 分|  
+|[レッスン 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 分|  
+|[レッスン 10: 管理ロールの定義](../analysis-services/lesson-10-defining-administrative-roles.md)|15 分|  
   
 > [!NOTE]  
 > このチュートリアルで作成するキューブ データベースは、CodePlex サイトでダウンロードできる Adventure Works サンプル データベースの一部である [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデル プロジェクトの簡易バージョンです。 Adventure Works 多次元データベースのチュートリアル バージョンは、すぐに習得することが望まれる特定のスキルを中心にして簡易化されています。 チュートリアルの終了後は、自分で多次元モデル プロジェクトを用意してさまざまな操作を行うと、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデリングの理解が深まります。  

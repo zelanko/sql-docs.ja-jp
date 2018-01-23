@@ -39,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>キューブのプロパティ - 多次元モデルのプログラミング
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブでは、キューブ全体の動作に影響する設定できるプロパティの数があります。 次の表は、これらのプロパティについてまとめたものです。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |プロパティ|Description|  
 |--------------|-----------------|  
 |**AggregationPrefix**|集計名に使用する共通のプレフィックスを指定します。|  
-|**照合順序**|Latin1_General_C1_AS のように、アンダースコアで区切られたロケール識別子 (LCID) と比較フラグを指定します。|  
+|**[照合順序]**|Latin1_General_C1_AS のように、アンダースコアで区切られたロケール識別子 (LCID) と比較フラグを指定します。|  
 |**DefaultMeasure**|キューブの既定のメジャーを定義する多次元式 (MDX) 式を保持します。|  
 |**Description**|キューブの説明を指定します。クライアント アプリケーションに公開できます。|  
 |**ErrorConfiguration**|重複するキー、不明なキー、エラーの制限、エラー検出時のアクション、エラー ログ ファイル、および NULL キーを処理するための、構成可能なエラー処理設定を保持します。|  
@@ -64,14 +64,14 @@ ms.lasthandoff: 01/08/2018
 |**ID**|キューブの一意識別子 (ID) を保持します。|  
 |**言語**|キューブの既定の言語識別子を指定します。|  
 |**名前**|キューブの表示名を指定します。|  
-|**プロアクティブ キャッシュ**|キューブのプロアクティブ キャッシュ設定を定義します。|  
+|**ProactiveCaching**|キューブのプロアクティブ キャッシュ設定を定義します。|  
 |**ProcessingMode**|インデックス作成と集計を処理中に行うか、処理後に行うかを指定します。 オプションは**正規**または**レイジー**です。|  
 |**ProcessingPriority**|レイジー集計やインデックス作成など、バックグラウンド操作中のキューブの処理の優先度を決定します。 既定値は **0**です。|  
 |**ScriptCacheProcessingMode**|スクリプト キャッシュのビルドを処理中に行うか、処理後に行うかを指定します。 オプションは**正規**と**レイジー**です。|  
 |**ScriptErrorHandlingMode**|エラー処理を決定します。 オプションは**ignorenone です**または**ignoreall です**|  
 |**ソース**|キューブに使用するデータ ソース ビューを表示します。|  
-|**[StorageLocation]**|キューブのファイル システムでのストレージ場所を指定します。 指定しない場合は、キューブ オブジェクトが含まれているデータベースから場所が継承されます。|  
-|**StorageMode**|キューブのストレージ モードを指定します。 値は**MOLAP**、 **ROLAP**、または**HOLAP * * *。**|  
+|**StorageLocation**|キューブのファイル システムでのストレージ場所を指定します。 指定しない場合は、キューブ オブジェクトが含まれているデータベースから場所が継承されます。|  
+|**StorageMode**|キューブのストレージ モードを指定します。 値は**MOLAP**、 **ROLAP**、または**HOLAP**です。|  
 |**[表示]**|キューブを表示するかどうかを決定します。|  
   
 > [!NOTE]  

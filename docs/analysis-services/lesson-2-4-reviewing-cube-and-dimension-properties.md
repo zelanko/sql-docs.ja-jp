@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 850aa434cc5eb5b5f1379be68d29cd77994a2f75
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d0913972ef2ca0b1c40c0e23d3d189a6149809cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>レッスン 2-4 - 確認キューブおよびディメンションのプロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]キューブを定義した後は、キューブ デザイナーを使用して結果を確認することができます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトのキューブの構造を確認します。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+キューブを定義した後は、その結果をキューブ デザイナーで確認できます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトのキューブの構造を確認します。  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>キューブ デザイナーでキューブとディメンションのプロパティを確認するには  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 10. XML コードのタブを閉じます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[Analysis Services プロジェクトの配置](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Analysis Services プロジェクトの展開](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>参照  
 [ディメンション デザイナーでのディメンション データの参照](../analysis-services/multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  

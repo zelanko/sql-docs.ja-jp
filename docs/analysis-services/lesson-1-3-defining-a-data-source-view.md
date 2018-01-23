@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4bdf8563587ef08dd89634676a56324dc0191edb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>レッスン 1 ~ 3-データ ソース ビューを定義します。
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]使用するデータ ソースを定義した後、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトでは、次の手順は一般に、プロジェクトのデータ ソース ビューを定義します。 データ ソース ビューは、指定したテーブルのメタデータと、プロジェクトのデータ ソースによって定義されているビューを 1 つに統合したものです。 データ ソース ビューにメタデータを格納すると、基になるデータ ソースへの接続を開かなくても、開発時にメタデータを操作することができます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトで使用するデータ ソースを定義した後は、一般に、プロジェクトのデータ ソース ビューを定義します。 データ ソース ビューは、指定したテーブルのメタデータと、プロジェクトのデータ ソースによって定義されているビューを 1 つに統合したものです。 データ ソース ビューにメタデータを格納すると、基になるデータ ソースへの接続を開かなくても、開発時にメタデータを操作することができます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
   
 次の実習では、 **AdventureWorksDW2012** データ ソースの 5 つのテーブルを含むデータ ソース ビューを定義します。  
   
@@ -35,10 +37,10 @@ ms.lasthandoff: 01/08/2018
   
 2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]**をクリックします。 **[データ ソースの選択]** ページが表示されます。  
   
-3.  **[リレーショナル データ ソース]** の一覧で、**[Adventure Works DW 2012]** データ ソースが選択されていることを確認します。 **[次へ]** をクリックします。  
+3.  **[リレーショナル データ ソース]** の一覧で、**[Adventure Works DW 2012]** データ ソースが選択されていることを確認します。 **[次へ]**をクリックします。  
   
     > [!NOTE]  
-    > 複数のデータ ソースに基づくデータ ソース ビューを作成するには、まず、1 つのデータ ソースに基づくデータ ソース ビューを定義します。 このデータ ソースをプライマリ データ ソースと呼びます。 次に、2 番目のデータ ソースのテーブルとビューを追加します。 複数のデータ ソースの関連するテーブルに基づいた属性を含むディメンションを設計する場合は、分散クエリ エンジン機能を使用するために、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースをプライマリ データ ソースとして定義する必要があります。  
+    > 複数のデータ ソースに基づくデータ ソース ビューを作成するには、まず、1 つのデータ ソースに基づくデータ ソース ビューを定義します。 このデータ ソースをプライマリ データ ソースと呼びます。 次に、2 番目のデータ ソースのテーブルとビューを追加します。 複数のデータ ソース内の関連テーブルに基づく属性を含むディメンションを設計する場合は、定義する必要があります、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]分散クエリ エンジン機能を使用するプライマリ データ ソースとデータ ソース。  
   
 4.  **[テーブルとビューの選択]** ページには、選択したデータ ソース内で使用できるオブジェクトの一覧が表示されます。この一覧からテーブルとビューを選択します。 この一覧をフィルター処理すれば、目的のテーブルとビューを簡単に選択できるようになります。  
   
@@ -84,10 +86,10 @@ ms.lasthandoff: 01/08/2018
     これで、**[ダイアグラム]** ウィンドウ内に、すべてのテーブルとそのリレーションシップを表示できるようになりました。 FactInternetSales テーブルと DimDate テーブルの間には 3 つのリレーションシップがあることがわかります。 各売上には、それぞれ 3 つの日付が関連付けられています。受注日、期日、出荷日の 3 つです。 リレーションシップの詳細を表示するには、**[ダイアグラム]** ウィンドウで、リレーションシップの矢印をダブルクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[既定のテーブル名の変更](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
+[既定のテーブル名を変更します。](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>参照  
-[「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+[多次元モデル内のデータ ソース ビュー](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
   

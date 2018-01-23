@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>レッスン 5-4-メジャー グループ内のディメンションの粒度の定義
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]さまざまな目的で、ユーザーに異なる粒度または特異性におけるディメンションのファクト データがします。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+ファクト データは、利用目的ごとに異なる粒度でディメンションを作成しなければならない場合があります。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
   
 メジャー グループでディメンションを使用する場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既定では、ディメンションのキー属性に基づいてディメンションの詳細度が決定されます。 たとえば、あるメジャー グループに時間のディメンションが存在し、その時間ディメンションの既定の詳細度が日単位である場合は、メジャー グループ内のそのディメンションの既定の詳細度が日単位になります。 このチュートリアルで使用する **Internet Sales** (インターネット売上) や **Reseller Sales** (販売店売上) メジャー グループなどのように、既定の詳細度が適切である場合は数多くあります。 しかし、販売量や予算などのメジャー グループに存在するディメンションには、月単位、または四半期単位の詳細度がより適切です。  
   
@@ -145,7 +147,7 @@ ms.lasthandoff: 01/08/2018
   
 9. **[具体化する]** チェック ボックスがオンになっていることを確認します。  
   
-10. **[OK]** をクリックします。  
+10. **[OK]**をクリックします。  
   
 11. **Sales Territory** ディメンションと **Sales Quotas 1** メジャー グループが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。 **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
 16. **[具体化する]** チェック ボックスがオンになっていることを確認します。  
   
-17. **[OK]** をクリックします。  
+17. **[OK]**をクリックします。  
   
 18. **Date** キューブ ディメンションを削除します。  
   
@@ -194,7 +196,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Quarter]**を指定します。 **[関連属性]** を **[Fiscal Quarter]**に設定します。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
     **Date** ディメンションに、1 つまたは複数の重複する属性リレーションシップが含まれており、このことが原因で、非キー属性が粒度属性として使用されている場合にデータの集計ができない可能性があることを警告するメッセージが表示されます。  
   
@@ -227,10 +229,10 @@ ms.lasthandoff: 01/08/2018
     ![Sales Quota メジャー グループが正しく多次元化](../analysis-services/media/l5-granularity-7.gif "正しく多次元化 Sales Quota メジャー グループ")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 6 : 計算の定義](../analysis-services/lesson-6-defining-calculations.md)  
+[レッスン 6: 計算の定義](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>参照  
-[ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[ディメンションのリレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
